@@ -228,12 +228,13 @@ h3 {
 .paginate_button.page-item.active a {
     background-color: rgba(94, 23, 235, 0.5);
     border: none;
-    color: white;
+    color: black;
 }
 
 .paginate_button.page-item.active a:hover {
     background-color: rgba(94, 23, 235, 0.5);
     border: none;
+    color: black;
 }
 
 .paginate_button.page-item a:hover {
@@ -244,10 +245,14 @@ h3 {
     color: black;
 }
 
+.page-link:hover {
+    color: black;
+    background-color: rgba(94, 23, 235, 0.2);
+}
+
 .page-link:focus {
     color: black;
     box-shadow: none !important;
-    background-color: white !important;
 }
 
 .dropdown-item.custom-dropdown-link:hover {
@@ -431,7 +436,7 @@ a:hover {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width : 768px) {
     .cover {
         width: auto !important;
         height: auto !important;
