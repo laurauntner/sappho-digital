@@ -431,6 +431,14 @@ a:hover {
     }
 }
 
+@media screen {
+    .cover {
+        width: auto !important;
+        height: auto !important;
+        margin-top: auto !important;
+    }
+}
+
 @font-face {
     font-family: 'Geist';
     src: url('../fonts/geist-sans-latin-200-normal.woff2') format('woff2');
