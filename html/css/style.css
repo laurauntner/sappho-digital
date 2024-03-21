@@ -431,7 +431,7 @@ a:hover {
     }
 }
 
-@media screen {
+@media (max-width: 768px) {
     .cover {
         width: auto !important;
         height: auto !important;
