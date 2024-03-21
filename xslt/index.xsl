@@ -46,7 +46,7 @@
                                 <a href="toc-alle.html" class="index-link">
                                     <div class="card index-card d-flex flex-column">
                                         <div class="card-body item-center">
-                                            <img src="../html/images/open-magazine.png"
+                                            <img src="images/open-magazine.png"
                                                 title="open-magazine.png"
                                                 alt="Flaticon" class="smaller-img"
                                             />
@@ -63,7 +63,7 @@
                                 <a href="bibliographie.html" class="index-link">
                                     <div class="card index-card d-flex flex-column">
                                         <div class="card-body item-center">
-                                            <img src="../html/images/search.png"
+                                            <img src="images/search.png"
                                                 title="search.png"
                                                 alt="Flaticon" class="smaller-img"
                                             />
