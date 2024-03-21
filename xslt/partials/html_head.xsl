@@ -13,6 +13,7 @@
         <meta name="apple-mobile-web-app-title" content="{$html_title}"/>
         <meta name="msapplication-TileColor" content="#ffffff"/>
         <meta name="msapplication-TileImage" content="{$project_logo}"/>
+        <meta property="og:image" content="images/sappho-reception-digital_logo.png"/>
         <!-- favicon -->
         <link rel="None" type="image/ico" href="html/image/favicons/favicon.ico"/>
         <link rel="icon" type="image/png" href="html/image/favicons/favicon-16x16.png"/>
