@@ -34,6 +34,10 @@
                                     </li>
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
+                                            href="buch.html">Textauswahl</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
                                             href="bibliographie.html">Bibliographie</a>
                                     </li>
                                     <li>

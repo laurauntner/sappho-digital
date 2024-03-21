@@ -28,6 +28,12 @@
     margin-top: 1px !important;
 }
 
+.cover {
+    width: 20% !important;
+    height: 20% !important;
+    margin-top: 50px !important;
+}
+
 h3 {
     margin-top: 40px;
     margin-bottom: 10px;

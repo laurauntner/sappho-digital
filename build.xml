@@ -59,6 +59,12 @@
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
+    
+    <xslt in="./data/meta/buch.xml" out="${target}/buch.html"
+        style="./xslt/meta.xsl">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
 
     <xslt in="./data/lists/sappho-rez_alle.xml" out="${target}/toc-alle.html"
         style="./xslt/toc-alle.xsl">

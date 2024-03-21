@@ -35,37 +35,44 @@
                     der Sappho-Rezeption zu beobachten.</p>
             </div>
             <div>
-                <p>Auf dieser Webseite werden fortlaufend Informationen zur literarischen
-                    Sappho-Rezeption im deutschsprachigen Raum gesammelt. Dahinter steht ein
+                <p>Auf dieser Webseite sammle ich fortlaufend Informationen zur literarischen
+                    Sappho-Rezeption im deutschsprachigen Raum. Dahinter steht mein
                     Dissertationsprojekt, das <ref target="https://doi.org/10.5281/zenodo.10698386"
-                        >hier</ref> beschrieben wird.</p>
+                        >hier</ref> beschrieben wird. Diesem Projekt ist eine jahrelange
+                    Beschäftigung mit der Sappho-Rezeption vorausgegangen, die unter anderem in
+                    einem <ref
+                        target="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/"
+                        >Buch über die literarische Sappho-Rezeption im deutschsprachigen Raum</ref>
+                    mündete. Nun verbinde ich mein Wissen über die Sappho-Rezeption mit meinen
+                    Kenntnissen im Bereich der Digital Humanities. Mehr zu meiner Person finden Sie
+                    auf der <ref target="https://www.oeaw.ac.at/acdh/team/current-team/laura-untner"
+                        >Webseite der Österreichischen Akademie der Wissenschaften</ref> und auf
+                        <ref target="https://orcid.org/0000-0002-9649-0870">ORCID</ref>.</p>
                 <p>Die <hi rend="bold">Daten</hi> werden sich letzten Endes aus drei Teilen
-                    zusammensetzen: einem für Menschen leicht lesbaren tabellarischen Verzeichnis aller bekannten
-                    produktiv-literarischen Rezeptionszeugnisse zu Sappho aus dem deutschsprachigen
-                    Raum, einer deutlich komplexeren OWL-Ontologie mit detaillierten Informationen
-                    und einer SKOS-Taxonomie zur Klassifizierung wiederkehrender Elemente in der
-                    literarischen Sappho-Rezeption. Mit letzteren Datensätzen soll vor allem die
-                    computergestützte Analyse der Sappho-Rezeption im deutschsprachigen Raum
-                    erleichtert werden.</p>
+                    zusammensetzen: einem für Menschen leicht lesbaren tabellarischen Verzeichnis
+                    aller bekannten produktiv-literarischen Rezeptionszeugnisse zu Sappho aus dem
+                    deutschsprachigen Raum, einer deutlich komplexeren OWL-Ontologie mit
+                    detaillierten Informationen und einer SKOS-Taxonomie zur Klassifizierung
+                    wiederkehrender Elemente in der literarischen Sappho-Rezeption. Mit letzteren
+                    Datensätzen soll vor allem die computergestützte Analyse der Sappho-Rezeption im
+                    deutschsprachigen Raum erleichtert werden. Volltexte der Rezeptionszeugnisse
+                    werden zu keinem Zeitpunkt angeboten. Eine Textauswahl findet sich jedoch in
+                    meinem Band <hi rend="italics"><ref
+                            target="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/"
+                            >Sappho. Texte zur literarischen Rezeption im deutschsprachigen
+                            Raum</ref></hi> (2023).</p>
                 <p>Unter <hi rend="bold">produktiv-literarischen Rezeptionszeugnissen</hi> werden
                     literarische Texte verstanden, die Elemente eines Rezeptionsgegenstandes
                     enthalten, beispielsweise in der Form von Figuren- und Motivübernahmen,
                     Stilimitationen, Paraphrasen, Strukturanalogien, Fortschreibungen und
                     Fiktionalisierungen von Autor_innen.</p>
                 <p>Einen <hi rend="bold">Überblick</hi> über die literarische Sappho-Rezeption im
-                    deutschsprachigen Raum bietet <hi rend="italics"><ref
+                    deutschsprachigen Raum bietet mein Band <hi rend="italics"><ref
                             target="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/"
                             >Sappho. Texte zur literarischen Rezeption im deutschsprachigen
-                            Raum</ref></hi> (hrsg. v. Laura Untner, 2023). Weitere Werke sind: <hi
-                        rend="italics">»sappho gibt es nicht«. Die Rezeption Sapphos in
-                        deutschsprachiger Lyrik des 20. und 21. Jahrhunderts</hi> (Cornelia Heinsch,
-                    2020), <hi rend="italics">Sapphostudien: Forschungsgeschichtliche, biographische
-                        und literarästhetische Untersuchungen</hi> (Helmut Saake, 1972) und <hi
-                        rend="italics">Sappho. Ihr Ruf und Ruhm bei der Nachwelt</hi> (1933) sowie
-                        <hi rend="italics">Geschichte der deutschen Sappho-Übersetzungen</hi> (1934,
-                    beide Horst Rüdiger).</p>
-                <p>Eine <hi rend="bold">Auswahlbibliographie</hi> zur literarischen Sappho-Rezeption
-                    ist <ref target="bibliographie.html">hier</ref> zu finden.</p>
+                            Raum</ref></hi> (2023). Eine <hi rend="bold">Auswahlbibliographie</hi>
+                    zur literarischen Sappho-Rezeption ist <ref target="bibliographie.html"
+                        >hier</ref> zu finden.</p>
             </div>
             <div>
                 <head>Projektstand</head>
@@ -74,8 +81,8 @@
                     können Belege für <ref target="toc-alle.html">alle</ref>, <ref
                         target="toc-prosa.html">prosaische</ref>, <ref target="toc-lyrik.html"
                         >lyrische</ref>, <ref target="toc-drama.html">dramatische</ref> oder <ref
-                        target="toc-sonstige.html">sonstige</ref> Rezeptionszeugnisse (z. B.
-                    Comics) eingesehen werden.</p>
+                        target="toc-sonstige.html">sonstige</ref> Rezeptionszeugnisse (z. B. Comics)
+                    eingesehen werden.</p>
                 <p>Neben der Gattungszugehörigkeit sind folgende Informationen erfasst und
                     durchsuchbar:</p>
                 <list>
@@ -94,7 +101,7 @@
                         >GitHub</ref> frei zugänglich.</p>
             </div>
             <div>
-                <head>Mithelfen</head>
+                <head>Mithelfen/Kontakt</head>
                 <p>Sie kennen einen literarischen Text aus dem deutschsprachigen Raum, der mit
                     Sappho zu tun hat, aber hier nicht verzeichnet ist? Über Hinweise jeglicher Art
                     bin ich sehr dankbar: <ref target="mailto:laura.untner@oeaw.ac.at"
@@ -103,6 +110,7 @@
                     freue ich mich. Am besten gleich ein Issue auf <ref
                         target="https://github.com/laurauntner/sappho-digital/issues">GitHub</ref>
                     anlegen.</p>
+                <p>Für Feedback danke ich Amrei Stanzel, Martin Anton Müller und Gregor Pirgie.</p>
             </div>
             <div>
                 <head>Zitieren</head>

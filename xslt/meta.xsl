@@ -97,4 +97,16 @@
         </li>
     </xsl:template>
     
+    <xsl:template match="tei:graphic">
+        <img>
+            <xsl:attribute name="src">
+                <xsl:value-of select="@url"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:text>cover</xsl:text>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </img>
+    </xsl:template>
+    
 </xsl:stylesheet>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Textauswahl</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Laura Untner</publisher>
+                <pubPlace>Wien</pubPlace>
+                <date when="2024">2024</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
+                        <p>CC BY 4.0</p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <p>Auf dieser Webseite werden keine Volltexte der Rezeptionszeugnisse angeboten.</p>
+                <p>Eine Textauswahl findet sich jedoch in meinem Band <hi rend="italics"><ref
+                            target="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/"
+                            >Sappho. Texte zur literarischen Rezeption im deutschsprachigen
+                            Raum</ref></hi> (2023).</p>
+            </div>
+            <div type="image">
+                <figure>
+                    <graphic url="images/cover.jpg"/>
+                </figure>
+            </div>
+        </body>
+    </text>
+</TEI>
