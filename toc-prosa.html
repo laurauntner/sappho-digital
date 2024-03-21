@@ -1,0 +1,921 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-title" content="Prosaische Rezeptionszeugnisse" />
+      <meta name="msapplication-TileColor" content="#ffffff" />
+      <meta name="msapplication-TileImage" content="images/sappho-reception-digital_logo.png" />
+      <link rel="None" type="image/ico" href="html/image/favicons/favicon.ico" />
+      <link rel="icon" type="image/png" href="html/image/favicons/favicon-16x16.png" />
+      <link rel="icon" type="image/png" href="html/image/favicons/favicon-32x32.png" />
+      <link rel="icon" type="image/png" href="html/image/favicons/favicon-64x64.png" />
+      <link rel="icon" type="image/png" href="html/image/favicons/favicon-96x96.png" />
+      <link rel="icon" type="image/png" href="html/image/favicons/favicon-180x180.png" />
+      <link rel="apple-touch-icon" type="image/png" href="html/image/favicons/apple-touch-icon-57x57.png" />
+      <link rel="apple-touch-icon" type="image/png" href="html/image/favicons/apple-touch-icon-60x60.png" />
+      <link rel="apple-touch-icon" type="image/png" href="html/image/favicons/apple-touch-icon-72x72.png" />
+      <link rel="apple-touch-icon" type="image/png" href="html/image/favicons/apple-touch-icon-76x76.png" />
+      <link rel="apple-touch-icon" type="image/png" href="html/image/favicons/apple-touch-icon-114x114.png" />
+      <link rel="apple-touch-icon" type="image/png" href="html/image/favicons/apple-touch-icon-120x120.png" />
+      <link rel="apple-touch-icon" type="image/png" href="html/image/favicons/apple-touch-icon-144x144.png" />
+      <link rel="apple-touch-icon" type="image/png" href="html/image/favicons/apple-touch-icon-152x152.png" />
+      <link rel="apple-touch-icon" type="image/png" href="html/image/favicons/apple-touch-icon-167x167.png" />
+      <link rel="apple-touch-icon" type="image/png" href="html/image/favicons/apple-touch-icon-180x180.png" />
+      <link rel="None" type="image/png" href="html/image/favicons/mstile-70x70.png" />
+      <link rel="None" type="image/png" href="html/image/favicons/mstile-270x270.png" />
+      <link rel="None" type="image/png" href="html/image/favicons/mstile-310x310.png" />
+      <link rel="None" type="image/png" href="html/image/favicons/mstile-310x150.png" />
+      <link rel="shortcut icon" type="image/png" href="html/image/favicons/favicon-196x196.png" />
+      <link rel="icon" type="image/svg+xml" href="images/sappho-reception-digital_logo.png" sizes="any" />
+      <link rel="profile" href="http://gmpg.org/xfn/11" />
+      <title>Prosaische Rezeptionszeugnisse</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+      <link rel="stylesheet" href="css/style.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.css" />
+   </head>
+   <body class="page">
+      <div class="hfeed site" id="page">
+         <div class="sticky-top"><a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a><nav class="navbar navbar-expand-lg">
+               <div class="container-fluid"><a href="index.html" class="navbar-brand custom-logo-link" rel="home" itemprop="url"><img src="images/sappho-reception-digital_logo.png" class="img-fluid" title="Sappho Digital" alt="Sappho Digital" itemprop="logo" /></a><span class="badge bg-light text-dark">in development</span><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                     <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle custom-dropdown-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projekt</a><ul class="dropdown-menu">
+                              <li><a class="dropdown-item custom-dropdown-link" href="about.html">Über das Projekt</a></li>
+                              <li><a class="dropdown-item custom-dropdown-link" href="bibliographie.html">Bibliographie</a></li>
+                              <li><a class="dropdown-item custom-dropdown-link" href="https://github.com/laurauntner/sappho-digital">Daten auf
+                                    GitHub</a></li>
+                           </ul>
+                        </li>
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle custom-dropdown-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Rezeptionszeugnisse</a><ul class="dropdown-menu">
+                              <li><a class="dropdown-item custom-dropdown-link" href="toc-alle.html">Alle Rezeptionszeugnisse</a></li>
+                              <li><a class="dropdown-item custom-dropdown-link" href="toc-prosa.html">Prosa</a></li>
+                              <li><a class="dropdown-item custom-dropdown-link" href="toc-lyrik.html">Lyrik</a></li>
+                              <li><a class="dropdown-item custom-dropdown-link" href="toc-drama.html">Drama</a></li>
+                              <li><a class="dropdown-item custom-dropdown-link" href="toc-sonstige.html">Sonstiges</a></li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </nav>
+         </div>
+         <div class="container-fluid">
+            <div class="card">
+               <div class="card-header">
+                  <h1>Prosaische Rezeptionszeugnisse</h1>
+               </div>
+               <div class="card-body">
+                  <table class="table table-striped display" id="tocTable" style="width:100%">
+                     <thead>
+                        <tr>
+                           <th scope="col">Jahr</th>
+                           <th scope="col">Titel</th>
+                           <th scope="col">Autor_in</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>[um 1474]</td>
+                           <td>Von Saphos der poeta das xlv capitel</td>
+                           <td>Heinrich Steinhöwel [Übers. Boccaccios De mulieribus claris (1374)]</td>
+                        </tr>
+                        <tr>
+                           <td>1494</td>
+                           <td>Das Narrenschiff</td>
+                           <td>Sebastian Brant</td>
+                        </tr>
+                        <tr>
+                           <td>1554–1557</td>
+                           <td>Wie Lewfrid an eines Graffen Hoff in die Küchen kam/un Küchebub ward/wie in
+                              der meisterkoch fast Lieb gewan: weiter von seinem Wolsingen</td>
+                           <td>Jörg Wickram</td>
+                        </tr>
+                        <tr>
+                           <td>1640</td>
+                           <td>Les Visiones De Don Francesco De Quevedo Villegas. Oder Wunderbahre Satyrische gesichte
+                              Verteutscht durch Philander von Sittewalt</td>
+                           <td>Johann Michael Moscherosch [Übers. Francisco Gómez de Quevedo y Villegas’ Sueños y
+                              Discursos (1627) – war Moscherosch aber nur im Franz. bekannt] </td>
+                        </tr>
+                        <tr>
+                           <td>1689/1690</td>
+                           <td>Großmütiger Feldherr Arminius</td>
+                           <td>Daniel Casper von Lohenstein</td>
+                        </tr>
+                        <tr>
+                           <td>1690</td>
+                           <td>Der Academische Roman</td>
+                           <td>Eberhard Werner Happel</td>
+                        </tr>
+                        <tr>
+                           <td>1743</td>
+                           <td>Der Autor. Drittes Stück</td>
+                           <td>Karl Christian Gärtner</td>
+                        </tr>
+                        <tr>
+                           <td>1763</td>
+                           <td>Die Jungfrau. Zweyter Gesang</td>
+                           <td>Justus Friedrich Wilhelm Zachariae</td>
+                        </tr>
+                        <tr>
+                           <td>1772</td>
+                           <td>Die Abenteuer des Don Sylvio von Rosalva</td>
+                           <td>[Christoph Martin Wieland]</td>
+                        </tr>
+                        <tr>
+                           <td>1773–1776</td>
+                           <td>Das Leben und die Meinungen des Herrn Magister Sebaldus Nothanker</td>
+                           <td>Friedrich Nicolai</td>
+                        </tr>
+                        <tr>
+                           <td>1774</td>
+                           <td>Geschichte der Abderiten</td>
+                           <td>Christoph Martin Wieland</td>
+                        </tr>
+                        <tr>
+                           <td>1774</td>
+                           <td>Laidion oder die Eleusinischen Geheimnisse. Erster Theil [zweiter nicht erschienen]</td>
+                           <td>Wilhelm Heinse</td>
+                        </tr>
+                        <tr>
+                           <td>1776</td>
+                           <td>Der Landprediger</td>
+                           <td>Jakob Michael Reinhold Lenz</td>
+                        </tr>
+                        <tr>
+                           <td>1786–1794</td>
+                           <td>Hildegard von Hohenthal</td>
+                           <td>Wilhelm Heinse</td>
+                        </tr>
+                        <tr>
+                           <td>1787</td>
+                           <td>Eine Italiänische Geschichte aus dem sechszehnten Jahrhundert [später: Ardinghello
+                              und die glückseligen Inseln]</td>
+                           <td>[Wilhelm Heinse]</td>
+                        </tr>
+                        <tr>
+                           <td>1790</td>
+                           <td>Reise des jüngern Anacharsis durch Griechenland, viertehalbhundert Jahr vor der gewöhnlichen
+                              Zeitrechnung. Zweiter Theil</td>
+                           <td>Johann Erich Biester [Übers. Barthelemys Voyage du jeune Anacharsis en Grèce (1788)]</td>
+                        </tr>
+                        <tr>
+                           <td>1790</td>
+                           <td>Reise des jüngern Anacharsis durch Griechenland, viertehalbhundert Jahr vor der gewöhnlichen
+                              Zeitrechnung. Dritter Theil</td>
+                           <td>Johann Erich Biester [Übers. Barthelemys Voyage du jeune Anacharsis en Grèce (1788)]</td>
+                        </tr>
+                        <tr>
+                           <td>1791–1805</td>
+                           <td>Reise in die mittäglichen Provinzen von Frankreich im Jahre 1785–1786. 10 Bde.</td>
+                           <td>Moritz August von Thümmel</td>
+                        </tr>
+                        <tr>
+                           <td>1793</td>
+                           <td>Reise des jüngern Anacharsis durch Griechenland, viertehalbhundert Jahr vor der gewöhnlichen
+                              Zeitrechnung. Siebenter und letzter Theil</td>
+                           <td>Johann Erich Biester [Übers. Barthelemys Voyage du jeune Anacharsis en Grèce (1788)]</td>
+                        </tr>
+                        <tr>
+                           <td>1793</td>
+                           <td>Fragment von Hyperion [dritter Band]</td>
+                           <td>Friedrich Hölderlin</td>
+                        </tr>
+                        <tr>
+                           <td>[vmtl. 1798/1799]</td>
+                           <td>[Romanentwurf a. d. Nachlass]</td>
+                           <td>Caroline Schlegel-Schelling</td>
+                        </tr>
+                        <tr>
+                           <td>1799</td>
+                           <td>Lucinde. Ein Roman. Erster Theil [mehr nicht erschienen]</td>
+                           <td>Friedrich Schlegel</td>
+                        </tr>
+                        <tr>
+                           <td>1800</td>
+                           <td>Die Schwestern von Lesbos</td>
+                           <td>Amalie von Imhoff / Helvig</td>
+                        </tr>
+                        <tr>
+                           <td>1800–1801</td>
+                           <td>Aristipp und einige seiner Zeitgenossen. 4 Bde.</td>
+                           <td>Christoph Martin Wieland</td>
+                        </tr>
+                        <tr>
+                           <td>zw. 1801–1804</td>
+                           <td>Ein apokaliptisches Fragment</td>
+                           <td>Tian [d. i. Karoline von Günderrode, »Sappho der Romantik«]</td>
+                        </tr>
+                        <tr>
+                           <td>1804</td>
+                           <td>Albert und Albertine</td>
+                           <td>Friederike Helene Unger</td>
+                        </tr>
+                        <tr>
+                           <td>1806</td>
+                           <td>Sapho und Phaon. Ein Roman</td>
+                           <td>Sophie Mereau [Übers. Notts Sappho. After a Greek Romance (= Übers. v. Verris Avventure)?
+                              (1803)]</td>
+                        </tr>
+                        <tr>
+                           <td>1807</td>
+                           <td>Sappho und Phaon</td>
+                           <td>Friedrich Buchholz</td>
+                        </tr>
+                        <tr>
+                           <td>1809</td>
+                           <td>Sapho von Mitylene (Bruchstück aus dem 1. Capitel des 17. Buches)</td>
+                           <td>Franz Passow [Übersetzungsprobe von Verris Le avventure di Saffo (1780)]</td>
+                        </tr>
+                        <tr>
+                           <td>1810</td>
+                           <td>Armut, Reichtum, Schuld und Buße der Gräfin Dolores</td>
+                           <td>Ludwig Achim von Arnim</td>
+                        </tr>
+                        <tr>
+                           <td>1820</td>
+                           <td>Reise auf der Post von Dresden nach Leipzig. Eine humoristische Erzählung</td>
+                           <td>Karl Wilhelm Baumgarten-Crusius</td>
+                        </tr>
+                        <tr>
+                           <td>1834</td>
+                           <td>Rahel. Ein Buch des Andekens für ihre Freunde. Bd. 2</td>
+                           <td>Rahel Varnhagen von Ense, hg. v. Karl August Varnhagen von Ense</td>
+                        </tr>
+                        <tr>
+                           <td>1834</td>
+                           <td>Scenen aus meinem Leben</td>
+                           <td>Louis Graf von Ostrowski</td>
+                        </tr>
+                        <tr>
+                           <td>1835</td>
+                           <td>Goethes Briefwechsel mit einem Kinde. Seinem Denkmal. Zweiter Theil</td>
+                           <td>Bettina von Arnim</td>
+                        </tr>
+                        <tr>
+                           <td>1836</td>
+                           <td>Die schwedischen Bräute. Eine Novelle</td>
+                           <td>Carl Eichel</td>
+                        </tr>
+                        <tr>
+                           <td>1838</td>
+                           <td>Der Guckguck</td>
+                           <td>Carl Frühauf</td>
+                        </tr>
+                        <tr>
+                           <td>1842</td>
+                           <td>Saturns Leichenrede auf das Jahr 1841</td>
+                           <td>Carl Raimung Frühauf</td>
+                        </tr>
+                        <tr>
+                           <td>1845–1846</td>
+                           <td>Metamorphosen</td>
+                           <td>Franz von Elling</td>
+                        </tr>
+                        <tr>
+                           <td>1853</td>
+                           <td>Die Wiener in Griechenland. Novelle</td>
+                           <td>Julius Krebs</td>
+                        </tr>
+                        <tr>
+                           <td>1855</td>
+                           <td>Soll und Haben</td>
+                           <td>Gustav Freytag</td>
+                        </tr>
+                        <tr>
+                           <td>1855</td>
+                           <td>Ekkehard</td>
+                           <td>Joseph Viktor von Scheffel</td>
+                        </tr>
+                        <tr>
+                           <td>1855</td>
+                           <td>Meine Reise im Orient. 2 Bde.</td>
+                           <td>Alexander Ziegler</td>
+                        </tr>
+                        <tr>
+                           <td>1856</td>
+                           <td>Der Verstoßene</td>
+                           <td>Raoul</td>
+                        </tr>
+                        <tr>
+                           <td>1864</td>
+                           <td>Die verlorene Handschrift. 3 Teile</td>
+                           <td>Gustav Freytag</td>
+                        </tr>
+                        <tr>
+                           <td>1864</td>
+                           <td>Eine Aegyptische Königstochter. Historischer Roman. Erster Band</td>
+                           <td>Georg Ebers</td>
+                        </tr>
+                        <tr>
+                           <td>1864</td>
+                           <td>Eine Aegyptische Königstochter. Zweiter Band</td>
+                           <td>Georg Ebers</td>
+                        </tr>
+                        <tr>
+                           <td>1864</td>
+                           <td>Eine Aegyptische Königstochter. Dritter Band</td>
+                           <td>Georg Ebers</td>
+                        </tr>
+                        <tr>
+                           <td>1866</td>
+                           <td>Erste, zweite und dritte Liebe. Eine Erzählung</td>
+                           <td>Wilhelm Fischer</td>
+                        </tr>
+                        <tr>
+                           <td>1867/1869</td>
+                           <td>Der Schüdderump</td>
+                           <td>Wilhelm Raabe</td>
+                        </tr>
+                        <tr>
+                           <td>1874–1875</td>
+                           <td>Eine moderne Sappho</td>
+                           <td>Bertha Augusti (B. Schoeler)</td>
+                        </tr>
+                        <tr>
+                           <td>1875</td>
+                           <td>Das Quartier der Sappho</td>
+                           <td>Antoine Pithon</td>
+                        </tr>
+                        <tr>
+                           <td>1875</td>
+                           <td>Bonmots</td>
+                           <td>F. Ztg.</td>
+                        </tr>
+                        <tr>
+                           <td>1878</td>
+                           <td>Schützende Hände</td>
+                           <td>M. Alland</td>
+                        </tr>
+                        <tr>
+                           <td>1879</td>
+                           <td>Verlorene Blätter</td>
+                           <td>D. Beta</td>
+                        </tr>
+                        <tr>
+                           <td>1880</td>
+                           <td>Sappho</td>
+                           <td>Carmen Sylva [d. i. Elisabeth zu Wied]</td>
+                        </tr>
+                        <tr>
+                           <td>1881</td>
+                           <td>Nach dem Tode</td>
+                           <td>Marie von Ebner-Eschenbach</td>
+                        </tr>
+                        <tr>
+                           <td>1883</td>
+                           <td>Sappho. Novelle</td>
+                           <td>E. Jegher</td>
+                        </tr>
+                        <tr>
+                           <td>1884</td>
+                           <td>Sappho. Pariser Sittenbild. Bd. 1</td>
+                           <td>o. A. [Übers. Daudets Sapho (1884)]</td>
+                        </tr>
+                        <tr>
+                           <td>1884</td>
+                           <td>Sappho. Pariser Sittenbild. Bd. 2</td>
+                           <td>o. A. [Übers. Daudets Sapho (1884)]</td>
+                        </tr>
+                        <tr>
+                           <td>1886</td>
+                           <td>Sappho. Griechische Novelle</td>
+                           <td>Johannes Flach</td>
+                        </tr>
+                        <tr>
+                           <td>1886</td>
+                           <td>Gefahr im Verzuge. Humoreske</td>
+                           <td>F. Schifkorn</td>
+                        </tr>
+                        <tr>
+                           <td>1886?</td>
+                           <td>Die Sappho von Arles</td>
+                           <td>Ludwig Weißel</td>
+                        </tr>
+                        <tr>
+                           <td>1888</td>
+                           <td>Im Garten der Semiramis</td>
+                           <td>W. Egbert</td>
+                        </tr>
+                        <tr>
+                           <td>1888</td>
+                           <td>Geheilter Wahn</td>
+                           <td>F. v. Kapff-Essenther</td>
+                        </tr>
+                        <tr>
+                           <td>1888</td>
+                           <td>Größenwahn</td>
+                           <td>Karl Bleibtreu</td>
+                        </tr>
+                        <tr>
+                           <td>1888</td>
+                           <td>Auf der Harzreise</td>
+                           <td>A. Haupt</td>
+                        </tr>
+                        <tr>
+                           <td>1888</td>
+                           <td>Höhenluft</td>
+                           <td>Cary Groß</td>
+                        </tr>
+                        <tr>
+                           <td>1889</td>
+                           <td>Sybilla Holm</td>
+                           <td>T. Pauly</td>
+                        </tr>
+                        <tr>
+                           <td>1890</td>
+                           <td>Zwei Seelen und ein Gedanke</td>
+                           <td>F. v. Kapff-Essenther</td>
+                        </tr>
+                        <tr>
+                           <td>1891</td>
+                           <td>Eine moderne Sappho</td>
+                           <td>Alma Leschivo</td>
+                        </tr>
+                        <tr>
+                           <td>1891</td>
+                           <td>Eva Siebeck</td>
+                           <td>Bertha von Suttner</td>
+                        </tr>
+                        <tr>
+                           <td>1891</td>
+                           <td>Aus der Bahn</td>
+                           <td>Doris Freiin von Spättgen</td>
+                        </tr>
+                        <tr>
+                           <td>1891</td>
+                           <td>In der elften Stunde</td>
+                           <td>M. Stahl</td>
+                        </tr>
+                        <tr>
+                           <td>1891</td>
+                           <td>Der Blaustrumpf</td>
+                           <td>Georg Biagosch</td>
+                        </tr>
+                        <tr>
+                           <td>1891</td>
+                           <td>Zwei Titanen</td>
+                           <td>A. von Tannus</td>
+                        </tr>
+                        <tr>
+                           <td>[1893]</td>
+                           <td>Ein scandalöser Fall</td>
+                           <td>Oskar Panizza</td>
+                        </tr>
+                        <tr>
+                           <td>1894</td>
+                           <td>Werde, die Du bist!</td>
+                           <td>Hedwig Dohm</td>
+                        </tr>
+                        <tr>
+                           <td>1895</td>
+                           <td>Reidlingen</td>
+                           <td>A. von Limburg</td>
+                        </tr>
+                        <tr>
+                           <td>1897</td>
+                           <td>»Weihnacht!« Reiseerzählung</td>
+                           <td>Karl May</td>
+                        </tr>
+                        <tr>
+                           <td>1898</td>
+                           <td>Eine moderne Sappho</td>
+                           <td>Luise Wohl</td>
+                        </tr>
+                        <tr>
+                           <td>1902</td>
+                           <td>Mit der Fluth</td>
+                           <td>C. Dressel</td>
+                        </tr>
+                        <tr>
+                           <td>[1902]</td>
+                           <td>Sappho. Eine Novelle</td>
+                           <td>Therese Rak</td>
+                        </tr>
+                        <tr>
+                           <td>1902</td>
+                           <td>Sapphos Verse. Byzantinischer Roman</td>
+                           <td>Karl Roth</td>
+                        </tr>
+                        <tr>
+                           <td>1902</td>
+                           <td>Marianne Wildenberg</td>
+                           <td>Hans Karlsen</td>
+                        </tr>
+                        <tr>
+                           <td>1902</td>
+                           <td>Schattenspiel</td>
+                           <td>Karl Theodor Schultz</td>
+                        </tr>
+                        <tr>
+                           <td>1903</td>
+                           <td>Münchner Kindeln!</td>
+                           <td>Anton Frhrn. v. Perfall</td>
+                        </tr>
+                        <tr>
+                           <td>1904</td>
+                           <td>Sappho</td>
+                           <td>Ferdinand von Saar</td>
+                        </tr>
+                        <tr>
+                           <td>1904</td>
+                           <td>Ithaka</td>
+                           <td>Hermione von Preuschen</td>
+                        </tr>
+                        <tr>
+                           <td>n. n. 1904</td>
+                           <td>Sappho die Dichterin von Lesbos. Roman der Schönheit [Fragment a. d. Nachlass]</td>
+                           <td>Peter Hille</td>
+                        </tr>
+                        <tr>
+                           <td>1906</td>
+                           <td>Rache</td>
+                           <td>Doris Freiin von Spättgen</td>
+                        </tr>
+                        <tr>
+                           <td>1906</td>
+                           <td>Weder Glück noch Stern</td>
+                           <td>Eugen Stangen</td>
+                        </tr>
+                        <tr>
+                           <td>1906</td>
+                           <td>Die Erzieher der jungen Mädchen</td>
+                           <td>Max Brod</td>
+                        </tr>
+                        <tr>
+                           <td>1907</td>
+                           <td>Die Bücher einer Liebenden</td>
+                           <td>Rainer Maria Rilke</td>
+                        </tr>
+                        <tr>
+                           <td>1907</td>
+                           <td>Die Liebe Daria Lantes. Ein römischer Roman in zwei Teilen</td>
+                           <td>Richard Boß</td>
+                        </tr>
+                        <tr>
+                           <td>1908</td>
+                           <td>Ein Irrtum des Herzens. Originalroman</td>
+                           <td>Fanz Zistler</td>
+                        </tr>
+                        <tr>
+                           <td>1908</td>
+                           <td>Odysseus’ Heimkehr. Humoristischer Gesellschaftsroman aus Oesterreich</td>
+                           <td>Wolf von Tainach</td>
+                        </tr>
+                        <tr>
+                           <td>1908</td>
+                           <td>Erneste. Roman</td>
+                           <td>Ursula Zöge von Mauteuffel</td>
+                        </tr>
+                        <tr>
+                           <td>1908–1909</td>
+                           <td>Der leukadische Felsen [tw. auch »Der leukatische Felsen« betitelt]</td>
+                           <td>A. Noël</td>
+                        </tr>
+                        <tr>
+                           <td>1909</td>
+                           <td>Das Kind von Goslar</td>
+                           <td>Adolf von Wilbrandt</td>
+                        </tr>
+                        <tr>
+                           <td>1909</td>
+                           <td>Unsere Schweizer</td>
+                           <td>Florentine Kazelle</td>
+                        </tr>
+                        <tr>
+                           <td>1910</td>
+                           <td>Die Aufzeichnungen des Malte Laurids Brigge. Bd. 2</td>
+                           <td>Rainer Maria Rilke</td>
+                        </tr>
+                        <tr>
+                           <td>1910</td>
+                           <td>Theater</td>
+                           <td>Ernst Georgy</td>
+                        </tr>
+                        <tr>
+                           <td>1911</td>
+                           <td>Frühlingstaumel</td>
+                           <td>Gabriele Reuter</td>
+                        </tr>
+                        <tr>
+                           <td>1911</td>
+                           <td>Der neue Herr</td>
+                           <td>Walter Hogarth</td>
+                        </tr>
+                        <tr>
+                           <td>1913</td>
+                           <td>Helge Bendels Luftschlösser. Ein Chikago-Roman</td>
+                           <td>Henning Berger</td>
+                        </tr>
+                        <tr>
+                           <td>1914</td>
+                           <td>Schloß Melchow. Roman</td>
+                           <td>H. Steinbach</td>
+                        </tr>
+                        <tr>
+                           <td>1916</td>
+                           <td>Zeitenwende</td>
+                           <td>A. L. Lindner</td>
+                        </tr>
+                        <tr>
+                           <td>1917</td>
+                           <td>Die letzten Tage von Pompeji</td>
+                           <td>G. L. Bulwer</td>
+                        </tr>
+                        <tr>
+                           <td>1918</td>
+                           <td>Bis zur nächsten Ecke</td>
+                           <td>H. Teichmann</td>
+                        </tr>
+                        <tr>
+                           <td>1918</td>
+                           <td>Die Briefe des Fräulein Brandt</td>
+                           <td>Felix Hollaender</td>
+                        </tr>
+                        <tr>
+                           <td>1918</td>
+                           <td>Lodz. Das gelobte Land</td>
+                           <td>W. St. Reymont</td>
+                        </tr>
+                        <tr>
+                           <td>1922</td>
+                           <td>Maskerade</td>
+                           <td>Anna Kappstein</td>
+                        </tr>
+                        <tr>
+                           <td>1922</td>
+                           <td>Fünfundzwanzig Bräute. Schelmenroman</td>
+                           <td>Wilhelm Herbert</td>
+                        </tr>
+                        <tr>
+                           <td>1922</td>
+                           <td>Hunger!</td>
+                           <td>Frida Raimann</td>
+                        </tr>
+                        <tr>
+                           <td>1922</td>
+                           <td>Die lachende Maske. Roman</td>
+                           <td>Paul Oskar Höcker</td>
+                        </tr>
+                        <tr>
+                           <td>1924</td>
+                           <td>Schauspieler</td>
+                           <td>Hans Rewald</td>
+                        </tr>
+                        <tr>
+                           <td>1926</td>
+                           <td>Durchaus unpassende Geschichten</td>
+                           <td>Kurt Tucholsky</td>
+                        </tr>
+                        <tr>
+                           <td>1926</td>
+                           <td>Die Prüfung. Eine Novelle aus dem Lande der Romantik</td>
+                           <td>Carry Brachvogel</td>
+                        </tr>
+                        <tr>
+                           <td>1926</td>
+                           <td>Eine Frau und vier Verehrer. Novelle</td>
+                           <td>Edmund Schopen</td>
+                        </tr>
+                        <tr>
+                           <td>1927</td>
+                           <td>Spiel im Morgengrauen. Novelle</td>
+                           <td>Arthur Schnitzler</td>
+                        </tr>
+                        <tr>
+                           <td>1928</td>
+                           <td>Der Sprung ins Leben. Roman</td>
+                           <td>Max Castman</td>
+                        </tr>
+                        <tr>
+                           <td>1931?</td>
+                           <td>Römische Sappho</td>
+                           <td>Max Sidow</td>
+                        </tr>
+                        <tr>
+                           <td>1935</td>
+                           <td>Die Geschichte einer Hochzeitsreise. Roman</td>
+                           <td>Walther von Hollander</td>
+                        </tr>
+                        <tr>
+                           <td>1935</td>
+                           <td>Die Hand. Novelle</td>
+                           <td>Rudolf Becht</td>
+                        </tr>
+                        <tr>
+                           <td>1936</td>
+                           <td>Jagd nach dem Bildnis der Kaiserin Poppäa</td>
+                           <td>Wilhelm Scheider</td>
+                        </tr>
+                        <tr>
+                           <td>1937</td>
+                           <td>Nie wieder luegen</td>
+                           <td>Irmgard Keun</td>
+                        </tr>
+                        <tr>
+                           <td>1937?</td>
+                           <td>Der Thomaskantor</td>
+                           <td>L. G. Bachmann</td>
+                        </tr>
+                        <tr>
+                           <td>1938</td>
+                           <td>Susanne</td>
+                           <td>Maria von Peteani</td>
+                        </tr>
+                        <tr>
+                           <td>1938</td>
+                           <td>Zwischen Mann und Kind</td>
+                           <td>Lili Körber</td>
+                        </tr>
+                        <tr>
+                           <td>1938</td>
+                           <td>Wenn der Vollmond scheint …</td>
+                           <td>Dyk</td>
+                        </tr>
+                        <tr>
+                           <td>1938</td>
+                           <td>Sappho</td>
+                           <td>R. A.</td>
+                        </tr>
+                        <tr>
+                           <td>1939</td>
+                           <td>Ich erlebte fünfzig Jahre Weltgeschichte</td>
+                           <td>Berta Zuckerkandl-Szeps</td>
+                        </tr>
+                        <tr>
+                           <td>1939</td>
+                           <td>Die Schauspielerin</td>
+                           <td>Otto Nebelthau</td>
+                        </tr>
+                        <tr>
+                           <td>1942</td>
+                           <td>Das Lorbeerufer. Roman</td>
+                           <td>Emil Barth</td>
+                        </tr>
+                        <tr>
+                           <td>1945</td>
+                           <td>Sappho von Lesbos. Roman</td>
+                           <td>Margot Klausner</td>
+                        </tr>
+                        <tr>
+                           <td>1952</td>
+                           <td>Das Geheimnis der Sappho. Kriminal-Roman</td>
+                           <td>Thomas Muir, A. F. Garthe</td>
+                        </tr>
+                        <tr>
+                           <td>um 1973</td>
+                           <td>Sappho, Sängerin archäischer Liebe. Biograph. Vers-Erzählung in antiken Oden-Formen
+                              unter Einbeziehung sapphischer Originalfragmente in freier Nachdichtung</td>
+                           <td>Hubert Ludo Gerwald/Hubertus von Beyer</td>
+                        </tr>
+                        <tr>
+                           <td>1981</td>
+                           <td>Schöne Aussicht</td>
+                           <td>Walter Kempowski</td>
+                        </tr>
+                        <tr>
+                           <td>1983</td>
+                           <td>Jüdische Sappho</td>
+                           <td>Inge Merkel</td>
+                        </tr>
+                        <tr>
+                           <td>1983</td>
+                           <td>Amanda. Ein Hexenroman [= Zweiter Teil der Salman-Trilogie]</td>
+                           <td>Irmtraud Morgner</td>
+                        </tr>
+                        <tr>
+                           <td>1983</td>
+                           <td>Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf
+                              Lesbos</td>
+                           <td>Christine Brückner</td>
+                        </tr>
+                        <tr>
+                           <td>1983</td>
+                           <td>Dich hat Amor gewiß …</td>
+                           <td>Waldtraut Lewin</td>
+                        </tr>
+                        <tr>
+                           <td>1983</td>
+                           <td>Der Vikar Sappho oder Die Verzauberung. Erzählung</td>
+                           <td>Ottilie Schenk</td>
+                        </tr>
+                        <tr>
+                           <td>1983</td>
+                           <td>Kassandra. Erzählung</td>
+                           <td>Christa Wolf</td>
+                        </tr>
+                        <tr>
+                           <td>1984</td>
+                           <td>Die Frau im Brunnen. Roman</td>
+                           <td>Christa Reinig</td>
+                        </tr>
+                        <tr>
+                           <td>1986</td>
+                           <td>Sappho. Ein griechischer Sommernachtstraum</td>
+                           <td>Joachim Fernau</td>
+                        </tr>
+                        <tr>
+                           <td>1986</td>
+                           <td>Medusa</td>
+                           <td>Stefan Schütz</td>
+                        </tr>
+                        <tr>
+                           <td>1988</td>
+                           <td>Männerlust – Frauenlob, Anmerkungen zur Sapphorezeption und zum Orgasmusproblem</td>
+                           <td>Hubert Fichte</td>
+                        </tr>
+                        <tr>
+                           <td>1990</td>
+                           <td>Immer waren wir Hand in Hand. Erinna an Sappho</td>
+                           <td>Johannes Rüber</td>
+                        </tr>
+                        <tr>
+                           <td>1992</td>
+                           <td>Ich aber schlafe allein</td>
+                           <td>Helga Hegewisch</td>
+                        </tr>
+                        <tr>
+                           <td>1992</td>
+                           <td>Alexander – Der Roman der Einigung Griechenlands „Hellas“</td>
+                           <td>Gisbert Haefs</td>
+                        </tr>
+                        <tr>
+                           <td>1993</td>
+                           <td>Der Weg nach Oobliadooh</td>
+                           <td>Fritz Rudolf Fries</td>
+                        </tr>
+                        <tr>
+                           <td>1997</td>
+                           <td>Sappho küsst Europa. Geschichten von Lesben aus 20 Längern</td>
+                           <td>Hg. v. Madeleine Marti und Marianne Ulmi</td>
+                        </tr>
+                        <tr>
+                           <td>1999</td>
+                           <td>Sappho küßt die Welt. Geschichten von Lesben aus vier Kontinenten</td>
+                           <td>Hg. v. Käthe H. Fleckenstein</td>
+                        </tr>
+                        <tr>
+                           <td>2001</td>
+                           <td>Sappho. Roman</td>
+                           <td>Siegfried Obermeier</td>
+                        </tr>
+                        <tr>
+                           <td>2005</td>
+                           <td>SAPPHO »und dass ich dich lieben werde …«. Erinnerungen der Poetin und ihrer Hetären</td>
+                           <td>Tami van Dalen [d. i. Tami Dahlheim]</td>
+                        </tr>
+                        <tr>
+                           <td>2008</td>
+                           <td>Die Mädchen der Sappho. Archäologische und andere Streifzüge auf der Insel Lesbos</td>
+                           <td>Niklaus Gaschen</td>
+                        </tr>
+                        <tr>
+                           <td>2010</td>
+                           <td>Das Mädchen aus Eresos. Die Jugend der altgriechischen Dichterin Sappho</td>
+                           <td>Heinrich B. Siedentopf</td>
+                        </tr>
+                        <tr>
+                           <td>2012</td>
+                           <td>THE MOST BEAUTIFUL</td>
+                           <td>Barbara Köhler</td>
+                        </tr>
+                        <tr>
+                           <td>2014</td>
+                           <td>Mein Lieber Feldmann</td>
+                           <td>Bertram Reinecke</td>
+                        </tr>
+                        <tr>
+                           <td>2018</td>
+                           <td>Verzeichnis einiger Verluste</td>
+                           <td>Judith Schalansky</td>
+                        </tr>
+                        <tr>
+                           <td>2021</td>
+                           <td>Sapphos Sprung</td>
+                           <td>Karen Aydin</td>
+                        </tr>
+                        <tr>
+                           <td>2021</td>
+                           <td>Sappho, Dichterin einer neuen Zeit. Die große Romanbiografie</td>
+                           <td>Siegfried Obermeier</td>
+                        </tr>
+                        <tr>
+                           <td>2023</td>
+                           <td>»The mountains so vast«: Eine lesbische Wallfahrt</td>
+                           <td>Evan Tepest</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+         </div>
+         <div id="wrapper-footer-full"><a href="../html/imprint.html">© Laura Untner 2024</a></div><script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script><script src="js/listStopProp.js"></script><script src="js/navScroll.js"></script><script type="text/javascript" src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js"></script><script type="text/javascript" src="js/dt.js"></script><script>
+                        $(document).ready(function () {
+                            createDataTable('tocTable');
+                        });
+                    </script></div>
+   </body>
+</html>
