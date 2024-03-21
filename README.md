@@ -8,8 +8,5 @@ The [XML/TEI files](https://laurauntner/github.io/sappho-digital/data/lists) lis
 
 The [website](https://laurauntner/github.io/sappho-digital) is based on the [DSE-Static-Cookiecutter](https://github.com/acdh-oeaw/dse-static-cookiecutter).
 
-### Issues
-- improve Python-workflow to get the data lists, esp. regarding »a. d. Nachlass«
-
 *Color code: rgba(94, 23, 235)*
 *Font: Geist Sans*
