@@ -6,6 +6,6 @@ The data produced is part of the dissertation project by Laura Untner ([laura.un
 
 The [XML/TEI files](https://github.com/laurauntner/sappho-digital/tree/main/data/lists) listing testimonies of the productive literary reception of Sappho are generated locally with Python scripts from an Excel file and are then sorted with xslt/sort.xsl and xslt/n-bibl.xsl.
 
-The [website](https://laurauntner.github.io/sappho-digital/) is based on the [DSE-Static-Cookiecutter](https://github.com/acdh-oeaw/dse-static-cookiecutter).
+The [website](https://sappho-digital.com/) is based on the [DSE-Static-Cookiecutter](https://github.com/acdh-oeaw/dse-static-cookiecutter).
 
 *Color code: rgba(94, 23, 235)*, *Font: Geist Sans*
