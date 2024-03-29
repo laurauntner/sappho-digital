@@ -1,4 +1,4 @@
-# Die literarische Sappho-Rezeption im deutschsprachigen Raum
+# The literary reception of Sappho in German-speaking countries
 
 This repo provides information about the literary reception of Sappho in German-speaking countries. 
 
