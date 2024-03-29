@@ -413,6 +413,12 @@ a:hover {
     .custom-logo-link {
         margin-bottom: 0;
     }
+    .card {
+    margin-bottom: 0px;
+    margin-top: 1.5em !important;
+    box-shadow: none !important;
+    --bs-card-border-width: 0;
+}
 
 }
 
