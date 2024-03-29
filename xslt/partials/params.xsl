@@ -7,5 +7,5 @@
     <xsl:param name="github_url">https://github.com/laurauntner/sappho-digital</xsl:param>
     <xsl:param name="html_title">Sappho Digital</xsl:param>
     <xsl:param name="project_logo">images/sappho-reception-digital_logo.png</xsl:param>
-    <xsl:param name="base_url">https://laurauntner/github.io/sappho-digital</xsl:param>
+    <xsl:param name="base_url">https://sappho-digital.com</xsl:param>
 </xsl:stylesheet>
