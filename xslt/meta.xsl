@@ -97,13 +97,25 @@
         </li>
     </xsl:template>
     
-    <xsl:template match="tei:graphic">
+    <xsl:template match="tei:graphic[@type='cover']">
         <img>
             <xsl:attribute name="src">
                 <xsl:value-of select="@url"/>
             </xsl:attribute>
             <xsl:attribute name="class">
                 <xsl:text>cover</xsl:text>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </img>
+    </xsl:template>
+    
+    <xsl:template match="tei:graphic[@type='funding']">
+        <img>
+            <xsl:attribute name="src">
+                <xsl:value-of select="@url"/>
+            </xsl:attribute>
+            <xsl:attribute name="class">
+                <xsl:text>funding</xsl:text>
             </xsl:attribute>
             <xsl:apply-templates/>
         </img>

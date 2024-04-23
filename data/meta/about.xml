@@ -119,8 +119,7 @@
                 <p>Wer diese <hi rend="bold">Webseite</hi> zitieren möchte, kann diese Vorlage
                     verwenden:</p>
                 <p>Laura Untner: Sappho Digital. Die literarische Sappho-Rezeption im
-                    deutschsprachigen Raum. Wien 2024, <ref
-                        target="https://sappho-digital.com"
+                    deutschsprachigen Raum. Wien 2024, <ref target="https://sappho-digital.com"
                         >https://sappho-digital.com</ref>.</p>
                 <p>Wer auf das <hi rend="bold">Projekt</hi> selbst verweisen möchte, kann diese
                     Vorlage verwenden:</p>
@@ -166,6 +165,13 @@
                         target="https://twitter.com/l_untner">X</ref> und <ref
                         target="https://bsky.app/profile/luntner.bsky.social">Bluesky</ref> finden
                     Sie mich ebenfalls.</p>
+            </div>
+            <div type="funding">
+                <head>Fördergeber</head>
+                <p>Gefördert von der Stadt Wien Kultur (MA 7 Wissenschaft)</p>
+                <figure>
+                    <graphic type="funding" url="images/Stadt_Wien_Kultur_pos_rgb.png"/>
+                </figure>
             </div>
         </body>
     </text>
