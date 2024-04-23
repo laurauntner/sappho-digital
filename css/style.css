@@ -34,6 +34,12 @@
     margin-top: 30px !important;
 }
 
+.funding {
+    width: 10% !important;
+    height: 10% !important;
+    float: left;
+}
+
 h3 {
     margin-top: 40px;
     margin-bottom: 10px;
@@ -414,11 +420,11 @@ a:hover {
         margin-bottom: 0;
     }
     .card {
-    margin-bottom: 0px;
-    margin-top: 1.5em !important;
-    box-shadow: none !important;
-    --bs-card-border-width: 0;
-}
+        margin-bottom: 0px;
+        margin-top: 1.5em !important;
+        box-shadow: none !important;
+        --bs-card-border-width: 0;
+    }
 
 }
 
