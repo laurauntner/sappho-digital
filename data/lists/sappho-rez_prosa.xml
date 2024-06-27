@@ -1,845 +1,882 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-   <teiHeader>
-      <fileDesc>
-         <titleStmt>
-            <title type="main">Prosaische Rezeptionszeugnisse</title>
-         </titleStmt>
-         <publicationStmt>
-            <publisher>Laura Untner</publisher>
-            <pubPlace>Wien</pubPlace>
-            <date when="2024">2024</date>
-            <availability>
-               <licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
-                  <p>CC BY 4.0</p>
-               </licence>
-            </availability>
-         </publicationStmt>
-         <sourceDesc>
-            <p>Born digital</p>
-         </sourceDesc>
-      </fileDesc>
-   </teiHeader>
-   <text>
-      <body>
-         <listBibl>
-            <bibl n="1">
-               <date when="1474">[um 1474]</date>
-               <title>Von Saphos der poeta das xlv capitel</title>
-               <author>Heinrich Steinhöwel [Übers. Boccaccios De mulieribus claris (1374)]</author>
-            </bibl>
-            <bibl n="2">
-               <date when="1494">1494</date>
-               <title>Das Narrenschiff</title>
-               <author>Sebastian Brant</author>
-            </bibl>
-            <bibl n="3">
-               <date notBefore="1554" notAfter="1557">1554–1557</date>
-               <title>Wie Lewfrid an eines Graffen Hoff in die Küchen kam/un Küchebub ward/wie in
-                    der meisterkoch fast Lieb gewan: weiter von seinem Wolsingen</title>
-               <author>Jörg Wickram</author>
-            </bibl>
-            <bibl n="4">
-               <date when="1640">1640</date>
-               <title>Les Visiones De Don Francesco De Quevedo Villegas. Oder Wunderbahre Satyrische gesichte Verteutscht durch Philander von Sittewalt</title>
-               <author>Johann Michael Moscherosch [Übers. Francisco Gómez de Quevedo y Villegas’ Sueños y Discursos (1627) – war Moscherosch aber nur im Franz. bekannt] </author>
-            </bibl>
-            <bibl n="5">
-               <date notBefore="1689" notAfter="1690">1689/1690</date>
-               <title>Großmütiger Feldherr Arminius</title>
-               <author>Daniel Casper von Lohenstein</author>
-            </bibl>
-            <bibl n="6">
-               <date when="1690">1690</date>
-               <title>Der Academische Roman</title>
-               <author>Eberhard Werner Happel</author>
-            </bibl>
-            <bibl n="7">
-               <date when="1743">1743</date>
-               <title>Der Autor. Drittes Stück</title>
-               <author>Karl Christian Gärtner</author>
-            </bibl>
-            <bibl n="8">
-               <date when="1763">1763</date>
-               <title>Die Jungfrau. Zweyter Gesang</title>
-               <author>Justus Friedrich Wilhelm Zachariae</author>
-            </bibl>
-            <bibl n="9">
-               <date when="1772">1772</date>
-               <title>Die Abenteuer des Don Sylvio von Rosalva</title>
-               <author>[Christoph Martin Wieland]</author>
-            </bibl>
-            <bibl n="10">
-               <date notBefore="1773" notAfter="1776">1773–1776</date>
-               <title>Das Leben und die Meinungen des Herrn Magister Sebaldus Nothanker</title>
-               <author>Friedrich Nicolai</author>
-            </bibl>
-            <bibl n="11">
-               <date when="1774">1774</date>
-               <title>Geschichte der Abderiten</title>
-               <author>Christoph Martin Wieland</author>
-            </bibl>
-            <bibl n="12">
-               <date when="1774">1774</date>
-               <title>Laidion oder die Eleusinischen Geheimnisse. Erster Theil [zweiter nicht erschienen]</title>
-               <author>Wilhelm Heinse</author>
-            </bibl>
-            <bibl n="13">
-               <date when="1776">1776</date>
-               <title>Der Landprediger</title>
-               <author>Jakob Michael Reinhold Lenz</author>
-            </bibl>
-            <bibl n="14">
-               <date notBefore="1786" notAfter="1794">1786–1794</date>
-               <title>Hildegard von Hohenthal</title>
-               <author>Wilhelm Heinse</author>
-            </bibl>
-            <bibl n="15">
-               <date when="1787">1787</date>
-               <title>Eine Italiänische Geschichte aus dem sechszehnten Jahrhundert [später: Ardinghello und die glückseligen Inseln]</title>
-               <author>[Wilhelm Heinse]</author>
-            </bibl>
-            <bibl n="16">
-               <date when="1790">1790</date>
-               <title>Reise des jüngern Anacharsis durch Griechenland, viertehalbhundert Jahr vor der gewöhnlichen Zeitrechnung. Zweiter Theil</title>
-               <author>Johann Erich Biester [Übers. Barthelemys Voyage du jeune Anacharsis en Grèce (1788)]</author>
-            </bibl>
-            <bibl n="17">
-               <date when="1790">1790</date>
-               <title>Reise des jüngern Anacharsis durch Griechenland, viertehalbhundert Jahr vor der gewöhnlichen Zeitrechnung. Dritter Theil</title>
-               <author>Johann Erich Biester [Übers. Barthelemys Voyage du jeune Anacharsis en Grèce (1788)]</author>
-            </bibl>
-            <bibl n="18">
-               <date notBefore="1791" notAfter="1805">1791–1805</date>
-               <title>Reise in die mittäglichen Provinzen von Frankreich im Jahre 1785–1786. 10 Bde.</title>
-               <author>Moritz August von Thümmel</author>
-            </bibl>
-            <bibl n="19">
-               <date when="1793">1793</date>
-               <title>Reise des jüngern Anacharsis durch Griechenland, viertehalbhundert Jahr vor der gewöhnlichen Zeitrechnung. Siebenter und letzter Theil</title>
-               <author>Johann Erich Biester [Übers. Barthelemys Voyage du jeune Anacharsis en Grèce (1788)]</author>
-            </bibl>
-            <bibl n="20">
-               <date when="1793">1793</date>
-               <title>Fragment von Hyperion [dritter Band]</title>
-               <author>Friedrich Hölderlin</author>
-            </bibl>
-            <bibl n="21">
-               <date notBefore="1798" notAfter="1799">[vmtl. 1798/1799]</date>
-               <title>[Romanentwurf a. d. Nachlass]</title>
-               <author>Caroline Schlegel-Schelling</author>
-            </bibl>
-            <bibl n="22">
-               <date when="1799">1799</date>
-               <title>Lucinde. Ein Roman. Erster Theil [mehr nicht erschienen]</title>
-               <author>Friedrich Schlegel</author>
-            </bibl>
-            <bibl n="23">
-               <date when="1800">1800</date>
-               <title>Die Schwestern von Lesbos</title>
-               <author>Amalie von Imhoff / Helvig</author>
-            </bibl>
-            <bibl n="24">
-               <date notBefore="1800" notAfter="1801">1800–1801</date>
-               <title>Aristipp und einige seiner Zeitgenossen. 4 Bde.</title>
-               <author>Christoph Martin Wieland</author>
-            </bibl>
-            <bibl n="25">
-               <date notBefore="1801" notAfter="1804">zw. 1801–1804</date>
-               <title>Ein apokaliptisches Fragment</title>
-               <author>Tian [d. i. Karoline von Günderrode, »Sappho der Romantik«]</author>
-            </bibl>
-            <bibl n="26">
-               <date when="1804">1804</date>
-               <title>Albert und Albertine</title>
-               <author>Friederike Helene Unger</author>
-            </bibl>
-            <bibl n="27">
-               <date when="1806">1806</date>
-               <title>Sapho und Phaon. Ein Roman</title>
-               <author>Sophie Mereau [Übers. Notts Sappho. After a Greek Romance (= Übers. v. Verris Avventure)? (1803)]</author>
-            </bibl>
-            <bibl n="28">
-               <date when="1807">1807</date>
-               <title>Sappho und Phaon</title>
-               <author>Friedrich Buchholz</author>
-            </bibl>
-            <bibl n="29">
-               <date when="1809">1809</date>
-               <title>Sapho von Mitylene (Bruchstück aus dem 1. Capitel des 17. Buches)</title>
-               <author>Franz Passow [Übersetzungsprobe von Verris Le avventure di Saffo (1780)]</author>
-            </bibl>
-            <bibl n="30">
-               <date when="1810">1810</date>
-               <title>Armut, Reichtum, Schuld und Buße der Gräfin Dolores</title>
-               <author>Ludwig Achim von Arnim</author>
-            </bibl>
-            <bibl n="31">
-               <date when="1820">1820</date>
-               <title>Reise auf der Post von Dresden nach Leipzig. Eine humoristische Erzählung</title>
-               <author>Karl Wilhelm Baumgarten-Crusius</author>
-            </bibl>
-            <bibl n="32">
-               <date when="1834">1834</date>
-               <title>Rahel. Ein Buch des Andekens für ihre Freunde. Bd. 2</title>
-               <author>Rahel Varnhagen von Ense, hg. v. Karl August Varnhagen von Ense</author>
-            </bibl>
-            <bibl n="33">
-               <date when="1834">1834</date>
-               <title>Scenen aus meinem Leben</title>
-               <author>Louis Graf von Ostrowski</author>
-            </bibl>
-            <bibl n="34">
-               <date when="1835">1835</date>
-               <title>Goethes Briefwechsel mit einem Kinde. Seinem Denkmal. Zweiter Theil</title>
-               <author>Bettina von Arnim</author>
-            </bibl>
-            <bibl n="35">
-               <date when="1836">1836</date>
-               <title>Die schwedischen Bräute. Eine Novelle</title>
-               <author>Carl Eichel</author>
-            </bibl>
-            <bibl n="36">
-               <date when="1838">1838</date>
-               <title>Der Guckguck</title>
-               <author>Carl Frühauf</author>
-            </bibl>
-            <bibl n="37">
-               <date when="1842">1842</date>
-               <title>Saturns Leichenrede auf das Jahr 1841</title>
-               <author>Carl Raimung Frühauf</author>
-            </bibl>
-            <bibl n="38">
-               <date notBefore="1845" notAfter="1846">1845–1846</date>
-               <title>Metamorphosen</title>
-               <author>Franz von Elling</author>
-            </bibl>
-            <bibl n="39">
-               <date when="1853">1853</date>
-               <title>Die Wiener in Griechenland. Novelle</title>
-               <author>Julius Krebs</author>
-            </bibl>
-            <bibl n="40">
-               <date when="1855">1855</date>
-               <title>Soll und Haben</title>
-               <author>Gustav Freytag</author>
-            </bibl>
-            <bibl n="41">
-               <date when="1855">1855</date>
-               <title>Ekkehard</title>
-               <author>Joseph Viktor von Scheffel</author>
-            </bibl>
-            <bibl n="42">
-               <date when="1855">1855</date>
-               <title>Meine Reise im Orient. 2 Bde.</title>
-               <author>Alexander Ziegler</author>
-            </bibl>
-            <bibl n="43">
-               <date when="1856">1856</date>
-               <title>Der Verstoßene</title>
-               <author>Raoul</author>
-            </bibl>
-            <bibl n="44">
-               <date when="1864">1864</date>
-               <title>Die verlorene Handschrift. 3 Teile</title>
-               <author>Gustav Freytag</author>
-            </bibl>
-            <bibl n="45">
-               <date when="1864">1864</date>
-               <title>Eine Aegyptische Königstochter. Historischer Roman. Erster Band</title>
-               <author>Georg Ebers</author>
-            </bibl>
-            <bibl n="46">
-               <date when="1864">1864</date>
-               <title>Eine Aegyptische Königstochter. Zweiter Band</title>
-               <author>Georg Ebers</author>
-            </bibl>
-            <bibl n="47">
-               <date when="1864">1864</date>
-               <title>Eine Aegyptische Königstochter. Dritter Band</title>
-               <author>Georg Ebers</author>
-            </bibl>
-            <bibl n="48">
-               <date when="1866">1866</date>
-               <title>Erste, zweite und dritte Liebe. Eine Erzählung</title>
-               <author>Wilhelm Fischer</author>
-            </bibl>
-            <bibl n="49">
-               <date notBefore="1867" notAfter="1869">1867/1869</date>
-               <title>Der Schüdderump</title>
-               <author>Wilhelm Raabe</author>
-            </bibl>
-            <bibl n="50">
-               <date notBefore="1874" notAfter="1875">1874–1875</date>
-               <title>Eine moderne Sappho</title>
-               <author>Bertha Augusti (B. Schoeler)</author>
-            </bibl>
-            <bibl n="51">
-               <date when="1875">1875</date>
-               <title>Das Quartier der Sappho</title>
-               <author>Antoine Pithon</author>
-            </bibl>
-            <bibl n="52">
-               <date when="1875">1875</date>
-               <title>Bonmots</title>
-               <author>F. Ztg.</author>
-            </bibl>
-            <bibl n="53">
-               <date when="1878">1878</date>
-               <title>Schützende Hände</title>
-               <author>M. Alland</author>
-            </bibl>
-            <bibl n="54">
-               <date when="1879">1879</date>
-               <title>Verlorene Blätter</title>
-               <author>D. Beta</author>
-            </bibl>
-            <bibl n="55">
-               <date when="1880">1880</date>
-               <title>Sappho</title>
-               <author>Carmen Sylva [d. i. Elisabeth zu Wied]</author>
-            </bibl>
-            <bibl n="56">
-               <date when="1881">1881</date>
-               <title>Nach dem Tode</title>
-               <author>Marie von Ebner-Eschenbach</author>
-            </bibl>
-            <bibl n="57">
-               <date when="1883">1883</date>
-               <title>Sappho. Novelle</title>
-               <author>E. Jegher</author>
-            </bibl>
-            <bibl n="58">
-               <date when="1884">1884</date>
-               <title>Sappho. Pariser Sittenbild. Bd. 1</title>
-               <author>o. A. [Übers. Daudets Sapho (1884)]</author>
-            </bibl>
-            <bibl n="59">
-               <date when="1884">1884</date>
-               <title>Sappho. Pariser Sittenbild. Bd. 2</title>
-               <author>o. A. [Übers. Daudets Sapho (1884)]</author>
-            </bibl>
-            <bibl n="60">
-               <date when="1886">1886</date>
-               <title>Sappho. Griechische Novelle</title>
-               <author>Johannes Flach</author>
-            </bibl>
-            <bibl n="61">
-               <date when="1886">1886</date>
-               <title>Gefahr im Verzuge. Humoreske</title>
-               <author>F. Schifkorn</author>
-            </bibl>
-            <bibl n="62">
-               <date when="1886">1886?</date>
-               <title>Die Sappho von Arles</title>
-               <author>Ludwig Weißel</author>
-            </bibl>
-            <bibl n="63">
-               <date when="1888">1888</date>
-               <title>Im Garten der Semiramis</title>
-               <author>W. Egbert</author>
-            </bibl>
-            <bibl n="64">
-               <date when="1888">1888</date>
-               <title>Geheilter Wahn</title>
-               <author>F. v. Kapff-Essenther</author>
-            </bibl>
-            <bibl n="65">
-               <date when="1888">1888</date>
-               <title>Größenwahn</title>
-               <author>Karl Bleibtreu</author>
-            </bibl>
-            <bibl n="66">
-               <date when="1888">1888</date>
-               <title>Auf der Harzreise</title>
-               <author>A. Haupt</author>
-            </bibl>
-            <bibl n="67">
-               <date when="1888">1888</date>
-               <title>Höhenluft</title>
-               <author>Cary Groß</author>
-            </bibl>
-            <bibl n="68">
-               <date when="1889">1889</date>
-               <title>Sybilla Holm</title>
-               <author>T. Pauly</author>
-            </bibl>
-            <bibl n="69">
-               <date when="1890">1890</date>
-               <title>Zwei Seelen und ein Gedanke</title>
-               <author>F. v. Kapff-Essenther</author>
-            </bibl>
-            <bibl n="70">
-               <date when="1891">1891</date>
-               <title>Eine moderne Sappho</title>
-               <author>Alma Leschivo</author>
-            </bibl>
-            <bibl n="71">
-               <date when="1891">1891</date>
-               <title>Eva Siebeck</title>
-               <author>Bertha von Suttner</author>
-            </bibl>
-            <bibl n="72">
-               <date when="1891">1891</date>
-               <title>Aus der Bahn</title>
-               <author>Doris Freiin von Spättgen</author>
-            </bibl>
-            <bibl n="73">
-               <date when="1891">1891</date>
-               <title>In der elften Stunde</title>
-               <author>M. Stahl</author>
-            </bibl>
-            <bibl n="74">
-               <date when="1891">1891</date>
-               <title>Der Blaustrumpf</title>
-               <author>Georg Biagosch</author>
-            </bibl>
-            <bibl n="75">
-               <date when="1891">1891</date>
-               <title>Zwei Titanen</title>
-               <author>A. von Tannus</author>
-            </bibl>
-            <bibl n="76">
-               <date when="1893">[1893]</date>
-               <title>Ein scandalöser Fall</title>
-               <author>Oskar Panizza</author>
-            </bibl>
-            <bibl n="77">
-               <date when="1894">1894</date>
-               <title>Werde, die Du bist!</title>
-               <author>Hedwig Dohm</author>
-            </bibl>
-            <bibl n="78">
-               <date when="1895">1895</date>
-               <title>Reidlingen</title>
-               <author>A. von Limburg</author>
-            </bibl>
-            <bibl n="79">
-               <date when="1897">1897</date>
-               <title>»Weihnacht!« Reiseerzählung</title>
-               <author>Karl May</author>
-            </bibl>
-            <bibl n="80">
-               <date when="1898">1898</date>
-               <title>Eine moderne Sappho</title>
-               <author>Luise Wohl</author>
-            </bibl>
-            <bibl n="81">
-               <date when="1902">1902</date>
-               <title>Mit der Fluth</title>
-               <author>C. Dressel</author>
-            </bibl>
-            <bibl n="82">
-               <date when="1902">[1902]</date>
-               <title>Sappho. Eine Novelle</title>
-               <author>Therese Rak</author>
-            </bibl>
-            <bibl n="83">
-               <date when="1902">1902</date>
-               <title>Sapphos Verse. Byzantinischer Roman</title>
-               <author>Karl Roth</author>
-            </bibl>
-            <bibl n="84">
-               <date when="1902">1902</date>
-               <title>Marianne Wildenberg</title>
-               <author>Hans Karlsen</author>
-            </bibl>
-            <bibl n="85">
-               <date when="1902">1902</date>
-               <title>Schattenspiel</title>
-               <author>Karl Theodor Schultz</author>
-            </bibl>
-            <bibl n="86">
-               <date when="1903">1903</date>
-               <title>Münchner Kindeln!</title>
-               <author>Anton Frhrn. v. Perfall</author>
-            </bibl>
-            <bibl n="87">
-               <date when="1904">1904</date>
-               <title>Sappho</title>
-               <author>Ferdinand von Saar</author>
-            </bibl>
-            <bibl n="88">
-               <date when="1904">1904</date>
-               <title>Ithaka</title>
-               <author>Hermione von Preuschen</author>
-            </bibl>
-            <bibl n="89">
-               <date notAfter="1904">n. n. 1904</date>
-               <title>Sappho die Dichterin von Lesbos. Roman der Schönheit [Fragment a. d. Nachlass]</title>
-               <author>Peter Hille</author>
-            </bibl>
-            <bibl n="90">
-               <date when="1906">1906</date>
-               <title>Rache</title>
-               <author>Doris Freiin von Spättgen</author>
-            </bibl>
-            <bibl n="91">
-               <date when="1906">1906</date>
-               <title>Weder Glück noch Stern</title>
-               <author>Eugen Stangen</author>
-            </bibl>
-            <bibl n="92">
-               <date when="1906">1906</date>
-               <title>Die Erzieher der jungen Mädchen</title>
-               <author>Max Brod</author>
-            </bibl>
-            <bibl n="93">
-               <date when="1907">1907</date>
-               <title>Die Bücher einer Liebenden</title>
-               <author>Rainer Maria Rilke</author>
-            </bibl>
-            <bibl n="94">
-               <date when="1907">1907</date>
-               <title>Die Liebe Daria Lantes. Ein römischer Roman in zwei Teilen</title>
-               <author>Richard Boß</author>
-            </bibl>
-            <bibl n="95">
-               <date when="1908">1908</date>
-               <title>Ein Irrtum des Herzens. Originalroman</title>
-               <author>Fanz Zistler</author>
-            </bibl>
-            <bibl n="96">
-               <date when="1908">1908</date>
-               <title>Odysseus’ Heimkehr. Humoristischer Gesellschaftsroman aus Oesterreich</title>
-               <author>Wolf von Tainach</author>
-            </bibl>
-            <bibl n="97">
-               <date when="1908">1908</date>
-               <title>Erneste. Roman</title>
-               <author>Ursula Zöge von Mauteuffel</author>
-            </bibl>
-            <bibl n="98">
-               <date notBefore="1908" notAfter="1909">1908–1909</date>
-               <title>Der leukadische Felsen [tw. auch »Der leukatische Felsen« betitelt]</title>
-               <author>A. Noël</author>
-            </bibl>
-            <bibl n="99">
-               <date when="1909">1909</date>
-               <title>Das Kind von Goslar</title>
-               <author>Adolf von Wilbrandt</author>
-            </bibl>
-            <bibl n="100">
-               <date when="1909">1909</date>
-               <title>Unsere Schweizer</title>
-               <author>Florentine Kazelle</author>
-            </bibl>
-            <bibl n="101">
-               <date when="1910">1910</date>
-               <title>Die Aufzeichnungen des Malte Laurids Brigge. Bd. 2</title>
-               <author>Rainer Maria Rilke</author>
-            </bibl>
-            <bibl n="102">
-               <date when="1910">1910</date>
-               <title>Theater</title>
-               <author>Ernst Georgy</author>
-            </bibl>
-            <bibl n="103">
-               <date when="1911">1911</date>
-               <title>Frühlingstaumel</title>
-               <author>Gabriele Reuter</author>
-            </bibl>
-            <bibl n="104">
-               <date when="1911">1911</date>
-               <title>Der neue Herr</title>
-               <author>Walter Hogarth</author>
-            </bibl>
-            <bibl n="105">
-               <date when="1913">1913</date>
-               <title>Helge Bendels Luftschlösser. Ein Chikago-Roman</title>
-               <author>Henning Berger</author>
-            </bibl>
-            <bibl n="106">
-               <date when="1914">1914</date>
-               <title>Schloß Melchow. Roman</title>
-               <author>H. Steinbach</author>
-            </bibl>
-            <bibl n="107">
-               <date when="1916">1916</date>
-               <title>Zeitenwende</title>
-               <author>A. L. Lindner</author>
-            </bibl>
-            <bibl n="108">
-               <date when="1917">1917</date>
-               <title>Die letzten Tage von Pompeji</title>
-               <author>G. L. Bulwer</author>
-            </bibl>
-            <bibl n="109">
-               <date when="1918">1918</date>
-               <title>Bis zur nächsten Ecke</title>
-               <author>H. Teichmann</author>
-            </bibl>
-            <bibl n="110">
-               <date when="1918">1918</date>
-               <title>Die Briefe des Fräulein Brandt</title>
-               <author>Felix Hollaender</author>
-            </bibl>
-            <bibl n="111">
-               <date when="1918">1918</date>
-               <title>Lodz. Das gelobte Land</title>
-               <author>W. St. Reymont</author>
-            </bibl>
-            <bibl n="112">
-               <date when="1922">1922</date>
-               <title>Maskerade</title>
-               <author>Anna Kappstein</author>
-            </bibl>
-            <bibl n="113">
-               <date when="1922">1922</date>
-               <title>Fünfundzwanzig Bräute. Schelmenroman</title>
-               <author>Wilhelm Herbert</author>
-            </bibl>
-            <bibl n="114">
-               <date when="1922">1922</date>
-               <title>Hunger!</title>
-               <author>Frida Raimann</author>
-            </bibl>
-            <bibl n="115">
-               <date when="1922">1922</date>
-               <title>Die lachende Maske. Roman</title>
-               <author>Paul Oskar Höcker</author>
-            </bibl>
-            <bibl n="116">
-               <date when="1924">1924</date>
-               <title>Schauspieler</title>
-               <author>Hans Rewald</author>
-            </bibl>
-            <bibl n="117">
-               <date when="1926">1926</date>
-               <title>Durchaus unpassende Geschichten</title>
-               <author>Kurt Tucholsky</author>
-            </bibl>
-            <bibl n="118">
-               <date when="1926">1926</date>
-               <title>Die Prüfung. Eine Novelle aus dem Lande der Romantik</title>
-               <author>Carry Brachvogel</author>
-            </bibl>
-            <bibl n="119">
-               <date when="1926">1926</date>
-               <title>Eine Frau und vier Verehrer. Novelle</title>
-               <author>Edmund Schopen</author>
-            </bibl>
-            <bibl n="120">
-               <date when="1927">1927</date>
-               <title>Spiel im Morgengrauen. Novelle</title>
-               <author>Arthur Schnitzler</author>
-            </bibl>
-            <bibl n="121">
-               <date when="1928">1928</date>
-               <title>Der Sprung ins Leben. Roman</title>
-               <author>Max Castman</author>
-            </bibl>
-            <bibl n="122">
-               <date when="1931">1931?</date>
-               <title>Römische Sappho</title>
-               <author>Max Sidow</author>
-            </bibl>
-            <bibl n="123">
-               <date when="1935">1935</date>
-               <title>Die Geschichte einer Hochzeitsreise. Roman</title>
-               <author>Walther von Hollander</author>
-            </bibl>
-            <bibl n="124">
-               <date when="1935">1935</date>
-               <title>Die Hand. Novelle</title>
-               <author>Rudolf Becht</author>
-            </bibl>
-            <bibl n="125">
-               <date when="1936">1936</date>
-               <title>Jagd nach dem Bildnis der Kaiserin Poppäa</title>
-               <author>Wilhelm Scheider</author>
-            </bibl>
-            <bibl n="126">
-               <date when="1937">1937</date>
-               <title>Nie wieder luegen</title>
-               <author>Irmgard Keun</author>
-            </bibl>
-            <bibl n="127">
-               <date when="1937">1937?</date>
-               <title>Der Thomaskantor</title>
-               <author>L. G. Bachmann</author>
-            </bibl>
-            <bibl n="128">
-               <date when="1938">1938</date>
-               <title>Susanne</title>
-               <author>Maria von Peteani</author>
-            </bibl>
-            <bibl n="129">
-               <date when="1938">1938</date>
-               <title>Zwischen Mann und Kind</title>
-               <author>Lili Körber</author>
-            </bibl>
-            <bibl n="130">
-               <date when="1938">1938</date>
-               <title>Wenn der Vollmond scheint …</title>
-               <author>Dyk</author>
-            </bibl>
-            <bibl n="131">
-               <date when="1938">1938</date>
-               <title>Sappho</title>
-               <author>R. A.</author>
-            </bibl>
-            <bibl n="132">
-               <date when="1939">1939</date>
-               <title>Ich erlebte fünfzig Jahre Weltgeschichte</title>
-               <author>Berta Zuckerkandl-Szeps</author>
-            </bibl>
-            <bibl n="133">
-               <date when="1939">1939</date>
-               <title>Die Schauspielerin</title>
-               <author>Otto Nebelthau</author>
-            </bibl>
-            <bibl n="134">
-               <date when="1942">1942</date>
-               <title>Das Lorbeerufer. Roman</title>
-               <author>Emil Barth</author>
-            </bibl>
-            <bibl n="135">
-               <date when="1945">1945</date>
-               <title>Sappho von Lesbos. Roman</title>
-               <author>Margot Klausner</author>
-            </bibl>
-            <bibl n="136">
-               <date when="1973">um 1973</date>
-               <title>Sappho, Sängerin archäischer Liebe. Biograph. Vers-Erzählung in antiken Oden-Formen unter Einbeziehung sapphischer Originalfragmente in freier Nachdichtung</title>
-               <author>Hubert Ludo Gerwald/Hubertus von Beyer</author>
-            </bibl>
-            <bibl n="137">
-               <date when="1981">1981</date>
-               <title>Schöne Aussicht</title>
-               <author>Walter Kempowski</author>
-            </bibl>
-            <bibl n="138">
-               <date when="1983">1983</date>
-               <title>Jüdische Sappho</title>
-               <author>Inge Merkel</author>
-            </bibl>
-            <bibl n="139">
-               <date when="1983">1983</date>
-               <title>Amanda. Ein Hexenroman [= Zweiter Teil der Salman-Trilogie]</title>
-               <author>Irmtraud Morgner</author>
-            </bibl>
-            <bibl n="140">
-               <date when="1983">1983</date>
-               <title>Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos</title>
-               <author>Christine Brückner</author>
-            </bibl>
-            <bibl n="141">
-               <date when="1983">1983</date>
-               <title>Dich hat Amor gewiß …</title>
-               <author>Waldtraut Lewin</author>
-            </bibl>
-            <bibl n="142">
-               <date when="1983">1983</date>
-               <title>Der Vikar Sappho oder Die Verzauberung. Erzählung</title>
-               <author>Ottilie Schenk</author>
-            </bibl>
-            <bibl n="143">
-               <date when="1983">1983</date>
-               <title>Kassandra. Erzählung</title>
-               <author>Christa Wolf</author>
-            </bibl>
-            <bibl n="144">
-               <date when="1984">1984</date>
-               <title>Die Frau im Brunnen. Roman</title>
-               <author>Christa Reinig</author>
-            </bibl>
-            <bibl n="145">
-               <date when="1986">1986</date>
-               <title>Sappho. Ein griechischer Sommernachtstraum</title>
-               <author>Joachim Fernau</author>
-            </bibl>
-            <bibl n="146">
-               <date when="1986">1986</date>
-               <title>Medusa</title>
-               <author>Stefan Schütz</author>
-            </bibl>
-            <bibl n="147">
-               <date when="1988">1988</date>
-               <title>Männerlust – Frauenlob, Anmerkungen zur Sapphorezeption und zum Orgasmusproblem</title>
-               <author>Hubert Fichte</author>
-            </bibl>
-            <bibl n="148">
-               <date when="1990">1990</date>
-               <title>Immer waren wir Hand in Hand. Erinna an Sappho</title>
-               <author>Johannes Rüber</author>
-            </bibl>
-            <bibl n="149">
-               <date when="1992">1992</date>
-               <title>Ich aber schlafe allein</title>
-               <author>Helga Hegewisch</author>
-            </bibl>
-            <bibl n="150">
-               <date when="1992">1992</date>
-               <title>Alexander – Der Roman der Einigung Griechenlands „Hellas“</title>
-               <author>Gisbert Haefs</author>
-            </bibl>
-            <bibl n="151">
-               <date when="1993">1993</date>
-               <title>Der Weg nach Oobliadooh</title>
-               <author>Fritz Rudolf Fries</author>
-            </bibl>
-            <bibl n="152">
-               <date when="1997">1997</date>
-               <title>Sappho küsst Europa. Geschichten von Lesben aus 20 Längern</title>
-               <author>Hg. v. Madeleine Marti und Marianne Ulmi</author>
-            </bibl>
-            <bibl n="153">
-               <date when="1999">1999</date>
-               <title>Sappho küßt die Welt. Geschichten von Lesben aus vier Kontinenten</title>
-               <author>Hg. v. Käthe H. Fleckenstein</author>
-            </bibl>
-            <bibl n="154">
-               <date when="2001">2001</date>
-               <title>Sappho. Roman</title>
-               <author>Siegfried Obermeier</author>
-            </bibl>
-            <bibl n="155">
-               <date when="2005">2005</date>
-               <title>SAPPHO »und dass ich dich lieben werde …«. Erinnerungen der Poetin und ihrer Hetären</title>
-               <author>Tami van Dalen [d. i. Tami Dahlheim]</author>
-            </bibl>
-            <bibl n="156">
-               <date when="2008">2008</date>
-               <title>Die Mädchen der Sappho. Archäologische und andere Streifzüge auf der Insel Lesbos</title>
-               <author>Niklaus Gaschen</author>
-            </bibl>
-            <bibl n="157">
-               <date when="2010">2010</date>
-               <title>Das Mädchen aus Eresos. Die Jugend der altgriechischen Dichterin Sappho</title>
-               <author>Heinrich B. Siedentopf</author>
-            </bibl>
-            <bibl n="158">
-               <date when="2012">2012</date>
-               <title>THE MOST BEAUTIFUL</title>
-               <author>Barbara Köhler</author>
-            </bibl>
-            <bibl n="159">
-               <date when="2014">2014</date>
-               <title>Mein Lieber Feldmann</title>
-               <author>Bertram Reinecke</author>
-            </bibl>
-            <bibl n="160">
-               <date when="2018">2018</date>
-               <title>Verzeichnis einiger Verluste</title>
-               <author>Judith Schalansky</author>
-            </bibl>
-            <bibl n="161">
-               <date when="2021">2021</date>
-               <title>Sapphos Sprung</title>
-               <author>Karen Aydin</author>
-            </bibl>
-            <bibl n="162">
-               <date when="2021">2021</date>
-               <title>Sappho, Dichterin einer neuen Zeit. Die große Romanbiografie</title>
-               <author>Siegfried Obermeier</author>
-            </bibl>
-            <bibl n="163">
-               <date when="2023">2023</date>
-               <title>»The mountains so vast«: Eine lesbische Wallfahrt</title>
-               <author>Evan Tepest</author>
-            </bibl>
-         </listBibl>
-      </body>
-   </text>
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title type="main">Prosaische Rezeptionszeugnisse</title>
+			</titleStmt>
+			<publicationStmt>
+				<publisher>Laura Untner</publisher>
+				<pubPlace>Wien</pubPlace>
+				<date when="2024">2024</date>
+				<availability>
+					<licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
+						<p>CC BY 4.0</p>
+					</licence>
+				</availability>
+			</publicationStmt>
+			<sourceDesc>
+				<p>Born digital</p>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<listBibl>
+				<bibl>
+					<date when="1474">[um 1474]</date>
+					<title>Von Saphos der poeta das xlv capitel</title>
+					<author>Heinrich Steinhöwel [Übers. Boccaccios De mulieribus claris
+						(1374)]</author>
+				</bibl>
+				<bibl>
+					<date when="1494">1494</date>
+					<title>Das Narrenschiff</title>
+					<author>Sebastian Brant</author>
+				</bibl>
+				<bibl>
+					<date notBefore="1554" notAfter="1557">1554–1557</date>
+					<title>Wie Lewfrid an eines Graffen Hoff in die Küchen kam/un Küchebub ward/wie
+						in der meisterkoch fast Lieb gewan: weiter von seinem Wolsingen</title>
+					<author>Jörg Wickram</author>
+				</bibl>
+				<bibl>
+					<date when="1640">1640</date>
+					<title>Les Visiones De Don Francesco De Quevedo Villegas. Oder Wunderbahre
+						Satyrische gesichte Verteutscht durch Philander von Sittewalt</title>
+					<author>Johann Michael Moscherosch [Übers. Francisco Gómez de Quevedo y
+						Villegas’ Sueños y Discursos (1627) – war Moscherosch aber nur im Franz.
+						bekannt] </author>
+				</bibl>
+				<bibl>
+					<date notBefore="1689" notAfter="1690">1689/1690</date>
+					<title>Großmütiger Feldherr Arminius</title>
+					<author>Daniel Casper von Lohenstein</author>
+				</bibl>
+				<bibl>
+					<date when="1690">1690</date>
+					<title>Der Academische Roman</title>
+					<author>Eberhard Werner Happel</author>
+				</bibl>
+				<bibl>
+					<date when="1743">1743</date>
+					<title>Der Autor. Drittes Stück</title>
+					<author>Karl Christian Gärtner</author>
+				</bibl>
+				<bibl>
+					<date when="1763">1763</date>
+					<title>Die Jungfrau. Zweyter Gesang</title>
+					<author>Justus Friedrich Wilhelm Zachariae</author>
+				</bibl>
+				<bibl>
+					<date when="1772">1772</date>
+					<title>Die Abenteuer des Don Sylvio von Rosalva</title>
+					<author>[Christoph Martin Wieland]</author>
+				</bibl>
+				<bibl>
+					<date notBefore="1773" notAfter="1776">1773–1776</date>
+					<title>Das Leben und die Meinungen des Herrn Magister Sebaldus Nothanker</title>
+					<author>Friedrich Nicolai</author>
+				</bibl>
+				<bibl>
+					<date when="1774">1774</date>
+					<title>Geschichte der Abderiten</title>
+					<author>Christoph Martin Wieland</author>
+				</bibl>
+				<bibl>
+					<date when="1774">1774</date>
+					<title>Laidion oder die Eleusinischen Geheimnisse. Erster Theil [zweiter nicht
+						erschienen]</title>
+					<author>Wilhelm Heinse</author>
+				</bibl>
+				<bibl>
+					<date when="1776">1776</date>
+					<title>Der Landprediger</title>
+					<author>Jakob Michael Reinhold Lenz</author>
+				</bibl>
+				<bibl>
+					<date notBefore="1786" notAfter="1794">1786–1794</date>
+					<title>Hildegard von Hohenthal</title>
+					<author>Wilhelm Heinse</author>
+				</bibl>
+				<bibl>
+					<date when="1787">1787</date>
+					<title>Eine Italiänische Geschichte aus dem sechszehnten Jahrhundert [später:
+						Ardinghello und die glückseligen Inseln]</title>
+					<author>[Wilhelm Heinse]</author>
+				</bibl>
+				<bibl>
+					<date when="1790">1790</date>
+					<title>Reise des jüngern Anacharsis durch Griechenland, viertehalbhundert Jahr
+						vor der gewöhnlichen Zeitrechnung. Zweiter Theil</title>
+					<author>Johann Erich Biester [Übers. Barthelemys Voyage du jeune Anacharsis en
+						Grèce (1788)]</author>
+				</bibl>
+				<bibl>
+					<date when="1790">1790</date>
+					<title>Reise des jüngern Anacharsis durch Griechenland, viertehalbhundert Jahr
+						vor der gewöhnlichen Zeitrechnung. Dritter Theil</title>
+					<author>Johann Erich Biester [Übers. Barthelemys Voyage du jeune Anacharsis en
+						Grèce (1788)]</author>
+				</bibl>
+				<bibl>
+					<date notBefore="1791" notAfter="1805">1791–1805</date>
+					<title>Reise in die mittäglichen Provinzen von Frankreich im Jahre 1785–1786. 10
+						Bde.</title>
+					<author>Moritz August von Thümmel</author>
+				</bibl>
+				<bibl>
+					<date when="1793">1793</date>
+					<title>Reise des jüngern Anacharsis durch Griechenland, viertehalbhundert Jahr
+						vor der gewöhnlichen Zeitrechnung. Siebenter und letzter Theil</title>
+					<author>Johann Erich Biester [Übers. Barthelemys Voyage du jeune Anacharsis en
+						Grèce (1788)]</author>
+				</bibl>
+				<bibl>
+					<date when="1793">1793</date>
+					<title>Fragment von Hyperion [dritter Band]</title>
+					<author>Friedrich Hölderlin</author>
+				</bibl>
+				<bibl>
+					<date notBefore="1798" notAfter="1799">[vmtl. 1798/1799]</date>
+					<title>[Romanentwurf a. d. Nachlass]</title>
+					<author>Caroline Schlegel-Schelling</author>
+				</bibl>
+				<bibl>
+					<date when="1799">1799</date>
+					<title>Lucinde. Ein Roman. Erster Theil [mehr nicht erschienen]</title>
+					<author>Friedrich Schlegel</author>
+				</bibl>
+				<bibl>
+					<date when="1800">1800</date>
+					<title>Die Schwestern von Lesbos</title>
+					<author>Amalie von Imhoff / Helvig</author>
+				</bibl>
+				<bibl>
+					<date notBefore="1800" notAfter="1801">1800–1801</date>
+					<title>Aristipp und einige seiner Zeitgenossen. 4 Bde.</title>
+					<author>Christoph Martin Wieland</author>
+				</bibl>
+				<bibl>
+					<date notBefore="1801" notAfter="1804">zw. 1801–1804</date>
+					<title>Ein apokaliptisches Fragment</title>
+					<author>Tian [d. i. Karoline von Günderrode, »Sappho der Romantik«]</author>
+				</bibl>
+				<bibl>
+					<date when="1804">1804</date>
+					<title>Albert und Albertine</title>
+					<author>Friederike Helene Unger</author>
+				</bibl>
+				<bibl>
+					<date when="1806">1806</date>
+					<title>Sapho und Phaon. Ein Roman</title>
+					<author>Sophie Mereau [Übers. Notts Sappho. After a Greek Romance (= Übers. v.
+						Verris Avventure)? (1803)]</author>
+				</bibl>
+				<bibl>
+					<date when="1807">1807</date>
+					<title>Sappho und Phaon</title>
+					<author>Friedrich Buchholz</author>
+				</bibl>
+				<bibl>
+					<date when="1809">1809</date>
+					<title>Sapho von Mitylene (Bruchstück aus dem 1. Capitel des 17. Buches)</title>
+					<author>Franz Passow [Übersetzungsprobe von Verris Le avventure di Saffo
+						(1780)]</author>
+				</bibl>
+				<bibl>
+					<date when="1810">1810</date>
+					<title>Armut, Reichtum, Schuld und Buße der Gräfin Dolores</title>
+					<author>Ludwig Achim von Arnim</author>
+				</bibl>
+				<bibl>
+					<date when="1820">1820</date>
+					<title>Reise auf der Post von Dresden nach Leipzig. Eine humoristische
+						Erzählung</title>
+					<author>Karl Wilhelm Baumgarten-Crusius</author>
+				</bibl>
+				<bibl>
+					<date when="1834">1834</date>
+					<title>Rahel. Ein Buch des Andekens für ihre Freunde. Bd. 2</title>
+					<author>Rahel Varnhagen von Ense, hg. v. Karl August Varnhagen von Ense</author>
+				</bibl>
+				<bibl>
+					<date when="1834">1834</date>
+					<title>Scenen aus meinem Leben</title>
+					<author>Louis Graf von Ostrowski</author>
+				</bibl>
+				<bibl>
+					<date when="1835">1835</date>
+					<title>Goethes Briefwechsel mit einem Kinde. Seinem Denkmal. Zweiter
+						Theil</title>
+					<author>Bettina von Arnim</author>
+				</bibl>
+				<bibl>
+					<date when="1838">1838</date>
+					<title>Der Guckguck</title>
+					<author>Carl Frühauf</author>
+				</bibl>
+				<bibl>
+					<date when="1842">1842</date>
+					<title>Saturns Leichenrede auf das Jahr 1841</title>
+					<author>Carl Raimung Frühauf</author>
+				</bibl>
+				<bibl>
+					<date notBefore="1845" notAfter="1846">1845–1846</date>
+					<title>Metamorphosen</title>
+					<author>Franz von Elling</author>
+				</bibl>
+				<bibl>
+					<date when="1836">1836</date>
+					<title>Die schwedischen Bräute. Eine Novelle</title>
+					<author>Carl Eichel</author>
+				</bibl>
+				<bibl>
+					<date when="1853">1853</date>
+					<title>Die Wiener in Griechenland. Novelle</title>
+					<author>Julius Krebs</author>
+				</bibl>
+				<bibl>
+					<date when="1855">1855</date>
+					<title>Soll und Haben</title>
+					<author>Gustav Freytag</author>
+				</bibl>
+				<bibl>
+					<date when="1855">1855</date>
+					<title>Ekkehard</title>
+					<author>Joseph Viktor von Scheffel</author>
+				</bibl>
+				<bibl>
+					<date when="1855">1855</date>
+					<title>Meine Reise im Orient. 2 Bde.</title>
+					<author>Alexander Ziegler</author>
+				</bibl>
+				<bibl>
+					<date when="1856">1856</date>
+					<title>Der Verstoßene</title>
+					<author>Raoul</author>
+				</bibl>
+				<bibl>
+					<date when="1864">1864</date>
+					<title>Die verlorene Handschrift. 3 Teile</title>
+					<author>Gustav Freytag</author>
+				</bibl>
+				<bibl>
+					<date when="1864">1864</date>
+					<title>Eine Aegyptische Königstochter. Historischer Roman. Erster Band</title>
+					<author>Georg Ebers</author>
+				</bibl>
+				<bibl>
+					<date when="1864">1864</date>
+					<title>Eine Aegyptische Königstochter. Zweiter Band</title>
+					<author>Georg Ebers</author>
+				</bibl>
+				<bibl>
+					<date when="1864">1864</date>
+					<title>Eine Aegyptische Königstochter. Dritter Band</title>
+					<author>Georg Ebers</author>
+				</bibl>
+				<bibl>
+					<date when="1866">1866</date>
+					<title>Erste, zweite und dritte Liebe. Eine Erzählung</title>
+					<author>Wilhelm Fischer</author>
+				</bibl>
+				<bibl>
+					<date notBefore="1867" notAfter="1869">1867/1869</date>
+					<title>Der Schüdderump</title>
+					<author>Wilhelm Raabe</author>
+				</bibl>
+				<bibl>
+					<date notBefore="1874" notAfter="1875">1874–1875</date>
+					<title>Eine moderne Sappho</title>
+					<author>Bertha Augusti (B. Schoeler)</author>
+				</bibl>
+				<bibl>
+					<date when="1875">1875</date>
+					<title>Das Quartier der Sappho</title>
+					<author>Antoine Pithon</author>
+				</bibl>
+				<bibl>
+					<date when="1875">1875</date>
+					<title>Bonmots</title>
+					<author>F. Ztg.</author>
+				</bibl>
+				<bibl>
+					<date when="1878">1878</date>
+					<title>Schützende Hände</title>
+					<author>M. Alland</author>
+				</bibl>
+				<bibl>
+					<date when="1879">1879</date>
+					<title>Verlorene Blätter</title>
+					<author>D. Beta</author>
+				</bibl>
+				<bibl>
+					<date when="1880">1880</date>
+					<title>Sappho</title>
+					<author>Carmen Sylva [d. i. Elisabeth zu Wied]</author>
+				</bibl>
+				<bibl>
+					<date when="1881">1881</date>
+					<title>Nach dem Tode</title>
+					<author>Marie von Ebner-Eschenbach</author>
+				</bibl>
+				<bibl>
+					<date when="1883">1883</date>
+					<title>Sappho. Novelle</title>
+					<author>E. Jegher</author>
+				</bibl>
+				<bibl>
+					<date when="1884">1884</date>
+					<title>Sappho. Pariser Sittenbild. Bd. 1</title>
+					<author>o. A. [Übers. Daudets Sapho (1884)]</author>
+				</bibl>
+				<bibl>
+					<date when="1884">1884</date>
+					<title>Sappho. Pariser Sittenbild. Bd. 2</title>
+					<author>o. A. [Übers. Daudets Sapho (1884)]</author>
+				</bibl>
+				<bibl>
+					<date when="1886">1886</date>
+					<title>Sappho. Griechische Novelle</title>
+					<author>Johannes Flach</author>
+				</bibl>
+				<bibl>
+					<date when="1886">1886</date>
+					<title>Gefahr im Verzuge. Humoreske</title>
+					<author>F. Schifkorn</author>
+				</bibl>
+				<bibl>
+					<date when="1886">1886?</date>
+					<title>Die Sappho von Arles</title>
+					<author>Ludwig Weißel</author>
+				</bibl>
+				<bibl>
+					<date when="1888">1888</date>
+					<title>Im Garten der Semiramis</title>
+					<author>W. Egbert</author>
+				</bibl>
+				<bibl>
+					<date when="1888">1888</date>
+					<title>Geheilter Wahn</title>
+					<author>F. v. Kapff-Essenther</author>
+				</bibl>
+				<bibl>
+					<date when="1888">1888</date>
+					<title>Größenwahn</title>
+					<author>Karl Bleibtreu</author>
+				</bibl>
+				<bibl>
+					<date when="1888">1888</date>
+					<title>Auf der Harzreise</title>
+					<author>A. Haupt</author>
+				</bibl>
+				<bibl>
+					<date when="1888">1888</date>
+					<title>Höhenluft</title>
+					<author>Cary Groß</author>
+				</bibl>
+				<bibl>
+					<date when="1889">1889</date>
+					<title>Sybilla Holm</title>
+					<author>T. Pauly</author>
+				</bibl>
+				<bibl>
+					<date when="1890">1890</date>
+					<title>Zwei Seelen und ein Gedanke</title>
+					<author>F. v. Kapff-Essenther</author>
+				</bibl>
+				<bibl>
+					<date when="1891">1891</date>
+					<title>Eine moderne Sappho</title>
+					<author>Alma Leschivo</author>
+				</bibl>
+				<bibl>
+					<date when="1891">1891</date>
+					<title>Eva Siebeck</title>
+					<author>Bertha von Suttner</author>
+				</bibl>
+				<bibl>
+					<date when="1891">1891</date>
+					<title>Aus der Bahn</title>
+					<author>Doris Freiin von Spättgen</author>
+				</bibl>
+				<bibl>
+					<date when="1891">1891</date>
+					<title>In der elften Stunde</title>
+					<author>M. Stahl</author>
+				</bibl>
+				<bibl>
+					<date when="1891">1891</date>
+					<title>Der Blaustrumpf</title>
+					<author>Georg Biagosch</author>
+				</bibl>
+				<bibl>
+					<date when="1891">1891</date>
+					<title>Zwei Titanen</title>
+					<author>A. von Tannus</author>
+				</bibl>
+				<bibl>
+					<date when="1893">[1893]</date>
+					<title>Ein scandalöser Fall</title>
+					<author>Oskar Panizza</author>
+				</bibl>
+				<bibl>
+					<date when="1894">1894</date>
+					<title>Werde, die Du bist!</title>
+					<author>Hedwig Dohm</author>
+				</bibl>
+				<bibl>
+					<date when="1895">1895</date>
+					<title>Reidlingen</title>
+					<author>A. von Limburg</author>
+				</bibl>
+				<bibl>
+					<date when="1897">1897</date>
+					<title>»Weihnacht!« Reiseerzählung</title>
+					<author>Karl May</author>
+				</bibl>
+				<bibl>
+					<date when="1898">1898</date>
+					<title>Eine moderne Sappho</title>
+					<author>Luise Wohl</author>
+				</bibl>
+				<bibl>
+					<date when="1902">1902</date>
+					<title>Mit der Fluth</title>
+					<author>Marie Itzerott</author>
+				</bibl>
+				<bibl>
+					<date when="1902">[1902]</date>
+					<title>Sappho. Eine Novelle</title>
+					<author>Therese Rak</author>
+				</bibl>
+				<bibl>
+					<date when="1902">1902</date>
+					<title>Sapphos Verse. Byzantinischer Roman</title>
+					<author>Karl Roth</author>
+				</bibl>
+				<bibl>
+					<date when="1902">1902</date>
+					<title>Marianne Wildenberg</title>
+					<author>Hans Karlsen</author>
+				</bibl>
+				<bibl>
+					<date when="1902">1902</date>
+					<title>Schattenspiel</title>
+					<author>Karl Theodor Schultz</author>
+				</bibl>
+				<bibl>
+					<date when="1902">1902</date>
+					<title>Münchner Kindeln!</title>
+					<author>Anton Frhrn. v. Perfall</author>
+				</bibl>
+				<bibl>
+					<date when="1903">1903</date>
+					<title>Rache</title>
+					<author>Doris Freiin von Spättgen</author>
+				</bibl>
+				<bibl>
+					<date when="1904">1904</date>
+					<title>Sappho</title>
+					<author>Ferdinand von Saar</author>
+				</bibl>
+				<bibl>
+					<date when="1904">1904</date>
+					<title>Das Urteil der Geschichte</title>
+					<author>Laurids Bruun</author>
+				</bibl>
+				<bibl>
+					<date when="1904">1904</date>
+					<title>Ithaka</title>
+					<author>Hermione von Preuschen</author>
+				</bibl>
+				<bibl>
+					<date notAfter="1904">n. n. 1904</date>
+					<title>Sappho die Dichterin von Lesbos. Roman der Schönheit [Fragment a. d.
+						Nachlass]</title>
+					<author>Peter Hille</author>
+				</bibl>
+				<bibl>
+					<date when="1903">1903</date>
+					<title>Rache</title>
+					<author>Doris Freiin von Spättgen</author>
+				</bibl>
+				<bibl>
+					<date when="1906">1906</date>
+					<title>Weder Glück noch Stern</title>
+					<author>Eugen Stangen</author>
+				</bibl>
+				<bibl>
+					<date when="1906">1906</date>
+					<title>Die Erzieher der jungen Mädchen</title>
+					<author>Max Brod</author>
+				</bibl>
+				<bibl>
+					<date when="1907">1907</date>
+					<title>Die Bücher einer Liebenden</title>
+					<author>Rainer Maria Rilke</author>
+				</bibl>
+				<bibl>
+					<date when="1907">1907</date>
+					<title>Die Liebe Daria Lantes. Ein römischer Roman in zwei Teilen</title>
+					<author>Richard Boß</author>
+				</bibl>
+				<bibl>
+					<date when="1908">1908</date>
+					<title>Ein Irrtum des Herzens. Originalroman</title>
+					<author>Fanz Zistler</author>
+				</bibl>
+				<bibl>
+					<date when="1908">1908</date>
+					<title>Odysseus’ Heimkehr. Humoristischer Gesellschaftsroman aus
+						Oesterreich</title>
+					<author>Wolf von Tainach</author>
+				</bibl>
+				<bibl>
+					<date when="1908">1908</date>
+					<title>Erneste. Roman</title>
+					<author>Ursula Zöge von Mauteuffel</author>
+				</bibl>
+				<bibl>
+					<date notBefore="1908" notAfter="1909">1908–1909</date>
+					<title>Der leukadische Felsen [tw. auch »Der leukatische Felsen«
+						betitelt]</title>
+					<author>A. Noël</author>
+				</bibl>
+				<bibl>
+					<date when="1909">1909</date>
+					<title>Das Kind von Goslar</title>
+					<author>Adolf von Wilbrandt</author>
+				</bibl>
+				<bibl>
+					<date when="1909">1909</date>
+					<title>Unsere Schweizer</title>
+					<author>Florentine Kazelle</author>
+				</bibl>
+				<bibl>
+					<date when="1910">1910</date>
+					<title>Die Aufzeichnungen des Malte Laurids Brigge. Bd. 2</title>
+					<author>Rainer Maria Rilke</author>
+				</bibl>
+				<bibl>
+					<date when="1910">1910</date>
+					<title>Theater</title>
+					<author>Ernst Georgy</author>
+				</bibl>
+				<bibl>
+					<date when="1911">1911</date>
+					<title>Frühlingstaumel</title>
+					<author>Gabriele Reuter</author>
+				</bibl>
+				<bibl>
+					<date when="1911">1911</date>
+					<title>Der neue Herr</title>
+					<author>Walter Hogarth</author>
+				</bibl>
+				<bibl>
+					<date when="1913">1913</date>
+					<title>Helge Bendels Luftschlösser. Ein Chikago-Roman</title>
+					<author>Henning Berger</author>
+				</bibl>
+				<bibl>
+					<date when="1914">1914</date>
+					<title>Schloß Melchow. Roman</title>
+					<author>H. Steinbach</author>
+				</bibl>
+				<bibl>
+					<date when="1916">1916</date>
+					<title>Zeitenwende</title>
+					<author>A. L. Lindner</author>
+				</bibl>
+				<bibl>
+					<date when="1917">1917</date>
+					<title>Die letzten Tage von Pompeji</title>
+					<author>G. L. Bulwer</author>
+				</bibl>
+				<bibl>
+					<date when="1918">1918</date>
+					<title>Bis zur nächsten Ecke</title>
+					<author>H. Teichmann</author>
+				</bibl>
+				<bibl>
+					<date when="1918">1918</date>
+					<title>Die Briefe des Fräulein Brandt</title>
+					<author>Felix Hollaender</author>
+				</bibl>
+				<bibl>
+					<date when="1918">1918</date>
+					<title>Lodz. Das gelobte Land</title>
+					<author>W. St. Reymont</author>
+				</bibl>
+				<bibl>
+					<date when="1922">1922</date>
+					<title>Maskerade</title>
+					<author>Anna Kappstein</author>
+				</bibl>
+				<bibl>
+					<date when="1922">1922</date>
+					<title>Fünfundzwanzig Bräute. Schelmenroman</title>
+					<author>Wilhelm Herbert</author>
+				</bibl>
+				<bibl>
+					<date when="1922">1922</date>
+					<title>Hunger!</title>
+					<author>Frida Raimann</author>
+				</bibl>
+				<bibl>
+					<date when="1922">1922</date>
+					<title>Die lachende Maske. Roman</title>
+					<author>Paul Oskar Höcker</author>
+				</bibl>
+				<bibl>
+					<date when="1924">1924</date>
+					<title>Schauspieler</title>
+					<author>Hans Rewald</author>
+				</bibl>
+				<bibl>
+					<date when="1926">1926</date>
+					<title>Durchaus unpassende Geschichten</title>
+					<author>Kurt Tucholsky</author>
+				</bibl>
+				<bibl>
+					<date when="1926">1926</date>
+					<title>Die Prüfung. Eine Novelle aus dem Lande der Romantik</title>
+					<author>Carry Brachvogel</author>
+				</bibl>
+				<bibl>
+					<date when="1926">1926</date>
+					<title>Eine Frau und vier Verehrer. Novelle</title>
+					<author>Edmund Schopen</author>
+				</bibl>
+				<bibl>
+					<date when="1927">1927</date>
+					<title>Spiel im Morgengrauen. Novelle</title>
+					<author>Arthur Schnitzler</author>
+				</bibl>
+				<bibl>
+					<date when="1928">1928</date>
+					<title>Der Sprung ins Leben. Roman</title>
+					<author>Max Castman</author>
+				</bibl>
+				<bibl>
+					<date when="1931">1931?</date>
+					<title>Römische Sappho</title>
+					<author>Max Sidow</author>
+				</bibl>
+				<bibl>
+					<date when="1935">1935</date>
+					<title>Die Geschichte einer Hochzeitsreise. Roman</title>
+					<author>Walther von Hollander</author>
+				</bibl>
+				<bibl>
+					<date when="1935">1935</date>
+					<title>Die Hand. Novelle</title>
+					<author>Rudolf Becht</author>
+				</bibl>
+				<bibl>
+					<date when="1936">1936</date>
+					<title>Jagd nach dem Bildnis der Kaiserin Poppäa</title>
+					<author>Wilhelm Scheider</author>
+				</bibl>
+				<bibl>
+					<date when="1937">1937</date>
+					<title>Nie wieder luegen</title>
+					<author>Irmgard Keun</author>
+				</bibl>
+				<bibl>
+					<date when="1937">1937?</date>
+					<title>Der Thomaskantor</title>
+					<author>L. G. Bachmann</author>
+				</bibl>
+				<bibl>
+					<date when="1938">1938</date>
+					<title>Susanne</title>
+					<author>Maria von Peteani</author>
+				</bibl>
+				<bibl>
+					<date when="1938">1938</date>
+					<title>Zwischen Mann und Kind</title>
+					<author>Lili Körber</author>
+				</bibl>
+				<bibl>
+					<date when="1938">1938</date>
+					<title>Wenn der Vollmond scheint …</title>
+					<author>Dyk</author>
+				</bibl>
+				<bibl>
+					<date when="1938">1938</date>
+					<title>Sappho</title>
+					<author>R. A.</author>
+				</bibl>
+				<bibl>
+					<date when="1939">1939</date>
+					<title>Ich erlebte fünfzig Jahre Weltgeschichte</title>
+					<author>Berta Zuckerkandl-Szeps</author>
+				</bibl>
+				<bibl>
+					<date when="1939">1939</date>
+					<title>Die Schauspielerin</title>
+					<author>Otto Nebelthau</author>
+				</bibl>
+				<bibl>
+					<date when="1942">1942</date>
+					<title>Das Lorbeerufer. Roman</title>
+					<author>Emil Barth</author>
+				</bibl>
+				<bibl>
+					<date when="1945">1945</date>
+					<title>Sappho von Lesbos. Roman</title>
+					<author>Margot Klausner</author>
+				</bibl>
+				<bibl>
+					<date when="1973">um 1973</date>
+					<title>Sappho, Sängerin archäischer Liebe. Biograph. Vers-Erzählung in antiken
+						Oden-Formen unter Einbeziehung sapphischer Originalfragmente in freier
+						Nachdichtung</title>
+					<author>Hubert Ludo Gerwald/Hubertus von Beyer</author>
+				</bibl>
+				<bibl>
+					<date when="1981">1981</date>
+					<title>Schöne Aussicht</title>
+					<author>Walter Kempowski</author>
+				</bibl>
+				<bibl>
+					<date when="1983">1983</date>
+					<title>Jüdische Sappho</title>
+					<author>Inge Merkel</author>
+				</bibl>
+				<bibl>
+					<date when="1983">1983</date>
+					<title>Amanda. Ein Hexenroman [= Zweiter Teil der Salman-Trilogie]</title>
+					<author>Irmtraud Morgner</author>
+				</bibl>
+				<bibl>
+					<date when="1983">1983</date>
+					<title>Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden
+						Mädchen auf Lesbos</title>
+					<author>Christine Brückner</author>
+				</bibl>
+				<bibl>
+					<date when="1983">1983</date>
+					<title>Dich hat Amor gewiß …</title>
+					<author>Waldtraut Lewin</author>
+				</bibl>
+				<bibl>
+					<date when="1983">1983</date>
+					<title>Der Vikar Sappho oder Die Verzauberung. Erzählung</title>
+					<author>Ottilie Schenk</author>
+				</bibl>
+				<bibl>
+					<date when="1983">1983</date>
+					<title>Kassandra. Erzählung</title>
+					<author>Christa Wolf</author>
+				</bibl>
+				<bibl>
+					<date when="1984">1984</date>
+					<title>Die Frau im Brunnen. Roman</title>
+					<author>Christa Reinig</author>
+				</bibl>
+				<bibl>
+					<date when="1986">1986</date>
+					<title>Sappho. Ein griechischer Sommernachtstraum</title>
+					<author>Joachim Fernau</author>
+				</bibl>
+				<bibl>
+					<date when="1986">1986</date>
+					<title>Medusa</title>
+					<author>Stefan Schütz</author>
+				</bibl>
+				<bibl>
+					<date when="1988">1988</date>
+					<title>Männerlust – Frauenlob, Anmerkungen zur Sapphorezeption und zum
+						Orgasmusproblem</title>
+					<author>Hubert Fichte</author>
+				</bibl>
+				<bibl>
+					<date when="1990">1990</date>
+					<title>Immer waren wir Hand in Hand. Erinna an Sappho</title>
+					<author>Johannes Rüber</author>
+				</bibl>
+				<bibl>
+					<date when="1992">1992</date>
+					<title>Ich aber schlafe allein</title>
+					<author>Helga Hegewisch</author>
+				</bibl>
+				<bibl>
+					<date when="1992">1992</date>
+					<title>Alexander – Der Roman der Einigung Griechenlands „Hellas“</title>
+					<author>Gisbert Haefs</author>
+				</bibl>
+				<bibl>
+					<date when="1993">1993</date>
+					<title>Der Weg nach Oobliadooh</title>
+					<author>Fritz Rudolf Fries</author>
+				</bibl>
+				<bibl>
+					<date when="1997">1997</date>
+					<title>Sappho küsst Europa. Geschichten von Lesben aus 20 Längern</title>
+					<author>Hg. v. Madeleine Marti und Marianne Ulmi</author>
+				</bibl>
+				<bibl>
+					<date when="1999">1999</date>
+					<title>Sappho küßt die Welt. Geschichten von Lesben aus vier Kontinenten</title>
+					<author>Hg. v. Käthe H. Fleckenstein</author>
+				</bibl>
+				<bibl>
+					<date when="2001">2001</date>
+					<title>Sappho. Roman</title>
+					<author>Siegfried Obermeier</author>
+				</bibl>
+				<bibl>
+					<date when="2005">2005</date>
+					<title>SAPPHO »und dass ich dich lieben werde …«. Erinnerungen der Poetin und
+						ihrer Hetären</title>
+					<author>Tami van Dalen [d. i. Tami Dahlheim]</author>
+				</bibl>
+				<bibl>
+					<date when="2008">2008</date>
+					<title>Die Mädchen der Sappho. Archäologische und andere Streifzüge auf der
+						Insel Lesbos</title>
+					<author>Niklaus Gaschen</author>
+				</bibl>
+				<bibl>
+					<date when="2010">2010</date>
+					<title>Das Mädchen aus Eresos. Die Jugend der altgriechischen Dichterin
+						Sappho</title>
+					<author>Heinrich B. Siedentopf</author>
+				</bibl>
+				<bibl>
+					<date when="2012">2012</date>
+					<title>THE MOST BEAUTIFUL</title>
+					<author>Barbara Köhler</author>
+				</bibl>
+				<bibl>
+					<date when="2014">2014</date>
+					<title>Mein Lieber Feldmann</title>
+					<author>Bertram Reinecke</author>
+				</bibl>
+				<bibl>
+					<date when="2018">2018</date>
+					<title>Verzeichnis einiger Verluste</title>
+					<author>Judith Schalansky</author>
+				</bibl>
+				<bibl>
+					<date when="2021">2021</date>
+					<title>Sapphos Sprung</title>
+					<author>Karen Aydin</author>
+				</bibl>
+				<bibl>
+					<date when="2021">2021</date>
+					<title>Sappho, Dichterin einer neuen Zeit. Die große Romanbiografie</title>
+					<author>Siegfried Obermeier</author>
+				</bibl>
+				<bibl>
+					<date when="2023">2023</date>
+					<title>»The mountains so vast«: Eine lesbische Wallfahrt</title>
+					<author>Evan Tepest</author>
+				</bibl>
+			</listBibl>
+		</body>
+	</text>
 </TEI>
