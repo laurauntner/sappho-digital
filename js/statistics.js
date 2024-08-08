@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-            Highcharts.setOptions({
-                chart: {
-                    style: {
-                        fontFamily: 'Geist'
-                    }
-                }
-            });
+    Highcharts.setOptions({
+        chart: {
+            style: {
+                fontFamily: 'Geist'
+            }
+        }
+    });
 
     const url = "https://raw.githubusercontent.com/laurauntner/sappho-digital/main/data/lists/sappho-rez_alle.xml";
 
@@ -15,9 +15,20 @@ document.addEventListener("DOMContentLoaded", function () {
             const parser = new DOMParser();
             const xmlDoc = parser.parseFromString(data, "text/xml");
 
-            // Extract data for timeline
+            // Define the namespace resolver to handle TEI namespace
+            const nsResolver = (prefix) => {
+                const ns = {
+                    'tei': 'http://www.tei-c.org/ns/1.0'
+                };
+                return ns[prefix] || null;
+            };
+
+            // Extract data for timeline focusing only on //tei:body//tei:date
             const dateCounts = {};
-            Array.from(xmlDoc.getElementsByTagNameNS("http://www.tei-c.org/ns/1.0", "date")).forEach(dateElement => {
+            const dateElements = xmlDoc.evaluate("//tei:body//tei:date", xmlDoc, nsResolver, XPathResult.ANY_TYPE, null);
+            let dateElement = dateElements.iterateNext();
+
+            while (dateElement) {
                 const when = dateElement.getAttribute("when");
                 const notBefore = dateElement.getAttribute("notBefore");
                 const notAfter = dateElement.getAttribute("notAfter");
@@ -39,9 +50,21 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                     dateCounts[year]++;
                 }
-            });
+
+                dateElement = dateElements.iterateNext();
+            }
+
+            // Debugging: Print the dateCounts to the console
+            console.log(dateCounts);
 
             const timelineData = Object.keys(dateCounts).map(year => [Date.UTC(year, 0, 1), dateCounts[year]]).sort((a, b) => a[0] - b[0]);
+
+            // Debugging: Print the timelineData to the console
+            console.log(timelineData);
+
+            // Check the last data point specifically
+            const lastDataPoint = timelineData[timelineData.length - 1];
+            console.log("Last Data Point:", lastDataPoint);
 
             // Extract data for genres
             const genres = {};
@@ -101,6 +124,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 legend: {
                     enabled: false
+                },
+                tooltip: {
+                    formatter: function () {
+                        return 'Jahr: ' + Highcharts.dateFormat('%Y', this.x) + '<br/>Werke: ' + this.y;
+                    }
                 },
                 series: [{
                     name: 'Werke',
