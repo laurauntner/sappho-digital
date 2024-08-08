@@ -17,19 +17,29 @@
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"/>
                 </xsl:call-template>
+                <script src="https://code.highcharts.com/highcharts.js"/>
+                <script src="https://code.highcharts.com/modules/timeline.js"/>
+                <script src="https://code.highcharts.com/modules/data.js"/>
             </head>
-
             <body class="page">
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
-
-                    <div class="container-fluid">
+                    <div class="container">
                         <div class="card">
                             <div class="card-header">
                                 <h1>Alle Rezeptionszeugnisse</h1>
                             </div>
                             <div class="card-body">
-                                <table class="table table-striped display" id="tocTable">
+                                <div id="container"
+                                    style="display: flex; justify-content: space-between; padding-bottom: 50px">
+                                    <div id="container-timeline"
+                                        style="margin: auto; width: 70%; height: 200px;"/>
+                                    <div id="container-genres"
+                                        style="margin: auto; width: 30%; height: 200px;"/>
+                                </div>
+                                <script src="./js/statistics.js"/>
+                                <table class="table table-striped display" id="tocTable"
+                                    style="width:100%">
                                     <thead>
                                         <tr>
                                             <th scope="col">Jahr</th>
