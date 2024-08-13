@@ -4,7 +4,7 @@ import matplotlib.image as mpimg
 import numpy as np
 
 # Load the image
-image_path = 'sappho-reception-digital_logo.png'
+image_path = 'sappho-reception-digital_logo-ohne-text.png'
 img = mpimg.imread(image_path)
 
 # Create a sparse and chaotic graph
@@ -24,7 +24,7 @@ def random_circular_layout(graph):
 pos = random_circular_layout(G)
 
 # Draw the graph with images as nodes
-plt.figure(figsize=(8, 8))
+plt.figure(figsize=(10, 8))
 ax = plt.gca()
 ax.set_axis_off()
 
@@ -40,6 +40,6 @@ for n in G.nodes:
 # Draw fully transparent nodes on top of the images
 nx.draw_networkx_nodes(G, pos, node_size=20, node_color='blue', alpha=0)
 
-# Save the image
-plt.savefig('sappho-network.png', format='png', bbox_inches='tight')
+# Save the image with high resolution
+plt.savefig('sappho-network.png', format='png', bbox_inches='tight', dpi=1000)
 plt.show()
