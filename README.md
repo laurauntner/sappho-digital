@@ -8,4 +8,6 @@ The [XML/TEI files](https://github.com/laurauntner/sappho-digital/tree/main/data
 
 The [website](https://sappho-digital.com/) is based on the [DSE-Static-Cookiecutter](https://github.com/acdh-oeaw/dse-static-cookiecutter).
 
+If (for whatever reason) the website does not work anymore, visit the [Wayback Machine](https://web.archive.org/).
+
 *color code: rgba(94, 23, 235)*, *font: Geist Sans*
