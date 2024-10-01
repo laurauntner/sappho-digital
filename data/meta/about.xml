@@ -7,7 +7,7 @@
             </titleStmt>
             <publicationStmt>
                 <publisher>Laura Untner</publisher>
-                <pubPlace>Wien</pubPlace>
+                <pubPlace>Wien/Berlin</pubPlace>
                 <date when="2024">2024</date>
                 <availability>
                     <licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
@@ -103,8 +103,8 @@
                 <head>Mithelfen/Kontakt</head>
                 <p>Sie kennen einen literarischen Text aus dem deutschsprachigen Raum, der mit
                     Sappho zu tun hat, aber hier nicht verzeichnet ist? Über Hinweise jeglicher Art
-                    bin ich sehr dankbar: <ref target="mailto:laura.untner@oeaw.ac.at"
-                        >laura.untner@oeaw.ac.at</ref>.</p>
+                    bin ich sehr dankbar: <ref target="mailto:laura.untner@fu-berlin.de"
+                        >laura.untner@fu-berlin.de</ref>.</p>
                 <p>Sie haben Verbesserungsvorschläge oder gar einen Fehler gefunden? Auch darüber
                     freue ich mich. Am besten gleich ein Issue auf <ref
                         target="https://github.com/laurauntner/sappho-digital/issues">GitHub</ref>
@@ -120,8 +120,8 @@
                 <p>Wer diese <hi rend="bold">Webseite</hi> zitieren möchte, kann diese Vorlage
                     verwenden:</p>
                 <p>Laura Untner: Sappho Digital. Die literarische Sappho-Rezeption im
-                    deutschsprachigen Raum. Wien 2024, <ref target="https://sappho-digital.com"
-                        >https://sappho-digital.com</ref>.</p>
+                    deutschsprachigen Raum. Wien/Berlin 2024, <ref
+                        target="https://sappho-digital.com">https://sappho-digital.com</ref>.</p>
                 <p>Wer auf das <hi rend="bold">Projekt</hi> selbst verweisen möchte, kann diese
                     Vorlage verwenden:</p>
                 <p>Laura Untner: Paradigmen einer digitalen Rezeptionswissenschaft.
@@ -135,37 +135,35 @@
             <div>
                 <head>Über mich</head>
                 <p>Ich studierte Deutsche Philologie und Vergleichende Literaturwissenschaft an der
-                    Universität Wien, wo auch mein <ref
-                        target="https://doi.org/10.5281/zenodo.10698386">Dissertationsprojekt</ref>
-                    angesiedelt ist und von Paula Wojcik betreut wird. Ab Oktober 2024 wird es an
-                    der Friedrich Schlegel Graduiertenschule für literaturwissenschaftliche Studien
-                    an der Freien Universität Berlin in Assoziation mit dem Exzellenzcluster
-                    »Temporal Communities« bzw. dem Projekt »<ref
-                        target="https://www.temporal-communities.de/research/digital-communities/projects/digital-observatory-world-literature"
-                        >Digital Observatory of World Literature</ref>« (PI: Frank Fischer)
-                    weitergeführt.</p>
-                <p>An der Abteilung Literatur- und Textwissenschaft am Austrian Centre for Digital
-                    Humanities and Cultural Heritage an der Österreichischen Akademie der
-                    Wissenschaften wirkte ich bislang in Projekten zu Karl Kraus (<hi rend="italics"
-                            ><ref target="https://www.kraus.wienbibliothek.at/">Rechtsakten der
-                            Kanzlei Oskar Samek</ref></hi>, <hi rend="italics"><ref
+                    Universität Wien. Von Dezember 2020 bis September 2024 arbeitete ich am Austrian
+                    Centre for Digital Humanities and Cultural Heritage (Österreichische Akademie
+                    der Wissenschaften). Dort beschäftigte ich mich vor allem mit Karl Kraus (<hi
+                        rend="italics"><ref target="https://www.kraus.wienbibliothek.at/"
+                            >Rechtsakten der Kanzlei Oskar Samek</ref></hi>, <hi rend="italics"><ref
                             target="https://kraus1933.ace.oeaw.ac.at/index.html">Dritte
                             Walpurgisnacht</ref></hi>) und Arthur Schnitzler (<hi rend="italics"
                             ><ref target="https://schnitzler-briefe.acdh.oeaw.ac.at/">Briefwechsel
                             mit Autorinnen und Autoren</ref></hi> und diverse <ref
-                        target="https://schnitzler.acdh.oeaw.ac.at/">Nebenprojekte</ref>) mit.</p>
-                <p>Neben meinen wissenschaftlichen Aktivitäten bin ich als Literaturveranstalterin
-                    und -vermittlerin tätig. Gemeinsam mit Julius Handl leite ich die Wiener
+                        target="https://schnitzler.acdh.oeaw.ac.at/">Nebenprojekte</ref>).
+                    Ehrenamtlich leitete ich gemeinsam mit Julius Handl für viele Jahre die
                     Literaturreihe <ref target="https://glaesernetexte.com/">Gläserne Texte</ref>.
-                    Außerdem bin ich im Vorstand der <ref target="https://www.lesereihen.org/"
-                        >Unabhängigen Lesereihen</ref>.</p>
+                    Als Vorstandsmitglied der <ref target="https://www.lesereihen.org/">Unabhängigen
+                        Lesereihen</ref> engagiere ich mich weiterhin für
+                    Literaturveranstaltungen.</p>
+                <p>Seit Oktober 2024 führe ich mein <ref
+                        target="https://doi.org/10.5281/zenodo.10698386">Dissertationsprojekt</ref>
+                    an der Friedrich Schlegel Graduiertenschule für literaturwissenschaftliche
+                    Studien (Freie Universität Berlin) fort. Dort ist mein Projekt mit dem
+                    Exzellenzcluster »Temporal Communities« bzw. dem Projekt »<ref
+                        target="https://www.temporal-communities.de/research/digital-communities/projects/digital-observatory-world-literature"
+                        >Digital Observatory of World Literature</ref>« assoziiert. Betreut wird es
+                    von Frank Fischer (FU Berlin) und Paula Wojcik (Universität Wien).</p>
                 <p>Eine Auflistung meiner Vorträge und Publikationen ist auf <ref
                         target="https://orcid.org/0000-0002-9649-0870">ORCID</ref> zu finden.</p>
-                <p>Bei Rückfragen stehe ich gerne unter <ref target="mailto:laura.untner@oeaw.ac.at"
-                        >laura.untner@oeaw.ac.at</ref> zur Verfügung. Auf <ref
-                        target="https://twitter.com/l_untner">X</ref> und <ref
-                        target="https://bsky.app/profile/luntner.bsky.social">Bluesky</ref> finden
-                    Sie mich ebenfalls.</p>
+                <p>Bei Rückfragen stehe ich gerne unter <ref
+                        target="mailto:laura.untner@fu-berlin.de">laura.untner@fu-berlin.de</ref>
+                    zur Verfügung. Auf <ref target="https://twitter.com/l_untner">X</ref> finden Sie
+                    mich ebenfalls.</p>
             </div>
             <div type="funding">
                 <head>Fördergeber</head>
