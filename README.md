@@ -19,6 +19,6 @@ Laura Untner: Sappho Digital. Die literarische Sappho-Rezeption im deutschsprach
 
 ---
 
-**color code**: `rgba(94, 23, 235)`  
-**font**: *Geist Sans*
+**Color code**: `rgba(94, 23, 235)`  
+**Font**: Geist Sans
 
