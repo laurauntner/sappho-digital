@@ -32,55 +32,40 @@
                     bauen die Autorin als Figur ein, nehmen auf biographische Theorien und Legenden
                     um sie Bezug und spannen ein intertextuelles Netz mit anderen
                     Rezeptionszeugnissen. Aktuell ist im deutschsprachigen Raum ein starker Anstieg
-                    der Sappho-Rezeption zu beobachten.</p>
+                    der literarischen Sappho-Rezeption zu beobachten.</p>
             </div>
             <div>
-                <p>Auf dieser Webseite sammle ich fortlaufend Informationen zur literarischen
-                    Sappho-Rezeption im deutschsprachigen Raum. Dahinter steht mein
-                    Dissertationsprojekt, das <ref target="https://doi.org/10.5281/zenodo.10698386"
-                        >hier</ref> beschrieben wird. Diesem Projekt ist eine jahrelange
-                    Beschäftigung mit der Sappho-Rezeption vorausgegangen, die unter anderem in
-                    einem <ref
+                <p>Auf dieser Webseite werden Informationen zur literarischen Sappho-Rezeption im
+                    deutschsprachigen Raum gesammelt. Dahinter steht mein Dissertationsprojekt, das
+                        <ref target="https://doi.org/10.5281/zenodo.10698386">hier</ref> beschrieben
+                    wird. Diesem Projekt ist eine jahrelange Beschäftigung mit der Sappho-Rezeption
+                    vorausgegangen, die unter anderem in einer <ref
                         target="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/"
-                        >Buch über die literarische Sappho-Rezeption im deutschsprachigen Raum</ref>
-                    mündete. Nun verbinde ich mein Wissen über die Sappho-Rezeption mit meinen
-                    Kenntnissen im Bereich der Digital Humanities.</p>
-                <p>Die <hi rend="bold">Daten</hi> werden sich letzten Endes aus drei Teilen
-                    zusammensetzen: einem für Menschen leicht lesbaren tabellarischen Verzeichnis
-                    aller bekannten produktiv-literarischen Rezeptionszeugnisse zu Sappho aus dem
-                    deutschsprachigen Raum, einer deutlich komplexeren OWL-Ontologie mit
-                    detaillierten Informationen und einer SKOS-Taxonomie zur Klassifizierung
-                    wiederkehrender Elemente in der literarischen Sappho-Rezeption. Mit letzteren
-                    Datensätzen soll vor allem die computergestützte Analyse der Sappho-Rezeption im
-                    deutschsprachigen Raum erleichtert werden. Volltexte der Rezeptionszeugnisse
-                    werden zu keinem Zeitpunkt angeboten. Eine Textauswahl findet sich jedoch in
-                    meinem Band <hi rend="italics"><ref
+                        >Anthologie zur literarischen Sappho-Rezeption im deutschsprachigen
+                        Raum</ref> mündete. Nun verbinde ich mein Wissen über die Sappho-Rezeption
+                    mit meinen Kenntnissen im Bereich der Digital Humanities.</p>
+                <p>Die hier aufbereiteten <hi rend="bold">Daten</hi> werden sich letzten Endes aus
+                    drei Teilen zusammensetzen: einem für Menschen leicht lesbaren tabellarischen
+                    Verzeichnis aller bekannten produktiv-literarischen Rezeptionszeugnisse zu
+                    Sappho aus dem deutschsprachigen Raum, einer OWL-Ontologie mit detailliertem
+                    Wissen über diese Rezeptionszeugnisse, und einer SKOS-Taxonomie zur
+                    Klassifizierung wiederkehrender Elemente in der literarischen
+                    Sappho-Rezeption.Volltexte der Rezeptionszeugnisse werden zu keinem Zeitpunkt
+                    angeboten. Eine Textauswahl findet sich in meinem Band <hi rend="italics"><ref
                             target="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/"
                             >Sappho. Texte zur literarischen Rezeption im deutschsprachigen
                             Raum</ref></hi> (2023).</p>
-                <p>Unter <hi rend="bold">produktiv-literarischen Rezeptionszeugnissen</hi> werden
-                    literarische Texte verstanden, die Elemente eines Rezeptionsgegenstandes
-                    enthalten, beispielsweise in der Form von Figuren- und Motivübernahmen,
-                    Stilimitationen, Paraphrasen, Strukturanalogien, Fortschreibungen und
-                    Fiktionalisierungen von Autor_innen.</p>
-                <p>Einen <hi rend="bold">Überblick</hi> über die literarische Sappho-Rezeption im
-                    deutschsprachigen Raum bietet mein Band <hi rend="italics"><ref
-                            target="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/"
-                            >Sappho. Texte zur literarischen Rezeption im deutschsprachigen
-                            Raum</ref></hi> (2023). Eine <hi rend="bold">Auswahlbibliographie</hi>
-                    zur literarischen Sappho-Rezeption ist <ref target="bibliographie.html"
-                        >hier</ref> zu finden.</p>
             </div>
             <div>
                 <head>Projektstand</head>
-                <p>Aktuell ist das <hi rend="bold">Verzeichnis der Rezeptionszeugnisse</hi> so weit
-                    bearbeitet, dass es auszugsweise veröffentlicht werden kann. Es werden fünf
+                <p>Aktuell ist nur das <hi rend="bold">Verzeichnis der Rezeptionszeugnisse</hi> so
+                    weit bearbeitet, dass es auszugsweise veröffentlicht werden kann. Es werden fünf
                     Zugänge angeboten: Es können Belege für <ref target="toc-alle.html">alle</ref>,
                         <ref target="toc-prosa.html">prosaische</ref>, <ref target="toc-lyrik.html"
                         >lyrische</ref>, <ref target="toc-drama.html">dramatische</ref> und <ref
                         target="toc-sonstige.html">sonstige</ref> Rezeptionszeugnisse (z. B. Comics)
                     eingesehen werden.</p>
-                <p>Neben der Gattungszugehörigkeit sind folgende Informationen erfasst und
+                <p>Neben der Gattungszugehörigkeit sind aktuell folgende Informationen erfasst und
                     durchsuchbar:</p>
                 <list>
                     <item>Jahr der Erstveröffentlichung, oder, wenn bekannt, Jahr der
@@ -96,8 +81,15 @@
                     in den Unterseiten geladen werden. <hi rend="bold">XML/TEI-Dateien</hi> sind
                     über <ref
                         target="https://github.com/laurauntner/sappho-digital/tree/main/data/lists"
-                        >GitHub</ref> frei zugänglich. Sie können diese Daten unter Nennung der
-                    Quelle gerne weiterverwenden.</p>
+                        >GitHub</ref> frei zugänglich.</p>
+                <p>Auf GitHub findet sich ebenso ein <ref
+                        target="https://github.com/laurauntner/wikidata-to-cidoc-crm"
+                        >Repositorium</ref> mit Python-Skripten zur Transformation strukturierter
+                    biographischer, bibliographischer und intertextueller Daten aus Wikidata, die
+                    mithilfe von CIDOC CRM, LRMoo und INTRO in RDF überführt werden. Es bietet einen
+                    ersten Einblick in die OWL-Ontologie, die auch im Rahmen dieses Projekts zur
+                    Anwendung kommen wird.</p>
+                <p>Mit einer Fertigstellung des Projekts ist 2027 zu rechnen.</p>
             </div>
             <div>
                 <head>Mithelfen/Kontakt</head>
@@ -109,9 +101,6 @@
                     freue ich mich. Am besten gleich ein Issue auf <ref
                         target="https://github.com/laurauntner/sappho-digital/issues">GitHub</ref>
                     anlegen.</p>
-                <p>Für Unterstützung bei der Recherche danke ich Julius Handl.</p>
-                <p>Für Feedback danke ich Amrei Stanzel, Martin Anton Müller, Gregor Pirgie und
-                    Dimitra Grigoriou.</p>
             </div>
             <div>
                 <head>Zitieren</head>
@@ -128,7 +117,7 @@
                     Produktiv-literarische Rezeptionsphänomene als Linked Data am Beispiel der
                     deutschsprachigen literarischen Sappho-Rezeption. In: Joëlle Weis, Estelle
                     Bunout und Thomas Haider (Hg.): DHd 2024: DH Quo Vadis. 10. Tagung des Verbands
-                    »Digital Humanities im deutschsprachigen Raum« (DHd 2024). Passau 2024, <ref
+                    »Digital Humanities im deutschsprachigen Raum«. Passau 2024, <ref
                         target="https://doi.org/10.5281/zenodo.10698386"
                         >https://doi.org/10.5281/zenodo.10698386</ref>.</p>
             </div>
@@ -145,25 +134,36 @@
                             ><ref target="https://schnitzler-briefe.acdh.oeaw.ac.at/">Briefwechsel
                             mit Autorinnen und Autoren</ref></hi> und diverse <ref
                         target="https://schnitzler.acdh.oeaw.ac.at/">Nebenprojekte</ref>).
-                    Ehrenamtlich leitete ich gemeinsam mit Julius Handl für viele Jahre die
+                    Ehrenamtlich leitete ich gemeinsam mit Julius Handl für viele Jahre die Wiener
                     Literaturreihe <ref target="https://glaesernetexte.com/">Gläserne Texte</ref>.
                     Als Vorstandsmitglied der <ref target="https://www.lesereihen.org/">Unabhängigen
-                        Lesereihen</ref> engagiere ich mich weiterhin für
-                    Literaturveranstaltungen.</p>
+                        Lesereihen</ref> und Mitglied des Kurator_innenteams der Berliner Lesereihe
+                        <ref target="https://schreibengegendienormen.de/">Schreiben gegen die
+                        Norm(en)?</ref> engagiere ich mich weiterhin für Literaturveranstaltungen. </p>
                 <p>Seit Oktober 2024 führe ich mein <ref
                         target="https://doi.org/10.5281/zenodo.10698386">Dissertationsprojekt</ref>
                     an der Friedrich Schlegel Graduiertenschule für literaturwissenschaftliche
                     Studien (Freie Universität Berlin) fort. Dort ist mein Projekt mit dem
-                    Exzellenzcluster »Temporal Communities« bzw. dem Projekt »<ref
-                        target="https://www.temporal-communities.de/research/digital-communities/projects/digital-observatory-world-literature"
-                        >Digital Observatory of World Literature</ref>« assoziiert. Betreut wird es
-                    von Frank Fischer (FU Berlin) und Paula Wojcik (Universität Wien).</p>
+                    Exzellenzcluster »<ref target="https://www.temporal-communities.de/">Temporal
+                        Communities. Doing Literature in a Global Perspective</ref>« assoziiert.
+                    Betreut wird es von Frank Fischer (FU Berlin), Anita Traninger (FU Berlin) und
+                    Paula Wojcik (Universität Wien). Seit 2025 koordiniere ich gemeinsam mit Henny
+                    Sluyter-Gäthje außerdem das Netzwerk junge Digital-Humanities
+                    Berlin-Brandenburg.</p>
                 <p>Eine Auflistung meiner Publikationen ist auf <ref
-                        target="https://orcid.org/0000-0002-9649-0870">ORCID</ref> zu finden.</p>
+                        target="https://orcid.org/0000-0002-9649-0870">ORCID</ref> zu finden.
+                    Projektbezogene Publikationen und Vorträge sind zusätzlich <ref
+                        target="publikationen.html">hier</ref> gelistet.</p>
                 <p>Bei Rückfragen stehe ich gerne unter <ref
                         target="mailto:laura.untner@fu-berlin.de">laura.untner@fu-berlin.de</ref>
                     zur Verfügung. Auf <ref target="https://bsky.app/profile/luntner.bsky.social"
                         >Bluesky</ref> finden Sie mich ebenfalls.</p>
+            </div>
+            <div>
+                <head>Dank</head>
+                <p>Für Unterstützung bei der Recherche danke ich ausdrücklich Julius Handl.</p>
+                <p>Für Feedback danke ich zudem Amrei Stanzel, Martin Anton Müller, Gregor Pirgie
+                    und Dimitra Grigoriou.</p>
             </div>
             <div type="funding">
                 <head>Fördergeber</head>

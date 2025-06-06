@@ -42,6 +42,10 @@
                                     </li>
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
+                                            href="publikationen.html">Publikationen</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
                                             href="https://github.com/laurauntner/sappho-digital">Daten auf
                                             GitHub</a>
                                     </li>
