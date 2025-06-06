@@ -1,4 +1,4 @@
-# The literary reception of Sappho in German-speaking countries
+# Sappho Digital
 
 Over the centuries, the ancient Greek poet Sappho has been imagined and reimagined in countless ways. More than 1,000 German-language texts reference Sappho in ways that range from quotation and allusion to fictionalization and stylistic imitation. This project documents and analyzes these forms of *productive literary reception* using Linked Data. This repository provides data related to this literary reception of Sappho in German-speaking countries from the 15th to the 21st century. It is part of the dissertation project by Laura Untner ([laura.untner@fu-berlin.de](mailto:laura.untner@fu-berlin.de)). 
 
