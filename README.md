@@ -1,6 +1,6 @@
 # Sappho Digital
 
-Over the centuries, the ancient Greek poet Sappho has been imagined and reimagined in countless ways. More than 1,000 German-language texts reference Sappho in ways that range from quotation and allusion to fictionalization and stylistic imitation. Laura Untner’s dissertation project documents and analyzes these forms of the *productive literary reception* of Sappho in German-speaking countries from the 15th to the 21st century using Linked Data. This repository stores the corresponding data.
+Over the centuries, the ancient Greek poet Sappho has been imagined and reimagined in countless ways. More than 1,000 German-language texts from the 15th to the 21st century reference Sappho in ways that range from quotation and allusion to fictionalization and stylistic imitation. Laura Untner’s dissertation project documents and analyzes these forms of *productive literary reception* using Linked Data. This repository stores the corresponding data.
 
 For a detailed description of the project, see the [project website](https://sappho-digital.com/about.html) based on the [DSE-Static-Cookiecutter](https://github.com/acdh-oeaw/dse-static-cookiecutter). If, for whatever reason, the website becomes unavailable, see the archived version via the [Wayback Machine](https://web.archive.org/).
 
