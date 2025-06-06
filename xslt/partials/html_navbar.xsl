@@ -34,15 +34,15 @@
                                     </li>
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
+                                            href="publikationen.html">Publikationen</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
                                             href="bibliographie.html">Bibliographie</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
                                             href="buch.html">Primärtexte</a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item custom-dropdown-link"
-                                            href="publikationen.html">Publikationen</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
