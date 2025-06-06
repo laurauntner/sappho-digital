@@ -14,11 +14,11 @@ For questions, suggestions, or reports of errors, feel free to reach out ([laura
 
 ---
 
-**color code**: `rgba(94, 23, 235)`  
-**font**: *Geist Sans*
+### Citation recommendation
+Laura Untner: Sappho Digital. Die literarische Sappho-Rezeption im deutschsprachigen Raum. Wien/Berlin 2024f., https://sappho-digital.com.
 
 ---
 
-*Citation recommendation*  
-Laura Untner: *Sappho Digital. Die literarische Sappho-Rezeption im deutschsprachigen Raum*. Wien/Berlin 2024f., https://sappho-digital.com.
+**color code**: `rgba(94, 23, 235)`  
+**font**: *Geist Sans*
 
