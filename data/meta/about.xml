@@ -45,12 +45,17 @@
                         Raum</ref> mündete. Nun verbinde ich mein Wissen über die Sappho-Rezeption
                     mit meinen Kenntnissen im Bereich der Digital Humanities.</p>
                 <p>Die hier aufbereiteten <hi rend="bold">Daten</hi> werden sich letzten Endes aus
-                    drei Teilen zusammensetzen: einem für Menschen leicht lesbaren tabellarischen
-                    Verzeichnis aller bekannten produktiv-literarischen Rezeptionszeugnisse zu
-                    Sappho aus dem deutschsprachigen Raum, einer OWL-Ontologie mit detailliertem
-                    Wissen über diese Rezeptionszeugnisse, und einer SKOS-Taxonomie zur
-                    Klassifizierung wiederkehrender Elemente in der literarischen Sappho-Rezeption.
-                    Volltexte der Rezeptionszeugnisse werden zu keinem Zeitpunkt angeboten. Eine
+                    drei Teilen zusammensetzen:</p>
+                <list>
+                    <item>einem für Menschen leicht lesbaren tabellarischen Verzeichnis aller
+                        bekannten produktiv-literarischen Rezeptionszeugnisse zu Sappho aus dem
+                        deutschsprachigen Raum,</item>
+                    <item>einer OWL-Ontologie mit detailliertem Wissen über diese
+                        Rezeptionszeugnisse und</item>
+                    <item>einer SKOS-Taxonomie zur Klassifizierung wiederkehrender Elemente in der
+                        literarischen Sappho-Rezeption.</item>
+                </list>
+                <p>Volltexte der Rezeptionszeugnisse werden zu keinem Zeitpunkt angeboten. Eine
                     Textauswahl findet sich in meinem Band <hi rend="italics"><ref
                             target="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/"
                             >Sappho. Texte zur literarischen Rezeption im deutschsprachigen
@@ -70,27 +75,33 @@
                     durchsuchbar:</p>
                 <list>
                     <item>Jahr der Erstveröffentlichung, oder, wenn bekannt, Jahr der
-                        Entstehung</item>
-                    <item>Titel</item>
-                    <item>Autor_innenname</item>
+                        Entstehung,</item>
+                    <item>Titel und</item>
+                    <item>Autor_innenname.</item>
                 </list>
                 <p>Das Verzeichnis wird laufend aktualisiert und erweitert. Ca. 300 der über 1.000
                     Einträge sind noch nicht ausreichend bearbeitet, um sie abbilden zu können.
                     Weitere bibliographische Informationen, etwa Ort und Verlag des Erstdrucks,
                     werden erfasst, aber noch nicht dargestellt.</p>
-                <p><hi rend="bold">Excel-Tabellen</hi> mit den Daten aus den Verzeichnissen können
-                    in den Unterseiten geladen werden. <hi rend="bold">XML/TEI-Dateien</hi> sind
-                    über <ref
-                        target="https://github.com/laurauntner/sappho-digital/tree/main/data/lists"
-                        >GitHub</ref> frei zugänglich.</p>
-                <p>Auf GitHub findet sich ebenso ein <ref
+                <p>Auf GitHub findet sich ein <ref
                         target="https://github.com/laurauntner/wikidata-to-cidoc-crm"
                         >Repositorium</ref> mit Python-Skripten zur Transformation strukturierter
                     biographischer, bibliographischer und intertextueller Daten aus Wikidata, die
                     mithilfe von CIDOC CRM, LRMoo und INTRO in RDF überführt werden. Es bietet einen
                     ersten Einblick in die OWL-Ontologie, die auch im Rahmen dieses Projekts zur
                     Anwendung kommen wird.</p>
-                <p>Mit einer Fertigstellung des Projekts ist 2027 zu rechnen.</p>
+                <p>Mit einer Fertigstellung des Projekts ist 2027 zu rechnen. Bis dahin wird die
+                    Webseite fortlaufend erweitert.</p>
+            </div>
+            <div>
+                <head>Daten</head>
+                <p><hi rend="bold">Excel-Tabellen</hi> mit den Daten aus den Verzeichnissen können
+                    in den Unterseiten geladen werden. <hi rend="bold">XML/TEI-Dateien</hi> sind
+                    über <ref
+                        target="https://github.com/laurauntner/sappho-digital/tree/main/data/lists"
+                        >GitHub</ref> frei zugänglich.</p>
+                <p>Grundsätzlich können alle bereitgestellten Daten unter Nennung der Quelle frei
+                    weiterverwendet werden.</p>
             </div>
             <div>
                 <head>Mithelfen/Kontakt</head>
