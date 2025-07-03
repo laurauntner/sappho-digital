@@ -67,13 +67,25 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("Last Data Point:", lastDataPoint);
 
             // Extract data for genres
-            const genres = {};
+            const genres = {
+                'Prosa': 0,
+                'Lyrik': 0,
+                'Drama': 0,
+                'Sonstige': 0
+            };
+            
             Array.from(xmlDoc.getElementsByTagNameNS("http://www.tei-c.org/ns/1.0", "note")).forEach(noteElement => {
-                const genre = noteElement.textContent.trim();
-                if (!genres[genre]) {
-                    genres[genre] = 0;
+                const text = noteElement.textContent.toLowerCase();
+            
+                if (text.includes("lyrik")) {
+                    genres["Lyrik"]++;
+                } else if (text.includes("prosa")) {
+                    genres["Prosa"]++;
+                } else if (text.includes("drama")) {
+                    genres["Drama"]++;
+                } else {
+                    genres["Sonstige"]++;
                 }
-                genres[genre]++;
             });
 
             // Generate color variants
