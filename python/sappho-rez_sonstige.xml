@@ -1,0 +1,65 @@
+<?xml version="1.0" ?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Sonstige Rezeptionszeugnisse</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Laura Untner</publisher>
+                <pubPlace>Wien/Berlin</pubPlace>
+                <date when="2025">2025</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
+                        <p>CC BY 4.0</p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <listBibl>
+                <bibl>
+                    <date type="published" when="1666">1666</date>
+                    <title type="text">Poetisch-Historischer Lustgarten</title>
+                    <author>Georg Neumark</author>
+                    <note type="genre">Lyrik/Prosa</note>
+                    <pubPlace>Frankfurt a. M.</pubPlace>
+                    <publisher>Thomas Matthias Götze</publisher>
+                    <ref target="https://www.deutschestextarchiv.de/book/show/neumark_lustgarten_1666">https://www.deutschestextarchiv.de/book/show/neumark_lustgarten_1666</ref>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1835">1835</date>
+                    <title type="text">Sappho, ein romantisches Gemälde</title>
+                    <author>L. G. Förster</author>
+                    <note type="genre">Prosa?</note>
+                    <pubPlace>Gera</pubPlace>
+                    <publisher>Friedrich Schumann</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1887">1887</date>
+                    <title type="text">Liebeslied der Sappho</title>
+                    <title type="work">Hundert Lieder und Gesänge</title>
+                    <author>Georg Ebers</author>
+                </bibl>
+                <bibl>
+                    <date type="created" notAfter="1937">n. n. 1937</date>
+                    <title type="text">Sappho und Phaon</title>
+                    <author>Karl Wache</author>
+                </bibl>
+                <bibl>
+                    <date type="published" when="2021">2021</date>
+                    <title type="text">Sibylla</title>
+                    <author>Max Baitinger</author>
+                    <note type="genre">Comic</note>
+                    <pubPlace>Berlin</pubPlace>
+                    <publisher>Reprodukt</publisher>
+                </bibl>
+            </listBibl>
+        </body>
+    </text>
+</TEI>

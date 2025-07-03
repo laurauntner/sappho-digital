@@ -1,0 +1,413 @@
+<?xml version="1.0" ?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Dramatische Rezeptionszeugnisse</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Laura Untner</publisher>
+                <pubPlace>Wien/Berlin</pubPlace>
+                <date when="2025">2025</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
+                        <p>CC BY 4.0</p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <listBibl>
+                <bibl>
+                    <date type="created" when="1534">1534</date>
+                    <title type="text">Comedia oder kampff-gesprech zwischen Juppiter und Juno, ob weiber oder mender zun regimentn tüglicher seyn; hat V person</title>
+                    <author>Hans Sachs</author>
+                    <note type="genre">Drama</note>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1539">1539</date>
+                    <title type="text">Ivdith. Ain Nutzliche History, durch ain Herrliche Tragœdi</title>
+                    <author>Sixt Birck</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Augsburg</pubPlace>
+                    <publisher>Ulhart</publisher>
+                    <ref target="https://www.digitale-sammlungen.de/en/details/bsb00070161">https://www.digitale-sammlungen.de/en/details/bsb00070161</ref>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1750">18. Jhdt.?</date>
+                    <title type="text">Philindus</title>
+                    <note type="genre">Drama</note>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1785">1785</date>
+                    <title type="text">Minona oder Die Angelsachsen. Ein tragisches Melodrama in vier Akten. Die Musik vom Herrn Kapellmeister J. A. P. Schulz [d. i. Johann Abraham Peter Schulz]</title>
+                    <author>Heinrich Wilhelm von Gerstenberg</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Hamburg</pubPlace>
+                    <publisher>Benjamin Gottlob Hoffmann</publisher>
+                    <ref target="https://www.digitale-sammlungen.de/de/view/bsb10578436?page=,1">https://www.digitale-sammlungen.de/de/view/bsb10578436?page=,1</ref>
+                </bibl>
+                <bibl>
+                    <date type="created" notBefore="1789" notAfter="1793">1789–1793</date>
+                    <date type="published" when="1796">1796</date>
+                    <title type="text">Faon, Nireus, hernach Saffo, zuletzt noch Anakreon</title>
+                    <title type="work">C. M. Wielands sämmtliche Werke</title>
+                    <author>Christoph Martin Wieland</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Leipzig</pubPlace>
+                    <publisher>Georg Joachim Göschen</publisher>
+                    <ref target="https://books.google.at/books?id=DUkFB4643o0C&amp;dq=christoph%20martin%20wieland%20g%C3%B6ttergespr%C3%A4che&amp;hl=de&amp;pg=PA313#v=onepage&amp;q&amp;f=false">https://books.google.at/books?id=DUkFB4643o0C&amp;dq=christoph%20martin%20wieland%20g%C3%B6ttergespr%C3%A4che&amp;hl=de&amp;pg=PA313#v=onepage&amp;q&amp;f=false</ref>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1790">1790</date>
+                    <title type="text">Sapho. Ein Melodrama</title>
+                    <title type="work">Sapho. Ein Melodrama nebst anderen Gedichten</title>
+                    <author>J. J. H–b–r [d. i. Johann Joseph von Huber]</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Augsburg</pubPlace>
+                    <publisher>Kayser</publisher>
+                    <ref target="https://books.google.at/books?id=IpGYZwAOS3kC&amp;dq=Sapho%3A%20ein%20Melodrama%2C%20nebst%20anderen%20Gedichten&amp;hl=de&amp;pg=PA5#v=onepage&amp;q&amp;f=false">https://books.google.at/books?id=IpGYZwAOS3kC&amp;dq=Sapho%3A%20ein%20Melodrama%2C%20nebst%20anderen%20Gedichten&amp;hl=de&amp;pg=PA5#v=onepage&amp;q&amp;f=false</ref>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1792">1792</date>
+                    <title type="text">Der leukadische Fels. Ein Schauspiel</title>
+                    <title type="work">Thalia. Zweyter Theil. Viertes Stück des Jahrganges 1792</title>
+                    <author>Caroline von Wolzogen</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Leipzig</pubPlace>
+                    <publisher>Georg Joachim Göschen</publisher>
+                    <ref target="https://de.wikisource.org/wiki/Der_leukadische_Fels_%E2%80%93_Teil_1">https://de.wikisource.org/wiki/Der_leukadische_Fels_%E2%80%93_Teil_1</ref>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1792">1792</date>
+                    <title type="text">Der leukadische Fels. Ein Schauspiel. Fortsetzung</title>
+                    <title type="work">Thalia. Zweyter Theil. Viertes Stück des Jahrganges 1792</title>
+                    <author>Caroline von Wolzogen</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Leipzig</pubPlace>
+                    <publisher>Georg Joachim Göschen</publisher>
+                    <ref target="https://de.wikisource.org/wiki/Der_leukadische_Fels_%E2%80%93_Teil_2">https://de.wikisource.org/wiki/Der_leukadische_Fels_%E2%80%93_Teil_2</ref>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1793">1793</date>
+                    <title type="text">Sappho. Ein dramatisches Gedicht</title>
+                    <author>Franz Alexander von Kleist</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Berlin</pubPlace>
+                    <publisher>Vossische Buchhandlung</publisher>
+                    <ref target="https://books.google.at/books?id=d4YxX_-LQuAC&amp;printsec=frontcover&amp;hl=de&amp;source=gbs_ge_summary_r&amp;cad=0#v=onepage&amp;q&amp;f=false">https://books.google.at/books?id=d4YxX_-LQuAC&amp;printsec=frontcover&amp;hl=de&amp;source=gbs_ge_summary_r&amp;cad=0#v=onepage&amp;q&amp;f=false</ref>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1805">1805</date>
+                    <title type="text">Horribunda. Ein Drama in drey Acten</title>
+                    <author>Wilhelm Elogius Meyer</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Berlin</pubPlace>
+                    <publisher>Maurer</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1816">1816</date>
+                    <title type="text">Sappho. Melodrama</title>
+                    <author>Friedrich Wilhelm Gubitz</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Berlin</pubPlace>
+                    <publisher>Maurersche Buchhandlung</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1818">1818</date>
+                    <title type="text">Seppherl, komisches Melodrama als Parodie mit Gesang in 3 Aufzügen [oder »Jungfer Sepherl«]</title>
+                    <author>C.</author>
+                    <author>H.</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Wien</pubPlace>
+                    <publisher>unveröffentlicht</publisher>
+                </bibl>
+                <bibl>
+                    <date type="created" when="1818">1818</date>
+                    <date type="published" when="1820">1820</date>
+                    <title type="text">Sappho. Trauerspiel in fünf Aufzügen</title>
+                    <author>Franz Grillparzer</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Wien</pubPlace>
+                    <publisher>J. B. Wallishauser</publisher>
+                    <ref target="https://www.deutschestextarchiv.de/book/view/grillparzer_sappho_1819?p=7">https://www.deutschestextarchiv.de/book/view/grillparzer_sappho_1819?p=7</ref>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1819">1819</date>
+                    <title type="text">Scenen aus einem Bade</title>
+                    <title type="work">Zeitung für die elegante Welt</title>
+                    <author>Freiherr von Howald</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Leipzig</pubPlace>
+                    <publisher>Verlag von Georg Voß</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1819">1819</date>
+                    <title type="text">Die moderne Sappho. Ein musikalisch-dramatisches Durcheinander ohne Sinn und ohne Verstand. Bestehend aus zwei Akten und einem monodramatischen Finale</title>
+                    <author>Adolph von Schaden</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Leipzig</pubPlace>
+                    <ref target="https://www.digitale-sammlungen.de/view/bsb10129712?page=3">https://www.digitale-sammlungen.de/view/bsb10129712?page=3</ref>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1819">1819</date>
+                    <title type="text">Phaon und Melitta. Eine dramatische Phantasie</title>
+                    <title type="work">Wiener Zeitschrift für Kunst, Literatur, Theater und Mode</title>
+                    <author>Carl Anton von Gruber</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Wien</pubPlace>
+                    <publisher>Anton Strauß</publisher>
+                    <ref target="https://books.google.at/books?id=sGA-ebQLOCwC&amp;pg=PP9&amp;lpg=PP9&amp;dq=%22Phaon+und+Melitta.+Eine+dramatische+Phantasie%22&amp;source=bl&amp;ots=22MV6deyvH&amp;sig=ACfU3U1-sdPt1XlSdExkBiY_1_1oiIR0pA&amp;hl=de&amp;sa=X&amp;ved=2ahUKEwih9NXR8Nf2AhW_Q_EDHdyJA5QQ6AF6BAgCEAM#v=onepage&amp;q&amp;f=false">https://books.google.at/books?id=sGA-ebQLOCwC&amp;pg=PP9&amp;lpg=PP9&amp;dq=%22Phaon+und+Melitta.+Eine+dramatische+Phantasie%22&amp;source=bl&amp;ots=22MV6deyvH&amp;sig=ACfU3U1-sdPt1XlSdExkBiY_1_1oiIR0pA&amp;hl=de&amp;sa=X&amp;ved=2ahUKEwih9NXR8Nf2AhW_Q_EDHdyJA5QQ6AF6BAgCEAM#v=onepage&amp;q&amp;f=false</ref>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1820">1820</date>
+                    <title type="text">Das Gespenst in der Familie oder Sappho und Tobias Vermählung im Reiche der Todten. Locale Posse und Parodie der Geisterkomödien mit Gesang und Tanz in zwei Aufzügen</title>
+                    <author>Carl Meisl</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Wien</pubPlace>
+                    <publisher>unveröffentlicht</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1821">1821</date>
+                    <title type="text">Das Gespenst im Prater. Als Fortsetzung des Gespenstes auf der Bastey, in zwey Acten</title>
+                    <title type="work">Neuestes theatralisches Quodlibet, oder dramatische Beyträge für die Leopoldstädter Schaubühne</title>
+                    <author>Carl Meisl</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Wien</pubPlace>
+                    <publisher>Mörscher und Jasper</publisher>
+                    <ref target="https://books.google.at/books?id=ps86AAAAcAAJ&amp;pg=PP3&amp;dq=neuestes+dramatisches+quodlibet+meisl+gespenst+zweiter+band&amp;hl=de&amp;sa=X&amp;ved=2ahUKEwir_Lny-ZX4AhUJRPEDHdIxDaUQ6AF6BAgGEAI#v=onepage&amp;q&amp;f=false">https://books.google.at/books?id=ps86AAAAcAAJ&amp;pg=PP3&amp;dq=neuestes+dramatisches+quodlibet+meisl+gespenst+zweiter+band&amp;hl=de&amp;sa=X&amp;ved=2ahUKEwir_Lny-ZX4AhUJRPEDHdIxDaUQ6AF6BAgGEAI#v=onepage&amp;q&amp;f=false</ref>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1823">1823</date>
+                    <title type="text">Sappho, oder der leukadische Fels. Eine Komödie</title>
+                    <author>P. Berthold</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Leipzig</pubPlace>
+                    <publisher>Carl Cnobloch</publisher>
+                    <ref target="https://books.google.at/books?id=S24bhawjlWsC&amp;printsec=frontcover&amp;dq=%22Sappho,+oder+der+leukadische+Fels%22+AND+%22Berthold%22&amp;hl=de&amp;sa=X&amp;redir_esc=y#v=onepage&amp;q&amp;f=false">https://books.google.at/books?id=S24bhawjlWsC&amp;printsec=frontcover&amp;dq=%22Sappho,+oder+der+leukadische+Fels%22+AND+%22Berthold%22&amp;hl=de&amp;sa=X&amp;redir_esc=y#v=onepage&amp;q&amp;f=false</ref>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1823">1823</date>
+                    <title type="text">Faust. Trauerspiel mit Gesang und Tanz</title>
+                    <author>Julius von Voß</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Berlin</pubPlace>
+                    <publisher>Petri</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1824">1824</date>
+                    <title type="text">Nero. Ein dramatisches Charaktergemälde in fünf Akten</title>
+                    <author>Georg Christian Braun</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Mainz</pubPlace>
+                    <publisher>Simon Müller’sche Buchhandlung</publisher>
+                </bibl>
+                <bibl>
+                    <date type="created" when="1825">1825?</date>
+                    <date type="published" when="1827">1827</date>
+                    <title type="text">Kritik und Antikritik</title>
+                    <author>Ernst Raupach</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Hamburg</pubPlace>
+                    <publisher>Hoffmann und Campe</publisher>
+                </bibl>
+                <bibl>
+                    <date type="created" notBefore="1827" notAfter="1828">1827–1828</date>
+                    <date type="published" when="1829">1829</date>
+                    <title type="text">Der romantische Oedipus</title>
+                    <author>August von Platen-Hallermünde</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Stuttgart</pubPlace>
+                    <pubPlace>Tübingen</pubPlace>
+                    <publisher>J. G. Cotta</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1828">1828</date>
+                    <title type="text">Der Zwischenact. Zwischenspiel in 1 Acte</title>
+                    <author>Friedrich von Helldorff</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Schneeberg</pubPlace>
+                    <publisher>C. Schumann</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1829">1829?</date>
+                    <title type="text">Sappho, oder Selbstmord aus unglücklicher Liebe. Trauerspiel</title>
+                    <note type="genre">Drama</note>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1831">1831</date>
+                    <title type="text">Dramatisches Fragment</title>
+                    <title type="work">Carinthia. Zeitschrift für Vaterlandskunde, Belehrung und Unterhaltung</title>
+                    <author>Budik</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Klagenfurt</pubPlace>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1833">1833?</date>
+                    <title type="text">Sapho</title>
+                    <title type="work">Das gesellige Vergnügen</title>
+                    <note type="genre">Drama</note>
+                    <publisher>J. A. Edlen v. Kleinmayr’s Buchhandlung</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1835">1835?</date>
+                    <title type="text">Sappho</title>
+                    <title type="work">Der Brudermörder, die Waise aus Genf und Sappho</title>
+                    <author>Ignaz Franz Castelli?</author>
+                    <note type="genre">Drama</note>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1843">1843</date>
+                    <title type="text">Dies Buch gehört dem König</title>
+                    <author>Bettina von Arnim</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Berlin</pubPlace>
+                    <publisher>Eduard Heinrich Schröder</publisher>
+                    <ref target="https://www.digitale-sammlungen.de/de/view/bsb10104707?page=512">https://www.digitale-sammlungen.de/de/view/bsb10104707?page=512</ref>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1854">1854</date>
+                    <title type="text">Theaterg’schichten durch Liebe, Intrige, Geld und Dummheit. Posse mit Gesang in zwei Akten</title>
+                    <author>Johann Nestroy</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Wien</pubPlace>
+                    <publisher>Ulrich Klopf und Alexander Eurich</publisher>
+                    <ref target="https://books.google.at/books?id=CbtoAAAAcAAJ&amp;printsec=frontcover&amp;dq=Theaterg%E2%80%99schichten&amp;hl=de&amp;sa=X&amp;redir_esc=y#v=onepage&amp;q&amp;f=false">https://books.google.at/books?id=CbtoAAAAcAAJ&amp;printsec=frontcover&amp;dq=Theaterg%E2%80%99schichten&amp;hl=de&amp;sa=X&amp;redir_esc=y#v=onepage&amp;q&amp;f=false</ref>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1860">1860</date>
+                    <title type="text">D. F. Berg in Berlin. Eine Originalposse</title>
+                    <title type="work">Figaro</title>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Wien</pubPlace>
+                </bibl>
+                <bibl>
+                    <date type="created" when="1864">1864</date>
+                    <date type="published" when="1892">1892</date>
+                    <title type="text">Sappho, eine dramatische Scene (für Robert Volkmann 1864 gedichtet)</title>
+                    <title type="work">La Mara. Classisches und Romantisches aus der Tonwelt</title>
+                    <author>L[udwig?] Foglár</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Leipzig</pubPlace>
+                    <publisher>Breitkopf und Härtel</publisher>
+                    <ref target="https://books.google.at/books?id=_TAFAQAAIAAJ&amp;printsec=frontcover&amp;hl=de&amp;source=gbs_ge_summary_r&amp;cad=0#v=onepage&amp;q&amp;f=false">https://books.google.at/books?id=_TAFAQAAIAAJ&amp;printsec=frontcover&amp;hl=de&amp;source=gbs_ge_summary_r&amp;cad=0#v=onepage&amp;q&amp;f=false</ref>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1865">1865</date>
+                    <title type="text">Der letzte Grieche. Trauerspiel in fünf Aufzügen</title>
+                    <author>Julius Große</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Leipzig</pubPlace>
+                    <publisher>Weber</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1887">1887</date>
+                    <title type="text">Sappho. Drama in einem Aufzuge</title>
+                    <author>Georg von Preußen</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Berlin</pubPlace>
+                    <publisher>Vossische Buchhandlung</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1889">1889</date>
+                    <title type="text">Der Meister von Palmyra. Dramatische Dichtung in fünf Aufzügen</title>
+                    <author>Adolf von Wilbrandt</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Stuttgart</pubPlace>
+                    <publisher>Cotta</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1891">1891</date>
+                    <title type="text">Bei der Sappho im Burgtheater</title>
+                    <title type="work">Wiener Humor. Sammlung von humoristischen Vorträgen</title>
+                    <author>Fr. Rotter</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Wien</pubPlace>
+                    <publisher>Nationaler Verlag</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1900">1900</date>
+                    <title type="text">Der Star</title>
+                    <author>Hermann Bahr</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Berlin</pubPlace>
+                    <publisher>S. Fischer</publisher>
+                    <ref target="https://books.google.de/books?id=paEMAQAAIAAJ&amp;pg=PA3&amp;source=kp_read_button&amp;hl=de&amp;newbks=1&amp;newbks_redir=0&amp;redir_esc=y#v=onepage&amp;q&amp;f=false">https://books.google.de/books?id=paEMAQAAIAAJ&amp;pg=PA3&amp;source=kp_read_button&amp;hl=de&amp;newbks=1&amp;newbks_redir=0&amp;redir_esc=y#v=onepage&amp;q&amp;f=false</ref>
+                </bibl>
+                <bibl>
+                    <date type="created" when="1926">1926</date>
+                    <date type="published" when="1936">1936</date>
+                    <title type="text">Der Kanzler von Tirol. Schauspiel in 5 Akten und einem Epilog</title>
+                    <title type="work">Der Kanzler von Tirol, die Landgräfin von Thüringen</title>
+                    <author>Josef Wenter</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Wien</pubPlace>
+                    <pubPlace>Berlin</pubPlace>
+                    <publisher>Zsolnay</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1951">1951</date>
+                    <title type="text">Sappho. Drama in fünf Akten und einem Vor- und Nachspiel mit Berücksichtigung geschichtlicher und legendärer Züge aus Sapphos Leben</title>
+                    <title type="work">Sappho. Orpheus und Eurydike. Dramatische Dichtungen</title>
+                    <author>Maria Modena [d. i. Erna Kreis-Weber]</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Bern</pubPlace>
+                    <publisher>Benteli</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1953">1953</date>
+                    <title type="text">Sappho und Alkaios</title>
+                    <author>Rudolf Bayr</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Wien</pubPlace>
+                    <publisher>Donau-Verlag</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1977">1977</date>
+                    <title type="text">Sappho</title>
+                    <author>Rudolf Levy</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>München</pubPlace>
+                    <publisher>unveröffentlicht</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1978">1978</date>
+                    <title type="text">Sappho und alle die danach kamen</title>
+                    <author>Mara Kraus, Lesbentheater München</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>München</pubPlace>
+                    <publisher>come out lesbenverlag</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="1989">1989</date>
+                    <title type="text">Alkestis. Stück mit Musik in einem ersten Akt, einem zweiten Akt, zwei dritten Akten und einem Vorspiel. Dazu = Deliziös-verklärte Varianten zur Hintergrundforschung mythologisch bedingter Träume bzw. Landschaften im Weltbild antiker Dramen oder so = Fünf Ostraka-Palimpseste aus dem Kramladen der Antike (in Aquatintamanier) von Heiner Ulrich</title>
+                    <author>Franz Fühmann</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Rostock</pubPlace>
+                    <publisher>Hirnstorff</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="2015">2015</date>
+                    <title type="text">Sappho geht stiften</title>
+                    <author>Astrid Osterland</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Berlin</pubPlace>
+                    <publisher>unveröffentlicht</publisher>
+                </bibl>
+                <bibl>
+                    <date type="published" when="2019">2019</date>
+                    <title type="text">Sapphos Welt</title>
+                    <author>Leonie Sowa</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace>Leipzig</pubPlace>
+                    <publisher>unveröffentlicht</publisher>
+                </bibl>
+            </listBibl>
+        </body>
+    </text>
+</TEI>
