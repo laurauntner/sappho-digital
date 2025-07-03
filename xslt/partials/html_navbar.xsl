@@ -74,7 +74,7 @@
                                     </li>
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
-                                            href="toc-sonstige.html">Sonstiges</a>
+                                            href="toc-sonstige.html">Sonstige</a>
                                     </li>
                                 </ul>
                             </li>

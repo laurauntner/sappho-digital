@@ -6,7 +6,7 @@ For a detailed description of the project, see the [project website](https://sap
 
 This repository contains:
 - [XML/TEI files](https://github.com/laurauntner/sappho-digital/tree/main/data/lists) listing testimonies of the productive literary reception of Sappho. 
-- Scripts used for data transformation and sorting. The lists are generated locally with Python scripts from an Excel file and are then sorted with `xslt/sort.xsl` and `xslt/n-bibl.xsl`.
+- XXXX Scripts used for data transformation and sorting. The lists are generated locally with Python scripts from an Excel file and are then sorted with `xslt/sort.xsl` and `xslt/n-bibl.xsl`.
 
 ⚠️ This repository is under active development. Soon, there will also be an OWL ontology for modeling biographical, bibliographical, and intertextual information; a SKOS vocabulary for the literary reception of Sappho; and sample analyses of around 100 literary reception testimonies. To get an idea of the data model, see the companion repository [wikidata-to-cidoc-crm](https://github.com/laurauntner/wikidata-to-cidoc-crm). This repository contains Python scripts for converting structured data from Wikidata into RDF using CIDOC CRM, LRMoo, and INTRO. 
 
@@ -21,4 +21,3 @@ Laura Untner: Sappho Digital. Die literarische Sappho-Rezeption im deutschsprach
 
 **Color code**: `rgba(94, 23, 235)`  
 **Font**: Geist Sans
-

@@ -1,35 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" ?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-	<teiHeader>
-		<fileDesc>
-			<titleStmt>
-				<title type="main">Sonstige Rezeptionszeugnisse</title>
-			</titleStmt>
-			<publicationStmt>
-				<publisher>Laura Untner</publisher>
-				<pubPlace>Wien/Berlin</pubPlace>
-				<date when="2025">2025</date>
-				<availability>
-					<licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
-						<p>CC BY 4.0</p>
-					</licence>
-				</availability>
-			</publicationStmt>
-			<sourceDesc>
-				<p>Born digital</p>
-			</sourceDesc>
-		</fileDesc>
-	</teiHeader>
-	<text>
-		<body>
-			<listBibl>
-				<bibl>
-					<date when="2021.0">2021.0</date>
-					<title>Sibylla</title>
-					<author>Max Baitinger</author>
-					<note>Comic</note>
-				</bibl>
-			</listBibl>
-		</body>
-	</text>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Sonstige Rezeptionszeugnisse</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Laura Untner</publisher>
+                <pubPlace>Wien/Berlin</pubPlace>
+                <date when="2025">2025</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
+                        <p>CC BY 4.0</p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <listBibl>
+                <bibl>
+                    <date type="published" when="2021">2021</date>
+                    <title type="text">Sibylla</title>
+                    <author>Max Baitinger</author>
+                    <note type="genre">Comic</note>
+                    <pubPlace>Berlin</pubPlace>
+                    <publisher>Reprodukt</publisher>
+                </bibl>
+            </listBibl>
+        </body>
+    </text>
 </TEI>

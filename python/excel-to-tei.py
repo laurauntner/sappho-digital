@@ -181,7 +181,7 @@ def generate_tei(df_filtered, title_text):
             ET.SubElement(bibl, "author").text = author
 
         if row["Gattung"].strip():
-            ET.SubElement(bibl, "note", {"type": "genre"}).text = row["Gattung"]
+            ET.SubElement(bibl, "note", {"type": "genre"}).text = row["Gattung"].strip()
 
         for place in [p.strip() for p in row["Publikationsort/Aufführungsort"].split("/") if p.strip()]:
             ET.SubElement(bibl, "pubPlace").text = place
@@ -197,9 +197,23 @@ def generate_tei(df_filtered, title_text):
 
 for key, config in tei_configs.items():
     if config["filter"] == "Sonstige":
-        df_filtered = df[~df["Gattung"].isin(["Prosa", "Lyrik", "Drama"])]
+        df_filtered = df[
+            df["Gattung"].apply(
+                lambda x: all(
+                    g.strip("? ") not in ["Prosa", "Lyrik", "Drama"]
+                    for g in str(x).split("/")
+                )
+            )
+        ]
     elif config["filter"]:
-        df_filtered = df[df["Gattung"] == config["filter"]]
+        df_filtered = df[
+            df["Gattung"].apply(
+                lambda x: any(
+                    g.strip("? ") == config["filter"]
+                    for g in str(x).split("/")
+                )
+            )
+        ]
     else:
         df_filtered = df
 
