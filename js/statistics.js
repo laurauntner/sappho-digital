@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 'Prosa': 'https://sappho-digital.com/toc-prosa.html',
                 'Lyrik': 'https://sappho-digital.com/toc-lyrik.html',
                 'Drama': 'https://sappho-digital.com/toc-drama.html',
-                'Comic': 'https://sappho-digital.com/toc-sonstige.html'
+                'Sonstige': 'https://sappho-digital.com/toc-sonstige.html'
             };
 
             const genreData = Object.entries(genres).map(([genre, count], index) => ({
