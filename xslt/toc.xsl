@@ -14,7 +14,9 @@
         <xsl:variable name="doc_title" select="//tei:title[@type = 'main']"/>
 
         <xsl:variable name="filename" select="tokenize(base-uri(), '/')[last()]"/>
+
         <xsl:variable name="show_genres" select="contains($filename, 'sappho-rez_alle')"/>
+        <xsl:variable name="show_timeline" select="not(contains($filename, 'sappho-rez_sonstige'))"/>
 
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
         <html xmlns="http://www.w3.org/1999/xhtml">
@@ -36,7 +38,6 @@
                         <xsl:otherwise>false</xsl:otherwise>
                     </xsl:choose>
                 </xsl:attribute>
-
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
                     <div class="container">
@@ -47,16 +48,27 @@
                                 </h1>
                             </div>
                             <div class="card-body">
-                                <xsl:if test="$show_genres">
-                                    <div id="container"
-                                        style="display: flex; justify-content: space-between; padding-bottom: 50px">
-                                        <div id="container-timeline"
-                                            style="margin: auto; width: 70%; height: 200px;"/>
-                                        <div id="container-genres"
-                                            style="margin: auto; width: 30%; height: 200px;"/>
-                                    </div>
-                                    <script src="./js/statistics.js"/>
+                                <xsl:if test="$show_timeline">
+                                    <xsl:choose>
+                                        <xsl:when test="$show_genres">
+                                            <div id="container"
+                                                style="display: flex; justify-content: space-between; padding-bottom: 50px">
+                                                <div id="container-timeline"
+                                                  style="margin: auto; width: 70%; height: 200px;"/>
+                                                <div id="container-genres"
+                                                  style="margin: auto; width: 30%; height: 200px;"/>
+                                            </div>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <div id="container"
+                                                style="padding-bottom: 50px; display: flex; justify-content: center;">
+                                                <div id="container-timeline"
+                                                  style="width: 60%; height: 200px; margin: auto;"/>
+                                            </div>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
                                 </xsl:if>
+                                <script src="./js/statistics.js"/>
                                 <table class="table table-striped display" id="tocTable"
                                     style="width:100%">
                                     <thead>

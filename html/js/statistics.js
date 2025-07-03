@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    const url = "https://raw.githubusercontent.com/laurauntner/sappho-digital/main/data/lists/sappho-rez_alle.xml";
+    const fileName = document.body.getAttribute("data-tei-file");
+    const showGenres = document.body.getAttribute("data-show-genres") === "true";
+    const url = "https://raw.githubusercontent.com/laurauntner/sappho-digital/main/data/lists/" + fileName;
 
     fetch(url)
         .then(response => response.text())
@@ -15,105 +17,100 @@ document.addEventListener("DOMContentLoaded", function () {
             const parser = new DOMParser();
             const xmlDoc = parser.parseFromString(data, "text/xml");
 
-            // Define the namespace resolver to handle TEI namespace
+            // TEI-Namespace
             const nsResolver = (prefix) => {
-                const ns = {
-                    'tei': 'http://www.tei-c.org/ns/1.0'
-                };
+                const ns = { 'tei': 'http://www.tei-c.org/ns/1.0' };
                 return ns[prefix] || null;
             };
 
-            // Extract data for timeline focusing only on //tei:body//tei:date
+            // === Timeline aus <bibl>/<date> ===
             const dateCounts = {};
-            const dateElements = xmlDoc.evaluate("//tei:body//tei:date", xmlDoc, nsResolver, XPathResult.ANY_TYPE, null);
-            let dateElement = dateElements.iterateNext();
+            const biblElements = xmlDoc.evaluate("//tei:bibl", xmlDoc, nsResolver, XPathResult.ANY_TYPE, null);
+            let bibl = biblElements.iterateNext();
 
-            while (dateElement) {
-                const when = dateElement.getAttribute("when");
-                const notBefore = dateElement.getAttribute("notBefore");
-                const notAfter = dateElement.getAttribute("notAfter");
-
-                let year;
-                if (when) {
-                    year = parseInt(when);
-                } else if (notBefore && notAfter) {
-                    year = Math.round((parseInt(notBefore) + parseInt(notAfter)) / 2);
-                } else if (notBefore) {
-                    year = parseInt(notBefore);
-                } else if (notAfter) {
-                    year = parseInt(notAfter);
+            while (bibl) {
+                // Erst date[@type="created"], sonst date[@type="published"]
+                let dateElement = xmlDoc.evaluate(".//tei:date[@type='created']", bibl, nsResolver, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+                if (!dateElement) {
+                    dateElement = xmlDoc.evaluate(".//tei:date[@type='published']", bibl, nsResolver, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
                 }
 
-                if (year) {
-                    if (!dateCounts[year]) {
-                        dateCounts[year] = 0;
+                if (dateElement) {
+                    const when = dateElement.getAttribute("when");
+                    const notBefore = dateElement.getAttribute("notBefore");
+                    const notAfter = dateElement.getAttribute("notAfter");
+
+                    let year = null;
+                    if (when) {
+                        year = parseInt(when);
+                    } else if (notBefore && notAfter) {
+                        year = Math.round((parseInt(notBefore) + parseInt(notAfter)) / 2);
+                    } else if (notBefore) {
+                        year = parseInt(notBefore);
+                    } else if (notAfter) {
+                        year = parseInt(notAfter);
                     }
-                    dateCounts[year]++;
+
+                    if (year && !isNaN(year)) {
+                        dateCounts[year] = (dateCounts[year] || 0) + 1;
+                    }
                 }
 
-                dateElement = dateElements.iterateNext();
+                bibl = biblElements.iterateNext();
             }
 
-            // Debugging: Print the dateCounts to the console
-            console.log(dateCounts);
+            const timelineData = Object.keys(dateCounts)
+                .map(year => [Date.UTC(parseInt(year), 0, 1), dateCounts[year]])
+                .sort((a, b) => a[0] - b[0]);
 
-            const timelineData = Object.keys(dateCounts).map(year => [Date.UTC(year, 0, 1), dateCounts[year]]).sort((a, b) => a[0] - b[0]);
+            // === Genre-Zählung (nur bei "alle") ===
+            let genreData = [];
+            if (showGenres) {
+                const genres = {
+                    'Prosa': 0,
+                    'Lyrik': 0,
+                    'Drama': 0,
+                    'Sonstige': 0
+                };
 
-            // Debugging: Print the timelineData to the console
-            console.log(timelineData);
+                Array.from(xmlDoc.getElementsByTagNameNS("http://www.tei-c.org/ns/1.0", "note")).forEach(note => {
+                    const text = note.textContent.toLowerCase();
+                    if (text.includes("lyrik")) {
+                        genres["Lyrik"]++;
+                    } else if (text.includes("prosa")) {
+                        genres["Prosa"]++;
+                    } else if (text.includes("drama")) {
+                        genres["Drama"]++;
+                    } else {
+                        genres["Sonstige"]++;
+                    }
+                });
 
-            // Check the last data point specifically
-            const lastDataPoint = timelineData[timelineData.length - 1];
-            console.log("Last Data Point:", lastDataPoint);
+                const baseColor = 'rgba(94, 23, 235,';
+                const colorVariants = [
+                    `${baseColor} 0.9)`,
+                    `${baseColor} 0.7)`,
+                    `${baseColor} 0.5)`,
+                    `${baseColor} 0.3)`,
+                    `${baseColor} 0.1)`
+                ];
 
-            // Extract data for genres
-            const genres = {
-                'Prosa': 0,
-                'Lyrik': 0,
-                'Drama': 0,
-                'Sonstige': 0
-            };
-            
-            Array.from(xmlDoc.getElementsByTagNameNS("http://www.tei-c.org/ns/1.0", "note")).forEach(noteElement => {
-                const text = noteElement.textContent.toLowerCase();
-            
-                if (text.includes("lyrik")) {
-                    genres["Lyrik"]++;
-                } else if (text.includes("prosa")) {
-                    genres["Prosa"]++;
-                } else if (text.includes("drama")) {
-                    genres["Drama"]++;
-                } else {
-                    genres["Sonstige"]++;
-                }
-            });
+                const genreLinks = {
+                    'Prosa': 'https://sappho-digital.com/toc-prosa.html',
+                    'Lyrik': 'https://sappho-digital.com/toc-lyrik.html',
+                    'Drama': 'https://sappho-digital.com/toc-drama.html',
+                    'Sonstige': 'https://sappho-digital.com/toc-sonstige.html'
+                };
 
-            // Generate color variants
-            const baseColor = 'rgba(94, 23, 235,';
-            const colorVariants = [
-                `${baseColor} 0.9)`,
-                `${baseColor} 0.7)`,
-                `${baseColor} 0.5)`,
-                `${baseColor} 0.3)`,
-                `${baseColor} 0.1)`
-            ];
+                genreData = Object.entries(genres).map(([genre, count], index) => ({
+                    name: genre,
+                    y: count,
+                    color: colorVariants[index % colorVariants.length],
+                    url: genreLinks[genre] || ''
+                }));
+            }
 
-            // Define links for each genre
-            const genreLinks = {
-                'Prosa': 'https://sappho-digital.com/toc-prosa.html',
-                'Lyrik': 'https://sappho-digital.com/toc-lyrik.html',
-                'Drama': 'https://sappho-digital.com/toc-drama.html',
-                'Sonstige': 'https://sappho-digital.com/toc-sonstige.html'
-            };
-
-            const genreData = Object.entries(genres).map(([genre, count], index) => ({
-                name: genre,
-                y: count,
-                color: colorVariants[index % colorVariants.length],
-                url: genreLinks[genre] || ''
-            }));
-
-            // Create the line chart for the timeline
+            // === Timeline anzeigen ===
             Highcharts.chart('container-timeline', {
                 chart: {
                     type: 'line'
@@ -123,16 +120,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 xAxis: {
                     type: 'datetime',
-                    title: {
-                        text: 'Jahre'
-                    }
+                    title: { text: 'Jahre' }
                 },
                 yAxis: {
-                    title: {
-                        text: 'Werke'
-                    },
-                    max: 75, // Set the maximum value of the y-axis
-                    endOnTick: false // Prevents the axis from ending on a tick mark
+                    title: { text: 'Werke' },
+                    endOnTick: false
                 },
                 legend: {
                     enabled: false
@@ -149,34 +141,36 @@ document.addEventListener("DOMContentLoaded", function () {
                 }]
             });
 
-            // Create the genre chart
-            Highcharts.chart('container-genres', {
-                chart: {
-                    type: 'pie'
-                },
-                title: {
-                    text: null
-                },
-                plotOptions: {
-                    pie: {
-                        allowPointSelect: true,
-                        cursor: 'pointer',
-                        events: {
-                            click: function (event) {
-                                const point = event.point;
-                                if (point.options.url) {
-                                    window.open(point.options.url, '_blank');
+            // === Genre-Pie-Chart (nur bei "alle") ===
+            if (showGenres) {
+                Highcharts.chart('container-genres', {
+                    chart: {
+                        type: 'pie'
+                    },
+                    title: {
+                        text: null
+                    },
+                    plotOptions: {
+                        pie: {
+                            allowPointSelect: true,
+                            cursor: 'pointer',
+                            events: {
+                                click: function (event) {
+                                    const point = event.point;
+                                    if (point.options.url) {
+                                        window.open(point.options.url, '_blank');
+                                    }
                                 }
                             }
                         }
-                    }
-                },
-                series: [{
-                    name: 'Rezeptionszeugnisse',
-                    colorByPoint: true,
-                    data: genreData
-                }]
-            });
+                    },
+                    series: [{
+                        name: 'Rezeptionszeugnisse',
+                        colorByPoint: true,
+                        data: genreData
+                    }]
+                });
+            }
         })
         .catch(error => console.error('Error fetching the XML:', error));
 });
