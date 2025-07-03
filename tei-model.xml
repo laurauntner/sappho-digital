@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">TEI data model</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Laura Untner</publisher>
+                <pubPlace>Wien/Berlin</pubPlace>
+                <date when="2025">2025</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
+                        <p>CC BY 4.0</p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <listBibl>
+                <bibl ref="WikidataURI">
+                    <date type="created" when="YYYY">creation date</date>
+                    <date type="published" when="YYYY">publication date</date>
+                    <title type="text">title of the text</title>
+                    <title type="work">title of the work containing the text</title>
+                    <author ref="WikidataURI">author</author>
+                    <note type="genre">genre</note>
+                    <pubPlace ref="WikidataURI">publication place</pubPlace>
+                    <publisher ref="WikidataURI">publisher</publisher>
+                    <ref target="url">URL</ref>
+                </bibl>
+            </listBibl>
+        </body>
+    </text>
+</TEI>
