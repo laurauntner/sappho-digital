@@ -1,8 +1,5 @@
-/* http://live.datatables.net/nugeyewe/7/edit */
- /* script provided by https://github.com/babslgam */
-
 function hideSearchInputs(containerElement, columns) {
-    for (i = 0; i < columns.length; i++) {
+    for (let i = 0; i < columns.length; i++) {
         if (columns[i]) {
             $(`#${containerElement} .filters th`).eq(i).show();
         } else {
@@ -12,46 +9,72 @@ function hideSearchInputs(containerElement, columns) {
 }
 
 function createDataTable(containerElement, order, pageLength) {
-    $(`#${containerElement} thead tr`).clone(true).addClass('filters').appendTo(`#${containerElement} thead`);
+    order = order || [];
+    pageLength = pageLength || 50;
     
-    var table = $(`#${containerElement}`).DataTable({
-        columnDefs:[ {
-            orderable: false, targets: '_all'
-        }, {
-            type: 'num', targets: 0
-        }
-        // sort according to bibl/@n
-        ],
+    const showGenres = document.body.getAttribute("data-show-genres") === "true";
+
+    // Definiere sortierbare Spalten je nach Tabellenstruktur
+    const columnDefs = showGenres ? [
+        { type: 'num', targets: 0 },           // Entstehungsjahr
+        { type: 'num', targets: 1 },           // Publikationsjahr
+        { type: 'string', targets: 2 },        // Titel
+        { type: 'string', targets: 3 },        // Enthalten in
+        { type: 'string', targets: 4 },        // Autor_in
+        { type: 'string', targets: 5 },        // Gattung
+        { type: 'string', targets: 6 },        // Publikationsort
+        { type: 'string', targets: 7 },        // Verlag
+        { orderable: false, targets: 8 }       // Digitalisat
+    ] : [
+        { type: 'num', targets: 0 },
+        { type: 'num', targets: 1 },
+        { type: 'string', targets: 2 },
+        { type: 'string', targets: 3 },
+        { type: 'string', targets: 4 },
+        { type: 'string', targets: 5 },
+        { type: 'string', targets: 6 },
+        { orderable: false, targets: 7 }
+    ];
+
+    $(`#${containerElement} thead tr`).clone(true).addClass('filters').appendTo(`#${containerElement} thead`);
+
+    const table = $(`#${containerElement}`).DataTable({
+        autoWidth: false,
+        columnDefs: columnDefs,
         dom: "'<'row controlwrapper'<'col-sm-4'f><'col-sm-4'i><'col-sm-4 exportbuttons'Br>>'" +
-        "'<'row'<'col-sm-12't>>'" +
-        "'<'row'<'col-sm-6 offset-sm-6'p>>'",
+             "'<'row'<'col-sm-12't>>'" +
+             "'<'row'<'col-sm-6 offset-sm-6'p>>'",
         responsive: true,
-        pageLength: 50,
-        buttons:[ {
-            extend: 'copyHtml5',
-            text: '<i class="far fa-copy"/>',
-            titleAttr: 'Copy',
-            className: 'btn-link',
-            init: function (api, node, config) {
-                $(node).removeClass('btn-secondary');
+        pageLength: pageLength,
+        buttons: [
+            {
+                extend: 'copyHtml5',
+                text: '<i class="far fa-copy"/>',
+                titleAttr: 'Copy',
+                className: 'btn-link',
+                init: function (api, node) {
+                    $(node).removeClass('btn-secondary');
+                }
+            },
+            {
+                extend: 'excelHtml5',
+                text: '<i class="far fa-file-excel"/>',
+                titleAttr: 'Excel',
+                className: 'btn-link',
+                init: function (api, node) {
+                    $(node).removeClass('btn-secondary');
+                }
+            },
+            {
+                extend: 'pdfHtml5',
+                text: '<i class="far fa-file-pdf"/>',
+                titleAttr: 'PDF',
+                className: 'btn-link',
+                init: function (api, node) {
+                    $(node).removeClass('btn-secondary');
+                }
             }
-        }, {
-            extend: 'excelHtml5',
-            text: '<i class="far fa-file-excel"/>',
-            titleAttr: 'Excel',
-            className: 'btn-link',
-            init: function (api, node, config) {
-                $(node).removeClass('btn-secondary');
-            }
-        }, {
-            extend: 'pdfHtml5',
-            text: '<i class="far fa-file-pdf"/>',
-            titleAttr: 'PDF',
-            className: 'btn-link',
-            init: function (api, node, config) {
-                $(node).removeClass('btn-secondary');
-            }
-        }],
+        ],
         order: order,
         orderCellsTop: true,
         fixedHeader: true,
@@ -60,8 +83,6 @@ function createDataTable(containerElement, order, pageLength) {
             "sInfo": "_START_ bis _END_ von _TOTAL_ Einträgen",
             "sInfoEmpty": "Keine Einträge",
             "sInfoFiltered": "(gefiltert von _MAX_ Einträgen)",
-            "sInfoPostFix": "",
-            "sInfoThousands": ".",
             "sLengthMenu": "_MENU_ Einträge anzeigen",
             "sLoadingRecords": "Wird geladen...",
             "sProcessing": "Verarbeiten...",
@@ -73,42 +94,40 @@ function createDataTable(containerElement, order, pageLength) {
                 "sNext": "Nächste",
                 "sPrevious": "Vorherige"
             }
-            /*,
-             "oAria": {
-             "sSortAscending": ": aktivieren, um Spalte aufsteigend zu sortieren",
-             "sSortDescending": ": aktivieren, um Spalte absteigend zu sortieren"
-             }*/
         },
         initComplete: function () {
-            var api = this.api();
-            
+            const api = this.api();
+
             api.columns().eq(0).each(function (colIdx) {
-                var cell = $(`#${containerElement} .filters th`).eq($(api.column(colIdx).header()).index());
+                const cell = $(`#${containerElement} .filters th`).eq($(api.column(colIdx).header()).index());
                 $(cell).html('<input type="text"/>');
-                
-                $('input', $(`#${containerElement} .filters th`).eq($(api.column(colIdx).header()).index())).off('keyup change').on('keyup change', function (e) {
+
+                $('input', cell).off('keyup change').on('keyup change', function (e) {
                     e.stopPropagation();
                     $(this).attr('title', $(this).val());
-                    var regexr = '({search})';
-                    var cursorPosition = this.selectionStart;
-                    
-                    api.column(colIdx).search(this.value != '' ? regexr.replace('{search}', '(((' + this.value + ')))'): '', this.value != '', this.value == '').draw();
-                    
+                    const regexr = '({search})';
+                    const cursorPosition = this.selectionStart;
+
+                    api.column(colIdx).search(
+                        this.value !== '' ? regexr.replace('{search}', '(((' + this.value + ')))') : '',
+                        this.value !== '',
+                        this.value === ''
+                    ).draw();
+
                     $(this).focus()[0].setSelectionRange(cursorPosition, cursorPosition);
                 });
             });
+
             hideSearchInputs(containerElement, api.columns().responsiveHidden().toArray());
         }
     });
-    
-    $(`#${containerElement} thead th:first-child`).removeClass('sorting sorting_asc sorting_desc');
-    
+
     table.responsive.recalc();
-    
+
     table.on('draw.dt', function () {
         $('.paginate_button.current').removeClass('current');
     });
-    
+
     table.on('responsive-resize', function (e, datatable, columns) {
         hideSearchInputs(containerElement, columns);
     });

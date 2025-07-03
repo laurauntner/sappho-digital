@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return ns[prefix] || null;
             };
 
-            // === Timeline aus <bibl>/<date> ===
+            // Timeline aus bibl/date
             const dateCounts = {};
             const biblElements = xmlDoc.evaluate("//tei:bibl", xmlDoc, nsResolver, XPathResult.ANY_TYPE, null);
             let bibl = biblElements.iterateNext();
@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 .map(year => [Date.UTC(parseInt(year), 0, 1), dateCounts[year]])
                 .sort((a, b) => a[0] - b[0]);
 
-            // === Genre-Zählung (nur bei "alle") ===
+            // Genre-Zählung (nur bei "alle")
             let genreData = [];
             if (showGenres) {
                 const genres = {
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }));
             }
 
-            // === Timeline anzeigen ===
+            // Timeline anzeigen
             Highcharts.chart('container-timeline', {
                 chart: {
                     type: 'line'
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }]
             });
 
-            // === Genre-Pie-Chart (nur bei "alle") ===
+            // Genre-Pie-Chart (nur bei "alle") ===
             if (showGenres) {
                 Highcharts.chart('container-genres', {
                     chart: {
