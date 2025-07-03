@@ -74,15 +74,18 @@
                 <p>Neben der Gattungszugehörigkeit sind aktuell folgende Informationen erfasst und
                     durchsuchbar:</p>
                 <list>
-                    <item>Jahr der Erstveröffentlichung, oder, wenn bekannt, Jahr der
-                        Entstehung,</item>
-                    <item>Titel und</item>
-                    <item>Autor_innenname.</item>
+                    <item>Jahr der Entstehung,</item>
+                    <item>Jahr des Erstdrucks,</item>
+                    <item>Titel,</item>
+                    <item>ggf. Titel des Werks, in dem der Text enthalten ist,</item>
+                    <item>Autor_in,</item>
+                    <item>Publikationsort,</item>
+                    <item>Verlag und</item>
+                    <item>Link zu einem Digitalisat.</item>
                 </list>
-                <p>Das Verzeichnis wird laufend aktualisiert und erweitert. Ca. 300 der über 1.000
-                    Einträge sind noch nicht ausreichend bearbeitet, um sie abbilden zu können.
-                    Weitere bibliographische Informationen, etwa Ort und Verlag des Erstdrucks,
-                    werden erfasst, aber noch nicht dargestellt.</p>
+                <p>Das Verzeichnis wird laufend aktualisiert und erweitert. Zu vielen
+                    Rezeptionszeugnissen sind bereits fast alle Informationen vorhanden, zu manchen
+                    fehlen noch einige.</p>
                 <p>Auf GitHub findet sich ein <ref
                         target="https://github.com/laurauntner/wikidata-to-cidoc-crm"
                         >Repositorium</ref> mit Python-Skripten zur Transformation strukturierter
