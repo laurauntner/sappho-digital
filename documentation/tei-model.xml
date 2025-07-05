@@ -28,7 +28,9 @@
                     <date type="created" when="YYYY">creation date</date>
                     <date type="published" when="YYYY">publication date</date>
                     <title type="text">title of the text</title>
-                    <title type="work">title of the work containing the text</title>
+                    <bibl ref="WikidataURI">
+                        <title type="work">title of the work containing the text</title>
+                    </bibl>
                     <author ref="WikidataURI">author</author>
                     <note type="genre">genre</note>
                     <pubPlace ref="WikidataURI">publication place</pubPlace>

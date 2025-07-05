@@ -26,9 +26,9 @@
                 <bibl>
                     <date type="published" when="2021">2021</date>
                     <title type="text">Sibylla</title>
-                    <author>Max Baitinger</author>
+                    <author ref="https://www.wikidata.org/entity/Q57261145">Max Baitinger</author>
                     <note type="genre">Comic</note>
-                    <pubPlace>Berlin</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q64">Berlin</pubPlace>
                     <publisher>Reprodukt</publisher>
                 </bibl>
             </listBibl>

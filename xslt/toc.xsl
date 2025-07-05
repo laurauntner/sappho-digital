@@ -81,8 +81,8 @@
                                             <xsl:if test="$show_genres">
                                                 <th>Gattung</th>
                                             </xsl:if>
-                                            <th>Publikationsort</th>
-                                            <th>Verlag</th>
+                                            <th>Publikations-/Aufführungsort</th>
+                                            <th>Verlag/Druckerei</th>
                                             <th>Digitalisat</th>
                                         </tr>
                                     </thead>
@@ -99,13 +99,55 @@
                                                 </td>
                                                 <td>
                                                   <xsl:value-of select="tei:title[@type = 'text']"/>
+                                                  <xsl:if test="@ref">
+                                                  <a>
+                                                  <xsl:attribute name="href">
+                                                  <xsl:value-of select="@ref"/>
+                                                  </xsl:attribute>
+                                                  <xsl:attribute name="target"
+                                                  >_blank</xsl:attribute>
+                                                  <img src="images/wiki.png" alt="Wikidata"
+                                                  title="Wikidata-Eintrag öffnen"
+                                                  style="height: 0.5em; margin-left: 0.2em; vertical-align: middle; display: inline; border-radius: 0;"
+                                                  />
+                                                  </a>
+                                                  </xsl:if>
                                                 </td>
                                                 <td>
+                                                  <xsl:for-each
+                                                  select="tei:bibl[tei:title[@type = 'work']]">
                                                   <xsl:value-of select="tei:title[@type = 'work']"/>
+                                                  <xsl:if test="@ref">
+                                                  <a>
+                                                  <xsl:attribute name="href">
+                                                  <xsl:value-of select="@ref"/>
+                                                  </xsl:attribute>
+                                                  <xsl:attribute name="target"
+                                                  >_blank</xsl:attribute>
+                                                  <img src="images/wiki.png" alt="Wikidata"
+                                                  title="Wikidata-Eintrag öffnen"
+                                                  style="height: 0.5em; margin-left: 0.2em; vertical-align: middle; display: inline; border-radius: 0;"
+                                                  />
+                                                  </a>
+                                                  </xsl:if>
+                                                  </xsl:for-each>
                                                 </td>
                                                 <td>
                                                   <xsl:for-each select="tei:author">
                                                   <xsl:value-of select="."/>
+                                                  <xsl:if test="@ref">
+                                                  <a>
+                                                  <xsl:attribute name="href">
+                                                  <xsl:value-of select="@ref"/>
+                                                  </xsl:attribute>
+                                                  <xsl:attribute name="target"
+                                                  >_blank</xsl:attribute>
+                                                  <img src="images/wiki.png" alt="Wikidata"
+                                                  title="Wikidata-Eintrag öffnen"
+                                                  style="height: 0.5em; margin-left: 0.2em; vertical-align: middle; display: inline; border-radius: 0;"
+                                                  />
+                                                  </a>
+                                                  </xsl:if>
                                                   <xsl:if test="position() != last()">, </xsl:if>
                                                   </xsl:for-each>
                                                 </td>
@@ -120,12 +162,38 @@
                                                 <td>
                                                   <xsl:for-each select="tei:pubPlace">
                                                   <xsl:value-of select="."/>
+                                                  <xsl:if test="@ref">
+                                                  <a>
+                                                  <xsl:attribute name="href">
+                                                  <xsl:value-of select="@ref"/>
+                                                  </xsl:attribute>
+                                                  <xsl:attribute name="target"
+                                                  >_blank</xsl:attribute>
+                                                  <img src="images/wiki.png" alt="Wikidata"
+                                                  title="Wikidata-Eintrag öffnen"
+                                                  style="height: 0.5em; margin-left: 0.2em; vertical-align: middle; display: inline; border-radius: 0;"
+                                                  />
+                                                  </a>
+                                                  </xsl:if>
                                                   <xsl:if test="position() != last()">, </xsl:if>
                                                   </xsl:for-each>
                                                 </td>
                                                 <td>
                                                   <xsl:for-each select="tei:publisher">
                                                   <xsl:value-of select="."/>
+                                                  <xsl:if test="@ref">
+                                                  <a>
+                                                  <xsl:attribute name="href">
+                                                  <xsl:value-of select="@ref"/>
+                                                  </xsl:attribute>
+                                                  <xsl:attribute name="target"
+                                                  >_blank</xsl:attribute>
+                                                  <img src="images/wiki.png" alt="Wikidata"
+                                                  title="Wikidata-Eintrag öffnen"
+                                                  style="height: 0.5em; margin-left: 0.2em; vertical-align: middle; display: inline; border-radius: 0;"
+                                                  />
+                                                  </a>
+                                                  </xsl:if>
                                                   <xsl:if test="position() != last()">, </xsl:if>
                                                   </xsl:for-each>
                                                 </td>
