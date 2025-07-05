@@ -50,8 +50,22 @@ function createDataTable(containerElement, order, pageLength) {
             {
                 extend: 'copyHtml5',
                 text: '<i class="far fa-copy"/>',
-                titleAttr: 'Copy',
+                titleAttr: 'Tabelle kopieren',
                 className: 'btn-link',
+                exportOptions: {
+                    columns: function (idx, data, node) {
+                        return true;
+                    },
+                    format: {
+                        body: function (data, row, column, node) {
+                            const $link = $('a', node);
+                            if ($link.length && $link.attr('href')) {
+                                return $link.attr('href');
+                            }
+                            return $(node).clone().find('img, svg').remove().end().text().trim();
+                        }
+                    }
+                },
                 init: function (api, node) {
                     $(node).removeClass('btn-secondary');
                 }
@@ -59,8 +73,22 @@ function createDataTable(containerElement, order, pageLength) {
             {
                 extend: 'excelHtml5',
                 text: '<i class="far fa-file-excel"/>',
-                titleAttr: 'Excel',
+                titleAttr: 'Excel-Tabelle herunterladen',
                 className: 'btn-link',
+                exportOptions: {
+                    columns: function (idx, data, node) {
+                        return true;
+                    },
+                    format: {
+                        body: function (data, row, column, node) {
+                            const $link = $('a', node);
+                            if ($link.length && $link.attr('href')) {
+                                return $link.attr('href');
+                            }
+                            return $(node).clone().find('img, svg').remove().end().text().trim();
+                        }
+                    }
+                },
                 init: function (api, node) {
                     $(node).removeClass('btn-secondary');
                 }
@@ -70,6 +98,20 @@ function createDataTable(containerElement, order, pageLength) {
                 text: '<i class="far fa-file-pdf"/>',
                 titleAttr: 'PDF',
                 className: 'btn-link',
+                exportOptions: {
+                    columns: function (idx, data, node) {
+                        return true;
+                    },
+                    format: {
+                        body: function (data, row, column, node) {
+                            const $link = $('a', node);
+                            if ($link.length && $link.attr('href')) {
+                                return $link.attr('href');
+                            }
+                            return $(node).clone().find('img, svg').remove().end().text().trim();
+                        }
+                    }
+                },
                 init: function (api, node) {
                     $(node).removeClass('btn-secondary');
                 }
