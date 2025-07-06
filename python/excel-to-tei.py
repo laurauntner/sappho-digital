@@ -185,10 +185,15 @@ def generate_tei(df_filtered, title_text):
             ET.SubElement(bibl, "title", {"type": "text"}).text = row["Titel"]
 
         if row["Enthalten in"].strip():
-            work_bibl = create_element_with_ref("bibl", "", row.get("Hauptwerk QID", ""))
-            if work_bibl is not None:
-                ET.SubElement(work_bibl, "title", {"type": "work"}).text = row["Enthalten in"]
-                bibl.append(work_bibl)
+            title_text = row["Enthalten in"].strip()
+            qid = row.get("Hauptwerk QID", "").strip()
+            if qid:
+                work_bibl = ET.Element("bibl", {"ref": f"https://www.wikidata.org/entity/{qid}"})
+            else:
+                work_bibl = ET.Element("bibl")
+        
+            ET.SubElement(work_bibl, "title", {"type": "work"}).text = title_text
+            bibl.append(work_bibl)
 
         authors = [a.strip() for a in row["Autor_in"].split("und") if a.strip()]
         author_ids = [a.strip() for a in row.get("Autor_in QID", "").split("und")]
