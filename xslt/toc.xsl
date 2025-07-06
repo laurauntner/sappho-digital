@@ -67,8 +67,10 @@
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:if>
-
                                 <script src="./js/statistics.js"/>
+                                <div id="screen-too-small">Das Fenster ist zu klein, um die Tabelle
+                                    darstellen zu können. Bitte das Fenster vergrößern oder einen größeren
+                                    Bildschirm nutzen.</div>
                                 <table class="table table-striped display" id="tocTable"
                                     style="width:100%">
                                     <thead>

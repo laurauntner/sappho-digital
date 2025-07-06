@@ -300,6 +300,7 @@ table.dataTable thead th.sorting_desc::after {
 #tocTable {
     table-layout: fixed;
     width: 100%;
+    font-size: 0.9em;
 }
 
 #tocTable th:nth-child(1),
@@ -369,6 +370,18 @@ h1 {
 
 ul {
     text-align: left;
+}
+
+#screen-too-small {
+  display: none;
+  color: #a94442;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 4px;
+  text-align: center;
+  max-width: 600px;
 }
 
 li {
