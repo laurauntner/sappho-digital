@@ -76,14 +76,16 @@
                     durchsuchbar:</p>
                 <list>
                     <item>Jahr der Entstehung,</item>
-                    <item>Jahr des Erstdrucks,</item>
+                    <item>Jahr des Erstdrucks oder der Erstaufführung,</item>
                     <item>Titel,</item>
                     <item>ggf. Titel des Werks, in dem der Text enthalten ist,</item>
                     <item>Autor_in,</item>
-                    <item>Publikationsort,</item>
-                    <item>Verlag und</item>
+                    <item>Publikations- oder Erstaufführungsort,</item>
+                    <item>Verlag oder Druckerei und</item>
                     <item>Link zu einem Digitalisat.</item>
                 </list>
+                <p>Zu vielen Werken, Autor_innen, Orten, Verlagen und Druckereien werden auch <ref
+                        target="https://www.wikidata.org/">Wikidata</ref>-IDs bereitsgestellt.</p>
                 <p>Das Verzeichnis wird laufend aktualisiert und erweitert. Zu vielen
                     Rezeptionszeugnissen sind bereits fast alle Informationen vorhanden, zu manchen
                     fehlen noch einige.</p>
