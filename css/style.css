@@ -345,6 +345,10 @@ table {
     width: 100%;
 }
 
+.export-only {
+  display: none !important;
+}
+
 th,
 td {
     border: 1px solid #dddddd;
