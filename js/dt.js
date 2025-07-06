@@ -24,7 +24,7 @@ function createDataTable(containerElement, order, pageLength) {
         { type: "string", targets: 5 },
         { type: "string", targets: 6 },
         { type: "string", targets: 7 },
-        { orderable: false, targets: 8 },
+        { orderable: "string", targets: 8 },
         { type: "string", targets: 9 },
         { type: "string", targets: 10 },
         { type: "string", targets: 11 },
@@ -39,7 +39,7 @@ function createDataTable(containerElement, order, pageLength) {
         { type: "string", targets: 4 },
         { type: "string", targets: 5 },
         { type: "string", targets: 6 },
-        { orderable: false, targets: 7 },
+        { orderable: "string", targets: 7 },
         { type: "string", targets: 8 },
         { type: "string", targets: 9 },
         { type: "string", targets: 10 },
@@ -174,7 +174,19 @@ function createDataTable(containerElement, order, pageLength) {
     $(".paginate_button.current").removeClass("current");
   });
 
-  table.on("responsive-resize", function (e, datatable, columns) {
-    hideSearchInputs(containerElement, columns);
-  });
+    table.on("responsive-resize", function (e, datatable, columns) {
+      hideSearchInputs(containerElement, columns);
+    
+      const shouldHide = columns.some(col => col === false);
+      const warning = document.getElementById("screen-too-small");
+      const tableEl = document.getElementById(containerElement);
+    
+      if (shouldHide) {
+        if (warning) warning.style.display = "block";
+        if (tableEl) tableEl.style.display = "none";
+      } else {
+        if (warning) warning.style.display = "none";
+        if (tableEl) tableEl.style.display = "table";
+      }
+    });
 }
