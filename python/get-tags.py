@@ -30,6 +30,11 @@ def find_tags(folder_path):
                 else:
                     value = (elem.text or "").strip()
 
+                if tag == "stoff" and "modus" in elem.attrib:
+                    modus = elem.attrib["modus"].strip()
+                    if modus:
+                        value += f" ({modus})"
+
                 if value:
                     tag_values[tag].add(value)
 
