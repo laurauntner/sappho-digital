@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 import csv
 from collections import defaultdict
 
-IGNORE_TAGS = {"XML", "title", "text"}
+IGNORE_TAGS = {"XML", "title", "text", "status"}
 
 def remove_namespace(tag):
     return tag.split('}', 1)[1] if '}' in tag else tag
