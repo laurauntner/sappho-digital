@@ -88,4 +88,15 @@
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
 
+    <!-- bibl entities -->
+    <xslt in="./data/lists/sappho-rez_alle.xml"
+        out="${target}/_entities-dummy.html"
+        style="./xslt/bibl-entities.xsl">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
+
+    <!-- remove dummy -->
+    <delete file="${target}/_entities-dummy.html"/>
+
 </project>
