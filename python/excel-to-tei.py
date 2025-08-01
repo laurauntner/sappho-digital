@@ -180,6 +180,11 @@ def generate_tei(df_filtered, title_text):
         if qid:
             bibl.attrib["ref"] = f"https://www.wikidata.org/entity/{qid}"
 
+        if row["Titel"].strip():
+            title_text = row["Titel"].strip()
+            bibl.attrib["xml:id"] = make_stable_id("bibl", title_text)
+            ET.SubElement(bibl, "title", {"type": "text"}).text = title_text
+
         date_created = create_date_element("created", row["Entstehungsjahr"])
         if date_created is not None:
             bibl.append(date_created)
@@ -187,12 +192,6 @@ def generate_tei(df_filtered, title_text):
         date_published = create_date_element("published", row["Publikationsjahr/Aufführungsjahr"])
         if date_published is not None:
             bibl.append(date_published)
-
-        if row["Titel"].strip():
-            title_text = row["Titel"].strip()
-            title_elem = ET.SubElement(bibl, "title", {"type": "text"})
-            title_elem.attrib["xml:id"] = make_stable_id("title", title_text)
-            title_elem.text = title_text
 
         if row["Enthalten in"].strip():
             work_titles = [t.strip() for t in row["Enthalten in"].split("/") if t.strip()]
@@ -203,10 +202,8 @@ def generate_tei(df_filtered, title_text):
                 work_bibl = ET.Element("bibl")
                 if qid:
                     work_bibl.attrib["ref"] = f"https://www.wikidata.org/entity/{qid}"
-
-                title_elem = ET.SubElement(work_bibl, "title", {"type": "work"})
-                title_elem.attrib["xml:id"] = make_stable_id("work", title_text)
-                title_elem.text = title_text
+                work_bibl.attrib["xml:id"] = make_stable_id("bibl", title_text)
+                ET.SubElement(work_bibl, "title", {"type": "work"}).text = title_text
                 bibl.append(work_bibl)
 
         authors = [a.strip() for a in row["Autor_in"].split("und") if a.strip()]
