@@ -1,5 +1,6 @@
 import pandas as pd
 import re
+import hashlib
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 
@@ -54,6 +55,13 @@ tei_configs = {
     }
 }
 
+# Stabile IDs
+
+def make_stable_id(prefix, text):
+    text_normalized = re.sub(r"\s+", " ", text.strip().lower())
+    hash = hashlib.md5(text_normalized.encode("utf-8")).hexdigest()[:8]
+    return f"{prefix}_{hash}"
+
 # Datumselemente erzeugen
 def create_date_element(tag_type, value):
     value = str(value).strip()
@@ -63,7 +71,7 @@ def create_date_element(tag_type, value):
     date = ET.Element("date", {"type": tag_type})
     original = value
 
-    match_century = re.match(r"(\d{1,2})\.\s*(Jahrhundert|Jhdt)\.?\??", value)
+    match_century = re.match(r"(\d{1,2})\.\s*(Jahrhundert|Jhdt)\.??", value)
     if match_century:
         century = int(match_century.group(1))
         midpoint = (century - 1) * 100 + 50
@@ -71,7 +79,7 @@ def create_date_element(tag_type, value):
         date.text = original
         return date
 
-    match_decade = re.match(r"(\d{3})0er\??", value)
+    match_decade = re.match(r"(\d{3})0er??", value)
     if match_decade:
         decade = int(match_decade.group(1)) * 10 + 5
         date.attrib["when"] = str(decade)
@@ -168,7 +176,6 @@ def generate_tei(df_filtered, title_text):
     for _, row in df_filtered.iterrows():
         bibl = ET.SubElement(listBibl, "bibl")
 
-        # URIs
         qid = row.get("Werk QID", "").strip()
         if qid:
             bibl.attrib["ref"] = f"https://www.wikidata.org/entity/{qid}"
@@ -182,18 +189,25 @@ def generate_tei(df_filtered, title_text):
             bibl.append(date_published)
 
         if row["Titel"].strip():
-            ET.SubElement(bibl, "title", {"type": "text"}).text = row["Titel"]
+            title_text = row["Titel"].strip()
+            title_elem = ET.SubElement(bibl, "title", {"type": "text"})
+            title_elem.attrib["xml:id"] = make_stable_id("title", title_text)
+            title_elem.text = title_text
 
         if row["Enthalten in"].strip():
-            title_text = row["Enthalten in"].strip()
-            qid = row.get("Hauptwerk QID", "").strip()
-            if qid:
-                work_bibl = ET.Element("bibl", {"ref": f"https://www.wikidata.org/entity/{qid}"})
-            else:
+            work_titles = [t.strip() for t in row["Enthalten in"].split("/") if t.strip()]
+            work_ids = [qid.strip() for qid in row.get("Hauptwerk QID", "").split("/")]
+
+            for i, title_text in enumerate(work_titles):
+                qid = work_ids[i] if i < len(work_ids) else ""
                 work_bibl = ET.Element("bibl")
-        
-            ET.SubElement(work_bibl, "title", {"type": "work"}).text = title_text
-            bibl.append(work_bibl)
+                if qid:
+                    work_bibl.attrib["ref"] = f"https://www.wikidata.org/entity/{qid}"
+
+                title_elem = ET.SubElement(work_bibl, "title", {"type": "work"})
+                title_elem.attrib["xml:id"] = make_stable_id("work", title_text)
+                title_elem.text = title_text
+                bibl.append(work_bibl)
 
         authors = [a.strip() for a in row["Autor_in"].split("und") if a.strip()]
         author_ids = [a.strip() for a in row.get("Autor_in QID", "").split("und")]
@@ -202,6 +216,7 @@ def generate_tei(df_filtered, title_text):
             ref = author_ids[i] if i < len(author_ids) else ""
             author_elem = create_element_with_ref("author", author, ref)
             if author_elem is not None:
+                author_elem.attrib["xml:id"] = make_stable_id("author", author)
                 bibl.append(author_elem)
 
         if row["Gattung"].strip():
@@ -214,6 +229,7 @@ def generate_tei(df_filtered, title_text):
             ref = place_ids[i] if i < len(place_ids) else ""
             place_elem = create_element_with_ref("pubPlace", place, ref)
             if place_elem is not None:
+                place_elem.attrib["xml:id"] = make_stable_id("pubPlace", place)
                 bibl.append(place_elem)
 
         publishers = [p.strip() for p in row["Verlag"].split("/") if p.strip()]
@@ -223,6 +239,7 @@ def generate_tei(df_filtered, title_text):
             ref = publisher_ids[i] if i < len(publisher_ids) else ""
             pub_elem = create_element_with_ref("publisher", publisher, ref)
             if pub_elem is not None:
+                pub_elem.attrib["xml:id"] = make_stable_id("publisher", publisher)
                 bibl.append(pub_elem)
 
         if row["Link"].strip():

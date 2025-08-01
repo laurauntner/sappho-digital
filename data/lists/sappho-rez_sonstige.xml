@@ -25,11 +25,11 @@
             <listBibl>
                 <bibl>
                     <date type="published" when="2021">2021</date>
-                    <title type="text">Sibylla</title>
-                    <author ref="https://www.wikidata.org/entity/Q57261145">Max Baitinger</author>
+                    <title type="text" xml:id="title_f6923280">Sibylla</title>
+                    <author ref="https://www.wikidata.org/entity/Q57261145" xml:id="author_9ce6f7ee">Max Baitinger</author>
                     <note type="genre">Comic</note>
-                    <pubPlace ref="https://www.wikidata.org/entity/Q64">Berlin</pubPlace>
-                    <publisher>Reprodukt</publisher>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
+                    <publisher xml:id="publisher_c5efa907">Reprodukt</publisher>
                 </bibl>
             </listBibl>
         </body>
