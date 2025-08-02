@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="2.0"
-    xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    exclude-result-prefixes="xsl tei xs">
+<xsl:stylesheet version="2.0" xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xsl tei xs">
 
     <xsl:output encoding="UTF-8" method="xhtml" indent="yes" omit-xml-declaration="yes"/>
 
@@ -34,29 +31,38 @@
                     <div class="container">
                         <div class="card">
                             <div class="card-header">
-                                <h1><xsl:value-of select="$doc_title"/></h1>
+                                <h1>
+                                    <xsl:value-of select="$doc_title"/>
+                                </h1>
                             </div>
                             <div class="card-body">
                                 <xsl:if test="$show_timeline">
                                     <xsl:choose>
                                         <xsl:when test="$show_genres">
-                                            <div id="container" style="display: flex; justify-content: space-between; padding-bottom: 50px">
-                                                <div id="container-timeline" style="margin: auto; width: 70%; height: 200px;"/>
-                                                <div id="container-genres" style="margin: auto; width: 30%; height: 200px;"/>
+                                            <div id="container"
+                                                style="display: flex; justify-content: space-between; padding-bottom: 50px">
+                                                <div id="container-timeline"
+                                                  style="margin: auto; width: 70%; height: 200px;"/>
+                                                <div id="container-genres"
+                                                  style="margin: auto; width: 30%; height: 200px;"/>
                                             </div>
                                         </xsl:when>
                                         <xsl:otherwise>
-                                            <div id="container" style="padding-bottom: 50px; display: flex; justify-content: center;">
-                                                <div id="container-timeline" style="width: 60%; height: 200px; margin: auto;"/>
+                                            <div id="container"
+                                                style="padding-bottom: 50px; display: flex; justify-content: center;">
+                                                <div id="container-timeline"
+                                                  style="width: 60%; height: 200px; margin: auto;"/>
                                             </div>
                                         </xsl:otherwise>
                                     </xsl:choose>
                                 </xsl:if>
 
                                 <script src="./js/statistics.js"/>
-                                <div id="screen-too-small">Das Fenster ist zu klein, um die Tabelle darstellen zu können.</div>
+                                <div id="screen-too-small">Das Fenster ist zu klein, um die Tabelle
+                                    darstellen zu können.</div>
 
-                                <table class="table table-striped display" id="tocTable" style="width:100%">
+                                <table class="table table-striped display" id="tocTable"
+                                    style="width:100%">
                                     <thead>
                                         <tr>
                                             <th>Entstehungsjahr</th>
@@ -81,130 +87,163 @@
                                     <tbody>
                                         <xsl:for-each select="//tei:listBibl/tei:bibl">
                                             <tr>
-                                                <td><xsl:value-of select="tei:date[@type='created']"/></td>
-                                                <td><xsl:value-of select="tei:date[@type='published']"/></td>
                                                 <td>
-                                                    <a href="{@xml:id}.html" class="link-plain">
-                                                        <xsl:value-of select="tei:title[@type='text']"/>
-                                                    </a>
-                                                    <xsl:if test="@ref">
-                                                        <a href="{@ref}" target="_blank">
-                                                            <img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen"
-                                                                 style="height: 0.5em; margin-left: 0.2em; vertical-align: middle; display: inline; border-radius: 0;"/>
-                                                        </a>
-                                                    </xsl:if>
-                                                </td>
-                                                <td class="export-only">
-                                                    <xsl:if test="@ref">
-                                                        <xsl:value-of select="@ref"/>
-                                                    </xsl:if>
+                                                  <xsl:value-of select="tei:date[@type = 'created']"
+                                                  />
                                                 </td>
                                                 <td>
-                                                    <xsl:for-each select="tei:bibl[tei:title[@type='work']]">
-                                                        <a href="{@xml:id}.html" class="link-plain">
-                                                            <xsl:value-of select="tei:title"/>
-                                                        </a>
-                                                        <xsl:if test="@ref">
-                                                            <a href="{@ref}" target="_blank">
-                                                                <img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen"
-                                                                     style="height: 0.5em; margin-left: 0.2em; vertical-align: middle; display: inline; border-radius: 0;"/>
-                                                            </a>
-                                                        </xsl:if>
-                                                        <xsl:if test="position() != last()">, </xsl:if>
-                                                    </xsl:for-each>
-                                                </td>
-                                                <td class="export-only">
-                                                    <xsl:for-each select="tei:bibl[tei:title[@type='work']]">
-                                                        <xsl:if test="@ref">
-                                                            <xsl:value-of select="@ref"/>
-                                                            <xsl:if test="position() != last()">, </xsl:if>
-                                                        </xsl:if>
-                                                    </xsl:for-each>
+                                                  <xsl:value-of
+                                                  select="tei:date[@type = 'published']"/>
                                                 </td>
                                                 <td>
-                                                    <xsl:for-each select="tei:author">
-                                                        <a href="{@xml:id}.html" class="link-plain">
-                                                            <xsl:value-of select="."/>
-                                                        </a>
-                                                        <xsl:if test="@ref">
-                                                            <a href="{@ref}" target="_blank">
-                                                                <img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen"
-                                                                     style="height: 0.5em; margin-left: 0.2em; vertical-align: middle; display: inline; border-radius: 0;"/>
-                                                            </a>
-                                                        </xsl:if>
-                                                        <xsl:if test="position() != last()">, </xsl:if>
-                                                    </xsl:for-each>
+                                                  <a href="{@xml:id}.html" class="link-plain">
+                                                  <xsl:value-of select="tei:title[@type = 'text']"/>
+                                                  </a>
+                                                  <xsl:if test="@ref">
+                                                  <a href="{@ref}" target="_blank">
+                                                  <img src="images/wiki.png" alt="Wikidata"
+                                                  title="Wikidata-Eintrag öffnen" class="icon"/>
+                                                  </a>
+                                                  </xsl:if>
                                                 </td>
                                                 <td class="export-only">
-                                                    <xsl:for-each select="tei:author">
-                                                        <xsl:if test="@ref">
-                                                            <xsl:value-of select="@ref"/>
-                                                            <xsl:if test="position() != last()">, </xsl:if>
-                                                        </xsl:if>
-                                                    </xsl:for-each>
+                                                  <xsl:if test="@ref">
+                                                  <xsl:value-of select="@ref"/>
+                                                  </xsl:if>
+                                                </td>
+                                                <td>
+                                                  <xsl:for-each
+                                                  select="tei:bibl[tei:title[@type = 'work']]">
+                                                  <a href="{@xml:id}.html" class="link-plain">
+                                                  <xsl:value-of select="tei:title"/>
+                                                  </a>
+                                                  <xsl:if test="@ref">
+                                                  <a href="{@ref}" target="_blank">
+                                                  <img src="images/wiki.png" alt="Wikidata"
+                                                  title="Wikidata-Eintrag öffnen" class="icon"/>
+                                                  </a>
+                                                  </xsl:if>
+                                                  <xsl:if test="position() != last()">, </xsl:if>
+                                                  </xsl:for-each>
+                                                </td>
+                                                <td class="export-only">
+                                                  <xsl:for-each
+                                                  select="tei:bibl[tei:title[@type = 'work']]">
+                                                  <xsl:if test="@ref">
+                                                  <xsl:value-of select="@ref"/>
+                                                  <xsl:if test="position() != last()">, </xsl:if>
+                                                  </xsl:if>
+                                                  </xsl:for-each>
+                                                </td>
+                                                <td>
+                                                  <xsl:for-each select="tei:author">
+                                                  <a href="{@xml:id}.html" class="link-plain">
+                                                  <xsl:value-of select="."/>
+                                                  </a>
+                                                  <xsl:if test="@ref">
+                                                  <a href="{@ref}" target="_blank">
+                                                  <img src="images/wiki.png" alt="Wikidata"
+                                                  title="Wikidata-Eintrag öffnen" class="icon"/>
+                                                  </a>
+                                                  </xsl:if>
+                                                  <xsl:if test="position() != last()">, </xsl:if>
+                                                  </xsl:for-each>
+                                                </td>
+                                                <td class="export-only">
+                                                  <xsl:for-each select="tei:author">
+                                                  <xsl:if test="@ref">
+                                                  <xsl:value-of select="@ref"/>
+                                                  <xsl:if test="position() != last()">, </xsl:if>
+                                                  </xsl:if>
+                                                  </xsl:for-each>
                                                 </td>
                                                 <xsl:if test="$show_genres">
-                                                    <td><xsl:value-of select="normalize-space(tei:note[@type='genre'])"/></td>
+                                                  <td>
+                                                  <xsl:for-each select="tei:note[@type = 'genre']">
+                                                  <xsl:variable name="genreText"
+                                                  select="normalize-space(.)"/>
+                                                  <xsl:variable name="genreLower"
+                                                  select="lower-case($genreText)"/>
+                                                  <xsl:choose>
+                                                  <xsl:when test="contains($genreLower, 'lyrik')">
+                                                  <a href="toc-lyrik.html" class="link-plain"
+                                                  >Lyrik</a>
+                                                  </xsl:when>
+                                                  <xsl:when test="contains($genreLower, 'prosa')">
+                                                  <a href="toc-prosa.html" class="link-plain"
+                                                  >Prosa</a>
+                                                  </xsl:when>
+                                                  <xsl:when test="contains($genreLower, 'drama')">
+                                                  <a href="toc-drama.html" class="link-plain"
+                                                  >Drama</a>
+                                                  </xsl:when>
+                                                  <xsl:otherwise>
+                                                  <a href="toc-sonstige.html" class="link-plain"
+                                                  >Sonstige</a>
+                                                  </xsl:otherwise>
+                                                  </xsl:choose>
+                                                  <xsl:if test="position() != last()">, </xsl:if>
+                                                  </xsl:for-each>
+                                                  </td>
                                                 </xsl:if>
                                                 <td>
-                                                    <xsl:for-each select="tei:pubPlace">
-                                                        <a href="{@xml:id}.html" class="link-plain">
-                                                            <xsl:value-of select="."/>
-                                                        </a>
-                                                        <xsl:if test="@ref">
-                                                            <a href="{@ref}" target="_blank">
-                                                                <img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen"
-                                                                     style="height: 0.5em; margin-left: 0.2em; vertical-align: middle; display: inline; border-radius: 0;"/>
-                                                            </a>
-                                                        </xsl:if>
-                                                        <xsl:if test="position() != last()">, </xsl:if>
-                                                    </xsl:for-each>
+                                                  <xsl:for-each select="tei:pubPlace">
+                                                  <a href="{@xml:id}.html" class="link-plain">
+                                                  <xsl:value-of select="."/>
+                                                  </a>
+                                                  <xsl:if test="@ref">
+                                                  <a href="{@ref}" target="_blank">
+                                                  <img src="images/wiki.png" alt="Wikidata"
+                                                  title="Wikidata-Eintrag öffnen" class="icon"/>
+                                                  </a>
+                                                  </xsl:if>
+                                                  <xsl:if test="position() != last()">, </xsl:if>
+                                                  </xsl:for-each>
                                                 </td>
                                                 <td class="export-only">
-                                                    <xsl:for-each select="tei:pubPlace">
-                                                        <xsl:if test="@ref">
-                                                            <xsl:value-of select="@ref"/>
-                                                            <xsl:if test="position() != last()">, </xsl:if>
-                                                        </xsl:if>
-                                                    </xsl:for-each>
+                                                  <xsl:for-each select="tei:pubPlace">
+                                                  <xsl:if test="@ref">
+                                                  <xsl:value-of select="@ref"/>
+                                                  <xsl:if test="position() != last()">, </xsl:if>
+                                                  </xsl:if>
+                                                  </xsl:for-each>
                                                 </td>
                                                 <td>
-                                                    <xsl:for-each select="tei:publisher">
-                                                        <a href="{@xml:id}.html" class="link-plain">
-                                                            <xsl:value-of select="."/>
-                                                        </a>
-                                                        <xsl:if test="@ref">
-                                                            <a href="{@ref}" target="_blank">
-                                                                <img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen"
-                                                                     style="height: 0.5em; margin-left: 0.2em; vertical-align: middle; display: inline; border-radius: 0;"/>
-                                                            </a>
-                                                        </xsl:if>
-                                                        <xsl:if test="position() != last()">, </xsl:if>
-                                                    </xsl:for-each>
+                                                  <xsl:for-each select="tei:publisher">
+                                                  <a href="{@xml:id}.html" class="link-plain">
+                                                  <xsl:value-of select="."/>
+                                                  </a>
+                                                  <xsl:if test="@ref">
+                                                  <a href="{@ref}" target="_blank">
+                                                  <img src="images/wiki.png" alt="Wikidata"
+                                                  title="Wikidata-Eintrag öffnen" class="icon"/>
+                                                  </a>
+                                                  </xsl:if>
+                                                  <xsl:if test="position() != last()">, </xsl:if>
+                                                  </xsl:for-each>
                                                 </td>
                                                 <td class="export-only">
-                                                    <xsl:for-each select="tei:publisher">
-                                                        <xsl:if test="@ref">
-                                                            <xsl:value-of select="@ref"/>
-                                                            <xsl:if test="position() != last()">, </xsl:if>
-                                                        </xsl:if>
-                                                    </xsl:for-each>
+                                                  <xsl:for-each select="tei:publisher">
+                                                  <xsl:if test="@ref">
+                                                  <xsl:value-of select="@ref"/>
+                                                  <xsl:if test="position() != last()">, </xsl:if>
+                                                  </xsl:if>
+                                                  </xsl:for-each>
                                                 </td>
                                                 <td>
-                                                    <xsl:for-each select="tei:ref">
-                                                        <a href="{@target}" target="_blank" class="link-plain">
-                                                            Online
-                                                        </a>
-                                                        <xsl:if test="position() != last()">, </xsl:if>
-                                                    </xsl:for-each>
+                                                  <xsl:for-each select="tei:ref">
+                                                  <a href="{@target}" target="_blank"
+                                                  class="link-plain"> Online </a>
+                                                  <xsl:if test="position() != last()">, </xsl:if>
+                                                  </xsl:for-each>
                                                 </td>
                                                 <td class="export-only">
-                                                    <xsl:for-each select="tei:ref">
-                                                        <xsl:if test="@target">
-                                                            <xsl:value-of select="@target"/>
-                                                            <xsl:if test="position() != last()">, </xsl:if>
-                                                        </xsl:if>
-                                                    </xsl:for-each>
+                                                  <xsl:for-each select="tei:ref">
+                                                  <xsl:if test="@target">
+                                                  <xsl:value-of select="@target"/>
+                                                  <xsl:if test="position() != last()">, </xsl:if>
+                                                  </xsl:if>
+                                                  </xsl:for-each>
                                                 </td>
                                             </tr>
                                         </xsl:for-each>

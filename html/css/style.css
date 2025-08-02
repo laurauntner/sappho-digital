@@ -428,6 +428,19 @@ a:hover {
 a.link-plain {
     color: inherit !important;
     text-decoration: none !important;
+    display: inline !important;
+}
+
+a.link-plain:hover {
+    color: gray !important;
+}
+
+img.icon {
+    height: 0.5em !important;
+    margin-left: 0.2em !important;
+    vertical-align: middle !important;
+    display: inline !important;
+    border-radius: 0 !important;
 }
 
 @media (max-width : 1024px) {
