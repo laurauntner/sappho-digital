@@ -119,7 +119,7 @@
             <p class="align-left"> Enthalten in: <xsl:for-each select="tei:bibl">
                     <xsl:choose>
                         <xsl:when test="@xml:id">
-                            <a href="../html/{@xml:id}.html">
+                            <a href="{@xml:id}.html">
                                 <xsl:value-of select="tei:title"/>
                             </a>
                         </xsl:when>
@@ -142,7 +142,7 @@
             <p class="align-left"> Autor_in: <xsl:for-each select="tei:author">
                     <xsl:choose>
                         <xsl:when test="@xml:id">
-                            <a href="../html/{@xml:id}.html">
+                            <a href="{@xml:id}.html">
                                 <xsl:value-of select="."/>
                             </a>
                         </xsl:when>
@@ -188,7 +188,7 @@
             <p class="align-left"> Publikations-/Aufführungsort: <xsl:for-each select="tei:pubPlace">
                     <xsl:choose>
                         <xsl:when test="@xml:id">
-                            <a href="../html/{@xml:id}.html">
+                            <a href="{@xml:id}.html">
                                 <xsl:value-of select="."/>
                             </a>
                         </xsl:when>
@@ -211,7 +211,7 @@
             <p class="align-left"> Verlag/Druckerei: <xsl:for-each select="tei:publisher">
                     <xsl:choose>
                         <xsl:when test="@xml:id">
-                            <a href="../html/{@xml:id}.html">
+                            <a href="{@xml:id}.html">
                                 <xsl:value-of select="."/>
                             </a>
                         </xsl:when>
@@ -259,7 +259,7 @@
                 <xsl:for-each select="$matches[tei:title[@type = 'text']]">
                     <xsl:sort select="tei:title[@type = 'text']" data-type="text" order="ascending"/>
                     <li>
-                        <a href="../html/{@xml:id}.html">
+                        <a href="{@xml:id}.html">
                             <xsl:value-of select="tei:title[@type = 'text']"/>
                         </a>
                     </li>
@@ -288,7 +288,7 @@
                         <xsl:sort select="tei:title[@type = 'text']" data-type="text"
                             order="ascending"/>
                         <li>
-                            <a href="../html/{@xml:id}.html">
+                            <a href="{@xml:id}.html">
                                 <xsl:value-of select="tei:title[@type = 'text']"/>
                             </a>
                         </li>
@@ -318,7 +318,7 @@
                         <xsl:sort select="tei:title[@type = 'text']" data-type="text"
                             order="ascending"/>
                         <li>
-                            <a href="../html/{@xml:id}.html">
+                            <a href="{@xml:id}.html">
                                 <xsl:value-of select="tei:title[@type = 'text']"/>
                             </a>
                         </li>
@@ -340,12 +340,12 @@
                 <p class="align-left"> Enthält: <xsl:for-each select="$containedWorks">
                         <xsl:sort select="tei:title[@type = 'text']" data-type="text"
                             order="ascending"/>
-                        <a href="../html/{@xml:id}.html">
+                        <a href="{@xml:id}.html">
                             <xsl:value-of select="tei:title[@type = 'text']"/>
                         </a>
                         <xsl:if test="tei:author"> (<xsl:choose>
                                 <xsl:when test="tei:author[1]/@xml:id">
-                                    <a href="../html/{tei:author[1]/@xml:id}.html">
+                                    <a href="{tei:author[1]/@xml:id}.html">
                                         <xsl:value-of select="tei:author[1]"/>
                                     </a>
                                 </xsl:when>
@@ -368,7 +368,7 @@
                             select="$containedWorks/tei:pubPlace">
                             <xsl:choose>
                                 <xsl:when test="@xml:id">
-                                    <a href="../html/{@xml:id}.html">
+                                    <a href="{@xml:id}.html">
                                         <xsl:value-of select="."/>
                                     </a>
                                 </xsl:when>
@@ -392,7 +392,7 @@
                             select="$containedWorks/tei:publisher">
                             <xsl:choose>
                                 <xsl:when test="@xml:id">
-                                    <a href="../html/{@xml:id}.html">
+                                    <a href="{@xml:id}.html">
                                         <xsl:value-of select="."/>
                                     </a>
                                 </xsl:when>
