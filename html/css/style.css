@@ -443,6 +443,38 @@ img.icon {
     border-radius: 0 !important;
 }
 
+
+.wikidata-layout {
+display: grid;
+grid-template-columns: 1fr 300px;
+gap: 2rem;
+align-items: start;
+margin-top: 0 !important;
+clear: none !important;
+}
+
+.wikidata-left {
+grid-column: 1;
+grid-row: 1;
+}
+
+.wikidata-right {
+grid-column: 2;
+grid-row: 1;
+}
+
+.wikidata-thumb,
+.wikidata-map {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: contain;
+    display: block;
+}
+
 @media (max-width : 1024px) {
     .navbar .navbar-collapse {
         border-top: 1px solid rgba(0, 0, 0, .075);
