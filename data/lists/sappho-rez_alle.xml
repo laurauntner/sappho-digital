@@ -71,10 +71,7 @@
                     <title type="text">Gott grüß euch schone</title>
                     <date type="published" when="1532">1532</date>
                     <bibl xml:id="bibl_3bdf0ccc">
-                        <title type="work">Ain schoen spil von Fünfferlay betrachtnussen</title>
-                    </bibl>
-                    <bibl xml:id="bibl_bcdc093b">
-                        <title type="work">den menschen zur Bůß raytzende</title>
+                        <title type="work">Ain schoen spil von Fünfferlay betrachtnussen/ den menschen zur Bůß raytzende</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q109458" xml:id="author_649ab695">Johannes Kolrose</author>
                     <note type="genre">Lyrik</note>
@@ -132,7 +129,7 @@
                     der meisterkoch fast Lieb gewan: weiter von seinem Wolsingen</title>
                     <date type="created" notBefore="1554" notAfter="1557">1554–1557</date>
                     <date type="published" when="1557">1557</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120256127" xml:id="bibl_dbe47849">
+                    <bibl xml:id="bibl_dbe47849">
                         <title type="work">Der Goldtfaden</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q73072" xml:id="author_6bcd0402">Jörg Wickram</author>
@@ -187,13 +184,13 @@
                 <bibl xml:id="bibl_e9c359b3">
                     <title type="text">Derselbe, welcher diese Nacht</title>
                     <date type="published" when="1624">1624</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q53588" xml:id="bibl_ee6c648c">
+                    <bibl xml:id="bibl_ee6c648c">
                         <title type="work">Buch von der Deutschen Poeterey</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q60946" xml:id="author_900e54eb">Martin Opitz</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="pubPlace_811c769d">Breslau</pubPlace>
-                    <pubPlace xml:id="pubPlace_5d522693">Brieg</pubPlace>
+                    <pubPlace xml:id="pubPlace_5d522693">Breslau</pubPlace>
+                    <pubPlace xml:id="pubPlace_811c769d">Brieg</pubPlace>
                     <publisher xml:id="publisher_92d4347b">Müller</publisher>
                     <publisher xml:id="publisher_a163ee88">Gründer</publisher>
                     <ref target="https://www.deutschestextarchiv.de/book/show/opitz_buch_1624">https://www.deutschestextarchiv.de/book/show/opitz_buch_1624</ref>
@@ -243,7 +240,7 @@
                     <title type="text">WJe kan der Liebe Joch doch süß und lieblich seyn</title>
                     <date type="created" notAfter="1638">n. n. 1638</date>
                     <date type="published" when="1650">1650</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120254731" xml:id="bibl_c8f9e0e3">
+                    <bibl xml:id="bibl_c8f9e0e3">
                         <title type="work">Sibyllen Schwarzin Vohn Greiffswald Aus Pommern Ander Teil Deutscher Poëtischer Gedichten</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q120980" xml:id="author_749b60f3">Sibylla Schwarz</author>
@@ -256,7 +253,7 @@
                     <title type="text">Ein Gesang wieder den Neidt</title>
                     <date type="created" notAfter="1638">n. n. 1638</date>
                     <date type="published" when="1650">1650</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120254731" xml:id="bibl_c8f9e0e3">
+                    <bibl xml:id="bibl_c8f9e0e3">
                         <title type="work">Sibyllen Schwarzin Vohn Greiffswald Aus Pommern Ander Teil Deutscher Poëtischer Gedichten</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q120980" xml:id="author_749b60f3">Sibylla Schwarz</author>
@@ -269,7 +266,7 @@
                     <title type="text">Nahmens-Wechsel. Ist zwar’n Liebes-Licht</title>
                     <date type="created" notAfter="1638">n. n. 1638</date>
                     <date type="published" when="1650">1650</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120254731" xml:id="bibl_c8f9e0e3">
+                    <bibl xml:id="bibl_c8f9e0e3">
                         <title type="work">Sibyllen Schwarzin Vohn Greiffswald Aus Pommern Ander Teil Deutscher Poëtischer Gedichten</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1926767" xml:id="author_cd16cf95">Michael Albinus</author>
@@ -379,7 +376,8 @@
                     <author xml:id="author_dbd41688">Matthias Apelles von Löwenstein</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="published" when="1645">1645</date>
                     <author ref="https://www.wikidata.org/entity/Q71347" xml:id="author_52d605a1">Justus Georg Schottel</author>
                     <note type="genre">Lyrik</note>
@@ -406,7 +404,8 @@
                     <publisher ref="https://www.wikidata.org/entity/Q55843277" xml:id="publisher_cfea76fa">Max Niemeyer</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Dach,+Simon/Gedichte/Weltliche+Lieder.+Hochzeitsgedichte/An+die+HochEdle+Dahme+Jungfr.+Anna+Euphrosyne?hl=sappho">http://www.zeno.org/Literatur/M/Dach,+Simon/Gedichte/Weltliche+Lieder.+Hochzeitsgedichte/An+die+HochEdle+Dahme+Jungfr.+Anna+Euphrosyne?hl=sappho</ref>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="published" notBefore="1647" notAfter="1653">1647–1653</date>
                     <bibl xml:id="bibl_c7994627">
                         <title type="work">Poetischer Trichter</title>
@@ -515,7 +514,8 @@
                     <author ref="https://www.wikidata.org/entity/Q77285" xml:id="author_6bf82744">Simon Dach</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="1661">n. n. 1661</date>
                     <author ref="https://www.wikidata.org/entity/Q761023" xml:id="author_feeadef3">August Buchner</author>
                     <note type="genre">Lyrik</note>
@@ -593,7 +593,7 @@
                     <title type="text">Achte Satyra: Der Poët</title>
                     <date type="created" when="1666">1666?</date>
                     <date type="published" when="1677">1677</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120199091" xml:id="bibl_228d3345">
+                    <bibl xml:id="bibl_228d3345">
                         <title type="work">Neu-Verbesserte Teutsche Satyrische Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1226090" xml:id="author_713d6c9e">Joachim Rachel</author>
@@ -667,10 +667,10 @@
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1598366" xml:id="author_d9712b29">Heinrich Mühlpfort</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="pubPlace_811c769d">Breslau</pubPlace>
-                    <pubPlace xml:id="pubPlace_675a92e1">Frankfurt a. M.</pubPlace>
-                    <publisher xml:id="publisher_c81d3ecc">Johann Georg Steck</publisher>
-                    <publisher xml:id="publisher_8bdcddc7">Johann Philipp Andreä</publisher>
+                    <pubPlace xml:id="pubPlace_675a92e1">Breslau</pubPlace>
+                    <pubPlace xml:id="pubPlace_811c769d">Frankfurt a. M.</pubPlace>
+                    <publisher xml:id="publisher_8bdcddc7">Johann Georg Steck</publisher>
+                    <publisher xml:id="publisher_c81d3ecc">Johann Philipp Andreä</publisher>
                     <ref target="https://www.deutschestextarchiv.de/book/view/muehlpfort_gedichte01_1686/?p=719">https://www.deutschestextarchiv.de/book/view/muehlpfort_gedichte01_1686/?p=719</ref>
                 </bibl>
                 <bibl xml:id="bibl_41af64f7">
@@ -682,7 +682,8 @@
                     <publisher xml:id="publisher_b0e60526">Johann Friedrich Bleditschen Buchhändlern</publisher>
                     <ref target="https://www.deutschestextarchiv.de/book/show/lohenstein_feldherr01_1689">https://www.deutschestextarchiv.de/book/show/lohenstein_feldherr01_1689</ref>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="1689">n. n. 1689</date>
                     <author ref="https://www.wikidata.org/entity/Q1695812" xml:id="author_f00cdfeb">Johann Peter Titz</author>
                     <note type="genre">Lyrik</note>
@@ -817,7 +818,7 @@
                     <title type="text">Die Tugend. Ode an Herrn Hofrath Drollinger. 1729</title>
                     <date type="created" when="1729">1729</date>
                     <date type="published" when="1732">1732</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q116477085" xml:id="bibl_49df824c">
+                    <bibl xml:id="bibl_49df824c">
                         <title type="work">Versuch Schweizerischer Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q123225" xml:id="author_b2d380cf">Albrecht von Haller</author>
@@ -837,7 +838,8 @@
                     <publisher ref="https://www.wikidata.org/entity/Q100748" xml:id="publisher_8d967df7">Bernhard Christoph Breitkopf</publisher>
                     <ref target="https://books.google.at/books?id=Rexcq71eiqkC&amp;printsec=frontcover&amp;dq=versuch+einer+critischen+dichtkunst+1730&amp;hl=de&amp;sa=X&amp;redir_esc=y#v=onepage&amp;q&amp;f=false">https://books.google.at/books?id=Rexcq71eiqkC&amp;printsec=frontcover&amp;dq=versuch+einer+critischen+dichtkunst+1730&amp;hl=de&amp;sa=X&amp;redir_esc=y#v=onepage&amp;q&amp;f=false</ref>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="1729">n. n. 1729</date>
                     <author ref="https://www.wikidata.org/entity/Q106309" xml:id="author_322de61d">Benjamin Neukirch</author>
                     <note type="genre">Lyrik</note>
@@ -846,7 +848,7 @@
                     <title type="text">Ode. An Jungfer L. A. V. Kulmus [d. i. Luise Adelgunde Victorie Gottsched]. 1731. den 11 April</title>
                     <date type="created" when="1731">1731</date>
                     <date type="published" when="1736">1736</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176385" xml:id="bibl_dd6b8fd4">
+                    <bibl xml:id="bibl_dd6b8fd4">
                         <title type="work">Herrn Johann Christoph Gottscheds, öffentl. Lehrers der Weltweisheit und Dichtkunst zu Leipzig, Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q76442" xml:id="author_aba1427a">Johann Christoph Gottsched</author>
@@ -859,7 +861,7 @@
                     <title type="text">Schreiben An die Frau D. Volkmannin in Liegnitz</title>
                     <date type="created" when="1732">1732</date>
                     <date type="published" when="1736">1736</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176385" xml:id="bibl_dd6b8fd4">
+                    <bibl xml:id="bibl_dd6b8fd4">
                         <title type="work">Herrn Johann Christoph Gottscheds, öffentl. Lehrers der Weltweisheit und Dichtkunst zu Leipzig, Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q76442" xml:id="author_aba1427a">Johann Christoph Gottsched</author>
@@ -872,7 +874,7 @@
                     <title type="text">An eine junge Poetinn in Dresden</title>
                     <date type="created" when="1732">1732</date>
                     <date type="published" when="1736">1736</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176385" xml:id="bibl_dd6b8fd4">
+                    <bibl xml:id="bibl_dd6b8fd4">
                         <title type="work">Herrn Johann Christoph Gottscheds, öffentl. Lehrers der Weltweisheit und Dichtkunst zu Leipzig, Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q76442" xml:id="author_aba1427a">Johann Christoph Gottsched</author>
@@ -1245,7 +1247,7 @@
                     <title type="text">Die todte Clarissa</title>
                     <date type="created" when="1750">1750</date>
                     <date type="published" when="1771">1771</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120181343" xml:id="bibl_c759131a">
+                    <bibl xml:id="bibl_c759131a">
                         <title type="work">Oden</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q154367" xml:id="author_1537cf6e">Friedrich Gottlieb Klopstock</author>
@@ -1258,7 +1260,7 @@
                     <title type="text">An Cidli. 1751</title>
                     <date type="created" when="1751">1751</date>
                     <date type="published" when="1771">1771</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120181343" xml:id="bibl_c759131a">
+                    <bibl xml:id="bibl_c759131a">
                         <title type="work">Oden</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q154367" xml:id="author_1537cf6e">Friedrich Gottlieb Klopstock</author>
@@ -1277,7 +1279,7 @@
                     <title type="text">Furcht der Geliebten</title>
                     <date type="created" when="1753">1753</date>
                     <date type="published" when="1771">1771</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120181343" xml:id="bibl_c759131a">
+                    <bibl xml:id="bibl_c759131a">
                         <title type="work">Oden</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q154367" xml:id="author_1537cf6e">Friedrich Gottlieb Klopstock</author>
@@ -1866,7 +1868,7 @@
                     <title type="text">Sapho an Amor</title>
                     <date type="created" when="1761">1761</date>
                     <date type="published" when="1764">1764</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120180388" xml:id="bibl_91038132">
+                    <bibl xml:id="bibl_91038132">
                         <title type="work">Auserlesene Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q469571" xml:id="author_7240c9e7">Anna Louisa Karsch</author>
@@ -1879,7 +1881,7 @@
                     <title type="text">An den May</title>
                     <date type="created" when="1761">1761</date>
                     <date type="published" when="1764">1764</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120180388" xml:id="bibl_91038132">
+                    <bibl xml:id="bibl_91038132">
                         <title type="work">Auserlesene Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q469571" xml:id="author_7240c9e7">Anna Louisa Karsch</author>
@@ -1892,7 +1894,7 @@
                     <title type="text">An Palemon, als Herr Oeser das Bild der Dichterin entworfen hatte</title>
                     <date type="created" when="1761">1761</date>
                     <date type="published" when="1764">1764</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120180388" xml:id="bibl_91038132">
+                    <bibl xml:id="bibl_91038132">
                         <title type="work">Auserlesene Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q469571" xml:id="author_7240c9e7">Anna Louisa Karsch</author>
@@ -1905,7 +1907,7 @@
                     <title type="text">An Palemon</title>
                     <date type="created" when="1761">1761</date>
                     <date type="published" when="1764">1764</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120180388" xml:id="bibl_91038132">
+                    <bibl xml:id="bibl_91038132">
                         <title type="work">Auserlesene Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q469571" xml:id="author_7240c9e7">Anna Louisa Karsch</author>
@@ -1918,7 +1920,7 @@
                     <title type="text">An Herrn Utz</title>
                     <date type="created" when="1761">1761</date>
                     <date type="published" when="1764">1764</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120180388" xml:id="bibl_91038132">
+                    <bibl xml:id="bibl_91038132">
                         <title type="work">Auserlesene Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q469571" xml:id="author_7240c9e7">Anna Louisa Karsch</author>
@@ -1931,7 +1933,7 @@
                     <title type="text">Die Sehnsucht der Freundschaft, an Herrn Gleim</title>
                     <date type="created" when="1761">1761</date>
                     <date type="published" when="1764">1764</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120180388" xml:id="bibl_91038132">
+                    <bibl xml:id="bibl_91038132">
                         <title type="work">Auserlesene Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q469571" xml:id="author_7240c9e7">Anna Louisa Karsch</author>
@@ -2143,7 +2145,7 @@
                     <title type="text">Der unnachahmliche Pindar, an Herrn Ramler (Den 24ten Jenner 1763.)</title>
                     <date type="created" when="1763">1763</date>
                     <date type="published" when="1764">1764</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120180388" xml:id="bibl_91038132">
+                    <bibl xml:id="bibl_91038132">
                         <title type="work">Auserlesene Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q469571" xml:id="author_7240c9e7">Anna Louisa Karsch</author>
@@ -2155,7 +2157,7 @@
                 <bibl xml:id="bibl_8f29bbbf">
                     <title type="text">An Herrn Utz, den Verfasser der lyrischen Gedichte</title>
                     <date type="published" when="1764">1764</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120180388" xml:id="bibl_91038132">
+                    <bibl xml:id="bibl_91038132">
                         <title type="work">Auserlesene Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q469571" xml:id="author_7240c9e7">Anna Louisa Karsch</author>
@@ -2221,7 +2223,7 @@ Philosophen zu Sanssouci</title>
                 <bibl xml:id="bibl_3ec28497">
                     <title type="text">An den Dohmherrn von Rochow, als er gesagt hatte, die Liebe müsse sie gelehrt haben, so schöne Verse zu machen</title>
                     <date type="published" when="1764">1764</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120180388" xml:id="bibl_91038132">
+                    <bibl xml:id="bibl_91038132">
                         <title type="work">Auserlesene Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q469571" xml:id="author_7240c9e7">Anna Louisa Karsch</author>
@@ -2256,7 +2258,7 @@ Philosophen zu Sanssouci</title>
                     <title type="text">Selma und Selmar</title>
                     <date type="created" when="1766">1766</date>
                     <date type="published" when="1771">1771</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120181343" xml:id="bibl_c759131a">
+                    <bibl xml:id="bibl_c759131a">
                         <title type="work">Oden</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q154367" xml:id="author_1537cf6e">Friedrich Gottlieb Klopstock</author>
@@ -2303,7 +2305,8 @@ Philosophen zu Sanssouci</title>
                     <publisher ref="https://www.wikidata.org/entity/Q109538" xml:id="publisher_1a277293">Johann Christian Dieterich</publisher>
                     <ref target="https://de.wikisource.org/wiki/An_ein_Maienl%C3%Bcftchen">https://de.wikisource.org/wiki/An_ein_Maienl%C3%Bcftchen</ref>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="1769">n. n. 1769</date>
                     <author ref="https://www.wikidata.org/entity/Q60584" xml:id="author_04680faf">Christian Fürchtegott Gellert</author>
                     <note type="genre">Lyrik</note>
@@ -2491,8 +2494,8 @@ Philosophen zu Sanssouci</title>
                     <date type="published" when="1775">1775</date>
                     <author ref="https://www.wikidata.org/entity/Q215853" xml:id="author_ea8781b9">Friedrich Nicolai</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
-                    <pubPlace xml:id="pubPlace_6cee4661">Stettin</pubPlace>
+                    <pubPlace xml:id="pubPlace_6cee4661">Berlin</pubPlace>
+                    <pubPlace xml:id="pubPlace_d35a02eb">Stettin</pubPlace>
                     <publisher xml:id="publisher_f1e25fd6">Nicolai</publisher>
                     <ref target="https://www.deutschestextarchiv.de/book/view/nicolai_nothanker02_1775/?hl=Sappho&amp;p=204">https://www.deutschestextarchiv.de/book/view/nicolai_nothanker02_1775/?hl=Sappho&amp;p=204</ref>
                 </bibl>
@@ -2689,7 +2692,7 @@ Philosophen zu Sanssouci</title>
                 <bibl xml:id="bibl_aebddc54">
                     <title type="text">Sappho und Nanthen</title>
                     <date type="published" when="1782">1782</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179640" xml:id="bibl_8addb2a6">
+                    <bibl xml:id="bibl_8addb2a6">
                         <title type="work">Abraham Gotthelf Kästners neueste großentheils noch ungedruckte Sinngedichte und Einfälle</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q61813" xml:id="author_9e136a8f">Abraham Gotthelf Kästner</author>
@@ -2889,11 +2892,12 @@ Philosophen zu Sanssouci</title>
                     <note type="genre">Lyrik</note>
                     <pubPlace xml:id="pubPlace_43424d20">Lauenburg</pubPlace>
                     <pubPlace xml:id="pubPlace_f23bb5e2">Hamburg</pubPlace>
-                    <publisher xml:id="publisher_e545cda3">Behrenberg</publisher>
-                    <publisher xml:id="publisher_164bb66e">Bohn</publisher>
+                    <publisher xml:id="publisher_164bb66e">Behrenberg</publisher>
+                    <publisher xml:id="publisher_e545cda3">Bohn</publisher>
                     <ref target="https://viewer.onb.ac.at/108CBEAC">https://viewer.onb.ac.at/108CBEAC</ref>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="1788">n. n. 1788</date>
                     <author ref="https://www.wikidata.org/entity/Q70342" xml:id="author_4879dde0">Johann Andreas Cramer</author>
                     <note type="genre">Lyrik</note>
@@ -2934,7 +2938,7 @@ Philosophen zu Sanssouci</title>
                     <title type="text">Faon, Nireus, hernach Saffo, zuletzt noch Anakreon</title>
                     <date type="created" notBefore="1789" notAfter="1793">1789–1793</date>
                     <date type="published" when="1796">1796</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120256383" xml:id="bibl_19ed404e">
+                    <bibl xml:id="bibl_19ed404e">
                         <title type="work">C. M. Wielands sämmtliche Werke</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q154010" xml:id="author_7ea2d8de">Christoph Martin Wieland</author>
@@ -2982,7 +2986,7 @@ Philosophen zu Sanssouci</title>
                 <bibl xml:id="bibl_7e702a1a">
                     <title type="text">Hymne an die Menschheit</title>
                     <date type="published" when="1791">1791</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120177386" xml:id="bibl_76e640d6">
+                    <bibl xml:id="bibl_76e640d6">
                         <title type="work">Poetische Blumenlese fürs Jahr 1793</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q75889" xml:id="author_4e4cdf8e">Friedrich Hölderlin</author>
@@ -3092,7 +3096,8 @@ Philosophen zu Sanssouci</title>
                     <publisher xml:id="publisher_8504e8f9">Diterici</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Karsch,+Anna+Louisa/Gedichte/Gedichte+(Ausgabe+1792)/Einf%C3%A4lle/An+einen+Alten?hl=sapho">http://www.zeno.org/Literatur/M/Karsch,+Anna+Louisa/Gedichte/Gedichte+(Ausgabe+1792)/Einf%C3%A4lle/An+einen+Alten?hl=sapho</ref>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="1791">n. n. 1791</date>
                     <author ref="https://www.wikidata.org/entity/Q61251" xml:id="author_4d2b85d3">Christian Schubart</author>
                     <note type="genre">Lyrik</note>
@@ -3136,7 +3141,7 @@ Philosophen zu Sanssouci</title>
                 <bibl xml:id="bibl_bc78e569">
                     <title type="text">Hymne an den Genius der Jugend</title>
                     <date type="published" when="1792">1792</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120177386" xml:id="bibl_76e640d6">
+                    <bibl xml:id="bibl_76e640d6">
                         <title type="work">Poetische Blumenlese fürs Jahr 1793</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q75889" xml:id="author_4e4cdf8e">Friedrich Hölderlin</author>
@@ -3216,7 +3221,7 @@ Philosophen zu Sanssouci</title>
                     <title type="text">Die erneute Menschheit</title>
                     <date type="created" when="1794">1794</date>
                     <date type="published" when="1796">1796</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q19220405" xml:id="bibl_9ff4d54c">
+                    <bibl xml:id="bibl_9ff4d54c">
                         <title type="work">Musen-Almanach fürs Jahr 1796</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q62188" xml:id="author_bf64847b">Johann Heinrich Voß</author>
@@ -3266,7 +3271,7 @@ Philosophen zu Sanssouci</title>
                 <bibl xml:id="bibl_22ce7796">
                     <title type="text">An meine Jungfrauen</title>
                     <date type="published" when="1796">1796</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120199203" xml:id="bibl_3ace8ef1">
+                    <bibl xml:id="bibl_3ace8ef1">
                         <title type="work">Neue Sammlung von Gedichten</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1044547" xml:id="author_3bf06e59">Caroline Rudolphi</author>
@@ -3279,7 +3284,7 @@ Philosophen zu Sanssouci</title>
                     <title type="text">Die Schatten</title>
                     <date type="created" when="1797">1797?</date>
                     <date type="published" when="1799">1799</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q19220414" xml:id="bibl_e92c73b9">
+                    <bibl xml:id="bibl_e92c73b9">
                         <title type="work">Musen-Almanach für das Jahr 1799</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q213993" xml:id="author_c4954682">Friedrich von Matthisson</author>
@@ -3315,7 +3320,7 @@ Philosophen zu Sanssouci</title>
                 <bibl ref="https://www.wikidata.org/entity/Q19216479" xml:id="bibl_c63374a7">
                     <title type="text">Kunst und Liebe</title>
                     <date type="published" when="1799">1799</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q19220414" xml:id="bibl_e92c73b9">
+                    <bibl xml:id="bibl_e92c73b9">
                         <title type="work">Musen-Almanach für das Jahr 1799</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q57239" xml:id="author_787b818f">Ludwig Tieck</author>
@@ -3361,7 +3366,7 @@ nie mehr erschienen</ref>
                 <bibl ref="https://www.wikidata.org/entity/Q19226835" xml:id="bibl_efd5db0a">
                     <title type="text">Sappho</title>
                     <date type="published" when="1799">1799</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q19220414" xml:id="bibl_e92c73b9">
+                    <bibl xml:id="bibl_e92c73b9">
                         <title type="work">Musen-Almanach für das Jahr 1799</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q19217294" xml:id="author_aa770151">Lebrecht Nöller</author>
@@ -3519,15 +3524,15 @@ nie mehr erschienen</ref>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q62053" xml:id="author_2397260a">Tian [d. i. Karoline von Günderrode]</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="pubPlace_f23bb5e2">Hamburg</pubPlace>
-                    <pubPlace xml:id="pubPlace_675a92e1">Frankfurt a. M.</pubPlace>
+                    <pubPlace xml:id="pubPlace_675a92e1">Hamburg</pubPlace>
+                    <pubPlace xml:id="pubPlace_f23bb5e2">Frankfurt a. M.</pubPlace>
                     <publisher xml:id="publisher_49de49d5">J. C. Hermannsche Buchhandlung</publisher>
                     <ref target="https://www.digitale-sammlungen.de/de/view/bsb10861265?page=80,81">https://www.digitale-sammlungen.de/de/view/bsb10861265?page=80,81</ref>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q19211868" xml:id="bibl_5662b2ad">
                     <title type="text">Hymne an die Venus</title>
                     <date type="published" when="1802">1802</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q19221536" xml:id="bibl_e5a31254">
+                    <bibl xml:id="bibl_e5a31254">
                         <title type="work">Neue vermischte Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q2369590" xml:id="author_90ad82b4">Susanne von Bandemer</author>
@@ -3598,7 +3603,7 @@ nie mehr erschienen</ref>
                     <title type="text">An die Dichterinnen</title>
                     <date type="created" notAfter="1803">n. n. 1803</date>
                     <date type="published" when="1812">1812</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176367" xml:id="bibl_5c7d8ce2">
+                    <bibl xml:id="bibl_5c7d8ce2">
                         <title type="work">J. W. L. Gleim’s sämmtliche Werke</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q64364" xml:id="author_c418e31d">Johann Wilhelm Ludwig Gleim</author>
@@ -3611,7 +3616,7 @@ nie mehr erschienen</ref>
                     <title type="text">Sappho und Lalage</title>
                     <date type="created" notAfter="1803">n. n. 1803</date>
                     <date type="published" when="1812">1812</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176367" xml:id="bibl_5c7d8ce2">
+                    <bibl xml:id="bibl_5c7d8ce2">
                         <title type="work">J. W. L. Gleim’s sämmtliche Werke</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q64364" xml:id="author_c418e31d">Johann Wilhelm Ludwig Gleim</author>
@@ -3677,8 +3682,8 @@ nie mehr erschienen</ref>
                     <bibl xml:id="bibl_aa132bb6">
                         <title type="work">Gedichte</title>
                     </bibl>
-                    <author xml:id="author_f4763667">Karl</author>
-                    <author xml:id="author_3e933ecf">Karoline Woltmann</author>
+                    <author>Karl Woltmann</author>
+                    <author>Karoline Woltmann</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q120256759" xml:id="publisher_52c3b668">Realschulbuchhandlung</publisher>
@@ -3774,7 +3779,8 @@ nie mehr erschienen</ref>
                     <publisher ref="https://www.wikidata.org/entity/Q817521" xml:id="publisher_7eaf9ac7">Benjamin Gottlob Hoffmann</publisher>
                     <ref target="https://www.digitale-sammlungen.de/de/view/bsb10123062?page=307">https://www.digitale-sammlungen.de/de/view/bsb10123062?page=307</ref>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="1809">n. n. 1809</date>
                     <author ref="https://www.wikidata.org/entity/Q90925" xml:id="author_b957c79d">Karl Friedrich Kretschmann</author>
                     <note type="genre">Lyrik</note>
@@ -3831,7 +3837,7 @@ siehe auch https://books.google.at/books?id=L-MkAAAAMAAJ&amp;q=richard+dove+sapp
                     <title type="text">Sappho an Phaon</title>
                     <date type="created" when="1812">1812</date>
                     <date type="published" when="1909">1909</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120198639" xml:id="bibl_97732c59">
+                    <bibl xml:id="bibl_97732c59">
                         <title type="work">August Graf von Platens sämtliche Werke in zwölf Bänden</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q62432" xml:id="author_d5ea9f29">August von Platen-Hallermünde</author>
@@ -3904,7 +3910,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <publisher xml:id="publisher_c9b29243">Schulze’sche Buchhandlung</publisher>
                     <ref target="https://books.google.at/books?id=uYw9AAAAYAAJ&amp;pg=PA2&amp;dq=Gerhard+Anton+Hermann+Gramberg+sappho&amp;hl=de&amp;sa=X&amp;ved=2ahUKEwjE7ZG8g9P2AhWNRPEDHc_vBYcQ6AF6BAgIEAI#v=onepage&amp;q&amp;f=false">https://books.google.at/books?id=uYw9AAAAYAAJ&amp;pg=PA2&amp;dq=Gerhard+Anton+Hermann+Gramberg+sappho&amp;hl=de&amp;sa=X&amp;ved=2ahUKEwjE7ZG8g9P2AhWNRPEDHc_vBYcQ6AF6BAgIEAI#v=onepage&amp;q&amp;f=false</ref>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="1817">n. n. 1817</date>
                     <author ref="https://www.wikidata.org/entity/Q215845" xml:id="author_ae973934">Johann Heinrich Jung-Stilling</author>
                     <note type="genre">Lyrik</note>
@@ -3921,7 +3928,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">Seppherl, komisches Melodrama als Parodie mit Gesang in 3 Aufzügen [oder »Jungfer Sepherl«]</title>
                     <date type="published" when="1818">1818</date>
                     <author xml:id="author_012750d4">C.</author>
-                    <author xml:id="author_59731916">H.</author>
+                    <author xml:id="author_012750d4">H.</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="pubPlace_95b8315b">Wien</pubPlace>
                     <publisher xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
@@ -4037,10 +4044,10 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author xml:id="author_77a67df6">Achim von Arnim</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="pubPlace_efeaa516">Leipzig</pubPlace>
-                    <pubPlace xml:id="pubPlace_95b8315b">Wien</pubPlace>
-                    <publisher xml:id="publisher_ec580ca7">Georg Joachim Göschen</publisher>
-                    <publisher xml:id="publisher_a07c50f8">Carl Gerold’s Sohn Verlag</publisher>
+                    <pubPlace xml:id="pubPlace_95b8315b">Leipzig</pubPlace>
+                    <pubPlace xml:id="pubPlace_efeaa516">Wien</pubPlace>
+                    <publisher xml:id="publisher_a07c50f8">Georg Joachim Göschen</publisher>
+                    <publisher xml:id="publisher_ec580ca7">Carl Gerold’s Sohn Verlag</publisher>
                 </bibl>
                 <bibl xml:id="bibl_2ac336ad">
                     <title type="text">Das Gespenst im Prater. Als Fortsetzung des Gespenstes auf der Bastey, in zwey Acten</title>
@@ -4254,7 +4261,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_811bbdba">
                     <title type="text">Zweiter Brief</title>
                     <date type="published" when="1826">1826</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q64511029" xml:id="bibl_bc7988d7">
+                    <bibl xml:id="bibl_bc7988d7">
                         <title type="work">Reisebilder</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q44403" xml:id="author_d1ce90b4">Heinrich Heine</author>
@@ -4322,7 +4329,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="pubPlace_95b8315b">Wien</pubPlace>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=wzz&amp;datum=18270327&amp;seite=1&amp;zoom=33">https://anno.onb.ac.at/cgi-content/anno?aid=wzz&amp;datum=18270327&amp;seite=1&amp;zoom=33</ref>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="1827">n. n. 1827</date>
                     <author ref="https://www.wikidata.org/entity/Q75376" xml:id="author_217ea585">Karl Philipp Conz</author>
                     <note type="genre">Lyrik</note>
@@ -4474,7 +4482,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2516675" xml:id="publisher_97d7d8cd">Georg Reimer</publisher>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="1830">n. n. 1830</date>
                     <author ref="https://www.wikidata.org/entity/Q66015" xml:id="author_3779d25f">Wilhelm Waiblinger</author>
                     <note type="genre">Lyrik</note>
@@ -4707,7 +4716,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="pubPlace_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q54676621" xml:id="publisher_f9f09c49">Christian Ernst Kollmann</publisher>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="1837">n. n. 1837</date>
                     <author ref="https://www.wikidata.org/entity/Q1608590" xml:id="author_9f2e70a3">Johann Isaak von Gerning</author>
                     <note type="genre">Lyrik</note>
@@ -4741,7 +4751,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author xml:id="author_73873639">Nikolaus Lenau</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="1838">n. n. 1838</date>
                     <author ref="https://www.wikidata.org/entity/Q154782" xml:id="author_17d347f9">Adalbert von Chamisso</author>
                     <note type="genre">Lyrik</note>
@@ -4769,7 +4780,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <publisher ref="https://www.wikidata.org/entity/Q98834927" xml:id="publisher_09a6d808">Karl Ueberreuter</publisher>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=doz&amp;datum=18391025&amp;seite=9&amp;zoom=33&amp;query=%22Sappho%22%2B%22Sapho%22%2B%22sapphisch%22&amp;ref=anno-search">https://anno.onb.ac.at/cgi-content/anno?aid=doz&amp;datum=18391025&amp;seite=9&amp;zoom=33&amp;query=%22Sappho%22%2B%22Sapho%22%2B%22sapphisch%22&amp;ref=anno-search</ref>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="1839">n. n. 1839</date>
                     <author ref="https://www.wikidata.org/entity/Q1080913" xml:id="author_fbcacc36">Christian Ludwig Neuffer</author>
                     <note type="genre">Lyrik</note>
@@ -4912,13 +4924,14 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q76492" xml:id="author_b8ba5902">Fritz Reuter</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="pubPlace_b3271180">Wismar</pubPlace>
-                    <pubPlace xml:id="pubPlace_5cef94ac">Rostock</pubPlace>
-                    <pubPlace xml:id="pubPlace_64f9e1da">Ludwigslust</pubPlace>
+                    <pubPlace xml:id="pubPlace_5cef94ac">Wismar</pubPlace>
+                    <pubPlace xml:id="pubPlace_64f9e1da">Rostock</pubPlace>
+                    <pubPlace xml:id="pubPlace_b3271180">Ludwigslust</pubPlace>
                     <publisher xml:id="publisher_006305f7">Hinstorff’sche Buchhandlung</publisher>
                     <ref target="https://books.google.de/books?id=zToXV_6eq10C&amp;pg=PA193&amp;dq=fritz+reuter+S%C3%A4mtliche+Werke+Ein+gr%C3%A4flicher+Geburtstag&amp;hl=de&amp;newbks=1&amp;newbks_redir=0&amp;sa=X&amp;ved=2ahUKEwiGxbPgy4eOAxXSSfEDHQofGRgQ6AF6BAgGEAM#v=onepage&amp;q=fritz%20reuter%20S%C3%A4mtliche%20Werke%20Ein%20gr%C3%A4flicher%20Geburtstag&amp;f=false">https://books.google.de/books?id=zToXV_6eq10C&amp;pg=PA193&amp;dq=fritz+reuter+S%C3%A4mtliche+Werke+Ein+gr%C3%A4flicher+Geburtstag&amp;hl=de&amp;newbks=1&amp;newbks_redir=0&amp;sa=X&amp;ved=2ahUKEwiGxbPgy4eOAxXSSfEDHQofGRgQ6AF6BAgGEAM#v=onepage&amp;q=fritz%20reuter%20S%C3%A4mtliche%20Werke%20Ein%20gr%C3%A4flicher%20Geburtstag&amp;f=false</ref>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="1847">n. n. 1847</date>
                     <author ref="https://www.wikidata.org/entity/Q96416" xml:id="author_9634eedf">Moritz von Strachwitz</author>
                     <note type="genre">Lyrik</note>
@@ -4935,7 +4948,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_9c8da7c0">
                     <title type="text">Die Sappho des Westens</title>
                     <date type="published" when="1851">1851</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120198654" xml:id="bibl_c4cabf0c">
+                    <bibl xml:id="bibl_c4cabf0c">
                         <title type="work">Neue Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q120469" xml:id="author_0c148f7c">Luise von Plönnies</author>
@@ -4948,7 +4961,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">Lesbos</title>
                     <date type="created" notBefore="1851" notAfter="1856">1851–1856</date>
                     <date type="published" when="1856">1856</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176339" xml:id="bibl_c4cabf0c">
+                    <bibl xml:id="bibl_c4cabf0c">
                         <title type="work">Neue Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q77333" xml:id="author_361addef">Emanuel Geibel</author>
@@ -4999,7 +5012,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q156080" xml:id="pubPlace_96ef0de9">Opava</pubPlace>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="1853">n. n. 1853</date>
                     <author xml:id="author_a4d5d984">August Kopisch</author>
                     <note type="genre">Lyrik</note>
@@ -5104,7 +5118,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="pubPlace_4a15ea49">Köln</pubPlace>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="published" when="1859">1859</date>
                     <bibl xml:id="bibl_5e8eb7a5">
                         <title type="work">Sinnen und Minnen. Ein Jugendleben in Liedern</title>
@@ -5156,7 +5171,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">Erinna an Sappho</title>
                     <date type="created" when="1863">1863</date>
                     <date type="published" when="1864">1864</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120198556" xml:id="bibl_45dd6023">
+                    <bibl xml:id="bibl_45dd6023">
                         <title type="work">Deutsches Dichterbuch aus Schwaben</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q63699" xml:id="author_c8447c3c">Eduard Mörike</author>
@@ -5258,7 +5273,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">Einer Griechin</title>
                     <date type="created" notBefore="1867" notAfter="1868">1867/1868</date>
                     <date type="published" when="1891">1891</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120198580" xml:id="bibl_c4cabf0c">
+                    <bibl xml:id="bibl_c4cabf0c">
                         <title type="work">Neue Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q86954" xml:id="author_f7114165">Marie von Najmájer</author>
@@ -5297,9 +5312,9 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q76492" xml:id="author_b8ba5902">Fritz Reuter</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="pubPlace_b3271180">Wismar</pubPlace>
-                    <pubPlace xml:id="pubPlace_5cef94ac">Rostock</pubPlace>
-                    <pubPlace xml:id="pubPlace_64f9e1da">Ludwigslust</pubPlace>
+                    <pubPlace xml:id="pubPlace_5cef94ac">Wismar</pubPlace>
+                    <pubPlace xml:id="pubPlace_64f9e1da">Rostock</pubPlace>
+                    <pubPlace xml:id="pubPlace_b3271180">Ludwigslust</pubPlace>
                     <publisher xml:id="publisher_006305f7">Hinstorff’sche Buchhandlung</publisher>
                     <ref target="https://books.google.de/books?id=aaMuAAAAYAAJ&amp;printsec=frontcover&amp;hl=de&amp;source=gbs_ge_summary_r&amp;cad=0#v=onepage&amp;q&amp;f=false">https://books.google.de/books?id=aaMuAAAAYAAJ&amp;printsec=frontcover&amp;hl=de&amp;source=gbs_ge_summary_r&amp;cad=0#v=onepage&amp;q&amp;f=false</ref>
                 </bibl>
@@ -5352,7 +5367,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <publisher xml:id="publisher_2c3f530f">Wilhelm Müller</publisher>
                     <ref target="https://sammlungen.ulb.uni-muenster.de/urn/urn:nbn:de:hbz:6:1-228970">https://sammlungen.ulb.uni-muenster.de/urn/urn:nbn:de:hbz:6:1-228970</ref>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notBefore="1873" notAfter="1877">1873–1877</date>
                     <date type="published" when="1887">1887</date>
                     <bibl xml:id="bibl_845b44aa">
@@ -5636,7 +5652,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">Sappho</title>
                     <date type="created" notBefore="1883" notAfter="1904">1883–1904</date>
                     <date type="published" when="1905">1905</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q42192815" xml:id="bibl_17970ca3">
+                    <bibl xml:id="bibl_17970ca3">
                         <title type="work">Meine Verse. Gesammtausgabe</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q76279" xml:id="author_59b37975">Otto Erich Hartleben</author>
@@ -6017,7 +6033,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_0d6128d5">
                     <title type="text">An Phaon</title>
                     <date type="published" when="1895">1895</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q110878983" xml:id="bibl_cce1ec55">
+                    <bibl xml:id="bibl_cce1ec55">
                         <title type="work">Bücher der Hirten- und Preisgedichte, der Sagen und Sänge und der hängenden Gärten</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q57187" xml:id="author_c32ad0f8">Stefan George</author>
@@ -6087,7 +6103,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <pubPlace ref="https://www.wikidata.org/entity/Q157725" xml:id="pubPlace_e7593ca9">Czernowitz</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q104657414" xml:id="publisher_1f57eaff">Hermann Czopp</publisher>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="1898">n. n. 1898</date>
                     <author ref="https://www.wikidata.org/entity/Q76632" xml:id="author_db3f7fa5">Theodor Fontane</author>
                     <note type="genre">Lyrik</note>
@@ -6121,7 +6138,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_efd5db0a">
                     <title type="text">Sappho</title>
                     <date type="published" when="1900">1900</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120198486" xml:id="bibl_dfe57cf2">
+                    <bibl xml:id="bibl_dfe57cf2">
                         <title type="work">Auf Kypros</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q54859903" xml:id="author_a18ae9df">Marie Madeleine [d. i. Marie Madeleine Baronin von Puttkamer]</author>
@@ -6167,6 +6184,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_309c65af">
                         <title type="work">Stimmen der Gegenwart. Monatsschrift für moderne Literatur und Kritik</title>
                     </bibl>
+                    <author ref="https://www.wikidata.org/entity/Q95207036" xml:id="author_156a1461">Marie Itzerott</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q9306" xml:id="pubPlace_fecbc484">Eberswalde</pubPlace>
                 </bibl>
@@ -6341,7 +6359,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">Sappho die Dichterin von Lesbos. Roman der Schönheit</title>
                     <date type="created" notAfter="1904">n. n. 1904</date>
                     <date type="published" when="1904">1904</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120177248" xml:id="bibl_065e596d">
+                    <bibl xml:id="bibl_065e596d">
                         <title type="work">Gesammelte Werke, Bd. 2</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q95693" xml:id="author_c47c8ee0">Peter Hille</author>
@@ -6536,7 +6554,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl ref="https://www.wikidata.org/entity/Q33058241" xml:id="bibl_1d7fe8e5">
                     <title type="text">Sappho an Eranna</title>
                     <date type="published" when="1907">1907</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q7011009" xml:id="bibl_c4cabf0c">
+                    <bibl xml:id="bibl_c4cabf0c">
                         <title type="work">Neue Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q76483" xml:id="author_46e646b5">Rainer Maria Rilke</author>
@@ -6548,7 +6566,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl ref="https://www.wikidata.org/entity/Q33058239" xml:id="bibl_5824b54f">
                     <title type="text">Eranna an Sappho</title>
                     <date type="published" when="1907">1907</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q7011009" xml:id="bibl_c4cabf0c">
+                    <bibl xml:id="bibl_c4cabf0c">
                         <title type="work">Neue Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q76483" xml:id="author_46e646b5">Rainer Maria Rilke</author>
@@ -6560,7 +6578,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_87c45ece">
                     <title type="text">Sappho an Alkaïos. Fragment</title>
                     <date type="published" when="1907">1907</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q7011009" xml:id="bibl_c4cabf0c">
+                    <bibl xml:id="bibl_c4cabf0c">
                         <title type="work">Neue Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q76483" xml:id="author_46e646b5">Rainer Maria Rilke</author>
@@ -6689,7 +6707,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <publisher ref="https://www.wikidata.org/entity/Q1497214" xml:id="publisher_8ad3a927">Gebrüder Paetel</publisher>
                     <ref target="https://archive.org/details/deutscherundscha138stutuoft/page/34/mode/2up">https://archive.org/details/deutscherundscha138stutuoft/page/34/mode/2up</ref>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="published" when="1909">1909?</date>
                     <author xml:id="author_06d10730">Lange</author>
                     <note type="genre">Lyrik</note>
@@ -6928,7 +6947,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="pubPlace_95b8315b">Wien</pubPlace>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="published" when="1918">1918</date>
                     <bibl xml:id="bibl_38ed3441">
                         <title type="work">Sächsische Dorfzeitung und Elbgaupresse</title>
@@ -6991,7 +7011,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_35f8a05b">
                     <title type="text">Sapho</title>
                     <date type="published" when="1919">1919</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120168117" xml:id="bibl_92f7e243">
+                    <bibl xml:id="bibl_92f7e243">
                         <title type="work">Stehe von Lichtern gestreichelt. Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q69428" xml:id="author_402dfcfd">Kasimir Edschmid</author>
@@ -7009,8 +7029,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author xml:id="author_bb878fae">Ludwig Goldscheider</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace xml:id="pubPlace_0c1736a7">Zürich</pubPlace>
-                    <pubPlace xml:id="pubPlace_efeaa516">Leipzig</pubPlace>
-                    <pubPlace xml:id="pubPlace_95b8315b">Wien</pubPlace>
+                    <pubPlace xml:id="pubPlace_95b8315b">Leipzig</pubPlace>
+                    <pubPlace xml:id="pubPlace_efeaa516">Wien</pubPlace>
                     <publisher xml:id="publisher_3efce85a">Almathea</publisher>
                 </bibl>
                 <bibl xml:id="bibl_94d06f50">
@@ -7130,7 +7150,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_b898b2ac">
                     <title type="text">An Sappho</title>
                     <date type="published" when="1924">1924</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120165193" xml:id="bibl_3229164a">
+                    <bibl xml:id="bibl_3229164a">
                         <title type="work">Attische Sonette</title>
                     </bibl>
                     <author xml:id="author_529d41df">Theodor Däubler</author>
@@ -7218,7 +7238,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                         <title type="work">Kölnische Zeitung</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q55674905" xml:id="author_6cb5644b">Edm</author>
-                    <author xml:id="author_cac0f5ea">Schopen</author>
+                    <author xml:id="author_6cb5644b">Schopen</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="pubPlace_4a15ea49">Köln</pubPlace>
                     <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
@@ -7254,7 +7274,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <pubPlace ref="https://www.wikidata.org/entity/Q1017" xml:id="pubPlace_f29f9ace">Aachen</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2153225" xml:id="publisher_0fb21a8f">Rimbaud</publisher>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="1930">n. n. 1930</date>
                     <author ref="https://www.wikidata.org/entity/Q1354436" xml:id="author_ea1416c6">Erika Mitterer</author>
                     <note type="genre">Lyrik</note>
@@ -7301,8 +7322,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <date type="published" when="1933">1933</date>
                     <author xml:id="author_fcd61c9a">Edward Stucken</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
-                    <pubPlace xml:id="pubPlace_95b8315b">Wien</pubPlace>
+                    <pubPlace xml:id="pubPlace_95b8315b">Berlin</pubPlace>
+                    <pubPlace xml:id="pubPlace_d35a02eb">Wien</pubPlace>
                     <pubPlace xml:id="pubPlace_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q176169" xml:id="publisher_71955675">Zsolnay</publisher>
                 </bibl>
@@ -7339,7 +7360,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e4f98738">
                     <title type="text">An die Jugend</title>
                     <date type="published" when="1934">1934</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q42185087" xml:id="bibl_fb54feb7">
+                    <bibl xml:id="bibl_fb54feb7">
                         <title type="work">Adel und Untergang</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q78776" xml:id="author_8c0a2211">Josef Weinheber</author>
@@ -7351,7 +7372,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_485f3d1a">
                     <title type="text">Klage um den Freund</title>
                     <date type="published" when="1934">1934</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q42185087" xml:id="bibl_fb54feb7">
+                    <bibl xml:id="bibl_fb54feb7">
                         <title type="work">Adel und Untergang</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q78776" xml:id="author_8c0a2211">Josef Weinheber</author>
@@ -7363,7 +7384,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_a2e84958">
                     <title type="text">Mit halber Stimme</title>
                     <date type="published" when="1934">1934</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q42185087" xml:id="bibl_fb54feb7">
+                    <bibl xml:id="bibl_fb54feb7">
                         <title type="work">Adel und Untergang</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q78776" xml:id="author_8c0a2211">Josef Weinheber</author>
@@ -7403,7 +7424,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <pubPlace xml:id="pubPlace_a88f4cca">Ödenburg</pubPlace>
                     <publisher xml:id="publisher_91cc6e1b">Röttig-Romwalter</publisher>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="published" when="1935">1935?</date>
                     <author ref="https://www.wikidata.org/entity/Q16739370" xml:id="author_783332be">Paul Appel</author>
                     <note type="genre">Lyrik</note>
@@ -7430,7 +7452,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">Sappho</title>
                     <date type="created" when="1936">1936</date>
                     <date type="published" when="1985">1985</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120180546" xml:id="bibl_a027b88d">
+                    <bibl xml:id="bibl_a027b88d">
                         <title type="work">Gesammelte Werke</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q62365" xml:id="author_ad13c2e1">Marie Luise Kaschnitz</author>
@@ -7555,7 +7577,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_b898b2ac">
                     <title type="text">An Sappho</title>
                     <date type="published" when="1939">1939</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q107001131" xml:id="bibl_4b1fb783">
+                    <bibl xml:id="bibl_4b1fb783">
                         <title type="work">Kammermusik</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q78776" xml:id="author_8c0a2211">Josef Weinheber</author>
@@ -7705,15 +7727,16 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <pubPlace xml:id="pubPlace_9c83551a">Freiburg</pubPlace>
                     <publisher xml:id="publisher_cd4009a2">Atlantis</publisher>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="published" when="1949">1949</date>
                     <bibl xml:id="bibl_51d7e8c7">
                         <title type="work">Mit fremdem Saitenspiel</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1466002" xml:id="author_cbc43ec0">Fritz Diettrich</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="pubPlace_80611954">Kassel</pubPlace>
-                    <pubPlace xml:id="pubPlace_7aaf6c53">Basel</pubPlace>
+                    <pubPlace xml:id="pubPlace_7aaf6c53">Kassel</pubPlace>
+                    <pubPlace xml:id="pubPlace_80611954">Basel</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q659697" xml:id="publisher_7f6cad85">Bärenreiter</publisher>
                 </bibl>
                 <bibl xml:id="bibl_1ec9c59b">
@@ -7775,7 +7798,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_f4da7d9e">
                     <title type="text">Sappho. Drama in fünf Akten und einem Vor- und Nachspiel mit Berücksichtigung geschichtlicher und legendärer Züge aus Sapphos Leben</title>
                     <date type="published" when="1951">1951</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120198534" xml:id="bibl_54cf33e3">
+                    <bibl xml:id="bibl_54cf33e3">
                         <title type="work">Sappho. Orpheus und Eurydike. Dramatische Dichtungen</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q120198541" xml:id="author_55676bb1">Maria Modena [d. i. Erna Kreis-Weber]</author>
@@ -7836,13 +7859,13 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_307c0e82">
                     <title type="text">Ode an Sappho</title>
                     <date type="published" when="1954">1954</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q116152986" xml:id="bibl_84576172">
+                    <bibl xml:id="bibl_84576172">
                         <title type="work">Stillere Heimat. Literarisches Jahrbuch</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q709367" xml:id="author_2a6fd40a">Arthur Fischer-Colbrie</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="pubPlace_95b8315b">Wien</pubPlace>
-                    <pubPlace xml:id="pubPlace_06ec7d19">München</pubPlace>
+                    <pubPlace xml:id="pubPlace_06ec7d19">Wien</pubPlace>
+                    <pubPlace xml:id="pubPlace_95b8315b">München</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q62477247" xml:id="publisher_1e45dd20">Donau-Verlag</publisher>
                 </bibl>
                 <bibl xml:id="bibl_4f807cb5">
@@ -7861,13 +7884,13 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">WER GIBT DIR EIN RECHT DEN STUMMEN ZU SPIELEN</title>
                     <date type="created" notBefore="1954" notAfter="1966">1954–1966</date>
                     <date type="published" when="1985">1985</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120198571" xml:id="bibl_39f6ce4c">
+                    <bibl xml:id="bibl_39f6ce4c">
                         <title type="work">Wenn ich schon sterben muß. Gedichte</title>
                     </bibl>
                     <author xml:id="author_9de2c173">Inge Müller</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
-                    <pubPlace xml:id="pubPlace_c35eca96">Weimar</pubPlace>
+                    <pubPlace xml:id="pubPlace_c35eca96">Berlin</pubPlace>
+                    <pubPlace xml:id="pubPlace_d35a02eb">Weimar</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q316922" xml:id="publisher_87308a85">Aufbau</publisher>
                 </bibl>
                 <bibl xml:id="bibl_c12f4d99">
@@ -7939,7 +7962,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_b2814384">
                     <title type="text">Ich aber liege allein</title>
                     <date type="published" when="1956">1956</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q106202715" xml:id="bibl_1fdba7e2">
+                    <bibl xml:id="bibl_1fdba7e2">
                         <title type="work">Anrufung des Großen Bären</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q78506" xml:id="author_cbcfb9fa">Ingeborg Bachmann</author>
@@ -7970,7 +7993,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">Post-Ode, sapphisch</title>
                     <date type="created" when="1959">1959</date>
                     <date type="published" when="1964">1964</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120256985" xml:id="bibl_78c343e6">
+                    <bibl xml:id="bibl_78c343e6">
                         <title type="work">Jahresringe. Gedichte und Spiele</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q75868" xml:id="author_e5f7bab5">Arnold Zweig</author>
@@ -8050,25 +8073,25 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_a68a6daf">
                     <title type="text">Nachricht aus Lesbos</title>
                     <date type="published" when="1973">1973</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q110977370" xml:id="bibl_d3fc1215">
+                    <bibl xml:id="bibl_d3fc1215">
                         <title type="work">Zaubersprüche</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q263398" xml:id="author_197bc4a1">Sarah Kirsch</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
-                    <pubPlace xml:id="pubPlace_c35eca96">Weimar</pubPlace>
+                    <pubPlace xml:id="pubPlace_c35eca96">Berlin</pubPlace>
+                    <pubPlace xml:id="pubPlace_d35a02eb">Weimar</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q316922" xml:id="publisher_87308a85">Aufbau</publisher>
                 </bibl>
                 <bibl xml:id="bibl_5d45ef9b">
                     <title type="text">Der Droste würde ich gern Wasser reichen</title>
                     <date type="published" when="1973">1973</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q110977370" xml:id="bibl_d3fc1215">
+                    <bibl xml:id="bibl_d3fc1215">
                         <title type="work">Zaubersprüche</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q263398" xml:id="author_197bc4a1">Sarah Kirsch</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
-                    <pubPlace xml:id="pubPlace_c35eca96">Weimar</pubPlace>
+                    <pubPlace xml:id="pubPlace_c35eca96">Berlin</pubPlace>
+                    <pubPlace xml:id="pubPlace_d35a02eb">Weimar</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q316922" xml:id="publisher_87308a85">Aufbau</publisher>
                 </bibl>
                 <bibl xml:id="bibl_202ef569">
@@ -8079,7 +8102,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <pubPlace ref="https://www.wikidata.org/entity/Q2871" xml:id="pubPlace_f4429f06">Hagen</pubPlace>
                     <publisher xml:id="publisher_31d180f3">Pantheon-Sondervertrieb</publisher>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="1973">n. n. 1973</date>
                     <author ref="https://www.wikidata.org/entity/Q89416" xml:id="author_41a06134">Felix Braun</author>
                     <note type="genre">Lyrik</note>
@@ -8114,8 +8138,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q64400" xml:id="author_312feade">Günter Kunert</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
-                    <pubPlace xml:id="pubPlace_c35eca96">Weimar</pubPlace>
+                    <pubPlace xml:id="pubPlace_c35eca96">Berlin</pubPlace>
+                    <pubPlace xml:id="pubPlace_d35a02eb">Weimar</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q316922" xml:id="publisher_87308a85">Aufbau</publisher>
                 </bibl>
                 <bibl xml:id="bibl_91c8a6d2">
@@ -8177,7 +8201,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">Die späten Jahre</title>
                     <date type="created" notBefore="1978" notAfter="1980">1978–1980</date>
                     <date type="published" when="1982">1982</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120198630" xml:id="bibl_ff53d330">
+                    <bibl xml:id="bibl_ff53d330">
                         <title type="work">Werke in sechs Bänden</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q96912" xml:id="author_2f14b48f">Heinz Piontek</author>
@@ -8207,7 +8231,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_1593791a">
                     <title type="text">Vexierbild</title>
                     <date type="published" when="1979">1979</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q110813480" xml:id="bibl_8b917d55">
+                    <bibl xml:id="bibl_8b917d55">
                         <title type="work">Liebesgedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q84393" xml:id="author_b2a5a4c0">Erich Fried</author>
@@ -8224,7 +8248,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_c00a4cb4">
                     <title type="text">Wie du mußte ich fliehen</title>
                     <date type="published" when="1981">1981</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120143624" xml:id="bibl_4fdd84cc">
+                    <bibl xml:id="bibl_4fdd84cc">
                         <title type="work">Die Leidenschaft der Neugierde. Neue Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1148904" xml:id="author_bc508170">Cyrus Atabay</author>
@@ -8257,7 +8281,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">Von den plejaden her vierzehn gedichte im hinblick auf lesbos für walter jens</title>
                     <date type="created" when="1981">1981</date>
                     <date type="published" when="1988">1988</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120199074" xml:id="bibl_a79935a3">
+                    <bibl xml:id="bibl_a79935a3">
                         <title type="work">Wer hält mir die Himmelsleiter. Gedichte 1981–1987</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1698163" xml:id="author_547138e4">Johannes Poethen</author>
@@ -8280,7 +8304,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">EROS / beim Lesen der Sappho</title>
                     <date type="created" when="1982">1982</date>
                     <date type="published" when="1985">1985</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120167922" xml:id="bibl_be27ad26">
+                    <bibl xml:id="bibl_be27ad26">
                         <title type="work">Sturzacker. Gedichte 1980–1984</title>
                     </bibl>
                     <author xml:id="author_43f15a85">Gabriele Eckart</author>
@@ -8291,7 +8315,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_04cea377">
                     <title type="text">gedicht. aus dem tagebuch einer abgetrennten hand</title>
                     <date type="published" when="1982">1982</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q106106263" xml:id="bibl_626f273a">
+                    <bibl xml:id="bibl_626f273a">
                         <title type="work">Jeder Satellit hat einen Killersatelliten</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q95378" xml:id="author_5f77b9e5">Sascha Anderson</author>
@@ -8337,8 +8361,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <date type="published" when="1983">1983</date>
                     <author ref="https://www.wikidata.org/entity/Q68137" xml:id="author_8139a4e6">Irmtraud Morgner</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="pubPlace_b30287cd">Darmstadt</pubPlace>
-                    <pubPlace xml:id="pubPlace_88de4c35">Neuwied</pubPlace>
+                    <pubPlace xml:id="pubPlace_88de4c35">Darmstadt</pubPlace>
+                    <pubPlace xml:id="pubPlace_b30287cd">Neuwied</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1564874" xml:id="publisher_2406f66e">Luchterhand</publisher>
                 </bibl>
                 <bibl xml:id="bibl_6d8880f8">
@@ -8355,7 +8379,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_51495b9c">
                     <title type="text">Dich hat Amor gewiß …</title>
                     <date type="published" when="1983">1983</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120198474" xml:id="bibl_e558e9ec">
+                    <bibl xml:id="bibl_e558e9ec">
                         <title type="work">Kuckucksrufe und Ohrfeigen. Erzählungen</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q2541980" xml:id="author_4c9bafad">Waldtraut Lewin</author>
@@ -8366,7 +8390,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_7e3c4421">
                     <title type="text">Isoliert</title>
                     <date type="published" when="1983">1983</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120143641" xml:id="bibl_2d0bfae3">
+                    <bibl xml:id="bibl_2d0bfae3">
                         <title type="work">So sicher atmet nur der Tod. Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q60873" xml:id="author_cc996ae4">Rose Ausländer</author>
@@ -8377,9 +8401,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_d05f99e8">
                     <title type="text">Der Vikar Sappho oder Die Verzauberung. Erzählung</title>
                     <date type="published" when="1983">1983</date>
-                    <bibl xml:id="bibl_336d5ebc">
-                        <title type="work">-</title>
-                    </bibl>
                     <author ref="https://www.wikidata.org/entity/Q95186926" xml:id="author_41f6be4f">Ottilie Schenk</author>
                     <note type="genre">Prosa</note>
                     <pubPlace xml:id="pubPlace_2f511dd6">St. Michael</pubPlace>
@@ -8401,14 +8422,14 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <date type="published" when="1983">1983</date>
                     <author ref="https://www.wikidata.org/entity/Q57382" xml:id="author_ab5259c5">Christa Wolf</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
-                    <pubPlace xml:id="pubPlace_c35eca96">Weimar</pubPlace>
+                    <pubPlace xml:id="pubPlace_c35eca96">Berlin</pubPlace>
+                    <pubPlace xml:id="pubPlace_d35a02eb">Weimar</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q316922" xml:id="publisher_87308a85">Aufbau</publisher>
                 </bibl>
                 <bibl xml:id="bibl_70fdb926">
                     <title type="text">Bruchstück, für Sappho</title>
                     <date type="published" when="1984">1984</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120255756" xml:id="bibl_7dec9bba">
+                    <bibl xml:id="bibl_7dec9bba">
                         <title type="work">Midlands. Gedichte</title>
                     </bibl>
                     <author xml:id="author_a6c5a134">Jürgen Theobaldy</author>
@@ -8439,7 +8460,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">Wie wir alle atmen. griechische Augenblicke</title>
                     <date type="created" when="1984">1984</date>
                     <date type="published" when="1988">1988</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120199074" xml:id="bibl_8380f90f">
+                    <bibl xml:id="bibl_8380f90f">
                         <title type="work">Wer hält mir die Himmelsleiter 1981–1987</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1698163" xml:id="author_547138e4">Johannes Poethen</author>
@@ -8462,7 +8483,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">An diesem Morgen war</title>
                     <date type="created" notBefore="1985" notAfter="1988">1985–1988</date>
                     <date type="published" when="1988">1988</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176421" xml:id="bibl_f38327b8">
+                    <bibl xml:id="bibl_f38327b8">
                         <title type="work">Grauzone morgens. Gedichte. Geschrieben 1985–1988</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q705090" xml:id="author_6cb1891c">Durs Grünbein</author>
@@ -8473,7 +8494,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_82f9a60e">
                     <title type="text">Sappho schmiegt sich an Romeo</title>
                     <date type="published" when="1986">1986</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176899" xml:id="bibl_c5800c97">
+                    <bibl xml:id="bibl_c5800c97">
                         <title type="work">Textbuch 10: Von Liebeskunst</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q77754" xml:id="author_0b08fc2e">Helmut Heißenbüttel</author>
@@ -8514,7 +8535,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">Bibliothek</title>
                     <date type="created" when="1987">1987</date>
                     <date type="published" when="1988">1988</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120199074" xml:id="bibl_8380f90f">
+                    <bibl xml:id="bibl_8380f90f">
                         <title type="work">Wer hält mir die Himmelsleiter 1981–1987</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1698163" xml:id="author_547138e4">Johannes Poethen</author>
@@ -8541,9 +8562,9 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q96912" xml:id="author_2f14b48f">Heinz Piontek</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="pubPlace_9c83551a">Freiburg</pubPlace>
-                    <pubPlace xml:id="pubPlace_7aaf6c53">Basel</pubPlace>
-                    <pubPlace xml:id="pubPlace_95b8315b">Wien</pubPlace>
+                    <pubPlace xml:id="pubPlace_7aaf6c53">Freiburg</pubPlace>
+                    <pubPlace xml:id="pubPlace_95b8315b">Basel</pubPlace>
+                    <pubPlace xml:id="pubPlace_9c83551a">Wien</pubPlace>
                     <publisher xml:id="publisher_5da691f2">Herder</publisher>
                 </bibl>
                 <bibl xml:id="bibl_788f4e4b">
@@ -8554,8 +8575,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q124519" xml:id="author_b406f550">Erika Burkart</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="pubPlace_0c1736a7">Zürich</pubPlace>
-                    <pubPlace xml:id="pubPlace_06ec7d19">München</pubPlace>
+                    <pubPlace xml:id="pubPlace_06ec7d19">Zürich</pubPlace>
+                    <pubPlace xml:id="pubPlace_0c1736a7">München</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q113997506" xml:id="publisher_01dac4a9">Artemis</publisher>
                 </bibl>
                 <bibl xml:id="bibl_14acff34">
@@ -8583,7 +8604,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_572cbd6b">
                     <title type="text">Männerlust – Frauenlob, Anmerkungen zur Sapphorezeption und zum Orgasmusproblem</title>
                     <date type="published" when="1988">1988</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q1212933" xml:id="bibl_fb68007d">
+                    <bibl xml:id="bibl_fb68007d">
                         <title type="work">Die Geschichte der Empfindlichkeit</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q106087" xml:id="author_f5e28183">Hubert Fichte</author>
@@ -8613,7 +8634,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_c6d434a5">
                     <title type="text">fern ufo sah sappho ufern</title>
                     <date type="published" when="1990">1990</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120198622" xml:id="bibl_71bd7a44">
+                    <bibl xml:id="bibl_71bd7a44">
                         <title type="work">Kopfnuß Januskopf. Gedichte in Palindromen</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q72365" xml:id="author_59ec15eb">Oskar Pastior</author>
@@ -8794,7 +8815,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <pubPlace ref="https://www.wikidata.org/entity/Q1794" xml:id="pubPlace_675a92e1">Frankfurt a. M.</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q301609" xml:id="publisher_af0aeb0c">Suhrkamp</publisher>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="published" when="1997">1997</date>
                     <bibl xml:id="bibl_d90e720c">
                         <title type="work">Die Erfindung der Poesie</title>
@@ -8808,7 +8830,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">Sappho küsst Europa. Geschichten von Lesben aus 20 Längern</title>
                     <date type="published" when="1997">1997</date>
                     <author xml:id="author_9e73b47f">Hg. v. Madeleine Marti</author>
-                    <author xml:id="author_538dc29f">Marianne Ulmi</author>
+                    <author xml:id="author_9e73b47f">Marianne Ulmi</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2122937" xml:id="publisher_8f72e265">Querverlag</publisher>
@@ -8821,8 +8843,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q45250" xml:id="author_f338c317">Hans Carl Artmann</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="pubPlace_f2646aa0">Salzburg</pubPlace>
-                    <pubPlace xml:id="pubPlace_95b8315b">Wien</pubPlace>
+                    <pubPlace xml:id="pubPlace_95b8315b">Salzburg</pubPlace>
+                    <pubPlace xml:id="pubPlace_f2646aa0">Wien</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2145655" xml:id="publisher_f13bea0a">Residenz</publisher>
                 </bibl>
                 <bibl xml:id="bibl_efd5db0a">
@@ -8836,12 +8858,14 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <pubPlace ref="https://www.wikidata.org/entity/Q13298" xml:id="pubPlace_6e00929f">Graz</pubPlace>
                     <publisher xml:id="publisher_dd42fc80">Manuskripte</publisher>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="published" notAfter="1997">n. n. 1997</date>
                     <author xml:id="author_9de2c173">Inge Müller</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="published" when="1998">1998</date>
                     <bibl xml:id="bibl_dc05201d">
                         <title type="work">Und redete ich mit Engelzungen. Eine Auswahl neuerer Liebeslyrik</title>
@@ -8873,7 +8897,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e90df1aa">
                     <title type="text">Sapphos Wiederkehr (Gertrud Kolmar, verschollen 1943)</title>
                     <date type="published" when="1999">1999</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120167709" xml:id="bibl_9bb3d2af">
+                    <bibl xml:id="bibl_9bb3d2af">
                         <title type="work">Irdene Zeit. Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1560405" xml:id="author_389820a7">Volker Ebersbach</author>
@@ -8885,7 +8909,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">computergedicht nr. 2</title>
                     <date type="created" notAfter="2000">n. n. 2000</date>
                     <date type="published" when="2001">2001</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120178510" xml:id="bibl_645d1366">
+                    <bibl xml:id="bibl_645d1366">
                         <title type="work">Letzte Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q44775" xml:id="author_6a63d5ff">Ernst Jandl</author>
@@ -8914,7 +8938,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="pubPlace_06ec7d19">München</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2006160" xml:id="publisher_3d191563">nymphenburger</publisher>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="published" when="2002">2002</date>
                     <bibl xml:id="bibl_38116b1b">
                         <title type="work">Farbflecken auf einem Mondrian-Bild. Gedichte</title>
@@ -9102,7 +9127,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="pubPlace_06ec7d19">München</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1205382" xml:id="publisher_53da17a3">DTV</publisher>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="published" when="2006">2006</date>
                     <bibl xml:id="bibl_371af9c3">
                         <title type="work">Jahrbuch für Literatur, Bd. 12</title>
@@ -9236,7 +9262,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_8520ebcc">
                     <title type="text">Karneval der Sorge</title>
                     <date type="published" when="2008">2008</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120168292" xml:id="bibl_b51ec563">
+                    <bibl xml:id="bibl_b51ec563">
                         <title type="work">Hölderlin Reparatur. Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1511553" xml:id="author_21ce4315">Gerhard Falkner</author>
@@ -9247,7 +9273,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_b0850246">
                     <title type="text">HERMETISCHE DICHTUNG</title>
                     <date type="published" when="2008">2008</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120168292" xml:id="bibl_b51ec563">
+                    <bibl xml:id="bibl_b51ec563">
                         <title type="work">Hölderlin Reparatur. Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1511553" xml:id="author_21ce4315">Gerhard Falkner</author>
@@ -9258,7 +9284,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_342cce8e">
                     <title type="text">Weißes Fleisch</title>
                     <date type="published" when="2008">2008</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120168292" xml:id="bibl_b51ec563">
+                    <bibl xml:id="bibl_b51ec563">
                         <title type="work">Hölderlin Reparatur. Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1511553" xml:id="author_21ce4315">Gerhard Falkner</author>
@@ -9269,7 +9295,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e366bb6e">
                     <title type="text">Fünf vierzeilige Sommer</title>
                     <date type="published" when="2008">2008</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120168292" xml:id="bibl_b51ec563">
+                    <bibl xml:id="bibl_b51ec563">
                         <title type="work">Hölderlin Reparatur. Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1511553" xml:id="author_21ce4315">Gerhard Falkner</author>
@@ -9280,7 +9306,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_99875e85">
                     <title type="text">Eine Bühne für Sappho</title>
                     <date type="published" when="2008">2008</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120168292" xml:id="bibl_b51ec563">
+                    <bibl xml:id="bibl_b51ec563">
                         <title type="work">Hölderlin Reparatur. Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1511553" xml:id="author_21ce4315">Gerhard Falkner</author>
@@ -9291,7 +9317,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_48ec7b19">
                     <title type="text">Sappho: neu aufgebacken, ausgelegt und nachempfunden</title>
                     <date type="published" when="2008">2008</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120199221" xml:id="bibl_f9bbda9e">
+                    <bibl xml:id="bibl_f9bbda9e">
                         <title type="work">Paradiesvogelschiß. Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q67921" xml:id="author_bbd2f350">Peter Rühmkorf</author>
@@ -9307,16 +9333,17 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <pubPlace ref="https://www.wikidata.org/entity/Q1794" xml:id="pubPlace_675a92e1">Frankfurt a. M.</pubPlace>
                     <publisher xml:id="publisher_2382b3d4">Haag + Heerchen</publisher>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="published" when="2009">2009</date>
                     <bibl xml:id="bibl_d4b14eee">
                         <title type="work">Seit ein Gespräch wir sind. Poesie und Alltag. Eine Anthologie</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q98940" xml:id="author_a378003d">Hugo Dittberner</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="pubPlace_8c8dfa84">Bordenau</pubPlace>
+                    <pubPlace xml:id="pubPlace_3d8dbe04">Bordenau</pubPlace>
                     <pubPlace xml:id="pubPlace_80c239e5">Venedig</pubPlace>
-                    <pubPlace xml:id="pubPlace_3d8dbe04">Neustadt am Rübenberg</pubPlace>
+                    <pubPlace xml:id="pubPlace_8c8dfa84">Neustadt am Rübenberg</pubPlace>
                     <publisher xml:id="publisher_dceeae69">San-Marco-Handpresse</publisher>
                 </bibl>
                 <bibl xml:id="bibl_04ac1af3">
@@ -9333,7 +9360,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_25edad22">
                     <title type="text">Variationen über ein Fragment von Sappho</title>
                     <date type="published" when="2010">2010</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120165032" xml:id="bibl_057fb420">
+                    <bibl xml:id="bibl_057fb420">
                         <title type="work">Florida-Räume</title>
                     </bibl>
                     <author xml:id="author_31067ec6">Ann Cotten</author>
@@ -9363,7 +9390,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_21f8875d">
                     <title type="text">Sappho – Labor</title>
                     <date type="published" when="2010">2010</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176398" xml:id="bibl_fffb4021">
+                    <bibl xml:id="bibl_fffb4021">
                         <title type="work">Zur Irrfahrt verführt. Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q2164573" xml:id="author_3cf5c166">Roman Graf</author>
@@ -9396,7 +9423,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_89b08955">
                     <title type="text">THE MOST BEAUTIFUL</title>
                     <date type="published" when="2012">2012</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120198434" xml:id="bibl_abde9f9b">
+                    <bibl xml:id="bibl_abde9f9b">
                         <title type="work">Neufundland. Schriften, teils bestimmt</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q125511" xml:id="author_8c390adb">Barbara Köhler</author>
@@ -9434,7 +9461,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_70133689">
                     <title type="text">mit Sappho im Hof</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q16003108" xml:id="author_7eaf6aad">Odile Kennel</author>
@@ -9445,7 +9472,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_0d8513f2">
                     <title type="text">Wo isn der Mond jetzt hin</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q16003108" xml:id="author_7eaf6aad">Odile Kennel</author>
@@ -9456,7 +9483,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_209ac4a6">
                     <title type="text">die zehnten Musen</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -9467,7 +9494,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_a8c1bf00">
                     <title type="text">Sapphos »Brüdergedicht«</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -9478,7 +9505,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_36546c63">
                     <title type="text">es ist schon viel zu spät</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author xml:id="author_5102104a">Rick Reuther</author>
@@ -9489,7 +9516,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_4597c9e9">
                     <title type="text">sappho (kleïs / tochter)</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1894336" xml:id="author_c080c31b">Marcus Roloff</author>
@@ -9500,7 +9527,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_a8b7a46f">
                     <title type="text">vier nachtgedichte</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1894336" xml:id="author_c080c31b">Marcus Roloff</author>
@@ -9511,7 +9538,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_da753bf8">
                     <title type="text">Liebeslied</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q18022028" xml:id="author_546deade">Kerstin Becker</author>
@@ -9522,7 +9549,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_10bc7265">
                     <title type="text">Mädchen gebt euch Musen hin geht auf!</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q18022028" xml:id="author_546deade">Kerstin Becker</author>
@@ -9533,7 +9560,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_836b4de9">
                     <title type="text">mir fehlt der Mond</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q18022028" xml:id="author_546deade">Kerstin Becker</author>
@@ -9544,11 +9571,11 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_94e35c85">
                     <title type="text">(214db)</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author xml:id="author_b7c003bf">Richard Duraj</author>
-                    <author xml:id="author_04d16fe7">Andreas Bülhoff</author>
+                    <author xml:id="author_b7c003bf">Andreas Bülhoff</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="pubPlace_1d1718f7">Greifswald</pubPlace>
                     <publisher xml:id="publisher_5fb17386">Freiraum</publisher>
@@ -9556,7 +9583,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_133121d7">
                     <title type="text">Genialer Bluff</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author xml:id="author_d58b53d7">Jascha Dhal</author>
@@ -9567,7 +9594,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_5bb486a5">
                     <title type="text">Tritt in den Spiegel / ein</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author xml:id="author_a1e150d7">Daniela Danz</author>
@@ -9578,11 +9605,11 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_c0fae172">
                     <title type="text">the most beautiful poem</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author xml:id="author_5102104a">Rick Reuther</author>
-                    <author xml:id="author_299aab19">Christiane Heidrich</author>
+                    <author xml:id="author_5102104a">Christiane Heidrich</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="pubPlace_1d1718f7">Greifswald</pubPlace>
                     <publisher xml:id="publisher_5fb17386">Freiraum</publisher>
@@ -9590,7 +9617,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_66ff26f4">
                     <title type="text">SAPPHOS HOTEL</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author xml:id="author_e566ba30">Jenny Feuerstein</author>
@@ -9601,7 +9628,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_6a200c37">
                     <title type="text">Entbehrung</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author xml:id="author_3549f84b">Mascha Golda</author>
@@ -9612,7 +9639,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_0fe5cdda">
                     <title type="text">Stille Post</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author xml:id="author_5a93c737">Michael Gratz</author>
@@ -9623,7 +9650,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_6a387d7a">
                     <title type="text">Poetin VI</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q15447200" xml:id="author_1b3d4cad">Ulf Großmann</author>
@@ -9634,7 +9661,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_2993c595">
                     <title type="text">Poetin X</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q15447200" xml:id="author_1b3d4cad">Ulf Großmann</author>
@@ -9645,7 +9672,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_34ffb60a">
                     <title type="text">larichos seinen kopf</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q2642220" xml:id="author_33aa35e7">Alexander Gumz</author>
@@ -9656,7 +9683,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_c97e14f4">
                     <title type="text">viel von die augen machen einem nur phosphor</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author xml:id="author_92b8583a">Philipp Günzel</author>
@@ -9667,7 +9694,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e363ed94">
                     <title type="text">herausgefallen aus nächtlichem Himmel</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author xml:id="author_c70afc2e">Bianka Hadler</author>
@@ -9678,7 +9705,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_a6a996ba">
                     <title type="text">Blue Voodoo</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q122436678" xml:id="author_4e3696a1">Roman Israel</author>
@@ -9689,7 +9716,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_6880fd8c">
                     <title type="text">Ich, mein Fragment,</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q534351" xml:id="author_c6f51ce5">Angelika Janz</author>
@@ -9700,7 +9727,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_00a72a85">
                     <title type="text">Ich dachte an dich mit verlorenen / Schläfen</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q19834645" xml:id="author_1ec001c4">Anja Kampmann</author>
@@ -9711,7 +9738,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_c75e0a37">
                     <title type="text">Gärten</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q19834645" xml:id="author_1ec001c4">Anja Kampmann</author>
@@ -9722,7 +9749,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_ba35066c">
                     <title type="text">MÜHLE, DIE ZEIT [</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q15788744" xml:id="author_02f41294">Birgit Kreipe</author>
@@ -9733,7 +9760,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_f684f17c">
                     <title type="text">wir sind untergegangen</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1354412" xml:id="author_2c6f7b01">Erika Kronabitter</author>
@@ -9744,7 +9771,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_2b5423ba">
                     <title type="text">dafür sieht man den mond wieder</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author xml:id="author_999e1542">Marianna Lanz</author>
@@ -9755,7 +9782,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_b8ed699b">
                     <title type="text">wir lutschten noch am mond</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author xml:id="author_999e1542">Marianna Lanz</author>
@@ -9766,7 +9793,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_1fcd8ed7">
                     <title type="text">der Kontakt unterbricht mich (Hochzeitslied)</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q21031915" xml:id="author_d569aeb5">Georg Leß</author>
@@ -9777,7 +9804,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_059177bd">
                     <title type="text">erinnerung an (sappho)</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q95312462" xml:id="author_f4cc52d6">Artur Nickel</author>
@@ -9788,7 +9815,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_fddd0cb2">
                     <title type="text">Der Lärm der Stadt sinkt</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q15438768" xml:id="author_e96f2e01">Simone Katrin Paul</author>
@@ -9799,7 +9826,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_ff98698d">
                     <title type="text">Sapphoesie</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1559070" xml:id="author_54a37cad">Martin Piekar</author>
@@ -9810,7 +9837,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_5878a649">
                     <title type="text">Mein Lieber Feldmann</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q828487" xml:id="author_241bfafe">Bertram Reinecke</author>
@@ -9821,7 +9848,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_645a491a">
                     <title type="text">Hier das sapphische Fragment</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q828487" xml:id="author_241bfafe">Bertram Reinecke</author>
@@ -9832,7 +9859,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_c5d63fa5">
                     <title type="text">das alkäische:</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q828487" xml:id="author_241bfafe">Bertram Reinecke</author>
@@ -9843,7 +9870,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_ba7fa74d">
                     <title type="text">golden verschwinden mond</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author xml:id="author_aed70136">Christoph Georg Rohrbach</author>
@@ -9854,7 +9881,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e1fa546e">
                     <title type="text">Hinter spiegelnder Luft</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q17326599" xml:id="author_997a3476">Tobias Roth</author>
@@ -9865,7 +9892,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_22419de3">
                     <title type="text">Ihre Bestellung über booklover.de (›Sappho: Scherben – Skizzen – Ü‹)</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q95324404" xml:id="author_3d194b61">Clemens Schittko</author>
@@ -9876,7 +9903,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_9c9dcc41">
                     <title type="text">Info zu Bestellung 26636027</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q95324404" xml:id="author_3d194b61">Clemens Schittko</author>
@@ -9887,7 +9914,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_0d36499e">
                     <title type="text">seh(n)ungs_bogen, / all_ein + un/eins mit […]</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author xml:id="author_8d5f4364">Elena L. Steinbrecher</author>
@@ -9898,7 +9925,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_07cdd512">
                     <title type="text">Die Rückseite des Mondes hab ich bemalt,</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author xml:id="author_38b6a218">Brigitte Struzyk</author>
@@ -9909,7 +9936,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_8f948e4d">
                     <title type="text">I took my lyre and said:</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q95322216" xml:id="author_26a18207">Asmus Trautsch</author>
@@ -9920,7 +9947,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_06538f8f">
                     <title type="text">Getier</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q95322216" xml:id="author_26a18207">Asmus Trautsch</author>
@@ -9931,7 +9958,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_4c00f4f0">
                     <title type="text">Entfachter Lenz</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q95322216" xml:id="author_26a18207">Asmus Trautsch</author>
@@ -9942,7 +9969,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_39f8fd4e">
                     <title type="text">ausgeknipst der mond</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q95194291" xml:id="author_6d95e138">Monika Vasik</author>
@@ -9953,7 +9980,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_3c4a6099">
                     <title type="text">Der Nachtmond verschwunden</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1379152" xml:id="author_85ea27b0">Eva Christina Zeller</author>
@@ -9975,7 +10002,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_74b717d1">
                     <title type="text">krynica morska</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q20052143" xml:id="bibl_31597ed9">
+                    <bibl xml:id="bibl_31597ed9">
                         <title type="work">Regentonnenvariationen</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1682338" xml:id="author_13c78cdf">Jan Wagner</author>
@@ -9986,7 +10013,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_b5063a20">
                     <title type="text">verabredungen für die kaimanjagd</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q20052143" xml:id="bibl_31597ed9">
+                    <bibl xml:id="bibl_31597ed9">
                         <title type="work">Regentonnenvariationen</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1682338" xml:id="author_13c78cdf">Jan Wagner</author>
@@ -10001,7 +10028,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                         <title type="work">Versnetze: Deutschsprachige Lyrik der Gegenwart</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q108407156" xml:id="author_b2f5ff47">G</author>
-                    <author xml:id="author_5ea580ce">ula Schiffer</author>
+                    <author xml:id="author_b2f5ff47">ula Schiffer</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace xml:id="pubPlace_9d7aff47">Weilerswist</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1484714" xml:id="publisher_eef544c6">Ralf Liebe</publisher>
@@ -10039,9 +10066,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl ref="https://www.wikidata.org/entity/Q120177014" xml:id="bibl_1c946b9e">
                     <title type="text">Sapphische Flaschenpost. Vom entsetzlich aufschäumenden Eros</title>
                     <date type="published" when="2016">2016</date>
-                    <bibl xml:id="bibl_cac2addb">
-                        <title type="work">Hg. v. Josef Felix Müller, illustriert von Peter Z. Herzog</title>
-                    </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1429942" xml:id="author_14234df5">Florian Vetsch</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q25607" xml:id="pubPlace_0dcac3bc">St. Gallen</pubPlace>
@@ -10061,7 +10085,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_91f2c498">
                     <title type="text">Sappho träumt eine zweite Fahrt ins Exil</title>
                     <date type="published" when="2018">2018</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120143490" xml:id="bibl_bc49cfcd">
+                    <bibl xml:id="bibl_bc49cfcd">
                         <title type="work">Sappho träumt</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q18022201" xml:id="author_b2e2e732">Klaus Anders</author>
@@ -10112,7 +10136,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_3dca8081">
                     <title type="text">von sappho: 1</title>
                     <date type="published" when="2019">2019</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176698" xml:id="bibl_d45466bd">
+                    <bibl xml:id="bibl_d45466bd">
                         <title type="work">aussichtsplattform, welten.9, darsolarpolar</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -10123,7 +10147,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_6929d4a9">
                     <title type="text">von sappho: 2</title>
                     <date type="published" when="2019">2019</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176698" xml:id="bibl_d45466bd">
+                    <bibl xml:id="bibl_d45466bd">
                         <title type="work">aussichtsplattform, welten.9, darsolarpolar</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -10134,7 +10158,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_32ffb905">
                     <title type="text">von sappho: 3</title>
                     <date type="published" when="2019">2019</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176698" xml:id="bibl_d45466bd">
+                    <bibl xml:id="bibl_d45466bd">
                         <title type="work">aussichtsplattform, welten.9, darsolarpolar</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -10145,7 +10169,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_0ec2fecf">
                     <title type="text">von sappho: 4</title>
                     <date type="published" when="2019">2019</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176698" xml:id="bibl_d45466bd">
+                    <bibl xml:id="bibl_d45466bd">
                         <title type="work">aussichtsplattform, welten.9, darsolarpolar</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -10156,7 +10180,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_6b659b37">
                     <title type="text">von sappho: 5</title>
                     <date type="published" when="2019">2019</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176698" xml:id="bibl_d45466bd">
+                    <bibl xml:id="bibl_d45466bd">
                         <title type="work">aussichtsplattform, welten.9, darsolarpolar</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -10167,7 +10191,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_2be96e8a">
                     <title type="text">von sappho: 6</title>
                     <date type="published" when="2019">2019</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176698" xml:id="bibl_d45466bd">
+                    <bibl xml:id="bibl_d45466bd">
                         <title type="work">aussichtsplattform, welten.9, darsolarpolar</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -10178,7 +10202,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e0616745">
                     <title type="text">von sappho: 7</title>
                     <date type="published" when="2019">2019</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176698" xml:id="bibl_d45466bd">
+                    <bibl xml:id="bibl_d45466bd">
                         <title type="work">aussichtsplattform, welten.9, darsolarpolar</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -10189,7 +10213,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_22a7f92c">
                     <title type="text">von sappho: 8</title>
                     <date type="published" when="2019">2019</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176698" xml:id="bibl_d45466bd">
+                    <bibl xml:id="bibl_d45466bd">
                         <title type="work">aussichtsplattform, welten.9, darsolarpolar</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -10200,7 +10224,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_3192f1c7">
                     <title type="text">von sappho: 9</title>
                     <date type="published" when="2019">2019</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176698" xml:id="bibl_d45466bd">
+                    <bibl xml:id="bibl_d45466bd">
                         <title type="work">aussichtsplattform, welten.9, darsolarpolar</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -10211,7 +10235,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_2a4c6655">
                     <title type="text">von sappho: 10</title>
                     <date type="published" when="2019">2019</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176698" xml:id="bibl_d45466bd">
+                    <bibl xml:id="bibl_d45466bd">
                         <title type="work">aussichtsplattform, welten.9, darsolarpolar</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -10222,7 +10246,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_22570040">
                     <title type="text">von sappho: 11</title>
                     <date type="published" when="2019">2019</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176698" xml:id="bibl_d45466bd">
+                    <bibl xml:id="bibl_d45466bd">
                         <title type="work">aussichtsplattform, welten.9, darsolarpolar</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -10233,7 +10257,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_427a5ab4">
                     <title type="text">von sappho: 12</title>
                     <date type="published" when="2019">2019</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176698" xml:id="bibl_d45466bd">
+                    <bibl xml:id="bibl_d45466bd">
                         <title type="work">aussichtsplattform, welten.9, darsolarpolar</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -10244,7 +10268,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_da2c6458">
                     <title type="text">von sappho: 13</title>
                     <date type="published" when="2019">2019</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176698" xml:id="bibl_d45466bd">
+                    <bibl xml:id="bibl_d45466bd">
                         <title type="work">aussichtsplattform, welten.9, darsolarpolar</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -10255,7 +10279,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_f621bd83">
                     <title type="text">von sappho: 14</title>
                     <date type="published" when="2019">2019</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176698" xml:id="bibl_d45466bd">
+                    <bibl xml:id="bibl_d45466bd">
                         <title type="work">aussichtsplattform, welten.9, darsolarpolar</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -10266,7 +10290,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_0803924b">
                     <title type="text">von sappho: 15</title>
                     <date type="published" when="2019">2019</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176698" xml:id="bibl_d45466bd">
+                    <bibl xml:id="bibl_d45466bd">
                         <title type="work">aussichtsplattform, welten.9, darsolarpolar</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -10277,7 +10301,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_87f6392e">
                     <title type="text">von sappho: 16</title>
                     <date type="published" when="2019">2019</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176698" xml:id="bibl_d45466bd">
+                    <bibl xml:id="bibl_d45466bd">
                         <title type="work">aussichtsplattform, welten.9, darsolarpolar</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -10288,7 +10312,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_95f3f4cb">
                     <title type="text">von sappho: 17</title>
                     <date type="published" when="2019">2019</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176698" xml:id="bibl_d45466bd">
+                    <bibl xml:id="bibl_d45466bd">
                         <title type="work">aussichtsplattform, welten.9, darsolarpolar</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q42307647" xml:id="author_df4838be">Dirk Uwe Hansen</author>
@@ -10316,7 +10340,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <publisher ref="https://www.wikidata.org/entity/Q2153225" xml:id="publisher_0fb21a8f">Rimbaud</publisher>
                 </bibl>
                 <bibl xml:id="bibl_6140401b">
-                    <title type="text">my music is lost, i bite my tongue. Ein Abgesang</title>
+                    <title type="text">	
+my music is lost, i bite my tongue. Ein Abgesang</title>
                     <date type="published" when="2020">2020</date>
                     <bibl xml:id="bibl_823f9174">
                         <title type="work">BELLA triste. Zeitschrift für junge Literatur</title>
@@ -10344,7 +10369,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e7e9ec37">
                     <title type="text">bella</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q2209811" xml:id="author_ddebefa6">Sabine Gruber</author>
@@ -10355,7 +10380,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e1cc0c53">
                     <title type="text">Nun aber erscheine</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q2209811" xml:id="author_ddebefa6">Sabine Gruber</author>
@@ -10366,7 +10391,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_c03da39a">
                     <title type="text">Die reife Frucht</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q2209811" xml:id="author_ddebefa6">Sabine Gruber</author>
@@ -10377,7 +10402,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_d30af40d">
                     <title type="text">Ihr Blinken</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q2209811" xml:id="author_ddebefa6">Sabine Gruber</author>
@@ -10388,7 +10413,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_63488446">
                     <title type="text">Was zählt</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q2209811" xml:id="author_ddebefa6">Sabine Gruber</author>
@@ -10399,7 +10424,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_2d82fb2b">
                     <title type="text">Er kann</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q2209811" xml:id="author_ddebefa6">Sabine Gruber</author>
@@ -10410,7 +10435,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_ea59a34d">
                     <title type="text">Und nun?</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q2209811" xml:id="author_ddebefa6">Sabine Gruber</author>
@@ -10421,7 +10446,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e9b0bde7">
                     <title type="text">Wer zählt?</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q2209811" xml:id="author_ddebefa6">Sabine Gruber</author>
@@ -10432,7 +10457,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_512f6623">
                     <title type="text">Ja, du</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1405759" xml:id="author_99ff6cfa">Ferdinand Schmatz</author>
@@ -10443,7 +10468,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_f9c623e4">
                     <title type="text">Apfel, Äpfel</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1405759" xml:id="author_99ff6cfa">Ferdinand Schmatz</author>
@@ -10454,7 +10479,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_2c4d2d70">
                     <title type="text">Wer hat angst</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1405759" xml:id="author_99ff6cfa">Ferdinand Schmatz</author>
@@ -10465,7 +10490,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_90c77f93">
                     <title type="text">So so das helle</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1405759" xml:id="author_99ff6cfa">Ferdinand Schmatz</author>
@@ -10476,7 +10501,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_ebf02a09">
                     <title type="text">Das sagen reicht</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1405759" xml:id="author_99ff6cfa">Ferdinand Schmatz</author>
@@ -10487,7 +10512,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_1edf0e04">
                     <title type="text">Gott mag</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1405759" xml:id="author_99ff6cfa">Ferdinand Schmatz</author>
@@ -10498,7 +10523,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_d5136843">
                     <title type="text">… Bin spaltung</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1405759" xml:id="author_99ff6cfa">Ferdinand Schmatz</author>
@@ -10509,7 +10534,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_de04ebe1">
                     <title type="text">Wenn, ja wenn,</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1405759" xml:id="author_99ff6cfa">Ferdinand Schmatz</author>
@@ -10520,7 +10545,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_5ef5f5f1">
                     <title type="text">wie hab ich</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author xml:id="author_3cc08935">Sylvia Treudl</author>
@@ -10531,7 +10556,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_295e15d7">
                     <title type="text">das leichte blut</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author xml:id="author_3cc08935">Sylvia Treudl</author>
@@ -10542,7 +10567,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_9f234b3b">
                     <title type="text">schneewittchen</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author xml:id="author_3cc08935">Sylvia Treudl</author>
@@ -10553,7 +10578,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e499c895">
                     <title type="text">stiehl einer</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author xml:id="author_3cc08935">Sylvia Treudl</author>
@@ -10564,7 +10589,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_ff17fdb8">
                     <title type="text">im krieg und</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author xml:id="author_3cc08935">Sylvia Treudl</author>
@@ -10575,7 +10600,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_a1b75faa">
                     <title type="text">im wonnemonat</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author xml:id="author_3cc08935">Sylvia Treudl</author>
@@ -10586,7 +10611,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_00cd722a">
                     <title type="text">als wärs ein</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author xml:id="author_3cc08935">Sylvia Treudl</author>
@@ -10597,7 +10622,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e1834f9f">
                     <title type="text">&amp; üben wir</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author xml:id="author_3cc08935">Sylvia Treudl</author>
@@ -10608,7 +10633,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_f26cfe5b">
                     <title type="text">fort</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q50358613" xml:id="author_12692b6b">Simone Hirth</author>
@@ -10619,7 +10644,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e11997c0">
                     <title type="text">ohne uns</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q50358613" xml:id="author_12692b6b">Simone Hirth</author>
@@ -10630,7 +10655,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_4835b1aa">
                     <title type="text">als einziges noch</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q50358613" xml:id="author_12692b6b">Simone Hirth</author>
@@ -10641,7 +10666,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e491e501">
                     <title type="text">in Wirklichkeit</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q50358613" xml:id="author_12692b6b">Simone Hirth</author>
@@ -10652,7 +10677,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_9e465da1">
                     <title type="text">sie sagen</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q50358613" xml:id="author_12692b6b">Simone Hirth</author>
@@ -10663,7 +10688,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_b9711bf4">
                     <title type="text">in solchen Momenten</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q50358613" xml:id="author_12692b6b">Simone Hirth</author>
@@ -10674,7 +10699,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_d21d6f45">
                     <title type="text">Kriechtiere</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q50358613" xml:id="author_12692b6b">Simone Hirth</author>
@@ -10685,7 +10710,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e64a58bc">
                     <title type="text">wenn man nicht</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q50358613" xml:id="author_12692b6b">Simone Hirth</author>
@@ -10696,7 +10721,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_9597b45e">
                     <title type="text">Dabei die Stiefel</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q66058353" xml:id="author_12ed70cf">Verena Stauffer</author>
@@ -10707,7 +10732,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_0e2cb15a">
                     <title type="text">Denn vor</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q66058353" xml:id="author_12ed70cf">Verena Stauffer</author>
@@ -10718,7 +10743,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_ba6e7a1e">
                     <title type="text">Wenn ich</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q66058353" xml:id="author_12ed70cf">Verena Stauffer</author>
@@ -10729,7 +10754,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_dcf1f0c4">
                     <title type="text">Dann über</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q66058353" xml:id="author_12ed70cf">Verena Stauffer</author>
@@ -10740,7 +10765,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_58be7e19">
                     <title type="text">Im Tagtraum</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q66058353" xml:id="author_12ed70cf">Verena Stauffer</author>
@@ -10751,7 +10776,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_91f161e5">
                     <title type="text">Es ist ein Vacuum</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q66058353" xml:id="author_12ed70cf">Verena Stauffer</author>
@@ -10762,7 +10787,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_f4ac93ec">
                     <title type="text">… Jeden Tag</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q66058353" xml:id="author_12ed70cf">Verena Stauffer</author>
@@ -10773,7 +10798,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_d2573e88">
                     <title type="text">Die Zuneigung</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q66058353" xml:id="author_12ed70cf">Verena Stauffer</author>
@@ -10784,7 +10809,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_db776129">
                     <title type="text">mit dem Zwirn</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q107622418" xml:id="author_cb7d98c5">Sandra Hubinger</author>
@@ -10795,7 +10820,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_a66275fb">
                     <title type="text">Hier ist das</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q107622418" xml:id="author_cb7d98c5">Sandra Hubinger</author>
@@ -10806,7 +10831,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_71c98cbb">
                     <title type="text">so als ob</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q107622418" xml:id="author_cb7d98c5">Sandra Hubinger</author>
@@ -10817,7 +10842,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_6cd5705b">
                     <title type="text">Über die schwarze</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q107622418" xml:id="author_cb7d98c5">Sandra Hubinger</author>
@@ -10828,7 +10853,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_54dda19e">
                     <title type="text">was einer sagt</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q107622418" xml:id="author_cb7d98c5">Sandra Hubinger</author>
@@ -10839,7 +10864,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_6d793cb1">
                     <title type="text">Irre zwischen</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q107622418" xml:id="author_cb7d98c5">Sandra Hubinger</author>
@@ -10850,7 +10875,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_b18e8294">
                     <title type="text">Schau wie sie</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q107622418" xml:id="author_cb7d98c5">Sandra Hubinger</author>
@@ -10861,7 +10886,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_3253600a">
                     <title type="text">Ich nehme es</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q107622418" xml:id="author_cb7d98c5">Sandra Hubinger</author>
@@ -10872,7 +10897,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_48901a8f">
                     <title type="text">sappho singers I</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q73603258" xml:id="author_5647c8df">Ariane von Graffenried</author>
@@ -10883,7 +10908,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_7b31cea4">
                     <title type="text">sappho singers II</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q73603258" xml:id="author_5647c8df">Ariane von Graffenried</author>
@@ -10894,7 +10919,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_d28af251">
                     <title type="text">sappho singers III</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q73603258" xml:id="author_5647c8df">Ariane von Graffenried</author>
@@ -10905,7 +10930,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_9d53bab8">
                     <title type="text">sappho singers IV</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q73603258" xml:id="author_5647c8df">Ariane von Graffenried</author>
@@ -10916,7 +10941,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_28fbbeb2">
                     <title type="text">sappho singers V</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q73603258" xml:id="author_5647c8df">Ariane von Graffenried</author>
@@ -10927,7 +10952,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_1b92c58f">
                     <title type="text">sappho singers VI</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q73603258" xml:id="author_5647c8df">Ariane von Graffenried</author>
@@ -10938,7 +10963,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_c9c3027b">
                     <title type="text">sappho singers VII</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q73603258" xml:id="author_5647c8df">Ariane von Graffenried</author>
@@ -10949,7 +10974,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_2a81d59f">
                     <title type="text">sappho singers VIII</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q73603258" xml:id="author_5647c8df">Ariane von Graffenried</author>
@@ -10960,7 +10985,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_b5389f67">
                     <title type="text">auch wenn du</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q120153" xml:id="author_23b51863">Raphael Urweider</author>
@@ -10971,7 +10996,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_7c42a96d">
                     <title type="text">komm setz dich</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q120153" xml:id="author_23b51863">Raphael Urweider</author>
@@ -10982,7 +11007,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_b34d4150">
                     <title type="text">die hyazinthe</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q120153" xml:id="author_23b51863">Raphael Urweider</author>
@@ -10993,7 +11018,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_02d428a5">
                     <title type="text">nur ich schlafe</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q120153" xml:id="author_23b51863">Raphael Urweider</author>
@@ -11004,7 +11029,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_3b290e4b">
                     <title type="text">die kinder</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q120153" xml:id="author_23b51863">Raphael Urweider</author>
@@ -11015,7 +11040,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_a50cc6c6">
                     <title type="text">du hast es</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q120153" xml:id="author_23b51863">Raphael Urweider</author>
@@ -11026,7 +11051,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_1703c216">
                     <title type="text">… weiß nicht</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q120153" xml:id="author_23b51863">Raphael Urweider</author>
@@ -11037,7 +11062,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_dc0ed923">
                     <title type="text">endlich ruhe</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120176407" xml:id="bibl_def73d2f">
+                    <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q120153" xml:id="author_23b51863">Raphael Urweider</author>
@@ -11158,7 +11183,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q500169" xml:id="author_f987fee8">Andreas Reimann</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
-                <bibl>
+                <bibl xml:id="bibl_d41d8cd9">
+                    <title type="text"/>
                     <date type="created" notAfter="2024">n. n. 2024</date>
                     <author ref="https://www.wikidata.org/entity/Q500169" xml:id="author_f987fee8">Andreas Reimann</author>
                     <note type="genre">Lyrik</note>

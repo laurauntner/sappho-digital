@@ -37,7 +37,7 @@
                     der meisterkoch fast Lieb gewan: weiter von seinem Wolsingen</title>
                     <date type="created" notBefore="1554" notAfter="1557">1554–1557</date>
                     <date type="published" when="1557">1557</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120256127" xml:id="bibl_dbe47849">
+                    <bibl xml:id="bibl_dbe47849">
                         <title type="work">Der Goldtfaden</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q73072" xml:id="author_6bcd0402">Jörg Wickram</author>
@@ -130,8 +130,8 @@
                     <date type="published" when="1775">1775</date>
                     <author ref="https://www.wikidata.org/entity/Q215853" xml:id="author_ea8781b9">Friedrich Nicolai</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
-                    <pubPlace xml:id="pubPlace_6cee4661">Stettin</pubPlace>
+                    <pubPlace xml:id="pubPlace_6cee4661">Berlin</pubPlace>
+                    <pubPlace xml:id="pubPlace_d35a02eb">Stettin</pubPlace>
                     <publisher xml:id="publisher_f1e25fd6">Nicolai</publisher>
                     <ref target="https://www.deutschestextarchiv.de/book/view/nicolai_nothanker02_1775/?hl=Sappho&amp;p=204">https://www.deutschestextarchiv.de/book/view/nicolai_nothanker02_1775/?hl=Sappho&amp;p=204</ref>
                 </bibl>
@@ -285,8 +285,8 @@ nie mehr erschienen</ref>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q62053" xml:id="author_2397260a">Tian [d. i. Karoline von Günderrode]</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="pubPlace_f23bb5e2">Hamburg</pubPlace>
-                    <pubPlace xml:id="pubPlace_675a92e1">Frankfurt a. M.</pubPlace>
+                    <pubPlace xml:id="pubPlace_675a92e1">Hamburg</pubPlace>
+                    <pubPlace xml:id="pubPlace_f23bb5e2">Frankfurt a. M.</pubPlace>
                     <publisher xml:id="publisher_49de49d5">J. C. Hermannsche Buchhandlung</publisher>
                     <ref target="https://www.digitale-sammlungen.de/de/view/bsb10861265?page=80,81">https://www.digitale-sammlungen.de/de/view/bsb10861265?page=80,81</ref>
                 </bibl>
@@ -375,15 +375,15 @@ nie mehr erschienen</ref>
                     </bibl>
                     <author xml:id="author_77a67df6">Achim von Arnim</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="pubPlace_efeaa516">Leipzig</pubPlace>
-                    <pubPlace xml:id="pubPlace_95b8315b">Wien</pubPlace>
-                    <publisher xml:id="publisher_ec580ca7">Georg Joachim Göschen</publisher>
-                    <publisher xml:id="publisher_a07c50f8">Carl Gerold’s Sohn Verlag</publisher>
+                    <pubPlace xml:id="pubPlace_95b8315b">Leipzig</pubPlace>
+                    <pubPlace xml:id="pubPlace_efeaa516">Wien</pubPlace>
+                    <publisher xml:id="publisher_a07c50f8">Georg Joachim Göschen</publisher>
+                    <publisher xml:id="publisher_ec580ca7">Carl Gerold’s Sohn Verlag</publisher>
                 </bibl>
                 <bibl xml:id="bibl_811bbdba">
                     <title type="text">Zweiter Brief</title>
                     <date type="published" when="1826">1826</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q64511029" xml:id="bibl_bc7988d7">
+                    <bibl xml:id="bibl_bc7988d7">
                         <title type="work">Reisebilder</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q44403" xml:id="author_d1ce90b4">Heinrich Heine</author>
@@ -557,9 +557,9 @@ nie mehr erschienen</ref>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q76492" xml:id="author_b8ba5902">Fritz Reuter</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="pubPlace_b3271180">Wismar</pubPlace>
-                    <pubPlace xml:id="pubPlace_5cef94ac">Rostock</pubPlace>
-                    <pubPlace xml:id="pubPlace_64f9e1da">Ludwigslust</pubPlace>
+                    <pubPlace xml:id="pubPlace_5cef94ac">Wismar</pubPlace>
+                    <pubPlace xml:id="pubPlace_64f9e1da">Rostock</pubPlace>
+                    <pubPlace xml:id="pubPlace_b3271180">Ludwigslust</pubPlace>
                     <publisher xml:id="publisher_006305f7">Hinstorff’sche Buchhandlung</publisher>
                     <ref target="https://books.google.de/books?id=zToXV_6eq10C&amp;pg=PA193&amp;dq=fritz+reuter+S%C3%A4mtliche+Werke+Ein+gr%C3%A4flicher+Geburtstag&amp;hl=de&amp;newbks=1&amp;newbks_redir=0&amp;sa=X&amp;ved=2ahUKEwiGxbPgy4eOAxXSSfEDHQofGRgQ6AF6BAgGEAM#v=onepage&amp;q=fritz%20reuter%20S%C3%A4mtliche%20Werke%20Ein%20gr%C3%A4flicher%20Geburtstag&amp;f=false">https://books.google.de/books?id=zToXV_6eq10C&amp;pg=PA193&amp;dq=fritz+reuter+S%C3%A4mtliche+Werke+Ein+gr%C3%A4flicher+Geburtstag&amp;hl=de&amp;newbks=1&amp;newbks_redir=0&amp;sa=X&amp;ved=2ahUKEwiGxbPgy4eOAxXSSfEDHQofGRgQ6AF6BAgGEAM#v=onepage&amp;q=fritz%20reuter%20S%C3%A4mtliche%20Werke%20Ein%20gr%C3%A4flicher%20Geburtstag&amp;f=false</ref>
                 </bibl>
@@ -746,9 +746,9 @@ nie mehr erschienen</ref>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q76492" xml:id="author_b8ba5902">Fritz Reuter</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="pubPlace_b3271180">Wismar</pubPlace>
-                    <pubPlace xml:id="pubPlace_5cef94ac">Rostock</pubPlace>
-                    <pubPlace xml:id="pubPlace_64f9e1da">Ludwigslust</pubPlace>
+                    <pubPlace xml:id="pubPlace_5cef94ac">Wismar</pubPlace>
+                    <pubPlace xml:id="pubPlace_64f9e1da">Rostock</pubPlace>
+                    <pubPlace xml:id="pubPlace_b3271180">Ludwigslust</pubPlace>
                     <publisher xml:id="publisher_006305f7">Hinstorff’sche Buchhandlung</publisher>
                     <ref target="https://books.google.de/books?id=aaMuAAAAYAAJ&amp;printsec=frontcover&amp;hl=de&amp;source=gbs_ge_summary_r&amp;cad=0#v=onepage&amp;q&amp;f=false">https://books.google.de/books?id=aaMuAAAAYAAJ&amp;printsec=frontcover&amp;hl=de&amp;source=gbs_ge_summary_r&amp;cad=0#v=onepage&amp;q&amp;f=false</ref>
                 </bibl>
@@ -1370,7 +1370,7 @@ nie mehr erschienen</ref>
                     <title type="text">Sappho die Dichterin von Lesbos. Roman der Schönheit</title>
                     <date type="created" notAfter="1904">n. n. 1904</date>
                     <date type="published" when="1904">1904</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120177248" xml:id="bibl_065e596d">
+                    <bibl xml:id="bibl_065e596d">
                         <title type="work">Gesammelte Werke, Bd. 2</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q95693" xml:id="author_c47c8ee0">Peter Hille</author>
@@ -1855,7 +1855,7 @@ nie mehr erschienen</ref>
                         <title type="work">Kölnische Zeitung</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q55674905" xml:id="author_6cb5644b">Edm</author>
-                    <author xml:id="author_cac0f5ea">Schopen</author>
+                    <author xml:id="author_6cb5644b">Schopen</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="pubPlace_4a15ea49">Köln</pubPlace>
                     <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
@@ -1911,8 +1911,8 @@ nie mehr erschienen</ref>
                     <date type="published" when="1933">1933</date>
                     <author xml:id="author_fcd61c9a">Edward Stucken</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
-                    <pubPlace xml:id="pubPlace_95b8315b">Wien</pubPlace>
+                    <pubPlace xml:id="pubPlace_95b8315b">Berlin</pubPlace>
+                    <pubPlace xml:id="pubPlace_d35a02eb">Wien</pubPlace>
                     <pubPlace xml:id="pubPlace_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q176169" xml:id="publisher_71955675">Zsolnay</publisher>
                 </bibl>
@@ -2131,8 +2131,8 @@ nie mehr erschienen</ref>
                     <date type="published" when="1983">1983</date>
                     <author ref="https://www.wikidata.org/entity/Q68137" xml:id="author_8139a4e6">Irmtraud Morgner</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="pubPlace_b30287cd">Darmstadt</pubPlace>
-                    <pubPlace xml:id="pubPlace_88de4c35">Neuwied</pubPlace>
+                    <pubPlace xml:id="pubPlace_88de4c35">Darmstadt</pubPlace>
+                    <pubPlace xml:id="pubPlace_b30287cd">Neuwied</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1564874" xml:id="publisher_2406f66e">Luchterhand</publisher>
                 </bibl>
                 <bibl xml:id="bibl_6d8880f8">
@@ -2149,7 +2149,7 @@ nie mehr erschienen</ref>
                 <bibl xml:id="bibl_51495b9c">
                     <title type="text">Dich hat Amor gewiß …</title>
                     <date type="published" when="1983">1983</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120198474" xml:id="bibl_e558e9ec">
+                    <bibl xml:id="bibl_e558e9ec">
                         <title type="work">Kuckucksrufe und Ohrfeigen. Erzählungen</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q2541980" xml:id="author_4c9bafad">Waldtraut Lewin</author>
@@ -2160,9 +2160,6 @@ nie mehr erschienen</ref>
                 <bibl xml:id="bibl_d05f99e8">
                     <title type="text">Der Vikar Sappho oder Die Verzauberung. Erzählung</title>
                     <date type="published" when="1983">1983</date>
-                    <bibl xml:id="bibl_336d5ebc">
-                        <title type="work">-</title>
-                    </bibl>
                     <author ref="https://www.wikidata.org/entity/Q95186926" xml:id="author_41f6be4f">Ottilie Schenk</author>
                     <note type="genre">Prosa</note>
                     <pubPlace xml:id="pubPlace_2f511dd6">St. Michael</pubPlace>
@@ -2173,8 +2170,8 @@ nie mehr erschienen</ref>
                     <date type="published" when="1983">1983</date>
                     <author ref="https://www.wikidata.org/entity/Q57382" xml:id="author_ab5259c5">Christa Wolf</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
-                    <pubPlace xml:id="pubPlace_c35eca96">Weimar</pubPlace>
+                    <pubPlace xml:id="pubPlace_c35eca96">Berlin</pubPlace>
+                    <pubPlace xml:id="pubPlace_d35a02eb">Weimar</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q316922" xml:id="publisher_87308a85">Aufbau</publisher>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q120199158" xml:id="bibl_563ac5be">
@@ -2205,7 +2202,7 @@ nie mehr erschienen</ref>
                 <bibl xml:id="bibl_572cbd6b">
                     <title type="text">Männerlust – Frauenlob, Anmerkungen zur Sapphorezeption und zum Orgasmusproblem</title>
                     <date type="published" when="1988">1988</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q1212933" xml:id="bibl_fb68007d">
+                    <bibl xml:id="bibl_fb68007d">
                         <title type="work">Die Geschichte der Empfindlichkeit</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q106087" xml:id="author_f5e28183">Hubert Fichte</author>
@@ -2288,7 +2285,7 @@ nie mehr erschienen</ref>
                     <title type="text">Sappho küsst Europa. Geschichten von Lesben aus 20 Längern</title>
                     <date type="published" when="1997">1997</date>
                     <author xml:id="author_9e73b47f">Hg. v. Madeleine Marti</author>
-                    <author xml:id="author_538dc29f">Marianne Ulmi</author>
+                    <author xml:id="author_9e73b47f">Marianne Ulmi</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2122937" xml:id="publisher_8f72e265">Querverlag</publisher>
@@ -2377,7 +2374,7 @@ nie mehr erschienen</ref>
                 <bibl xml:id="bibl_89b08955">
                     <title type="text">THE MOST BEAUTIFUL</title>
                     <date type="published" when="2012">2012</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120198434" xml:id="bibl_abde9f9b">
+                    <bibl xml:id="bibl_abde9f9b">
                         <title type="work">Neufundland. Schriften, teils bestimmt</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q125511" xml:id="author_8c390adb">Barbara Köhler</author>
@@ -2388,7 +2385,7 @@ nie mehr erschienen</ref>
                 <bibl xml:id="bibl_5878a649">
                     <title type="text">Mein Lieber Feldmann</title>
                     <date type="published" when="2014">2014</date>
-                    <bibl ref="https://www.wikidata.org/entity/Q120179880" xml:id="bibl_574806a3">
+                    <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q828487" xml:id="author_241bfafe">Bertram Reinecke</author>

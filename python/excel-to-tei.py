@@ -1,13 +1,12 @@
 import pandas as pd
 import re
-import hashlib
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
 
 # Excel-Datei
 excel_file = "../../doktorat/Diss/Sappho-Rezeption/Sappho-Rez_vollstaendig.xlsx"
 
-# Spalten inkl. QIDs
+# Spalten
 use_columns = [
     "Bearbeitungsstand",
     "Entstehungsjahr",
@@ -23,10 +22,14 @@ use_columns = [
     "Hauptwerk QID",
     "Autor_in QID",
     "Publikationsort QID",
-    "Verlag QID"
+    "Verlag QID",
+    "Interne Werk-ID",
+    "Interne Hauptwerk-ID",
+    "Interne Autor_in-ID",
+    "Interne Ort-ID",
+    "Interne Verlag-ID"
 ]
 
-# TEI-Konfiguration
 tei_configs = {
     "alle": {
         "filename": "../data/lists/sappho-rez_alle.xml",
@@ -52,17 +55,9 @@ tei_configs = {
         "filename": "../data/lists/sappho-rez_sonstige.xml",
         "title": "Sonstige Rezeptionszeugnisse",
         "filter": "Sonstige"
-    }
+    },
 }
 
-# Stabile IDs
-
-def make_stable_id(prefix, text):
-    text_normalized = re.sub(r"\s+", " ", text.strip().lower())
-    hash = hashlib.md5(text_normalized.encode("utf-8")).hexdigest()[:8]
-    return f"{prefix}_{hash}"
-
-# Datumselemente erzeugen
 def create_date_element(tag_type, value):
     value = str(value).strip()
     if not value:
@@ -71,6 +66,7 @@ def create_date_element(tag_type, value):
     date = ET.Element("date", {"type": tag_type})
     original = value
 
+    # Jahrhundert
     match_century = re.match(r"(\d{1,2})\.\s*(Jahrhundert|Jhdt)\.??", value)
     if match_century:
         century = int(match_century.group(1))
@@ -79,6 +75,7 @@ def create_date_element(tag_type, value):
         date.text = original
         return date
 
+    # Dekade
     match_decade = re.match(r"(\d{3})0er??", value)
     if match_decade:
         decade = int(match_decade.group(1)) * 10 + 5
@@ -86,12 +83,14 @@ def create_date_element(tag_type, value):
         date.text = original
         return date
 
+    # Unklarheit
     match_questionable_year = re.match(r"(\d{4})\?", value)
     if match_questionable_year:
         date.attrib["when"] = match_questionable_year.group(1)
         date.text = original
         return date
 
+    # Jahrspanne mit Schrägstrich
     match_year_range = re.match(r"(\d{4})/(\d{4})", value)
     if match_year_range:
         date.attrib["notBefore"] = match_year_range.group(1)
@@ -99,36 +98,38 @@ def create_date_element(tag_type, value):
         date.text = original
         return date
 
+    # Spannweite
     match_full_range = re.match(r"(\d{4})(/\d{4})?–(\d{4})(/\d{4})?", value)
     if match_full_range:
-        not_before = match_full_range.group(1)
-        not_after = match_full_range.group(3)
-        date.attrib["notBefore"] = not_before
-        date.attrib["notAfter"] = not_after
+        date.attrib["notBefore"] = match_full_range.group(1)
+        date.attrib["notAfter"] = match_full_range.group(3)
         date.text = original
         return date
 
+    # "um XXXX"
     match_approx = re.match(r"um (\d{4})", value)
     if match_approx:
         date.attrib["when"] = match_approx.group(1)
         date.text = original
         return date
 
+    # "n. n. XXXX"
     match_nn = re.match(r"n\. n\.\s*(\d{4})", value, re.IGNORECASE)
     if match_nn:
         date.attrib["notAfter"] = match_nn.group(1)
         date.text = original
         return date
 
+    # Normales Jahr
     if re.match(r"^\d{4}$", value):
         date.attrib["when"] = value
         date.text = value
         return date
 
+    # Fallback
     date.text = value
     return date
 
-# QIDs
 def create_element_with_ref(tag, text, qid):
     if not text.strip():
         return None
@@ -140,7 +141,6 @@ def create_element_with_ref(tag, text, qid):
     elem.text = text.strip()
     return elem
 
-# XML hübsch formatieren
 def prettify(elem):
     rough_string = ET.tostring(elem, encoding="utf-8")
     return minidom.parseString(rough_string).toprettyxml(indent="    ")
@@ -150,20 +150,17 @@ df_raw = pd.read_excel(excel_file, dtype=str).fillna("")
 df_raw = df_raw[df_raw["Bearbeitungsstand"].str.lower() == "done"]
 df = df_raw[use_columns[1:]]
 
-# TEI erzeugen
 def generate_tei(df_filtered, title_text):
     tei = ET.Element("TEI", xmlns="http://www.tei-c.org/ns/1.0")
     teiHeader = ET.SubElement(tei, "teiHeader")
     fileDesc = ET.SubElement(teiHeader, "fileDesc")
     titleStmt = ET.SubElement(fileDesc, "titleStmt")
-    title = ET.SubElement(titleStmt, "title", {"type": "main"})
-    title.text = title_text
-
-    publicationStmt = ET.SubElement(fileDesc, "publicationStmt")
-    ET.SubElement(publicationStmt, "publisher").text = "Laura Untner"
-    ET.SubElement(publicationStmt, "pubPlace").text = "Wien/Berlin"
-    ET.SubElement(publicationStmt, "date", {"when": "2025"}).text = "2025"
-    availability = ET.SubElement(publicationStmt, "availability")
+    ET.SubElement(titleStmt, "title", {"type": "main"}).text = title_text
+    pubStmt = ET.SubElement(fileDesc, "publicationStmt")
+    ET.SubElement(pubStmt, "publisher").text = "Laura Untner"
+    ET.SubElement(pubStmt, "pubPlace").text = "Wien/Berlin"
+    ET.SubElement(pubStmt, "date", {"when": "2025"}).text = "2025"
+    availability = ET.SubElement(pubStmt, "availability")
     licence = ET.SubElement(availability, "licence", {"target": "https://creativecommons.org/licenses/by/4.0/deed.de"})
     ET.SubElement(licence, "p").text = "CC BY 4.0"
     sourceDesc = ET.SubElement(fileDesc, "sourceDesc")
@@ -176,14 +173,12 @@ def generate_tei(df_filtered, title_text):
     for _, row in df_filtered.iterrows():
         bibl = ET.SubElement(listBibl, "bibl")
 
-        qid = row.get("Werk QID", "").strip()
-        if qid:
-            bibl.attrib["ref"] = f"https://www.wikidata.org/entity/{qid}"
+        if row["Werk QID"].strip():
+            bibl.attrib["ref"] = f"https://www.wikidata.org/entity/{row['Werk QID'].strip()}"
+        if row["Interne Werk-ID"].strip():
+            bibl.attrib["xml:id"] = row["Interne Werk-ID"].strip()
 
-        if row["Titel"].strip():
-            title_text = row["Titel"].strip()
-            bibl.attrib["xml:id"] = make_stable_id("bibl", title_text)
-            ET.SubElement(bibl, "title", {"type": "text"}).text = title_text
+        ET.SubElement(bibl, "title", {"type": "text"}).text = row["Titel"]
 
         date_created = create_date_element("created", row["Entstehungsjahr"])
         if date_created is not None:
@@ -193,55 +188,50 @@ def generate_tei(df_filtered, title_text):
         if date_published is not None:
             bibl.append(date_published)
 
-        if row["Enthalten in"].strip():
-            work_titles = [t.strip() for t in row["Enthalten in"].split("/") if t.strip()]
-            work_ids = [qid.strip() for qid in row.get("Hauptwerk QID", "").split("/")]
+        # Enthaltene Werke
+        work_titles = [row["Enthalten in"].strip()] if row["Enthalten in"].strip() else []
+        work_ids = [t.strip() for t in row["Interne Hauptwerk-ID"].split(",") if t.strip()]
+        for i, title_text in enumerate(work_titles):
+            work_bibl = ET.Element("bibl")
+            if i < len(work_ids):
+                work_bibl.attrib["xml:id"] = work_ids[i]
+            ET.SubElement(work_bibl, "title", {"type": "work"}).text = title_text
+            bibl.append(work_bibl)
 
-            for i, title_text in enumerate(work_titles):
-                qid = work_ids[i] if i < len(work_ids) else ""
-                work_bibl = ET.Element("bibl")
-                if qid:
-                    work_bibl.attrib["ref"] = f"https://www.wikidata.org/entity/{qid}"
-                work_bibl.attrib["xml:id"] = make_stable_id("bibl", title_text)
-                ET.SubElement(work_bibl, "title", {"type": "work"}).text = title_text
-                bibl.append(work_bibl)
-
-        authors = [a.strip() for a in row["Autor_in"].split("und") if a.strip()]
-        author_ids = [a.strip() for a in row.get("Autor_in QID", "").split("und")]
-
-        for i, author in enumerate(authors):
-            ref = author_ids[i] if i < len(author_ids) else ""
-            author_elem = create_element_with_ref("author", author, ref)
-            if author_elem is not None:
-                author_elem.attrib["xml:id"] = make_stable_id("author", author)
-                bibl.append(author_elem)
+        for i, author in enumerate(row["Autor_in"].split("und")):
+            author = author.strip()
+            qid = row["Autor_in QID"].split("und")[i].strip() if i < len(row["Autor_in QID"].split("und")) else ""
+            elem = create_element_with_ref("author", author, qid)
+            if elem is not None and row["Interne Autor_in-ID"].strip():
+                elem.attrib["xml:id"] = row["Interne Autor_in-ID"].strip()
+            if elem is not None:
+                bibl.append(elem)
 
         if row["Gattung"].strip():
             ET.SubElement(bibl, "note", {"type": "genre"}).text = row["Gattung"].strip()
 
-        places = [p.strip() for p in row["Publikationsort/Aufführungsort"].split("/") if p.strip()]
-        place_ids = [p.strip() for p in row.get("Publikationsort QID", "").split("/")]
+        for i, place in enumerate(row["Publikationsort/Aufführungsort"].split("/")):
+            place = place.strip()
+            qid = row["Publikationsort QID"].split("/")[i].strip() if i < len(row["Publikationsort QID"].split("/")) else ""
+            elem = create_element_with_ref("pubPlace", place, qid)
+            ids = [t.strip() for t in row["Interne Ort-ID"].split(",") if t.strip()]
+            if elem is not None and i < len(ids):
+                elem.attrib["xml:id"] = ids[i]
+            if elem is not None:
+                bibl.append(elem)
 
-        for i, place in enumerate(places):
-            ref = place_ids[i] if i < len(place_ids) else ""
-            place_elem = create_element_with_ref("pubPlace", place, ref)
-            if place_elem is not None:
-                place_elem.attrib["xml:id"] = make_stable_id("pubPlace", place)
-                bibl.append(place_elem)
-
-        publishers = [p.strip() for p in row["Verlag"].split("/") if p.strip()]
-        publisher_ids = [p.strip() for p in row.get("Verlag QID", "").split("/")]
-
-        for i, publisher in enumerate(publishers):
-            ref = publisher_ids[i] if i < len(publisher_ids) else ""
-            pub_elem = create_element_with_ref("publisher", publisher, ref)
-            if pub_elem is not None:
-                pub_elem.attrib["xml:id"] = make_stable_id("publisher", publisher)
-                bibl.append(pub_elem)
+        for i, verlag in enumerate(row["Verlag"].split("/")):
+            verlag = verlag.strip()
+            qid = row["Verlag QID"].split("/")[i].strip() if i < len(row["Verlag QID"].split("/")) else ""
+            elem = create_element_with_ref("publisher", verlag, qid)
+            ids = [t.strip() for t in row["Interne Verlag-ID"].split(",") if t.strip()]
+            if elem is not None and i < len(ids):
+                elem.attrib["xml:id"] = ids[i]
+            if elem is not None:
+                bibl.append(elem)
 
         if row["Link"].strip():
-            ref = ET.SubElement(bibl, "ref", {"target": row["Link"].strip()})
-            ref.text = row["Link"].strip()
+            ET.SubElement(bibl, "ref", {"target": row["Link"].strip()}).text = row["Link"].strip()
 
     return tei
 
@@ -270,6 +260,5 @@ for key, config in tei_configs.items():
 
     tei_element = generate_tei(df_filtered, config["title"])
     xml_str = prettify(tei_element)
-
     with open(config["filename"], "w", encoding="utf-8") as f:
         f.write(xml_str)
