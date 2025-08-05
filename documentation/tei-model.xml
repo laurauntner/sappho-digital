@@ -23,18 +23,18 @@
     <text>
         <body>
             <listBibl>
-                <bibl ref="WikidataURI">
+                <bibl ref="WikidataURI" xml:id="ID">
                     <!-- date alternative: @notBefore, @notAfter -->
                     <date type="created" when="YYYY">creation date</date>
                     <date type="published" when="YYYY">publication date</date>
                     <title type="text">title of the text</title>
-                    <bibl ref="WikidataURI">
+                    <bibl ref="WikidataURI" xml:id="ID">
                         <title type="work">title of the work containing the text</title>
                     </bibl>
-                    <author ref="WikidataURI">author</author>
+                    <author ref="WikidataURI" xml:id="ID">author</author>
                     <note type="genre">genre</note>
-                    <pubPlace ref="WikidataURI">publication place</pubPlace>
-                    <publisher ref="WikidataURI">publisher</publisher>
+                    <pubPlace ref="WikidataURI" xml:id="ID">publication place</pubPlace>
+                    <publisher ref="WikidataURI" xml:id="ID">publisher</publisher>
                     <ref target="url">URL</ref>
                 </bibl>
             </listBibl>
