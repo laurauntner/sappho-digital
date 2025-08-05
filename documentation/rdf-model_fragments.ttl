@@ -1,0 +1,198 @@
+@prefix : <https://sappho-digital.com/> .
+@prefix lrmoo: <http://www.cidoc-crm.org/lrmoo/> .
+@prefix ecrm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+#################################################################
+# Sapphos Gesamtwerk
+#################################################################
+
+<https://sappho-digital.com/work_creation/sappho-work> a lrmoo:F27_Work_Creation ;
+    rdfs:label "Work creation of Sappho’s Work"@en ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_sappho> ;
+    lrmoo:R16_created <https://sappho-digital.com/work/sappho-work> .
+
+<https://sappho-digital.com/work/sappho-work> a lrmoo:F1_Work ;
+    rdfs:label "Work of Sappho’s Work"@en ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_sappho> ;
+    lrmoo:R16i_was_created_by <https://sappho-digital.com/work_creation/sappho-work> ;
+    lrmoo:R10_has_member <https://sappho-digital.com/fragment/XXXX> .
+
+<https://sappho-digital.com/person/author_sappho> a ecrm:E21_Person ;
+    rdfs:label "Sappho" ;
+    ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_sappho> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/visual_item/author_sappho> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q17892> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_sappho> ;
+    ecrm:P2_has_type <https://sappho-digital.com/gender/female> ;
+    ecrm:P14i_performed <https://sappho-digital.com/work/sappho-work>,
+        <https://sappho-digital.com/work_creation/sappho-work> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q17892> .
+
+<https://sappho-digital.com/appellation/author_sappho> a ecrm:E82_Actor_Appellation ;
+    rdfs:label "Sappho"@en ;
+    ecrm:P131i_identifies <https://sappho-digital.com/person/author_sappho> .
+
+<https://sappho-digital.com/identifier/author_sappho> a ecrm:E42_Identifier ;
+    rdfs:label "author_sappho" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/person/author_sappho> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
+<https://sappho-digital.com/id_type/sappho-digital> a ecrm:E55_Type ;
+    rdfs:label "Sappho Digital ID"@en ;
+    ecrm:P2i_is_type_of <https://sappho-digital.com/identifier/author_sappho> , 
+                        <https://sappho-digital.com/identifier/editor_bagordo> ,
+                        <https://sappho-digital.com/identifier/XXXX> .
+
+<https://sappho-digital.com/identifier/Q17892> a ecrm:E42_Identifier ;
+    rdfs:label "Q17892" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/person/author_sappho> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/id_type/wikidata> a ecrm:E55_Type ;
+    rdfs:label "Wikidata ID"@en ;
+    ecrm:P2i_is_type_of <https://sappho-digital.com/identifier/Q17892> , 
+                        <https://sappho-digital.com/identifier/Q495907> , 
+                        <https://sappho-digital.com/identifier/XXXXX> .
+
+<https://sappho-digital.com/gender/female> a ecrm:E55_Type ;
+    rdfs:label "female"@en ;
+    ecrm:P2_has_type <https://sappho-digital.com/gender_type/sappho-digital> ;
+    ecrm:P2i_is_type_of <https://sappho-digital.com/person/author_sappho> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q6581072> .
+
+#################################################################
+# Symbolic Objects einzelner Fragmente
+#################################################################
+
+<https://sappho-digital.com/fragment/XXXX> a ecrm:E90_Symbolic_Object ;
+    rdfs:label "Fragment XXXX"@en ;
+    lrmoo:R10i_is_member_of <https://sappho-digital.com/work/sappho-work> .
+
+#################################################################
+# Expressions einzelner Fragmente
+#################################################################
+
+<https://sappho-digital.com/expression_creation/XXXX> a lrmoo:F28_Expression_Creation ;
+    rdfs:label "Expression creation of Fragment XXXX"@en ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/person/editor_bagordo> ;
+    lrmoo:R17_created <https://sappho-digital.com/expression/XXXX> ;
+    lrmoo:R19_created_a_realisation_of <https://sappho-digital.com/fragment/XXXX> .
+
+<https://sappho-digital.com/person/editor_bagordo> a ecrm:E21_Person ;
+    rdfs:label "Andreas Bagordo" ;
+    ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/editor_bagordo> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/visual_item/editor_bagordo> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q495907> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/editor_bagordo> ;
+    ecrm:P2_has_type <https://sappho-digital.com/gender/male> ;
+    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/XXXXX> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q495907> .
+
+<https://sappho-digital.com/appellation/editor_bagordo> a ecrm:E82_Actor_Appellation ;
+    rdfs:label "Andreas Bagordo"@en ;
+    ecrm:P131i_identifies <https://sappho-digital.com/person/editor_bagordo> .
+
+<https://sappho-digital.com/identifier/editor_bagordo> a ecrm:E42_Identifier ;
+    rdfs:label "editor_bagordo" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/person/editor_bagordo> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
+<https://sappho-digital.com/identifier/Q495907> a ecrm:E42_Identifier ;
+    rdfs:label "Q495907" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/person/editor_bagordo> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/gender/male> a ecrm:E55_Type ;
+    rdfs:label "male"@en ;
+    ecrm:P2_has_type <https://sappho-digital.com/gender_type/sappho-digital> ;
+    ecrm:P2i_is_type_of <https://sappho-digital.com/person/editor_bagordo> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q6581097> .
+
+<https://sappho-digital.com/expression/XXXX> a lrmoo:F2_Expression ;
+    rdfs:label "Expression of Fragment XXXX"@en ;
+    lrmoo:R3i_realises <https://sappho-digital.com/fragment/XXXX> ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/XXXX> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/XXXX> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/XXXX> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXXX> ,
+                            <https://sappho-digital.com/identifier/XXXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/poetry> ; 
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/title/expression/XXXX> a ecrm:E35_Title ;
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/XXXX> ;
+    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/XXXX> .
+
+<https://sappho-digital.com/title_string/expression/XXXX> a ecrm:E62_String ;
+    rdfs:label "Fragment XXXX"@de ;
+    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/XXXX> .
+
+<https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
+    rdfs:label "XXXX" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
+    rdfs:label "XXXX" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
+<https://sappho-digital.com/genre/poetry> a ecrm:E55_Type ;
+    rdfs:label "poetry"@en ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre_type/sappho-digital> ;
+    ecrm:P2_is_type_of <https://sappho-digital.com/expression/XXXX> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q482> .
+
+<https://sappho-digital.com/genre_type/wikidata> a ecrm:E55_Type ;
+    rdfs:label "Sappho Digital Genre"@en ;
+    ecrm:P2_is_type_of <https://sappho-digital.com/genre/poetry> .
+
+<https://sappho-digital.com/digital/XXXX> a ecrm:E73_Information_Object ;
+    rdfs:label "Digital copy of Fragment XXXX"@en ;
+    ecrm:P138_represents <https://sappho-digital.com/expression/XXXX> ;
+    rdfs:seeAlso <XXXX> .
+
+#################################################################
+# Manifestation und Item
+#################################################################
+
+<https://sappho-digital.com/manifestation_creation/sappho_bagordo> a lrmoo:F30_Manifestation_Creation ;
+    rdfs:label "Manifestation creation Andreas Bagordo’s Sappho edition"@en ;
+    lrmoo:R24_created <https://sappho-digital.com/manifestation/sappho_bagordo> ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/manifestation/editor_bagordo> ,
+                            <https://sappho-digital.com/manifestation/publisher_patmos> ;
+    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/2009> ;
+    ecrm:P7_took_place_at <https://sappho-digital.com/pubPlace/pubPlace_42b32e43> .
+
+<https://sappho-digital.com/manifestation/sappho_bagordo> a lrmoo:F3_Manifestation ;
+    rdfs:label "Andreas Bagordo’s Sappho edition"@en ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/XXXX> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/sappho_bagordo> ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/manifestation/sappho_bagordo> ; 
+    lrmoo:R27i_was_materialized_by <https://sappho-digital.com/item_production/sappho_bagordo> .
+
+<https://sappho-digital.com/title/manifestation/sappho_bagordo> a ecrm:E35_Title ;
+    ecrm:P102i_is_title_of <https://sappho-digital.com/manifestation/sappho_bagordo> ;
+    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/manifestation/sappho_bagordo> .
+
+<https://sappho-digital.com/title_string/manifestation/sappho_bagordo> a ecrm:E62_String ;
+    rdfs:label "Sappho. Gedichte. Griechisch-Deutsch"@de ;
+    ecrm:P190i_is_content_of <https://sappho-digital.com/title/manifestation/sappho_bagordo> .
+
+<https://sappho-digital.com/timespan/2009> a ecrm:E52_Time-Span ;
+    rdfs:label "2009"^^xsd:gYear ;
+    ecrm:P4_is_time-span_of <https://sappho-digital.com/manifestation_creation/sappho_bagordo> .
+
+<https://sappho-digital.com/publisher/publisher_patmos> a ecrm:E40_Legal_Body ;
+    rdfs:label "Patmos"@en ;
+    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/sappho_bagordo> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q1463096> .
+
+<https://sappho-digital.com/pubPlace/pubPlace_42b32e43> a ecrm:E53_Place ;
+    rdfs:label "Düsseldorf"@en ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/sappho_bagordo> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q1718> .
