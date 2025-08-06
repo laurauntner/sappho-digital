@@ -22,8 +22,8 @@
     rdfs:label "Sappho" ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_sappho> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/visual_item/author_sappho> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q17892> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_sappho> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q17892> ,
+                             <https://sappho-digital.com/identifier/author_sappho> ;
     ecrm:P2_has_type <https://sappho-digital.com/gender/female> ;
     ecrm:P14i_performed <https://sappho-digital.com/work/sappho-work>,
         <https://sappho-digital.com/work_creation/sappho-work> ;
@@ -77,8 +77,8 @@
     rdfs:label "Andreas Bagordo" ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/editor_bagordo> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/visual_item/editor_bagordo> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q495907> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/editor_bagordo> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q495907> ,
+                             <https://sappho-digital.com/identifier/editor_bagordo> ;
     ecrm:P2_has_type <https://sappho-digital.com/gender/male> ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/XXXXX> ;
     owl:sameAs <http://www.wikidata.org/entity/Q495907> .

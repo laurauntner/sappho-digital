@@ -9,8 +9,8 @@
     ecrm:P100i_died_in <https://sappho-digital.com/death/XXXX> ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/XXXX> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/visual_item/XXXX> ; # wdt:P18
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ,
+                             <https://sappho-digital.com/identifier/XXXX> ;
     ecrm:P2_has_type <https://sappho-digital.com/gender/XXXX> ; # wdt:P21
     ecrm:P98i_was_born <https://sappho-digital.com/birth/XXXX> ;
     owl:sameAs <http://www.wikidata.org/entity/XXXX> .

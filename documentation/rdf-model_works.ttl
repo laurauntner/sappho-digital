@@ -12,8 +12,8 @@
     ecrm:P100i_died_in <https://sappho-digital.com/death/XXXX> ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/XXXX> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/visual_item/XXXX> ; 
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ,
+                             <https://sappho-digital.com/identifier/XXXX> ;
     ecrm:P2_has_type <https://sappho-digital.com/gender/XXXX> ;
     ecrm:P98i_was_born <https://sappho-digital.com/birth/XXXX> ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/XXXX>, # new
@@ -34,8 +34,8 @@
     rdfs:label "Expression of XXXX"@en ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/XXXX> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/XXXX> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ,
+                             <https://sappho-digital.com/identifier/XXXX> ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/XXXX> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/XXXX> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/XXXX> ;
