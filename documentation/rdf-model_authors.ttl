@@ -1,0 +1,90 @@
+@prefix : <https://sappho-digital.com/> .
+@prefix ecrm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+<https://sappho-digital.com/person/XXXX> a ecrm:E21_Person ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P100i_died_in <https://sappho-digital.com/death/XXXX> ;
+    ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/XXXX> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/visual_item/XXXX> ; # wdt:P18
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/gender/XXXX> ; # wdt:P21
+    ecrm:P98i_was_born <https://sappho-digital.com/birth/XXXX> ;
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/appellation/XXXX> a ecrm:E82_Actor_Appellation ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P131i_identifies <https://sappho-digital.com/person/XXXX> .
+
+<https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
+    rdfs:label "XXXX" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/person/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/id_type/wikidata> a ecrm:E55_Type ;
+    rdfs:label "Wikidata ID"@en ;
+    ecrm:P2i_is_type_of <https://sappho-digital.com/identifier/XXXX> .
+
+<https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
+    rdfs:label "XXXX" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/person/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
+<https://sappho-digital.com/id_type/sappho-digital> a ecrm:E55_Type ;
+    rdfs:label "Sappho Digital ID"@en ;
+    ecrm:P2i_is_type_of <https://sappho-digital.com/identifier/XXXX> .
+
+<https://sappho-digital.com/birth/XXXX> a ecrm:E67_Birth ;
+    rdfs:label "Birth of XXXX"@en ;
+    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/XXXX> ; # wdt:P569
+    ecrm:P7_took_place_at <https://sappho-digital.com/place/XXXX> ; # wdt:P19
+    ecrm:P98_brought_into_life <https://sappho-digital.com/person/XXXX> ;
+    prov:wasDerivedFrom <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/death/XXXX> a ecrm:E69_Death ;
+    rdfs:label "Death of XXXX"@en ;
+    ecrm:P100_was_death_of <https://sappho-digital.com/person/XXXX> ;
+    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/XXXX> ; # wdt:P570
+    ecrm:P7_took_place_at <https://sappho-digital.com/place/XXXX> ; # wdt:P20
+    prov:wasDerivedFrom <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/place/XXXX> a ecrm:E53_Place ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/XXXX> ;
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/place/XXXX> a ecrm:E53_Place ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/XXXX> ;
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/timespan/YYYYMMDD> a ecrm:E52_Time-Span ;
+    rdfs:label "YYYY-MM-DD"^^xsd:date ;
+    ecrm:P4i_is_time-span_of <https://sappho-digital.com/birth/XXXX> .
+
+<https://sappho-digital.com/timespan/YYYYMMDD> a ecrm:E52_Time-Span ;
+    rdfs:label "YYYY-MM-DD"^^xsd:date ;
+    ecrm:P4i_is_time-span_of <https://sappho-digital.com/death/XXXX> .
+
+<https://sappho-digital.com/gender/female> a ecrm:E55_Type ;
+    rdfs:label "female"@en ;
+    ecrm:P2_has_type <https://sappho-digital.com/gender_type/wikidata> ;
+    ecrm:P2i_is_type_of <https://sappho-digital.com/person/XXXX> ;
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/gender_type/wikidata> a ecrm:E55_Type ;
+    rdfs:label "Wikidata Gender"@en ;
+    ecrm:P2i_is_type_of <https://sappho-digital.com/gender/XXXX> .
+
+<https://sappho-digital.com/image/XXXX> a ecrm:E38_Image ;
+    ecrm:P65_shows_visual_item <https://sappho-digital.com/visual_item/XXXX> ;
+    rdfs:seeAlso <http://commons.wikimedia.org/wiki/Special:FilePath/XXXX.JPG> ;
+    prov:wasDerivedFrom <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/visual_item/XXXX> a ecrm:E36_Visual_Item ;
+    rdfs:label "Visual representation of XXXX"@en ;
+    ecrm:P138_represents <https://sappho-digital.com/person/XXXX> ;
+    ecrm:P65i_is_shown_by <https://sappho-digital.com/image/XXXX> .
