@@ -4,6 +4,9 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+# Wenn das genaue Werk nicht bekannt ist, wird eine entsprechend minimale F2-Instanz (ohne Titel usw.) angelegt.
+# Wenn Werke ungedruckt bzw. unveröffentlicht sind, wird keine F3-Instanz angelegt. 
+
 <https://sappho-digital.com/person/XXXX> a ecrm:E21_Person ; # see authors data model
     rdfs:label "XXXX"@en ;
     ecrm:P100i_died_in <https://sappho-digital.com/death/XXXX> ;

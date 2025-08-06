@@ -5,9 +5,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
-#################################################################
 # Sapphos Gesamtwerk
-#################################################################
 
 <https://sappho-digital.com/work_creation/sappho-work> a lrmoo:F27_Work_Creation ;
     rdfs:label "Work creation of Sappho’s Work"@en ;
@@ -63,17 +61,11 @@
     ecrm:P2i_is_type_of <https://sappho-digital.com/person/author_sappho> ;
     owl:sameAs <http://www.wikidata.org/entity/Q6581072> .
 
-#################################################################
-# Symbolic Objects einzelner Fragmente
-#################################################################
+# Einzelne Fragmente
 
 <https://sappho-digital.com/fragment/XXXX> a ecrm:E90_Symbolic_Object ;
     rdfs:label "Fragment XXXX"@en ;
     lrmoo:R10i_is_member_of <https://sappho-digital.com/work/sappho-work> .
-
-#################################################################
-# Expressions einzelner Fragmente
-#################################################################
 
 <https://sappho-digital.com/expression_creation/XXXX> a lrmoo:F28_Expression_Creation ;
     rdfs:label "Expression creation of Fragment XXXX"@en ;
@@ -156,9 +148,7 @@
     ecrm:P138_represents <https://sappho-digital.com/expression/XXXX> ;
     rdfs:seeAlso <XXXX> .
 
-#################################################################
-# Manifestation und Item
-#################################################################
+# Bagordo-Edition
 
 <https://sappho-digital.com/manifestation_creation/sappho_bagordo> a lrmoo:F30_Manifestation_Creation ;
     rdfs:label "Manifestation creation Andreas Bagordo’s Sappho edition"@en ;
