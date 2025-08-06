@@ -1,0 +1,576 @@
+@prefix : <https://sappho-digital.com/> .
+@prefix lrmoo: <http://www.cidoc-crm.org/lrmoo/> .
+@prefix ecrm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> 
+@prefix intro: <https://w3id.org/lso/intro/currentbeta#>.
+
+# URIs werden mittels Kombination gebildet, etwa: work_ref/referring-expression-id_referred-to-expression-id, character/expression-id_character-id
+
+# Vgl. zum Verständnis auch https://github.com/laurauntner/wikidata-to-cidoc-crm?tab=readme-ov-file#-relations-module-intro
+
+# Expressions (see works data model)
+
+<https://sappho-digital.com/expression/XXXX> a lrmoo:F2_Expression ;
+    rdfs:label "Expression of XXXX"@en ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/XXXX> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/XXXX> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ,
+                             <https://sappho-digital.com/identifier/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/XXXX> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/XXXX> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/XXXX> ;
+    ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/work_ref/XXXX_XXXX> ; # new
+    intro:R18_showsActualization <https://sappho-digital.com/actualization/character/XXXX_XXXX>, # new
+                                <https://sappho-digital.com/actualization/motif/XXXX_XXXX>, # new
+                                <https://sappho-digital.com/actualization/person_ref/XXXX_XXXX>, # new
+                                <https://sappho-digital.com/actualization/place_ref/XXXX_XXXX>, # new
+                                <https://sappho-digital.com/actualization/plot/XXXX_XXXX>, # new
+                                <https://sappho-digital.com/actualization/topic/XXXX_XXXX> ; # new
+    intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/XXXX_XXXX> ; # new
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/expression/XXXX> a lrmoo:F2_Expression ;
+    rdfs:label "Expression of XXXX"@en ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/XXXX> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/XXXX> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ,
+                             <https://sappho-digital.com/identifier/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/XXXX> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/XXXX> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/XXXX> ;
+    intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/XXXX_XXXX>, # new
+                                <https://sappho-digital.com/actualization/person_ref/XXXX_XXXX>, # new
+                                <https://sappho-digital.com/actualization/plot/XXXX_XXXX>, # new
+                                <https://sappho-digital.com/actualization/topic/XXXX_XXXX>, # new
+                                <https://sappho-digital.com/actualization/work_ref/XXXX_XXXX> ; # new
+    intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/XXXX_XXXX> ; # new
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/expression/XXXX> a lrmoo:F2_Expression ;
+    rdfs:label "Expression of XXXX"@en ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/XXXX> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/XXXX> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ,
+                             <https://sappho-digital.com/identifier/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/XXXX> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/XXXX> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/XXXX> ;
+    intro:R18_showsActualization <https://sappho-digital.com/actualization/place_ref/XXXX_XXXX> ; # new
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/expression/XXXX> a lrmoo:F2_Expression ;
+    rdfs:label "Expression of XXXX"@en ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/XXXX> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/XXXX> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ,
+                             <https://sappho-digital.com/identifier/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/XXXX> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/XXXX> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/XXXX> ;
+    intro:R18_showsActualization <https://sappho-digital.com/actualization/character/XXXX_XXXX> ; # new
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+# Intertextual Relations
+
+<https://sappho-digital.com/relation/XXXX_XXXX> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextual relation between XXXX and XXXX"@en ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
+    intro:R22i_relationIsBasedOnSimilarity <https://sappho-digital.com/feature/character/XXXX> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/actualization/character/XXXX_XXXX>,
+                            <https://sappho-digital.com/actualization/character/XXXX_XXXX> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of intertextual relation between XXXX and XXXX"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of intertextual relation between XXXX and XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/relation/XXXX_XXXX> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextual relation between XXXX and XXXX"@en ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
+    intro:R22i_relationIsBasedOnSimilarity <https://sappho-digital.com/feature/place_ref/XXXX> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/actualization/place_ref/XXXX_XXXX>,
+                            <https://sappho-digital.com/actualization/place_ref/XXXX_XXXX> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of intertextual relation between XXXX and XXXX"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of intertextual relation between XXXX and XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/relation/XXXX_XXXX> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextual relation between XXXX and XXXX"@en ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
+    intro:R22i_relationIsBasedOnSimilarity <https://sappho-digital.com/feature/motif/XXXX>,
+                                            <https://sappho-digital.com/feature/person_ref/XXXX>,
+                                            <https://sappho-digital.com/feature/plot/XXXX>,
+                                            <https://sappho-digital.com/feature/topic/XXXX>,
+                                            <https://sappho-digital.com/feature/work_ref/XXXX> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/actualization/motif/XXXX_XXXX>,
+                                <https://sappho-digital.com/actualization/motif/XXXX_XXXX>,
+                                <https://sappho-digital.com/actualization/person_ref/XXXX_XXXX>,
+                                <https://sappho-digital.com/actualization/person_ref/XXXX_XXXX>,
+                                <https://sappho-digital.com/actualization/plot/XXXX_XXXX>,
+                                <https://sappho-digital.com/actualization/plot/XXXX_XXXX>,
+                                <https://sappho-digital.com/actualization/topic/XXXX_XXXX>,
+                                <https://sappho-digital.com/actualization/topic/XXXX_XXXX>,
+                                <https://sappho-digital.com/actualization/work_ref/XXXX_XXXX>,
+                                <https://sappho-digital.com/textpassage/XXXX_XXXX>,
+                                <https://sappho-digital.com/textpassage/XXXX_XXXX> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of intertextual relation between XXXX and XXXX"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of intertextual relation between XXXX and XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+# Features & Actualizations
+
+# Person References
+
+<https://sappho-digital.com/feature/person_ref/XXXX> a intro:INT18_Reference ;
+    rdfs:label "Reference to XXXX (person)"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/person_ref/XXXX_XXXX>,
+                                     <https://sappho-digital.com/actualization/person_ref/XXXX_XXXX> ;
+    intro:R22_providesSimilarityForRelation <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/person/XXXX> a ecrm:E21_Person ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ,
+                             <https://sappho-digital.com/identifier/XXXX> ;
+    ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/character/XXXX_XXXX>,
+                                <https://sappho-digital.com/actualization/character/XXXX_XXXX>,
+                                <https://sappho-digital.com/actualization/person_ref/XXXX_XXXX>,
+                                <https://sappho-digital.com/actualization/person_ref/XXXX_XXXX> ;
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P1i_identifies <https://sappho-digital.com/feature/character/XXXX>,
+                        <https://sappho-digital.com/person/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P1i_identifies <https://sappho-digital.com/feature/character/XXXX>,
+                        <https://sappho-digital.com/person/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
+<https://sappho-digital.com/actualization/person_ref/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "XXXX in XXXX"@en ;
+    ecrm:P67_refers_to <https://sappho-digital.com/person/XXXX> ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/XXXX> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/XXXX> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/person_ref/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "XXXX in XXXX"@en ;
+    ecrm:P67_refers_to <https://sappho-digital.com/person/XXXX> ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/XXXX> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/XXXX> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/character/XXXX_XXXX>,
+                        <https://sappho-digital.com/actualization/person_ref/XXXX_XXXX> .
+
+# Place References
+
+<https://sappho-digital.com/feature/place_ref/XXXX> a intro:INT18_Reference ;
+    rdfs:label "Reference to XXXX (place)"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/place_ref/XXXX_XXXX>,
+                                    <https://sappho-digital.com/actualization/place_ref/XXXX_XXXX> ;
+    intro:R22_providesSimilarityForRelation <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/place/XXXX> a ecrm:E53_Place ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ,
+                             <https://sappho-digital.com/identifier/XXXX> ;
+    ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/XXXX_XXXX>,
+                                <https://sappho-digital.com/actualization/place_ref/XXXX_XXXX> ;
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P1i_identifies <https://sappho-digital.com/place/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P1i_identifies <https://sappho-digital.com/place/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
+<https://sappho-digital.com/actualization/place_ref/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "XXXX in XXXX"@en ;
+    ecrm:P67_refers_to <https://sappho-digital.com/place/XXXX> ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/place_ref/XXXX> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/XXXX> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/place_ref/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/place_ref/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "XXXX in XXXX"@en ;
+    ecrm:P67_refers_to <https://sappho-digital.com/place/XXXX> ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/place_ref/XXXX> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/XXXX> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/place_ref/XXXX_XXXX> .
+
+# Expression References
+
+<https://sappho-digital.com/feature/work_ref/XXXX> a intro:INT18_Reference ;
+    rdfs:label "Reference to XXXX (expression)"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/work_ref/XXXX_XXXX> ;
+    intro:R22_providesSimilarityForRelation <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/work_ref/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Reference to XXXX in XXXX"@en ;
+    ecrm:P67_refers_to <https://sappho-digital.com/expression/XXXX> ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/work_ref/XXXX> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/XXXX> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/work_ref/XXXX_XXXX> .
+
+# Citations
+
+<https://sappho-digital.com/textpassage/XXXX_XXXX> a intro:INT21_TextPassage ;
+    rdfs:label "Text passage in XXXX"@en ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> ;
+    intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/XXXX> .
+
+<https://sappho-digital.com/textpassage/XXXX_XXXX> a intro:INT21_TextPassage ;
+    rdfs:label "Text passage in XXXX"@en ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> ;
+    intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/XXXX> .
+
+# Characters
+
+<https://sappho-digital.com/feature/character/XXXX> a intro:INT_Character ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> , 
+                            <https://sappho-digital.com/identifier/XXXX>;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/character/XXXX_XXXX>,
+                                    <https://sappho-digital.com/actualization/character/XXXX_XXXX> ;
+    intro:R22_providesSimilarityForRelation <https://sappho-digital.com/relation/XXXX_XXXX> ;
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/actualization/character/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "XXXX in XXXX"@en ;
+    ecrm:P67_refers_to <https://sappho-digital.com/person/XXXX> ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/character/XXXX> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/XXXX> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/character/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/character/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "XXXX in XXXX"@en ;
+    ecrm:P67_refers_to <https://sappho-digital.com/person/XXXX> ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/character/XXXX> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/XXXX> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+# Motifs
+
+<https://sappho-digital.com/feature/motif/XXXX> a intro:INT_Motif ;
+    rdfs:label "XXXX (motif)"@en ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ,
+                             <https://sappho-digital.com/identifier/XXXX> ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/XXXX_XXXX>,
+                                    <https://sappho-digital.com/actualization/motif/XXXX_XXXX> ;
+    intro:R22_providesSimilarityForRelation <https://sappho-digital.com/relation/XXXX_XXXX> ;
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P1i_identifies <https://sappho-digital.com/feature/motif/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P1i_identifies <https://sappho-digital.com/feature/motif/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
+<https://sappho-digital.com/actualization/motif/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/motif/XXXX> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/XXXX> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/motif/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/motif/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/motif/XXXX> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/XXXX> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/motif/XXXX_XXXX> .
+
+# Plots
+
+<https://sappho-digital.com/feature/plot/XXXX> a intro:INT_Plot ;
+    rdfs:label "XXXX (plot)"@en ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ,
+                             <https://sappho-digital.com/identifier/XXXX> ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/XXXX_XXXX>,
+                                    <https://sappho-digital.com/actualization/plot/XXXX_XXXX> ;
+    intro:R22_providesSimilarityForRelation <https://sappho-digital.com/relation/XXXX_XXXX> ;
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P1i_identifies <https://sappho-digital.com/feature/plot/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P1i_identifies <https://sappho-digital.com/feature/plot/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
+<https://sappho-digital.com/actualization/plot/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/plot/XXXX> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/XXXX> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/plot/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/plot/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/plot/XXXX> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/XXXX> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/plot/XXXX_XXXX> .
+
+# Topics
+
+<https://sappho-digital.com/feature/topic/XXXX> a intro:INT_Topic ;
+    rdfs:label "XXXX (topic)"@en ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ,
+                             <https://sappho-digital.com/identifier/XXXX> ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/XXXX_XXXX>,
+                                    <https://sappho-digital.com/actualization/topic/XXXX_XXXX> ;
+    intro:R22_providesSimilarityForRelation <https://sappho-digital.com/relation/XXXX_XXXX> ;
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P1i_identifies <https://sappho-digital.com/feature/topic/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P1i_identifies <https://sappho-digital.com/feature/topic/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
+<https://sappho-digital.com/actualization/topic/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/topic/XXXX> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/XXXX> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/topic/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/topic/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/topic/XXXX> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/XXXX> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/topic/XXXX_XXXX> .
+
+# IDs
+
+<https://sappho-digital.com/id_type/wikidata> a ecrm:E55_Type ;
+    rdfs:label "Wikidata ID"@en ;
+    ecrm:P2i_is_type_of <https://sappho-digital.com/identifier/XXXX>,
+        <https://sappho-digital.com/identifier/XXXX>,
+        <https://sappho-digital.com/identifier/XXXX>,
+        <https://sappho-digital.com/identifier/XXXX>,
+        <https://sappho-digital.com/identifier/XXXX> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q43649390> .
+
+<https://sappho-digital.com/id_type/sappho-digital> a ecrm:E55_Type ;
+    rdfs:label "Sappho Digital ID"@en ;
+    ecrm:P2i_is_type_of <https://sappho-digital.com/identifier/XXXX>,
+        <https://sappho-digital.com/identifier/XXXX>,
+        <https://sappho-digital.com/identifier/XXXX>,
+        <https://sappho-digital.com/identifier/XXXX>,
+        <https://sappho-digital.com/identifier/XXXX> .
+
+# Das obige Datenmodell trifft in erster Linie auf die näher analysierten Rezeptionszeugnisse zu. 
+# Um unspezifische intertextuelle Relationen zwischen allen anderen Rezeptionszeugnissen und Sapphos Werk festzuhalten, kommt folgendes Modell zum Einsatz:
+
+<https://sappho-digital.com/expression/XXXX> a lrmoo:F2_Expression ; # see works data model
+    rdfs:label "Expression of XXXX"@en ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/XXXX> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/XXXX> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ,
+                             <https://sappho-digital.com/identifier/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/XXXX> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/XXXX> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/XXXX> ;
+    intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/XXXX_sappho_work> ; # new
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/work/sappho-work> a lrmoo:F1_Work ; # see fragments data model
+    rdfs:label "Work of Sappho’s Work"@en ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_sappho> ;
+    lrmoo:R16i_was_created_by <https://sappho-digital.com/work_creation/sappho-work> ;
+    ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/work_ref/XXXX_sappho_work> ; # new
+    lrmoo:R10_has_member <https://sappho-digital.com/fragment/XXXX> .
+
+<https://sappho-digital.com/feature/work_ref/sappho_work> a intro:INT18_Reference ; # reference to Sappho’s work as a whole
+    rdfs:label "Reference to Sappho’s work"@en ; 
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/work_ref/XXXX_sappho_work> ;
+    intro:R22_providesSimilarityForRelation <https://sappho-digital.com/relation/XXXX_sappho_work> .
+
+<https://sappho-digital.com/actualization/work_ref/XXXX_sappho_work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Reference to Sappho’s work in XXXX"@en ;
+    ecrm:P67_refers_to <https://sappho-digital.com/work/sappho-work> ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/work_ref/sappho_work> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/XXXX> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_sappho_work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_sappho_work> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_sappho_work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of reference to Sappho’s work in XXXX"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_sappho_work> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_sappho_work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of reference to Sappho’s work in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_sappho_work> ;
+    intro:R21_identifies <https://sappho-digital.com/work_ref/XXXX_sappho_work> .
+
+<https://sappho-digital.com/relation/XXXX_sappho_work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextual relation between XXXX and Sappho’s work"@en ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_sappho_work> ;
+    intro:R22i_relationIsBasedOnSimilarity <https://sappho-digital.com/feature/work_ref/sappho_work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/actualization/XXXX_sappho_work> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_sappho_work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of intertextual relation between XXXX and Sappho’s work"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_sappho_work> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_sappho_work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of intertextual relation between XXXX and Sappho’s work"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_sappho_work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/XXXX_sappho_work> .
+
+# intro:R24_hasRelatedEntity wird sowohl bei den detaillierten als auch bei den groben Modellierungen ersetzt, wenn durch den Abgleich der Publikationsdaten (F3) eine Chronologie hergestellt werden kann. 
+# Der jüngere, referierende Text wird dann über intro:R13_hasReferringEntity eingebunden und selbst mittels intro:R13i_isReferringEntity gebunden.
+# Der ältere, referierte Text wird über intro:R12_hasReferredToEntity eingebunden und selbst mittels intro:R12i_isReferredToEntity gebunden.
+# Im Hinblick auf Referenzen auf Sapphos Werk gilt immer, dass Sapphos Werk das ältere ist.
