@@ -1,0 +1,116 @@
+@prefix : <https://sappho-digital.com/> .
+@prefix lrmoo: <http://www.cidoc-crm.org/lrmoo/> .
+@prefix ecrm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://sappho-digital.com/person/XXXX> a ecrm:E21_Person ; # see authors data model
+    rdfs:label "XXXX"@en ;
+    ecrm:P100i_died_in <https://sappho-digital.com/death/XXXX> ;
+    ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/XXXX> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/visual_item/XXXX> ; 
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/gender/XXXX> ;
+    ecrm:P98i_was_born <https://sappho-digital.com/birth/XXXX> ;
+    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/XXXX>, # new
+        <https://sappho-digital.com/manifestation_creation/XXXX>; # new
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/expression_creation/XXXX> a lrmoo:F28_Expression_Creation ;
+    rdfs:label "Expression creation of XXXX"@en ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/person/XXXX> ;
+    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/YYYY> ;
+    lrmoo:R17_created <https://sappho-digital.com/expression/XXXX> .
+
+<https://sappho-digital.com/timespan/YYYY> a ecrm:E52_Time-Span ;
+    rdfs:label "YYYY"^^xsd:gYear ;
+    ecrm:P4i_is_time-span_of <https://sappho-digital.com/expression_creation/XXXX> .
+
+<https://sappho-digital.com/expression/XXXX> a lrmoo:F2_Expression ;
+    rdfs:label "Expression of XXXX"@en ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/XXXX> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/XXXX> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/XXXX> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/XXXX> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/XXXX> ;
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/title/expression/Q1242002> a ecrm:E35_Title ;
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/XXXX> ;
+    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/XXXX> .
+
+<https://sappho-digital.com/title_string/expression/XXXX> a ecrm:E62_String ;
+    rdfs:label "XXXX"@de ;
+    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/XXXX> .
+
+<https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ; 
+    rdfs:label "XXXX" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ; 
+    rdfs:label "XXXX" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
+<https://sappho-digital.com/id_type/wikidata> a ecrm:E55_Type ; # see authors data model
+    rdfs:label "Wikidata ID"@en ;
+    ecrm:P2_is_type_of <https://sappho-digital.com/identifier/XXXX> ;
+    owl:sameAs <http://www.wikidata.org/wiki/Q43649390> .
+
+<https://sappho-digital.com/id_type/sappho-digital> a ecrm:E55_Type ; # see authors data model
+    rdfs:label "Sappho Digital ID"@en ;
+    ecrm:P2_is_type_of <https://sappho-digital.com/identifier/XXXX> .
+
+<https://sappho-digital.com/genre/XXXX> a ecrm:E55_Type ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre_type/sappho-digital> ;
+    ecrm:P2_is_type_of <https://sappho-digital.com/expression/XXXX> .
+
+<https://sappho-digital.com/genre_type/sappho-digital> a ecrm:E55_Type ;
+    rdfs:label "Sappho Digital Genre"@en ;
+    ecrm:P2_is_type_of <https://sappho-digital.com/genre/XXXX> .
+
+<https://sappho-digital.com/digital/XXXX> a ecrm:E73_Information_Object ;
+    rdfs:label "Digital copy of XXXX"@en ;
+    ecrm:P138_represents <https://sappho-digital.com/expression/XXXX> ;
+    rdfs:seeAlso <XXXX> .
+
+<https://sappho-digital.com/manifestation_creation/XXXX> a lrmoo:F30_Manifestation_Creation ;
+    rdfs:label "Manifestation creation of XXXX"@en ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/person/XXXX>,
+        <https://sappho-digital.com/publisher/XXXX> ;
+    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/YYYY> ;
+    ecrm:P7_took_place_at <https://sappho-digital.com/place/XXXX> ;
+    lrmoo:R24_created <https://sappho-digital.com/manifestation/XXXX> .
+
+<https://sappho-digital.com/publisher/XXXX> a ecrm:E40_Legal_Body ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/XXXX> ;
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/timespan/YYYY> a ecrm:E52_Time-Span ;
+    rdfs:label "YYYY"^^xsd:gYear ;
+    ecrm:P4_is_time-span_of <https://sappho-digital.com/manifestation_creation/XXXX> .
+
+<https://sappho-digital.com/place/XXXX> a ecrm:E53_Place ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/XXXX> ;
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/manifestation/XXXX> a lrmoo:F3_Manifestation ;
+    rdfs:label "Manifestation of XXXX"@en ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/manifestation/XXXX> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/XXXX> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/XXXX> .
+
+<https://sappho-digital.com/title/manifestation/XXXX> a ecrm:E35_Title ;
+    ecrm:P102i_is_title_of <https://sappho-digital.com/manifestation/XXXX> ;
+    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/manifestation/XXXX> .
+
+<https://sappho-digital.com/title_string/manifestation/XXXX> a ecrm:E62_String ;
+    rdfs:label "XXXX"@de ;
+    ecrm:P190i_is_content_of <https://sappho-digital.com/title/manifestation/XXXX> .

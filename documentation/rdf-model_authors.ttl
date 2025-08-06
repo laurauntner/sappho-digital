@@ -26,7 +26,8 @@
 
 <https://sappho-digital.com/id_type/wikidata> a ecrm:E55_Type ;
     rdfs:label "Wikidata ID"@en ;
-    ecrm:P2i_is_type_of <https://sappho-digital.com/identifier/XXXX> .
+    ecrm:P2i_is_type_of <https://sappho-digital.com/identifier/XXXX> ;
+    owl:sameAs <http://wikidata.org/entity/Q43649390> .
 
 <https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
     rdfs:label "XXXX" ;
