@@ -94,7 +94,7 @@ for bibl in top_bibls:
             genres = [genre_raw]
 
         for genre_string in genres:
-            genre_uri = SD[f"genre/{genre_string.replace(' ', '_')}"]
+            genre_uri = SD[f"genre/{genre_string.lower().replace(' ', '_')}"]
             g.add((genre_uri, RDF.type, ECRM.E55_Type))
             g.add((genre_uri, RDFS.label, Literal(genre_string, lang="de")))
             g.add((genre_uri, ECRM.P2_has_type, SD["genre_type/sappho-digital"]))
