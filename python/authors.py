@@ -5,11 +5,11 @@ from rdflib.namespace import RDF, RDFS, XSD, OWL
 from pathlib import Path
 from datetime import datetime
 
-# === Dateipfade ===
+# Pfade
 INPUT_FILE = "../data/lists/sappho-rez_alle.xml"
 OUTPUT_FILE = "../data/rdf/authors.ttl"
 
-# === Namespaces ===
+# Namespaces
 SD = Namespace("https://sappho-digital.com/")
 ECRM = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
 PROV = Namespace("http://www.w3.org/ns/prov#")
@@ -17,7 +17,7 @@ WD = "http://www.wikidata.org/entity/"
 WDCOM = "http://commons.wikimedia.org/wiki/Special:FilePath/"
 NS = {"tei": "http://www.tei-c.org/ns/1.0"}
 
-# === RDF Graph initialisieren ===
+# RDF Graph
 g = Graph()
 g.bind(":", SD)
 g.bind("ecrm", ECRM)
@@ -26,7 +26,7 @@ g.bind("xsd", XSD)
 g.bind("prov", PROV)
 g.bind("owl", OWL)
 
-# === Hilfsfunktionen ===
+# Hilfsfunktionen
 
 def normalize_id(name):
     return name.strip().lower().replace(" ", "_")
@@ -46,7 +46,6 @@ def get_claim_val(entity, prop, val_type="id"):
     return val.get(val_type) if isinstance(val, dict) else val
 
 def safe_date_literal(date_str):
-    """Liefert Literal mit xsd:date, wenn gültig, sonst nur als plain literal."""
     if not date_str or len(date_str) != 10:
         return Literal(date_str)
     try:
@@ -62,7 +61,7 @@ def get_label(entity):
         labels.get("en", {}).get("value")
     )
 
-# === Autoren aus XML lesen ===
+# Autor_innen aus XML lesen
 parser = etree.XMLParser(recover=True)
 tree = etree.parse(INPUT_FILE, parser=parser)
 root = tree.getroot()
@@ -101,7 +100,7 @@ for el in authors:
         qid = wikidata_ref.split("/")[-1]
         entity = fetch_wikidata(qid)
 
-        # extra identifier
+        # Extra Identifier
         wd_id_uri = SD[f"identifier/{qid}"]
         g.add((person_uri, ECRM.P1_is_identified_by, wd_id_uri))
         g.add((wd_id_uri, RDF.type, ECRM.E42_Identifier))
@@ -209,6 +208,6 @@ for el in authors:
             g.add((vis_uri, ECRM.P138_represents, person_uri))
             g.add((vis_uri, ECRM.P65i_is_shown_by, img_uri))
 
-# === Speichern ===
+# Speichern
 Path(OUTPUT_FILE).parent.mkdir(parents=True, exist_ok=True)
 g.serialize(destination=OUTPUT_FILE, format="turtle")
