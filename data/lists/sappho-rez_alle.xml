@@ -3357,11 +3357,7 @@ Philosophen zu Sanssouci</title>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q112563758" xml:id="publisher_aa8c7246">Heinrich Frölich</publisher>
-                    <ref target="https://www.digitale-sammlungen.de/de/view/bsb11342069?page=84,85
-
-nie mehr erschienen">https://www.digitale-sammlungen.de/de/view/bsb11342069?page=84,85
-
-nie mehr erschienen</ref>
+                    <ref target="https://www.digitale-sammlungen.de/de/view/bsb11342069?page=84,85">https://www.digitale-sammlungen.de/de/view/bsb11342069?page=84,85</ref>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q19226835" xml:id="bibl_a4cce261">
                     <title type="text">Sappho</title>
@@ -3682,8 +3678,8 @@ nie mehr erschienen</ref>
                     <bibl xml:id="bibl_aa132bb6">
                         <title type="work">Gedichte</title>
                     </bibl>
-                    <author>Karl Woltmann</author>
-                    <author>Karoline Woltmann</author>
+                    <author xml:id="author_b4b4af98">Karl Woltmann</author>
+                    <author xml:id="author_8c3d27e1">Karoline Woltmann</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q120256759" xml:id="publisher_52c3b668">Realschulbuchhandlung</publisher>
@@ -3719,7 +3715,7 @@ nie mehr erschienen</ref>
                     <bibl xml:id="bibl_da54ba99">
                         <title type="work">Morgenblatt für gebildete Stände</title>
                     </bibl>
-                    <author xml:id="author_fe383a4c">[Pseudonym:] Hg.</author>
+                    <author xml:id="author_fe383a4c">Hg.</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="pubPlace_700b43a2">Stuttgart</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1136691" xml:id="publisher_d7432893">Cotta’sche Verlagsbuchhandlung</publisher>
@@ -3807,11 +3803,7 @@ nie mehr erschienen</ref>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3126" xml:id="pubPlace_ce0c1fb4">Erlangen</pubPlace>
                     <publisher xml:id="publisher_6a5ed879">Heyder</publisher>
-                    <ref target="https://www.digitale-sammlungen.de/de/view/bsb10117426?page=44,45
-
-siehe auch https://books.google.at/books?id=L-MkAAAAMAAJ&amp;q=richard+dove+sappho&amp;dq=richard+dove+sappho&amp;hl=de&amp;sa=X&amp;ved=2ahUKEwiF8d3YtPH6AhURXfEDHZP-B5oQ6AF6BAgIEAI">https://www.digitale-sammlungen.de/de/view/bsb10117426?page=44,45
-
-siehe auch https://books.google.at/books?id=L-MkAAAAMAAJ&amp;q=richard+dove+sappho&amp;dq=richard+dove+sappho&amp;hl=de&amp;sa=X&amp;ved=2ahUKEwiF8d3YtPH6AhURXfEDHZP-B5oQ6AF6BAgIEAI</ref>
+                    <ref target="https://www.digitale-sammlungen.de/de/view/bsb10117426?page=44,45">https://www.digitale-sammlungen.de/de/view/bsb10117426?page=44,45</ref>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q689540" xml:id="bibl_7ca7c46a">
                     <title type="text">Armut, Reichtum, Schuld und Buße der Gräfin Dolores</title>
@@ -3928,7 +3920,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">Seppherl, komisches Melodrama als Parodie mit Gesang in 3 Aufzügen [oder »Jungfer Sepherl«]</title>
                     <date type="published" when="1818">1818</date>
                     <author xml:id="author_012750d4">C.</author>
-                    <author xml:id="author_012750d4">H.</author>
+                    <author xml:id="author_012750d5">H.</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="pubPlace_95b8315b">Wien</pubPlace>
                     <publisher xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
@@ -7977,7 +7969,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e623029b">
                     <title type="text">Unter dem sapphischen Mond. Deutsche Frauenlyrik seit 1900</title>
                     <date type="published" when="1957">1957</date>
-                    <author xml:id="author_071ddf43">Oda Schaefer (Hg.)</author>
+                    <author xml:id="author_071ddf43">Oda Schaefer</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="pubPlace_06ec7d19">München</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1385440" xml:id="publisher_ca058f7f">Piper</publisher>
@@ -8833,8 +8825,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_51a3d5d2">
                     <title type="text">Sappho küsst Europa. Geschichten von Lesben aus 20 Längern</title>
                     <date type="published" when="1997">1997</date>
-                    <author xml:id="author_9e73b47f">Hg. v. Madeleine Marti</author>
-                    <author xml:id="author_9e73b47f">Marianne Ulmi</author>
+                    <author xml:id="author_9e73b47f">Madeleine Marti</author>
+                    <author xml:id="author_9e73b47y">Marianne Ulmi</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2122937" xml:id="publisher_8f72e265">Querverlag</publisher>
@@ -8904,7 +8896,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_f11bc50a">
                     <title type="text">Sappho küßt die Welt. Geschichten von Lesben aus vier Kontinenten</title>
                     <date type="published" when="1999">1999</date>
-                    <author xml:id="author_39519faa">Käthe H. Fleckenstein (Hg.)</author>
+                    <author xml:id="author_39519faa">Käthe H. Fleckenstein</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2122937" xml:id="publisher_8f72e265">Querverlag</publisher>
@@ -8977,7 +8969,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_d038a92c">
                     <title type="text">Sappho küsst die Sterne. Neue deutschsprachige Literatur von Lesben</title>
                     <date type="published" when="2004">2004</date>
-                    <author xml:id="author_5f9e41d8">Ilona Bubeck (Hg.)</author>
+                    <author xml:id="author_5f9e41d8">Ilona Bubeck</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2122937" xml:id="publisher_8f72e265">Querverlag</publisher>
@@ -9590,7 +9582,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author xml:id="author_b7c003bf">Richard Duraj</author>
-                    <author xml:id="author_b7c003bf">Andreas Bülhoff</author>
+                    <author xml:id="author_b7c003bo">Andreas Bülhoff</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="pubPlace_1d1718f7">Greifswald</pubPlace>
                     <publisher xml:id="publisher_5fb17386">Freiraum</publisher>
@@ -9623,8 +9615,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
-                    <author xml:id="author_5102104a">Rick Reuther</author>
-                    <author xml:id="author_5102104a">Christiane Heidrich</author>
+                    <author xml:id="author_5102104aauthor_5102104p">Rick Reuther</author>
+                    <author>Christiane Heidrich</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="pubPlace_1d1718f7">Greifswald</pubPlace>
                     <publisher xml:id="publisher_5fb17386">Freiraum</publisher>

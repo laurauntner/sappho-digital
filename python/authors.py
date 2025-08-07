@@ -71,9 +71,11 @@ seen = set()
 for el in authors:
     name = el.text.strip()
     xml_id = el.get("{http://www.w3.org/XML/1998/namespace}id")
-    if not xml_id or xml_id in seen:
+    if not xml_id:
         continue
-    seen.add(xml_id)
+    if (xml_id, el.text.strip()) in seen:
+        continue
+    seen.add((xml_id, el.text.strip()))
 
     norm_id = xml_id
     person_uri = SD[f"person/{xml_id}"]

@@ -2154,6 +2154,10 @@
     rdfs:label "C."@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_012750d4> .
 
+<https://sappho-digital.com/appellation/author_012750d5> a ecrm:E82_Actor_Appellation ;
+    rdfs:label "H."@de ;
+    ecrm:P131i_identifies <https://sappho-digital.com/person/author_012750d5> .
+
 <https://sappho-digital.com/appellation/author_012dbb67> a ecrm:E82_Actor_Appellation ;
     rdfs:label "Johann Heermann"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_012dbb67> .
@@ -2211,7 +2215,7 @@
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_06d10730> .
 
 <https://sappho-digital.com/appellation/author_071ddf43> a ecrm:E82_Actor_Appellation ;
-    rdfs:label "Oda Schaefer (Hg.)"@de ;
+    rdfs:label "Oda Schaefer"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_071ddf43> .
 
 <https://sappho-digital.com/appellation/author_079de5c1> a ecrm:E82_Actor_Appellation ;
@@ -2691,7 +2695,7 @@
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_38b6a218> .
 
 <https://sappho-digital.com/appellation/author_39519faa> a ecrm:E82_Actor_Appellation ;
-    rdfs:label "Käthe H. Fleckenstein (Hg.)"@de ;
+    rdfs:label "Käthe H. Fleckenstein"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_39519faa> .
 
 <https://sappho-digital.com/appellation/author_3981a222> a ecrm:E82_Actor_Appellation ;
@@ -2930,6 +2934,10 @@
     rdfs:label "Rick Reuther"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_5102104a> .
 
+<https://sappho-digital.com/appellation/author_5102104aauthor_5102104p> a ecrm:E82_Actor_Appellation ;
+    rdfs:label "Rick Reuther"@de ;
+    ecrm:P131i_identifies <https://sappho-digital.com/person/author_5102104aauthor_5102104p> .
+
 <https://sappho-digital.com/appellation/author_512e247a> a ecrm:E82_Actor_Appellation ;
     rdfs:label "Josef Wenter"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_512e247a> .
@@ -3067,7 +3075,7 @@
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_5f77b9e5> .
 
 <https://sappho-digital.com/appellation/author_5f9e41d8> a ecrm:E82_Actor_Appellation ;
-    rdfs:label "Ilona Bubeck (Hg.)"@de ;
+    rdfs:label "Ilona Bubeck"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_5f9e41d8> .
 
 <https://sappho-digital.com/appellation/author_5fac6550> a ecrm:E82_Actor_Appellation ;
@@ -3103,7 +3111,8 @@
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_653eb09d> .
 
 <https://sappho-digital.com/appellation/author_659f5f08> a ecrm:E82_Actor_Appellation ;
-    rdfs:label "Johann Georg Jacobi"@de ;
+    rdfs:label "Johann Georg Jacobi"@de,
+        "[Johann Georg Jacobi?]"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_659f5f08> .
 
 <https://sappho-digital.com/appellation/author_66c39712> a ecrm:E82_Actor_Appellation ;
@@ -3442,6 +3451,10 @@
     rdfs:label "Barbara Köhler"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_8c390adb> .
 
+<https://sappho-digital.com/appellation/author_8c3d27e1> a ecrm:E82_Actor_Appellation ;
+    rdfs:label "Karoline Woltmann"@de ;
+    ecrm:P131i_identifies <https://sappho-digital.com/person/author_8c3d27e1> .
+
 <https://sappho-digital.com/appellation/author_8ca253a9> a ecrm:E82_Actor_Appellation ;
     rdfs:label "[Pseudonym:] Sappho"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_8ca253a9> .
@@ -3635,8 +3648,12 @@
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_9e136a8f> .
 
 <https://sappho-digital.com/appellation/author_9e73b47f> a ecrm:E82_Actor_Appellation ;
-    rdfs:label "Hg. v. Madeleine Marti"@de ;
+    rdfs:label "Madeleine Marti"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_9e73b47f> .
+
+<https://sappho-digital.com/appellation/author_9e73b47y> a ecrm:E82_Actor_Appellation ;
+    rdfs:label "Marianne Ulmi"@de ;
+    ecrm:P131i_identifies <https://sappho-digital.com/person/author_9e73b47y> .
 
 <https://sappho-digital.com/appellation/author_9eaa8590> a ecrm:E82_Actor_Appellation ;
     rdfs:label "P. Berthold"@de ;
@@ -3810,6 +3827,10 @@
     rdfs:label "Erika Burkart"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_b406f550> .
 
+<https://sappho-digital.com/appellation/author_b4b4af98> a ecrm:E82_Actor_Appellation ;
+    rdfs:label "Karl Woltmann"@de ;
+    ecrm:P131i_identifies <https://sappho-digital.com/person/author_b4b4af98> .
+
 <https://sappho-digital.com/appellation/author_b4b4af99> a ecrm:E82_Actor_Appellation ;
     rdfs:label "Ludwig Robert"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_b4b4af99> .
@@ -3857,6 +3878,10 @@
 <https://sappho-digital.com/appellation/author_b7c003bf> a ecrm:E82_Actor_Appellation ;
     rdfs:label "Richard Duraj"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_b7c003bf> .
+
+<https://sappho-digital.com/appellation/author_b7c003bo> a ecrm:E82_Actor_Appellation ;
+    rdfs:label "Andreas Bülhoff"@de ;
+    ecrm:P131i_identifies <https://sappho-digital.com/person/author_b7c003bo> .
 
 <https://sappho-digital.com/appellation/author_b7f8b162> a ecrm:E82_Actor_Appellation ;
     rdfs:label "Cary Groß"@de ;
@@ -4083,7 +4108,8 @@
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_ccb6fb51> .
 
 <https://sappho-digital.com/appellation/author_cd06f885> a ecrm:E82_Actor_Appellation ;
-    rdfs:label "anonym"@de ;
+    rdfs:label "Anonym"@de,
+        "anonym"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_cd06f885> .
 
 <https://sappho-digital.com/appellation/author_cd16cf95> a ecrm:E82_Actor_Appellation ;
@@ -4431,7 +4457,7 @@
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_fce53424> .
 
 <https://sappho-digital.com/appellation/author_fe383a4c> a ecrm:E82_Actor_Appellation ;
-    rdfs:label "[Pseudonym:] Hg."@de ;
+    rdfs:label "Hg."@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_fe383a4c> .
 
 <https://sappho-digital.com/appellation/author_fe4f23b6> a ecrm:E82_Actor_Appellation ;
@@ -4458,6 +4484,11 @@
 <https://sappho-digital.com/identifier/author_012750d4> a ecrm:E42_Identifier ;
     rdfs:label "author_012750d4" ;
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_012750d4> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
+<https://sappho-digital.com/identifier/author_012750d5> a ecrm:E42_Identifier ;
+    rdfs:label "author_012750d5" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/person/author_012750d5> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
 <https://sappho-digital.com/identifier/author_012dbb67> a ecrm:E42_Identifier ;
@@ -5430,6 +5461,11 @@
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_5102104a> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
+<https://sappho-digital.com/identifier/author_5102104aauthor_5102104p> a ecrm:E42_Identifier ;
+    rdfs:label "author_5102104aauthor_5102104p" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/person/author_5102104aauthor_5102104p> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
 <https://sappho-digital.com/identifier/author_512e247a> a ecrm:E42_Identifier ;
     rdfs:label "author_512e247a" ;
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_512e247a> ;
@@ -6070,6 +6106,11 @@
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_8c390adb> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
+<https://sappho-digital.com/identifier/author_8c3d27e1> a ecrm:E42_Identifier ;
+    rdfs:label "author_8c3d27e1" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/person/author_8c3d27e1> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
 <https://sappho-digital.com/identifier/author_8ca253a9> a ecrm:E42_Identifier ;
     rdfs:label "author_8ca253a9" ;
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_8ca253a9> ;
@@ -6315,6 +6356,11 @@
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_9e73b47f> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
+<https://sappho-digital.com/identifier/author_9e73b47y> a ecrm:E42_Identifier ;
+    rdfs:label "author_9e73b47y" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/person/author_9e73b47y> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
 <https://sappho-digital.com/identifier/author_9eaa8590> a ecrm:E42_Identifier ;
     rdfs:label "author_9eaa8590" ;
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_9eaa8590> ;
@@ -6530,6 +6576,11 @@
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_b406f550> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
+<https://sappho-digital.com/identifier/author_b4b4af98> a ecrm:E42_Identifier ;
+    rdfs:label "author_b4b4af98" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/person/author_b4b4af98> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
 <https://sappho-digital.com/identifier/author_b4b4af99> a ecrm:E42_Identifier ;
     rdfs:label "author_b4b4af99" ;
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_b4b4af99> ;
@@ -6588,6 +6639,11 @@
 <https://sappho-digital.com/identifier/author_b7c003bf> a ecrm:E42_Identifier ;
     rdfs:label "author_b7c003bf" ;
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_b7c003bf> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
+<https://sappho-digital.com/identifier/author_b7c003bo> a ecrm:E42_Identifier ;
+    rdfs:label "author_b7c003bo" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/person/author_b7c003bo> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
 <https://sappho-digital.com/identifier/author_b7f8b162> a ecrm:E42_Identifier ;
@@ -12068,7 +12124,8 @@
     ecrm:P65i_is_shown_by <https://sappho-digital.com/image/author_5dbae385> .
 
 <https://sappho-digital.com/visual_item/author_659f5f08> a ecrm:E36_Visual_Item ;
-    rdfs:label "Visual representation of Johann Georg Jacobi"@en ;
+    rdfs:label "Visual representation of Johann Georg Jacobi"@en,
+        "Visual representation of [Johann Georg Jacobi?]"@en ;
     ecrm:P138_represents <https://sappho-digital.com/person/author_659f5f08> ;
     ecrm:P65i_is_shown_by <https://sappho-digital.com/image/author_659f5f08> .
 
@@ -15113,6 +15170,11 @@
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_012750d4> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_012750d4> .
 
+<https://sappho-digital.com/person/author_012750d5> a ecrm:E21_Person ;
+    rdfs:label "H."@de ;
+    ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_012750d5> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_012750d5> .
+
 <https://sappho-digital.com/person/author_013a094f> a ecrm:E21_Person ;
     rdfs:label "Balduin"@de ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_013a094f> ;
@@ -15149,7 +15211,7 @@
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_06d10730> .
 
 <https://sappho-digital.com/person/author_071ddf43> a ecrm:E21_Person ;
-    rdfs:label "Oda Schaefer (Hg.)"@de ;
+    rdfs:label "Oda Schaefer"@de ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_071ddf43> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_071ddf43> .
 
@@ -15354,7 +15416,7 @@
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_38b6a218> .
 
 <https://sappho-digital.com/person/author_39519faa> a ecrm:E21_Person ;
-    rdfs:label "Käthe H. Fleckenstein (Hg.)"@de ;
+    rdfs:label "Käthe H. Fleckenstein"@de ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_39519faa> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_39519faa> .
 
@@ -15413,6 +15475,11 @@
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_5102104a> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_5102104a> .
 
+<https://sappho-digital.com/person/author_5102104aauthor_5102104p> a ecrm:E21_Person ;
+    rdfs:label "Rick Reuther"@de ;
+    ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_5102104aauthor_5102104p> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_5102104aauthor_5102104p> .
+
 <https://sappho-digital.com/person/author_529d41df> a ecrm:E21_Person ;
     rdfs:label "Theodor Däubler"@de ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_529d41df> ;
@@ -15464,7 +15531,7 @@
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_5ce38272> .
 
 <https://sappho-digital.com/person/author_5f9e41d8> a ecrm:E21_Person ;
-    rdfs:label "Ilona Bubeck (Hg.)"@de ;
+    rdfs:label "Ilona Bubeck"@de ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_5f9e41d8> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_5f9e41d8> .
 
@@ -15593,6 +15660,11 @@
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_8c1adbea> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_8c1adbea> .
 
+<https://sappho-digital.com/person/author_8c3d27e1> a ecrm:E21_Person ;
+    rdfs:label "Karoline Woltmann"@de ;
+    ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_8c3d27e1> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_8c3d27e1> .
+
 <https://sappho-digital.com/person/author_8ca253a9> a ecrm:E21_Person ;
     rdfs:label "[Pseudonym:] Sappho"@de ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_8ca253a9> ;
@@ -15669,9 +15741,14 @@
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_9de2c173> .
 
 <https://sappho-digital.com/person/author_9e73b47f> a ecrm:E21_Person ;
-    rdfs:label "Hg. v. Madeleine Marti"@de ;
+    rdfs:label "Madeleine Marti"@de ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_9e73b47f> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_9e73b47f> .
+
+<https://sappho-digital.com/person/author_9e73b47y> a ecrm:E21_Person ;
+    rdfs:label "Marianne Ulmi"@de ;
+    ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_9e73b47y> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_9e73b47y> .
 
 <https://sappho-digital.com/person/author_9eaa8590> a ecrm:E21_Person ;
     rdfs:label "P. Berthold"@de ;
@@ -15758,6 +15835,11 @@
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_b1037de0> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_b1037de0> .
 
+<https://sappho-digital.com/person/author_b4b4af98> a ecrm:E21_Person ;
+    rdfs:label "Karl Woltmann"@de ;
+    ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_b4b4af98> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_b4b4af98> .
+
 <https://sappho-digital.com/person/author_b5793641> a ecrm:E21_Person ;
     rdfs:label "Raoul Schrott"@de ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_b5793641> ;
@@ -15777,6 +15859,11 @@
     rdfs:label "Richard Duraj"@de ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_b7c003bf> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_b7c003bf> .
+
+<https://sappho-digital.com/person/author_b7c003bo> a ecrm:E21_Person ;
+    rdfs:label "Andreas Bülhoff"@de ;
+    ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_b7c003bo> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_b7c003bo> .
 
 <https://sappho-digital.com/person/author_b7f8b162> a ecrm:E21_Person ;
     rdfs:label "Cary Groß"@de ;
@@ -15839,7 +15926,8 @@
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_cb06c3ad> .
 
 <https://sappho-digital.com/person/author_cd06f885> a ecrm:E21_Person ;
-    rdfs:label "anonym"@de ;
+    rdfs:label "Anonym"@de,
+        "anonym"@de ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_cd06f885> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_cd06f885> .
 
@@ -15959,7 +16047,7 @@
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_fce3757f> .
 
 <https://sappho-digital.com/person/author_fe383a4c> a ecrm:E21_Person ;
-    rdfs:label "[Pseudonym:] Hg."@de ;
+    rdfs:label "Hg."@de ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_fe383a4c> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/author_fe383a4c> .
 
@@ -16925,7 +17013,8 @@
     prov:wasDerivedFrom <http://www.wikidata.org/entity/Q109458> .
 
 <https://sappho-digital.com/birth/author_659f5f08> a ecrm:E67_Birth ;
-    rdfs:label "Birth of Johann Georg Jacobi"@en ;
+    rdfs:label "Birth of Johann Georg Jacobi"@en,
+        "Birth of [Johann Georg Jacobi?]"@en ;
     ecrm:P4_has_time_span <https://sappho-digital.com/timespan/17400902> ;
     ecrm:P98_brought_into_life <https://sappho-digital.com/person/author_659f5f08> ;
     prov:wasDerivedFrom <http://www.wikidata.org/entity/Q68209> .
@@ -19025,7 +19114,8 @@
     prov:wasDerivedFrom <http://www.wikidata.org/entity/Q109458> .
 
 <https://sappho-digital.com/death/author_659f5f08> a ecrm:E69_Death ;
-    rdfs:label "Death of Johann Georg Jacobi"@en ;
+    rdfs:label "Death of Johann Georg Jacobi"@en,
+        "Death of [Johann Georg Jacobi?]"@en ;
     ecrm:P100_was_death_of <https://sappho-digital.com/person/author_659f5f08> ;
     ecrm:P4_has_time_span <https://sappho-digital.com/timespan/18140104> ;
     prov:wasDerivedFrom <http://www.wikidata.org/entity/Q68209> .
@@ -22712,7 +22802,8 @@
     owl:sameAs <http://www.wikidata.org/entity/Q71427> .
 
 <https://sappho-digital.com/person/author_659f5f08> a ecrm:E21_Person ;
-    rdfs:label "Johann Georg Jacobi"@de ;
+    rdfs:label "Johann Georg Jacobi"@de,
+        "[Johann Georg Jacobi?]"@de ;
     ecrm:P100i_died_in <https://sappho-digital.com/death/author_659f5f08> ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_659f5f08> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q68209>,

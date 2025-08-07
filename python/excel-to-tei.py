@@ -198,14 +198,16 @@ def generate_tei(df_filtered, title_text):
             ET.SubElement(work_bibl, "title", {"type": "work"}).text = title_text
             bibl.append(work_bibl)
 
-        authors = row["Autor_in"].split(" und ")
-        qids = row["Autor_in QID"].split(" und ") if "Autor_in QID" in row else []
+        authors = [a.strip() for a in row["Autor_in"].split(" und ") if a.strip()]
+        qids = [q.strip() for q in row["Autor_in QID"].split(" und ")] if "Autor_in QID" in row else []
+        ids = [i.strip() for i in row["Interne Autor_in-ID"].split(",") if i.strip()]
+
         for i, author in enumerate(authors):
-            author = author.strip()
-            qid = qids[i].strip() if i < len(qids) else ""
+            qid = qids[i] if i < len(qids) else ""
+            aid = ids[i] if i < len(ids) else ""
             elem = create_element_with_ref("author", author, qid)
-            if elem is not None and row["Interne Autor_in-ID"].strip():
-                elem.attrib["xml:id"] = row["Interne Autor_in-ID"].strip()
+            if elem is not None and aid:
+                elem.attrib["xml:id"] = aid
             if elem is not None:
                 bibl.append(elem)
 

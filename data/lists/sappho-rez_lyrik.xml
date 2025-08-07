@@ -3321,8 +3321,8 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_aa132bb6">
                         <title type="work">Gedichte</title>
                     </bibl>
-                    <author>Karl Woltmann</author>
-                    <author>Karoline Woltmann</author>
+                    <author xml:id="author_b4b4af98">Karl Woltmann</author>
+                    <author xml:id="author_8c3d27e1">Karoline Woltmann</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="pubPlace_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q120256759" xml:id="publisher_52c3b668">Realschulbuchhandlung</publisher>
@@ -3346,7 +3346,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_da54ba99">
                         <title type="work">Morgenblatt für gebildete Stände</title>
                     </bibl>
-                    <author xml:id="author_fe383a4c">[Pseudonym:] Hg.</author>
+                    <author xml:id="author_fe383a4c">Hg.</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="pubPlace_700b43a2">Stuttgart</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1136691" xml:id="publisher_d7432893">Cotta’sche Verlagsbuchhandlung</publisher>
@@ -3434,11 +3434,7 @@ Philosophen zu Sanssouci</title>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3126" xml:id="pubPlace_ce0c1fb4">Erlangen</pubPlace>
                     <publisher xml:id="publisher_6a5ed879">Heyder</publisher>
-                    <ref target="https://www.digitale-sammlungen.de/de/view/bsb10117426?page=44,45
-
-siehe auch https://books.google.at/books?id=L-MkAAAAMAAJ&amp;q=richard+dove+sappho&amp;dq=richard+dove+sappho&amp;hl=de&amp;sa=X&amp;ved=2ahUKEwiF8d3YtPH6AhURXfEDHZP-B5oQ6AF6BAgIEAI">https://www.digitale-sammlungen.de/de/view/bsb10117426?page=44,45
-
-siehe auch https://books.google.at/books?id=L-MkAAAAMAAJ&amp;q=richard+dove+sappho&amp;dq=richard+dove+sappho&amp;hl=de&amp;sa=X&amp;ved=2ahUKEwiF8d3YtPH6AhURXfEDHZP-B5oQ6AF6BAgIEAI</ref>
+                    <ref target="https://www.digitale-sammlungen.de/de/view/bsb10117426?page=44,45">https://www.digitale-sammlungen.de/de/view/bsb10117426?page=44,45</ref>
                 </bibl>
                 <bibl xml:id="bibl_bc7fdff6">
                     <title type="text">An Theoda</title>
@@ -5543,7 +5539,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e623029b">
                     <title type="text">Unter dem sapphischen Mond. Deutsche Frauenlyrik seit 1900</title>
                     <date type="published" when="1957">1957</date>
-                    <author xml:id="author_071ddf43">Oda Schaefer (Hg.)</author>
+                    <author xml:id="author_071ddf43">Oda Schaefer</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="pubPlace_06ec7d19">München</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1385440" xml:id="publisher_ca058f7f">Piper</publisher>
@@ -6838,7 +6834,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
                     <author xml:id="author_b7c003bf">Richard Duraj</author>
-                    <author xml:id="author_b7c003bf">Andreas Bülhoff</author>
+                    <author xml:id="author_b7c003bo">Andreas Bülhoff</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="pubPlace_1d1718f7">Greifswald</pubPlace>
                     <publisher xml:id="publisher_5fb17386">Freiraum</publisher>
@@ -6871,8 +6867,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
-                    <author xml:id="author_5102104a">Rick Reuther</author>
-                    <author xml:id="author_5102104a">Christiane Heidrich</author>
+                    <author xml:id="author_5102104aauthor_5102104p">Rick Reuther</author>
+                    <author>Christiane Heidrich</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="pubPlace_1d1718f7">Greifswald</pubPlace>
                     <publisher xml:id="publisher_5fb17386">Freiraum</publisher>
