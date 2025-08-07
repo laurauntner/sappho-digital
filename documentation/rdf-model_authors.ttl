@@ -5,7 +5,7 @@
 @prefix prov: <http://www.w3.org/ns/prov#> .
 
 <https://sappho-digital.com/person/XXXX> a ecrm:E21_Person ;
-    rdfs:label "XXXX"@en ;
+    rdfs:label "XXXX"@de ;
     ecrm:P100i_died_in <https://sappho-digital.com/death/XXXX> ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/XXXX> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/visual_item/XXXX> ; # wdt:P18
@@ -16,7 +16,7 @@
     owl:sameAs <http://www.wikidata.org/entity/XXXX> .
 
 <https://sappho-digital.com/appellation/XXXX> a ecrm:E82_Actor_Appellation ;
-    rdfs:label "XXXX"@en ;
+    rdfs:label "XXXX"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/XXXX> .
 
 <https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
@@ -53,12 +53,12 @@
     prov:wasDerivedFrom <http://www.wikidata.org/entity/XXXX> .
 
 <https://sappho-digital.com/place/XXXX> a ecrm:E53_Place ;
-    rdfs:label "XXXX"@en ;
+    rdfs:label "XXXX"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/birth/XXXX> ;
     owl:sameAs <http://www.wikidata.org/entity/XXXX> .
 
 <https://sappho-digital.com/place/XXXX> a ecrm:E53_Place ;
-    rdfs:label "XXXX"@en ;
+    rdfs:label "XXXX"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/death/XXXX> ;
     owl:sameAs <http://www.wikidata.org/entity/XXXX> .
 
