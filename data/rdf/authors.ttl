@@ -3175,7 +3175,7 @@
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_6cb1891c> .
 
 <https://sappho-digital.com/appellation/author_6cb5644b> a ecrm:E82_Actor_Appellation ;
-    rdfs:label "Edm"@de ;
+    rdfs:label "Edmund Schopen"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_6cb5644b> .
 
 <https://sappho-digital.com/appellation/author_6cc9f98c> a ecrm:E82_Actor_Appellation ;
@@ -3799,7 +3799,7 @@
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_b2e2e732> .
 
 <https://sappho-digital.com/appellation/author_b2f5ff47> a ecrm:E82_Actor_Appellation ;
-    rdfs:label "G"@de ;
+    rdfs:label "Gundula Schiffer"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_b2f5ff47> .
 
 <https://sappho-digital.com/appellation/author_b3cde7ee> a ecrm:E82_Actor_Appellation ;
@@ -17021,7 +17021,7 @@
     prov:wasDerivedFrom <http://www.wikidata.org/entity/Q705090> .
 
 <https://sappho-digital.com/birth/author_6cb5644b> a ecrm:E67_Birth ;
-    rdfs:label "Birth of Edm"@en ;
+    rdfs:label "Birth of Edmund Schopen"@en ;
     ecrm:P4_has_time_span <https://sappho-digital.com/timespan/18820525> ;
     ecrm:P98_brought_into_life <https://sappho-digital.com/person/author_6cb5644b> ;
     prov:wasDerivedFrom <http://www.wikidata.org/entity/Q55674905> .
@@ -17591,7 +17591,7 @@
     prov:wasDerivedFrom <http://www.wikidata.org/entity/Q18022201> .
 
 <https://sappho-digital.com/birth/author_b2f5ff47> a ecrm:E67_Birth ;
-    rdfs:label "Birth of G"@en ;
+    rdfs:label "Birth of Gundula Schiffer"@en ;
     ecrm:P4_has_time_span <https://sappho-digital.com/timespan/19800000> ;
     ecrm:P98_brought_into_life <https://sappho-digital.com/person/author_b2f5ff47> ;
     prov:wasDerivedFrom <http://www.wikidata.org/entity/Q108407156> .
@@ -19109,7 +19109,7 @@
     prov:wasDerivedFrom <http://www.wikidata.org/entity/Q18916999> .
 
 <https://sappho-digital.com/death/author_6cb5644b> a ecrm:E69_Death ;
-    rdfs:label "Death of Edm"@en ;
+    rdfs:label "Death of Edmund Schopen"@en ;
     ecrm:P100_was_death_of <https://sappho-digital.com/person/author_6cb5644b> ;
     ecrm:P4_has_time_span <https://sappho-digital.com/timespan/19611009> ;
     prov:wasDerivedFrom <http://www.wikidata.org/entity/Q55674905> .
@@ -20417,7 +20417,7 @@
     owl:sameAs <http://www.wikidata.org/entity/Q18022201> .
 
 <https://sappho-digital.com/person/author_b2f5ff47> a ecrm:E21_Person ;
-    rdfs:label "G"@de ;
+    rdfs:label "Gundula Schiffer"@de ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_b2f5ff47> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q108407156>,
         <https://sappho-digital.com/identifier/author_b2f5ff47> ;
@@ -21108,7 +21108,7 @@
     owl:sameAs <http://www.wikidata.org/entity/Q705090> .
 
 <https://sappho-digital.com/person/author_6cb5644b> a ecrm:E21_Person ;
-    rdfs:label "Edm"@de ;
+    rdfs:label "Edmund Schopen"@de ;
     ecrm:P100i_died_in <https://sappho-digital.com/death/author_6cb5644b> ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_6cb5644b> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q55674905>,
