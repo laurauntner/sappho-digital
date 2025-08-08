@@ -261,10 +261,10 @@
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/place_ref/XXXX_XXXX> .
 
-# Expression References
+# Work References
 
 <https://sappho-digital.com/feature/work_ref/XXXX> a intro:INT18_Reference ;
-    rdfs:label "Reference to XXXX (expression)"@en ;
+    rdfs:label "Reference to XXXX (work)"@en ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/work_ref/XXXX_XXXX> ;
     intro:R22_providesSimilarityForRelation <https://sappho-digital.com/relation/XXXX_XXXX> .
 
@@ -300,7 +300,7 @@
 # Characters
 
 <https://sappho-digital.com/feature/character/XXXX> a intro:INT_Character ;
-    rdfs:label "XXXX"@en ;
+    rdfs:label "XXXX"@de ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> , 
                             <https://sappho-digital.com/identifier/XXXX>;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/character/XXXX_XXXX>,
