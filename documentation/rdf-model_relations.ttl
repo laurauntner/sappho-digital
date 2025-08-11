@@ -28,6 +28,10 @@
                                 <https://sappho-digital.com/actualization/plot/XXXX_XXXX>, # new
                                 <https://sappho-digital.com/actualization/topic/XXXX_XXXX> ; # new
     intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/XXXX_XXXX> ; # new
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX>, # new
+                            <https://sappho-digital.com/relation/XXXX_XXXX>,
+                            <https://sappho-digital.com/relation/XXXX_XXXX>,
+                            <https://sappho-digital.com/relation/XXXX_XXXX> ;
     owl:sameAs <http://www.wikidata.org/entity/XXXX> .
 
 <https://sappho-digital.com/expression/XXXX> a lrmoo:F2_Expression ;
@@ -45,6 +49,7 @@
                                 <https://sappho-digital.com/actualization/topic/XXXX_XXXX>, # new
                                 <https://sappho-digital.com/actualization/work_ref/XXXX_XXXX> ; # new
     intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/XXXX_XXXX> ; # new
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> ; # new
     owl:sameAs <http://www.wikidata.org/entity/XXXX> .
 
 <https://sappho-digital.com/expression/XXXX> a lrmoo:F2_Expression ;
@@ -57,6 +62,7 @@
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/XXXX> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/XXXX> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/place_ref/XXXX_XXXX> ; # new
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> ; # new
     owl:sameAs <http://www.wikidata.org/entity/XXXX> .
 
 <https://sappho-digital.com/expression/XXXX> a lrmoo:F2_Expression ;
@@ -69,6 +75,7 @@
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/XXXX> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/XXXX> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/character/XXXX_XXXX> ; # new
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> ; # new
     owl:sameAs <http://www.wikidata.org/entity/XXXX> .
 
 # Intertextual Relations
@@ -78,7 +85,9 @@
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
     intro:R22i_relationIsBasedOnSimilarity <https://sappho-digital.com/feature/character/XXXX> ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/actualization/character/XXXX_XXXX>,
-                            <https://sappho-digital.com/actualization/character/XXXX_XXXX> .
+                            <https://sappho-digital.com/actualization/character/XXXX_XXXX>,
+                            <https://sappho-digital.com/expression/XXXX>, 
+                            <https://sappho-digital.com/expression/XXXX> .
 
 <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
     rdfs:label "Interpretation of intertextual relation between XXXX and XXXX"@en ;
@@ -94,7 +103,9 @@
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
     intro:R22i_relationIsBasedOnSimilarity <https://sappho-digital.com/feature/place_ref/XXXX> ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/actualization/place_ref/XXXX_XXXX>,
-                            <https://sappho-digital.com/actualization/place_ref/XXXX_XXXX> .
+                            <https://sappho-digital.com/actualization/place_ref/XXXX_XXXX>,
+                            <https://sappho-digital.com/expression/XXXX>,
+                            <https://sappho-digital.com/expression/XXXX> .
 
 <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
     rdfs:label "Interpretation of intertextual relation between XXXX and XXXX"@en ;
@@ -123,7 +134,9 @@
                                 <https://sappho-digital.com/actualization/topic/XXXX_XXXX>,
                                 <https://sappho-digital.com/actualization/work_ref/XXXX_XXXX>,
                                 <https://sappho-digital.com/textpassage/XXXX_XXXX>,
-                                <https://sappho-digital.com/textpassage/XXXX_XXXX> .
+                                <https://sappho-digital.com/textpassage/XXXX_XXXX>,
+                                <https://sappho-digital.com/expression/XXXX>,
+                                <https://sappho-digital.com/expression/XXXX> .
 
 <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
     rdfs:label "Interpretation of intertextual relation between XXXX and XXXX"@en ;
@@ -559,7 +572,8 @@
     rdfs:label "Intertextual relation between XXXX and Sappho’s work"@en ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_sappho_work> ;
     intro:R22i_relationIsBasedOnSimilarity <https://sappho-digital.com/feature/work_ref/sappho_work> ;
-    intro:R24_hasRelatedEntity <https://sappho-digital.com/actualization/XXXX_sappho_work> .
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/actualization/XXXX_sappho_work>, 
+                                <https://sappho-digital.com/expression/XXXX> .
 
 <https://sappho-digital.com/feature/interpretation/XXXX_sappho_work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation of intertextual relation between XXXX and Sappho’s work"@en ;

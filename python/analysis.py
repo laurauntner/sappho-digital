@@ -3,6 +3,7 @@ import hashlib
 import re
 import xml.etree.ElementTree as ET
 from typing import Optional
+from urllib.parse import quote
 
 from rdflib import Graph, Namespace, URIRef, Literal
 from rdflib.namespace import RDF, RDFS, XSD
@@ -10,8 +11,8 @@ from rdflib.namespace import RDF, RDFS, XSD
 # Pfade
 
 XML_DIR = Path("../../doktorat/Diss/Sappho-Rezeption/XML")
-WORKS_TTL = Path("../data/rdf/works.ttl")         
-FRAGMENTS_TTL = Path("../data/rdf/fragments.ttl") 
+WORKS_TTL = Path("../data/rdf/works.ttl")
+FRAGMENTS_TTL = Path("../data/rdf/fragments.ttl")
 OUT_TTL = Path("../data/rdf/analysis.ttl")
 
 BASE = "https://sappho-digital.com/"
@@ -48,7 +49,13 @@ def literal_text(x) -> str:
         return str(x)
     return str(x) if x is not None else ""
 
-# F2/E90 einlesen
+def clean_uri_component(s: str) -> str:
+    s = str(s)
+    s_no_parens = re.sub(r"\s*\(.*?\)", "", s)
+    s_underscores = s_no_parens.replace(" ", "_")
+    return quote(s_underscores, safe="._-~")
+
+# Quellgraph laden (TTL einlesen)
 
 g_src = Graph()
 if WORKS_TTL.exists():
@@ -56,17 +63,32 @@ if WORKS_TTL.exists():
 if FRAGMENTS_TTL.exists():
     g_src.parse(FRAGMENTS_TTL.as_posix(), format="turtle")
 
+# F2 einlesen
+
 text_index = {}
+
+def is_f2(typ) -> bool:
+    t = str(typ)
+    return t.endswith("F2_Expression")
+
+def last_token(iri: str) -> str:
+    return re.split(r"[#/]", iri)[-1]
+
+def base_id(tid: str) -> str:
+    return re.sub(r"^bibl_(?:sappho_)?", "", tid)
+
+def make_keys_for_bibl_variants(tid: str):
+    b = base_id(tid)
+    return [f"bibl_{b}", f"bibl_sappho_{b}"]
+
 for s, _, otype in g_src.triples((None, RDF.type, None)):
-    s_str = str(s)
-    if otype == LRMOO.F2_Expression and "/expression/" in s_str:
-        tid = s_str.rsplit("/", 1)[-1]
+    if is_f2(otype):
+        s_str = str(s)
+        tid = last_token(s_str)
         label = next(g_src.objects(s, RDFS.label), None)
-        text_index[tid] = {"uri": s, "type": "F2", "label": label}
-    elif otype == ECRM.E90_Symbolic_Object and "/fragment/" in s_str:
-        tid = s_str.rsplit("/", 1)[-1]
-        label = next(g_src.objects(s, RDFS.label), None)
-        text_index[tid] = {"uri": s, "type": "E90", "label": label}
+
+        for key in make_keys_for_bibl_variants(tid):
+            text_index[key] = {"uri": s, "type": "F2", "label": label}
 
 # Graph
 
@@ -105,15 +127,15 @@ def add_actualization_common(
     g: Graph,
     kind: str,
     text_id: str,
-    feature_id_suffix: str,   
+    feature_id_suffix: str,
     feature_uri: URIRef,
     feature_label: str,
     text_res_uri: URIRef,
     text_title: str,
     refers_to_uri: Optional[URIRef] = None
 ):
-
     typ = TYPE_LABEL_DE.get(kind, "Feature")
+    # feature_id_suffix muss bereits „clean“ sein
     act_id = f"{text_id}_{feature_id_suffix}"
     act_uri = uri(f"actualization/{kind}/{act_id}")
 
@@ -131,13 +153,13 @@ def add_actualization_common(
     # Interpretation-Feature
     interp_feat_uri = uri(f"feature/interpretation/{act_id}")
     g.add((interp_feat_uri, RDF.type, INTRO.INT_Interpretation))
-    g.add((interp_feat_uri, RDFS.label, Literal(f"Interpretation von {feature_label} ({typ}) in {text_title}", lang="de")))
+    g.add((interp_feat_uri, RDFS.label, Literal(f"Interpretation of {feature_label} ({typ}) in {text_title}", lang="de")))
     g.add((interp_feat_uri, INTRO.R17i_featureIsActualizedIn, uri(f"actualization/interpretation/{act_id}")))
 
     # Interpretation-Actualization
     interp_act_uri = uri(f"actualization/interpretation/{act_id}")
     g.add((interp_act_uri, RDF.type, INTRO.INT2_ActualizationOfFeature))
-    g.add((interp_act_uri, RDFS.label, Literal(f"Interpretation von {feature_label} ({typ}) in {text_title}", lang="de")))
+    g.add((interp_act_uri, RDFS.label, Literal(f"Interpretation of {feature_label} ({typ}) in {text_title}", lang="de")))
     g.add((interp_act_uri, INTRO.R17_actualizesFeature, interp_feat_uri))
     g.add((interp_act_uri, INTRO.R21_identifies, act_uri))
 
@@ -145,11 +167,11 @@ def add_actualization_common(
 
 # XML einlesen und Analyseelemente sammeln
 
-elements_per_text = {} 
+elements_per_text = {}
 distinct_value_to_id = {k: {} for k in ["figur","motiv","stoff","thema","werk","ort","person"]}
 
-distinct_phrase_to_id = {}  
-phrase_to_texts = {}        
+distinct_phrase_to_id = {}
+phrase_to_texts = {}
 
 def get_or_make_distinct(cat: str, value: str) -> str:
     if value not in distinct_value_to_id[cat]:
@@ -201,12 +223,9 @@ for xml_file in sorted(XML_DIR.glob("*.xml")):
 # Instanzen erzeugen
 
 for text_id, cats in elements_per_text.items():
-    txt = text_index.get(text_id) or text_index.get(text_id.replace("bibl_", "")) or text_index.get(f"bibl_{text_id}")
-    if not txt and "sappho" in text_id.lower():
-        txt = text_index.get(text_id) or text_index.get(f"bibl_{text_id}")
-
+    txt = text_index.get(text_id)
     if not txt:
-        print(f"Warn: Keine F2/E90-Instanz für {text_id} gefunden.")
+        print(f"Warn: Keine F2-Instanz für {text_id} gefunden.")
         continue
 
     text_uri = txt["uri"]
@@ -217,7 +236,7 @@ for text_id, cats in elements_per_text.items():
 
     # INT_Character
     for v in cats["figur"]:
-        fid = get_or_make_distinct("figur", v)
+        fid = get_or_make_distinct("figur", v)  # hashed => URI-safe
         feat_uri = uri(f"feature/character/{fid}")
         g.add((feat_uri, RDF.type, INTRO.INT_Character))
         g.add((feat_uri, RDFS.label, Literal(f"Character: {v}", lang="de")))
@@ -229,7 +248,7 @@ for text_id, cats in elements_per_text.items():
 
     # INT_Motif
     for v in cats["motiv"]:
-        fid = get_or_make_distinct("motiv", v)
+        fid = get_or_make_distinct("motiv", v)  # hashed => URI-safe
         feat_uri = uri(f"feature/motif/{fid}")
         g.add((feat_uri, RDF.type, INTRO.INT_Motif))
         g.add((feat_uri, RDFS.label, Literal(f"Motif: {v}", lang="de")))
@@ -241,7 +260,7 @@ for text_id, cats in elements_per_text.items():
 
     # INT_Plot
     for v in cats["stoff"]:
-        fid = get_or_make_distinct("stoff", v)
+        fid = get_or_make_distinct("stoff", v)  # hashed => URI-safe
         feat_uri = uri(f"feature/plot/{fid}")
         g.add((feat_uri, RDF.type, INTRO.INT_Plot))
         g.add((feat_uri, RDFS.label, Literal(f"Plot: {v}", lang="de")))
@@ -253,7 +272,7 @@ for text_id, cats in elements_per_text.items():
 
     # INT_Topic
     for v in cats["thema"]:
-        fid = get_or_make_distinct("thema", v) 
+        fid = get_or_make_distinct("thema", v)  # hashed => URI-safe
         feat_uri = uri(f"feature/topic/{fid}")
         g.add((feat_uri, RDF.type, INTRO.INT_Topic))
         g.add((feat_uri, RDFS.label, Literal(f"Topic: {v}", lang="de")))
@@ -265,7 +284,11 @@ for text_id, cats in elements_per_text.items():
 
     # INT18_Reference: WORK
     for v in cats["werk"]:
-        feat_uri = uri(f"feature/work_ref/{text_id}_{v}")
+        # URI-kompatiblen Suffix aus text_id + v (ohne Klammerinhalt, Spaces->_)
+        v_clean = clean_uri_component(v)
+        suffix = f"{text_id}_{v_clean}"
+
+        feat_uri = uri(f"feature/work_ref/{suffix}")
         g.add((feat_uri, RDF.type, INTRO.INT18_Reference))
 
         target = (text_index.get(v)
@@ -277,7 +300,7 @@ for text_id, cats in elements_per_text.items():
         g.add((feat_uri, RDFS.label, Literal(f"Reference to {ref_label} (work)", lang="en")))
 
         act_uri = add_actualization_common(
-            g, "work_ref", text_id, v, feat_uri, ref_label, text_uri, text_title,
+            g, "work_ref", text_id, v_clean, feat_uri, ref_label, text_uri, text_title,
             refers_to_uri=ref_target_uri
         )
         g.add((text_uri, INTRO.R18_showsActualization, act_uri))
@@ -289,7 +312,7 @@ for text_id, cats in elements_per_text.items():
 
     # INT18_Reference: PLACE
     for v in cats["ort"]:
-        pid = get_or_make_distinct("ort", v)  
+        pid = get_or_make_distinct("ort", v)  # hashed => URI-safe
         feat_uri = uri(f"feature/place_ref/{pid}")
         g.add((feat_uri, RDF.type, INTRO.INT18_Reference))
         g.add((feat_uri, RDFS.label, Literal(f"Reference to {v} (place)", lang="en")))
@@ -306,7 +329,7 @@ for text_id, cats in elements_per_text.items():
 
     # INT18_Reference: PERSON
     for v in cats["person"]:
-        per_id = get_or_make_distinct("person", v)
+        per_id = get_or_make_distinct("person", v)  # hashed => URI-safe
         feat_uri = uri(f"feature/person_ref/{per_id}")
         g.add((feat_uri, RDF.type, INTRO.INT18_Reference))
         g.add((feat_uri, RDFS.label, Literal(f"Reference to {v} (person)", lang="en")))
