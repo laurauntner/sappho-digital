@@ -10,7 +10,7 @@ OUTPUT_FILE = "../data/rdf/works.ttl"
 # Namespaces
 NSMAP = {"tei": "http://www.tei-c.org/ns/1.0"}
 SD = Namespace("https://sappho-digital.com/")
-ECRM = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
+ECRM = Namespace("http://erlangen-crm.org/current/")
 LRMOO = Namespace("http://www.cidoc-crm.org/lrmoo/")
 
 # Graph

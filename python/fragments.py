@@ -9,7 +9,7 @@ OUTPUT_FILE = "../data/rdf/fragments.ttl"
 
 # Namespaces
 SD = Namespace("https://sappho-digital.com/")
-ECRM = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
+ECRM = Namespace("http://erlangen-crm.org/current/")
 LRMOO = Namespace("http://www.cidoc-crm.org/lrmoo/")
 
 # Graph

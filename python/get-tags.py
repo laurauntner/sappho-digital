@@ -4,9 +4,12 @@ import csv
 from collections import defaultdict
 
 IGNORE_TAGS = {"XML", "title", "text", "status", "id", "vorlageSeiten", "anthologieSeiten"}
+ARTS = ["real", "fictional", "type"]
+
 
 def remove_namespace(tag):
     return tag.split('}', 1)[1] if '}' in tag else tag
+
 
 def find_tags(folder_path):
     tag_values = defaultdict(set)
@@ -33,15 +36,25 @@ def find_tags(folder_path):
                 if tag == "stoff" and "modus" in elem.attrib:
                     modus = elem.attrib["modus"].strip()
                     if modus:
-                        value += f" ({modus})"
+                        value = f"{value} ({modus})" if value else f"({modus})"
 
-                if value:
+                if not value:
+                    continue
+
+                if "art" in elem.attrib:
+                    art_val = elem.attrib["art"].strip()
+                    if art_val in ARTS:
+                        tag_values[f"{tag}@{art_val}"].add(value)
+                    else:
+                        tag_values[f"{tag}@{art_val}"].add(value)
+                else:
                     tag_values[tag].add(value)
 
         except ET.ParseError as e:
             print(f"Warnung: Datei {filename} konnte nicht geparst werden: {e}.")
-    
+
     return tag_values
+
 
 def check_duplicate_values_across_tags(tag_values):
     value_to_tags = defaultdict(set)
@@ -53,7 +66,10 @@ def check_duplicate_values_across_tags(tag_values):
 
     for value, tags in value_to_tags.items():
         if len(tags) > 1:
-            print(f'⚠️  WARNUNG: Der Wert "{value}" kommt mehrfach vor in den Spalten: {", ".join(sorted(tags))}')
+            print(
+                f'⚠️ WARNUNG: Der Wert "{value}" kommt mehrfach vor in den Spalten: {", ".join(sorted(tags))}'
+            )
+
 
 def write_table(tag_values, output_file_path):
     all_tags = sorted(tag_values.keys())
@@ -72,6 +88,7 @@ def write_table(tag_values, output_file_path):
         writer.writerow(all_tags)
         writer.writerows(lines)
 
+
 if __name__ == "__main__":
     input_path = "../../doktorat/Diss/Sappho-Rezeption/XML"
     output_path = "../../doktorat/Diss/Sappho-Rezeption/Analysehilfen"
@@ -83,4 +100,4 @@ if __name__ == "__main__":
     check_duplicate_values_across_tags(tag_values)
     write_table(tag_values, output_file)
 
-    print(f"\n✅ Tabelle mit {len(tag_values)} Elementen und ihren Werten gespeichert in:\n{output_file}")
+    print(f"\n✅ Tabelle mit {len(tag_values)} Spalten gespeichert in:\n{output_file}")

@@ -18,7 +18,7 @@ NS = Namespace("https://sappho-digital.com/")
 BASE = "https://sappho-digital.com/"
 
 LRMOO = Namespace("http://www.cidoc-crm.org/lrmoo/")
-ECRM = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
+ECRM = Namespace("http://erlangen-crm.org/current/")
 INTRO = Namespace("https://w3id.org/lso/intro/currentbeta#")
 
 # Hilfsfunktionen

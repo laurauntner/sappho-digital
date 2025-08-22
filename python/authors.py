@@ -11,7 +11,7 @@ OUTPUT_FILE = "../data/rdf/authors.ttl"
 
 # Namespaces
 SD = Namespace("https://sappho-digital.com/")
-ECRM = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
+ECRM = Namespace("http://erlangen-crm.org/current/")
 PROV = Namespace("http://www.w3.org/ns/prov#")
 WD = "http://www.wikidata.org/entity/"
 WDCOM = "http://commons.wikimedia.org/wiki/Special:FilePath/"

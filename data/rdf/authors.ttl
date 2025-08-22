@@ -1,4 +1,4 @@
-@prefix ecrm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix ecrm: <http://erlangen-crm.org/current/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -343,7 +343,7 @@
     owl:sameAs <http://www.wikidata.org/entity/Q15982> .
 
 <https://sappho-digital.com/place/Q160175> a ecrm:E53_Place ;
-    rdfs:label "KZ Theresienstadt"@de ;
+    rdfs:label "Ghetto Theresienstadt"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/death/author_4593a9c2> ;
     owl:sameAs <http://www.wikidata.org/entity/Q160175> .
 
