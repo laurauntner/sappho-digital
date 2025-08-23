@@ -14,7 +14,10 @@ def remove_namespace(tag):
 
 
 def find_tags(folder_path):
-    tag_values = defaultdict(set)
+
+    tag_docs = defaultdict(set)
+    tag_value_docs = defaultdict(lambda: defaultdict(set))
+    value_canonical = defaultdict(dict)
 
     for filename in os.listdir(folder_path):
         if not filename.endswith(".xml"):
@@ -65,12 +68,41 @@ def find_tags(folder_path):
                 else:
                     tag_key = tag
 
-                tag_values[tag_key].add(value)
+                tag_docs[tag_key].add(filename)
+
+                norm_val = value.lower()
+                tag_value_docs[tag_key][norm_val].add(filename)
+                if norm_val not in value_canonical[tag_key]:
+                    value_canonical[tag_key][norm_val] = value
 
         except ET.ParseError as e:
             print(f"Warnung: Datei {filename} konnte nicht geparst werden: {e}.")
 
-    return tag_values
+    eligible_tags = {tag for tag, docs in tag_docs.items() if len(docs) >= 2}
+
+    filtered = {}
+    removed_tags = []
+    removed_values_info = []
+
+    for tag in sorted(eligible_tags):
+        kept_values = []
+        for norm_val, docs in tag_value_docs[tag].items():
+            if len(docs) >= 2:
+                kept_values.append(value_canonical[tag][norm_val])
+        if kept_values:
+            filtered[tag] = set(kept_values)
+            removed_count = len(tag_value_docs[tag]) - len(kept_values)
+            if removed_count > 0:
+                removed_values_info.append(f"{tag}: {removed_count} Wert(e) entfernt")
+        else:
+            removed_tags.append(tag)
+
+    if removed_tags:
+        print(f"ℹ️ {len(removed_tags)} Tag(s) entfernt, da deren Werte nur in je einem Dokument vorkamen: {', '.join(removed_tags)}")
+    if removed_values_info:
+        print("ℹ️ Werte-Filterung pro Tag:", "; ".join(removed_values_info))
+
+    return filtered
 
 
 def check_duplicate_values_across_tags(tag_values):
@@ -109,11 +141,11 @@ def write_table(tag_values, output_file_path):
 if __name__ == "__main__":
     input_path = "../../doktorat/Diss/Sappho-Rezeption/XML"
     output_path = "../../doktorat/Diss/Sappho-Rezeption/Analysehilfen"
-    output_file = os.path.join(output_path, "elemente_und_werte.csv")
+    output_file = os.path.join(output_path, "haeufige_elemente_und_werte.csv")
 
     os.makedirs(output_path, exist_ok=True)
 
-    tag_values = find_tags(input_path)
+    tag_values = find_tags(input_path)  # bereits gefiltert auf >= 2 Dokumente
     check_duplicate_values_across_tags(tag_values)
     write_table(tag_values, output_file)
 
