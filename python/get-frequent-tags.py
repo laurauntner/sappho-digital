@@ -46,25 +46,20 @@ def find_tags(folder_path):
                 if not value:
                     continue
 
-                if "art" in elem.attrib:
+                if "art" in elem.attrib and tag in {"person", "ort"}:
                     art_val = elem.attrib["art"].strip().lower()
-
                     if tag == "person":
                         if art_val in PERSON_ARTS:
                             tag_key = f"{tag}@{art_val}"
                         else:
                             print(f"⚠️ Warnung: Unerwarteter art-Wert bei <person>: {art_val}")
                             tag_key = f"{tag}@{art_val}"
-
                     elif tag == "ort":
                         if art_val in ORT_ARTS:
                             tag_key = f"{tag}@{art_val}"
                         else:
                             print(f"⚠️ Warnung: Unerwarteter art-Wert bei <ort>: {art_val}")
                             tag_key = f"{tag}@{art_val}"
-
-                    else:
-                        tag_key = f"{tag}@{art_val}"
                 else:
                     tag_key = tag
 
@@ -78,7 +73,11 @@ def find_tags(folder_path):
         except ET.ParseError as e:
             print(f"Warnung: Datei {filename} konnte nicht geparst werden: {e}.")
 
-    eligible_tags = {tag for tag, docs in tag_docs.items() if len(docs) >= 2}
+    # Mind. 2 Dokumente, außer bei Werken
+    eligible_tags = {
+        tag for tag, docs in tag_docs.items()
+        if len(docs) >= 2 or tag == "werk"
+    }
 
     filtered = {}
     removed_tags = []
@@ -87,12 +86,12 @@ def find_tags(folder_path):
     for tag in sorted(eligible_tags):
         kept_values = []
         for norm_val, docs in tag_value_docs[tag].items():
-            if len(docs) >= 2:
+            if len(docs) >= 2 or tag == "werk":
                 kept_values.append(value_canonical[tag][norm_val])
         if kept_values:
             filtered[tag] = set(kept_values)
             removed_count = len(tag_value_docs[tag]) - len(kept_values)
-            if removed_count > 0:
+            if removed_count > 0 and tag != "werk":
                 removed_values_info.append(f"{tag}: {removed_count} Wert(e) entfernt")
         else:
             removed_tags.append(tag)
@@ -103,7 +102,6 @@ def find_tags(folder_path):
         print("ℹ️ Werte-Filterung pro Tag:", "; ".join(removed_values_info))
 
     return filtered
-
 
 def check_duplicate_values_across_tags(tag_values):
     value_to_tags = defaultdict(set)

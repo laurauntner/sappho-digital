@@ -1,0 +1,3681 @@
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd:   <http://www.wikidata.org/entity/> .
+
+<https://sappho-digital.com/voc> a skos:ConceptScheme ;
+    skos:prefLabel "Vokabular zur literarischen Sappho-Rezeption"@de .
+
+<https://sappho-digital.com/voc/collection_motif> a skos:Collection ;
+    skos:prefLabel "Motive"@de ;
+    skos:member <https://sappho-digital.com/voc/motif_71dbf6e67ea5a907> ;
+    skos:member <https://sappho-digital.com/voc/motif_c1c5790bb38d4fbb> ;
+    skos:member <https://sappho-digital.com/voc/motif_e50316313352d60d> ;
+    skos:member <https://sappho-digital.com/voc/motif_ee611d65b870ad00> ;
+    skos:member <https://sappho-digital.com/voc/motif_8d88e091e3bb28d8> ;
+    skos:member <https://sappho-digital.com/voc/motif_278e356ed64cbb3f> ;
+    skos:member <https://sappho-digital.com/voc/motif_844c1db25d6fbc84> ;
+    skos:member <https://sappho-digital.com/voc/motif_f4cf66993a308196> ;
+    skos:member <https://sappho-digital.com/voc/motif_92328d8c25447861> ;
+    skos:member <https://sappho-digital.com/voc/motif_473b30ea708768d2> ;
+    skos:member <https://sappho-digital.com/voc/motif_ec830d6c2e83aea3> ;
+    skos:member <https://sappho-digital.com/voc/motif_fcf3b7b61805babd> ;
+    skos:member <https://sappho-digital.com/voc/motif_64a381d1facbb9aa> ;
+    skos:member <https://sappho-digital.com/voc/motif_6ca05631ae27d928> ;
+    skos:member <https://sappho-digital.com/voc/motif_f8ead995947f7500> ;
+    skos:member <https://sappho-digital.com/voc/motif_0824726b36365ab5> ;
+    skos:member <https://sappho-digital.com/voc/motif_a26b7d0dd6b16118> ;
+    skos:member <https://sappho-digital.com/voc/motif_c9ab4b3812d39197> ;
+    skos:member <https://sappho-digital.com/voc/motif_62581a673f405e6c> ;
+    skos:member <https://sappho-digital.com/voc/motif_c10f460a9ccb3510> ;
+    skos:member <https://sappho-digital.com/voc/motif_6defe0a8e240f27b> ;
+    skos:member <https://sappho-digital.com/voc/motif_5712449d2e4712f8> ;
+    skos:member <https://sappho-digital.com/voc/motif_4facb4bf5a22499b> ;
+    skos:member <https://sappho-digital.com/voc/motif_876aeb61deb4984f> ;
+    skos:member <https://sappho-digital.com/voc/motif_3950fcecf002a43a> ;
+    skos:member <https://sappho-digital.com/voc/motif_c2ec495b51738811> ;
+    skos:member <https://sappho-digital.com/voc/motif_01c3eb8edb59de39> ;
+    skos:member <https://sappho-digital.com/voc/motif_8e771c69dd16a41d> ;
+    skos:member <https://sappho-digital.com/voc/motif_f2aa906d0ec4e3f4> ;
+    skos:member <https://sappho-digital.com/voc/motif_04b4fca3d10aab24> ;
+    skos:member <https://sappho-digital.com/voc/motif_7b4f6bd41d20b520> ;
+    skos:member <https://sappho-digital.com/voc/motif_872360a9416bbe76> ;
+    skos:member <https://sappho-digital.com/voc/motif_01ca370ea29462e3> ;
+    skos:member <https://sappho-digital.com/voc/motif_232c5062cde7d3c1> ;
+    skos:member <https://sappho-digital.com/voc/motif_6ce22ab4ce13cf9e> ;
+    skos:member <https://sappho-digital.com/voc/motif_ed3912cf6c881149> ;
+    skos:member <https://sappho-digital.com/voc/motif_8bd0b4436d2c2211> ;
+    skos:member <https://sappho-digital.com/voc/motif_5047cf2d5e1607fa> ;
+    skos:member <https://sappho-digital.com/voc/motif_4c9fc6a95d249640> ;
+    skos:member <https://sappho-digital.com/voc/motif_ea433b378d53e195> ;
+    skos:member <https://sappho-digital.com/voc/motif_a9a67d884bb4bc94> ;
+    skos:member <https://sappho-digital.com/voc/motif_ea72ee231feeee11> ;
+    skos:member <https://sappho-digital.com/voc/motif_b10a4078d73a7320> ;
+    skos:member <https://sappho-digital.com/voc/motif_9505455eb419f6c3> ;
+    skos:member <https://sappho-digital.com/voc/motif_4c934ba7b9f256bf> ;
+    skos:member <https://sappho-digital.com/voc/motif_8aa33913f008eb89> ;
+    skos:member <https://sappho-digital.com/voc/motif_f810c10450ef91b3> ;
+    skos:member <https://sappho-digital.com/voc/motif_4592efcd729119a1> ;
+    skos:member <https://sappho-digital.com/voc/motif_a93562355b8f336c> ;
+    skos:member <https://sappho-digital.com/voc/motif_f7b450835049e501> ;
+    skos:member <https://sappho-digital.com/voc/motif_499787c4944b0ba5> ;
+    skos:member <https://sappho-digital.com/voc/motif_80440c5206e2b3d4> ;
+    skos:member <https://sappho-digital.com/voc/motif_5a650c393c811ea4> ;
+    skos:member <https://sappho-digital.com/voc/motif_117bf1151b920a34> ;
+    skos:member <https://sappho-digital.com/voc/motif_c92ed98fdf8c34f1> ;
+    skos:member <https://sappho-digital.com/voc/motif_e49a5f49d3750700> ;
+    skos:member <https://sappho-digital.com/voc/motif_38d7d43628e9d018> ;
+    skos:member <https://sappho-digital.com/voc/motif_61d8a11fb3de5da8> ;
+    skos:member <https://sappho-digital.com/voc/motif_7de60080ab357919> ;
+    skos:member <https://sappho-digital.com/voc/motif_8f940561ee7ea623> ;
+    skos:member <https://sappho-digital.com/voc/motif_33727627b793830a> ;
+    skos:member <https://sappho-digital.com/voc/motif_eadc613d365792dc> ;
+    skos:member <https://sappho-digital.com/voc/motif_7fe9f2b8afd3cc70> ;
+    skos:member <https://sappho-digital.com/voc/motif_c181a5a5b7398262> ;
+    skos:member <https://sappho-digital.com/voc/motif_f74d0ae71a82bf5d> ;
+    skos:member <https://sappho-digital.com/voc/motif_b298b875e60b4efb> ;
+    skos:member <https://sappho-digital.com/voc/motif_481b1c00e6a442c4> ;
+    skos:member <https://sappho-digital.com/voc/motif_ff994c162fe2474d> ;
+    skos:member <https://sappho-digital.com/voc/motif_58aba2ccf82b6543> ;
+    skos:member <https://sappho-digital.com/voc/motif_304a5e562a17af49> ;
+    skos:member <https://sappho-digital.com/voc/motif_736eb7ef6202472f> ;
+    skos:member <https://sappho-digital.com/voc/motif_162e6dfcee6ada53> ;
+    skos:member <https://sappho-digital.com/voc/motif_2d21be022480abad> ;
+    skos:member <https://sappho-digital.com/voc/motif_2c7c60fffbf5467c> ;
+    skos:member <https://sappho-digital.com/voc/motif_25f446d346d5ae39> ;
+    skos:member <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:member <https://sappho-digital.com/voc/motif_791dc243a6ba1593> ;
+    skos:member <https://sappho-digital.com/voc/motif_7205babaca933dc4> ;
+    skos:member <https://sappho-digital.com/voc/motif_2d730412302b3df0> ;
+    skos:member <https://sappho-digital.com/voc/motif_f08832363d803240> ;
+    skos:member <https://sappho-digital.com/voc/motif_24f6269abdf1c989> ;
+    skos:member <https://sappho-digital.com/voc/motif_2bae3f2188e05143> ;
+    skos:member <https://sappho-digital.com/voc/motif_4f6e0ef68efa0824> ;
+    skos:member <https://sappho-digital.com/voc/motif_190541ca0caf5c3f> ;
+    skos:member <https://sappho-digital.com/voc/motif_f4fe687d6a816b49> ;
+    skos:member <https://sappho-digital.com/voc/motif_63ab36bbe88b209b> ;
+    skos:member <https://sappho-digital.com/voc/motif_78fe5e7fce1afcba> ;
+    skos:member <https://sappho-digital.com/voc/motif_8f41e1cc1d433f40> ;
+    skos:member <https://sappho-digital.com/voc/motif_15d689c1f40b1d56> ;
+    skos:member <https://sappho-digital.com/voc/motif_580d75823aa2f127> ;
+    skos:member <https://sappho-digital.com/voc/motif_51e665deaa2486ee> ;
+    skos:member <https://sappho-digital.com/voc/motif_7a31b1efe2cb20da> ;
+    skos:member <https://sappho-digital.com/voc/motif_c30341434873ce70> ;
+    skos:member <https://sappho-digital.com/voc/motif_88112d916a887aa5> ;
+    skos:member <https://sappho-digital.com/voc/motif_82cbd847b829adca> ;
+    skos:member <https://sappho-digital.com/voc/motif_637a4ceb95c9c2f5> ;
+    skos:member <https://sappho-digital.com/voc/motif_1cd4207b96382696> ;
+    skos:member <https://sappho-digital.com/voc/motif_7abc136b51bb0005> ;
+    skos:member <https://sappho-digital.com/voc/motif_2f658ec3c5ec3ae4> ;
+    skos:member <https://sappho-digital.com/voc/motif_8e292f9623cb3869> ;
+    skos:member <https://sappho-digital.com/voc/motif_2b1f28169974867c> ;
+    skos:member <https://sappho-digital.com/voc/motif_de1c36b3db3ce34c> ;
+    skos:member <https://sappho-digital.com/voc/motif_67d99b12bd68f38d> ;
+    skos:member <https://sappho-digital.com/voc/motif_97e73b26b0dc22b0> ;
+    skos:member <https://sappho-digital.com/voc/motif_8d6c4ae5261c1b7f> ;
+    skos:member <https://sappho-digital.com/voc/motif_9de00cb308757267> ;
+    skos:member <https://sappho-digital.com/voc/motif_cf45a73d6da82f20> ;
+    skos:member <https://sappho-digital.com/voc/motif_b3f47e9ec671bb4b> ;
+    skos:member <https://sappho-digital.com/voc/motif_f9de876206744971> ;
+    skos:member <https://sappho-digital.com/voc/motif_25f24c9ae6926a3d> ;
+    skos:member <https://sappho-digital.com/voc/motif_62827f2ed507b1a4> ;
+    skos:member <https://sappho-digital.com/voc/motif_e454faf75bf650db> ;
+    skos:member <https://sappho-digital.com/voc/motif_203ed612d2946cdf> ;
+    skos:member <https://sappho-digital.com/voc/motif_7939d5d42d13eba9> ;
+    skos:member <https://sappho-digital.com/voc/motif_002ca4e56dca366e> ;
+    skos:member <https://sappho-digital.com/voc/motif_71f3b15b4a29d968> ;
+    skos:member <https://sappho-digital.com/voc/motif_281b95ce63718bed> ;
+    skos:member <https://sappho-digital.com/voc/motif_803e6cdc78c0c5a1> ;
+    skos:member <https://sappho-digital.com/voc/motif_68f3d8712ddf8d70> ;
+    skos:member <https://sappho-digital.com/voc/motif_25bab1557374fb8e> ;
+    skos:member <https://sappho-digital.com/voc/motif_acf2f74928d12caa> ;
+    skos:member <https://sappho-digital.com/voc/motif_b0bf073234a3855a> ;
+    skos:member <https://sappho-digital.com/voc/motif_d57e3bd57313bbdd> ;
+    skos:member <https://sappho-digital.com/voc/motif_a18a39883dd84fa9> ;
+    skos:member <https://sappho-digital.com/voc/motif_9cdcb44dabe9cfde> ;
+    skos:member <https://sappho-digital.com/voc/motif_48abc1d4ebad9497> ;
+    skos:member <https://sappho-digital.com/voc/motif_3b55ac3756f8ab42> ;
+    skos:member <https://sappho-digital.com/voc/motif_b310d7fa48a3989f> ;
+    skos:member <https://sappho-digital.com/voc/motif_051983025a946344> ;
+    skos:member <https://sappho-digital.com/voc/motif_af8f6ed291383b8c> ;
+    skos:member <https://sappho-digital.com/voc/motif_751896a2b642d52f> ;
+    skos:member <https://sappho-digital.com/voc/motif_12b7c713ac24e9f6> ;
+    skos:member <https://sappho-digital.com/voc/motif_c7adfc594b0535b3> ;
+    skos:member <https://sappho-digital.com/voc/motif_d79ec516e61a1f80> ;
+    skos:member <https://sappho-digital.com/voc/motif_88df0b1164b2fb91> ;
+    skos:member <https://sappho-digital.com/voc/motif_e66f181abe9c99b8> ;
+    skos:member <https://sappho-digital.com/voc/motif_beeb48d0c7ac4bd1> ;
+    skos:member <https://sappho-digital.com/voc/motif_fe5b704563cc5b98> ;
+    skos:member <https://sappho-digital.com/voc/motif_e3a227ac72b4e7d3> ;
+    skos:member <https://sappho-digital.com/voc/motif_faa2b53108d3d18e> ;
+    skos:member <https://sappho-digital.com/voc/motif_a9de6af914034ff8> ;
+    skos:member <https://sappho-digital.com/voc/motif_5d06c1eb322d00b7> ;
+    skos:member <https://sappho-digital.com/voc/motif_d46b25ce34a468d0> ;
+    skos:member <https://sappho-digital.com/voc/motif_320231279067b1d8> ;
+    skos:member <https://sappho-digital.com/voc/motif_c16c6077a42ad438> ;
+    skos:member <https://sappho-digital.com/voc/motif_ab661b23423441c6> ;
+    skos:member <https://sappho-digital.com/voc/motif_d80bb67aabd5386f> ;
+    skos:member <https://sappho-digital.com/voc/motif_2e583b17a2474551> ;
+    skos:member <https://sappho-digital.com/voc/motif_ffcba97b822ac20c> ;
+    skos:member <https://sappho-digital.com/voc/motif_8dda05b62f2174da> ;
+    skos:member <https://sappho-digital.com/voc/motif_39a10faa6e0647fb> ;
+    skos:member <https://sappho-digital.com/voc/motif_20ee4027d4def3f7> ;
+    skos:member <https://sappho-digital.com/voc/motif_43ccd28d178d02b7> ;
+    skos:member <https://sappho-digital.com/voc/motif_b39aa0e2a40a8ee4> ;
+    skos:member <https://sappho-digital.com/voc/motif_e594796d6e9733cb> ;
+    skos:member <https://sappho-digital.com/voc/motif_6605a54f19f1346b> ;
+    skos:member <https://sappho-digital.com/voc/motif_5cc0b75e5bf4c183> ;
+    skos:member <https://sappho-digital.com/voc/motif_3030faf4dfb8101d> ;
+    skos:member <https://sappho-digital.com/voc/motif_e02eb23076791844> ;
+    skos:member <https://sappho-digital.com/voc/motif_778e6dc2ad3d5401> ;
+    skos:member <https://sappho-digital.com/voc/motif_cf06ac1a51be3c55> ;
+    skos:member <https://sappho-digital.com/voc/motif_b7009f43de3da4ad> ;
+    skos:member <https://sappho-digital.com/voc/motif_d8dc25c9b4d4bd52> ;
+    skos:member <https://sappho-digital.com/voc/motif_ecfabfc090d9d609> ;
+    skos:member <https://sappho-digital.com/voc/motif_099b483011788b7b> ;
+    skos:member <https://sappho-digital.com/voc/motif_815301c03c8fd072> ;
+    skos:member <https://sappho-digital.com/voc/motif_dde09ae7bddcf72c> ;
+    skos:member <https://sappho-digital.com/voc/motif_172883cbad5b3349> ;
+    skos:member <https://sappho-digital.com/voc/motif_5a30a7576a2ef0e9> ;
+    skos:member <https://sappho-digital.com/voc/motif_632a07b81eb5d851> ;
+    skos:member <https://sappho-digital.com/voc/motif_08cc6f8757d81249> ;
+    skos:member <https://sappho-digital.com/voc/motif_65c67fdcba66886b> .
+
+<https://sappho-digital.com/voc/collection_place> a skos:Collection ;
+    skos:prefLabel "Orte"@de ;
+    skos:member <https://sappho-digital.com/voc/place_818717a17d1bcde7> ;
+    skos:member <https://sappho-digital.com/voc/place_4f523d00fc5d27fd> ;
+    skos:member <https://sappho-digital.com/voc/place_040eb47ff2612816> ;
+    skos:member <https://sappho-digital.com/voc/place_ac07f1e878d38c8d> ;
+    skos:member <https://sappho-digital.com/voc/place_0009a58f625c087b> ;
+    skos:member <https://sappho-digital.com/voc/place_c88a9704cb14800c> ;
+    skos:member <https://sappho-digital.com/voc/place_21104b06fd2e1311> ;
+    skos:member <https://sappho-digital.com/voc/place_481812f727302fbe> ;
+    skos:member <https://sappho-digital.com/voc/place_fb64d1e49976fb8c> ;
+    skos:member <https://sappho-digital.com/voc/place_9bd33c7fdd67c764> ;
+    skos:member <https://sappho-digital.com/voc/place_c469fa37e1f081e9> ;
+    skos:member <https://sappho-digital.com/voc/place_be670e476be162e1> ;
+    skos:member <https://sappho-digital.com/voc/place_f80dc51761a44c4c> ;
+    skos:member <https://sappho-digital.com/voc/place_c7da5f2e77438154> ;
+    skos:member <https://sappho-digital.com/voc/place_fd02663b34855167> ;
+    skos:member <https://sappho-digital.com/voc/place_6f62261a950e9311> ;
+    skos:member <https://sappho-digital.com/voc/place_65e7187dfcae7a96> ;
+    skos:member <https://sappho-digital.com/voc/place_8f3a4ee0def96e05> ;
+    skos:member <https://sappho-digital.com/voc/place_268d446ffb379c3d> ;
+    skos:member <https://sappho-digital.com/voc/place_a47b52347c0cc636> ;
+    skos:member <https://sappho-digital.com/voc/place_7a4fb8e10d66c95f> ;
+    skos:member <https://sappho-digital.com/voc/place_638e00b9cd6f28ce> ;
+    skos:member <https://sappho-digital.com/voc/place_39fc06d60391f952> ;
+    skos:member <https://sappho-digital.com/voc/place_2e23b3c7057bdc84> ;
+    skos:member <https://sappho-digital.com/voc/place_50b86d57b7836783> ;
+    skos:member <https://sappho-digital.com/voc/place_7b892e08cb9fdc41> ;
+    skos:member <https://sappho-digital.com/voc/place_8975b920fcc0ab24> ;
+    skos:member <https://sappho-digital.com/voc/place_265da080030b40ab> ;
+    skos:member <https://sappho-digital.com/voc/place_dc407ad0184a6b43> ;
+    skos:member <https://sappho-digital.com/voc/place_cdf504e86348b33a> ;
+    skos:member <https://sappho-digital.com/voc/place_967849e8809f26b2> ;
+    skos:member <https://sappho-digital.com/voc/place_65cc743dd1fdd3c3> ;
+    skos:member <https://sappho-digital.com/voc/place_2170b82f2666eaab> ;
+    skos:member <https://sappho-digital.com/voc/place_1adb2da7993ecc95> ;
+    skos:member <https://sappho-digital.com/voc/place_4cab37cdf075289f> ;
+    skos:member <https://sappho-digital.com/voc/place_938d82612b2cbf3a> ;
+    skos:member <https://sappho-digital.com/voc/place_ff6c437a4ca1c9b1> .
+
+<https://sappho-digital.com/voc/collection_person> a skos:Collection ;
+    skos:prefLabel "Personen"@de ;
+    skos:member <https://sappho-digital.com/voc/person_1a6f232a48b9845e> ;
+    skos:member <https://sappho-digital.com/voc/person_298d1d2696887999> ;
+    skos:member <https://sappho-digital.com/voc/person_a92154dba89f764f> ;
+    skos:member <https://sappho-digital.com/voc/person_974acb11c098c41b> ;
+    skos:member <https://sappho-digital.com/voc/person_f79231e41dd95683> ;
+    skos:member <https://sappho-digital.com/voc/person_1526106cabf2fa6b> ;
+    skos:member <https://sappho-digital.com/voc/person_fe75cd740876c3e4> ;
+    skos:member <https://sappho-digital.com/voc/person_f47881025ad98035> ;
+    skos:member <https://sappho-digital.com/voc/person_499bbc9e7596f10d> ;
+    skos:member <https://sappho-digital.com/voc/person_2eb129793d7ca74a> ;
+    skos:member <https://sappho-digital.com/voc/person_db10ad7627a6e7ad> ;
+    skos:member <https://sappho-digital.com/voc/person_c7aebd12b1cbd031> ;
+    skos:member <https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> ;
+    skos:member <https://sappho-digital.com/voc/person_38af0ac181d5d397> ;
+    skos:member <https://sappho-digital.com/voc/person_4e64c1b5997afbc9> ;
+    skos:member <https://sappho-digital.com/voc/person_807f37582972882e> ;
+    skos:member <https://sappho-digital.com/voc/person_f9d48292bc61bb67> ;
+    skos:member <https://sappho-digital.com/voc/person_1d5abf4995fa23e4> ;
+    skos:member <https://sappho-digital.com/voc/person_2bf51959e0848f5f> ;
+    skos:member <https://sappho-digital.com/voc/person_e9b8b1919af5758a> ;
+    skos:member <https://sappho-digital.com/voc/person_454c27fc8a648f4f> ;
+    skos:member <https://sappho-digital.com/voc/person_dbb519c32f7f48ce> ;
+    skos:member <https://sappho-digital.com/voc/person_664342af9e58739b> ;
+    skos:member <https://sappho-digital.com/voc/person_4bc689084fcb5dcb> ;
+    skos:member <https://sappho-digital.com/voc/person_6a8069a235c0da1d> ;
+    skos:member <https://sappho-digital.com/voc/person_4a2654173d9042b0> ;
+    skos:member <https://sappho-digital.com/voc/person_352e0f8a99c574b2> ;
+    skos:member <https://sappho-digital.com/voc/person_e68a8e275e56e27e> ;
+    skos:member <https://sappho-digital.com/voc/person_86564f02874aec39> ;
+    skos:member <https://sappho-digital.com/voc/person_5c74e76e7da1f025> ;
+    skos:member <https://sappho-digital.com/voc/person_256ddc5d500b7e13> ;
+    skos:member <https://sappho-digital.com/voc/person_3ae4177dfc72d693> ;
+    skos:member <https://sappho-digital.com/voc/person_2a23732b2a3c21cf> ;
+    skos:member <https://sappho-digital.com/voc/person_887e83106aad1200> ;
+    skos:member <https://sappho-digital.com/voc/person_fd527c6f3b4cd056> ;
+    skos:member <https://sappho-digital.com/voc/person_9cb6996a0396db3d> ;
+    skos:member <https://sappho-digital.com/voc/person_3bd6faa78c3b97eb> ;
+    skos:member <https://sappho-digital.com/voc/person_e3e42e3bfe456766> ;
+    skos:member <https://sappho-digital.com/voc/person_7715e9ee67577553> ;
+    skos:member <https://sappho-digital.com/voc/person_edd73d43dbe4b946> ;
+    skos:member <https://sappho-digital.com/voc/person_d1946e7b74bf22bc> ;
+    skos:member <https://sappho-digital.com/voc/person_0eabdfe13c1ff095> ;
+    skos:member <https://sappho-digital.com/voc/person_bf1a16fc1e6ba956> ;
+    skos:member <https://sappho-digital.com/voc/person_331d06f48bf9d3d9> ;
+    skos:member <https://sappho-digital.com/voc/person_a66ff1aaf842f1d4> ;
+    skos:member <https://sappho-digital.com/voc/person_55cb3a6f391d86db> ;
+    skos:member <https://sappho-digital.com/voc/person_2603b095dc14c9fd> ;
+    skos:member <https://sappho-digital.com/voc/person_fe179d791732151d> ;
+    skos:member <https://sappho-digital.com/voc/person_4fa8ba6e36329b8d> ;
+    skos:member <https://sappho-digital.com/voc/person_a766e76721189267> ;
+    skos:member <https://sappho-digital.com/voc/person_a44f7c86bfc2958d> ;
+    skos:member <https://sappho-digital.com/voc/person_c4b1fa4084e429c3> ;
+    skos:member <https://sappho-digital.com/voc/person_86ef94ea68ce0fe0> ;
+    skos:member <https://sappho-digital.com/voc/person_9545062e029ef19b> ;
+    skos:member <https://sappho-digital.com/voc/person_d6049353a1b9b167> ;
+    skos:member <https://sappho-digital.com/voc/person_c408a1bcd63c420f> ;
+    skos:member <https://sappho-digital.com/voc/person_db532d0c7b2fccca> ;
+    skos:member <https://sappho-digital.com/voc/person_7124993358ee4d33> ;
+    skos:member <https://sappho-digital.com/voc/person_9c96d9e565291dda> ;
+    skos:member <https://sappho-digital.com/voc/person_1e6e628ea0192e31> ;
+    skos:member <https://sappho-digital.com/voc/person_278a0a79e0be5174> ;
+    skos:member <https://sappho-digital.com/voc/person_06c6360bcd505db1> ;
+    skos:member <https://sappho-digital.com/voc/person_b663db28c943787a> ;
+    skos:member <https://sappho-digital.com/voc/person_f42fab276b6fdb13> ;
+    skos:member <https://sappho-digital.com/voc/person_a8693158074cfc94> ;
+    skos:member <https://sappho-digital.com/voc/person_98fe1bf71475363b> ;
+    skos:member <https://sappho-digital.com/voc/person_1972623f5799ed62> ;
+    skos:member <https://sappho-digital.com/voc/person_b440568ec351ed84> ;
+    skos:member <https://sappho-digital.com/voc/person_66fc054f0477ea23> ;
+    skos:member <https://sappho-digital.com/voc/person_01ec9bc374eb76b7> ;
+    skos:member <https://sappho-digital.com/voc/person_9865138458182890> ;
+    skos:member <https://sappho-digital.com/voc/person_5771e8248ede2068> ;
+    skos:member <https://sappho-digital.com/voc/person_e585b2a779019b7e> ;
+    skos:member <https://sappho-digital.com/voc/person_278199322209770d> ;
+    skos:member <https://sappho-digital.com/voc/person_a2f67175618331bf> ;
+    skos:member <https://sappho-digital.com/voc/person_b793a3807d130de0> ;
+    skos:member <https://sappho-digital.com/voc/person_8403b22eecf9a7e8> ;
+    skos:member <https://sappho-digital.com/voc/person_dd90800ee54e2216> ;
+    skos:member <https://sappho-digital.com/voc/person_d2167a313c41ceaa> ;
+    skos:member <https://sappho-digital.com/voc/person_9ee0b67040c4734c> ;
+    skos:member <https://sappho-digital.com/voc/person_6c3ac7cd68c42b93> ;
+    skos:member <https://sappho-digital.com/voc/person_36a33d615281cb7f> ;
+    skos:member <https://sappho-digital.com/voc/person_7d3c887eeaa47caf> ;
+    skos:member <https://sappho-digital.com/voc/person_ee7ff70540e361f7> ;
+    skos:member <https://sappho-digital.com/voc/person_95f834da965f8d52> ;
+    skos:member <https://sappho-digital.com/voc/person_05e200db9312b803> ;
+    skos:member <https://sappho-digital.com/voc/person_d92f8054b846977e> ;
+    skos:member <https://sappho-digital.com/voc/person_40792a88ba634e66> ;
+    skos:member <https://sappho-digital.com/voc/person_e7c5d465a0193271> ;
+    skos:member <https://sappho-digital.com/voc/person_acdbd75b6cf29fa6> ;
+    skos:member <https://sappho-digital.com/voc/person_4a8abedda068cc77> ;
+    skos:member <https://sappho-digital.com/voc/person_97a24d8c828b75ec> ;
+    skos:member <https://sappho-digital.com/voc/person_f608e2394ac9ae2a> ;
+    skos:member <https://sappho-digital.com/voc/person_521151dea6fb9e09> ;
+    skos:member <https://sappho-digital.com/voc/person_669b106539453871> ;
+    skos:member <https://sappho-digital.com/voc/person_14582bf9dd069b37> ;
+    skos:member <https://sappho-digital.com/voc/person_37c2bf8d11811a0e> ;
+    skos:member <https://sappho-digital.com/voc/person_803864de40878a17> ;
+    skos:member <https://sappho-digital.com/voc/person_4054b50081c54a12> ;
+    skos:member <https://sappho-digital.com/voc/person_a31e921338acf862> .
+
+<https://sappho-digital.com/voc/collection_phrase> a skos:Collection ;
+    skos:prefLabel "Phrasen"@de ;
+    skos:member <https://sappho-digital.com/voc/phrase_108f0ac68025102d> ;
+    skos:member <https://sappho-digital.com/voc/phrase_42853034668c7b29> ;
+    skos:member <https://sappho-digital.com/voc/phrase_2ec47d9b59c1040e> ;
+    skos:member <https://sappho-digital.com/voc/phrase_5cd31d1448d304fd> ;
+    skos:member <https://sappho-digital.com/voc/phrase_993410118d749966> .
+
+<https://sappho-digital.com/voc/collection_plot> a skos:Collection ;
+    skos:prefLabel "Stoffe"@de ;
+    skos:member <https://sappho-digital.com/voc/plot_dfc7969c4ebf3533> ;
+    skos:member <https://sappho-digital.com/voc/plot_fd168d9b2224361d> ;
+    skos:member <https://sappho-digital.com/voc/plot_86a1ad47f8e7fa03> ;
+    skos:member <https://sappho-digital.com/voc/plot_7fc0a31f8eefb7cc> ;
+    skos:member <https://sappho-digital.com/voc/plot_42557e8d70c24751> ;
+    skos:member <https://sappho-digital.com/voc/plot_b3deb8ded8bddf04> ;
+    skos:member <https://sappho-digital.com/voc/plot_b83cd3a9f03a61c4> ;
+    skos:member <https://sappho-digital.com/voc/plot_5087850a55fd0874> ;
+    skos:member <https://sappho-digital.com/voc/plot_7bd4c599c42360db> ;
+    skos:member <https://sappho-digital.com/voc/plot_d761685e20e4c05d> ;
+    skos:member <https://sappho-digital.com/voc/plot_9b9d5a40ffdaaaba> ;
+    skos:member <https://sappho-digital.com/voc/plot_dedcc9b1e7fb8e79> ;
+    skos:member <https://sappho-digital.com/voc/plot_168fc491c40ff2fd> ;
+    skos:member <https://sappho-digital.com/voc/plot_ebb7046704a8c30c> ;
+    skos:member <https://sappho-digital.com/voc/plot_1bd6cf31c44d00e5> ;
+    skos:member <https://sappho-digital.com/voc/plot_531e3c7365ed869a> ;
+    skos:member <https://sappho-digital.com/voc/plot_5528e918f9003c9c> ;
+    skos:member <https://sappho-digital.com/voc/plot_0a6119efed4bdf7d> ;
+    skos:member <https://sappho-digital.com/voc/plot_efe620bf3882fa2f> ;
+    skos:member <https://sappho-digital.com/voc/plot_a3935710c883087b> ;
+    skos:member <https://sappho-digital.com/voc/plot_b2d8b14d68b73dd5> ;
+    skos:member <https://sappho-digital.com/voc/plot_0b092ed64a936159> ;
+    skos:member <https://sappho-digital.com/voc/plot_30ec8b515802033f> ;
+    skos:member <https://sappho-digital.com/voc/plot_cc6bf7467ad0c7cf> ;
+    skos:member <https://sappho-digital.com/voc/plot_6ec13f66820264d7> ;
+    skos:member <https://sappho-digital.com/voc/plot_011312b82eb4fc98> ;
+    skos:member <https://sappho-digital.com/voc/plot_47b732cf0edd2f7e> ;
+    skos:member <https://sappho-digital.com/voc/plot_3b2a78ce1bd49c2f> ;
+    skos:member <https://sappho-digital.com/voc/plot_f69b5676eae739bc> ;
+    skos:member <https://sappho-digital.com/voc/plot_43b59f052f3dc73e> ;
+    skos:member <https://sappho-digital.com/voc/plot_cce03921076cb7bf> ;
+    skos:member <https://sappho-digital.com/voc/plot_b2aa4b409c0138a8> ;
+    skos:member <https://sappho-digital.com/voc/plot_cc3d0841ee1cc1f2> ;
+    skos:member <https://sappho-digital.com/voc/plot_830dcfef58019d56> ;
+    skos:member <https://sappho-digital.com/voc/plot_6adb2e4795def630> ;
+    skos:member <https://sappho-digital.com/voc/plot_7088a192832d9d0c> ;
+    skos:member <https://sappho-digital.com/voc/plot_c15e2310c0183ba9> ;
+    skos:member <https://sappho-digital.com/voc/plot_08ad0013a591aa17> ;
+    skos:member <https://sappho-digital.com/voc/plot_414bc4680cad7ddc> .
+
+<https://sappho-digital.com/voc/collection_topic> a skos:Collection ;
+    skos:prefLabel "Themen"@de ;
+    skos:member <https://sappho-digital.com/voc/topic_9bace65450b57656> ;
+    skos:member <https://sappho-digital.com/voc/topic_dd0209b2c71040a5> ;
+    skos:member <https://sappho-digital.com/voc/topic_16fb1687f7449a95> ;
+    skos:member <https://sappho-digital.com/voc/topic_f6d80c8d012ca95d> ;
+    skos:member <https://sappho-digital.com/voc/topic_868c77ac61c449bd> ;
+    skos:member <https://sappho-digital.com/voc/topic_6965e0a196d0b97e> ;
+    skos:member <https://sappho-digital.com/voc/topic_a10417e468b798b0> ;
+    skos:member <https://sappho-digital.com/voc/topic_ccb502909ffa7cd8> ;
+    skos:member <https://sappho-digital.com/voc/topic_85e382a7ed66294c> ;
+    skos:member <https://sappho-digital.com/voc/topic_0af359e15219034a> ;
+    skos:member <https://sappho-digital.com/voc/topic_d0d0d796a787f4a8> ;
+    skos:member <https://sappho-digital.com/voc/topic_b44d4c1bda5009f2> ;
+    skos:member <https://sappho-digital.com/voc/topic_547b51889f7bce04> ;
+    skos:member <https://sappho-digital.com/voc/topic_b51493c7cb013212> ;
+    skos:member <https://sappho-digital.com/voc/topic_173f939586542d39> ;
+    skos:member <https://sappho-digital.com/voc/topic_1de543cc588d6ee3> ;
+    skos:member <https://sappho-digital.com/voc/topic_979480c5de919f6e> ;
+    skos:member <https://sappho-digital.com/voc/topic_4d0efc6118699f99> ;
+    skos:member <https://sappho-digital.com/voc/topic_e059b05a9148622d> ;
+    skos:member <https://sappho-digital.com/voc/topic_7da8193d94d44125> ;
+    skos:member <https://sappho-digital.com/voc/topic_193f7fb77b90540a> ;
+    skos:member <https://sappho-digital.com/voc/topic_3c28b27922e5dfea> ;
+    skos:member <https://sappho-digital.com/voc/topic_6c84497f664d562a> ;
+    skos:member <https://sappho-digital.com/voc/topic_c02e0ff3d2bffc47> ;
+    skos:member <https://sappho-digital.com/voc/topic_b0049a9652bca00f> ;
+    skos:member <https://sappho-digital.com/voc/topic_7112b97bd8eccdc6> ;
+    skos:member <https://sappho-digital.com/voc/topic_e3f9c28d697807a6> ;
+    skos:member <https://sappho-digital.com/voc/topic_bdd785a758abd7cd> ;
+    skos:member <https://sappho-digital.com/voc/topic_216c06ff845256fe> ;
+    skos:member <https://sappho-digital.com/voc/topic_61418e73ecf18fa9> ;
+    skos:member <https://sappho-digital.com/voc/topic_afe138550cd16d0b> ;
+    skos:member <https://sappho-digital.com/voc/topic_6dfd95722c255071> ;
+    skos:member <https://sappho-digital.com/voc/topic_d8a87ac0faded437> ;
+    skos:member <https://sappho-digital.com/voc/topic_e6ecf2d8c3d52793> ;
+    skos:member <https://sappho-digital.com/voc/topic_48d9deec1aa375bc> ;
+    skos:member <https://sappho-digital.com/voc/topic_522a85ce59f9c66a> ;
+    skos:member <https://sappho-digital.com/voc/topic_91fbce010840c414> ;
+    skos:member <https://sappho-digital.com/voc/topic_f83ec0822d1cce6e> ;
+    skos:member <https://sappho-digital.com/voc/topic_83a2d3f58ce463ad> ;
+    skos:member <https://sappho-digital.com/voc/topic_fe0ae02e2ba6d7c4> ;
+    skos:member <https://sappho-digital.com/voc/topic_e7a7fad674ab17f4> ;
+    skos:member <https://sappho-digital.com/voc/topic_90253972585e05d8> ;
+    skos:member <https://sappho-digital.com/voc/topic_5f98e5b87c9f2f96> ;
+    skos:member <https://sappho-digital.com/voc/topic_0424470816a8c5ac> .
+
+<https://sappho-digital.com/voc/collection_work> a skos:Collection ;
+    skos:prefLabel "Werke"@de ;
+    skos:member <https://sappho-digital.com/voc/work_da4bf9fda473cc89> ;
+    skos:member <https://sappho-digital.com/voc/work_0e2eeafefe2dae48> ;
+    skos:member <https://sappho-digital.com/voc/work_50897b387fb5a925> ;
+    skos:member <https://sappho-digital.com/voc/work_2b67619b4d423e5a> ;
+    skos:member <https://sappho-digital.com/voc/work_9b4a173a94427606> ;
+    skos:member <https://sappho-digital.com/voc/work_f740219977100c75> ;
+    skos:member <https://sappho-digital.com/voc/work_0b367126b900439f> ;
+    skos:member <https://sappho-digital.com/voc/work_7b7be8da5c1ca839> ;
+    skos:member <https://sappho-digital.com/voc/work_67d314d5db550e06> ;
+    skos:member <https://sappho-digital.com/voc/work_d27bb3164e556709> ;
+    skos:member <https://sappho-digital.com/voc/work_18f9bba320ea9dc9> ;
+    skos:member <https://sappho-digital.com/voc/work_e0fa6d52d403955c> ;
+    skos:member <https://sappho-digital.com/voc/work_ef190d7c21734365> ;
+    skos:member <https://sappho-digital.com/voc/work_0951b31d71de94b8> ;
+    skos:member <https://sappho-digital.com/voc/work_bd94b08706bbf1d8> ;
+    skos:member <https://sappho-digital.com/voc/work_8b90e47471cb4cb5> ;
+    skos:member <https://sappho-digital.com/voc/work_9e0dd0ba7bd9212d> ;
+    skos:member <https://sappho-digital.com/voc/work_9a6fa5b72a8235b6> ;
+    skos:member <https://sappho-digital.com/voc/work_7ad506cbcc0b8143> ;
+    skos:member <https://sappho-digital.com/voc/work_64e314c856d1dbbe> ;
+    skos:member <https://sappho-digital.com/voc/work_7ddaff9b6814b58b> ;
+    skos:member <https://sappho-digital.com/voc/work_4f835860e11c2674> ;
+    skos:member <https://sappho-digital.com/voc/work_59687e2256dfc7f3> ;
+    skos:member <https://sappho-digital.com/voc/work_b0614c54335f6184> ;
+    skos:member <https://sappho-digital.com/voc/work_dd5a96c631b854f4> ;
+    skos:member <https://sappho-digital.com/voc/work_b36331eb746b025a> .
+
+<https://sappho-digital.com/voc/motif_8e771c69dd16a41d> a skos:Concept ;
+    skos:prefLabel "Abendrot"@de ;
+    skos:notation "motif_8e771c69dd16a41d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_876aeb61deb4984f> ;
+    skos:exactMatch wd:Q1141780 .
+
+<https://sappho-digital.com/voc/motif_637a4ceb95c9c2f5> a skos:Concept ;
+    skos:prefLabel "Abschied/Verlassen"@de ;
+    skos:notation "motif_637a4ceb95c9c2f5" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:exactMatch wd:Q21171241 .
+
+<https://sappho-digital.com/voc/motif_8e292f9623cb3869> a skos:Concept ;
+    skos:prefLabel "Alter"@de ;
+    skos:notation "motif_8e292f9623cb3869" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2f658ec3c5ec3ae4> ;
+    skos:exactMatch wd:Q185836 .
+
+<https://sappho-digital.com/voc/motif_2b1f28169974867c> a skos:Concept ;
+    skos:prefLabel "Altern"@de ;
+    skos:notation "motif_2b1f28169974867c" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2f658ec3c5ec3ae4> ;
+    skos:exactMatch wd:Q332154 .
+
+<https://sappho-digital.com/voc/motif_7b4f6bd41d20b520> a skos:Concept ;
+    skos:prefLabel "Apfel"@de ;
+    skos:notation "motif_7b4f6bd41d20b520" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f2aa906d0ec4e3f4> ;
+    skos:exactMatch wd:Q89 .
+
+<https://sappho-digital.com/voc/motif_872360a9416bbe76> a skos:Concept ;
+    skos:prefLabel "Apfelbaum"@de ;
+    skos:notation "motif_872360a9416bbe76" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f2aa906d0ec4e3f4> ;
+    skos:exactMatch wd:Q60458657 .
+
+<https://sappho-digital.com/voc/motif_38d7d43628e9d018> a skos:Concept ;
+    skos:prefLabel "Auge"@de ;
+    skos:notation "motif_38d7d43628e9d018" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_e49a5f49d3750700> ;
+    skos:exactMatch wd:Q7364 .
+
+<https://sappho-digital.com/voc/motif_2c7c60fffbf5467c> a skos:Concept ;
+    skos:prefLabel "Aussehen"@de ;
+    skos:notation "motif_2c7c60fffbf5467c" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_c92ed98fdf8c34f1> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_25f446d346d5ae39> .
+
+<https://sappho-digital.com/voc/motif_faa2b53108d3d18e> a skos:Concept ;
+    skos:prefLabel "Barbitos"@de ;
+    skos:notation "motif_faa2b53108d3d18e" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_e3a227ac72b4e7d3> ;
+    skos:exactMatch wd:Q790312 .
+
+<https://sappho-digital.com/voc/motif_d80bb67aabd5386f> a skos:Concept ;
+    skos:prefLabel "Becher/Krug"@de ;
+    skos:notation "motif_d80bb67aabd5386f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_ab661b23423441c6> ;
+    skos:exactMatch wd:Q81727 .
+
+<https://sappho-digital.com/voc/motif_736eb7ef6202472f> a skos:Concept ;
+    skos:prefLabel "Begehren"@de ;
+    skos:notation "motif_736eb7ef6202472f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_58aba2ccf82b6543> ;
+    skos:exactMatch wd:Q775842 .
+
+<https://sappho-digital.com/voc/motif_8aa33913f008eb89> a skos:Concept ;
+    skos:prefLabel "Biene"@de ;
+    skos:notation "motif_8aa33913f008eb89" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_4c934ba7b9f256bf> ;
+    skos:exactMatch wd:Q7391 .
+
+<https://sappho-digital.com/voc/motif_51e665deaa2486ee> a skos:Concept ;
+    skos:prefLabel "Bitterkeit"@de ;
+    skos:notation "motif_51e665deaa2486ee" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:narrowMatch wd:Q1517187,
+        wd:Q407747 .
+
+<https://sappho-digital.com/voc/motif_01ca370ea29462e3> a skos:Concept ;
+    skos:prefLabel "Blume"@de ;
+    skos:notation "motif_01ca370ea29462e3" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f2aa906d0ec4e3f4> ;
+    skos:exactMatch wd:Q886167 .
+
+<https://sappho-digital.com/voc/motif_4facb4bf5a22499b> a skos:Concept ;
+    skos:prefLabel "Brunnen"@de ;
+    skos:notation "motif_4facb4bf5a22499b" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_a26b7d0dd6b16118> ;
+    skos:exactMatch wd:Q483453 .
+
+<https://sappho-digital.com/voc/motif_d79ec516e61a1f80> a skos:Concept ;
+    skos:prefLabel "Chor"@de ;
+    skos:notation "motif_d79ec516e61a1f80" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_c7adfc594b0535b3> ;
+    skos:exactMatch wd:Q131186 .
+
+<https://sappho-digital.com/voc/motif_af8f6ed291383b8c> a skos:Concept ;
+    skos:prefLabel "Dichtkunst"@de ;
+    skos:notation "motif_af8f6ed291383b8c" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_051983025a946344> ;
+    skos:exactMatch wd:Q482 .
+
+<https://sappho-digital.com/voc/motif_71f3b15b4a29d968> a skos:Concept ;
+    skos:prefLabel "Ehe"@de ;
+    skos:notation "motif_71f3b15b4a29d968" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_b3f47e9ec671bb4b> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_281b95ce63718bed>,
+        <https://sappho-digital.com/voc/motif_803e6cdc78c0c5a1> ;
+    skos:exactMatch wd:Q8445 .
+
+<https://sappho-digital.com/voc/motif_15d689c1f40b1d56> a skos:Concept ;
+    skos:prefLabel "Eifersucht"@de ;
+    skos:notation "motif_15d689c1f40b1d56" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:exactMatch wd:Q6545811 .
+
+<https://sappho-digital.com/voc/motif_f4fe687d6a816b49> a skos:Concept ;
+    skos:prefLabel "Einsamkeit"@de ;
+    skos:notation "motif_f4fe687d6a816b49" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:exactMatch wd:Q223270 .
+
+<https://sappho-digital.com/voc/motif_2126df79f7250a93> a skos:Concept ;
+    skos:prefLabel "Emotionen- und Affektmotive"@de ;
+    skos:notation "motif_2126df79f7250a93" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_15d689c1f40b1d56>,
+        <https://sappho-digital.com/voc/motif_190541ca0caf5c3f>,
+        <https://sappho-digital.com/voc/motif_1cd4207b96382696>,
+        <https://sappho-digital.com/voc/motif_24f6269abdf1c989>,
+        <https://sappho-digital.com/voc/motif_2bae3f2188e05143>,
+        <https://sappho-digital.com/voc/motif_2d730412302b3df0>,
+        <https://sappho-digital.com/voc/motif_4f6e0ef68efa0824>,
+        <https://sappho-digital.com/voc/motif_51e665deaa2486ee>,
+        <https://sappho-digital.com/voc/motif_580d75823aa2f127>,
+        <https://sappho-digital.com/voc/motif_637a4ceb95c9c2f5>,
+        <https://sappho-digital.com/voc/motif_63ab36bbe88b209b>,
+        <https://sappho-digital.com/voc/motif_78fe5e7fce1afcba>,
+        <https://sappho-digital.com/voc/motif_791dc243a6ba1593>,
+        <https://sappho-digital.com/voc/motif_7a31b1efe2cb20da>,
+        <https://sappho-digital.com/voc/motif_7abc136b51bb0005>,
+        <https://sappho-digital.com/voc/motif_82cbd847b829adca>,
+        <https://sappho-digital.com/voc/motif_88112d916a887aa5>,
+        <https://sappho-digital.com/voc/motif_8f41e1cc1d433f40>,
+        <https://sappho-digital.com/voc/motif_c30341434873ce70>,
+        <https://sappho-digital.com/voc/motif_f08832363d803240>,
+        <https://sappho-digital.com/voc/motif_f4fe687d6a816b49> .
+
+<https://sappho-digital.com/voc/motif_24f6269abdf1c989> a skos:Concept ;
+    skos:prefLabel "Erinnerung"@de ;
+    skos:notation "motif_24f6269abdf1c989" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:exactMatch wd:Q492 .
+
+<https://sappho-digital.com/voc/motif_099b483011788b7b> a skos:Concept ;
+    skos:prefLabel "Erscheinungsmotive"@de ;
+    skos:notation "motif_099b483011788b7b" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_815301c03c8fd072> .
+
+<https://sappho-digital.com/voc/motif_b39aa0e2a40a8ee4> a skos:Concept ;
+    skos:prefLabel "Farbmotive"@de ;
+    skos:notation "motif_b39aa0e2a40a8ee4" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_3030faf4dfb8101d>,
+        <https://sappho-digital.com/voc/motif_5cc0b75e5bf4c183>,
+        <https://sappho-digital.com/voc/motif_6605a54f19f1346b>,
+        <https://sappho-digital.com/voc/motif_778e6dc2ad3d5401>,
+        <https://sappho-digital.com/voc/motif_e02eb23076791844>,
+        <https://sappho-digital.com/voc/motif_e594796d6e9733cb> .
+
+<https://sappho-digital.com/voc/motif_b10a4078d73a7320> a skos:Concept ;
+    skos:prefLabel "Fauna"@de ;
+    skos:notation "motif_b10a4078d73a7320" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_4c934ba7b9f256bf>,
+        <https://sappho-digital.com/voc/motif_9505455eb419f6c3> .
+
+<https://sappho-digital.com/voc/motif_6defe0a8e240f27b> a skos:Concept ;
+    skos:prefLabel "Fels"@de ;
+    skos:notation "motif_6defe0a8e240f27b" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_a26b7d0dd6b16118> ;
+    skos:exactMatch wd:Q107679 .
+
+<https://sappho-digital.com/voc/motif_64a381d1facbb9aa> a skos:Concept ;
+    skos:prefLabel "Feuer"@de ;
+    skos:notation "motif_64a381d1facbb9aa" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_fcf3b7b61805babd> ;
+    skos:exactMatch wd:Q3196 .
+
+<https://sappho-digital.com/voc/motif_61d8a11fb3de5da8> a skos:Concept ;
+    skos:prefLabel "Finger"@de ;
+    skos:notation "motif_61d8a11fb3de5da8" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_e49a5f49d3750700> ;
+    skos:exactMatch wd:Q620207 .
+
+<https://sappho-digital.com/voc/motif_f2aa906d0ec4e3f4> a skos:Concept ;
+    skos:prefLabel "Flora"@de ;
+    skos:notation "motif_f2aa906d0ec4e3f4" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_01ca370ea29462e3>,
+        <https://sappho-digital.com/voc/motif_04b4fca3d10aab24>,
+        <https://sappho-digital.com/voc/motif_232c5062cde7d3c1>,
+        <https://sappho-digital.com/voc/motif_4c9fc6a95d249640>,
+        <https://sappho-digital.com/voc/motif_5047cf2d5e1607fa>,
+        <https://sappho-digital.com/voc/motif_6ce22ab4ce13cf9e>,
+        <https://sappho-digital.com/voc/motif_7b4f6bd41d20b520>,
+        <https://sappho-digital.com/voc/motif_872360a9416bbe76>,
+        <https://sappho-digital.com/voc/motif_8bd0b4436d2c2211>,
+        <https://sappho-digital.com/voc/motif_a9a67d884bb4bc94>,
+        <https://sappho-digital.com/voc/motif_ea433b378d53e195>,
+        <https://sappho-digital.com/voc/motif_ea72ee231feeee11>,
+        <https://sappho-digital.com/voc/motif_ed3912cf6c881149> .
+
+<https://sappho-digital.com/voc/motif_751896a2b642d52f> a skos:Concept ;
+    skos:prefLabel "Fragmenthaftigkeit"@de ;
+    skos:notation "motif_751896a2b642d52f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_051983025a946344> ;
+    skos:relatedMatch wd:Q122238708 .
+
+<https://sappho-digital.com/voc/motif_7939d5d42d13eba9> a skos:Concept ;
+    skos:prefLabel "Freundschaft"@de ;
+    skos:notation "motif_7939d5d42d13eba9" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_25f24c9ae6926a3d> ;
+    skos:exactMatch wd:Q491 .
+
+<https://sappho-digital.com/voc/motif_2d21be022480abad> a skos:Concept ;
+    skos:prefLabel "Fruchtbarkeit"@de ;
+    skos:notation "motif_2d21be022480abad" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_58aba2ccf82b6543> ;
+    skos:exactMatch wd:Q964401 .
+
+<https://sappho-digital.com/voc/motif_117bf1151b920a34> a skos:Concept ;
+    skos:prefLabel "Frühling"@de ;
+    skos:notation "motif_117bf1151b920a34" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_5a650c393c811ea4> ;
+    skos:exactMatch wd:Q1312 .
+
+<https://sappho-digital.com/voc/motif_7de60080ab357919> a skos:Concept ;
+    skos:prefLabel "Fuß"@de ;
+    skos:notation "motif_7de60080ab357919" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_e49a5f49d3750700> ;
+    skos:exactMatch wd:Q15807 .
+
+<https://sappho-digital.com/voc/motif_5712449d2e4712f8> a skos:Concept ;
+    skos:prefLabel "Garten"@de ;
+    skos:notation "motif_5712449d2e4712f8" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_a26b7d0dd6b16118> ;
+    skos:exactMatch wd:Q1107656 .
+
+<https://sappho-digital.com/voc/motif_acf2f74928d12caa> a skos:Concept ;
+    skos:prefLabel "Gebet"@de ;
+    skos:notation "motif_acf2f74928d12caa" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_68f3d8712ddf8d70> ;
+    skos:exactMatch wd:Q40953 .
+
+<https://sappho-digital.com/voc/motif_88df0b1164b2fb91> a skos:Concept ;
+    skos:prefLabel "Gesang"@de ;
+    skos:notation "motif_88df0b1164b2fb91" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_c7adfc594b0535b3> ;
+    skos:exactMatch wd:Q27939 .
+
+<https://sappho-digital.com/voc/motif_25f24c9ae6926a3d> a skos:Concept ;
+    skos:prefLabel "Gesellschaft"@de ;
+    skos:notation "motif_25f24c9ae6926a3d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_b3f47e9ec671bb4b> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_002ca4e56dca366e>,
+        <https://sappho-digital.com/voc/motif_203ed612d2946cdf>,
+        <https://sappho-digital.com/voc/motif_62827f2ed507b1a4>,
+        <https://sappho-digital.com/voc/motif_7939d5d42d13eba9>,
+        <https://sappho-digital.com/voc/motif_e454faf75bf650db> .
+
+<https://sappho-digital.com/voc/motif_b3f47e9ec671bb4b> a skos:Concept ;
+    skos:prefLabel "Gesellschafts- und Religionsmotive"@de ;
+    skos:notation "motif_b3f47e9ec671bb4b" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_25f24c9ae6926a3d>,
+        <https://sappho-digital.com/voc/motif_68f3d8712ddf8d70>,
+        <https://sappho-digital.com/voc/motif_71f3b15b4a29d968>,
+        <https://sappho-digital.com/voc/motif_a18a39883dd84fa9>,
+        <https://sappho-digital.com/voc/motif_f9de876206744971> .
+
+<https://sappho-digital.com/voc/motif_92328d8c25447861> a skos:Concept ;
+    skos:prefLabel "Gewitter"@de ;
+    skos:notation "motif_92328d8c25447861" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f4cf66993a308196> ;
+    skos:exactMatch wd:Q2857578 .
+
+<https://sappho-digital.com/voc/motif_43ccd28d178d02b7> a skos:Concept ;
+    skos:prefLabel "Gift"@de ;
+    skos:notation "motif_43ccd28d178d02b7" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_ffcba97b822ac20c> ;
+    skos:exactMatch wd:Q40867 .
+
+<https://sappho-digital.com/voc/motif_815301c03c8fd072> a skos:Concept ;
+    skos:prefLabel "Glanz"@de ;
+    skos:notation "motif_815301c03c8fd072" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_099b483011788b7b> ;
+    skos:exactMatch wd:Q900581 .
+
+<https://sappho-digital.com/voc/motif_67d99b12bd68f38d> a skos:Concept ;
+    skos:prefLabel "Gleichaltrigkeit"@de ;
+    skos:notation "motif_67d99b12bd68f38d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2f658ec3c5ec3ae4> ;
+    skos:narrowMatch wd:Q115089745 .
+
+<https://sappho-digital.com/voc/motif_2bae3f2188e05143> a skos:Concept ;
+    skos:prefLabel "Glückseligkeit"@de ;
+    skos:notation "motif_2bae3f2188e05143" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:relatedMatch wd:Q8 .
+
+<https://sappho-digital.com/voc/motif_5cc0b75e5bf4c183> a skos:Concept ;
+    skos:prefLabel "Gold"@de ;
+    skos:notation "motif_5cc0b75e5bf4c183" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_b39aa0e2a40a8ee4> ;
+    skos:exactMatch wd:Q208045 .
+
+<https://sappho-digital.com/voc/motif_b0bf073234a3855a> a skos:Concept ;
+    skos:prefLabel "Gottesvergleich"@de ;
+    skos:notation "motif_b0bf073234a3855a" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_68f3d8712ddf8d70> ;
+    skos:broadMatch wd:Q1720648 ;
+    skos:closeMatch wd:Q580995 ;
+    skos:relatedMatch wd:Q178885 .
+
+<https://sappho-digital.com/voc/motif_8bd0b4436d2c2211> a skos:Concept ;
+    skos:prefLabel "Granatapfel"@de ;
+    skos:notation "motif_8bd0b4436d2c2211" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f2aa906d0ec4e3f4> ;
+    skos:exactMatch wd:Q13188 .
+
+<https://sappho-digital.com/voc/motif_04b4fca3d10aab24> a skos:Concept ;
+    skos:prefLabel "Gras"@de ;
+    skos:notation "motif_04b4fca3d10aab24" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f2aa906d0ec4e3f4> ;
+    skos:exactMatch wd:Q643352 .
+
+<https://sappho-digital.com/voc/motif_a9de6af914034ff8> a skos:Concept ;
+    skos:prefLabel "Harfe"@de ;
+    skos:notation "motif_a9de6af914034ff8" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_e3a227ac72b4e7d3> ;
+    skos:exactMatch wd:Q47369 .
+
+<https://sappho-digital.com/voc/motif_803e6cdc78c0c5a1> a skos:Concept ;
+    skos:prefLabel "Heirat"@de ;
+    skos:notation "motif_803e6cdc78c0c5a1" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_71f3b15b4a29d968> ;
+    skos:closeMatch wd:Q49836 ;
+    skos:relatedMatch wd:Q8445 .
+
+<https://sappho-digital.com/voc/motif_172883cbad5b3349> a skos:Concept ;
+    skos:prefLabel "Heller Ton"@de ;
+    skos:notation "motif_172883cbad5b3349" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_dde09ae7bddcf72c> ;
+    skos:broadMatch wd:Q2717062 .
+
+<https://sappho-digital.com/voc/motif_8f940561ee7ea623> a skos:Concept ;
+    skos:prefLabel "Herz"@de ;
+    skos:notation "motif_8f940561ee7ea623" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_e49a5f49d3750700> ;
+    skos:exactMatch wd:Q1072 .
+
+<https://sappho-digital.com/voc/motif_c1c5790bb38d4fbb> a skos:Concept ;
+    skos:prefLabel "Himmel"@de ;
+    skos:notation "motif_c1c5790bb38d4fbb" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_278e356ed64cbb3f>,
+        <https://sappho-digital.com/voc/motif_844c1db25d6fbc84>,
+        <https://sappho-digital.com/voc/motif_8d88e091e3bb28d8>,
+        <https://sappho-digital.com/voc/motif_e50316313352d60d>,
+        <https://sappho-digital.com/voc/motif_ee611d65b870ad00> ;
+    skos:exactMatch wd:Q527 .
+
+<https://sappho-digital.com/voc/motif_9505455eb419f6c3> a skos:Concept ;
+    skos:prefLabel "Hirtenwesen"@de ;
+    skos:notation "motif_9505455eb419f6c3" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_b10a4078d73a7320> ;
+    skos:exactMatch wd:Q9056738 .
+
+<https://sappho-digital.com/voc/motif_281b95ce63718bed> a skos:Concept ;
+    skos:prefLabel "Hochzeit"@de ;
+    skos:notation "motif_281b95ce63718bed" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_71f3b15b4a29d968> ;
+    skos:exactMatch wd:Q49836 .
+
+<https://sappho-digital.com/voc/motif_f08832363d803240> a skos:Concept ;
+    skos:prefLabel "Hoffnung"@de ;
+    skos:notation "motif_f08832363d803240" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:exactMatch wd:Q190507 .
+
+<https://sappho-digital.com/voc/motif_39a10faa6e0647fb> a skos:Concept ;
+    skos:prefLabel "Honig"@de ;
+    skos:notation "motif_39a10faa6e0647fb" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_ffcba97b822ac20c> ;
+    skos:exactMatch wd:Q10987 .
+
+<https://sappho-digital.com/voc/motif_6ce22ab4ce13cf9e> a skos:Concept ;
+    skos:prefLabel "Hyazinthe"@de ;
+    skos:notation "motif_6ce22ab4ce13cf9e" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f2aa906d0ec4e3f4> ;
+    skos:exactMatch wd:Q158758 .
+
+<https://sappho-digital.com/voc/motif_c10f460a9ccb3510> a skos:Concept ;
+    skos:prefLabel "Insel"@de ;
+    skos:notation "motif_c10f460a9ccb3510" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_a26b7d0dd6b16118> ;
+    skos:exactMatch wd:Q23442 .
+
+<https://sappho-digital.com/voc/motif_e3a227ac72b4e7d3> a skos:Concept ;
+    skos:prefLabel "Instrumente"@de ;
+    skos:notation "motif_e3a227ac72b4e7d3" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_48abc1d4ebad9497> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_320231279067b1d8>,
+        <https://sappho-digital.com/voc/motif_5d06c1eb322d00b7>,
+        <https://sappho-digital.com/voc/motif_a9de6af914034ff8>,
+        <https://sappho-digital.com/voc/motif_c16c6077a42ad438>,
+        <https://sappho-digital.com/voc/motif_d46b25ce34a468d0>,
+        <https://sappho-digital.com/voc/motif_faa2b53108d3d18e> .
+
+<https://sappho-digital.com/voc/motif_5a650c393c811ea4> a skos:Concept ;
+    skos:prefLabel "Jahreszeiten"@de ;
+    skos:notation "motif_5a650c393c811ea4" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_117bf1151b920a34> .
+
+<https://sappho-digital.com/voc/motif_de1c36b3db3ce34c> a skos:Concept ;
+    skos:prefLabel "Jugend"@de ;
+    skos:notation "motif_de1c36b3db3ce34c" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2f658ec3c5ec3ae4> ;
+    skos:exactMatch wd:Q190007 .
+
+<https://sappho-digital.com/voc/motif_7abc136b51bb0005> a skos:Concept ;
+    skos:prefLabel "Klage"@de ;
+    skos:notation "motif_7abc136b51bb0005" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:narrowMatch wd:Q1471717 .
+
+<https://sappho-digital.com/voc/motif_ea72ee231feeee11> a skos:Concept ;
+    skos:prefLabel "Kranz"@de ;
+    skos:notation "motif_ea72ee231feeee11" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f2aa906d0ec4e3f4> ;
+    skos:exactMatch wd:Q1201922 .
+
+<https://sappho-digital.com/voc/motif_ed3912cf6c881149> a skos:Concept ;
+    skos:prefLabel "Krokus"@de ;
+    skos:notation "motif_ed3912cf6c881149" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f2aa906d0ec4e3f4> ;
+    skos:exactMatch wd:Q157806 .
+
+<https://sappho-digital.com/voc/motif_25bab1557374fb8e> a skos:Concept ;
+    skos:prefLabel "Kult"@de ;
+    skos:notation "motif_25bab1557374fb8e" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_68f3d8712ddf8d70> ;
+    skos:exactMatch wd:Q756820 .
+
+<https://sappho-digital.com/voc/motif_3b55ac3756f8ab42> a skos:Concept ;
+    skos:prefLabel "Kunst"@de ;
+    skos:notation "motif_3b55ac3756f8ab42" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_48abc1d4ebad9497> ;
+    skos:exactMatch wd:Q735 .
+
+<https://sappho-digital.com/voc/motif_48abc1d4ebad9497> a skos:Concept ;
+    skos:prefLabel "Kunstmotive"@de ;
+    skos:notation "motif_48abc1d4ebad9497" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_051983025a946344>,
+        <https://sappho-digital.com/voc/motif_3b55ac3756f8ab42>,
+        <https://sappho-digital.com/voc/motif_b310d7fa48a3989f>,
+        <https://sappho-digital.com/voc/motif_c7adfc594b0535b3>,
+        <https://sappho-digital.com/voc/motif_e3a227ac72b4e7d3> .
+
+<https://sappho-digital.com/voc/motif_304a5e562a17af49> a skos:Concept ;
+    skos:prefLabel "Kuss"@de ;
+    skos:notation "motif_304a5e562a17af49" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_58aba2ccf82b6543> ;
+    skos:exactMatch wd:Q7307 .
+
+<https://sappho-digital.com/voc/motif_c92ed98fdf8c34f1> a skos:Concept ;
+    skos:prefLabel "Körper- und Sinnlichkeitsmotive"@de ;
+    skos:notation "motif_c92ed98fdf8c34f1" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_2c7c60fffbf5467c>,
+        <https://sappho-digital.com/voc/motif_e49a5f49d3750700>,
+        <https://sappho-digital.com/voc/motif_f74d0ae71a82bf5d> .
+
+<https://sappho-digital.com/voc/motif_f74d0ae71a82bf5d> a skos:Concept ;
+    skos:prefLabel "Körperlichkeit"@de ;
+    skos:notation "motif_f74d0ae71a82bf5d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_c92ed98fdf8c34f1> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_481b1c00e6a442c4>,
+        <https://sappho-digital.com/voc/motif_58aba2ccf82b6543>,
+        <https://sappho-digital.com/voc/motif_b298b875e60b4efb>,
+        <https://sappho-digital.com/voc/motif_ff994c162fe2474d> ;
+    skos:relatedMatch wd:Q170494 .
+
+<https://sappho-digital.com/voc/motif_e49a5f49d3750700> a skos:Concept ;
+    skos:prefLabel "Körperteile"@de ;
+    skos:notation "motif_e49a5f49d3750700" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_c92ed98fdf8c34f1> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_33727627b793830a>,
+        <https://sappho-digital.com/voc/motif_38d7d43628e9d018>,
+        <https://sappho-digital.com/voc/motif_61d8a11fb3de5da8>,
+        <https://sappho-digital.com/voc/motif_7de60080ab357919>,
+        <https://sappho-digital.com/voc/motif_7fe9f2b8afd3cc70>,
+        <https://sappho-digital.com/voc/motif_8f940561ee7ea623>,
+        <https://sappho-digital.com/voc/motif_c181a5a5b7398262>,
+        <https://sappho-digital.com/voc/motif_eadc613d365792dc> .
+
+<https://sappho-digital.com/voc/motif_5d06c1eb322d00b7> a skos:Concept ;
+    skos:prefLabel "Laute"@de ;
+    skos:notation "motif_5d06c1eb322d00b7" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_e3a227ac72b4e7d3> ;
+    skos:exactMatch wd:Q180733 .
+
+<https://sappho-digital.com/voc/motif_2f658ec3c5ec3ae4> a skos:Concept ;
+    skos:prefLabel "Lebens- und Altersmotive"@de ;
+    skos:notation "motif_2f658ec3c5ec3ae4" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_2b1f28169974867c>,
+        <https://sappho-digital.com/voc/motif_67d99b12bd68f38d>,
+        <https://sappho-digital.com/voc/motif_8d6c4ae5261c1b7f>,
+        <https://sappho-digital.com/voc/motif_8e292f9623cb3869>,
+        <https://sappho-digital.com/voc/motif_97e73b26b0dc22b0>,
+        <https://sappho-digital.com/voc/motif_de1c36b3db3ce34c> .
+
+<https://sappho-digital.com/voc/motif_ffcba97b822ac20c> a skos:Concept ;
+    skos:prefLabel "Lebensmittel- und Substanzmotive"@de ;
+    skos:notation "motif_ffcba97b822ac20c" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_20ee4027d4def3f7>,
+        <https://sappho-digital.com/voc/motif_39a10faa6e0647fb>,
+        <https://sappho-digital.com/voc/motif_43ccd28d178d02b7>,
+        <https://sappho-digital.com/voc/motif_8dda05b62f2174da> .
+
+<https://sappho-digital.com/voc/motif_162e6dfcee6ada53> a skos:Concept ;
+    skos:prefLabel "Leidenschaft"@de ;
+    skos:notation "motif_162e6dfcee6ada53" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_58aba2ccf82b6543> ;
+    skos:exactMatch wd:Q335046 .
+
+<https://sappho-digital.com/voc/motif_d46b25ce34a468d0> a skos:Concept ;
+    skos:prefLabel "Leier"@de ;
+    skos:notation "motif_d46b25ce34a468d0" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_e3a227ac72b4e7d3> ;
+    skos:exactMatch wd:Q1814870 .
+
+<https://sappho-digital.com/voc/motif_fe5b704563cc5b98> a skos:Concept ;
+    skos:prefLabel "Letztes Lied"@de ;
+    skos:notation "motif_fe5b704563cc5b98" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_c7adfc594b0535b3> ;
+    skos:broadMatch wd:Q7366 .
+
+<https://sappho-digital.com/voc/motif_791dc243a6ba1593> a skos:Concept ;
+    skos:prefLabel "Liebe"@de ;
+    skos:notation "motif_791dc243a6ba1593" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_7205babaca933dc4> ;
+    skos:exactMatch wd:Q316 .
+
+<https://sappho-digital.com/voc/motif_33727627b793830a> a skos:Concept ;
+    skos:prefLabel "Lippe"@de ;
+    skos:notation "motif_33727627b793830a" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_e49a5f49d3750700> ;
+    skos:exactMatch wd:Q15173 .
+
+<https://sappho-digital.com/voc/motif_051983025a946344> a skos:Concept ;
+    skos:prefLabel "Literatur"@de ;
+    skos:notation "motif_051983025a946344" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_48abc1d4ebad9497> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_12b7c713ac24e9f6>,
+        <https://sappho-digital.com/voc/motif_751896a2b642d52f>,
+        <https://sappho-digital.com/voc/motif_af8f6ed291383b8c> ;
+    skos:exactMatch wd:Q8242 .
+
+<https://sappho-digital.com/voc/motif_eadc613d365792dc> a skos:Concept ;
+    skos:prefLabel "Locke"@de ;
+    skos:notation "motif_eadc613d365792dc" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_e49a5f49d3750700> ;
+    skos:exactMatch wd:Q3332053 .
+
+<https://sappho-digital.com/voc/motif_5047cf2d5e1607fa> a skos:Concept ;
+    skos:prefLabel "Lorbeer"@de ;
+    skos:notation "motif_5047cf2d5e1607fa" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f2aa906d0ec4e3f4> ;
+    skos:exactMatch wd:Q26006 .
+
+<https://sappho-digital.com/voc/motif_320231279067b1d8> a skos:Concept ;
+    skos:prefLabel "Lyra"@de ;
+    skos:notation "motif_320231279067b1d8" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_e3a227ac72b4e7d3> ;
+    skos:exactMatch wd:Q201129 .
+
+<https://sappho-digital.com/voc/motif_c9ab4b3812d39197> a skos:Concept ;
+    skos:prefLabel "Meer"@de ;
+    skos:notation "motif_c9ab4b3812d39197" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_a26b7d0dd6b16118> ;
+    skos:exactMatch wd:Q165 .
+
+<https://sappho-digital.com/voc/motif_62581a673f405e6c> a skos:Concept ;
+    skos:prefLabel "Meeresküste"@de ;
+    skos:notation "motif_62581a673f405e6c" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_a26b7d0dd6b16118> ;
+    skos:exactMatch wd:Q93352 .
+
+<https://sappho-digital.com/voc/motif_f9de876206744971> a skos:Concept ;
+    skos:prefLabel "Menschlichkeit"@de ;
+    skos:notation "motif_f9de876206744971" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_b3f47e9ec671bb4b> ;
+    skos:exactMatch wd:Q12767209 .
+
+<https://sappho-digital.com/voc/motif_e454faf75bf650db> a skos:Concept ;
+    skos:prefLabel "Mode"@de ;
+    skos:notation "motif_e454faf75bf650db" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_25f24c9ae6926a3d> ;
+    skos:exactMatch wd:Q12684 .
+
+<https://sappho-digital.com/voc/motif_ee611d65b870ad00> a skos:Concept ;
+    skos:prefLabel "Mond"@de ;
+    skos:notation "motif_ee611d65b870ad00" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_c1c5790bb38d4fbb> ;
+    skos:exactMatch wd:Q405 .
+
+<https://sappho-digital.com/voc/motif_f8ead995947f7500> a skos:Concept ;
+    skos:prefLabel "Morgen"@de ;
+    skos:notation "motif_f8ead995947f7500" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_6ca05631ae27d928> ;
+    skos:exactMatch wd:Q7722 .
+
+<https://sappho-digital.com/voc/motif_01c3eb8edb59de39> a skos:Concept ;
+    skos:prefLabel "Morgenrot"@de ;
+    skos:notation "motif_01c3eb8edb59de39" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_876aeb61deb4984f> ;
+    skos:exactMatch wd:Q635954 .
+
+<https://sappho-digital.com/voc/motif_e66f181abe9c99b8> a skos:Concept ;
+    skos:prefLabel "Musik"@de ;
+    skos:notation "motif_e66f181abe9c99b8" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_c7adfc594b0535b3> ;
+    skos:exactMatch wd:Q638 .
+
+<https://sappho-digital.com/voc/motif_c7adfc594b0535b3> a skos:Concept ;
+    skos:prefLabel "Musik und Gesang"@de ;
+    skos:notation "motif_c7adfc594b0535b3" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_48abc1d4ebad9497> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_88df0b1164b2fb91>,
+        <https://sappho-digital.com/voc/motif_beeb48d0c7ac4bd1>,
+        <https://sappho-digital.com/voc/motif_d79ec516e61a1f80>,
+        <https://sappho-digital.com/voc/motif_e66f181abe9c99b8>,
+        <https://sappho-digital.com/voc/motif_fe5b704563cc5b98> .
+
+<https://sappho-digital.com/voc/motif_0824726b36365ab5> a skos:Concept ;
+    skos:prefLabel "Nacht"@de ;
+    skos:notation "motif_0824726b36365ab5" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_6ca05631ae27d928> ;
+    skos:exactMatch wd:Q575 .
+
+<https://sappho-digital.com/voc/motif_499787c4944b0ba5> a skos:Concept ;
+    skos:prefLabel "Nachtigall"@de ;
+    skos:notation "motif_499787c4944b0ba5" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_a93562355b8f336c> ;
+    skos:exactMatch wd:Q25393 .
+
+<https://sappho-digital.com/voc/motif_b298b875e60b4efb> a skos:Concept ;
+    skos:prefLabel "Nacktheit"@de ;
+    skos:notation "motif_b298b875e60b4efb" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f74d0ae71a82bf5d> ;
+    skos:exactMatch wd:Q10791 .
+
+<https://sappho-digital.com/voc/motif_71dbf6e67ea5a907> a skos:Concept ;
+    skos:prefLabel "Natur"@de ;
+    skos:notation "motif_71dbf6e67ea5a907" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:exactMatch wd:Q7860 .
+
+<https://sappho-digital.com/voc/motif_876aeb61deb4984f> a skos:Concept ;
+    skos:prefLabel "Naturerscheinungen"@de ;
+    skos:notation "motif_876aeb61deb4984f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_01c3eb8edb59de39>,
+        <https://sappho-digital.com/voc/motif_3950fcecf002a43a>,
+        <https://sappho-digital.com/voc/motif_8e771c69dd16a41d>,
+        <https://sappho-digital.com/voc/motif_c2ec495b51738811> .
+
+<https://sappho-digital.com/voc/motif_580d75823aa2f127> a skos:Concept ;
+    skos:prefLabel "Neid"@de ;
+    skos:notation "motif_580d75823aa2f127" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:exactMatch wd:Q188739 .
+
+<https://sappho-digital.com/voc/motif_20ee4027d4def3f7> a skos:Concept ;
+    skos:prefLabel "Nektar"@de ;
+    skos:notation "motif_20ee4027d4def3f7" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_ffcba97b822ac20c> ;
+    skos:exactMatch wd:Q171934 .
+
+<https://sappho-digital.com/voc/motif_12b7c713ac24e9f6> a skos:Concept ;
+    skos:prefLabel "Neue Sappho"@de ;
+    skos:notation "motif_12b7c713ac24e9f6" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_051983025a946344> ;
+    skos:broadMatch wd:Q207869 .
+
+<https://sappho-digital.com/voc/motif_ab661b23423441c6> a skos:Concept ;
+    skos:prefLabel "Objektmotive"@de ;
+    skos:notation "motif_ab661b23423441c6" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_2e583b17a2474551>,
+        <https://sappho-digital.com/voc/motif_d80bb67aabd5386f> .
+
+<https://sappho-digital.com/voc/motif_a26b7d0dd6b16118> a skos:Concept ;
+    skos:prefLabel "Orte"@de ;
+    skos:notation "motif_a26b7d0dd6b16118" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_4facb4bf5a22499b>,
+        <https://sappho-digital.com/voc/motif_5712449d2e4712f8>,
+        <https://sappho-digital.com/voc/motif_62581a673f405e6c>,
+        <https://sappho-digital.com/voc/motif_6defe0a8e240f27b>,
+        <https://sappho-digital.com/voc/motif_c10f460a9ccb3510>,
+        <https://sappho-digital.com/voc/motif_c9ab4b3812d39197> .
+
+<https://sappho-digital.com/voc/motif_c16c6077a42ad438> a skos:Concept ;
+    skos:prefLabel "Pektis"@de ;
+    skos:notation "motif_c16c6077a42ad438" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_e3a227ac72b4e7d3> ;
+    skos:exactMatch wd:Q116758801 .
+
+<https://sappho-digital.com/voc/motif_fcf3b7b61805babd> a skos:Concept ;
+    skos:prefLabel "Physikalische Phänomene"@de ;
+    skos:notation "motif_fcf3b7b61805babd" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_64a381d1facbb9aa> .
+
+<https://sappho-digital.com/voc/motif_278e356ed64cbb3f> a skos:Concept ;
+    skos:prefLabel "Plejaden"@de ;
+    skos:notation "motif_278e356ed64cbb3f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_c1c5790bb38d4fbb> ;
+    skos:exactMatch wd:Q13423 .
+
+<https://sappho-digital.com/voc/motif_a18a39883dd84fa9> a skos:Concept ;
+    skos:prefLabel "Politik"@de ;
+    skos:notation "motif_a18a39883dd84fa9" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_b3f47e9ec671bb4b> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_9cdcb44dabe9cfde> .
+
+<https://sappho-digital.com/voc/motif_6605a54f19f1346b> a skos:Concept ;
+    skos:prefLabel "Purpur"@de ;
+    skos:notation "motif_6605a54f19f1346b" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_b39aa0e2a40a8ee4> ;
+    skos:exactMatch wd:Q3257809 .
+
+<https://sappho-digital.com/voc/motif_88112d916a887aa5> a skos:Concept ;
+    skos:prefLabel "Rache"@de ;
+    skos:notation "motif_88112d916a887aa5" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:exactMatch wd:Q1712140 .
+
+<https://sappho-digital.com/voc/motif_68f3d8712ddf8d70> a skos:Concept ;
+    skos:prefLabel "Religion"@de ;
+    skos:notation "motif_68f3d8712ddf8d70" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_b3f47e9ec671bb4b> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_25bab1557374fb8e>,
+        <https://sappho-digital.com/voc/motif_acf2f74928d12caa>,
+        <https://sappho-digital.com/voc/motif_b0bf073234a3855a>,
+        <https://sappho-digital.com/voc/motif_d57e3bd57313bbdd> ;
+    skos:exactMatch wd:Q9174 .
+
+<https://sappho-digital.com/voc/motif_232c5062cde7d3c1> a skos:Concept ;
+    skos:prefLabel "Rose"@de ;
+    skos:notation "motif_232c5062cde7d3c1" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f2aa906d0ec4e3f4> ;
+    skos:exactMatch wd:Q34687 .
+
+<https://sappho-digital.com/voc/motif_e594796d6e9733cb> a skos:Concept ;
+    skos:prefLabel "Rot"@de ;
+    skos:notation "motif_e594796d6e9733cb" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_b39aa0e2a40a8ee4> ;
+    skos:exactMatch wd:Q3142 .
+
+<https://sappho-digital.com/voc/motif_b310d7fa48a3989f> a skos:Concept ;
+    skos:prefLabel "Ruhm"@de ;
+    skos:notation "motif_b310d7fa48a3989f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_48abc1d4ebad9497> ;
+    skos:exactMatch wd:Q1519566 .
+
+<https://sappho-digital.com/voc/motif_cf06ac1a51be3c55> a skos:Concept ;
+    skos:prefLabel "Schlaf-Motive"@de ;
+    skos:notation "motif_cf06ac1a51be3c55" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_b7009f43de3da4ad>,
+        <https://sappho-digital.com/voc/motif_d8dc25c9b4d4bd52>,
+        <https://sappho-digital.com/voc/motif_ecfabfc090d9d609> ;
+    skos:exactMatch wd:Q35831 .
+
+<https://sappho-digital.com/voc/motif_b7009f43de3da4ad> a skos:Concept ;
+    skos:prefLabel "Schlaflosigkeit"@de ;
+    skos:notation "motif_b7009f43de3da4ad" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_cf06ac1a51be3c55> ;
+    skos:exactMatch wd:Q1869874 .
+
+<https://sappho-digital.com/voc/motif_f810c10450ef91b3> a skos:Concept ;
+    skos:prefLabel "Schlange"@de ;
+    skos:notation "motif_f810c10450ef91b3" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_4c934ba7b9f256bf> ;
+    skos:exactMatch wd:Q2102 .
+
+<https://sappho-digital.com/voc/motif_4f6e0ef68efa0824> a skos:Concept ;
+    skos:prefLabel "Schmerz"@de ;
+    skos:notation "motif_4f6e0ef68efa0824" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:exactMatch wd:Q81938 .
+
+<https://sappho-digital.com/voc/motif_82cbd847b829adca> a skos:Concept ;
+    skos:prefLabel "Schuld"@de ;
+    skos:notation "motif_82cbd847b829adca" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:exactMatch wd:Q628939 .
+
+<https://sappho-digital.com/voc/motif_80440c5206e2b3d4> a skos:Concept ;
+    skos:prefLabel "Schwan"@de ;
+    skos:notation "motif_80440c5206e2b3d4" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_a93562355b8f336c> ;
+    skos:exactMatch wd:Q34384 .
+
+<https://sappho-digital.com/voc/motif_e02eb23076791844> a skos:Concept ;
+    skos:prefLabel "Schwarz"@de ;
+    skos:notation "motif_e02eb23076791844" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_b39aa0e2a40a8ee4> ;
+    skos:exactMatch wd:Q23445 .
+
+<https://sappho-digital.com/voc/motif_632a07b81eb5d851> a skos:Concept ;
+    skos:prefLabel "Schweigen"@de ;
+    skos:notation "motif_632a07b81eb5d851" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_dde09ae7bddcf72c> ;
+    skos:exactMatch wd:Q2255545 .
+
+<https://sappho-digital.com/voc/motif_25f446d346d5ae39> a skos:Concept ;
+    skos:prefLabel "Schönheit"@de ;
+    skos:notation "motif_25f446d346d5ae39" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2c7c60fffbf5467c> ;
+    skos:exactMatch wd:Q7242 .
+
+<https://sappho-digital.com/voc/motif_2d730412302b3df0> a skos:Concept ;
+    skos:prefLabel "Sehnsucht"@de ;
+    skos:notation "motif_2d730412302b3df0" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:exactMatch wd:Q1892385 .
+
+<https://sappho-digital.com/voc/motif_58aba2ccf82b6543> a skos:Concept ;
+    skos:prefLabel "Sexualität und Begehren"@de ;
+    skos:notation "motif_58aba2ccf82b6543" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f74d0ae71a82bf5d> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_162e6dfcee6ada53>,
+        <https://sappho-digital.com/voc/motif_2d21be022480abad>,
+        <https://sappho-digital.com/voc/motif_304a5e562a17af49>,
+        <https://sappho-digital.com/voc/motif_736eb7ef6202472f> .
+
+<https://sappho-digital.com/voc/motif_3030faf4dfb8101d> a skos:Concept ;
+    skos:prefLabel "Silber"@de ;
+    skos:notation "motif_3030faf4dfb8101d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_b39aa0e2a40a8ee4> ;
+    skos:exactMatch wd:Q317802 .
+
+<https://sappho-digital.com/voc/motif_62827f2ed507b1a4> a skos:Concept ;
+    skos:prefLabel "Sittenhaftigkeit"@de ;
+    skos:notation "motif_62827f2ed507b1a4" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_25f24c9ae6926a3d> ;
+    skos:exactMatch wd:Q48324 .
+
+<https://sappho-digital.com/voc/motif_e50316313352d60d> a skos:Concept ;
+    skos:prefLabel "Sonne"@de ;
+    skos:notation "motif_e50316313352d60d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_c1c5790bb38d4fbb> ;
+    skos:exactMatch wd:Q525 .
+
+<https://sappho-digital.com/voc/motif_63ab36bbe88b209b> a skos:Concept ;
+    skos:prefLabel "Sorge"@de ;
+    skos:notation "motif_63ab36bbe88b209b" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:exactMatch wd:Q1436482 .
+
+<https://sappho-digital.com/voc/motif_2e583b17a2474551> a skos:Concept ;
+    skos:prefLabel "Spiegel"@de ;
+    skos:notation "motif_2e583b17a2474551" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_ab661b23423441c6> ;
+    skos:exactMatch wd:Q35197 .
+
+<https://sappho-digital.com/voc/motif_65c67fdcba66886b> a skos:Concept ;
+    skos:prefLabel "Sprachlosigkeit"@de ;
+    skos:notation "motif_65c67fdcba66886b" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_dde09ae7bddcf72c> ;
+    skos:exactMatch wd:Q16526687 .
+
+<https://sappho-digital.com/voc/motif_8d88e091e3bb28d8> a skos:Concept ;
+    skos:prefLabel "Stern"@de ;
+    skos:notation "motif_8d88e091e3bb28d8" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_c1c5790bb38d4fbb> ;
+    skos:exactMatch wd:Q523 .
+
+<https://sappho-digital.com/voc/motif_08cc6f8757d81249> a skos:Concept ;
+    skos:prefLabel "Stille"@de ;
+    skos:notation "motif_08cc6f8757d81249" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_dde09ae7bddcf72c> ;
+    skos:exactMatch wd:Q502261 .
+
+<https://sappho-digital.com/voc/motif_dde09ae7bddcf72c> a skos:Concept ;
+    skos:prefLabel "Stimm- und Tonmotive"@de ;
+    skos:notation "motif_dde09ae7bddcf72c" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_08cc6f8757d81249>,
+        <https://sappho-digital.com/voc/motif_172883cbad5b3349>,
+        <https://sappho-digital.com/voc/motif_5a30a7576a2ef0e9>,
+        <https://sappho-digital.com/voc/motif_632a07b81eb5d851>,
+        <https://sappho-digital.com/voc/motif_65c67fdcba66886b> .
+
+<https://sappho-digital.com/voc/motif_473b30ea708768d2> a skos:Concept ;
+    skos:prefLabel "Sturm"@de ;
+    skos:notation "motif_473b30ea708768d2" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f4cf66993a308196> ;
+    skos:exactMatch wd:Q81054 .
+
+<https://sappho-digital.com/voc/motif_9de00cb308757267> a skos:Concept ;
+    skos:prefLabel "Suizid"@de ;
+    skos:notation "motif_9de00cb308757267" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_8d6c4ae5261c1b7f> ;
+    skos:exactMatch wd:Q10737 .
+
+<https://sappho-digital.com/voc/motif_5a30a7576a2ef0e9> a skos:Concept ;
+    skos:prefLabel "Süße Stimme"@de ;
+    skos:notation "motif_5a30a7576a2ef0e9" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_dde09ae7bddcf72c> ;
+    skos:broadMatch wd:Q17172850 .
+
+<https://sappho-digital.com/voc/motif_6ca05631ae27d928> a skos:Concept ;
+    skos:prefLabel "Tageszeiten"@de ;
+    skos:notation "motif_6ca05631ae27d928" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_0824726b36365ab5>,
+        <https://sappho-digital.com/voc/motif_f8ead995947f7500> .
+
+<https://sappho-digital.com/voc/motif_beeb48d0c7ac4bd1> a skos:Concept ;
+    skos:prefLabel "Tanz"@de ;
+    skos:notation "motif_beeb48d0c7ac4bd1" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_c7adfc594b0535b3> ;
+    skos:exactMatch wd:Q11639 .
+
+<https://sappho-digital.com/voc/motif_c2ec495b51738811> a skos:Concept ;
+    skos:prefLabel "Tau"@de ;
+    skos:notation "motif_c2ec495b51738811" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_876aeb61deb4984f> ;
+    skos:exactMatch wd:Q41097 .
+
+<https://sappho-digital.com/voc/motif_f7b450835049e501> a skos:Concept ;
+    skos:prefLabel "Taube"@de ;
+    skos:notation "motif_f7b450835049e501" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_a93562355b8f336c> ;
+    skos:exactMatch wd:Q10856 .
+
+<https://sappho-digital.com/voc/motif_4c934ba7b9f256bf> a skos:Concept ;
+    skos:prefLabel "Tier"@de ;
+    skos:notation "motif_4c934ba7b9f256bf" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_b10a4078d73a7320> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_4592efcd729119a1>,
+        <https://sappho-digital.com/voc/motif_8aa33913f008eb89>,
+        <https://sappho-digital.com/voc/motif_a93562355b8f336c>,
+        <https://sappho-digital.com/voc/motif_f810c10450ef91b3> ;
+    skos:exactMatch wd:Q729 .
+
+<https://sappho-digital.com/voc/motif_8d6c4ae5261c1b7f> a skos:Concept ;
+    skos:prefLabel "Tod"@de ;
+    skos:notation "motif_8d6c4ae5261c1b7f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2f658ec3c5ec3ae4> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_9de00cb308757267>,
+        <https://sappho-digital.com/voc/motif_cf45a73d6da82f20> ;
+    skos:exactMatch wd:Q4 .
+
+<https://sappho-digital.com/voc/motif_cf45a73d6da82f20> a skos:Concept ;
+    skos:prefLabel "Todeswunsch"@de ;
+    skos:notation "motif_cf45a73d6da82f20" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_8d6c4ae5261c1b7f> ;
+    skos:narrowMatch wd:Q944142 .
+
+<https://sappho-digital.com/voc/motif_190541ca0caf5c3f> a skos:Concept ;
+    skos:prefLabel "Trauer"@de ;
+    skos:notation "motif_190541ca0caf5c3f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:exactMatch wd:Q1026040 .
+
+<https://sappho-digital.com/voc/motif_d8dc25c9b4d4bd52> a skos:Concept ;
+    skos:prefLabel "Traum"@de ;
+    skos:notation "motif_d8dc25c9b4d4bd52" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_cf06ac1a51be3c55> ;
+    skos:exactMatch wd:Q36348 .
+
+<https://sappho-digital.com/voc/motif_ff994c162fe2474d> a skos:Concept ;
+    skos:prefLabel "Träne"@de ;
+    skos:notation "motif_ff994c162fe2474d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f74d0ae71a82bf5d> ;
+    skos:exactMatch wd:Q76469 .
+
+<https://sappho-digital.com/voc/motif_7205babaca933dc4> a skos:Concept ;
+    skos:prefLabel "Unglückliche Liebe"@de ;
+    skos:notation "motif_7205babaca933dc4" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_791dc243a6ba1593> ;
+    skos:broadMatch wd:Q316 .
+
+<https://sappho-digital.com/voc/motif_78fe5e7fce1afcba> a skos:Concept ;
+    skos:prefLabel "Unsicherheit"@de ;
+    skos:notation "motif_78fe5e7fce1afcba" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:exactMatch wd:Q13649246 .
+
+<https://sappho-digital.com/voc/motif_4c9fc6a95d249640> a skos:Concept ;
+    skos:prefLabel "Veilchen"@de ;
+    skos:notation "motif_4c9fc6a95d249640" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f2aa906d0ec4e3f4> ;
+    skos:exactMatch wd:Q146095 .
+
+<https://sappho-digital.com/voc/motif_a9a67d884bb4bc94> a skos:Concept ;
+    skos:prefLabel "Veilchenbrust"@de ;
+    skos:notation "motif_a9a67d884bb4bc94" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f2aa906d0ec4e3f4> ;
+    skos:broadMatch wd:Q9103 ;
+    skos:relatedMatch wd:Q146095 .
+
+<https://sappho-digital.com/voc/motif_ea433b378d53e195> a skos:Concept ;
+    skos:prefLabel "Veilchenkranz"@de ;
+    skos:notation "motif_ea433b378d53e195" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f2aa906d0ec4e3f4> ;
+    skos:broadMatch wd:Q1201922 ;
+    skos:relatedMatch wd:Q146095 .
+
+<https://sappho-digital.com/voc/motif_9cdcb44dabe9cfde> a skos:Concept ;
+    skos:prefLabel "Verbannung"@de ;
+    skos:notation "motif_9cdcb44dabe9cfde" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_a18a39883dd84fa9> ;
+    skos:exactMatch wd:Q1716571 .
+
+<https://sappho-digital.com/voc/motif_1cd4207b96382696> a skos:Concept ;
+    skos:prefLabel "Vergessen"@de ;
+    skos:notation "motif_1cd4207b96382696" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:exactMatch wd:Q1377840 .
+
+<https://sappho-digital.com/voc/motif_d57e3bd57313bbdd> a skos:Concept ;
+    skos:prefLabel "Vergöttlichung"@de ;
+    skos:notation "motif_d57e3bd57313bbdd" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_68f3d8712ddf8d70> ;
+    skos:closeMatch wd:Q580995 .
+
+<https://sappho-digital.com/voc/motif_a93562355b8f336c> a skos:Concept ;
+    skos:prefLabel "Vogel"@de ;
+    skos:notation "motif_a93562355b8f336c" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_4c934ba7b9f256bf> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_499787c4944b0ba5>,
+        <https://sappho-digital.com/voc/motif_80440c5206e2b3d4>,
+        <https://sappho-digital.com/voc/motif_f7b450835049e501> ;
+    skos:exactMatch wd:Q5113 .
+
+<https://sappho-digital.com/voc/motif_c30341434873ce70> a skos:Concept ;
+    skos:prefLabel "Wahnsinn"@de ;
+    skos:notation "motif_c30341434873ce70" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:exactMatch wd:Q505619 .
+
+<https://sappho-digital.com/voc/motif_7fe9f2b8afd3cc70> a skos:Concept ;
+    skos:prefLabel "Wange"@de ;
+    skos:notation "motif_7fe9f2b8afd3cc70" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_e49a5f49d3750700> ;
+    skos:exactMatch wd:Q47038 .
+
+<https://sappho-digital.com/voc/motif_002ca4e56dca366e> a skos:Concept ;
+    skos:prefLabel "Weibliche Gemeinschaft"@de ;
+    skos:notation "motif_002ca4e56dca366e" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_25f24c9ae6926a3d> ;
+    skos:broadMatch wd:Q177634 .
+
+<https://sappho-digital.com/voc/motif_203ed612d2946cdf> a skos:Concept ;
+    skos:prefLabel "Weiblichkeit"@de ;
+    skos:notation "motif_203ed612d2946cdf" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_25f24c9ae6926a3d> ;
+    skos:exactMatch wd:Q866081 .
+
+<https://sappho-digital.com/voc/motif_ecfabfc090d9d609> a skos:Concept ;
+    skos:prefLabel "Weiches Lager"@de ;
+    skos:notation "motif_ecfabfc090d9d609" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_cf06ac1a51be3c55> ;
+    skos:relatedMatch wd:Q42177 .
+
+<https://sappho-digital.com/voc/motif_8dda05b62f2174da> a skos:Concept ;
+    skos:prefLabel "Wein"@de ;
+    skos:notation "motif_8dda05b62f2174da" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_ffcba97b822ac20c> ;
+    skos:exactMatch wd:Q282 .
+
+<https://sappho-digital.com/voc/motif_481b1c00e6a442c4> a skos:Concept ;
+    skos:prefLabel "Weinen"@de ;
+    skos:notation "motif_481b1c00e6a442c4" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f74d0ae71a82bf5d> ;
+    skos:exactMatch wd:Q152247 .
+
+<https://sappho-digital.com/voc/motif_778e6dc2ad3d5401> a skos:Concept ;
+    skos:prefLabel "Weiß"@de ;
+    skos:notation "motif_778e6dc2ad3d5401" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_b39aa0e2a40a8ee4> ;
+    skos:exactMatch wd:Q23444 .
+
+<https://sappho-digital.com/voc/motif_3950fcecf002a43a> a skos:Concept ;
+    skos:prefLabel "Welle"@de ;
+    skos:notation "motif_3950fcecf002a43a" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_876aeb61deb4984f> ;
+    skos:exactMatch wd:Q165848 .
+
+<https://sappho-digital.com/voc/motif_f4cf66993a308196> a skos:Concept ;
+    skos:prefLabel "Wetter"@de ;
+    skos:notation "motif_f4cf66993a308196" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/motif_473b30ea708768d2>,
+        <https://sappho-digital.com/voc/motif_92328d8c25447861>,
+        <https://sappho-digital.com/voc/motif_ec830d6c2e83aea3> .
+
+<https://sappho-digital.com/voc/motif_97e73b26b0dc22b0> a skos:Concept ;
+    skos:prefLabel "Wiederauferstehung"@de ;
+    skos:notation "motif_97e73b26b0dc22b0" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2f658ec3c5ec3ae4> ;
+    skos:exactMatch wd:Q188681 .
+
+<https://sappho-digital.com/voc/motif_ec830d6c2e83aea3> a skos:Concept ;
+    skos:prefLabel "Wind"@de ;
+    skos:notation "motif_ec830d6c2e83aea3" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_f4cf66993a308196> ;
+    skos:exactMatch wd:Q8094 .
+
+<https://sappho-digital.com/voc/motif_844c1db25d6fbc84> a skos:Concept ;
+    skos:prefLabel "Wolke"@de ;
+    skos:notation "motif_844c1db25d6fbc84" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_c1c5790bb38d4fbb> ;
+    skos:exactMatch wd:Q8074 .
+
+<https://sappho-digital.com/voc/motif_4592efcd729119a1> a skos:Concept ;
+    skos:prefLabel "Ziege"@de ;
+    skos:notation "motif_4592efcd729119a1" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_4c934ba7b9f256bf> ;
+    skos:exactMatch wd:Q2934 .
+
+<https://sappho-digital.com/voc/motif_7a31b1efe2cb20da> a skos:Concept ;
+    skos:prefLabel "Zorn"@de ;
+    skos:notation "motif_7a31b1efe2cb20da" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:exactMatch wd:Q79871 .
+
+<https://sappho-digital.com/voc/motif_c181a5a5b7398262> a skos:Concept ;
+    skos:prefLabel "Zunge"@de ;
+    skos:notation "motif_c181a5a5b7398262" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_e49a5f49d3750700> ;
+    skos:exactMatch wd:Q9614 .
+
+<https://sappho-digital.com/voc/motif_8f41e1cc1d433f40> a skos:Concept ;
+    skos:prefLabel "Zweifel"@de ;
+    skos:notation "motif_8f41e1cc1d433f40" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/motif_2126df79f7250a93> ;
+    skos:exactMatch wd:Q34302 .
+
+<https://sappho-digital.com/voc/place_4cab37cdf075289f> a skos:Concept ;
+    skos:prefLabel "Acheron"@de ;
+    skos:notation "place_4cab37cdf075289f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_1adb2da7993ecc95> ;
+    skos:exactMatch wd:Q13081186 .
+
+<https://sappho-digital.com/voc/place_265da080030b40ab> a skos:Concept ;
+    skos:prefLabel "Alexandria"@de ;
+    skos:notation "place_265da080030b40ab" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_8975b920fcc0ab24> ;
+    skos:exactMatch wd:Q87 .
+
+<https://sappho-digital.com/voc/place_9bd33c7fdd67c764> a skos:Concept ;
+    skos:prefLabel "Athen"@de ;
+    skos:notation "place_9bd33c7fdd67c764" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_ac07f1e878d38c8d> ;
+    skos:exactMatch wd:Q1524 .
+
+<https://sappho-digital.com/voc/place_fb64d1e49976fb8c> a skos:Concept ;
+    skos:prefLabel "Delos"@de ;
+    skos:notation "place_fb64d1e49976fb8c" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_ac07f1e878d38c8d> ;
+    skos:exactMatch wd:Q173148 .
+
+<https://sappho-digital.com/voc/place_967849e8809f26b2> a skos:Concept ;
+    skos:prefLabel "Deutschland"@de ;
+    skos:notation "place_967849e8809f26b2" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_cdf504e86348b33a> ;
+    skos:exactMatch wd:Q183 .
+
+<https://sappho-digital.com/voc/place_938d82612b2cbf3a> a skos:Concept ;
+    skos:prefLabel "Elysium"@de ;
+    skos:notation "place_938d82612b2cbf3a" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_1adb2da7993ecc95> ;
+    skos:exactMatch wd:Q157128 .
+
+<https://sappho-digital.com/voc/place_65cc743dd1fdd3c3> a skos:Concept ;
+    skos:prefLabel "England"@de ;
+    skos:notation "place_65cc743dd1fdd3c3" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_cdf504e86348b33a> ;
+    skos:exactMatch wd:Q21 .
+
+<https://sappho-digital.com/voc/place_c88a9704cb14800c> a skos:Concept ;
+    skos:prefLabel "Eresos"@de ;
+    skos:notation "place_c88a9704cb14800c" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_0009a58f625c087b> ;
+    skos:exactMatch wd:Q1018197 .
+
+<https://sappho-digital.com/voc/place_2170b82f2666eaab> a skos:Concept ;
+    skos:prefLabel "Fiktionale Orte"@de ;
+    skos:notation "place_2170b82f2666eaab" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/place_1adb2da7993ecc95> .
+
+<https://sappho-digital.com/voc/place_ac07f1e878d38c8d> a skos:Concept ;
+    skos:prefLabel "Griechenland"@de ;
+    skos:notation "place_ac07f1e878d38c8d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_818717a17d1bcde7> ;
+    skos:narrower <https://sappho-digital.com/voc/place_0009a58f625c087b>,
+        <https://sappho-digital.com/voc/place_481812f727302fbe>,
+        <https://sappho-digital.com/voc/place_9bd33c7fdd67c764>,
+        <https://sappho-digital.com/voc/place_be670e476be162e1>,
+        <https://sappho-digital.com/voc/place_c469fa37e1f081e9>,
+        <https://sappho-digital.com/voc/place_c7da5f2e77438154>,
+        <https://sappho-digital.com/voc/place_f80dc51761a44c4c>,
+        <https://sappho-digital.com/voc/place_fb64d1e49976fb8c> ;
+    skos:exactMatch wd:Q41 .
+
+<https://sappho-digital.com/voc/place_818717a17d1bcde7> a skos:Concept ;
+    skos:prefLabel "Griechenland und Ägäis"@de ;
+    skos:notation "place_818717a17d1bcde7" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/place_040eb47ff2612816>,
+        <https://sappho-digital.com/voc/place_4f523d00fc5d27fd>,
+        <https://sappho-digital.com/voc/place_ac07f1e878d38c8d> .
+
+<https://sappho-digital.com/voc/place_7a4fb8e10d66c95f> a skos:Concept ;
+    skos:prefLabel "Ionien"@de ;
+    skos:notation "place_7a4fb8e10d66c95f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_fd02663b34855167> ;
+    skos:narrower <https://sappho-digital.com/voc/place_638e00b9cd6f28ce> ;
+    skos:exactMatch wd:Q620874 .
+
+<https://sappho-digital.com/voc/place_7b892e08cb9fdc41> a skos:Concept ;
+    skos:prefLabel "Iran"@de ;
+    skos:notation "place_7b892e08cb9fdc41" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:exactMatch wd:Q794 .
+
+<https://sappho-digital.com/voc/place_65e7187dfcae7a96> a skos:Concept ;
+    skos:prefLabel "Italien"@de ;
+    skos:notation "place_65e7187dfcae7a96" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_fd02663b34855167> ;
+    skos:narrower <https://sappho-digital.com/voc/place_268d446ffb379c3d>,
+        <https://sappho-digital.com/voc/place_8f3a4ee0def96e05> ;
+    skos:exactMatch wd:Q38 .
+
+<https://sappho-digital.com/voc/place_fd02663b34855167> a skos:Concept ;
+    skos:prefLabel "Italien und Kleinasien"@de ;
+    skos:notation "place_fd02663b34855167" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/place_39fc06d60391f952>,
+        <https://sappho-digital.com/voc/place_50b86d57b7836783>,
+        <https://sappho-digital.com/voc/place_65e7187dfcae7a96>,
+        <https://sappho-digital.com/voc/place_6f62261a950e9311>,
+        <https://sappho-digital.com/voc/place_7a4fb8e10d66c95f>,
+        <https://sappho-digital.com/voc/place_a47b52347c0cc636> .
+
+<https://sappho-digital.com/voc/place_481812f727302fbe> a skos:Concept ;
+    skos:prefLabel "Kreta"@de ;
+    skos:notation "place_481812f727302fbe" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_ac07f1e878d38c8d> ;
+    skos:exactMatch wd:Q34374 .
+
+<https://sappho-digital.com/voc/place_0009a58f625c087b> a skos:Concept ;
+    skos:prefLabel "Lesbos"@de ;
+    skos:notation "place_0009a58f625c087b" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_ac07f1e878d38c8d> ;
+    skos:narrower <https://sappho-digital.com/voc/place_21104b06fd2e1311>,
+        <https://sappho-digital.com/voc/place_c88a9704cb14800c> ;
+    skos:exactMatch wd:Q128087 .
+
+<https://sappho-digital.com/voc/place_ff6c437a4ca1c9b1> a skos:Concept ;
+    skos:prefLabel "Lethe"@de ;
+    skos:notation "place_ff6c437a4ca1c9b1" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_1adb2da7993ecc95> ;
+    skos:exactMatch wd:Q161096 .
+
+<https://sappho-digital.com/voc/place_c7da5f2e77438154> a skos:Concept ;
+    skos:prefLabel "Leukasfelsen"@de ;
+    skos:notation "place_c7da5f2e77438154" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_ac07f1e878d38c8d> ;
+    skos:broadMatch wd:Q190138 .
+
+<https://sappho-digital.com/voc/place_39fc06d60391f952> a skos:Concept ;
+    skos:prefLabel "Lydien"@de ;
+    skos:notation "place_39fc06d60391f952" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_fd02663b34855167> ;
+    skos:narrower <https://sappho-digital.com/voc/place_2e23b3c7057bdc84> ;
+    skos:exactMatch wd:Q620765 .
+
+<https://sappho-digital.com/voc/place_21104b06fd2e1311> a skos:Concept ;
+    skos:prefLabel "Mytilene"@de ;
+    skos:notation "place_21104b06fd2e1311" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_0009a58f625c087b> ;
+    skos:exactMatch wd:Q189059 .
+
+<https://sappho-digital.com/voc/place_dc407ad0184a6b43> a skos:Concept ;
+    skos:prefLabel "Naukratis"@de ;
+    skos:notation "place_dc407ad0184a6b43" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_8975b920fcc0ab24> ;
+    skos:exactMatch wd:Q137721 .
+
+<https://sappho-digital.com/voc/place_cdf504e86348b33a> a skos:Concept ;
+    skos:prefLabel "Nord- und Zentraleuropa"@de ;
+    skos:notation "place_cdf504e86348b33a" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/place_65cc743dd1fdd3c3>,
+        <https://sappho-digital.com/voc/place_967849e8809f26b2> .
+
+<https://sappho-digital.com/voc/place_be670e476be162e1> a skos:Concept ;
+    skos:prefLabel "Olymp"@de ;
+    skos:notation "place_be670e476be162e1" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_ac07f1e878d38c8d> ;
+    skos:exactMatch wd:Q80344 .
+
+<https://sappho-digital.com/voc/place_f80dc51761a44c4c> a skos:Concept ;
+    skos:prefLabel "Olympia"@de ;
+    skos:notation "place_f80dc51761a44c4c" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_ac07f1e878d38c8d> ;
+    skos:exactMatch wd:Q38888 .
+
+<https://sappho-digital.com/voc/place_638e00b9cd6f28ce> a skos:Concept ;
+    skos:prefLabel "Phokaia"@de ;
+    skos:notation "place_638e00b9cd6f28ce" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_7a4fb8e10d66c95f> ;
+    skos:exactMatch wd:Q428732 .
+
+<https://sappho-digital.com/voc/place_50b86d57b7836783> a skos:Concept ;
+    skos:prefLabel "Phrygien"@de ;
+    skos:notation "place_50b86d57b7836783" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_fd02663b34855167> ;
+    skos:exactMatch wd:Q32579 .
+
+<https://sappho-digital.com/voc/place_c469fa37e1f081e9> a skos:Concept ;
+    skos:prefLabel "Pieria"@de ;
+    skos:notation "place_c469fa37e1f081e9" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_ac07f1e878d38c8d> ;
+    skos:exactMatch wd:Q7800388 .
+
+<https://sappho-digital.com/voc/place_268d446ffb379c3d> a skos:Concept ;
+    skos:prefLabel "Rom"@de ;
+    skos:notation "place_268d446ffb379c3d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_65e7187dfcae7a96> ;
+    skos:exactMatch wd:Q220 .
+
+<https://sappho-digital.com/voc/place_2e23b3c7057bdc84> a skos:Concept ;
+    skos:prefLabel "Sardes"@de ;
+    skos:notation "place_2e23b3c7057bdc84" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_39fc06d60391f952> ;
+    skos:exactMatch wd:Q232615 .
+
+<https://sappho-digital.com/voc/place_8f3a4ee0def96e05> a skos:Concept ;
+    skos:prefLabel "Syrakus"@de ;
+    skos:notation "place_8f3a4ee0def96e05" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_65e7187dfcae7a96> ;
+    skos:exactMatch wd:Q13670 .
+
+<https://sappho-digital.com/voc/place_6f62261a950e9311> a skos:Concept ;
+    skos:prefLabel "Troja"@de ;
+    skos:notation "place_6f62261a950e9311" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_fd02663b34855167> ;
+    skos:exactMatch wd:Q22647 .
+
+<https://sappho-digital.com/voc/place_1adb2da7993ecc95> a skos:Concept ;
+    skos:prefLabel "Unterwelt/Hades/Orkus"@de ;
+    skos:notation "place_1adb2da7993ecc95" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_2170b82f2666eaab> ;
+    skos:narrower <https://sappho-digital.com/voc/place_4cab37cdf075289f>,
+        <https://sappho-digital.com/voc/place_938d82612b2cbf3a>,
+        <https://sappho-digital.com/voc/place_ff6c437a4ca1c9b1> ;
+    skos:exactMatch wd:Q1521549 .
+
+<https://sappho-digital.com/voc/place_040eb47ff2612816> a skos:Concept ;
+    skos:prefLabel "Zypern"@de ;
+    skos:notation "place_040eb47ff2612816" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_818717a17d1bcde7> ;
+    skos:exactMatch wd:Q229 .
+
+<https://sappho-digital.com/voc/place_8975b920fcc0ab24> a skos:Concept ;
+    skos:prefLabel "Ägypten"@de ;
+    skos:notation "place_8975b920fcc0ab24" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/place_265da080030b40ab>,
+        <https://sappho-digital.com/voc/place_dc407ad0184a6b43> ;
+    skos:exactMatch wd:Q79 .
+
+<https://sappho-digital.com/voc/place_4f523d00fc5d27fd> a skos:Concept ;
+    skos:prefLabel "Ägäis"@de ;
+    skos:notation "place_4f523d00fc5d27fd" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_818717a17d1bcde7> ;
+    skos:exactMatch wd:Q34575 .
+
+<https://sappho-digital.com/voc/place_a47b52347c0cc636> a skos:Concept ;
+    skos:prefLabel "Äolien"@de ;
+    skos:notation "place_a47b52347c0cc636" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/place_fd02663b34855167> ;
+    skos:exactMatch wd:Q255325 .
+
+<https://sappho-digital.com/voc/person_38af0ac181d5d397> a skos:Concept ;
+    skos:prefLabel "Adonis"@de ;
+    skos:notation "person_38af0ac181d5d397" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> ;
+    skos:exactMatch wd:Q163920 .
+
+<https://sappho-digital.com/voc/person_3ae4177dfc72d693> a skos:Concept ;
+    skos:prefLabel "Agamemnon"@de ;
+    skos:notation "person_3ae4177dfc72d693" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_256ddc5d500b7e13> ;
+    skos:exactMatch wd:Q128176 .
+
+<https://sappho-digital.com/voc/person_5c74e76e7da1f025> a skos:Concept ;
+    skos:prefLabel "Aiolos"@de ;
+    skos:notation "person_5c74e76e7da1f025" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> ;
+    skos:exactMatch wd:Q406388 .
+
+<https://sappho-digital.com/voc/person_f42fab276b6fdb13> a skos:Concept ;
+    skos:prefLabel "Alkaios"@de ;
+    skos:notation "person_f42fab276b6fdb13" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_06c6360bcd505db1> ;
+    skos:exactMatch wd:Q212872 .
+
+<https://sappho-digital.com/voc/person_a8693158074cfc94> a skos:Concept ;
+    skos:prefLabel "Anakreon"@de ;
+    skos:notation "person_a8693158074cfc94" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_06c6360bcd505db1> ;
+    skos:exactMatch wd:Q213484 .
+
+<https://sappho-digital.com/voc/person_55cb3a6f391d86db> a skos:Concept ;
+    skos:prefLabel "Anaktoria/Anagora"@de ;
+    skos:notation "person_55cb3a6f391d86db" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_a66ff1aaf842f1d4> ;
+    skos:exactMatch wd:Q4750729 .
+
+<https://sappho-digital.com/voc/person_2a23732b2a3c21cf> a skos:Concept ;
+    skos:prefLabel "Andromeda"@de ;
+    skos:notation "person_2a23732b2a3c21cf" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_256ddc5d500b7e13> ;
+    skos:exactMatch wd:Q161582 .
+
+<https://sappho-digital.com/voc/person_06c6360bcd505db1> a skos:Concept ;
+    skos:prefLabel "Antike Persönlichkeiten"@de ;
+    skos:notation "person_06c6360bcd505db1" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_278a0a79e0be5174> ;
+    skos:narrower <https://sappho-digital.com/voc/person_01ec9bc374eb76b7>,
+        <https://sappho-digital.com/voc/person_1972623f5799ed62>,
+        <https://sappho-digital.com/voc/person_66fc054f0477ea23>,
+        <https://sappho-digital.com/voc/person_9865138458182890>,
+        <https://sappho-digital.com/voc/person_98fe1bf71475363b>,
+        <https://sappho-digital.com/voc/person_a8693158074cfc94>,
+        <https://sappho-digital.com/voc/person_b440568ec351ed84>,
+        <https://sappho-digital.com/voc/person_b663db28c943787a>,
+        <https://sappho-digital.com/voc/person_f42fab276b6fdb13> .
+
+<https://sappho-digital.com/voc/person_298d1d2696887999> a skos:Concept ;
+    skos:prefLabel "Aphrodite"@de ;
+    skos:notation "person_298d1d2696887999" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_1a6f232a48b9845e> ;
+    skos:exactMatch wd:Q35500 .
+
+<https://sappho-digital.com/voc/person_a92154dba89f764f> a skos:Concept ;
+    skos:prefLabel "Apollon"@de ;
+    skos:notation "person_a92154dba89f764f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_1a6f232a48b9845e> ;
+    skos:exactMatch wd:Q37340 .
+
+<https://sappho-digital.com/voc/person_2603b095dc14c9fd> a skos:Concept ;
+    skos:prefLabel "Archeanassa"@de ;
+    skos:notation "person_2603b095dc14c9fd" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_a66ff1aaf842f1d4> .
+
+<https://sappho-digital.com/voc/person_974acb11c098c41b> a skos:Concept ;
+    skos:prefLabel "Ares"@de ;
+    skos:notation "person_974acb11c098c41b" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_1a6f232a48b9845e> ;
+    skos:exactMatch wd:Q40901 .
+
+<https://sappho-digital.com/voc/person_b663db28c943787a> a skos:Concept ;
+    skos:prefLabel "Arion"@de ;
+    skos:notation "person_b663db28c943787a" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_06c6360bcd505db1> ;
+    skos:exactMatch wd:Q312422 .
+
+<https://sappho-digital.com/voc/person_f79231e41dd95683> a skos:Concept ;
+    skos:prefLabel "Artemis"@de ;
+    skos:notation "person_f79231e41dd95683" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_1a6f232a48b9845e> ;
+    skos:exactMatch wd:Q39503 .
+
+<https://sappho-digital.com/voc/person_1526106cabf2fa6b> a skos:Concept ;
+    skos:prefLabel "Athene"@de ;
+    skos:notation "person_1526106cabf2fa6b" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_1a6f232a48b9845e> ;
+    skos:exactMatch wd:Q37122 .
+
+<https://sappho-digital.com/voc/person_4e64c1b5997afbc9> a skos:Concept ;
+    skos:prefLabel "Atropos"@de ;
+    skos:notation "person_4e64c1b5997afbc9" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> ;
+    skos:exactMatch wd:Q753294 .
+
+<https://sappho-digital.com/voc/person_fe179d791732151d> a skos:Concept ;
+    skos:prefLabel "Atthis"@de ;
+    skos:notation "person_fe179d791732151d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_a66ff1aaf842f1d4> .
+
+<https://sappho-digital.com/voc/person_05e200db9312b803> a skos:Concept ;
+    skos:prefLabel "Braut/Bräutigam"@de ;
+    skos:notation "person_05e200db9312b803" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_95f834da965f8d52> ;
+    skos:exactMatch wd:Q353673,
+        wd:Q854830 .
+
+<https://sappho-digital.com/voc/person_278199322209770d> a skos:Concept ;
+    skos:prefLabel "Charaxos"@de ;
+    skos:notation "person_278199322209770d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_5771e8248ede2068> ;
+    skos:exactMatch wd:Q16184753 .
+
+<https://sappho-digital.com/voc/person_4fa8ba6e36329b8d> a skos:Concept ;
+    skos:prefLabel "Charikleia"@de ;
+    skos:notation "person_4fa8ba6e36329b8d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_a66ff1aaf842f1d4> .
+
+<https://sappho-digital.com/voc/person_4054b50081c54a12> a skos:Concept ;
+    skos:prefLabel "Charis"@de ;
+    skos:notation "person_4054b50081c54a12" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_14582bf9dd069b37> ;
+    skos:broadMatch wd:Q184353 .
+
+<https://sappho-digital.com/voc/person_887e83106aad1200> a skos:Concept ;
+    skos:prefLabel "Charon"@de ;
+    skos:notation "person_887e83106aad1200" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_256ddc5d500b7e13> ;
+    skos:exactMatch wd:Q6612 .
+
+<https://sappho-digital.com/voc/person_fd527c6f3b4cd056> a skos:Concept ;
+    skos:prefLabel "Daphne"@de ;
+    skos:notation "person_fd527c6f3b4cd056" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_256ddc5d500b7e13> ;
+    skos:exactMatch wd:Q194015 .
+
+<https://sappho-digital.com/voc/person_fe75cd740876c3e4> a skos:Concept ;
+    skos:prefLabel "Demeter"@de ;
+    skos:notation "person_fe75cd740876c3e4" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_1a6f232a48b9845e> ;
+    skos:exactMatch wd:Q40730 .
+
+<https://sappho-digital.com/voc/person_f47881025ad98035> a skos:Concept ;
+    skos:prefLabel "Dionysos"@de ;
+    skos:notation "person_f47881025ad98035" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_1a6f232a48b9845e> ;
+    skos:exactMatch wd:Q41680 .
+
+<https://sappho-digital.com/voc/person_a766e76721189267> a skos:Concept ;
+    skos:prefLabel "Eirana"@de ;
+    skos:notation "person_a766e76721189267" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_a66ff1aaf842f1d4> .
+
+<https://sappho-digital.com/voc/person_807f37582972882e> a skos:Concept ;
+    skos:prefLabel "Eos"@de ;
+    skos:notation "person_807f37582972882e" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> ;
+    skos:exactMatch wd:Q178417 .
+
+<https://sappho-digital.com/voc/person_98fe1bf71475363b> a skos:Concept ;
+    skos:prefLabel "Erinna"@de ;
+    skos:notation "person_98fe1bf71475363b" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_06c6360bcd505db1> ;
+    skos:exactMatch wd:Q256241 .
+
+<https://sappho-digital.com/voc/person_a31e921338acf862> a skos:Concept ;
+    skos:prefLabel "Erinys"@de ;
+    skos:notation "person_a31e921338acf862" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_14582bf9dd069b37> ;
+    skos:broadMatch wd:Q180262 .
+
+<https://sappho-digital.com/voc/person_f9d48292bc61bb67> a skos:Concept ;
+    skos:prefLabel "Eros"@de ;
+    skos:notation "person_f9d48292bc61bb67" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> ;
+    skos:exactMatch wd:Q121973 .
+
+<https://sappho-digital.com/voc/person_9cb6996a0396db3d> a skos:Concept ;
+    skos:prefLabel "Eurydike"@de ;
+    skos:notation "person_9cb6996a0396db3d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_256ddc5d500b7e13> ;
+    skos:exactMatch wd:Q208588 .
+
+<https://sappho-digital.com/voc/person_97a24d8c828b75ec> a skos:Concept ;
+    skos:prefLabel "Fischer"@de ;
+    skos:notation "person_97a24d8c828b75ec" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e7c5d465a0193271> ;
+    skos:exactMatch wd:Q331432 .
+
+<https://sappho-digital.com/voc/person_36a33d615281cb7f> a skos:Concept ;
+    skos:prefLabel "Francesco Petrarca"@de ;
+    skos:notation "person_36a33d615281cb7f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_6c3ac7cd68c42b93> ;
+    skos:exactMatch wd:Q1401 .
+
+<https://sappho-digital.com/voc/person_7d3c887eeaa47caf> a skos:Concept ;
+    skos:prefLabel "Friedrich Gottlieb Welcker"@de ;
+    skos:notation "person_7d3c887eeaa47caf" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_6c3ac7cd68c42b93> ;
+    skos:exactMatch wd:Q69028 .
+
+<https://sappho-digital.com/voc/person_1d5abf4995fa23e4> a skos:Concept ;
+    skos:prefLabel "Gaia"@de ;
+    skos:notation "person_1d5abf4995fa23e4" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> ;
+    skos:exactMatch wd:Q93172 .
+
+<https://sappho-digital.com/voc/person_e7c5d465a0193271> a skos:Concept ;
+    skos:prefLabel "Gesellschaftliche Personentypen"@de ;
+    skos:notation "person_e7c5d465a0193271" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_ee7ff70540e361f7> ;
+    skos:narrower <https://sappho-digital.com/voc/person_4a8abedda068cc77>,
+        <https://sappho-digital.com/voc/person_97a24d8c828b75ec>,
+        <https://sappho-digital.com/voc/person_acdbd75b6cf29fa6> .
+
+<https://sappho-digital.com/voc/person_a44f7c86bfc2958d> a skos:Concept ;
+    skos:prefLabel "Gongyla"@de ;
+    skos:notation "person_a44f7c86bfc2958d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_a66ff1aaf842f1d4> .
+
+<https://sappho-digital.com/voc/person_c4b1fa4084e429c3> a skos:Concept ;
+    skos:prefLabel "Gorgo"@de ;
+    skos:notation "person_c4b1fa4084e429c3" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_a66ff1aaf842f1d4> ;
+    skos:exactMatch wd:Q10984182 .
+
+<https://sappho-digital.com/voc/person_669b106539453871> a skos:Concept ;
+    skos:prefLabel "Gott/Göttin"@de ;
+    skos:notation "person_669b106539453871" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_f608e2394ac9ae2a> ;
+    skos:exactMatch wd:Q178885 .
+
+<https://sappho-digital.com/voc/person_86ef94ea68ce0fe0> a skos:Concept ;
+    skos:prefLabel "Gyrinno"@de ;
+    skos:notation "person_86ef94ea68ce0fe0" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_a66ff1aaf842f1d4> .
+
+<https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> a skos:Concept ;
+    skos:prefLabel "Göttliche Gestalten und Personifikationen"@de ;
+    skos:notation "person_e6e1e08c60e5a04d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/person_1d5abf4995fa23e4>,
+        <https://sappho-digital.com/voc/person_2bf51959e0848f5f>,
+        <https://sappho-digital.com/voc/person_352e0f8a99c574b2>,
+        <https://sappho-digital.com/voc/person_38af0ac181d5d397>,
+        <https://sappho-digital.com/voc/person_454c27fc8a648f4f>,
+        <https://sappho-digital.com/voc/person_4a2654173d9042b0>,
+        <https://sappho-digital.com/voc/person_4bc689084fcb5dcb>,
+        <https://sappho-digital.com/voc/person_4e64c1b5997afbc9>,
+        <https://sappho-digital.com/voc/person_5c74e76e7da1f025>,
+        <https://sappho-digital.com/voc/person_664342af9e58739b>,
+        <https://sappho-digital.com/voc/person_6a8069a235c0da1d>,
+        <https://sappho-digital.com/voc/person_807f37582972882e>,
+        <https://sappho-digital.com/voc/person_86564f02874aec39>,
+        <https://sappho-digital.com/voc/person_dbb519c32f7f48ce>,
+        <https://sappho-digital.com/voc/person_e68a8e275e56e27e>,
+        <https://sappho-digital.com/voc/person_e9b8b1919af5758a>,
+        <https://sappho-digital.com/voc/person_f9d48292bc61bb67> .
+
+<https://sappho-digital.com/voc/person_86564f02874aec39> a skos:Concept ;
+    skos:prefLabel "Hades"@de ;
+    skos:notation "person_86564f02874aec39" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> ;
+    skos:exactMatch wd:Q41410 .
+
+<https://sappho-digital.com/voc/person_3bd6faa78c3b97eb> a skos:Concept ;
+    skos:prefLabel "Hektor"@de ;
+    skos:notation "person_3bd6faa78c3b97eb" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_256ddc5d500b7e13> ;
+    skos:exactMatch wd:Q159666 .
+
+<https://sappho-digital.com/voc/person_e3e42e3bfe456766> a skos:Concept ;
+    skos:prefLabel "Helena"@de ;
+    skos:notation "person_e3e42e3bfe456766" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_256ddc5d500b7e13> ;
+    skos:exactMatch wd:Q164061 .
+
+<https://sappho-digital.com/voc/person_2bf51959e0848f5f> a skos:Concept ;
+    skos:prefLabel "Helios"@de ;
+    skos:notation "person_2bf51959e0848f5f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> ;
+    skos:exactMatch wd:Q134270 .
+
+<https://sappho-digital.com/voc/person_499bbc9e7596f10d> a skos:Concept ;
+    skos:prefLabel "Hera"@de ;
+    skos:notation "person_499bbc9e7596f10d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_1a6f232a48b9845e> ;
+    skos:exactMatch wd:Q38012 .
+
+<https://sappho-digital.com/voc/person_2eb129793d7ca74a> a skos:Concept ;
+    skos:prefLabel "Hermes"@de ;
+    skos:notation "person_2eb129793d7ca74a" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_1a6f232a48b9845e> ;
+    skos:exactMatch wd:Q41484 .
+
+<https://sappho-digital.com/voc/person_1972623f5799ed62> a skos:Concept ;
+    skos:prefLabel "Homer"@de ;
+    skos:notation "person_1972623f5799ed62" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_06c6360bcd505db1> ;
+    skos:exactMatch wd:Q6691 .
+
+<https://sappho-digital.com/voc/person_e9b8b1919af5758a> a skos:Concept ;
+    skos:prefLabel "Hymenaios"@de ;
+    skos:notation "person_e9b8b1919af5758a" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> ;
+    skos:exactMatch wd:Q506770 .
+
+<https://sappho-digital.com/voc/person_454c27fc8a648f4f> a skos:Concept ;
+    skos:prefLabel "Iris"@de ;
+    skos:notation "person_454c27fc8a648f4f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> ;
+    skos:exactMatch wd:Q184570 .
+
+<https://sappho-digital.com/voc/person_d92f8054b846977e> a skos:Concept ;
+    skos:prefLabel "Jungfrau"@de ;
+    skos:notation "person_d92f8054b846977e" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_95f834da965f8d52> ;
+    skos:exactMatch wd:Q32859833 .
+
+<https://sappho-digital.com/voc/person_d2167a313c41ceaa> a skos:Concept ;
+    skos:prefLabel "Kerkylas von Andros"@de ;
+    skos:notation "person_d2167a313c41ceaa" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_5771e8248ede2068> ;
+    skos:exactMatch wd:Q85870889 .
+
+<https://sappho-digital.com/voc/person_b793a3807d130de0> a skos:Concept ;
+    skos:prefLabel "Kleis"@de ;
+    skos:notation "person_b793a3807d130de0" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_5771e8248ede2068> .
+
+<https://sappho-digital.com/voc/person_8403b22eecf9a7e8> a skos:Concept ;
+    skos:prefLabel "Kleis (Mutter)"@de ;
+    skos:notation "person_8403b22eecf9a7e8" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_5771e8248ede2068> .
+
+<https://sappho-digital.com/voc/person_a2f67175618331bf> a skos:Concept ;
+    skos:prefLabel "Larichos"@de ;
+    skos:notation "person_a2f67175618331bf" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_5771e8248ede2068> .
+
+<https://sappho-digital.com/voc/person_1e6e628ea0192e31> a skos:Concept ;
+    skos:prefLabel "Laura (Petrarca)"@de ;
+    skos:notation "person_1e6e628ea0192e31" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_9c96d9e565291dda> .
+
+<https://sappho-digital.com/voc/person_dbb519c32f7f48ce> a skos:Concept ;
+    skos:prefLabel "Leto"@de ;
+    skos:notation "person_dbb519c32f7f48ce" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> ;
+    skos:exactMatch wd:Q103107 .
+
+<https://sappho-digital.com/voc/person_9545062e029ef19b> a skos:Concept ;
+    skos:prefLabel "Melitta"@de ;
+    skos:notation "person_9545062e029ef19b" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_a66ff1aaf842f1d4> .
+
+<https://sappho-digital.com/voc/person_7715e9ee67577553> a skos:Concept ;
+    skos:prefLabel "Menelaos"@de ;
+    skos:notation "person_7715e9ee67577553" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_256ddc5d500b7e13> ;
+    skos:exactMatch wd:Q171839 .
+
+<https://sappho-digital.com/voc/person_37c2bf8d11811a0e> a skos:Concept ;
+    skos:prefLabel "Muse"@de ;
+    skos:notation "person_37c2bf8d11811a0e" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_14582bf9dd069b37> ;
+    skos:exactMatch wd:Q66016 .
+
+<https://sappho-digital.com/voc/person_256ddc5d500b7e13> a skos:Concept ;
+    skos:prefLabel "Mythologische Gestalten"@de ;
+    skos:notation "person_256ddc5d500b7e13" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/person_0eabdfe13c1ff095>,
+        <https://sappho-digital.com/voc/person_2a23732b2a3c21cf>,
+        <https://sappho-digital.com/voc/person_331d06f48bf9d3d9>,
+        <https://sappho-digital.com/voc/person_3ae4177dfc72d693>,
+        <https://sappho-digital.com/voc/person_3bd6faa78c3b97eb>,
+        <https://sappho-digital.com/voc/person_7715e9ee67577553>,
+        <https://sappho-digital.com/voc/person_887e83106aad1200>,
+        <https://sappho-digital.com/voc/person_9cb6996a0396db3d>,
+        <https://sappho-digital.com/voc/person_bf1a16fc1e6ba956>,
+        <https://sappho-digital.com/voc/person_d1946e7b74bf22bc>,
+        <https://sappho-digital.com/voc/person_e3e42e3bfe456766>,
+        <https://sappho-digital.com/voc/person_edd73d43dbe4b946>,
+        <https://sappho-digital.com/voc/person_fd527c6f3b4cd056> .
+
+<https://sappho-digital.com/voc/person_14582bf9dd069b37> a skos:Concept ;
+    skos:prefLabel "Mythologische Personentypen"@de ;
+    skos:notation "person_14582bf9dd069b37" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_ee7ff70540e361f7> ;
+    skos:narrower <https://sappho-digital.com/voc/person_37c2bf8d11811a0e>,
+        <https://sappho-digital.com/voc/person_4054b50081c54a12>,
+        <https://sappho-digital.com/voc/person_803864de40878a17>,
+        <https://sappho-digital.com/voc/person_a31e921338acf862> .
+
+<https://sappho-digital.com/voc/person_40792a88ba634e66> a skos:Concept ;
+    skos:prefLabel "Mädchen"@de ;
+    skos:notation "person_40792a88ba634e66" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_95f834da965f8d52> ;
+    skos:exactMatch wd:Q3031 .
+
+<https://sappho-digital.com/voc/person_edd73d43dbe4b946> a skos:Concept ;
+    skos:prefLabel "Narziss"@de ;
+    skos:notation "person_edd73d43dbe4b946" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_256ddc5d500b7e13> ;
+    skos:exactMatch wd:Q179256 .
+
+<https://sappho-digital.com/voc/person_803864de40878a17> a skos:Concept ;
+    skos:prefLabel "Nymphe"@de ;
+    skos:notation "person_803864de40878a17" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_14582bf9dd069b37> ;
+    skos:exactMatch wd:Q373916 .
+
+<https://sappho-digital.com/voc/person_d1946e7b74bf22bc> a skos:Concept ;
+    skos:prefLabel "Odysseus"@de ;
+    skos:notation "person_d1946e7b74bf22bc" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_256ddc5d500b7e13> ;
+    skos:exactMatch wd:Q47231 .
+
+<https://sappho-digital.com/voc/person_1a6f232a48b9845e> a skos:Concept ;
+    skos:prefLabel "Olympische Götter"@de ;
+    skos:notation "person_1a6f232a48b9845e" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/person_1526106cabf2fa6b>,
+        <https://sappho-digital.com/voc/person_298d1d2696887999>,
+        <https://sappho-digital.com/voc/person_2eb129793d7ca74a>,
+        <https://sappho-digital.com/voc/person_499bbc9e7596f10d>,
+        <https://sappho-digital.com/voc/person_974acb11c098c41b>,
+        <https://sappho-digital.com/voc/person_a92154dba89f764f>,
+        <https://sappho-digital.com/voc/person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/voc/person_db10ad7627a6e7ad>,
+        <https://sappho-digital.com/voc/person_f47881025ad98035>,
+        <https://sappho-digital.com/voc/person_f79231e41dd95683>,
+        <https://sappho-digital.com/voc/person_fe75cd740876c3e4> .
+
+<https://sappho-digital.com/voc/person_0eabdfe13c1ff095> a skos:Concept ;
+    skos:prefLabel "Orpheus"@de ;
+    skos:notation "person_0eabdfe13c1ff095" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_256ddc5d500b7e13> ;
+    skos:exactMatch wd:Q174353 .
+
+<https://sappho-digital.com/voc/person_664342af9e58739b> a skos:Concept ;
+    skos:prefLabel "Peitho"@de ;
+    skos:notation "person_664342af9e58739b" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> ;
+    skos:exactMatch wd:Q611171 .
+
+<https://sappho-digital.com/voc/person_d6049353a1b9b167> a skos:Concept ;
+    skos:prefLabel "Penthilos"@de ;
+    skos:notation "person_d6049353a1b9b167" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_a66ff1aaf842f1d4> .
+
+<https://sappho-digital.com/voc/person_4bc689084fcb5dcb> a skos:Concept ;
+    skos:prefLabel "Persephone"@de ;
+    skos:notation "person_4bc689084fcb5dcb" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> ;
+    skos:exactMatch wd:Q45967 .
+
+<https://sappho-digital.com/voc/person_a66ff1aaf842f1d4> a skos:Concept ;
+    skos:prefLabel "Personen aus Sapphos Umfeld"@de ;
+    skos:notation "person_a66ff1aaf842f1d4" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/person_2603b095dc14c9fd>,
+        <https://sappho-digital.com/voc/person_4fa8ba6e36329b8d>,
+        <https://sappho-digital.com/voc/person_55cb3a6f391d86db>,
+        <https://sappho-digital.com/voc/person_7124993358ee4d33>,
+        <https://sappho-digital.com/voc/person_86ef94ea68ce0fe0>,
+        <https://sappho-digital.com/voc/person_9545062e029ef19b>,
+        <https://sappho-digital.com/voc/person_a44f7c86bfc2958d>,
+        <https://sappho-digital.com/voc/person_a766e76721189267>,
+        <https://sappho-digital.com/voc/person_c408a1bcd63c420f>,
+        <https://sappho-digital.com/voc/person_c4b1fa4084e429c3>,
+        <https://sappho-digital.com/voc/person_d6049353a1b9b167>,
+        <https://sappho-digital.com/voc/person_db532d0c7b2fccca>,
+        <https://sappho-digital.com/voc/person_fe179d791732151d> .
+
+<https://sappho-digital.com/voc/person_ee7ff70540e361f7> a skos:Concept ;
+    skos:prefLabel "Personentypen"@de ;
+    skos:notation "person_ee7ff70540e361f7" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/person_14582bf9dd069b37>,
+        <https://sappho-digital.com/voc/person_95f834da965f8d52>,
+        <https://sappho-digital.com/voc/person_e7c5d465a0193271>,
+        <https://sappho-digital.com/voc/person_f608e2394ac9ae2a> .
+
+<https://sappho-digital.com/voc/person_c408a1bcd63c420f> a skos:Concept ;
+    skos:prefLabel "Phaon"@de ;
+    skos:notation "person_c408a1bcd63c420f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_a66ff1aaf842f1d4> ;
+    skos:exactMatch wd:Q595876 .
+
+<https://sappho-digital.com/voc/person_6a8069a235c0da1d> a skos:Concept ;
+    skos:prefLabel "Philomele"@de ;
+    skos:notation "person_6a8069a235c0da1d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> ;
+    skos:exactMatch wd:Q115449 .
+
+<https://sappho-digital.com/voc/person_b440568ec351ed84> a skos:Concept ;
+    skos:prefLabel "Pindar"@de ;
+    skos:notation "person_b440568ec351ed84" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_06c6360bcd505db1> ;
+    skos:exactMatch wd:Q134929 .
+
+<https://sappho-digital.com/voc/person_9865138458182890> a skos:Concept ;
+    skos:prefLabel "Pittakos"@de ;
+    skos:notation "person_9865138458182890" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_06c6360bcd505db1> ;
+    skos:exactMatch wd:Q311835 .
+
+<https://sappho-digital.com/voc/person_66fc054f0477ea23> a skos:Concept ;
+    skos:prefLabel "Platon"@de ;
+    skos:notation "person_66fc054f0477ea23" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_06c6360bcd505db1> ;
+    skos:exactMatch wd:Q134929 .
+
+<https://sappho-digital.com/voc/person_db10ad7627a6e7ad> a skos:Concept ;
+    skos:prefLabel "Poseidon"@de ;
+    skos:notation "person_db10ad7627a6e7ad" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_1a6f232a48b9845e> ;
+    skos:exactMatch wd:Q41127 .
+
+<https://sappho-digital.com/voc/person_521151dea6fb9e09> a skos:Concept ;
+    skos:prefLabel "Priester/Priesterin"@de ;
+    skos:notation "person_521151dea6fb9e09" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_f608e2394ac9ae2a> ;
+    skos:exactMatch wd:Q42603 .
+
+<https://sappho-digital.com/voc/person_bf1a16fc1e6ba956> a skos:Concept ;
+    skos:prefLabel "Prometheus"@de ;
+    skos:notation "person_bf1a16fc1e6ba956" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_256ddc5d500b7e13> ;
+    skos:exactMatch wd:Q83160 .
+
+<https://sappho-digital.com/voc/person_4a2654173d9042b0> a skos:Concept ;
+    skos:prefLabel "Psyche"@de ;
+    skos:notation "person_4a2654173d9042b0" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> ;
+    skos:exactMatch wd:Q843382 .
+
+<https://sappho-digital.com/voc/person_278a0a79e0be5174> a skos:Concept ;
+    skos:prefLabel "Reale Personen"@de ;
+    skos:notation "person_278a0a79e0be5174" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/person_06c6360bcd505db1>,
+        <https://sappho-digital.com/voc/person_5771e8248ede2068>,
+        <https://sappho-digital.com/voc/person_6c3ac7cd68c42b93> .
+
+<https://sappho-digital.com/voc/person_f608e2394ac9ae2a> a skos:Concept ;
+    skos:prefLabel "Religiöse Personentypen"@de ;
+    skos:notation "person_f608e2394ac9ae2a" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_ee7ff70540e361f7> ;
+    skos:narrower <https://sappho-digital.com/voc/person_521151dea6fb9e09>,
+        <https://sappho-digital.com/voc/person_669b106539453871> .
+
+<https://sappho-digital.com/voc/person_db532d0c7b2fccca> a skos:Concept ;
+    skos:prefLabel "Rhamnes"@de ;
+    skos:notation "person_db532d0c7b2fccca" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_a66ff1aaf842f1d4> .
+
+<https://sappho-digital.com/voc/person_9ee0b67040c4734c> a skos:Concept ;
+    skos:prefLabel "Rhodopis/Doricha"@de ;
+    skos:notation "person_9ee0b67040c4734c" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_5771e8248ede2068> ;
+    skos:exactMatch wd:Q109278381,
+        wd:Q15504920 .
+
+<https://sappho-digital.com/voc/person_e585b2a779019b7e> a skos:Concept ;
+    skos:prefLabel "Sappho"@de ;
+    skos:notation "person_e585b2a779019b7e" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_5771e8248ede2068> ;
+    skos:exactMatch wd:Q17892 .
+
+<https://sappho-digital.com/voc/person_5771e8248ede2068> a skos:Concept ;
+    skos:prefLabel "Sappho und Personen aus ihrem Umfeld"@de ;
+    skos:notation "person_5771e8248ede2068" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_278a0a79e0be5174> ;
+    skos:narrower <https://sappho-digital.com/voc/person_278199322209770d>,
+        <https://sappho-digital.com/voc/person_8403b22eecf9a7e8>,
+        <https://sappho-digital.com/voc/person_9ee0b67040c4734c>,
+        <https://sappho-digital.com/voc/person_a2f67175618331bf>,
+        <https://sappho-digital.com/voc/person_b793a3807d130de0>,
+        <https://sappho-digital.com/voc/person_d2167a313c41ceaa>,
+        <https://sappho-digital.com/voc/person_dd90800ee54e2216>,
+        <https://sappho-digital.com/voc/person_e585b2a779019b7e> .
+
+<https://sappho-digital.com/voc/person_352e0f8a99c574b2> a skos:Concept ;
+    skos:prefLabel "Selene"@de ;
+    skos:notation "person_352e0f8a99c574b2" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> ;
+    skos:exactMatch wd:Q131585 .
+
+<https://sappho-digital.com/voc/person_dd90800ee54e2216> a skos:Concept ;
+    skos:prefLabel "Skamandronymos"@de ;
+    skos:notation "person_dd90800ee54e2216" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_5771e8248ede2068> .
+
+<https://sappho-digital.com/voc/person_4a8abedda068cc77> a skos:Concept ;
+    skos:prefLabel "Sklave/Sklavin"@de ;
+    skos:notation "person_4a8abedda068cc77" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e7c5d465a0193271> ;
+    skos:exactMatch wd:Q12773225 .
+
+<https://sappho-digital.com/voc/person_01ec9bc374eb76b7> a skos:Concept ;
+    skos:prefLabel "Solon"@de ;
+    skos:notation "person_01ec9bc374eb76b7" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_06c6360bcd505db1> ;
+    skos:exactMatch wd:Q133337 .
+
+<https://sappho-digital.com/voc/person_9c96d9e565291dda> a skos:Concept ;
+    skos:prefLabel "Sonstige fiktionale Personen"@de ;
+    skos:notation "person_9c96d9e565291dda" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/person_1e6e628ea0192e31> .
+
+<https://sappho-digital.com/voc/person_6c3ac7cd68c42b93> a skos:Concept ;
+    skos:prefLabel "Sonstige reale Personen"@de ;
+    skos:notation "person_6c3ac7cd68c42b93" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_278a0a79e0be5174> ;
+    skos:narrower <https://sappho-digital.com/voc/person_36a33d615281cb7f>,
+        <https://sappho-digital.com/voc/person_7d3c887eeaa47caf> .
+
+<https://sappho-digital.com/voc/person_95f834da965f8d52> a skos:Concept ;
+    skos:prefLabel "Soziale Personentypen"@de ;
+    skos:notation "person_95f834da965f8d52" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_ee7ff70540e361f7> ;
+    skos:narrower <https://sappho-digital.com/voc/person_05e200db9312b803>,
+        <https://sappho-digital.com/voc/person_40792a88ba634e66>,
+        <https://sappho-digital.com/voc/person_d92f8054b846977e> .
+
+<https://sappho-digital.com/voc/person_7124993358ee4d33> a skos:Concept ;
+    skos:prefLabel "Telesippa"@de ;
+    skos:notation "person_7124993358ee4d33" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_a66ff1aaf842f1d4> .
+
+<https://sappho-digital.com/voc/person_331d06f48bf9d3d9> a skos:Concept ;
+    skos:prefLabel "Tithonos"@de ;
+    skos:notation "person_331d06f48bf9d3d9" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_256ddc5d500b7e13> ;
+    skos:exactMatch wd:Q737306 .
+
+<https://sappho-digital.com/voc/person_acdbd75b6cf29fa6> a skos:Concept ;
+    skos:prefLabel "Tyrann"@de ;
+    skos:notation "person_acdbd75b6cf29fa6" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e7c5d465a0193271> ;
+    skos:exactMatch wd:Q180095 .
+
+<https://sappho-digital.com/voc/person_e68a8e275e56e27e> a skos:Concept ;
+    skos:prefLabel "Zephyr"@de ;
+    skos:notation "person_e68a8e275e56e27e" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_e6e1e08c60e5a04d> ;
+    skos:exactMatch wd:Q467515 .
+
+<https://sappho-digital.com/voc/person_c7aebd12b1cbd031> a skos:Concept ;
+    skos:prefLabel "Zeus"@de ;
+    skos:notation "person_c7aebd12b1cbd031" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/person_1a6f232a48b9845e> ;
+    skos:exactMatch wd:Q34201 .
+
+<https://sappho-digital.com/voc/phrase_108f0ac68025102d> a skos:Concept ;
+    skos:prefLabel "Goldner als Gold"@de ;
+    skos:notation "phrase_108f0ac68025102d" ;
+    skos:inScheme <https://sappho-digital.com/voc> .
+
+<https://sappho-digital.com/voc/phrase_42853034668c7b29> a skos:Concept ;
+    skos:prefLabel "Grüner als Gras"@de ;
+    skos:notation "phrase_42853034668c7b29" ;
+    skos:inScheme <https://sappho-digital.com/voc> .
+
+<https://sappho-digital.com/voc/phrase_2ec47d9b59c1040e> a skos:Concept ;
+    skos:prefLabel "Honigsüß"@de ;
+    skos:notation "phrase_2ec47d9b59c1040e" ;
+    skos:inScheme <https://sappho-digital.com/voc> .
+
+<https://sappho-digital.com/voc/phrase_5cd31d1448d304fd> a skos:Concept ;
+    skos:prefLabel "Rosenfingrig"@de ;
+    skos:notation "phrase_5cd31d1448d304fd" ;
+    skos:inScheme <https://sappho-digital.com/voc> .
+
+<https://sappho-digital.com/voc/phrase_993410118d749966> a skos:Concept ;
+    skos:prefLabel "Süßbitter"@de ;
+    skos:notation "phrase_993410118d749966" ;
+    skos:inScheme <https://sappho-digital.com/voc> .
+
+<https://sappho-digital.com/voc/plot_7088a192832d9d0c> a skos:Concept ;
+    skos:prefLabel "Alternde Sappho"@de ;
+    skos:notation "plot_7088a192832d9d0c" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_cc3d0841ee1cc1f2> ;
+    skos:relatedMatch wd:Q17892,
+        wd:Q332154 .
+
+<https://sappho-digital.com/voc/plot_08ad0013a591aa17> a skos:Concept ;
+    skos:prefLabel "Charaxos als Mundschenk"@de ;
+    skos:notation "plot_08ad0013a591aa17" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_c15e2310c0183ba9> ;
+    skos:broadMatch wd:Q1075791 ;
+    skos:relatedMatch wd:Q16184753 .
+
+<https://sappho-digital.com/voc/plot_414bc4680cad7ddc> a skos:Concept ;
+    skos:prefLabel "Charaxos-Rhodopis"@de ;
+    skos:notation "plot_414bc4680cad7ddc" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_c15e2310c0183ba9> ;
+    skos:broadMatch wd:Q91670341 ;
+    skos:relatedMatch wd:Q109278381,
+        wd:Q15504920,
+        wd:Q16184753 .
+
+<https://sappho-digital.com/voc/plot_c15e2310c0183ba9> a skos:Concept ;
+    skos:prefLabel "Charaxos-Stoffe"@de ;
+    skos:notation "plot_c15e2310c0183ba9" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/plot_08ad0013a591aa17>,
+        <https://sappho-digital.com/voc/plot_414bc4680cad7ddc> .
+
+<https://sappho-digital.com/voc/plot_42557e8d70c24751> a skos:Concept ;
+    skos:prefLabel "Göttliche Sappho"@de ;
+    skos:notation "plot_42557e8d70c24751" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_86a1ad47f8e7fa03> ;
+    skos:relatedMatch wd:Q17892,
+        wd:Q580995 .
+
+<https://sappho-digital.com/voc/plot_531e3c7365ed869a> a skos:Concept ;
+    skos:prefLabel "Sappho als Aphrodite-Verehrerin"@de ;
+    skos:notation "plot_531e3c7365ed869a" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_dedcc9b1e7fb8e79> ;
+    skos:relatedMatch wd:Q17892,
+        wd:Q2514663,
+        wd:Q35500 .
+
+<https://sappho-digital.com/voc/plot_168fc491c40ff2fd> a skos:Concept ;
+    skos:prefLabel "Sappho als Chorleiterin"@de ;
+    skos:notation "plot_168fc491c40ff2fd" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_dedcc9b1e7fb8e79> ;
+    skos:broadMatch wd:Q1076502 ;
+    skos:relatedMatch wd:Q17892 .
+
+<https://sappho-digital.com/voc/plot_fd168d9b2224361d> a skos:Concept ;
+    skos:prefLabel "Sappho als Dichterin"@de ;
+    skos:notation "plot_fd168d9b2224361d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_dfc7969c4ebf3533> ;
+    skos:narrower <https://sappho-digital.com/voc/plot_86a1ad47f8e7fa03>,
+        <https://sappho-digital.com/voc/plot_b3deb8ded8bddf04> ;
+    skos:relatedMatch wd:Q107230508,
+        wd:Q17892,
+        wd:Q49757 .
+
+<https://sappho-digital.com/voc/plot_ebb7046704a8c30c> a skos:Concept ;
+    skos:prefLabel "Sappho als Erzieherin"@de ;
+    skos:notation "plot_ebb7046704a8c30c" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_dedcc9b1e7fb8e79> ;
+    skos:broadMatch wd:Q974144 ;
+    skos:relatedMatch wd:Q17892 .
+
+<https://sappho-digital.com/voc/plot_86a1ad47f8e7fa03> a skos:Concept ;
+    skos:prefLabel "Sappho als große Dichterin"@de ;
+    skos:notation "plot_86a1ad47f8e7fa03" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_fd168d9b2224361d> ;
+    skos:narrower <https://sappho-digital.com/voc/plot_42557e8d70c24751>,
+        <https://sappho-digital.com/voc/plot_7fc0a31f8eefb7cc> ;
+    skos:relatedMatch wd:Q107230508,
+        wd:Q17892,
+        wd:Q49757 .
+
+<https://sappho-digital.com/voc/plot_43b59f052f3dc73e> a skos:Concept ;
+    skos:prefLabel "Sappho als homoerotisch Begehrende"@de ;
+    skos:notation "plot_43b59f052f3dc73e" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_a3935710c883087b> ;
+    skos:narrower <https://sappho-digital.com/voc/plot_b2aa4b409c0138a8>,
+        <https://sappho-digital.com/voc/plot_cce03921076cb7bf> ;
+    skos:broadMatch wd:Q592 ;
+    skos:relatedMatch wd:Q17892 .
+
+<https://sappho-digital.com/voc/plot_cce03921076cb7bf> a skos:Concept ;
+    skos:prefLabel "Sappho als homoerotisch Begehrende (Ablehnung)"@de ;
+    skos:notation "plot_cce03921076cb7bf" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_43b59f052f3dc73e> ;
+    skos:broadMatch wd:Q592 ;
+    skos:relatedMatch wd:Q17892 .
+
+<https://sappho-digital.com/voc/plot_1bd6cf31c44d00e5> a skos:Concept ;
+    skos:prefLabel "Sappho als Lehrerin"@de ;
+    skos:notation "plot_1bd6cf31c44d00e5" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_dedcc9b1e7fb8e79> ;
+    skos:broadMatch wd:Q37226 ;
+    skos:relatedMatch wd:Q17892 .
+
+<https://sappho-digital.com/voc/plot_0b092ed64a936159> a skos:Concept ;
+    skos:prefLabel "Sappho als Liebende"@de ;
+    skos:notation "plot_0b092ed64a936159" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_a3935710c883087b> ;
+    skos:narrower <https://sappho-digital.com/voc/plot_30ec8b515802033f>,
+        <https://sappho-digital.com/voc/plot_cc6bf7467ad0c7cf> ;
+    skos:broadMatch wd:Q841509 ;
+    skos:relatedMatch wd:Q17892 .
+
+<https://sappho-digital.com/voc/plot_b3deb8ded8bddf04> a skos:Concept ;
+    skos:prefLabel "Sappho als Liebesdichterin"@de ;
+    skos:notation "plot_b3deb8ded8bddf04" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_fd168d9b2224361d> ;
+    skos:relatedMatch wd:Q10296750,
+        wd:Q17892 .
+
+<https://sappho-digital.com/voc/plot_0a6119efed4bdf7d> a skos:Concept ;
+    skos:prefLabel "Sappho als Mutter"@de ;
+    skos:notation "plot_0a6119efed4bdf7d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_5528e918f9003c9c> ;
+    skos:narrower <https://sappho-digital.com/voc/plot_efe620bf3882fa2f> ;
+    skos:broadMatch wd:Q7560 ;
+    skos:relatedMatch wd:Q17892 .
+
+<https://sappho-digital.com/voc/plot_efe620bf3882fa2f> a skos:Concept ;
+    skos:prefLabel "Sappho als Mutter von Kleis"@de ;
+    skos:notation "plot_efe620bf3882fa2f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_0a6119efed4bdf7d> ;
+    skos:broadMatch wd:Q7560 ;
+    skos:relatedMatch wd:Q17892 .
+
+<https://sappho-digital.com/voc/plot_b2d8b14d68b73dd5> a skos:Concept ;
+    skos:prefLabel "Sappho als sittenlose Frau"@de ;
+    skos:notation "plot_b2d8b14d68b73dd5" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_a3935710c883087b> ;
+    skos:broadMatch wd:Q467 ;
+    skos:relatedMatch wd:Q17892,
+        wd:Q3796713 .
+
+<https://sappho-digital.com/voc/plot_cc6bf7467ad0c7cf> a skos:Concept ;
+    skos:prefLabel "Sappho als unglücklich Liebende"@de ;
+    skos:notation "plot_cc6bf7467ad0c7cf" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_0b092ed64a936159> ;
+    skos:narrower <https://sappho-digital.com/voc/plot_6ec13f66820264d7> ;
+    skos:broadMatch wd:Q841509 ;
+    skos:relatedMatch wd:Q17892 .
+
+<https://sappho-digital.com/voc/plot_830dcfef58019d56> a skos:Concept ;
+    skos:prefLabel "Sappho im Exil"@de ;
+    skos:notation "plot_830dcfef58019d56" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_cc3d0841ee1cc1f2> ;
+    skos:broadMatch wd:Q12765670 ;
+    skos:relatedMatch wd:Q17892 .
+
+<https://sappho-digital.com/voc/plot_b2aa4b409c0138a8> a skos:Concept ;
+    skos:prefLabel "Sappho-Erinna-Beziehung"@de ;
+    skos:notation "plot_b2aa4b409c0138a8" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_43b59f052f3dc73e> ;
+    skos:broadMatch wd:Q3242821 ;
+    skos:relatedMatch wd:Q17892,
+        wd:Q256241 .
+
+<https://sappho-digital.com/voc/plot_30ec8b515802033f> a skos:Concept ;
+    skos:prefLabel "Sappho-Kerkylas-Ehe"@de ;
+    skos:notation "plot_30ec8b515802033f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_0b092ed64a936159> ;
+    skos:broadMatch wd:Q8445 ;
+    skos:relatedMatch wd:Q17892,
+        wd:Q85870889 .
+
+<https://sappho-digital.com/voc/plot_6ec13f66820264d7> a skos:Concept ;
+    skos:prefLabel "Sappho-Phaon-Legende"@de ;
+    skos:notation "plot_6ec13f66820264d7" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_cc6bf7467ad0c7cf> ;
+    skos:narrower <https://sappho-digital.com/voc/plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/voc/plot_3b2a78ce1bd49c2f>,
+        <https://sappho-digital.com/voc/plot_f69b5676eae739bc> ;
+    skos:relatedMatch wd:Q17892,
+        wd:Q595876 .
+
+<https://sappho-digital.com/voc/plot_f69b5676eae739bc> a skos:Concept ;
+    skos:prefLabel "Sappho-Phaon-Legende (Ablehnung)"@de ;
+    skos:notation "plot_f69b5676eae739bc" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_6ec13f66820264d7> ;
+    skos:relatedMatch wd:Q17892,
+        wd:Q595876 .
+
+<https://sappho-digital.com/voc/plot_3b2a78ce1bd49c2f> a skos:Concept ;
+    skos:prefLabel "Sappho-Phaon-Legende (Dekonstruktion)"@de ;
+    skos:notation "plot_3b2a78ce1bd49c2f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_6ec13f66820264d7> ;
+    skos:relatedMatch wd:Q17892,
+        wd:Q595876 .
+
+<https://sappho-digital.com/voc/plot_7bd4c599c42360db> a skos:Concept ;
+    skos:prefLabel "Sapphos adlige Familie"@de ;
+    skos:notation "plot_7bd4c599c42360db" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_5087850a55fd0874> ;
+    skos:relatedMatch wd:Q134737,
+        wd:Q17892,
+        wd:Q8436 .
+
+<https://sappho-digital.com/voc/plot_5087850a55fd0874> a skos:Concept ;
+    skos:prefLabel "Sapphos Familie"@de ;
+    skos:notation "plot_5087850a55fd0874" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_b83cd3a9f03a61c4> ;
+    skos:narrower <https://sappho-digital.com/voc/plot_7bd4c599c42360db>,
+        <https://sappho-digital.com/voc/plot_9b9d5a40ffdaaaba>,
+        <https://sappho-digital.com/voc/plot_d761685e20e4c05d> .
+
+<https://sappho-digital.com/voc/plot_dedcc9b1e7fb8e79> a skos:Concept ;
+    skos:prefLabel "Sapphos Mädchenkreis"@de ;
+    skos:notation "plot_dedcc9b1e7fb8e79" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_b83cd3a9f03a61c4> ;
+    skos:narrower <https://sappho-digital.com/voc/plot_168fc491c40ff2fd>,
+        <https://sappho-digital.com/voc/plot_1bd6cf31c44d00e5>,
+        <https://sappho-digital.com/voc/plot_531e3c7365ed869a>,
+        <https://sappho-digital.com/voc/plot_ebb7046704a8c30c> ;
+    skos:broadMatch wd:Q177634 ;
+    skos:relatedMatch wd:Q17892,
+        wd:Q3031 .
+
+<https://sappho-digital.com/voc/plot_d761685e20e4c05d> a skos:Concept ;
+    skos:prefLabel "Sapphos politisch oppositionelle Familie"@de ;
+    skos:notation "plot_d761685e20e4c05d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_5087850a55fd0874> ;
+    skos:relatedMatch wd:Q17892,
+        wd:Q192852,
+        wd:Q8436 .
+
+<https://sappho-digital.com/voc/plot_011312b82eb4fc98> a skos:Concept ;
+    skos:prefLabel "Sapphos Suizid"@de ;
+    skos:notation "plot_011312b82eb4fc98" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_6ec13f66820264d7> ;
+    skos:narrower <https://sappho-digital.com/voc/plot_47b732cf0edd2f7e> ;
+    skos:exactMatch wd:Q134285870 .
+
+<https://sappho-digital.com/voc/plot_47b732cf0edd2f7e> a skos:Concept ;
+    skos:prefLabel "Sapphos Suizid (Ablehnung)"@de ;
+    skos:notation "plot_47b732cf0edd2f7e" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_011312b82eb4fc98> ;
+    skos:broadMatch wd:Q134285870 .
+
+<https://sappho-digital.com/voc/plot_9b9d5a40ffdaaaba> a skos:Concept ;
+    skos:prefLabel "Sapphos wohlhabende Familie"@de ;
+    skos:notation "plot_9b9d5a40ffdaaaba" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_5087850a55fd0874> ;
+    skos:relatedMatch wd:Q1760011,
+        wd:Q17892,
+        wd:Q8436 .
+
+<https://sappho-digital.com/voc/plot_7fc0a31f8eefb7cc> a skos:Concept ;
+    skos:prefLabel "Solons Verehrung Sapphos"@de ;
+    skos:notation "plot_7fc0a31f8eefb7cc" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_86a1ad47f8e7fa03> ;
+    skos:relatedMatch wd:Q133337,
+        wd:Q17892,
+        wd:Q851918 .
+
+<https://sappho-digital.com/voc/plot_b83cd3a9f03a61c4> a skos:Concept ;
+    skos:prefLabel "Stoffe zu Familie und Umfeld"@de ;
+    skos:notation "plot_b83cd3a9f03a61c4" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/plot_5087850a55fd0874>,
+        <https://sappho-digital.com/voc/plot_dedcc9b1e7fb8e79> .
+
+<https://sappho-digital.com/voc/plot_cc3d0841ee1cc1f2> a skos:Concept ;
+    skos:prefLabel "Stoffe zu Lebensumständen"@de ;
+    skos:notation "plot_cc3d0841ee1cc1f2" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/plot_6adb2e4795def630>,
+        <https://sappho-digital.com/voc/plot_7088a192832d9d0c>,
+        <https://sappho-digital.com/voc/plot_830dcfef58019d56> .
+
+<https://sappho-digital.com/voc/plot_5528e918f9003c9c> a skos:Concept ;
+    skos:prefLabel "Stoffe zu Mutterschaft"@de ;
+    skos:notation "plot_5528e918f9003c9c" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/plot_0a6119efed4bdf7d> .
+
+<https://sappho-digital.com/voc/plot_a3935710c883087b> a skos:Concept ;
+    skos:prefLabel "Stoffe zu Romantik und Sexualität"@de ;
+    skos:notation "plot_a3935710c883087b" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/plot_0b092ed64a936159>,
+        <https://sappho-digital.com/voc/plot_43b59f052f3dc73e>,
+        <https://sappho-digital.com/voc/plot_b2d8b14d68b73dd5> .
+
+<https://sappho-digital.com/voc/plot_dfc7969c4ebf3533> a skos:Concept ;
+    skos:prefLabel "Stoffe zur dichterischen Identität"@de ;
+    skos:notation "plot_dfc7969c4ebf3533" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/plot_fd168d9b2224361d> .
+
+<https://sappho-digital.com/voc/plot_6adb2e4795def630> a skos:Concept ;
+    skos:prefLabel "Unglückliche Sappho"@de ;
+    skos:notation "plot_6adb2e4795def630" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/plot_cc3d0841ee1cc1f2> ;
+    skos:relatedMatch wd:Q105839683,
+        wd:Q17892 .
+
+<https://sappho-digital.com/voc/topic_d8a87ac0faded437> a skos:Concept ;
+    skos:prefLabel "Abschied/Verlassen"@de ;
+    skos:notation "topic_d8a87ac0faded437" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_6dfd95722c255071> ;
+    skos:exactMatch wd:Q21171241 .
+
+<https://sappho-digital.com/voc/topic_dd0209b2c71040a5> a skos:Concept ;
+    skos:prefLabel "Altern"@de ;
+    skos:notation "topic_dd0209b2c71040a5" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:exactMatch wd:Q332154 .
+
+<https://sappho-digital.com/voc/topic_d0d0d796a787f4a8> a skos:Concept ;
+    skos:prefLabel "Begehren"@de ;
+    skos:notation "topic_d0d0d796a787f4a8" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_6965e0a196d0b97e> ;
+    skos:exactMatch wd:Q775842 .
+
+<https://sappho-digital.com/voc/topic_91fbce010840c414> a skos:Concept ;
+    skos:prefLabel "Dichtkunst"@de ;
+    skos:notation "topic_91fbce010840c414" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_522a85ce59f9c66a> ;
+    skos:narrower <https://sappho-digital.com/voc/topic_f83ec0822d1cce6e>,
+        <https://sappho-digital.com/voc/topic_fe0ae02e2ba6d7c4> ;
+    skos:exactMatch wd:Q482 .
+
+<https://sappho-digital.com/voc/topic_f83ec0822d1cce6e> a skos:Concept ;
+    skos:prefLabel "Dichtkunst von Frauen"@de ;
+    skos:notation "topic_f83ec0822d1cce6e" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_91fbce010840c414> ;
+    skos:narrower <https://sappho-digital.com/voc/topic_83a2d3f58ce463ad> ;
+    skos:broadMatch wd:Q482 .
+
+<https://sappho-digital.com/voc/topic_547b51889f7bce04> a skos:Concept ;
+    skos:prefLabel "Ehe"@de ;
+    skos:notation "topic_547b51889f7bce04" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_6965e0a196d0b97e> ;
+    skos:exactMatch wd:Q8445 .
+
+<https://sappho-digital.com/voc/topic_e6ecf2d8c3d52793> a skos:Concept ;
+    skos:prefLabel "Erinnerung"@de ;
+    skos:notation "topic_e6ecf2d8c3d52793" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_6dfd95722c255071> ;
+    skos:exactMatch wd:Q492 .
+
+<https://sappho-digital.com/voc/topic_b0049a9652bca00f> a skos:Concept ;
+    skos:prefLabel "Exil"@de ;
+    skos:notation "topic_b0049a9652bca00f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_173f939586542d39> ;
+    skos:exactMatch wd:Q188863 .
+
+<https://sappho-digital.com/voc/topic_fe0ae02e2ba6d7c4> a skos:Concept ;
+    skos:prefLabel "Fragmenthaftigkeit"@de ;
+    skos:notation "topic_fe0ae02e2ba6d7c4" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_91fbce010840c414> ;
+    skos:relatedMatch wd:Q122238708 .
+
+<https://sappho-digital.com/voc/topic_90253972585e05d8> a skos:Concept ;
+    skos:prefLabel "Gelehrsamkeit"@de ;
+    skos:notation "topic_90253972585e05d8" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_522a85ce59f9c66a> ;
+    skos:exactMatch wd:Q707726 .
+
+<https://sappho-digital.com/voc/topic_1de543cc588d6ee3> a skos:Concept ;
+    skos:prefLabel "Geschlechterrollen"@de ;
+    skos:notation "topic_1de543cc588d6ee3" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_173f939586542d39> ;
+    skos:narrower <https://sappho-digital.com/voc/topic_979480c5de919f6e> ;
+    skos:closeMatch wd:Q2672163 .
+
+<https://sappho-digital.com/voc/topic_173f939586542d39> a skos:Concept ;
+    skos:prefLabel "Gesellschafts- und Geschlechtsthemen"@de ;
+    skos:notation "topic_173f939586542d39" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/topic_193f7fb77b90540a>,
+        <https://sappho-digital.com/voc/topic_1de543cc588d6ee3>,
+        <https://sappho-digital.com/voc/topic_3c28b27922e5dfea>,
+        <https://sappho-digital.com/voc/topic_4d0efc6118699f99>,
+        <https://sappho-digital.com/voc/topic_6c84497f664d562a>,
+        <https://sappho-digital.com/voc/topic_7112b97bd8eccdc6>,
+        <https://sappho-digital.com/voc/topic_7da8193d94d44125>,
+        <https://sappho-digital.com/voc/topic_b0049a9652bca00f>,
+        <https://sappho-digital.com/voc/topic_c02e0ff3d2bffc47>,
+        <https://sappho-digital.com/voc/topic_e059b05a9148622d>,
+        <https://sappho-digital.com/voc/topic_e3f9c28d697807a6> .
+
+<https://sappho-digital.com/voc/topic_0af359e15219034a> a skos:Concept ;
+    skos:prefLabel "Gleichgeschlechtliche Liebe unter Frauen"@de ;
+    skos:notation "topic_0af359e15219034a" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_a10417e468b798b0> ;
+    skos:broadMatch wd:Q316 ;
+    skos:closeMatch wd:Q6649 .
+
+<https://sappho-digital.com/voc/topic_c02e0ff3d2bffc47> a skos:Concept ;
+    skos:prefLabel "Handel"@de ;
+    skos:notation "topic_c02e0ff3d2bffc47" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_173f939586542d39> ;
+    skos:exactMatch wd:Q601401 .
+
+<https://sappho-digital.com/voc/topic_e3f9c28d697807a6> a skos:Concept ;
+    skos:prefLabel "Hass"@de ;
+    skos:notation "topic_e3f9c28d697807a6" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_173f939586542d39> ;
+    skos:exactMatch wd:Q160232 .
+
+<https://sappho-digital.com/voc/topic_b44d4c1bda5009f2> a skos:Concept ;
+    skos:prefLabel "Heterosexualität"@de ;
+    skos:notation "topic_b44d4c1bda5009f2" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_6965e0a196d0b97e> ;
+    skos:exactMatch wd:Q1035954 .
+
+<https://sappho-digital.com/voc/topic_9bace65450b57656> a skos:Concept ;
+    skos:prefLabel "Jugend"@de ;
+    skos:notation "topic_9bace65450b57656" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:exactMatch wd:Q190007 .
+
+<https://sappho-digital.com/voc/topic_b51493c7cb013212> a skos:Concept ;
+    skos:prefLabel "Jungfräulichkeit"@de ;
+    skos:notation "topic_b51493c7cb013212" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_6965e0a196d0b97e> ;
+    skos:exactMatch wd:Q170538 .
+
+<https://sappho-digital.com/voc/topic_6c84497f664d562a> a skos:Concept ;
+    skos:prefLabel "Kriegswesen"@de ;
+    skos:notation "topic_6c84497f664d562a" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_173f939586542d39> ;
+    skos:exactMatch wd:Q12786121 .
+
+<https://sappho-digital.com/voc/topic_522a85ce59f9c66a> a skos:Concept ;
+    skos:prefLabel "Kunst- und Wissenschaftsthemen"@de ;
+    skos:notation "topic_522a85ce59f9c66a" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/topic_0424470816a8c5ac>,
+        <https://sappho-digital.com/voc/topic_5f98e5b87c9f2f96>,
+        <https://sappho-digital.com/voc/topic_90253972585e05d8>,
+        <https://sappho-digital.com/voc/topic_91fbce010840c414>,
+        <https://sappho-digital.com/voc/topic_e7a7fad674ab17f4> .
+
+<https://sappho-digital.com/voc/topic_a10417e468b798b0> a skos:Concept ;
+    skos:prefLabel "Liebe"@de ;
+    skos:notation "topic_a10417e468b798b0" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_6965e0a196d0b97e> ;
+    skos:narrower <https://sappho-digital.com/voc/topic_0af359e15219034a>,
+        <https://sappho-digital.com/voc/topic_ccb502909ffa7cd8> ;
+    skos:exactMatch wd:Q316 .
+
+<https://sappho-digital.com/voc/topic_6965e0a196d0b97e> a skos:Concept ;
+    skos:prefLabel "Liebes- und Sexualitätsthemen"@de ;
+    skos:notation "topic_6965e0a196d0b97e" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/topic_547b51889f7bce04>,
+        <https://sappho-digital.com/voc/topic_a10417e468b798b0>,
+        <https://sappho-digital.com/voc/topic_b44d4c1bda5009f2>,
+        <https://sappho-digital.com/voc/topic_b51493c7cb013212>,
+        <https://sappho-digital.com/voc/topic_d0d0d796a787f4a8> .
+
+<https://sappho-digital.com/voc/topic_85e382a7ed66294c> a skos:Concept ;
+    skos:prefLabel "Liebeskummer"@de ;
+    skos:notation "topic_85e382a7ed66294c" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_ccb502909ffa7cd8> ;
+    skos:exactMatch wd:Q13604751 .
+
+<https://sappho-digital.com/voc/topic_61418e73ecf18fa9> a skos:Concept ;
+    skos:prefLabel "Menschlichkeit"@de ;
+    skos:notation "topic_61418e73ecf18fa9" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_bdd785a758abd7cd> ;
+    skos:exactMatch wd:Q12767209 .
+
+<https://sappho-digital.com/voc/topic_216c06ff845256fe> a skos:Concept ;
+    skos:prefLabel "Menschlichkeit/Göttlichkeit"@de ;
+    skos:notation "topic_216c06ff845256fe" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_bdd785a758abd7cd> ;
+    skos:relatedMatch wd:Q12767209,
+        wd:Q1379405 .
+
+<https://sappho-digital.com/voc/topic_bdd785a758abd7cd> a skos:Concept ;
+    skos:prefLabel "Menschlichkeits- und Göttlichkeitsthemen"@de ;
+    skos:notation "topic_bdd785a758abd7cd" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/topic_216c06ff845256fe>,
+        <https://sappho-digital.com/voc/topic_61418e73ecf18fa9>,
+        <https://sappho-digital.com/voc/topic_afe138550cd16d0b> .
+
+<https://sappho-digital.com/voc/topic_4d0efc6118699f99> a skos:Concept ;
+    skos:prefLabel "Mutterschaft"@de ;
+    skos:notation "topic_4d0efc6118699f99" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_173f939586542d39> ;
+    skos:exactMatch wd:Q1956046 .
+
+<https://sappho-digital.com/voc/topic_e059b05a9148622d> a skos:Concept ;
+    skos:prefLabel "Patiarchat"@de ;
+    skos:notation "topic_e059b05a9148622d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_173f939586542d39> ;
+    skos:exactMatch wd:Q181339 .
+
+<https://sappho-digital.com/voc/topic_5f98e5b87c9f2f96> a skos:Concept ;
+    skos:prefLabel "Philologie"@de ;
+    skos:notation "topic_5f98e5b87c9f2f96" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_522a85ce59f9c66a> ;
+    skos:exactMatch wd:Q40634 .
+
+<https://sappho-digital.com/voc/topic_3c28b27922e5dfea> a skos:Concept ;
+    skos:prefLabel "Politik"@de ;
+    skos:notation "topic_3c28b27922e5dfea" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_173f939586542d39> ;
+    skos:exactMatch wd:Q7163 .
+
+<https://sappho-digital.com/voc/topic_0424470816a8c5ac> a skos:Concept ;
+    skos:prefLabel "Ruhm"@de ;
+    skos:notation "topic_0424470816a8c5ac" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_522a85ce59f9c66a> ;
+    skos:exactMatch wd:Q1519566 .
+
+<https://sappho-digital.com/voc/topic_83a2d3f58ce463ad> a skos:Concept ;
+    skos:prefLabel "Sapphos Rezeption"@de ;
+    skos:notation "topic_83a2d3f58ce463ad" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_f83ec0822d1cce6e> ;
+    skos:relatedMatch wd:Q17892 .
+
+<https://sappho-digital.com/voc/topic_868c77ac61c449bd> a skos:Concept ;
+    skos:prefLabel "Schlaflosigkeit"@de ;
+    skos:notation "topic_868c77ac61c449bd" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:exactMatch wd:Q1869874 .
+
+<https://sappho-digital.com/voc/topic_193f7fb77b90540a> a skos:Concept ;
+    skos:prefLabel "Schönheit"@de ;
+    skos:notation "topic_193f7fb77b90540a" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_173f939586542d39> ;
+    skos:exactMatch wd:Q7242 .
+
+<https://sappho-digital.com/voc/topic_f6d80c8d012ca95d> a skos:Concept ;
+    skos:prefLabel "Suizid"@de ;
+    skos:notation "topic_f6d80c8d012ca95d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_16fb1687f7449a95> ;
+    skos:exactMatch wd:Q10737 .
+
+<https://sappho-digital.com/voc/topic_e7a7fad674ab17f4> a skos:Concept ;
+    skos:prefLabel "Theater"@de ;
+    skos:notation "topic_e7a7fad674ab17f4" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_522a85ce59f9c66a> ;
+    skos:exactMatch wd:Q11635 .
+
+<https://sappho-digital.com/voc/topic_16fb1687f7449a95> a skos:Concept ;
+    skos:prefLabel "Tod"@de ;
+    skos:notation "topic_16fb1687f7449a95" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/topic_f6d80c8d012ca95d> ;
+    skos:exactMatch wd:Q4 .
+
+<https://sappho-digital.com/voc/topic_7da8193d94d44125> a skos:Concept ;
+    skos:prefLabel "Tugend"@de ;
+    skos:notation "topic_7da8193d94d44125" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_173f939586542d39> ;
+    skos:exactMatch wd:Q157811 .
+
+<https://sappho-digital.com/voc/topic_ccb502909ffa7cd8> a skos:Concept ;
+    skos:prefLabel "Unglückliche Liebe"@de ;
+    skos:notation "topic_ccb502909ffa7cd8" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_a10417e468b798b0> ;
+    skos:narrower <https://sappho-digital.com/voc/topic_85e382a7ed66294c> ;
+    skos:broadMatch wd:Q316 .
+
+<https://sappho-digital.com/voc/topic_7112b97bd8eccdc6> a skos:Concept ;
+    skos:prefLabel "Verbannung"@de ;
+    skos:notation "topic_7112b97bd8eccdc6" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_173f939586542d39> ;
+    skos:exactMatch wd:Q1716571 .
+
+<https://sappho-digital.com/voc/topic_48d9deec1aa375bc> a skos:Concept ;
+    skos:prefLabel "Vergessen"@de ;
+    skos:notation "topic_48d9deec1aa375bc" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_6dfd95722c255071> ;
+    skos:exactMatch wd:Q1377840 .
+
+<https://sappho-digital.com/voc/topic_afe138550cd16d0b> a skos:Concept ;
+    skos:prefLabel "Vergöttlichung"@de ;
+    skos:notation "topic_afe138550cd16d0b" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_bdd785a758abd7cd> ;
+    skos:closeMatch wd:Q580995 .
+
+<https://sappho-digital.com/voc/topic_6dfd95722c255071> a skos:Concept ;
+    skos:prefLabel "Verlusts- und Endlichkeitsthemen"@de ;
+    skos:notation "topic_6dfd95722c255071" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/topic_48d9deec1aa375bc>,
+        <https://sappho-digital.com/voc/topic_d8a87ac0faded437>,
+        <https://sappho-digital.com/voc/topic_e6ecf2d8c3d52793> .
+
+<https://sappho-digital.com/voc/topic_979480c5de919f6e> a skos:Concept ;
+    skos:prefLabel "Weiblichkeit"@de ;
+    skos:notation "topic_979480c5de919f6e" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/topic_1de543cc588d6ee3> ;
+    skos:exactMatch wd:Q866081 .
+
+<https://sappho-digital.com/voc/work_9a6fa5b72a8235b6> a skos:Concept ;
+    skos:prefLabel "Alina (Gaetano Donizetti)"@de ;
+    skos:notation "work_9a6fa5b72a8235b6" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_9e0dd0ba7bd9212d> ;
+    skos:exactMatch wd:Q648981 .
+
+<https://sappho-digital.com/voc/work_50897b387fb5a925> a skos:Concept ;
+    skos:prefLabel "An den delischen Apollon (Homer)"@de ;
+    skos:notation "work_50897b387fb5a925" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broadMatch wd:Q329342 .
+
+<https://sappho-digital.com/voc/work_7ad506cbcc0b8143> a skos:Concept ;
+    skos:prefLabel "Die Spindel (Erinna)"@de ;
+    skos:notation "work_7ad506cbcc0b8143" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_9e0dd0ba7bd9212d> .
+
+<https://sappho-digital.com/voc/work_9b4a173a94427606> a skos:Concept ;
+    skos:prefLabel "Erinna an Sappho"@de ;
+    skos:notation "work_9b4a173a94427606" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_2b67619b4d423e5a> .
+
+<https://sappho-digital.com/voc/work_d27bb3164e556709> a skos:Concept ;
+    skos:prefLabel "Fragment 1 Voigt"@de ;
+    skos:notation "work_d27bb3164e556709" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_67d314d5db550e06> ;
+    skos:exactMatch wd:Q21070481 .
+
+<https://sappho-digital.com/voc/work_18f9bba320ea9dc9> a skos:Concept ;
+    skos:prefLabel "Fragment 105 Voigt"@de ;
+    skos:notation "work_18f9bba320ea9dc9" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_67d314d5db550e06> ;
+    skos:exactMatch wd:Q119291392 .
+
+<https://sappho-digital.com/voc/work_e0fa6d52d403955c> a skos:Concept ;
+    skos:prefLabel "Fragment 130 Voigt"@de ;
+    skos:notation "work_e0fa6d52d403955c" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_67d314d5db550e06> ;
+    skos:exactMatch wd:Q119292152 .
+
+<https://sappho-digital.com/voc/work_ef190d7c21734365> a skos:Concept ;
+    skos:prefLabel "Fragment 16 Voigt"@de ;
+    skos:notation "work_ef190d7c21734365" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_67d314d5db550e06> ;
+    skos:exactMatch wd:Q119288114 .
+
+<https://sappho-digital.com/voc/work_0951b31d71de94b8> a skos:Concept ;
+    skos:prefLabel "Fragment 168b Voigt"@de ;
+    skos:notation "work_0951b31d71de94b8" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_67d314d5db550e06> ;
+    skos:exactMatch wd:Q24884666 .
+
+<https://sappho-digital.com/voc/work_bd94b08706bbf1d8> a skos:Concept ;
+    skos:prefLabel "Fragment 31 Voigt"@de ;
+    skos:notation "work_bd94b08706bbf1d8" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_67d314d5db550e06> ;
+    skos:exactMatch wd:Q17079267 .
+
+<https://sappho-digital.com/voc/work_8b90e47471cb4cb5> a skos:Concept ;
+    skos:prefLabel "Fragment 96 Voigt"@de ;
+    skos:notation "work_8b90e47471cb4cb5" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_67d314d5db550e06> ;
+    skos:exactMatch wd:Q119289993 .
+
+<https://sappho-digital.com/voc/work_64e314c856d1dbbe> a skos:Concept ;
+    skos:prefLabel "Griechische Anthologie/Anthologia Graeca"@de ;
+    skos:notation "work_64e314c856d1dbbe" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_9e0dd0ba7bd9212d> ;
+    skos:exactMatch wd:Q8934183 .
+
+<https://sappho-digital.com/voc/work_7ddaff9b6814b58b> a skos:Concept ;
+    skos:prefLabel "Heroides"@de ;
+    skos:notation "work_7ddaff9b6814b58b" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_9e0dd0ba7bd9212d> ;
+    skos:exactMatch wd:Q1236672 .
+
+<https://sappho-digital.com/voc/work_0e2eeafefe2dae48> a skos:Concept ;
+    skos:prefLabel "Illias"@de ;
+    skos:notation "work_0e2eeafefe2dae48" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:exactMatch wd:Q8275 .
+
+<https://sappho-digital.com/voc/work_da4bf9fda473cc89> a skos:Concept ;
+    skos:prefLabel "Odyssee"@de ;
+    skos:notation "work_da4bf9fda473cc89" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:exactMatch wd:Q35160 .
+
+<https://sappho-digital.com/voc/work_4f835860e11c2674> a skos:Concept ;
+    skos:prefLabel "Sacred Emily (Gertrude Stein)"@de ;
+    skos:notation "work_4f835860e11c2674" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_9e0dd0ba7bd9212d> ;
+    skos:exactMatch wd:Q123015482 .
+
+<https://sappho-digital.com/voc/work_59687e2256dfc7f3> a skos:Concept ;
+    skos:prefLabel "Sappho von einem herrschenden Vorurtheil befreyt (Friedrich Gottlieb Welcker)"@de ;
+    skos:notation "work_59687e2256dfc7f3" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_9e0dd0ba7bd9212d> .
+
+<https://sappho-digital.com/voc/work_67d314d5db550e06> a skos:Concept ;
+    skos:prefLabel "sappho-work"@de ;
+    skos:notation "work_67d314d5db550e06" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_7b7be8da5c1ca839> ;
+    skos:narrower <https://sappho-digital.com/voc/work_0951b31d71de94b8>,
+        <https://sappho-digital.com/voc/work_18f9bba320ea9dc9>,
+        <https://sappho-digital.com/voc/work_8b90e47471cb4cb5>,
+        <https://sappho-digital.com/voc/work_bd94b08706bbf1d8>,
+        <https://sappho-digital.com/voc/work_d27bb3164e556709>,
+        <https://sappho-digital.com/voc/work_e0fa6d52d403955c>,
+        <https://sappho-digital.com/voc/work_ef190d7c21734365> .
+
+<https://sappho-digital.com/voc/work_0b367126b900439f> a skos:Concept ;
+    skos:prefLabel "Sappho. Trauerspiel in fünf Aufzügen"@de ;
+    skos:notation "work_0b367126b900439f" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_f740219977100c75> ;
+    skos:exactMatch wd:Q1242002 .
+
+<https://sappho-digital.com/voc/work_b0614c54335f6184> a skos:Concept ;
+    skos:prefLabel "Sapphos Fr. 201 Voigt (Zitat bei Aristoteles)"@de ;
+    skos:notation "work_b0614c54335f6184" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_9e0dd0ba7bd9212d> .
+
+<https://sappho-digital.com/voc/work_dd5a96c631b854f4> a skos:Concept ;
+    skos:prefLabel "Sieben Schönheiten (Nizami)"@de ;
+    skos:notation "work_dd5a96c631b854f4" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_9e0dd0ba7bd9212d> ;
+    skos:exactMatch wd:Q4679100 .
+
+<https://sappho-digital.com/voc/work_b36331eb746b025a> a skos:Concept ;
+    skos:prefLabel "The Raven (Edgar Allan Poe)"@de ;
+    skos:notation "work_b36331eb746b025a" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:broader <https://sappho-digital.com/voc/work_9e0dd0ba7bd9212d> ;
+    skos:exactMatch wd:Q22726 .
+
+<https://sappho-digital.com/voc/work_9e0dd0ba7bd9212d> a skos:Concept ;
+    skos:prefLabel "Werke von anderen"@de ;
+    skos:notation "work_9e0dd0ba7bd9212d" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/work_4f835860e11c2674>,
+        <https://sappho-digital.com/voc/work_59687e2256dfc7f3>,
+        <https://sappho-digital.com/voc/work_64e314c856d1dbbe>,
+        <https://sappho-digital.com/voc/work_7ad506cbcc0b8143>,
+        <https://sappho-digital.com/voc/work_7ddaff9b6814b58b>,
+        <https://sappho-digital.com/voc/work_9a6fa5b72a8235b6>,
+        <https://sappho-digital.com/voc/work_b0614c54335f6184>,
+        <https://sappho-digital.com/voc/work_b36331eb746b025a>,
+        <https://sappho-digital.com/voc/work_dd5a96c631b854f4> .
+
+<https://sappho-digital.com/voc/work_2b67619b4d423e5a> a skos:Concept ;
+    skos:prefLabel "Werke von Eduard Mörike"@de ;
+    skos:notation "work_2b67619b4d423e5a" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/work_9b4a173a94427606> .
+
+<https://sappho-digital.com/voc/work_f740219977100c75> a skos:Concept ;
+    skos:prefLabel "Werke von Franz Grillparzer"@de ;
+    skos:notation "work_f740219977100c75" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/work_0b367126b900439f> .
+
+<https://sappho-digital.com/voc/work_7b7be8da5c1ca839> a skos:Concept ;
+    skos:prefLabel "Werke von Sappho"@de ;
+    skos:notation "work_7b7be8da5c1ca839" ;
+    skos:inScheme <https://sappho-digital.com/voc> ;
+    skos:narrower <https://sappho-digital.com/voc/work_67d314d5db550e06> .
+
