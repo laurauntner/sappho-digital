@@ -1,22 +1,10 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-
-"""
-Merge all Turtle files from ../data/rdf into ../data/rdf/sappho-reception.ttl
-with precedence (later files overwrite earlier ones by subject URI),
-then add ontology alignments following the provided schema
-(external identifier mappings intentionally omitted).
-
-Author: (your name)
-"""
-
 from pathlib import Path
 import sys
 import re
 from rdflib import Graph, Namespace, URIRef, BNode, Literal, RDF, RDFS, OWL
 from rdflib.collection import Collection
 
-# --- Namespaces --------------------------------------------------------------
+# Namespaces
 
 SKOS = Namespace("http://www.w3.org/2004/02/skos/core#")
 CRM = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
@@ -47,10 +35,9 @@ ONTOPOETRY_CORE = Namespace("http://postdata.linhd.uned.es/ontology/postdata-cor
 ONTOPOETRY_ANALYSIS = Namespace("http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#")
 SCHEMA = Namespace("https://schema.org/")
 
-# --- Helpers -----------------------------------------------------------------
+# Helpers
 
 def merge_with_precedence(base_dir: Path, out_path: Path) -> Graph:
-    # exakt die gewünschte Reihenfolge
     order = [
         "authors.ttl",
         "works.ttl",
@@ -59,13 +46,11 @@ def merge_with_precedence(base_dir: Path, out_path: Path) -> Graph:
         "relations.ttl",
     ]
 
-    # baue die Liste der vorhandenen Dateien in dieser Reihenfolge
     files = []
     for name in order:
         p = (base_dir / name).resolve()
         if not p.exists():
             raise FileNotFoundError(f"{name} fehlt im Eingabeordner {base_dir}")
-        # Output-Datei vorsichtshalber ausschließen (auch wenn sie nicht in 'order' vorkommt)
         if p == out_path:
             continue
         files.append(p)
@@ -81,7 +66,6 @@ def merge_with_precedence(base_dir: Path, out_path: Path) -> Graph:
             print(f"[WARN] Konnte {path.name} nicht parsen: {e}")
             continue
 
-        # spätere Dateien überschreiben frühere – nach Subject-URI
         subjects = {s for s in g_tmp.subjects() if isinstance(s, URIRef)}
         for s in subjects:
             g_merged.remove((s, None, None))
@@ -97,7 +81,6 @@ def extract_year(label_lit):
     try:
         return int(str(label_lit))
     except Exception:
-        # try to find a 4-digit year inside the label, e.g. "1897" in "1897-01-01"
         m = re.search(r"(-?\d{3,4})", str(label_lit))
         return int(m.group(1)) if m else None
 
@@ -127,8 +110,6 @@ def bind_namespaces(g: Graph):
     g.bind("lrmoo", LRMOO, override=True)
     g.bind("intro", INTRO, override=True)
     g.bind("prov", PROV, override=True)
-
-    # DCMI: nur Terms unter Prefix "dc"
     g.bind("dc", DC, override=True)
 
     # Sonstige
@@ -150,14 +131,13 @@ def bind_namespaces(g: Graph):
 
     g.bind("sappho_prop", SAPPHO_PROP, override=True)
 
-# --- Alignment logic (as per your schema, minus the external mappings) -------
+# Alignment
 
 def normalize_uris(g: Graph):
-    """Bringt inkompatible Basen/Namespaces auf einen Nenner."""
     MAPS = [
         # LRMO: IFLA -> CIDOC
         ("http://iflastandards.info/ns/lrm/lrmoo/", "http://www.cidoc-crm.org/lrmoo/"),
-        # DC Elements -> DCMI Terms (optional, nur wenn du 1.1 vermeiden willst)
+        # DC Elements -> DCMI Terms
         ("http://purl.org/dc/elements/1.1/", "http://purl.org/dc/terms/"),
     ]
 
@@ -189,7 +169,6 @@ def normalize_uris(g: Graph):
     for t in to_add:
         g.add(t)
 
-    # Präfixe nachziehen (dc soll dcterms sein)
     bind_namespaces(g)
 
 def add_alignments(g: Graph):
@@ -814,7 +793,7 @@ def add_alignments(g: Graph):
         g.add((ONTOPOETRY_CORE.hasCharacter, SKOS.closeMatch, SAPPHO_PROP.has_character))
         g.add((SCHEMA.character, SKOS.closeMatch, SAPPHO_PROP.has_character))
 
-# --- Main --------------------------------------------------------------------
+# Main
 
 def main():
     base_dir = Path("../data/rdf").resolve()
@@ -826,10 +805,8 @@ def main():
     g = merge_with_precedence(base_dir, out_path)
     normalize_uris(g)      # <— NEU
 
-    # Alignments
     add_alignments(g)
 
-    # sicher schreiben (optional: erst in Temp, dann atomar ersetzen)
     tmp_path = out_path.with_suffix(".ttl.tmp")
     g.serialize(destination=tmp_path.as_posix(), format="turtle", encoding="utf-8")
     Path(tmp_path).replace(out_path)
