@@ -1198,6 +1198,29 @@
     rdfs:label "Sappho Digital Genre"@en ;
     ecrm:P2i_is_type_of <https://sappho-digital.com/genre/lyrik> .
 
+<https://sappho-digital.com/id_type/goodreads> a ecrm:E55_Type ;
+    rdfs:label "Goodreads Work ID"@en .
+
+<https://sappho-digital.com/identifier/69118150> a ecrm:E42_Identifier ;
+    rdfs:label "69118150" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_sappho_168b> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/goodreads> .
+
+<https://sappho-digital.com/identifier/Midnight_poem> a ecrm:E42_Identifier ;
+    rdfs:label "Midnight_poem" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_sappho_168b> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
+
+<https://sappho-digital.com/identifier/Ode_to_Aphrodite> a ecrm:E42_Identifier ;
+    rdfs:label "Ode_to_Aphrodite" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_sappho_1> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
+
+<https://sappho-digital.com/identifier/Preghiera_per_Carasso> a ecrm:E42_Identifier ;
+    rdfs:label "Preghiera_per_Carasso" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_sappho_5> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
+
 <https://sappho-digital.com/identifier/Q119286575> a ecrm:E42_Identifier ;
     rdfs:label "Q119286575" ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_sappho_3> ;
@@ -2182,6 +2205,26 @@
     rdfs:label "Q38199509" ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_sappho_2> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Sappho_2> a ecrm:E42_Identifier ;
+    rdfs:label "Sappho_2" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_sappho_2> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
+
+<https://sappho-digital.com/identifier/Sappho_31> a ecrm:E42_Identifier ;
+    rdfs:label "Sappho_31" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_sappho_31> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
+
+<https://sappho-digital.com/identifier/Sappho_94> a ecrm:E42_Identifier ;
+    rdfs:label "Sappho_94" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_sappho_94> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
+
+<https://sappho-digital.com/identifier/Tithonus_poem> a ecrm:E42_Identifier ;
+    rdfs:label "Tithonus_poem" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_sappho_58> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
 
 <https://sappho-digital.com/identifier/bibl_sappho_1> a ecrm:E42_Identifier ;
     rdfs:label "bibl_sappho_1" ;
@@ -5602,15 +5645,6 @@
     ecrm:P7_took_place_at <https://sappho-digital.com/pubPlace/pubPlace_42b32e43> ;
     lrmoo:R24_created <https://sappho-digital.com/manifestation/sappho_bagordo> .
 
-<https://sappho-digital.com/expression/bibl_sappho_1> a lrmoo:F2_Expression ;
-    rdfs:label "Expression of Fragment 1 Voigt"@en ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_1> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/lyrik> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_sappho_1> ;
-    lrmoo:R3i_realises <https://sappho-digital.com/fragment/bibl_sappho_1> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
-    owl:sameAs <http://www.wikidata.org/entity/Q21070481> .
-
 <https://sappho-digital.com/expression/bibl_sappho_100> a lrmoo:F2_Expression ;
     rdfs:label "Expression of Fragment 100 Voigt"@en ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_100> ;
@@ -6313,15 +6347,6 @@
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
     owl:sameAs <http://www.wikidata.org/entity/Q119292560> .
 
-<https://sappho-digital.com/expression/bibl_sappho_168b> a lrmoo:F2_Expression ;
-    rdfs:label "Expression of Fragment 168b Voigt"@en ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_168b> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/lyrik> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_sappho_168b> ;
-    lrmoo:R3i_realises <https://sappho-digital.com/fragment/bibl_sappho_168b> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
-    owl:sameAs <http://www.wikidata.org/entity/Q24884666> .
-
 <https://sappho-digital.com/expression/bibl_sappho_168c> a lrmoo:F2_Expression ;
     rdfs:label "Expression of Fragment 168c Voigt"@en ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_168c> ;
@@ -6574,15 +6599,6 @@
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
     owl:sameAs <http://www.wikidata.org/entity/Q119292638> .
 
-<https://sappho-digital.com/expression/bibl_sappho_2> a lrmoo:F2_Expression ;
-    rdfs:label "Expression of Fragment 2 Voigt"@en ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_2> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/lyrik> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_sappho_2> ;
-    lrmoo:R3i_realises <https://sappho-digital.com/fragment/bibl_sappho_2> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
-    owl:sameAs <http://www.wikidata.org/entity/Q38199509> .
-
 <https://sappho-digital.com/expression/bibl_sappho_20> a lrmoo:F2_Expression ;
     rdfs:label "Expression of Fragment 20 Voigt"@en ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_20> ;
@@ -6708,15 +6724,6 @@
     lrmoo:R3i_realises <https://sappho-digital.com/fragment/bibl_sappho_30> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
     owl:sameAs <http://www.wikidata.org/entity/Q119288426> .
-
-<https://sappho-digital.com/expression/bibl_sappho_31> a lrmoo:F2_Expression ;
-    rdfs:label "Expression of Fragment 31 Voigt"@en ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_31> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/lyrik> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_sappho_31> ;
-    lrmoo:R3i_realises <https://sappho-digital.com/fragment/bibl_sappho_31> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
-    owl:sameAs <http://www.wikidata.org/entity/Q17079267> .
 
 <https://sappho-digital.com/expression/bibl_sappho_32> a lrmoo:F2_Expression ;
     rdfs:label "Expression of Fragment 32 Voigt"@en ;
@@ -6898,15 +6905,6 @@
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
     owl:sameAs <http://www.wikidata.org/entity/Q119288897> .
 
-<https://sappho-digital.com/expression/bibl_sappho_5> a lrmoo:F2_Expression ;
-    rdfs:label "Expression of Fragment 5 Voigt"@en ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_5> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/lyrik> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_sappho_5> ;
-    lrmoo:R3i_realises <https://sappho-digital.com/fragment/bibl_sappho_5> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
-    owl:sameAs <http://www.wikidata.org/entity/Q26708531> .
-
 <https://sappho-digital.com/expression/bibl_sappho_50> a lrmoo:F2_Expression ;
     rdfs:label "Expression of Fragment 50 Voigt"@en ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_50> ;
@@ -6978,15 +6976,6 @@
     lrmoo:R3i_realises <https://sappho-digital.com/fragment/bibl_sappho_57> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
     owl:sameAs <http://www.wikidata.org/entity/Q119289079> .
-
-<https://sappho-digital.com/expression/bibl_sappho_58> a lrmoo:F2_Expression ;
-    rdfs:label "Expression of Fragment 58 Voigt"@en ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_58> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/lyrik> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_sappho_58> ;
-    lrmoo:R3i_realises <https://sappho-digital.com/fragment/bibl_sappho_58> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
-    owl:sameAs <http://www.wikidata.org/entity/Q24893656> .
 
 <https://sappho-digital.com/expression/bibl_sappho_59> a lrmoo:F2_Expression ;
     rdfs:label "Expression of Fragment 59 Voigt"@en ;
@@ -7330,15 +7319,6 @@
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
     owl:sameAs <http://www.wikidata.org/entity/Q119289941> .
 
-<https://sappho-digital.com/expression/bibl_sappho_94> a lrmoo:F2_Expression ;
-    rdfs:label "Expression of Fragment 94 Voigt"@en ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_94> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/lyrik> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_sappho_94> ;
-    lrmoo:R3i_realises <https://sappho-digital.com/fragment/bibl_sappho_94> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
-    owl:sameAs <http://www.wikidata.org/entity/Q28229948> .
-
 <https://sappho-digital.com/expression/bibl_sappho_95> a lrmoo:F2_Expression ;
     rdfs:label "Expression of Fragment 95 Voigt"@en ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_95> ;
@@ -7382,6 +7362,88 @@
         <https://sappho-digital.com/identifier/author_sappho> ;
     ecrm:P2_has_type <https://sappho-digital.com/gender/female> ;
     owl:sameAs <http://www.wikidata.org/entity/Q17892> .
+
+<https://sappho-digital.com/expression/bibl_sappho_1> a lrmoo:F2_Expression ;
+    rdfs:label "Expression of Fragment 1 Voigt"@en ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_1> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Ode_to_Aphrodite> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_sappho_1> ;
+    lrmoo:R3i_realises <https://sappho-digital.com/fragment/bibl_sappho_1> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q21070481>,
+        <https://dbpedia.org/resource/Ode_to_Aphrodite> .
+
+<https://sappho-digital.com/expression/bibl_sappho_2> a lrmoo:F2_Expression ;
+    rdfs:label "Expression of Fragment 2 Voigt"@en ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_2> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Sappho_2> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_sappho_2> ;
+    lrmoo:R3i_realises <https://sappho-digital.com/fragment/bibl_sappho_2> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q38199509>,
+        <https://dbpedia.org/resource/Sappho_2> .
+
+<https://sappho-digital.com/expression/bibl_sappho_31> a lrmoo:F2_Expression ;
+    rdfs:label "Expression of Fragment 31 Voigt"@en ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_31> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Sappho_31> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_sappho_31> ;
+    lrmoo:R3i_realises <https://sappho-digital.com/fragment/bibl_sappho_31> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q17079267>,
+        <https://dbpedia.org/resource/Sappho_31> .
+
+<https://sappho-digital.com/expression/bibl_sappho_5> a lrmoo:F2_Expression ;
+    rdfs:label "Expression of Fragment 5 Voigt"@en ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_5> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Preghiera_per_Carasso> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_sappho_5> ;
+    lrmoo:R3i_realises <https://sappho-digital.com/fragment/bibl_sappho_5> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q26708531>,
+        <https://dbpedia.org/resource/Preghiera_per_Carasso> .
+
+<https://sappho-digital.com/expression/bibl_sappho_58> a lrmoo:F2_Expression ;
+    rdfs:label "Expression of Fragment 58 Voigt"@en ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_58> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Tithonus_poem> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_sappho_58> ;
+    lrmoo:R3i_realises <https://sappho-digital.com/fragment/bibl_sappho_58> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q24893656>,
+        <https://dbpedia.org/resource/Tithonus_poem> .
+
+<https://sappho-digital.com/expression/bibl_sappho_94> a lrmoo:F2_Expression ;
+    rdfs:label "Expression of Fragment 94 Voigt"@en ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_94> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Sappho_94> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_sappho_94> ;
+    lrmoo:R3i_realises <https://sappho-digital.com/fragment/bibl_sappho_94> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q28229948>,
+        <https://dbpedia.org/resource/Sappho_94> .
+
+<https://sappho-digital.com/expression/bibl_sappho_168b> a lrmoo:F2_Expression ;
+    rdfs:label "Expression of Fragment 168b Voigt"@en ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_168b> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/69118150>,
+        <https://sappho-digital.com/identifier/Midnight_poem> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_sappho_168b> ;
+    lrmoo:R3i_realises <https://sappho-digital.com/fragment/bibl_sappho_168b> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q24884666>,
+        <https://dbpedia.org/resource/Midnight_poem>,
+        <https://www.goodreads.com/work/show/69118150> .
+
+<https://sappho-digital.com/id_type/dbpedia> a ecrm:E55_Type ;
+    rdfs:label "DBpedia ID"@en .
 
 <https://sappho-digital.com/genre/lyrik> a ecrm:E55_Type ;
     rdfs:label "Lyrik"@de ;

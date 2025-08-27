@@ -1,7 +1,86 @@
 import csv
+import time
+import requests
 from pathlib import Path
 from rdflib import Graph, Namespace, URIRef, Literal
 from rdflib.namespace import RDF, RDFS, XSD, OWL
+from typing import Optional
+
+# Wikidata
+SESSION = requests.Session()
+SESSION.headers.update({
+    "User-Agent": "SapphoDigital/1.0 (+mailto:laura.untner@fu-berlin.de)"
+})
+_WD_CACHE: dict[str, dict] = {}
+
+def fetch_wikidata(qid: str) -> dict:
+    if not qid:
+        return {}
+    if qid in _WD_CACHE:
+        return _WD_CACHE[qid]
+    url = f"https://www.wikidata.org/wiki/Special:EntityData/{qid}.json"
+    for attempt in range(3):
+        try:
+            r = SESSION.get(url, timeout=15)
+            if r.status_code == 200:
+                data = r.json().get("entities", {}).get(qid, {})
+                if data:
+                    _WD_CACHE[qid] = data
+                    return data
+            if r.status_code in (429, 503):
+                time.sleep(1.5 * (attempt + 1))
+                continue
+            break
+        except requests.RequestException:
+            time.sleep(1.0 * (attempt + 1))
+            continue
+    return {}
+
+def get_claim_vals(entity, prop, expect="auto"):
+    vals = []
+    for cl in entity.get("claims", {}).get(prop, []):
+        val = cl.get("mainsnak", {}).get("datavalue", {}).get("value")
+        if val is None:
+            continue
+        if isinstance(val, dict):
+            if expect == "id":
+                v = val.get("id")
+                if v: vals.append(v)
+            elif expect in ("url", "auto"):
+                v = val.get("id") or val.get("value")
+                if isinstance(v, str):
+                    vals.append(v)
+            else:
+                v = val.get("id") or val.get("value")
+                if v: vals.append(str(v))
+        else:
+            vals.append(str(val))
+    return vals
+
+def normalize_dbpedia_url(url: Optional[str]) -> Optional[str]:
+    if not url:
+        return None
+    u = url.strip()
+    if u.startswith("http://"):
+        u = "https://" + u[len("http://"):]
+    u = u.replace("://dbpedia.org/page/", "://dbpedia.org/resource/")
+    return u if u.startswith("https://dbpedia.org/") else None
+
+def dbpedia_from_sitelinks(entity: dict) -> Optional[str]:
+    sl = entity.get("sitelinks", {}) or {}
+    title = None
+    if "enwiki" in sl:
+        title = sl["enwiki"].get("title")
+    elif "dewiki" in sl:
+        title = sl["dewiki"].get("title")
+    else:
+        for k, v in sl.items():
+            if k.endswith("wiki") and isinstance(v, dict) and v.get("title"):
+                title = v["title"]
+                break
+    if not title:
+        return None
+    return f"https://dbpedia.org/resource/{title.replace(' ', '_')}"
 
 # Pfade
 INPUT_FILE = "../data/sappho_fragments_qids.csv"
@@ -11,6 +90,7 @@ OUTPUT_FILE = "../data/rdf/fragments.ttl"
 SD = Namespace("https://sappho-digital.com/")
 ECRM = Namespace("http://erlangen-crm.org/current/")
 LRMOO = Namespace("http://www.cidoc-crm.org/lrmoo/")
+WD = "http://www.wikidata.org/entity/"
 
 # Graph
 g = Graph()
@@ -21,7 +101,7 @@ g.bind("rdfs", RDFS)
 g.bind("xsd", XSD)
 g.bind("owl", OWL)
 
-# Einmalige Knoten
+# Einmalige Knoten / Typen
 
 # ID-Typen
 g.add((SD["id_type/sappho-digital"], RDF.type, ECRM.E55_Type))
@@ -29,6 +109,12 @@ g.add((SD["id_type/sappho-digital"], RDFS.label, Literal("Sappho Digital ID", la
 
 g.add((SD["id_type/wikidata"], RDF.type, ECRM.E55_Type))
 g.add((SD["id_type/wikidata"], RDFS.label, Literal("Wikidata ID", lang="en")))
+
+g.add((SD["id_type/dbpedia"], RDF.type, ECRM.E55_Type))
+g.add((SD["id_type/dbpedia"], RDFS.label, Literal("DBpedia ID", lang="en")))
+
+g.add((SD["id_type/goodreads"], RDF.type, ECRM.E55_Type))
+g.add((SD["id_type/goodreads"], RDFS.label, Literal("Goodreads Work ID", lang="en")))
 
 # Geschlechtstypen
 g.add((SD["gender/female"], RDF.type, ECRM.E55_Type))
@@ -120,7 +206,6 @@ g.add((SD["work_creation/sappho-work"], ECRM.P14_carried_out_by, SD["person/auth
 g.add((SD["work_creation/sappho-work"], LRMOO.R16_created, SD["work/sappho-work"]))
 
 # Andreas Bagordos Edition
-
 manifestation_uri = SD["manifestation/sappho_bagordo"]
 manifestation_creation_uri = SD["manifestation_creation/sappho_bagordo"]
 title_uri = SD["title/manifestation/sappho_bagordo"]
@@ -236,13 +321,51 @@ with open(INPUT_FILE, newline='', encoding="utf-8") as f:
         g.add((SD[f"identifier/{frag_id}"], ECRM.P1i_identifies, expr_uri))
         g.add((SD[f"identifier/{frag_id}"], ECRM.P2_has_type, SD["id_type/sappho-digital"]))
         g.add((SD["id_type/sappho-digital"], ECRM.P2i_is_type_of, SD[f"identifier/{frag_id}"]))
-    
-    manifestation_uri = SD["manifestation/sappho_bagordo"]
-    g.add((manifestation_uri, RDF.type, LRMOO.F3_Manifestation))
-    g.add((manifestation_uri, RDFS.label, Literal("Andreas Bagordo’s Sappho edition", lang="en")))
 
-    for expr_uri in all_expressions:
-        g.add((manifestation_uri, LRMOO.R4_embodies, expr_uri))
+        entity = fetch_wikidata(qid)
+
+        # DBpedia
+        dbpedia_links = set()
+        for p in ("P2888", "P1709"):
+            for raw in get_claim_vals(entity, p, expect="url"):
+                norm = normalize_dbpedia_url(raw)
+                if norm:
+                    dbpedia_links.add(norm)
+        if not dbpedia_links:
+            maybe = normalize_dbpedia_url(dbpedia_from_sitelinks(entity))
+            if maybe:
+                dbpedia_links.add(maybe)
+
+        for link in dbpedia_links:
+            db_key = link.rsplit("/", 1)[-1] or "resource"
+            db_id_uri = SD[f"identifier/{db_key}"]
+            g.add((expr_uri, ECRM.P1_is_identified_by, db_id_uri))
+            g.add((db_id_uri, RDF.type, ECRM.E42_Identifier))
+            g.add((db_id_uri, RDFS.label, Literal(db_key))) 
+            g.add((db_id_uri, ECRM.P1i_identifies, expr_uri))
+            g.add((db_id_uri, ECRM.P2_has_type, SD["id_type/dbpedia"]))
+            g.add((expr_uri, OWL.sameAs, URIRef(link)))
+
+        # Goodreads Work (P8383)
+        for gr in set(get_claim_vals(entity, "P8383", expect="str")):
+            gr = (gr or "").strip()
+            if not gr:
+                continue
+            gr_uri = SD[f"identifier/{gr}"]
+            g.add((expr_uri, ECRM.P1_is_identified_by, gr_uri))
+            g.add((gr_uri, RDF.type, ECRM.E42_Identifier))
+            g.add((gr_uri, RDFS.label, Literal(gr)))
+            g.add((gr_uri, ECRM.P1i_identifies, expr_uri))
+            g.add((gr_uri, ECRM.P2_has_type, SD["id_type/goodreads"]))
+            g.add((expr_uri, OWL.sameAs, URIRef(f"https://www.goodreads.com/work/show/{gr}")))
+
+# Manifestation-Knoten (Sammel-Embodiment)
+manifestation_uri = SD["manifestation/sappho_bagordo"]
+g.add((manifestation_uri, RDF.type, LRMOO.F3_Manifestation))
+g.add((manifestation_uri, RDFS.label, Literal("Andreas Bagordo’s Sappho edition", lang="en")))
+
+for expr_uri in all_expressions:
+    g.add((manifestation_uri, LRMOO.R4_embodies, expr_uri))
 
 # Speichern
 Path(OUTPUT_FILE).parent.mkdir(parents=True, exist_ok=True)
