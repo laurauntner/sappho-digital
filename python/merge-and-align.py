@@ -133,51 +133,13 @@ def bind_namespaces(g: Graph):
 
 # Alignment
 
-def normalize_uris(g: Graph):
-    MAPS = [
-        # LRMO: IFLA -> CIDOC
-        ("http://iflastandards.info/ns/lrm/lrmoo/", "http://www.cidoc-crm.org/lrmoo/"),
-        # DC Elements -> DCMI Terms
-        ("http://purl.org/dc/elements/1.1/", "http://purl.org/dc/terms/"),
-    ]
-
-    to_add = []
-    to_remove = []
-    for s, p, o in g:
-        s2, p2, o2 = s, p, o
-        changed = False
-
-        if isinstance(s, URIRef):
-            for old, new in MAPS:
-                if str(s).startswith(old):
-                    s2 = URIRef(str(s).replace(old, new, 1)); changed = True; break
-        if isinstance(p, URIRef):
-            for old, new in MAPS:
-                if str(p).startswith(old):
-                    p2 = URIRef(str(p).replace(old, new, 1)); changed = True; break
-        if isinstance(o, URIRef):
-            for old, new in MAPS:
-                if str(o).startswith(old):
-                    o2 = URIRef(str(o).replace(old, new, 1)); changed = True; break
-
-        if changed:
-            to_remove.append((s, p, o))
-            to_add.append((s2, p2, o2))
-
-    for t in to_remove:
-        g.remove(t)
-    for t in to_add:
-        g.add(t)
-
-    bind_namespaces(g)
-
 def add_alignments(g: Graph):
     bind_namespaces(g)
 
     ## Classes ##
     if any(g.triples((None, RDF.type, ECRM.E21_Person))):
         g.add((DRACOR.author, SKOS.broadMatch, ECRM.E21_Person))
-        g.add((ECRM.E21_Person, SKOS.broadMatch, FOAF.Agent))
+        g.add((FOAF.Agent, SKOS.closeMatch, ECRM.E21_Person))
         g.add((MIMOTEXT.Q11, SKOS.broadMatch, ECRM.E21_Person))  # author
         g.add((MIMOTEXT.Q10, SKOS.closeMatch, ECRM.E21_Person))  # person
         g.add((ONTOPOETRY_CORE.Person, SKOS.closeMatch, ECRM.E21_Person))
@@ -190,7 +152,7 @@ def add_alignments(g: Graph):
         g.add((FOAF.Image, SKOS.closeMatch, ECRM.E38_Image))
 
     if any(g.triples((None, RDF.type, ECRM.E40_Legal_Body))):
-        g.add((ECRM.E40_Legal_Body, SKOS.broadMatch, FOAF.Agent))
+        g.add((FOAF.Agent, SKOS.closeMatch, ECRM.E40_Legal_Body))
         g.add((ONTOPOETRY_CORE.Organisation, SKOS.broadMatch, ECRM.E40_Legal_Body))
 
     if any(g.triples((None, RDF.type, ECRM["E52_Time-Span"]))):
@@ -223,7 +185,7 @@ def add_alignments(g: Graph):
         g.add((ONTOPOETRY_CORE.PoeticWork, SKOS.broadMatch, LRMOO.F1_Work))
 
     if any(g.triples((None, RDF.type, LRMOO.F2_Expression))):
-        g.add((LRMOO.F2_Expression, SKOS.broadMatch, FOAF.Document))
+        g.add((FOAF.Document, SKOS.closeMatch, LRMOO.F2_Expression))
         g.add((BIBO.Manuscript, SKOS.broadMatch, LRMOO.F2_Expression))
         g.add((DRACOR.play, SKOS.broadMatch, LRMOO.F2_Expression))
         g.add((FABIO.Expression, SKOS.broadMatch, LRMOO.F2_Expression))
@@ -242,11 +204,11 @@ def add_alignments(g: Graph):
         g.add((BIBO.Book, SKOS.broadMatch, LRMOO.F3_Manifestation))
         g.add((DC.BibliographicResource, SKOS.broadMatch, LRMOO.F3_Manifestation))
         g.add((FABIO.Manifestation, SKOS.broadMatch, LRMOO.F3_Manifestation))
-        g.add((LRMOO.F3_Manifestation, SKOS.broadMatch, FOAF.Document))
+        g.add((FOAF.Document, SKOS.closeMatch, LRMOO.F3_Manifestation))
 
     if any(g.triples((None, RDF.type, LRMOO.F5_Item))):
         g.add((FABIO.Item, SKOS.broadMatch, LRMOO.F5_Item))
-        g.add((LRMOO.F5_Item, SKOS.broadMatch, FOAF.Document))
+        g.add((FOAF.Document, SKOS.closeMatch, LRMOO.F5_Item))
 
     if any(g.triples((None, RDF.type, LRMOO.F27_Work_Creation))):
         g.add((ONTOPOETRY_CORE.WorkConception, SKOS.closeMatch, LRMOO.F27_Work_Creation))
@@ -266,7 +228,7 @@ def add_alignments(g: Graph):
         g.add((ONTOPOETRY_CORE.Character, SKOS.broadMatch, INTRO.INT2_ActualizationOfFeature))
 
     if any(g.triples((None, RDF.type, INTRO.INT4_Feature))):
-        g.add((INTRO.INT4_Feature, SKOS.broadMatch, INTERTEXT_AB.Mediator))
+        g.add((INTERTEXT_AB.Mediator, SKOS.closeMatch, INTRO.INT4_Feature))
         g.add((GOLEM.G9_Narrative_Unit, SKOS.broadMatch, INTRO.INT4_Feature))
 
     if any(g.triples((None, RDF.type, INTRO.INT6_Architext))):
@@ -276,20 +238,20 @@ def add_alignments(g: Graph):
         g.add((INTERTEXT_AB.IntertexualSpecification, SKOS.closeMatch, INTRO.INT11_TypeOfInterrelation))
 
     if any(g.triples((None, RDF.type, INTRO.INT21_TextPassage))):
-        g.add((INTRO.INT21_TextPassage, SKOS.broadMatch, DOCO.Part))
-        g.add((INTRO.INT21_TextPassage, SKOS.broadMatch, DOCO.BackMatter))
-        g.add((INTRO.INT21_TextPassage, SKOS.broadMatch, DOCO.BodyMatter))
-        g.add((INTRO.INT21_TextPassage, SKOS.broadMatch, DOCO.CaptionedBox))
-        g.add((INTRO.INT21_TextPassage, SKOS.broadMatch, DOCO.Chapter))
-        g.add((INTRO.INT21_TextPassage, SKOS.broadMatch, DOCO.ComplexRunInQuotation))
-        g.add((INTRO.INT21_TextPassage, SKOS.broadMatch, DOCO.Footnote))
-        g.add((INTRO.INT21_TextPassage, SKOS.broadMatch, DOCO.Formula))
-        g.add((INTRO.INT21_TextPassage, SKOS.broadMatch, DOCO.FormulaBox))
-        g.add((INTRO.INT21_TextPassage, SKOS.broadMatch, DOCO.FrontMatter))
-        g.add((INTRO.INT21_TextPassage, SKOS.broadMatch, DOCO.List))
-        g.add((INTRO.INT21_TextPassage, SKOS.broadMatch, DOCO.Section))
-        g.add((INTRO.INT21_TextPassage, SKOS.broadMatch, DOCO.Table))
-        g.add((INTRO.INT21_TextPassage, SKOS.broadMatch, INTERTEXT_AB.Mediator))
+        g.add((DOCO.Part, SKOS.closeMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.BackMatter, SKOS.closeMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.BodyMatter, SKOS.closeMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.CaptionedBox, SKOS.closeMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.Chapter, SKOS.closeMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.ComplexRunInQuotation, SKOS.closeMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.Footnote, SKOS.closeMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.Formula, SKOS.closeMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.FormulaBox, SKOS.closeMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.FrontMatter, SKOS.closeMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.List, SKOS.closeMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.Section, SKOS.closeMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.Table, SKOS.closeMatch, INTRO.INT21_TextPassage))
+        g.add((INTERTEXT_AB.Mediator, SKOS.closeMatch, INTRO.INT21_TextPassage))
         g.add((BIBO.Quote, SKOS.broadMatch, INTRO.INT21_TextPassage))
         g.add((FABIO.Quotation, SKOS.broadMatch, INTRO.INT21_TextPassage))
         g.add((INTERTEXT_TX.TextSegment, SKOS.closeMatch, INTRO.INT21_TextPassage))
@@ -308,7 +270,7 @@ def add_alignments(g: Graph):
         g.add((GOLEM.G14_Narrative_Stoff, SKOS.closeMatch, INTRO.INT_Plot))
 
     if any(g.triples((None, RDF.type, INTRO.INT_Motif))):
-        g.add((INTRO.INT_Motif, SKOS.broadMatch, INTERTEXT_MT.Motive))
+        g.add((INTERTEXT_MT.Motive, SKOS.closeMatch, INTRO.INT_Motif))
 
     if any(g.triples((None, RDF.type, INTRO.INT_Topic))):
         g.add((MIMOTEXT.Q20, SKOS.closeMatch, INTRO.INT_Topic))  # thematic concept
@@ -415,10 +377,10 @@ def add_alignments(g: Graph):
         g.add((ONTOPOETRY_CORE.realisedThroughExpressionCreation, SKOS.closeMatch, LRMOO.R19i_was_realised_through))
 
     if any(g.triples((None, INTRO.R12i_isReferredToEntity, None))):
-        g.add((INTRO.R12i_isReferredToEntity, SKOS.closeMatch, INTERTEXT_AB.there))
+        g.add((INTERTEXT_AB.there, SKOS.broadMatch, INTRO.R12i_isReferredToEntity))
 
     if any(g.triples((None, INTRO.R13i_isReferringEntity, None))):
-        g.add((INTRO.R13i_isReferringEntity, SKOS.closeMatch, INTERTEXT_AB.here))
+        g.add((INTERTEXT_AB.here, SKOS.broadMatch, INTRO.R13i_isReferringEntity))
 
     if any(g.triples((None, INTRO.R18_showsActualization, None))):
         g.add((ONTOPOETRY_ANALYSIS.presentsIntertextuality, SKOS.broadMatch, INTRO.R18_showsActualization))
@@ -431,13 +393,13 @@ def add_alignments(g: Graph):
         g.add((ONTOPOETRY_ANALYSIS.typeOfIntertextuality, SKOS.broadMatch, INTRO.R19i_isTypeOf))
 
     if any(g.triples((None, INTRO.R22i_relationIsBasedOnSimilarity, None))):
-        g.add((INTRO.R22i_relationIsBasedOnSimilarity, SKOS.broadMatch, INTERTEXT_AB.mediatedBy))
+        g.add((INTERTEXT_AB.mediatedBy, SKOS.closeMatch, INTRO.R22i_relationIsBasedOnSimilarity))
 
     if any(g.triples((None, INTRO.R24_hasRelatedEntity, None))):
-        g.add((INTRO.R24_hasRelatedEntity, SKOS.broadMatch, INTERTEXT_AB.mediatedBy))
+        g.add((INTERTEXT_AB.mediatedBy, SKOS.closeMatch, INTRO.R24_hasRelatedEntity))
 
     if any(g.triples((None, INTRO.R30_hasTextPassage, None))):
-        g.add((INTRO.R30_hasTextPassage, SKOS.broadMatch, DC.hasPart))
+        g.add((DC.hasPart, SKOS.closeMatch, INTRO.R30_hasTextPassage))
         g.add((ONTOPOETRY_ANALYSIS.presentsIntertextuality, SKOS.broadMatch, INTRO.R30_hasTextPassage))
 
     if any(g.triples((None, INTRO.R30i_isTextPassageOf, None))):
@@ -803,7 +765,6 @@ def main():
         sys.exit(f"Verzeichnis nicht gefunden: {base_dir}")
 
     g = merge_with_precedence(base_dir, out_path)
-    normalize_uris(g)      # <— NEU
 
     add_alignments(g)
 
