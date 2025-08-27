@@ -5,7 +5,92 @@ import sys
 from typing import Dict, List, Tuple, Optional, Set, DefaultDict
 from collections import defaultdict
 
+import time
+import requests
 import pandas as pd
+
+# Wikidata
+SESSION = requests.Session()
+SESSION.headers.update({
+    "User-Agent": "SapphoDigital/1.0 (+mailto:laura.untner@fu-berlin.de)"
+})
+_WD_CACHE: Dict[str, dict] = {}
+
+def fetch_wikidata(qid: str) -> dict:
+    if not qid:
+        return {}
+    if qid in _WD_CACHE:
+        return _WD_CACHE[qid]
+    url = f"https://www.wikidata.org/wiki/Special:EntityData/{qid}.json"
+    for attempt in range(3):
+        try:
+            r = SESSION.get(url, timeout=15)
+            if r.status_code == 200:
+                ent = r.json().get("entities", {}).get(qid, {})
+                if ent:
+                    _WD_CACHE[qid] = ent
+                    return ent
+            if r.status_code in (429, 503):
+                time.sleep(1.5 * (attempt + 1))
+                continue
+            break
+        except requests.RequestException:
+            time.sleep(1.0 * (attempt + 1))
+            continue
+    return {}
+
+def get_claim_vals(entity: dict, prop: str, expect: str = "auto") -> List[str]:
+    vals: List[str] = []
+    for cl in entity.get("claims", {}).get(prop, []):
+        v = cl.get("mainsnak", {}).get("datavalue", {}).get("value")
+        if v is None:
+            continue
+        if isinstance(v, dict):
+            if expect == "id":
+                x = v.get("id")
+                if x: vals.append(x)
+            elif expect in ("url", "auto"):
+                x = v.get("id") or v.get("value")
+                if isinstance(x, str):
+                    vals.append(x)
+            else:
+                x = v.get("id") or v.get("value")
+                if x: vals.append(str(x))
+        else:
+            vals.append(str(v))
+    return vals
+
+def normalize_dbpedia_url(url: Optional[str]) -> Optional[str]:
+    if not url:
+        return None
+    u = url.strip()
+    if u.startswith("http://"):
+        u = "https://" + u[len("http://"):]
+    u = u.replace("://dbpedia.org/page/", "://dbpedia.org/resource/")
+    return u if u.startswith("https://dbpedia.org/") else None
+
+def normalize_schema_url(url: Optional[str]) -> Optional[str]:
+    if not url:
+        return None
+    u = url.strip()
+    if u.startswith("http://"):
+        u = "https://" + u[len("http://"):]
+    return u if u.startswith("https://schema.org/") else None
+
+def dbpedia_from_sitelinks(entity: dict) -> Optional[str]:
+    sl = entity.get("sitelinks", {}) or {}
+    title = None
+    if "enwiki" in sl:
+        title = sl["enwiki"].get("title")
+    elif "dewiki" in sl:
+        title = sl["dewiki"].get("title")
+    else:
+        for k, v in sl.items():
+            if k.endswith("wiki") and isinstance(v, dict) and v.get("title"):
+                title = v["title"]; break
+    if not title:
+        return None
+    return f"https://dbpedia.org/resource/{title.replace(' ', '_')}"
 
 # Pfade
 BASE_DIR = os.path.dirname(__file__)
@@ -31,8 +116,10 @@ SHEET_KIND = {
 }
 
 # Namespaces
-TTL_PREFIX = """@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix wd:   <http://www.wikidata.org/entity/> .
+TTL_PREFIX = """@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix wd:     <http://www.wikidata.org/entity/> .
+@prefix schema: <https://schema.org/> .
+@prefix dbr:    <https://dbpedia.org/resource/> .
 
 """
 
@@ -55,7 +142,7 @@ MAP_LIST_FULL_RE = rf"^\s*(?:{MAP_TOKEN_RE}\s*(?:[,;]\s*)?)+\s*$"
 # Hilfsfunktionen
 def slug_id(sheet: str, label: str) -> str:
     key = f"{sheet}::{label}".encode("utf-8")
-    return hashlib.sha256(key).hexdigest()[:16]  # 16 hex chars
+    return hashlib.sha256(key).hexdigest()[:16]
 
 def is_qid_like(s: str) -> bool:
     return bool(re.fullmatch(rf"\s*{QID_ONLY_RE}\s*$", (s or "").strip()))
@@ -87,7 +174,7 @@ def parse_mapping_cell(cell: str) -> List[Tuple[str, str]]:
             prop = CANON_PROP.get(prop_raw.lower(), prop_raw)
             qid = re.search(QID_ONLY_RE, part, flags=re.IGNORECASE).group(1).upper()
             out.append((prop, qid))
-            current_prop = prop  # ab hier erben nackte QIDs diese Property
+            current_prop = prop
             continue
         m2 = re.match(rf"^\s*{QID_ONLY_RE}\s*$", part, flags=re.IGNORECASE)
         if m2:
@@ -96,6 +183,20 @@ def parse_mapping_cell(cell: str) -> List[Tuple[str, str]]:
             out.append((prop, qid))
             continue
     return out
+
+def cell_has_skos_prop(cell: str) -> bool:
+    return bool(re.search(rf"\b{PROP_RE}\b", (cell or ""), flags=re.IGNORECASE))
+
+def extract_plain_qids(cell: str) -> List[str]:
+    if not is_mapping_only_cell(cell) or cell_has_skos_prop(cell):
+        return []
+    qids: List[str] = []
+    parts = [p.strip() for p in re.split(r"[;,]", cell) if p.strip()]
+    for part in parts:
+        m = re.match(rf"^\s*{QID_ONLY_RE}\s*$", part, flags=re.IGNORECASE)
+        if m:
+            qids.append(m.group(1).upper())
+    return qids
 
 # bibl-Labels
 def load_bibl_labels_de(ttl_path: str) -> Dict[str, Tuple[str, str]]:
@@ -151,7 +252,9 @@ class Concept:
         self.sheet = sheet
         self.broader: Set[str] = set()
         self.narrower: Set[str] = set()
-        self.mappings: Set[Tuple[str, str]] = set()  # (prop, QID)
+        self.mappings: Set[Tuple[str, str]] = set()       
+        self.mappings_iri: Set[Tuple[str, str]] = set()  
+        self.enrich_qids: Set[str] = set()              
 
     def to_turtle(self) -> str:
         lines = [
@@ -179,6 +282,9 @@ class Concept:
         propmap: Dict[str, List[str]] = defaultdict(list)
         for prop, qid in sorted(self.mappings):
             propmap[prop].append(f"wd:{qid}")
+        for prop, iri in sorted(self.mappings_iri):
+            propmap[prop].append(iri)
+
         for prop, vals in propmap.items():
             write_prop(prop, vals)
 
@@ -233,6 +339,8 @@ def process_sheet(df: pd.DataFrame, sheet: str, kind: str,
 
             for prop, qid in parse_mapping_cell(cell_text(df.iat[r, c])):
                 node.mappings.add((prop, qid))
+            # Enrichment: nur Zellen ohne skos:*
+            node.enrich_qids.update(extract_plain_qids(cell_text(df.iat[r, c])))
 
             cc = c + 1
             while cc < n_cols:
@@ -243,6 +351,7 @@ def process_sheet(df: pd.DataFrame, sheet: str, kind: str,
                 if is_mapping_only_cell(val):
                     for prop, qid in parse_mapping_cell(val):
                         node.mappings.add((prop, qid))
+                    node.enrich_qids.update(extract_plain_qids(val))
                     cc += 1
                     continue
                 break
@@ -255,7 +364,7 @@ def process_sheet(df: pd.DataFrame, sheet: str, kind: str,
                 entry = bibl_labels_de.get(label)
                 if entry:
                     _uri, lab_de = entry
-                    node.label = lab_de  # ersetze prefLabel mit deutschem TTL-Label
+                    node.label = lab_de
 
 # Prozessieren
 def main():
@@ -278,6 +387,38 @@ def main():
         df = pd.read_excel(XLSX_PATH, sheet_name=sheet, header=0)
         process_sheet(df, sheet, kind, concepts, bibl_labels_de)
 
+    # More IDs 
+    for (_, _), concept in concepts.items():
+        for qid in sorted(concept.enrich_qids):
+            ent = fetch_wikidata(qid)
+            if not ent:
+                continue
+
+            # DBpedia
+            dbpedia_links: Set[str] = set()
+            for p in ("P2888", "P1709"):
+                for raw in get_claim_vals(ent, p, expect="url"):
+                    norm = normalize_dbpedia_url(raw)
+                    if norm:
+                        dbpedia_links.add(norm)
+            if not dbpedia_links:
+                maybe = normalize_dbpedia_url(dbpedia_from_sitelinks(ent))
+                if maybe:
+                    dbpedia_links.add(maybe)
+            for link in dbpedia_links:
+                concept.mappings_iri.add(("skos:exactMatch", f"<{link}>"))
+
+            # schema.org
+            schema_links: Set[str] = set()
+            for p in ("P2888", "P1709"):
+                for raw in get_claim_vals(ent, p, expect="url"):
+                    norm = normalize_schema_url(raw)
+                    if norm:
+                        schema_links.add(norm)
+            for link in schema_links:
+                concept.mappings_iri.add(("skos:exactMatch", f"<{link}>"))
+
+    # Schreiben 
     members_by_sheet: DefaultDict[str, List[str]] = defaultdict(list)
     for (_, _), concept in concepts.items():
         members_by_sheet[concept.sheet].append(concept.uri)
