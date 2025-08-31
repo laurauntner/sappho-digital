@@ -28,6 +28,7 @@
   skos:broader :motif_ecdd7525fe74838a;
   skos:narrower :motif_e50316313352d60d, :motif_ee611d65b870ad00, :motif_8d88e091e3bb28d8,
     :motif_278e356ed64cbb3f, :motif_844c1db25d6fbc84;
+  skos:related :person_c7aebd12b1cbd031;
   skos:exactMatch <http://www.wikidata.org/entity/Q527>, <https://dbpedia.org/resource/Sky> .
 
 :motif_e50316313352d60d a skos:Concept;
@@ -35,6 +36,7 @@
   skos:prefLabel "Sonne"@de;
   skos:notation "motif_e50316313352d60d";
   skos:broader :motif_c1c5790bb38d4fbb;
+  skos:related :person_2bf51959e0848f5f;
   skos:exactMatch <http://www.wikidata.org/entity/Q525>, <https://dbpedia.org/resource/Sun> .
 
 :motif_ee611d65b870ad00 a skos:Concept;
@@ -42,7 +44,8 @@
   skos:prefLabel "Mond"@de;
   skos:notation "motif_ee611d65b870ad00";
   skos:broader :motif_c1c5790bb38d4fbb;
-  skos:related :motif_0824726b36365ab5, :phrase_5cd31d1448d304fd;
+  skos:related :motif_0824726b36365ab5, :phrase_5cd31d1448d304fd, :person_f79231e41dd95683,
+    :person_352e0f8a99c574b2, :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q405>, <https://dbpedia.org/resource/Moon> .
 
 :motif_8d88e091e3bb28d8 a skos:Concept;
@@ -58,6 +61,7 @@
   skos:prefLabel "Plejaden"@de;
   skos:notation "motif_278e356ed64cbb3f";
   skos:broader :motif_c1c5790bb38d4fbb;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q13423>, <https://dbpedia.org/resource/Pleiades> .
 
 :motif_844c1db25d6fbc84 a skos:Concept;
@@ -79,7 +83,7 @@
   skos:prefLabel "Gewitter"@de;
   skos:notation "motif_92328d8c25447861";
   skos:broader :motif_f4cf66993a308196;
-  skos:related :motif_7a31b1efe2cb20da;
+  skos:related :motif_7a31b1efe2cb20da, :person_c7aebd12b1cbd031;
   skos:exactMatch <http://www.wikidata.org/entity/Q2857578>, <https://dbpedia.org/resource/Thunderstorm> .
 
 :motif_473b30ea708768d2 a skos:Concept;
@@ -87,7 +91,7 @@
   skos:prefLabel "Sturm"@de;
   skos:notation "motif_473b30ea708768d2";
   skos:broader :motif_f4cf66993a308196;
-  skos:related :motif_7a31b1efe2cb20da;
+  skos:related :motif_7a31b1efe2cb20da, :person_db10ad7627a6e7ad, :person_5c74e76e7da1f025;
   skos:exactMatch <http://www.wikidata.org/entity/Q81054>, <https://dbpedia.org/resource/Storm> .
 
 :motif_ec830d6c2e83aea3 a skos:Concept;
@@ -95,13 +99,14 @@
   skos:prefLabel "Wind"@de;
   skos:notation "motif_ec830d6c2e83aea3";
   skos:broader :motif_f4cf66993a308196;
+  skos:related :person_454c27fc8a648f4f, :person_e68a8e275e56e27e, :person_5c74e76e7da1f025;
   skos:exactMatch <http://www.wikidata.org/entity/Q8094>, <https://dbpedia.org/resource/Wind> .
 
 :motif_fcf3b7b61805babd a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:prefLabel "Physikalische Phänomene"@de;
   skos:notation "motif_fcf3b7b61805babd";
-  skos:broader :motif_ecdd7525fe74838a, :motifs;
+  skos:broader :motif_ecdd7525fe74838a;
   skos:narrower :motif_64a381d1facbb9aa .
 
 :motif_64a381d1facbb9aa a skos:Concept;
@@ -109,7 +114,8 @@
   skos:prefLabel "Feuer"@de;
   skos:notation "motif_64a381d1facbb9aa";
   skos:broader :motif_fcf3b7b61805babd;
-  skos:related :motif_736eb7ef6202472f, :motif_162e6dfcee6ada53;
+  skos:related :motif_736eb7ef6202472f, :motif_162e6dfcee6ada53, :person_e9b8b1919af5758a,
+    :person_bf1a16fc1e6ba956;
   skos:exactMatch <http://www.wikidata.org/entity/Q3196>, <https://dbpedia.org/resource/Fire> .
 
 :motif_6ca05631ae27d928 a skos:Concept;
@@ -124,6 +130,7 @@
   skos:prefLabel "Morgen"@de;
   skos:notation "motif_f8ead995947f7500";
   skos:broader :motif_6ca05631ae27d928;
+  skos:related :person_807f37582972882e;
   skos:exactMatch <http://www.wikidata.org/entity/Q7722>, <https://dbpedia.org/resource/Morning> .
 
 :motif_0824726b36365ab5 a skos:Concept;
@@ -132,7 +139,8 @@
   skos:notation "motif_0824726b36365ab5";
   skos:broader :motif_6ca05631ae27d928;
   skos:related :motif_ee611d65b870ad00, :motif_8d6c4ae5261c1b7f, :motif_e02eb23076791844,
-    :motif_08cc6f8757d81249, :work_b36331eb746b025a;
+    :motif_08cc6f8757d81249, :person_f79231e41dd95683, :person_4a2654173d9042b0, :person_352e0f8a99c574b2,
+    :person_e585b2a779019b7e, :work_b36331eb746b025a;
   skos:exactMatch <http://www.wikidata.org/entity/Q575>, <https://dbpedia.org/resource/Night> .
 
 :motif_a26b7d0dd6b16118 a skos:Concept;
@@ -148,7 +156,8 @@
   skos:prefLabel "Meer"@de;
   skos:notation "motif_c9ab4b3812d39197";
   skos:broader :motif_a26b7d0dd6b16118;
-  skos:related :place_4f523d00fc5d27fd;
+  skos:related :place_4f523d00fc5d27fd, :person_db10ad7627a6e7ad, :person_2a23732b2a3c21cf,
+    :person_d1946e7b74bf22bc, :person_e585b2a779019b7e, :person_278199322209770d, :person_97a24d8c828b75ec;
   skos:exactMatch <http://www.wikidata.org/entity/Q165>, <https://dbpedia.org/resource/Sea>,
     <https://schema.org/SeaBodyOfWater> .
 
@@ -157,6 +166,7 @@
   skos:prefLabel "Meeresküste"@de;
   skos:notation "motif_62581a673f405e6c";
   skos:broader :motif_a26b7d0dd6b16118;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q93352>, <https://dbpedia.org/resource/Coast> .
 
 :motif_c10f460a9ccb3510 a skos:Concept;
@@ -164,7 +174,7 @@
   skos:prefLabel "Insel"@de;
   skos:notation "motif_c10f460a9ccb3510";
   skos:broader :motif_a26b7d0dd6b16118;
-  skos:related :place_040eb47ff2612816, :place_0009a58f625c087b;
+  skos:related :place_040eb47ff2612816, :place_0009a58f625c087b, :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q23442>, <https://dbpedia.org/ontology/Island> .
 
 :motif_6defe0a8e240f27b a skos:Concept;
@@ -172,6 +182,7 @@
   skos:prefLabel "Fels"@de;
   skos:notation "motif_6defe0a8e240f27b";
   skos:broader :motif_a26b7d0dd6b16118;
+  skos:related :person_2a23732b2a3c21cf, :person_c408a1bcd63c420f, :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q107679>, <https://dbpedia.org/resource/Cliff> .
 
 :motif_5712449d2e4712f8 a skos:Concept;
@@ -186,6 +197,7 @@
   skos:prefLabel "Brunnen"@de;
   skos:notation "motif_4facb4bf5a22499b";
   skos:broader :motif_a26b7d0dd6b16118;
+  skos:related :person_edd73d43dbe4b946, :person_803864de40878a17;
   skos:exactMatch <http://www.wikidata.org/entity/Q483453>, <https://dbpedia.org/resource/Fountain> .
 
 :motif_876aeb61deb4984f a skos:Concept;
@@ -201,6 +213,7 @@
   skos:prefLabel "Welle"@de;
   skos:notation "motif_3950fcecf002a43a";
   skos:broader :motif_876aeb61deb4984f;
+  skos:related :person_db10ad7627a6e7ad;
   skos:exactMatch <http://www.wikidata.org/entity/Q165848>, <https://dbpedia.org/resource/Wind_wave> .
 
 :motif_c2ec495b51738811 a skos:Concept;
@@ -215,6 +228,7 @@
   skos:prefLabel "Morgenrot"@de;
   skos:notation "motif_01c3eb8edb59de39";
   skos:broader :motif_876aeb61deb4984f;
+  skos:related :person_807f37582972882e;
   skos:exactMatch <http://www.wikidata.org/entity/Q635954>, <https://dbpedia.org/resource/Red_sky_at_morning> .
 
 :motif_8e771c69dd16a41d a skos:Concept;
@@ -247,6 +261,7 @@
   skos:prefLabel "Apfel"@de;
   skos:notation "motif_7b4f6bd41d20b520";
   skos:broader :motif_f2aa906d0ec4e3f4;
+  skos:related :person_298d1d2696887999, :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q89>, <https://dbpedia.org/resource/Apple> .
 
 :motif_872360a9416bbe76 a skos:Concept;
@@ -254,6 +269,7 @@
   skos:prefLabel "Apfelbaum"@de;
   skos:notation "motif_872360a9416bbe76";
   skos:broader :motif_f2aa906d0ec4e3f4;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q60458657>, <https://dbpedia.org/resource/Category:Apple_trees> .
 
 :motif_01ca370ea29462e3 a skos:Concept;
@@ -261,6 +277,7 @@
   skos:prefLabel "Blume"@de;
   skos:notation "motif_01ca370ea29462e3";
   skos:broader :motif_f2aa906d0ec4e3f4;
+  skos:related :person_fe75cd740876c3e4, :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q886167>, <https://dbpedia.org/resource/Blume> .
 
 :motif_232c5062cde7d3c1 a skos:Concept;
@@ -268,7 +285,7 @@
   skos:prefLabel "Rose"@de;
   skos:notation "motif_232c5062cde7d3c1";
   skos:broader :motif_f2aa906d0ec4e3f4;
-  skos:related :phrase_5cd31d1448d304fd;
+  skos:related :phrase_5cd31d1448d304fd, :person_298d1d2696887999, :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q34687>, <https://dbpedia.org/resource/Rose> .
 
 :motif_6ce22ab4ce13cf9e a skos:Concept;
@@ -276,6 +293,7 @@
   skos:prefLabel "Hyazinthe"@de;
   skos:notation "motif_6ce22ab4ce13cf9e";
   skos:broader :motif_f2aa906d0ec4e3f4;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q158758>, <https://dbpedia.org/resource/Hyacinth> .
 
 :motif_ed3912cf6c881149 a skos:Concept;
@@ -290,6 +308,7 @@
   skos:prefLabel "Granatapfel"@de;
   skos:notation "motif_8bd0b4436d2c2211";
   skos:broader :motif_f2aa906d0ec4e3f4;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q13188>, <https://dbpedia.org/resource/Pomegranate> .
 
 :motif_5047cf2d5e1607fa a skos:Concept;
@@ -297,7 +316,7 @@
   skos:prefLabel "Lorbeer"@de;
   skos:notation "motif_5047cf2d5e1607fa";
   skos:broader :motif_f2aa906d0ec4e3f4;
-  skos:related :motif_af8f6ed291383b8c;
+  skos:related :motif_af8f6ed291383b8c, :person_fd527c6f3b4cd056, :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q26006>, <https://dbpedia.org/resource/Laurus_nobilis> .
 
 :motif_4c9fc6a95d249640 a skos:Concept;
@@ -305,6 +324,7 @@
   skos:prefLabel "Veilchen"@de;
   skos:notation "motif_4c9fc6a95d249640";
   skos:broader :motif_f2aa906d0ec4e3f4;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q146095>, <https://dbpedia.org/resource/Viola_(plant)> .
 
 :motif_ea433b378d53e195 a skos:Concept;
@@ -312,6 +332,7 @@
   skos:prefLabel "Veilchenkranz"@de;
   skos:notation "motif_ea433b378d53e195";
   skos:broader :motif_f2aa906d0ec4e3f4;
+  skos:related :person_e585b2a779019b7e;
   skos:broadMatch <http://www.wikidata.org/entity/Q1201922>;
   skos:relatedMatch <http://www.wikidata.org/entity/Q146095> .
 
@@ -320,6 +341,7 @@
   skos:prefLabel "Veilchenbrust"@de;
   skos:notation "motif_a9a67d884bb4bc94";
   skos:broader :motif_f2aa906d0ec4e3f4;
+  skos:related :person_e585b2a779019b7e;
   skos:broadMatch <http://www.wikidata.org/entity/Q9103>;
   skos:relatedMatch <http://www.wikidata.org/entity/Q146095> .
 
@@ -328,6 +350,7 @@
   skos:prefLabel "Kranz"@de;
   skos:notation "motif_ea72ee231feeee11";
   skos:broader :motif_f2aa906d0ec4e3f4;
+  skos:related :person_e585b2a779019b7e, :person_4054b50081c54a12;
   skos:exactMatch <http://www.wikidata.org/entity/Q1201922>, <https://dbpedia.org/resource/Wreath> .
 
 :motif_b10a4078d73a7320 a skos:Concept;
@@ -380,7 +403,7 @@
   skos:notation "motif_a93562355b8f336c";
   skos:broader :motif_4c934ba7b9f256bf;
   skos:narrower :motif_f7b450835049e501, :motif_499787c4944b0ba5, :motif_80440c5206e2b3d4;
-  skos:related :work_b36331eb746b025a;
+  skos:related :person_6a8069a235c0da1d, :work_b36331eb746b025a;
   skos:exactMatch <http://www.wikidata.org/entity/Q5113>, <https://dbpedia.org/resource/Bird> .
 
 :motif_f7b450835049e501 a skos:Concept;
@@ -388,6 +411,7 @@
   skos:prefLabel "Taube"@de;
   skos:notation "motif_f7b450835049e501";
   skos:broader :motif_a93562355b8f336c;
+  skos:related :person_298d1d2696887999;
   skos:exactMatch <http://www.wikidata.org/entity/Q10856>, <https://dbpedia.org/resource/Columbidae> .
 
 :motif_499787c4944b0ba5 a skos:Concept;
@@ -416,6 +440,8 @@
   skos:prefLabel "Frühling"@de;
   skos:notation "motif_117bf1151b920a34";
   skos:broader :motif_5a650c393c811ea4;
+  skos:related :person_a92154dba89f764f, :person_fe75cd740876c3e4, :person_4bc689084fcb5dcb,
+    :person_e68a8e275e56e27e;
   skos:exactMatch <http://www.wikidata.org/entity/Q1312>, <https://dbpedia.org/resource/Spring_(season)> .
 
 :motif_c92ed98fdf8c34f1 a skos:Concept;
@@ -489,6 +515,7 @@
   skos:prefLabel "Zunge"@de;
   skos:notation "motif_c181a5a5b7398262";
   skos:broader :motif_e49a5f49d3750700;
+  skos:related :person_6a8069a235c0da1d;
   skos:exactMatch <http://www.wikidata.org/entity/Q9614>, <https://dbpedia.org/resource/Tongue> .
 
 :motif_f74d0ae71a82bf5d a skos:Concept;
@@ -528,7 +555,8 @@
   skos:notation "motif_58aba2ccf82b6543";
   skos:broader :motif_f74d0ae71a82bf5d;
   skos:narrower :motif_304a5e562a17af49, :motif_736eb7ef6202472f, :motif_162e6dfcee6ada53,
-    :motif_2d21be022480abad .
+    :motif_2d21be022480abad;
+  skos:related :person_d92f8054b846977e .
 
 :motif_304a5e562a17af49 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
@@ -543,7 +571,11 @@
   skos:notation "motif_736eb7ef6202472f";
   skos:broader :motif_58aba2ccf82b6543;
   skos:related :motif_64a381d1facbb9aa, :motif_e594796d6e9733cb, :phrase_8447592d89ddd5b5,
-    :phrase_42853034668c7b29, :phrase_993410118d749966;
+    :phrase_42853034668c7b29, :phrase_993410118d749966, :person_298d1d2696887999, :person_38af0ac181d5d397,
+    :person_f9d48292bc61bb67, :person_664342af9e58739b, :person_4a2654173d9042b0, :person_fd527c6f3b4cd056,
+    :person_e3e42e3bfe456766, :person_edd73d43dbe4b946, :person_0eabdfe13c1ff095, :person_fe179d791732151d,
+    :person_c408a1bcd63c420f, :person_1e6e628ea0192e31, :person_a8693158074cfc94, :person_e585b2a779019b7e,
+    :person_278199322209770d, :person_9ee0b67040c4734c;
   skos:exactMatch <http://www.wikidata.org/entity/Q775842>, <https://dbpedia.org/resource/Desire> .
 
 :motif_162e6dfcee6ada53 a skos:Concept;
@@ -551,7 +583,7 @@
   skos:prefLabel "Leidenschaft"@de;
   skos:notation "motif_162e6dfcee6ada53";
   skos:broader :motif_58aba2ccf82b6543;
-  skos:related :motif_64a381d1facbb9aa;
+  skos:related :motif_64a381d1facbb9aa, :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q335046>, <https://dbpedia.org/resource/Passion_(emotion)> .
 
 :motif_2d21be022480abad a skos:Concept;
@@ -559,7 +591,7 @@
   skos:prefLabel "Fruchtbarkeit"@de;
   skos:notation "motif_2d21be022480abad";
   skos:broader :motif_58aba2ccf82b6543;
-  skos:related :motif_f2aa906d0ec4e3f4;
+  skos:related :motif_f2aa906d0ec4e3f4, :person_1d5abf4995fa23e4;
   skos:exactMatch <http://www.wikidata.org/entity/Q964401>, <https://dbpedia.org/resource/Fertility> .
 
 :motif_2c7c60fffbf5467c a skos:Concept;
@@ -574,7 +606,10 @@
   skos:prefLabel "Schönheit"@de;
   skos:notation "motif_25f446d346d5ae39";
   skos:broader :motif_2c7c60fffbf5467c;
-  skos:related :place_6f62261a950e9311;
+  skos:related :place_6f62261a950e9311, :person_298d1d2696887999, :person_38af0ac181d5d397,
+    :person_2a23732b2a3c21cf, :person_e3e42e3bfe456766, :person_edd73d43dbe4b946, :person_c408a1bcd63c420f,
+    :person_1e6e628ea0192e31, :person_e585b2a779019b7e, :person_9ee0b67040c4734c, :person_803864de40878a17,
+    :person_4054b50081c54a12;
   skos:exactMatch <http://www.wikidata.org/entity/Q7242>, <https://dbpedia.org/resource/Beauty> .
 
 :motif_2126df79f7250a93 a skos:Concept;
@@ -596,7 +631,12 @@
   skos:broader :motif_2126df79f7250a93;
   skos:narrower :motif_7205babaca933dc4;
   skos:related :motif_e594796d6e9733cb, :phrase_8447592d89ddd5b5, :phrase_42853034668c7b29,
-    :phrase_993410118d749966, :phrase_2ec47d9b59c1040e;
+    :phrase_993410118d749966, :phrase_2ec47d9b59c1040e, :person_298d1d2696887999, :person_499bbc9e7596f10d,
+    :person_38af0ac181d5d397, :person_807f37582972882e, :person_f9d48292bc61bb67, :person_e9b8b1919af5758a,
+    :person_664342af9e58739b, :person_4a2654173d9042b0, :person_fd527c6f3b4cd056, :person_9cb6996a0396db3d,
+    :person_e3e42e3bfe456766, :person_edd73d43dbe4b946, :person_0eabdfe13c1ff095, :person_fe179d791732151d,
+    :person_c408a1bcd63c420f, :person_1e6e628ea0192e31, :person_e585b2a779019b7e, :person_278199322209770d,
+    :person_d2167a313c41ceaa, :person_9ee0b67040c4734c;
   skos:exactMatch <http://www.wikidata.org/entity/Q316>, <https://dbpedia.org/resource/Love> .
 
 :motif_7205babaca933dc4 a skos:Concept;
@@ -612,6 +652,7 @@
   skos:prefLabel "Sehnsucht"@de;
   skos:notation "motif_2d730412302b3df0";
   skos:broader :motif_2126df79f7250a93;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q1892385>, <https://dbpedia.org/resource/Sehnsucht> .
 
 :motif_f08832363d803240 a skos:Concept;
@@ -627,6 +668,7 @@
   skos:prefLabel "Erinnerung"@de;
   skos:notation "motif_24f6269abdf1c989";
   skos:broader :motif_2126df79f7250a93;
+  skos:related :person_9cb6996a0396db3d, :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q492>, <https://dbpedia.org/resource/Memory> .
 
 :motif_2bae3f2188e05143 a skos:Concept;
@@ -641,7 +683,7 @@
   skos:prefLabel "Schmerz"@de;
   skos:notation "motif_4f6e0ef68efa0824";
   skos:broader :motif_2126df79f7250a93;
-  skos:related :motif_637a4ceb95c9c2f5;
+  skos:related :motif_637a4ceb95c9c2f5, :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q81938>, <https://dbpedia.org/resource/Pain> .
 
 :motif_190541ca0caf5c3f a skos:Concept;
@@ -649,7 +691,7 @@
   skos:prefLabel "Trauer"@de;
   skos:notation "motif_190541ca0caf5c3f";
   skos:broader :motif_2126df79f7250a93;
-  skos:related :motif_e02eb23076791844, :work_b36331eb746b025a;
+  skos:related :motif_e02eb23076791844, :person_9cb6996a0396db3d, :work_b36331eb746b025a;
   skos:exactMatch <http://www.wikidata.org/entity/Q1026040>, <https://dbpedia.org/resource/Grief> .
 
 :motif_f4fe687d6a816b49 a skos:Concept;
@@ -657,6 +699,7 @@
   skos:prefLabel "Einsamkeit"@de;
   skos:notation "motif_f4fe687d6a816b49";
   skos:broader :motif_2126df79f7250a93;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q223270>, <https://dbpedia.org/resource/Loneliness> .
 
 :motif_63ab36bbe88b209b a skos:Concept;
@@ -685,7 +728,7 @@
   skos:prefLabel "Eifersucht"@de;
   skos:notation "motif_15d689c1f40b1d56";
   skos:broader :motif_2126df79f7250a93;
-  skos:related :phrase_42853034668c7b29;
+  skos:related :phrase_42853034668c7b29, :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q6545811>, <https://dbpedia.org/resource/Jealousy> .
 
 :motif_580d75823aa2f127 a skos:Concept;
@@ -700,6 +743,7 @@
   skos:prefLabel "Bitterkeit"@de;
   skos:notation "motif_51e665deaa2486ee";
   skos:broader :motif_2126df79f7250a93;
+  skos:related :person_e585b2a779019b7e;
   skos:narrowMatch <http://www.wikidata.org/entity/Q1517187>, <http://www.wikidata.org/entity/Q407747> .
 
 :motif_7a31b1efe2cb20da a skos:Concept;
@@ -707,7 +751,7 @@
   skos:prefLabel "Zorn"@de;
   skos:notation "motif_7a31b1efe2cb20da";
   skos:broader :motif_2126df79f7250a93;
-  skos:related :motif_92328d8c25447861, :motif_473b30ea708768d2;
+  skos:related :motif_92328d8c25447861, :motif_473b30ea708768d2, :person_a31e921338acf862;
   skos:exactMatch <http://www.wikidata.org/entity/Q79871>, <https://dbpedia.org/resource/Anger> .
 
 :motif_c30341434873ce70 a skos:Concept;
@@ -715,7 +759,7 @@
   skos:prefLabel "Wahnsinn"@de;
   skos:notation "motif_c30341434873ce70";
   skos:broader :motif_2126df79f7250a93;
-  skos:related :place_c7da5f2e77438154;
+  skos:related :place_c7da5f2e77438154, :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q505619>, <https://dbpedia.org/resource/Insanity> .
 
 :motif_88112d916a887aa5 a skos:Concept;
@@ -723,6 +767,7 @@
   skos:prefLabel "Rache"@de;
   skos:notation "motif_88112d916a887aa5";
   skos:broader :motif_2126df79f7250a93;
+  skos:related :person_a31e921338acf862;
   skos:exactMatch <http://www.wikidata.org/entity/Q1712140>, <https://dbpedia.org/resource/Revenge> .
 
 :motif_82cbd847b829adca a skos:Concept;
@@ -737,7 +782,8 @@
   skos:prefLabel "Abschied/Verlassen"@de;
   skos:notation "motif_637a4ceb95c9c2f5";
   skos:broader :motif_2126df79f7250a93;
-  skos:related :motif_4f6e0ef68efa0824, :motif_7abc136b51bb0005, :motif_8d6c4ae5261c1b7f;
+  skos:related :motif_4f6e0ef68efa0824, :motif_7abc136b51bb0005, :motif_8d6c4ae5261c1b7f,
+    :person_9cb6996a0396db3d, :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q21171241> .
 
 :motif_1cd4207b96382696 a skos:Concept;
@@ -753,7 +799,8 @@
   skos:prefLabel "Klage"@de;
   skos:notation "motif_7abc136b51bb0005";
   skos:broader :motif_2126df79f7250a93;
-  skos:related :motif_637a4ceb95c9c2f5;
+  skos:related :motif_637a4ceb95c9c2f5, :person_38af0ac181d5d397, :person_9cb6996a0396db3d,
+    :person_e585b2a779019b7e;
   skos:narrowMatch <http://www.wikidata.org/entity/Q1471717> .
 
 :motif_2f658ec3c5ec3ae4 a skos:Concept;
@@ -776,6 +823,7 @@
   skos:prefLabel "Altern"@de;
   skos:notation "motif_2b1f28169974867c";
   skos:broader :motif_2f658ec3c5ec3ae4;
+  skos:related :person_807f37582972882e, :person_331d06f48bf9d3d9, :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q332154>, <https://dbpedia.org/resource/Ageing> .
 
 :motif_de1c36b3db3ce34c a skos:Concept;
@@ -783,6 +831,7 @@
   skos:prefLabel "Jugend"@de;
   skos:notation "motif_de1c36b3db3ce34c";
   skos:broader :motif_2f658ec3c5ec3ae4;
+  skos:related :person_807f37582972882e, :person_331d06f48bf9d3d9, :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q190007>, <https://dbpedia.org/resource/Youth> .
 
 :motif_67d99b12bd68f38d a skos:Concept;
@@ -806,7 +855,8 @@
   skos:broader :motif_2f658ec3c5ec3ae4;
   skos:narrower :motif_9de00cb308757267, :motif_cf45a73d6da82f20;
   skos:related :motif_0824726b36365ab5, :motif_637a4ceb95c9c2f5, :motif_e02eb23076791844,
-    :place_1adb2da7993ecc95;
+    :place_1adb2da7993ecc95, :person_4bc689084fcb5dcb, :person_86564f02874aec39, :person_9cb6996a0396db3d,
+    :person_0eabdfe13c1ff095;
   skos:exactMatch <http://www.wikidata.org/entity/Q4>, <https://dbpedia.org/resource/Death> .
 
 :motif_9de00cb308757267 a skos:Concept;
@@ -814,6 +864,7 @@
   skos:prefLabel "Suizid"@de;
   skos:notation "motif_9de00cb308757267";
   skos:broader :motif_8d6c4ae5261c1b7f;
+  skos:related :person_c408a1bcd63c420f, :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q10737>, <https://dbpedia.org/resource/Suicide> .
 
 :motif_cf45a73d6da82f20 a skos:Concept;
@@ -821,6 +872,7 @@
   skos:prefLabel "Todeswunsch"@de;
   skos:notation "motif_cf45a73d6da82f20";
   skos:broader :motif_8d6c4ae5261c1b7f;
+  skos:related :person_e585b2a779019b7e;
   skos:narrowMatch <http://www.wikidata.org/entity/Q944142> .
 
 :motif_b3f47e9ec671bb4b a skos:Concept;
@@ -851,6 +903,7 @@
   skos:prefLabel "Sittenhaftigkeit"@de;
   skos:notation "motif_62827f2ed507b1a4";
   skos:broader :motif_25f24c9ae6926a3d;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q48324>, <https://dbpedia.org/resource/Morality> .
 
 :motif_e454faf75bf650db a skos:Concept;
@@ -858,6 +911,7 @@
   skos:prefLabel "Mode"@de;
   skos:notation "motif_e454faf75bf650db";
   skos:broader :motif_25f24c9ae6926a3d;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q12684>, <https://dbpedia.org/resource/Fashion> .
 
 :motif_203ed612d2946cdf a skos:Concept;
@@ -865,6 +919,8 @@
   skos:prefLabel "Weiblichkeit"@de;
   skos:notation "motif_203ed612d2946cdf";
   skos:broader :motif_25f24c9ae6926a3d;
+  skos:related :person_f79231e41dd95683, :person_e585b2a779019b7e, :person_d92f8054b846977e,
+    :person_40792a88ba634e66;
   skos:exactMatch <http://www.wikidata.org/entity/Q866081>, <https://dbpedia.org/resource/Femininity> .
 
 :motif_7939d5d42d13eba9 a skos:Concept;
@@ -872,6 +928,7 @@
   skos:prefLabel "Freundschaft"@de;
   skos:notation "motif_7939d5d42d13eba9";
   skos:broader :motif_25f24c9ae6926a3d;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q491>, <https://dbpedia.org/resource/Friendship> .
 
 :motif_002ca4e56dca366e a skos:Concept;
@@ -879,7 +936,7 @@
   skos:prefLabel "Weibliche Gemeinschaft"@de;
   skos:notation "motif_002ca4e56dca366e";
   skos:broader :motif_25f24c9ae6926a3d;
-  skos:related :place_0009a58f625c087b;
+  skos:related :place_0009a58f625c087b, :person_e585b2a779019b7e;
   skos:broadMatch <http://www.wikidata.org/entity/Q177634> .
 
 :motif_71f3b15b4a29d968 a skos:Concept;
@@ -888,6 +945,9 @@
   skos:notation "motif_71f3b15b4a29d968";
   skos:broader :motif_b3f47e9ec671bb4b;
   skos:narrower :motif_281b95ce63718bed, :motif_803e6cdc78c0c5a1;
+  skos:related :person_298d1d2696887999, :person_499bbc9e7596f10d, :person_e9b8b1919af5758a,
+    :person_664342af9e58739b, :person_e585b2a779019b7e, :person_d2167a313c41ceaa, :person_05e200db9312b803,
+    :person_d92f8054b846977e;
   skos:exactMatch <http://www.wikidata.org/entity/Q8445>, <https://dbpedia.org/ontology/Marriage> .
 
 :motif_281b95ce63718bed a skos:Concept;
@@ -912,6 +972,7 @@
   skos:broader :motif_b3f47e9ec671bb4b;
   skos:narrower :motif_25bab1557374fb8e, :motif_acf2f74928d12caa, :motif_b0bf073234a3855a,
     :motif_d57e3bd57313bbdd;
+  skos:related :person_e585b2a779019b7e, :person_521151dea6fb9e09, :person_669b106539453871;
   skos:exactMatch <http://www.wikidata.org/entity/Q9174>, <https://dbpedia.org/resource/Religion> .
 
 :motif_25bab1557374fb8e a skos:Concept;
@@ -950,14 +1011,16 @@
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:prefLabel "Politik"@de;
   skos:notation "motif_a18a39883dd84fa9";
-  skos:broader :motif_b3f47e9ec671bb4b, :motifs;
-  skos:narrower :motif_9cdcb44dabe9cfde .
+  skos:broader :motif_b3f47e9ec671bb4b;
+  skos:narrower :motif_9cdcb44dabe9cfde;
+  skos:related :person_01ec9bc374eb76b7, :person_acdbd75b6cf29fa6 .
 
 :motif_9cdcb44dabe9cfde a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:prefLabel "Verbannung"@de;
   skos:notation "motif_9cdcb44dabe9cfde";
   skos:broader :motif_a18a39883dd84fa9;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q1716571>, <https://dbpedia.org/resource/Banishment> .
 
 :motif_48abc1d4ebad9497 a skos:Concept;
@@ -966,13 +1029,15 @@
   skos:notation "motif_48abc1d4ebad9497";
   skos:broader :motifs;
   skos:narrower :motif_3b55ac3756f8ab42, :motif_b310d7fa48a3989f, :motif_051983025a946344,
-    :motif_c7adfc594b0535b3, :motif_e3a227ac72b4e7d3 .
+    :motif_c7adfc594b0535b3, :motif_e3a227ac72b4e7d3;
+  skos:related :person_0eabdfe13c1ff095, :person_37c2bf8d11811a0e .
 
 :motif_3b55ac3756f8ab42 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:prefLabel "Kunst"@de;
   skos:notation "motif_3b55ac3756f8ab42";
   skos:broader :motif_48abc1d4ebad9497;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q735>, <https://dbpedia.org/resource/Art> .
 
 :motif_b310d7fa48a3989f a skos:Concept;
@@ -980,6 +1045,7 @@
   skos:prefLabel "Ruhm"@de;
   skos:notation "motif_b310d7fa48a3989f";
   skos:broader :motif_48abc1d4ebad9497;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q1519566>, <https://dbpedia.org/resource/Ruhm> .
 
 :motif_051983025a946344 a skos:Concept;
@@ -995,7 +1061,9 @@
   skos:prefLabel "Dichtkunst"@de;
   skos:notation "motif_af8f6ed291383b8c";
   skos:broader :motif_051983025a946344;
-  skos:related :motif_5047cf2d5e1607fa, :phrase_108f0ac68025102d;
+  skos:related :motif_5047cf2d5e1607fa, :phrase_108f0ac68025102d, :person_a92154dba89f764f,
+    :person_d1946e7b74bf22bc, :person_1e6e628ea0192e31, :person_b663db28c943787a, :person_f42fab276b6fdb13,
+    :person_a8693158074cfc94, :person_b440568ec351ed84, :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q482>, <https://dbpedia.org/resource/Poetry> .
 
 :motif_751896a2b642d52f a skos:Concept;
@@ -1003,6 +1071,7 @@
   skos:prefLabel "Fragmenthaftigkeit"@de;
   skos:notation "motif_751896a2b642d52f";
   skos:broader :motif_051983025a946344;
+  skos:related :person_e585b2a779019b7e;
   skos:relatedMatch <http://www.wikidata.org/entity/Q122238708> .
 
 :motif_12b7c713ac24e9f6 a skos:Concept;
@@ -1010,6 +1079,7 @@
   skos:prefLabel "Neue Sappho"@de;
   skos:notation "motif_12b7c713ac24e9f6";
   skos:broader :motif_051983025a946344;
+  skos:related :person_e585b2a779019b7e;
   skos:broadMatch <http://www.wikidata.org/entity/Q207869> .
 
 :motif_c7adfc594b0535b3 a skos:Concept;
@@ -1018,7 +1088,8 @@
   skos:notation "motif_c7adfc594b0535b3";
   skos:broader :motif_48abc1d4ebad9497;
   skos:narrower :motif_d79ec516e61a1f80, :motif_88df0b1164b2fb91, :motif_e66f181abe9c99b8,
-    :motif_beeb48d0c7ac4bd1, :motif_fe5b704563cc5b98 .
+    :motif_beeb48d0c7ac4bd1, :motif_fe5b704563cc5b98;
+  skos:related :person_a92154dba89f764f, :person_f47881025ad98035, :person_e585b2a779019b7e .
 
 :motif_d79ec516e61a1f80 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
@@ -1046,6 +1117,7 @@
   skos:prefLabel "Tanz"@de;
   skos:notation "motif_beeb48d0c7ac4bd1";
   skos:broader :motif_c7adfc594b0535b3;
+  skos:related :person_803864de40878a17;
   skos:exactMatch <http://www.wikidata.org/entity/Q11639>, <https://dbpedia.org/resource/Dance> .
 
 :motif_fe5b704563cc5b98 a skos:Concept;
@@ -1061,7 +1133,8 @@
   skos:notation "motif_e3a227ac72b4e7d3";
   skos:broader :motif_48abc1d4ebad9497;
   skos:narrower :motif_faa2b53108d3d18e, :motif_a9de6af914034ff8, :motif_5d06c1eb322d00b7,
-    :motif_d46b25ce34a468d0, :motif_320231279067b1d8, :motif_c16c6077a42ad438 .
+    :motif_d46b25ce34a468d0, :motif_320231279067b1d8, :motif_c16c6077a42ad438;
+  skos:related :person_a92154dba89f764f .
 
 :motif_faa2b53108d3d18e a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
@@ -1089,6 +1162,7 @@
   skos:prefLabel "Leier"@de;
   skos:notation "motif_d46b25ce34a468d0";
   skos:broader :motif_e3a227ac72b4e7d3;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q1814870>, <https://dbpedia.org/resource/Yoke_lutes> .
 
 :motif_320231279067b1d8 a skos:Concept;
@@ -1096,6 +1170,7 @@
   skos:prefLabel "Lyra"@de;
   skos:notation "motif_320231279067b1d8";
   skos:broader :motif_e3a227ac72b4e7d3;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q201129>, <https://dbpedia.org/resource/Lyre> .
 
 :motif_c16c6077a42ad438 a skos:Concept;
@@ -1103,6 +1178,7 @@
   skos:prefLabel "Pektis"@de;
   skos:notation "motif_c16c6077a42ad438";
   skos:broader :motif_e3a227ac72b4e7d3;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q116758801> .
 
 :motif_ab661b23423441c6 a skos:Concept;
@@ -1117,6 +1193,7 @@
   skos:prefLabel "Becher/Krug"@de;
   skos:notation "motif_d80bb67aabd5386f";
   skos:broader :motif_ab661b23423441c6;
+  skos:related :plot_08ad0013a591aa17;
   skos:exactMatch <http://www.wikidata.org/entity/Q81727>, <https://dbpedia.org/resource/Cup> .
 
 :motif_2e583b17a2474551 a skos:Concept;
@@ -1124,6 +1201,7 @@
   skos:prefLabel "Spiegel"@de;
   skos:notation "motif_2e583b17a2474551";
   skos:broader :motif_ab661b23423441c6;
+  skos:related :person_edd73d43dbe4b946;
   skos:exactMatch <http://www.wikidata.org/entity/Q35197>, <https://dbpedia.org/resource/Mirror> .
 
 :motif_ffcba97b822ac20c a skos:Concept;
@@ -1139,6 +1217,8 @@
   skos:prefLabel "Wein"@de;
   skos:notation "motif_8dda05b62f2174da";
   skos:broader :motif_ffcba97b822ac20c;
+  skos:related :person_f47881025ad98035, :person_f42fab276b6fdb13, :person_a8693158074cfc94,
+    :plot_08ad0013a591aa17;
   skos:exactMatch <http://www.wikidata.org/entity/Q282>, <https://dbpedia.org/ontology/Wine> .
 
 :motif_39a10faa6e0647fb a skos:Concept;
@@ -1183,6 +1263,7 @@
   skos:prefLabel "Purpur"@de;
   skos:notation "motif_6605a54f19f1346b";
   skos:broader :motif_b39aa0e2a40a8ee4;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q3257809>, <https://dbpedia.org/resource/Purple> .
 
 :motif_5cc0b75e5bf4c183 a skos:Concept;
@@ -1220,6 +1301,7 @@
   skos:notation "motif_cf06ac1a51be3c55";
   skos:broader :motifs;
   skos:narrower :motif_b7009f43de3da4ad, :motif_d8dc25c9b4d4bd52, :motif_ecfabfc090d9d609;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q35831>, <https://dbpedia.org/resource/Sleep> .
 
 :motif_b7009f43de3da4ad a skos:Concept;
@@ -1227,6 +1309,7 @@
   skos:prefLabel "Schlaflosigkeit"@de;
   skos:notation "motif_b7009f43de3da4ad";
   skos:broader :motif_cf06ac1a51be3c55;
+  skos:related :person_352e0f8a99c574b2;
   skos:exactMatch <http://www.wikidata.org/entity/Q1869874>, <https://dbpedia.org/resource/Insomnia> .
 
 :motif_d8dc25c9b4d4bd52 a skos:Concept;
@@ -1270,6 +1353,7 @@
   skos:prefLabel "Heller Ton"@de;
   skos:notation "motif_172883cbad5b3349";
   skos:broader :motif_dde09ae7bddcf72c;
+  skos:related :person_e585b2a779019b7e;
   skos:broadMatch <http://www.wikidata.org/entity/Q2717062> .
 
 :motif_5a30a7576a2ef0e9 a skos:Concept;
@@ -1277,6 +1361,7 @@
   skos:prefLabel "Süße Stimme"@de;
   skos:notation "motif_5a30a7576a2ef0e9";
   skos:broader :motif_dde09ae7bddcf72c;
+  skos:related :person_e585b2a779019b7e;
   skos:broadMatch <http://www.wikidata.org/entity/Q17172850> .
 
 :motif_632a07b81eb5d851 a skos:Concept;
@@ -1299,6 +1384,7 @@
   skos:prefLabel "Sprachlosigkeit"@de;
   skos:notation "motif_65c67fdcba66886b";
   skos:broader :motif_dde09ae7bddcf72c;
+  skos:related :person_e585b2a779019b7e;
   skos:exactMatch <http://www.wikidata.org/entity/Q16526687>, <https://dbpedia.org/resource/Afazja_(filozofia)> .
 
 :motif_ecdd7525fe74838a a skos:Concept;
@@ -1307,7 +1393,8 @@
   skos:broader :motifs;
   skos:narrower :motif_71dbf6e67ea5a907, :motif_c1c5790bb38d4fbb, :motif_f4cf66993a308196,
     :motif_fcf3b7b61805babd, :motif_6ca05631ae27d928, :motif_a26b7d0dd6b16118, :motif_876aeb61deb4984f,
-    :motif_f2aa906d0ec4e3f4, :motif_b10a4078d73a7320, :motif_5a650c393c811ea4 .
+    :motif_f2aa906d0ec4e3f4, :motif_b10a4078d73a7320, :motif_5a650c393c811ea4;
+  skos:related :person_1d5abf4995fa23e4, :person_803864de40878a17 .
 
 :phrase_5cd31d1448d304fd a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
@@ -1696,10 +1783,13 @@
   skos:prefLabel "Aphrodite"@de;
   skos:notation "person_298d1d2696887999";
   skos:broader :person_1a6f232a48b9845e;
-  skos:related :place_4f523d00fc5d27fd, :place_040eb47ff2612816, :phrase_2ec47d9b59c1040e,
-    :place_481812f727302fbe, :person_974acb11c098c41b, :person_c7aebd12b1cbd031, :person_38af0ac181d5d397,
-    :person_f9d48292bc61bb67, :person_c408a1bcd63c420f, :person_e585b2a779019b7e, :person_803864de40878a17,
-    :plot_b3deb8ded8bddf04, :plot_531e3c7365ed869a;
+  skos:related :motif_7b4f6bd41d20b520, :motif_232c5062cde7d3c1, :motif_f7b450835049e501,
+    :motif_736eb7ef6202472f, :motif_25f446d346d5ae39, :motif_791dc243a6ba1593, :motif_71f3b15b4a29d968,
+    :place_4f523d00fc5d27fd, :place_040eb47ff2612816, :phrase_2ec47d9b59c1040e, :place_481812f727302fbe,
+    :person_974acb11c098c41b, :person_c7aebd12b1cbd031, :person_38af0ac181d5d397, :person_f9d48292bc61bb67,
+    :person_c408a1bcd63c420f, :person_e585b2a779019b7e, :person_803864de40878a17, :topic_a10417e468b798b0,
+    :topic_d0d0d796a787f4a8, :plot_b3deb8ded8bddf04, :plot_531e3c7365ed869a, :topic_547b51889f7bce04,
+    :topic_193f7fb77b90540a;
   skos:exactMatch <http://www.wikidata.org/entity/Q35500>, <https://dbpedia.org/resource/Aphrodite> .
 
 :person_a92154dba89f764f a skos:Concept;
@@ -1707,10 +1797,11 @@
   skos:prefLabel "Apollon"@de;
   skos:notation "person_a92154dba89f764f";
   skos:broader :person_1a6f232a48b9845e;
-  skos:related :place_6f62261a950e9311, :place_fb64d1e49976fb8c, :place_c469fa37e1f081e9,
+  skos:related :motif_117bf1151b920a34, :motif_af8f6ed291383b8c, :motif_c7adfc594b0535b3,
+    :motif_e3a227ac72b4e7d3, :place_6f62261a950e9311, :place_fb64d1e49976fb8c, :place_c469fa37e1f081e9,
     :person_f79231e41dd95683, :person_2eb129793d7ca74a, :person_c7aebd12b1cbd031, :person_dbb519c32f7f48ce,
-    :person_3bd6faa78c3b97eb, :person_b663db28c943787a, :person_37c2bf8d11811a0e, :work_0e2eeafefe2dae48,
-    :work_50897b387fb5a925;
+    :person_fd527c6f3b4cd056, :person_3bd6faa78c3b97eb, :person_b663db28c943787a, :person_37c2bf8d11811a0e,
+    :topic_91fbce010840c414, :work_0e2eeafefe2dae48, :work_50897b387fb5a925;
   skos:exactMatch <http://www.wikidata.org/entity/Q37340>, <https://dbpedia.org/resource/Apollo> .
 
 :person_974acb11c098c41b a skos:Concept;
@@ -1719,7 +1810,7 @@
   skos:notation "person_974acb11c098c41b";
   skos:broader :person_1a6f232a48b9845e;
   skos:related :place_6f62261a950e9311, :person_298d1d2696887999, :person_1526106cabf2fa6b,
-    :person_c7aebd12b1cbd031, :work_0e2eeafefe2dae48;
+    :person_c7aebd12b1cbd031, :topic_6c84497f664d562a, :work_0e2eeafefe2dae48;
   skos:exactMatch <http://www.wikidata.org/entity/Q40901>, <https://dbpedia.org/resource/Ares> .
 
 :person_f79231e41dd95683 a skos:Concept;
@@ -1727,8 +1818,9 @@
   skos:prefLabel "Artemis"@de;
   skos:notation "person_f79231e41dd95683";
   skos:broader :person_1a6f232a48b9845e;
-  skos:related :place_fb64d1e49976fb8c, :person_a92154dba89f764f, :person_c7aebd12b1cbd031,
-    :person_dbb519c32f7f48ce, :person_d92f8054b846977e;
+  skos:related :motif_ee611d65b870ad00, :motif_0824726b36365ab5, :motif_203ed612d2946cdf,
+    :place_fb64d1e49976fb8c, :person_a92154dba89f764f, :person_c7aebd12b1cbd031, :person_dbb519c32f7f48ce,
+    :person_d92f8054b846977e, :topic_b51493c7cb013212, :topic_979480c5de919f6e;
   skos:exactMatch <http://www.wikidata.org/entity/Q39503>, <https://dbpedia.org/resource/Artemis> .
 
 :person_1526106cabf2fa6b a skos:Concept;
@@ -1737,8 +1829,8 @@
   skos:notation "person_1526106cabf2fa6b";
   skos:broader :person_1a6f232a48b9845e;
   skos:related :place_6f62261a950e9311, :place_9bd33c7fdd67c764, :person_974acb11c098c41b,
-    :person_db10ad7627a6e7ad, :person_c7aebd12b1cbd031, :person_3bd6faa78c3b97eb, :work_da4bf9fda473cc89,
-    :work_0e2eeafefe2dae48;
+    :person_db10ad7627a6e7ad, :person_c7aebd12b1cbd031, :person_3bd6faa78c3b97eb, :topic_6c84497f664d562a,
+    :topic_90253972585e05d8, :work_da4bf9fda473cc89, :work_0e2eeafefe2dae48;
   skos:exactMatch <http://www.wikidata.org/entity/Q37122>, <https://dbpedia.org/resource/Athena> .
 
 :person_fe75cd740876c3e4 a skos:Concept;
@@ -1746,7 +1838,8 @@
   skos:prefLabel "Demeter"@de;
   skos:notation "person_fe75cd740876c3e4";
   skos:broader :person_1a6f232a48b9845e;
-  skos:related :person_c7aebd12b1cbd031, :person_4bc689084fcb5dcb, :person_86564f02874aec39;
+  skos:related :motif_01ca370ea29462e3, :motif_117bf1151b920a34, :person_c7aebd12b1cbd031,
+    :person_4bc689084fcb5dcb, :person_86564f02874aec39, :topic_16fb1687f7449a95;
   skos:exactMatch <http://www.wikidata.org/entity/Q40730>, <https://dbpedia.org/resource/Demeter> .
 
 :person_f47881025ad98035 a skos:Concept;
@@ -1754,7 +1847,8 @@
   skos:prefLabel "Dionysos"@de;
   skos:notation "person_f47881025ad98035";
   skos:broader :person_1a6f232a48b9845e;
-  skos:related :person_c7aebd12b1cbd031;
+  skos:related :motif_c7adfc594b0535b3, :motif_8dda05b62f2174da, :person_c7aebd12b1cbd031,
+    :topic_e7a7fad674ab17f4;
   skos:exactMatch <http://www.wikidata.org/entity/Q41680>, <https://dbpedia.org/resource/Dionysus> .
 
 :person_499bbc9e7596f10d a skos:Concept;
@@ -1762,6 +1856,8 @@
   skos:prefLabel "Hera"@de;
   skos:notation "person_499bbc9e7596f10d";
   skos:broader :person_1a6f232a48b9845e;
+  skos:related :motif_791dc243a6ba1593, :motif_71f3b15b4a29d968, :person_c7aebd12b1cbd031,
+    :person_454c27fc8a648f4f, :topic_a10417e468b798b0, :topic_547b51889f7bce04, :topic_b44d4c1bda5009f2;
   skos:exactMatch <http://www.wikidata.org/entity/Q38012>, <https://dbpedia.org/resource/Hera> .
 
 :person_2eb129793d7ca74a a skos:Concept;
@@ -1770,7 +1866,7 @@
   skos:notation "person_2eb129793d7ca74a";
   skos:broader :person_1a6f232a48b9845e;
   skos:related :person_a92154dba89f764f, :person_c7aebd12b1cbd031, :person_4bc689084fcb5dcb,
-    :person_887e83106aad1200, :work_da4bf9fda473cc89;
+    :person_887e83106aad1200, :topic_c02e0ff3d2bffc47, :work_da4bf9fda473cc89;
   skos:exactMatch <http://www.wikidata.org/entity/Q41484>, <https://dbpedia.org/resource/Hermes> .
 
 :person_db10ad7627a6e7ad a skos:Concept;
@@ -1778,8 +1874,9 @@
   skos:prefLabel "Poseidon"@de;
   skos:notation "person_db10ad7627a6e7ad";
   skos:broader :person_1a6f232a48b9845e;
-  skos:related :place_4f523d00fc5d27fd, :person_1526106cabf2fa6b, :person_c7aebd12b1cbd031,
-    :person_97a24d8c828b75ec, :work_da4bf9fda473cc89;
+  skos:related :motif_473b30ea708768d2, :motif_c9ab4b3812d39197, :motif_3950fcecf002a43a,
+    :place_4f523d00fc5d27fd, :person_1526106cabf2fa6b, :person_c7aebd12b1cbd031, :person_97a24d8c828b75ec,
+    :topic_6c84497f664d562a, :work_da4bf9fda473cc89;
   skos:exactMatch <http://www.wikidata.org/entity/Q41127>, <https://dbpedia.org/resource/Poseidon> .
 
 :person_c7aebd12b1cbd031 a skos:Concept;
@@ -1787,11 +1884,11 @@
   skos:prefLabel "Zeus"@de;
   skos:notation "person_c7aebd12b1cbd031";
   skos:broader :person_1a6f232a48b9845e;
-  skos:related :place_6f62261a950e9311, :place_481812f727302fbe, :person_298d1d2696887999,
-    :person_a92154dba89f764f, :person_974acb11c098c41b, :person_f79231e41dd95683, :person_1526106cabf2fa6b,
-    :person_fe75cd740876c3e4, :person_f47881025ad98035, :person_2eb129793d7ca74a, :person_db10ad7627a6e7ad,
-    :person_dbb519c32f7f48ce, :person_86564f02874aec39, :person_e3e42e3bfe456766, :work_da4bf9fda473cc89,
-    :work_0e2eeafefe2dae48;
+  skos:related :motif_c1c5790bb38d4fbb, :motif_92328d8c25447861, :place_6f62261a950e9311,
+    :place_481812f727302fbe, :person_298d1d2696887999, :person_a92154dba89f764f, :person_974acb11c098c41b,
+    :person_f79231e41dd95683, :person_1526106cabf2fa6b, :person_fe75cd740876c3e4, :person_f47881025ad98035,
+    :person_499bbc9e7596f10d, :person_2eb129793d7ca74a, :person_db10ad7627a6e7ad, :person_dbb519c32f7f48ce,
+    :person_86564f02874aec39, :person_e3e42e3bfe456766, :work_da4bf9fda473cc89, :work_0e2eeafefe2dae48;
   skos:exactMatch <http://www.wikidata.org/entity/Q34201>, <https://dbpedia.org/resource/Zeus> .
 
 :person_e6e1e08c60e5a04d a skos:Concept;
@@ -1811,7 +1908,9 @@
   skos:prefLabel "Adonis"@de;
   skos:notation "person_38af0ac181d5d397";
   skos:broader :person_e6e1e08c60e5a04d;
-  skos:related :place_040eb47ff2612816, :person_298d1d2696887999, :person_e585b2a779019b7e;
+  skos:related :motif_736eb7ef6202472f, :motif_25f446d346d5ae39, :motif_791dc243a6ba1593,
+    :motif_7abc136b51bb0005, :place_040eb47ff2612816, :person_298d1d2696887999, :person_e585b2a779019b7e,
+    :topic_a10417e468b798b0, :topic_d0d0d796a787f4a8, :topic_193f7fb77b90540a;
   skos:exactMatch <http://www.wikidata.org/entity/Q163920>, <https://dbpedia.org/resource/Adonis> .
 
 :person_4e64c1b5997afbc9 a skos:Concept;
@@ -1819,7 +1918,7 @@
   skos:prefLabel "Atropos"@de;
   skos:notation "person_4e64c1b5997afbc9";
   skos:broader :person_e6e1e08c60e5a04d;
-  skos:related :place_1adb2da7993ecc95, :person_86564f02874aec39;
+  skos:related :place_1adb2da7993ecc95, :person_86564f02874aec39, :topic_16fb1687f7449a95;
   skos:exactMatch <http://www.wikidata.org/entity/Q753294>, <https://dbpedia.org/resource/Atropos> .
 
 :person_807f37582972882e a skos:Concept;
@@ -1827,6 +1926,9 @@
   skos:prefLabel "Eos"@de;
   skos:notation "person_807f37582972882e";
   skos:broader :person_e6e1e08c60e5a04d;
+  skos:related :motif_f8ead995947f7500, :motif_01c3eb8edb59de39, :motif_791dc243a6ba1593,
+    :motif_2b1f28169974867c, :motif_de1c36b3db3ce34c, :topic_a10417e468b798b0, :topic_216c06ff845256fe,
+    :topic_9bace65450b57656, :topic_dd0209b2c71040a5;
   skos:exactMatch <http://www.wikidata.org/entity/Q178417>, <https://dbpedia.org/resource/Eos> .
 
 :person_f9d48292bc61bb67 a skos:Concept;
@@ -1834,7 +1936,8 @@
   skos:prefLabel "Eros"@de;
   skos:notation "person_f9d48292bc61bb67";
   skos:broader :person_e6e1e08c60e5a04d;
-  skos:related :phrase_8447592d89ddd5b5, :phrase_993410118d749966, :person_298d1d2696887999;
+  skos:related :motif_736eb7ef6202472f, :motif_791dc243a6ba1593, :phrase_8447592d89ddd5b5,
+    :phrase_993410118d749966, :person_298d1d2696887999, :topic_a10417e468b798b0, :topic_d0d0d796a787f4a8;
   skos:exactMatch <http://www.wikidata.org/entity/Q121973>, <https://dbpedia.org/resource/Eros> .
 
 :person_1d5abf4995fa23e4 a skos:Concept;
@@ -1842,6 +1945,7 @@
   skos:prefLabel "Gaia"@de;
   skos:notation "person_1d5abf4995fa23e4";
   skos:broader :person_e6e1e08c60e5a04d;
+  skos:related :motif_2d21be022480abad, :motif_ecdd7525fe74838a, :topic_979480c5de919f6e;
   skos:exactMatch <http://www.wikidata.org/entity/Q93172>, <https://dbpedia.org/resource/Gaia> .
 
 :person_2bf51959e0848f5f a skos:Concept;
@@ -1849,7 +1953,8 @@
   skos:prefLabel "Helios"@de;
   skos:notation "person_2bf51959e0848f5f";
   skos:broader :person_e6e1e08c60e5a04d;
-  skos:related :person_352e0f8a99c574b2, :work_da4bf9fda473cc89;
+  skos:related :motif_e50316313352d60d, :person_352e0f8a99c574b2, :topic_e6ecf2d8c3d52793,
+    :work_da4bf9fda473cc89;
   skos:exactMatch <http://www.wikidata.org/entity/Q134270>, <https://dbpedia.org/resource/Helios> .
 
 :person_e9b8b1919af5758a a skos:Concept;
@@ -1857,7 +1962,8 @@
   skos:prefLabel "Hymenaios"@de;
   skos:notation "person_e9b8b1919af5758a";
   skos:broader :person_e6e1e08c60e5a04d;
-  skos:related :person_05e200db9312b803;
+  skos:related :motif_64a381d1facbb9aa, :motif_791dc243a6ba1593, :motif_71f3b15b4a29d968,
+    :person_05e200db9312b803, :topic_a10417e468b798b0, :topic_547b51889f7bce04;
   skos:exactMatch <http://www.wikidata.org/entity/Q506770>, <https://dbpedia.org/resource/Hymen_(god)> .
 
 :person_454c27fc8a648f4f a skos:Concept;
@@ -1865,6 +1971,7 @@
   skos:prefLabel "Iris"@de;
   skos:notation "person_454c27fc8a648f4f";
   skos:broader :person_e6e1e08c60e5a04d;
+  skos:related :motif_ec830d6c2e83aea3, :person_499bbc9e7596f10d;
   skos:exactMatch <http://www.wikidata.org/entity/Q184570>, <https://dbpedia.org/resource/Iris_(mythology)> .
 
 :person_dbb519c32f7f48ce a skos:Concept;
@@ -1881,6 +1988,8 @@
   skos:prefLabel "Peitho"@de;
   skos:notation "person_664342af9e58739b";
   skos:broader :person_e6e1e08c60e5a04d;
+  skos:related :motif_736eb7ef6202472f, :motif_791dc243a6ba1593, :motif_71f3b15b4a29d968,
+    :topic_a10417e468b798b0, :topic_d0d0d796a787f4a8, :topic_547b51889f7bce04;
   skos:exactMatch <http://www.wikidata.org/entity/Q611171>, <https://dbpedia.org/resource/Peitho> .
 
 :person_4bc689084fcb5dcb a skos:Concept;
@@ -1888,8 +1997,8 @@
   skos:prefLabel "Persephone"@de;
   skos:notation "person_4bc689084fcb5dcb";
   skos:broader :person_e6e1e08c60e5a04d;
-  skos:related :place_1adb2da7993ecc95, :person_fe75cd740876c3e4, :person_2eb129793d7ca74a,
-    :person_86564f02874aec39, :person_887e83106aad1200;
+  skos:related :motif_117bf1151b920a34, :motif_8d6c4ae5261c1b7f, :place_1adb2da7993ecc95,
+    :person_fe75cd740876c3e4, :person_2eb129793d7ca74a, :person_86564f02874aec39, :person_887e83106aad1200;
   skos:exactMatch <http://www.wikidata.org/entity/Q45967>, <https://dbpedia.org/resource/Persephone> .
 
 :person_6a8069a235c0da1d a skos:Concept;
@@ -1897,6 +2006,7 @@
   skos:prefLabel "Philomele"@de;
   skos:notation "person_6a8069a235c0da1d";
   skos:broader :person_e6e1e08c60e5a04d;
+  skos:related :motif_a93562355b8f336c, :motif_c181a5a5b7398262;
   skos:exactMatch <http://www.wikidata.org/entity/Q115449>, <https://dbpedia.org/resource/Philomela> .
 
 :person_4a2654173d9042b0 a skos:Concept;
@@ -1904,6 +2014,8 @@
   skos:prefLabel "Psyche"@de;
   skos:notation "person_4a2654173d9042b0";
   skos:broader :person_e6e1e08c60e5a04d;
+  skos:related :motif_0824726b36365ab5, :motif_736eb7ef6202472f, :motif_791dc243a6ba1593,
+    :topic_a10417e468b798b0, :topic_d0d0d796a787f4a8;
   skos:exactMatch <http://www.wikidata.org/entity/Q843382>, <https://dbpedia.org/resource/Psyche_(mythology)> .
 
 :person_352e0f8a99c574b2 a skos:Concept;
@@ -1911,7 +2023,8 @@
   skos:prefLabel "Selene"@de;
   skos:notation "person_352e0f8a99c574b2";
   skos:broader :person_e6e1e08c60e5a04d;
-  skos:related :phrase_5cd31d1448d304fd, :person_2bf51959e0848f5f;
+  skos:related :motif_ee611d65b870ad00, :motif_0824726b36365ab5, :motif_b7009f43de3da4ad,
+    :phrase_5cd31d1448d304fd, :person_2bf51959e0848f5f, :topic_868c77ac61c449bd;
   skos:exactMatch <http://www.wikidata.org/entity/Q131585>, <https://dbpedia.org/resource/Selene> .
 
 :person_e68a8e275e56e27e a skos:Concept;
@@ -1919,7 +2032,7 @@
   skos:prefLabel "Zephyr"@de;
   skos:notation "person_e68a8e275e56e27e";
   skos:broader :person_e6e1e08c60e5a04d;
-  skos:related :person_5c74e76e7da1f025;
+  skos:related :motif_ec830d6c2e83aea3, :motif_117bf1151b920a34, :person_5c74e76e7da1f025;
   skos:exactMatch <http://www.wikidata.org/entity/Q467515>, <https://dbpedia.org/resource/Zephyrus> .
 
 :person_86564f02874aec39 a skos:Concept;
@@ -1927,8 +2040,9 @@
   skos:prefLabel "Hades"@de;
   skos:notation "person_86564f02874aec39";
   skos:broader :person_e6e1e08c60e5a04d;
-  skos:related :place_1adb2da7993ecc95, :person_fe75cd740876c3e4, :person_c7aebd12b1cbd031,
-    :person_4e64c1b5997afbc9, :person_4bc689084fcb5dcb, :person_887e83106aad1200;
+  skos:related :motif_8d6c4ae5261c1b7f, :place_1adb2da7993ecc95, :person_fe75cd740876c3e4,
+    :person_c7aebd12b1cbd031, :person_4e64c1b5997afbc9, :person_4bc689084fcb5dcb, :person_887e83106aad1200,
+    :topic_16fb1687f7449a95;
   skos:exactMatch <http://www.wikidata.org/entity/Q41410>, <https://dbpedia.org/resource/Hades> .
 
 :person_5c74e76e7da1f025 a skos:Concept;
@@ -1936,7 +2050,8 @@
   skos:prefLabel "Aiolos"@de;
   skos:notation "person_5c74e76e7da1f025";
   skos:broader :person_e6e1e08c60e5a04d;
-  skos:related :place_a47b52347c0cc636, :person_e68a8e275e56e27e, :work_da4bf9fda473cc89;
+  skos:related :motif_473b30ea708768d2, :motif_ec830d6c2e83aea3, :place_a47b52347c0cc636,
+    :person_e68a8e275e56e27e, :work_da4bf9fda473cc89;
   skos:exactMatch <http://www.wikidata.org/entity/Q406388>, <https://dbpedia.org/resource/Aeolus_(son_of_Hellen)> .
 
 :person_256ddc5d500b7e13 a skos:Concept;
@@ -1955,7 +2070,7 @@
   skos:notation "person_3ae4177dfc72d693";
   skos:broader :person_256ddc5d500b7e13;
   skos:related :place_6f62261a950e9311, :person_3bd6faa78c3b97eb, :person_e3e42e3bfe456766,
-    :person_7715e9ee67577553, :work_0e2eeafefe2dae48;
+    :person_7715e9ee67577553, :topic_6c84497f664d562a, :work_0e2eeafefe2dae48;
   skos:exactMatch <http://www.wikidata.org/entity/Q128176>, <https://dbpedia.org/resource/Agamemnon> .
 
 :person_2a23732b2a3c21cf a skos:Concept;
@@ -1963,6 +2078,8 @@
   skos:prefLabel "Andromeda"@de;
   skos:notation "person_2a23732b2a3c21cf";
   skos:broader :person_256ddc5d500b7e13;
+  skos:related :motif_c9ab4b3812d39197, :motif_6defe0a8e240f27b, :motif_25f446d346d5ae39,
+    :topic_193f7fb77b90540a;
   skos:exactMatch <http://www.wikidata.org/entity/Q161582>, <https://dbpedia.org/resource/Andromeda_(mythology)> .
 
 :person_887e83106aad1200 a skos:Concept;
@@ -1971,7 +2088,7 @@
   skos:notation "person_887e83106aad1200";
   skos:broader :person_256ddc5d500b7e13;
   skos:related :place_1adb2da7993ecc95, :person_2eb129793d7ca74a, :person_4bc689084fcb5dcb,
-    :person_86564f02874aec39;
+    :person_86564f02874aec39, :topic_16fb1687f7449a95;
   skos:exactMatch <http://www.wikidata.org/entity/Q6612>, <https://dbpedia.org/resource/Charon> .
 
 :person_fd527c6f3b4cd056 a skos:Concept;
@@ -1979,6 +2096,8 @@
   skos:prefLabel "Daphne"@de;
   skos:notation "person_fd527c6f3b4cd056";
   skos:broader :person_256ddc5d500b7e13;
+  skos:related :motif_5047cf2d5e1607fa, :motif_736eb7ef6202472f, :motif_791dc243a6ba1593,
+    :person_a92154dba89f764f, :topic_a10417e468b798b0, :topic_d0d0d796a787f4a8;
   skos:exactMatch <http://www.wikidata.org/entity/Q194015>, <https://dbpedia.org/resource/Daphne> .
 
 :person_9cb6996a0396db3d a skos:Concept;
@@ -1986,7 +2105,10 @@
   skos:prefLabel "Eurydike"@de;
   skos:notation "person_9cb6996a0396db3d";
   skos:broader :person_256ddc5d500b7e13;
-  skos:related :place_1adb2da7993ecc95;
+  skos:related :motif_791dc243a6ba1593, :motif_24f6269abdf1c989, :motif_190541ca0caf5c3f,
+    :motif_637a4ceb95c9c2f5, :motif_7abc136b51bb0005, :motif_8d6c4ae5261c1b7f, :place_1adb2da7993ecc95,
+    :person_0eabdfe13c1ff095, :topic_a10417e468b798b0, :topic_d8a87ac0faded437, :topic_e6ecf2d8c3d52793,
+    :topic_16fb1687f7449a95;
   skos:exactMatch <http://www.wikidata.org/entity/Q208588>, <https://dbpedia.org/resource/Eurydice> .
 
 :person_3bd6faa78c3b97eb a skos:Concept;
@@ -1995,7 +2117,7 @@
   skos:notation "person_3bd6faa78c3b97eb";
   skos:broader :person_256ddc5d500b7e13;
   skos:related :place_6f62261a950e9311, :person_a92154dba89f764f, :person_1526106cabf2fa6b,
-    :person_3ae4177dfc72d693, :person_7715e9ee67577553, :work_0e2eeafefe2dae48;
+    :person_3ae4177dfc72d693, :person_7715e9ee67577553, :topic_6c84497f664d562a, :work_0e2eeafefe2dae48;
   skos:exactMatch <http://www.wikidata.org/entity/Q159666>, <https://dbpedia.org/resource/Hector> .
 
 :person_e3e42e3bfe456766 a skos:Concept;
@@ -2003,8 +2125,9 @@
   skos:prefLabel "Helena"@de;
   skos:notation "person_e3e42e3bfe456766";
   skos:broader :person_256ddc5d500b7e13;
-  skos:related :place_6f62261a950e9311, :person_c7aebd12b1cbd031, :person_3ae4177dfc72d693,
-    :person_7715e9ee67577553, :work_0e2eeafefe2dae48;
+  skos:related :motif_736eb7ef6202472f, :motif_25f446d346d5ae39, :motif_791dc243a6ba1593,
+    :place_6f62261a950e9311, :person_c7aebd12b1cbd031, :person_3ae4177dfc72d693, :person_7715e9ee67577553,
+    :topic_a10417e468b798b0, :topic_d0d0d796a787f4a8, :topic_193f7fb77b90540a, :work_0e2eeafefe2dae48;
   skos:exactMatch <http://www.wikidata.org/entity/Q164061>, <https://dbpedia.org/resource/Helen_of_Troy> .
 
 :person_7715e9ee67577553 a skos:Concept;
@@ -2013,7 +2136,7 @@
   skos:notation "person_7715e9ee67577553";
   skos:broader :person_256ddc5d500b7e13;
   skos:related :place_6f62261a950e9311, :person_3ae4177dfc72d693, :person_3bd6faa78c3b97eb,
-    :person_e3e42e3bfe456766, :work_0e2eeafefe2dae48;
+    :person_e3e42e3bfe456766, :topic_6c84497f664d562a, :work_0e2eeafefe2dae48;
   skos:exactMatch <http://www.wikidata.org/entity/Q171839>, <https://dbpedia.org/resource/Menelaus> .
 
 :person_edd73d43dbe4b946 a skos:Concept;
@@ -2021,6 +2144,9 @@
   skos:prefLabel "Narziss"@de;
   skos:notation "person_edd73d43dbe4b946";
   skos:broader :person_256ddc5d500b7e13;
+  skos:related :motif_4facb4bf5a22499b, :motif_736eb7ef6202472f, :motif_25f446d346d5ae39,
+    :motif_791dc243a6ba1593, :motif_2e583b17a2474551, :topic_a10417e468b798b0, :topic_d0d0d796a787f4a8,
+    :topic_193f7fb77b90540a;
   skos:exactMatch <http://www.wikidata.org/entity/Q179256>, <https://dbpedia.org/resource/Narcissus_(mythology)> .
 
 :person_d1946e7b74bf22bc a skos:Concept;
@@ -2028,7 +2154,8 @@
   skos:prefLabel "Odysseus"@de;
   skos:notation "person_d1946e7b74bf22bc";
   skos:broader :person_256ddc5d500b7e13;
-  skos:related :person_1972623f5799ed62, :work_da4bf9fda473cc89;
+  skos:related :motif_c9ab4b3812d39197, :motif_af8f6ed291383b8c, :person_1972623f5799ed62,
+    :topic_91fbce010840c414, :work_da4bf9fda473cc89;
   skos:exactMatch <http://www.wikidata.org/entity/Q47231>, <https://dbpedia.org/resource/Odysseus> .
 
 :person_0eabdfe13c1ff095 a skos:Concept;
@@ -2036,7 +2163,9 @@
   skos:prefLabel "Orpheus"@de;
   skos:notation "person_0eabdfe13c1ff095";
   skos:broader :person_256ddc5d500b7e13;
-  skos:related :place_1adb2da7993ecc95, :place_c469fa37e1f081e9;
+  skos:related :motif_736eb7ef6202472f, :motif_791dc243a6ba1593, :motif_8d6c4ae5261c1b7f,
+    :motif_48abc1d4ebad9497, :place_1adb2da7993ecc95, :place_c469fa37e1f081e9, :person_9cb6996a0396db3d,
+    :topic_91fbce010840c414, :topic_a10417e468b798b0, :topic_d0d0d796a787f4a8, :topic_16fb1687f7449a95;
   skos:exactMatch <http://www.wikidata.org/entity/Q174353>, <https://dbpedia.org/resource/Orpheus> .
 
 :person_bf1a16fc1e6ba956 a skos:Concept;
@@ -2044,6 +2173,7 @@
   skos:prefLabel "Prometheus"@de;
   skos:notation "person_bf1a16fc1e6ba956";
   skos:broader :person_256ddc5d500b7e13;
+  skos:related :motif_64a381d1facbb9aa;
   skos:exactMatch <http://www.wikidata.org/entity/Q83160>, <https://dbpedia.org/resource/Prometheus> .
 
 :person_331d06f48bf9d3d9 a skos:Concept;
@@ -2051,6 +2181,8 @@
   skos:prefLabel "Tithonos"@de;
   skos:notation "person_331d06f48bf9d3d9";
   skos:broader :person_256ddc5d500b7e13;
+  skos:related :motif_2b1f28169974867c, :motif_de1c36b3db3ce34c, :topic_9bace65450b57656,
+    :topic_dd0209b2c71040a5;
   skos:exactMatch <http://www.wikidata.org/entity/Q737306>, <https://dbpedia.org/resource/Tithonus> .
 
 :person_a66ff1aaf842f1d4 a skos:Concept;
@@ -2084,7 +2216,8 @@
   skos:prefLabel "Atthis"@de;
   skos:notation "person_fe179d791732151d";
   skos:broader :person_a66ff1aaf842f1d4;
-  skos:related :plot_dedcc9b1e7fb8e79, :plot_0b092ed64a936159, :plot_43b59f052f3dc73e .
+  skos:related :motif_736eb7ef6202472f, :motif_791dc243a6ba1593, :topic_d0d0d796a787f4a8,
+    :plot_dedcc9b1e7fb8e79, :plot_0b092ed64a936159, :plot_43b59f052f3dc73e, :topic_0af359e15219034a .
 
 :person_4fa8ba6e36329b8d a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
@@ -2140,8 +2273,10 @@
   skos:prefLabel "Phaon"@de;
   skos:notation "person_c408a1bcd63c420f";
   skos:broader :person_a66ff1aaf842f1d4;
-  skos:related :place_c7da5f2e77438154, :person_298d1d2696887999, :plot_0b092ed64a936159,
-    :work_7ddaff9b6814b58b;
+  skos:related :motif_6defe0a8e240f27b, :motif_736eb7ef6202472f, :motif_25f446d346d5ae39,
+    :motif_791dc243a6ba1593, :motif_9de00cb308757267, :place_c7da5f2e77438154, :person_298d1d2696887999,
+    :topic_a10417e468b798b0, :topic_d0d0d796a787f4a8, :plot_0b092ed64a936159, :topic_9bace65450b57656,
+    :topic_193f7fb77b90540a, :topic_f6d80c8d012ca95d, :work_7ddaff9b6814b58b;
   skos:exactMatch <http://www.wikidata.org/entity/Q595876>, <https://dbpedia.org/resource/Phaon> .
 
 :person_db532d0c7b2fccca a skos:Concept;
@@ -2169,7 +2304,9 @@
   skos:prefLabel "Laura (Petrarca)"@de;
   skos:notation "person_1e6e628ea0192e31";
   skos:broader :person_9c96d9e565291dda;
-  skos:related :place_65e7187dfcae7a96, :person_36a33d615281cb7f .
+  skos:related :motif_736eb7ef6202472f, :motif_25f446d346d5ae39, :motif_791dc243a6ba1593,
+    :motif_af8f6ed291383b8c, :place_65e7187dfcae7a96, :person_36a33d615281cb7f, :topic_91fbce010840c414,
+    :topic_a10417e468b798b0, :topic_d0d0d796a787f4a8, :topic_193f7fb77b90540a .
 
 :person_278a0a79e0be5174 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
@@ -2192,7 +2329,8 @@
   skos:prefLabel "Arion"@de;
   skos:notation "person_b663db28c943787a";
   skos:broader :person_06c6360bcd505db1;
-  skos:related :place_0009a58f625c087b, :person_a92154dba89f764f;
+  skos:related :motif_af8f6ed291383b8c, :place_0009a58f625c087b, :person_a92154dba89f764f,
+    :topic_91fbce010840c414;
   skos:exactMatch <http://www.wikidata.org/entity/Q312422>, <https://dbpedia.org/resource/Arion> .
 
 :person_f42fab276b6fdb13 a skos:Concept;
@@ -2200,8 +2338,9 @@
   skos:prefLabel "Alkaios"@de;
   skos:notation "person_f42fab276b6fdb13";
   skos:broader :person_06c6360bcd505db1;
-  skos:related :place_0009a58f625c087b, :place_a47b52347c0cc636, :person_a8693158074cfc94,
-    :person_9865138458182890, :person_e585b2a779019b7e;
+  skos:related :motif_af8f6ed291383b8c, :motif_8dda05b62f2174da, :place_0009a58f625c087b,
+    :place_a47b52347c0cc636, :person_a8693158074cfc94, :person_9865138458182890, :person_e585b2a779019b7e,
+    :topic_91fbce010840c414, :topic_3c28b27922e5dfea;
   skos:exactMatch <http://www.wikidata.org/entity/Q212872>, <https://dbpedia.org/resource/Alcaeus> .
 
 :person_a8693158074cfc94 a skos:Concept;
@@ -2209,8 +2348,9 @@
   skos:prefLabel "Anakreon"@de;
   skos:notation "person_a8693158074cfc94";
   skos:broader :person_06c6360bcd505db1;
-  skos:related :place_9bd33c7fdd67c764, :place_7a4fb8e10d66c95f, :person_f42fab276b6fdb13,
-    :person_e585b2a779019b7e;
+  skos:related :motif_736eb7ef6202472f, :motif_af8f6ed291383b8c, :motif_8dda05b62f2174da,
+    :place_9bd33c7fdd67c764, :place_7a4fb8e10d66c95f, :person_f42fab276b6fdb13, :person_e585b2a779019b7e,
+    :topic_91fbce010840c414, :topic_d0d0d796a787f4a8;
   skos:exactMatch <http://www.wikidata.org/entity/Q213484>, <https://dbpedia.org/resource/Anacreon> .
 
 :person_98fe1bf71475363b a skos:Concept;
@@ -2218,8 +2358,8 @@
   skos:prefLabel "Erinna"@de;
   skos:notation "person_98fe1bf71475363b";
   skos:broader :person_06c6360bcd505db1;
-  skos:related :person_e585b2a779019b7e, :plot_b2aa4b409c0138a8, :work_9b4a173a94427606,
-    :work_7ad506cbcc0b8143;
+  skos:related :person_e585b2a779019b7e, :topic_91fbce010840c414, :plot_b2aa4b409c0138a8,
+    :work_9b4a173a94427606, :work_7ad506cbcc0b8143;
   skos:exactMatch <http://www.wikidata.org/entity/Q256241>, <https://dbpedia.org/resource/Erinna> .
 
 :person_1972623f5799ed62 a skos:Concept;
@@ -2227,7 +2367,8 @@
   skos:prefLabel "Homer"@de;
   skos:notation "person_1972623f5799ed62";
   skos:broader :person_06c6360bcd505db1;
-  skos:related :place_ac07f1e878d38c8d, :place_7a4fb8e10d66c95f, :person_d1946e7b74bf22bc;
+  skos:related :place_ac07f1e878d38c8d, :place_7a4fb8e10d66c95f, :person_d1946e7b74bf22bc,
+    :topic_91fbce010840c414;
   skos:exactMatch <http://www.wikidata.org/entity/Q6691>, <https://dbpedia.org/resource/Homer> .
 
 :person_b440568ec351ed84 a skos:Concept;
@@ -2235,7 +2376,8 @@
   skos:prefLabel "Pindar"@de;
   skos:notation "person_b440568ec351ed84";
   skos:broader :person_06c6360bcd505db1;
-  skos:related :place_ac07f1e878d38c8d, :place_f80dc51761a44c4c;
+  skos:related :motif_af8f6ed291383b8c, :place_ac07f1e878d38c8d, :place_f80dc51761a44c4c,
+    :topic_91fbce010840c414;
   skos:exactMatch <http://www.wikidata.org/entity/Q134929>, <https://dbpedia.org/resource/Pindar> .
 
 :person_66fc054f0477ea23 a skos:Concept;
@@ -2243,7 +2385,8 @@
   skos:prefLabel "Platon"@de;
   skos:notation "person_66fc054f0477ea23";
   skos:broader :person_06c6360bcd505db1;
-  skos:related :place_9bd33c7fdd67c764, :place_8f3a4ee0def96e05, :person_e585b2a779019b7e;
+  skos:related :place_9bd33c7fdd67c764, :place_8f3a4ee0def96e05, :person_e585b2a779019b7e,
+    :topic_83a2d3f58ce463ad;
   skos:exactMatch <http://www.wikidata.org/entity/Q134929>, <https://dbpedia.org/resource/Pindar> .
 
 :person_01ec9bc374eb76b7 a skos:Concept;
@@ -2251,7 +2394,8 @@
   skos:prefLabel "Solon"@de;
   skos:notation "person_01ec9bc374eb76b7";
   skos:broader :person_06c6360bcd505db1;
-  skos:related :place_9bd33c7fdd67c764, :person_e585b2a779019b7e, :plot_7fc0a31f8eefb7cc;
+  skos:related :motif_a18a39883dd84fa9, :place_9bd33c7fdd67c764, :person_e585b2a779019b7e,
+    :plot_7fc0a31f8eefb7cc, :topic_3c28b27922e5dfea, :topic_83a2d3f58ce463ad;
   skos:exactMatch <http://www.wikidata.org/entity/Q133337>, <https://dbpedia.org/resource/Solon> .
 
 :person_9865138458182890 a skos:Concept;
@@ -2260,7 +2404,7 @@
   skos:notation "person_9865138458182890";
   skos:broader :person_06c6360bcd505db1;
   skos:related :place_21104b06fd2e1311, :person_f42fab276b6fdb13, :person_e585b2a779019b7e,
-    :person_acdbd75b6cf29fa6, :plot_d761685e20e4c05d, :plot_830dcfef58019d56;
+    :person_acdbd75b6cf29fa6, :plot_d761685e20e4c05d, :plot_830dcfef58019d56, :topic_3c28b27922e5dfea;
   skos:exactMatch <http://www.wikidata.org/entity/Q311835>, <https://dbpedia.org/resource/Pittacus_of_Mytilene> .
 
 :person_5771e8248ede2068 a skos:Concept;
@@ -2278,12 +2422,31 @@
   skos:prefLabel "Sappho"@de;
   skos:notation "person_e585b2a779019b7e";
   skos:broader :person_5771e8248ede2068;
-  skos:related :place_c7da5f2e77438154, :place_8f3a4ee0def96e05, :place_a47b52347c0cc636,
-    :place_dc407ad0184a6b43, :person_298d1d2696887999, :person_38af0ac181d5d397, :person_a66ff1aaf842f1d4,
-    :person_f42fab276b6fdb13, :person_a8693158074cfc94, :person_98fe1bf71475363b, :person_66fc054f0477ea23,
-    :person_01ec9bc374eb76b7, :person_9865138458182890, :person_278199322209770d, :person_a2f67175618331bf,
-    :person_b793a3807d130de0, :person_8403b22eecf9a7e8, :person_dd90800ee54e2216, :person_d2167a313c41ceaa,
-    :person_9ee0b67040c4734c, :person_37c2bf8d11811a0e, :plot_414bc4680cad7ddc, :plot_02612f6f060ef11d,
+  skos:related :motif_ee611d65b870ad00, :motif_278e356ed64cbb3f, :motif_0824726b36365ab5,
+    :motif_c9ab4b3812d39197, :motif_62581a673f405e6c, :motif_c10f460a9ccb3510, :motif_6defe0a8e240f27b,
+    :motif_7b4f6bd41d20b520, :motif_872360a9416bbe76, :motif_01ca370ea29462e3, :motif_232c5062cde7d3c1,
+    :motif_6ce22ab4ce13cf9e, :motif_8bd0b4436d2c2211, :motif_5047cf2d5e1607fa, :motif_4c9fc6a95d249640,
+    :motif_ea433b378d53e195, :motif_a9a67d884bb4bc94, :motif_ea72ee231feeee11, :motif_736eb7ef6202472f,
+    :motif_162e6dfcee6ada53, :motif_25f446d346d5ae39, :motif_791dc243a6ba1593, :motif_2d730412302b3df0,
+    :motif_24f6269abdf1c989, :motif_4f6e0ef68efa0824, :motif_f4fe687d6a816b49, :motif_15d689c1f40b1d56,
+    :motif_51e665deaa2486ee, :motif_c30341434873ce70, :motif_637a4ceb95c9c2f5, :motif_7abc136b51bb0005,
+    :motif_2b1f28169974867c, :motif_de1c36b3db3ce34c, :motif_9de00cb308757267, :motif_cf45a73d6da82f20,
+    :motif_62827f2ed507b1a4, :motif_e454faf75bf650db, :motif_203ed612d2946cdf, :motif_7939d5d42d13eba9,
+    :motif_002ca4e56dca366e, :motif_71f3b15b4a29d968, :motif_68f3d8712ddf8d70, :motif_9cdcb44dabe9cfde,
+    :motif_3b55ac3756f8ab42, :motif_b310d7fa48a3989f, :motif_af8f6ed291383b8c, :motif_751896a2b642d52f,
+    :motif_12b7c713ac24e9f6, :motif_c7adfc594b0535b3, :motif_d46b25ce34a468d0, :motif_320231279067b1d8,
+    :motif_c16c6077a42ad438, :motif_6605a54f19f1346b, :motif_cf06ac1a51be3c55, :motif_172883cbad5b3349,
+    :motif_5a30a7576a2ef0e9, :motif_65c67fdcba66886b, :place_c7da5f2e77438154, :place_8f3a4ee0def96e05,
+    :place_a47b52347c0cc636, :place_dc407ad0184a6b43, :person_298d1d2696887999, :person_38af0ac181d5d397,
+    :person_a66ff1aaf842f1d4, :person_f42fab276b6fdb13, :person_a8693158074cfc94, :person_98fe1bf71475363b,
+    :person_66fc054f0477ea23, :person_01ec9bc374eb76b7, :person_9865138458182890, :person_278199322209770d,
+    :person_a2f67175618331bf, :person_b793a3807d130de0, :person_8403b22eecf9a7e8, :person_dd90800ee54e2216,
+    :person_d2167a313c41ceaa, :person_9ee0b67040c4734c, :person_37c2bf8d11811a0e, :topic_91fbce010840c414,
+    :topic_a10417e468b798b0, :topic_d0d0d796a787f4a8, :plot_414bc4680cad7ddc, :plot_02612f6f060ef11d,
+    :topic_0424470816a8c5ac, :topic_b0049a9652bca00f, :topic_7112b97bd8eccdc6, :topic_9bace65450b57656,
+    :topic_dd0209b2c71040a5, :topic_547b51889f7bce04, :topic_b51493c7cb013212, :topic_979480c5de919f6e,
+    :topic_193f7fb77b90540a, :topic_d8a87ac0faded437, :topic_e6ecf2d8c3d52793, :topic_48d9deec1aa375bc,
+    :topic_4d0efc6118699f99, :topic_f6d80c8d012ca95d, :topic_868c77ac61c449bd, :topic_bdd785a758abd7cd,
     :work_9b4a173a94427606, :work_0b367126b900439f, :work_7b7be8da5c1ca839, :work_64e314c856d1dbbe,
     :work_7ddaff9b6814b58b, :work_59687e2256dfc7f3;
   skos:exactMatch <http://www.wikidata.org/entity/Q17892>, <https://dbpedia.org/resource/Sappho> .
@@ -2293,9 +2456,10 @@
   skos:prefLabel "Charaxos"@de;
   skos:notation "person_278199322209770d";
   skos:broader :person_5771e8248ede2068;
-  skos:related :place_dc407ad0184a6b43, :person_e585b2a779019b7e, :person_a2f67175618331bf,
-    :person_b793a3807d130de0, :person_8403b22eecf9a7e8, :person_dd90800ee54e2216, :person_9ee0b67040c4734c,
-    :plot_c15e2310c0183ba9;
+  skos:related :motif_c9ab4b3812d39197, :motif_736eb7ef6202472f, :motif_791dc243a6ba1593,
+    :place_dc407ad0184a6b43, :person_e585b2a779019b7e, :person_a2f67175618331bf, :person_b793a3807d130de0,
+    :person_8403b22eecf9a7e8, :person_dd90800ee54e2216, :person_9ee0b67040c4734c, :topic_d0d0d796a787f4a8,
+    :plot_c15e2310c0183ba9, :topic_c02e0ff3d2bffc47;
   skos:exactMatch <http://www.wikidata.org/entity/Q16184753>, <https://dbpedia.org/resource/Caraxos> .
 
 :person_a2f67175618331bf a skos:Concept;
@@ -2312,7 +2476,7 @@
   skos:notation "person_b793a3807d130de0";
   skos:broader :person_5771e8248ede2068;
   skos:related :person_e585b2a779019b7e, :person_278199322209770d, :person_a2f67175618331bf,
-    :person_8403b22eecf9a7e8, :person_dd90800ee54e2216, :plot_efe620bf3882fa2f .
+    :person_8403b22eecf9a7e8, :person_dd90800ee54e2216, :plot_efe620bf3882fa2f, :topic_4d0efc6118699f99 .
 
 :person_8403b22eecf9a7e8 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
@@ -2335,8 +2499,9 @@
   skos:prefLabel "Kerkylas von Andros"@de;
   skos:notation "person_d2167a313c41ceaa";
   skos:broader :person_5771e8248ede2068;
-  skos:related :person_e585b2a779019b7e, :plot_0a6119efed4bdf7d, :plot_0b092ed64a936159,
-    :plot_30ec8b515802033f;
+  skos:related :motif_791dc243a6ba1593, :motif_71f3b15b4a29d968, :person_e585b2a779019b7e,
+    :topic_a10417e468b798b0, :plot_0a6119efed4bdf7d, :plot_0b092ed64a936159, :plot_30ec8b515802033f,
+    :topic_547b51889f7bce04, :topic_b44d4c1bda5009f2;
   skos:exactMatch <http://www.wikidata.org/entity/Q85870889>, <https://dbpedia.org/resource/Cércolas_de_Andros> .
 
 :person_9ee0b67040c4734c a skos:Concept;
@@ -2344,8 +2509,9 @@
   skos:prefLabel "Rhodopis/Doricha"@de;
   skos:notation "person_9ee0b67040c4734c";
   skos:broader :person_5771e8248ede2068;
-  skos:related :place_dc407ad0184a6b43, :person_e585b2a779019b7e, :person_278199322209770d,
-    :plot_414bc4680cad7ddc;
+  skos:related :motif_736eb7ef6202472f, :motif_25f446d346d5ae39, :motif_791dc243a6ba1593,
+    :place_dc407ad0184a6b43, :person_e585b2a779019b7e, :person_278199322209770d, :topic_a10417e468b798b0,
+    :topic_d0d0d796a787f4a8, :plot_414bc4680cad7ddc, :topic_193f7fb77b90540a, :topic_c02e0ff3d2bffc47;
   skos:exactMatch <http://www.wikidata.org/entity/Q109278381>, <http://www.wikidata.org/entity/Q15504920>,
     <https://dbpedia.org/resource/Rhodopis_(hetaera)> .
 
@@ -2361,7 +2527,7 @@
   skos:prefLabel "Francesco Petrarca"@de;
   skos:notation "person_36a33d615281cb7f";
   skos:broader :person_6c3ac7cd68c42b93;
-  skos:related :place_65e7187dfcae7a96, :person_1e6e628ea0192e31;
+  skos:related :place_65e7187dfcae7a96, :person_1e6e628ea0192e31, :topic_91fbce010840c414;
   skos:exactMatch <http://www.wikidata.org/entity/Q1401>, <https://dbpedia.org/resource/Petrarch> .
 
 :person_7d3c887eeaa47caf a skos:Concept;
@@ -2369,7 +2535,8 @@
   skos:prefLabel "Friedrich Gottlieb Welcker"@de;
   skos:notation "person_7d3c887eeaa47caf";
   skos:broader :person_6c3ac7cd68c42b93;
-  skos:related :place_967849e8809f26b2, :work_59687e2256dfc7f3;
+  skos:related :place_967849e8809f26b2, :topic_83a2d3f58ce463ad, :topic_5f98e5b87c9f2f96,
+    :work_59687e2256dfc7f3;
   skos:exactMatch <http://www.wikidata.org/entity/Q69028>, <https://dbpedia.org/resource/Friedrich_Gottlieb_Welcker> .
 
 :person_ee7ff70540e361f7 a skos:Concept;
@@ -2392,7 +2559,8 @@
   skos:prefLabel "Braut/Bräutigam"@de;
   skos:notation "person_05e200db9312b803";
   skos:broader :person_95f834da965f8d52;
-  skos:related :person_e9b8b1919af5758a;
+  skos:related :motif_71f3b15b4a29d968, :person_e9b8b1919af5758a, :topic_547b51889f7bce04,
+    :topic_b44d4c1bda5009f2;
   skos:exactMatch <http://www.wikidata.org/entity/Q353673>, <http://www.wikidata.org/entity/Q854830>,
     <https://dbpedia.org/resource/Bride>, <https://dbpedia.org/resource/Bridegroom> .
 
@@ -2401,7 +2569,8 @@
   skos:prefLabel "Jungfrau"@de;
   skos:notation "person_d92f8054b846977e";
   skos:broader :person_95f834da965f8d52;
-  skos:related :person_f79231e41dd95683;
+  skos:related :motif_58aba2ccf82b6543, :motif_203ed612d2946cdf, :motif_71f3b15b4a29d968,
+    :person_f79231e41dd95683, :topic_d0d0d796a787f4a8, :topic_547b51889f7bce04, :topic_979480c5de919f6e;
   skos:exactMatch <http://www.wikidata.org/entity/Q32859833>, <https://dbpedia.org/resource/Jungfrau> .
 
 :person_40792a88ba634e66 a skos:Concept;
@@ -2409,6 +2578,7 @@
   skos:prefLabel "Mädchen"@de;
   skos:notation "person_40792a88ba634e66";
   skos:broader :person_95f834da965f8d52;
+  skos:related :motif_203ed612d2946cdf, :topic_979480c5de919f6e;
   skos:exactMatch <http://www.wikidata.org/entity/Q3031>, <https://dbpedia.org/resource/Girl> .
 
 :person_e7c5d465a0193271 a skos:Concept;
@@ -2423,7 +2593,7 @@
   skos:prefLabel "Tyrann"@de;
   skos:notation "person_acdbd75b6cf29fa6";
   skos:broader :person_e7c5d465a0193271;
-  skos:related :person_9865138458182890;
+  skos:related :motif_a18a39883dd84fa9, :person_9865138458182890, :topic_3c28b27922e5dfea;
   skos:exactMatch <http://www.wikidata.org/entity/Q180095>, <https://dbpedia.org/resource/Tyrant> .
 
 :person_4a8abedda068cc77 a skos:Concept;
@@ -2438,7 +2608,7 @@
   skos:prefLabel "Fischer"@de;
   skos:notation "person_97a24d8c828b75ec";
   skos:broader :person_e7c5d465a0193271;
-  skos:related :person_db10ad7627a6e7ad;
+  skos:related :motif_c9ab4b3812d39197, :person_db10ad7627a6e7ad;
   skos:exactMatch <http://www.wikidata.org/entity/Q331432>, <https://dbpedia.org/resource/Fisherman> .
 
 :person_f608e2394ac9ae2a a skos:Concept;
@@ -2453,6 +2623,7 @@
   skos:prefLabel "Priester/Priesterin"@de;
   skos:notation "person_521151dea6fb9e09";
   skos:broader :person_f608e2394ac9ae2a;
+  skos:related :motif_68f3d8712ddf8d70, :person_803864de40878a17;
   skos:exactMatch <http://www.wikidata.org/entity/Q42603>, <https://dbpedia.org/ontology/Priest> .
 
 :person_669b106539453871 a skos:Concept;
@@ -2460,7 +2631,7 @@
   skos:prefLabel "Gott/Göttin"@de;
   skos:notation "person_669b106539453871";
   skos:broader :person_f608e2394ac9ae2a;
-  skos:related :place_938d82612b2cbf3a;
+  skos:related :motif_68f3d8712ddf8d70, :place_938d82612b2cbf3a, :topic_afe138550cd16d0b;
   skos:exactMatch <http://www.wikidata.org/entity/Q178885>, <https://dbpedia.org/ontology/Deity> .
 
 :person_14582bf9dd069b37 a skos:Concept;
@@ -2476,7 +2647,8 @@
   skos:prefLabel "Muse"@de;
   skos:notation "person_37c2bf8d11811a0e";
   skos:broader :person_14582bf9dd069b37;
-  skos:related :place_c469fa37e1f081e9, :person_a92154dba89f764f, :person_e585b2a779019b7e;
+  skos:related :motif_48abc1d4ebad9497, :place_c469fa37e1f081e9, :person_a92154dba89f764f,
+    :person_e585b2a779019b7e, :topic_91fbce010840c414;
   skos:exactMatch <http://www.wikidata.org/entity/Q66016>, <https://dbpedia.org/resource/Muses> .
 
 :person_803864de40878a17 a skos:Concept;
@@ -2484,7 +2656,8 @@
   skos:prefLabel "Nymphe"@de;
   skos:notation "person_803864de40878a17";
   skos:broader :person_14582bf9dd069b37;
-  skos:related :person_298d1d2696887999;
+  skos:related :motif_4facb4bf5a22499b, :motif_25f446d346d5ae39, :motif_beeb48d0c7ac4bd1,
+    :motif_ecdd7525fe74838a, :person_298d1d2696887999, :person_521151dea6fb9e09, :topic_193f7fb77b90540a;
   skos:exactMatch <http://www.wikidata.org/entity/Q373916>, <https://dbpedia.org/resource/Nymph> .
 
 :person_4054b50081c54a12 a skos:Concept;
@@ -2492,6 +2665,7 @@
   skos:prefLabel "Charis"@de;
   skos:notation "person_4054b50081c54a12";
   skos:broader :person_14582bf9dd069b37;
+  skos:related :motif_ea72ee231feeee11, :motif_25f446d346d5ae39, :topic_193f7fb77b90540a;
   skos:broadMatch <http://www.wikidata.org/entity/Q184353> .
 
 :person_a31e921338acf862 a skos:Concept;
@@ -2499,6 +2673,7 @@
   skos:prefLabel "Erinys"@de;
   skos:notation "person_a31e921338acf862";
   skos:broader :person_14582bf9dd069b37;
+  skos:related :motif_7a31b1efe2cb20da, :motif_88112d916a887aa5, :topic_e3f9c28d697807a6;
   skos:broadMatch <http://www.wikidata.org/entity/Q180262> .
 
 :person_f00db1cf9f68778d a skos:Concept;
@@ -2516,8 +2691,11 @@
   skos:broader :topic_522a85ce59f9c66a;
   skos:narrower :topic_f83ec0822d1cce6e, :topic_fe0ae02e2ba6d7c4;
   skos:related :place_0009a58f625c087b, :phrase_108f0ac68025102d, :place_ac07f1e878d38c8d,
-    :place_c469fa37e1f081e9, :plot_fd168d9b2224361d, :plot_86a1ad47f8e7fa03, :plot_b3deb8ded8bddf04,
-    :plot_dedcc9b1e7fb8e79;
+    :place_c469fa37e1f081e9, :person_a92154dba89f764f, :person_d1946e7b74bf22bc, :person_0eabdfe13c1ff095,
+    :person_1e6e628ea0192e31, :person_b663db28c943787a, :person_f42fab276b6fdb13, :person_a8693158074cfc94,
+    :person_98fe1bf71475363b, :person_1972623f5799ed62, :person_b440568ec351ed84, :person_e585b2a779019b7e,
+    :person_36a33d615281cb7f, :person_37c2bf8d11811a0e, :plot_fd168d9b2224361d, :plot_86a1ad47f8e7fa03,
+    :plot_b3deb8ded8bddf04, :plot_dedcc9b1e7fb8e79;
   skos:exactMatch <http://www.wikidata.org/entity/Q482>, <https://dbpedia.org/resource/Poetry> .
 
 :work_5744284c4623de0d a skos:Concept;
@@ -2534,9 +2712,14 @@
   skos:broader :topic_6965e0a196d0b97e;
   skos:narrower :topic_0af359e15219034a, :topic_ccb502909ffa7cd8;
   skos:related :phrase_8447592d89ddd5b5, :phrase_42853034668c7b29, :phrase_993410118d749966,
-    :phrase_2ec47d9b59c1040e, :plot_b3deb8ded8bddf04, :plot_dedcc9b1e7fb8e79, :plot_30ec8b515802033f,
-    :plot_cc6bf7467ad0c7cf, :plot_6ec13f66820264d7, :plot_43b59f052f3dc73e, :plot_414bc4680cad7ddc,
-    :topic_193f7fb77b90540a, :work_9a6fa5b72a8235b6, :work_7ddaff9b6814b58b;
+    :phrase_2ec47d9b59c1040e, :person_298d1d2696887999, :person_499bbc9e7596f10d, :person_38af0ac181d5d397,
+    :person_807f37582972882e, :person_f9d48292bc61bb67, :person_e9b8b1919af5758a, :person_664342af9e58739b,
+    :person_4a2654173d9042b0, :person_fd527c6f3b4cd056, :person_9cb6996a0396db3d, :person_e3e42e3bfe456766,
+    :person_edd73d43dbe4b946, :person_0eabdfe13c1ff095, :person_c408a1bcd63c420f, :person_1e6e628ea0192e31,
+    :person_e585b2a779019b7e, :person_d2167a313c41ceaa, :person_9ee0b67040c4734c, :plot_b3deb8ded8bddf04,
+    :plot_dedcc9b1e7fb8e79, :plot_30ec8b515802033f, :plot_cc6bf7467ad0c7cf, :plot_6ec13f66820264d7,
+    :plot_43b59f052f3dc73e, :plot_414bc4680cad7ddc, :topic_193f7fb77b90540a, :work_9a6fa5b72a8235b6,
+    :work_7ddaff9b6814b58b;
   skos:exactMatch <http://www.wikidata.org/entity/Q316>, <https://dbpedia.org/resource/Love> .
 
 :topic_d0d0d796a787f4a8 a skos:Concept;
@@ -2545,10 +2728,14 @@
   skos:notation "topic_d0d0d796a787f4a8";
   skos:broader :topic_6965e0a196d0b97e;
   skos:related :place_040eb47ff2612816, :place_0009a58f625c087b, :phrase_8447592d89ddd5b5,
-    :phrase_42853034668c7b29, :phrase_993410118d749966, :place_481812f727302fbe, :plot_dedcc9b1e7fb8e79,
-    :plot_b2d8b14d68b73dd5, :plot_30ec8b515802033f, :plot_cc6bf7467ad0c7cf, :plot_6ec13f66820264d7,
-    :plot_43b59f052f3dc73e, :plot_6adb2e4795def630, :topic_193f7fb77b90540a, :work_9a6fa5b72a8235b6,
-    :work_7ddaff9b6814b58b, :work_dd5a96c631b854f4;
+    :phrase_42853034668c7b29, :phrase_993410118d749966, :place_481812f727302fbe, :person_298d1d2696887999,
+    :person_38af0ac181d5d397, :person_f9d48292bc61bb67, :person_664342af9e58739b, :person_4a2654173d9042b0,
+    :person_fd527c6f3b4cd056, :person_e3e42e3bfe456766, :person_edd73d43dbe4b946, :person_0eabdfe13c1ff095,
+    :person_fe179d791732151d, :person_c408a1bcd63c420f, :person_1e6e628ea0192e31, :person_a8693158074cfc94,
+    :person_e585b2a779019b7e, :person_278199322209770d, :person_9ee0b67040c4734c, :person_d92f8054b846977e,
+    :plot_dedcc9b1e7fb8e79, :plot_b2d8b14d68b73dd5, :plot_30ec8b515802033f, :plot_cc6bf7467ad0c7cf,
+    :plot_6ec13f66820264d7, :plot_43b59f052f3dc73e, :plot_6adb2e4795def630, :topic_193f7fb77b90540a,
+    :work_9a6fa5b72a8235b6, :work_7ddaff9b6814b58b, :work_dd5a96c631b854f4;
   skos:exactMatch <http://www.wikidata.org/entity/Q775842>, <https://dbpedia.org/resource/Desire> .
 
 :work_bd94b08706bbf1d8 a skos:Concept;
@@ -2936,7 +3123,8 @@
   skos:prefLabel "Charaxos als Mundschenk"@de;
   skos:notation "plot_08ad0013a591aa17";
   skos:broader :plot_c15e2310c0183ba9;
-  skos:related :place_0009a58f625c087b, :topic_173f939586542d39;
+  skos:related :motif_d80bb67aabd5386f, :motif_8dda05b62f2174da, :place_0009a58f625c087b,
+    :topic_173f939586542d39;
   skos:broadMatch <http://www.wikidata.org/entity/Q1075791>;
   skos:relatedMatch <http://www.wikidata.org/entity/Q16184753> .
 
@@ -2965,7 +3153,8 @@
   skos:prefLabel "Ruhm"@de;
   skos:notation "topic_0424470816a8c5ac";
   skos:broader :topic_522a85ce59f9c66a;
-  skos:related :place_938d82612b2cbf3a, :place_be670e476be162e1, :plot_86a1ad47f8e7fa03;
+  skos:related :place_938d82612b2cbf3a, :place_be670e476be162e1, :person_e585b2a779019b7e,
+    :plot_86a1ad47f8e7fa03;
   skos:exactMatch <http://www.wikidata.org/entity/Q1519566>, <https://dbpedia.org/resource/Ruhm> .
 
 :topic_216c06ff845256fe a skos:Concept;
@@ -2974,7 +3163,7 @@
   skos:notation "topic_216c06ff845256fe";
   skos:broader :topic_bdd785a758abd7cd;
   skos:related :place_1adb2da7993ecc95, :place_ac07f1e878d38c8d, :place_be670e476be162e1,
-    :plot_42557e8d70c24751;
+    :person_807f37582972882e, :plot_42557e8d70c24751;
   skos:relatedMatch <http://www.wikidata.org/entity/Q12767209>, <http://www.wikidata.org/entity/Q1379405> .
 
 :topic_afe138550cd16d0b a skos:Concept;
@@ -2982,8 +3171,8 @@
   skos:prefLabel "Vergöttlichung"@de;
   skos:notation "topic_afe138550cd16d0b";
   skos:broader :topic_bdd785a758abd7cd;
-  skos:related :place_938d82612b2cbf3a, :plot_42557e8d70c24751, :plot_6ec13f66820264d7,
-    :plot_011312b82eb4fc98, :topic_16fb1687f7449a95;
+  skos:related :place_938d82612b2cbf3a, :person_669b106539453871, :plot_42557e8d70c24751,
+    :plot_6ec13f66820264d7, :plot_011312b82eb4fc98, :topic_16fb1687f7449a95;
   skos:closeMatch <http://www.wikidata.org/entity/Q580995> .
 
 :topic_3c28b27922e5dfea a skos:Concept;
@@ -2991,7 +3180,8 @@
   skos:prefLabel "Politik"@de;
   skos:notation "topic_3c28b27922e5dfea";
   skos:broader :topic_173f939586542d39;
-  skos:related :place_ac07f1e878d38c8d, :plot_7bd4c599c42360db, :plot_d761685e20e4c05d,
+  skos:related :place_ac07f1e878d38c8d, :person_f42fab276b6fdb13, :person_01ec9bc374eb76b7,
+    :person_9865138458182890, :person_acdbd75b6cf29fa6, :plot_7bd4c599c42360db, :plot_d761685e20e4c05d,
     :plot_9b9d5a40ffdaaaba, :plot_830dcfef58019d56, :plot_6adb2e4795def630;
   skos:exactMatch <http://www.wikidata.org/entity/Q7163>, <https://dbpedia.org/resource/Politics> .
 
@@ -3000,8 +3190,9 @@
   skos:prefLabel "Exil"@de;
   skos:notation "topic_b0049a9652bca00f";
   skos:broader :topic_173f939586542d39;
-  skos:related :place_8f3a4ee0def96e05, :plot_7bd4c599c42360db, :plot_d761685e20e4c05d,
-    :plot_9b9d5a40ffdaaaba, :plot_830dcfef58019d56, :plot_6adb2e4795def630, :topic_d8a87ac0faded437;
+  skos:related :place_8f3a4ee0def96e05, :person_e585b2a779019b7e, :plot_7bd4c599c42360db,
+    :plot_d761685e20e4c05d, :plot_9b9d5a40ffdaaaba, :plot_830dcfef58019d56, :plot_6adb2e4795def630,
+    :topic_d8a87ac0faded437;
   skos:exactMatch <http://www.wikidata.org/entity/Q188863>, <https://dbpedia.org/resource/Exile> .
 
 :topic_7112b97bd8eccdc6 a skos:Concept;
@@ -3009,8 +3200,9 @@
   skos:prefLabel "Verbannung"@de;
   skos:notation "topic_7112b97bd8eccdc6";
   skos:broader :topic_173f939586542d39;
-  skos:related :place_8f3a4ee0def96e05, :plot_7bd4c599c42360db, :plot_d761685e20e4c05d,
-    :plot_9b9d5a40ffdaaaba, :plot_830dcfef58019d56, :plot_6adb2e4795def630, :topic_d8a87ac0faded437;
+  skos:related :place_8f3a4ee0def96e05, :person_e585b2a779019b7e, :plot_7bd4c599c42360db,
+    :plot_d761685e20e4c05d, :plot_9b9d5a40ffdaaaba, :plot_830dcfef58019d56, :plot_6adb2e4795def630,
+    :topic_d8a87ac0faded437;
   skos:exactMatch <http://www.wikidata.org/entity/Q1716571>, <https://dbpedia.org/resource/Banishment> .
 
 :topic_9bace65450b57656 a skos:Concept;
@@ -3018,7 +3210,8 @@
   skos:prefLabel "Jugend"@de;
   skos:notation "topic_9bace65450b57656";
   skos:broader :topic_9a3a9c83b659fda6;
-  skos:related :plot_dedcc9b1e7fb8e79, :plot_6ec13f66820264d7;
+  skos:related :person_807f37582972882e, :person_331d06f48bf9d3d9, :person_c408a1bcd63c420f,
+    :person_e585b2a779019b7e, :plot_dedcc9b1e7fb8e79, :plot_6ec13f66820264d7;
   skos:exactMatch <http://www.wikidata.org/entity/Q190007>, <https://dbpedia.org/resource/Youth> .
 
 :topic_dd0209b2c71040a5 a skos:Concept;
@@ -3026,8 +3219,8 @@
   skos:prefLabel "Altern"@de;
   skos:notation "topic_dd0209b2c71040a5";
   skos:broader :topic_9a3a9c83b659fda6;
-  skos:related :place_1adb2da7993ecc95, :plot_dedcc9b1e7fb8e79, :plot_7088a192832d9d0c,
-    :topic_6dfd95722c255071;
+  skos:related :place_1adb2da7993ecc95, :person_807f37582972882e, :person_331d06f48bf9d3d9,
+    :person_e585b2a779019b7e, :plot_dedcc9b1e7fb8e79, :plot_7088a192832d9d0c, :topic_6dfd95722c255071;
   skos:exactMatch <http://www.wikidata.org/entity/Q332154>, <https://dbpedia.org/resource/Ageing> .
 
 :topic_85e382a7ed66294c a skos:Concept;
@@ -3043,8 +3236,8 @@
   skos:prefLabel "Gleichgeschlechtliche Liebe unter Frauen"@de;
   skos:notation "topic_0af359e15219034a";
   skos:broader :topic_a10417e468b798b0;
-  skos:related :place_0009a58f625c087b, :plot_dedcc9b1e7fb8e79, :plot_b2d8b14d68b73dd5,
-    :plot_43b59f052f3dc73e, :work_59687e2256dfc7f3;
+  skos:related :place_0009a58f625c087b, :person_fe179d791732151d, :plot_dedcc9b1e7fb8e79,
+    :plot_b2d8b14d68b73dd5, :plot_43b59f052f3dc73e, :work_59687e2256dfc7f3;
   skos:broadMatch <http://www.wikidata.org/entity/Q316>;
   skos:closeMatch <http://www.wikidata.org/entity/Q6649> .
 
@@ -3053,7 +3246,9 @@
   skos:prefLabel "Ehe"@de;
   skos:notation "topic_547b51889f7bce04";
   skos:broader :topic_6965e0a196d0b97e;
-  skos:related :plot_dedcc9b1e7fb8e79, :plot_30ec8b515802033f, :plot_414bc4680cad7ddc,
+  skos:related :person_298d1d2696887999, :person_499bbc9e7596f10d, :person_e9b8b1919af5758a,
+    :person_664342af9e58739b, :person_e585b2a779019b7e, :person_d2167a313c41ceaa, :person_05e200db9312b803,
+    :person_d92f8054b846977e, :plot_dedcc9b1e7fb8e79, :plot_30ec8b515802033f, :plot_414bc4680cad7ddc,
     :work_9a6fa5b72a8235b6;
   skos:exactMatch <http://www.wikidata.org/entity/Q8445>, <https://dbpedia.org/ontology/Marriage> .
 
@@ -3062,7 +3257,7 @@
   skos:prefLabel "Jungfräulichkeit"@de;
   skos:notation "topic_b51493c7cb013212";
   skos:broader :topic_6965e0a196d0b97e;
-  skos:related :plot_dedcc9b1e7fb8e79;
+  skos:related :person_f79231e41dd95683, :person_e585b2a779019b7e, :plot_dedcc9b1e7fb8e79;
   skos:exactMatch <http://www.wikidata.org/entity/Q170538>, <https://dbpedia.org/resource/Virginity> .
 
 :topic_979480c5de919f6e a skos:Concept;
@@ -3070,7 +3265,9 @@
   skos:prefLabel "Weiblichkeit"@de;
   skos:notation "topic_979480c5de919f6e";
   skos:broader :topic_1de543cc588d6ee3;
-  skos:related :place_0009a58f625c087b, :plot_dedcc9b1e7fb8e79, :plot_b2d8b14d68b73dd5;
+  skos:related :place_0009a58f625c087b, :person_f79231e41dd95683, :person_1d5abf4995fa23e4,
+    :person_e585b2a779019b7e, :person_d92f8054b846977e, :person_40792a88ba634e66, :plot_dedcc9b1e7fb8e79,
+    :plot_b2d8b14d68b73dd5;
   skos:exactMatch <http://www.wikidata.org/entity/Q866081>, <https://dbpedia.org/resource/Femininity> .
 
 :topic_e059b05a9148622d a skos:Concept;
@@ -3095,8 +3292,10 @@
   skos:notation "topic_193f7fb77b90540a";
   skos:broader :topic_173f939586542d39;
   skos:related :place_040eb47ff2612816, :place_6f62261a950e9311, :place_481812f727302fbe,
-    :topic_a10417e468b798b0, :topic_d0d0d796a787f4a8, :plot_dedcc9b1e7fb8e79, :plot_6ec13f66820264d7,
-    :work_dd5a96c631b854f4;
+    :person_298d1d2696887999, :person_38af0ac181d5d397, :person_2a23732b2a3c21cf, :person_e3e42e3bfe456766,
+    :person_edd73d43dbe4b946, :person_c408a1bcd63c420f, :person_1e6e628ea0192e31, :person_e585b2a779019b7e,
+    :person_9ee0b67040c4734c, :person_803864de40878a17, :person_4054b50081c54a12, :topic_a10417e468b798b0,
+    :topic_d0d0d796a787f4a8, :plot_dedcc9b1e7fb8e79, :plot_6ec13f66820264d7, :work_dd5a96c631b854f4;
   skos:exactMatch <http://www.wikidata.org/entity/Q7242>, <https://dbpedia.org/resource/Beauty> .
 
 :topic_d8a87ac0faded437 a skos:Concept;
@@ -3104,9 +3303,9 @@
   skos:prefLabel "Abschied/Verlassen"@de;
   skos:notation "topic_d8a87ac0faded437";
   skos:broader :topic_6dfd95722c255071;
-  skos:related :place_1adb2da7993ecc95, :plot_dedcc9b1e7fb8e79, :plot_cc6bf7467ad0c7cf,
-    :plot_6ec13f66820264d7, :plot_830dcfef58019d56, :plot_6adb2e4795def630, :topic_b0049a9652bca00f,
-    :topic_7112b97bd8eccdc6;
+  skos:related :place_1adb2da7993ecc95, :person_9cb6996a0396db3d, :person_e585b2a779019b7e,
+    :plot_dedcc9b1e7fb8e79, :plot_cc6bf7467ad0c7cf, :plot_6ec13f66820264d7, :plot_830dcfef58019d56,
+    :plot_6adb2e4795def630, :topic_b0049a9652bca00f, :topic_7112b97bd8eccdc6;
   skos:exactMatch <http://www.wikidata.org/entity/Q21171241> .
 
 :topic_e6ecf2d8c3d52793 a skos:Concept;
@@ -3114,8 +3313,9 @@
   skos:prefLabel "Erinnerung"@de;
   skos:notation "topic_e6ecf2d8c3d52793";
   skos:broader :topic_6dfd95722c255071;
-  skos:related :place_1adb2da7993ecc95, :plot_dedcc9b1e7fb8e79, :plot_6adb2e4795def630,
-    :topic_6dfd95722c255071, :work_b36331eb746b025a;
+  skos:related :place_1adb2da7993ecc95, :person_2bf51959e0848f5f, :person_9cb6996a0396db3d,
+    :person_e585b2a779019b7e, :plot_dedcc9b1e7fb8e79, :plot_6adb2e4795def630, :topic_6dfd95722c255071,
+    :work_b36331eb746b025a;
   skos:exactMatch <http://www.wikidata.org/entity/Q492>, <https://dbpedia.org/resource/Memory> .
 
 :topic_48d9deec1aa375bc a skos:Concept;
@@ -3123,8 +3323,8 @@
   skos:prefLabel "Vergessen"@de;
   skos:notation "topic_48d9deec1aa375bc";
   skos:broader :topic_6dfd95722c255071;
-  skos:related :place_ff6c437a4ca1c9b1, :place_1adb2da7993ecc95, :plot_dedcc9b1e7fb8e79,
-    :plot_6adb2e4795def630, :topic_6dfd95722c255071, :work_b36331eb746b025a;
+  skos:related :place_ff6c437a4ca1c9b1, :place_1adb2da7993ecc95, :person_e585b2a779019b7e,
+    :plot_dedcc9b1e7fb8e79, :plot_6adb2e4795def630, :topic_6dfd95722c255071, :work_b36331eb746b025a;
   skos:exactMatch <http://www.wikidata.org/entity/Q1377840>, <https://dbpedia.org/resource/Forgetting> .
 
 :topic_4d0efc6118699f99 a skos:Concept;
@@ -3132,7 +3332,7 @@
   skos:prefLabel "Mutterschaft"@de;
   skos:notation "topic_4d0efc6118699f99";
   skos:broader :topic_173f939586542d39;
-  skos:related :plot_0a6119efed4bdf7d;
+  skos:related :person_e585b2a779019b7e, :person_b793a3807d130de0, :plot_0a6119efed4bdf7d;
   skos:exactMatch <http://www.wikidata.org/entity/Q1956046>, <https://dbpedia.org/resource/Motherhood> .
 
 :topic_1de543cc588d6ee3 a skos:Concept;
@@ -3158,7 +3358,8 @@
   skos:prefLabel "Heterosexualität"@de;
   skos:notation "topic_b44d4c1bda5009f2";
   skos:broader :topic_6965e0a196d0b97e;
-  skos:related :plot_30ec8b515802033f, :plot_cc6bf7467ad0c7cf, :plot_6ec13f66820264d7;
+  skos:related :person_499bbc9e7596f10d, :person_d2167a313c41ceaa, :person_05e200db9312b803,
+    :plot_30ec8b515802033f, :plot_cc6bf7467ad0c7cf, :plot_6ec13f66820264d7;
   skos:exactMatch <http://www.wikidata.org/entity/Q1035954>, <https://dbpedia.org/resource/Heterosexuality> .
 
 :topic_f6d80c8d012ca95d a skos:Concept;
@@ -3166,8 +3367,8 @@
   skos:prefLabel "Suizid"@de;
   skos:notation "topic_f6d80c8d012ca95d";
   skos:broader :topic_16fb1687f7449a95;
-  skos:related :place_c7da5f2e77438154, :plot_cc6bf7467ad0c7cf, :plot_6ec13f66820264d7,
-    :plot_6adb2e4795def630, :work_7ddaff9b6814b58b;
+  skos:related :place_c7da5f2e77438154, :person_c408a1bcd63c420f, :person_e585b2a779019b7e,
+    :plot_cc6bf7467ad0c7cf, :plot_6ec13f66820264d7, :plot_6adb2e4795def630, :work_7ddaff9b6814b58b;
   skos:exactMatch <http://www.wikidata.org/entity/Q10737>, <https://dbpedia.org/resource/Suicide> .
 
 :topic_6c84497f664d562a a skos:Concept;
@@ -3175,7 +3376,9 @@
   skos:prefLabel "Kriegswesen"@de;
   skos:notation "topic_6c84497f664d562a";
   skos:broader :topic_173f939586542d39;
-  skos:related :place_6f62261a950e9311, :plot_830dcfef58019d56, :work_0e2eeafefe2dae48;
+  skos:related :place_6f62261a950e9311, :person_974acb11c098c41b, :person_1526106cabf2fa6b,
+    :person_db10ad7627a6e7ad, :person_3ae4177dfc72d693, :person_3bd6faa78c3b97eb, :person_7715e9ee67577553,
+    :plot_830dcfef58019d56, :work_0e2eeafefe2dae48;
   skos:exactMatch <http://www.wikidata.org/entity/Q12786121>, <https://dbpedia.org/resource/Warfare> .
 
 :topic_e3f9c28d697807a6 a skos:Concept;
@@ -3183,7 +3386,7 @@
   skos:prefLabel "Hass"@de;
   skos:notation "topic_e3f9c28d697807a6";
   skos:broader :topic_173f939586542d39;
-  skos:related :plot_830dcfef58019d56;
+  skos:related :person_a31e921338acf862, :plot_830dcfef58019d56;
   skos:exactMatch <http://www.wikidata.org/entity/Q160232>, <https://dbpedia.org/resource/Hatred> .
 
 :topic_868c77ac61c449bd a skos:Concept;
@@ -3191,7 +3394,7 @@
   skos:prefLabel "Schlaflosigkeit"@de;
   skos:notation "topic_868c77ac61c449bd";
   skos:broader :topic_9a3a9c83b659fda6;
-  skos:related :plot_6adb2e4795def630;
+  skos:related :person_352e0f8a99c574b2, :person_e585b2a779019b7e, :plot_6adb2e4795def630;
   skos:exactMatch <http://www.wikidata.org/entity/Q1869874>, <https://dbpedia.org/resource/Insomnia> .
 
 :topic_ccb502909ffa7cd8 a skos:Concept;
@@ -3227,7 +3430,9 @@
   skos:notation "topic_16fb1687f7449a95";
   skos:broader :topic_9a3a9c83b659fda6;
   skos:narrower :topic_f6d80c8d012ca95d;
-  skos:related :place_1adb2da7993ecc95, :topic_afe138550cd16d0b, :work_b36331eb746b025a;
+  skos:related :place_1adb2da7993ecc95, :person_fe75cd740876c3e4, :person_4e64c1b5997afbc9,
+    :person_86564f02874aec39, :person_887e83106aad1200, :person_9cb6996a0396db3d, :person_0eabdfe13c1ff095,
+    :topic_afe138550cd16d0b, :work_b36331eb746b025a;
   skos:exactMatch <http://www.wikidata.org/entity/Q4>, <https://dbpedia.org/resource/Death> .
 
 :topic_c02e0ff3d2bffc47 a skos:Concept;
@@ -3236,7 +3441,7 @@
   skos:notation "topic_c02e0ff3d2bffc47";
   skos:broader :topic_173f939586542d39;
   skos:related :place_7a4fb8e10d66c95f, :place_39fc06d60391f952, :place_50b86d57b7836783,
-    :place_dc407ad0184a6b43;
+    :place_dc407ad0184a6b43, :person_2eb129793d7ca74a, :person_278199322209770d, :person_9ee0b67040c4734c;
   skos:exactMatch <http://www.wikidata.org/entity/Q601401>, <https://dbpedia.org/resource/Trade> .
 
 :topic_bdd785a758abd7cd a skos:Concept;
@@ -3244,7 +3449,8 @@
   skos:prefLabel "Menschlichkeits- und Göttlichkeitsthemen"@de;
   skos:notation "topic_bdd785a758abd7cd";
   skos:broader :topics;
-  skos:narrower :topic_216c06ff845256fe, :topic_afe138550cd16d0b, :topic_61418e73ecf18fa9 .
+  skos:narrower :topic_216c06ff845256fe, :topic_afe138550cd16d0b, :topic_61418e73ecf18fa9;
+  skos:related :person_e585b2a779019b7e .
 
 :topic_6dfd95722c255071 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
@@ -3276,7 +3482,8 @@
   skos:prefLabel "Sapphos Rezeption"@de;
   skos:notation "topic_83a2d3f58ce463ad";
   skos:broader :topic_f83ec0822d1cce6e;
-  skos:related :place_0009a58f625c087b, :work_59687e2256dfc7f3;
+  skos:related :place_0009a58f625c087b, :person_66fc054f0477ea23, :person_01ec9bc374eb76b7,
+    :person_7d3c887eeaa47caf, :work_59687e2256dfc7f3;
   skos:relatedMatch <http://www.wikidata.org/entity/Q17892> .
 
 :topic_fe0ae02e2ba6d7c4 a skos:Concept;
@@ -3291,7 +3498,7 @@
   skos:prefLabel "Theater"@de;
   skos:notation "topic_e7a7fad674ab17f4";
   skos:broader :topic_522a85ce59f9c66a;
-  skos:related :place_9bd33c7fdd67c764;
+  skos:related :place_9bd33c7fdd67c764, :person_f47881025ad98035;
   skos:exactMatch <http://www.wikidata.org/entity/Q11635>, <https://dbpedia.org/resource/Theatre> .
 
 :topic_90253972585e05d8 a skos:Concept;
@@ -3299,7 +3506,7 @@
   skos:prefLabel "Gelehrsamkeit"@de;
   skos:notation "topic_90253972585e05d8";
   skos:broader :topic_522a85ce59f9c66a;
-  skos:related :place_ac07f1e878d38c8d, :place_265da080030b40ab;
+  skos:related :place_ac07f1e878d38c8d, :place_265da080030b40ab, :person_1526106cabf2fa6b;
   skos:exactMatch <http://www.wikidata.org/entity/Q707726>, <https://dbpedia.org/resource/Gelehrsamkeit> .
 
 :topic_5f98e5b87c9f2f96 a skos:Concept;
@@ -3307,7 +3514,8 @@
   skos:prefLabel "Philologie"@de;
   skos:notation "topic_5f98e5b87c9f2f96";
   skos:broader :topic_522a85ce59f9c66a;
-  skos:related :place_265da080030b40ab, :work_64e314c856d1dbbe, :work_59687e2256dfc7f3;
+  skos:related :place_265da080030b40ab, :person_7d3c887eeaa47caf, :work_64e314c856d1dbbe,
+    :work_59687e2256dfc7f3;
   skos:exactMatch <http://www.wikidata.org/entity/Q40634>, <https://dbpedia.org/resource/Philology> .
 
 :topic_9a3a9c83b659fda6 a skos:Concept;
@@ -3512,10 +3720,10 @@
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:topConceptOf <https://sappho-digital.com/voc>;
   skos:prefLabel "Motive"@de;
-  skos:narrower :motif_fcf3b7b61805babd, :motif_c92ed98fdf8c34f1, :motif_2126df79f7250a93,
-    :motif_2f658ec3c5ec3ae4, :motif_b3f47e9ec671bb4b, :motif_a18a39883dd84fa9, :motif_48abc1d4ebad9497,
-    :motif_ab661b23423441c6, :motif_ffcba97b822ac20c, :motif_b39aa0e2a40a8ee4, :motif_cf06ac1a51be3c55,
-    :motif_099b483011788b7b, :motif_dde09ae7bddcf72c, :motif_ecdd7525fe74838a .
+  skos:narrower :motif_c92ed98fdf8c34f1, :motif_2126df79f7250a93, :motif_2f658ec3c5ec3ae4,
+    :motif_b3f47e9ec671bb4b, :motif_48abc1d4ebad9497, :motif_ab661b23423441c6, :motif_ffcba97b822ac20c,
+    :motif_b39aa0e2a40a8ee4, :motif_cf06ac1a51be3c55, :motif_099b483011788b7b, :motif_dde09ae7bddcf72c,
+    :motif_ecdd7525fe74838a .
 
 :places a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
