@@ -151,7 +151,7 @@
 
 :motif_a26b7d0dd6b16118 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Orte"@de;
+  skos:prefLabel "Orte (Motive)"@de;
   skos:notation "motif_a26b7d0dd6b16118";
   skos:broader :motif_ecdd7525fe74838a;
   skos:narrower :motif_c9ab4b3812d39197, :motif_62581a673f405e6c, :motif_c10f460a9ccb3510,
@@ -585,7 +585,7 @@
 
 :motif_736eb7ef6202472f a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Begehren"@de;
+  skos:prefLabel "Begehren (Motiv)"@de;
   skos:notation "motif_736eb7ef6202472f";
   skos:broader :motif_58aba2ccf82b6543;
   skos:related :motif_64a381d1facbb9aa, :motif_7b4f6bd41d20b520, :motif_791dc243a6ba1593,
@@ -625,7 +625,7 @@
 
 :motif_25f446d346d5ae39 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Schönheit"@de;
+  skos:prefLabel "Schönheit (Motiv)"@de;
   skos:notation "motif_25f446d346d5ae39";
   skos:broader :motif_2c7c60fffbf5467c;
   skos:related :place_6f62261a950e9311, :person_298d1d2696887999, :person_38af0ac181d5d397,
@@ -649,7 +649,7 @@
 
 :motif_791dc243a6ba1593 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Liebe"@de;
+  skos:prefLabel "Liebe (Motiv)"@de;
   skos:notation "motif_791dc243a6ba1593";
   skos:broader :motif_2126df79f7250a93;
   skos:narrower :motif_7205babaca933dc4;
@@ -667,7 +667,7 @@
 
 :motif_7205babaca933dc4 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Unglückliche Liebe"@de;
+  skos:prefLabel "Unglückliche Liebe (Motiv)"@de;
   skos:notation "motif_7205babaca933dc4";
   skos:broader :motif_791dc243a6ba1593;
   skos:related :motif_7abc136b51bb0005, :place_c7da5f2e77438154, :plot_6adb2e4795def630;
@@ -691,7 +691,7 @@
 
 :motif_24f6269abdf1c989 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Erinnerung"@de;
+  skos:prefLabel "Erinnerung (Motiv)"@de;
   skos:notation "motif_24f6269abdf1c989";
   skos:broader :motif_2126df79f7250a93;
   skos:related :person_9cb6996a0396db3d, :person_e585b2a779019b7e, :plot_dedcc9b1e7fb8e79,
@@ -814,7 +814,7 @@
 
 :motif_637a4ceb95c9c2f5 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Abschied/Verlassen"@de;
+  skos:prefLabel "Abschied/Verlassen (Motiv)"@de;
   skos:notation "motif_637a4ceb95c9c2f5";
   skos:broader :motif_2126df79f7250a93;
   skos:related :motif_4f6e0ef68efa0824, :motif_7abc136b51bb0005, :motif_8d6c4ae5261c1b7f,
@@ -825,7 +825,7 @@
 
 :motif_1cd4207b96382696 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Vergessen"@de;
+  skos:prefLabel "Vergessen (Motiv)"@de;
   skos:notation "motif_1cd4207b96382696";
   skos:broader :motif_2126df79f7250a93;
   skos:related :place_ff6c437a4ca1c9b1, :topic_e6ecf2d8c3d52793, :topic_48d9deec1aa375bc;
@@ -862,7 +862,7 @@
 
 :motif_2b1f28169974867c a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Altern"@de;
+  skos:prefLabel "Altern (Motiv)"@de;
   skos:notation "motif_2b1f28169974867c";
   skos:broader :motif_2f658ec3c5ec3ae4;
   skos:related :motif_8e292f9623cb3869, :person_807f37582972882e, :person_331d06f48bf9d3d9,
@@ -871,7 +871,7 @@
 
 :motif_de1c36b3db3ce34c a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Jugend"@de;
+  skos:prefLabel "Jugend (Motiv)"@de;
   skos:notation "motif_de1c36b3db3ce34c";
   skos:broader :motif_2f658ec3c5ec3ae4;
   skos:related :motif_8e292f9623cb3869, :person_807f37582972882e, :person_331d06f48bf9d3d9,
@@ -896,7 +896,7 @@
 
 :motif_8d6c4ae5261c1b7f a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Tod"@de;
+  skos:prefLabel "Tod (Motiv)"@de;
   skos:notation "motif_8d6c4ae5261c1b7f";
   skos:broader :motif_2f658ec3c5ec3ae4;
   skos:narrower :motif_9de00cb308757267, :motif_cf45a73d6da82f20;
@@ -908,7 +908,7 @@
 
 :motif_9de00cb308757267 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Suizid"@de;
+  skos:prefLabel "Suizid (Motiv)"@de;
   skos:notation "motif_9de00cb308757267";
   skos:broader :motif_8d6c4ae5261c1b7f;
   skos:related :person_c408a1bcd63c420f, :person_e585b2a779019b7e, :plot_6ec13f66820264d7;
@@ -932,7 +932,7 @@
 
 :motif_f9de876206744971 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Menschlichkeit"@de;
+  skos:prefLabel "Menschlichkeit (Motiv)"@de;
   skos:notation "motif_f9de876206744971";
   skos:broader :motif_b3f47e9ec671bb4b;
   skos:exactMatch <http://www.wikidata.org/entity/Q12767209>, <https://dbpedia.org/resource/Humanity_(virtue)> .
@@ -964,7 +964,7 @@
 
 :motif_203ed612d2946cdf a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Weiblichkeit"@de;
+  skos:prefLabel "Weiblichkeit (Motiv)"@de;
   skos:notation "motif_203ed612d2946cdf";
   skos:broader :motif_25f24c9ae6926a3d;
   skos:related :person_f79231e41dd95683, :person_e585b2a779019b7e, :person_d92f8054b846977e,
@@ -991,7 +991,7 @@
 
 :motif_71f3b15b4a29d968 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Ehe"@de;
+  skos:prefLabel "Ehe (Motiv)"@de;
   skos:notation "motif_71f3b15b4a29d968";
   skos:broader :motif_b3f47e9ec671bb4b;
   skos:narrower :motif_281b95ce63718bed, :motif_803e6cdc78c0c5a1;
@@ -1056,7 +1056,7 @@
 
 :motif_d57e3bd57313bbdd a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Vergöttlichung"@de;
+  skos:prefLabel "Vergöttlichung (Motiv)"@de;
   skos:notation "motif_d57e3bd57313bbdd";
   skos:broader :motif_68f3d8712ddf8d70;
   skos:related :motif_5047cf2d5e1607fa, :place_938d82612b2cbf3a, :plot_42557e8d70c24751,
@@ -1065,7 +1065,7 @@
 
 :motif_a18a39883dd84fa9 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Politik"@de;
+  skos:prefLabel "Politik (Motiv)"@de;
   skos:notation "motif_a18a39883dd84fa9";
   skos:broader :motif_b3f47e9ec671bb4b;
   skos:narrower :motif_9cdcb44dabe9cfde;
@@ -1075,7 +1075,7 @@
 
 :motif_9cdcb44dabe9cfde a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Verbannung"@de;
+  skos:prefLabel "Verbannung (Motiv)"@de;
   skos:notation "motif_9cdcb44dabe9cfde";
   skos:broader :motif_a18a39883dd84fa9;
   skos:related :person_e585b2a779019b7e, :topic_d8a87ac0faded437;
@@ -1101,7 +1101,7 @@
 
 :motif_b310d7fa48a3989f a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Ruhm"@de;
+  skos:prefLabel "Ruhm (Motiv)"@de;
   skos:notation "motif_b310d7fa48a3989f";
   skos:broader :motif_48abc1d4ebad9497;
   skos:related :motif_5047cf2d5e1607fa, :motif_ea72ee231feeee11, :person_e585b2a779019b7e,
@@ -1119,7 +1119,7 @@
 
 :motif_af8f6ed291383b8c a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Dichtkunst"@de;
+  skos:prefLabel "Dichtkunst (Motiv)"@de;
   skos:notation "motif_af8f6ed291383b8c";
   skos:broader :motif_051983025a946344;
   skos:related :motif_5047cf2d5e1607fa, :phrase_108f0ac68025102d, :person_a92154dba89f764f,
@@ -1129,7 +1129,7 @@
 
 :motif_751896a2b642d52f a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Fragmenthaftigkeit"@de;
+  skos:prefLabel "Fragmenthaftigkeit (Motiv)"@de;
   skos:notation "motif_751896a2b642d52f";
   skos:broader :motif_051983025a946344;
   skos:related :person_e585b2a779019b7e;
@@ -1370,7 +1370,7 @@
 
 :motif_b7009f43de3da4ad a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Schlaflosigkeit"@de;
+  skos:prefLabel "Schlaflosigkeit (Motiv)"@de;
   skos:notation "motif_b7009f43de3da4ad";
   skos:broader :motif_cf06ac1a51be3c55;
   skos:related :person_352e0f8a99c574b2, :topic_868c77ac61c449bd;
@@ -1455,6 +1455,7 @@
 :motif_ecdd7525fe74838a a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:prefLabel "Natur- und Kosmosmotive"@de;
+  skos:notation "motif_ecdd7525fe74838a";
   skos:broader :motifs;
   skos:narrower :motif_71dbf6e67ea5a907, :motif_c1c5790bb38d4fbb, :motif_f4cf66993a308196,
     :motif_fcf3b7b61805babd, :motif_6ca05631ae27d928, :motif_a26b7d0dd6b16118, :motif_876aeb61deb4984f,
@@ -2751,7 +2752,7 @@
 
 :topic_91fbce010840c414 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Dichtkunst"@de;
+  skos:prefLabel "Dichtkunst (Thema)"@de;
   skos:notation "topic_91fbce010840c414";
   skos:broader :topic_522a85ce59f9c66a;
   skos:narrower :topic_f83ec0822d1cce6e, :topic_fe0ae02e2ba6d7c4;
@@ -2772,7 +2773,7 @@
 
 :topic_a10417e468b798b0 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Liebe"@de;
+  skos:prefLabel "Liebe (Thema)"@de;
   skos:notation "topic_a10417e468b798b0";
   skos:broader :topic_6965e0a196d0b97e;
   skos:narrower :topic_0af359e15219034a, :topic_ccb502909ffa7cd8;
@@ -2790,7 +2791,7 @@
 
 :topic_d0d0d796a787f4a8 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Begehren"@de;
+  skos:prefLabel "Begehren (Thema)"@de;
   skos:notation "topic_d0d0d796a787f4a8";
   skos:broader :topic_6965e0a196d0b97e;
   skos:related :motif_7b4f6bd41d20b520, :motif_304a5e562a17af49, :motif_736eb7ef6202472f,
@@ -3234,7 +3235,7 @@
 
 :topic_0424470816a8c5ac a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Ruhm"@de;
+  skos:prefLabel "Ruhm (Thema)"@de;
   skos:notation "topic_0424470816a8c5ac";
   skos:broader :topic_522a85ce59f9c66a;
   skos:related :motif_5047cf2d5e1607fa, :motif_ea72ee231feeee11, :motif_b310d7fa48a3989f,
@@ -3252,7 +3253,7 @@
 
 :topic_afe138550cd16d0b a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Vergöttlichung"@de;
+  skos:prefLabel "Vergöttlichung (Thema)"@de;
   skos:notation "topic_afe138550cd16d0b";
   skos:broader :topic_bdd785a758abd7cd;
   skos:related :motif_c1c5790bb38d4fbb, :motif_5047cf2d5e1607fa, :motif_97e73b26b0dc22b0,
@@ -3262,7 +3263,7 @@
 
 :topic_3c28b27922e5dfea a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Politik"@de;
+  skos:prefLabel "Politik (Thema)"@de;
   skos:notation "topic_3c28b27922e5dfea";
   skos:broader :topic_173f939586542d39;
   skos:related :motif_a18a39883dd84fa9, :place_ac07f1e878d38c8d, :person_f42fab276b6fdb13,
@@ -3282,7 +3283,7 @@
 
 :topic_7112b97bd8eccdc6 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Verbannung"@de;
+  skos:prefLabel "Verbannung (Thema)"@de;
   skos:notation "topic_7112b97bd8eccdc6";
   skos:broader :topic_173f939586542d39;
   skos:related :motif_637a4ceb95c9c2f5, :motif_a18a39883dd84fa9, :place_8f3a4ee0def96e05,
@@ -3292,7 +3293,7 @@
 
 :topic_9bace65450b57656 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Jugend"@de;
+  skos:prefLabel "Jugend (Thema)"@de;
   skos:notation "topic_9bace65450b57656";
   skos:broader :topic_9a3a9c83b659fda6;
   skos:related :person_807f37582972882e, :person_331d06f48bf9d3d9, :person_c408a1bcd63c420f,
@@ -3301,7 +3302,7 @@
 
 :topic_dd0209b2c71040a5 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Altern"@de;
+  skos:prefLabel "Altern (Thema)"@de;
   skos:notation "topic_dd0209b2c71040a5";
   skos:broader :topic_9a3a9c83b659fda6;
   skos:related :place_1adb2da7993ecc95, :person_807f37582972882e, :person_331d06f48bf9d3d9,
@@ -3329,7 +3330,7 @@
 
 :topic_547b51889f7bce04 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Ehe"@de;
+  skos:prefLabel "Ehe (Thema)"@de;
   skos:notation "topic_547b51889f7bce04";
   skos:broader :topic_6965e0a196d0b97e;
   skos:related :motif_64a381d1facbb9aa, :motif_736eb7ef6202472f, :motif_791dc243a6ba1593,
@@ -3349,7 +3350,7 @@
 
 :topic_979480c5de919f6e a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Weiblichkeit"@de;
+  skos:prefLabel "Weiblichkeit (Thema)"@de;
   skos:notation "topic_979480c5de919f6e";
   skos:broader :topic_1de543cc588d6ee3;
   skos:related :motif_62827f2ed507b1a4, :motif_203ed612d2946cdf, :motif_002ca4e56dca366e,
@@ -3375,7 +3376,7 @@
 
 :topic_193f7fb77b90540a a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Schönheit"@de;
+  skos:prefLabel "Schönheit (Thema)"@de;
   skos:notation "topic_193f7fb77b90540a";
   skos:broader :topic_173f939586542d39;
   skos:related :motif_736eb7ef6202472f, :motif_25f446d346d5ae39, :motif_791dc243a6ba1593,
@@ -3388,7 +3389,7 @@
 
 :topic_d8a87ac0faded437 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Abschied/Verlassen"@de;
+  skos:prefLabel "Abschied/Verlassen (Thema)"@de;
   skos:notation "topic_d8a87ac0faded437";
   skos:broader :topic_6dfd95722c255071;
   skos:related :motif_8d6c4ae5261c1b7f, :motif_71f3b15b4a29d968, :motif_9cdcb44dabe9cfde,
@@ -3398,7 +3399,7 @@
 
 :topic_e6ecf2d8c3d52793 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Erinnerung"@de;
+  skos:prefLabel "Erinnerung (Thema)"@de;
   skos:notation "topic_e6ecf2d8c3d52793";
   skos:broader :topic_6dfd95722c255071;
   skos:related :motif_24f6269abdf1c989, :motif_637a4ceb95c9c2f5, :motif_1cd4207b96382696,
@@ -3408,7 +3409,7 @@
 
 :topic_48d9deec1aa375bc a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Vergessen"@de;
+  skos:prefLabel "Vergessen (Thema)"@de;
   skos:notation "topic_48d9deec1aa375bc";
   skos:broader :topic_6dfd95722c255071;
   skos:related :motif_24f6269abdf1c989, :motif_637a4ceb95c9c2f5, :motif_1cd4207b96382696,
@@ -3455,7 +3456,7 @@
 
 :topic_f6d80c8d012ca95d a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Suizid"@de;
+  skos:prefLabel "Suizid (Thema)"@de;
   skos:notation "topic_f6d80c8d012ca95d";
   skos:broader :topic_16fb1687f7449a95;
   skos:related :place_c7da5f2e77438154, :person_c408a1bcd63c420f, :person_e585b2a779019b7e,
@@ -3482,7 +3483,7 @@
 
 :topic_868c77ac61c449bd a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Schlaflosigkeit"@de;
+  skos:prefLabel "Schlaflosigkeit (Thema)"@de;
   skos:notation "topic_868c77ac61c449bd";
   skos:broader :topic_9a3a9c83b659fda6;
   skos:related :motif_ee611d65b870ad00, :motif_0824726b36365ab5, :motif_b7009f43de3da4ad,
@@ -3491,7 +3492,7 @@
 
 :topic_ccb502909ffa7cd8 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Unglückliche Liebe"@de;
+  skos:prefLabel "Unglückliche Liebe (Thema)"@de;
   skos:notation "topic_ccb502909ffa7cd8";
   skos:broader :topic_a10417e468b798b0;
   skos:narrower :topic_85e382a7ed66294c;
@@ -3500,7 +3501,7 @@
 
 :topic_61418e73ecf18fa9 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Menschlichkeit"@de;
+  skos:prefLabel "Menschlichkeit (Thema)"@de;
   skos:notation "topic_61418e73ecf18fa9";
   skos:broader :topic_bdd785a758abd7cd;
   skos:exactMatch <http://www.wikidata.org/entity/Q12767209>, <https://dbpedia.org/resource/Humanity_(virtue)> .
@@ -3517,7 +3518,7 @@
 
 :topic_16fb1687f7449a95 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Tod"@de;
+  skos:prefLabel "Tod (Thema)"@de;
   skos:notation "topic_16fb1687f7449a95";
   skos:broader :topic_9a3a9c83b659fda6;
   skos:narrower :topic_f6d80c8d012ca95d;
@@ -3581,7 +3582,7 @@
 
 :topic_fe0ae02e2ba6d7c4 a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Fragmenthaftigkeit"@de;
+  skos:prefLabel "Fragmenthaftigkeit (Thema)"@de;
   skos:notation "topic_fe0ae02e2ba6d7c4";
   skos:broader :topic_91fbce010840c414;
   skos:relatedMatch <http://www.wikidata.org/entity/Q122238708> .
@@ -3813,6 +3814,7 @@
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:topConceptOf <https://sappho-digital.com/voc>;
   skos:prefLabel "Motive"@de;
+  skos:notation "motifs";
   skos:narrower :motif_c92ed98fdf8c34f1, :motif_2126df79f7250a93, :motif_2f658ec3c5ec3ae4,
     :motif_b3f47e9ec671bb4b, :motif_48abc1d4ebad9497, :motif_ab661b23423441c6, :motif_ffcba97b822ac20c,
     :motif_b39aa0e2a40a8ee4, :motif_cf06ac1a51be3c55, :motif_099b483011788b7b, :motif_dde09ae7bddcf72c,
@@ -3822,18 +3824,21 @@
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:topConceptOf <https://sappho-digital.com/voc>;
   skos:prefLabel "Orte"@de;
+  skos:notation "places";
   skos:narrower :place_2170b82f2666eaab, :place_79e5ca5884082e6c .
 
 :persons a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:topConceptOf <https://sappho-digital.com/voc>;
   skos:prefLabel "Personen"@de;
+  skos:notation "persons";
   skos:narrower :person_278a0a79e0be5174, :person_ee7ff70540e361f7, :person_f00db1cf9f68778d .
 
 :phrases a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:topConceptOf <https://sappho-digital.com/voc>;
   skos:prefLabel "Phrasen"@de;
+  skos:notation "phrases";
   skos:narrower :phrase_5cd31d1448d304fd, :phrase_8447592d89ddd5b5, :phrase_42853034668c7b29,
     :phrase_993410118d749966, :phrase_2ec47d9b59c1040e, :phrase_108f0ac68025102d .
 
@@ -3841,12 +3846,14 @@
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:topConceptOf <https://sappho-digital.com/voc>;
   skos:prefLabel "Stoffe"@de;
+  skos:notation "plots";
   skos:narrower :plot_c15e2310c0183ba9, :plot_02612f6f060ef11d .
 
 :topics a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:topConceptOf <https://sappho-digital.com/voc>;
   skos:prefLabel "Themen"@de;
+  skos:notation "topics";
   skos:narrower :topic_6965e0a196d0b97e, :topic_173f939586542d39, :topic_bdd785a758abd7cd,
     :topic_6dfd95722c255071, :topic_522a85ce59f9c66a, :topic_9a3a9c83b659fda6 .
 
@@ -3854,5 +3861,6 @@
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:topConceptOf <https://sappho-digital.com/voc>;
   skos:prefLabel "Werke"@de;
+  skos:notation "works";
   skos:narrower :work_2b67619b4d423e5a, :work_f740219977100c75, :work_7b7be8da5c1ca839,
     :work_9e0dd0ba7bd9212d, :work_75700d3e9077c098 .
