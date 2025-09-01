@@ -226,7 +226,7 @@ g.add((manifestation_creation_uri, RDFS.label, Literal("Manifestation creation o
 g.add((manifestation_creation_uri, LRMOO.R24_created, manifestation_uri))
 g.add((manifestation_creation_uri, ECRM.P14_carried_out_by, SD["person/editor_bagordo"]))
 g.add((manifestation_creation_uri, ECRM.P14_carried_out_by, publisher_uri))
-g.add((manifestation_creation_uri, ECRM.P4_has_time_span, time_span_uri))
+g.add((manifestation_creation_uri, ECRM["P4_has_time-span"], time_span_uri))
 g.add((manifestation_creation_uri, ECRM.P7_took_place_at, pub_place_uri))
 
 # Title
@@ -251,12 +251,13 @@ g.add((pub_place_uri, ECRM.P7i_witnessed, manifestation_creation_uri))
 g.add((pub_place_uri, OWL.sameAs, URIRef("http://www.wikidata.org/entity/Q1718")))
 
 # Time-Span
-g.add((time_span_uri, RDF.type, ECRM.E52_Time_Span))
+g.add((time_span_uri, RDF.type, ECRM["E52_Time-Span"]))
 g.add((time_span_uri, RDFS.label, Literal("2009", datatype=XSD.gYear)))
-g.add((time_span_uri, ECRM.P4_is_time_span_of, manifestation_creation_uri))
+g.add((time_span_uri, ECRM["P4i_is_time-span_of"], manifestation_creation_uri))
 
 # Fragmente einlesen
 all_expressions = []
+all_fragments = []
 
 with open(INPUT_FILE, newline='', encoding="utf-8") as f:
     reader = csv.DictReader(f, delimiter=';')
@@ -278,6 +279,7 @@ with open(INPUT_FILE, newline='', encoding="utf-8") as f:
         frag_uri = SD[f"fragment/{frag_id}"]
         expr_uri = SD[f"expression/{frag_id}"]
         all_expressions.append(expr_uri)
+        all_fragments.append(frag_uri)
         expr_creation_uri = SD[f"expression_creation/{frag_id}"]
         title_uri = SD[f"title/expression/{frag_id}"]
         title_str_uri = SD[f"title_string/expression/{frag_id}"]
@@ -358,6 +360,10 @@ with open(INPUT_FILE, newline='', encoding="utf-8") as f:
             g.add((gr_uri, ECRM.P1i_identifies, expr_uri))
             g.add((gr_uri, ECRM.P2_has_type, SD["id_type/goodreads"]))
             g.add((expr_uri, OWL.sameAs, URIRef(f"https://www.goodreads.com/work/show/{gr}")))
+
+work_uri = SD["work/sappho-work"]
+for frag_uri in all_fragments:
+    g.add((work_uri, LRMOO.R10_has_member, frag_uri))
 
 # Manifestation-Knoten (Sammel-Embodiment)
 manifestation_uri = SD["manifestation/sappho_bagordo"]
