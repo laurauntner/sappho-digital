@@ -11,6 +11,7 @@
 <https://sappho-digital.com/voc/> a owl:Ontology .
 
 <https://sappho-digital.com/voc> a skos:ConceptScheme;
+  skos:scopeNote "Dieses Vokabular dient der systematischen Erfassung von wiederkehrenden Motiven, Themen, Stoffen, Personen bzw. Figuren, Orten, Phrasen bzw. Zitaten und referenzierten Werken in der literarischen Rezeption Sapphos von der Antike bis in die Gegenwart.";
   skos:hasTopConcept :motifs, :places, :persons, :phrases, :plots, :topics, :works;
   skos:prefLabel "Vokabular zur literarischen Sappho-Rezeption"@de .
 
@@ -1814,7 +1815,7 @@
 
 :place_2170b82f2666eaab a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Fiktionale Orte"@de;
+  skos:prefLabel "Fiktive Orte"@de;
   skos:notation "place_2170b82f2666eaab";
   skos:broader :places;
   skos:narrower :place_1adb2da7993ecc95 .
@@ -2744,7 +2745,7 @@
 
 :person_f00db1cf9f68778d a skos:Concept;
   skos:inScheme <https://sappho-digital.com/voc>;
-  skos:prefLabel "Fiktionale Personen"@de;
+  skos:prefLabel "Fiktive Personen"@de;
   skos:notation "person_f00db1cf9f68778d";
   skos:broader :persons;
   skos:narrower :person_1a6f232a48b9845e, :person_e6e1e08c60e5a04d, :person_256ddc5d500b7e13,
@@ -3811,6 +3812,8 @@
   skos:narrower :work_da4bf9fda473cc89, :work_0e2eeafefe2dae48, :work_50897b387fb5a925 .
 
 :motifs a skos:Concept;
+  skos:definition "Motiv [von mlat. motivus = bewegend], allg.: Beweggrund einer menschl. Haltung oder Handlung; in der Lit.- und Kunstwiss.: das stofflich-thematische, situationsgebundene Element, dessen inhaltliche Grundform schematisiert beschrieben werden kann, z.B. das mit vielen histor. Stoffen verbundene Motiv der Dreiecksbeziehung, des unerkannten Heimkehrers, des Doppelgängers, der feindl. Bruder, das Typusmotiv des Einzelgängers, Bohemiens usw., das Raum- und Zeitmotiv der Ruine, des Wettlaufs mit der Zeit, des Unterweltsbesuchs, des Wiedererkennens (anagnorisis) usw. Besitzt im Ggs. zum Stoff keine Handlungskontinuität, keine Fixierung an Personen und keinen erzählbaren inhaltl. Verlauf. (Heike Gfrereis (Hg.): Grundbegriffe der Literaturwissenschaft. Stuttgart/Weimar: Metzler 1999, S. 130)";
+  skos:example "Ein zentrales Motiv in Sapphos Werk und in ihrer Rezeptionsgeschichte ist der Mond. Der Mond erscheint unter anderem in Fragment 168b Voigt und steht im engen Zusammenhang mit weiteren Motiven wie Nacht und Schlaf.";
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:topConceptOf <https://sappho-digital.com/voc>;
   skos:prefLabel "Motive"@de;
@@ -3821,6 +3824,7 @@
     :motif_ecdd7525fe74838a .
 
 :places a skos:Concept;
+  skos:scopeNote "Unter Orten werden sowohl fiktive Räume (z. B. die Unterwelt) als auch reale Schauplätze (z. B. Griechenland) gefasst.";
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:topConceptOf <https://sappho-digital.com/voc>;
   skos:prefLabel "Orte"@de;
@@ -3828,6 +3832,7 @@
   skos:narrower :place_2170b82f2666eaab, :place_79e5ca5884082e6c .
 
 :persons a skos:Concept;
+  skos:scopeNote "Unter Personen werden reale wie fiktive Gestalten erfasst. Zu den realen zählen antike Persönlichkeiten wie Alkaios oder Sappho selbst sowie Menschen aus ihrem Umfeld, etwa ihr Vater Skamandronymos. Daneben werden auch andere historische Figuren berücksichtigt, zum Beispiel Francesco Petrarca. Zu den fiktiven Personen gehören göttliche Gestalten und Personifikationen wie Adonis, mythologische Figuren wie Narziss, olympische Götter wie Aphrodite sowie Figuren aus Sapphos Kreis, etwa Atthis. Hinzu kommen literarische Gestalten wie Petrarcas Laura. Darüber hinaus werden auch Typen verzeichnet, die bestimmte gesellschaftliche, mythologische, religiöse oder soziale Rollen bezeichnen, etwa Sklave/Sklavin, Muse, Priester/Priesterin sowie Braut/Bräutigam.";
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:topConceptOf <https://sappho-digital.com/voc>;
   skos:prefLabel "Personen"@de;
@@ -3835,6 +3840,8 @@
   skos:narrower :person_278a0a79e0be5174, :person_ee7ff70540e361f7, :person_f00db1cf9f68778d .
 
 :phrases a skos:Concept;
+  skos:definition "Phrase [gr. Ausdruck], 1. in der antiken Rhetorik: die sprachlich-stilistische Ausformulierung der einem Text zugrundeliegenden Gedanken allg. (lat. elocutio), besonders die einzelne Wortgruppe oder Wendung, im Unterschied zur lexis, dem einzelnen Wort; heute v.a. abwertend: ›leeres Geschwätz‹; 2. in der Linguistik (generative Transformationsgrammatik): die einzelnen Einheiten eines Satzes, die durch einen Stammbaum (phrasemarker) hierarchisch dargestellt werden können. (Heike Gfrereis (Hg.): Grundbegriffe der Literaturwissenschaft. Stuttgart/Weimar: Metzler 1999, S. 151";
+  skos:example "»Süßbitter« ist eine Phrase aus Sapphos Fragment 130 Voigt, die vielfach rezipiert wurde (oft auch in der Form »bittersüß«). Der Ausdruck ist eng verknüpft mit den Themen Begehren und Liebe.";
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:topConceptOf <https://sappho-digital.com/voc>;
   skos:prefLabel "Phrasen"@de;
@@ -3843,6 +3850,9 @@
     :phrase_993410118d749966, :phrase_2ec47d9b59c1040e, :phrase_108f0ac68025102d .
 
 :plots a skos:Concept;
+  skos:definition "Stoff, die aus einem lit. Werk herauslösbare Handlung, die Ordnung der einzelnen Geschehenspartikel (z.B. Begegnung/Trennung/Wiederfinden) in ihrer logischen, chronologischen und psychologischen Abfolge: der Faust-Stoff, der Amphitryon-St., der Don-Juan-St., der Julius-Caesar-St. usw. Immer schon auf eine best. Weise geformt, nie Rohstoff, bloßer Stoff an sich; geht oft zurück auf sog. Urstoffe, in denen z.B. best. archetypische Handlungs- und Verhaltensmuster (wie die Ödipus-Konstellation, der Generationenkonflikt) oder Auseinandersetzungen zwischen unterschiedl. Weltauffassungen (ldealismus – Materialismus; Rationalismus – Irrationalismus u.a.) durch eine Erzählung mit konkretem Personal, einer auf best. Weise angeordneten Kette von Ereignissen, einer spezifischen Situationsangabe usw. verarbeitet werden. Wichtige Stoffquellen neben einzelnen lit. Texten: die Geschichte, die antike Mythologie und die Bibel. Herkunft, Entstehung und Veränderungen (Stilisierung, Trivialisierung usw.) eines vielfach überlieferten und lit. verarbeiteten Stoffs untersucht die Stoffgeschichte, die Thematologie. Im russ. Formalismus meist als Fabel (fabula), in der engl.-amerikan. Lit.wiss. als plot, in der frz. als histoire, in der Poetik des Aristoteles als mythos bezeichnet; vom jeweiligen lit. Werk meist in logisch, chronologisch und psychologisch anderer Abfolge arrangiert (Sujet, story, Diskurs). (Heike Gfrereis (Hg.): Grundbegriffe der Literaturwissenschaft. Stuttgart/Weimar: Metzler 1999, S. 195)";
+  skos:scopeNote "Unter Stoffen werden hier primär biographische Erzählungen verstanden, die sich auf Sappho und ihr unmittelbares Umfeld beziehen; besondere Bedeutung hat neben Sappho selbst ihr Bruder Charaxos.";
+  skos:example "Ein zentraler Stoff in der Sappho-Rezeption ist die Sappho-Phaon-Legende, also die Erzählung von Sapphos unerfüllter Liebe zu Phaon und ihrem daraus resultierenden Suizid.";
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:topConceptOf <https://sappho-digital.com/voc>;
   skos:prefLabel "Stoffe"@de;
@@ -3850,6 +3860,8 @@
   skos:narrower :plot_c15e2310c0183ba9, :plot_02612f6f060ef11d .
 
 :topics a skos:Concept;
+  skos:definition "Thema [gr. das Aufgestellte], häufig verwendeter, doch umstrittener Begriff der Lit.wiss., allg.: der Gesprächsstoff, der Gegenstand einer Rede oder eines schriftlichen Textes; stiftet zwischen den stofflichen und motivischen Einzelheiten einen Zusammenhang (Textualitat) und verbindet sie mit außerlit. Erfahrungs- und Vorstellungsbereichen; aber auch synonym mit Stoff bzw. Motiv. (Heike Gfrereis (Hg.): Grundbegriffe der Literaturwissenschaft. Stuttgart/Weimar: Metzler 1999, S. 208)";
+  skos:example "Ein Beispiel sind Darstellungen und Verhandlungen von Weiblichkeit und Männlichkeit, wie sie in literarischen Texten etwa über Figurenkonstellationen ausgeführt werden.";
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:topConceptOf <https://sappho-digital.com/voc>;
   skos:prefLabel "Themen"@de;
@@ -3858,6 +3870,7 @@
     :topic_6dfd95722c255071, :topic_522a85ce59f9c66a, :topic_9a3a9c83b659fda6 .
 
 :works a skos:Concept;
+  skos:scopeNote "Erfasst werden sowohl literarische Texte als auch wissenschaftliche Werke.";
   skos:inScheme <https://sappho-digital.com/voc>;
   skos:topConceptOf <https://sappho-digital.com/voc>;
   skos:prefLabel "Werke"@de;
