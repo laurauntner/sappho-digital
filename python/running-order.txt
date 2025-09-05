@@ -1,8 +1,8 @@
-1. update xml data: excel-to-tei
+1. update xml data: excel-to-tei.py
 2. update skos data: export data from VocBench
-3. update analysis helpers: get-tags, get-frequent-tags, mfw_idf
-4. update authors data: authors
-5. update works data: works, fragments 
-6. update analysis data: analysis
-7. update relations data: relations
-8. update merged and aligned file: merge and align
+3. update analysis helpers: get-tags.py, get-frequent-tags.py, mfw_idf.py
+4. update authors data: authors.py
+5. update works data: works.py, fragments.py 
+6. update analysis data: analysis.py
+7. update relations data: relations.py
+8. update merged and aligned file: merge-and-align.py
