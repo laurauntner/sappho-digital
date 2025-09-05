@@ -1010,11 +1010,18 @@ def main():
     add_alignments(g)
     add_additional_alignments(g)
 
-    tmp_path = out_path.with_suffix(".ttl.tmp")
-    g.serialize(destination=tmp_path.as_posix(), format="turtle", encoding="utf-8")
-    Path(tmp_path).replace(out_path)
+    # Turtle
+    tmp_ttl = out_path.with_suffix(".ttl.tmp")
+    g.serialize(destination=tmp_ttl.as_posix(), format="turtle", encoding="utf-8")
+    Path(tmp_ttl).replace(out_path)
 
-    print(f"\nFertig. Datei gespeichert: {out_path}")
+    # RDF/XML
+    rdf_out = out_path.with_suffix(".rdf")       
+    tmp_rdf = rdf_out.with_suffix(".rdf.tmp")
+    g.serialize(destination=tmp_rdf.as_posix(), format="pretty-xml", encoding="utf-8")
+    Path(tmp_rdf).replace(rdf_out)
+
+    print(f"\nFertig. Dateien gespeichert:\n  {out_path}\n  {rdf_out}")
     print(f"Gesamtzahl Tripel: {len(g)}")
 
 if __name__ == "__main__":

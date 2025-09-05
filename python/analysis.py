@@ -530,3 +530,6 @@ for phr, old_pid in list(distinct_phrase_to_id.items()):
 
 OUT_TTL.parent.mkdir(parents=True, exist_ok=True)
 g.serialize(destination=OUT_TTL.as_posix(), format="turtle")
+
+OUT_RDF = OUT_TTL.with_suffix(".rdf")
+g.serialize(destination=OUT_RDF.as_posix(), format="pretty-xml", encoding="utf-8")

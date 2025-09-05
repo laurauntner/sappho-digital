@@ -347,3 +347,6 @@ for bibl in top_bibls:
 # Speichern
 Path(OUTPUT_FILE).parent.mkdir(parents=True, exist_ok=True)
 g.serialize(destination=OUTPUT_FILE, format="turtle")
+
+xml_output = OUTPUT_FILE.replace(".ttl", ".rdf")
+g.serialize(destination=xml_output, format="pretty-xml")

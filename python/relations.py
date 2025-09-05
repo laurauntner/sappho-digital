@@ -439,3 +439,6 @@ if relations_to_create:
 # Serialisieren
 OUTFILE.parent.mkdir(parents=True, exist_ok=True)
 out.serialize(destination=str(OUTFILE), format="turtle")
+
+OUTFILE_RDF = OUTFILE.with_suffix(".rdf")
+out.serialize(destination=str(OUTFILE_RDF), format="pretty-xml", encoding="utf-8")
