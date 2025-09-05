@@ -31,7 +31,8 @@
     ecrm:P2_has_type <https://sappho-digital.com/genre/XXXX> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/XXXX> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/XXXX> ;
-    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+    owl:sameAs <http://www.wikidata.org/entity/XXXX>
+    rdfs:seeAlso <<http://commons.wikimedia.org/wiki/Special:FilePath/XXXX.jpg> .
 
 <https://sappho-digital.com/title/expression/Q1242002> a ecrm:E35_Title ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/XXXX> ;

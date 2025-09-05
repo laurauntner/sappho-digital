@@ -56,25 +56,55 @@
 
                                     <div class="card-body wikidata-layout">
 
-                                        <xsl:if
-                                            test="@ref and (self::tei:bibl or self::tei:author or self::tei:pubPlace)">
+                                        <xsl:if test="self::tei:bibl or self::tei:author or self::tei:pubPlace">
                                             <div class="wikidata-right">
-                                                <xsl:if
-                                                  test="@ref and (self::tei:bibl or self::tei:author)">
-                                                  <a href="{@ref}" target="_blank">
-                                                  <div id="wikidata-image-{$id}"
-                                                  class="wikidata-thumb-container"
-                                                  data-wikidata="{substring-after(@ref, 'entity/')}"
-                                                  data-type="image"/>
-                                                  </a>
+                                                
+                                                <!-- work image -->
+                                                <xsl:if test="self::tei:bibl">
+                                                    <xsl:variable name="works" select="doc('../data/rdf/works.rdf')"/>
+                                                    <xsl:variable name="expr-iri" select="concat('https://sappho-digital.com/expression/', @xml:id)"/>
+                                                    <xsl:variable name="img-url"
+                                                        select="string((
+                                                        $works//*[@rdf:about=$expr-iri]/rdfs:seeAlso/@rdf:resource,
+                                                        $works//*[@rdf:about=$expr-iri]/rdfs:seeAlso/text()
+                                                        )[1])"/>
+                                                    <xsl:if test="$img-url">
+                                                        <a href="{@ref}" target="_blank" rel="noopener">
+                                                            <img class="wikidata-thumb" src="{$img-url}" alt="{normalize-space(tei:title[@type='text'][1])}"/>
+                                                        </a>
+                                                    </xsl:if>
                                                 </xsl:if>
-
-                                                <xsl:if test="@ref and self::tei:pubPlace">
-                                                  <div id="wikidata-map-{$id}"
-                                                  class="wikidata-map-container"
-                                                  data-wikidata="{substring-after(@ref, 'entity/')}"
-                                                  data-type="map"/>
+                                                
+                                                <!-- author image -->
+                                                <xsl:if test="self::tei:author">
+                                                    <xsl:variable name="authors" select="doc('../data/rdf/authors.rdf')"/>
+                                                    <xsl:variable name="person-iri" select="concat('https://sappho-digital.com/person/', @xml:id)"/>
+                                                    <xsl:variable name="img"
+                                                        select="$authors//ecrm:E38_Image[
+                                                        ecrm:P65_shows_visual_item
+                                                        /ecrm:E36_Visual_Item
+                                                        /ecrm:P138_represents/@rdf:resource = $person-iri
+                                                        ][1]"/>
+                                                    <xsl:variable name="img-url"
+                                                        select="string((
+                                                        $img/rdfs:seeAlso/@rdf:resource,
+                                                        $img/rdfs:seeAlso/text()
+                                                        )[1])"/>
+                                                    <xsl:if test="$img-url">
+                                                        <a href="{@ref}" target="_blank" rel="noopener">
+                                                            <img class="wikidata-thumb" src="{$img-url}" alt="{normalize-space(.)}"/>
+                                                        </a>
+                                                    </xsl:if>
                                                 </xsl:if>
+                                                
+                                                <!-- place map -->
+                                                <xsl:if test="self::tei:pubPlace and @ref">
+                                                    <div id="wikidata-map-{@xml:id}"
+                                                        class="wikidata-map-container"
+                                                        data-wikidata="{substring-after(@ref, 'entity/')}"
+                                                        data-type="map"/>
+                                                </xsl:if>
+                                                
                                             </div>
                                         </xsl:if>
 

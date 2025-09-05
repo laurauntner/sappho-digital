@@ -6,7 +6,7 @@ from rdflib.namespace import RDF, RDFS, XSD, OWL
 from pathlib import Path
 from typing import Optional
 
-# ---- Wikidata Session & Cache ----
+# Wikidata
 SESSION = requests.Session()
 SESSION.headers.update({
     "User-Agent": "SapphoDigital/1.0 (+mailto:laura.untner@fu-berlin.de)"
@@ -92,6 +92,7 @@ SD = Namespace("https://sappho-digital.com/")
 ECRM = Namespace("http://erlangen-crm.org/current/")
 LRMOO = Namespace("http://www.cidoc-crm.org/lrmoo/")
 WD = "http://www.wikidata.org/entity/"
+WDCOM = "http://commons.wikimedia.org/wiki/Special:FilePath/"
 
 # Graph
 g = Graph()
@@ -242,6 +243,12 @@ for bibl in top_bibls:
             g.add((gr_uri, ECRM.P2_has_type, idtype_gr))
             # kanonischer Formatter für P8383:
             g.add((bibl_uri, OWL.sameAs, URIRef(f"https://www.goodreads.com/work/show/{gr}")))
+
+        # Wikimedia Image
+        img = next((v for v in get_claim_vals(entity, "P18", expect="auto") if v), None)
+        if img:
+            img_url = WDCOM + img.replace(" ", "_")
+            g.add((bibl_uri, RDFS.seeAlso, URIRef(img_url)))
 
     # Digital Copy
     ref_el = bibl.find("tei:ref", namespaces=NSMAP)

@@ -14,18 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!entity) return;
 
-        if (type === 'image') {
-          const p18 = entity.claims?.P18?.[0]?.mainsnak?.datavalue?.value;
-          if (p18) {
-            const url = 'https://commons.wikimedia.org/wiki/Special:FilePath/' + encodeURIComponent(p18);
-            const img = document.createElement('img');
-            img.src = url;
-            img.alt = p18;
-            img.className = 'wikidata-thumb';
-            el.appendChild(img);
-          }
-        }
-
         if (type === 'map') {
           const coord = entity.claims?.P625?.[0]?.mainsnak?.datavalue?.value;
           if (coord) {
