@@ -110,13 +110,13 @@
         </xsl:if>
 
         <xsl:if test="tei:date[@type = 'published']">
-            <p class="align-left"> Publikations-/Aufführungsjahr: <xsl:value-of
+            <p class="align-left">Publikations-/Aufführungsjahr: <xsl:value-of
                     select="tei:date[@type = 'published']"/>
             </p>
         </xsl:if>
 
         <xsl:if test="tei:bibl/tei:title">
-            <p class="align-left"> Enthalten in: <xsl:for-each select="tei:bibl">
+            <p class="align-left">Enthalten in: <xsl:for-each select="tei:bibl">
                     <xsl:choose>
                         <xsl:when test="@xml:id">
                             <a href="{@xml:id}.html">
@@ -139,7 +139,7 @@
         </xsl:if>
 
         <xsl:if test="tei:author">
-            <p class="align-left"> Autor_in: <xsl:for-each select="tei:author">
+            <p class="align-left">Autor_in: <xsl:for-each select="tei:author">
                     <xsl:choose>
                         <xsl:when test="@xml:id">
                             <a href="{@xml:id}.html">
@@ -162,7 +162,7 @@
         </xsl:if>
 
         <xsl:if test="tei:note[@type = 'genre']">
-            <p class="align-left"> Gattung: <xsl:for-each select="tei:note[@type = 'genre']">
+            <p class="align-left">Gattung: <xsl:for-each select="tei:note[@type = 'genre']">
                     <xsl:variable name="genreText" select="normalize-space(.)"/>
                     <xsl:variable name="genreLower" select="lower-case($genreText)"/>
                     <xsl:choose>
@@ -185,7 +185,7 @@
         </xsl:if>
 
         <xsl:if test="tei:pubPlace">
-            <p class="align-left"> Publikations-/Aufführungsort: <xsl:for-each select="tei:pubPlace">
+            <p class="align-left">Publikations-/Aufführungsort: <xsl:for-each select="tei:pubPlace">
                     <xsl:choose>
                         <xsl:when test="@xml:id">
                             <a href="{@xml:id}.html">
@@ -208,7 +208,7 @@
         </xsl:if>
 
         <xsl:if test="tei:publisher">
-            <p class="align-left"> Verlag/Druckerei: <xsl:for-each select="tei:publisher">
+            <p class="align-left">Verlag/Druckerei: <xsl:for-each select="tei:publisher">
                     <xsl:choose>
                         <xsl:when test="@xml:id">
                             <a href="{@xml:id}.html">
@@ -231,7 +231,7 @@
         </xsl:if>
 
         <xsl:if test="tei:ref">
-            <p class="align-left"> Digitalisat: <xsl:for-each select="tei:ref">
+            <p class="align-left">Digitalisat: <xsl:for-each select="tei:ref">
                     <a href="{@target}" target="_blank">
                         <xsl:value-of select="text()"/>
                     </a>
@@ -276,6 +276,7 @@
             <xsl:variable name="matches" select="//tei:bibl[tei:author/@xml:id = $id]"/>
             <xsl:variable name="count" select="count($matches)"/>
             <xsl:if test="$count &gt; 0">
+                <!-- XXXX -->
                 <p class="align-left">
                     <xsl:choose>
                         <xsl:when test="$count = 1">Ein Werk in der Datenbank:</xsl:when>
@@ -364,7 +365,7 @@
                 </p>
 
                 <xsl:if test="$containedWorks/tei:pubPlace">
-                    <p class="align-left"> Publikations-/Aufführungsort: <xsl:for-each
+                    <p class="align-left">Publikations-/Aufführungsort: <xsl:for-each
                             select="$containedWorks/tei:pubPlace">
                             <xsl:choose>
                                 <xsl:when test="@xml:id">
@@ -388,7 +389,7 @@
                 </xsl:if>
 
                 <xsl:if test="$containedWorks/tei:publisher">
-                    <p class="align-left"> Verlag/Druckerei: <xsl:for-each
+                    <p class="align-left">Verlag/Druckerei: <xsl:for-each
                             select="$containedWorks/tei:publisher">
                             <xsl:choose>
                                 <xsl:when test="@xml:id">
