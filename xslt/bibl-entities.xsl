@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns="http://www.w3.org/1999/xhtml"
-    exclude-result-prefixes="tei">
+    xmlns:ecrm="http://erlangen-crm.org/current/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:local="xyz" exclude-result-prefixes="tei">
 
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
@@ -276,7 +279,54 @@
             <xsl:variable name="matches" select="//tei:bibl[tei:author/@xml:id = $id]"/>
             <xsl:variable name="count" select="count($matches)"/>
             <xsl:if test="$count &gt; 0">
-                <!-- XXXX -->
+
+                <xsl:variable name="rdf" select="doc('../data/rdf/authors.rdf')"/>
+                <xsl:variable name="person-iri"
+                    select="concat('https://sappho-digital.com/person/', $id)"/>
+                <xsl:variable name="person" select="$rdf//ecrm:E21_Person[@rdf:about = $person-iri]"/>
+
+                <xsl:variable name="birth-iri" select="$person/ecrm:P98i_was_born/@rdf:resource"/>
+                <xsl:variable name="death-iri" select="$person/ecrm:P100i_died_in/@rdf:resource"/>
+
+                <xsl:variable name="birth" select="$rdf//ecrm:E67_Birth[@rdf:about = $birth-iri]"/>
+                <xsl:variable name="death" select="$rdf//ecrm:E69_Death[@rdf:about = $death-iri]"/>
+
+                <xsl:variable name="bdate"
+                    select="$rdf//ecrm:E52_Time-Span[@rdf:about = $birth/ecrm:P4_has_time_span/@rdf:resource]/rdfs:label"/>
+                <xsl:variable name="ddate"
+                    select="$rdf//ecrm:E52_Time-Span[@rdf:about = $death/ecrm:P4_has_time_span/@rdf:resource]/rdfs:label"/>
+
+                <xsl:variable name="bplace"
+                    select="$rdf//ecrm:E53_Place[ecrm:P7i_witnessed/ecrm:E67_Birth[@rdf:about = $birth-iri]]"/>
+                <xsl:variable name="dplace"
+                    select="$rdf//ecrm:E53_Place[ecrm:P7i_witnessed/ecrm:E69_Death[@rdf:about = $death-iri]]"/>
+
+                <xsl:if test="$bdate or $bplace">
+                    <p class="align-left">
+                        <xsl:text>Geboren: </xsl:text>
+                        <xsl:value-of select="local:format-partial-date(string(($bdate)[1]))"/>
+                        <xsl:if test="$bplace">
+                            <xsl:text>, </xsl:text>
+                            <xsl:value-of
+                                select="($bplace/rdfs:label[@xml:lang = 'de'], $bplace/rdfs:label)[1]"
+                            />
+                        </xsl:if>
+                    </p>
+                </xsl:if>
+
+                <xsl:if test="$ddate or $dplace">
+                    <p class="align-left">
+                        <xsl:text>Gestorben: </xsl:text>
+                        <xsl:value-of select="local:format-partial-date(string(($ddate)[1]))"/>
+                        <xsl:if test="$dplace">
+                            <xsl:text>, </xsl:text>
+                            <xsl:value-of
+                                select="($dplace/rdfs:label[@xml:lang = 'de'], $dplace/rdfs:label)[1]"
+                            />
+                        </xsl:if>
+                    </p>
+                </xsl:if>
+
                 <p class="align-left">
                     <xsl:choose>
                         <xsl:when test="$count = 1">Ein Werk in der Datenbank:</xsl:when>
@@ -284,6 +334,7 @@
                             Datenbank:</xsl:otherwise>
                     </xsl:choose>
                 </p>
+
                 <ul>
                     <xsl:for-each select="$matches[tei:title[@type = 'text']]">
                         <xsl:sort select="tei:title[@type = 'text']" data-type="text"
@@ -414,5 +465,46 @@
             </xsl:if>
         </div>
     </xsl:template>
+
+    <!-- functions for dates -->
+
+    <xsl:function name="local:month-name-de" as="xs:string">
+        <xsl:param name="m" as="xs:integer"/>
+        <xsl:sequence select="
+                ('Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
+                'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember')[$m]"/>
+    </xsl:function>
+
+    <xsl:function name="local:format-partial-date" as="xs:string?">
+        <xsl:param name="lex" as="xs:string?"/>
+        <xsl:variable name="s" select="normalize-space($lex)"/>
+        <xsl:choose>
+            <!-- YYYY-MM-DD -->
+            <xsl:when test="$s castable as xs:date">
+                <xsl:variable name="d" select="xs:date($s)"/>
+                <xsl:sequence select="
+                        concat(day-from-date($d), '. ', local:month-name-de(month-from-date($d)), ' ', year-from-date($d))
+                        "/>
+            </xsl:when>
+
+            <!-- YYYY-MM -->
+            <xsl:when test="$s castable as xs:gYearMonth">
+                <xsl:variable name="d" select="xs:date(concat($s, '-01'))"/>
+                <xsl:sequence select="
+                        concat(local:month-name-de(month-from-date($d)), ' ', year-from-date($d))
+                        "/>
+            </xsl:when>
+
+            <!-- YYYY -->
+            <xsl:when test="$s castable as xs:gYear">
+                <xsl:sequence select="string($s)"/>
+            </xsl:when>
+
+            <!-- Fallback -->
+            <xsl:otherwise>
+                <xsl:sequence select="$s"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
 
 </xsl:stylesheet>
