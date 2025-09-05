@@ -7,11 +7,12 @@ For a detailed description of the project and the data, see the [project website
 ---
 
 This repository contains:
-- [XML/TEI files](https://github.com/laurauntner/sappho-digital/tree/main/data/lists) listing testimonies of the productive literary reception of Sappho. 
-- Scripts used for data transformation and satistics ([XSLT](https://github.com/laurauntner/sappho-digital/tree/main/xslt) and [Python](https://github.com/laurauntner/sappho-digital/tree/main/python)).
-- [Files](https://github.com/laurauntner/sappho-digital/tree/main/documentation) documenting the applied data models.
+- [XML/TEI files](https://github.com/laurauntner/sappho-digital/tree/main/data/lists) listing testimonies of the productive literary reception of Sappho.
+- [RDF/XML and RDF/Turtle files](https://github.com/laurauntner/sappho-digital/tree/main/data/rdf) with information about these productive literary reception testimonies: about the authors, the works, intertextual features in 100 exemplary texts, and their relationships to each other as well as to Sappho’s work ("sappho-reception" is the combined file, "vocab" stores the SKOS-vocabulary for the intertextual phenomena).
+- Scripts used for data transformation and satistics ([XSLT](https://github.com/laurauntner/sappho-digital/tree/main/xslt) and [Python](https://github.com/laurauntner/sappho-digital/tree/main/python)). 
+- [Files](https://github.com/laurauntner/sappho-digital/tree/main/documentation) documenting the applied RDF data models.  To get an idea of the data model, see also the companion repository [wikidata-to-cidoc-crm](https://github.com/laurauntner/wikidata-to-cidoc-crm). This repository contains Python scripts for converting structured data from Wikidata into RDF using CIDOC CRM, LRMoo, and INTRO. 
 
-⚠️ This repository is under active development. Soon, there will also be an OWL ontology for modeling biographical, bibliographical, and intertextual information; a SKOS vocabulary for the literary reception of Sappho; and sample analyses of around 100 literary reception testimonies. To get an idea of the data model, see the companion repository [wikidata-to-cidoc-crm](https://github.com/laurauntner/wikidata-to-cidoc-crm). This repository contains Python scripts for converting structured data from Wikidata into RDF using CIDOC CRM, LRMoo, and INTRO. 
+⚠️ This repository is under active development.
 
 ---
 
