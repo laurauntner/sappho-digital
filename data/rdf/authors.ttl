@@ -538,6 +538,7 @@
         <https://sappho-digital.com/birth/author_ea1416c6>,
         <https://sappho-digital.com/birth/author_ecd75d50>,
         <https://sappho-digital.com/birth/author_f338c317>,
+        <https://sappho-digital.com/birth/author_l85pac83>,
         <https://sappho-digital.com/death/author_0d277f21>,
         <https://sappho-digital.com/death/author_0de8e0eb>,
         <https://sappho-digital.com/death/author_24ebe8ef>,
@@ -584,6 +585,11 @@
     rdfs:label "Korsør"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d5f6a8bc> ;
     owl:sameAs <http://www.wikidata.org/entity/Q1784816> .
+
+<https://sappho-digital.com/place/Q178582> a ecrm:E53_Place ;
+    rdfs:label "Wels"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_cb7d98c5> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q178582> .
 
 <https://sappho-digital.com/place/Q1792> a ecrm:E53_Place ;
     rdfs:label "Danzig"@de ;
@@ -4476,6 +4482,10 @@
     rdfs:label "Peter Gan"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_fefd92e0> .
 
+<https://sappho-digital.com/appellation/author_l85pac83> a ecrm:E82_Actor_Appellation ;
+    rdfs:label "Sophie Reyer"@de ;
+    ecrm:P131i_identifies <https://sappho-digital.com/person/author_l85pac83> .
+
 <https://sappho-digital.com/identifier/100084168> a ecrm:E42_Identifier ;
     rdfs:label "100084168" ;
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_7ea009fb> ;
@@ -6651,6 +6661,11 @@
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_6dfe8a9d> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/gnd> .
 
+<https://sappho-digital.com/identifier/136941389> a ecrm:E42_Identifier ;
+    rdfs:label "136941389" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/person/author_l85pac83> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/gnd> .
+
 <https://sappho-digital.com/identifier/136990665> a ecrm:E42_Identifier ;
     rdfs:label "136990665" ;
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_f4cc52d6> ;
@@ -8384,6 +8399,11 @@
 <https://sappho-digital.com/identifier/89636048> a ecrm:E42_Identifier ;
     rdfs:label "89636048" ;
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_4d29ad49> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/viaf> .
+
+<https://sappho-digital.com/identifier/904145858163823022450> a ecrm:E42_Identifier ;
+    rdfs:label "904145858163823022450" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/person/author_l85pac83> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/viaf> .
 
 <https://sappho-digital.com/identifier/90634351> a ecrm:E42_Identifier ;
@@ -10219,6 +10239,11 @@
 <https://sappho-digital.com/identifier/Sixt_Birck> a ecrm:E42_Identifier ;
     rdfs:label "Sixt_Birck" ;
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_b0f9b07f> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
+
+<https://sappho-digital.com/identifier/Sophie_Reyer> a ecrm:E42_Identifier ;
+    rdfs:label "Sophie_Reyer" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/person/author_l85pac83> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
 
 <https://sappho-digital.com/identifier/Stefan_George> a ecrm:E42_Identifier ;
@@ -13306,6 +13331,11 @@
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_fefd92e0> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
+<https://sappho-digital.com/identifier/author_l85pac83> a ecrm:E42_Identifier ;
+    rdfs:label "author_l85pac83" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/person/author_l85pac83> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
 <https://sappho-digital.com/image/author_001f1b95> a ecrm:E38_Image ;
     ecrm:P65_shows_visual_item <https://sappho-digital.com/visual_item/author_001f1b95> ;
     rdfs:seeAlso <http://commons.wikimedia.org/wiki/Special:FilePath/GeorgvonPreußen.jpg> ;
@@ -14650,6 +14680,11 @@
     ecrm:P65_shows_visual_item <https://sappho-digital.com/visual_item/author_feeadef3> ;
     rdfs:seeAlso <http://commons.wikimedia.org/wiki/Special:FilePath/August-Buchner.jpg> ;
     prov:wasDerivedFrom <http://www.wikidata.org/entity/Q761023> .
+
+<https://sappho-digital.com/image/author_l85pac83> a ecrm:E38_Image ;
+    ecrm:P65_shows_visual_item <https://sappho-digital.com/visual_item/author_l85pac83> ;
+    rdfs:seeAlso <http://commons.wikimedia.org/wiki/Special:FilePath/Sophie_Reyer_2010.jpg> ;
+    prov:wasDerivedFrom <http://www.wikidata.org/entity/Q1545603> .
 
 <https://sappho-digital.com/timespan/14580101> a ecrm:E52_Time-Span ;
     rdfs:label "1458-01-01"^^xsd:date ;
@@ -17299,6 +17334,10 @@
     rdfs:label "1984-09-25"^^xsd:date ;
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/death/author_11c6f454> .
 
+<https://sappho-digital.com/timespan/19841220> a ecrm:E52_Time-Span ;
+    rdfs:label "1984-12-20"^^xsd:date ;
+    ecrm:P4i_is_time-span_of <https://sappho-digital.com/birth/author_l85pac83> .
+
 <https://sappho-digital.com/timespan/19850101> a ecrm:E52_Time-Span ;
     rdfs:label "1985-01-01"^^xsd:date ;
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/birth/author_997a3476> .
@@ -18849,6 +18888,11 @@
     ecrm:P138_represents <https://sappho-digital.com/person/author_feeadef3> ;
     ecrm:P65i_is_shown_by <https://sappho-digital.com/image/author_feeadef3> .
 
+<https://sappho-digital.com/visual_item/author_l85pac83> a ecrm:E36_Visual_Item ;
+    rdfs:label "Visual representation of Sophie Reyer"@en ;
+    ecrm:P138_represents <https://sappho-digital.com/person/author_l85pac83> ;
+    ecrm:P65i_is_shown_by <https://sappho-digital.com/image/author_l85pac83> .
+
 <https://sappho-digital.com/birth/author_01477749> a ecrm:E67_Birth ;
     rdfs:label "Birth of Niklaus Gaschen"@en ;
     ecrm:P4_has_time_span <https://sappho-digital.com/timespan/19420000> ;
@@ -18956,12 +19000,6 @@
     ecrm:P4_has_time_span <https://sappho-digital.com/timespan/19860101> ;
     ecrm:P98_brought_into_life <https://sappho-digital.com/person/author_c85eac23> ;
     prov:wasDerivedFrom <http://www.wikidata.org/entity/Q130403819> .
-
-<https://sappho-digital.com/birth/author_cb7d98c5> a ecrm:E67_Birth ;
-    rdfs:label "Birth of Sandra Hubinger"@en ;
-    ecrm:P4_has_time_span <https://sappho-digital.com/timespan/19740000> ;
-    ecrm:P98_brought_into_life <https://sappho-digital.com/person/author_cb7d98c5> ;
-    prov:wasDerivedFrom <http://www.wikidata.org/entity/Q107622418> .
 
 <https://sappho-digital.com/birth/author_cc2bc35c> a ecrm:E67_Birth ;
     rdfs:label "Birth of Wilhelm Bartesch"@en ;
@@ -19617,6 +19655,11 @@
 <https://sappho-digital.com/identifier/Q15451448> a ecrm:E42_Identifier ;
     rdfs:label "Q15451448" ;
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_2f2c0ddf> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q1545603> a ecrm:E42_Identifier ;
+    rdfs:label "Q1545603" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/person/author_l85pac83> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
 
 <https://sappho-digital.com/identifier/Q154782> a ecrm:E42_Identifier ;
@@ -23923,6 +23966,12 @@
     ecrm:P98_brought_into_life <https://sappho-digital.com/person/author_c9ceb171> ;
     prov:wasDerivedFrom <http://www.wikidata.org/entity/Q93525> .
 
+<https://sappho-digital.com/birth/author_cb7d98c5> a ecrm:E67_Birth ;
+    rdfs:label "Birth of Sandra Hubinger"@en ;
+    ecrm:P4_has_time_span <https://sappho-digital.com/timespan/19740000> ;
+    ecrm:P98_brought_into_life <https://sappho-digital.com/person/author_cb7d98c5> ;
+    prov:wasDerivedFrom <http://www.wikidata.org/entity/Q107622418> .
+
 <https://sappho-digital.com/birth/author_cb7f347d> a ecrm:E67_Birth ;
     rdfs:label "Birth of Wilhelm Scheider"@en ;
     ecrm:P4_has_time_span <https://sappho-digital.com/timespan/18940528> ;
@@ -24348,6 +24397,12 @@
     ecrm:P4_has_time_span <https://sappho-digital.com/timespan/18940204> ;
     ecrm:P98_brought_into_life <https://sappho-digital.com/person/author_fefd92e0> ;
     prov:wasDerivedFrom <http://www.wikidata.org/entity/Q1595310> .
+
+<https://sappho-digital.com/birth/author_l85pac83> a ecrm:E67_Birth ;
+    rdfs:label "Birth of Sophie Reyer"@en ;
+    ecrm:P4_has_time_span <https://sappho-digital.com/timespan/19841220> ;
+    ecrm:P98_brought_into_life <https://sappho-digital.com/person/author_l85pac83> ;
+    prov:wasDerivedFrom <http://www.wikidata.org/entity/Q1545603> .
 
 <https://sappho-digital.com/death/author_001f1b95> a ecrm:E69_Death ;
     rdfs:label "Death of Georg von Preußen"@en ;
@@ -28730,6 +28785,21 @@
         <https://dbpedia.org/resource/Alfred_Kittner>,
         <https://viaf.org/viaf/69055208> .
 
+<https://sappho-digital.com/person/author_l85pac83> a ecrm:E21_Person ;
+    rdfs:label "Sophie Reyer"@de ;
+    ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_l85pac83> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/136941389>,
+        <https://sappho-digital.com/identifier/904145858163823022450>,
+        <https://sappho-digital.com/identifier/Q1545603>,
+        <https://sappho-digital.com/identifier/Sophie_Reyer>,
+        <https://sappho-digital.com/identifier/author_l85pac83> ;
+    ecrm:P2_has_type <https://sappho-digital.com/gender/Q6581072> ;
+    ecrm:P98i_was_born <https://sappho-digital.com/birth/author_l85pac83> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q1545603>,
+        <https://d-nb.info/gnd/136941389>,
+        <https://dbpedia.org/resource/Sophie_Reyer>,
+        <https://viaf.org/viaf/904145858163823022450> .
+
 <https://sappho-digital.com/person/author_001f1b95> a ecrm:E21_Person ;
     rdfs:label "Georg von Preußen"@de ;
     ecrm:P100i_died_in <https://sappho-digital.com/death/author_001f1b95> ;
@@ -32725,7 +32795,8 @@
         <https://sappho-digital.com/person/author_ea1416c6>,
         <https://sappho-digital.com/person/author_f468f7e6>,
         <https://sappho-digital.com/person/author_f7114165>,
-        <https://sappho-digital.com/person/author_f7e862d9> ;
+        <https://sappho-digital.com/person/author_f7e862d9>,
+        <https://sappho-digital.com/person/author_l85pac83> ;
     owl:sameAs <http://www.wikidata.org/entity/Q6581072> .
 
 <https://sappho-digital.com/gender/Q6581097> a ecrm:E55_Type ;
@@ -33132,6 +33203,7 @@
         <https://sappho-digital.com/identifier/Q154438>,
         <https://sappho-digital.com/identifier/Q15447200>,
         <https://sappho-digital.com/identifier/Q15451448>,
+        <https://sappho-digital.com/identifier/Q1545603>,
         <https://sappho-digital.com/identifier/Q154782>,
         <https://sappho-digital.com/identifier/Q155547>,
         <https://sappho-digital.com/identifier/Q1559070>,
