@@ -210,7 +210,7 @@ manifestation_uri = SD["manifestation/sappho_bagordo"]
 manifestation_creation_uri = SD["manifestation_creation/sappho_bagordo"]
 title_uri = SD["title/manifestation/sappho_bagordo"]
 title_string_uri = SD["title_string/manifestation/sappho_bagordo"]
-pub_place_uri = SD["pubPlace/pubPlace_42b32e43"]
+pub_place_uri = SD["place/place_42b32e43"]
 publisher_uri = SD["publisher/publisher_patmos"]
 time_span_uri = SD["timespan/2009"]
 

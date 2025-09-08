@@ -1,5 +1,7 @@
 import requests
 import time
+import uuid 
+import xml.etree.ElementTree as ET
 from lxml import etree
 from rdflib import Graph, Namespace, URIRef, Literal
 from rdflib.namespace import RDF, RDFS, XSD, OWL
@@ -21,9 +23,10 @@ OUTPUT_FILE = "../data/rdf/authors.ttl"
 SD = Namespace("https://sappho-digital.com/")
 ECRM = Namespace("http://erlangen-crm.org/current/")
 PROV = Namespace("http://www.w3.org/ns/prov#")
-WD = "http://www.wikidata.org/entity/"
+WD = "https://www.wikidata.org/entity/"
 WDCOM = "http://commons.wikimedia.org/wiki/Special:FilePath/"
 NS = {"tei": "http://www.tei-c.org/ns/1.0"}
+XML_NS = "{http://www.w3.org/XML/1998/namespace}"
 
 # RDF Graph
 g = Graph()
@@ -35,6 +38,33 @@ g.bind("prov", PROV)
 g.bind("owl", OWL)
 
 # Hilfsfunktionen
+
+def _load_pubplace_index(xml_path: str) -> dict[str, str]:
+    idx: dict[str, str] = {}
+    try:
+        root = ET.parse(xml_path).getroot()
+    except Exception:
+        return idx
+
+    for el in root.findall(".//tei:pubPlace", NS):
+        ref = (el.get("ref") or "").strip()
+        xml_id = (el.get(f"{XML_NS}id") or "").strip()
+        if not ref or not xml_id:
+            continue
+        if ref.startswith("http://www.wikidata.org/"):
+            ref = "https://" + ref[len("http://"):]
+        if ref.startswith("https://www.wikidata.org/entity/"):
+            idx.setdefault(ref, xml_id)
+    return idx
+
+def _place_uri_from_index_or_random(pubplace_idx: dict[str, str], wikidata_qid: str):
+    wd_uri = WD + wikidata_qid   
+    xml_id = pubplace_idx.get(wd_uri)
+    if xml_id:
+        return SD[f"place/{xml_id}"], wd_uri
+    return SD[f"place/place_{uuid.uuid4().hex[:8]}"], wd_uri
+
+_pubplace_idx = _load_pubplace_index(INPUT_FILE)
 
 def normalize_id(name):
     return name.strip().lower().replace(" ", "_")
@@ -290,21 +320,23 @@ for el in authors:
         # Geburtsort
         birth_place_qid = get_claim_val(entity, "P19")
         if birth_place_qid:
-            place_uri = SD[f"place/{birth_place_qid}"]
             place_label = get_label(fetch_wikidata(birth_place_qid)) or birth_place_qid
+            place_uri, same_as = _place_uri_from_index_or_random(_pubplace_idx, birth_place_qid)
+
             g.add((place_uri, RDF.type, ECRM.E53_Place))
             g.add((place_uri, RDFS.label, Literal(place_label, lang="de")))
-            g.add((place_uri, OWL.sameAs, URIRef(WD + birth_place_qid)))
+            g.add((place_uri, OWL.sameAs, URIRef(same_as)))
             g.add((place_uri, ECRM["P7i_witnessed"], SD[f"birth/{xml_id}"]))
 
         # Sterbeort
         death_place_qid = get_claim_val(entity, "P20")
         if death_place_qid:
-            place_uri = SD[f"place/{death_place_qid}"]
             place_label = get_label(fetch_wikidata(death_place_qid)) or death_place_qid
+            place_uri, same_as = _place_uri_from_index_or_random(_pubplace_idx, death_place_qid)
+
             g.add((place_uri, RDF.type, ECRM.E53_Place))
             g.add((place_uri, RDFS.label, Literal(place_label, lang="de")))
-            g.add((place_uri, OWL.sameAs, URIRef(WD + death_place_qid)))
+            g.add((place_uri, OWL.sameAs, URIRef(same_as)))
             g.add((place_uri, ECRM["P7i_witnessed"], SD[f"death/{xml_id}"]))
 
         # Geschlecht

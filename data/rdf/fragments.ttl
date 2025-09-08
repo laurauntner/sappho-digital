@@ -3211,7 +3211,7 @@
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_sappho_98> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
-<https://sappho-digital.com/pubPlace/pubPlace_42b32e43> a ecrm:E53_Place ;
+<https://sappho-digital.com/place/place_42b32e43> a ecrm:E53_Place ;
     rdfs:label "Düsseldorf"@en ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/sappho_bagordo> ;
     owl:sameAs <http://www.wikidata.org/entity/Q1718> .
@@ -5642,7 +5642,7 @@
     ecrm:P14_carried_out_by <https://sappho-digital.com/person/editor_bagordo>,
         <https://sappho-digital.com/publisher/publisher_patmos> ;
     ecrm:P4_has_time-span <https://sappho-digital.com/timespan/2009> ;
-    ecrm:P7_took_place_at <https://sappho-digital.com/pubPlace/pubPlace_42b32e43> ;
+    ecrm:P7_took_place_at <https://sappho-digital.com/place/place_42b32e43> ;
     lrmoo:R24_created <https://sappho-digital.com/manifestation/sappho_bagordo> .
 
 <https://sappho-digital.com/expression/bibl_sappho_100> a lrmoo:F2_Expression ;

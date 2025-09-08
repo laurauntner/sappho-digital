@@ -93,6 +93,7 @@ ECRM = Namespace("http://erlangen-crm.org/current/")
 LRMOO = Namespace("http://www.cidoc-crm.org/lrmoo/")
 WD = "http://www.wikidata.org/entity/"
 WDCOM = "http://commons.wikimedia.org/wiki/Special:FilePath/"
+XML_NS = "{http://www.w3.org/XML/1998/namespace}"
 
 # Graph
 g = Graph()
@@ -309,16 +310,16 @@ for bibl in top_bibls:
 
         # Ort
         for pubplace_el in bibl.findall("tei:pubPlace", namespaces=NSMAP):
-            place_ref = pubplace_el.get("ref")
+            place_qid = pubplace_el.get("ref")
+            place_ref = pubplace_el.get(f"{XML_NS}id") 
             place_label = pubplace_el.text.strip() if pubplace_el.text else "Unknown"
             place_uri = (
-                SD[f"place/{place_ref.split('/')[-1]}"]
-                if place_ref else SD[f"place/{place_label.replace(' ', '_')}"]
+                SD[f"place/{place_ref}"]
             )
             g.add((place_uri, RDF.type, ECRM.E53_Place))
             g.add((place_uri, RDFS.label, Literal(place_label, lang="de")))
-            if place_ref:
-                g.add((place_uri, OWL.sameAs, URIRef(place_ref)))
+            if place_qid:
+                g.add((place_uri, OWL.sameAs, URIRef(place_qid)))
             g.add((place_uri, ECRM.P7i_witnessed, creation_manif_uri))
             g.add((creation_manif_uri, ECRM.P7_took_place_at, place_uri))
 
