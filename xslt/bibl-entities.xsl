@@ -4,11 +4,13 @@
     xmlns:ecrm="http://erlangen-crm.org/current/"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    xmlns:local="xyz" exclude-result-prefixes="tei">
+    xmlns:local="xyz" xmlns:owl="http://www.w3.org/2002/07/owl#" exclude-result-prefixes="tei">
 
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
     <xsl:import href="./partials/html_footer.xsl"/>
+
+    <xsl:variable name="works" select="doc('../data/rdf/works.rdf')"/>
 
     <xsl:output method="xhtml" encoding="UTF-8" indent="yes"/>
 
@@ -69,8 +71,6 @@
 
                                                 <!-- work image -->
                                                 <xsl:if test="self::tei:bibl">
-                                                  <xsl:variable name="works"
-                                                  select="doc('../data/rdf/works.rdf')"/>
                                                   <xsl:variable name="expr-iri"
                                                   select="concat('https://sappho-digital.com/expression/', @xml:id)"/>
                                                   <xsl:variable name="img-url" select="
@@ -365,10 +365,40 @@
                         <xsl:value-of select="local:format-partial-date(string(($bdate)[1]))"/>
                         <xsl:if test="$bplace">
                             <xsl:text>, </xsl:text>
-                            <xsl:value-of
-                                select="($bplace/rdfs:label[@xml:lang = 'de'], $bplace/rdfs:label)[1]"
-                            />
+                            
+                            <xsl:variable name="label"
+                                select="string(($bplace/rdfs:label[@xml:lang='de'], $bplace/rdfs:label)[1])"/>
+                            
+                            <xsl:variable name="id"
+                                select="tokenize(string(($bplace/@rdf:about)[1]), '/')[last()]"/>
+                            
+                            <xsl:variable name="iri" select="concat('https://sappho-digital.com/place/', $id)"/>
+                            
+                            <xsl:variable name="hasPlace"
+                                select="exists($works//ecrm:E53_Place[@rdf:about = $iri])"/>
+                            
+                            <xsl:variable name="wd" select="
+                                string((
+                                ($bplace/owl:sameAs[@rdf:resource[contains(., 'wikidata.org')]]/@rdf:resource)[1]
+                                ))"/>
+                            
+                            <xsl:choose>
+                                <xsl:when test="$hasPlace">
+                                    <a href="{$id}.html"><xsl:value-of select="$label"/></a>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:value-of select="$label"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                            
+                            <xsl:if test="$wd">
+                                <a href="{$wd}" target="_blank" rel="noopener">
+                                    <img src="images/wiki.png" alt="Wikidata"
+                                        title="Wikidata-Eintrag öffnen" class="icon"/>
+                                </a>
+                            </xsl:if>
                         </xsl:if>
+                        
                     </p>
                 </xsl:if>
 
@@ -378,10 +408,36 @@
                         <xsl:value-of select="local:format-partial-date(string(($ddate)[1]))"/>
                         <xsl:if test="$dplace">
                             <xsl:text>, </xsl:text>
-                            <xsl:value-of
-                                select="($dplace/rdfs:label[@xml:lang = 'de'], $dplace/rdfs:label)[1]"
-                            />
+                            
+                            <xsl:variable name="label"
+                                select="string(($dplace/rdfs:label[@xml:lang='de'], $dplace/rdfs:label)[1])"/>
+                            <xsl:variable name="id"
+                                select="tokenize(string(($dplace/@rdf:about)[1]), '/')[last()]"/>
+                            <xsl:variable name="iri" select="concat('https://sappho-digital.com/place/', $id)"/>
+                            <xsl:variable name="hasPlace"
+                                select="exists($works//ecrm:E53_Place[@rdf:about = $iri])"/>
+                            <xsl:variable name="wd" select="
+                                string((
+                                ($dplace/owl:sameAs[@rdf:resource[contains(., 'wikidata.org')]]/@rdf:resource)[1]
+                                ))"/>
+                            
+                            <xsl:choose>
+                                <xsl:when test="$hasPlace">
+                                    <a href="{$id}.html"><xsl:value-of select="$label"/></a>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:value-of select="$label"/>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                            
+                            <xsl:if test="$wd">
+                                <a href="{$wd}" target="_blank" rel="noopener">
+                                    <img src="images/wiki.png" alt="Wikidata"
+                                        title="Wikidata-Eintrag öffnen" class="icon"/>
+                                </a>
+                            </xsl:if>
                         </xsl:if>
+                        
                     </p>
                 </xsl:if>
 
@@ -511,11 +567,9 @@
                 </xsl:for-each>
             </p>
 
-            <xsl:if test="$containedWorks/tei:date[@type='published']">
-                <p class="align-left">Publikations-/Aufführungsjahr:
-                    <xsl:for-each-group
-                        select="$containedWorks/tei:date[@type='published']"
-                        group-by="string()">
+            <xsl:if test="$containedWorks/tei:date[@type = 'published']">
+                <p class="align-left">Publikations-/Aufführungsjahr: <xsl:for-each-group
+                        select="$containedWorks/tei:date[@type = 'published']" group-by="string()">
                         <xsl:variable name="date" select="current-grouping-key()"/>
                         <xsl:value-of select="$date"/>
                         <xsl:if test="position() != last()">, </xsl:if>
