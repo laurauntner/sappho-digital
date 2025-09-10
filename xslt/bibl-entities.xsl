@@ -18,7 +18,14 @@
             <xsl:variable name="label">
                 <xsl:choose>
                     <xsl:when test="self::tei:bibl">
-                        <xsl:value-of select="normalize-space(tei:title[1])"/>
+                        <xsl:value-of select="
+                                let $t := normalize-space((tei:title[@type = 'text'][1], tei:title[1])[1])
+                                return
+                                    if ($t != '') then
+                                        $t
+                                    else
+                                        '[??]'
+                                "/>
                     </xsl:when>
                     <xsl:otherwise>
                         <xsl:value-of select="normalize-space(current-group()[1])"/>
@@ -56,55 +63,63 @@
 
                                     <div class="card-body wikidata-layout">
 
-                                        <xsl:if test="self::tei:bibl or self::tei:author or self::tei:pubPlace">
+                                        <xsl:if
+                                            test="self::tei:bibl or self::tei:author or self::tei:pubPlace">
                                             <div class="wikidata-right">
-                                                
+
                                                 <!-- work image -->
                                                 <xsl:if test="self::tei:bibl">
-                                                    <xsl:variable name="works" select="doc('../data/rdf/works.rdf')"/>
-                                                    <xsl:variable name="expr-iri" select="concat('https://sappho-digital.com/expression/', @xml:id)"/>
-                                                    <xsl:variable name="img-url"
-                                                        select="string((
-                                                        $works//*[@rdf:about=$expr-iri]/rdfs:seeAlso/@rdf:resource,
-                                                        $works//*[@rdf:about=$expr-iri]/rdfs:seeAlso/text()
-                                                        )[1])"/>
-                                                    <xsl:if test="$img-url">
-                                                        <a href="{@ref}" target="_blank" rel="noopener">
-                                                            <img class="wikidata-thumb" src="{$img-url}" alt="{normalize-space(tei:title[@type='text'][1])}"/>
-                                                        </a>
-                                                    </xsl:if>
+                                                  <xsl:variable name="works"
+                                                  select="doc('../data/rdf/works.rdf')"/>
+                                                  <xsl:variable name="expr-iri"
+                                                  select="concat('https://sappho-digital.com/expression/', @xml:id)"/>
+                                                  <xsl:variable name="img-url" select="
+                                                            string((
+                                                            $works//*[@rdf:about = $expr-iri]/rdfs:seeAlso/@rdf:resource,
+                                                            $works//*[@rdf:about = $expr-iri]/rdfs:seeAlso/text()
+                                                            )[1])"/>
+                                                  <xsl:if test="$img-url">
+                                                  <a href="{@ref}" target="_blank" rel="noopener">
+                                                  <img class="wikidata-thumb" src="{$img-url}"
+                                                  alt="{normalize-space(tei:title[@type='text'][1])}"
+                                                  />
+                                                  </a>
+                                                  </xsl:if>
                                                 </xsl:if>
-                                                
+
                                                 <!-- author image -->
                                                 <xsl:if test="self::tei:author">
-                                                    <xsl:variable name="authors" select="doc('../data/rdf/authors.rdf')"/>
-                                                    <xsl:variable name="person-iri" select="concat('https://sappho-digital.com/person/', @xml:id)"/>
-                                                    <xsl:variable name="img"
-                                                        select="$authors//ecrm:E38_Image[
-                                                        ecrm:P65_shows_visual_item
-                                                        /ecrm:E36_Visual_Item
-                                                        /ecrm:P138_represents/@rdf:resource = $person-iri
-                                                        ][1]"/>
-                                                    <xsl:variable name="img-url"
-                                                        select="string((
-                                                        $img/rdfs:seeAlso/@rdf:resource,
-                                                        $img/rdfs:seeAlso/text()
-                                                        )[1])"/>
-                                                    <xsl:if test="$img-url">
-                                                        <a href="{@ref}" target="_blank" rel="noopener">
-                                                            <img class="wikidata-thumb" src="{$img-url}" alt="{normalize-space(.)}"/>
-                                                        </a>
-                                                    </xsl:if>
+                                                  <xsl:variable name="authors"
+                                                  select="doc('../data/rdf/authors.rdf')"/>
+                                                  <xsl:variable name="person-iri"
+                                                  select="concat('https://sappho-digital.com/person/', @xml:id)"/>
+                                                  <xsl:variable name="img" select="
+                                                            $authors//ecrm:E38_Image[
+                                                            ecrm:P65_shows_visual_item
+                                                            /ecrm:E36_Visual_Item
+                                                            /ecrm:P138_represents/@rdf:resource = $person-iri
+                                                            ][1]"/>
+                                                  <xsl:variable name="img-url" select="
+                                                            string((
+                                                            $img/rdfs:seeAlso/@rdf:resource,
+                                                            $img/rdfs:seeAlso/text()
+                                                            )[1])"/>
+                                                  <xsl:if test="$img-url">
+                                                  <a href="{@ref}" target="_blank" rel="noopener">
+                                                  <img class="wikidata-thumb" src="{$img-url}"
+                                                  alt="{normalize-space(.)}"/>
+                                                  </a>
+                                                  </xsl:if>
                                                 </xsl:if>
-                                                
+
                                                 <!-- place map -->
                                                 <xsl:if test="self::tei:pubPlace and @ref">
-                                                    <div id="wikidata-map-{@xml:id}"
-                                                        class="wikidata-map-container"
-                                                        data-wikidata="{substring-after(@ref, 'entity/')}"
-                                                        data-type="map"/>
+                                                  <div id="wikidata-map-{@xml:id}"
+                                                  class="wikidata-map-container"
+                                                  data-wikidata="{substring-after(@ref, 'entity/')}"
+                                                  data-type="map"/>
                                                 </xsl:if>
-                                                
+
                                             </div>
                                         </xsl:if>
 
@@ -289,11 +304,24 @@
                 </xsl:choose>
             </p>
             <ul>
-                <xsl:for-each select="$matches[tei:title[@type = 'text']]">
-                    <xsl:sort select="tei:title[@type = 'text']" data-type="text" order="ascending"/>
+                <xsl:for-each select="$matches">
+                    <xsl:sort select="
+                            if (normalize-space((tei:title[@type = 'text'][1], tei:title[1])[1]) != '') then
+                                0
+                            else
+                                1" data-type="number"/>
+                    <xsl:sort
+                        select="lower-case(normalize-space((tei:title[@type = 'text'][1], tei:title[1])[1]))"/>
+                    <xsl:variable name="t"
+                        select="normalize-space((tei:title[@type = 'text'][1], tei:title[1])[1])"/>
                     <li>
                         <a href="{@xml:id}.html">
-                            <xsl:value-of select="tei:title[@type = 'text']"/>
+                            <xsl:choose>
+                                <xsl:when test="$t != ''">
+                                    <xsl:value-of select="$t"/>
+                                </xsl:when>
+                                <xsl:otherwise>[??]</xsl:otherwise>
+                            </xsl:choose>
                         </a>
                     </li>
                 </xsl:for-each>
@@ -364,14 +392,25 @@
                             Datenbank:</xsl:otherwise>
                     </xsl:choose>
                 </p>
-
                 <ul>
-                    <xsl:for-each select="$matches[tei:title[@type = 'text']]">
-                        <xsl:sort select="tei:title[@type = 'text']" data-type="text"
-                            order="ascending"/>
+                    <xsl:for-each select="$matches">
+                        <xsl:sort select="
+                                if (normalize-space((tei:title[@type = 'text'][1], tei:title[1])[1]) != '') then
+                                    0
+                                else
+                                    1" data-type="number"/>
+                        <xsl:sort
+                            select="lower-case(normalize-space((tei:title[@type = 'text'][1], tei:title[1])[1]))"/>
+                        <xsl:variable name="t"
+                            select="normalize-space((tei:title[@type = 'text'][1], tei:title[1])[1])"/>
                         <li>
                             <a href="{@xml:id}.html">
-                                <xsl:value-of select="tei:title[@type = 'text']"/>
+                                <xsl:choose>
+                                    <xsl:when test="$t != ''">
+                                        <xsl:value-of select="$t"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>[??]</xsl:otherwise>
+                                </xsl:choose>
                             </a>
                         </li>
                     </xsl:for-each>
@@ -396,12 +435,25 @@
                     </xsl:choose>
                 </p>
                 <ul>
-                    <xsl:for-each select="$matches[tei:title[@type = 'text']]">
-                        <xsl:sort select="tei:title[@type = 'text']" data-type="text"
-                            order="ascending"/>
+                    <xsl:for-each select="$matches">
+                        <xsl:sort select="
+                                if (normalize-space((tei:title[@type = 'text'][1], tei:title[1])[1]) != '') then
+                                    0
+                                else
+                                    1" data-type="number"/>
+                        <xsl:sort
+                            select="lower-case(normalize-space((tei:title[@type = 'text'][1], tei:title[1])[1]))"/>
+                        <xsl:variable name="t"
+                            select="normalize-space((tei:title[@type = 'text'][1], tei:title[1])[1])"/>
+
                         <li>
                             <a href="{@xml:id}.html">
-                                <xsl:value-of select="tei:title[@type = 'text']"/>
+                                <xsl:choose>
+                                    <xsl:when test="$t != ''">
+                                        <xsl:value-of select="$t"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>[??]</xsl:otherwise>
+                                </xsl:choose>
                             </a>
                         </li>
                     </xsl:for-each>
@@ -411,89 +463,157 @@
     </xsl:template>
 
     <!-- superwork -->
-    <xsl:template match="self::tei:bibl//tei:title[@type = 'work']">
-        <div>
-            <p class="align-left">Typ: Werk</p>
-            <xsl:variable name="currentId" select="@xml:id"/>
-            <xsl:variable name="containedWorks"
-                select="//tei:bibl[tei:bibl/@xml:id = $currentId and tei:title[@type = 'text']]"/>
+    <xsl:template match="tei:bibl[tei:title[@type = 'work']]" priority="2">
+        <xsl:variable name="currentId" select="@xml:id"/>
 
-            <xsl:if test="count($containedWorks) &gt; 0">
-                <p class="align-left"> Enthält: <xsl:for-each select="$containedWorks">
-                        <xsl:sort select="tei:title[@type = 'text']" data-type="text"
-                            order="ascending"/>
-                        <a href="{@xml:id}.html">
-                            <xsl:value-of select="tei:title[@type = 'text']"/>
-                        </a>
-                        <xsl:if test="tei:author"> (<xsl:choose>
-                                <xsl:when test="tei:author[1]/@xml:id">
-                                    <a href="{tei:author[1]/@xml:id}.html">
-                                        <xsl:value-of select="tei:author[1]"/>
-                                    </a>
-                                </xsl:when>
-                                <xsl:otherwise>
+        <xsl:variable name="containedWorks" select="//tei:bibl[tei:bibl/@xml:id = $currentId]"/>
+
+        <xsl:next-match/>
+
+        <xsl:if test="count($containedWorks) &gt; 0">
+            <p class="align-left"> Enthält: <xsl:for-each select="$containedWorks">
+                    <xsl:sort select="
+                            if (normalize-space((tei:title[@type = 'text'][1], tei:title[1])[1]) != '') then
+                                0
+                            else
+                                1" data-type="number"/>
+                    <xsl:sort
+                        select="lower-case(normalize-space((tei:title[@type = 'text'][1], tei:title[1])[1]))"/>
+                    <xsl:variable name="t"
+                        select="normalize-space((tei:title[@type = 'text'][1], tei:title[1])[1])"/>
+                    <a href="{@xml:id}.html">
+                        <xsl:choose>
+                            <xsl:when test="$t != ''"><xsl:value-of select="$t"/></xsl:when>
+                            <xsl:otherwise>[??]</xsl:otherwise>
+                        </xsl:choose>
+                    </a>
+                    <xsl:if test="tei:author">
+                        <xsl:text> (</xsl:text>
+                        <xsl:choose>
+                            <xsl:when test="tei:author[1]/@xml:id">
+                                <a href="{tei:author[1]/@xml:id}.html">
                                     <xsl:value-of select="tei:author[1]"/>
-                                </xsl:otherwise>
-                            </xsl:choose>) </xsl:if>
-                        <xsl:if test="@ref">
-                            <a href="{@ref}" target="_blank">
+                                </a>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="tei:author[1]"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:text>) </xsl:text>
+                    </xsl:if>
+                    <xsl:if test="@ref">
+                        <a href="{@ref}" target="_blank">
+                            <img src="images/wiki.png" alt="Wikidata"
+                                title="Wikidata-Eintrag öffnen" class="icon"/>
+                        </a>
+                    </xsl:if>
+                    <xsl:if test="position() != last()">, </xsl:if>
+                </xsl:for-each>
+            </p>
+
+            <xsl:if test="$containedWorks/tei:date[@type='published']">
+                <p class="align-left">Publikations-/Aufführungsjahr:
+                    <xsl:for-each-group
+                        select="$containedWorks/tei:date[@type='published']"
+                        group-by="string()">
+                        <xsl:variable name="date" select="current-grouping-key()"/>
+                        <xsl:value-of select="$date"/>
+                        <xsl:if test="position() != last()">, </xsl:if>
+                    </xsl:for-each-group>
+                </p>
+            </xsl:if>
+
+            <xsl:if test="$containedWorks/tei:pubPlace">
+                <p class="align-left">Publikations-/Aufführungsort: <xsl:for-each-group
+                        select="$containedWorks/tei:pubPlace" group-by="
+                            if (@xml:id) then
+                                @xml:id
+                            else
+                                lower-case(normalize-space(string(.)))">
+                        <xsl:sort select="
+                                if (normalize-space(string(current-group()[1])) != '') then
+                                    0
+                                else
+                                    1" data-type="number"/>
+                        <xsl:sort select="lower-case(normalize-space(string(current-group()[1])))"/>
+                        <xsl:variable name="id" select="string((current-group()/@xml:id)[1])"/>
+                        <xsl:variable name="ref" select="string((current-group()/@ref)[1])"/>
+                        <xsl:variable name="t" select="normalize-space(string(current-group()[1]))"/>
+                        <xsl:choose>
+                            <xsl:when test="$id">
+                                <a href="{$id}.html">
+                                    <xsl:choose>
+                                        <xsl:when test="$t != ''"><xsl:value-of
+                                                select="current-group()[1]"/></xsl:when>
+                                        <xsl:otherwise>[??]</xsl:otherwise>
+                                    </xsl:choose>
+                                </a>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:choose>
+                                    <xsl:when test="$t != ''"><xsl:value-of
+                                            select="current-group()[1]"/></xsl:when>
+                                    <xsl:otherwise>[??]</xsl:otherwise>
+                                </xsl:choose>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:if test="$ref">
+                            <a href="{$ref}" target="_blank">
                                 <img src="images/wiki.png" alt="Wikidata"
                                     title="Wikidata-Eintrag öffnen" class="icon"/>
                             </a>
                         </xsl:if>
                         <xsl:if test="position() != last()">, </xsl:if>
-                    </xsl:for-each>
+                    </xsl:for-each-group>
                 </p>
-
-                <xsl:if test="$containedWorks/tei:pubPlace">
-                    <p class="align-left">Publikations-/Aufführungsort: <xsl:for-each
-                            select="$containedWorks/tei:pubPlace">
-                            <xsl:choose>
-                                <xsl:when test="@xml:id">
-                                    <a href="{@xml:id}.html">
-                                        <xsl:value-of select="."/>
-                                    </a>
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <xsl:value-of select="."/>
-                                </xsl:otherwise>
-                            </xsl:choose>
-                            <xsl:if test="@ref">
-                                <a href="{@ref}" target="_blank">
-                                    <img src="images/wiki.png" alt="Wikidata"
-                                        title="Wikidata-Eintrag öffnen" class="icon"/>
-                                </a>
-                            </xsl:if>
-                            <xsl:if test="position() != last()">, </xsl:if>
-                        </xsl:for-each>
-                    </p>
-                </xsl:if>
-
-                <xsl:if test="$containedWorks/tei:publisher">
-                    <p class="align-left">Verlag/Druckerei: <xsl:for-each
-                            select="$containedWorks/tei:publisher">
-                            <xsl:choose>
-                                <xsl:when test="@xml:id">
-                                    <a href="{@xml:id}.html">
-                                        <xsl:value-of select="."/>
-                                    </a>
-                                </xsl:when>
-                                <xsl:otherwise>
-                                    <xsl:value-of select="."/>
-                                </xsl:otherwise>
-                            </xsl:choose>
-                            <xsl:if test="@ref">
-                                <a href="{@ref}" target="_blank">
-                                    <img src="images/wiki.png" alt="Wikidata"
-                                        title="Wikidata-Eintrag öffnen" class="icon"/>
-                                </a>
-                            </xsl:if>
-                            <xsl:if test="position() != last()">, </xsl:if>
-                        </xsl:for-each>
-                    </p>
-                </xsl:if>
             </xsl:if>
-        </div>
+
+            <xsl:if test="$containedWorks/tei:publisher">
+                <p class="align-left">Verlag/Druckerei: <xsl:for-each-group
+                        select="$containedWorks/tei:publisher" group-by="
+                            if (@xml:id) then
+                                @xml:id
+                            else
+                                lower-case(normalize-space(string(.)))">
+                        <xsl:sort select="
+                                if (normalize-space(string(current-group()[1])) != '') then
+                                    0
+                                else
+                                    1" data-type="number"/>
+                        <xsl:sort select="lower-case(normalize-space(string(current-group()[1])))"/>
+                        <xsl:variable name="id" select="string((current-group()/@xml:id)[1])"/>
+                        <xsl:variable name="ref" select="string((current-group()/@ref)[1])"/>
+                        <xsl:variable name="t" select="normalize-space(string(current-group()[1]))"/>
+                        <xsl:choose>
+                            <xsl:when test="$id">
+                                <a href="{$id}.html">
+                                    <xsl:choose>
+                                        <xsl:when test="$t != ''"><xsl:value-of
+                                                select="current-group()[1]"/></xsl:when>
+                                        <xsl:otherwise>[??]</xsl:otherwise>
+                                    </xsl:choose>
+                                </a>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:choose>
+                                    <xsl:when test="$t != ''"><xsl:value-of
+                                            select="current-group()[1]"/></xsl:when>
+                                    <xsl:otherwise>[??]</xsl:otherwise>
+                                </xsl:choose>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                        <xsl:if test="$ref">
+                            <a href="{$ref}" target="_blank">
+                                <img src="images/wiki.png" alt="Wikidata"
+                                    title="Wikidata-Eintrag öffnen" class="icon"/>
+                            </a>
+                        </xsl:if>
+                        <xsl:if test="position() != last()">, </xsl:if>
+                    </xsl:for-each-group>
+                </p>
+            </xsl:if>
+
+        </xsl:if>
     </xsl:template>
 
     <!-- functions for dates -->
@@ -508,21 +628,22 @@
     <xsl:function name="local:format-partial-date" as="xs:string?">
         <xsl:param name="lex" as="xs:string?"/>
         <xsl:variable name="s" select="normalize-space($lex)"/>
+
         <xsl:choose>
             <!-- YYYY-MM-DD -->
             <xsl:when test="$s castable as xs:date">
                 <xsl:variable name="d" select="xs:date($s)"/>
-                <xsl:sequence select="
-                        concat(day-from-date($d), '. ', local:month-name-de(month-from-date($d)), ' ', year-from-date($d))
-                        "/>
+                <xsl:sequence
+                    select="concat(day-from-date($d), '. ', local:month-name-de(month-from-date($d)), ' ', year-from-date($d))"
+                />
             </xsl:when>
 
             <!-- YYYY-MM -->
             <xsl:when test="$s castable as xs:gYearMonth">
                 <xsl:variable name="d" select="xs:date(concat($s, '-01'))"/>
-                <xsl:sequence select="
-                        concat(local:month-name-de(month-from-date($d)), ' ', year-from-date($d))
-                        "/>
+                <xsl:sequence
+                    select="concat(local:month-name-de(month-from-date($d)), ' ', year-from-date($d))"
+                />
             </xsl:when>
 
             <!-- YYYY -->
@@ -530,11 +651,37 @@
                 <xsl:sequence select="string($s)"/>
             </xsl:when>
 
+            <!-- YYYY-MM-00 or YYYY-00-.. -->
+            <xsl:when test="matches($s, '^\d{4}-\d{2}-\d{2}$')">
+                <xsl:variable name="y" select="substring($s, 1, 4)"/>
+                <xsl:variable name="m" select="substring($s, 6, 2)"/>
+                <xsl:variable name="d" select="substring($s, 9, 2)"/>
+                <xsl:choose>
+                    <xsl:when test="$m = '00'">
+                        <xsl:sequence select="$y"/>
+                    </xsl:when>
+                    <xsl:when
+                        test="$d = '00' and $m castable as xs:integer and xs:integer($m) ge 1 and xs:integer($m) le 12">
+                        <xsl:sequence select="concat(local:month-name-de(xs:integer($m)), ' ', $y)"
+                        />
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:sequence select="$s"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:when>
+
+            <!-- YYYY-00 -->
+            <xsl:when test="matches($s, '^\d{4}-00$')">
+                <xsl:sequence select="substring($s, 1, 4)"/>
+            </xsl:when>
+
             <!-- Fallback -->
             <xsl:otherwise>
                 <xsl:sequence select="$s"/>
             </xsl:otherwise>
         </xsl:choose>
+
     </xsl:function>
 
 </xsl:stylesheet>
