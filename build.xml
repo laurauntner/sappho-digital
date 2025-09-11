@@ -90,13 +90,22 @@
 
     <!-- bibl entities -->
     <xslt in="./data/lists/sappho-rez_alle.xml"
-        out="${target}/_entities-dummy.html"
+        out="${target}/_bibl-entities-dummy.html"
         style="./xslt/bibl-entities.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
+    
+    <!-- reception entities -->
+    <xslt in="./data/rdf/sappho-reception.rdf"
+        out="${target}/_reception-entities-dummy.html"
+        style="./xslt/reception-entities.xsl">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
 
-    <!-- remove dummy -->
-    <delete file="${target}/_entities-dummy.html"/>
+    <!-- remove dummies -->
+    <delete file="${target}/_bibl-entities-dummy.html"/>
+    <delete file="${target}/_reception-entities-dummy.html"/>
 
 </project>

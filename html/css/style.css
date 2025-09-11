@@ -372,6 +372,26 @@ ul {
     text-align: left;
 }
 
+/* Baumdarstellung SKOS */
+.skos-tree {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skos-tree li {
+  margin: .2rem 0 .2rem 1rem;
+}
+
+.skos-tree details > summary {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.skos-note {
+  margin: .25rem 0 .5rem 1.25rem;
+}
+
+
 #screen-too-small {
   display: none;
   color: #a94442;
