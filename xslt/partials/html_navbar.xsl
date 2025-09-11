@@ -78,6 +78,49 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle custom-dropdown-link" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false"
+                                    >Rezeptionsphänomene</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
+                                            href="vocab.html">Vokabular</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
+                                            href="intertexts.html">Intertextuelle Beziehungen</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
+                                            href="pers-refs.html">Personenreferenzen</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
+                                            href="place-refs.html">Ortsreferenzen</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
+                                            href="work-refs.html">Werkreferenzen</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
+                                            href="text-passages.html">Phrasen</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
+                                            href="motifs.html">Motive</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
+                                            href="topics.html">Themen</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
+                                            href="plots.html">Stoffe</a>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
                 </div>

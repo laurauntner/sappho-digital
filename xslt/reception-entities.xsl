@@ -43,12 +43,14 @@
                                         />
                                     </h1>
                                     <p class="align-left">
-                                        <xsl:value-of select="normalize-space(($cs/skos:scopeNote[@xml:lang='de'], 
-                                            $cs/skos:scopeNote)[1])"/>
+                                        <xsl:value-of select="
+                                                normalize-space(($cs/skos:scopeNote[@xml:lang = 'de'],
+                                                $cs/skos:scopeNote)[1])"
+                                        />
                                     </p>
                                 </div>
 
-                                <div class="card-body">
+                                <div class="card-body skos-wrap">
                                     <!-- Hierarchische, ausklappbare Liste -->
                                     <ul class="skos-tree">
                                         <xsl:for-each select="distinct-values($tops/@rdf:about)">
@@ -73,73 +75,97 @@
 
     <xsl:template name="label">
         <xsl:param name="n"/>
-        <xsl:value-of select="
-                ($n/skos:prefLabel[@xml:lang = 'de'],
-                $n/skos:prefLabel[@xml:lang = 'en'],
-                $n/skos:prefLabel,
-                $n/rdfs:label,
-                $n/@rdf:about)[1]"/>
+        <xsl:variable name="rawLabel"
+            select="($n/skos:prefLabel[@xml:lang='de'],
+            $n/skos:prefLabel[@xml:lang='en'],
+            $n/skos:prefLabel,
+            $n/rdfs:label,
+            $n/@rdf:about)[1]"/>
+        <!-- alles in Klammern (inkl. der Klammern und evtl. folgendem Leerzeichen) entfernen -->
+        <xsl:value-of select="normalize-space(replace($rawLabel, '\s*\([^)]*\)', ''))"/>
     </xsl:template>
 
     <xsl:template name="render-concept">
         <xsl:param name="node" as="element()"/>
         <xsl:param name="open" as="xs:boolean" select="false()"/>
 
-        <!-- Kinder ermitteln -->
         <xsl:variable name="narrowerUris" select="$node/skos:narrower/@rdf:resource"/>
         <xsl:variable name="children" select="$node/ancestor::rdf:RDF/*[@rdf:about = $narrowerUris]"/>
 
         <li>
-            <details>
-                <!-- nur wenn gewünscht geöffnet -->
-                <xsl:if test="$open">
-                    <xsl:attribute name="open">open</xsl:attribute>
-                </xsl:if>
-                <summary>
-                    <xsl:call-template name="label">
-                        <xsl:with-param name="n" select="$node"/>
-                    </xsl:call-template>
-                </summary>
-
-                <!-- Definition/ScopeNote beim Aufklappen sichtbar -->
-                <xsl:if test="$node/skos:definition or $node/skos:scopeNote">
-                    <div class="skos-note">
-                        <xsl:if test="$node/skos:definition">
-                            <p>
-                                <strong>Definition:</strong>
-                                <xsl:text> </xsl:text>
-                                <xsl:value-of select="normalize-space(($node/skos:definition[@xml:lang='de'], 
-                                    $node/skos:definition)[1])"/>
-                            </p>
+            <xsl:choose>
+                <!-- Hat Kinder: nutze <details>/<summary> -->
+                <xsl:when test="exists($children)">
+                    <details>
+                        <xsl:if test="$open">
+                            <xsl:attribute name="open">open</xsl:attribute>
                         </xsl:if>
-                        <xsl:if test="$node/skos:scopeNote">
-                            <p>
-                                <xsl:value-of select="normalize-space(($node/skos:scopeNote[@xml:lang='de'], 
-                                    $node/skos:scopeNote)[1])"/>
-                            </p>
-                        </xsl:if>
-                    </div>
-                </xsl:if>
-
-                <!-- Kinder rekursiv -->
-                <xsl:if test="exists($children)">
-                    <ul class="skos-tree">
-                        <xsl:for-each select="$children">
-                            <xsl:sort select="
-                                    lower-case((skos:prefLabel[@xml:lang = 'de'],
-                                    skos:prefLabel[@xml:lang = 'en'],
-                                    skos:prefLabel,
-                                    rdfs:label,
-                                    @rdf:about)[1])"/>
-                            <xsl:call-template name="render-concept">
-                                <xsl:with-param name="node" select="."/>
-                                <!-- Unterebenen standardmäßig zu -->
-                                <xsl:with-param name="open" select="false()"/>
+                        <summary class="has-children">
+                            <xsl:call-template name="label">
+                                <xsl:with-param name="n" select="$node"/>
                             </xsl:call-template>
-                        </xsl:for-each>
-                    </ul>
-                </xsl:if>
-            </details>
+                        </summary>
+
+                        <!-- Definition/ScopeNote -->
+                        <div class="skos-children">
+                            <xsl:if test="$node/skos:definition or $node/skos:scopeNote">
+                                <div class="skos-note">
+                                    <xsl:if test="$node/skos:definition">
+                                        <p class="align-left smaller-text breakable"
+                                                ><strong>Definition:</strong>
+                                            <xsl:text> </xsl:text>
+                                            <xsl:value-of select="
+                                                    normalize-space(($node/skos:definition[@xml:lang = 'de'],
+                                                    $node/skos:definition)[1])"
+                                            />
+                                        </p>
+                                    </xsl:if>
+                                    <xsl:if test="$node/skos:scopeNote">
+                                        <p class="align-left smaller-text breakable">
+                                            <xsl:value-of select="
+                                                    normalize-space(($node/skos:scopeNote[@xml:lang = 'de'],
+                                                    $node/skos:scopeNote)[1])"
+                                            />
+                                        </p>
+                                    </xsl:if>
+                                </div>
+                            </xsl:if>
+
+                            <!-- Kinder -->
+                            <ul class="skos-tree">
+                                <xsl:for-each select="$children">
+                                    <xsl:sort select="
+                                            lower-case((skos:prefLabel[@xml:lang = 'de'],
+                                            skos:prefLabel[@xml:lang = 'en'],
+                                            skos:prefLabel, rdfs:label, @rdf:about)[1])"/>
+                                    <xsl:call-template name="render-concept">
+                                        <xsl:with-param name="node" select="."/>
+                                    </xsl:call-template>
+                                </xsl:for-each>
+                            </ul>
+                        </div>
+                    </details>
+                </xsl:when>
+
+                <!-- Keine Kinder: nur Text -->
+                <xsl:otherwise>
+                    <span class="leaf">
+                        <xsl:call-template name="label">
+                            <xsl:with-param name="n" select="$node"/>
+                        </xsl:call-template>
+                    </span>
+
+                    <xsl:if test="$node/skos:definition or $node/skos:scopeNote">
+                        <div class="skos-note">
+                            <xsl:value-of select="
+                                    normalize-space(($node/skos:definition[@xml:lang = 'de'],
+                                    $node/skos:scopeNote[@xml:lang = 'de'],
+                                    $node/skos:definition,
+                                    $node/skos:scopeNote)[1])"/>
+                        </div>
+                    </xsl:if>
+                </xsl:otherwise>
+            </xsl:choose>
         </li>
     </xsl:template>
 

@@ -308,7 +308,7 @@ table.dataTable thead th.sorting_desc::after {
 #tocTable th:nth-child(2),
 #tocTable td:nth-child(2), /* Publikationsjahr */
 #tocTable th:last-child,
-#tocTable td:last-child    /* Digitalisat */
+#tocTable td:last-child /* Digitalisat */
 {
     width: 5%;
 }
@@ -347,7 +347,7 @@ table {
 }
 
 .export-only {
-  display: none !important;
+    display: none !important;
 }
 
 th,
@@ -372,36 +372,114 @@ ul {
     text-align: left;
 }
 
-/* Baumdarstellung SKOS */
+/* SKOS */
 .skos-tree {
-  list-style: none;
+    list-style: none;
+    padding-left: 0;
+}
+.skos-tree li {
+    margin: .2rem 0 .2rem 1rem;
+}
+
+.skos-wrap .skos-tree,
+.skos-wrap .skos-tree ul { 
+  width: 100%; 
+  list-style: none; 
   padding-left: 0;
 }
-
-.skos-tree li {
-  margin: .2rem 0 .2rem 1rem;
+.skos-wrap .skos-tree li { 
+  margin: .2rem 0 .2rem 1rem; 
 }
 
-.skos-tree details > summary {
-  cursor: pointer;
-  font-weight: 600;
+.card-body.skos-wrap {
+  text-align: left;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
 }
 
-.skos-note {
-  margin: .25rem 0 .5rem 1.25rem;
+.breakable {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
+@supports not (overflow-wrap: anywhere) {
+  .breakable { overflow-wrap: break-word; }
+}
+
+.skos-wrap details { 
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+.skos-wrap details > summary { 
+  display: flex;
+  align-items: baseline;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+.skos-wrap details > summary::-webkit-details-marker { 
+  display: none; 
+}
+
+.skos-wrap details > summary.has-children::before {
+  content: "▶";
+  display: inline-block;
+  flex: 0 0 1rem;
+  width: 1rem;
+  margin-right: .25rem;
+  color: rgba(94, 23, 235, 1);
+  transition: transform .2s ease;
+}
+.skos-wrap details[open] > summary.has-children::before {
+  transform: rotate(90deg);
+}
+
+.skos-wrap .skos-children,
+.skos-wrap .leaf { 
+  display: block; 
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.skos-wrap .skos-children {
+  opacity: 0;
+  transform: translateY(-2px);
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+.skos-wrap details[open] > .skos-children {
+  opacity: 1;
+  transform: none;
+}
+
+body.page {
+  overflow: hidden;
+}
+
+body.page #page {
+  height: 100vh;
+  overflow-y: scroll;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
 
 #screen-too-small {
-  display: none;
-  color: #a94442;
-  background-color: #f2dede;
-  border: 1px solid #ebccd1;
-  padding: 15px;
-  margin: 20px auto;
-  border-radius: 4px;
-  text-align: center;
-  max-width: 600px;
+    display: none;
+    color: #a94442;
+    background-color: #f2dede;
+    border: 1px solid #ebccd1;
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 4px;
+    text-align: center;
+    max-width: 600px;
 }
 
 li {
@@ -465,22 +543,22 @@ img.icon {
 
 
 .wikidata-layout {
-display: grid;
-grid-template-columns: 1fr 300px;
-gap: 2rem;
-align-items: start;
-margin-top: 0 !important;
-clear: none !important;
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 2rem;
+    align-items: start;
+    margin-top: 0 !important;
+    clear: none !important;
 }
 
 .wikidata-left {
-grid-column: 1;
-grid-row: 1;
+    grid-column: 1;
+    grid-row: 1;
 }
 
 .wikidata-right {
-grid-column: 2;
-grid-row: 1;
+    grid-column: 2;
+    grid-row: 1;
 }
 
 .wikidata-thumb,
@@ -571,4 +649,5 @@ grid-row: 1;
 @font-face {
     font-family: 'Geist';
     src: url('../fonts/geist-sans-latin-200-normal.woff2') format('woff2');
+    font-display: swap;
 }
