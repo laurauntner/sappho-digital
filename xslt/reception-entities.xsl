@@ -340,7 +340,7 @@
                                                                                         ))
                                                                                         )"
                                                   order="descending" data-type="number"/>
-                                                  <xsl:if test="position() le 10">
+                                                  <!--<xsl:if test="position() le 10">-->
                                                   <xsl:variable name="rel"
                                                   select="key('by-about', (current-group()[1]/@about)[1], $receptionEntities)"/>
                                                   <xsl:variable name="sim"
@@ -514,7 +514,7 @@
 
                                                   </details>
                                                   </li>
-                                                  </xsl:if>
+                                                  <!--</xsl:if>-->
                                                   </xsl:for-each-group>
                                                   </ul>
                                                   </div>
@@ -558,7 +558,7 @@
                                                                                         ))
                                                                                         )"
                                                   order="descending" data-type="number"/>
-                                                  <xsl:if test="position() le 10">
+                                                  <!--<xsl:if test="position() le 10">-->
                                                   <xsl:variable name="rel"
                                                   select="key('by-about', (current-group()[1]/@about)[1], $receptionEntities)"/>
                                                   <xsl:variable name="sim"
@@ -732,7 +732,7 @@
 
                                                   </details>
                                                   </li>
-                                                  </xsl:if>
+                                                  <!--</xsl:if>-->
                                                   </xsl:for-each-group>
                                                   </ul>
                                                   </div>
@@ -776,7 +776,7 @@
                                                                                         ))
                                                                                         )"
                                                   order="descending" data-type="number"/>
-                                                  <xsl:if test="position() le 10">
+                                                  <!--<xsl:if test="position() le 10">-->
                                                   <xsl:variable name="rel"
                                                   select="key('by-about', (current-group()[1]/@about)[1], $receptionEntities)"/>
                                                   <xsl:variable name="sim"
@@ -950,7 +950,7 @@
 
                                                   </details>
                                                   </li>
-                                                  </xsl:if>
+                                                  <!--</xsl:if>-->
                                                   </xsl:for-each-group>
                                                   </ul>
                                                   </div>
@@ -1081,11 +1081,43 @@
                                         <xsl:for-each select="$u_persons">
                                             <xsl:sort select="lower-case(u:label(.))"/>
                                             <li>
-                                                <span class="leaf">
+                                                <xsl:variable name="this" select="."/>
+                                                <xsl:variable name="occRels"
+                                                  select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
+                                                <xsl:variable name="occTexts"
+                                                  select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
+                                                <xsl:choose>
+                                                  <xsl:when test="exists($occTexts)">
+                                                  <details>
+                                                  <summary class="has-children">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  </summary>
+                                                  <div class="skos-children">
+                                                  <ul class="skos-tree">
+                                                  <xsl:for-each select="$occTexts">
+                                                  <xsl:sort select="lower-case(u:label(.))"/>
+                                                  <li>
+                                                  <span class="leaf indent">
                                                   <xsl:call-template name="label-of-uri">
                                                   <xsl:with-param name="uri" select="."/>
                                                   </xsl:call-template>
-                                                </span>
+                                                  </span>
+                                                  </li>
+                                                  </xsl:for-each>
+                                                  </ul>
+                                                  </div>
+                                                  </details>
+                                                  </xsl:when>
+                                                  <xsl:otherwise>
+                                                  <span class="leaf">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  </span>
+                                                  </xsl:otherwise>
+                                                </xsl:choose>
                                             </li>
                                         </xsl:for-each>
                                     </ul>
@@ -1121,11 +1153,43 @@
                                         <xsl:for-each select="$u_places">
                                             <xsl:sort select="lower-case(u:label(.))"/>
                                             <li>
-                                                <span class="leaf">
+                                                <xsl:variable name="this" select="."/>
+                                                <xsl:variable name="occRels"
+                                                  select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
+                                                <xsl:variable name="occTexts"
+                                                  select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
+                                                <xsl:choose>
+                                                  <xsl:when test="exists($occTexts)">
+                                                  <details>
+                                                  <summary class="has-children">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  </summary>
+                                                  <div class="skos-children">
+                                                  <ul class="skos-tree">
+                                                  <xsl:for-each select="$occTexts">
+                                                  <xsl:sort select="lower-case(u:label(.))"/>
+                                                  <li>
+                                                  <span class="leaf indent">
                                                   <xsl:call-template name="label-of-uri">
                                                   <xsl:with-param name="uri" select="."/>
                                                   </xsl:call-template>
-                                                </span>
+                                                  </span>
+                                                  </li>
+                                                  </xsl:for-each>
+                                                  </ul>
+                                                  </div>
+                                                  </details>
+                                                  </xsl:when>
+                                                  <xsl:otherwise>
+                                                  <span class="leaf">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  </span>
+                                                  </xsl:otherwise>
+                                                </xsl:choose>
                                             </li>
                                         </xsl:for-each>
                                     </ul>
@@ -1161,11 +1225,43 @@
                                         <xsl:for-each select="$u_works">
                                             <xsl:sort select="lower-case(u:label(.))"/>
                                             <li>
-                                                <span class="leaf">
+                                                <xsl:variable name="this" select="."/>
+                                                <xsl:variable name="occRels"
+                                                  select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
+                                                <xsl:variable name="occTexts"
+                                                  select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
+                                                <xsl:choose>
+                                                  <xsl:when test="exists($occTexts)">
+                                                  <details>
+                                                  <summary class="has-children">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  </summary>
+                                                  <div class="skos-children">
+                                                  <ul class="skos-tree">
+                                                  <xsl:for-each select="$occTexts">
+                                                  <xsl:sort select="lower-case(u:label(.))"/>
+                                                  <li>
+                                                  <span class="leaf indent">
                                                   <xsl:call-template name="label-of-uri">
                                                   <xsl:with-param name="uri" select="."/>
                                                   </xsl:call-template>
-                                                </span>
+                                                  </span>
+                                                  </li>
+                                                  </xsl:for-each>
+                                                  </ul>
+                                                  </div>
+                                                  </details>
+                                                  </xsl:when>
+                                                  <xsl:otherwise>
+                                                  <span class="leaf">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  </span>
+                                                  </xsl:otherwise>
+                                                </xsl:choose>
                                             </li>
                                         </xsl:for-each>
                                     </ul>
@@ -1183,7 +1279,7 @@
             <html lang="de">
                 <head>
                     <xsl:call-template name="html_head">
-                        <xsl:with-param name="html_title" select="'Textpassagen'"/>
+                        <xsl:with-param name="html_title" select="'Phrasen'"/>
                     </xsl:call-template>
                 </head>
                 <body class="page">
@@ -1201,11 +1297,43 @@
                                         <xsl:for-each select="$u_phrases">
                                             <xsl:sort select="lower-case(u:label(.))"/>
                                             <li>
-                                                <span class="leaf">
+                                                <xsl:variable name="this" select="."/>
+                                                <xsl:variable name="occRels"
+                                                  select="$rels[intro:R24_hasRelatedEntity/@rdf:resource = $this]"/>
+                                                <xsl:variable name="occTexts"
+                                                  select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
+                                                <xsl:choose>
+                                                  <xsl:when test="exists($occTexts)">
+                                                  <details>
+                                                  <summary class="has-children">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  </summary>
+                                                  <div class="skos-children">
+                                                  <ul class="skos-tree">
+                                                  <xsl:for-each select="$occTexts">
+                                                  <xsl:sort select="lower-case(u:label(.))"/>
+                                                  <li>
+                                                  <span class="leaf indent">
                                                   <xsl:call-template name="label-of-uri">
                                                   <xsl:with-param name="uri" select="."/>
                                                   </xsl:call-template>
-                                                </span>
+                                                  </span>
+                                                  </li>
+                                                  </xsl:for-each>
+                                                  </ul>
+                                                  </div>
+                                                  </details>
+                                                  </xsl:when>
+                                                  <xsl:otherwise>
+                                                  <span class="leaf">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  </span>
+                                                  </xsl:otherwise>
+                                                </xsl:choose>
                                             </li>
                                         </xsl:for-each>
                                     </ul>
@@ -1241,11 +1369,43 @@
                                         <xsl:for-each select="$u_motifs">
                                             <xsl:sort select="lower-case(u:label(.))"/>
                                             <li>
-                                                <span class="leaf">
+                                                <xsl:variable name="this" select="."/>
+                                                <xsl:variable name="occRels"
+                                                  select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
+                                                <xsl:variable name="occTexts"
+                                                  select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
+                                                <xsl:choose>
+                                                  <xsl:when test="exists($occTexts)">
+                                                  <details>
+                                                  <summary class="has-children">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  </summary>
+                                                  <div class="skos-children">
+                                                  <ul class="skos-tree">
+                                                  <xsl:for-each select="$occTexts">
+                                                  <xsl:sort select="lower-case(u:label(.))"/>
+                                                  <li>
+                                                  <span class="leaf indent">
                                                   <xsl:call-template name="label-of-uri">
                                                   <xsl:with-param name="uri" select="."/>
                                                   </xsl:call-template>
-                                                </span>
+                                                  </span>
+                                                  </li>
+                                                  </xsl:for-each>
+                                                  </ul>
+                                                  </div>
+                                                  </details>
+                                                  </xsl:when>
+                                                  <xsl:otherwise>
+                                                  <span class="leaf">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  </span>
+                                                  </xsl:otherwise>
+                                                </xsl:choose>
                                             </li>
                                         </xsl:for-each>
                                     </ul>
@@ -1281,11 +1441,43 @@
                                         <xsl:for-each select="$u_topics">
                                             <xsl:sort select="lower-case(u:label(.))"/>
                                             <li>
-                                                <span class="leaf">
+                                                <xsl:variable name="this" select="."/>
+                                                <xsl:variable name="occRels"
+                                                  select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
+                                                <xsl:variable name="occTexts"
+                                                  select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
+                                                <xsl:choose>
+                                                  <xsl:when test="exists($occTexts)">
+                                                  <details>
+                                                  <summary class="has-children">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  </summary>
+                                                  <div class="skos-children">
+                                                  <ul class="skos-tree">
+                                                  <xsl:for-each select="$occTexts">
+                                                  <xsl:sort select="lower-case(u:label(.))"/>
+                                                  <li>
+                                                  <span class="leaf indent">
                                                   <xsl:call-template name="label-of-uri">
                                                   <xsl:with-param name="uri" select="."/>
                                                   </xsl:call-template>
-                                                </span>
+                                                  </span>
+                                                  </li>
+                                                  </xsl:for-each>
+                                                  </ul>
+                                                  </div>
+                                                  </details>
+                                                  </xsl:when>
+                                                  <xsl:otherwise>
+                                                  <span class="leaf">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  </span>
+                                                  </xsl:otherwise>
+                                                </xsl:choose>
                                             </li>
                                         </xsl:for-each>
                                     </ul>
@@ -1321,11 +1513,43 @@
                                         <xsl:for-each select="$u_plots">
                                             <xsl:sort select="lower-case(u:label(.))"/>
                                             <li>
-                                                <span class="leaf">
+                                                <xsl:variable name="this" select="."/>
+                                                <xsl:variable name="occRels"
+                                                  select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
+                                                <xsl:variable name="occTexts"
+                                                  select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
+                                                <xsl:choose>
+                                                  <xsl:when test="exists($occTexts)">
+                                                  <details>
+                                                  <summary class="has-children">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  </summary>
+                                                  <div class="skos-children">
+                                                  <ul class="skos-tree">
+                                                  <xsl:for-each select="$occTexts">
+                                                  <xsl:sort select="lower-case(u:label(.))"/>
+                                                  <li>
+                                                  <span class="leaf indent">
                                                   <xsl:call-template name="label-of-uri">
                                                   <xsl:with-param name="uri" select="."/>
                                                   </xsl:call-template>
-                                                </span>
+                                                  </span>
+                                                  </li>
+                                                  </xsl:for-each>
+                                                  </ul>
+                                                  </div>
+                                                  </details>
+                                                  </xsl:when>
+                                                  <xsl:otherwise>
+                                                  <span class="leaf">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  </span>
+                                                  </xsl:otherwise>
+                                                </xsl:choose>
                                             </li>
                                         </xsl:for-each>
                                     </ul>
