@@ -435,6 +435,17 @@ ul {
   color: rgba(94, 23, 235, 1);
   transition: transform .2s ease;
 }
+
+.skos-wrap .leaf::before {
+  content: "▶";
+  display: inline-block;
+  flex: 0 0 1rem;
+  width: 1rem;
+  margin-right: .25rem;
+  color: rgba(94, 23, 235, 1);
+  transition: transform .2s ease;
+}
+
 .skos-wrap details[open] > summary.has-children::before {
   transform: rotate(90deg);
 }
@@ -446,6 +457,10 @@ ul {
   max-width: 100%;
   min-width: 0;
   box-sizing: border-box;
+}
+
+.indent {
+    padding-left: 1.5rem;
 }
 
 .skos-wrap .skos-children {
