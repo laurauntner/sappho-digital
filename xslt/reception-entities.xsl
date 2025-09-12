@@ -40,23 +40,18 @@
                             <div class="card">
                                 <div class="card-header">
                                     <h1>
-                                        <xsl:value-of select="
-                                                ($cs/skos:prefLabel[@xml:lang = 'de'],
-                                                $cs/skos:prefLabel[@xml:lang = 'en'],
-                                                $cs/skos:prefLabel,
-                                                'Vokabular')[1]"
+                                        <xsl:value-of
+                                            select="($cs/skos:prefLabel[@xml:lang = 'de'], $cs/skos:prefLabel[@xml:lang = 'en'], $cs/skos:prefLabel, 'Vokabular')[1]"
                                         />
                                     </h1>
                                     <p class="align-left">
-                                        <xsl:value-of select="
-                                                normalize-space(($cs/skos:scopeNote[@xml:lang = 'de'],
-                                                $cs/skos:scopeNote)[1])"
+                                        <xsl:value-of
+                                            select="normalize-space(($cs/skos:scopeNote[@xml:lang = 'de'], $cs/skos:scopeNote)[1])"
                                         />
                                     </p>
                                 </div>
 
                                 <div class="card-body skos-wrap">
-                                    <!-- list/tree -->
                                     <ul class="skos-tree">
                                         <xsl:for-each select="distinct-values($tops/@rdf:about)">
                                             <xsl:variable name="top"
@@ -73,21 +68,17 @@
                         <xsl:call-template name="html_footer"/>
                     </div>
                 </body>
-
             </html>
         </xsl:result-document>
+
         <xsl:apply-templates select="/" mode="intertexts"/>
         <xsl:apply-templates select="/" mode="features"/>
     </xsl:template>
 
     <xsl:template name="label">
         <xsl:param name="n"/>
-        <xsl:variable name="rawLabel" select="
-                ($n/skos:prefLabel[@xml:lang = 'de'],
-                $n/skos:prefLabel[@xml:lang = 'en'],
-                $n/skos:prefLabel,
-                $n/rdfs:label,
-                $n/@rdf:about)[1]"/>
+        <xsl:variable name="rawLabel"
+            select="($n/skos:prefLabel[@xml:lang = 'de'], $n/skos:prefLabel[@xml:lang = 'en'], $n/skos:prefLabel, $n/rdfs:label, $n/@rdf:about)[1]"/>
         <!-- Liebe (Motiv) -> Liebe -->
         <xsl:value-of select="normalize-space(replace($rawLabel, '\s*\([^)]*\)', ''))"/>
     </xsl:template>
@@ -101,7 +92,6 @@
 
         <li>
             <xsl:choose>
-                <!-- children -->
                 <xsl:when test="exists($children)">
                     <details>
                         <xsl:if test="$open">
@@ -113,7 +103,6 @@
                             </xsl:call-template>
                         </summary>
 
-                        <!-- definition/scopeNote -->
                         <div class="skos-children">
                             <xsl:if test="$node/skos:definition or $node/skos:scopeNote">
                                 <div class="skos-note">
@@ -121,30 +110,25 @@
                                         <p class="align-left smaller-text breakable"
                                                 ><strong>Definition:</strong>
                                             <xsl:text> </xsl:text>
-                                            <xsl:value-of select="
-                                                    normalize-space(($node/skos:definition[@xml:lang = 'de'],
-                                                    $node/skos:definition)[1])"
+                                            <xsl:value-of
+                                                select="normalize-space(($node/skos:definition[@xml:lang = 'de'], $node/skos:definition)[1])"
                                             />
                                         </p>
                                     </xsl:if>
                                     <xsl:if test="$node/skos:scopeNote">
                                         <p class="align-left smaller-text breakable">
-                                            <xsl:value-of select="
-                                                    normalize-space(($node/skos:scopeNote[@xml:lang = 'de'],
-                                                    $node/skos:scopeNote)[1])"
+                                            <xsl:value-of
+                                                select="normalize-space(($node/skos:scopeNote[@xml:lang = 'de'], $node/skos:scopeNote)[1])"
                                             />
                                         </p>
                                     </xsl:if>
                                 </div>
                             </xsl:if>
 
-                            <!-- children -->
                             <ul class="skos-tree">
                                 <xsl:for-each select="$children">
-                                    <xsl:sort select="
-                                            lower-case((skos:prefLabel[@xml:lang = 'de'],
-                                            skos:prefLabel[@xml:lang = 'en'],
-                                            skos:prefLabel, rdfs:label, @rdf:about)[1])"/>
+                                    <xsl:sort
+                                        select="lower-case((skos:prefLabel[@xml:lang = 'de'], skos:prefLabel[@xml:lang = 'en'], skos:prefLabel, rdfs:label, @rdf:about)[1])"/>
                                     <xsl:call-template name="render-concept">
                                         <xsl:with-param name="node" select="."/>
                                     </xsl:call-template>
@@ -153,8 +137,6 @@
                         </div>
                     </details>
                 </xsl:when>
-
-                <!-- no children -->
                 <xsl:otherwise>
                     <span class="leaf">
                         <xsl:call-template name="label">
@@ -164,16 +146,242 @@
 
                     <xsl:if test="$node/skos:definition or $node/skos:scopeNote">
                         <div class="skos-note">
-                            <xsl:value-of select="
-                                    normalize-space(($node/skos:definition[@xml:lang = 'de'],
-                                    $node/skos:scopeNote[@xml:lang = 'de'],
-                                    $node/skos:definition,
-                                    $node/skos:scopeNote)[1])"/>
+                            <xsl:value-of
+                                select="normalize-space(($node/skos:definition[@xml:lang = 'de'], $node/skos:scopeNote[@xml:lang = 'de'], $node/skos:definition, $node/skos:scopeNote)[1])"
+                            />
                         </div>
                     </xsl:if>
                 </xsl:otherwise>
             </xsl:choose>
         </li>
+    </xsl:template>
+
+    <!-- label helpers -->
+
+    <xsl:template name="label-of-uri">
+        <xsl:param name="uri" as="xs:string?"/>
+        <xsl:choose>
+            <xsl:when test="exists($uri) and normalize-space($uri) != ''">
+                <xsl:variable name="n" select="key('by-about', $uri, $receptionEntities)"/>
+                <xsl:variable name="raw" select="normalize-space(($n/rdfs:label, $n/@rdf:about)[1])"/>
+
+                <!-- translate and manipulate labels -->
+                <xsl:variable name="t1"
+                    select="replace($raw, '^\s*intertextual relation(ship)? between\s+', 'Intertextuelle Beziehung zwischen ', 'i')"/>
+                <xsl:variable name="t2" select="replace($t1, '\s+and\s+', ' und ')"/>
+                <xsl:variable name="t3" select="replace($t2, 'Expression of\s+', '', 'i')"/>
+                <xsl:variable name="t4"
+                    select="replace($t3, '»\s*(Fragment[^«»]*Voigt)\s*«', '$1', 'i')"/>
+                <xsl:variable name="t5"
+                    select="replace($t4, '^\s*(Motif|Topic|Plot|Textpassage)\s*:\s*', '', 'i')"/>
+                <xsl:variable name="t6"
+                    select="replace($t5, '\s*\((place|person|work)\)\s*', '', 'i')"/>
+                <xsl:variable name="t7" select="replace($t6, 'Reference to ', '', 'i')"/>
+                <xsl:value-of select="normalize-space($t7)"/>
+            </xsl:when>
+            <xsl:otherwise>–</xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
+    <xsl:function name="u:label" as="xs:string">
+        <xsl:param name="uri" as="xs:string"/>
+        <xsl:variable name="n" select="key('by-about', $uri, $receptionEntities)"/>
+        <xsl:variable name="raw" select="normalize-space(($n/rdfs:label, $n/@rdf:about)[1])"/>
+        <xsl:variable name="t1"
+            select="replace($raw, '^\s*intertextual relation(ship)? between\s+', 'Intertextuelle Beziehung zwischen ', 'i')"/>
+        <xsl:variable name="t2" select="replace($t1, '\s+and\s+', ' und ')"/>
+        <xsl:variable name="t3" select="replace($t2, 'Expression of\s+', '', 'i')"/>
+        <xsl:variable name="t4" select="replace($t3, '»\s*(Fragment[^«»]*Voigt)\s*«', '$1', 'i')"/>
+        <xsl:variable name="t5"
+            select="replace($t4, '^\s*(Motif|Topic|Plot|Textpassage)\s*:\s*', '', 'i')"/>
+        <xsl:variable name="t6" select="replace($t5, '\s*\((place|person|work)\)\s*', '', 'i')"/>
+        <xsl:variable name="t7" select="replace($t6, 'Reference to ', '', 'i')"/>
+        <xsl:sequence select="normalize-space($t7)"/>
+    </xsl:function>
+
+    <xsl:function name="u:sgpl" as="xs:string">
+        <xsl:param name="n" as="xs:integer"/>
+        <xsl:param name="sg" as="xs:string"/>
+        <xsl:param name="pl" as="xs:string"/>
+        <xsl:sequence select="
+                if ($n = 1) then
+                    $sg
+                else
+                    $pl"/>
+    </xsl:function>
+
+    <!-- helper functions for intertexts -->
+
+    <!-- return distinct union of all common features in a relation -->
+    <xsl:function name="u:common-uris" as="xs:string*">
+        <xsl:param name="rel" as="element(intro:INT31_IntertextualRelation)"/>
+        <xsl:variable name="sim" select="$rel/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource"/>
+        <xsl:variable name="phr" select="$rel/intro:R24_hasRelatedEntity/@rdf:resource"/>
+        <xsl:sequence select="
+                distinct-values((
+                data($sim[matches(., '/feature/person_ref/')]),
+                data($sim[matches(., '/feature/place_ref/')]),
+                data($sim[matches(., '/feature/work_ref/') or matches(., '/actualization/work_ref/')]),
+                data($phr[matches(., '/textpassage/phrase_')]),
+                data($sim[matches(., '/feature/motif/')]),
+                data($sim[matches(., '/feature/topic/')]),
+                data($sim[matches(., '/feature/plot/')])
+                ))
+                "/>
+    </xsl:function>
+
+    <!-- return number of unique common features for a relation by @about -->
+    <xsl:function name="u:common-count" as="xs:integer">
+        <xsl:param name="about" as="xs:string"/>
+        <xsl:variable name="rel" select="key('by-about', $about, $receptionEntities)"/>
+        <xsl:sequence select="count(u:common-uris($rel))"/>
+    </xsl:function>
+
+    <!-- get items of one kind for rendering (motifs/topics/plots/persons/places/works/phrases) -->
+    <xsl:function name="u:commons" as="xs:string*">
+        <xsl:param name="rel" as="element(intro:INT31_IntertextualRelation)"/>
+        <xsl:param name="kind" as="xs:string"/>
+        <xsl:variable name="sim" select="$rel/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource"/>
+        <xsl:variable name="phr" select="$rel/intro:R24_hasRelatedEntity/@rdf:resource"/>
+        <xsl:choose>
+            <xsl:when test="$kind = 'motifs'">
+                <xsl:sequence select="distinct-values(data($sim[matches(., '/feature/motif/')]))"/>
+            </xsl:when>
+            <xsl:when test="$kind = 'topics'">
+                <xsl:sequence select="distinct-values(data($sim[matches(., '/feature/topic/')]))"/>
+            </xsl:when>
+            <xsl:when test="$kind = 'plots'">
+                <xsl:sequence select="distinct-values(data($sim[matches(., '/feature/plot/')]))"/>
+            </xsl:when>
+            <xsl:when test="$kind = 'persons'">
+                <xsl:sequence
+                    select="distinct-values(data($sim[matches(., '/feature/person_ref/')]))"/>
+            </xsl:when>
+            <xsl:when test="$kind = 'places'">
+                <xsl:sequence
+                    select="distinct-values(data($sim[matches(., '/feature/place_ref/')]))"/>
+            </xsl:when>
+            <xsl:when test="$kind = 'works'">
+                <xsl:sequence
+                    select="distinct-values(data($sim[matches(., '/feature/work_ref/') or matches(., '/actualization/work_ref/')]))"
+                />
+            </xsl:when>
+            <xsl:when test="$kind = 'phrases'">
+                <xsl:sequence
+                    select="distinct-values(data($phr[matches(., '/textpassage/phrase_')]))"/>
+            </xsl:when>
+            <xsl:otherwise/>
+        </xsl:choose>
+    </xsl:function>
+
+    <!-- true if any pair in a group has > 0 commonalities -->
+    <xsl:function name="u:any-common" as="xs:boolean">
+        <xsl:param name="pairs" as="element(pair)*"/>
+        <xsl:sequence select="
+                some $p in $pairs
+                    satisfies u:common-count(string($p/@about)) gt 0"/>
+    </xsl:function>
+
+    <!-- emit one category line if there are items -->
+    <xsl:template name="emit-kind-list">
+        <xsl:param name="rel" as="element(intro:INT31_IntertextualRelation)"/>
+        <xsl:param name="kind" as="xs:string"/>
+        <xsl:param name="sg" as="xs:string"/>
+        <xsl:param name="pl" as="xs:string"/>
+
+        <xsl:variable name="items" select="u:commons($rel, $kind)"/>
+        <xsl:variable name="n" select="count($items)"/>
+        <xsl:if test="$n &gt; 0">
+            <div class="smaller-text indent">
+                <strong>
+                    <xsl:value-of select="u:sgpl($n, $sg, $pl)"/>
+                </strong>
+                <xsl:text> </xsl:text>
+                <xsl:for-each select="$items">
+                    <xsl:sort select="lower-case(u:label(.))"/>
+                    <xsl:value-of select="u:label(.)"/>
+                    <xsl:if test="position() != last()">, </xsl:if>
+                </xsl:for-each>
+            </div>
+        </xsl:if>
+    </xsl:template>
+
+    <!-- render one partner line (li > details ...) if cnt > 0 -->
+    <xsl:template name="render-pair">
+        <xsl:param name="about" as="xs:string"/>
+        <xsl:param name="partner" as="xs:string"/>
+
+        <xsl:variable name="rel" select="key('by-about', $about, $receptionEntities)"/>
+        <xsl:variable name="cnt" select="u:common-count($about)"/>
+        <xsl:if test="$cnt &gt; 0">
+            <xsl:variable name="cmt"
+                select="normalize-space(($rel/rdfs:comment[@xml:lang = 'de'], $rel/rdfs:comment)[1])"/>
+            <li>
+                <details>
+                    <summary>
+                        <span class="leaf"> Intertextuelle Beziehung mit »<xsl:value-of
+                                select="$partner"/>« (<xsl:value-of select="$cnt"/><xsl:value-of
+                                select="u:sgpl($cnt, ' Gemeinsamkeit', ' Gemeinsamkeiten')"/>)
+                        </span>
+                    </summary>
+
+                    <xsl:if test="$cmt != ''">
+                        <div class="skos-note smaller-text indent">
+                            <xsl:value-of select="$cmt"/>
+                        </div>
+                    </xsl:if>
+
+                    <xsl:call-template name="emit-kind-list">
+                        <xsl:with-param name="rel" select="$rel"/>
+                        <xsl:with-param name="kind" select="'motifs'"/>
+                        <xsl:with-param name="sg" select="'Gemeinsames Motiv:'"/>
+                        <xsl:with-param name="pl" select="'Gemeinsame Motive:'"/>
+                    </xsl:call-template>
+
+                    <xsl:call-template name="emit-kind-list">
+                        <xsl:with-param name="rel" select="$rel"/>
+                        <xsl:with-param name="kind" select="'topics'"/>
+                        <xsl:with-param name="sg" select="'Gemeinsames Thema:'"/>
+                        <xsl:with-param name="pl" select="'Gemeinsame Themen:'"/>
+                    </xsl:call-template>
+
+                    <xsl:call-template name="emit-kind-list">
+                        <xsl:with-param name="rel" select="$rel"/>
+                        <xsl:with-param name="kind" select="'plots'"/>
+                        <xsl:with-param name="sg" select="'Gemeinsamer Stoff:'"/>
+                        <xsl:with-param name="pl" select="'Gemeinsame Stoffe:'"/>
+                    </xsl:call-template>
+
+                    <xsl:call-template name="emit-kind-list">
+                        <xsl:with-param name="rel" select="$rel"/>
+                        <xsl:with-param name="kind" select="'persons'"/>
+                        <xsl:with-param name="sg" select="'Gemeinsame Personenreferenz:'"/>
+                        <xsl:with-param name="pl" select="'Gemeinsame Personenreferenzen:'"/>
+                    </xsl:call-template>
+
+                    <xsl:call-template name="emit-kind-list">
+                        <xsl:with-param name="rel" select="$rel"/>
+                        <xsl:with-param name="kind" select="'places'"/>
+                        <xsl:with-param name="sg" select="'Gemeinsame Ortsreferenz:'"/>
+                        <xsl:with-param name="pl" select="'Gemeinsame Ortsreferenzen:'"/>
+                    </xsl:call-template>
+
+                    <xsl:call-template name="emit-kind-list">
+                        <xsl:with-param name="rel" select="$rel"/>
+                        <xsl:with-param name="kind" select="'works'"/>
+                        <xsl:with-param name="sg" select="'Gemeinsame Werkreferenz:'"/>
+                        <xsl:with-param name="pl" select="'Gemeinsame Werkreferenzen:'"/>
+                    </xsl:call-template>
+
+                    <xsl:call-template name="emit-kind-list">
+                        <xsl:with-param name="rel" select="$rel"/>
+                        <xsl:with-param name="kind" select="'phrases'"/>
+                        <xsl:with-param name="sg" select="'Gemeinsame Phrase:'"/>
+                        <xsl:with-param name="pl" select="'Gemeinsame Phrasen:'"/>
+                    </xsl:call-template>
+                </details>
+            </li>
+        </xsl:if>
     </xsl:template>
 
     <!-- intertextual relationships -->
@@ -186,7 +394,9 @@
             select="$rels[matches(@rdf:about, 'bibl_sappho_.*bibl_sappho_')]"/>
         <xsl:variable name="rels_recep"
             select="$rels[matches(@rdf:about, 'bibl_sappho_') and not(matches(@rdf:about, 'bibl_sappho_.*bibl_sappho_'))]"/>
+        <xsl:variable name="rels_none" select="$rels[not(matches(@rdf:about, 'bibl_sappho_'))]"/>
 
+        <!-- build pair lists -->
         <xsl:variable name="pairs_frag" as="element(pair)*">
             <xsl:for-each select="$rels_frag">
                 <xsl:variable name="relAbout" select="string(@rdf:about)"/>
@@ -201,13 +411,13 @@
                         <xsl:sequence select="normalize-space(string($rtf))"/>
                     </xsl:for-each>
                 </xsl:variable>
-                <xsl:variable name="fragLabels" select="
+                <xsl:variable name="fragLabels" as="xs:string*" select="
                         for $l in $allLabels
                         return
                             if (matches($l, '^Fragment\s', 'i')) then
                                 $l
                             else
-                                ()" as="xs:string*"/>
+                                ()"/>
                 <xsl:for-each select="distinct-values($fragLabels)">
                     <xsl:variable name="g" select="."/>
                     <xsl:for-each select="distinct-values($fragLabels[. ne $g])">
@@ -231,20 +441,20 @@
                         <xsl:sequence select="normalize-space(string($rtf))"/>
                     </xsl:for-each>
                 </xsl:variable>
-                <xsl:variable name="fragLabels" select="
+                <xsl:variable name="fragLabels" as="xs:string*" select="
                         for $l in $allLabels
                         return
                             if (matches($l, '^Fragment\s', 'i')) then
                                 $l
                             else
-                                ()" as="xs:string*"/>
-                <xsl:variable name="nonFragLabels" select="
+                                ()"/>
+                <xsl:variable name="nonFragLabels" as="xs:string*" select="
                         for $l in $allLabels
                         return
                             if (not(matches($l, '^Fragment\s', 'i'))) then
                                 $l
                             else
-                                ()" as="xs:string*"/>
+                                ()"/>
                 <xsl:for-each select="distinct-values($nonFragLabels)">
                     <xsl:variable name="g" select="."/>
                     <xsl:for-each select="distinct-values($fragLabels)">
@@ -253,8 +463,6 @@
                 </xsl:for-each>
             </xsl:for-each>
         </xsl:variable>
-
-        <xsl:variable name="rels_none" select="$rels[not(matches(@rdf:about, 'bibl_sappho_'))]"/>
 
         <xsl:variable name="pairs_none" as="element(pair)*">
             <xsl:for-each select="$rels_none">
@@ -270,13 +478,13 @@
                         <xsl:sequence select="normalize-space(string($rtf))"/>
                     </xsl:for-each>
                 </xsl:variable>
-                <xsl:variable name="nonFragLabels" select="
+                <xsl:variable name="nonFragLabels" as="xs:string*" select="
                         for $l in $labels
                         return
                             if (not(matches($l, '^Fragment\s', 'i'))) then
                                 $l
                             else
-                                ()" as="xs:string*"/>
+                                ()"/>
                 <xsl:for-each select="distinct-values($nonFragLabels)">
                     <xsl:variable name="g" select="."/>
                     <xsl:for-each select="distinct-values($nonFragLabels[. ne $g])">
@@ -309,6 +517,7 @@
                                 <div class="card-body skos-wrap">
                                     <ul class="skos-tree">
 
+                                        <!-- frag ↔ frag -->
                                         <li>
                                             <details>
                                                 <summary class="has-children">Intertexuelle
@@ -318,6 +527,8 @@
                                                   <xsl:for-each-group select="$pairs_frag"
                                                   group-by="@group">
                                                   <xsl:sort select="lower-case(@group)"/>
+
+                                                  <xsl:if test="u:any-common(current-group())">
                                                   <li>
                                                   <details>
                                                   <summary class="has-children">
@@ -327,205 +538,26 @@
                                                   <ul class="skos-tree">
                                                   <xsl:for-each-group select="current-group()"
                                                   group-by="@partner">
-                                                  <xsl:sort select="
-                                                                                        count(
-                                                                                        distinct-values((
-                                                                                        data(key('by-about', (current-group()[1]/@about)[1], $receptionEntities)
-                                                                                        /intro:R22i_relationIsBasedOnSimilarity/@rdf:resource
-                                                                                        [matches(., '/feature/(person_ref|place_ref|work_ref|motif|topic|plot)/')
-                                                                                        or matches(., '/actualization/work_ref/')]),
-                                                                                        data(key('by-about', (current-group()[1]/@about)[1], $receptionEntities)
-                                                                                        /intro:R24_hasRelatedEntity/@rdf:resource
-                                                                                        [matches(., '/textpassage/phrase_')])
-                                                                                        ))
-                                                                                        )"
-                                                  order="descending" data-type="number"/>
-                                                  <!--<xsl:if test="position() le 10">-->
-                                                  <xsl:variable name="rel"
-                                                  select="key('by-about', (current-group()[1]/@about)[1], $receptionEntities)"/>
-                                                  <xsl:variable name="sim"
-                                                  select="$rel/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource"/>
-                                                  <xsl:variable name="phr"
-                                                  select="$rel/intro:R24_hasRelatedEntity/@rdf:resource"/>
-
-                                                  <xsl:variable name="u_persons"
-                                                  select="distinct-values(data($sim[matches(., '/feature/person_ref/')]))"/>
-                                                  <xsl:variable name="u_places"
-                                                  select="distinct-values(data($sim[matches(., '/feature/place_ref/')]))"/>
-                                                  <xsl:variable name="u_works"
-                                                  select="distinct-values(data($sim[matches(., '/feature/work_ref/') or matches(., '/actualization/work_ref/')]))"/>
-                                                  <xsl:variable name="u_phrases"
-                                                  select="distinct-values(data($phr[matches(., '/textpassage/phrase_')]))"/>
-                                                  <xsl:variable name="u_motifs"
-                                                  select="distinct-values(data($sim[matches(., '/feature/motif/')]))"/>
-                                                  <xsl:variable name="u_topics"
-                                                  select="distinct-values(data($sim[matches(., '/feature/topic/')]))"/>
-                                                  <xsl:variable name="u_plots"
-                                                  select="distinct-values(data($sim[matches(., '/feature/plot/')]))"/>
-
-                                                  <xsl:variable name="cnt"
-                                                  select="count(distinct-values(($u_persons, $u_places, $u_works, $u_phrases, $u_motifs, $u_topics, $u_plots)))"/>
-
-                                                  <xsl:variable name="cmt"
-                                                  select="normalize-space(($rel/rdfs:comment[@xml:lang = 'de'], $rel/rdfs:comment)[1])"/>
-
-                                                  <li>
-                                                  <details>
-                                                  <summary>
-                                                  <span class="leaf"> Intertextuelle Beziehung mit
-                                                  »<xsl:value-of select="@partner"/>« (<xsl:value-of
-                                                  select="$cnt"/>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($cnt, ' Gemeinsamkeit', ' Gemeinsamkeiten')"
-                                                  />)</span>
-                                                  </summary>
-
-                                                  <xsl:if test="$cmt != ''">
-                                                  <div class="skos-note smaller-text indent">
-                                                  <xsl:value-of select="$cmt"/>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_motifs"
-                                                  select="count($u_motifs)"/>
-                                                  <xsl:if test="$n_motifs &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_motifs, 'Gemeinsames Motiv:', 'Gemeinsame Motive:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_motifs">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_topics"
-                                                  select="count($u_topics)"/>
-                                                  <xsl:if test="$n_topics &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_topics, 'Gemeinsames Thema:', 'Gemeinsame Themen:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_topics">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_plots"
-                                                  select="count($u_plots)"/>
-                                                  <xsl:if test="$n_plots &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_plots, 'Gemeinsamer Stoff:', 'Gemeinsame Stoffe:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_plots">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_pers"
-                                                  select="count($u_persons)"/>
-                                                  <xsl:if test="$n_pers &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_pers, 'Gemeinsame Personenreferenz:', 'Gemeinsame Personenreferenzen:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_persons">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_places"
-                                                  select="count($u_places)"/>
-                                                  <xsl:if test="$n_places &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_places, 'Gemeinsame Ortsreferenz:', 'Gemeinsame Ortsreferenzen:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_places">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_works"
-                                                  select="count($u_works)"/>
-                                                  <xsl:if test="$n_works &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_works, 'Gemeinsame Werkreferenz:', 'Gemeinsame Werkreferenzen:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_works">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_phr"
-                                                  select="count($u_phrases)"/>
-                                                  <xsl:if test="$n_phr &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_phr, 'Gemeinsame Phrase:', 'Gemeinsame Phrasen:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_phrases">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  </details>
-                                                  </li>
-                                                  <!--</xsl:if>-->
+                                                  <xsl:sort data-type="number" order="descending"
+                                                  select="u:common-count(string((current-group()[1]/@about)[1]))"/>
+                                                  <xsl:call-template name="render-pair">
+                                                  <xsl:with-param name="about"
+                                                  select="string((current-group()[1]/@about)[1])"/>
+                                                  <xsl:with-param name="partner" select="@partner"/>
+                                                  </xsl:call-template>
                                                   </xsl:for-each-group>
                                                   </ul>
                                                   </div>
                                                   </details>
                                                   </li>
+                                                  </xsl:if>
                                                   </xsl:for-each-group>
                                                   </ul>
                                                 </div>
                                             </details>
                                         </li>
 
+                                        <!-- reception testimony ↔ frag -->
                                         <li>
                                             <details>
                                                 <summary class="has-children">Intertexuelle
@@ -536,6 +568,8 @@
                                                   <xsl:for-each-group select="$pairs_recep"
                                                   group-by="@group">
                                                   <xsl:sort select="lower-case(@group)"/>
+
+                                                  <xsl:if test="u:any-common(current-group())">
                                                   <li>
                                                   <details>
                                                   <summary class="has-children">
@@ -545,205 +579,26 @@
                                                   <ul class="skos-tree">
                                                   <xsl:for-each-group select="current-group()"
                                                   group-by="@partner">
-                                                  <xsl:sort select="
-                                                                                        count(
-                                                                                        distinct-values((
-                                                                                        data(key('by-about', (current-group()[1]/@about)[1], $receptionEntities)
-                                                                                        /intro:R22i_relationIsBasedOnSimilarity/@rdf:resource
-                                                                                        [matches(., '/feature/(person_ref|place_ref|work_ref|motif|topic|plot)/')
-                                                                                        or matches(., '/actualization/work_ref/')]),
-                                                                                        data(key('by-about', (current-group()[1]/@about)[1], $receptionEntities)
-                                                                                        /intro:R24_hasRelatedEntity/@rdf:resource
-                                                                                        [matches(., '/textpassage/phrase_')])
-                                                                                        ))
-                                                                                        )"
-                                                  order="descending" data-type="number"/>
-                                                  <!--<xsl:if test="position() le 10">-->
-                                                  <xsl:variable name="rel"
-                                                  select="key('by-about', (current-group()[1]/@about)[1], $receptionEntities)"/>
-                                                  <xsl:variable name="sim"
-                                                  select="$rel/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource"/>
-                                                  <xsl:variable name="phr"
-                                                  select="$rel/intro:R24_hasRelatedEntity/@rdf:resource"/>
-
-                                                  <xsl:variable name="u_persons"
-                                                  select="distinct-values(data($sim[matches(., '/feature/person_ref/')]))"/>
-                                                  <xsl:variable name="u_places"
-                                                  select="distinct-values(data($sim[matches(., '/feature/place_ref/')]))"/>
-                                                  <xsl:variable name="u_works"
-                                                  select="distinct-values(data($sim[matches(., '/feature/work_ref/') or matches(., '/actualization/work_ref/')]))"/>
-                                                  <xsl:variable name="u_phrases"
-                                                  select="distinct-values(data($phr[matches(., '/textpassage/phrase_')]))"/>
-                                                  <xsl:variable name="u_motifs"
-                                                  select="distinct-values(data($sim[matches(., '/feature/motif/')]))"/>
-                                                  <xsl:variable name="u_topics"
-                                                  select="distinct-values(data($sim[matches(., '/feature/topic/')]))"/>
-                                                  <xsl:variable name="u_plots"
-                                                  select="distinct-values(data($sim[matches(., '/feature/plot/')]))"/>
-
-                                                  <xsl:variable name="cnt"
-                                                  select="count(distinct-values(($u_persons, $u_places, $u_works, $u_phrases, $u_motifs, $u_topics, $u_plots)))"/>
-
-                                                  <xsl:variable name="cmt"
-                                                  select="normalize-space(($rel/rdfs:comment[@xml:lang = 'de'], $rel/rdfs:comment)[1])"/>
-
-                                                  <li>
-                                                  <details>
-                                                  <summary>
-                                                  <span class="leaf"> Intertextuelle Beziehung mit
-                                                  »<xsl:value-of select="@partner"/>« (<xsl:value-of
-                                                  select="$cnt"/>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($cnt, ' Gemeinsamkeit', ' Gemeinsamkeiten')"
-                                                  />)</span>
-                                                  </summary>
-
-                                                  <xsl:if test="$cmt != ''">
-                                                  <div class="skos-note smaller-text indent">
-                                                  <xsl:value-of select="$cmt"/>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_motifs"
-                                                  select="count($u_motifs)"/>
-                                                  <xsl:if test="$n_motifs &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_motifs, 'Gemeinsames Motiv:', 'Gemeinsame Motive:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_motifs">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_topics"
-                                                  select="count($u_topics)"/>
-                                                  <xsl:if test="$n_topics &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_topics, 'Gemeinsames Thema:', 'Gemeinsame Themen:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_topics">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_plots"
-                                                  select="count($u_plots)"/>
-                                                  <xsl:if test="$n_plots &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_plots, 'Gemeinsamer Stoff:', 'Gemeinsame Stoffe:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_plots">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_pers"
-                                                  select="count($u_persons)"/>
-                                                  <xsl:if test="$n_pers &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_pers, 'Gemeinsame Personenreferenz:', 'Gemeinsame Personenreferenzen:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_persons">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_places"
-                                                  select="count($u_places)"/>
-                                                  <xsl:if test="$n_places &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_places, 'Gemeinsame Ortsreferenz:', 'Gemeinsame Ortsreferenzen:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_places">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_works"
-                                                  select="count($u_works)"/>
-                                                  <xsl:if test="$n_works &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_works, 'Gemeinsame Werkreferenz:', 'Gemeinsame Werkreferenzen:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_works">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_phr"
-                                                  select="count($u_phrases)"/>
-                                                  <xsl:if test="$n_phr &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_phr, 'Gemeinsame Phrase:', 'Gemeinsame Phrasen:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_phrases">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  </details>
-                                                  </li>
-                                                  <!--</xsl:if>-->
+                                                  <xsl:sort data-type="number" order="descending"
+                                                  select="u:common-count(string((current-group()[1]/@about)[1]))"/>
+                                                  <xsl:call-template name="render-pair">
+                                                  <xsl:with-param name="about"
+                                                  select="string((current-group()[1]/@about)[1])"/>
+                                                  <xsl:with-param name="partner" select="@partner"/>
+                                                  </xsl:call-template>
                                                   </xsl:for-each-group>
                                                   </ul>
                                                   </div>
                                                   </details>
                                                   </li>
+                                                  </xsl:if>
                                                   </xsl:for-each-group>
                                                   </ul>
                                                 </div>
                                             </details>
                                         </li>
 
+                                        <!-- reception testimony ↔ reception testimony -->
                                         <li>
                                             <details>
                                                 <summary class="has-children">Intertexuelle
@@ -754,6 +609,8 @@
                                                   <xsl:for-each-group select="$pairs_none"
                                                   group-by="@group">
                                                   <xsl:sort select="lower-case(@group)"/>
+
+                                                  <xsl:if test="u:any-common(current-group())">
                                                   <li>
                                                   <details>
                                                   <summary class="has-children">
@@ -763,199 +620,19 @@
                                                   <ul class="skos-tree">
                                                   <xsl:for-each-group select="current-group()"
                                                   group-by="@partner">
-                                                  <xsl:sort select="
-                                                                                        count(
-                                                                                        distinct-values((
-                                                                                        data(key('by-about', (current-group()[1]/@about)[1], $receptionEntities)
-                                                                                        /intro:R22i_relationIsBasedOnSimilarity/@rdf:resource
-                                                                                        [matches(., '/feature/(person_ref|place_ref|work_ref|motif|topic|plot)/')
-                                                                                        or matches(., '/actualization/work_ref/')]),
-                                                                                        data(key('by-about', (current-group()[1]/@about)[1], $receptionEntities)
-                                                                                        /intro:R24_hasRelatedEntity/@rdf:resource
-                                                                                        [matches(., '/textpassage/phrase_')])
-                                                                                        ))
-                                                                                        )"
-                                                  order="descending" data-type="number"/>
-                                                  <!--<xsl:if test="position() le 10">-->
-                                                  <xsl:variable name="rel"
-                                                  select="key('by-about', (current-group()[1]/@about)[1], $receptionEntities)"/>
-                                                  <xsl:variable name="sim"
-                                                  select="$rel/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource"/>
-                                                  <xsl:variable name="phr"
-                                                  select="$rel/intro:R24_hasRelatedEntity/@rdf:resource"/>
-
-                                                  <xsl:variable name="u_persons"
-                                                  select="distinct-values(data($sim[matches(., '/feature/person_ref/')]))"/>
-                                                  <xsl:variable name="u_places"
-                                                  select="distinct-values(data($sim[matches(., '/feature/place_ref/')]))"/>
-                                                  <xsl:variable name="u_works"
-                                                  select="distinct-values(data($sim[matches(., '/feature/work_ref/') or matches(., '/actualization/work_ref/')]))"/>
-                                                  <xsl:variable name="u_phrases"
-                                                  select="distinct-values(data($phr[matches(., '/textpassage/phrase_')]))"/>
-                                                  <xsl:variable name="u_motifs"
-                                                  select="distinct-values(data($sim[matches(., '/feature/motif/')]))"/>
-                                                  <xsl:variable name="u_topics"
-                                                  select="distinct-values(data($sim[matches(., '/feature/topic/')]))"/>
-                                                  <xsl:variable name="u_plots"
-                                                  select="distinct-values(data($sim[matches(., '/feature/plot/')]))"/>
-
-                                                  <xsl:variable name="cnt"
-                                                  select="count(distinct-values(($u_persons, $u_places, $u_works, $u_phrases, $u_motifs, $u_topics, $u_plots)))"/>
-
-                                                  <xsl:variable name="cmt"
-                                                  select="normalize-space(($rel/rdfs:comment[@xml:lang = 'de'], $rel/rdfs:comment)[1])"/>
-
-                                                  <li>
-                                                  <details>
-                                                  <summary>
-                                                  <span class="leaf"> Intertextuelle Beziehung mit
-                                                  »<xsl:value-of select="@partner"/>« (<xsl:value-of
-                                                  select="$cnt"/>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($cnt, ' Gemeinsamkeit', ' Gemeinsamkeiten')"
-                                                  />)</span>
-                                                  </summary>
-
-                                                  <xsl:if test="$cmt != ''">
-                                                  <div class="skos-note smaller-text indent">
-                                                  <xsl:value-of select="$cmt"/>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_motifs"
-                                                  select="count($u_motifs)"/>
-                                                  <xsl:if test="$n_motifs &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_motifs, 'Gemeinsames Motiv:', 'Gemeinsame Motive:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_motifs">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_topics"
-                                                  select="count($u_topics)"/>
-                                                  <xsl:if test="$n_topics &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_topics, 'Gemeinsames Thema:', 'Gemeinsame Themen:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_topics">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_plots"
-                                                  select="count($u_plots)"/>
-                                                  <xsl:if test="$n_plots &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_plots, 'Gemeinsamer Stoff:', 'Gemeinsame Stoffe:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_plots">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_pers"
-                                                  select="count($u_persons)"/>
-                                                  <xsl:if test="$n_pers &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_pers, 'Gemeinsame Personenreferenz:', 'Gemeinsame Personenreferenzen:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_persons">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_places"
-                                                  select="count($u_places)"/>
-                                                  <xsl:if test="$n_places &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_places, 'Gemeinsame Ortsreferenz:', 'Gemeinsame Ortsreferenzen:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_places">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_works"
-                                                  select="count($u_works)"/>
-                                                  <xsl:if test="$n_works &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_works, 'Gemeinsame Werkreferenz:', 'Gemeinsame Werkreferenzen:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_works">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  <xsl:variable name="n_phr"
-                                                  select="count($u_phrases)"/>
-                                                  <xsl:if test="$n_phr &gt; 0">
-                                                  <div class="smaller-text indent">
-                                                  <strong>
-                                                  <xsl:value-of
-                                                  select="u:sgpl($n_phr, 'Gemeinsame Phrase:', 'Gemeinsame Phrasen:')"
-                                                  />
-                                                  </strong>
-                                                  <xsl:text> </xsl:text>
-                                                  <xsl:for-each select="$u_phrases">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
-                                                  <xsl:value-of select="u:label(.)"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </div>
-                                                  </xsl:if>
-
-                                                  </details>
-                                                  </li>
-                                                  <!--</xsl:if>-->
+                                                  <xsl:sort data-type="number" order="descending"
+                                                  select="u:common-count(string((current-group()[1]/@about)[1]))"/>
+                                                  <xsl:call-template name="render-pair">
+                                                  <xsl:with-param name="about"
+                                                  select="string((current-group()[1]/@about)[1])"/>
+                                                  <xsl:with-param name="partner" select="@partner"/>
+                                                  </xsl:call-template>
                                                   </xsl:for-each-group>
                                                   </ul>
                                                   </div>
                                                   </details>
                                                   </li>
+                                                  </xsl:if>
                                                   </xsl:for-each-group>
                                                   </ul>
                                                 </div>
@@ -974,69 +651,6 @@
         </xsl:result-document>
     </xsl:template>
 
-    <xsl:template name="label-of-uri">
-        <xsl:param name="uri" as="xs:string?"/>
-        <xsl:choose>
-            <xsl:when test="exists($uri) and normalize-space($uri) != ''">
-                <xsl:variable name="n" select="key('by-about', $uri, $receptionEntities)"/>
-
-                <xsl:variable name="raw" select="
-                        normalize-space((
-                        $n/rdfs:label,
-                        $n/@rdf:about
-                        )[1])"/>
-
-                <!-- translate and manipulate labels -->
-                <xsl:variable name="t1" select="
-                        replace($raw, '^\s*intertextual relation(ship)? between\s+',
-                        'Intertextuelle Beziehung zwischen ', 'i')"/>
-                <xsl:variable name="t2" select="replace($t1, '\s+and\s+', ' und ')"/>
-                <xsl:variable name="t3" select="replace($t2, 'Expression of\s+', '', 'i')"/>
-                <!-- »Fragment … Voigt« -> Fragment … Voigt -->
-                <xsl:variable name="t4"
-                    select="replace($t3, '»\s*(Fragment[^«»]*Voigt)\s*«', '$1', 'i')"/>
-                <!-- remove e. g. Motif: -->
-                <xsl:variable name="t5"
-                    select="replace($t4, '^\s*(Motif|Topic|Plot|Textpassage)\s*:\s*', '', 'i')"/>
-                <!-- remove e. g. (place) -->
-                <xsl:variable name="t6"
-                    select="replace($t5, '\s*\((place|person|work)\)\s*', '', 'i')"/>
-                <!-- remove "reference to" -->
-                <xsl:variable name="t7" select="replace($t6, 'Reference to ', '', 'i')"/>
-                <xsl:value-of select="normalize-space($t7)"/>
-            </xsl:when>
-            <xsl:otherwise>–</xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
-
-    <!-- function to later sort labels alphabetically -->
-    <xsl:function name="u:label" as="xs:string">
-        <xsl:param name="uri" as="xs:string"/>
-        <xsl:variable name="n" select="key('by-about', $uri, $receptionEntities)"/>
-        <xsl:variable name="raw" select="normalize-space(($n/rdfs:label, $n/@rdf:about)[1])"/>
-        <xsl:variable name="t1"
-            select="replace($raw, '^\s*intertextual relation(ship)? between\s+', 'Intertextuelle Beziehung zwischen ', 'i')"/>
-        <xsl:variable name="t2" select="replace($t1, '\s+and\s+', ' und ')"/>
-        <xsl:variable name="t3" select="replace($t2, 'Expression of\s+', '', 'i')"/>
-        <xsl:variable name="t4" select="replace($t3, '»\s*(Fragment[^«»]*Voigt)\s*«', '$1', 'i')"/>
-        <xsl:variable name="t5"
-            select="replace($t4, '^\s*(Motif|Topic|Plot|Textpassage)\s*:\s*', '', 'i')"/>
-        <xsl:variable name="t6" select="replace($t5, '\s*\((place|person|work)\)\s*', '', 'i')"/>
-        <xsl:variable name="t7" select="replace($t6, 'Reference to ', '', 'i')"/>
-        <xsl:sequence select="normalize-space($t7)"/>
-    </xsl:function>
-
-    <xsl:function name="u:sgpl" as="xs:string">
-        <xsl:param name="n" as="xs:integer"/>
-        <xsl:param name="sg" as="xs:string"/>
-        <xsl:param name="pl" as="xs:string"/>
-        <xsl:sequence select="
-                if ($n = 1) then
-                    $sg
-                else
-                    $pl"/>
-    </xsl:function>
-
     <!-- features -->
 
     <xsl:template match="/" mode="features">
@@ -1046,9 +660,8 @@
             select="distinct-values($rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/person_ref/')])"/>
         <xsl:variable name="u_places"
             select="distinct-values($rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/place_ref/')])"/>
-        <xsl:variable name="u_works" select="
-                distinct-values(($rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/work_ref/')],
-                $rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/actualization/work_ref/')]))"/>
+        <xsl:variable name="u_works"
+            select="distinct-values(($rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/work_ref/')], $rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/actualization/work_ref/')]))"/>
         <xsl:variable name="u_phrases"
             select="distinct-values($rels/intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/textpassage/phrase_')])"/>
         <xsl:variable name="u_motifs"
@@ -1086,6 +699,7 @@
                                                   select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
                                                 <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
+
                                                 <xsl:choose>
                                                   <xsl:when test="exists($occTexts)">
                                                   <details>
@@ -1158,6 +772,7 @@
                                                   select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
                                                 <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
+
                                                 <xsl:choose>
                                                   <xsl:when test="exists($occTexts)">
                                                   <details>
@@ -1230,6 +845,7 @@
                                                   select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
                                                 <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
+
                                                 <xsl:choose>
                                                   <xsl:when test="exists($occTexts)">
                                                   <details>
@@ -1302,6 +918,7 @@
                                                   select="$rels[intro:R24_hasRelatedEntity/@rdf:resource = $this]"/>
                                                 <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
+
                                                 <xsl:choose>
                                                   <xsl:when test="exists($occTexts)">
                                                   <details>
@@ -1374,6 +991,7 @@
                                                   select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
                                                 <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
+
                                                 <xsl:choose>
                                                   <xsl:when test="exists($occTexts)">
                                                   <details>
@@ -1446,6 +1064,7 @@
                                                   select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
                                                 <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
+
                                                 <xsl:choose>
                                                   <xsl:when test="exists($occTexts)">
                                                   <details>
@@ -1518,6 +1137,7 @@
                                                   select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
                                                 <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
+
                                                 <xsl:choose>
                                                   <xsl:when test="exists($occTexts)">
                                                   <details>
