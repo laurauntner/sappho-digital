@@ -450,6 +450,10 @@ ul {
   transform: rotate(90deg);
 }
 
+.skos-wrap details[open] > summary .leaf::before {
+  transform: rotate(90deg);
+}
+
 .skos-wrap .skos-children,
 .skos-wrap .leaf { 
   display: block; 
