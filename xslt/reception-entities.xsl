@@ -77,6 +77,7 @@
             </html>
         </xsl:result-document>
         <xsl:apply-templates select="/" mode="intertexts"/>
+        <xsl:apply-templates select="/" mode="features"/>
     </xsl:template>
 
     <xsl:template name="label">
@@ -1008,7 +1009,7 @@
         </xsl:choose>
     </xsl:template>
 
-    <!--  -->
+    <!-- function to later sort labels alphabetically -->
     <xsl:function name="u:label" as="xs:string">
         <xsl:param name="uri" as="xs:string"/>
         <xsl:variable name="n" select="key('by-about', $uri, $receptionEntities)"/>
@@ -1036,18 +1037,306 @@
                     $pl"/>
     </xsl:function>
 
-    <!-- references to persons -->
+    <!-- features -->
 
-    <!-- references to places -->
+    <xsl:template match="/" mode="features">
+        <xsl:variable name="rels" select="$receptionEntities//intro:INT31_IntertextualRelation"/>
 
-    <!-- references to works -->
+        <xsl:variable name="u_persons"
+            select="distinct-values($rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/person_ref/')])"/>
+        <xsl:variable name="u_places"
+            select="distinct-values($rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/place_ref/')])"/>
+        <xsl:variable name="u_works" select="
+                distinct-values(($rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/work_ref/')],
+                $rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/actualization/work_ref/')]))"/>
+        <xsl:variable name="u_phrases"
+            select="distinct-values($rels/intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/textpassage/phrase_')])"/>
+        <xsl:variable name="u_motifs"
+            select="distinct-values($rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/motif/')])"/>
+        <xsl:variable name="u_topics"
+            select="distinct-values($rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/topic/')])"/>
+        <xsl:variable name="u_plots"
+            select="distinct-values($rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/plot/')])"/>
 
-    <!-- text passages -->
+        <!-- references to persons -->
+        <xsl:result-document href="../html/pers-refs.html">
+            <html lang="de">
+                <head>
+                    <xsl:call-template name="html_head">
+                        <xsl:with-param name="html_title" select="'Personenreferenzen'"/>
+                    </xsl:call-template>
+                </head>
+                <body class="page">
+                    <div class="hfeed site" id="page">
+                        <xsl:call-template name="nav_bar"/>
+                        <div class="container-fluid">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h1>Personenreferenzen</h1>
+                                    <p class="align-left">Für eine hierarchische Ansicht siehe das
+                                            <a href="../html/vocab.html">Vokabular</a>.</p>
+                                </div>
+                                <div class="card-body skos-wrap">
+                                    <ul class="skos-tree">
+                                        <xsl:for-each select="$u_persons">
+                                            <xsl:sort select="lower-case(u:label(.))"/>
+                                            <li>
+                                                <span class="leaf">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="."/>
+                                                  </xsl:call-template>
+                                                </span>
+                                            </li>
+                                        </xsl:for-each>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <xsl:call-template name="html_footer"/>
+                    </div>
+                </body>
+            </html>
+        </xsl:result-document>
 
-    <!-- motifs -->
+        <!-- references to places -->
+        <xsl:result-document href="../html/place-refs.html">
+            <html lang="de">
+                <head>
+                    <xsl:call-template name="html_head">
+                        <xsl:with-param name="html_title" select="'Ortsreferenzen'"/>
+                    </xsl:call-template>
+                </head>
+                <body class="page">
+                    <div class="hfeed site" id="page">
+                        <xsl:call-template name="nav_bar"/>
+                        <div class="container-fluid">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h1>Ortsreferenzen</h1>
+                                    <p class="align-left">Für eine hierarchische Ansicht siehe das
+                                            <a href="../html/vocab.html">Vokabular</a>.</p>
+                                </div>
+                                <div class="card-body skos-wrap">
+                                    <ul class="skos-tree">
+                                        <xsl:for-each select="$u_places">
+                                            <xsl:sort select="lower-case(u:label(.))"/>
+                                            <li>
+                                                <span class="leaf">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="."/>
+                                                  </xsl:call-template>
+                                                </span>
+                                            </li>
+                                        </xsl:for-each>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <xsl:call-template name="html_footer"/>
+                    </div>
+                </body>
+            </html>
+        </xsl:result-document>
 
-    <!-- topics -->
+        <!-- references to works -->
+        <xsl:result-document href="../html/work-refs.html">
+            <html lang="de">
+                <head>
+                    <xsl:call-template name="html_head">
+                        <xsl:with-param name="html_title" select="'Werkreferenzen'"/>
+                    </xsl:call-template>
+                </head>
+                <body class="page">
+                    <div class="hfeed site" id="page">
+                        <xsl:call-template name="nav_bar"/>
+                        <div class="container-fluid">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h1>Werkreferenzen</h1>
+                                    <p class="align-left">Für eine hierarchische Ansicht siehe das
+                                            <a href="../html/vocab.html">Vokabular</a>.</p>
+                                </div>
+                                <div class="card-body skos-wrap">
+                                    <ul class="skos-tree">
+                                        <xsl:for-each select="$u_works">
+                                            <xsl:sort select="lower-case(u:label(.))"/>
+                                            <li>
+                                                <span class="leaf">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="."/>
+                                                  </xsl:call-template>
+                                                </span>
+                                            </li>
+                                        </xsl:for-each>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <xsl:call-template name="html_footer"/>
+                    </div>
+                </body>
+            </html>
+        </xsl:result-document>
 
-    <!-- plots -->
+        <!-- text passages -->
+        <xsl:result-document href="../html/text-passages.html">
+            <html lang="de">
+                <head>
+                    <xsl:call-template name="html_head">
+                        <xsl:with-param name="html_title" select="'Textpassagen'"/>
+                    </xsl:call-template>
+                </head>
+                <body class="page">
+                    <div class="hfeed site" id="page">
+                        <xsl:call-template name="nav_bar"/>
+                        <div class="container-fluid">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h1>Phrasen</h1>
+                                    <p class="align-left">Für eine hierarchische Ansicht siehe das
+                                            <a href="../html/vocab.html">Vokabular</a>.</p>
+                                </div>
+                                <div class="card-body skos-wrap">
+                                    <ul class="skos-tree">
+                                        <xsl:for-each select="$u_phrases">
+                                            <xsl:sort select="lower-case(u:label(.))"/>
+                                            <li>
+                                                <span class="leaf">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="."/>
+                                                  </xsl:call-template>
+                                                </span>
+                                            </li>
+                                        </xsl:for-each>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <xsl:call-template name="html_footer"/>
+                    </div>
+                </body>
+            </html>
+        </xsl:result-document>
+
+        <!-- motifs -->
+        <xsl:result-document href="../html/motifs.html">
+            <html lang="de">
+                <head>
+                    <xsl:call-template name="html_head">
+                        <xsl:with-param name="html_title" select="'Motive'"/>
+                    </xsl:call-template>
+                </head>
+                <body class="page">
+                    <div class="hfeed site" id="page">
+                        <xsl:call-template name="nav_bar"/>
+                        <div class="container-fluid">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h1>Motive</h1>
+                                    <p class="align-left">Für eine hierarchische Ansicht siehe das
+                                            <a href="../html/vocab.html">Vokabular</a>.</p>
+                                </div>
+                                <div class="card-body skos-wrap">
+                                    <ul class="skos-tree">
+                                        <xsl:for-each select="$u_motifs">
+                                            <xsl:sort select="lower-case(u:label(.))"/>
+                                            <li>
+                                                <span class="leaf">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="."/>
+                                                  </xsl:call-template>
+                                                </span>
+                                            </li>
+                                        </xsl:for-each>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <xsl:call-template name="html_footer"/>
+                    </div>
+                </body>
+            </html>
+        </xsl:result-document>
+
+        <!-- topics -->
+        <xsl:result-document href="../html/topics.html">
+            <html lang="de">
+                <head>
+                    <xsl:call-template name="html_head">
+                        <xsl:with-param name="html_title" select="'Themen'"/>
+                    </xsl:call-template>
+                </head>
+                <body class="page">
+                    <div class="hfeed site" id="page">
+                        <xsl:call-template name="nav_bar"/>
+                        <div class="container-fluid">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h1>Themen</h1>
+                                    <p class="align-left">Für eine hierarchische Ansicht siehe das
+                                            <a href="../html/vocab.html">Vokabular</a>.</p>
+                                </div>
+                                <div class="card-body skos-wrap">
+                                    <ul class="skos-tree">
+                                        <xsl:for-each select="$u_topics">
+                                            <xsl:sort select="lower-case(u:label(.))"/>
+                                            <li>
+                                                <span class="leaf">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="."/>
+                                                  </xsl:call-template>
+                                                </span>
+                                            </li>
+                                        </xsl:for-each>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <xsl:call-template name="html_footer"/>
+                    </div>
+                </body>
+            </html>
+        </xsl:result-document>
+
+        <!-- plots -->
+        <xsl:result-document href="../html/plots.html">
+            <html lang="de">
+                <head>
+                    <xsl:call-template name="html_head">
+                        <xsl:with-param name="html_title" select="'Stoffe'"/>
+                    </xsl:call-template>
+                </head>
+                <body class="page">
+                    <div class="hfeed site" id="page">
+                        <xsl:call-template name="nav_bar"/>
+                        <div class="container-fluid">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h1>Stoffe</h1>
+                                    <p class="align-left">Für eine hierarchische Ansicht siehe das
+                                            <a href="../html/vocab.html">Vokabular</a>.</p>
+                                </div>
+                                <div class="card-body skos-wrap">
+                                    <ul class="skos-tree">
+                                        <xsl:for-each select="$u_plots">
+                                            <xsl:sort select="lower-case(u:label(.))"/>
+                                            <li>
+                                                <span class="leaf">
+                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:with-param name="uri" select="."/>
+                                                  </xsl:call-template>
+                                                </span>
+                                            </li>
+                                        </xsl:for-each>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <xsl:call-template name="html_footer"/>
+                    </div>
+                </body>
+            </html>
+        </xsl:result-document>
+    </xsl:template>
 
 </xsl:stylesheet>
