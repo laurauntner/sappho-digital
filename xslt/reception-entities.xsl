@@ -687,7 +687,7 @@
                                 <div class="card-header">
                                     <h1>Personenreferenzen</h1>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="../html/vocab.html">Vokabular</a>.</p>
+                                            <a href="vocab.html">Vokabular</a>.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <ul class="skos-tree">
@@ -760,7 +760,7 @@
                                 <div class="card-header">
                                     <h1>Ortsreferenzen</h1>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="../html/vocab.html">Vokabular</a>.</p>
+                                            <a href="vocab.html">Vokabular</a>.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <ul class="skos-tree">
@@ -833,7 +833,7 @@
                                 <div class="card-header">
                                     <h1>Werkreferenzen</h1>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="../html/vocab.html">Vokabular</a>.</p>
+                                            <a href="vocab.html">Vokabular</a>.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <ul class="skos-tree">
@@ -906,7 +906,7 @@
                                 <div class="card-header">
                                     <h1>Phrasen</h1>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="../html/vocab.html">Vokabular</a>.</p>
+                                            <a href="vocab.html">Vokabular</a>.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <ul class="skos-tree">
@@ -979,7 +979,7 @@
                                 <div class="card-header">
                                     <h1>Motive</h1>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="../html/vocab.html">Vokabular</a>.</p>
+                                            <a href="vocab.html">Vokabular</a>.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <ul class="skos-tree">
@@ -1052,7 +1052,7 @@
                                 <div class="card-header">
                                     <h1>Themen</h1>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="../html/vocab.html">Vokabular</a>.</p>
+                                            <a href="vocab.html">Vokabular</a>.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <ul class="skos-tree">
@@ -1125,7 +1125,7 @@
                                 <div class="card-header">
                                     <h1>Stoffe</h1>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="../html/vocab.html">Vokabular</a>.</p>
+                                            <a href="vocab.html">Vokabular</a>.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <ul class="skos-tree">
