@@ -25,5 +25,13 @@ Laura Untner: Sappho Digital. Die literarische Sappho-Rezeption im deutschsprach
 
 ---
 
+Run the app locally:
+```
+sh shellscripts/dl_saxon.sh
+ant
+```
+
+---
+
 **Color code**: `rgba(94, 23, 235)`  
 **Font**: Geist Sans
