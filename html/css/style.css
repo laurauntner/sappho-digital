@@ -454,6 +454,12 @@ ul {
   transform: rotate(90deg);
 }
 
+.skos-wrap summary .ext-link {
+  margin-left: .5rem;
+  font-size: .9em;
+  text-decoration: none;
+}
+
 .skos-wrap .skos-children,
 .skos-wrap .leaf { 
   display: block; 
@@ -566,7 +572,7 @@ img.icon {
     grid-template-columns: 1fr 300px;
     gap: 2rem;
     align-items: start;
-    margin-top: 0 !important;
+    margin-top: 0 !importanext;
     clear: none !important;
 }
 

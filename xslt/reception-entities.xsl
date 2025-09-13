@@ -161,23 +161,8 @@
     <xsl:template name="label-of-uri">
         <xsl:param name="uri" as="xs:string?"/>
         <xsl:choose>
-            <xsl:when test="exists($uri) and normalize-space($uri) != ''">
-                <xsl:variable name="n" select="key('by-about', $uri, $receptionEntities)"/>
-                <xsl:variable name="raw" select="normalize-space(($n/rdfs:label, $n/@rdf:about)[1])"/>
-
-                <!-- translate and manipulate labels -->
-                <xsl:variable name="t1"
-                    select="replace($raw, '^\s*intertextual relation(ship)? between\s+', 'Intertextuelle Beziehung zwischen ', 'i')"/>
-                <xsl:variable name="t2" select="replace($t1, '\s+and\s+', ' und ')"/>
-                <xsl:variable name="t3" select="replace($t2, 'Expression of\s+', '', 'i')"/>
-                <xsl:variable name="t4"
-                    select="replace($t3, '»\s*(Fragment[^«»]*Voigt)\s*«', '$1', 'i')"/>
-                <xsl:variable name="t5"
-                    select="replace($t4, '^\s*(Motif|Topic|Plot|Textpassage)\s*:\s*', '', 'i')"/>
-                <xsl:variable name="t6"
-                    select="replace($t5, '\s*\((place|person|work)\)\s*', '', 'i')"/>
-                <xsl:variable name="t7" select="replace($t6, 'Reference to ', '', 'i')"/>
-                <xsl:value-of select="normalize-space($t7)"/>
+            <xsl:when test="$uri and normalize-space($uri) != ''">
+                <xsl:value-of select="u:label($uri)"/>
             </xsl:when>
             <xsl:otherwise>–</xsl:otherwise>
         </xsl:choose>
@@ -209,6 +194,68 @@
                 else
                     $pl"/>
     </xsl:function>
+
+    <xsl:function name="u:work-id" as="xs:string?">
+        <xsl:param name="uri" as="xs:string?"/>
+        <xsl:sequence select="
+                if (exists($uri) and matches($uri, 'bibl_[^/#?]+')) then
+                    let $id := replace($uri, '.*?(bibl_[^/#?]+).*', '$1')
+                    return
+                        if (starts-with($id, 'bibl_sappho')) then
+                            ()
+                        else
+                            $id
+                else
+                    ()"/>
+    </xsl:function>
+
+    <xsl:function name="u:work-href" as="xs:string?">
+        <xsl:param name="uri" as="xs:string?"/>
+        <xsl:variable name="id" select="u:work-id($uri)"/>
+        <xsl:sequence select="
+                if ($id) then
+                    concat('https://sappho-digital.com/', $id, '.html')
+                else
+                    ()"/>
+    </xsl:function>
+
+    <xsl:template name="render-label-or-link">
+        <xsl:param name="uri" as="xs:string?"/>
+        <xsl:variable name="href" select="u:work-href($uri)"/>
+        <xsl:variable name="label">
+            <xsl:call-template name="label-of-uri">
+                <xsl:with-param name="uri" select="$uri"/>
+            </xsl:call-template>
+        </xsl:variable>
+        <xsl:choose>
+            <xsl:when test="$href">
+                <a href="{$href}">
+                    <xsl:value-of select="normalize-space(string($label))"/>
+                </a>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:value-of select="normalize-space(string($label))"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
+    <xsl:template name="render-label-with-icon">
+        <xsl:param name="uri" as="xs:string?"/>
+        <xsl:variable name="label-rtf">
+            <xsl:call-template name="label-of-uri">
+                <xsl:with-param name="uri" select="$uri"/>
+            </xsl:call-template>
+        </xsl:variable>
+        <xsl:variable name="label" select="normalize-space(string($label-rtf))"/>
+        <xsl:variable name="href" select="u:work-href($uri)"/>
+
+        <xsl:value-of select="$label"/>
+
+        <xsl:if test="$href">
+            <a href="{$href}" class="ext-link" target="_blank" rel="noopener"
+                onclick="event.stopPropagation()" title="Öffnen"> ↗ </a>
+        </xsl:if>
+    </xsl:template>
 
     <!-- helper functions for intertexts -->
 
@@ -299,7 +346,9 @@
                 <xsl:text> </xsl:text>
                 <xsl:for-each select="$items">
                     <xsl:sort select="lower-case(u:label(.))"/>
-                    <xsl:value-of select="u:label(.)"/>
+                    <xsl:call-template name="render-label-or-link">
+                        <xsl:with-param name="uri" select="."/>
+                    </xsl:call-template>
                     <xsl:if test="position() != last()">, </xsl:if>
                 </xsl:for-each>
             </div>
@@ -310,18 +359,38 @@
     <xsl:template name="render-pair">
         <xsl:param name="about" as="xs:string"/>
         <xsl:param name="partner" as="xs:string"/>
+        <xsl:param name="partner-uri" as="xs:string"/>
 
         <xsl:variable name="rel" select="key('by-about', $about, $receptionEntities)"/>
         <xsl:variable name="cnt" select="u:common-count($about)"/>
+
         <xsl:if test="$cnt &gt; 0">
             <xsl:variable name="cmt"
                 select="normalize-space(($rel/rdfs:comment[@xml:lang = 'de'], $rel/rdfs:comment)[1])"/>
+
             <li>
                 <details>
                     <summary>
-                        <span class="leaf"> Intertextuelle Beziehung mit »<xsl:value-of
-                                select="$partner"/>« (<xsl:value-of select="$cnt"/><xsl:value-of
-                                select="u:sgpl($cnt, ' Gemeinsamkeit', ' Gemeinsamkeiten')"/>)
+                        <span class="leaf">
+                            <xsl:text>Intertextuelle Beziehung mit </xsl:text>
+                            <xsl:choose>
+                                <xsl:when test="matches($partner, '^Fragment\s', 'i')">
+                                    <xsl:value-of select="$partner"/>
+                                </xsl:when>
+                                <xsl:otherwise>
+                                    <xsl:text>»</xsl:text>
+                                    <xsl:value-of select="$partner"/>
+                                    <xsl:text>«</xsl:text>
+                                </xsl:otherwise>
+                            </xsl:choose>
+                            <xsl:call-template name="link-icon">
+                                <xsl:with-param name="uri" select="$partner-uri"/>
+                            </xsl:call-template>
+                            <xsl:text> (</xsl:text>
+                            <xsl:value-of select="$cnt"/>
+                            <xsl:value-of
+                                select="u:sgpl($cnt, ' Gemeinsamkeit', ' Gemeinsamkeiten')"/>
+                            <xsl:text>)</xsl:text>
                         </span>
                     </summary>
 
@@ -384,6 +453,16 @@
         </xsl:if>
     </xsl:template>
 
+    <!-- link icons for intertexts -->
+    <xsl:template name="link-icon">
+        <xsl:param name="uri" as="xs:string?"/>
+        <xsl:variable name="href" select="u:work-href($uri)"/>
+        <xsl:if test="$href">
+            <a href="{$href}" class="ext-link" target="_blank" rel="noopener"
+                onclick="event.stopPropagation()" title="Öffnen"> ↗ </a>
+        </xsl:if>
+    </xsl:template>
+
     <!-- intertextual relationships -->
 
     <xsl:template match="/" mode="intertexts">
@@ -397,98 +476,66 @@
         <xsl:variable name="rels_none" select="$rels[not(matches(@rdf:about, 'bibl_sappho_'))]"/>
 
         <!-- build pair lists -->
+        <!-- frag ↔ frag -->
         <xsl:variable name="pairs_frag" as="element(pair)*">
             <xsl:for-each select="$rels_frag">
                 <xsl:variable name="relAbout" select="string(@rdf:about)"/>
-                <xsl:variable name="allLabels" as="xs:string*">
-                    <xsl:for-each
-                        select="(intro:R13_hasReferringEntity/@rdf:resource, intro:R12_hasReferredToEntity/@rdf:resource)">
-                        <xsl:variable name="rtf">
-                            <xsl:call-template name="label-of-uri">
-                                <xsl:with-param name="uri" select="string(.)"/>
-                            </xsl:call-template>
-                        </xsl:variable>
-                        <xsl:sequence select="normalize-space(string($rtf))"/>
-                    </xsl:for-each>
-                </xsl:variable>
-                <xsl:variable name="fragLabels" as="xs:string*" select="
-                        for $l in $allLabels
-                        return
-                            if (matches($l, '^Fragment\s', 'i')) then
-                                $l
-                            else
-                                ()"/>
-                <xsl:for-each select="distinct-values($fragLabels)">
-                    <xsl:variable name="g" select="."/>
-                    <xsl:for-each select="distinct-values($fragLabels[. ne $g])">
-                        <pair group="{$g}" partner="{.}" about="{$relAbout}"/>
+                <xsl:variable name="allUris" as="xs:string*" select="
+                        (data(intro:R13_hasReferringEntity/@rdf:resource),
+                        data(intro:R12_hasReferredToEntity/@rdf:resource))"/>
+                <xsl:variable name="fragUris" as="xs:string*"
+                    select="$allUris[matches(., '/bibl_sappho_')]"/>
+
+                <xsl:for-each select="distinct-values($fragUris)">
+                    <xsl:variable name="guri" select="."/>
+                    <xsl:for-each select="distinct-values($fragUris[. ne $guri])">
+                        <xsl:variable name="puri" select="."/>
+                        <pair group="{u:label($guri)}" group-uri="{$guri}"
+                            partner="{u:label($puri)}" partner-uri="{$puri}" about="{$relAbout}"/>
                     </xsl:for-each>
                 </xsl:for-each>
             </xsl:for-each>
         </xsl:variable>
 
+        <!-- recep ↔ frag -->
         <xsl:variable name="pairs_recep" as="element(pair)*">
             <xsl:for-each select="$rels_recep">
                 <xsl:variable name="relAbout" select="string(@rdf:about)"/>
-                <xsl:variable name="allLabels" as="xs:string*">
-                    <xsl:for-each
-                        select="(intro:R13_hasReferringEntity/@rdf:resource, intro:R12_hasReferredToEntity/@rdf:resource)">
-                        <xsl:variable name="rtf">
-                            <xsl:call-template name="label-of-uri">
-                                <xsl:with-param name="uri" select="string(.)"/>
-                            </xsl:call-template>
-                        </xsl:variable>
-                        <xsl:sequence select="normalize-space(string($rtf))"/>
-                    </xsl:for-each>
-                </xsl:variable>
-                <xsl:variable name="fragLabels" as="xs:string*" select="
-                        for $l in $allLabels
-                        return
-                            if (matches($l, '^Fragment\s', 'i')) then
-                                $l
-                            else
-                                ()"/>
-                <xsl:variable name="nonFragLabels" as="xs:string*" select="
-                        for $l in $allLabels
-                        return
-                            if (not(matches($l, '^Fragment\s', 'i'))) then
-                                $l
-                            else
-                                ()"/>
-                <xsl:for-each select="distinct-values($nonFragLabels)">
-                    <xsl:variable name="g" select="."/>
-                    <xsl:for-each select="distinct-values($fragLabels)">
-                        <pair group="{$g}" partner="{.}" about="{$relAbout}"/>
+                <xsl:variable name="allUris" as="xs:string*" select="
+                        (data(intro:R13_hasReferringEntity/@rdf:resource),
+                        data(intro:R12_hasReferredToEntity/@rdf:resource))"/>
+                <xsl:variable name="fragUris" as="xs:string*"
+                    select="$allUris[matches(., '/bibl_sappho_')]"/>
+                <xsl:variable name="nonFragUris" as="xs:string*"
+                    select="$allUris[not(matches(., '/bibl_sappho_'))]"/>
+
+                <xsl:for-each select="distinct-values($nonFragUris)">
+                    <xsl:variable name="guri" select="."/>
+                    <xsl:for-each select="distinct-values($fragUris)">
+                        <xsl:variable name="puri" select="."/>
+                        <pair group="{u:label($guri)}" group-uri="{$guri}"
+                            partner="{u:label($puri)}" partner-uri="{$puri}" about="{$relAbout}"/>
                     </xsl:for-each>
                 </xsl:for-each>
             </xsl:for-each>
         </xsl:variable>
 
+        <!-- recep ↔ recep -->
         <xsl:variable name="pairs_none" as="element(pair)*">
             <xsl:for-each select="$rels_none">
                 <xsl:variable name="relAbout" select="string(@rdf:about)"/>
-                <xsl:variable name="labels" as="xs:string*">
-                    <xsl:for-each
-                        select="(intro:R13_hasReferringEntity/@rdf:resource, intro:R12_hasReferredToEntity/@rdf:resource)">
-                        <xsl:variable name="rtf">
-                            <xsl:call-template name="label-of-uri">
-                                <xsl:with-param name="uri" select="string(.)"/>
-                            </xsl:call-template>
-                        </xsl:variable>
-                        <xsl:sequence select="normalize-space(string($rtf))"/>
-                    </xsl:for-each>
-                </xsl:variable>
-                <xsl:variable name="nonFragLabels" as="xs:string*" select="
-                        for $l in $labels
-                        return
-                            if (not(matches($l, '^Fragment\s', 'i'))) then
-                                $l
-                            else
-                                ()"/>
-                <xsl:for-each select="distinct-values($nonFragLabels)">
-                    <xsl:variable name="g" select="."/>
-                    <xsl:for-each select="distinct-values($nonFragLabels[. ne $g])">
-                        <pair group="{$g}" partner="{.}" about="{$relAbout}"/>
+                <xsl:variable name="allUris" as="xs:string*" select="
+                        (data(intro:R13_hasReferringEntity/@rdf:resource),
+                        data(intro:R12_hasReferredToEntity/@rdf:resource))"/>
+                <xsl:variable name="nonFragUris" as="xs:string*"
+                    select="$allUris[not(matches(., '/bibl_sappho_'))]"/>
+
+                <xsl:for-each select="distinct-values($nonFragUris)">
+                    <xsl:variable name="guri" select="."/>
+                    <xsl:for-each select="distinct-values($nonFragUris[. ne $guri])">
+                        <xsl:variable name="puri" select="."/>
+                        <pair group="{u:label($guri)}" group-uri="{$guri}"
+                            partner="{u:label($puri)}" partner-uri="{$puri}" about="{$relAbout}"/>
                     </xsl:for-each>
                 </xsl:for-each>
             </xsl:for-each>
@@ -532,7 +579,11 @@
                                                   <li>
                                                   <details>
                                                   <summary class="has-children">
-                                                  <xsl:value-of select="@group"/>
+                                                  <xsl:call-template name="render-label-with-icon">
+                                                  <xsl:with-param name="uri"
+                                                  select="string((current-group()[1]/@group-uri)[1])"
+                                                  />
+                                                  </xsl:call-template>
                                                   </summary>
                                                   <div class="skos-children">
                                                   <ul class="skos-tree">
@@ -544,6 +595,9 @@
                                                   <xsl:with-param name="about"
                                                   select="string((current-group()[1]/@about)[1])"/>
                                                   <xsl:with-param name="partner" select="@partner"/>
+                                                  <xsl:with-param name="partner-uri"
+                                                  select="string((current-group()[1]/@partner-uri)[1])"
+                                                  />
                                                   </xsl:call-template>
                                                   </xsl:for-each-group>
                                                   </ul>
@@ -573,7 +627,11 @@
                                                   <li>
                                                   <details>
                                                   <summary class="has-children">
-                                                  <xsl:value-of select="@group"/>
+                                                  <xsl:call-template name="render-label-with-icon">
+                                                  <xsl:with-param name="uri"
+                                                  select="string((current-group()[1]/@group-uri)[1])"
+                                                  />
+                                                  </xsl:call-template>
                                                   </summary>
                                                   <div class="skos-children">
                                                   <ul class="skos-tree">
@@ -585,6 +643,9 @@
                                                   <xsl:with-param name="about"
                                                   select="string((current-group()[1]/@about)[1])"/>
                                                   <xsl:with-param name="partner" select="@partner"/>
+                                                  <xsl:with-param name="partner-uri"
+                                                  select="string((current-group()[1]/@partner-uri)[1])"
+                                                  />
                                                   </xsl:call-template>
                                                   </xsl:for-each-group>
                                                   </ul>
@@ -614,7 +675,11 @@
                                                   <li>
                                                   <details>
                                                   <summary class="has-children">
-                                                  <xsl:value-of select="@group"/>
+                                                  <xsl:call-template name="render-label-with-icon">
+                                                  <xsl:with-param name="uri"
+                                                  select="string((current-group()[1]/@group-uri)[1])"
+                                                  />
+                                                  </xsl:call-template>
                                                   </summary>
                                                   <div class="skos-children">
                                                   <ul class="skos-tree">
@@ -626,6 +691,9 @@
                                                   <xsl:with-param name="about"
                                                   select="string((current-group()[1]/@about)[1])"/>
                                                   <xsl:with-param name="partner" select="@partner"/>
+                                                  <xsl:with-param name="partner-uri"
+                                                  select="string((current-group()[1]/@partner-uri)[1])"
+                                                  />
                                                   </xsl:call-template>
                                                   </xsl:for-each-group>
                                                   </ul>
@@ -704,7 +772,7 @@
                                                   <xsl:when test="exists($occTexts)">
                                                   <details>
                                                   <summary class="has-children">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
                                                   </xsl:call-template>
                                                   </summary>
@@ -714,7 +782,7 @@
                                                   <xsl:sort select="lower-case(u:label(.))"/>
                                                   <li>
                                                   <span class="leaf indent">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="."/>
                                                   </xsl:call-template>
                                                   </span>
@@ -726,7 +794,7 @@
                                                   </xsl:when>
                                                   <xsl:otherwise>
                                                   <span class="leaf">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
                                                   </xsl:call-template>
                                                   </span>
@@ -777,7 +845,7 @@
                                                   <xsl:when test="exists($occTexts)">
                                                   <details>
                                                   <summary class="has-children">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
                                                   </xsl:call-template>
                                                   </summary>
@@ -787,7 +855,7 @@
                                                   <xsl:sort select="lower-case(u:label(.))"/>
                                                   <li>
                                                   <span class="leaf indent">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="."/>
                                                   </xsl:call-template>
                                                   </span>
@@ -799,7 +867,7 @@
                                                   </xsl:when>
                                                   <xsl:otherwise>
                                                   <span class="leaf">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
                                                   </xsl:call-template>
                                                   </span>
@@ -850,7 +918,7 @@
                                                   <xsl:when test="exists($occTexts)">
                                                   <details>
                                                   <summary class="has-children">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
                                                   </xsl:call-template>
                                                   </summary>
@@ -860,7 +928,7 @@
                                                   <xsl:sort select="lower-case(u:label(.))"/>
                                                   <li>
                                                   <span class="leaf indent">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="."/>
                                                   </xsl:call-template>
                                                   </span>
@@ -872,7 +940,7 @@
                                                   </xsl:when>
                                                   <xsl:otherwise>
                                                   <span class="leaf">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
                                                   </xsl:call-template>
                                                   </span>
@@ -923,7 +991,7 @@
                                                   <xsl:when test="exists($occTexts)">
                                                   <details>
                                                   <summary class="has-children">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
                                                   </xsl:call-template>
                                                   </summary>
@@ -933,7 +1001,7 @@
                                                   <xsl:sort select="lower-case(u:label(.))"/>
                                                   <li>
                                                   <span class="leaf indent">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="."/>
                                                   </xsl:call-template>
                                                   </span>
@@ -945,7 +1013,7 @@
                                                   </xsl:when>
                                                   <xsl:otherwise>
                                                   <span class="leaf">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
                                                   </xsl:call-template>
                                                   </span>
@@ -996,7 +1064,7 @@
                                                   <xsl:when test="exists($occTexts)">
                                                   <details>
                                                   <summary class="has-children">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
                                                   </xsl:call-template>
                                                   </summary>
@@ -1006,7 +1074,7 @@
                                                   <xsl:sort select="lower-case(u:label(.))"/>
                                                   <li>
                                                   <span class="leaf indent">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="."/>
                                                   </xsl:call-template>
                                                   </span>
@@ -1018,7 +1086,7 @@
                                                   </xsl:when>
                                                   <xsl:otherwise>
                                                   <span class="leaf">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
                                                   </xsl:call-template>
                                                   </span>
@@ -1069,7 +1137,7 @@
                                                   <xsl:when test="exists($occTexts)">
                                                   <details>
                                                   <summary class="has-children">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
                                                   </xsl:call-template>
                                                   </summary>
@@ -1079,7 +1147,7 @@
                                                   <xsl:sort select="lower-case(u:label(.))"/>
                                                   <li>
                                                   <span class="leaf indent">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="."/>
                                                   </xsl:call-template>
                                                   </span>
@@ -1091,7 +1159,7 @@
                                                   </xsl:when>
                                                   <xsl:otherwise>
                                                   <span class="leaf">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
                                                   </xsl:call-template>
                                                   </span>
@@ -1142,7 +1210,7 @@
                                                   <xsl:when test="exists($occTexts)">
                                                   <details>
                                                   <summary class="has-children">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
                                                   </xsl:call-template>
                                                   </summary>
@@ -1152,7 +1220,7 @@
                                                   <xsl:sort select="lower-case(u:label(.))"/>
                                                   <li>
                                                   <span class="leaf indent">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="."/>
                                                   </xsl:call-template>
                                                   </span>
@@ -1164,7 +1232,7 @@
                                                   </xsl:when>
                                                   <xsl:otherwise>
                                                   <span class="leaf">
-                                                  <xsl:call-template name="label-of-uri">
+                                                  <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
                                                   </xsl:call-template>
                                                   </span>
