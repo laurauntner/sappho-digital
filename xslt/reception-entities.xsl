@@ -472,6 +472,62 @@
         <xsl:text>)</xsl:text>
     </xsl:template>
 
+    <!-- statistics -->
+    <xsl:template name="emit-right-barchart">
+        <xsl:param name="rels" as="element(intro:INT31_IntertextualRelation)*"/>
+        <xsl:param name="items" as="xs:string*"/>
+        <xsl:param name="kind" as="xs:string"/>
+        <xsl:param name="chart-id" as="xs:string"/>
+        <xsl:param name="chart-title" as="xs:string"/>
+        <xsl:param name="top" as="xs:integer" select="10"/>
+
+        <xsl:variable name="itemsWithCounts">
+            <xsl:for-each select="$items">
+                <xsl:variable name="this" select="."/>
+                <xsl:variable name="occRels" select="
+                        if ($kind = 'phrases')
+                        then
+                            $rels[intro:R24_hasRelatedEntity/@rdf:resource = $this]
+                        else
+                            $rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
+                <xsl:variable name="occTexts"
+                    select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
+                <item name="{u:label($this)}" n="{count($occTexts)}"/>
+            </xsl:for-each>
+        </xsl:variable>
+
+        <xsl:variable name="topItems" as="element(item)*">
+            <xsl:perform-sort select="$itemsWithCounts/item[@n &gt; 0]">
+                <xsl:sort select="number(@n)" data-type="number" order="descending"/>
+                <xsl:sort select="lower-case(@name)"/>
+            </xsl:perform-sort>
+        </xsl:variable>
+        <xsl:variable name="limited" select="$topItems[position() &lt;= $top]"/>
+
+        <div class="wikidata-right">
+            <div id="{$chart-id}" class="skos-chart" data-chart="bar" aria-label="{$chart-title}"/>
+            <script type="application/json" id="{$chart-id}-data">{
+                "title": "<xsl:value-of select="u:json-escape($chart-title)"/>",
+                "seriesName": "Vorkommnisse",
+                "data": [
+                <xsl:for-each select="$limited">
+                    {
+                    "name": "<xsl:value-of select="u:json-escape(string(@name))"/>",
+                    "y": <xsl:value-of select="@n"/>
+                    }<xsl:if test="position() != last()">,</xsl:if>
+                </xsl:for-each>
+                ]
+                }</script>
+        </div>
+    </xsl:template>
+
+    <!-- JSON escapes -->
+    <xsl:function name="u:json-escape" as="xs:string">
+        <xsl:param name="s" as="xs:string?"/>
+        <xsl:variable name="t1" select="replace(string($s), '\\', '\\\\')"/>
+        <xsl:sequence select="replace($t1, '&quot;', '\\&quot;')"/>
+    </xsl:function>
+
     <!-- intertextual relationships -->
 
     <xsl:template match="/" mode="intertexts">
@@ -755,6 +811,8 @@
                     <xsl:call-template name="html_head">
                         <xsl:with-param name="html_title" select="'Personenreferenzen'"/>
                     </xsl:call-template>
+                    <script src="https://code.highcharts.com/highcharts.js"/>
+                    <script src="./js/feature-statistics.js"/>
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
@@ -767,17 +825,19 @@
                                             <a href="vocab.html">Vokabular</a>.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
-                                    <ul class="skos-tree">
-                                        <xsl:for-each select="$u_persons">
-                                            <xsl:sort select="lower-case(u:label(.))"/>
-                                            <li>
-                                                <xsl:variable name="this" select="."/>
-                                                <xsl:variable name="occRels"
+                                    <div class="wikidata-layout has-wide-chart">
+                                        <div class="wikidata-left">
+                                            <ul class="skos-tree">
+                                                <xsl:for-each select="$u_persons">
+                                                  <xsl:sort select="lower-case(u:label(.))"/>
+                                                  <li>
+                                                  <xsl:variable name="this" select="."/>
+                                                  <xsl:variable name="occRels"
                                                   select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
-                                                <xsl:variable name="occTexts"
+                                                  <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
-                                                <xsl:variable name="n" select="count($occTexts)"/>
-                                                <xsl:choose>
+                                                  <xsl:variable name="n" select="count($occTexts)"/>
+                                                  <xsl:choose>
                                                   <xsl:when test="$n &gt; 0">
                                                   <details>
                                                   <summary class="has-children">
@@ -814,10 +874,20 @@
                                                   </xsl:call-template>
                                                   </span>
                                                   </xsl:otherwise>
-                                                </xsl:choose>
-                                            </li>
-                                        </xsl:for-each>
-                                    </ul>
+                                                  </xsl:choose>
+                                                  </li>
+                                                </xsl:for-each>
+                                            </ul>
+                                        </div>
+                                        <xsl:call-template name="emit-right-barchart">
+                                            <xsl:with-param name="rels" select="$rels"/>
+                                            <xsl:with-param name="items" select="$u_persons"/>
+                                            <xsl:with-param name="kind" select="'persons'"/>
+                                            <xsl:with-param name="chart-id" select="'chart-persons'"/>
+                                            <xsl:with-param name="chart-title" select="'Top Personen'"/>
+                                            <xsl:with-param name="top" select="20"/>
+                                        </xsl:call-template>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -834,6 +904,8 @@
                     <xsl:call-template name="html_head">
                         <xsl:with-param name="html_title" select="'Ortsreferenzen'"/>
                     </xsl:call-template>
+                    <script src="https://code.highcharts.com/highcharts.js"/>
+                    <script src="./js/feature-statistics.js"/>
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
@@ -846,17 +918,19 @@
                                             <a href="vocab.html">Vokabular</a>.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
-                                    <ul class="skos-tree">
-                                        <xsl:for-each select="$u_places">
-                                            <xsl:sort select="lower-case(u:label(.))"/>
-                                            <li>
-                                                <xsl:variable name="this" select="."/>
-                                                <xsl:variable name="occRels"
+                                    <div class="wikidata-layout has-wide-chart">
+                                        <div class="wikidata-left">
+                                            <ul class="skos-tree">
+                                                <xsl:for-each select="$u_places">
+                                                  <xsl:sort select="lower-case(u:label(.))"/>
+                                                  <li>
+                                                  <xsl:variable name="this" select="."/>
+                                                  <xsl:variable name="occRels"
                                                   select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
-                                                <xsl:variable name="occTexts"
+                                                  <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
-                                                <xsl:variable name="n" select="count($occTexts)"/>
-                                                <xsl:choose>
+                                                  <xsl:variable name="n" select="count($occTexts)"/>
+                                                  <xsl:choose>
                                                   <xsl:when test="$n &gt; 0">
                                                   <details>
                                                   <summary class="has-children">
@@ -893,10 +967,20 @@
                                                   </xsl:call-template>
                                                   </span>
                                                   </xsl:otherwise>
-                                                </xsl:choose>
-                                            </li>
-                                        </xsl:for-each>
-                                    </ul>
+                                                  </xsl:choose>
+                                                  </li>
+                                                </xsl:for-each>
+                                            </ul>
+                                        </div>
+                                        <xsl:call-template name="emit-right-barchart">
+                                            <xsl:with-param name="rels" select="$rels"/>
+                                            <xsl:with-param name="items" select="$u_places"/>
+                                            <xsl:with-param name="kind" select="'places'"/>
+                                            <xsl:with-param name="chart-id" select="'chart-places'"/>
+                                            <xsl:with-param name="chart-title" select="'Top Orte'"/>
+                                            <xsl:with-param name="top" select="20"/>
+                                        </xsl:call-template>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -913,6 +997,8 @@
                     <xsl:call-template name="html_head">
                         <xsl:with-param name="html_title" select="'Werkreferenzen'"/>
                     </xsl:call-template>
+                    <script src="https://code.highcharts.com/highcharts.js"/>
+                    <script src="./js/feature-statistics.js"/>
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
@@ -925,17 +1011,19 @@
                                             <a href="vocab.html">Vokabular</a>.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
-                                    <ul class="skos-tree">
-                                        <xsl:for-each select="$u_works">
-                                            <xsl:sort select="lower-case(u:label(.))"/>
-                                            <li>
-                                                <xsl:variable name="this" select="."/>
-                                                <xsl:variable name="occRels"
+                                    <div class="wikidata-layout has-wide-chart">
+                                        <div class="wikidata-left">
+                                            <ul class="skos-tree">
+                                                <xsl:for-each select="$u_works">
+                                                  <xsl:sort select="lower-case(u:label(.))"/>
+                                                  <li>
+                                                  <xsl:variable name="this" select="."/>
+                                                  <xsl:variable name="occRels"
                                                   select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
-                                                <xsl:variable name="occTexts"
+                                                  <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
-                                                <xsl:variable name="n" select="count($occTexts)"/>
-                                                <xsl:choose>
+                                                  <xsl:variable name="n" select="count($occTexts)"/>
+                                                  <xsl:choose>
                                                   <xsl:when test="$n &gt; 0">
                                                   <details>
                                                   <summary class="has-children">
@@ -972,10 +1060,20 @@
                                                   </xsl:call-template>
                                                   </span>
                                                   </xsl:otherwise>
-                                                </xsl:choose>
-                                            </li>
-                                        </xsl:for-each>
-                                    </ul>
+                                                  </xsl:choose>
+                                                  </li>
+                                                </xsl:for-each>
+                                            </ul>
+                                        </div>
+                                        <xsl:call-template name="emit-right-barchart">
+                                            <xsl:with-param name="rels" select="$rels"/>
+                                            <xsl:with-param name="items" select="$u_works"/>
+                                            <xsl:with-param name="kind" select="'works'"/>
+                                            <xsl:with-param name="chart-id" select="'chart-works'"/>
+                                            <xsl:with-param name="chart-title" select="'Top Werke'"/>
+                                            <xsl:with-param name="top" select="20"/>
+                                        </xsl:call-template>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -992,6 +1090,8 @@
                     <xsl:call-template name="html_head">
                         <xsl:with-param name="html_title" select="'Phrasen'"/>
                     </xsl:call-template>
+                    <script src="https://code.highcharts.com/highcharts.js"/>
+                    <script src="./js/feature-statistics.js"/>
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
@@ -1004,17 +1104,19 @@
                                             <a href="vocab.html">Vokabular</a>.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
-                                    <ul class="skos-tree">
-                                        <xsl:for-each select="$u_phrases">
-                                            <xsl:sort select="lower-case(u:label(.))"/>
-                                            <li>
-                                                <xsl:variable name="this" select="."/>
-                                                <xsl:variable name="occRels"
+                                    <div class="wikidata-layout has-wide-chart">
+                                        <div class="wikidata-left">
+                                            <ul class="skos-tree">
+                                                <xsl:for-each select="$u_phrases">
+                                                  <xsl:sort select="lower-case(u:label(.))"/>
+                                                  <li>
+                                                  <xsl:variable name="this" select="."/>
+                                                  <xsl:variable name="occRels"
                                                   select="$rels[intro:R24_hasRelatedEntity/@rdf:resource = $this]"/>
-                                                <xsl:variable name="occTexts"
+                                                  <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
-                                                <xsl:variable name="n" select="count($occTexts)"/>
-                                                <xsl:choose>
+                                                  <xsl:variable name="n" select="count($occTexts)"/>
+                                                  <xsl:choose>
                                                   <xsl:when test="$n &gt; 0">
                                                   <details>
                                                   <summary class="has-children">
@@ -1051,10 +1153,20 @@
                                                   </xsl:call-template>
                                                   </span>
                                                   </xsl:otherwise>
-                                                </xsl:choose>
-                                            </li>
-                                        </xsl:for-each>
-                                    </ul>
+                                                  </xsl:choose>
+                                                  </li>
+                                                </xsl:for-each>
+                                            </ul>
+                                        </div>
+                                        <xsl:call-template name="emit-right-barchart">
+                                            <xsl:with-param name="rels" select="$rels"/>
+                                            <xsl:with-param name="items" select="$u_phrases"/>
+                                            <xsl:with-param name="kind" select="'phrases'"/> <!-- NEU: anderer Pfad -->
+                                            <xsl:with-param name="chart-id" select="'chart-phrases'"/>
+                                            <xsl:with-param name="chart-title" select="'Top Phrasen'"/>
+                                            <xsl:with-param name="top" select="20"/>
+                                        </xsl:call-template>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1071,6 +1183,8 @@
                     <xsl:call-template name="html_head">
                         <xsl:with-param name="html_title" select="'Motive'"/>
                     </xsl:call-template>
+                    <script src="https://code.highcharts.com/highcharts.js"/>
+                    <script src="./js/feature-statistics.js"/>
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
@@ -1083,17 +1197,19 @@
                                             <a href="vocab.html">Vokabular</a>.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
-                                    <ul class="skos-tree">
-                                        <xsl:for-each select="$u_motifs">
-                                            <xsl:sort select="lower-case(u:label(.))"/>
-                                            <li>
-                                                <xsl:variable name="this" select="."/>
-                                                <xsl:variable name="occRels"
+                                    <div class="wikidata-layout has-wide-chart">
+                                        <div class="wikidata-left">
+                                            <ul class="skos-tree">
+                                                <xsl:for-each select="$u_motifs">
+                                                  <xsl:sort select="lower-case(u:label(.))"/>
+                                                  <li>
+                                                  <xsl:variable name="this" select="."/>
+                                                  <xsl:variable name="occRels"
                                                   select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
-                                                <xsl:variable name="occTexts"
+                                                  <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
-                                                <xsl:variable name="n" select="count($occTexts)"/>
-                                                <xsl:choose>
+                                                  <xsl:variable name="n" select="count($occTexts)"/>
+                                                  <xsl:choose>
                                                   <xsl:when test="$n &gt; 0">
                                                   <details>
                                                   <summary class="has-children">
@@ -1130,10 +1246,20 @@
                                                   </xsl:call-template>
                                                   </span>
                                                   </xsl:otherwise>
-                                                </xsl:choose>
-                                            </li>
-                                        </xsl:for-each>
-                                    </ul>
+                                                  </xsl:choose>
+                                                  </li>
+                                                </xsl:for-each>
+                                            </ul>
+                                        </div>
+                                        <xsl:call-template name="emit-right-barchart">
+                                            <xsl:with-param name="rels" select="$rels"/>
+                                            <xsl:with-param name="items" select="$u_motifs"/>
+                                            <xsl:with-param name="kind" select="'motifs'"/>
+                                            <xsl:with-param name="chart-id" select="'chart-motifs'"/>
+                                            <xsl:with-param name="chart-title" select="'Top Motive'"/>
+                                            <xsl:with-param name="top" select="20"/>
+                                        </xsl:call-template>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1150,6 +1276,8 @@
                     <xsl:call-template name="html_head">
                         <xsl:with-param name="html_title" select="'Themen'"/>
                     </xsl:call-template>
+                    <script src="https://code.highcharts.com/highcharts.js"/>
+                    <script src="./js/feature-statistics.js"/>
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
@@ -1162,17 +1290,19 @@
                                             <a href="vocab.html">Vokabular</a>.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
-                                    <ul class="skos-tree">
-                                        <xsl:for-each select="$u_topics">
-                                            <xsl:sort select="lower-case(u:label(.))"/>
-                                            <li>
-                                                <xsl:variable name="this" select="."/>
-                                                <xsl:variable name="occRels"
+                                    <div class="wikidata-layout has-wide-chart">
+                                        <div class="wikidata-left">
+                                            <ul class="skos-tree">
+                                                <xsl:for-each select="$u_topics">
+                                                  <xsl:sort select="lower-case(u:label(.))"/>
+                                                  <li>
+                                                  <xsl:variable name="this" select="."/>
+                                                  <xsl:variable name="occRels"
                                                   select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
-                                                <xsl:variable name="occTexts"
+                                                  <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
-                                                <xsl:variable name="n" select="count($occTexts)"/>
-                                                <xsl:choose>
+                                                  <xsl:variable name="n" select="count($occTexts)"/>
+                                                  <xsl:choose>
                                                   <xsl:when test="$n &gt; 0">
                                                   <details>
                                                   <summary class="has-children">
@@ -1209,10 +1339,20 @@
                                                   </xsl:call-template>
                                                   </span>
                                                   </xsl:otherwise>
-                                                </xsl:choose>
-                                            </li>
-                                        </xsl:for-each>
-                                    </ul>
+                                                  </xsl:choose>
+                                                  </li>
+                                                </xsl:for-each>
+                                            </ul>
+                                        </div>
+                                        <xsl:call-template name="emit-right-barchart">
+                                            <xsl:with-param name="rels" select="$rels"/>
+                                            <xsl:with-param name="items" select="$u_topics"/>
+                                            <xsl:with-param name="kind" select="'topics'"/>
+                                            <xsl:with-param name="chart-id" select="'chart-topics'"/>
+                                            <xsl:with-param name="chart-title" select="'Top Themen'"/>
+                                            <xsl:with-param name="top" select="20"/>
+                                        </xsl:call-template>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -1229,6 +1369,8 @@
                     <xsl:call-template name="html_head">
                         <xsl:with-param name="html_title" select="'Stoffe'"/>
                     </xsl:call-template>
+                    <script src="https://code.highcharts.com/highcharts.js"/>
+                    <script src="./js/feature-statistics.js"/>
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
@@ -1241,17 +1383,19 @@
                                             <a href="vocab.html">Vokabular</a>.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
-                                    <ul class="skos-tree">
-                                        <xsl:for-each select="$u_plots">
-                                            <xsl:sort select="lower-case(u:label(.))"/>
-                                            <li>
-                                                <xsl:variable name="this" select="."/>
-                                                <xsl:variable name="occRels"
+                                    <div class="wikidata-layout has-wide-chart">
+                                        <div class="wikidata-left">
+                                            <ul class="skos-tree">
+                                                <xsl:for-each select="$u_plots">
+                                                  <xsl:sort select="lower-case(u:label(.))"/>
+                                                  <li>
+                                                  <xsl:variable name="this" select="."/>
+                                                  <xsl:variable name="occRels"
                                                   select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
-                                                <xsl:variable name="occTexts"
+                                                  <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
-                                                <xsl:variable name="n" select="count($occTexts)"/>
-                                                <xsl:choose>
+                                                  <xsl:variable name="n" select="count($occTexts)"/>
+                                                  <xsl:choose>
                                                   <xsl:when test="$n &gt; 0">
                                                   <details>
                                                   <summary class="has-children">
@@ -1288,10 +1432,20 @@
                                                   </xsl:call-template>
                                                   </span>
                                                   </xsl:otherwise>
-                                                </xsl:choose>
-                                            </li>
-                                        </xsl:for-each>
-                                    </ul>
+                                                  </xsl:choose>
+                                                  </li>
+                                                </xsl:for-each>
+                                            </ul>
+                                        </div>
+                                        <xsl:call-template name="emit-right-barchart">
+                                            <xsl:with-param name="rels" select="$rels"/>
+                                            <xsl:with-param name="items" select="$u_plots"/>
+                                            <xsl:with-param name="kind" select="'plots'"/>
+                                            <xsl:with-param name="chart-id" select="'chart-plots'"/>
+                                            <xsl:with-param name="chart-title" select="'Top Stoffe'"/>
+                                            <xsl:with-param name="top" select="20"/>
+                                        </xsl:call-template>
+                                    </div>
                                 </div>
                             </div>
                         </div>
