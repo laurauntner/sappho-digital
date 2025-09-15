@@ -524,8 +524,13 @@
     <!-- JSON escapes -->
     <xsl:function name="u:json-escape" as="xs:string">
         <xsl:param name="s" as="xs:string?"/>
-        <xsl:variable name="t1" select="replace(string($s), '\\', '\\\\')"/>
-        <xsl:sequence select="replace($t1, '&quot;', '\\&quot;')"/>
+        <xsl:variable name="t0" select="string($s)"/>
+        <xsl:variable name="t1" select="replace($t0, '\\', '\\\\')"/>
+        <xsl:variable name="t2" select="replace($t1, '[&quot;]', '\\&quot;')"/>
+        <xsl:variable name="t3" select="replace($t2, '&#13;', '\\r')"/>
+        <xsl:variable name="t4" select="replace($t3, '&#10;', '\\n')"/>
+        <xsl:variable name="t5" select="replace($t4, '&#9;', '\\t')"/>
+        <xsl:sequence select="$t5"/>
     </xsl:function>
 
     <!-- intertextual relationships -->
@@ -540,13 +545,13 @@
             select="$rels[matches(@rdf:about, 'bibl_sappho_') and not(matches(@rdf:about, 'bibl_sappho_.*bibl_sappho_'))]"/>
         <xsl:variable name="rels_none" select="$rels[not(matches(@rdf:about, 'bibl_sappho_'))]"/>
 
-        <!-- build pair lists -->
         <!-- frag ↔ frag -->
         <xsl:variable name="pairs_frag" as="element(pair)*">
             <xsl:for-each select="$rels_frag">
                 <xsl:variable name="relAbout" select="string(@rdf:about)"/>
                 <xsl:variable name="allUris" as="xs:string*" select="
-                        (data(intro:R13_hasReferringEntity/@rdf:resource),
+                        (
+                        data(intro:R13_hasReferringEntity/@rdf:resource),
                         data(intro:R12_hasReferredToEntity/@rdf:resource))"/>
                 <xsl:variable name="fragUris" as="xs:string*"
                     select="$allUris[matches(., '/bibl_sappho_')]"/>
@@ -567,7 +572,8 @@
             <xsl:for-each select="$rels_recep">
                 <xsl:variable name="relAbout" select="string(@rdf:about)"/>
                 <xsl:variable name="allUris" as="xs:string*" select="
-                        (data(intro:R13_hasReferringEntity/@rdf:resource),
+                        (
+                        data(intro:R13_hasReferringEntity/@rdf:resource),
                         data(intro:R12_hasReferredToEntity/@rdf:resource))"/>
                 <xsl:variable name="fragUris" as="xs:string*"
                     select="$allUris[matches(., '/bibl_sappho_')]"/>
@@ -590,7 +596,8 @@
             <xsl:for-each select="$rels_none">
                 <xsl:variable name="relAbout" select="string(@rdf:about)"/>
                 <xsl:variable name="allUris" as="xs:string*" select="
-                        (data(intro:R13_hasReferringEntity/@rdf:resource),
+                        (
+                        data(intro:R13_hasReferringEntity/@rdf:resource),
                         data(intro:R12_hasReferredToEntity/@rdf:resource))"/>
                 <xsl:variable name="nonFragUris" as="xs:string*"
                     select="$allUris[not(matches(., '/bibl_sappho_'))]"/>
@@ -606,12 +613,91 @@
             </xsl:for-each>
         </xsl:variable>
 
-        <xsl:result-document href="../html/intertexts.html">
+        <!-- aggregation -->
+        <xsl:variable name="pairs_all" select="($pairs_frag, $pairs_recep, $pairs_none)"/>
+        <xsl:variable name="pairs_filtered"
+            select="$pairs_all[u:common-count(string(@about)) &gt; 0]"/>
+
+        <xsl:variable name="nodeUris"
+            select="distinct-values(($pairs_filtered/@group-uri, $pairs_filtered/@partner-uri))"/>
+
+        <xsl:variable name="edges_agg">
+            <xsl:for-each-group select="$pairs_filtered" group-by="
+                    if (@group-uri &lt;= @partner-uri)
+                    then
+                        concat(@group-uri, '|', @partner-uri)
+                    else
+                        concat(@partner-uri, '|', @group-uri)">
+                <xsl:variable name="first" select="current-group()[1]"/>
+                <xsl:variable name="a" select="string($first/@group-uri)"/>
+                <xsl:variable name="b" select="string($first/@partner-uri)"/>
+                <xsl:variable name="source" select="
+                        if ($a &lt;= $b) then
+                            $a
+                        else
+                            $b"/>
+                <xsl:variable name="target" select="
+                        if ($a &lt;= $b) then
+                            $b
+                        else
+                            $a"/>
+                <edge s="{$source}" t="{$target}"
+                    w="{sum(for $p in current-group() return u:common-count(string($p/@about)))}"/>
+            </xsl:for-each-group>
+        </xsl:variable>
+
+        <!-- json -->
+        <xsl:result-document href="../data/json/itx-graph-data.json" method="text" encoding="UTF-8"
+            >{ "nodes": [ <xsl:for-each select="$nodeUris">
+                <xsl:sort select="lower-case(u:label(.))"/> { "id": "<xsl:value-of
+                    select="u:json-escape(.)"/>", "label": "<xsl:value-of
+                    select="u:json-escape(u:label(.))"/>", "href": <xsl:choose>
+                    <xsl:when test="u:work-href(.)">"<xsl:value-of
+                            select="u:json-escape(u:work-href(.))"/>"</xsl:when>
+                    <xsl:otherwise>null</xsl:otherwise>
+                </xsl:choose>, "kind": "<xsl:value-of select="
+                        if (matches(., '/bibl_sappho_')) then
+                            'frag'
+                        else
+                            'recep'"/>" }<xsl:if test="position() != last()"
+                    >,</xsl:if>
+            </xsl:for-each> ], "edges": [ <xsl:for-each select="$edges_agg/edge[@w &gt; 0]"> {
+                "source": "<xsl:value-of select="u:json-escape(@s)"/>", "target": "<xsl:value-of
+                    select="u:json-escape(@t)"/>", "weight": <xsl:value-of select="@w"/> }<xsl:if
+                    test="position() != last()">,</xsl:if>
+            </xsl:for-each> ] }</xsl:result-document>
+
+        <!-- html -->
+        <xsl:result-document href="../html/intertexts.html" method="html">
             <html lang="de">
                 <head>
                     <xsl:call-template name="html_head">
                         <xsl:with-param name="html_title" select="'Intertextuelle Beziehungen'"/>
                     </xsl:call-template>
+                    <script type="module" src="./js/intertexts-network.js"/>
+                    <style>
+                        .big-graph {
+                            height: 55vh;
+                            border: 1px solid #ddd;
+                            border-radius: 8px;
+                        }
+                        .graph-toolbar {
+                            display: flex;
+                            gap: .5rem;
+                            align-items: center;
+                            margin: .5rem 0 1rem;
+                        }
+                        .graph-legend {
+                            font-size: .9rem;
+                            opacity: .8;
+                        }
+                        .graph-legend .dot {
+                            display: inline-block;
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            margin-right: .3rem;
+                        }</style>
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
@@ -621,25 +707,68 @@
                             <div class="card">
                                 <div class="card-header">
                                     <h1>Intertextuelle Beziehungen</h1>
-                                    <p class="align-left">Liste aller (im weitesten Sinne)
-                                        intertextuellen Beziehungen zwischen den exemplarisch
-                                        analysierten Texten.</p>
+                                    <p class="align-left"> Alle (im weitesten Sinne) intertextuellen
+                                        Beziehungen zwischen den exemplarisch analysierten Texten. </p>
+
+                                    <div class="graph-toolbar">
+                                        <input id="graph-search" type="search"
+                                            placeholder="Suche nach Text …"/>
+                                        <span class="graph-legend">
+                                            <span class="dot dot-frag"/> Fragment (Sappho) <xsl:text>&#160;</xsl:text>
+                                            <span class="dot dot-recep"/> Rezeptionszeugnis </span>
+                                    </div>
                                 </div>
 
+                                <div class="card-body">
+                                    <div id="itx-graph" class="big-graph"/>
+
+                                    <script type="application/json" id="itx-graph-data">{
+                  "nodes": [
+                  <xsl:for-each select="$nodeUris">
+                    <xsl:sort select="lower-case(u:label(.))"/>
+                    {
+                      "id": "<xsl:value-of select="u:json-escape(.)"/>",
+                      "label": "<xsl:value-of select="u:json-escape(u:label(.))"/>",
+                      "href": <xsl:choose>
+                               <xsl:when test="u:work-href(.)">"<xsl:value-of select="u:json-escape(u:work-href(.))"/>"</xsl:when>
+                               <xsl:otherwise>null</xsl:otherwise>
+                              </xsl:choose>,
+                      "kind": "<xsl:value-of select="
+                                                    if (matches(., '/bibl_sappho_')) then
+                                                        'frag'
+                                                    else
+                                                        'recep'"/>"
+                    }<xsl:if test="position() != last()">,</xsl:if>
+                  </xsl:for-each>
+                  ],
+                  "edges": [
+                  <xsl:for-each select="$edges_agg/edge[@w &gt; 0]">
+                    {
+                      "source": "<xsl:value-of select="u:json-escape(@s)"/>",
+                      "target": "<xsl:value-of select="u:json-escape(@t)"/>",
+                      "weight": <xsl:value-of select="@w"/>
+                    }<xsl:if test="position() != last()">,</xsl:if>
+                  </xsl:for-each>
+                  ]
+                }</script>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container-fluid">
+                            <div class="card">
                                 <div class="card-body skos-wrap">
                                     <ul class="skos-tree">
-
                                         <!-- frag ↔ frag -->
                                         <li>
                                             <details>
-                                                <summary class="has-children">Intertexuelle
+                                                <summary class="has-children">Intertextuelle
                                                   Beziehungen zwischen Sappho-Fragmenten</summary>
                                                 <div class="skos-children">
                                                   <ul class="skos-tree">
                                                   <xsl:for-each-group select="$pairs_frag"
                                                   group-by="@group">
                                                   <xsl:sort select="lower-case(@group)"/>
-
                                                   <xsl:if test="u:any-common(current-group())">
                                                   <li>
                                                   <details>
@@ -676,10 +805,10 @@
                                             </details>
                                         </li>
 
-                                        <!-- reception testimony ↔ frag -->
+                                        <!-- recep ↔ frag -->
                                         <li>
                                             <details>
-                                                <summary class="has-children">Intertexuelle
+                                                <summary class="has-children">Intertextuelle
                                                   Beziehungen zwischen Rezeptionszeugnissen und
                                                   Sappho-Fragmenten</summary>
                                                 <div class="skos-children">
@@ -687,7 +816,6 @@
                                                   <xsl:for-each-group select="$pairs_recep"
                                                   group-by="@group">
                                                   <xsl:sort select="lower-case(@group)"/>
-
                                                   <xsl:if test="u:any-common(current-group())">
                                                   <li>
                                                   <details>
@@ -724,10 +852,10 @@
                                             </details>
                                         </li>
 
-                                        <!-- reception testimony ↔ reception testimony -->
+                                        <!-- recep ↔ recep -->
                                         <li>
                                             <details>
-                                                <summary class="has-children">Intertexuelle
+                                                <summary class="has-children">Intertextuelle
                                                   Beziehungen zwischen
                                                   Rezeptionszeugnissen</summary>
                                                 <div class="skos-children">
@@ -735,7 +863,6 @@
                                                   <xsl:for-each-group select="$pairs_none"
                                                   group-by="@group">
                                                   <xsl:sort select="lower-case(@group)"/>
-
                                                   <xsl:if test="u:any-common(current-group())">
                                                   <li>
                                                   <details>
@@ -779,6 +906,7 @@
 
                         <xsl:call-template name="html_footer"/>
                     </div>
+
                 </body>
             </html>
         </xsl:result-document>
@@ -884,7 +1012,8 @@
                                             <xsl:with-param name="items" select="$u_persons"/>
                                             <xsl:with-param name="kind" select="'persons'"/>
                                             <xsl:with-param name="chart-id" select="'chart-persons'"/>
-                                            <xsl:with-param name="chart-title" select="'Top Personen'"/>
+                                            <xsl:with-param name="chart-title"
+                                                select="'Top Personen'"/>
                                             <xsl:with-param name="top" select="20"/>
                                         </xsl:call-template>
                                     </div>
@@ -1161,9 +1290,11 @@
                                         <xsl:call-template name="emit-right-barchart">
                                             <xsl:with-param name="rels" select="$rels"/>
                                             <xsl:with-param name="items" select="$u_phrases"/>
-                                            <xsl:with-param name="kind" select="'phrases'"/> <!-- NEU: anderer Pfad -->
+                                            <xsl:with-param name="kind" select="'phrases'"/>
+                                            <!-- NEU: anderer Pfad -->
                                             <xsl:with-param name="chart-id" select="'chart-phrases'"/>
-                                            <xsl:with-param name="chart-title" select="'Top Phrasen'"/>
+                                            <xsl:with-param name="chart-title"
+                                                select="'Top Phrasen'"/>
                                             <xsl:with-param name="top" select="20"/>
                                         </xsl:call-template>
                                     </div>
