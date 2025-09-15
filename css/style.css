@@ -455,7 +455,6 @@ ul {
 }
 
 .skos-wrap summary .ext-link {
-  margin-left: .5rem;
   font-size: .9em;
   text-decoration: none;
 }
@@ -569,11 +568,12 @@ img.icon {
 
 .wikidata-layout {
     display: grid;
-    grid-template-columns: 1fr 300px;
+    grid-template-columns: 1fr var(--chart-col, 300px);
     gap: 2rem;
     align-items: start;
-    margin-top: 0 !importanext;
+    margin-top: 0 !important;
     clear: none !important;
+
 }
 
 .wikidata-left {
@@ -584,6 +584,10 @@ img.icon {
 .wikidata-right {
     grid-column: 2;
     grid-row: 1;
+}
+
+.has-wide-chart {
+  --chart-col: 600px;
 }
 
 .wikidata-thumb,
