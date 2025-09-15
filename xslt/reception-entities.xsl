@@ -463,6 +463,15 @@
         </xsl:if>
     </xsl:template>
 
+    <!-- counter -->
+    <xsl:template name="emit-count">
+        <xsl:param name="n" as="xs:integer"/>
+        <xsl:text> (</xsl:text>
+        <xsl:value-of select="$n"/>
+        <xsl:value-of select="u:sgpl($n, ' Vorkommnis', ' Vorkommnisse')"/>
+        <xsl:text>)</xsl:text>
+    </xsl:template>
+
     <!-- intertextual relationships -->
 
     <xsl:template match="/" mode="intertexts">
@@ -767,13 +776,16 @@
                                                   select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
                                                 <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
-
+                                                <xsl:variable name="n" select="count($occTexts)"/>
                                                 <xsl:choose>
-                                                  <xsl:when test="exists($occTexts)">
+                                                  <xsl:when test="$n &gt; 0">
                                                   <details>
                                                   <summary class="has-children">
                                                   <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  <xsl:call-template name="emit-count">
+                                                  <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </summary>
                                                   <div class="skos-children">
@@ -796,6 +808,9 @@
                                                   <span class="leaf">
                                                   <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  <xsl:call-template name="emit-count">
+                                                  <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </span>
                                                   </xsl:otherwise>
@@ -840,13 +855,16 @@
                                                   select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
                                                 <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
-
+                                                <xsl:variable name="n" select="count($occTexts)"/>
                                                 <xsl:choose>
-                                                  <xsl:when test="exists($occTexts)">
+                                                  <xsl:when test="$n &gt; 0">
                                                   <details>
                                                   <summary class="has-children">
                                                   <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  <xsl:call-template name="emit-count">
+                                                  <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </summary>
                                                   <div class="skos-children">
@@ -869,6 +887,9 @@
                                                   <span class="leaf">
                                                   <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  <xsl:call-template name="emit-count">
+                                                  <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </span>
                                                   </xsl:otherwise>
@@ -913,13 +934,16 @@
                                                   select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
                                                 <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
-
+                                                <xsl:variable name="n" select="count($occTexts)"/>
                                                 <xsl:choose>
-                                                  <xsl:when test="exists($occTexts)">
+                                                  <xsl:when test="$n &gt; 0">
                                                   <details>
                                                   <summary class="has-children">
                                                   <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  <xsl:call-template name="emit-count">
+                                                  <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </summary>
                                                   <div class="skos-children">
@@ -942,6 +966,9 @@
                                                   <span class="leaf">
                                                   <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  <xsl:call-template name="emit-count">
+                                                  <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </span>
                                                   </xsl:otherwise>
@@ -986,13 +1013,16 @@
                                                   select="$rels[intro:R24_hasRelatedEntity/@rdf:resource = $this]"/>
                                                 <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
-
+                                                <xsl:variable name="n" select="count($occTexts)"/>
                                                 <xsl:choose>
-                                                  <xsl:when test="exists($occTexts)">
+                                                  <xsl:when test="$n &gt; 0">
                                                   <details>
                                                   <summary class="has-children">
                                                   <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  <xsl:call-template name="emit-count">
+                                                  <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </summary>
                                                   <div class="skos-children">
@@ -1015,6 +1045,9 @@
                                                   <span class="leaf">
                                                   <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  <xsl:call-template name="emit-count">
+                                                  <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </span>
                                                   </xsl:otherwise>
@@ -1059,13 +1092,16 @@
                                                   select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
                                                 <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
-
+                                                <xsl:variable name="n" select="count($occTexts)"/>
                                                 <xsl:choose>
-                                                  <xsl:when test="exists($occTexts)">
+                                                  <xsl:when test="$n &gt; 0">
                                                   <details>
                                                   <summary class="has-children">
                                                   <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  <xsl:call-template name="emit-count">
+                                                  <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </summary>
                                                   <div class="skos-children">
@@ -1088,6 +1124,9 @@
                                                   <span class="leaf">
                                                   <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  <xsl:call-template name="emit-count">
+                                                  <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </span>
                                                   </xsl:otherwise>
@@ -1132,13 +1171,16 @@
                                                   select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
                                                 <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
-
+                                                <xsl:variable name="n" select="count($occTexts)"/>
                                                 <xsl:choose>
-                                                  <xsl:when test="exists($occTexts)">
+                                                  <xsl:when test="$n &gt; 0">
                                                   <details>
                                                   <summary class="has-children">
                                                   <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  <xsl:call-template name="emit-count">
+                                                  <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </summary>
                                                   <div class="skos-children">
@@ -1149,6 +1191,9 @@
                                                   <span class="leaf indent">
                                                   <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="."/>
+                                                  </xsl:call-template>
+                                                  <xsl:call-template name="emit-count">
+                                                  <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </span>
                                                   </li>
@@ -1205,13 +1250,16 @@
                                                   select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
                                                 <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
-
+                                                <xsl:variable name="n" select="count($occTexts)"/>
                                                 <xsl:choose>
-                                                  <xsl:when test="exists($occTexts)">
+                                                  <xsl:when test="$n &gt; 0">
                                                   <details>
                                                   <summary class="has-children">
                                                   <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  <xsl:call-template name="emit-count">
+                                                  <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </summary>
                                                   <div class="skos-children">
@@ -1234,6 +1282,9 @@
                                                   <span class="leaf">
                                                   <xsl:call-template name="render-label-with-icon">
                                                   <xsl:with-param name="uri" select="$this"/>
+                                                  </xsl:call-template>
+                                                  <xsl:call-template name="emit-count">
+                                                  <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </span>
                                                   </xsl:otherwise>
