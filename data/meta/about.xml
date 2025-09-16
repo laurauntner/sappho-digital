@@ -65,8 +65,8 @@
             </div>
             <div>
                 <head>Projektstand</head>
-                <p>Aktuell ist nur das <hi rend="bold">Verzeichnis der Rezeptionszeugnisse</hi> so
-                    weit bearbeitet, dass es auszugsweise veröffentlicht werden kann. Es werden fünf
+                <p>Aktuell ist das <hi rend="bold">Verzeichnis der Rezeptionszeugnisse</hi> so weit
+                    bearbeitet, dass es auszugsweise veröffentlicht werden kann. Es werden fünf
                     Zugänge angeboten: Es können Belege für <ref target="toc-alle.html">alle</ref>,
                         <ref target="toc-prosa.html">prosaische</ref>, <ref target="toc-lyrik.html"
                         >lyrische</ref>, <ref target="toc-drama.html">dramatische</ref> und <ref
@@ -96,6 +96,11 @@
                     mithilfe von CIDOC CRM, LRMoo und INTRO in RDF überführt werden. Es bietet einen
                     ersten Einblick in die OWL-Ontologie, die auch im Rahmen dieses Projekts zur
                     Anwendung kommen wird.</p>
+                <p>Ergebnisse der exemplarischen Analyse und OWL-Modellierung werden fortlaufend in
+                    den Reiter »Rezeptionsphänomene« integriert. Mehr Informationen zur Analyse sind
+                        <ref target="analyse.html">hier</ref> zu finden.</p>
+                <p>Die SKOS-Taxonomie ist in einem Beta-Status <ref target="vocab.html">hier</ref>
+                    zu finden.</p>
                 <p>Mit einer Fertigstellung des Projekts ist 2027 zu rechnen. Bis dahin wird die
                     Webseite fortlaufend erweitert.</p>
             </div>

@@ -708,7 +708,9 @@
                                 <div class="card-header">
                                     <h1>Intertextuelle Beziehungen</h1>
                                     <p class="align-left"> Alle (im weitesten Sinne) intertextuellen
-                                        Beziehungen zwischen den exemplarisch analysierten Texten. </p>
+                                        Beziehungen zwischen den exemplarisch analysierten Texten.
+                                        Mehr Informationen zur exemplarischen Analyse sind <a
+                                            href="analyse.html">hier</a> zu finden.</p>
 
                                     <div class="graph-toolbar">
                                         <input id="graph-search" type="search"
@@ -950,7 +952,9 @@
                                 <div class="card-header">
                                     <h1>Personenreferenzen</h1>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vocab.html">Vokabular</a>.</p>
+                                            <a href="vocab.html">Vokabular</a>. Mehr Informationen
+                                        zur exemplarischen Analyse sind <a href="analyse.html"
+                                            >hier</a> zu finden.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -1044,7 +1048,9 @@
                                 <div class="card-header">
                                     <h1>Ortsreferenzen</h1>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vocab.html">Vokabular</a>.</p>
+                                            <a href="vocab.html">Vokabular</a>. Mehr Informationen
+                                        zur exemplarischen Analyse sind <a href="analyse.html"
+                                            >hier</a> zu finden.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -1137,7 +1143,9 @@
                                 <div class="card-header">
                                     <h1>Werkreferenzen</h1>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vocab.html">Vokabular</a>.</p>
+                                            <a href="vocab.html">Vokabular</a>. Mehr Informationen
+                                        zur exemplarischen Analyse sind <a href="analyse.html"
+                                            >hier</a> zu finden.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -1230,7 +1238,9 @@
                                 <div class="card-header">
                                     <h1>Phrasen</h1>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vocab.html">Vokabular</a>.</p>
+                                            <a href="vocab.html">Vokabular</a>. Mehr Informationen
+                                        zur exemplarischen Analyse sind <a href="analyse.html"
+                                            >hier</a> zu finden.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -1325,7 +1335,9 @@
                                 <div class="card-header">
                                     <h1>Motive</h1>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vocab.html">Vokabular</a>.</p>
+                                            <a href="vocab.html">Vokabular</a>. Mehr Informationen
+                                        zur exemplarischen Analyse sind <a href="analyse.html"
+                                            >hier</a> zu finden.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -1418,7 +1430,9 @@
                                 <div class="card-header">
                                     <h1>Themen</h1>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vocab.html">Vokabular</a>.</p>
+                                            <a href="vocab.html">Vokabular</a>. Mehr Informationen
+                                        zur exemplarischen Analyse sind <a href="analyse.html"
+                                            >hier</a> zu finden.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -1511,7 +1525,9 @@
                                 <div class="card-header">
                                     <h1>Stoffe</h1>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vocab.html">Vokabular</a>.</p>
+                                            <a href="vocab.html">Vokabular</a>. Mehr Informationen
+                                        zur exemplarischen Analyse sind <a href="analyse.html"
+                                            >hier</a> zu finden.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">

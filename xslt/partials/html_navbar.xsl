@@ -25,12 +25,17 @@
                         id="navbarSupportedContent">
                         <ul class="navbar-nav mb-2 mb-lg-0">
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle custom-dropdown-link" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false">Projekt</a>
+                                <a class="nav-link dropdown-toggle custom-dropdown-link" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                    >Projekt</a>
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
                                             href="about.html">Über das Projekt</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
+                                            href="analyse.html">Zur Analyse</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
@@ -46,14 +51,14 @@
                                     </li>
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
-                                            href="https://github.com/laurauntner/sappho-digital">Daten auf
-                                            GitHub</a>
+                                            href="https://github.com/laurauntner/sappho-digital"
+                                            >Daten auf GitHub</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle custom-dropdown-link" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false"
+                                <a class="nav-link dropdown-toggle custom-dropdown-link" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false"
                                     >Rezeptionszeugnisse</a>
                                 <ul class="dropdown-menu">
                                     <li>
@@ -79,8 +84,8 @@
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle custom-dropdown-link" href="#" role="button"
-                                    data-bs-toggle="dropdown" aria-expanded="false"
+                                <a class="nav-link dropdown-toggle custom-dropdown-link" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false"
                                     >Rezeptionsphänomene</a>
                                 <ul class="dropdown-menu">
                                     <li>

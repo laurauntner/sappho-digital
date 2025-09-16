@@ -28,6 +28,12 @@
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
+    
+    <!-- analyse -->
+    <xslt in="./data/meta/analyse.xml" out="${target}/analyse.html" style="./xslt/meta.xsl">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
 
     <!-- publications -->
     <xslt in="./data/meta/publikationen.xml" out="${target}/publikationen.html"
