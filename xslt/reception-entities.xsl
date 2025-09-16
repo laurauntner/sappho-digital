@@ -4,8 +4,9 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    xmlns:intro="https://w3id.org/lso/intro/currentbeta#" xmlns:u="urn:util"
-    exclude-result-prefixes="xs u" version="2.0">
+    xmlns:intro="https://w3id.org/lso/intro/currentbeta#"
+    xmlns:ecrm="http://erlangen-crm.org/current/" xmlns:u="urn:util" exclude-result-prefixes="xs u"
+    version="2.0">
 
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
@@ -90,6 +91,51 @@
         <xsl:variable name="narrowerUris" select="$node/skos:narrower/@rdf:resource"/>
         <xsl:variable name="children" select="$node/ancestor::rdf:RDF/*[@rdf:about = $narrowerUris]"/>
 
+        <xsl:variable name="thisAbout" select="string($node/@rdf:about)"/>
+
+        <xsl:variable name="directUris" select="
+                distinct-values((
+                $thisAbout,
+                $receptionEntities//*[@rdf:about][skos:exactMatch/@rdf:resource = $thisAbout]/@rdf:about,
+                $receptionEntities//*[@rdf:about = $thisAbout]/skos:exactMatch/@rdf:resource
+                ))
+                "/>
+
+        <xsl:variable name="viaActsFromEntities" select="
+                distinct-values(
+                $receptionEntities//*[@rdf:about = $directUris]
+                /ecrm:P67i_is_referred_to_by/@rdf:resource
+                )
+                "/>
+        <xsl:variable name="viaFeatsFromEntities" select="
+                distinct-values(
+                $receptionEntities//*[@rdf:about = $viaActsFromEntities]
+                /intro:R17_actualizesFeature/@rdf:resource
+                )
+                "/>
+
+        <xsl:variable name="actsOfFeatures" select="
+                distinct-values(
+                $receptionEntities//*[@rdf:about = $viaFeatsFromEntities]
+                /intro:R17i_featureIsActualizedIn/@rdf:resource
+                )
+                "/>
+
+        <xsl:variable name="matchUris" select="
+                distinct-values(($directUris, $viaFeatsFromEntities, $actsOfFeatures))
+                "/>
+
+        <xsl:variable name="occRels" select="
+                $receptionEntities//intro:INT31_IntertextualRelation[
+                intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $matchUris
+                or intro:R24_hasRelatedEntity/@rdf:resource = $matchUris
+                ]"/>
+
+        <xsl:variable name="occTexts" select="
+                distinct-values(
+                data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource)
+                )"/>
+
         <li>
             <xsl:choose>
                 <xsl:when test="exists($children)">
@@ -125,6 +171,22 @@
                                 </div>
                             </xsl:if>
 
+                            <xsl:if test="count($occTexts) &gt; 0">
+                                <div class="skos-note">
+                                    <div class="smaller-text indent">
+                                        <strong>Vorkommnis in:</strong>
+                                        <xsl:text> </xsl:text>
+                                        <xsl:for-each select="$occTexts">
+                                            <xsl:sort select="lower-case(u:label(.))"/>
+                                            <xsl:call-template name="render-label-or-link">
+                                                <xsl:with-param name="uri" select="."/>
+                                            </xsl:call-template>
+                                            <xsl:if test="position() != last()">, </xsl:if>
+                                        </xsl:for-each>
+                                    </div>
+                                </div>
+                            </xsl:if>
+
                             <ul class="skos-tree">
                                 <xsl:for-each select="$children">
                                     <xsl:sort
@@ -149,6 +211,22 @@
                             <xsl:value-of
                                 select="normalize-space(($node/skos:definition[@xml:lang = 'de'], $node/skos:scopeNote[@xml:lang = 'de'], $node/skos:definition, $node/skos:scopeNote)[1])"
                             />
+                        </div>
+                    </xsl:if>
+
+                    <xsl:if test="count($occTexts) &gt; 0">
+                        <div class="skos-note">
+                            <div class="smaller-text indent">
+                                <strong>Vorkommnis in:</strong>
+                                <xsl:text> </xsl:text>
+                                <xsl:for-each select="$occTexts">
+                                    <xsl:sort select="lower-case(u:label(.))"/>
+                                    <xsl:call-template name="render-label-or-link">
+                                        <xsl:with-param name="uri" select="."/>
+                                    </xsl:call-template>
+                                    <xsl:if test="position() != last()">, </xsl:if>
+                                </xsl:for-each>
+                            </div>
                         </div>
                     </xsl:if>
                 </xsl:otherwise>

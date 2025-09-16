@@ -103,6 +103,16 @@ CAT_TO_LOCAL_PATH = {
 vocab_label_index: Dict[str, Dict[str, URIRef]] = {k: {} for k in CAT_TO_VOC_PREFIX.keys()}
 vocab_label_global: Dict[str, URIRef] = {}
 
+def norm_label_key(s: str) -> str:
+    if not s:
+        return ""
+    s = str(s)
+    s = re.sub(r"\s*\([^)]*\)", "", s)
+    s = re.sub(r"^\s*(Motif|Motiv|Topic|Thema|Plot|Stoff|Textpassage)\s*:\s*", "", s, flags=re.I)
+    s = s.replace("»", "").replace("«", "").replace('"', "").replace("‚", "").replace("‘", "").replace("’", "")
+    s = re.sub(r"\s+", " ", s)
+    return s.strip().lower()
+
 for s in g_vocab.subjects(RDF.type, SKOS.Concept):
     s_str = str(s)
     cat = None
@@ -110,15 +120,18 @@ for s in g_vocab.subjects(RDF.type, SKOS.Concept):
         if s_str.startswith(pref):
             cat = k
             break
-    for lab in g_vocab.objects(s, SKOS.prefLabel):
-        if isinstance(lab, Literal) and lab.language == "de":
-            key = str(lab).strip().lower()
-            if cat:
-                vocab_label_index[cat].setdefault(key, s)
-            vocab_label_global.setdefault(key, s)
+    for lab_prop in (SKOS.prefLabel, SKOS.altLabel):
+        for lab in g_vocab.objects(s, lab_prop):
+            if isinstance(lab, Literal) and lab.language == "de":
+                key = norm_label_key(str(lab))
+                if not key:
+                    continue
+                if cat:
+                    vocab_label_index[cat].setdefault(key, s)
+                vocab_label_global.setdefault(key, s)
 
 def find_vocab(cat: Optional[str], label: str) -> Optional[URIRef]:
-    lab_key = (label or "").strip().lower()
+    lab_key = norm_label_key(label)
     cand = None
     if cat and vocab_label_index.get(cat):
         cand = vocab_label_index[cat].get(lab_key)
