@@ -753,29 +753,6 @@
                         <xsl:with-param name="html_title" select="'Intertextuelle Beziehungen'"/>
                     </xsl:call-template>
                     <script type="module" src="./js/intertexts-network.js"/>
-                    <style>
-                        .big-graph {
-                            height: 55vh;
-                            border: 1px solid #ddd;
-                            border-radius: 8px;
-                        }
-                        .graph-toolbar {
-                            display: flex;
-                            gap: .5rem;
-                            align-items: center;
-                            margin: .5rem 0 1rem;
-                        }
-                        .graph-legend {
-                            font-size: .9rem;
-                            opacity: .8;
-                        }
-                        .graph-legend .dot {
-                            display: inline-block;
-                            width: 10px;
-                            height: 10px;
-                            border-radius: 50%;
-                            margin-right: .3rem;
-                        }</style>
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
@@ -791,10 +768,13 @@
                                             href="analyse.html">hier</a> zu finden.</p>
 
                                     <div class="graph-toolbar">
-                                        <input id="graph-search" type="search"
-                                            placeholder="Suche nach Text …"/>
+                                        <label style="margin-left:.5rem; font-size: .9rem">Gewicht
+                                                <input id="edge-threshold" type="range" min="2"
+                                                max="20" value="2" step="1"/>
+                                        </label>
+                                        <br/>
                                         <span class="graph-legend">
-                                            <span class="dot dot-frag"/> Fragment (Sappho) <xsl:text>&#160;</xsl:text>
+                                            <span class="dot dot-frag"/> Fragment (Sappho) <br/>
                                             <span class="dot dot-recep"/> Rezeptionszeugnis </span>
                                     </div>
                                 </div>
@@ -831,6 +811,9 @@
                   </xsl:for-each>
                   ]
                 }</script>
+                                    <span class="graph-legend">Es wurden nur die k stärksten
+                                        Verbindungen pro Knoten sowie ein verbindender
+                                        Maximum-Spanning-Tree visualisiert (Standard: k = 2).</span>
                                 </div>
                             </div>
                         </div>
