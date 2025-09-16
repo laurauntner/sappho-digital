@@ -539,14 +539,14 @@ body.page #page {
 
 #itx-graph-container,
 .graph-wrapper {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 #itx-graph + *,
 #itx-graph ~ * {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
 
 
@@ -556,7 +556,9 @@ body.page #page {
     padding: 0 !important;
 }
 
-.graph-card { margin: 1rem auto .75rem !important; }
+.graph-card {
+    margin: 1rem auto .75rem !important;
+}
 
 li {
     text-align: left;
@@ -700,8 +702,40 @@ img.icon {
     background: #6b7280;
 }
 
+.graph-toolbar input[type = "range"] {
+    accent-color: #5e17eb;
+}
+
+.big-graph {
+    height: 72vh;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
 #itx-graph canvas {
     image-rendering: auto;
+}
+
+.graph-toolbar {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    margin: .5rem 0 1rem;
+}
+
+.graph-legend {
+    font-size: .9rem;
+    opacity: .8;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.graph-legend .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: .3rem;
 }
 
 @media (max-width : 1024px) {
