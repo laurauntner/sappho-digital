@@ -6,7 +6,7 @@
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:intro="https://w3id.org/lso/intro/currentbeta#"
     xmlns:ecrm="http://erlangen-crm.org/current/" xmlns:u="urn:util" exclude-result-prefixes="xs u"
-    version="2.0">
+    version="3.0">
 
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
@@ -17,6 +17,19 @@
 
     <xsl:strip-space elements="*"/>
     <xsl:key name="by-about" match="*[@rdf:about]" use="@rdf:about"/>
+
+    <xsl:key name="rels-by-sim" match="intro:INT31_IntertextualRelation"
+        use="intro:R22i_relationIsBasedOnSimilarity/@rdf:resource"/>
+    <xsl:key name="rels-by-phr" match="intro:INT31_IntertextualRelation"
+        use="intro:R24_hasRelatedEntity/@rdf:resource"/>
+
+    <xsl:key name="acts-by-feature" match="*[@rdf:about][intro:R17_actualizesFeature]"
+        use="intro:R17_actualizesFeature/@rdf:resource"/>
+    <xsl:key name="acts-by-feature2" match="intro:INT2_ActualizationOfFeature" use="
+            (intro:R17_actualizesFeature/@rdf:resource
+            | intro:R17_actualizesFeature/*/@rdf:about)"/>
+    <xsl:key name="texts-by-act" match="*[@rdf:about][intro:R18i_actualizationFoundOn]"
+        use="intro:R18i_actualizationFoundOn/@rdf:resource"/>
 
     <!-- vocab -->
 
@@ -287,13 +300,74 @@
 
     <xsl:function name="u:work-href" as="xs:string?">
         <xsl:param name="uri" as="xs:string?"/>
-        <xsl:variable name="id" select="u:work-id($uri)"/>
+        <xsl:variable name="tid" select="
+                if ($uri) then
+                    u:work-target-id($uri)
+                else
+                    ()"/>
+        <xsl:variable name="id" select="($tid, u:work-id($uri))[1]"/>
         <xsl:sequence select="
                 if ($id) then
                     concat('https://sappho-digital.com/', $id, '.html')
                 else
                     ()"/>
     </xsl:function>
+
+    <xsl:function name="u:work-id-any" as="xs:string?">
+        <xsl:param name="uri" as="xs:string?"/>
+        <xsl:sequence select="
+                if ($uri and matches($uri, 'bibl_[^/#?]+'))
+                then
+                    replace($uri, '^.*(bibl_[^/#?]+).*$', '$1')
+                else
+                    ()
+                "/>
+    </xsl:function>
+
+    <xsl:function name="u:workref-target-id" as="xs:string?">
+        <xsl:param name="uri" as="xs:string"/>
+        <xsl:sequence select="u:work-id-any($uri)"/>
+    </xsl:function>
+
+    <xsl:function name="u:work-label" as="xs:string">
+        <xsl:param name="uri" as="xs:string"/>
+        <xsl:variable name="base" select="u:label($uri)"/>
+        <xsl:sequence select="
+                if (matches($uri, '/(feature|actualization)/work_ref/'))
+                then
+                    normalize-space(replace($base, '\s+in\s+.*$', ''))
+                else
+                    $base
+                "/>
+    </xsl:function>
+
+    <xsl:function name="u:work-target-key" as="xs:string">
+        <xsl:param name="uri" as="xs:string"/>
+        <xsl:variable name="tid" select="u:work-target-id($uri)"/>
+        <xsl:sequence
+            select="lower-case(normalize-space(($tid, u:norm-label(u:work-label($uri)))[1]))"/>
+    </xsl:function>
+
+    <xsl:function name="u:work-target-id" as="xs:string?">
+        <xsl:param name="uri" as="xs:string"/>
+        <xsl:variable name="n" select="key('by-about', $uri, $receptionEntities)"/>
+        <xsl:choose>
+            <xsl:when test="matches($uri, '/actualization/work_ref/')">
+                <xsl:sequence select="u:work-id-any(($n/ecrm:P67_refers_to/@rdf:resource)[1])"/>
+            </xsl:when>
+            <xsl:when test="matches($uri, '/feature/work_ref/')">
+                <xsl:sequence select="
+                        u:work-id-any((
+                        key('by-about', $n/intro:R17i_featureIsActualizedIn/@rdf:resource, $receptionEntities)
+                        /ecrm:P67_refers_to/@rdf:resource
+                        )[1])"/>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:sequence select="u:work-id-any($uri)"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:function>
+
 
     <xsl:template name="render-label-or-link">
         <xsl:param name="uri" as="xs:string?"/>
@@ -385,9 +459,20 @@
                     select="distinct-values(data($sim[matches(., '/feature/place_ref/')]))"/>
             </xsl:when>
             <xsl:when test="$kind = 'works'">
-                <xsl:sequence
-                    select="distinct-values(data($sim[matches(., '/feature/work_ref/') or matches(., '/actualization/work_ref/')]))"
-                />
+                <xsl:variable name="worksRaw"
+                    select="distinct-values(data($sim[matches(., '/feature/work_ref/') or matches(., '/actualization/work_ref/')]))"/>
+
+                <xsl:variable name="textIds" as="xs:string*" select="
+                        distinct-values(
+                        for $t in data(($rel/intro:R13_hasReferringEntity | $rel/intro:R12_hasReferredToEntity)/@rdf:resource)
+                        return
+                            u:work-id-any($t)
+                        )"/>
+
+                <xsl:sequence select="
+                        $worksRaw
+                        [not(u:is-sappho-work(.))]
+                        [not(u:workref-target-id(.) = $textIds)]"/>
             </xsl:when>
             <xsl:when test="$kind = 'phrases'">
                 <xsl:sequence
@@ -403,6 +488,42 @@
         <xsl:sequence select="
                 some $p in $pairs
                     satisfies u:common-count(string($p/@about)) gt 0"/>
+    </xsl:function>
+
+    <xsl:function name="u:act-target-bibl" as="xs:string?">
+        <xsl:param name="act-uri" as="xs:string"/>
+        <xsl:variable name="tokens">
+            <xsl:analyze-string select="$act-uri" regex="bibl_(?:sappho_[0-9]+|[0-9a-f]+)">
+                <xsl:matching-substring>
+                    <i>
+                        <xsl:value-of select="."/>
+                    </i>
+                </xsl:matching-substring>
+            </xsl:analyze-string>
+        </xsl:variable>
+        <xsl:sequence select="($tokens/i)[last()]"/>
+    </xsl:function>
+
+    <xsl:function name="u:workref-feature" as="xs:string?">
+        <xsl:param name="uri" as="xs:string"/>
+        <xsl:sequence select="
+                if (contains($uri, '/actualization/work_ref/')) then
+                    key('by-about', $uri, $receptionEntities)/intro:R17_actualizesFeature/@rdf:resource
+                else
+                    $uri"/>
+    </xsl:function>
+
+    <xsl:function name="u:norm-label" as="xs:string">
+        <xsl:param name="s" as="xs:string?"/>
+        <xsl:variable name="t0" select="normalize-space(string($s))"/>
+        <xsl:variable name="t1" select="lower-case(normalize-unicode($t0, 'NFKC'))"/>
+        <xsl:variable name="t2" select="translate($t1, '&#x2019;&#x2018;`', '''')"/>
+        <xsl:sequence select="replace($t2, '\s+', ' ')"/>
+    </xsl:function>
+
+    <xsl:function name="u:is-sappho-work" as="xs:boolean">
+        <xsl:param name="uri" as="xs:string?"/>
+        <xsl:sequence select="exists($uri) and matches($uri, 'sappho-?work', 'i')"/>
     </xsl:function>
 
     <!-- emit one category line if there are items -->
@@ -431,11 +552,110 @@
         </xsl:if>
     </xsl:template>
 
+    <!-- work refs -->
+    <xsl:template name="emit-work-lines">
+        <xsl:param name="rel" as="element(intro:INT31_IntertextualRelation)"/>
+        <xsl:param name="source-uri" as="xs:string"/>
+        <xsl:param name="partner-uri" as="xs:string"/>
+
+        <xsl:variable name="src-id" select="u:work-id-any($source-uri)"/>
+        <xsl:variable name="dst-id" select="u:work-id-any($partner-uri)"/>
+
+        <xsl:variable name="wr-uris" as="xs:string*" select="
+                distinct-values((
+                $rel/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/(feature|actualization)/work_ref/')],
+                $rel/intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/(feature|actualization)/work_ref/')]
+                ))
+                [not(u:is-sappho-work(.))]"/>
+
+        <xsl:variable name="acts" as="xs:string*" select="
+                distinct-values(
+                for $u in $wr-uris
+                return
+                    if (contains($u, '/actualization/work_ref/')) then
+                        $u
+                    else
+                        key('by-about', $u, $receptionEntities)/intro:R17i_featureIsActualizedIn/@rdf:resource
+                )"/>
+
+        <xsl:variable name="targets">
+            <xsl:for-each select="$acts">
+                <xsl:variable name="act" select="key('by-about', ., $receptionEntities)"/>
+                <xsl:variable name="on" select="$act/intro:R18i_actualizationFoundOn/@rdf:resource"/>
+                <xsl:for-each select="$act/ecrm:P67_refers_to/@rdf:resource">
+                    <t on="{u:work-id-any($on)}" tgt="{u:work-id-any(.)}" tgturi="{.}"/>
+                </xsl:for-each>
+            </xsl:for-each>
+        </xsl:variable>
+
+        <xsl:variable name="srcTargets" select="distinct-values($targets/t[@on = $src-id]/@tgturi)"/>
+        <xsl:variable name="dstTargets" select="distinct-values($targets/t[@on = $dst-id]/@tgturi)"/>
+
+        <xsl:variable name="commonUri" select="
+                distinct-values(
+                $srcTargets[. = $dstTargets]
+                [not(u:work-id-any(.) = ($src-id, $dst-id))]
+                )"/>
+
+        <xsl:variable name="directUri" as="xs:string*" select="
+                distinct-values((
+                if (some $t in $srcTargets
+                    satisfies u:work-id-any($t) = $dst-id)
+                then
+                    $partner-uri
+                else
+                    (),
+                if (some $t in $dstTargets
+                    satisfies u:work-id-any($t) = $src-id)
+                then
+                    $source-uri
+                else
+                    ()
+                ))"/>
+
+        <xsl:variable name="nCommon" select="count($commonUri)"/>
+        <xsl:if test="$nCommon &gt; 0">
+            <div class="smaller-text indent">
+                <strong>
+                    <xsl:value-of
+                        select="u:sgpl($nCommon, 'Gemeinsame Werkreferenz:', 'Gemeinsame Werkreferenzen:')"
+                    />
+                </strong>
+                <xsl:text> </xsl:text>
+                <xsl:for-each select="$commonUri">
+                    <xsl:sort select="lower-case(u:work-label(.))"/>
+                    <xsl:call-template name="render-label-or-link">
+                        <xsl:with-param name="uri" select="."/>
+                    </xsl:call-template>
+                    <xsl:if test="position() != last()">, </xsl:if>
+                </xsl:for-each>
+            </div>
+        </xsl:if>
+
+        <xsl:variable name="nDirect" select="count($directUri)"/>
+        <xsl:if test="$nDirect &gt; 0">
+            <div class="smaller-text indent">
+                <strong>
+                    <xsl:value-of select="u:sgpl($nDirect, 'Werkreferenz:', 'Werkreferenzen:')"/>
+                </strong>
+                <xsl:text> </xsl:text>
+                <xsl:for-each select="$directUri">
+                    <xsl:sort select="lower-case(u:work-label(.))"/>
+                    <xsl:call-template name="render-label-or-link">
+                        <xsl:with-param name="uri" select="."/>
+                    </xsl:call-template>
+                    <xsl:if test="position() != last()">, </xsl:if>
+                </xsl:for-each>
+            </div>
+        </xsl:if>
+    </xsl:template>
+
     <!-- render one partner line (li > details ...) if cnt > 0 -->
     <xsl:template name="render-pair">
         <xsl:param name="about" as="xs:string"/>
         <xsl:param name="partner" as="xs:string"/>
         <xsl:param name="partner-uri" as="xs:string"/>
+        <xsl:param name="source-uri" as="xs:string"/>
 
         <xsl:variable name="rel" select="key('by-about', $about, $receptionEntities)"/>
         <xsl:variable name="cnt" select="u:common-count($about)"/>
@@ -511,11 +731,10 @@
                         <xsl:with-param name="pl" select="'Gemeinsame Ortsreferenzen:'"/>
                     </xsl:call-template>
 
-                    <xsl:call-template name="emit-kind-list">
+                    <xsl:call-template name="emit-work-lines">
                         <xsl:with-param name="rel" select="$rel"/>
-                        <xsl:with-param name="kind" select="'works'"/>
-                        <xsl:with-param name="sg" select="'Gemeinsame Werkreferenz:'"/>
-                        <xsl:with-param name="pl" select="'Gemeinsame Werkreferenzen:'"/>
+                        <xsl:with-param name="source-uri" select="$source-uri"/>
+                        <xsl:with-param name="partner-uri" select="$partner-uri"/>
                     </xsl:call-template>
 
                     <xsl:call-template name="emit-kind-list">
@@ -557,28 +776,91 @@
         <xsl:param name="chart-title" as="xs:string"/>
         <xsl:param name="top" as="xs:integer" select="10"/>
 
-        <xsl:variable name="itemsWithCounts">
-            <xsl:for-each select="$items">
-                <xsl:variable name="this" select="."/>
-                <xsl:variable name="occRels" select="
-                        if ($kind = 'phrases')
-                        then
-                            $rels[intro:R24_hasRelatedEntity/@rdf:resource = $this]
-                        else
-                            $rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
-                <xsl:variable name="occTexts"
-                    select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
-                <item name="{u:label($this)}" n="{count($occTexts)}"/>
-            </xsl:for-each>
-        </xsl:variable>
+        <xsl:variable name="limited" as="element(item)*">
+            <xsl:choose>
 
-        <xsl:variable name="topItems" as="element(item)*">
-            <xsl:perform-sort select="$itemsWithCounts/item[@n &gt; 0]">
-                <xsl:sort select="number(@n)" data-type="number" order="descending"/>
-                <xsl:sort select="lower-case(@name)"/>
-            </xsl:perform-sort>
+                <xsl:when test="$kind = 'works'">
+                    <xsl:variable name="itemsWithCounts">
+                        <xsl:for-each-group select="$items" group-by="
+                                if (u:work-id-any(.))
+                                then
+                                    u:work-id-any(.)
+                                else
+                                    u:norm-label(u:work-label(.))
+                                ">
+                            <xsl:variable name="grp" select="current-group()"/>
+                            <xsl:variable name="disp" select="u:work-label($grp[1])"/>
+
+                            <xsl:variable name="occRels" select="
+                                    $rels[
+                                    intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $grp
+                                    or intro:R24_hasRelatedEntity/@rdf:resource = $grp
+                                    ]"/>
+                            <xsl:variable name="occTexts_rel" select="
+                                    distinct-values(
+                                    data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource)
+                                    )"/>
+
+                            <xsl:variable name="actsByRes"
+                                select="key('acts-by-feature', $grp, $receptionEntities)/@rdf:about"/>
+                            <xsl:variable name="actsByInline"
+                                select="key('acts-by-feature2', $grp, $receptionEntities)/@rdf:about"/>
+                            <xsl:variable name="actsByBacklink"
+                                select="key('by-about', $grp, $receptionEntities)/intro:R17i_featureIsActualizedIn/@rdf:resource"/>
+                            <xsl:variable name="actsOfFeat" as="xs:string*"
+                                select="distinct-values(($actsByRes, $actsByInline, $actsByBacklink))"/>
+
+                            <xsl:variable name="occTexts_r18" as="xs:string*" select="
+                                    distinct-values(
+                                    key('by-about', $actsOfFeat, $receptionEntities)/intro:R18i_actualizationFoundOn/@rdf:resource
+                                    )"/>
+
+                            <xsl:variable name="occTexts" as="xs:string*"
+                                select="distinct-values(($occTexts_rel, $occTexts_r18)[matches(., '/bibl_')])"/>
+
+                            <item name="{u:label($grp[1])}" display="{$disp}" n="{count($occTexts)}"
+                            />
+                        </xsl:for-each-group>
+                    </xsl:variable>
+
+                    <xsl:variable name="topItems" as="element(item)*">
+                        <xsl:perform-sort select="$itemsWithCounts/item[@n &gt; 0]">
+                            <xsl:sort select="number(@n)" data-type="number" order="descending"/>
+                            <xsl:sort select="lower-case(@display)"/>
+                        </xsl:perform-sort>
+                    </xsl:variable>
+
+                    <xsl:sequence select="$topItems[position() &lt;= $top]"/>
+                </xsl:when>
+
+                <xsl:otherwise>
+                    <xsl:variable name="itemsWithCounts">
+                        <xsl:for-each select="$items">
+                            <xsl:variable name="this" select="."/>
+                            <xsl:variable name="occRels" select="
+                                    if ($kind = 'phrases')
+                                    then
+                                        $rels[intro:R24_hasRelatedEntity/@rdf:resource = $this]
+                                    else
+                                        $rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
+                            <xsl:variable name="occTexts"
+                                select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
+                            <item name="{u:label($this)}" display="{u:label($this)}"
+                                n="{count($occTexts)}"/>
+                        </xsl:for-each>
+                    </xsl:variable>
+
+                    <xsl:variable name="topItems" as="element(item)*">
+                        <xsl:perform-sort select="$itemsWithCounts/item[@n &gt; 0]">
+                            <xsl:sort select="number(@n)" data-type="number" order="descending"/>
+                            <xsl:sort select="lower-case(@display)"/>
+                        </xsl:perform-sort>
+                    </xsl:variable>
+
+                    <xsl:sequence select="$topItems[position() &lt;= $top]"/>
+                </xsl:otherwise>
+            </xsl:choose>
         </xsl:variable>
-        <xsl:variable name="limited" select="$topItems[position() &lt;= $top]"/>
 
         <div class="wikidata-right">
             <div id="{$chart-id}" class="skos-chart" data-chart="bar" aria-label="{$chart-title}"/>
@@ -588,7 +870,7 @@
                 "data": [
                 <xsl:for-each select="$limited">
                     {
-                    "name": "<xsl:value-of select="u:json-escape(string(@name))"/>",
+                    "name": "<xsl:value-of select="u:json-escape(string((@display, @name)[1]))"/>",
                     "y": <xsl:value-of select="@n"/>
                     }<xsl:if test="position() != last()">,</xsl:if>
                 </xsl:for-each>
@@ -851,8 +1133,10 @@
                                                   select="string((current-group()[1]/@about)[1])"/>
                                                   <xsl:with-param name="partner" select="@partner"/>
                                                   <xsl:with-param name="partner-uri"
-                                                  select="string((current-group()[1]/@partner-uri)[1])"
-                                                  />
+                                                  select="string((current-group()[1]/@partner-uri)[1])"/>
+                                                  <xsl:with-param name="source-uri"
+                                                  select="string((current-group()[1]/@group-uri)[1])"/>
+                                                  <!-- NEU -->
                                                   </xsl:call-template>
                                                   </xsl:for-each-group>
                                                   </ul>
@@ -898,8 +1182,10 @@
                                                   select="string((current-group()[1]/@about)[1])"/>
                                                   <xsl:with-param name="partner" select="@partner"/>
                                                   <xsl:with-param name="partner-uri"
-                                                  select="string((current-group()[1]/@partner-uri)[1])"
-                                                  />
+                                                  select="string((current-group()[1]/@partner-uri)[1])"/>
+                                                  <xsl:with-param name="source-uri"
+                                                  select="string((current-group()[1]/@group-uri)[1])"/>
+                                                  <!-- NEU -->
                                                   </xsl:call-template>
                                                   </xsl:for-each-group>
                                                   </ul>
@@ -945,8 +1231,10 @@
                                                   select="string((current-group()[1]/@about)[1])"/>
                                                   <xsl:with-param name="partner" select="@partner"/>
                                                   <xsl:with-param name="partner-uri"
-                                                  select="string((current-group()[1]/@partner-uri)[1])"
-                                                  />
+                                                  select="string((current-group()[1]/@partner-uri)[1])"/>
+                                                  <xsl:with-param name="source-uri"
+                                                  select="string((current-group()[1]/@group-uri)[1])"/>
+                                                  <!-- NEU -->
                                                   </xsl:call-template>
                                                   </xsl:for-each-group>
                                                   </ul>
@@ -989,6 +1277,7 @@
                 $receptionEntities//intro:INT2_ActualizationOfFeature/intro:R17_actualizesFeature/@rdf:resource[matches(., '/feature/work_ref/')],
                 $receptionEntities//intro:INT2_ActualizationOfFeature/intro:R17_actualizesFeature/*/@rdf:about[matches(., '/feature/work_ref/')]
                 ))
+                [not(u:is-sappho-work(.))]
                 "/>
         <xsl:variable name="u_phrases"
             select="distinct-values($rels/intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/textpassage/phrase_')])"/>
@@ -1216,43 +1505,38 @@
                                     <div class="wikidata-layout has-wide-chart">
                                         <div class="wikidata-left">
                                             <ul class="skos-tree">
-                                                <xsl:for-each select="$u_works">
-                                                  <xsl:sort select="lower-case(u:label(.))"/>
+                                                <xsl:for-each-group select="$u_works"
+                                                  group-by="u:work-target-key(.)">
+                                                  <xsl:sort
+                                                  select="u:norm-label(u:work-label(current-group()[1]))"/>
+                                                  <xsl:sort
+                                                  select="u:norm-label(u:work-label(current-group()[1]))"/>
                                                   <li>
+                                                  <xsl:variable name="grp" select="current-group()"/>
+                                                  <xsl:variable name="bestUri"
+                                                  select="($grp[u:work-href(.)], $grp)[1]"/>
+                                                  <xsl:variable name="thisFeat" select="$bestUri"/>
 
-                                                  <xsl:variable name="this" select="."/>
-                                                  <xsl:variable name="thisFeat" select="$this"/>
-
-                                                  <xsl:variable name="occRels" select="
-                                                                $rels[
-                                                                intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $thisFeat
-                                                                or intro:R24_hasRelatedEntity/@rdf:resource = $thisFeat
-                                                                ]"/>
-
-                                                  <xsl:variable name="occTexts_rel" as="xs:string*"
-                                                  select="
-                                                                distinct-values(
-                                                                data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource)
-                                                                )[matches(., '/expression/')]
-                                                                "/>
+                                                  <xsl:variable name="actsByRes"
+                                                  select="key('acts-by-feature', $grp, $receptionEntities)/@rdf:about"/>
+                                                  <xsl:variable name="actsByInline"
+                                                  select="key('acts-by-feature2', $grp, $receptionEntities)/@rdf:about"/>
+                                                  <xsl:variable name="actsByBacklink"
+                                                  select="key('by-about', $grp, $receptionEntities)/intro:R17i_featureIsActualizedIn/@rdf:resource"/>
 
                                                   <xsl:variable name="actsOfFeat" as="xs:string*"
-                                                  select="
-                                                                $receptionEntities//*[@rdf:about]
-                                                                [intro:R17_actualizesFeature/@rdf:resource = $thisFeat
-                                                                or intro:R17_actualizesFeature/*/@rdf:about = $thisFeat]/@rdf:about
-                                                                "/>
+                                                  select="distinct-values(($actsByRes, $actsByInline, $actsByBacklink))"/>
 
-                                                  <xsl:variable name="occTexts_r18" as="xs:string*"
+                                                  <xsl:variable name="foundOnTexts" as="xs:string*"
                                                   select="
                                                                 distinct-values(
-                                                                $receptionEntities//*[@rdf:about = $actsOfFeat]
+                                                                key('by-about', $actsOfFeat, $receptionEntities)
                                                                 /intro:R18i_actualizationFoundOn/@rdf:resource
-                                                                )[matches(., '/expression/')]
-                                                                "/>
+                                                                )"/>
 
                                                   <xsl:variable name="occTexts" as="xs:string*"
-                                                  select="distinct-values(($occTexts_rel, $occTexts_r18))"/>
+                                                  select="distinct-values($foundOnTexts[matches(., '/bibl_')])"/>
+
                                                   <xsl:variable name="n" select="count($occTexts)"/>
 
                                                   <xsl:choose>
@@ -1285,7 +1569,7 @@
                                                   <xsl:otherwise>
                                                   <span class="leaf">
                                                   <xsl:call-template name="render-label-with-icon">
-                                                  <xsl:with-param name="uri" select="$this"/>
+                                                  <xsl:with-param name="uri" select="$thisFeat"/>
                                                   </xsl:call-template>
                                                   <xsl:call-template name="emit-count">
                                                   <xsl:with-param name="n" select="$n"/>
@@ -1294,8 +1578,9 @@
                                                   </xsl:otherwise>
                                                   </xsl:choose>
                                                   </li>
-                                                </xsl:for-each>
+                                                </xsl:for-each-group>
                                             </ul>
+
                                         </div>
                                         <xsl:call-template name="emit-right-barchart">
                                             <xsl:with-param name="rels" select="$rels"/>
@@ -1396,7 +1681,6 @@
                                             <xsl:with-param name="rels" select="$rels"/>
                                             <xsl:with-param name="items" select="$u_phrases"/>
                                             <xsl:with-param name="kind" select="'phrases'"/>
-                                            <!-- NEU: anderer Pfad -->
                                             <xsl:with-param name="chart-id" select="'chart-phrases'"/>
                                             <xsl:with-param name="chart-title"
                                                 select="'Top Phrasen'"/>
