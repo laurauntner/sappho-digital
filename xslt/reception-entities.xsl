@@ -287,13 +287,9 @@
     <xsl:function name="u:work-id" as="xs:string?">
         <xsl:param name="uri" as="xs:string?"/>
         <xsl:sequence select="
-                if (exists($uri) and matches($uri, 'bibl_[^/#?]+')) then
-                    let $id := replace($uri, '.*?(bibl_[^/#?]+).*', '$1')
-                    return
-                        if (starts-with($id, 'bibl_sappho')) then
-                            ()
-                        else
-                            $id
+                if (exists($uri) and matches($uri, 'bibl_[^/#?]+'))
+                then
+                    replace($uri, '.*?(bibl_[^/#?]+).*', '$1')
                 else
                     ()"/>
     </xsl:function>

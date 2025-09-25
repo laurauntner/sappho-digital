@@ -7,7 +7,7 @@
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
     <xsl:import href="./partials/html_footer.xsl"/>
-    
+
     <xsl:template match="/">
         <xsl:variable name="doc_title">
             <xsl:value-of select='"Sappho Digital"'/>
@@ -47,14 +47,13 @@
                                     <div class="card index-card d-flex flex-column">
                                         <div class="card-body item-center">
                                             <img src="images/open-magazine.png"
-                                                title="open-magazine.png"
-                                                alt="Flaticon" class="smaller-img"
-                                            />
+                                                title="open-magazine.png" alt="Flaticon"
+                                                class="smaller-img"/>
                                         </div>
                                         <div class="card-header">
                                             <h5>Rezeptionszeugnisse</h5>
-                                            <p>Verzeichnis deutschsprachiger
-                                                literarischer <br/>Rezeptionszeugnisse zu Sappho</p>
+                                            <p>Verzeichnis deutschsprachiger literarischer
+                                                <br/>Rezeptionszeugnisse zu Sappho</p>
                                         </div>
                                     </div>
                                 </a>
@@ -63,15 +62,41 @@
                                 <a href="bibliographie.html" class="index-link">
                                     <div class="card index-card d-flex flex-column">
                                         <div class="card-body item-center">
-                                            <img src="images/search.png"
-                                                title="search.png"
-                                                alt="Flaticon" class="smaller-img"
-                                            />
+                                            <img src="images/search.png" title="search.png"
+                                                alt="Flaticon" class="smaller-img"/>
                                         </div>
                                         <div class="card-header">
                                             <h5>Bibliographie</h5>
-                                            <p>Sekundärliteratur zur
-                                                literarischen <br/>Sappho-Rezeption</p>
+                                            <p>Sekundärliteratur zur literarischen
+                                                <br/>Sappho-Rezeption</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-sm-12">
+                                <a href="analyse.html" class="index-link">
+                                    <div class="card index-card d-flex flex-column">
+                                        <div class="card-body item-center">
+                                            <img src="images/analysis.png" title="analysis.png"
+                                                alt="Flaticon" class="smaller-img"/>
+                                        </div>
+                                        <div class="card-header">
+                                            <h5>Analyse</h5>
+                                            <p>Erläuterungen zur <br/>exemplarischen Analyse</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-sm-12">
+                                <a href="https://github.com/laurauntner/sappho-digital" class="index-link">
+                                    <div class="card index-card d-flex flex-column">
+                                        <div class="card-body item-center">
+                                            <img src="images/data.png" title="data.png"
+                                                alt="Flaticon" class="smaller-img"/>
+                                        </div>
+                                        <div class="card-header">
+                                            <h5>Daten</h5>
+                                            <p>Frei verfügbare Daten <br/>auf GitHub</p>
                                         </div>
                                     </div>
                                 </a>

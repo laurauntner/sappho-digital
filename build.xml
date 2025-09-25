@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project basedir="." name="tei2html">
-    
+
     <property name="index" value="./data/meta/about.xml"/>
 
     <property name="target" value="./html"/>
@@ -28,7 +28,7 @@
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
-    
+
     <!-- analyse -->
     <xslt in="./data/meta/analyse.xml" out="${target}/analyse.html" style="./xslt/meta.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
@@ -50,22 +50,19 @@
     </xslt>
 
     <!-- book -->
-    <xslt in="./data/meta/buch.xml" out="${target}/buch.html"
-        style="./xslt/meta.xsl">
+    <xslt in="./data/meta/buch.xml" out="${target}/buch.html" style="./xslt/meta.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
 
     <!-- 404 -->
-    <xslt in="./data/meta/404.xml" out="${target}/404.html"
-        style="./xslt/meta.xsl">
+    <xslt in="./data/meta/404.xml" out="${target}/404.html" style="./xslt/meta.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
 
     <!-- tocs -->
-    <xslt in="./data/lists/sappho-rez_alle.xml" out="${target}/toc-alle.html"
-        style="./xslt/toc.xsl">
+    <xslt in="./data/lists/sappho-rez_alle.xml" out="${target}/toc-alle.html" style="./xslt/toc.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
@@ -95,17 +92,22 @@
     </xslt>
 
     <!-- bibl entities -->
-    <xslt in="./data/lists/sappho-rez_alle.xml"
-        out="${target}/_bibl-entities-dummy.html"
+    <xslt in="./data/lists/sappho-rez_alle.xml" out="${target}/_bibl-entities-dummy.html"
         style="./xslt/bibl-entities.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
-    
+
     <!-- reception entities -->
-    <xslt in="./data/rdf/sappho-reception.rdf"
-        out="${target}/_reception-entities-dummy.html"
+    <xslt in="./data/rdf/sappho-reception.rdf" out="${target}/_reception-entities-dummy.html"
         style="./xslt/reception-entities.xsl">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
+
+    <!-- sappho fragments -->
+    <xslt in="./data/rdf/fragments.rdf" out="${target}/_fragments-dummy.html"
+        style="./xslt/sappho-fragments.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
@@ -113,5 +115,6 @@
     <!-- remove dummies -->
     <delete file="${target}/_bibl-entities-dummy.html"/>
     <delete file="${target}/_reception-entities-dummy.html"/>
+    <delete file="${target}/_fragments-dummy.html"/>
 
 </project>
