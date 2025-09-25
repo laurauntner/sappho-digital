@@ -147,11 +147,14 @@
             select="concat('https://sappho-digital.com/expression/', $work-id)"/>
 
         <xsl:variable name="int31" select="
-                $receptionEntities//intro:INT31_IntertextualRelation[
-                local:iri-id(string(intro:R13_hasReferringEntity/@rdf:resource)) = $work-id or
-                local:iri-id(string(intro:R12_hasReferredToEntity/@rdf:resource)) = $work-id
-                ]
-                "/>
+            $receptionEntities//intro:INT31_IntertextualRelation[
+            (local:iri-id(string(intro:R13_hasReferringEntity/@rdf:resource)) = $work-id
+            and not(contains(string(intro:R12_hasReferredToEntity/@rdf:resource),'sappho-work')))
+            or
+            (local:iri-id(string(intro:R12_hasReferredToEntity/@rdf:resource)) = $work-id
+            and not(contains(string(intro:R13_hasReferringEntity/@rdf:resource),'sappho-work')))
+            ]
+            "/>
 
         <xsl:variable name="targets" as="xs:string*" select="
                 for $rel in $int31
