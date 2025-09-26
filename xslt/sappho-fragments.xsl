@@ -275,8 +275,6 @@
 
                                             <p class="align-left">Autorin: Sappho</p>
                                             
-                                            <p class="align-left">Enthalten in: </p>
-
                                             <!-- analysis -->
                                             <xsl:call-template name="render-connected-features">
                                                 <xsl:with-param name="work-id" select="$id"/>
