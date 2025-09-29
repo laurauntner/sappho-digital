@@ -252,7 +252,7 @@
   }
 
   function chartTop(el, data, pairSetName, title, topN) {
-    const pairSet = data[pairSetName]; // Set von "ID||Wert"
+    const pairSet = data[pairSetName];
     const counts = {};
     for (const p of pairSet) {
       const [, value] = p.split('||');
@@ -263,7 +263,7 @@
     let entries = Object.entries(counts);
 
     if (pairSetName === 'cityPairs') {
-      entries = entries.filter(([, v]) => v >= 2);
+      entries = entries.filter(([, v]) => v >= 3);
     }
 
     const seriesData = entries
