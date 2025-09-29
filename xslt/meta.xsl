@@ -38,6 +38,10 @@
                     </div>
                     <xsl:call-template name="html_footer"/>
                 </div>
+                <xsl:if test=".//tei:graphic[@type = 'chart']">
+                    <script src="https://code.highcharts.com/highcharts.js"/>
+                    <script src="./js/analysis-statistics.js"/>
+                </xsl:if>
             </body>
         </html>
     </xsl:template>
@@ -45,13 +49,13 @@
     <xsl:template match="tei:p">
         <p class="align-left" id="{generate-id()}"><xsl:apply-templates/></p>
     </xsl:template>
-    
+
     <xsl:template match="tei:title[@type = 'main']">
         <h1 class="align-left">
             <xsl:apply-templates/>
         </h1>
     </xsl:template>
-    
+
     <xsl:template match="tei:head">
         <h3 class="align-left">
             <xsl:apply-templates/>
@@ -72,32 +76,32 @@
             <xsl:value-of select="."/>
         </a>
     </xsl:template>
-    
+
     <xsl:template match="tei:hi[@rend = 'italics']">
         <i>
             <xsl:apply-templates/>
         </i>
     </xsl:template>
-    
+
     <xsl:template match="tei:hi[@rend = 'bold']">
         <b>
             <xsl:apply-templates/>
         </b>
     </xsl:template>
-    
+
     <xsl:template match="tei:list">
         <ul>
             <xsl:apply-templates/>
         </ul>
     </xsl:template>
-    
+
     <xsl:template match="tei:item">
         <li>
             <xsl:apply-templates/>
         </li>
     </xsl:template>
-    
-    <xsl:template match="tei:graphic[@type='cover']">
+
+    <xsl:template match="tei:graphic[@type = 'cover']">
         <img>
             <xsl:attribute name="src">
                 <xsl:value-of select="@url"/>
@@ -108,8 +112,8 @@
             <xsl:apply-templates/>
         </img>
     </xsl:template>
-    
-    <xsl:template match="tei:graphic[@type='funding']">
+
+    <xsl:template match="tei:graphic[@type = 'funding']">
         <img>
             <xsl:attribute name="src">
                 <xsl:value-of select="@url"/>
@@ -120,5 +124,15 @@
             <xsl:apply-templates/>
         </img>
     </xsl:template>
+
+    <xsl:template match="tei:graphic[@type = 'chart']">
+        <div class="skos-chart" id="{@n}" data-chart="{@subtype}" data-csv="{@url}"/>
+    </xsl:template>
     
+    <xsl:template match="tei:div[@rend='charts']">
+        <section class="charts-grid">
+            <xsl:apply-templates/>
+        </section>
+    </xsl:template>
+
 </xsl:stylesheet>

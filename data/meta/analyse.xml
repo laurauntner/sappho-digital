@@ -345,6 +345,21 @@
             in der <ref target="buch.html">Anthologie</ref>)</item>
         </list>
       </div>
+      <div>
+        <head>Statistische Übersicht</head>
+        <div rend="charts">
+          <p><graphic type="chart" subtype="gattungen" url="../data/analysetexte_statistik.csv"
+              n="chart-gattungen"/></p>
+          <p><graphic type="chart" subtype="zeitverteilung" url="../data/analysetexte_statistik.csv"
+              n="chart-zeitverteilung"/></p>
+          <p><graphic type="chart" subtype="geschlecht" url="../data/analysetexte_statistik.csv"
+              n="chart-geschlecht"/></p>
+          <p><graphic type="chart" subtype="staedte" url="../data/analysetexte_statistik.csv"
+              n="chart-staedte"/></p>
+          <p><graphic type="chart" subtype="laender" url="../data/analysetexte_statistik.csv"
+              n="chart-laender"/></p>
+        </div>
+      </div>
     </body>
   </text>
 </TEI>
