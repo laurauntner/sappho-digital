@@ -1,29 +1,11 @@
-/* charts.js — Highcharts-Auswertungen für TEI <graphic type="chart">-Container
-
-Erwartet Container wie:
-  <div class="skos-chart" id="chart-gattungen"
-       data-chart="gattungen"
-       data-csv="data/analysetexte_statistik.csv"></div>
-
-Zähl-Logik:
-- Gattungen: pro Werk (ID) genau 1x (erste nicht-leere Gattung je ID)
-- Zeitverteilung: pro Werk (ID) genau 1 Jahr (kleinstes gültiges Jahr je ID)
-- Geschlecht: pro (ID, Gender) 1x → ein Werk mit m & w zählt in beiden Kategorien je 1
-  (ohne Doppelzählung derselben Kategorie)
-- Städte/Länder: pro (ID, Stadt/Land) 1x → ein Werk mit mehreren Orten verteilt sich
-  auf mehrere Orte; identischer Ort pro ID wird nicht mehrfach gezählt
-*/
-
 (function () {
 
-  // --------- Hinweise / Utils ---------------------------------------------
   if (!location.protocol.startsWith('http')) {
     console.warn(
       'Hinweis: Diese Seite läuft nicht über HTTP. fetch() auf lokale Dateien wird von Browsern blockiert (CORS). Bitte lokal per http://localhost:… serven.'
     );
   }
 
-  // CSV-Parser mit ; als Default-Trenner, unterstützt Anführungszeichen
   function parseCSV(text, delimiter = ';') {
     const rows = [];
     let i = 0, cur = '', inQuotes = false, row = [];
@@ -62,8 +44,7 @@ Zähl-Logik:
 
   const pairKey = (...parts) => parts.map(p => String(p ?? '')).join('||');
 
-  // --------- Highcharts Defaults (Farben wie im Beispiel) ----------
-  const base = 'rgba(94, 23, 235,'; // Violett
+  const base = 'rgba(94, 23, 235,';
   const variants = [
     `${base} 0.9)`,
     `${base} 0.7)`,
@@ -89,8 +70,7 @@ Zähl-Logik:
     });
   }
 
-  // --------- Datenaufbereitung & Cache ------------------------------------
-  const dataCache = new Map(); // csvUrl -> prepared data
+  const dataCache = new Map();
 
   async function loadAndPrepare(csvUrl) {
     if (dataCache.has(csvUrl)) return dataCache.get(csvUrl);
@@ -119,7 +99,6 @@ Zähl-Logik:
       if (i === -1) console.warn(`charts.js: Spalte "${k}" fehlt in CSV.`);
     });
 
-    // Normalisierte Datensätze
     const rows = rowsRaw.map(cols => ({
       ID: col.ID >= 0 ? String(cols[col.ID]).trim() : '',
       Gender: col.Gender >= 0 ? String(cols[col.Gender] || '').trim() : '',
@@ -129,19 +108,16 @@ Zähl-Logik:
       Land: col.Land >= 0 ? String(cols[col.Land] || '').trim() : ''
     }));
 
-    // Distinkte Werke
     const ids = rows.map(r => r.ID).filter(Boolean);
     const uniqueIDs = Array.from(new Set(ids));
     const totalWorks = uniqueIDs.length;
 
-    // Gattung: pro ID erste nicht-leere
     const genreByID = new Map();
     for (const r of rows) {
       if (!r.ID) continue;
       if (!genreByID.has(r.ID) && r.Gattung) genreByID.set(r.ID, r.Gattung);
     }
 
-    // Jahr: pro ID kleinstes gültiges Jahr
     const yearByID = new Map();
     for (const r of rows) {
       if (!r.ID || !Number.isFinite(r.Jahr)) continue;
@@ -149,13 +125,11 @@ Zähl-Logik:
       else yearByID.set(r.ID, Math.min(yearByID.get(r.ID), r.Jahr));
     }
 
-    // Geschlecht: (ID,Gender) Paare
     const genderPairs = new Set();
     for (const r of rows) {
       if (r.ID && r.Gender) genderPairs.add(pairKey(r.ID, r.Gender));
     }
 
-    // Städte/Länder: (ID, Ort) Paare
     const cityPairs = new Set();
     const countryPairs = new Set();
     for (const r of rows) {
@@ -168,9 +142,8 @@ Zähl-Logik:
     return prepared;
   }
 
-  // --------- Rendering -----------------------------------------------------
   async function renderFromElement(el) {
-    const kind = el.getAttribute('data-chart'); // gattungen | zeitverteilung | geschlecht | staedte | laender
+    const kind = el.getAttribute('data-chart');
     const csvUrl = el.getAttribute('data-csv');
     if (!csvUrl) {
       console.error('charts.js: data-csv fehlt am Element', el);
@@ -187,7 +160,7 @@ Zähl-Logik:
 
     switch (kind) {
       case 'gattungen':       return chartGattungen(el, data);
-      case 'zeitverteilung':  return chartZeitverteilung(el, data); // y-Achse min: 0 + fehlende Jahre = 0
+      case 'zeitverteilung':  return chartZeitverteilung(el, data);
       case 'geschlecht':      return chartGeschlecht(el, data);
       case 'staedte':         return chartTop(el, data, 'cityPairs', 'Top Publikationsorte (Städte)', 30);
       case 'laender':         return chartTop(el, data, 'countryPairs', 'Top Publikationsorte (Länder)', 50);
@@ -196,7 +169,6 @@ Zähl-Logik:
     }
   }
 
-  // 1) Gattungen — Pie (pro Werk 1×)
   function chartGattungen(el, data) {
     const counts = {};
     for (const g of data.genreByID.values()) {
@@ -216,7 +188,6 @@ Zähl-Logik:
     ensureNote(el, data);
   }
 
-  // 2) Zeitverteilung — Line (pro Werk 1×; Jahr = Minimum je ID)
   function chartZeitverteilung(el, data) {
     const byYear = {};
     for (const y of data.yearByID.values()) {
@@ -231,7 +202,7 @@ Zähl-Logik:
 
     const seriesData = [];
     for (let y = minYear; y <= maxYear; y++) {
-      const count = byYear[y] || 0; // fehlende Jahre → 0
+      const count = byYear[y] || 0;
       seriesData.push([Date.UTC(y, 0, 1), count]);
     }
 
@@ -255,7 +226,6 @@ Zähl-Logik:
     ensureNote(el, data);
   }
 
-  // 3) Geschlecht — Bar (pro (ID,Gender) 1×)
   function chartGeschlecht(el, data) {
     const counts = {};
     for (const pg of data.genderPairs) {
@@ -281,7 +251,6 @@ Zähl-Logik:
     ensureNote(el, data);
   }
 
-  // 4/5) Städte & Länder — Bar (pro (ID,Ort) 1×, Top-N)
   function chartTop(el, data, pairSetName, title, topN) {
     const pairSet = data[pairSetName]; // Set von "ID||Wert"
     const counts = {};
@@ -291,10 +260,8 @@ Zähl-Logik:
       counts[value] = (counts[value] || 0) + 1;
     }
 
-    // Einträge sammeln
     let entries = Object.entries(counts);
 
-    // bei Städten nur Werte mit mindestens 2 Vorkommen
     if (pairSetName === 'cityPairs') {
       entries = entries.filter(([, v]) => v >= 2);
     }
@@ -304,7 +271,6 @@ Zähl-Logik:
       .sort((a, b) => b[1] - a[1])
       .slice(0, topN);
 
-    // >>> Layout-Verbesserungen für lange Listen (nur hier) <<<
     const dynamicHeight = Math.max(240, 22 * seriesData.length + 200);
 
     Highcharts.chart(el.id, {
@@ -315,9 +281,9 @@ Zähl-Logik:
         type: 'category',
         title: { text: null },
         labels: {
-          step: 1,                // alle Labels anzeigen
+          step: 1,
           useHTML: true,
-          style: { whiteSpace: 'normal', width: 110 } // Umbruch statt Überlappung
+          style: { whiteSpace: 'normal', width: 110 }
         },
         tickInterval: 1
       },
@@ -329,7 +295,6 @@ Zähl-Logik:
     ensureNote(el, data);
   }
 
-  // --------- Bootstrapping -------------------------------------------------
   document.addEventListener('DOMContentLoaded', function () {
     if (typeof Highcharts === 'undefined') {
       console.error('charts.js: Highcharts ist nicht geladen. Bitte <script src="https://code.highcharts.com/highcharts.js"></script> vor charts.js einbinden.');
