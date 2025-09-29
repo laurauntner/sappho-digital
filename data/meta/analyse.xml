@@ -1,569 +1,350 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0">
-        <teiHeader>
-                <fileDesc>
-                        <titleStmt>
-                                <title type="main">Erläuterungen zur Analyse</title>
-                        </titleStmt>
-                        <publicationStmt>
-                                <publisher>Laura Untner</publisher>
-                                <pubPlace>Wien/Berlin</pubPlace>
-                                <date when="2025">2025</date>
-                                <availability>
-                                        <licence
-                                                target="https://creativecommons.org/licenses/by/4.0/deed.de">
-                                                <p>CC BY 4.0</p>
-                                        </licence>
-                                </availability>
-                        </publicationStmt>
-                        <sourceDesc>
-                                <p>Born digital</p>
-                        </sourceDesc>
-                </fileDesc>
-        </teiHeader>
-        <text>
-                <body>
-                        <div>
-                                <p>Neben allen in Andreas Bagordos Edition der Sappho-Fragmente
-                                        (Patmos 2009) enthaltenen Gedichte (vgl. das Menü Texte > Sappho-Fragmente) wurden
-                                        99 exemplarische Rezeptionszeugnisse bzw. Auszüge aus diesen
-                                        analysiert:</p>
-                                <list>
-                                        <item><ref target="bibl_684109f1.html">Abschied an meine
-                                                  Leyer</ref> (<ref target="author_8a1a3a96.html"
-                                                  >Gabriele Baumberg</ref>, 1787, S. 124–126 im
-                                                Erstdruck, S. 52–53 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_db8dfab9.html">Achte Satyra: Der
-                                                  Poët</ref> (<ref target="author_713d6c9e.html"
-                                                  >Joachim Rachel</ref>, 1666?/1677, S. 100–120,
-                                                hier: 106–108 im Erstdruck, S. 23–25 in der <ref
-                                                  target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_2e3cd65f.html">An Cidli. 1751</ref>
-                                                  (<ref target="author_1537cf6e.html">Friedrich
-                                                  Gottlieb Klopstock</ref>, 1751/1771, S. 134–136 im
-                                                Erstdruck, S. 35–36 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_7dffe8b1.html">An die
-                                                  Dichterinnen</ref> (<ref
-                                                  target="author_c418e31d.html">Johann Wilhelm
-                                                  Ludwig Gleim</ref>, n. n. 1803/1812, S. 124 im
-                                                Erstdruck, S. 107 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_b8a3a15a.html">An diesem Morgen
-                                                  war</ref> (<ref target="author_6cb1891c.html">Durs
-                                                  Grünbein</ref>, 1985–1988/1988, S. 24 im
-                                                Erstdruck, S. 279 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_936bf0a5.html">An meine
-                                                  Jungfrauen</ref> (<ref
-                                                  target="author_3bf06e59.html">Caroline
-                                                  Rudolphi</ref>, 1796, S. 45–52 im Erstdruck, S.
-                                                94–98 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_4422d6d6.html">An Sappho</ref> (<ref
-                                                  target="author_529d41df.html">Theodor
-                                                  Däubler</ref>, 1924, S. 51 im Erstdruck, S. 226 in
-                                                der <ref target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_e9d96eef.html">Aufnahmen:
-                                                  Sappho</ref> (<ref target="author_4697f5ea.html"
-                                                  >Kurt Marti</ref>, 1956, S. 113 im Erstdruck, S.
-                                                241 in der <ref target="buch.html"
-                                                >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_a369dda0.html">Bruchstück, für
-                                                  Sappho</ref> (<ref target="author_a6c5a134.html"
-                                                  >Jürgen Theobaldy</ref>, 1984, S. 36 im Erstdruck,
-                                                S. 278 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_0a0e461e.html">computergedicht nr.
-                                                  2</ref> (<ref target="author_6a63d5ff.html">Ernst
-                                                  Jandl</ref>, n. n. 2000/2001, S. 74 im Erstdruck,
-                                                S. 312 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_0643ca58.html">Der leukadische Fels.
-                                                  Ein Schauspiel</ref> (<ref
-                                                  target="author_d25d3d67.html">Caroline von
-                                                  Wolzogen</ref>, 1792, S. 241–266, hier: 247–257 im
-                                                Erstdruck, S. 79–87 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_9ef5617d.html">Dich hat Amor gewiß
-                                                  …</ref> (<ref target="author_4c9bafad.html"
-                                                  >Waldtraut Lewin</ref>, 1983, S. 5–65, hier: 11–16
-                                                im Erstdruck, S. 265–269 in der <ref
-                                                  target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_a0bace6b.html">Die Frau im Brunnen.
-                                                  Roman</ref> (<ref target="author_19def99f.html"
-                                                  >Christa Reinig</ref>, 1984, S. 13–20 im
-                                                Erstdruck, S. 271–277 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_8fc572e2.html">Die Kunst der
-                                                  Griechen. An Goethe. Elegie</ref> (<ref
-                                                  target="author_48ba1f03.html">August Wilhelm
-                                                  Schlegel</ref>, 1799, S. 181–192, hier: 189–190 im
-                                                Erstdruck, S. 101 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_339f7bbc.html">Die moderne Sappho.
-                                                  Ein musikalisch-dramatisches Durcheinander ohne
-                                                  Sinn und ohne Verstand. Bestehend aus zwei Akten
-                                                  und einem monodramatischen Finale</ref> (<ref
-                                                  target="author_f1bb4938.html">Adolph von
-                                                  Schaden</ref>, 1819, S. 59–62 im Erstdruck, S.
-                                                144–146 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_3759bef5.html">Die Sappho des
-                                                  Westens</ref> (<ref target="author_0c148f7c.html"
-                                                  >Luise von Plönnies</ref>, 1851, S. 85–174, hier:
-                                                87–88 im Erstdruck, S. 156–157 in der <ref
-                                                  target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_a5039b6f.html">Die Schale der
-                                                  Vergessenheit</ref> (<ref
-                                                  target="author_b7521cbe.html">Ludwig Hölty</ref>,
-                                                1776/1783, S. 125 im Erstdruck, S. 43 in der <ref
-                                                  target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_f7bb70af.html">Die Schwestern von
-                                                  Lesbos</ref> (<ref target="author_d942331e.html"
-                                                  >Amalie von Imhoff</ref>, 1800, S. 1–182, hier:
-                                                23–34 im Erstdruck, S. 103–106 in der <ref
-                                                  target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_407a0d29.html">Die späten
-                                                  Jahre</ref> (<ref target="author_2f14b48f.html"
-                                                  >Heinz Piontek</ref>, 1978–1980/1982, S. 313–314
-                                                im Erstdruck, S. 248–249 in der <ref
-                                                  target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_a717f073.html">Die Umarmung. Im
-                                                  Herbst 1776</ref> (<ref
-                                                  target="author_33a63963.html">Gottfried August
-                                                  Bürger</ref>, 1776/1778, S. 243–246 im Erstdruck,
-                                                S. 44–46 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_1585db9d.html">Dies Buch gehört dem
-                                                  König</ref> (<ref target="author_41ec22f4.html"
-                                                  >Bettina von Arnim</ref>, 1843, S. 472–473 im
-                                                Erstdruck, S. 155 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_b53e5151.html">Ein apokaliptisches
-                                                  Fragment</ref> (<ref target="author_2397260a.html"
-                                                  >Tian [d. i. Karoline von Günderrode]</ref>,
-                                                1801–1804/1804, S. 77–82 im Erstdruck, S. 108–110 in
-                                                der <ref target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_8665dcc5.html">Eine Aegyptische
-                                                  Königstochter. Historischer Roman. Erster
-                                                  Band</ref> (<ref target="author_caa5df32.html"
-                                                  >Georg Ebers</ref>, 1864, S. 8–12 im Erstdruck, S.
-                                                179–184 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_19d5a7ab.html">Erinna an
-                                                  Sappho</ref> (<ref target="author_c8447c3c.html"
-                                                  >Eduard Mörike</ref>, 1863/1864, S. 278–280 im
-                                                Erstdruck, S. 177–178 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_9bb8a741.html">EROS / beim Lesen der
-                                                  Sappho</ref> (<ref target="author_43f15a85.html"
-                                                  >Gabriele Eckart</ref>, 1982/1985, S. 23 im
-                                                Erstdruck, S. 259 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_b0693a0e.html">Faon, Nireus, hernach
-                                                  Saffo, zuletzt noch Anakreon</ref> (<ref
-                                                  target="author_7ea2d8de.html">Christoph Martin
-                                                  Wieland</ref>, 1789–1793/1796, S. 313–328 im
-                                                Erstdruck, S. 58–66 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_b47fb393.html">fern ufo sah sappho
-                                                  ufern</ref> (<ref target="author_59ec15eb.html"
-                                                  >Oskar Pastior</ref>, 1990, S. 131–142 im
-                                                Erstdruck, S. 296–306 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_88439060.html">Hymne an den Genius
-                                                  der Jugend</ref> (<ref
-                                                  target="author_4e4cdf8e.html">Friedrich
-                                                  Hölderlin</ref>, 1792, S. 46–51 im Erstdruck, S.
-                                                75–78 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_0f7a6b8d.html">Ich dachte an dich
-                                                  mit verlorenen / Schläfen</ref> (<ref
-                                                  target="author_1ec001c4.html">Anja Kampmann</ref>,
-                                                2014, S. 25 im Erstdruck, S. 342 in der <ref
-                                                  target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_4e970562.html">Immer waren wir Hand
-                                                  in Hand. Erinna an Sappho</ref> (<ref
-                                                  target="author_ec557a00.html">Johannes
-                                                Rüber</ref>, 1990, S. 71–86 im Erstdruck, S. 284–295
-                                                in der <ref target="buch.html"
-                                                >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_ffadfa01.html">Isoliert</ref> (<ref
-                                                  target="author_cc996ae4.html">Rose
-                                                Ausländer</ref>, 1983, S. 13 im Erstdruck, S. 270 in
-                                                der <ref target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_efcd32b0.html">Karneval der
-                                                  Sorge</ref> (<ref target="author_21ce4315.html"
-                                                  >Gerhard Falkner</ref>, 2008, S. 8 im Erstdruck,
-                                                S. 327–328 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_5283cfa8.html">Laidion oder die
-                                                  Eleusinischen Geheimnisse. Erster Theil</ref>
-                                                  (<ref target="author_6deae303.html">Wilhelm
-                                                  Heinse</ref>, 1774, S. 372–378 im Erstdruck, S.
-                                                39–41 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_fa064c2f.html">Lesbos</ref> (<ref
-                                                  target="author_361addef.html">Emanuel
-                                                Geibel</ref>, 1851–1856/1856, S. 32 im Erstdruck, S.
-                                                158 in der <ref target="buch.html"
-                                                >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_c908fde2.html">Lob der
-                                                  Dichterinnen</ref> (<ref
-                                                  target="author_9c093075.html">Johann Joachim
-                                                  Schwabe</ref>, 1741, S. 227–231 im Erstdruck, S.
-                                                30–34 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_2838b3d9.html">Lucinde. Ein Roman.
-                                                  Erster Theil</ref> (<ref
-                                                  target="author_8000ee92.html">Friedrich
-                                                  Schlegel</ref>, 1799, S. 75–77 im Erstdruck, S.
-                                                102 in der <ref target="buch.html"
-                                                >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_39b012ab.html">Mein Lieber
-                                                  Feldmann</ref> (<ref target="author_241bfafe.html"
-                                                  >Bertram Reinecke</ref>, 2014, S. 76–81 im
-                                                Erstdruck, S. 343–348 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_98b2a68e.html">Minona oder Die
-                                                  Angelsachsen. Ein tragisches Melodrama in vier
-                                                  Akten. Die Musik vom Herrn Kapellmeister J. A. P.
-                                                  Schulz [d. i. Johann Abraham Peter Schulz]</ref>
-                                                  (<ref target="author_ec30f867.html">Heinrich
-                                                  Wilhelm von Gerstenberg</ref>, 1785, S. 10–15 im
-                                                Erstdruck, S. 48–51 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_a667785d.html">Mirtill!</ref> (<ref
-                                                  target="author_39fd1d81.html">Caroline Louise von
-                                                  Klencke</ref>, 1775, S. 148–150 im Erstdruck, S.
-                                                42 in der <ref target="buch.html"
-                                                >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_56775306.html">Mit Liedern
-                                                  Sapphos</ref> (<ref target="author_4a7ff7b6.html"
-                                                  >Johannes Bobrowski</ref>, 1964/1965, S. 44 im
-                                                Erstdruck, S. 243 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_843e4821.html">mit Sappho im
-                                                  Hof</ref> (<ref target="author_7eaf6aad.html"
-                                                  >Odile Kennel</ref>, 2014, S. 30–31 im Erstdruck,
-                                                S. 340–341 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_a3992d71.html">nach Sappholektüren
-                                                  (und Gennadij Ajgi) / Fingerknöchel Jasmin und
-                                                  fragmentarischer Eros</ref> (<ref
-                                                  target="author_0de8e0eb.html">Friederike
-                                                  Mayröcker</ref>, 1995/1996, S. 115 im Erstdruck,
-                                                S. 307–308 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_5ae4b5fe.html">Nachricht aus
-                                                  Lesbos</ref> (<ref target="author_197bc4a1.html"
-                                                  >Sarah Kirsch</ref>, 1973, S. 71 im Erstdruck, S.
-                                                244 in der <ref target="buch.html"
-                                                >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_0491bde2.html">Ode der Sappho</ref>
-                                                  (<ref target="author_70b62a8f.html">Johannes
-                                                  Robert Becher</ref>, 1917/1918, S. 108–111 im
-                                                Erstdruck, S. 222–224 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_29dac241.html">Ode. An Jungfer L. A.
-                                                  V. Kulmus [d. i. Luise Adelgunde Victorie
-                                                  Gottsched]. 1731. den 11 April</ref> (<ref
-                                                  target="author_aba1427a.html">Johann Christoph
-                                                  Gottsched</ref>, 1731/1736, S. 252–255 im
-                                                Erstdruck, S. 26–29 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_11a107f7.html">Post-Ode,
-                                                  sapphisch</ref> (<ref
-                                                  target="author_e5f7bab5.html">Arnold Zweig</ref>,
-                                                1959/1964, S. 349 im Erstdruck, S. 242 in der <ref
-                                                  target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_31f96313.html">Sapho</ref> (<ref
-                                                  target="author_402dfcfd.html">Kasimir
-                                                  Edschmid</ref>, 1919, S. 15 im Erstdruck, S. 225
-                                                in der <ref target="buch.html"
-                                                >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_d85ade6a.html">Sapho</ref> (<ref
-                                                  target="author_296dd9b2.html">Gotthold Friedrich
-                                                  Stäudlin</ref>, 1788, S. 49–55 im Erstdruck, S.
-                                                54–57 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_8819a3b3.html">Sapho</ref> (<ref
-                                                  target="author_b4b4af98.html">Karl Woltmann</ref>,
-                                                  <ref target="author_8c3d27e1.html">Karoline
-                                                  Woltmann</ref>, 1806, S. 7 im Erstdruck, S. 115 in
-                                                der <ref target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_9ade79f7.html">Sapho an Amor</ref>
-                                                  (<ref target="author_7240c9e7.html">Anna Louisa
-                                                  Karsch</ref>, 1761/1764, S. 252–254 im Erstdruck,
-                                                S. 37–38 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_632dac82.html">Sapho. Ein
-                                                  Melodrama</ref> (<ref
-                                                  target="author_27500efc.html">J. J. H–b–r [d. i.
-                                                  Johann Joseph von Huber]</ref>, 1790, S. 5–16 im
-                                                Erstdruck, S. 67–74 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_1bf78f84.html">Sapphische
-                                                  Flaschenpost. Vom entsetzlich aufschäumenden
-                                                  Eros</ref> (<ref target="author_14234df5.html"
-                                                  >Florian Vetsch</ref>, 2016, S. 60 im Erstdruck,
-                                                S. 349 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_3d6a534d.html">Sappho</ref> (<ref
-                                                  target="author_f7114165.html">Marie von
-                                                  Najmájer</ref>, 1889, S. 23 im Erstdruck, S.
-                                                191–192 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_e58bccae.html">Sappho</ref> (<ref
-                                                  target="author_9a3d3005.html">Carmen Sylva [d. i.
-                                                  Elisabeth zu Wied]</ref>, 1880, S. 21–25 im
-                                                Erstdruck, S. 185–187 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_63209746.html">Sappho</ref> (<ref
-                                                  target="author_a58ca455.html">Ida Hahn-Hahn</ref>,
-                                                1835, S. 235–236 im Erstdruck, S. 153–154 in der
-                                                  <ref target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_b695354d.html">Sappho</ref> (<ref
-                                                  target="author_ad13c2e1.html">Marie Luise
-                                                  Kaschnitz</ref>, 1936/1985, S. 621–622 im
-                                                Erstdruck, S. 227 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_5f1d7d40.html">Sappho</ref> (<ref
-                                                  target="author_156a1461.html">Marie
-                                                Itzerott</ref>, 1901, S. 12–15 im Erstdruck, S.
-                                                199–205 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_78d95d8c.html">Sappho</ref> (<ref
-                                                  target="author_59b37975.html">Otto Erich
-                                                  Hartleben</ref>, 1883–1904/1905, S. 156–157 im
-                                                Erstdruck, S. 188–189 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_f8609041.html">Sappho</ref> (<ref
-                                                  target="author_ecd75d50.html">Ferdinand von
-                                                  Saar</ref>, 1904, S. 39–81, hier: 41–45 im
-                                                Erstdruck, S. 218–220 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_e2546c7f.html">Sappho</ref> (<ref
-                                                  target="author_a18ae9df.html">Marie Madeleine [d.
-                                                  i. Marie Madeleine Baronin von Puttkamer]</ref>,
-                                                1900, S. 6–8 im Erstdruck, S. 197–198 in der <ref
-                                                  target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_4110fba1.html">Sappho</ref> (<ref
-                                                  target="author_8fab2701.html">Agnes Franz</ref>,
-                                                1820, S. v–x im Erstdruck, S. 147–152 in der <ref
-                                                  target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_295bbaf8.html">Sappho an
-                                                  Eranna</ref> (<ref target="author_46e646b5.html"
-                                                  >Rainer Maria Rilke</ref>, 1907, S. 5 im
-                                                Erstdruck, S. 221 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_0434022c.html">Sappho an Phaon</ref>
-                                                  (<ref target="author_6bc845c6.html">Theone [d. i.
-                                                  Therese von Artner]</ref>, 1806, S. 92–97 im
-                                                Erstdruck, S. 116–120 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_cbfea792.html">Sappho an Phaon</ref>
-                                                  (<ref target="author_d5ea9f29.html">August von
-                                                  Platen-Hallermünde</ref>, 1812/1909, S. 158–163 im
-                                                Erstdruck, S. 130–136 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_5ca5f0b6.html">Sappho die Dichterin
-                                                  von Lesbos. Roman der Schönheit</ref> (<ref
-                                                  target="author_c47c8ee0.html">Peter Hille</ref>,
-                                                n. n. 1904/1904, S. 7–11 im Erstdruck, S. 206–209 in
-                                                der <ref target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_a88a263f.html">Sappho ist tot. Auf
-                                                  den Tod von Ricarda Huch</ref> (<ref
-                                                  target="author_91b3e0e9.html">Rudolf
-                                                  Hagelstange</ref>, 1950, S. 205 im Erstdruck, S.
-                                                228 in der <ref target="buch.html"
-                                                >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_7ca33bdb.html">Sappho schmiegt sich
-                                                  an Romeo</ref> (<ref target="author_0b08fc2e.html"
-                                                  >Helmut Heißenbüttel</ref>, 1986, S. 9 im
-                                                Erstdruck, S. 280 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_6fcff98a.html">sappho singers
-                                                  VII</ref> (<ref target="author_5647c8df.html"
-                                                  >Ariane von Graffenried</ref>, 2021, S. 78 im
-                                                Erstdruck, S. 357 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_2660d82e.html">Sappho träumt eine
-                                                  zweite Fahrt ins Exil</ref> (<ref
-                                                  target="author_b2e2e732.html">Klaus Anders</ref>,
-                                                2018, S. 22–23 im Erstdruck, S. 350–351 in der <ref
-                                                  target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_a53d809b.html">Sappho und alle die
-                                                  danach kamen</ref> (<ref
-                                                  target="author_34fd5b25.html">Mara Krauss,
-                                                  Lesbentheater München</ref>, 1978, S. 9–14 im
-                                                Erstdruck, S. 245–247 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_97722fa3.html">Sappho und
-                                                  Apoll</ref> (<ref target="author_999f2a49.html"
-                                                  >Anna Forstenheim</ref>, n. n. 1889/1890, S. 85 im
-                                                Erstdruck, S. 190 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_8df69e81.html">Sappho und
-                                                  Nanthen</ref> (<ref target="author_9e136a8f.html"
-                                                  >Abraham Gotthelf Kästner</ref>, 1782, S. 99 im
-                                                Erstdruck, S. 47 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_458b7c88.html">Sappho und
-                                                  Phaon</ref> (<ref target="author_cba6134b.html"
-                                                  >Friedrich Buchholz</ref>, 1807, S. 98–171, hier:
-                                                121–127 im Erstdruck, S. 121–125 in der <ref
-                                                  target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_b705febf.html">SAPPHO »und dass ich
-                                                  dich lieben werde …«. Erinnerungen der Poetin und
-                                                  ihrer Hetären</ref> (<ref
-                                                  target="author_8d60dbcb.html">Tami van Dalen [d.
-                                                  i. Tami Dahlheim]</ref>, 2005, S. 105–109 im
-                                                Erstdruck, S. 323–326 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_baaeb54e.html">Sappho – Labor</ref>
-                                                  (<ref target="author_3cf5c166.html">Roman
-                                                  Graf</ref>, 2010, S. 37–45 im Erstdruck, S.
-                                                332–334 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_e745799e.html">Sappho. Drama in fünf
-                                                  Akten und einem Vor- und Nachspiel mit
-                                                  Berücksichtigung geschichtlicher und legendärer
-                                                  Züge aus Sapphos Leben</ref> (<ref
-                                                  target="author_55676bb1.html">Maria Modena [d. i.
-                                                  Erna Kreis-Weber]</ref>, 1951, S. 7–76, hier:
-                                                65–73 im Erstdruck, S. 229–238 in der <ref
-                                                  target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_5aa55e45.html">Sappho. Ein
-                                                  dramatisches Gedicht</ref> (<ref
-                                                  target="author_c6ba13c5.html">Franz Alexander von
-                                                  Kleist</ref>, 1793, S. 86–94 im Erstdruck, S.
-                                                88–93 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_ebc1bb1f.html">Sappho. Ein
-                                                  griechischer Sommernachtstraum</ref> (<ref
-                                                  target="author_a186641f.html">Joachim
-                                                Fernau</ref>, 1986, S. 7–12 im Erstdruck, S. 281–283
-                                                in der <ref target="buch.html"
-                                                >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_ec11b447.html">Sappho. Eine
-                                                  Novelle</ref> (<ref target="author_727e9e25.html"
-                                                  >Therese Rak</ref>, 1902, S. 135–144 im Erstdruck,
-                                                S. 210–217 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_f4da59f4.html">Sappho. Roman</ref>
-                                                  (<ref target="author_f917bb57.html">Siegfried
-                                                  Obermeier</ref>, 2001, S. 9–16 im Erstdruck, S.
-                                                313–321 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_ba71b2e5.html">Sappho. Trauerspiel
-                                                  in fünf Aufzügen</ref> (<ref
-                                                  target="author_37fcac67.html">Franz
-                                                  Grillparzer</ref>, 1818/1820, S. 121–127 im
-                                                Erstdruck, S. 137–143 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_f5e2fa88.html">Sappho: neu
-                                                  aufgebacken, ausgelegt und nachempfunden</ref>
-                                                  (<ref target="author_bbd2f350.html">Peter
-                                                  Rühmkorf</ref>, 2008, S. 117 im Erstdruck, S. 329
-                                                in der <ref target="buch.html"
-                                                >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_69eddc38.html">Sapphos
-                                                  Schwärmerey</ref> (<ref
-                                                  target="author_6766d110.html">Engel Christine
-                                                  Westphalen</ref>, 1809, S. 112–188 im Erstdruck,
-                                                S. 126–129 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_3761b97f.html">Sapphos Sprung</ref>
-                                                  (<ref target="author_fbea9be0.html">Karen
-                                                  Aydin</ref>, 2021, S. 14–18 im Erstdruck, S.
-                                                353–356 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_a5889140.html">Sapphos Wiederkehr
-                                                  (Gertrud Kolmar, verschollen 1943)</ref> (<ref
-                                                  target="author_389820a7.html">Volker
-                                                  Ebersbach</ref>, 1999, S. 122 im Erstdruck, S. 31
-                                                in der <ref target="buch.html"
-                                                >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_8e053a15.html">SÜSS wie der rote /
-                                                  Apfel</ref> (<ref target="author_fc1094bb.html"
-                                                  >Hans Arnfrid Astel</ref>, 2004, S. 322 in der
-                                                  <ref target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_0bd2c59f.html">THE MOST
-                                                  BEAUTIFUL</ref> (<ref
-                                                  target="author_8c390adb.html">Barbara
-                                                Köhler</ref>, 2012, S. 239–245 im Erstdruck, S.
-                                                355–339 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_8ebf0c28.html">Theaterg’schichten
-                                                  durch Liebe, Intrige, Geld und Dummheit. Posse mit
-                                                  Gesang in zwei Akten</ref> (<ref
-                                                  target="author_e00f499f.html">Johann
-                                                Nestroy</ref>, 1854, S. 19–27 im Erstdruck, S.
-                                                159–176 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_889153c6.html">Variationen über ein
-                                                  Fragment von Sappho</ref> (<ref
-                                                  target="author_31067ec6.html">Ann Cotten</ref>,
-                                                2010, S. 27–28 im Erstdruck, S. 330–331 in der <ref
-                                                  target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_69a9167e.html">Vergeßt den Namen des
-                                                  Eisvogels nicht: Sappho an die Abschied nehmenden
-                                                  Mädchen auf Lesbos</ref> (<ref
-                                                  target="author_db9d367b.html">Christine
-                                                  Brückner</ref>, 1983, S. 51–60 im Erstdruck, S.
-                                                260–264 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_e26a1604.html">Vexierbild</ref>
-                                                  (<ref target="author_b2a5a4c0.html">Erich
-                                                  Fried</ref>, 1979, S. 96–102, hier: 100 im
-                                                Erstdruck, S. 250–251 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_00e9aff1.html">Von den plejaden her
-                                                  vierzehn gedichte im hinblick auf Lesbos</ref>
-                                                  (<ref target="author_547138e4.html">Johannes
-                                                  Poethen</ref>, 1981/1983, S. 111–114 im Erstdruck,
-                                                S. 253–258 in der <ref target="buch.html"
-                                                  >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_b6b98051.html">von sappho: 8</ref>
-                                                  (<ref target="author_df4838be.html">Dirk Uwe
-                                                  Hansen</ref>, 2019, S. 82 im Erstdruck, S. 352 in
-                                                der <ref target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_926d0a7c.html">WER GIBT DIR EIN
-                                                  RECHT DEN STUMMEN ZU SPIELEN</ref> (<ref
-                                                  target="author_9de2c173.html">Inge Müller</ref>,
-                                                1954–1966/1985, S. 55–56 im Erstdruck, S. 239–240 in
-                                                der <ref target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_8ab38a85.html">Wie du mußte ich
-                                                  fliehen</ref> (<ref target="author_bc508170.html"
-                                                  >Cyrus Atabay</ref>, 1981, S. 15 im Erstdruck, S.
-                                                252 in der <ref target="buch.html"
-                                                >Anthologie</ref>)</item>
-                                        <item><ref target="bibl_b53a5020.html">Wie Lewfrid an eines
-                                                  Graffen Hoff in die Küchen kam/un Küchebub
-                                                  ward/wie in der meisterkoch fast Lieb gewan:
-                                                  weiter von seinem Wolsingen</ref> (<ref
-                                                  target="author_6bcd0402.html">Jörg Wickram</ref>,
-                                                1554–1557/1557, S. 24–27 im Erstdruck, S. 19–21 in
-                                                der <ref target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_e2598fbd.html">WJe kan der Liebe
-                                                  Joch doch süß und lieblich seyn</ref> (<ref
-                                                  target="author_749b60f3.html">Sibylla
-                                                  Schwarz</ref>, n. n. 1638/1650, ohne Seitenangaben im Erstdruck, S. 22 in der <ref
-                                                  target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_4fcb8123.html">XX</ref> (<ref
-                                                  target="author_b5793641.html">Raoul Schrott</ref>,
-                                                1997, S. 90 im Erstdruck, S. 309–310 in der <ref
-                                                  target="buch.html">Anthologie</ref>)</item>
-                                        <item><ref target="bibl_fa4c6f94.html">»Weihnacht!«
-                                                  Reiseerzählung</ref> (<ref
-                                                  target="author_525a826b.html">Karl May</ref>,
-                                                1897, S. 27–30 im Erstdruck, S. 193–196 in der <ref
-                                                  target="buch.html">Anthologie</ref>)</item>
-                                </list>
-                        </div>
-                </body>
-        </text>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title type="main">Erläuterungen zur Analyse</title>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Laura Untner</publisher>
+        <pubPlace>Wien/Berlin</pubPlace>
+        <date when="2025">2025</date>
+        <availability>
+          <licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
+            <p>CC BY 4.0</p>
+          </licence>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <p>Born digital</p>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <div>
+        <p>Neben allen in Andreas Bagordos Edition der Sappho-Fragmente (Patmos 2009) enthaltenen
+          Gedichte (vgl. das Menü Texte > Sappho-Fragmente) wurden 99 exemplarische
+          Rezeptionszeugnisse bzw. Auszüge aus diesen analysiert:</p>
+        <list>
+          <item><ref target="bibl_684109f1.html">Abschied an meine Leyer</ref> (<ref
+              target="author_8a1a3a96.html">Gabriele Baumberg</ref>, 1787, S. 124–126 im Erstdruck,
+            S. 52–53 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_db8dfab9.html">Achte Satyra: Der Poët</ref> (<ref
+              target="author_713d6c9e.html">Joachim Rachel</ref>, 1666?/1677, S. 100–120, hier:
+            106–108 im Erstdruck, S. 23–25 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_2e3cd65f.html">An Cidli. 1751</ref> (<ref
+              target="author_1537cf6e.html">Friedrich Gottlieb Klopstock</ref>, 1751/1771, S.
+            134–136 im Erstdruck, S. 35–36 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_7dffe8b1.html">An die Dichterinnen</ref> (<ref
+              target="author_c418e31d.html">Johann Wilhelm Ludwig Gleim</ref>, n. n. 1803/1812, S.
+            124 im Erstdruck, S. 107 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_b8a3a15a.html">An diesem Morgen war</ref> (<ref
+              target="author_6cb1891c.html">Durs Grünbein</ref>, 1985–1988/1988, S. 24 im Erstdruck,
+            S. 279 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_936bf0a5.html">An meine Jungfrauen</ref> (<ref
+              target="author_3bf06e59.html">Caroline Rudolphi</ref>, 1796, S. 45–52 im Erstdruck, S.
+            94–98 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_4422d6d6.html">An Sappho</ref> (<ref target="author_529d41df.html"
+              >Theodor Däubler</ref>, 1924, S. 51 im Erstdruck, S. 226 in der <ref
+              target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_e9d96eef.html">Aufnahmen: Sappho</ref> (<ref
+              target="author_4697f5ea.html">Kurt Marti</ref>, 1956, S. 113 im Erstdruck, S. 241 in
+            der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_a369dda0.html">Bruchstück, für Sappho</ref> (<ref
+              target="author_a6c5a134.html">Jürgen Theobaldy</ref>, 1984, S. 36 im Erstdruck, S. 278
+            in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_0a0e461e.html">computergedicht nr. 2</ref> (<ref
+              target="author_6a63d5ff.html">Ernst Jandl</ref>, n. n. 2000/2001, S. 74 im Erstdruck,
+            S. 312 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_0643ca58.html">Der leukadische Fels. Ein Schauspiel</ref> (<ref
+              target="author_d25d3d67.html">Caroline von Wolzogen</ref>, 1792, S. 241–266, hier:
+            247–257 im Erstdruck, S. 79–87 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_9ef5617d.html">Dich hat Amor gewiß …</ref> (<ref
+              target="author_4c9bafad.html">Waldtraut Lewin</ref>, 1983, S. 5–65, hier: 11–16 im
+            Erstdruck, S. 265–269 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_a0bace6b.html">Die Frau im Brunnen. Roman</ref> (<ref
+              target="author_19def99f.html">Christa Reinig</ref>, 1984, S. 13–20 im Erstdruck, S.
+            271–277 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_8fc572e2.html">Die Kunst der Griechen. An Goethe. Elegie</ref>
+              (<ref target="author_48ba1f03.html">August Wilhelm Schlegel</ref>, 1799, S. 181–192,
+            hier: 189–190 im Erstdruck, S. 101 in der <ref target="buch.html"
+            >Anthologie</ref>)</item>
+          <item><ref target="bibl_339f7bbc.html">Die moderne Sappho. Ein musikalisch-dramatisches
+              Durcheinander ohne Sinn und ohne Verstand. Bestehend aus zwei Akten und einem
+              monodramatischen Finale</ref> (<ref target="author_f1bb4938.html">Adolph von
+              Schaden</ref>, 1819, S. 59–62 im Erstdruck, S. 144–146 in der <ref target="buch.html"
+              >Anthologie</ref>)</item>
+          <item><ref target="bibl_3759bef5.html">Die Sappho des Westens</ref> (<ref
+              target="author_0c148f7c.html">Luise von Plönnies</ref>, 1851, S. 85–174, hier: 87–88
+            im Erstdruck, S. 156–157 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_a5039b6f.html">Die Schale der Vergessenheit</ref> (<ref
+              target="author_b7521cbe.html">Ludwig Hölty</ref>, 1776/1783, S. 125 im Erstdruck, S.
+            43 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_f7bb70af.html">Die Schwestern von Lesbos</ref> (<ref
+              target="author_d942331e.html">Amalie von Imhoff</ref>, 1800, S. 1–182, hier: 23–34 im
+            Erstdruck, S. 103–106 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_407a0d29.html">Die späten Jahre</ref> (<ref
+              target="author_2f14b48f.html">Heinz Piontek</ref>, 1978–1980/1982, S. 313–314 im
+            Erstdruck, S. 248–249 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_a717f073.html">Die Umarmung. Im Herbst 1776</ref> (<ref
+              target="author_33a63963.html">Gottfried August Bürger</ref>, 1776/1778, S. 243–246 im
+            Erstdruck, S. 44–46 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_1585db9d.html">Dies Buch gehört dem König</ref> (<ref
+              target="author_41ec22f4.html">Bettina von Arnim</ref>, 1843, S. 472–473 im Erstdruck,
+            S. 155 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_1bf78f84.html">Duke, der Logenkönig</ref> (<ref
+              target="author_14234df5.html">Florian Vetsch</ref>, 2016, S. 60 im Erstdruck, S. 349
+            in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_b53e5151.html">Ein apokaliptisches Fragment</ref> (<ref
+              target="author_2397260a.html">Tian [d. i. Karoline von Günderrode]</ref>,
+            1801–1804/1804, S. 77–82 im Erstdruck, S. 108–110 in der <ref target="buch.html"
+              >Anthologie</ref>)</item>
+          <item><ref target="bibl_8665dcc5.html">Eine Aegyptische Königstochter. Historischer Roman.
+              Erster Band</ref> (<ref target="author_caa5df32.html">Georg Ebers</ref>, 1864, S. 8–12
+            im Erstdruck, S. 179–184 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_19d5a7ab.html">Erinna an Sappho</ref> (<ref
+              target="author_c8447c3c.html">Eduard Mörike</ref>, 1863/1864, S. 278–280 im Erstdruck,
+            S. 177–178 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_9bb8a741.html">EROS / beim Lesen der Sappho</ref> (<ref
+              target="author_43f15a85.html">Gabriele Eckart</ref>, 1982/1985, S. 23 im Erstdruck, S.
+            259 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_b0693a0e.html">Faon, Nireus, hernach Saffo, zuletzt noch
+              Anakreon</ref> [Auszug aus »Göttergespräche. Gespräche im Elysium«] (<ref
+              target="author_7ea2d8de.html">Christoph Martin Wieland</ref>, 1789–1793/1796, S.
+            313–328 im Erstdruck, S. 58–66 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_b47fb393.html">fern ufo sah sappho ufern</ref> (<ref
+              target="author_59ec15eb.html">Oskar Pastior</ref>, 1990, S. 131–142 im Erstdruck, S.
+            296–306 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_88439060.html">Hymne an den Genius der Jugend</ref> (<ref
+              target="author_4e4cdf8e.html">Friedrich Hölderlin</ref>, 1792, S. 46–51 im Erstdruck,
+            S. 75–78 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_0f7a6b8d.html">Ich dachte an dich mit verlorenen / Schläfen</ref>
+              (<ref target="author_1ec001c4.html">Anja Kampmann</ref>, 2014, S. 25 im Erstdruck, S.
+            342 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_4e970562.html">Immer waren wir Hand in Hand. Erinna an
+              Sappho</ref> (<ref target="author_ec557a00.html">Johannes Rüber</ref>, 1990, S. 71–86
+            im Erstdruck, S. 284–295 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_ffadfa01.html">Isoliert</ref> (<ref target="author_cc996ae4.html"
+              >Rose Ausländer</ref>, 1983, S. 13 im Erstdruck, S. 270 in der <ref target="buch.html"
+              >Anthologie</ref>)</item>
+          <item><ref target="bibl_efcd32b0.html">Karneval der Sorge</ref> (<ref
+              target="author_21ce4315.html">Gerhard Falkner</ref>, 2008, S. 8 im Erstdruck, S.
+            327–328 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_5283cfa8.html">Laidion oder die Eleusinischen Geheimnisse. Erster
+              Theil</ref> (<ref target="author_6deae303.html">Wilhelm Heinse</ref>, 1774, S. 372–378
+            im Erstdruck, S. 39–41 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_fa064c2f.html">Lesbos</ref> (<ref target="author_361addef.html"
+              >Emanuel Geibel</ref>, 1851–1856/1856, S. 32 im Erstdruck, S. 158 in der <ref
+              target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_c908fde2.html">Lob der Dichterinnen</ref> (<ref
+              target="author_9c093075.html">Johann Joachim Schwabe</ref>, 1741, S. 227–231 im
+            Erstdruck, S. 30–34 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_2838b3d9.html">Lucinde. Ein Roman. Erster Theil</ref> (<ref
+              target="author_8000ee92.html">Friedrich Schlegel</ref>, 1799, S. 75–77 im Erstdruck,
+            S. 102 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_39b012ab.html">Mein Lieber Feldmann</ref> (<ref
+              target="author_241bfafe.html">Bertram Reinecke</ref>, 2014, S. 76–81 im Erstdruck, S.
+            343–348 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_98b2a68e.html">Minona oder Die Angelsachsen. Ein tragisches
+              Melodrama in vier Akten. Die Musik vom Herrn Kapellmeister J. A. P. Schulz [d. i.
+              Johann Abraham Peter Schulz]</ref> (<ref target="author_ec30f867.html">Heinrich
+              Wilhelm von Gerstenberg</ref>, 1785, S. 10–15 im Erstdruck, S. 48–51 in der <ref
+              target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_a667785d.html">Mirtill!</ref> (<ref target="author_39fd1d81.html"
+              >Caroline Louise von Klencke</ref>, 1775, S. 148–150 im Erstdruck, S. 42 in der <ref
+              target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_56775306.html">Mit Liedern Sapphos</ref> (<ref
+              target="author_4a7ff7b6.html">Johannes Bobrowski</ref>, 1964/1965, S. 44 im Erstdruck,
+            S. 243 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_843e4821.html">mit Sappho im Hof</ref> (<ref
+              target="author_7eaf6aad.html">Odile Kennel</ref>, 2014, S. 30–31 im Erstdruck, S.
+            340–341 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_a3992d71.html">nach Sappholektüren (und Gennadij Ajgi) /
+              Fingerknöchel Jasmin und fragmentarischer Eros</ref> (<ref
+              target="author_0de8e0eb.html">Friederike Mayröcker</ref>, 1995/1996, S. 115 im
+            Erstdruck, S. 307–308 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_5ae4b5fe.html">Nachricht aus Lesbos</ref> (<ref
+              target="author_197bc4a1.html">Sarah Kirsch</ref>, 1973, S. 71 im Erstdruck, S. 244 in
+            der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_0491bde2.html">Ode der Sappho</ref> (<ref
+              target="author_70b62a8f.html">Johannes Robert Becher</ref>, 1917/1918, S. 108–111 im
+            Erstdruck, S. 222–224 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_29dac241.html">Ode. An Jungfer L. A. V. Kulmus [d. i. Luise
+              Adelgunde Victorie Gottsched]. 1731. den 11 April</ref> (<ref
+              target="author_aba1427a.html">Johann Christoph Gottsched</ref>, 1731/1736, S. 252–255
+            im Erstdruck, S. 26–29 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_11a107f7.html">Post-Ode, sapphisch</ref> (<ref
+              target="author_e5f7bab5.html">Arnold Zweig</ref>, 1959/1964, S. 349 im Erstdruck, S.
+            242 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_31f96313.html">Sapho</ref> (<ref target="author_402dfcfd.html"
+              >Kasimir Edschmid</ref>, 1919, S. 15 im Erstdruck, S. 225 in der <ref
+              target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_d85ade6a.html">Sapho</ref> (<ref target="author_296dd9b2.html"
+              >Gotthold Friedrich Stäudlin</ref>, 1788, S. 49–55 im Erstdruck, S. 54–57 in der <ref
+              target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_8819a3b3.html">Sapho</ref> (<ref target="author_b4b4af98.html"
+              >Karl Woltmann</ref>, <ref target="author_8c3d27e1.html">Karoline Woltmann</ref>,
+            1806, S. 7 im Erstdruck, S. 115 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_9ade79f7.html">Sapho an Amor</ref> (<ref
+              target="author_7240c9e7.html">Anna Louisa Karsch</ref>, 1761/1764, S. 252–254 im
+            Erstdruck, S. 37–38 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_632dac82.html">Sapho. Ein Melodrama</ref> (<ref
+              target="author_27500efc.html">J. J. H–b–r [d. i. Johann Joseph von Huber]</ref>, 1790,
+            S. 5–16 im Erstdruck, S. 67–74 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_3d6a534d.html">Sappho</ref> (<ref target="author_f7114165.html"
+              >Marie von Najmájer</ref>, 1889, S. 23 im Erstdruck, S. 191–192 in der <ref
+              target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_e58bccae.html">Sappho</ref> (<ref target="author_9a3d3005.html"
+              >Carmen Sylva [d. i. Elisabeth zu Wied]</ref>, 1880, S. 21–25 im Erstdruck, S. 185–187
+            in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_63209746.html">Sappho</ref> (<ref target="author_a58ca455.html"
+              >Ida Hahn-Hahn</ref>, 1835, S. 235–236 im Erstdruck, S. 153–154 in der <ref
+              target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_b695354d.html">Sappho</ref> (<ref target="author_ad13c2e1.html"
+              >Marie Luise Kaschnitz</ref>, 1936/1985, S. 621–622 im Erstdruck, S. 227 in der <ref
+              target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_5f1d7d40.html">Sappho</ref> (<ref target="author_156a1461.html"
+              >Marie Itzerott</ref>, 1901, S. 12–15 im Erstdruck, S. 199–205 in der <ref
+              target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_78d95d8c.html">Sappho</ref> (<ref target="author_59b37975.html"
+              >Otto Erich Hartleben</ref>, 1883–1904/1905, S. 156–157 im Erstdruck, S. 188–189 in
+            der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_f8609041.html">Sappho</ref> (<ref target="author_ecd75d50.html"
+              >Ferdinand von Saar</ref>, 1904, S. 39–81, hier: 41–45 im Erstdruck, S. 218–220 in der
+              <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_e2546c7f.html">Sappho</ref> (<ref target="author_a18ae9df.html"
+              >Marie Madeleine [d. i. Marie Madeleine Baronin von Puttkamer]</ref>, 1900, S. 6–8 im
+            Erstdruck, S. 197–198 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_4110fba1.html">Sappho</ref> (<ref target="author_8fab2701.html"
+              >Agnes Franz</ref>, 1820, S. v–x im Erstdruck, S. 147–152 in der <ref
+              target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_295bbaf8.html">Sappho an Eranna</ref> (<ref
+              target="author_46e646b5.html">Rainer Maria Rilke</ref>, 1907, S. 5 im Erstdruck, S.
+            221 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_0434022c.html">Sappho an Phaon</ref> (<ref
+              target="author_6bc845c6.html">Theone [d. i. Therese von Artner]</ref>, 1806, S. 92–97
+            im Erstdruck, S. 116–120 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_cbfea792.html">Sappho an Phaon</ref> (<ref
+              target="author_d5ea9f29.html">August von Platen-Hallermünde</ref>, 1812/1909, S.
+            158–163 im Erstdruck, S. 130–136 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_5ca5f0b6.html">Sappho die Dichterin von Lesbos. Roman der
+              Schönheit</ref> (<ref target="author_c47c8ee0.html">Peter Hille</ref>, n. n.
+            1904/1904, S. 7–11 im Erstdruck, S. 206–209 in der <ref target="buch.html"
+              >Anthologie</ref>)</item>
+          <item><ref target="bibl_a88a263f.html">Sappho ist tot. Auf den Tod von Ricarda Huch</ref>
+              (<ref target="author_91b3e0e9.html">Rudolf Hagelstange</ref>, 1950, S. 205 im
+            Erstdruck, S. 228 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_7ca33bdb.html">Sappho schmiegt sich an Romeo</ref> (<ref
+              target="author_0b08fc2e.html">Helmut Heißenbüttel</ref>, 1986, S. 9 im Erstdruck, S.
+            280 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_6fcff98a.html">sappho singers VII</ref> (<ref
+              target="author_5647c8df.html">Ariane von Graffenried</ref>, 2021, S. 78 im Erstdruck,
+            S. 357 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_2660d82e.html">Sappho träumt eine zweite Fahrt ins Exil</ref>
+              (<ref target="author_b2e2e732.html">Klaus Anders</ref>, 2018, S. 22–23 im Erstdruck,
+            S. 350–351 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_a53d809b.html">Sappho und alle die danach kamen</ref> (<ref
+              target="author_34fd5b25.html">Mara Krauss, Lesbentheater München</ref>, 1978, S. 9–14
+            im Erstdruck, S. 245–247 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_97722fa3.html">Sappho und Apoll</ref> (<ref
+              target="author_999f2a49.html">Anna Forstenheim</ref>, n. n. 1889/1890, S. 85 im
+            Erstdruck, S. 190 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_8df69e81.html">Sappho und Nanthen</ref> (<ref
+              target="author_9e136a8f.html">Abraham Gotthelf Kästner</ref>, 1782, S. 99 im
+            Erstdruck, S. 47 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_458b7c88.html">Sappho und Phaon</ref> (<ref
+              target="author_cba6134b.html">Friedrich Buchholz</ref>, 1807, S. 98–171, hier: 121–127
+            im Erstdruck, S. 121–125 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_b705febf.html">SAPPHO »und dass ich dich lieben werde …«.
+              Erinnerungen der Poetin und ihrer Hetären</ref> (<ref target="author_8d60dbcb.html"
+              >Tami van Dalen [d. i. Tami Dahlheim]</ref>, 2005, S. 105–109 im Erstdruck, S. 323–326
+            in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_baaeb54e.html">Sappho – Labor</ref> (<ref
+              target="author_3cf5c166.html">Roman Graf</ref>, 2010, S. 37–45 im Erstdruck, S.
+            332–334 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_e745799e.html">Sappho. Drama in fünf Akten und einem Vor- und
+              Nachspiel mit Berücksichtigung geschichtlicher und legendärer Züge aus Sapphos
+              Leben</ref> (<ref target="author_55676bb1.html">Maria Modena [d. i. Erna
+              Kreis-Weber]</ref>, 1951, S. 7–76, hier: 65–73 im Erstdruck, S. 229–238 in der <ref
+              target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_5aa55e45.html">Sappho. Ein dramatisches Gedicht</ref> (<ref
+              target="author_c6ba13c5.html">Franz Alexander von Kleist</ref>, 1793, S. 86–94 im
+            Erstdruck, S. 88–93 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_ebc1bb1f.html">Sappho. Ein griechischer Sommernachtstraum</ref>
+              (<ref target="author_a186641f.html">Joachim Fernau</ref>, 1986, S. 7–12 im Erstdruck,
+            S. 281–283 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_ec11b447.html">Sappho. Eine Novelle</ref> (<ref
+              target="author_727e9e25.html">Therese Rak</ref>, 1902, S. 135–144 im Erstdruck, S.
+            210–217 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_f4da59f4.html">Sappho. Roman</ref> (<ref
+              target="author_f917bb57.html">Siegfried Obermeier</ref>, 2001, S. 9–16 im Erstdruck,
+            S. 313–321 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_ba71b2e5.html">Sappho. Trauerspiel in fünf Aufzügen</ref> (<ref
+              target="author_37fcac67.html">Franz Grillparzer</ref>, 1818/1820, S. 121–127 im
+            Erstdruck, S. 137–143 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_f5e2fa88.html">Sappho: neu aufgebacken, ausgelegt und
+              nachempfunden</ref> (<ref target="author_bbd2f350.html">Peter Rühmkorf</ref>, 2008, S.
+            117 im Erstdruck, S. 329 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_69eddc38.html">Sapphos Schwärmerey</ref> (<ref
+              target="author_6766d110.html">Engel Christine Westphalen</ref>, 1809, S. 112–188 im
+            Erstdruck, S. 126–129 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_3761b97f.html">Sapphos Sprung</ref> (<ref
+              target="author_fbea9be0.html">Karen Aydin</ref>, 2021, S. 14–18 im Erstdruck, S.
+            353–356 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_a5889140.html">Sapphos Wiederkehr (Gertrud Kolmar, verschollen
+              1943)</ref> (<ref target="author_389820a7.html">Volker Ebersbach</ref>, 1999, S. 122
+            im Erstdruck, S. 31 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_8e053a15.html">SÜSS wie der rote / Apfel</ref> (<ref
+              target="author_fc1094bb.html">Hans Arnfrid Astel</ref>, 2004, S. 322 in der <ref
+              target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_0bd2c59f.html">THE MOST BEAUTIFUL</ref> (<ref
+              target="author_8c390adb.html">Barbara Köhler</ref>, 2012, S. 239–245 im Erstdruck, S.
+            355–339 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_8ebf0c28.html">Theaterg’schichten durch Liebe, Intrige, Geld und
+              Dummheit. Posse mit Gesang in zwei Akten</ref> (<ref target="author_e00f499f.html"
+              >Johann Nestroy</ref>, 1854, S. 19–27 im Erstdruck, S. 159–176 in der <ref
+              target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_889153c6.html">Variationen über ein Fragment von Sappho</ref>
+              (<ref target="author_31067ec6.html">Ann Cotten</ref>, 2010, S. 27–28 im Erstdruck, S.
+            330–331 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_69a9167e.html">Vergeßt den Namen des Eisvogels nicht: Sappho an
+              die Abschied nehmenden Mädchen auf Lesbos</ref> (<ref target="author_db9d367b.html"
+              >Christine Brückner</ref>, 1983, S. 51–60 im Erstdruck, S. 260–264 in der <ref
+              target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_e26a1604.html">Vexierbild</ref> (<ref
+              target="author_b2a5a4c0.html">Erich Fried</ref>, 1979, S. 96–102, hier: 100 im
+            Erstdruck, S. 250–251 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_00e9aff1.html">Von den plejaden her vierzehn gedichte im hinblick
+              auf Lesbos</ref> (<ref target="author_547138e4.html">Johannes Poethen</ref>,
+            1981/1983, S. 111–114 im Erstdruck, S. 253–258 in der <ref target="buch.html"
+              >Anthologie</ref>)</item>
+          <item><ref target="bibl_b6b98051.html">von sappho: 8</ref> (<ref
+              target="author_df4838be.html">Dirk Uwe Hansen</ref>, 2019, S. 82 im Erstdruck, S. 352
+            in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_926d0a7c.html">WER GIBT DIR EIN RECHT DEN STUMMEN ZU SPIELEN</ref>
+              (<ref target="author_9de2c173.html">Inge Müller</ref>, 1954–1966/1985, S. 55–56 im
+            Erstdruck, S. 239–240 in der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_8ab38a85.html">Wie du mußte ich fliehen</ref> (<ref
+              target="author_bc508170.html">Cyrus Atabay</ref>, 1981, S. 15 im Erstdruck, S. 252 in
+            der <ref target="buch.html">Anthologie</ref>)</item>
+          <item><ref target="bibl_b53a5020.html">Wie Lewfrid an eines Graffen Hoff in die Küchen
+              kam/un Küchebub ward/wie in der meisterkoch fast Lieb gewan: weiter von seinem
+              Wolsingen</ref> (<ref target="author_6bcd0402.html">Jörg Wickram</ref>,
+            1554–1557/1557, S. 24–27 im Erstdruck, S. 19–21 in der <ref target="buch.html"
+              >Anthologie</ref>)</item>
+          <item><ref target="bibl_e2598fbd.html">WJe kan der Liebe Joch doch süß und lieblich
+              seyn</ref> (<ref target="author_749b60f3.html">Sibylla Schwarz</ref>, n. n. 1638/1650,
+            ohne Seitenangaben im Erstdruck, S. 22 in der <ref target="buch.html"
+            >Anthologie</ref>)</item>
+          <item><ref target="bibl_4fcb8123.html">XX</ref> (<ref target="author_b5793641.html">Raoul
+              Schrott</ref>, 1997, S. 90 im Erstdruck, S. 309–310 in der <ref target="buch.html"
+              >Anthologie</ref>)</item>
+          <item><ref target="bibl_fa4c6f94.html">»Weihnacht!« Reiseerzählung</ref> (<ref
+              target="author_525a826b.html">Karl May</ref>, 1897, S. 27–30 im Erstdruck, S. 193–196
+            in der <ref target="buch.html">Anthologie</ref>)</item>
+        </list>
+      </div>
+    </body>
+  </text>
 </TEI>

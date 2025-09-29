@@ -772,6 +772,18 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
                     <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
                 </bibl>
+                <bibl xml:id="bibl_ui5a596f">
+                    <title type="text">Der Pantoffel der Sappho. 1819</title>
+                    <date type="published" when="1874">1874</date>
+                    <bibl xml:id="bibl_jj152bj6">
+                        <title type="work">Liebesgeschichten aus verschiedenen Jahrhunderten. Novellen. Dritte Sammlung</title>
+                    </bibl>
+                    <author ref="https://www.wikidata.org/entity/Q78474" xml:id="author_0djd9701">Leopold von Sacher-Masoch</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q95263308" xml:id="publisher_tg7fe3cx">Ernst Julius Günther</publisher>
+                    <ref target="https://books.google.de/books?redir_esc=y&amp;hl=de&amp;id=e2f5nmVGQ5IC&amp;q=sappho#v=onepage&amp;q&amp;f=false">https://books.google.de/books?redir_esc=y&amp;hl=de&amp;id=e2f5nmVGQ5IC&amp;q=sappho#v=onepage&amp;q&amp;f=false</ref>
+                </bibl>
                 <bibl xml:id="bibl_f894f0c1">
                     <title type="text">Aspasia. Ein Künstler- und Liebesroman aus Alt-Hellas</title>
                     <date type="published" when="1875">1875</date>
@@ -1323,7 +1335,6 @@
                 </bibl>
                 <bibl xml:id="bibl_f8609041">
                     <title type="text">Sappho</title>
-                    <date type="created" when="1904">1904</date>
                     <date type="published" when="1904">1904</date>
                     <bibl xml:id="bibl_253d12a8">
                         <title type="work">Österreichische Rundschau</title>
