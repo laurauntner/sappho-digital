@@ -8,8 +8,9 @@ data_dir = Path("../data/rdf")
 files = [
     "authors",
     "works",
-    "relations",
+    "fragments",
     "analysis",
+    "relations",
     "sappho-reception",
     "vocab"
 ]
