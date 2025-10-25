@@ -151,7 +151,7 @@
                     <bibl xml:id="bibl_f965201c">
                         <title type="work">Zeitung für die elegante Welt</title>
                     </bibl>
-                    <author xml:id="author_845ce76f">Freiherr von Howald</author>
+                    <author ref="https://www.wikidata.org/entity/Q73607" xml:id="author_845ce76f">Ernst von Houwald</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher xml:id="publisher_7b364dff">Verlag von Georg Voß</publisher>
