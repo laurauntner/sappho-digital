@@ -1,13 +1,11 @@
 from rdflib import Graph, URIRef
 from rdflib.namespace import SKOS, RDF
 from pathlib import Path
-from collections import defaultdict
 from typing import Optional
 
-# Path
+# Paths
 data_dir = Path("../data/rdf")
 
-# Files
 files = [
     "authors",
     "works",
@@ -18,14 +16,29 @@ files = [
     "vocab"
 ]
 
-# Vocab
 vocabs_path = data_dir / "vocab.ttl"
 
-# Vocab Concepts
+# Types
 GROUP_KEYS = ["motif", "place", "person", "phrase", "plot", "topic", "work"]
 
-# Helpers
+# broader + narrower
+HIERARCHY_PROPS = [SKOS.broader, SKOS.narrower]
+
+# related
+ASSOCIATIVE_PROPS = [SKOS.related]
+
+# *Match
+MATCH_PROPS = [
+    SKOS.relatedMatch,
+    SKOS.narrowMatch,
+    SKOS.closeMatch,
+    SKOS.broadMatch,
+    SKOS.exactMatch,
+]
+
+# Helper
 def count_triples(file_path: Path) -> int:
+    """Zähle Tripel in einer Turtle-Datei."""
     g = Graph()
     g.parse(file_path, format="turtle")
     return len(g)
@@ -43,89 +56,82 @@ def detect_group(uri: URIRef) -> Optional[str]:
             return key
     return None
 
+# Vocabs
 def analyze_vocabs(vocabs_file: Path):
     g = Graph()
     g.parse(vocabs_file, format="turtle")
 
-    # All Concepts
+    triples_total = len(g)
+
     concepts = set(g.subjects(RDF.type, SKOS.Concept))
     total_concepts = len(concepts)
+    concepts_per_group = {k: 0 for k in GROUP_KEYS}
 
-    # Aggregatspeicher
-    groups = {
-        key: {
-            "concepts": 0,
-            "broader": 0,
-            "narrower": 0,
-            "related": 0,
-            "relatedMatch_triples": 0,
-            "wikidata_relatedMatch_objects": set(),
+    def init_bucket():
+        return {
+            "hierarchy": 0,       
+            "associative": 0,     
+            "wikidata_links": 0,  
         }
-        for key in GROUP_KEYS
-    }
 
-    overall = {
-        "broader": 0,
-        "narrower": 0,
-        "related": 0,
-        "relatedMatch_triples": 0,
-        "wikidata_relatedMatch_objects": set(),
-    }
+    totals = init_bucket()
+    per_group = {k: init_bucket() for k in GROUP_KEYS}
 
     for s in concepts:
         grp = detect_group(s)
 
-        # Relations
-        broader_os = list(g.objects(s, SKOS.broader))
-        narrower_os = list(g.objects(s, SKOS.narrower))
-        related_os = list(g.objects(s, SKOS.related))
-        rmatch_os = list(g.objects(s, SKOS.relatedMatch))
+        h_count = sum(1 for p, o in g.predicate_objects(s) if p in HIERARCHY_PROPS)
 
-        overall["broader"] += len(broader_os)
-        overall["narrower"] += len(narrower_os)
-        overall["related"] += len(related_os)
-        overall["relatedMatch_triples"] += len(rmatch_os)
-        for o in rmatch_os:
-            if isinstance(o, URIRef) and "wikidata" in str(o):
-                overall["wikidata_relatedMatch_objects"].add(str(o))
+        a_count = sum(1 for p, o in g.predicate_objects(s) if p in ASSOCIATIVE_PROPS)
 
-        if grp in groups:
-            groups[grp]["concepts"] += 1
-            groups[grp]["broader"] += len(broader_os)
-            groups[grp]["narrower"] += len(narrower_os)
-            groups[grp]["related"] += len(related_os)
-            groups[grp]["relatedMatch_triples"] += len(rmatch_os)
-            for o in rmatch_os:
-                if isinstance(o, URIRef) and "wikidata" in str(o):
-                    groups[grp]["wikidata_relatedMatch_objects"].add(str(o))
+        w_count = sum(
+            1
+            for p, o in g.predicate_objects(s)
+            if p in MATCH_PROPS and isinstance(o, URIRef) and "wikidata.org" in str(o)
+        )
 
-    # Print
-    print("\n=== vocabs.ttl – SKOS-Übersicht ===")
-    print(f"Anzahl SKOS-Konzepte insgesamt: {total_concepts}\n")
+        totals["hierarchy"] += h_count
+        totals["associative"] += a_count
+        totals["wikidata_links"] += w_count
 
-    print("Insgesamt (über alle Gruppen):")
-    print(f"  skos:broader         : {overall['broader']}")
-    print(f"  skos:narrower        : {overall['narrower']}")
-    print(f"  skos:related         : {overall['related']}")
-    print(f"  skos:relatedMatch    : {overall['relatedMatch_triples']}")
-    print(f"  Distinct Wikidata-Objekte via skos:relatedMatch: {len(overall['wikidata_relatedMatch_objects'])}\n")
+        if grp in per_group:
+            concepts_per_group[grp] += 1
+            per_group[grp]["hierarchy"] += h_count
+            per_group[grp]["associative"] += a_count
+            per_group[grp]["wikidata_links"] += w_count
 
-    print("Pro Gruppe:")
-    for key in GROUP_KEYS:
-        info = groups[key]
-        print(f"- {key}:")
-        print(f"    Konzepte                         : {info['concepts']}")
-        print(f"    skos:broader                     : {info['broader']}")
-        print(f"    skos:narrower                    : {info['narrower']}")
-        print(f"    skos:related                     : {info['related']}")
-        print(f"    skos:relatedMatch                : {info['relatedMatch_triples']}")
-        print(f"    Distinct Wikidata-Objekte (rMatch): {len(info['wikidata_relatedMatch_objects'])}")
+    print("\n=== vocabs.ttl – SKOS-Auswertung ===")
+    print(f"Tripel gesamt: {triples_total}\n")
+
+    print(f"Anzahl SKOS-Konzepte gesamt: {total_concepts}")
+    print("Anzahl SKOS-Konzepte pro Typ:")
+    for k in GROUP_KEYS:
+        print(f"  - {k}: {concepts_per_group[k]}")
+    print()
+
+    print("Hierarchische Relationen (broader/narrower):")
+    print(f"  Gesamt: {totals['hierarchy']}")
+    print("  Nach Typ:")
+    for k in GROUP_KEYS:
+        print(f"    - {k}: {per_group[k]['hierarchy']}")
+    print()
+
+    print("Assoziative Relationen (related):")
+    print(f"  Gesamt: {totals['associative']}")
+    print("  Nach Typ:")
+    for k in GROUP_KEYS:
+        print(f"    - {k}: {per_group[k]['associative']}")
+    print()
+
+    print("Verlinkungen mit Wikidata (*Match mit Wikidata-Objekt):")
+    print(f"  Gesamt: {totals['wikidata_links']}")
+    print("  Nach Typ:")
+    for k in GROUP_KEYS:
+        print(f"    - {k}: {per_group[k]['wikidata_links']}")
     print()
 
 # Main
-
 def main():
-    # Count Triples
     total = 0
     print("=== Tripel-Zählung ===")
     for name in files:
@@ -139,9 +145,8 @@ def main():
                 print(f"❌ Fehler beim Parsen von {ttl_path}: {e}")
         else:
             print(f"⚠️ Datei nicht gefunden: {ttl_path}")
-    print(f"\nGesamtanzahl der Tripel (oben gelistete Dateien): {total}")
+    print(f"\nGesamtanzahl der Tripel: {total}")
 
-    # Analyze Vocabs
     if vocabs_path.exists():
         try:
             analyze_vocabs(vocabs_path)
