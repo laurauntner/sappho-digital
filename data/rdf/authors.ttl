@@ -15,55 +15,45 @@
         <https://sappho-digital.com/death/author_4deb50c9> ;
     owl:sameAs <https://www.wikidata.org/entity/Q2936> .
 
-<https://sappho-digital.com/place/place_014c207f> a ecrm:E53_Place ;
-    rdfs:label "Berchtesgaden"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_5dbae385> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q278221> .
-
 <https://sappho-digital.com/place/place_01b3ebf8> a ecrm:E53_Place ;
     rdfs:label "Gera"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c57c28d2> ;
     owl:sameAs <https://www.wikidata.org/entity/Q3750> .
 
-<https://sappho-digital.com/place/place_047d21c1> a ecrm:E53_Place ;
-    rdfs:label "Montreux"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_46e646b5> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q69354> .
+<https://sappho-digital.com/place/place_01ed6e95> a ecrm:E53_Place ;
+    rdfs:label "Ghetto Theresienstadt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_4593a9c2> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q160175> .
 
-<https://sappho-digital.com/place/place_049f5eb7> a ecrm:E53_Place ;
+<https://sappho-digital.com/place/place_03038b5e> a ecrm:E53_Place ;
+    rdfs:label "Wetzikon"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_a814c343> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q68305> .
+
+<https://sappho-digital.com/place/place_03a202e6> a ecrm:E53_Place ;
+    rdfs:label "Kluppeneggerhof"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_5b14047f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q38183257> .
+
+<https://sappho-digital.com/place/place_044c3bcc> a ecrm:E53_Place ;
+    rdfs:label "Głubczyce"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_7a234aaa> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q717947> .
+
+<https://sappho-digital.com/place/place_045628f5> a ecrm:E53_Place ;
     rdfs:label "Wernigerode"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_5d34caa6> ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4c9bafad> ;
     owl:sameAs <https://www.wikidata.org/entity/Q15982> .
 
-<https://sappho-digital.com/place/place_04dde1c9> a ecrm:E53_Place ;
-    rdfs:label "Locarno"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_d1509f6c> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q11935> .
+<https://sappho-digital.com/place/place_0499e308> a ecrm:E53_Place ;
+    rdfs:label "Schweinfurt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d2f72734> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q4126> .
 
-<https://sappho-digital.com/place/place_06136e1a> a ecrm:E53_Place ;
-    rdfs:label "Fraustadt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_39fd1d81> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q717938> .
-
-<https://sappho-digital.com/place/place_062af62c> a ecrm:E53_Place ;
-    rdfs:label "Kiel"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_4879dde0> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1707> .
-
-<https://sappho-digital.com/place/place_065b8046> a ecrm:E53_Place ;
-    rdfs:label "Düren"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4052161e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1884> .
-
-<https://sappho-digital.com/place/place_0668b52c> a ecrm:E53_Place ;
-    rdfs:label "Rosenow"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_41109f45> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1561056> .
-
-<https://sappho-digital.com/place/place_06a72055> a ecrm:E53_Place ;
-    rdfs:label "Wissen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b2e2e732> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q26364> .
+<https://sappho-digital.com/place/place_062765b5> a ecrm:E53_Place ;
+    rdfs:label "Bad Muskau"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b80ef17a> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q165131> .
 
 <https://sappho-digital.com/place/place_06ec7d19> a ecrm:E53_Place ;
     rdfs:label "München"@de ;
@@ -90,35 +80,30 @@
         <https://sappho-digital.com/death/author_f1bb4938> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1726> .
 
-<https://sappho-digital.com/place/place_06f1f009> a ecrm:E53_Place ;
-    rdfs:label "Obernai"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_1fd03437> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q22727> .
+<https://sappho-digital.com/place/place_09794cff> a ecrm:E53_Place ;
+    rdfs:label "Rom"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_ad13c2e1> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q220> .
 
-<https://sappho-digital.com/place/place_07606b08> a ecrm:E53_Place ;
-    rdfs:label "Rechberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_96590f1e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1609187> .
+<https://sappho-digital.com/place/place_09ca22ae> a ecrm:E53_Place ;
+    rdfs:label "Sagan"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_5a2e6a24> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q158459> .
 
-<https://sappho-digital.com/place/place_0776b54a> a ecrm:E53_Place ;
-    rdfs:label "Welda"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_99c5cd6b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1297472> .
+<https://sappho-digital.com/place/place_0ab77446> a ecrm:E53_Place ;
+    rdfs:label "Bartoszyce"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_5a2e6a24> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q809585> .
 
-<https://sappho-digital.com/place/place_0843c139> a ecrm:E53_Place ;
-    rdfs:label "Hohendodeleben"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c4954682> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q695555> .
+<https://sappho-digital.com/place/place_0bbb6d76> a ecrm:E53_Place ;
+    rdfs:label "Meißen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_220cae48> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q8738> .
 
-<https://sappho-digital.com/place/place_08f57978> a ecrm:E53_Place ;
-    rdfs:label "Gut Sondermühlen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_c26b98cd> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q15111971> .
-
-<https://sappho-digital.com/place/place_099be517> a ecrm:E53_Place ;
-    rdfs:label "Kitzingen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_54c5b326> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q269447> .
+<https://sappho-digital.com/place/place_0bdaece3> a ecrm:E53_Place ;
+    rdfs:label "Schloss Jägerhof"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_001f1b95> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q175400> .
 
 <https://sappho-digital.com/place/place_0c1736a7> a ecrm:E53_Place ;
     rdfs:label "Zürich"@de ;
@@ -127,15 +112,25 @@
         <https://sappho-digital.com/death/author_a814c343> ;
     owl:sameAs <https://www.wikidata.org/entity/Q72> .
 
-<https://sappho-digital.com/place/place_0c50f8ad> a ecrm:E53_Place ;
-    rdfs:label "Königsberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_3e71f643> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q4120832> .
+<https://sappho-digital.com/place/place_0d1c51e6> a ecrm:E53_Place ;
+    rdfs:label "Lauterbach"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_60e0b439> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q622569> .
 
-<https://sappho-digital.com/place/place_0c8e7fed> a ecrm:E53_Place ;
-    rdfs:label "Limlingerode"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_197bc4a1> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1825494> .
+<https://sappho-digital.com/place/place_0d3d85af> a ecrm:E53_Place ;
+    rdfs:label "Bonn"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_a98ddea4> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q586> .
+
+<https://sappho-digital.com/place/place_0d681fd0> a ecrm:E53_Place ;
+    rdfs:label "Trins"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_58e91001> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q694304> .
+
+<https://sappho-digital.com/place/place_0d8dacfc> a ecrm:E53_Place ;
+    rdfs:label "Cybulino (Bobolice)"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_e375d59c> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1147276> .
 
 <https://sappho-digital.com/place/place_0dcac3bc> a ecrm:E53_Place ;
     rdfs:label "St. Gallen"@de ;
@@ -152,85 +147,125 @@
         <https://sappho-digital.com/death/author_86bf4efd> ;
     owl:sameAs <https://www.wikidata.org/entity/Q2773> .
 
-<https://sappho-digital.com/place/place_0e9bd314> a ecrm:E53_Place ;
-    rdfs:label "Kirchstetten"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_8c0a2211> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q674814> .
+<https://sappho-digital.com/place/place_0e5cfd28> a ecrm:E53_Place ;
+    rdfs:label "Głogów"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_6706a04e> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q66013> .
 
-<https://sappho-digital.com/place/place_0f4ad9b7> a ecrm:E53_Place ;
-    rdfs:label "Schloss Zdislawitz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c9ceb171> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q30764762> .
+<https://sappho-digital.com/place/place_0fb54cae> a ecrm:E53_Place ;
+    rdfs:label "Riga"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b6223d75> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1773> .
 
-<https://sappho-digital.com/place/place_0f670335> a ecrm:E53_Place ;
-    rdfs:label "Lindheim"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_0djd9701> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1826192> .
+<https://sappho-digital.com/place/place_0fe95ec4> a ecrm:E53_Place ;
+    rdfs:label "Cottbus"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6b28d4de> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3214> .
 
-<https://sappho-digital.com/place/place_0ff6bb39> a ecrm:E53_Place ;
-    rdfs:label "Kurland"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_be0048fb> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q185072> .
+<https://sappho-digital.com/place/place_0ffc8973> a ecrm:E53_Place ;
+    rdfs:label "Ronneburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6cce6676> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q554655> .
 
-<https://sappho-digital.com/place/place_10651164> a ecrm:E53_Place ;
-    rdfs:label "Kirchhain"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_f99433d1> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q569684> .
+<https://sappho-digital.com/place/place_10463b9f> a ecrm:E53_Place ;
+    rdfs:label "Tegernsee"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_9cf0f902> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q260130> .
 
-<https://sappho-digital.com/place/place_10f3da55> a ecrm:E53_Place ;
+<https://sappho-digital.com/place/place_10c08a97> a ecrm:E53_Place ;
+    rdfs:label "Syrakus"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_d5ea9f29> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q13670> .
+
+<https://sappho-digital.com/place/place_11104962> a ecrm:E53_Place ;
+    rdfs:label "Regensburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c2fce185> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2978> .
+
+<https://sappho-digital.com/place/place_11d9c959> a ecrm:E53_Place ;
+    rdfs:label "Lindau"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_9d992311> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q153969> .
+
+<https://sappho-digital.com/place/place_120b94db> a ecrm:E53_Place ;
+    rdfs:label "Burkheim am Kaiserstuhl"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_6bcd0402> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q977317> .
+
+<https://sappho-digital.com/place/place_1286e6a3> a ecrm:E53_Place ;
+    rdfs:label "Fraustadt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_39fd1d81> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q717938> .
+
+<https://sappho-digital.com/place/place_12e7f4ef> a ecrm:E53_Place ;
+    rdfs:label "Arnsberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d569aeb5> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3912> .
+
+<https://sappho-digital.com/place/place_1396d854> a ecrm:E53_Place ;
     rdfs:label "Krieglach"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/death/author_5b14047f> ;
     owl:sameAs <https://www.wikidata.org/entity/Q671402> .
 
-<https://sappho-digital.com/place/place_12c8b72f> a ecrm:E53_Place ;
-    rdfs:label "Roseburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_bbd2f350> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q666385> .
+<https://sappho-digital.com/place/place_1504e0eb> a ecrm:E53_Place ;
+    rdfs:label "Klipphausen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_57ed33d2> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q8726> .
 
-<https://sappho-digital.com/place/place_13646275> a ecrm:E53_Place ;
-    rdfs:label "Vrba"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_3c1d84af> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q122649> .
+<https://sappho-digital.com/place/place_15130df8> a ecrm:E53_Place ;
+    rdfs:label "Pilica"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_80e4b80a> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q555053> .
 
-<https://sappho-digital.com/place/place_140c6339> a ecrm:E53_Place ;
-    rdfs:label "Šintava"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6bc845c6> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q391673> .
+<https://sappho-digital.com/place/place_15709260> a ecrm:E53_Place ;
+    rdfs:label "Herzberg (Elster)"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_7ea009fb> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q544699> .
 
-<https://sappho-digital.com/place/place_14336102> a ecrm:E53_Place ;
-    rdfs:label "Teheran"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_bc508170> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3616> .
+<https://sappho-digital.com/place/place_15e9fdce> a ecrm:E53_Place ;
+    rdfs:label "Oberkassel"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_12bbb2c4> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q178317> .
 
-<https://sappho-digital.com/place/place_144c93b1> a ecrm:E53_Place ;
+<https://sappho-digital.com/place/place_15f844a7> a ecrm:E53_Place ;
+    rdfs:label "Garmisch-Partenkirchen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_fce53424> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q127043> .
+
+<https://sappho-digital.com/place/place_16e787a1> a ecrm:E53_Place ;
+    rdfs:label "Alexandria"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_45e5928d> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q87> .
+
+<https://sappho-digital.com/place/place_17a6bf1e> a ecrm:E53_Place ;
     rdfs:label "Colmar"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_0dfb434b> ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_0dfb434b> ;
     owl:sameAs <https://www.wikidata.org/entity/Q130994> .
 
-<https://sappho-digital.com/place/place_151b4d86> a ecrm:E53_Place ;
-    rdfs:label "Güstrow"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_e96f2e01> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q16147> .
+<https://sappho-digital.com/place/place_17c099ed> a ecrm:E53_Place ;
+    rdfs:label "Salò"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_59b37975> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q111705> .
 
-<https://sappho-digital.com/place/place_16772335> a ecrm:E53_Place ;
-    rdfs:label "Kiel"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_e8e2e042> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1707> .
+<https://sappho-digital.com/place/place_17dfb7fc> a ecrm:E53_Place ;
+    rdfs:label "Cochem"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_3a6f93f6> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q502749> .
 
-<https://sappho-digital.com/place/place_195cc8c1> a ecrm:E53_Place ;
-    rdfs:label "Obernai"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_e79cea2e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q22727> .
+<https://sappho-digital.com/place/place_18e75d86> a ecrm:E53_Place ;
+    rdfs:label "Löwenstein"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b6223d75> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q522474> .
 
-<https://sappho-digital.com/place/place_199368e7> a ecrm:E53_Place ;
-    rdfs:label "Heilbronn"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_3779d25f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q715> .
+<https://sappho-digital.com/place/place_19105606> a ecrm:E53_Place ;
+    rdfs:label "Schloss Monrepos (Neuwied)"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_9a3d3005> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2242466> .
 
-<https://sappho-digital.com/place/place_1a3231a0> a ecrm:E53_Place ;
-    rdfs:label "Wernigerode"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4c9bafad> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q15982> .
+<https://sappho-digital.com/place/place_19e626a6> a ecrm:E53_Place ;
+    rdfs:label "Moskau"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_1c326fef> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q649> .
 
 <https://sappho-digital.com/place/place_1aa97a04> a ecrm:E53_Place ;
     rdfs:label "Jena"@de ;
@@ -239,35 +274,25 @@
         <https://sappho-digital.com/death/author_d52e4b5b> ;
     owl:sameAs <https://www.wikidata.org/entity/Q3150> .
 
-<https://sappho-digital.com/place/place_1aef4ddf> a ecrm:E53_Place ;
-    rdfs:label "Rudolstadt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d25d3d67> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q517107> .
+<https://sappho-digital.com/place/place_1b176f09> a ecrm:E53_Place ;
+    rdfs:label "Głogów"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_e5f7bab5> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q66013> .
 
-<https://sappho-digital.com/place/place_1bc055d4> a ecrm:E53_Place ;
-    rdfs:label "Obersontheim"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4d2b85d3> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q83053> .
+<https://sappho-digital.com/place/place_1c00e5b4> a ecrm:E53_Place ;
+    rdfs:label "Kopenhagen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_450707d9> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1748> .
 
-<https://sappho-digital.com/place/place_1c159881> a ecrm:E53_Place ;
-    rdfs:label "Salò"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_59b37975> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q111705> .
+<https://sappho-digital.com/place/place_1c7c38f1> a ecrm:E53_Place ;
+    rdfs:label "Meiningen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_bf6d8c80> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q487278> .
 
-<https://sappho-digital.com/place/place_1c1e682c> a ecrm:E53_Place ;
-    rdfs:label "Rochlitz an der Iser"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d398349f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1894625> .
-
-<https://sappho-digital.com/place/place_1c2b49de> a ecrm:E53_Place ;
-    rdfs:label "Bonn"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_48ba1f03> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q586> .
-
-<https://sappho-digital.com/place/place_1c4e37e6> a ecrm:E53_Place ;
-    rdfs:label "Viljandi"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_2083c9d5> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q44840> .
+<https://sappho-digital.com/place/place_1ce7c97e> a ecrm:E53_Place ;
+    rdfs:label "Fălticeni"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_3f92e64c> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q303015> .
 
 <https://sappho-digital.com/place/place_1d1718f7> a ecrm:E53_Place ;
     rdfs:label "Greifswald"@de ;
@@ -279,50 +304,40 @@
         <https://sappho-digital.com/death/author_7b93a308> ;
     owl:sameAs <https://www.wikidata.org/entity/Q4098> .
 
-<https://sappho-digital.com/place/place_1d610bc5> a ecrm:E53_Place ;
-    rdfs:label "Schönberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_24558c69> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2258753> .
+<https://sappho-digital.com/place/place_1d4ad5fd> a ecrm:E53_Place ;
+    rdfs:label "Oliva"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_3e71f643> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1447540> .
 
-<https://sappho-digital.com/place/place_1d910e71> a ecrm:E53_Place ;
-    rdfs:label "Wilhelmshaven"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_0b08fc2e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3857> .
+<https://sappho-digital.com/place/place_1d4b64d4> a ecrm:E53_Place ;
+    rdfs:label "Ummerstadt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_317190dd> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q535689> .
 
 <https://sappho-digital.com/place/place_1dcf667c> a ecrm:E53_Place ;
     rdfs:label "Ljubljana"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_0d277f21> ;
     owl:sameAs <https://www.wikidata.org/entity/Q437> .
 
-<https://sappho-digital.com/place/place_1ddf2446> a ecrm:E53_Place ;
-    rdfs:label "Meißen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_54c5b326> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q8738> .
+<https://sappho-digital.com/place/place_1e558009> a ecrm:E53_Place ;
+    rdfs:label "Kiel"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_4879dde0> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1707> .
 
-<https://sappho-digital.com/place/place_1e6b585d> a ecrm:E53_Place ;
-    rdfs:label "Gland"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_3981a222> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q69300> .
+<https://sappho-digital.com/place/place_1fb98176> a ecrm:E53_Place ;
+    rdfs:label "Rydzyna"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_322de61d> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q995872> .
 
-<https://sappho-digital.com/place/place_1e71b856> a ecrm:E53_Place ;
-    rdfs:label "Schloss Seisenegg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_ccb6fb51> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2243493> .
+<https://sappho-digital.com/place/place_20e8964d> a ecrm:E53_Place ;
+    rdfs:label "Ruhla"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d31d3f33> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q494627> .
 
-<https://sappho-digital.com/place/place_1f991e74> a ecrm:E53_Place ;
-    rdfs:label "Arnstadt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_f468f7e6> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q490665> .
-
-<https://sappho-digital.com/place/place_20a9ba66> a ecrm:E53_Place ;
-    rdfs:label "Einbeck"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_52d605a1> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q47244> .
-
-<https://sappho-digital.com/place/place_20b00fbd> a ecrm:E53_Place ;
-    rdfs:label "Striegau"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d52e4b5b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q246288> .
+<https://sappho-digital.com/place/place_210fe23c> a ecrm:E53_Place ;
+    rdfs:label "Buda"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_f7114165> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q193478> .
 
 <https://sappho-digital.com/place/place_2126faa6> a ecrm:E53_Place ;
     rdfs:label "Karlsruhe"@de ;
@@ -335,105 +350,85 @@
         <https://sappho-digital.com/death/author_ae973934> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1040> .
 
-<https://sappho-digital.com/place/place_2134e3ed> a ecrm:E53_Place ;
-    rdfs:label "Koblenz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_90ad82b4> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3104> .
+<https://sappho-digital.com/place/place_21b321fe> a ecrm:E53_Place ;
+    rdfs:label "Magdeburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4b888f17> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1733> .
 
-<https://sappho-digital.com/place/place_218a04f7> a ecrm:E53_Place ;
-    rdfs:label "Długoszyn"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_268fcc92> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q5321203> .
+<https://sappho-digital.com/place/place_23053b05> a ecrm:E53_Place ;
+    rdfs:label "Hartenstein"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_1163a14a> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q20078> .
 
-<https://sappho-digital.com/place/place_2350dc3a> a ecrm:E53_Place ;
-    rdfs:label "Schloss Wiepersdorf"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_6b97b3e5> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2244146> .
+<https://sappho-digital.com/place/place_23e92c8f> a ecrm:E53_Place ;
+    rdfs:label "Groß Schoritz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_a98ddea4> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1547968> .
 
-<https://sappho-digital.com/place/place_2401ee11> a ecrm:E53_Place ;
-    rdfs:label "Rydzyna"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_322de61d> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q995872> .
+<https://sappho-digital.com/place/place_250d8654> a ecrm:E53_Place ;
+    rdfs:label "Zittau"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_0ec01258> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q157200> .
 
-<https://sappho-digital.com/place/place_243b8c7c> a ecrm:E53_Place ;
-    rdfs:label "Blankenburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_90f115c3> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q525960> .
+<https://sappho-digital.com/place/place_252b00b2> a ecrm:E53_Place ;
+    rdfs:label "Kiel"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_e8e2e042> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1707> .
 
-<https://sappho-digital.com/place/place_2578be9b> a ecrm:E53_Place ;
-    rdfs:label "Brake"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_725d0c5e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q501639> .
+<https://sappho-digital.com/place/place_256b7d02> a ecrm:E53_Place ;
+    rdfs:label "Bolesławiec"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_900e54eb> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q156828> .
 
-<https://sappho-digital.com/place/place_259ed7eb> a ecrm:E53_Place ;
-    rdfs:label "Innsbruck"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_51914f18> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1735> .
+<https://sappho-digital.com/place/place_25a39b85> a ecrm:E53_Place ;
+    rdfs:label "Seitenstetten"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_727e9e25> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q640190> .
 
-<https://sappho-digital.com/place/place_25d56eff> a ecrm:E53_Place ;
-    rdfs:label "Minusio"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_c32ad0f8> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q69065> .
+<https://sappho-digital.com/place/place_26025a9c> a ecrm:E53_Place ;
+    rdfs:label "Bilbao"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_e3ab9dd0> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q8692> .
 
-<https://sappho-digital.com/place/place_25e06765> a ecrm:E53_Place ;
-    rdfs:label "Möhlin"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_2f2c0ddf> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q69126> .
-
-<https://sappho-digital.com/place/place_26b7a6af> a ecrm:E53_Place ;
-    rdfs:label "Königsberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_aba1427a> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q4120832> .
+<https://sappho-digital.com/place/place_265149bb> a ecrm:E53_Place ;
+    rdfs:label "Grevesmühlen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_7b93a308> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q517353> .
 
 <https://sappho-digital.com/place/place_26d0ccc2> a ecrm:E53_Place ;
     rdfs:label "Schneeberg"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_7e1d4cde> ;
     owl:sameAs <https://www.wikidata.org/entity/Q57941> .
 
-<https://sappho-digital.com/place/place_2731f83a> a ecrm:E53_Place ;
-    rdfs:label "Rotenburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_49a8c79a> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q498560> .
+<https://sappho-digital.com/place/place_277c5770> a ecrm:E53_Place ;
+    rdfs:label "Tel Aviv-Jaffa"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b29d1f16> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q33935> .
 
-<https://sappho-digital.com/place/place_276261d6> a ecrm:E53_Place ;
-    rdfs:label "Güstrow"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_241bfafe> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q16147> .
-
-<https://sappho-digital.com/place/place_2762ef81> a ecrm:E53_Place ;
-    rdfs:label "Klaipėda"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_895fe99d> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q776965> .
-
-<https://sappho-digital.com/place/place_276d3de5> a ecrm:E53_Place ;
-    rdfs:label "Schleswig"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_713d6c9e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q501661> .
-
-<https://sappho-digital.com/place/place_279ea0f0> a ecrm:E53_Place ;
-    rdfs:label "Lübeck"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_361addef> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2843> .
-
-<https://sappho-digital.com/place/place_294ac431> a ecrm:E53_Place ;
+<https://sappho-digital.com/place/place_27d4b7ed> a ecrm:E53_Place ;
     rdfs:label "Katzenelnbogen"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/death/author_a18ae9df> ;
     owl:sameAs <https://www.wikidata.org/entity/Q636133> .
 
-<https://sappho-digital.com/place/place_2a4848da> a ecrm:E53_Place ;
-    rdfs:label "Bolesławiec"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_900e54eb> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q156828> .
+<https://sappho-digital.com/place/place_284d9ca4> a ecrm:E53_Place ;
+    rdfs:label "Berchtesgaden"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_5dbae385> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q278221> .
 
-<https://sappho-digital.com/place/place_2a9c3345> a ecrm:E53_Place ;
-    rdfs:label "Schmillinghausen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_db9d367b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2246491> .
+<https://sappho-digital.com/place/place_296a1ecf> a ecrm:E53_Place ;
+    rdfs:label "Aarau"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b406f550> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q14274> .
 
-<https://sappho-digital.com/place/place_2b880b59> a ecrm:E53_Place ;
-    rdfs:label "Weilburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d16a9318> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q573599> .
+<https://sappho-digital.com/place/place_29a840b6> a ecrm:E53_Place ;
+    rdfs:label "Ermsleben"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c418e31d> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1356007> .
+
+<https://sappho-digital.com/place/place_2ac29041> a ecrm:E53_Place ;
+    rdfs:label "Kirchpolkritz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_156a1461> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q84595807> .
 
 <https://sappho-digital.com/place/place_2bd03983> a ecrm:E53_Place ;
     rdfs:label "Nürnberg"@de ;
@@ -444,170 +439,210 @@
         <https://sappho-digital.com/death/author_ccb6fb51> ;
     owl:sameAs <https://www.wikidata.org/entity/Q2090> .
 
-<https://sappho-digital.com/place/place_2c200c4f> a ecrm:E53_Place ;
-    rdfs:label "Innsbruck"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_512e247a> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1735> .
+<https://sappho-digital.com/place/place_2cf205cf> a ecrm:E53_Place ;
+    rdfs:label "Neuses"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_d2f72734> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1981594> .
 
-<https://sappho-digital.com/place/place_2cefb6e0> a ecrm:E53_Place ;
-    rdfs:label "Göteborg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_573b8bae> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q25287> .
+<https://sappho-digital.com/place/place_2cfcf7a6> a ecrm:E53_Place ;
+    rdfs:label "Wissen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b2e2e732> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q26364> .
 
-<https://sappho-digital.com/place/place_2e1f92af> a ecrm:E53_Place ;
-    rdfs:label "Bühl"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_7eaf6aad> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q505534> .
+<https://sappho-digital.com/place/place_2d1c40f6> a ecrm:E53_Place ;
+    rdfs:label "London"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_bc8543e3> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q84> .
 
-<https://sappho-digital.com/place/place_2feca6ce> a ecrm:E53_Place ;
-    rdfs:label "Bad Blankenburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_47f9a96b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q518432> .
+<https://sappho-digital.com/place/place_2d7bbd4f> a ecrm:E53_Place ;
+    rdfs:label "Rom"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_3779d25f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q220> .
 
-<https://sappho-digital.com/place/place_30459c99> a ecrm:E53_Place ;
-    rdfs:label "Magdeburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_9c093075> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1733> .
+<https://sappho-digital.com/place/place_2d7c511f> a ecrm:E53_Place ;
+    rdfs:label "Einbeck"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_52d605a1> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q47244> .
 
-<https://sappho-digital.com/place/place_3052a2dc> a ecrm:E53_Place ;
-    rdfs:label "Wels"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_cb7d98c5> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q178582> .
+<https://sappho-digital.com/place/place_2df08403> a ecrm:E53_Place ;
+    rdfs:label "Windeby"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_09414448> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q552810> .
 
-<https://sappho-digital.com/place/place_313dbdb1> a ecrm:E53_Place ;
-    rdfs:label "Frankenberg/Sa."@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_546deade> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q71104> .
+<https://sappho-digital.com/place/place_2e6bea67> a ecrm:E53_Place ;
+    rdfs:label "Maly Trostinez"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_d4f2ce92> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q316109> .
 
-<https://sappho-digital.com/place/place_319f7d8c> a ecrm:E53_Place ;
-    rdfs:label "Morąg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4a193880> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q139725> .
+<https://sappho-digital.com/place/place_2efbb2af> a ecrm:E53_Place ;
+    rdfs:label "Gland"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_3981a222> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q69300> .
 
-<https://sappho-digital.com/place/place_32682c47> a ecrm:E53_Place ;
-    rdfs:label "Freiberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_3a578161> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q14819> .
+<https://sappho-digital.com/place/place_2f0add3c> a ecrm:E53_Place ;
+    rdfs:label "Marktoberdorf"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_f1bb4938> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q502955> .
 
-<https://sappho-digital.com/place/place_3285f3ba> a ecrm:E53_Place ;
-    rdfs:label "Groß Schoritz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_a98ddea4> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1547968> .
+<https://sappho-digital.com/place/place_2f64b71a> a ecrm:E53_Place ;
+    rdfs:label "Molmerswende"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_33a63963> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q701324> .
 
-<https://sappho-digital.com/place/place_351df4c6> a ecrm:E53_Place ;
-    rdfs:label "Clausthal"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_59b37975> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q15377091> .
+<https://sappho-digital.com/place/place_302a7879> a ecrm:E53_Place ;
+    rdfs:label "Locarno"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_d1509f6c> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q11935> .
 
-<https://sappho-digital.com/place/place_35355ef0> a ecrm:E53_Place ;
-    rdfs:label "Schloss Litomyšl"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_94014daa> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2164885> .
+<https://sappho-digital.com/place/place_30651e20> a ecrm:E53_Place ;
+    rdfs:label "Koblenz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_bb5f45cd> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3104> .
 
-<https://sappho-digital.com/place/place_3739102f> a ecrm:E53_Place ;
-    rdfs:label "Ermsleben"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c418e31d> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1356007> .
+<https://sappho-digital.com/place/place_3102cc6e> a ecrm:E53_Place ;
+    rdfs:label "Wachtendonk"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_bba27650> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q243139> .
 
-<https://sappho-digital.com/place/place_378a1c9c> a ecrm:E53_Place ;
-    rdfs:label "Hanau"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_91b3e0e9> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3802> .
+<https://sappho-digital.com/place/place_34129283> a ecrm:E53_Place ;
+    rdfs:label "Schwabach"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_21ce4315> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q14889> .
 
-<https://sappho-digital.com/place/place_37bec2dc> a ecrm:E53_Place ;
-    rdfs:label "Kiel"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_26a18207> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1707> .
+<https://sappho-digital.com/place/place_342bdd2d> a ecrm:E53_Place ;
+    rdfs:label "Ludwigslust"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_527c60a3> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q156119> .
+
+<https://sappho-digital.com/place/place_3448f7cf> a ecrm:E53_Place ;
+    rdfs:label "Ottensen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_9334e746> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1597> .
+
+<https://sappho-digital.com/place/place_34b3ac26> a ecrm:E53_Place ;
+    rdfs:label "Provinz Oberschlesien"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_2f14b48f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q704495> .
+
+<https://sappho-digital.com/place/place_34e31b6c> a ecrm:E53_Place ;
+    rdfs:label "Gut Sondermühlen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_c26b98cd> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q15111971> .
+
+<https://sappho-digital.com/place/place_35b29a53> a ecrm:E53_Place ;
+    rdfs:label "Colmar"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_0dfb434b> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q130994> .
+
+<https://sappho-digital.com/place/place_36ba4235> a ecrm:E53_Place ;
+    rdfs:label "Buchs"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_14234df5> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q68277> .
+
+<https://sappho-digital.com/place/place_36da35e2> a ecrm:E53_Place ;
+    rdfs:label "Kirchhain"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_f99433d1> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q569684> .
+
+<https://sappho-digital.com/place/place_3786f7a8> a ecrm:E53_Place ;
+    rdfs:label "Koblenz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_90ad82b4> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3104> .
+
+<https://sappho-digital.com/place/place_37b02c87> a ecrm:E53_Place ;
+    rdfs:label "Bad Vöslau"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_999f2a49> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q798800> .
 
 <https://sappho-digital.com/place/place_37eb173a> a ecrm:E53_Place ;
     rdfs:label "Bremen"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_ce4b6fc9> ;
     owl:sameAs <https://www.wikidata.org/entity/Q24879> .
 
-<https://sappho-digital.com/place/place_38f81c8c> a ecrm:E53_Place ;
-    rdfs:label "Ost-Berlin"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_d398349f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q56037> .
+<https://sappho-digital.com/place/place_388007d1> a ecrm:E53_Place ;
+    rdfs:label "Olsberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_3e63e21f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q10921> .
 
-<https://sappho-digital.com/place/place_390afc81> a ecrm:E53_Place ;
-    rdfs:label "Putlitz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_14d8a453> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q565732> .
+<https://sappho-digital.com/place/place_38af005a> a ecrm:E53_Place ;
+    rdfs:label "Milicz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_8fab2701> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q717933> .
 
-<https://sappho-digital.com/place/place_39eab840> a ecrm:E53_Place ;
-    rdfs:label "Rom"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_3779d25f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q220> .
+<https://sappho-digital.com/place/place_3922b999> a ecrm:E53_Place ;
+    rdfs:label "Bukarest"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_9a3d3005> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q19660> .
 
-<https://sappho-digital.com/place/place_3abf0da7> a ecrm:E53_Place ;
-    rdfs:label "Sankt Petersburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_35efad91> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q656> .
+<https://sappho-digital.com/place/place_3ad6757d> a ecrm:E53_Place ;
+    rdfs:label "Magdeburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_9c093075> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1733> .
 
-<https://sappho-digital.com/place/place_3ce12df8> a ecrm:E53_Place ;
-    rdfs:label "Neubrandenburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c080c31b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3958> .
+<https://sappho-digital.com/place/place_3aea175c> a ecrm:E53_Place ;
+    rdfs:label "Meran"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_512e247a> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q131605> .
 
-<https://sappho-digital.com/place/place_3ce227ef> a ecrm:E53_Place ;
-    rdfs:label "Ummerstadt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_317190dd> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q535689> .
+<https://sappho-digital.com/place/place_3bf7ddf2> a ecrm:E53_Place ;
+    rdfs:label "Sulzbach-Rosenberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_89573fb9> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q503633> .
 
-<https://sappho-digital.com/place/place_3ce9cf50> a ecrm:E53_Place ;
-    rdfs:label "Tarasp"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_402dfcfd> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q68372> .
-
-<https://sappho-digital.com/place/place_3d69c0a4> a ecrm:E53_Place ;
-    rdfs:label "Ruhla"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d31d3f33> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q494627> .
-
-<https://sappho-digital.com/place/place_3e8c3c82> a ecrm:E53_Place ;
+<https://sappho-digital.com/place/place_3c0181b3> a ecrm:E53_Place ;
     rdfs:label "Hanau"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_0c148f7c> ;
     owl:sameAs <https://www.wikidata.org/entity/Q3802> .
 
-<https://sappho-digital.com/place/place_3eeb2c16> a ecrm:E53_Place ;
-    rdfs:label "Strupice, Lower Silesian Voivodeship"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_053c1ca2> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1811646> .
+<https://sappho-digital.com/place/place_3d2d0da2> a ecrm:E53_Place ;
+    rdfs:label "Niendorf a. d. St."@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_90f115c3> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q666399> .
 
-<https://sappho-digital.com/place/place_3f443075> a ecrm:E53_Place ;
-    rdfs:label "Kopenhagen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_450707d9> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1748> .
+<https://sappho-digital.com/place/place_3d64d127> a ecrm:E53_Place ;
+    rdfs:label "Limlingerode"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_197bc4a1> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1825494> .
 
-<https://sappho-digital.com/place/place_403e9c7f> a ecrm:E53_Place ;
-    rdfs:label "Kassel"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_db9d367b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2865> .
+<https://sappho-digital.com/place/place_3dcb773b> a ecrm:E53_Place ;
+    rdfs:label "Rotenburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_49a8c79a> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q498560> .
 
-<https://sappho-digital.com/place/place_40be9003> a ecrm:E53_Place ;
-    rdfs:label "Dyszno"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_c6ba13c5> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1909590> .
+<https://sappho-digital.com/place/place_3e640537> a ecrm:E53_Place ;
+    rdfs:label "Rudna"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_012dbb67> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q750363> .
 
-<https://sappho-digital.com/place/place_40f4d70a> a ecrm:E53_Place ;
-    rdfs:label "Herrnhut"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_bc8543e3> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q165140> .
+<https://sappho-digital.com/place/place_3f3878f2> a ecrm:E53_Place ;
+    rdfs:label "Ost-Berlin"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_d398349f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q56037> .
 
-<https://sappho-digital.com/place/place_4170d3ed> a ecrm:E53_Place ;
-    rdfs:label "Bad Kissingen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b72fcd0d> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q488346> .
+<https://sappho-digital.com/place/place_3f64458e> a ecrm:E53_Place ;
+    rdfs:label "Dormagen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b555e2fa> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3978> .
 
-<https://sappho-digital.com/place/place_41a5c0f6> a ecrm:E53_Place ;
-    rdfs:label "Alexandria"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_45e5928d> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q87> .
+<https://sappho-digital.com/place/place_3f7e9f37> a ecrm:E53_Place ;
+    rdfs:label "Baden-Baden"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b4b4af99> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q4100> .
 
-<https://sappho-digital.com/place/place_4235caec> a ecrm:E53_Place ;
-    rdfs:label "Plaue"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_72f779cd> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q552628> .
+<https://sappho-digital.com/place/place_3fc87007> a ecrm:E53_Place ;
+    rdfs:label "Ost-Berlin"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_70b62a8f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q56037> .
+
+<https://sappho-digital.com/place/place_40c64eef> a ecrm:E53_Place ;
+    rdfs:label "Putlitz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_14d8a453> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q565732> .
+
+<https://sappho-digital.com/place/place_417af640> a ecrm:E53_Place ;
+    rdfs:label "Rochlitz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c3b4bc0f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q71180> .
 
 <https://sappho-digital.com/place/place_42b32e43> a ecrm:E53_Place ;
     rdfs:label "Düsseldorf"@de ;
@@ -621,30 +656,40 @@
         <https://sappho-digital.com/death/author_fe4f23b6> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1718> .
 
-<https://sappho-digital.com/place/place_4345a0bd> a ecrm:E53_Place ;
-    rdfs:label "Niendorf a. d. St."@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_90f115c3> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q666399> .
+<https://sappho-digital.com/place/place_4389a762> a ecrm:E53_Place ;
+    rdfs:label "Brandenburg an der Havel"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_1bd51bbb> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3931> .
 
-<https://sappho-digital.com/place/place_43b38e38> a ecrm:E53_Place ;
-    rdfs:label "Bad Berka"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_57ed33d2> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q630334> .
+<https://sappho-digital.com/place/place_43f463e9> a ecrm:E53_Place ;
+    rdfs:label "Głogów"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_66c39712> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q66013> .
 
-<https://sappho-digital.com/place/place_45b45532> a ecrm:E53_Place ;
-    rdfs:label "Riga"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_2083c9d5> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1773> .
+<https://sappho-digital.com/place/place_446837b6> a ecrm:E53_Place ;
+    rdfs:label "Zittau"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b957c79d> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q157200> .
 
-<https://sappho-digital.com/place/place_47061bf9> a ecrm:E53_Place ;
-    rdfs:label "Tel Aviv-Jaffa"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_465361bf> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q33935> .
+<https://sappho-digital.com/place/place_44cb98d4> a ecrm:E53_Place ;
+    rdfs:label "Rotthalmünster"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_2f14b48f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q517994> .
 
-<https://sappho-digital.com/place/place_476d7898> a ecrm:E53_Place ;
-    rdfs:label "Quedlinburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_1537cf6e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q40623> .
+<https://sappho-digital.com/place/place_45d6cc5d> a ecrm:E53_Place ;
+    rdfs:label "Heide"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_197bc4a1> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q492322> .
+
+<https://sappho-digital.com/place/place_467cb175> a ecrm:E53_Place ;
+    rdfs:label "Syców"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_4b39735a> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1001322> .
+
+<https://sappho-digital.com/place/place_4738b0c1> a ecrm:E53_Place ;
+    rdfs:label "Sowetsk"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4a7ff7b6> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q5647> .
 
 <https://sappho-digital.com/place/place_477d8872> a ecrm:E53_Place ;
     rdfs:label "Straßburg"@de ;
@@ -652,35 +697,20 @@
         <https://sappho-digital.com/death/author_e6e3afa5> ;
     owl:sameAs <https://www.wikidata.org/entity/Q6602> .
 
-<https://sappho-digital.com/place/place_47da3b22> a ecrm:E53_Place ;
-    rdfs:label "Zittau"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_0ec01258> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q157200> .
+<https://sappho-digital.com/place/place_48006914> a ecrm:E53_Place ;
+    rdfs:label "Bad Muskau"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b80ef17a> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q165131> .
 
-<https://sappho-digital.com/place/place_487d33da> a ecrm:E53_Place ;
-    rdfs:label "Oberkassel"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_12bbb2c4> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q178317> .
+<https://sappho-digital.com/place/place_4870e613> a ecrm:E53_Place ;
+    rdfs:label "Muralto"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_74aff90a> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q69961> .
 
-<https://sappho-digital.com/place/place_488a0bfd> a ecrm:E53_Place ;
-    rdfs:label "Freiberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_1b3d4cad> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q14819> .
-
-<https://sappho-digital.com/place/place_48e21dff> a ecrm:E53_Place ;
-    rdfs:label "Rom"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_ad13c2e1> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q220> .
-
-<https://sappho-digital.com/place/place_49250161> a ecrm:E53_Place ;
-    rdfs:label "Alt Ruppin"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_cba6134b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q433253> .
-
-<https://sappho-digital.com/place/place_498a3777> a ecrm:E53_Place ;
-    rdfs:label "Zittau"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_0ec01258> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q157200> .
+<https://sappho-digital.com/place/place_4959efcb> a ecrm:E53_Place ;
+    rdfs:label "Ludwigsburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c8447c3c> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q622> .
 
 <https://sappho-digital.com/place/place_4a15ea49> a ecrm:E53_Place ;
     rdfs:label "Köln"@de ;
@@ -690,145 +720,125 @@
         <https://sappho-digital.com/birth/author_dfa2ad1a> ;
     owl:sameAs <https://www.wikidata.org/entity/Q365> .
 
-<https://sappho-digital.com/place/place_4a21d3f9> a ecrm:E53_Place ;
+<https://sappho-digital.com/place/place_4af81b96> a ecrm:E53_Place ;
+    rdfs:label "Stavenhagen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b8ba5902> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q50986> .
+
+<https://sappho-digital.com/place/place_4afa0a71> a ecrm:E53_Place ;
+    rdfs:label "Reichenbach im Vogtland"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_7c69b53b> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q46849> .
+
+<https://sappho-digital.com/place/place_4b3c86fb> a ecrm:E53_Place ;
+    rdfs:label "Ost-Berlin"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_4a7ff7b6> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q56037> .
+
+<https://sappho-digital.com/place/place_4bb17a00> a ecrm:E53_Place ;
+    rdfs:label "Lindheim"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_0djd9701> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1826192> .
+
+<https://sappho-digital.com/place/place_4d2d28dc> a ecrm:E53_Place ;
+    rdfs:label "Grieskirchen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_51914f18> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q256996> .
+
+<https://sappho-digital.com/place/place_4d34f5f0> a ecrm:E53_Place ;
+    rdfs:label "Viljandi"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_2083c9d5> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q44840> .
+
+<https://sappho-digital.com/place/place_4f575408> a ecrm:E53_Place ;
+    rdfs:label "Teheran"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_bc508170> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3616> .
+
+<https://sappho-digital.com/place/place_50856a73> a ecrm:E53_Place ;
+    rdfs:label "Güstrow"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_241bfafe> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q16147> .
+
+<https://sappho-digital.com/place/place_510943be> a ecrm:E53_Place ;
+    rdfs:label "Wolfsburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c180f900> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3014> .
+
+<https://sappho-digital.com/place/place_51348400> a ecrm:E53_Place ;
     rdfs:label "Königsberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_6bf82744> ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_7e1d4cde> ;
     owl:sameAs <https://www.wikidata.org/entity/Q4120832> .
 
-<https://sappho-digital.com/place/place_4bdcbe98> a ecrm:E53_Place ;
-    rdfs:label "Gräfentonna"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_5ae9c542> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1551440> .
+<https://sappho-digital.com/place/place_518119af> a ecrm:E53_Place ;
+    rdfs:label "Büdesheim"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c32ad0f8> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1020468> .
 
-<https://sappho-digital.com/place/place_4d7d7130> a ecrm:E53_Place ;
-    rdfs:label "Świebodzin"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_1f254435> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q387463> .
+<https://sappho-digital.com/place/place_51874cdd> a ecrm:E53_Place ;
+    rdfs:label "Sanremo"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_d9d5515b> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q33962> .
 
-<https://sappho-digital.com/place/place_4ee3f7ca> a ecrm:E53_Place ;
-    rdfs:label "Genf"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_1a94204b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q71> .
+<https://sappho-digital.com/place/place_51e753d9> a ecrm:E53_Place ;
+    rdfs:label "Tel Aviv-Jaffa"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_465361bf> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q33935> .
 
-<https://sappho-digital.com/place/place_4fdd096e> a ecrm:E53_Place ;
-    rdfs:label "Neuruppin"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_11c6f454> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q16085> .
+<https://sappho-digital.com/place/place_52630c8b> a ecrm:E53_Place ;
+    rdfs:label "Kętrzyn"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_bf6f469d> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q319397> .
 
-<https://sappho-digital.com/place/place_503fe784> a ecrm:E53_Place ;
-    rdfs:label "Hartenstein"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_1163a14a> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q20078> .
+<https://sappho-digital.com/place/place_52acc6ee> a ecrm:E53_Place ;
+    rdfs:label "Szprotawa"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_bb3bee84> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q165066> .
 
-<https://sappho-digital.com/place/place_504753cc> a ecrm:E53_Place ;
-    rdfs:label "Lemberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_0djd9701> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q36036> .
-
-<https://sappho-digital.com/place/place_5095fb77> a ecrm:E53_Place ;
-    rdfs:label "Rheinfelden (Baden)"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b3cde7ee> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q16077> .
-
-<https://sappho-digital.com/place/place_50de4df8> a ecrm:E53_Place ;
-    rdfs:label "Pegau"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_4b944de3> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q10773> .
-
-<https://sappho-digital.com/place/place_51fd0cdb> a ecrm:E53_Place ;
-    rdfs:label "Kaisborstel"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_312feade> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q556219> .
-
-<https://sappho-digital.com/place/place_52f74de3> a ecrm:E53_Place ;
-    rdfs:label "Dormagen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b555e2fa> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3978> .
+<https://sappho-digital.com/place/place_53460fbd> a ecrm:E53_Place ;
+    rdfs:label "Schönberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_24558c69> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2258753> .
 
 <https://sappho-digital.com/place/place_5367e178> a ecrm:E53_Place ;
     rdfs:label "Legnica"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_f00cdfeb> ;
     owl:sameAs <https://www.wikidata.org/entity/Q106274> .
 
-<https://sappho-digital.com/place/place_55012359> a ecrm:E53_Place ;
-    rdfs:label "Zittau"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b957c79d> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q157200> .
+<https://sappho-digital.com/place/place_537df6c4> a ecrm:E53_Place ;
+    rdfs:label "Stralsund"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_9304ec71> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q4065> .
 
-<https://sappho-digital.com/place/place_557b6ca5> a ecrm:E53_Place ;
-    rdfs:label "Lorch"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_217ea585> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q574249> .
+<https://sappho-digital.com/place/place_5582be05> a ecrm:E53_Place ;
+    rdfs:label "Rastatt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_bf6d8c80> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q6874> .
 
-<https://sappho-digital.com/place/place_5597aeaa> a ecrm:E53_Place ;
-    rdfs:label "Lindau"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_a1d3f305> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q153969> .
+<https://sappho-digital.com/place/place_5597a81b> a ecrm:E53_Place ;
+    rdfs:label "Kassel"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_db9d367b> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2865> .
 
-<https://sappho-digital.com/place/place_55f3f2cf> a ecrm:E53_Place ;
-    rdfs:label "Rochlitz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c3b4bc0f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q71180> .
+<https://sappho-digital.com/place/place_568709cd> a ecrm:E53_Place ;
+    rdfs:label "Ried im Innkreis"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_8328fab0> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q267791> .
 
-<https://sappho-digital.com/place/place_57f1b032> a ecrm:E53_Place ;
-    rdfs:label "Sulechów"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6dd6a140> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q457865> .
+<https://sappho-digital.com/place/place_58122347> a ecrm:E53_Place ;
+    rdfs:label "Varel"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_966c0c55> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q496056> .
 
-<https://sappho-digital.com/place/place_5822c3ae> a ecrm:E53_Place ;
-    rdfs:label "Heide"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_197bc4a1> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q492322> .
+<https://sappho-digital.com/place/place_58a2232c> a ecrm:E53_Place ;
+    rdfs:label "Riga"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_2083c9d5> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1773> .
 
-<https://sappho-digital.com/place/place_58695ea8> a ecrm:E53_Place ;
-    rdfs:label "Lemberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_12b3c9ce> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q36036> .
-
-<https://sappho-digital.com/place/place_587e4891> a ecrm:E53_Place ;
-    rdfs:label "Bartoszyce"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_5a2e6a24> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q809585> .
-
-<https://sappho-digital.com/place/place_592782e1> a ecrm:E53_Place ;
-    rdfs:label "Tondern"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_ec30f867> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3223979> .
-
-<https://sappho-digital.com/place/place_5a08f428> a ecrm:E53_Place ;
-    rdfs:label "Sowetsk"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4a7ff7b6> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q5647> .
-
-<https://sappho-digital.com/place/place_5a845ffd> a ecrm:E53_Place ;
-    rdfs:label "Koblenz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_bb5f45cd> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3104> .
-
-<https://sappho-digital.com/place/place_5ad6f261> a ecrm:E53_Place ;
-    rdfs:label "Trier"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_fc1094bb> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3138> .
-
-<https://sappho-digital.com/place/place_5b965dc1> a ecrm:E53_Place ;
-    rdfs:label "Königstein im Taunus"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4116f769> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q569661> .
-
-<https://sappho-digital.com/place/place_5bb3327f> a ecrm:E53_Place ;
-    rdfs:label "Ottensen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_9334e746> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1597> .
-
-<https://sappho-digital.com/place/place_5bea994a> a ecrm:E53_Place ;
-    rdfs:label "Hilchenbach"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_ae973934> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q10949> .
-
-<https://sappho-digital.com/place/place_5c329eaf> a ecrm:E53_Place ;
-    rdfs:label "Pokój"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_e4b9df24> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q910522> .
+<https://sappho-digital.com/place/place_5b8f1ffb> a ecrm:E53_Place ;
+    rdfs:label "Quedlinburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_1537cf6e> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q40623> .
 
 <https://sappho-digital.com/place/place_5cef94ac> a ecrm:E53_Place ;
     rdfs:label "Rostock"@de ;
@@ -837,110 +847,140 @@
         <https://sappho-digital.com/death/author_0d9a9602> ;
     owl:sameAs <https://www.wikidata.org/entity/Q2861> .
 
-<https://sappho-digital.com/place/place_5de5ec49> a ecrm:E53_Place ;
-    rdfs:label "Lübben (Spreewald)"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b9e599ee> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q584815> .
+<https://sappho-digital.com/place/place_5e24add4> a ecrm:E53_Place ;
+    rdfs:label "Obernai"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_1fd03437> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q22727> .
 
-<https://sappho-digital.com/place/place_5e54830e> a ecrm:E53_Place ;
-    rdfs:label "Kranj"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_3c1d84af> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1021> .
+<https://sappho-digital.com/place/place_5e83bb53> a ecrm:E53_Place ;
+    rdfs:label "Rom"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_cbcfb9fa> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q220> .
 
-<https://sappho-digital.com/place/place_5f8ecdb5> a ecrm:E53_Place ;
-    rdfs:label "Wörlitz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_c4954682> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q518275> .
+<https://sappho-digital.com/place/place_5f3fa6d2> a ecrm:E53_Place ;
+    rdfs:label "Warburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6c69db4e> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q968> .
 
-<https://sappho-digital.com/place/place_5fd0e0aa> a ecrm:E53_Place ;
-    rdfs:label "Fălticeni"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_3f92e64c> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q303015> .
+<https://sappho-digital.com/place/place_60a3d69e> a ecrm:E53_Place ;
+    rdfs:label "Frankenberg/Sa."@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_546deade> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q71104> .
 
-<https://sappho-digital.com/place/place_60aecab1> a ecrm:E53_Place ;
-    rdfs:label "Milicz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_8fab2701> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q717933> .
+<https://sappho-digital.com/place/place_60b51027> a ecrm:E53_Place ;
+    rdfs:label "Meißen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_54c5b326> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q8738> .
 
-<https://sappho-digital.com/place/place_62cf229d> a ecrm:E53_Place ;
-    rdfs:label "Baden-Baden"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b4b4af99> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q4100> .
+<https://sappho-digital.com/place/place_61cf53fd> a ecrm:E53_Place ;
+    rdfs:label "Kirchstetten"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_8c0a2211> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q674814> .
 
-<https://sappho-digital.com/place/place_634fdf91> a ecrm:E53_Place ;
-    rdfs:label "Baden-Baden"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b2a5a4c0> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q4100> .
+<https://sappho-digital.com/place/place_6227f044> a ecrm:E53_Place ;
+    rdfs:label "Mariensee"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b7521cbe> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1800996> .
 
-<https://sappho-digital.com/place/place_63c098e8> a ecrm:E53_Place ;
-    rdfs:label "Haag"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_727e9e25> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q255534> .
+<https://sappho-digital.com/place/place_63049885> a ecrm:E53_Place ;
+    rdfs:label "Rudolstadt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d25d3d67> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q517107> .
 
-<https://sappho-digital.com/place/place_648cc94e> a ecrm:E53_Place ;
-    rdfs:label "Wolfskehlen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_783332be> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1799797> .
+<https://sappho-digital.com/place/place_63f350c4> a ecrm:E53_Place ;
+    rdfs:label "Bonn"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_48ba1f03> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q586> .
 
-<https://sappho-digital.com/place/place_64b2cbe6> a ecrm:E53_Place ;
-    rdfs:label "Stavenhagen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b8ba5902> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q50986> .
+<https://sappho-digital.com/place/place_64a0ea66> a ecrm:E53_Place ;
+    rdfs:label "Kaisborstel"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_312feade> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q556219> .
 
-<https://sappho-digital.com/place/place_6573a252> a ecrm:E53_Place ;
-    rdfs:label "Kluppeneggerhof"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_5b14047f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q38183257> .
+<https://sappho-digital.com/place/place_654b9f58> a ecrm:E53_Place ;
+    rdfs:label "Muri"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b406f550> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q69011> .
 
-<https://sappho-digital.com/place/place_662ae5e0> a ecrm:E53_Place ;
-    rdfs:label "Loschwitz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_9201b2fb> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q8939> .
+<https://sappho-digital.com/place/place_65d797d7> a ecrm:E53_Place ;
+    rdfs:label "Bad Soden am Taunus"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_54a37cad> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q39785> .
 
-<https://sappho-digital.com/place/place_6716beac> a ecrm:E53_Place ;
-    rdfs:label "Ehrenkirchen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_649ab695> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q527951> .
+<https://sappho-digital.com/place/place_66219a2c> a ecrm:E53_Place ;
+    rdfs:label "Schloss Košátky"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_8d1e5941> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q26215796> .
 
-<https://sappho-digital.com/place/place_67fd65d1> a ecrm:E53_Place ;
-    rdfs:label "Głogów"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6706a04e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q66013> .
+<https://sappho-digital.com/place/place_671d0595> a ecrm:E53_Place ;
+    rdfs:label "Gröningen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4b39735a> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q571925> .
+
+<https://sappho-digital.com/place/place_68b525d0> a ecrm:E53_Place ;
+    rdfs:label "Fürth"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_2f4449aa> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3075> .
+
+<https://sappho-digital.com/place/place_69dc6f42> a ecrm:E53_Place ;
+    rdfs:label "Hilchenbach"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_ae973934> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q10949> .
+
+<https://sappho-digital.com/place/place_6a2c33e7> a ecrm:E53_Place ;
+    rdfs:label "Hustopeče nad Bečvou"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_97660a23> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1021063> .
 
 <https://sappho-digital.com/place/place_6a607ac8> a ecrm:E53_Place ;
     rdfs:label "Hildesheim"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_02f41294> ;
     owl:sameAs <https://www.wikidata.org/entity/Q3185> .
 
-<https://sappho-digital.com/place/place_6b9f5eab> a ecrm:E53_Place ;
-    rdfs:label "Ost-Berlin"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_70b62a8f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q56037> .
+<https://sappho-digital.com/place/place_6b195de6> a ecrm:E53_Place ;
+    rdfs:label "Freiberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_3a578161> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q14819> .
 
-<https://sappho-digital.com/place/place_6bacda44> a ecrm:E53_Place ;
-    rdfs:label "Klaipėda"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6bf82744> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q776965> .
+<https://sappho-digital.com/place/place_6b8239eb> a ecrm:E53_Place ;
+    rdfs:label "Rudolstadt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_02a74410> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q517107> .
 
-<https://sappho-digital.com/place/place_6bfe5621> a ecrm:E53_Place ;
-    rdfs:label "Bad Muskau"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b80ef17a> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q165131> .
+<https://sappho-digital.com/place/place_6cd17597> a ecrm:E53_Place ;
+    rdfs:label "Biberach an der Riß"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_7ea2d8de> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q16069> .
 
-<https://sappho-digital.com/place/place_6ce8a76e> a ecrm:E53_Place ;
-    rdfs:label "Rastatt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_bf6d8c80> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q6874> .
+<https://sappho-digital.com/place/place_6cf55b38> a ecrm:E53_Place ;
+    rdfs:label "Duisburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_8c390adb> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2100> .
+
+<https://sappho-digital.com/place/place_6d138de0> a ecrm:E53_Place ;
+    rdfs:label "Niemcza"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_719065e7> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q389412> .
 
 <https://sappho-digital.com/place/place_6d273fb9> a ecrm:E53_Place ;
     rdfs:label "Dortmund"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_bbd2f350> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1295> .
 
-<https://sappho-digital.com/place/place_6dba265d> a ecrm:E53_Place ;
-    rdfs:label "Neipperg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6c7fd589> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1974949> .
+<https://sappho-digital.com/place/place_6d56755b> a ecrm:E53_Place ;
+    rdfs:label "Winterburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_a52d43ac> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q562772> .
+
+<https://sappho-digital.com/place/place_6da60bbd> a ecrm:E53_Place ;
+    rdfs:label "Vaihingen an der Enz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d6ec6ac3> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q61928> .
+
+<https://sappho-digital.com/place/place_6db141fb> a ecrm:E53_Place ;
+    rdfs:label "Klosterneuburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_41a06134> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q487522> .
 
 <https://sappho-digital.com/place/place_6e00929f> a ecrm:E53_Place ;
     rdfs:label "Graz"@de ;
@@ -951,6 +991,11 @@
         <https://sappho-digital.com/death/author_e00f499f> ;
     owl:sameAs <https://www.wikidata.org/entity/Q13298> .
 
+<https://sappho-digital.com/place/place_6e1f655f> a ecrm:E53_Place ;
+    rdfs:label "Blankenburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_90f115c3> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q525960> .
+
 <https://sappho-digital.com/place/place_6ea98adb> a ecrm:E53_Place ;
     rdfs:label "Hannover"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_48ba1f03>,
@@ -959,26 +1004,6 @@
         <https://sappho-digital.com/birth/author_a8ee8870>,
         <https://sappho-digital.com/death/author_b7521cbe> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1715> .
-
-<https://sappho-digital.com/place/place_6eefeca3> a ecrm:E53_Place ;
-    rdfs:label "Pilica"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_80e4b80a> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q555053> .
-
-<https://sappho-digital.com/place/place_6ef66a87> a ecrm:E53_Place ;
-    rdfs:label "Lübeck"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_361addef> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2843> .
-
-<https://sappho-digital.com/place/place_6f46a87a> a ecrm:E53_Place ;
-    rdfs:label "Bad Blankenburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_47f9a96b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q518432> .
-
-<https://sappho-digital.com/place/place_6fe290fd> a ecrm:E53_Place ;
-    rdfs:label "Hainichen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_04680faf> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q71123> .
 
 <https://sappho-digital.com/place/place_700b43a2> a ecrm:E53_Place ;
     rdfs:label "Stuttgart"@de ;
@@ -992,65 +1017,100 @@
         <https://sappho-digital.com/death/author_d6ec6ac3> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1022> .
 
-<https://sappho-digital.com/place/place_741a38f0> a ecrm:E53_Place ;
-    rdfs:label "Jerusalem"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_4d29ad49> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1218> .
+<https://sappho-digital.com/place/place_70351a84> a ecrm:E53_Place ;
+    rdfs:label "Worms"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_a52d43ac> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3852> .
 
-<https://sappho-digital.com/place/place_74400bc0> a ecrm:E53_Place ;
-    rdfs:label "Erwitzen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c47c8ee0> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1363657> .
+<https://sappho-digital.com/place/place_705469a6> a ecrm:E53_Place ;
+    rdfs:label "Kaufbeuren"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_9cf0f902> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q14805> .
 
-<https://sappho-digital.com/place/place_74eb92dc> a ecrm:E53_Place ;
-    rdfs:label "Korsør"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d5f6a8bc> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1784816> .
+<https://sappho-digital.com/place/place_7058a302> a ecrm:E53_Place ;
+    rdfs:label "Göteborg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_573b8bae> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q25287> .
 
-<https://sappho-digital.com/place/place_75abce09> a ecrm:E53_Place ;
-    rdfs:label "Amrum"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_8a8c94bf> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3136> .
+<https://sappho-digital.com/place/place_709c3e2b> a ecrm:E53_Place ;
+    rdfs:label "Bratislava"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_97660a23> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1780> .
 
-<https://sappho-digital.com/place/place_75d0d19b> a ecrm:E53_Place ;
-    rdfs:label "Grevesmühlen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_7b93a308> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q517353> .
+<https://sappho-digital.com/place/place_711061b2> a ecrm:E53_Place ;
+    rdfs:label "Rheinfelden (Baden)"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b3cde7ee> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q16077> .
 
-<https://sappho-digital.com/place/place_76335bc2> a ecrm:E53_Place ;
-    rdfs:label "Sagan"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_5a2e6a24> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q158459> .
+<https://sappho-digital.com/place/place_726ac1b3> a ecrm:E53_Place ;
+    rdfs:label "Kranj"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_3c1d84af> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1021> .
 
-<https://sappho-digital.com/place/place_76e3b299> a ecrm:E53_Place ;
-    rdfs:label "Reichenbach/O.L."@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4380cb31> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q157462> .
+<https://sappho-digital.com/place/place_72f343a3> a ecrm:E53_Place ;
+    rdfs:label "Arnstadt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_f468f7e6> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q490665> .
 
-<https://sappho-digital.com/place/place_776b1024> a ecrm:E53_Place ;
-    rdfs:label "Meran"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_512e247a> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q131605> .
+<https://sappho-digital.com/place/place_733604f1> a ecrm:E53_Place ;
+    rdfs:label "Groß Flottbek"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_9334e746> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1606> .
 
-<https://sappho-digital.com/place/place_77791c64> a ecrm:E53_Place ;
-    rdfs:label "Sulzbach-Rosenberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_89573fb9> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q503633> .
+<https://sappho-digital.com/place/place_7350e7c4> a ecrm:E53_Place ;
+    rdfs:label "Herrnhut"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_bc8543e3> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q165140> .
 
-<https://sappho-digital.com/place/place_77f20be8> a ecrm:E53_Place ;
-    rdfs:label "Rom"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_cbcfb9fa> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q220> .
+<https://sappho-digital.com/place/place_73a0cc7f> a ecrm:E53_Place ;
+    rdfs:label "Genf"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_1a94204b> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q71> .
 
-<https://sappho-digital.com/place/place_784d0839> a ecrm:E53_Place ;
-    rdfs:label "Kopenhagen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_5ae9c542> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1748> .
+<https://sappho-digital.com/place/place_744d81b5> a ecrm:E53_Place ;
+    rdfs:label "Penzberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_9ce6f7ee> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q254271> .
 
-<https://sappho-digital.com/place/place_78782e97> a ecrm:E53_Place ;
-    rdfs:label "Duisburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_8c390adb> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2100> .
+<https://sappho-digital.com/place/place_74fa38f6> a ecrm:E53_Place ;
+    rdfs:label "Q250984"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_31154bf3> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q250984> .
+
+<https://sappho-digital.com/place/place_755f70dc> a ecrm:E53_Place ;
+    rdfs:label "Weilburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d16a9318> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q573599> .
+
+<https://sappho-digital.com/place/place_762f4d5e> a ecrm:E53_Place ;
+    rdfs:label "Bingen am Rhein"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b555e2fa> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q285879> .
+
+<https://sappho-digital.com/place/place_76ba618c> a ecrm:E53_Place ;
+    rdfs:label "Loivre"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_aeca2de7> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1219578> .
+
+<https://sappho-digital.com/place/place_771d2eef> a ecrm:E53_Place ;
+    rdfs:label "Wolfskehlen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_783332be> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1799797> .
+
+<https://sappho-digital.com/place/place_77787565> a ecrm:E53_Place ;
+    rdfs:label "Morąg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4a193880> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q139725> .
+
+<https://sappho-digital.com/place/place_78595ad1> a ecrm:E53_Place ;
+    rdfs:label "Lübben (Spreewald)"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b9e599ee> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q584815> .
+
+<https://sappho-digital.com/place/place_78caaf74> a ecrm:E53_Place ;
+    rdfs:label "Eckernförde"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_df4838be> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q490453> .
 
 <https://sappho-digital.com/place/place_79a1323e> a ecrm:E53_Place ;
     rdfs:label "Marburg"@de ;
@@ -1058,15 +1118,15 @@
         <https://sappho-digital.com/death/author_698b81ae> ;
     owl:sameAs <https://www.wikidata.org/entity/Q3869> .
 
-<https://sappho-digital.com/place/place_79a37c78> a ecrm:E53_Place ;
-    rdfs:label "Nago-Torbole"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_7d5a00c9> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q296262> .
+<https://sappho-digital.com/place/place_79b5e1a5> a ecrm:E53_Place ;
+    rdfs:label "Brühl"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_dfa2ad1a> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q7036> .
 
-<https://sappho-digital.com/place/place_7a2f87ea> a ecrm:E53_Place ;
-    rdfs:label "Korneuburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_99ff6cfa> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q659841> .
+<https://sappho-digital.com/place/place_7aa1783e> a ecrm:E53_Place ;
+    rdfs:label "Ehrenkirchen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_649ab695> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q527951> .
 
 <https://sappho-digital.com/place/place_7aaf6c53> a ecrm:E53_Place ;
     rdfs:label "Basel"@de ;
@@ -1086,10 +1146,10 @@
         <https://sappho-digital.com/death/author_322de61d> ;
     owl:sameAs <https://www.wikidata.org/entity/Q14859> .
 
-<https://sappho-digital.com/place/place_7b20800c> a ecrm:E53_Place ;
-    rdfs:label "Schönefeld"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d5ce330f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q882826> .
+<https://sappho-digital.com/place/place_7ba5e865> a ecrm:E53_Place ;
+    rdfs:label "Freiberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_1b3d4cad> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q14819> .
 
 <https://sappho-digital.com/place/place_7c29df5a> a ecrm:E53_Place ;
     rdfs:label "Chemnitz"@de ;
@@ -1097,60 +1157,35 @@
         <https://sappho-digital.com/birth/author_8139a4e6> ;
     owl:sameAs <https://www.wikidata.org/entity/Q2795> .
 
-<https://sappho-digital.com/place/place_7c308033> a ecrm:E53_Place ;
-    rdfs:label "Varel"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_966c0c55> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q496056> .
+<https://sappho-digital.com/place/place_7c817826> a ecrm:E53_Place ;
+    rdfs:label "Magdeburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_3bf06e59> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1733> .
 
-<https://sappho-digital.com/place/place_7c9a6923> a ecrm:E53_Place ;
-    rdfs:label "Cybulino (Bobolice)"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_e375d59c> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1147276> .
+<https://sappho-digital.com/place/place_7eeac01e> a ecrm:E53_Place ;
+    rdfs:label "Clausthal"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_59b37975> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q15377091> .
 
-<https://sappho-digital.com/place/place_7cc7b720> a ecrm:E53_Place ;
-    rdfs:label "Wolfenbüttel"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_52d605a1> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q4122> .
+<https://sappho-digital.com/place/place_7f6469d2> a ecrm:E53_Place ;
+    rdfs:label "Colmar"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6bcd0402> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q130994> .
 
-<https://sappho-digital.com/place/place_7e6d5092> a ecrm:E53_Place ;
-    rdfs:label "Groß Flottbek"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_9334e746> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1606> .
+<https://sappho-digital.com/place/place_7fba8a93> a ecrm:E53_Place ;
+    rdfs:label "Bad Kissingen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b72fcd0d> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q488346> .
 
-<https://sappho-digital.com/place/place_7ea20215> a ecrm:E53_Place ;
-    rdfs:label "Windeby"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_09414448> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q552810> .
+<https://sappho-digital.com/place/place_7fea119d> a ecrm:E53_Place ;
+    rdfs:label "Neubrandenburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c080c31b> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3958> .
 
-<https://sappho-digital.com/place/place_7ec55b91> a ecrm:E53_Place ;
-    rdfs:label "Großröhrsdorf"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_7c38cf25> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q81736> .
-
-<https://sappho-digital.com/place/place_7f555069> a ecrm:E53_Place ;
-    rdfs:label "Stockholm ehemalige Stadtgemeinde"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_450707d9> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q10680648> .
-
-<https://sappho-digital.com/place/place_7f946371> a ecrm:E53_Place ;
-    rdfs:label "Tschernyschewskoje"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_a18ae9df> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q655358> .
-
-<https://sappho-digital.com/place/place_80310d5f> a ecrm:E53_Place ;
-    rdfs:label "Obernai"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_1fd03437> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q22727> .
-
-<https://sappho-digital.com/place/place_803694a1> a ecrm:E53_Place ;
-    rdfs:label "Lahr/Schwarzwald"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_374deda4> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q7039> .
-
-<https://sappho-digital.com/place/place_8102a118> a ecrm:E53_Place ;
-    rdfs:label "Bad Aussee"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_fcbc13ca> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q251065> .
+<https://sappho-digital.com/place/place_804e3d14> a ecrm:E53_Place ;
+    rdfs:label "Glückstadt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_0b08fc2e> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q377277> .
 
 <https://sappho-digital.com/place/place_811c769d> a ecrm:E53_Place ;
     rdfs:label "Breslau"@de ;
@@ -1164,55 +1199,65 @@
         <https://sappho-digital.com/death/author_d9712b29> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1799> .
 
-<https://sappho-digital.com/place/place_8139c2b2> a ecrm:E53_Place ;
-    rdfs:label "Muri"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b406f550> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q69011> .
-
 <https://sappho-digital.com/place/place_81bb34f0> a ecrm:E53_Place ;
     rdfs:label "Freiburg im Breisgau"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/death/author_659f5f08> ;
     owl:sameAs <https://www.wikidata.org/entity/Q2833> .
 
-<https://sappho-digital.com/place/place_82a036ac> a ecrm:E53_Place ;
-    rdfs:label "Ried im Innkreis"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_acae0b75> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q267791> .
+<https://sappho-digital.com/place/place_83e24877> a ecrm:E53_Place ;
+    rdfs:label "Kirchdorf an der Krems"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_12ed70cf> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q688620> .
 
-<https://sappho-digital.com/place/place_84c5a1a4> a ecrm:E53_Place ;
-    rdfs:label "Calbe"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_20619122> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q505176> .
+<https://sappho-digital.com/place/place_8416fa84> a ecrm:E53_Place ;
+    rdfs:label "Döbling"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_ecd75d50> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q267360> .
 
-<https://sappho-digital.com/place/place_8559f231> a ecrm:E53_Place ;
-    rdfs:label "Neuses"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_d2f72734> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1981594> .
+<https://sappho-digital.com/place/place_843be957> a ecrm:E53_Place ;
+    rdfs:label "London"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_4380cb31> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q84> .
 
-<https://sappho-digital.com/place/place_857dd8c0> a ecrm:E53_Place ;
-    rdfs:label "Garmisch-Partenkirchen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_fce53424> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q127043> .
+<https://sappho-digital.com/place/place_844fa580> a ecrm:E53_Place ;
+    rdfs:label "Alt Ruppin"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_cba6134b> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q433253> .
 
-<https://sappho-digital.com/place/place_85ba67ba> a ecrm:E53_Place ;
-    rdfs:label "Châlons-en-Champagne"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_17d347f9> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q47135> .
+<https://sappho-digital.com/place/place_84cb8a0f> a ecrm:E53_Place ;
+    rdfs:label "Schloss Wiepersdorf"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_6b97b3e5> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2244146> .
 
-<https://sappho-digital.com/place/place_86b84323> a ecrm:E53_Place ;
-    rdfs:label "Tegernsee"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_9cf0f902> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q260130> .
+<https://sappho-digital.com/place/place_858e01eb> a ecrm:E53_Place ;
+    rdfs:label "Rechberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_96590f1e> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1609187> .
 
-<https://sappho-digital.com/place/place_86ecde44> a ecrm:E53_Place ;
-    rdfs:label "Warburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6c69db4e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q968> .
+<https://sappho-digital.com/place/place_85a91784> a ecrm:E53_Place ;
+    rdfs:label "Ludwigsburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b6688b19> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q622> .
 
-<https://sappho-digital.com/place/place_8792eb78> a ecrm:E53_Place ;
-    rdfs:label "West-Berlin"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_14d8a453> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q56036> .
+<https://sappho-digital.com/place/place_85bb895b> a ecrm:E53_Place ;
+    rdfs:label "Priorau"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b8bc3d7f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q106962227> .
+
+<https://sappho-digital.com/place/place_85edeb68> a ecrm:E53_Place ;
+    rdfs:label "Erwitzen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c47c8ee0> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1363657> .
+
+<https://sappho-digital.com/place/place_86897d36> a ecrm:E53_Place ;
+    rdfs:label "Innsbruck"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_9c0e35cb> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1735> .
+
+<https://sappho-digital.com/place/place_8789be7d> a ecrm:E53_Place ;
+    rdfs:label "Bergisch Gladbach"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b2f5ff47> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3117> .
 
 <https://sappho-digital.com/place/place_87bc3115> a ecrm:E53_Place ;
     rdfs:label "Erfurt"@de ;
@@ -1220,90 +1265,60 @@
         <https://sappho-digital.com/birth/author_7d5a00c9> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1729> .
 
-<https://sappho-digital.com/place/place_88c99248> a ecrm:E53_Place ;
-    rdfs:label "Kirchnüchel"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_3e63e21f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q641663> .
+<https://sappho-digital.com/place/place_882af4e6> a ecrm:E53_Place ;
+    rdfs:label "Bühl"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_7eaf6aad> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q505534> .
 
-<https://sappho-digital.com/place/place_894a814a> a ecrm:E53_Place ;
-    rdfs:label "Bad Wiessee"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_ce4b6fc9> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q502921> .
+<https://sappho-digital.com/place/place_89d45789> a ecrm:E53_Place ;
+    rdfs:label "Freudenstadt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_12692b6b> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q82838> .
 
-<https://sappho-digital.com/place/place_896556dd> a ecrm:E53_Place ;
-    rdfs:label "Klosterneuburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_41a06134> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q487522> .
+<https://sappho-digital.com/place/place_8bf670f4> a ecrm:E53_Place ;
+    rdfs:label "Lemberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_12b3c9ce> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q36036> .
 
-<https://sappho-digital.com/place/place_8984b7db> a ecrm:E53_Place ;
-    rdfs:label "Maly Trostinez"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_d4f2ce92> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q316109> .
+<https://sappho-digital.com/place/place_8c2c6888> a ecrm:E53_Place ;
+    rdfs:label "Obernai"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_1fd03437> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q22727> .
 
-<https://sappho-digital.com/place/place_89c3bf4b> a ecrm:E53_Place ;
+<https://sappho-digital.com/place/place_8c54dc72> a ecrm:E53_Place ;
+    rdfs:label "Hainichen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_04680faf> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q71123> .
+
+<https://sappho-digital.com/place/place_8c6fa6c0> a ecrm:E53_Place ;
+    rdfs:label "Tondern"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_ec30f867> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3223979> .
+
+<https://sappho-digital.com/place/place_8c9c9718> a ecrm:E53_Place ;
+    rdfs:label "Altona"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_15926358> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1630> .
+
+<https://sappho-digital.com/place/place_8da067fd> a ecrm:E53_Place ;
+    rdfs:label "Nago-Torbole"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_7d5a00c9> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q296262> .
+
+<https://sappho-digital.com/place/place_8dfb5133> a ecrm:E53_Place ;
+    rdfs:label "Straupitz (Spreewald)"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_845ce76f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q572581> .
+
+<https://sappho-digital.com/place/place_8eb9b6d5> a ecrm:E53_Place ;
+    rdfs:label "Arnstadt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_f468f7e6> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q490665> .
+
+<https://sappho-digital.com/place/place_8f83c9ed> a ecrm:E53_Place ;
     rdfs:label "Winkel"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/death/author_2397260a> ;
     owl:sameAs <https://www.wikidata.org/entity/Q2584478> .
-
-<https://sappho-digital.com/place/place_89c6bf94> a ecrm:E53_Place ;
-    rdfs:label "Königsberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_58e91001> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q4120832> .
-
-<https://sappho-digital.com/place/place_8a2cee26> a ecrm:E53_Place ;
-    rdfs:label "Eschershausen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_48010049> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q58757> .
-
-<https://sappho-digital.com/place/place_8aa2a013> a ecrm:E53_Place ;
-    rdfs:label "Lauffen am Neckar"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4e4cdf8e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q525720> .
-
-<https://sappho-digital.com/place/place_8ab6208b> a ecrm:E53_Place ;
-    rdfs:label "Bukarest"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_9a3d3005> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q19660> .
-
-<https://sappho-digital.com/place/place_8c4e03c9> a ecrm:E53_Place ;
-    rdfs:label "Durlach"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_374deda4> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q639876> .
-
-<https://sappho-digital.com/place/place_8c9e8ace> a ecrm:E53_Place ;
-    rdfs:label "Palais Wrangel"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6b97b3e5> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1553547> .
-
-<https://sappho-digital.com/place/place_8d22005c> a ecrm:E53_Place ;
-    rdfs:label "Rahlstedt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_e8e2e042> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1820> .
-
-<https://sappho-digital.com/place/place_8d49d742> a ecrm:E53_Place ;
-    rdfs:label "Wilhelmshorst"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_11c6f454> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1392183> .
-
-<https://sappho-digital.com/place/place_8e09b005> a ecrm:E53_Place ;
-    rdfs:label "Nordhausen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_91b3e0e9> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q7033> .
-
-<https://sappho-digital.com/place/place_8e163794> a ecrm:E53_Place ;
-    rdfs:label "Loivre"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_aeca2de7> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1219578> .
-
-<https://sappho-digital.com/place/place_8ed1e367> a ecrm:E53_Place ;
-    rdfs:label "Herzberg (Elster)"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_7ea009fb> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q544699> .
-
-<https://sappho-digital.com/place/place_90764c6c> a ecrm:E53_Place ;
-    rdfs:label "Schloss Košátky"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_8d1e5941> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q26215796> .
 
 <https://sappho-digital.com/place/place_907e6aad> a ecrm:E53_Place ;
     rdfs:label "Linz"@de ;
@@ -1338,35 +1353,35 @@
         <https://sappho-digital.com/death/author_6bc845c6> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1435> .
 
-<https://sappho-digital.com/place/place_910a99ff> a ecrm:E53_Place ;
-    rdfs:label "Oberschleißheim"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_f917bb57> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q253881> .
+<https://sappho-digital.com/place/place_917a50dc> a ecrm:E53_Place ;
+    rdfs:label "Chełmno"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_aeca2de7> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q161962> .
 
-<https://sappho-digital.com/place/place_916f8d75> a ecrm:E53_Place ;
-    rdfs:label "Magdeburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_3bf06e59> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1733> .
+<https://sappho-digital.com/place/place_9286d4e8> a ecrm:E53_Place ;
+    rdfs:label "Stockholm ehemalige Stadtgemeinde"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_450707d9> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q10680648> .
 
-<https://sappho-digital.com/place/place_9232ce63> a ecrm:E53_Place ;
-    rdfs:label "Straupitz (Spreewald)"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_845ce76f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q572581> .
+<https://sappho-digital.com/place/place_92c849b3> a ecrm:E53_Place ;
+    rdfs:label "Châlons-en-Champagne"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_17d347f9> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q47135> .
 
-<https://sappho-digital.com/place/place_92a4780c> a ecrm:E53_Place ;
-    rdfs:label "Vence"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_e79cea2e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q192368> .
+<https://sappho-digital.com/place/place_932ed9a6> a ecrm:E53_Place ;
+    rdfs:label "Kopenhagen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_5ae9c542> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1748> .
 
-<https://sappho-digital.com/place/place_936d244e> a ecrm:E53_Place ;
-    rdfs:label "Ludwigslust"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_527c60a3> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q156119> .
+<https://sappho-digital.com/place/place_9341fb2e> a ecrm:E53_Place ;
+    rdfs:label "Baden-Baden"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_66c39712> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q4100> .
 
-<https://sappho-digital.com/place/place_94774191> a ecrm:E53_Place ;
-    rdfs:label "Rotthalmünster"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_2f14b48f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q517994> .
+<https://sappho-digital.com/place/place_94ba9968> a ecrm:E53_Place ;
+    rdfs:label "Vrba"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_3c1d84af> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q122649> .
 
 <https://sappho-digital.com/place/place_95b8315b> a ecrm:E53_Place ;
     rdfs:label "Wien"@de ;
@@ -1408,95 +1423,85 @@
         <https://sappho-digital.com/death/author_fcbc13ca> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1741> .
 
-<https://sappho-digital.com/place/place_96168da7> a ecrm:E53_Place ;
-    rdfs:label "Regensburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_e68bfecf> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2978> .
+<https://sappho-digital.com/place/place_95ffc9e3> a ecrm:E53_Place ;
+    rdfs:label "Sommerstorf"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_bf64847b> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2300615> .
 
-<https://sappho-digital.com/place/place_9781fb66> a ecrm:E53_Place ;
-    rdfs:label "Brandenburg an der Havel"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_1bd51bbb> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3931> .
+<https://sappho-digital.com/place/place_974d10c0> a ecrm:E53_Place ;
+    rdfs:label "Hohendodeleben"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c4954682> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q695555> .
 
-<https://sappho-digital.com/place/place_98ed145c> a ecrm:E53_Place ;
-    rdfs:label "Biberach an der Riß"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_7ea2d8de> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q16069> .
+<https://sappho-digital.com/place/place_97f679a2> a ecrm:E53_Place ;
+    rdfs:label "West-Berlin"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_14d8a453> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q56036> .
 
-<https://sappho-digital.com/place/place_994e58da> a ecrm:E53_Place ;
-    rdfs:label "Bad Muskau"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b80ef17a> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q165131> .
+<https://sappho-digital.com/place/place_98f6141e> a ecrm:E53_Place ;
+    rdfs:label "Kirchnüchel"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_3e63e21f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q641663> .
 
-<https://sappho-digital.com/place/place_9c091b99> a ecrm:E53_Place ;
-    rdfs:label "Stralsund"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_9304ec71> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q4065> .
+<https://sappho-digital.com/place/place_9910796f> a ecrm:E53_Place ;
+    rdfs:label "Tarasp"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_402dfcfd> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q68372> .
 
-<https://sappho-digital.com/place/place_9d805cba> a ecrm:E53_Place ;
-    rdfs:label "Lindau"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_9d992311> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q153969> .
+<https://sappho-digital.com/place/place_995d1259> a ecrm:E53_Place ;
+    rdfs:label "Wernigerode"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_5d34caa6> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q15982> .
 
-<https://sappho-digital.com/place/place_9e6808fa> a ecrm:E53_Place ;
+<https://sappho-digital.com/place/place_9c2f56c6> a ecrm:E53_Place ;
+    rdfs:label "Obernai"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_e79cea2e> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q22727> .
+
+<https://sappho-digital.com/place/place_9cc16c80> a ecrm:E53_Place ;
+    rdfs:label "Wilhelmshorst"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_11c6f454> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1392183> .
+
+<https://sappho-digital.com/place/place_9cf6f51b> a ecrm:E53_Place ;
+    rdfs:label "Bad Berka"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_57ed33d2> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q630334> .
+
+<https://sappho-digital.com/place/place_9dae428f> a ecrm:E53_Place ;
     rdfs:label "Bernburg"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_389820a7> ;
     owl:sameAs <https://www.wikidata.org/entity/Q14938> .
 
-<https://sappho-digital.com/place/place_9ebcb096> a ecrm:E53_Place ;
-    rdfs:label "Radebeul"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_525a826b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q8762> .
+<https://sappho-digital.com/place/place_9e97a1ef> a ecrm:E53_Place ;
+    rdfs:label "Überlingen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_a8ee8870> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q332952> .
 
-<https://sappho-digital.com/place/place_9f140728> a ecrm:E53_Place ;
-    rdfs:label "Szprotawa"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_bb3bee84> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q165066> .
+<https://sappho-digital.com/place/place_9f647533> a ecrm:E53_Place ;
+    rdfs:label "Rydzyna"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_059b5d13> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q995872> .
 
-<https://sappho-digital.com/place/place_9fa667b9> a ecrm:E53_Place ;
-    rdfs:label "Ludwigsburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b6688b19> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q622> .
+<https://sappho-digital.com/place/place_9f8217c8> a ecrm:E53_Place ;
+    rdfs:label "Schleswig"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_713d6c9e> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q501661> .
 
-<https://sappho-digital.com/place/place_9fcfce4a> a ecrm:E53_Place ;
-    rdfs:label "Schwabach"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_21ce4315> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q14889> .
+<https://sappho-digital.com/place/place_9ffc082e> a ecrm:E53_Place ;
+    rdfs:label "Eschershausen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_48010049> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q58757> .
 
-<https://sappho-digital.com/place/place_9ff505d9> a ecrm:E53_Place ;
-    rdfs:label "Schweinfurt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d2f72734> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q4126> .
+<https://sappho-digital.com/place/place_a157e302> a ecrm:E53_Place ;
+    rdfs:label "Lorch"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_217ea585> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q574249> .
 
-<https://sappho-digital.com/place/place_a0c473fc> a ecrm:E53_Place ;
-    rdfs:label "Skąpe"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_7240c9e7> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q659063> .
-
-<https://sappho-digital.com/place/place_a0da2e5c> a ecrm:E53_Place ;
-    rdfs:label "Bonn"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_a98ddea4> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q586> .
-
-<https://sappho-digital.com/place/place_a16e1ff5> a ecrm:E53_Place ;
-    rdfs:label "Eisenach"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b8ba5902> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q7070> .
-
-<https://sappho-digital.com/place/place_a1d1b2bb> a ecrm:E53_Place ;
-    rdfs:label "Wetzikon"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_a814c343> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q68305> .
-
-<https://sappho-digital.com/place/place_a1f0ae6f> a ecrm:E53_Place ;
-    rdfs:label "Penzberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_9ce6f7ee> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q254271> .
-
-<https://sappho-digital.com/place/place_a24c91c3> a ecrm:E53_Place ;
-    rdfs:label "Wickrath"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_547138e4> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1677185> .
+<https://sappho-digital.com/place/place_a1ffa00d> a ecrm:E53_Place ;
+    rdfs:label "Lübben (Spreewald)"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_845ce76f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q584815> .
 
 <https://sappho-digital.com/place/place_a24d0551> a ecrm:E53_Place ;
     rdfs:label "Göttingen"@de ;
@@ -1505,120 +1510,75 @@
         <https://sappho-digital.com/death/author_cbc43ec0> ;
     owl:sameAs <https://www.wikidata.org/entity/Q3033> .
 
-<https://sappho-digital.com/place/place_a2cb6bf6> a ecrm:E53_Place ;
-    rdfs:label "Arnsberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d569aeb5> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3912> .
+<https://sappho-digital.com/place/place_a3a27e5e> a ecrm:E53_Place ;
+    rdfs:label "Schloss Litomyšl"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_94014daa> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2164885> .
 
-<https://sappho-digital.com/place/place_a392d44f> a ecrm:E53_Place ;
-    rdfs:label "Vaihingen an der Enz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d6ec6ac3> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q61928> .
-
-<https://sappho-digital.com/place/place_a414859f> a ecrm:E53_Place ;
-    rdfs:label "Ovelgönne"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_966c0c55> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q652356> .
-
-<https://sappho-digital.com/place/place_a4424f4a> a ecrm:E53_Place ;
-    rdfs:label "Klipphausen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_57ed33d2> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q8726> .
-
-<https://sappho-digital.com/place/place_a457000c> a ecrm:E53_Place ;
-    rdfs:label "Bad Aussee"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_f7114165> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q251065> .
-
-<https://sappho-digital.com/place/place_a481c2df> a ecrm:E53_Place ;
-    rdfs:label "Büdesheim"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c32ad0f8> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1020468> .
-
-<https://sappho-digital.com/place/place_a57fa101> a ecrm:E53_Place ;
-    rdfs:label "Bydgoszcz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_a186641f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q41252> .
-
-<https://sappho-digital.com/place/place_a5a137d5> a ecrm:E53_Place ;
-    rdfs:label "Leszno"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_012dbb67> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q52892> .
-
-<https://sappho-digital.com/place/place_a5d8363e> a ecrm:E53_Place ;
-    rdfs:label "Molmerswende"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_33a63963> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q701324> .
-
-<https://sappho-digital.com/place/place_a5d95fd0> a ecrm:E53_Place ;
-    rdfs:label "Schloss Monrepos (Neuwied)"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_9a3d3005> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2242466> .
-
-<https://sappho-digital.com/place/place_a6aabac6> a ecrm:E53_Place ;
-    rdfs:label "Bergisch Gladbach"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b2f5ff47> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3117> .
-
-<https://sappho-digital.com/place/place_a6c450c8> a ecrm:E53_Place ;
-    rdfs:label "Königsberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_2a13eb29> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q4120832> .
-
-<https://sappho-digital.com/place/place_a6ef124b> a ecrm:E53_Place ;
-    rdfs:label "Regensburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c2fce185> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2978> .
-
-<https://sappho-digital.com/place/place_a7750033> a ecrm:E53_Place ;
-    rdfs:label "Bilbao"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_e3ab9dd0> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q8692> .
-
-<https://sappho-digital.com/place/place_a798ead7> a ecrm:E53_Place ;
-    rdfs:label "Freiberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_86bf4efd> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q14819> .
-
-<https://sappho-digital.com/place/place_a82dea53> a ecrm:E53_Place ;
-    rdfs:label "Florenz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_a186641f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2044> .
-
-<https://sappho-digital.com/place/place_a96f0e21> a ecrm:E53_Place ;
-    rdfs:label "Bingen am Rhein"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b555e2fa> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q285879> .
-
-<https://sappho-digital.com/place/place_aa0af697> a ecrm:E53_Place ;
+<https://sappho-digital.com/place/place_a4438788> a ecrm:E53_Place ;
     rdfs:label "Cesvaine"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_1c326fef> ;
     owl:sameAs <https://www.wikidata.org/entity/Q757050> .
 
-<https://sappho-digital.com/place/place_aa7a2f26> a ecrm:E53_Place ;
-    rdfs:label "Syców"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_4b39735a> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1001322> .
+<https://sappho-digital.com/place/place_a5372db6> a ecrm:E53_Place ;
+    rdfs:label "Tschernyschewskoje"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_a18ae9df> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q655358> .
 
-<https://sappho-digital.com/place/place_aab28ac2> a ecrm:E53_Place ;
-    rdfs:label "Meißen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_220cae48> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q8738> .
+<https://sappho-digital.com/place/place_a7e03338> a ecrm:E53_Place ;
+    rdfs:label "Lahr/Schwarzwald"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_374deda4> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q7039> .
 
-<https://sappho-digital.com/place/place_ab6fdcfb> a ecrm:E53_Place ;
-    rdfs:label "Kirchpolkritz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_156a1461> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q84595807> .
+<https://sappho-digital.com/place/place_a964fd90> a ecrm:E53_Place ;
+    rdfs:label "Bad Blankenburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_47f9a96b> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q518432> .
 
-<https://sappho-digital.com/place/place_ac1bceb3> a ecrm:E53_Place ;
-    rdfs:label "Buda"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_f7114165> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q193478> .
+<https://sappho-digital.com/place/place_a9980ace> a ecrm:E53_Place ;
+    rdfs:label "Travemünde"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_74d9eceb> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q321792> .
 
-<https://sappho-digital.com/place/place_ac47acec> a ecrm:E53_Place ;
-    rdfs:label "Gieboldehausen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_a378003d> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q566701> .
+<https://sappho-digital.com/place/place_aaf353ff> a ecrm:E53_Place ;
+    rdfs:label "Pegau"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_4b944de3> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q10773> .
+
+<https://sappho-digital.com/place/place_ab04235d> a ecrm:E53_Place ;
+    rdfs:label "Jerusalem"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_4d29ad49> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1218> .
+
+<https://sappho-digital.com/place/place_abb5c736> a ecrm:E53_Place ;
+    rdfs:label "Innsbruck"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_51914f18> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1735> .
+
+<https://sappho-digital.com/place/place_abed3259> a ecrm:E53_Place ;
+    rdfs:label "Klaipėda"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6bf82744> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q776965> .
+
+<https://sappho-digital.com/place/place_ac64ae07> a ecrm:E53_Place ;
+    rdfs:label "Lindau"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_a1d3f305> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q153969> .
+
+<https://sappho-digital.com/place/place_ad126549> a ecrm:E53_Place ;
+    rdfs:label "Montreux"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_46e646b5> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q69354> .
+
+<https://sappho-digital.com/place/place_ad2355fe> a ecrm:E53_Place ;
+    rdfs:label "Neipperg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6c7fd589> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1974949> .
+
+<https://sappho-digital.com/place/place_ae161f6a> a ecrm:E53_Place ;
+    rdfs:label "Gräfenhainichen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b9e599ee> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q373077> .
 
 <https://sappho-digital.com/place/place_ae5c315b> a ecrm:E53_Place ;
     rdfs:label "Frankfurt am Main"@de ;
@@ -1644,10 +1604,10 @@
     ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b6688b19> ;
     owl:sameAs <https://www.wikidata.org/entity/Q430449> .
 
-<https://sappho-digital.com/place/place_afadaca0> a ecrm:E53_Place ;
-    rdfs:label "Kaufbeuren"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_9cf0f902> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q14805> .
+<https://sappho-digital.com/place/place_aec23a97> a ecrm:E53_Place ;
+    rdfs:label "Zittau"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_0ec01258> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q157200> .
 
 <https://sappho-digital.com/place/place_afc56847> a ecrm:E53_Place ;
     rdfs:label "Münster"@de ;
@@ -1659,20 +1619,15 @@
     ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_cbcfb9fa> ;
     owl:sameAs <https://www.wikidata.org/entity/Q41753> .
 
-<https://sappho-digital.com/place/place_b12471d4> a ecrm:E53_Place ;
-    rdfs:label "Moskau"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_1c326fef> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q649> .
+<https://sappho-digital.com/place/place_b0c09fce> a ecrm:E53_Place ;
+    rdfs:label "Coburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_d5ce330f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q14821> .
 
-<https://sappho-digital.com/place/place_b129d149> a ecrm:E53_Place ;
-    rdfs:label "Bayreuth"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b72fcd0d> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3923> .
-
-<https://sappho-digital.com/place/place_b19d91af> a ecrm:E53_Place ;
-    rdfs:label "Sanremo"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_d9d5515b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q33962> .
+<https://sappho-digital.com/place/place_b0f86db7> a ecrm:E53_Place ;
+    rdfs:label "Rahlstedt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_e8e2e042> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1820> .
 
 <https://sappho-digital.com/place/place_b30287cd> a ecrm:E53_Place ;
     rdfs:label "Darmstadt"@de ;
@@ -1682,55 +1637,70 @@
         <https://sappho-digital.com/death/author_0c148f7c> ;
     owl:sameAs <https://www.wikidata.org/entity/Q2973> .
 
-<https://sappho-digital.com/place/place_b36a24dd> a ecrm:E53_Place ;
-    rdfs:label "Hermannstadt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_59ec15eb> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q83324> .
+<https://sappho-digital.com/place/place_b3155910> a ecrm:E53_Place ;
+    rdfs:label "Bydgoszcz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_a186641f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q41252> .
 
-<https://sappho-digital.com/place/place_b598340e> a ecrm:E53_Place ;
-    rdfs:label "Provinz Oberschlesien"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_2f14b48f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q704495> .
+<https://sappho-digital.com/place/place_b465908f> a ecrm:E53_Place ;
+    rdfs:label "Bergedorf"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_74d9eceb> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2384> .
+
+<https://sappho-digital.com/place/place_b5085b52> a ecrm:E53_Place ;
+    rdfs:label "Hartberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_2c6f7b01> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q368598> .
+
+<https://sappho-digital.com/place/place_b5899bc7> a ecrm:E53_Place ;
+    rdfs:label "Kochel am See"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_6c69db4e> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q256533> .
 
 <https://sappho-digital.com/place/place_b5b32385> a ecrm:E53_Place ;
     rdfs:label "Gießen"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_2e79e96b> ;
     owl:sameAs <https://www.wikidata.org/entity/Q3874> .
 
-<https://sappho-digital.com/place/place_b6114b3c> a ecrm:E53_Place ;
-    rdfs:label "Bergedorf"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_74d9eceb> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2384> .
+<https://sappho-digital.com/place/place_b6c4f2fc> a ecrm:E53_Place ;
+    rdfs:label "Heilbronn"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_3779d25f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q715> .
 
-<https://sappho-digital.com/place/place_b6b3c960> a ecrm:E53_Place ;
-    rdfs:label "Seitenstetten"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_727e9e25> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q640190> .
+<https://sappho-digital.com/place/place_b7b31caa> a ecrm:E53_Place ;
+    rdfs:label "Gorzów Wielkopolski"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_ab5259c5> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q104731> .
 
-<https://sappho-digital.com/place/place_b7d67864> a ecrm:E53_Place ;
-    rdfs:label "Gräfenhainichen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b9e599ee> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q373077> .
+<https://sappho-digital.com/place/place_b7b45edc> a ecrm:E53_Place ;
+    rdfs:label "Pokój"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_e4b9df24> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q910522> .
 
-<https://sappho-digital.com/place/place_b7e9c43e> a ecrm:E53_Place ;
-    rdfs:label "Głogów"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_66c39712> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q66013> .
+<https://sappho-digital.com/place/place_b8e418de> a ecrm:E53_Place ;
+    rdfs:label "Ried im Innkreis"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_acae0b75> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q267791> .
 
-<https://sappho-digital.com/place/place_b7ed456f> a ecrm:E53_Place ;
-    rdfs:label "Bendeleben"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_7ea009fb> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q628655> .
+<https://sappho-digital.com/place/place_b94d3d92> a ecrm:E53_Place ;
+    rdfs:label "Wilhelmshaven"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_0b08fc2e> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3857> .
 
-<https://sappho-digital.com/place/place_b8b863a9> a ecrm:E53_Place ;
-    rdfs:label "Jöhstadt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4879dde0> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q57908> .
+<https://sappho-digital.com/place/place_b9661bdd> a ecrm:E53_Place ;
+    rdfs:label "Eisenach"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b8ba5902> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q7070> .
 
-<https://sappho-digital.com/place/place_ba8d442b> a ecrm:E53_Place ;
-    rdfs:label "Glückstadt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_0b08fc2e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q377277> .
+<https://sappho-digital.com/place/place_b9e9987c> a ecrm:E53_Place ;
+    rdfs:label "Nysa"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_9304ec71> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q815721> .
+
+<https://sappho-digital.com/place/place_ba389bbe> a ecrm:E53_Place ;
+    rdfs:label "Lichtenrade"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_49118653> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q821101> .
 
 <https://sappho-digital.com/place/place_bac82a99> a ecrm:E53_Place ;
     rdfs:label "Bern"@de ;
@@ -1742,60 +1712,90 @@
         <https://sappho-digital.com/death/author_b2d380cf> ;
     owl:sameAs <https://www.wikidata.org/entity/Q70> .
 
-<https://sappho-digital.com/place/place_bb28f617> a ecrm:E53_Place ;
-    rdfs:label "Ried im Innkreis"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_8328fab0> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q267791> .
-
 <https://sappho-digital.com/place/place_bb2b3096> a ecrm:E53_Place ;
     rdfs:label "Halberstadt"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/death/author_c418e31d> ;
     owl:sameAs <https://www.wikidata.org/entity/Q7072> .
 
-<https://sappho-digital.com/place/place_bb37a15f> a ecrm:E53_Place ;
-    rdfs:label "Nödlitz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4b944de3> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q19965258> .
+<https://sappho-digital.com/place/place_bbde5cce> a ecrm:E53_Place ;
+    rdfs:label "Altona"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_ec30f867> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1630> .
 
-<https://sappho-digital.com/place/place_bc944acd> a ecrm:E53_Place ;
-    rdfs:label "Cottbus"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6b28d4de> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3214> .
+<https://sappho-digital.com/place/place_bbe2148c> a ecrm:E53_Place ;
+    rdfs:label "Königstein im Taunus"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4116f769> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q569661> .
 
-<https://sappho-digital.com/place/place_bcb0e712> a ecrm:E53_Place ;
-    rdfs:label "Löwenstein"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b6223d75> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q522474> .
+<https://sappho-digital.com/place/place_bbfa7af5> a ecrm:E53_Place ;
+    rdfs:label "Bad Langensalza"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_e164efab> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q518368> .
 
-<https://sappho-digital.com/place/place_bf31a865> a ecrm:E53_Place ;
-    rdfs:label "Magdeburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4b888f17> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1733> .
+<https://sappho-digital.com/place/place_bc638293> a ecrm:E53_Place ;
+    rdfs:label "Freiberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_86bf4efd> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q14819> .
 
-<https://sappho-digital.com/place/place_c1074d1c> a ecrm:E53_Place ;
-    rdfs:label "Aarau"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b406f550> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q14274> .
+<https://sappho-digital.com/place/place_bc74a1bd> a ecrm:E53_Place ;
+    rdfs:label "Möhlin"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_2f2c0ddf> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q69126> .
 
-<https://sappho-digital.com/place/place_c1bcaa00> a ecrm:E53_Place ;
-    rdfs:label "Głogów"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_6706a04e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q66013> .
+<https://sappho-digital.com/place/place_bc9994a3> a ecrm:E53_Place ;
+    rdfs:label "Bayreuth"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b72fcd0d> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3923> .
 
-<https://sappho-digital.com/place/place_c1fe2afc> a ecrm:E53_Place ;
-    rdfs:label "Niemcza"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_719065e7> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q389412> .
+<https://sappho-digital.com/place/place_bd45e313> a ecrm:E53_Place ;
+    rdfs:label "Rochlitz an der Iser"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d398349f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1894625> .
 
-<https://sappho-digital.com/place/place_c281c934> a ecrm:E53_Place ;
-    rdfs:label "Buchs"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_14234df5> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q68277> .
+<https://sappho-digital.com/place/place_bd464801> a ecrm:E53_Place ;
+    rdfs:label "Wörlitz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_c4954682> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q518275> .
 
-<https://sappho-digital.com/place/place_c29f37b2> a ecrm:E53_Place ;
-    rdfs:label "Cochem"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_3a6f93f6> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q502749> .
+<https://sappho-digital.com/place/place_be8a9b9b> a ecrm:E53_Place ;
+    rdfs:label "Sankt Petersburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_35efad91> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q656> .
+
+<https://sappho-digital.com/place/place_bf481617> a ecrm:E53_Place ;
+    rdfs:label "Korneuburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_99ff6cfa> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q659841> .
+
+<https://sappho-digital.com/place/place_bfd944b4> a ecrm:E53_Place ;
+    rdfs:label "Zittau"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b957c79d> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q157200> .
+
+<https://sappho-digital.com/place/place_c01ba623> a ecrm:E53_Place ;
+    rdfs:label "Bad Aussee"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_fcbc13ca> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q251065> .
+
+<https://sappho-digital.com/place/place_c0d93ca0> a ecrm:E53_Place ;
+    rdfs:label "Leszno"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_012dbb67> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q52892> .
+
+<https://sappho-digital.com/place/place_c102c86a> a ecrm:E53_Place ;
+    rdfs:label "Gieboldehausen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_a378003d> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q566701> .
+
+<https://sappho-digital.com/place/place_c24d613a> a ecrm:E53_Place ;
+    rdfs:label "Perleberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_f5e28183> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q498540> .
+
+<https://sappho-digital.com/place/place_c2d8a78c> a ecrm:E53_Place ;
+    rdfs:label "Świebodzin"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_1f254435> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q387463> .
 
 <https://sappho-digital.com/place/place_c35eca96> a ecrm:E53_Place ;
     rdfs:label "Weimar"@de ;
@@ -1808,80 +1808,85 @@
         <https://sappho-digital.com/death/author_e164efab> ;
     owl:sameAs <https://www.wikidata.org/entity/Q3955> .
 
-<https://sappho-digital.com/place/place_c368931b> a ecrm:E53_Place ;
-    rdfs:label "Altona"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_15926358> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1630> .
+<https://sappho-digital.com/place/place_c4396170> a ecrm:E53_Place ;
+    rdfs:label "Kitzingen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_54c5b326> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q269447> .
 
-<https://sappho-digital.com/place/place_c3eb94d5> a ecrm:E53_Place ;
-    rdfs:label "Döbling"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_ecd75d50> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q267360> .
+<https://sappho-digital.com/place/place_c56abd87> a ecrm:E53_Place ;
+    rdfs:label "Roseburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_bbd2f350> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q666385> .
 
-<https://sappho-digital.com/place/place_c429fcdd> a ecrm:E53_Place ;
-    rdfs:label "Sankt Petersburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_35efad91> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q656> .
+<https://sappho-digital.com/place/place_c56b9ca7> a ecrm:E53_Place ;
+    rdfs:label "Lübeck"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_361addef> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2843> .
 
-<https://sappho-digital.com/place/place_c58b400f> a ecrm:E53_Place ;
-    rdfs:label "Herzog-Max-Palais"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_1a94204b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1615212> .
+<https://sappho-digital.com/place/place_c58ad7c3> a ecrm:E53_Place ;
+    rdfs:label "Plaue"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_72f779cd> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q552628> .
 
-<https://sappho-digital.com/place/place_c5f841bd> a ecrm:E53_Place ;
-    rdfs:label "Colmar"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_0dfb434b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q130994> .
+<https://sappho-digital.com/place/place_c59452f4> a ecrm:E53_Place ;
+    rdfs:label "Lauffen am Neckar"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4e4cdf8e> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q525720> .
 
-<https://sappho-digital.com/place/place_c62bc962> a ecrm:E53_Place ;
-    rdfs:label "Tressow"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_a58ca455> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q23163860> .
+<https://sappho-digital.com/place/place_c5b82c46> a ecrm:E53_Place ;
+    rdfs:label "Durlach"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_374deda4> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q639876> .
 
-<https://sappho-digital.com/place/place_c6f3dc6e> a ecrm:E53_Place ;
-    rdfs:label "Stoszowice"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_9634eedf> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q940945> .
+<https://sappho-digital.com/place/place_c606499c> a ecrm:E53_Place ;
+    rdfs:label "Neuruppin"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_db3f7fa5> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q16085> .
 
-<https://sappho-digital.com/place/place_c73b1a3b> a ecrm:E53_Place ;
-    rdfs:label "Muralto"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_74aff90a> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q69961> .
+<https://sappho-digital.com/place/place_c622aea0> a ecrm:E53_Place ;
+    rdfs:label "Königsberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_aba1427a> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q4120832> .
 
-<https://sappho-digital.com/place/place_c74588f4> a ecrm:E53_Place ;
-    rdfs:label "Głogów"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_e5f7bab5> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q66013> .
+<https://sappho-digital.com/place/place_c6be3bbf> a ecrm:E53_Place ;
+    rdfs:label "Oberschleißheim"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_f917bb57> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q253881> .
 
-<https://sappho-digital.com/place/place_c8507e97> a ecrm:E53_Place ;
-    rdfs:label "Hohenstein-Ernstthal"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_525a826b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q20073> .
+<https://sappho-digital.com/place/place_c6cbbeb5> a ecrm:E53_Place ;
+    rdfs:label "Güstrow"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_e96f2e01> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q16147> .
 
-<https://sappho-digital.com/place/place_ca43954b> a ecrm:E53_Place ;
-    rdfs:label "Gorzów Wielkopolski"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_ab5259c5> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q104731> .
+<https://sappho-digital.com/place/place_c6df1413> a ecrm:E53_Place ;
+    rdfs:label "Wickrath"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_547138e4> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1677185> .
 
-<https://sappho-digital.com/place/place_ca735de4> a ecrm:E53_Place ;
-    rdfs:label "Chełmno"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_aeca2de7> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q161962> .
+<https://sappho-digital.com/place/place_c759e19d> a ecrm:E53_Place ;
+    rdfs:label "Sulechów"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6dd6a140> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q457865> .
 
-<https://sappho-digital.com/place/place_caa2ca99> a ecrm:E53_Place ;
-    rdfs:label "Bad Bramstedt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c26b98cd> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q523987> .
+<https://sappho-digital.com/place/place_c781b889> a ecrm:E53_Place ;
+    rdfs:label "Herne"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4d89894e> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2904> .
 
-<https://sappho-digital.com/place/place_cad66b1f> a ecrm:E53_Place ;
-    rdfs:label "Baden-Baden"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_66c39712> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q4100> .
+<https://sappho-digital.com/place/place_c7e62f68> a ecrm:E53_Place ;
+    rdfs:label "Düren"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4052161e> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1884> .
 
-<https://sappho-digital.com/place/place_caf69865> a ecrm:E53_Place ;
-    rdfs:label "Freudenstadt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_12692b6b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q82838> .
+<https://sappho-digital.com/place/place_ca373a1c> a ecrm:E53_Place ;
+    rdfs:label "Nowe Chrapowo"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_5dbae385> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q7066421> .
+
+<https://sappho-digital.com/place/place_cac0dd32> a ecrm:E53_Place ;
+    rdfs:label "Welda"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_99c5cd6b> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1297472> .
 
 <https://sappho-digital.com/place/place_cb9d8885> a ecrm:E53_Place ;
     rdfs:label "Danzig"@de ;
@@ -1891,45 +1896,55 @@
         <https://sappho-digital.com/death/author_f00cdfeb> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1792> .
 
-<https://sappho-digital.com/place/place_cc1ac1f4> a ecrm:E53_Place ;
-    rdfs:label "Colmar"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6bcd0402> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q130994> .
-
 <https://sappho-digital.com/place/place_ccbee73c> a ecrm:E53_Place ;
     rdfs:label "Paris"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/death/author_d1ce90b4> ;
     owl:sameAs <https://www.wikidata.org/entity/Q90> .
 
-<https://sappho-digital.com/place/place_ceb451fd> a ecrm:E53_Place ;
-    rdfs:label "Überlingen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_a8ee8870> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q332952> .
+<https://sappho-digital.com/place/place_cd110f37> a ecrm:E53_Place ;
+    rdfs:label "Trier"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_fc1094bb> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3138> .
 
-<https://sappho-digital.com/place/place_cef09aca> a ecrm:E53_Place ;
-    rdfs:label "Winterthur"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_3cf5c166> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q9125> .
-
-<https://sappho-digital.com/place/place_cf215c00> a ecrm:E53_Place ;
-    rdfs:label "Lübben (Spreewald)"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_845ce76f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q584815> .
-
-<https://sappho-digital.com/place/place_d05dcc10> a ecrm:E53_Place ;
-    rdfs:label "Herne"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4d89894e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2904> .
-
-<https://sappho-digital.com/place/place_d2370523> a ecrm:E53_Place ;
-    rdfs:label "Olsberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_3e63e21f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q10921> .
-
-<https://sappho-digital.com/place/place_d282e7f4> a ecrm:E53_Place ;
+<https://sappho-digital.com/place/place_cd9e2bae> a ecrm:E53_Place ;
     rdfs:label "Haan"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4ccbbf71> ;
     owl:sameAs <https://www.wikidata.org/entity/Q2974> .
+
+<https://sappho-digital.com/place/place_cda631c5> a ecrm:E53_Place ;
+    rdfs:label "Ost-Berlin"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_e5f7bab5> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q56037> .
+
+<https://sappho-digital.com/place/place_d0106b40> a ecrm:E53_Place ;
+    rdfs:label "Skąpe"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_7240c9e7> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q659063> .
+
+<https://sappho-digital.com/place/place_d0fadc0d> a ecrm:E53_Place ;
+    rdfs:label "Wels"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_cb7d98c5> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q178582> .
+
+<https://sappho-digital.com/place/place_d130b225> a ecrm:E53_Place ;
+    rdfs:label "Innsbruck"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_512e247a> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1735> .
+
+<https://sappho-digital.com/place/place_d1b8aae6> a ecrm:E53_Place ;
+    rdfs:label "Klaipėda"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_895fe99d> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q776965> .
+
+<https://sappho-digital.com/place/place_d2514438> a ecrm:E53_Place ;
+    rdfs:label "Calbe"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_20619122> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q505176> .
+
+<https://sappho-digital.com/place/place_d3144b56> a ecrm:E53_Place ;
+    rdfs:label "Vence"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_e79cea2e> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q192368> .
 
 <https://sappho-digital.com/place/place_d35a02eb> a ecrm:E53_Place ;
     rdfs:label "Berlin"@de ;
@@ -1990,10 +2005,10 @@
         <https://sappho-digital.com/death/author_ea8781b9> ;
     owl:sameAs <https://www.wikidata.org/entity/Q64> .
 
-<https://sappho-digital.com/place/place_d3b2be6f> a ecrm:E53_Place ;
-    rdfs:label "Zittau"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b957c79d> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q157200> .
+<https://sappho-digital.com/place/place_d365d354> a ecrm:E53_Place ;
+    rdfs:label "Loschwitz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_9201b2fb> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q8939> .
 
 <https://sappho-digital.com/place/place_d4135c97> a ecrm:E53_Place ;
     rdfs:label "Augsburg"@de ;
@@ -2001,56 +2016,51 @@
         <https://sappho-digital.com/death/author_b0f9b07f> ;
     owl:sameAs <https://www.wikidata.org/entity/Q2749> .
 
-<https://sappho-digital.com/place/place_d414246a> a ecrm:E53_Place ;
-    rdfs:label "Bad Berka"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_f7e862d9> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q630334> .
+<https://sappho-digital.com/place/place_d44eafb3> a ecrm:E53_Place ;
+    rdfs:label "Wolfenbüttel"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_52d605a1> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q4122> .
 
-<https://sappho-digital.com/place/place_d66e4ebc> a ecrm:E53_Place ;
-    rdfs:label "Burkheim am Kaiserstuhl"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_6bcd0402> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q977317> .
+<https://sappho-digital.com/place/place_d477c8f7> a ecrm:E53_Place ;
+    rdfs:label "Königsberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_2a13eb29> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q4120832> .
 
-<https://sappho-digital.com/place/place_d6a0546b> a ecrm:E53_Place ;
-    rdfs:label "Tel Aviv-Jaffa"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b29d1f16> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q33935> .
+<https://sappho-digital.com/place/place_d4a613d3> a ecrm:E53_Place ;
+    rdfs:label "Sankt Petersburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_35efad91> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q656> .
 
-<https://sappho-digital.com/place/place_d77c5c2b> a ecrm:E53_Place ;
-    rdfs:label "Sommerstorf"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_bf64847b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2300615> .
+<https://sappho-digital.com/place/place_d4fce8ce> a ecrm:E53_Place ;
+    rdfs:label "Nödlitz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4b944de3> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q19965258> .
 
-<https://sappho-digital.com/place/place_d7b29ef5> a ecrm:E53_Place ;
-    rdfs:label "Coburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_d5ce330f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q14821> .
+<https://sappho-digital.com/place/place_d5ae45d0> a ecrm:E53_Place ;
+    rdfs:label "Gräfentonna"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_5ae9c542> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1551440> .
 
-<https://sappho-digital.com/place/place_d80c59c9> a ecrm:E53_Place ;
-    rdfs:label "Innsbruck"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_9c0e35cb> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1735> .
+<https://sappho-digital.com/place/place_d6e4ac1e> a ecrm:E53_Place ;
+    rdfs:label "Haag"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_727e9e25> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q255534> .
 
-<https://sappho-digital.com/place/place_d871ace7> a ecrm:E53_Place ;
-    rdfs:label "Brühl"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_dfa2ad1a> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q7036> .
+<https://sappho-digital.com/place/place_d6fa13f7> a ecrm:E53_Place ;
+    rdfs:label "Winterthur"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_3cf5c166> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q9125> .
 
-<https://sappho-digital.com/place/place_d9d6f0fb> a ecrm:E53_Place ;
-    rdfs:label "Neuruppin"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_db3f7fa5> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q16085> .
+<https://sappho-digital.com/place/place_d8086226> a ecrm:E53_Place ;
+    rdfs:label "Schloss Zdislawitz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c9ceb171> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q30764762> .
 
 <https://sappho-digital.com/place/place_d9eca09e> a ecrm:E53_Place ;
     rdfs:label "Paderborn"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_079de5c1>,
         <https://sappho-digital.com/death/author_99c5cd6b> ;
     owl:sameAs <https://www.wikidata.org/entity/Q2971> .
-
-<https://sappho-digital.com/place/place_da3e32f5> a ecrm:E53_Place ;
-    rdfs:label "Kochel am See"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_6c69db4e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q256533> .
 
 <https://sappho-digital.com/place/place_da490359> a ecrm:E53_Place ;
     rdfs:label "Frankfurt (Oder)"@de ;
@@ -2059,65 +2069,55 @@
         <https://sappho-digital.com/death/author_e375d59c> ;
     owl:sameAs <https://www.wikidata.org/entity/Q4024> .
 
-<https://sappho-digital.com/place/place_da627c76> a ecrm:E53_Place ;
-    rdfs:label "Ried im Innkreis"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_8328fab0> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q267791> .
+<https://sappho-digital.com/place/place_dba399b4> a ecrm:E53_Place ;
+    rdfs:label "Rosenow"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_41109f45> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1561056> .
 
-<https://sappho-digital.com/place/place_da998de0> a ecrm:E53_Place ;
-    rdfs:label "Bad Vöslau"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_999f2a49> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q798800> .
-
-<https://sappho-digital.com/place/place_db1e741f> a ecrm:E53_Place ;
-    rdfs:label "Ghetto Theresienstadt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_4593a9c2> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q160175> .
-
-<https://sappho-digital.com/place/place_db9f720c> a ecrm:E53_Place ;
-    rdfs:label "Oliva"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_3e71f643> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1447540> .
-
-<https://sappho-digital.com/place/place_dc146bf8> a ecrm:E53_Place ;
+<https://sappho-digital.com/place/place_dc3c55b0> a ecrm:E53_Place ;
     rdfs:label "Königsberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_7e1d4cde> ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_6bf82744> ;
     owl:sameAs <https://www.wikidata.org/entity/Q4120832> .
 
-<https://sappho-digital.com/place/place_dcd5da16> a ecrm:E53_Place ;
-    rdfs:label "Meiningen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_bf6d8c80> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q487278> .
+<https://sappho-digital.com/place/place_dd934a53> a ecrm:E53_Place ;
+    rdfs:label "Regensburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_e68bfecf> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2978> .
 
-<https://sappho-digital.com/place/place_dcffc3fb> a ecrm:E53_Place ;
-    rdfs:label "Syrakus"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_d5ea9f29> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q13670> .
+<https://sappho-digital.com/place/place_df680159> a ecrm:E53_Place ;
+    rdfs:label "Ovelgönne"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_966c0c55> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q652356> .
 
-<https://sappho-digital.com/place/place_df00fbeb> a ecrm:E53_Place ;
-    rdfs:label "Nowe Chrapowo"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_5dbae385> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q7066421> .
+<https://sappho-digital.com/place/place_df7c955d> a ecrm:E53_Place ;
+    rdfs:label "Długoszyn"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_268fcc92> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q5321203> .
 
-<https://sappho-digital.com/place/place_df48a110> a ecrm:E53_Place ;
-    rdfs:label "Bad Soden am Taunus"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_54a37cad> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q39785> .
+<https://sappho-digital.com/place/place_dfbea6e2> a ecrm:E53_Place ;
+    rdfs:label "Bad Wiessee"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_ce4b6fc9> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q502921> .
+
+<https://sappho-digital.com/place/place_e0e087f1> a ecrm:E53_Place ;
+    rdfs:label "Reichenbach/O.L."@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4380cb31> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q157462> .
+
+<https://sappho-digital.com/place/place_e17168f0> a ecrm:E53_Place ;
+    rdfs:label "Burgstädt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_8c390adb> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q71095> .
 
 <https://sappho-digital.com/place/place_e1c2c4a0> a ecrm:E53_Place ;
     rdfs:label "Lutherstadt Wittenberg"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/death/author_feeadef3> ;
     owl:sameAs <https://www.wikidata.org/entity/Q6837> .
 
-<https://sappho-digital.com/place/place_e1ecad1b> a ecrm:E53_Place ;
-    rdfs:label "Lichtenrade"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_49118653> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q821101> .
-
-<https://sappho-digital.com/place/place_e2546584> a ecrm:E53_Place ;
-    rdfs:label "Lunden"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_713d6c9e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q554187> .
+<https://sappho-digital.com/place/place_e24e74ae> a ecrm:E53_Place ;
+    rdfs:label "Korsør"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d5f6a8bc> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1784816> .
 
 <https://sappho-digital.com/place/place_e27a0539> a ecrm:E53_Place ;
     rdfs:label "Potsdam"@de ;
@@ -2125,26 +2125,26 @@
         <https://sappho-digital.com/birth/author_c6ba13c5> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1711> .
 
-<https://sappho-digital.com/place/place_e339a680> a ecrm:E53_Place ;
-    rdfs:label "Reichenbach im Vogtland"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_7c69b53b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q46849> .
+<https://sappho-digital.com/place/place_e3436de9> a ecrm:E53_Place ;
+    rdfs:label "Bad Bramstedt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c26b98cd> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q523987> .
 
-<https://sappho-digital.com/place/place_e43278a7> a ecrm:E53_Place ;
-    rdfs:label "Rudolstadt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_02a74410> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q517107> .
-
-<https://sappho-digital.com/place/place_e462b9d6> a ecrm:E53_Place ;
-    rdfs:label "Arnstadt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_f468f7e6> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q490665> .
+<https://sappho-digital.com/place/place_e381db81> a ecrm:E53_Place ;
+    rdfs:label "Lübeck"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_361addef> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2843> .
 
 <https://sappho-digital.com/place/place_e4f9b171> a ecrm:E53_Place ;
     rdfs:label "Halle (Saale)"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_15926358>,
         <https://sappho-digital.com/death/author_c3b4bc0f> ;
     owl:sameAs <https://www.wikidata.org/entity/Q2814> .
+
+<https://sappho-digital.com/place/place_e502f649> a ecrm:E53_Place ;
+    rdfs:label "Ried im Innkreis"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_8328fab0> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q267791> .
 
 <https://sappho-digital.com/place/place_e575530b> a ecrm:E53_Place ;
     rdfs:label "Prag"@de ;
@@ -2157,10 +2157,20 @@
         <https://sappho-digital.com/birth/author_d71837ad> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1085> .
 
-<https://sappho-digital.com/place/place_e6b0fe3d> a ecrm:E53_Place ;
-    rdfs:label "Mariensee"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b7521cbe> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1800996> .
+<https://sappho-digital.com/place/place_e595c6a8> a ecrm:E53_Place ;
+    rdfs:label "Tressow"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_a58ca455> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q23163860> .
+
+<https://sappho-digital.com/place/place_e5de50b8> a ecrm:E53_Place ;
+    rdfs:label "Obersontheim"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4d2b85d3> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q83053> .
+
+<https://sappho-digital.com/place/place_e6bbe31b> a ecrm:E53_Place ;
+    rdfs:label "Schloss Seisenegg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_ccb6fb51> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2243493> .
 
 <https://sappho-digital.com/place/place_e7593ca9> a ecrm:E53_Place ;
     rdfs:label "Czernowitz"@de ;
@@ -2169,15 +2179,10 @@
         <https://sappho-digital.com/birth/author_fe4f23b6> ;
     owl:sameAs <https://www.wikidata.org/entity/Q157725> .
 
-<https://sappho-digital.com/place/place_e85539fa> a ecrm:E53_Place ;
-    rdfs:label "Altona"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_ec30f867> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1630> .
-
-<https://sappho-digital.com/place/place_e8f5b4e1> a ecrm:E53_Place ;
-    rdfs:label "Ronneburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6cce6676> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q554655> .
+<https://sappho-digital.com/place/place_e76f7f1f> a ecrm:E53_Place ;
+    rdfs:label "Süßen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b54a136c> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q80849> .
 
 <https://sappho-digital.com/place/place_e90c98c3> a ecrm:E53_Place ;
     rdfs:label "Ulm"@de ;
@@ -2186,15 +2191,45 @@
         <https://sappho-digital.com/death/author_fbcacc36> ;
     owl:sameAs <https://www.wikidata.org/entity/Q3012> .
 
-<https://sappho-digital.com/place/place_ec2b870d> a ecrm:E53_Place ;
-    rdfs:label "Fürth"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_2f4449aa> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3075> .
+<https://sappho-digital.com/place/place_e946a8de> a ecrm:E53_Place ;
+    rdfs:label "Bad Aussee"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_f7114165> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q251065> .
 
-<https://sappho-digital.com/place/place_ec51a053> a ecrm:E53_Place ;
-    rdfs:label "Bad Langensalza"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_e164efab> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q518368> .
+<https://sappho-digital.com/place/place_e97a238c> a ecrm:E53_Place ;
+    rdfs:label "Bendeleben"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_7ea009fb> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q628655> .
+
+<https://sappho-digital.com/place/place_e9f4ea4a> a ecrm:E53_Place ;
+    rdfs:label "Hermannstadt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_59ec15eb> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q83324> .
+
+<https://sappho-digital.com/place/place_ea355267> a ecrm:E53_Place ;
+    rdfs:label "Głogów"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6706a04e> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q66013> .
+
+<https://sappho-digital.com/place/place_eb7da29b> a ecrm:E53_Place ;
+    rdfs:label "Kurland"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_be0048fb> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q185072> .
+
+<https://sappho-digital.com/place/place_ebf8707b> a ecrm:E53_Place ;
+    rdfs:label "Brake"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_725d0c5e> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q501639> .
+
+<https://sappho-digital.com/place/place_ec3fca82> a ecrm:E53_Place ;
+    rdfs:label "Stoszowice"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_9634eedf> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q940945> .
+
+<https://sappho-digital.com/place/place_ec4f2c6e> a ecrm:E53_Place ;
+    rdfs:label "Großröhrsdorf"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_7c38cf25> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q81736> .
 
 <https://sappho-digital.com/place/place_ec6f644a> a ecrm:E53_Place ;
     rdfs:label "Heidelberg"@de ;
@@ -2204,35 +2239,25 @@
         <https://sappho-digital.com/death/author_bf64847b> ;
     owl:sameAs <https://www.wikidata.org/entity/Q2966> .
 
-<https://sappho-digital.com/place/place_ec7125db> a ecrm:E53_Place ;
-    rdfs:label "Hartberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_2c6f7b01> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q368598> .
+<https://sappho-digital.com/place/place_ecad7da5> a ecrm:E53_Place ;
+    rdfs:label "Lemberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_0djd9701> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q36036> .
 
-<https://sappho-digital.com/place/place_ec9fb815> a ecrm:E53_Place ;
-    rdfs:label "Wolfsburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c180f900> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3014> .
+<https://sappho-digital.com/place/place_ee4fd2e1> a ecrm:E53_Place ;
+    rdfs:label "Kiel"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_26a18207> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1707> .
 
-<https://sappho-digital.com/place/place_ecaf07cf> a ecrm:E53_Place ;
-    rdfs:label "Wachtendonk"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_bba27650> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q243139> .
+<https://sappho-digital.com/place/place_ee755c43> a ecrm:E53_Place ;
+    rdfs:label "Königsberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_58e91001> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q4120832> .
 
-<https://sappho-digital.com/place/place_edaed711> a ecrm:E53_Place ;
-    rdfs:label "Gröningen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4b39735a> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q571925> .
-
-<https://sappho-digital.com/place/place_ee7aefb5> a ecrm:E53_Place ;
-    rdfs:label "Rydzyna"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_059b5d13> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q995872> .
-
-<https://sappho-digital.com/place/place_ef394922> a ecrm:E53_Place ;
-    rdfs:label "Nysa"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_9304ec71> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q815721> .
+<https://sappho-digital.com/place/place_ef864fd1> a ecrm:E53_Place ;
+    rdfs:label "Bad Blankenburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_47f9a96b> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q518432> .
 
 <https://sappho-digital.com/place/place_efaf7112> a ecrm:E53_Place ;
     rdfs:label "Mainz"@de ;
@@ -2257,10 +2282,30 @@
         <https://sappho-digital.com/death/author_be0048fb> ;
     owl:sameAs <https://www.wikidata.org/entity/Q2079> .
 
-<https://sappho-digital.com/place/place_f21b4f6c> a ecrm:E53_Place ;
-    rdfs:label "London"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_4380cb31> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q84> .
+<https://sappho-digital.com/place/place_f010437a> a ecrm:E53_Place ;
+    rdfs:label "Baden-Baden"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_b2a5a4c0> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q4100> .
+
+<https://sappho-digital.com/place/place_f01311d5> a ecrm:E53_Place ;
+    rdfs:label "Amrum"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_8a8c94bf> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3136> .
+
+<https://sappho-digital.com/place/place_f03ad2a5> a ecrm:E53_Place ;
+    rdfs:label "Minusio"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_c32ad0f8> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q69065> .
+
+<https://sappho-digital.com/place/place_f16ababb> a ecrm:E53_Place ;
+    rdfs:label "Radebeul"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_525a826b> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q8762> .
+
+<https://sappho-digital.com/place/place_f1a4ea7d> a ecrm:E53_Place ;
+    rdfs:label "Bad Berka"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_f7e862d9> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q630334> .
 
 <https://sappho-digital.com/place/place_f23bb5e2> a ecrm:E53_Place ;
     rdfs:label "Hamburg"@de ;
@@ -2291,120 +2336,85 @@
     ecrm:P7i_witnessed <https://sappho-digital.com/death/author_eed4609b> ;
     owl:sameAs <https://www.wikidata.org/entity/Q34713> .
 
-<https://sappho-digital.com/place/place_f438dcb8> a ecrm:E53_Place ;
-    rdfs:label "Kirchdorf an der Krems"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_12ed70cf> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q688620> .
+<https://sappho-digital.com/place/place_f2bddd31> a ecrm:E53_Place ;
+    rdfs:label "Strupice, Lower Silesian Voivodeship"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_053c1ca2> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1811646> .
 
-<https://sappho-digital.com/place/place_f4614dc6> a ecrm:E53_Place ;
-    rdfs:label "Marktoberdorf"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_f1bb4938> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q502955> .
+<https://sappho-digital.com/place/place_f4dbd567> a ecrm:E53_Place ;
+    rdfs:label "Schönefeld"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d5ce330f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q882826> .
 
-<https://sappho-digital.com/place/place_f4e5db34> a ecrm:E53_Place ;
-    rdfs:label "Trins"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_58e91001> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q694304> .
+<https://sappho-digital.com/place/place_f6e880c0> a ecrm:E53_Place ;
+    rdfs:label "Schmillinghausen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_db9d367b> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2246491> .
 
-<https://sappho-digital.com/place/place_f4e7b18e> a ecrm:E53_Place ;
-    rdfs:label "Głubczyce"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_7a234aaa> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q717947> .
+<https://sappho-digital.com/place/place_f77e8441> a ecrm:E53_Place ;
+    rdfs:label "Hanau"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_91b3e0e9> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3802> .
 
-<https://sappho-digital.com/place/place_f525fb20> a ecrm:E53_Place ;
-    rdfs:label "Burgstädt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_8c390adb> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q71095> .
+<https://sappho-digital.com/place/place_f8b4826c> a ecrm:E53_Place ;
+    rdfs:label "Königsberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_3e71f643> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q4120832> .
 
-<https://sappho-digital.com/place/place_f5899370> a ecrm:E53_Place ;
-    rdfs:label "Süßen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b54a136c> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q80849> .
+<https://sappho-digital.com/place/place_f9263ecc> a ecrm:E53_Place ;
+    rdfs:label "Striegau"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_d52e4b5b> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q246288> .
 
-<https://sappho-digital.com/place/place_f6b07c34> a ecrm:E53_Place ;
-    rdfs:label "Worms"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_a52d43ac> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3852> .
+<https://sappho-digital.com/place/place_fa222f38> a ecrm:E53_Place ;
+    rdfs:label "Palais Wrangel"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6b97b3e5> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1553547> .
 
-<https://sappho-digital.com/place/place_f79c6bf7> a ecrm:E53_Place ;
-    rdfs:label "Travemünde"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_74d9eceb> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q321792> .
+<https://sappho-digital.com/place/place_fb0e80a6> a ecrm:E53_Place ;
+    rdfs:label "Jöhstadt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_4879dde0> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q57908> .
 
-<https://sappho-digital.com/place/place_f7ebb132> a ecrm:E53_Place ;
-    rdfs:label "Ost-Berlin"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_e5f7bab5> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q56037> .
+<https://sappho-digital.com/place/place_fcccf962> a ecrm:E53_Place ;
+    rdfs:label "Dyszno"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_c6ba13c5> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1909590> .
 
-<https://sappho-digital.com/place/place_f7f436b0> a ecrm:E53_Place ;
-    rdfs:label "Kętrzyn"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_bf6f469d> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q319397> .
+<https://sappho-digital.com/place/place_fcd47f4e> a ecrm:E53_Place ;
+    rdfs:label "Herzog-Max-Palais"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_1a94204b> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1615212> .
 
-<https://sappho-digital.com/place/place_f802cc0a> a ecrm:E53_Place ;
-    rdfs:label "Ost-Berlin"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_4a7ff7b6> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q56037> .
+<https://sappho-digital.com/place/place_fd3df749> a ecrm:E53_Place ;
+    rdfs:label "Šintava"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_6bc845c6> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q391673> .
 
-<https://sappho-digital.com/place/place_f85fe875> a ecrm:E53_Place ;
-    rdfs:label "Rudna"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_012dbb67> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q750363> .
+<https://sappho-digital.com/place/place_fd8b471f> a ecrm:E53_Place ;
+    rdfs:label "Hohenstein-Ernstthal"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_525a826b> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q20073> .
 
-<https://sappho-digital.com/place/place_f873faef> a ecrm:E53_Place ;
-    rdfs:label "London"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_bc8543e3> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q84> .
+<https://sappho-digital.com/place/place_fe75b63d> a ecrm:E53_Place ;
+    rdfs:label "Neuruppin"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_11c6f454> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q16085> .
 
-<https://sappho-digital.com/place/place_f9076b65> a ecrm:E53_Place ;
-    rdfs:label "Perleberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_f5e28183> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q498540> .
+<https://sappho-digital.com/place/place_fe98522c> a ecrm:E53_Place ;
+    rdfs:label "Nordhausen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_91b3e0e9> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q7033> .
 
-<https://sappho-digital.com/place/place_f99fc2ba> a ecrm:E53_Place ;
-    rdfs:label "Schloss Jägerhof"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_001f1b95> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q175400> .
+<https://sappho-digital.com/place/place_ff20d524> a ecrm:E53_Place ;
+    rdfs:label "Florenz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_a186641f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2044> .
 
-<https://sappho-digital.com/place/place_fa56758c> a ecrm:E53_Place ;
-    rdfs:label "Eckernförde"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_df4838be> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q490453> .
-
-<https://sappho-digital.com/place/place_fa7c84a4> a ecrm:E53_Place ;
-    rdfs:label "Grieskirchen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_51914f18> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q256996> .
-
-<https://sappho-digital.com/place/place_faa2beb4> a ecrm:E53_Place ;
-    rdfs:label "Q250984"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_31154bf3> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q250984> .
-
-<https://sappho-digital.com/place/place_facb4308> a ecrm:E53_Place ;
-    rdfs:label "Lauterbach"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_60e0b439> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q622569> .
-
-<https://sappho-digital.com/place/place_fd0972cb> a ecrm:E53_Place ;
-    rdfs:label "Ludwigsburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_c8447c3c> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q622> .
-
-<https://sappho-digital.com/place/place_fea6e775> a ecrm:E53_Place ;
-    rdfs:label "Riga"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b6223d75> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1773> .
-
-<https://sappho-digital.com/place/place_ff7b60c9> a ecrm:E53_Place ;
-    rdfs:label "Winterburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/death/author_a52d43ac> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q562772> .
-
-<https://sappho-digital.com/place/place_ffccbd29> a ecrm:E53_Place ;
-    rdfs:label "Priorau"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_b8bc3d7f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q106962227> .
+<https://sappho-digital.com/place/place_ff9a6363> a ecrm:E53_Place ;
+    rdfs:label "Lunden"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/birth/author_713d6c9e> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q554187> .
 
 <https://sappho-digital.com/appellation/author_001f1b95> a ecrm:E82_Actor_Appellation ;
     rdfs:label "Georg von Preußen"@de ;
@@ -8709,6 +8719,11 @@
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_1c326fef> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/viaf> .
 
+<https://sappho-digital.com/identifier/9153061306619202173> a ecrm:E42_Identifier ;
+    rdfs:label "9153061306619202173" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/person/author_bf049101> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/viaf> .
+
 <https://sappho-digital.com/identifier/91685924> a ecrm:E42_Identifier ;
     rdfs:label "91685924" ;
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_59ec15eb> ;
@@ -14151,7 +14166,7 @@
 
 <https://sappho-digital.com/image/author_5692b9c2> a ecrm:E38_Image ;
     ecrm:P65_shows_visual_item <https://sappho-digital.com/visual_item/author_5692b9c2> ;
-    rdfs:seeAlso <http://commons.wikimedia.org/wiki/Special:FilePath/Scheffel.jpg> ;
+    rdfs:seeAlso <http://commons.wikimedia.org/wiki/Special:FilePath/Die_Gartenlaube_(1886)_b_316.jpg> ;
     prov:wasDerivedFrom <https://www.wikidata.org/entity/Q9082> .
 
 <https://sappho-digital.com/image/author_573b8bae> a ecrm:E38_Image ;
@@ -14443,6 +14458,11 @@
     ecrm:P65_shows_visual_item <https://sappho-digital.com/visual_item/author_9334e746> ;
     rdfs:seeAlso <http://commons.wikimedia.org/wiki/Special:FilePath/Otto_Ernst_1905.jpg> ;
     prov:wasDerivedFrom <https://www.wikidata.org/entity/Q123291> .
+
+<https://sappho-digital.com/image/author_94083352> a ecrm:E38_Image ;
+    ecrm:P65_shows_visual_item <https://sappho-digital.com/visual_item/author_94083352> ;
+    rdfs:seeAlso <http://commons.wikimedia.org/wiki/Special:FilePath/2025-10-19_Buchmesse_Hugo_Tepest_(10).jpg> ;
+    prov:wasDerivedFrom <https://www.wikidata.org/entity/Q123848623> .
 
 <https://sappho-digital.com/image/author_9634eedf> a ecrm:E38_Image ;
     ecrm:P65_shows_visual_item <https://sappho-digital.com/visual_item/author_9634eedf> ;
@@ -18690,6 +18710,11 @@
     ecrm:P138_represents <https://sappho-digital.com/person/author_9334e746> ;
     ecrm:P65i_is_shown_by <https://sappho-digital.com/image/author_9334e746> .
 
+<https://sappho-digital.com/visual_item/author_94083352> a ecrm:E36_Visual_Item ;
+    rdfs:label "Visual representation of Hugo Tepest"@en ;
+    ecrm:P138_represents <https://sappho-digital.com/person/author_94083352> ;
+    ecrm:P65i_is_shown_by <https://sappho-digital.com/image/author_94083352> .
+
 <https://sappho-digital.com/visual_item/author_9634eedf> a ecrm:E36_Visual_Item ;
     rdfs:label "Visual representation of Moritz von Strachwitz"@en ;
     ecrm:P138_represents <https://sappho-digital.com/person/author_9634eedf> ;
@@ -19334,12 +19359,6 @@
     ecrm:P98_brought_into_life <https://sappho-digital.com/person/author_94083352> ;
     prov:wasDerivedFrom <https://www.wikidata.org/entity/Q123848623> .
 
-<https://sappho-digital.com/birth/author_97660a23> a ecrm:E67_Birth ;
-    rdfs:label "Birth of Freiherr von Baillou"@en ;
-    ecrm:P4_has_time_span <https://sappho-digital.com/timespan/18150223> ;
-    ecrm:P98_brought_into_life <https://sappho-digital.com/person/author_97660a23> ;
-    prov:wasDerivedFrom <https://www.wikidata.org/entity/Q12806303> .
-
 <https://sappho-digital.com/birth/author_a455787b> a ecrm:E67_Birth ;
     rdfs:label "Birth of Heinrich Klose"@en ;
     ecrm:P4_has_time_span <https://sappho-digital.com/timespan/16000101> ;
@@ -19459,12 +19478,6 @@
     ecrm:P100_was_death_of <https://sappho-digital.com/person/author_904bde5d> ;
     ecrm:P4_has_time_span <https://sappho-digital.com/timespan/18960404> ;
     prov:wasDerivedFrom <https://www.wikidata.org/entity/Q15699504> .
-
-<https://sappho-digital.com/death/author_97660a23> a ecrm:E69_Death ;
-    rdfs:label "Death of Freiherr von Baillou"@en ;
-    ecrm:P100_was_death_of <https://sappho-digital.com/person/author_97660a23> ;
-    ecrm:P4_has_time_span <https://sappho-digital.com/timespan/18900711> ;
-    prov:wasDerivedFrom <https://www.wikidata.org/entity/Q12806303> .
 
 <https://sappho-digital.com/death/author_a455787b> a ecrm:E69_Death ;
     rdfs:label "Death of Heinrich Klose"@en ;
@@ -23877,6 +23890,12 @@
     ecrm:P98_brought_into_life <https://sappho-digital.com/person/author_96e97674> ;
     prov:wasDerivedFrom <https://www.wikidata.org/entity/Q66605> .
 
+<https://sappho-digital.com/birth/author_97660a23> a ecrm:E67_Birth ;
+    rdfs:label "Birth of Freiherr von Baillou"@en ;
+    ecrm:P4_has_time_span <https://sappho-digital.com/timespan/18150223> ;
+    ecrm:P98_brought_into_life <https://sappho-digital.com/person/author_97660a23> ;
+    prov:wasDerivedFrom <https://www.wikidata.org/entity/Q12806303> .
+
 <https://sappho-digital.com/birth/author_9894d650> a ecrm:E67_Birth ;
     rdfs:label "Birth of Karl Mickel"@en ;
     ecrm:P4_has_time_span <https://sappho-digital.com/timespan/19350812> ;
@@ -25936,6 +25955,12 @@
     ecrm:P4_has_time_span <https://sappho-digital.com/timespan/16580917> ;
     prov:wasDerivedFrom <https://www.wikidata.org/entity/Q66605> .
 
+<https://sappho-digital.com/death/author_97660a23> a ecrm:E69_Death ;
+    rdfs:label "Death of Freiherr von Baillou"@en ;
+    ecrm:P100_was_death_of <https://sappho-digital.com/person/author_97660a23> ;
+    ecrm:P4_has_time_span <https://sappho-digital.com/timespan/18900711> ;
+    prov:wasDerivedFrom <https://www.wikidata.org/entity/Q12806303> .
+
 <https://sappho-digital.com/death/author_9894d650> a ecrm:E69_Death ;
     rdfs:label "Death of Karl Mickel"@en ;
     ecrm:P100_was_death_of <https://sappho-digital.com/person/author_9894d650> ;
@@ -26729,16 +26754,6 @@
     ecrm:P98i_was_born <https://sappho-digital.com/birth/author_3f92e64c> ;
     owl:sameAs <https://www.wikidata.org/entity/Q108155435> .
 
-<https://sappho-digital.com/person/author_bf049101> a ecrm:E21_Person ;
-    rdfs:label "Anna-Lena Obermoser"@de ;
-    ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_bf049101> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/1161769021>,
-        <https://sappho-digital.com/identifier/Q133405540>,
-        <https://sappho-digital.com/identifier/author_bf049101> ;
-    ecrm:P2_has_type <https://sappho-digital.com/gender/Q6581072> ;
-    owl:sameAs <https://d-nb.info/gnd/1161769021>,
-        <https://www.wikidata.org/entity/Q133405540> .
-
 <https://sappho-digital.com/person/author_f5a8b647> a ecrm:E21_Person ;
     rdfs:label "Franz Zistler"@de ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_f5a8b647> ;
@@ -26759,6 +26774,18 @@
     owl:sameAs <https://d-nb.info/gnd/116887281>,
         <https://viaf.org/viaf/67228725>,
         <https://www.wikidata.org/entity/Q95879149> .
+
+<https://sappho-digital.com/person/author_bf049101> a ecrm:E21_Person ;
+    rdfs:label "Anna-Lena Obermoser"@de ;
+    ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_bf049101> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/1161769021>,
+        <https://sappho-digital.com/identifier/9153061306619202173>,
+        <https://sappho-digital.com/identifier/Q133405540>,
+        <https://sappho-digital.com/identifier/author_bf049101> ;
+    ecrm:P2_has_type <https://sappho-digital.com/gender/Q6581072> ;
+    owl:sameAs <https://d-nb.info/gnd/1161769021>,
+        <https://viaf.org/viaf/9153061306619202173>,
+        <https://www.wikidata.org/entity/Q133405540> .
 
 <https://sappho-digital.com/person/author_01477749> a ecrm:E21_Person ;
     rdfs:label "Niklaus Gaschen"@de ;
@@ -27184,21 +27211,6 @@
         <https://dbpedia.org/resource/Helga_Hegewisch>,
         <https://viaf.org/viaf/182720>,
         <https://www.wikidata.org/entity/Q55069314> .
-
-<https://sappho-digital.com/person/author_94083352> a ecrm:E21_Person ;
-    rdfs:label "Hugo Tepest"@de ;
-    ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_94083352> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/1308999410>,
-        <https://sappho-digital.com/identifier/1420170011251384810003>,
-        <https://sappho-digital.com/identifier/Evan_Tepest>,
-        <https://sappho-digital.com/identifier/Q123848623>,
-        <https://sappho-digital.com/identifier/author_94083352> ;
-    ecrm:P2_has_type <https://sappho-digital.com/gender/Q6581097> ;
-    ecrm:P98i_was_born <https://sappho-digital.com/birth/author_94083352> ;
-    owl:sameAs <https://d-nb.info/gnd/1308999410>,
-        <https://dbpedia.org/resource/Evan_Tepest>,
-        <https://viaf.org/viaf/1420170011251384810003>,
-        <https://www.wikidata.org/entity/Q123848623> .
 
 <https://sappho-digital.com/person/author_9ce6f7ee> a ecrm:E21_Person ;
     rdfs:label "Max Baitinger"@de ;
@@ -28554,6 +28566,21 @@
         <https://dbpedia.org/resource/Franziska_von_Kapff-Essenther>,
         <https://viaf.org/viaf/52432257>,
         <https://www.wikidata.org/entity/Q1383245> .
+
+<https://sappho-digital.com/person/author_94083352> a ecrm:E21_Person ;
+    rdfs:label "Hugo Tepest"@de ;
+    ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_94083352> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/1308999410>,
+        <https://sappho-digital.com/identifier/1420170011251384810003>,
+        <https://sappho-digital.com/identifier/Evan_Tepest>,
+        <https://sappho-digital.com/identifier/Q123848623>,
+        <https://sappho-digital.com/identifier/author_94083352> ;
+    ecrm:P2_has_type <https://sappho-digital.com/gender/Q6581097> ;
+    ecrm:P98i_was_born <https://sappho-digital.com/birth/author_94083352> ;
+    owl:sameAs <https://d-nb.info/gnd/1308999410>,
+        <https://dbpedia.org/resource/Evan_Tepest>,
+        <https://viaf.org/viaf/1420170011251384810003>,
+        <https://www.wikidata.org/entity/Q123848623> .
 
 <https://sappho-digital.com/person/author_966c0c55> a ecrm:E21_Person ;
     rdfs:label "Hedwig Hülle"@de ;

@@ -2233,6 +2233,18 @@ Philosophen zu Sanssouci</title>
                     <author ref="https://www.wikidata.org/entity/Q76417" xml:id="author_1c326fef">Jakob Michael Reinhold Lenz</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
+                <bibl xml:id="bibl_88e7dc50">
+                    <title type="text">Der Seelenkrieg</title>
+                    <date type="created" when="1770">1770</date>
+                    <date type="published" when="1902">1902</date>
+                    <bibl xml:id="bibl_f85c4b6e">
+                        <title type="work">Sämmtliche Werke</title>
+                    </bibl>
+                    <author xml:id="author_6deae303">Wilhelm Heinse</author>
+                    <note type="genre">Lyrik</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q316015" xml:id="publisher_308da38b">Insel</publisher>
+                </bibl>
                 <bibl xml:id="bibl_276ee09f">
                     <title type="text">Lied der Sappho</title>
                     <date type="created" notAfter="1771">n. n. 1771</date>
@@ -3280,18 +3292,6 @@ Philosophen zu Sanssouci</title>
                     <publisher ref="https://www.wikidata.org/entity/Q120176375" xml:id="publisher_66a27542">Büreau für Literatur und Kunst</publisher>
                     <ref target="https://books.google.at/books?id=OYE6AAAAcAAJ&amp;pg=PA263&amp;dq=gleim+%22sappho+und+lalage%22&amp;hl=de&amp;sa=X&amp;ved=2ahUKEwi7ypfwmf33AhUeSvEDHe9pBeMQ6AF6BAgKEAI#v=onepage&amp;q&amp;f=false">https://books.google.at/books?id=OYE6AAAAcAAJ&amp;pg=PA263&amp;dq=gleim+%22sappho+und+lalage%22&amp;hl=de&amp;sa=X&amp;ved=2ahUKEwi7ypfwmf33AhUeSvEDHe9pBeMQ6AF6BAgKEAI#v=onepage&amp;q&amp;f=false</ref>
                 </bibl>
-                <bibl xml:id="bibl_88e7dc50">
-                    <title type="text">Der Seelenkrieg</title>
-                    <date type="created" notAfter="1803">n. n. 1803</date>
-                    <date type="published" when="1902">1902</date>
-                    <bibl xml:id="bibl_f85c4b6e">
-                        <title type="work">Sämmtliche Werke</title>
-                    </bibl>
-                    <author xml:id="author_6deae303">Wilhelm Heinse</author>
-                    <note type="genre">Lyrik</note>
-                    <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher ref="https://www.wikidata.org/entity/Q316015" xml:id="publisher_308da38b">Insel</publisher>
-                </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q19227814" xml:id="bibl_8c61167b">
                     <title type="text">Schönheitssinn</title>
                     <date type="published" when="1804">1804</date>
@@ -3355,7 +3355,7 @@ Philosophen zu Sanssouci</title>
                     <title type="text">Sapphos Schwärmerey</title>
                     <date type="published" when="1809">1809</date>
                     <bibl xml:id="bibl_aa132bb6">
-                        <title type="work">Gedichte</title>
+                        <title type="work">Gedichte, Bd. 2</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1341775" xml:id="author_6766d110">Engel Christine Westphalen</author>
                     <note type="genre">Lyrik</note>
@@ -3367,7 +3367,7 @@ Philosophen zu Sanssouci</title>
                     <title type="text">Sappho an Charons Nachen</title>
                     <date type="published" when="1809">1809</date>
                     <bibl xml:id="bibl_aa132bb6">
-                        <title type="work">Gedichte</title>
+                        <title type="work">Gedichte, Bd. 2</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1341775" xml:id="author_6766d110">Engel Christine Westphalen</author>
                     <note type="genre">Lyrik</note>
@@ -3385,7 +3385,7 @@ Philosophen zu Sanssouci</title>
                 <bibl xml:id="bibl_789c7076">
                     <title type="text">Er an Sie</title>
                     <date type="published" when="1809">1809</date>
-                    <bibl xml:id="bibl_80084ea1">
+                    <bibl xml:id="bibl_aa132bb6">
                         <title type="work">Gedichte, Bd. 2</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1341775" xml:id="author_6766d110">Engel Christine Westphalen</author>
@@ -3397,7 +3397,7 @@ Philosophen zu Sanssouci</title>
                 <bibl xml:id="bibl_de274127">
                     <title type="text">An eine Nachtigall</title>
                     <date type="published" when="1809">1809</date>
-                    <bibl xml:id="bibl_80084ea1">
+                    <bibl xml:id="bibl_aa132bb6">
                         <title type="work">Gedichte, Bd. 2</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1341775" xml:id="author_6766d110">Engel Christine Westphalen</author>
@@ -4262,6 +4262,18 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <publisher xml:id="publisher_8286ce96">Ebner</publisher>
                     <ref target="https://www.digitale-sammlungen.de/de/view/bsb10120083?page=292,293">https://www.digitale-sammlungen.de/de/view/bsb10120083?page=292,293</ref>
+                </bibl>
+                <bibl xml:id="bibl_fea98265">
+                    <title type="text">Zwei Schwestern sah ich heut geschmückt</title>
+                    <date type="published" when="1864">1864</date>
+                    <bibl xml:id="bibl_6d88865d">
+                        <title type="work">Gedichte und Gedenkblätter</title>
+                    </bibl>
+                    <author ref="https://www.wikidata.org/entity/Q77333" xml:id="author_361addef">Emanuel Geibel</author>
+                    <note type="genre">Lyrik</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q1136691" xml:id="publisher_d7432893">J. G. Cotta’sche Buchhandlung</publisher>
+                    <ref target="http://www.zeno.org/nid/20004800672">http://www.zeno.org/nid/20004800672</ref>
                 </bibl>
                 <bibl xml:id="bibl_fea98267">
                     <title type="text">Beim Mondesuntergange</title>
@@ -6188,7 +6200,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <publisher ref="https://www.wikidata.org/entity/Q2145655" xml:id="publisher_f13bea0a">Residenz</publisher>
                 </bibl>
                 <bibl xml:id="bibl_921425bb">
-                    <title type="text">Sappho</title>
+                    <title type="text">Sappho [56 Gedichte]</title>
                     <date type="published" when="1997">1997</date>
                     <bibl xml:id="bibl_dc80353f">
                         <title type="work">Manuskripte. Zeitschrift für Literatur, Kunst und Kritik</title>
@@ -6285,7 +6297,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <publisher xml:id="publisher_eabe67c3">Edition Thaleia</publisher>
                 </bibl>
                 <bibl xml:id="bibl_c2dd7f46">
-                    <title type="text">II PALADE [BLANKVERSE AUS WIEPERSDORF / GÖTTERBILDER]</title>
+                    <title type="text">II PALADE</title>
                     <date type="published" when="2002">2002</date>
                     <bibl xml:id="bibl_85ceac60">
                         <title type="work">Sand am Meer. Sinn- &amp; Stilübungen</title>
