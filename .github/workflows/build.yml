@@ -10,18 +10,24 @@ jobs:
     steps:
     - name: Perform Checkout
       uses: actions/checkout@v4
-    - name: Install Ant
+
+    - name: Set up Java 11
+      uses: actions/setup-java@v4
+      with:
+        distribution: temurin
+        java-version: '11'
+
+    - name: Install Ant + Ant-Contrib
       run: |
-        apt-get update && apt-get install openjdk-11-jre-headless ant -y --no-install-recommend
-    - name: Install Ant-Contrib
-      run: |
-        wget https://repo1.maven.org/maven2/ant-contrib/ant-contrib/1.0b3/ant-contrib-1.0b3.jar
-        mv ant-contrib-1.0b3.jar /usr/share/ant/lib
+        sudo apt-get update
+        sudo apt-get install -y --no-install-recommends ant ant-contrib
+
     - name: Prepare Data
       run: |
         ant -f ./build.xml
+
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{secrets.GITHUB_TOKEN}}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./html
