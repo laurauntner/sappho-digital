@@ -1470,6 +1470,11 @@
     ecrm:P138_represents <https://sappho-digital.com/expression/bibl_dc836aeb> ;
     rdfs:seeAlso <https://digitale.bibliothek.uni-halle.de/vd18/content/pageview/5449901> .
 
+<https://sappho-digital.com/digital/bibl_dc90edfe> a ecrm:E73_Information_Object ;
+    rdfs:label "Digital copy of Sappho. Drama in einem Aufzuge"@en ;
+    ecrm:P138_represents <https://sappho-digital.com/expression/bibl_dc90edfe> ;
+    rdfs:seeAlso <https://staging.dracor.org/ger/georg-von-preussen-sappho#text> .
+
 <https://sappho-digital.com/digital/bibl_dd084662> a ecrm:E73_Information_Object ;
     rdfs:label "Digital copy of An die untergehende Sonne. Als Thyrsis gegen Abend abgereist war, und die Nacht hindurch seine Reise fortsetzte. Den 1 Julius 1761"@en ;
     ecrm:P138_represents <https://sappho-digital.com/expression/bibl_dd084662> ;
@@ -34454,12 +34459,6 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_dbf48f68> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_dbf48f68> .
 
-<https://sappho-digital.com/expression/bibl_dc90edfe> a lrmoo:F2_Expression ;
-    rdfs:label "Sappho. Drama in einem Aufzuge"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_dc90edfe> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_dc90edfe> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_dc90edfe> .
-
 <https://sappho-digital.com/expression/bibl_dcf23926> a lrmoo:F2_Expression ;
     rdfs:label "Die Zuneigung"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_dcf23926> ;
@@ -37680,6 +37679,13 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_dc836aeb> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_dc836aeb> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_dc836aeb> .
+
+<https://sappho-digital.com/expression/bibl_dc90edfe> a lrmoo:F2_Expression ;
+    rdfs:label "Sappho. Drama in einem Aufzuge"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_dc90edfe> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_dc90edfe> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_dc90edfe> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_dc90edfe> .
 
 <https://sappho-digital.com/expression/bibl_dd084662> a lrmoo:F2_Expression ;
     rdfs:label "An die untergehende Sonne. Als Thyrsis gegen Abend abgereist war, und die Nacht hindurch seine Reise fortsetzte. Den 1 Julius 1761"@de ;

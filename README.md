@@ -25,9 +25,8 @@ Laura Untner: Sappho Digital. Die literarische Sappho-Rezeption im deutschsprach
 
 ---
 
-Run the app locally:
+Run the app locally with:
 ```
-sh shellscripts/dl_saxon.sh
 ant
 ```
 
@@ -35,3 +34,8 @@ ant
 
 **Color code**: `rgba(94, 23, 235)`  
 **Font**: Geist Sans
+
+---
+
+### SAXON-HE
+The projects includes Saxon-HE, which is licensed separately under the Mozilla Public License, Version 2.0 (MPL 2.0). See the dedicated [LICENSE.txt](https://github.com/laurauntner/sappho-digital/tree/main/saxon/notices/LICENSE.txt).
