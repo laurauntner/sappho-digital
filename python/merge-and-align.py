@@ -189,17 +189,17 @@ def add_alignments(g: Graph):
         g.add((FABIO.DigitalItem, SKOS.broadMatch, ECRM.E73_Information_Object))
 
     if any(g.triples((None, RDF.type, LRMOO.F1_Work))):
-        g.add((FABIO.Work, SKOS.broadMatch, LRMOO.F1_Work))
+        g.add((FABIO.Work, SKOS.closeMatch, LRMOO.F1_Work))
         g.add((FABIO.LiteraryArtisticWork, SKOS.broadMatch, LRMOO.F1_Work))
         g.add((ONTOPOETRY_CORE.Work, SKOS.closeMatch, LRMOO.F1_Work))
         g.add((ONTOPOETRY_CORE.PoeticWork, SKOS.broadMatch, LRMOO.F1_Work))
         g.add((URB.Work, SKOS.closeMatch, LRMOO.F1_Work))
 
     if any(g.triples((None, RDF.type, LRMOO.F2_Expression))):
-        g.add((FOAF.Document, SKOS.closeMatch, LRMOO.F2_Expression))
+        g.add((FOAF.Document, SKOS.broadMatch, LRMOO.F2_Expression))
         g.add((BIBO.Manuscript, SKOS.broadMatch, LRMOO.F2_Expression))
         g.add((DRACOR.play, SKOS.broadMatch, LRMOO.F2_Expression))
-        g.add((FABIO.Expression, SKOS.broadMatch, LRMOO.F2_Expression))
+        g.add((FABIO.Expression, SKOS.closeMatch, LRMOO.F2_Expression))
         g.add((INTERTEXT_TX.Text, SKOS.broadMatch, LRMOO.F2_Expression))
         g.add((INTERTEXT_TX.SingleText, SKOS.broadMatch, LRMOO.F2_Expression))
         g.add((INTERTEXT_AF.Work, SKOS.broadMatch, LRMOO.F2_Expression))
@@ -215,13 +215,13 @@ def add_alignments(g: Graph):
     if any(g.triples((None, RDF.type, LRMOO.F3_Manifestation))):
         g.add((BIBO.Book, SKOS.broadMatch, LRMOO.F3_Manifestation))
         g.add((DC.BibliographicResource, SKOS.broadMatch, LRMOO.F3_Manifestation))
-        g.add((FABIO.Manifestation, SKOS.broadMatch, LRMOO.F3_Manifestation))
-        g.add((FOAF.Document, SKOS.closeMatch, LRMOO.F3_Manifestation))
+        g.add((FABIO.Manifestation, SKOS.closeMatch, LRMOO.F3_Manifestation))
+        g.add((FOAF.Document, SKOS.broadMatch, LRMOO.F3_Manifestation))
         g.add((URB.Manifestation, SKOS.closeMatch, LRMOO.F3_Manifestation))
 
     if any(g.triples((None, RDF.type, LRMOO.F5_Item))):
-        g.add((FABIO.Item, SKOS.broadMatch, LRMOO.F5_Item))
-        g.add((FOAF.Document, SKOS.closeMatch, LRMOO.F5_Item))
+        g.add((FABIO.Item, SKOS.closeMatch, LRMOO.F5_Item))
+        g.add((FOAF.Document, SKOS.narrowMatch, LRMOO.F5_Item))
 
     if any(g.triples((None, RDF.type, LRMOO.F27_Work_Creation))):
         g.add((ONTOPOETRY_CORE.WorkConception, SKOS.closeMatch, LRMOO.F27_Work_Creation))
@@ -292,20 +292,21 @@ def add_alignments(g: Graph):
 
     ## Properties ##
     if any(g.triples((None, ECRM.P1_is_identified_by, None))):
-        g.add((DC.identifier, SKOS.broadMatch, ECRM.P1_is_identified_by))
+        g.add((DC.identifier, SKOS.closeMatch, ECRM.P1_is_identified_by))
         g.add((URW.hasIdentifier, SKOS.closeMatch, ECRM.P1_is_identified_by))
 
     if any(g.triples((None, ECRM.P2_has_type, None))):
-        g.add((DC.type, SKOS.broadMatch, ECRM.P2_has_type))
+        g.add((DC.type, SKOS.closeMatch, ECRM.P2_has_type))
         g.add((DRACOR.has_genre, SKOS.broadMatch, ECRM.P2_has_type))
         g.add((FOAF.gender, SKOS.broadMatch, ECRM.P2_has_type))
         g.add((MIMOTEXT.P12, SKOS.broadMatch, ECRM.P2_has_type))  # genre
         g.add((ONTOPOETRY_CORE.gender, SKOS.broadMatch, ECRM.P2_has_type))
         g.add((ONTOPOETRY_CORE.genre, SKOS.broadMatch, ECRM.P2_has_type))
         g.add((SCHEMA.genre, SKOS.broadMatch, ECRM.P2_has_type))
+        g.add((URW.gender, SKOS.broadMatch, ECRM.P2_has_type))
 
     if any(g.triples((None, ECRM["P4_has_time-span"], None))):
-        g.add((DC.date, SKOS.broadMatch, ECRM["P4_has_time-span"]))
+        g.add((DC.date, SKOS.closeMatch, ECRM["P4_has_time-span"]))
         g.add((DC.created, SKOS.broadMatch, ECRM["P4_has_time-span"]))
         g.add((DC.dateCopyrighted, SKOS.broadMatch, ECRM["P4_has_time-span"]))
         g.add((DRACOR.printYear, SKOS.broadMatch, ECRM["P4_has_time-span"]))
@@ -358,12 +359,12 @@ def add_alignments(g: Graph):
         g.add((ONTOPOETRY_CORE.diedIn, SKOS.closeMatch, ECRM.P100i_died_in))
 
     if any(g.triples((None, ECRM.P102_has_title, None))):
-        g.add((DC.title, SKOS.broadMatch, ECRM.P102_has_title))
-        g.add((MIMOTEXT.P4, SKOS.broadMatch, ECRM.P102_has_title))  # title
+        g.add((DC.title, SKOS.closeMatch, ECRM.P102_has_title))
+        g.add((MIMOTEXT.P4, SKOS.closeMatch, ECRM.P102_has_title))  # title
 
     if any(g.triples((None, ECRM.P131_is_identified_by, None))):
-        g.add((FOAF.name, SKOS.broadMatch, ECRM.P131_is_identified_by))
-        g.add((MIMOTEXT.P8, SKOS.broadMatch, ECRM.P131_is_identified_by))  # name
+        g.add((FOAF.name, SKOS.closeMatch, ECRM.P131_is_identified_by))
+        g.add((MIMOTEXT.P8, SKOS.closeMatch, ECRM.P131_is_identified_by))  # name
 
     if any(g.triples((None, ECRM.P138i_has_representation, None))):
         g.add((FOAF.img, SKOS.broadMatch, ECRM.P138i_has_representation))
@@ -373,18 +374,13 @@ def add_alignments(g: Graph):
         g.add((URB.realization, SKOS.closeMatch, LRMOO.R3_realises))
 
     if any(g.triples((None, LRMOO.R3_is_realised_in, None))):
-        g.add((FABIO.realization, SKOS.closeMatch, LRMOO.R3_is_realised_in))
         g.add((URB.realizationOf, SKOS.closeMatch, LRMOO.R3_is_realised_in))
 
     if any(g.triples((None, LRMOO.R4_embodies, None))):
         g.add((URB.embodimentOf, SKOS.closeMatch, LRMOO.R4_embodies))
 
     if any(g.triples((None, LRMOO.R4i_is_embodied_in, None))):
-        g.add((FABIO.embodiment, SKOS.closeMatch, LRMOO.R4i_is_embodied_in))
         g.add((URB.embodiment, SKOS.closeMatch, LRMOO.R4i_is_embodied_in))
-
-    if any(g.triples((None, LRMOO.R7i_is_exemplified_by, None))):
-        g.add((FABIO.exemplar, SKOS.closeMatch, LRMOO.R7i_is_exemplified_by))
 
     if any(g.triples((None, LRMOO.R16_created, None))):
         g.add((ONTOPOETRY_CORE.initiated, SKOS.closeMatch, LRMOO.R16_created))
@@ -508,7 +504,6 @@ def add_alignments(g: Graph):
         g.add((SAPPHO_PROP.about, SKOS.closeMatch, FOAF.topic))
         g.add((SAPPHO_PROP.about, SKOS.closeMatch, MIMOTEXT.P36))
         g.add((SAPPHO_PROP.about, SKOS.closeMatch, SCHEMA.about))
-        g.add((SAPPHO_PROP.about, SKOS.closeMatch, URW.hasSubject))
         g.add((SAPPHO_PROP.about, RDFS.domain, LRMOO.F2_Expression))
         g.add((SAPPHO_PROP.about, RDFS.range, INTRO.INT_Topic))
 
