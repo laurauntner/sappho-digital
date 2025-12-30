@@ -502,7 +502,7 @@ def add_alignments(g: Graph):
         g.add((SAPPHO_PROP.about, OWL.propertyChainAxiom, b_about))
         g.add((SAPPHO_PROP.about, SKOS.closeMatch, DC.subject))
         g.add((SAPPHO_PROP.about, SKOS.closeMatch, FOAF.topic))
-        g.add((SAPPHO_PROP.about, SKOS.closeMatch, MIMOTEXT.P36))
+        g.add((SAPPHO_PROP.about, SKOS.closeMatch, MIMOTEXT.P36)) # about
         g.add((SAPPHO_PROP.about, SKOS.closeMatch, SCHEMA.about))
         g.add((SAPPHO_PROP.about, RDFS.domain, LRMOO.F2_Expression))
         g.add((SAPPHO_PROP.about, RDFS.range, INTRO.INT_Topic))
