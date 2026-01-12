@@ -185,7 +185,6 @@ def add_alignments(g: Graph):
     if any(g.triples((None, RDF.type, LRMOO.F1_Work))):
         g.add((FABIO.Work, SKOS.closeMatch, LRMOO.F1_Work))
         g.add((FABIO.LiteraryArtisticWork, SKOS.broadMatch, LRMOO.F1_Work))
-        g.add((POSTDATA_CORE.Work, SKOS.closeMatch, LRMOO.F1_Work))
         g.add((POSTDATA_CORE.PoeticWork, SKOS.broadMatch, LRMOO.F1_Work))
         g.add((URB.Work, SKOS.closeMatch, LRMOO.F1_Work))
 
