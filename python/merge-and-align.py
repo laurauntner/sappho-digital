@@ -159,8 +159,9 @@ def add_alignments(g: Graph):
         g.add((FOAF.Image, SKOS.closeMatch, ECRM.E38_Image))
 
     if any(g.triples((None, RDF.type, ECRM.E40_Legal_Body))):
-        g.add((FOAF.Agent, SKOS.closeMatch, ECRM.E40_Legal_Body))
+        g.add((FOAF.Agent, SKOS.narrowMatch, ECRM.E40_Legal_Body))
         g.add((POSTDATA_CORE.Organisation, SKOS.broadMatch, ECRM.E40_Legal_Body))
+        g.add((POSTDATA_CORE.Organization, SKOS.broadMatch, ECRM.E40_Legal_Body))
         g.add((URW.Organization, SKOS.broadMatch, ECRM.E40_Legal_Body))
         g.add((URW.Publisher, SKOS.broadMatch, ECRM.E40_Legal_Body))
 
@@ -215,6 +216,7 @@ def add_alignments(g: Graph):
 
     if any(g.triples((None, RDF.type, INTRO.INT1_Segment))):
         g.add((INTERTEXT_AF.Segment, SKOS.broadMatch, INTRO.INT1_Segment))
+        g.add((POSTDATA_CORE.TextUnit, SKOS.broadMatch, INTRO.INT1_Segment))
 
     if any(g.triples((None, RDF.type, INTRO.INT2_ActualizationOfFeature))):
         g.add((FRBROO.F38_Character, SKOS.broadMatch, INTRO.INT2_ActualizationOfFeature))
@@ -224,7 +226,7 @@ def add_alignments(g: Graph):
         g.add((GOLEM.G7_Narrative_Sequence, SKOS.broadMatch, INTRO.INT2_ActualizationOfFeature))
 
     if any(g.triples((None, RDF.type, INTRO.INT4_Feature))):
-        g.add((INTERTEXT_AB.Mediator, SKOS.closeMatch, INTRO.INT4_Feature))
+        g.add((INTERTEXT_AB.Mediator, SKOS.narrowMatch, INTRO.INT4_Feature))
         g.add((GOLEM.G9_Narrative_Unit, SKOS.broadMatch, INTRO.INT4_Feature))
 
     if any(g.triples((None, RDF.type, INTRO.INT6_Architext))):
@@ -234,23 +236,24 @@ def add_alignments(g: Graph):
         g.add((INTERTEXT_AB.IntertexualSpecification, SKOS.closeMatch, INTRO.INT11_TypeOfInterrelation))
 
     if any(g.triples((None, RDF.type, INTRO.INT21_TextPassage))):
-        g.add((DOCO.Part, SKOS.closeMatch, INTRO.INT21_TextPassage))
-        g.add((DOCO.BackMatter, SKOS.closeMatch, INTRO.INT21_TextPassage))
-        g.add((DOCO.BodyMatter, SKOS.closeMatch, INTRO.INT21_TextPassage))
-        g.add((DOCO.CaptionedBox, SKOS.closeMatch, INTRO.INT21_TextPassage))
-        g.add((DOCO.Chapter, SKOS.closeMatch, INTRO.INT21_TextPassage))
-        g.add((DOCO.ComplexRunInQuotation, SKOS.closeMatch, INTRO.INT21_TextPassage))
-        g.add((DOCO.Footnote, SKOS.closeMatch, INTRO.INT21_TextPassage))
-        g.add((DOCO.Formula, SKOS.closeMatch, INTRO.INT21_TextPassage))
-        g.add((DOCO.FormulaBox, SKOS.closeMatch, INTRO.INT21_TextPassage))
-        g.add((DOCO.FrontMatter, SKOS.closeMatch, INTRO.INT21_TextPassage))
-        g.add((DOCO.List, SKOS.closeMatch, INTRO.INT21_TextPassage))
-        g.add((DOCO.Section, SKOS.closeMatch, INTRO.INT21_TextPassage))
-        g.add((DOCO.Table, SKOS.closeMatch, INTRO.INT21_TextPassage))
-        g.add((INTERTEXT_AB.Mediator, SKOS.closeMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.Part, SKOS.narrowMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.BackMatter, SKOS.narrowMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.BodyMatter, SKOS.narrowMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.CaptionedBox, SKOS.narrowMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.Chapter, SKOS.narrowMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.ComplexRunInQuotation, SKOS.narrowMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.Footnote, SKOS.narrowMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.Formula, SKOS.narrowMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.FormulaBox, SKOS.narrowMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.FrontMatter, SKOS.narrowMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.List, SKOS.narrowMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.Section, SKOS.narrowMatch, INTRO.INT21_TextPassage))
+        g.add((DOCO.Table, SKOS.narrowMatch, INTRO.INT21_TextPassage))
+        g.add((INTERTEXT_AB.Mediator, SKOS.narrowMatch, INTRO.INT21_TextPassage))
         g.add((BIBO.Quote, SKOS.broadMatch, INTRO.INT21_TextPassage))
         g.add((FABIO.Quotation, SKOS.broadMatch, INTRO.INT21_TextPassage))
         g.add((INTERTEXT_TX.TextSegment, SKOS.closeMatch, INTRO.INT21_TextPassage))
+        g.add((POSTDATA_CORE.TextUnit, SKOS.closeMatch, INTRO.INT21_TextPassage))
 
     if any(g.triples((None, RDF.type, INTRO.INT31_IntertextualRelation))):
         g.add((INTERTEXT_AB.IntertexualRelation, SKOS.closeMatch, INTRO.INT31_IntertextualRelation))
@@ -267,7 +270,7 @@ def add_alignments(g: Graph):
         g.add((GOLEM.G14_Narrative_Stoff, SKOS.closeMatch, INTRO.INT_Plot))
 
     if any(g.triples((None, RDF.type, INTRO.INT_Motif))):
-        g.add((INTERTEXT_MT.Motive, SKOS.closeMatch, INTRO.INT_Motif))
+        g.add((INTERTEXT_MT.Motive, SKOS.narrowMatch, INTRO.INT_Motif))
 
     if any(g.triples((None, RDF.type, INTRO.INT_Topic))):
         g.add((MIMOTEXT.Q20, SKOS.closeMatch, INTRO.INT_Topic))  # thematic concept
@@ -294,6 +297,9 @@ def add_alignments(g: Graph):
         g.add((DRACOR.printYear, SKOS.broadMatch, ECRM["P4_has_time-span"]))
         g.add((DRACOR.writtenYear, SKOS.broadMatch, ECRM["P4_has_time-span"]))
         g.add((MIMOTEXT.P9, SKOS.broadMatch, ECRM["P4_has_time-span"]))  # publication date
+        g.add((POSTDATA_CORE.date, SKOS.closeMatch, ECRM["P4_has_time-span"]))
+        g.add((POSTDATA_CORE.birthDate, SKOS.broadMatch, ECRM["P4_has_time-span"]))
+        g.add((POSTDATA_CORE.deathDate, SKOS.broadMatch, ECRM["P4_has_time-span"]))
         g.add((SCHEMA.dateCreated, SKOS.broadMatch, ECRM["P4_has_time-span"]))
         g.add((SCHEMA.datePublished, SKOS.broadMatch, ECRM["P4_has_time-span"]))
         g.add((URW.wasPublishedWhen, SKOS.broadMatch, ECRM["P4_has_time-span"]))
@@ -301,15 +307,23 @@ def add_alignments(g: Graph):
 
     if any(g.triples((None, ECRM.P7_took_place_at, None))):
         g.add((FABIO.hasPlaceOfPublication, SKOS.broadMatch, ECRM.P7_took_place_at))
-        g.add((MIMOTEXT.P10, SKOS.broadMatch, ECRM.P7_took_place_at))  # publication place
+        g.add((MIMOTEXT.P10, SKOS.broadMatch, ECRM.P7_took_place_at)) # publication place
+        g.add((POSTDATA_CORE.birthPlace, SKOS.broadMatch, ECRM.P7_took_place_at))
+        g.add((POSTDATA_CORE.deathPlace, SKOS.broadMatch, ECRM.P7_took_place_at))
         g.add((SCHEMA.locationCreated, SKOS.broadMatch, ECRM.P7_took_place_at))
         g.add((URW.wasPublishedWhere, SKOS.broadMatch, ECRM.P7_took_place_at))
+
+    if any(g.triples((None, ECRM.P7i_witnessed, None))):
+        g.add((POSTDATA_CORE.birthPlaceOf, SKOS.broadMatch, ECRM.P7i_witnessed))
+        g.add((POSTDATA_CORE.deathPlaceOf, SKOS.broadMatch, ECRM.P7i_witnessed))
 
     if any(g.triples((None, ECRM.P14_carried_out_by, None))):
         g.add((BIBO.editor, SKOS.broadMatch, ECRM.P14_carried_out_by))
         g.add((DRACOR.has_author, SKOS.broadMatch, ECRM.P14_carried_out_by))
         g.add((FOAF.maker, SKOS.broadMatch, ECRM.P14_carried_out_by))
         g.add((MIMOTEXT.P5, SKOS.broadMatch, ECRM.P14_carried_out_by))  # has author
+        g.add((POSTDATA_CORE.hasCreator, SKOS.broadMatch, ECRM.P14_carried_out_by))
+        g.add((POSTDATA_CORE.hasEditor, SKOS.broadMatch, ECRM.P14_carried_out_by))
         g.add((SCHEMA.author, SKOS.broadMatch, ECRM.P14_carried_out_by))
         g.add((SCHEMA.creator, SKOS.broadMatch, ECRM.P14_carried_out_by))
         g.add((URW.wasPublishedBy, SKOS.broadMatch, ECRM.P14_carried_out_by))
@@ -319,6 +333,8 @@ def add_alignments(g: Graph):
         g.add((DC.publisher, SKOS.broadMatch, ECRM.P14i_performed))
         g.add((FOAF.made, SKOS.broadMatch, ECRM.P14i_performed))
         g.add((MIMOTEXT.P7, SKOS.broadMatch, ECRM.P14i_performed))  # author of
+        g.add((POSTDATA_CORE.isCreatorOf, SKOS.broadMatch, ECRM.P14i_performed))
+        g.add((POSTDATA_CORE.editorOf, SKOS.broadMatch, ECRM.P14i_performed))
 
     if any(g.triples((None, ECRM.P102_has_title, None))):
         g.add((DC.title, SKOS.closeMatch, ECRM.P102_has_title))
@@ -355,13 +371,14 @@ def add_alignments(g: Graph):
         g.add((POSTDATA_ANALYSIS.typeOfIntertextuality, SKOS.broadMatch, INTRO.R19i_isTypeOf))
 
     if any(g.triples((None, INTRO.R22i_relationIsBasedOnSimilarity, None))):
-        g.add((INTERTEXT_AB.mediatedBy, SKOS.closeMatch, INTRO.R22i_relationIsBasedOnSimilarity))
+        g.add((INTERTEXT_AB.mediatedBy, SKOS.narrowMatch, INTRO.R22i_relationIsBasedOnSimilarity))
 
     if any(g.triples((None, INTRO.R24_hasRelatedEntity, None))):
-        g.add((INTERTEXT_AB.mediatedBy, SKOS.closeMatch, INTRO.R24_hasRelatedEntity))
+        g.add((INTERTEXT_AB.mediatedBy, SKOS.narrowMatch, INTRO.R24_hasRelatedEntity))
 
     if any(g.triples((None, INTRO.R30_hasTextPassage, None))):
-        g.add((DC.hasPart, SKOS.closeMatch, INTRO.R30_hasTextPassage))
+        g.add((DC.hasPart, SKOS.narrowMatch, INTRO.R30_hasTextPassage))
+        g.add((POSTDATA_CORE.hasTextUnit, SKOS.closeMatch, INTRO.R30_hasTextPassage))
 
     if any(g.triples((None, PROV.wasDerivedFrom, None))):
         g.add((DC.source, SKOS.closeMatch, PROV.wasDerivedFrom))
@@ -375,6 +392,8 @@ def add_alignments(g: Graph):
         g.add((SAPPHO_PROP.has_manifestation, RDF.type, OWL.ObjectProperty))
         g.add((SAPPHO_PROP.has_manifestation, RDFS.label, Literal("has manifestation", lang="en")))
         g.add((SAPPHO_PROP.has_manifestation, SKOS.closeMatch, FABIO.hasManifestation))
+        g.add((SAPPHO_PROP.has_manifestation, SKOS.closeMatch, POSTDATA_CORE.isRealisedThrough))
+        g.add((POSTDATA_CORE.isRealisedThrough, OWL.inverseOf, POSTDATA_CORE.realises))
         g.add((SAPPHO_PROP.has_manifestation, SKOS.closeMatch, URB.manifestation))
         g.add((SAPPHO_PROP.has_manifestation, RDFS.domain, LRMOO.F1_Work))
         g.add((SAPPHO_PROP.has_manifestation, RDFS.range, LRMOO.F3_Manifestation))
