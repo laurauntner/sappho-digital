@@ -2,9 +2,12 @@ from rdflib import Graph, URIRef
 from rdflib.namespace import SKOS, RDF
 from pathlib import Path
 from typing import Optional
+import os
 
 # Paths
-data_dir = Path("../data/rdf")
+HERE = Path(__file__).resolve().parent
+data_dir = (HERE / "../data/rdf").resolve()
+vocabs_path = (HERE / "../html/vocab/vocab.ttl").resolve()
 
 files = [
     "authors",
@@ -12,11 +15,8 @@ files = [
     "fragments",
     "analysis",
     "relations",
-    "sappho-reception",
-    "vocab"
+    "sappho-reception"
 ]
-
-vocabs_path = data_dir / "vocab.ttl"
 
 # Types
 GROUP_KEYS = ["motif", "place", "person", "phrase", "plot", "topic", "work"]
@@ -100,7 +100,7 @@ def analyze_vocabs(vocabs_file: Path):
             per_group[grp]["associative"] += a_count
             per_group[grp]["wikidata_links"] += w_count
 
-    print("\n=== vocabs.ttl – SKOS-Auswertung ===")
+    print("\n=== Vokabular ===")
     print(f"Tripel gesamt: {triples_total}\n")
 
     print(f"Anzahl SKOS-Konzepte gesamt: {total_concepts}")
@@ -133,7 +133,7 @@ def analyze_vocabs(vocabs_file: Path):
 # Main
 def main():
     total = 0
-    print("=== Tripel-Zählung ===")
+    print("=== Instanzen ===")
     for name in files:
         ttl_path = data_dir / f"{name}.ttl"
         if ttl_path.exists():

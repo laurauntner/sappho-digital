@@ -15,7 +15,7 @@ XML_DIR = Path("../../doktorat/Diss/Sappho-Rezeption/XML")
 WORKS_TTL = Path("../data/rdf/works.ttl")
 FRAGMENTS_TTL = Path("../data/rdf/fragments.ttl")
 OUT_TTL = Path("../data/rdf/analysis.ttl")
-VOCAB_TTL = Path("../data/rdf/vocab.ttl")
+VOCAB_TTL = Path("../html/vocab/vocab.ttl")
 
 BASE = "https://sappho-digital.com/"
 
