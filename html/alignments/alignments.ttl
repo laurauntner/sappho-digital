@@ -1,0 +1,33 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<https://sappho-digital.com/alignments/>
+  a owl:Ontology "Sappho Digital Alignments"@en;
+  owl:imports
+    <http://purl.org/ontology/bibo/> ,
+    <http://purl.org/spar/cito/> ,
+    <http://www.cidoc-crm.org/cidoc-crm/> ,
+    <http://purl.org/dc/terms/> ,
+    <http://purl.org/spar/doco/> ,
+    <http://dracor.org/ontology#> ,
+    <http://erlangen-crm.org/current/> ,
+    <http://erlangen-crm.org/efrbroo/> ,
+    <http://purl.org/spar/fabio/> ,
+    <http://xmlns.com/foaf/0.1/> ,
+    <http://iflastandards.info/ns/fr/frbr/frbroo/> ,
+    <https://ontology.golemlab.eu/> ,
+    <https://intertextuality.org/abstract#> ,
+    <https://intertextuality.org/extensions/artifacts#> ,
+    <https://intertextuality.org/extensions/motifs#> ,
+    <https://intertextuality.org/extensions/text#> ,
+    <https://w3id.org/lso/intro/currentbeta#> ,
+    <http://www.cidoc-crm.org/lrmoo/> ,
+    <http://data.mimotext.uni-trier.de/entity/> ,
+    <http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#> ,
+    <http://postdata.linhd.uned.es/ontology/postdata-core#> ,
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ,
+    <http://www.w3.org/2000/01/rdf-schema#> ,
+    <https://sappho-digital.com/property/> ,
+    <https://schema.org/> ,
+    <http://www.w3.org/2004/02/skos/core#> .
+
+    ## alignments ## 
