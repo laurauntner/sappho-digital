@@ -43,13 +43,18 @@ sappho_prop:has_manifestation
   rdfs:range lrmoo:F3_Manifestation ;
   owl:propertyChainAxiom ( lrmoo:R3_is_realised_in lrmoo:R4i_is_embodied_in ) .
 
+sappho_prop:refers_to_helper
+  a owl:ObjectProperty ;
+  rdfs:label "Helper: refers_to used in property chains"@en ;
+  rdfs:subPropertyOf ecrm:P67_refers_to .
+
 sappho_prop:expr_references
   a owl:ObjectProperty ;
   rdfs:label "Reference from expression to person, place or expression"@en ;
   rdfs:domain lrmoo:F2_Expression ;
   rdfs:range ecrm:E21_Person, ecrm:E53_Place, lrmoo:F2_Expression ;
   rdfs:subPropertyOf ecrm:P67_refers_to ;
-  owl:propertyChainAxiom ( intro:R18_showsActualization ecrm:P67_refers_to ) .
+  owl:propertyChainAxiom ( intro:R18_showsActualization sappho_prop:refers_to_helper ) .
 
 sappho_prop:referenced_by_expr
   a owl:ObjectProperty ;
