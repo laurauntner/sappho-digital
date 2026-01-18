@@ -20,13 +20,13 @@
 @prefix postdata_analysis: <http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#> .
 @prefix postdata_core: <http://postdata.linhd.uned.es/ontology/postdata-core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sappho_prop: <https://sappho-digital.com/ontology/> .
+@prefix sappho_prop: <https://w3id.org/sappho-digital/ontology/> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix urb: <https://purl.archive.org/urbooks#> .
 @prefix urw: <https://purl.archive.org/urwriters#> .
 
-<https://sappho-digital.com/alignments/> a owl:Ontology ;
+<https://w3id.org/sappho-digital/alignments/> a owl:Ontology ;
     rdfs:label "Sappho Digital Alignments"@en ;
     owl:imports mimotext:,
         dracor:,

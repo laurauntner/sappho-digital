@@ -5,9 +5,9 @@
 @prefix ecrm: <http://erlangen-crm.org/current/> .
 @prefix intro: <https://w3id.org/lso/intro/currentbeta#> .
 @prefix lrmoo: <http://www.cidoc-crm.org/lrmoo/> .
-@prefix sappho_prop: <https://sappho-digital.com/ontology/> .
+@prefix sappho_prop: <https://w3id.org/sappho-digital/ontology/> .
 
-<https://sappho-digital.com/ontology/>
+<https://w3id.org/sappho-digital/ontology/>
   a owl:Ontology ;
   rdfs:label "Sappho Digital Ontology"@en ;
   owl:imports

@@ -79,14 +79,14 @@ else:
 
 # Heuristik: Präfixe je Kategorie
 CAT_TO_VOC_PREFIX = {
-    "motiv":  "https://sappho-digital.com/vocab/motif_",
-    "stoff":  "https://sappho-digital.com/vocab/plot_",
-    "thema":  "https://sappho-digital.com/vocab/topic_",
-    "werk":   "https://sappho-digital.com/vocab/work_",
-    "ort":    "https://sappho-digital.com/vocab/place_",
-    "person": "https://sappho-digital.com/vocab/person_",
-    "phrase": "https://sappho-digital.com/vocab/phrase_",
-    "werk":     "https://sappho-digital.com/vocab/work_",
+    "motiv":  "https://w3id.org/sappho-digital/vocab/motif_",
+    "stoff":  "https://w3id.org/sappho-digital/vocab/plot_",
+    "thema":  "https://w3id.org/sappho-digital/vocab/topic_",
+    "werk":   "https://w3id.org/sappho-digital/vocab/work_",
+    "ort":    "https://w3id.org/sappho-digital/vocab/place_",
+    "person": "https://w3id.org/sappho-digital /vocab/person_",
+    "phrase": "https://w3id.org/sappho-digital/vocab/phrase_",
+    "werk":     "https://w3id.org/sappho-digital/vocab/work_",
 }
 
 # Zielpfade (ohne /vocab/) für lokale URIs je Kategorie

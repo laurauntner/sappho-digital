@@ -25948,19 +25948,19 @@
 
 <https://sappho-digital.com/textpassage/phrase_108f0ac68025102d> a intro:INT21_TextPassage ;
     rdfs:label "Textpassage: Goldner als Gold"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/phrase_108f0ac68025102d> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/phrase_108f0ac68025102d> ;
     intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_407a0d29>,
         <https://sappho-digital.com/expression/bibl_sappho_156> .
 
 <https://sappho-digital.com/textpassage/phrase_42853034668c7b29> a intro:INT21_TextPassage ;
     rdfs:label "Textpassage: Grüner als Gras"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/phrase_42853034668c7b29> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/phrase_42853034668c7b29> ;
     intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_5283cfa8>,
         <https://sappho-digital.com/expression/bibl_sappho_31> .
 
 <https://sappho-digital.com/textpassage/phrase_8447592d89ddd5b5> a intro:INT21_TextPassage ;
     rdfs:label "Textpassage: Gliederlösend"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/phrase_8447592d89ddd5b5> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/phrase_8447592d89ddd5b5> ;
     intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_6fcff98a>,
         <https://sappho-digital.com/expression/bibl_sappho_130> .
 
@@ -35069,31 +35069,31 @@
 
 <https://sappho-digital.com/feature/motif/motif_01c3eb8edb59de39> a intro:INT_Motif ;
     rdfs:label "Motif: Morgenrot"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_01c3eb8edb59de39> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_01c3eb8edb59de39> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_b53e5151_motif_01c3eb8edb59de39>,
         <https://sappho-digital.com/actualization/motif/bibl_ba71b2e5_motif_01c3eb8edb59de39> .
 
 <https://sappho-digital.com/feature/motif/motif_04b4fca3d10aab24> a intro:INT_Motif ;
     rdfs:label "Motif: Gras"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_04b4fca3d10aab24> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_04b4fca3d10aab24> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_5ca5f0b6_motif_04b4fca3d10aab24>,
         <https://sappho-digital.com/actualization/motif/bibl_efcd32b0_motif_04b4fca3d10aab24> .
 
 <https://sappho-digital.com/feature/motif/motif_162e6dfcee6ada53> a intro:INT_Motif ;
     rdfs:label "Motif: Leidenschaft"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_162e6dfcee6ada53> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_162e6dfcee6ada53> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_b705febf_motif_162e6dfcee6ada53>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_163_motif_162e6dfcee6ada53> .
 
 <https://sappho-digital.com/feature/motif/motif_190541ca0caf5c3f> a intro:INT_Motif ;
     rdfs:label "Motif: Trauer"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_190541ca0caf5c3f> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_190541ca0caf5c3f> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_2e3cd65f_motif_190541ca0caf5c3f>,
         <https://sappho-digital.com/actualization/motif/bibl_31f96313_motif_190541ca0caf5c3f> .
 
 <https://sappho-digital.com/feature/motif/motif_1cd4207b96382696> a intro:INT_Motif ;
     rdfs:label "Motif: Vergessen"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_1cd4207b96382696> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_1cd4207b96382696> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0434022c_motif_1cd4207b96382696>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_25_motif_1cd4207b96382696> .
 
@@ -35104,139 +35104,139 @@
 
 <https://sappho-digital.com/feature/motif/motif_43ccd28d178d02b7> a intro:INT_Motif ;
     rdfs:label "Motif: Gift"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_43ccd28d178d02b7> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_43ccd28d178d02b7> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_9ade79f7_motif_43ccd28d178d02b7>,
         <https://sappho-digital.com/actualization/motif/bibl_e2598fbd_motif_43ccd28d178d02b7> .
 
 <https://sappho-digital.com/feature/motif/motif_473b30ea708768d2> a intro:INT_Motif ;
     rdfs:label "Motif: Sturm"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_473b30ea708768d2> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_473b30ea708768d2> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_5ca5f0b6_motif_473b30ea708768d2>,
         <https://sappho-digital.com/actualization/motif/bibl_5f1d7d40_motif_473b30ea708768d2> .
 
 <https://sappho-digital.com/feature/motif/motif_499787c4944b0ba5> a intro:INT_Motif ;
     rdfs:label "Motif: Nachtigall"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_499787c4944b0ba5> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_499787c4944b0ba5> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_5ca5f0b6_motif_499787c4944b0ba5>,
         <https://sappho-digital.com/actualization/motif/bibl_c908fde2_motif_499787c4944b0ba5> .
 
 <https://sappho-digital.com/feature/motif/motif_4facb4bf5a22499b> a intro:INT_Motif ;
     rdfs:label "Motif: Brunnen"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_4facb4bf5a22499b> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_4facb4bf5a22499b> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_936bf0a5_motif_4facb4bf5a22499b>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_44_motif_4facb4bf5a22499b> .
 
 <https://sappho-digital.com/feature/motif/motif_580d75823aa2f127> a intro:INT_Motif ;
     rdfs:label "Motif: Neid"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_580d75823aa2f127> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_580d75823aa2f127> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_8fc572e2_motif_580d75823aa2f127>,
         <https://sappho-digital.com/actualization/motif/bibl_936bf0a5_motif_580d75823aa2f127> .
 
 <https://sappho-digital.com/feature/motif/motif_5d06c1eb322d00b7> a intro:INT_Motif ;
     rdfs:label "Motif: Laute"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_5d06c1eb322d00b7> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_5d06c1eb322d00b7> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_b53a5020_motif_5d06c1eb322d00b7>,
         <https://sappho-digital.com/actualization/motif/bibl_e58bccae_motif_5d06c1eb322d00b7> .
 
 <https://sappho-digital.com/feature/motif/motif_61d8a11fb3de5da8> a intro:INT_Motif ;
     rdfs:label "Motif: Finger"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_61d8a11fb3de5da8> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_61d8a11fb3de5da8> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_9ade79f7_motif_61d8a11fb3de5da8>,
         <https://sappho-digital.com/actualization/motif/bibl_b6b98051_motif_61d8a11fb3de5da8> .
 
 <https://sappho-digital.com/feature/motif/motif_65c67fdcba66886b> a intro:INT_Motif ;
     rdfs:label "Motif: Sprachlosigkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_65c67fdcba66886b> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_65c67fdcba66886b> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_5283cfa8_motif_65c67fdcba66886b>,
         <https://sappho-digital.com/actualization/motif/bibl_78d95d8c_motif_65c67fdcba66886b> .
 
 <https://sappho-digital.com/feature/motif/motif_68f3d8712ddf8d70> a intro:INT_Motif ;
     rdfs:label "Motif: Religion"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_68f3d8712ddf8d70> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_68f3d8712ddf8d70> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_1bf78f84_motif_68f3d8712ddf8d70>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_9_motif_68f3d8712ddf8d70> .
 
 <https://sappho-digital.com/feature/motif/motif_7205babaca933dc4> a intro:INT_Motif ;
     rdfs:label "Motif: Unglückliche Liebe"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_7205babaca933dc4> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_7205babaca933dc4> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_9ef5617d_motif_7205babaca933dc4>,
         <https://sappho-digital.com/actualization/motif/bibl_e2546c7f_motif_7205babaca933dc4> .
 
 <https://sappho-digital.com/feature/motif/motif_78fe5e7fce1afcba> a intro:INT_Motif ;
     rdfs:label "Motif: Unsicherheit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_78fe5e7fce1afcba> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_78fe5e7fce1afcba> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0f7a6b8d_motif_78fe5e7fce1afcba>,
         <https://sappho-digital.com/actualization/motif/bibl_f8609041_motif_78fe5e7fce1afcba> .
 
 <https://sappho-digital.com/feature/motif/motif_803e6cdc78c0c5a1> a intro:INT_Motif ;
     rdfs:label "Motif: Heirat"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_803e6cdc78c0c5a1> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_803e6cdc78c0c5a1> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_803e6cdc78c0c5a1>,
         <https://sappho-digital.com/actualization/motif/bibl_4e970562_motif_803e6cdc78c0c5a1> .
 
 <https://sappho-digital.com/feature/motif/motif_82cbd847b829adca> a intro:INT_Motif ;
     rdfs:label "Motif: Schuld"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_82cbd847b829adca> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_82cbd847b829adca> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_82cbd847b829adca>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_69_motif_82cbd847b829adca> .
 
 <https://sappho-digital.com/feature/motif/motif_8bd0b4436d2c2211> a intro:INT_Motif ;
     rdfs:label "Motif: Granatapfel"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_8bd0b4436d2c2211> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_8bd0b4436d2c2211> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_8bd0b4436d2c2211>,
         <https://sappho-digital.com/actualization/motif/bibl_4e970562_motif_8bd0b4436d2c2211> .
 
 <https://sappho-digital.com/feature/motif/motif_8e292f9623cb3869> a intro:INT_Motif ;
     rdfs:label "Motif: Alter"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_8e292f9623cb3869> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_8e292f9623cb3869> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_407a0d29_motif_8e292f9623cb3869>,
         <https://sappho-digital.com/actualization/motif/bibl_b53a5020_motif_8e292f9623cb3869> .
 
 <https://sappho-digital.com/feature/motif/motif_8e771c69dd16a41d> a intro:INT_Motif ;
     rdfs:label "Motif: Abendrot"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_8e771c69dd16a41d> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_8e771c69dd16a41d> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_b53e5151_motif_8e771c69dd16a41d>,
         <https://sappho-digital.com/actualization/motif/bibl_cbfea792_motif_8e771c69dd16a41d> .
 
 <https://sappho-digital.com/feature/motif/motif_9cdcb44dabe9cfde> a intro:INT_Motif ;
     rdfs:label "Motif: Verbannung"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_9cdcb44dabe9cfde> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_9cdcb44dabe9cfde> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_9cdcb44dabe9cfde>,
         <https://sappho-digital.com/actualization/motif/bibl_ec11b447_motif_9cdcb44dabe9cfde> .
 
 <https://sappho-digital.com/feature/motif/motif_9de00cb308757267> a intro:INT_Motif ;
     rdfs:label "Motif: Suizid"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_9de00cb308757267> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_9de00cb308757267> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_9de00cb308757267>,
         <https://sappho-digital.com/actualization/motif/bibl_8ebf0c28_motif_9de00cb308757267> .
 
 <https://sappho-digital.com/feature/motif/motif_b7009f43de3da4ad> a intro:INT_Motif ;
     rdfs:label "Motif: Schlaflosigkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_b7009f43de3da4ad> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_b7009f43de3da4ad> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_632dac82_motif_b7009f43de3da4ad>,
         <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_b7009f43de3da4ad> .
 
 <https://sappho-digital.com/feature/motif/motif_ea433b378d53e195> a intro:INT_Motif ;
     rdfs:label "Motif: Veilchenkranz"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_ea433b378d53e195> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_ea433b378d53e195> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_f5e2fa88_motif_ea433b378d53e195>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_94_motif_ea433b378d53e195> .
 
 <https://sappho-digital.com/feature/motif/motif_ed3912cf6c881149> a intro:INT_Motif ;
     rdfs:label "Motif: Krokus"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_ed3912cf6c881149> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_ed3912cf6c881149> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_sappho_92_motif_ed3912cf6c881149>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_94_motif_ed3912cf6c881149> .
 
 <https://sappho-digital.com/feature/motif/motif_faa2b53108d3d18e> a intro:INT_Motif ;
     rdfs:label "Motif: Barbitos"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_faa2b53108d3d18e> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_faa2b53108d3d18e> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_e26a1604_motif_faa2b53108d3d18e>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_176_motif_faa2b53108d3d18e> .
 
 <https://sappho-digital.com/feature/motif/motif_fe5b704563cc5b98> a intro:INT_Motif ;
     rdfs:label "Motif: Letztes Lied"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_fe5b704563cc5b98> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_fe5b704563cc5b98> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_684109f1_motif_fe5b704563cc5b98>,
         <https://sappho-digital.com/actualization/motif/bibl_cbfea792_motif_fe5b704563cc5b98> .
 
@@ -35356,55 +35356,55 @@
 
 <https://sappho-digital.com/feature/plot/plot_08ad0013a591aa17> a intro:INT_Plot ;
     rdfs:label "Plot: Charaxos als Mundschenk"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_08ad0013a591aa17> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_08ad0013a591aa17> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_8665dcc5_plot_08ad0013a591aa17>,
         <https://sappho-digital.com/actualization/plot/bibl_b705febf_plot_08ad0013a591aa17> .
 
 <https://sappho-digital.com/feature/plot/plot_0b092ed64a936159> a intro:INT_Plot ;
     rdfs:label "Plot: Sappho als Liebende"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_0b092ed64a936159> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_0b092ed64a936159> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_2660d82e_plot_0b092ed64a936159>,
         <https://sappho-digital.com/actualization/plot/bibl_a717f073_plot_0b092ed64a936159> .
 
 <https://sappho-digital.com/feature/plot/plot_7fc0a31f8eefb7cc> a intro:INT_Plot ;
     rdfs:label "Plot: Solons Verehrung Sapphos"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_7fc0a31f8eefb7cc> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_7fc0a31f8eefb7cc> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_56775306_plot_7fc0a31f8eefb7cc>,
         <https://sappho-digital.com/actualization/plot/bibl_8665dcc5_plot_7fc0a31f8eefb7cc> .
 
 <https://sappho-digital.com/feature/plot/plot_9b9d5a40ffdaaaba> a intro:INT_Plot ;
     rdfs:label "Plot: Sapphos wohlhabende Familie"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_9b9d5a40ffdaaaba> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_9b9d5a40ffdaaaba> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_8665dcc5_plot_9b9d5a40ffdaaaba>,
         <https://sappho-digital.com/actualization/plot/bibl_f4da59f4_plot_9b9d5a40ffdaaaba> .
 
 <https://sappho-digital.com/feature/plot/plot_b2aa4b409c0138a8> a intro:INT_Plot ;
     rdfs:label "Plot: Sappho-Erinna-Beziehung"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_b2aa4b409c0138a8> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_b2aa4b409c0138a8> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_19d5a7ab_plot_b2aa4b409c0138a8>,
         <https://sappho-digital.com/actualization/plot/bibl_4e970562_plot_b2aa4b409c0138a8> .
 
 <https://sappho-digital.com/feature/plot/plot_b2d8b14d68b73dd5> a intro:INT_Plot ;
     rdfs:label "Plot: Sappho als sittenlose Frau"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_b2d8b14d68b73dd5> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_b2d8b14d68b73dd5> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_db8dfab9_plot_b2d8b14d68b73dd5>,
         <https://sappho-digital.com/actualization/plot/bibl_e58bccae_plot_b2d8b14d68b73dd5> .
 
 <https://sappho-digital.com/feature/plot/plot_d761685e20e4c05d> a intro:INT_Plot ;
     rdfs:label "Plot: Sapphos politisch oppositionelle Familie"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_d761685e20e4c05d> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_d761685e20e4c05d> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_8665dcc5_plot_d761685e20e4c05d>,
         <https://sappho-digital.com/actualization/plot/bibl_ebc1bb1f_plot_d761685e20e4c05d> .
 
 <https://sappho-digital.com/feature/plot/plot_dedcc9b1e7fb8e79> a intro:INT_Plot ;
     rdfs:label "Plot: Sapphos Mädchenkreis"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_dedcc9b1e7fb8e79> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_dedcc9b1e7fb8e79> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_e58bccae_plot_dedcc9b1e7fb8e79>,
         <https://sappho-digital.com/actualization/plot/bibl_e745799e_plot_dedcc9b1e7fb8e79> .
 
 <https://sappho-digital.com/feature/topic/topic_0af359e15219034a> a intro:INT_Topic ;
     rdfs:label "Topic: Gleichgeschlechtliche Liebe unter Frauen"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_0af359e15219034a> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_0af359e15219034a> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_4fcb8123_topic_0af359e15219034a>,
         <https://sappho-digital.com/actualization/topic/bibl_a53d809b_topic_0af359e15219034a> .
 
@@ -35415,91 +35415,91 @@
 
 <https://sappho-digital.com/feature/topic/topic_48d9deec1aa375bc> a intro:INT_Topic ;
     rdfs:label "Topic: Vergessen"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_48d9deec1aa375bc> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_48d9deec1aa375bc> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_a5039b6f_topic_48d9deec1aa375bc>,
         <https://sappho-digital.com/actualization/topic/bibl_sappho_129_topic_48d9deec1aa375bc> .
 
 <https://sappho-digital.com/feature/topic/topic_4d0efc6118699f99> a intro:INT_Topic ;
     rdfs:label "Topic: Mutterschaft"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_4d0efc6118699f99> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_4d0efc6118699f99> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_69a9167e_topic_4d0efc6118699f99>,
         <https://sappho-digital.com/actualization/topic/bibl_ec11b447_topic_4d0efc6118699f99> .
 
 <https://sappho-digital.com/feature/topic/topic_547b51889f7bce04> a intro:INT_Topic ;
     rdfs:label "Topic: Ehe"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_547b51889f7bce04> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_547b51889f7bce04> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_69a9167e_topic_547b51889f7bce04>,
         <https://sappho-digital.com/actualization/topic/bibl_e745799e_topic_547b51889f7bce04> .
 
 <https://sappho-digital.com/feature/topic/topic_5f98e5b87c9f2f96> a intro:INT_Topic ;
     rdfs:label "Topic: Philologie"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_5f98e5b87c9f2f96> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_5f98e5b87c9f2f96> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_39b012ab_topic_5f98e5b87c9f2f96>,
         <https://sappho-digital.com/actualization/topic/bibl_a0bace6b_topic_5f98e5b87c9f2f96> .
 
 <https://sappho-digital.com/feature/topic/topic_7112b97bd8eccdc6> a intro:INT_Topic ;
     rdfs:label "Topic: Verbannung"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_7112b97bd8eccdc6> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_7112b97bd8eccdc6> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_8665dcc5_topic_7112b97bd8eccdc6>,
         <https://sappho-digital.com/actualization/topic/bibl_a53d809b_topic_7112b97bd8eccdc6> .
 
 <https://sappho-digital.com/feature/topic/topic_7da8193d94d44125> a intro:INT_Topic ;
     rdfs:label "Topic: Tugend"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_7da8193d94d44125> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_7da8193d94d44125> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_2e3cd65f_topic_7da8193d94d44125>,
         <https://sappho-digital.com/actualization/topic/bibl_sappho_148_topic_7da8193d94d44125> .
 
 <https://sappho-digital.com/feature/topic/topic_90253972585e05d8> a intro:INT_Topic ;
     rdfs:label "Topic: Gelehrsamkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_90253972585e05d8> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_90253972585e05d8> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_29dac241_topic_90253972585e05d8>,
         <https://sappho-digital.com/actualization/topic/bibl_db8dfab9_topic_90253972585e05d8> .
 
 <https://sappho-digital.com/feature/topic/topic_9bace65450b57656> a intro:INT_Topic ;
     rdfs:label "Topic: Jugend"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_9bace65450b57656> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_9bace65450b57656> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_88439060_topic_9bace65450b57656>,
         <https://sappho-digital.com/actualization/topic/bibl_e745799e_topic_9bace65450b57656> .
 
 <https://sappho-digital.com/feature/topic/topic_afe138550cd16d0b> a intro:INT_Topic ;
     rdfs:label "Topic: Vergöttlichung"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_afe138550cd16d0b> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_afe138550cd16d0b> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_63209746_topic_afe138550cd16d0b>,
         <https://sappho-digital.com/actualization/topic/bibl_ba71b2e5_topic_afe138550cd16d0b> .
 
 <https://sappho-digital.com/feature/topic/topic_b44d4c1bda5009f2> a intro:INT_Topic ;
     rdfs:label "Topic: Heterosexualität"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_b44d4c1bda5009f2> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_b44d4c1bda5009f2> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_4e970562_topic_b44d4c1bda5009f2>,
         <https://sappho-digital.com/actualization/topic/bibl_5ae4b5fe_topic_b44d4c1bda5009f2> .
 
 <https://sappho-digital.com/feature/topic/topic_c02e0ff3d2bffc47> a intro:INT_Topic ;
     rdfs:label "Topic: Handel"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_c02e0ff3d2bffc47> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_c02e0ff3d2bffc47> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_8665dcc5_topic_c02e0ff3d2bffc47>,
         <https://sappho-digital.com/actualization/topic/bibl_f4da59f4_topic_c02e0ff3d2bffc47> .
 
 <https://sappho-digital.com/feature/topic/topic_e3f9c28d697807a6> a intro:INT_Topic ;
     rdfs:label "Topic: Hass"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_e3f9c28d697807a6> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_e3f9c28d697807a6> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_a5889140_topic_e3f9c28d697807a6>,
         <https://sappho-digital.com/actualization/topic/bibl_ebc1bb1f_topic_e3f9c28d697807a6> .
 
 <https://sappho-digital.com/feature/topic/topic_e7a7fad674ab17f4> a intro:INT_Topic ;
     rdfs:label "Topic: Theater"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_e7a7fad674ab17f4> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_e7a7fad674ab17f4> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_8ebf0c28_topic_e7a7fad674ab17f4>,
         <https://sappho-digital.com/actualization/topic/bibl_ec11b447_topic_e7a7fad674ab17f4> .
 
 <https://sappho-digital.com/feature/topic/topic_f6d80c8d012ca95d> a intro:INT_Topic ;
     rdfs:label "Topic: Suizid"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_f6d80c8d012ca95d> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_f6d80c8d012ca95d> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_8819a3b3_topic_f6d80c8d012ca95d>,
         <https://sappho-digital.com/actualization/topic/bibl_8df69e81_topic_f6d80c8d012ca95d> .
 
 <https://sappho-digital.com/feature/topic/topic_fe0ae02e2ba6d7c4> a intro:INT_Topic ;
     rdfs:label "Topic: Fragmenthaftigkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_fe0ae02e2ba6d7c4> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_fe0ae02e2ba6d7c4> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_39b012ab_topic_fe0ae02e2ba6d7c4>,
         <https://sappho-digital.com/actualization/topic/bibl_f5e2fa88_topic_fe0ae02e2ba6d7c4> .
 
@@ -35518,299 +35518,299 @@
     rdfs:label "Gaia"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_936bf0a5_person_1d5abf4995fa23e4>,
         <https://sappho-digital.com/actualization/person_ref/bibl_d85ade6a_person_1d5abf4995fa23e4> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_1d5abf4995fa23e4> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_1d5abf4995fa23e4> .
 
 <https://sappho-digital.com/person/person_1e6e628ea0192e31> a ecrm:E21_Person ;
     rdfs:label "Laura (Petrarca)"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_5283cfa8_person_1e6e628ea0192e31>,
         <https://sappho-digital.com/actualization/person_ref/bibl_a717f073_person_1e6e628ea0192e31> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_1e6e628ea0192e31> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_1e6e628ea0192e31> .
 
 <https://sappho-digital.com/person/person_2603b095dc14c9fd> a ecrm:E21_Person ;
     rdfs:label "Archeanassa"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_b705febf_person_2603b095dc14c9fd>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_103c_person_2603b095dc14c9fd> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_2603b095dc14c9fd> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_2603b095dc14c9fd> .
 
 <https://sappho-digital.com/person/person_2bf51959e0848f5f> a ecrm:E21_Person ;
     rdfs:label "Helios"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_0491bde2_person_2bf51959e0848f5f>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_58_person_2bf51959e0848f5f> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_2bf51959e0848f5f> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_2bf51959e0848f5f> .
 
 <https://sappho-digital.com/person/person_352e0f8a99c574b2> a ecrm:E21_Person ;
     rdfs:label "Selene"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_sappho_154_person_352e0f8a99c574b2>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_96_person_352e0f8a99c574b2> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_352e0f8a99c574b2> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_352e0f8a99c574b2> .
 
 <https://sappho-digital.com/person/person_36a33d615281cb7f> a ecrm:E21_Person ;
     rdfs:label "Francesco Petrarca"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_5283cfa8_person_36a33d615281cb7f>,
         <https://sappho-digital.com/actualization/person_ref/bibl_a717f073_person_36a33d615281cb7f> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_36a33d615281cb7f> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_36a33d615281cb7f> .
 
 <https://sappho-digital.com/person/person_3ae4177dfc72d693> a ecrm:E21_Person ;
     rdfs:label "Agamemnon"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_3ae4177dfc72d693>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_17_person_3ae4177dfc72d693> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_3ae4177dfc72d693> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_3ae4177dfc72d693> .
 
 <https://sappho-digital.com/person/person_3bd6faa78c3b97eb> a ecrm:E21_Person ;
     rdfs:label "Hektor"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_sappho_180_person_3bd6faa78c3b97eb>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_44_person_3bd6faa78c3b97eb> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_3bd6faa78c3b97eb> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_3bd6faa78c3b97eb> .
 
 <https://sappho-digital.com/person/person_454c27fc8a648f4f> a ecrm:E21_Person ;
     rdfs:label "Iris"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_69eddc38_person_454c27fc8a648f4f>,
         <https://sappho-digital.com/actualization/person_ref/bibl_e745799e_person_454c27fc8a648f4f> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_454c27fc8a648f4f> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_454c27fc8a648f4f> .
 
 <https://sappho-digital.com/person/person_4a2654173d9042b0> a ecrm:E21_Person ;
     rdfs:label "Psyche"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_936bf0a5_person_4a2654173d9042b0>,
         <https://sappho-digital.com/actualization/person_ref/bibl_cbfea792_person_4a2654173d9042b0> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_4a2654173d9042b0> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_4a2654173d9042b0> .
 
 <https://sappho-digital.com/person/person_4bc689084fcb5dcb> a ecrm:E21_Person ;
     rdfs:label "Persephone"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_19d5a7ab_person_4bc689084fcb5dcb>,
         <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_4bc689084fcb5dcb> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_4bc689084fcb5dcb> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_4bc689084fcb5dcb> .
 
 <https://sappho-digital.com/person/person_4e64c1b5997afbc9> a ecrm:E21_Person ;
     rdfs:label "Atropos"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_cbfea792_person_4e64c1b5997afbc9>,
         <https://sappho-digital.com/actualization/person_ref/bibl_f4da59f4_person_4e64c1b5997afbc9> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_4e64c1b5997afbc9> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_4e64c1b5997afbc9> .
 
 <https://sappho-digital.com/person/person_4fa8ba6e36329b8d> a ecrm:E21_Person ;
     rdfs:label "Charikleia"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_936bf0a5_person_4fa8ba6e36329b8d>,
         <https://sappho-digital.com/actualization/person_ref/bibl_b705febf_person_4fa8ba6e36329b8d> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_4fa8ba6e36329b8d> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_4fa8ba6e36329b8d> .
 
 <https://sappho-digital.com/person/person_521151dea6fb9e09> a ecrm:E21_Person ;
     rdfs:label "Priester/Priesterin"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_5f1d7d40_person_521151dea6fb9e09>,
         <https://sappho-digital.com/actualization/person_ref/bibl_e745799e_person_521151dea6fb9e09> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_521151dea6fb9e09> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_521151dea6fb9e09> .
 
 <https://sappho-digital.com/person/person_664342af9e58739b> a ecrm:E21_Person ;
     rdfs:label "Peitho"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_sappho_90_person_664342af9e58739b>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_96_person_664342af9e58739b> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_664342af9e58739b> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_664342af9e58739b> .
 
 <https://sappho-digital.com/person/person_6a8069a235c0da1d> a ecrm:E21_Person ;
     rdfs:label "Philomele"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_69eddc38_person_6a8069a235c0da1d>,
         <https://sappho-digital.com/actualization/person_ref/bibl_cbfea792_person_6a8069a235c0da1d> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_6a8069a235c0da1d> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_6a8069a235c0da1d> .
 
 <https://sappho-digital.com/person/person_7d3c887eeaa47caf> a ecrm:E21_Person ;
     rdfs:label "Friedrich Gottlieb Welcker"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_39b012ab_person_7d3c887eeaa47caf>,
         <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_7d3c887eeaa47caf> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_7d3c887eeaa47caf> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_7d3c887eeaa47caf> .
 
 <https://sappho-digital.com/person/person_803864de40878a17> a ecrm:E21_Person ;
     rdfs:label "Nymphe"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_803864de40878a17>,
         <https://sappho-digital.com/actualization/person_ref/bibl_cbfea792_person_803864de40878a17> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_803864de40878a17> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_803864de40878a17> .
 
 <https://sappho-digital.com/person/person_86ef94ea68ce0fe0> a ecrm:E21_Person ;
     rdfs:label "Gyrinno"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_sappho_29_person_86ef94ea68ce0fe0>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_82_person_86ef94ea68ce0fe0> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_86ef94ea68ce0fe0> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_86ef94ea68ce0fe0> .
 
 <https://sappho-digital.com/person/person_9865138458182890> a ecrm:E21_Person ;
     rdfs:label "Pittakos"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_9865138458182890>,
         <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_9865138458182890> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_9865138458182890> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_9865138458182890> .
 
 <https://sappho-digital.com/person/person_98fe1bf71475363b> a ecrm:E21_Person ;
     rdfs:label "Erinna"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_19d5a7ab_person_98fe1bf71475363b>,
         <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_98fe1bf71475363b> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_98fe1bf71475363b> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_98fe1bf71475363b> .
 
 <https://sappho-digital.com/person/person_9cb6996a0396db3d> a ecrm:E21_Person ;
     rdfs:label "Eurydike"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_9cb6996a0396db3d>,
         <https://sappho-digital.com/actualization/person_ref/bibl_a5039b6f_person_9cb6996a0396db3d> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_9cb6996a0396db3d> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_9cb6996a0396db3d> .
 
 <https://sappho-digital.com/person/person_a31e921338acf862> a ecrm:E21_Person ;
     rdfs:label "Erinys"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_0434022c_person_a31e921338acf862>,
         <https://sappho-digital.com/actualization/person_ref/bibl_e745799e_person_a31e921338acf862> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_a31e921338acf862> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_a31e921338acf862> .
 
 <https://sappho-digital.com/person/person_a766e76721189267> a ecrm:E21_Person ;
     rdfs:label "Eirana"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_sappho_135_person_a766e76721189267>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_91_person_a766e76721189267> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_a766e76721189267> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_a766e76721189267> .
 
 <https://sappho-digital.com/person/person_acdbd75b6cf29fa6> a ecrm:E21_Person ;
     rdfs:label "Tyrann"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_8fc572e2_person_acdbd75b6cf29fa6>,
         <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_acdbd75b6cf29fa6> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_acdbd75b6cf29fa6> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_acdbd75b6cf29fa6> .
 
 <https://sappho-digital.com/person/person_b440568ec351ed84> a ecrm:E21_Person ;
     rdfs:label "Pindar"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_c908fde2_person_b440568ec351ed84>,
         <https://sappho-digital.com/actualization/person_ref/bibl_d85ade6a_person_b440568ec351ed84> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_b440568ec351ed84> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_b440568ec351ed84> .
 
 <https://sappho-digital.com/person/person_b663db28c943787a> a ecrm:E21_Person ;
     rdfs:label "Arion"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_458b7c88_person_b663db28c943787a>,
         <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_b663db28c943787a> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_b663db28c943787a> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_b663db28c943787a> .
 
 <https://sappho-digital.com/person/person_bf1a16fc1e6ba956> a ecrm:E21_Person ;
     rdfs:label "Prometheus"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_5283cfa8_person_bf1a16fc1e6ba956>,
         <https://sappho-digital.com/actualization/person_ref/bibl_cbfea792_person_bf1a16fc1e6ba956> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_bf1a16fc1e6ba956> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_bf1a16fc1e6ba956> .
 
 <https://sappho-digital.com/person/person_d1946e7b74bf22bc> a ecrm:E21_Person ;
     rdfs:label "Odysseus"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_39b012ab_person_d1946e7b74bf22bc>,
         <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_d1946e7b74bf22bc> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_d1946e7b74bf22bc> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_d1946e7b74bf22bc> .
 
 <https://sappho-digital.com/person/person_d6049353a1b9b167> a ecrm:E21_Person ;
     rdfs:label "Penthilos"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_f4da59f4_person_d6049353a1b9b167>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_71_person_d6049353a1b9b167> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_d6049353a1b9b167> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_d6049353a1b9b167> .
 
 <https://sappho-digital.com/person/person_db10ad7627a6e7ad> a ecrm:E21_Person ;
     rdfs:label "Poseidon"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_db10ad7627a6e7ad>,
         <https://sappho-digital.com/actualization/person_ref/bibl_f4da59f4_person_db10ad7627a6e7ad> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_db10ad7627a6e7ad> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_db10ad7627a6e7ad> .
 
 <https://sappho-digital.com/person/person_dd90800ee54e2216> a ecrm:E21_Person ;
     rdfs:label "Skamandronymos"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_dd90800ee54e2216>,
         <https://sappho-digital.com/actualization/person_ref/bibl_f4da59f4_person_dd90800ee54e2216> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_dd90800ee54e2216> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_dd90800ee54e2216> .
 
 <https://sappho-digital.com/person/person_e68a8e275e56e27e> a ecrm:E21_Person ;
     rdfs:label "Zephyr"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_936bf0a5_person_e68a8e275e56e27e>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_90_person_e68a8e275e56e27e> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_e68a8e275e56e27e> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_e68a8e275e56e27e> .
 
 <https://sappho-digital.com/person/person_edd73d43dbe4b946> a ecrm:E21_Person ;
     rdfs:label "Narziss"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_926d0a7c_person_edd73d43dbe4b946>,
         <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_edd73d43dbe4b946> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_edd73d43dbe4b946> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_edd73d43dbe4b946> .
 
 <https://sappho-digital.com/person/person_fd527c6f3b4cd056> a ecrm:E21_Person ;
     rdfs:label "Daphne"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_fd527c6f3b4cd056>,
         <https://sappho-digital.com/actualization/person_ref/bibl_69eddc38_person_fd527c6f3b4cd056> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_fd527c6f3b4cd056> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_fd527c6f3b4cd056> .
 
 <https://sappho-digital.com/person/person_fe75cd740876c3e4> a ecrm:E21_Person ;
     rdfs:label "Demeter"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_19d5a7ab_person_fe75cd740876c3e4>,
         <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_fe75cd740876c3e4> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_fe75cd740876c3e4> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_fe75cd740876c3e4> .
 
 <https://sappho-digital.com/place/place_265da080030b40ab> a ecrm:E53_Place ;
     rdfs:label "Alexandria"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_8665dcc5_place_265da080030b40ab>,
         <https://sappho-digital.com/actualization/place_ref/bibl_a0bace6b_place_265da080030b40ab> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_265da080030b40ab> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_265da080030b40ab> .
 
 <https://sappho-digital.com/place/place_268d446ffb379c3d> a ecrm:E53_Place ;
     rdfs:label "Rom"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_98b2a68e_place_268d446ffb379c3d>,
         <https://sappho-digital.com/actualization/place_ref/bibl_d85ade6a_place_268d446ffb379c3d> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_268d446ffb379c3d> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_268d446ffb379c3d> .
 
 <https://sappho-digital.com/place/place_2e23b3c7057bdc84> a ecrm:E53_Place ;
     rdfs:label "Sardes"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_sappho_96_place_2e23b3c7057bdc84>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_98_place_2e23b3c7057bdc84> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_2e23b3c7057bdc84> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_2e23b3c7057bdc84> .
 
 <https://sappho-digital.com/place/place_4f523d00fc5d27fd> a ecrm:E53_Place ;
     rdfs:label "Ägäis"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_4e970562_place_4f523d00fc5d27fd>,
         <https://sappho-digital.com/actualization/place_ref/bibl_a53d809b_place_4f523d00fc5d27fd> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_4f523d00fc5d27fd> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_4f523d00fc5d27fd> .
 
 <https://sappho-digital.com/place/place_50b86d57b7836783> a ecrm:E53_Place ;
     rdfs:label "Phrygien"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_56775306_place_50b86d57b7836783>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_92_place_50b86d57b7836783> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_50b86d57b7836783> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_50b86d57b7836783> .
 
 <https://sappho-digital.com/place/place_638e00b9cd6f28ce> a ecrm:E53_Place ;
     rdfs:label "Phokaia"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_8665dcc5_place_638e00b9cd6f28ce>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_101_place_638e00b9cd6f28ce> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_638e00b9cd6f28ce> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_638e00b9cd6f28ce> .
 
 <https://sappho-digital.com/place/place_65cc743dd1fdd3c3> a ecrm:E53_Place ;
     rdfs:label "England"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_8ebf0c28_place_65cc743dd1fdd3c3>,
         <https://sappho-digital.com/actualization/place_ref/bibl_a0bace6b_place_65cc743dd1fdd3c3> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_65cc743dd1fdd3c3> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_65cc743dd1fdd3c3> .
 
 <https://sappho-digital.com/place/place_7b892e08cb9fdc41> a ecrm:E53_Place ;
     rdfs:label "Iran"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_8665dcc5_place_7b892e08cb9fdc41>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_92_place_7b892e08cb9fdc41> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_7b892e08cb9fdc41> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_7b892e08cb9fdc41> .
 
 <https://sappho-digital.com/place/place_a47b52347c0cc636> a ecrm:E53_Place ;
     rdfs:label "Äolien"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_8665dcc5_place_a47b52347c0cc636>,
         <https://sappho-digital.com/actualization/place_ref/bibl_8fc572e2_place_a47b52347c0cc636> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_a47b52347c0cc636> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_a47b52347c0cc636> .
 
 <https://sappho-digital.com/place/place_c88a9704cb14800c> a ecrm:E53_Place ;
     rdfs:label "Eresos"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_e58bccae_place_c88a9704cb14800c>,
         <https://sappho-digital.com/actualization/place_ref/bibl_f4da59f4_place_c88a9704cb14800c> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_c88a9704cb14800c> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_c88a9704cb14800c> .
 
 <https://sappho-digital.com/place/place_dc407ad0184a6b43> a ecrm:E53_Place ;
     rdfs:label "Naukratis"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_8665dcc5_place_dc407ad0184a6b43>,
         <https://sappho-digital.com/actualization/place_ref/bibl_f4da59f4_place_dc407ad0184a6b43> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_dc407ad0184a6b43> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_dc407ad0184a6b43> .
 
 <https://sappho-digital.com/place/place_f80dc51761a44c4c> a ecrm:E53_Place ;
     rdfs:label "Olympia"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_4e970562_place_f80dc51761a44c4c>,
         <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_f80dc51761a44c4c> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_f80dc51761a44c4c> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_f80dc51761a44c4c> .
 
 <https://sappho-digital.com/place/place_fb64d1e49976fb8c> a ecrm:E53_Place ;
     rdfs:label "Delos"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_4e970562_place_fb64d1e49976fb8c>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_44a_place_fb64d1e49976fb8c> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_fb64d1e49976fb8c> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_fb64d1e49976fb8c> .
 
 <https://sappho-digital.com/textpassage/phrase_5cd31d1448d304fd> a intro:INT21_TextPassage ;
     rdfs:label "Textpassage: Rosenfingrig"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/phrase_5cd31d1448d304fd> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/phrase_5cd31d1448d304fd> ;
     intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_6fcff98a>,
         <https://sappho-digital.com/expression/bibl_f7bb70af>,
         <https://sappho-digital.com/expression/bibl_sappho_96> .
@@ -40391,42 +40391,42 @@
 
 <https://sappho-digital.com/feature/motif/motif_15d689c1f40b1d56> a intro:INT_Motif ;
     rdfs:label "Motif: Eifersucht"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_15d689c1f40b1d56> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_15d689c1f40b1d56> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0434022c_motif_15d689c1f40b1d56>,
         <https://sappho-digital.com/actualization/motif/bibl_9ef5617d_motif_15d689c1f40b1d56>,
         <https://sappho-digital.com/actualization/motif/bibl_ec11b447_motif_15d689c1f40b1d56> .
 
 <https://sappho-digital.com/feature/motif/motif_203ed612d2946cdf> a intro:INT_Motif ;
     rdfs:label "Motif: Weiblichkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_203ed612d2946cdf> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_203ed612d2946cdf> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_4422d6d6_motif_203ed612d2946cdf>,
         <https://sappho-digital.com/actualization/motif/bibl_936bf0a5_motif_203ed612d2946cdf>,
         <https://sappho-digital.com/actualization/motif/bibl_a5889140_motif_203ed612d2946cdf> .
 
 <https://sappho-digital.com/feature/motif/motif_2b1f28169974867c> a intro:INT_Motif ;
     rdfs:label "Motif: Altern"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_2b1f28169974867c> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_2b1f28169974867c> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_4e970562_motif_2b1f28169974867c>,
         <https://sappho-digital.com/actualization/motif/bibl_88439060_motif_2b1f28169974867c>,
         <https://sappho-digital.com/actualization/motif/bibl_97722fa3_motif_2b1f28169974867c> .
 
 <https://sappho-digital.com/feature/motif/motif_2d21be022480abad> a intro:INT_Motif ;
     rdfs:label "Motif: Fruchtbarkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_2d21be022480abad> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_2d21be022480abad> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_4e970562_motif_2d21be022480abad>,
         <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_2d21be022480abad>,
         <https://sappho-digital.com/actualization/motif/bibl_a0bace6b_motif_2d21be022480abad> .
 
 <https://sappho-digital.com/feature/motif/motif_2e583b17a2474551> a intro:INT_Motif ;
     rdfs:label "Motif: Spiegel"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_2e583b17a2474551> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_2e583b17a2474551> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_2e583b17a2474551>,
         <https://sappho-digital.com/actualization/motif/bibl_4e970562_motif_2e583b17a2474551>,
         <https://sappho-digital.com/actualization/motif/bibl_9ef5617d_motif_2e583b17a2474551> .
 
 <https://sappho-digital.com/feature/motif/motif_3b55ac3756f8ab42> a intro:INT_Motif ;
     rdfs:label "Motif: Kunst"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_3b55ac3756f8ab42> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_3b55ac3756f8ab42> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_458b7c88_motif_3b55ac3756f8ab42>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_118_motif_3b55ac3756f8ab42>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_150_motif_3b55ac3756f8ab42> .
@@ -40439,21 +40439,21 @@
 
 <https://sappho-digital.com/feature/motif/motif_62827f2ed507b1a4> a intro:INT_Motif ;
     rdfs:label "Motif: Sittenhaftigkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_62827f2ed507b1a4> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_62827f2ed507b1a4> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_62827f2ed507b1a4>,
         <https://sappho-digital.com/actualization/motif/bibl_8665dcc5_motif_62827f2ed507b1a4>,
         <https://sappho-digital.com/actualization/motif/bibl_c908fde2_motif_62827f2ed507b1a4> .
 
 <https://sappho-digital.com/feature/motif/motif_63ab36bbe88b209b> a intro:INT_Motif ;
     rdfs:label "Motif: Sorge"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_63ab36bbe88b209b> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_63ab36bbe88b209b> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_5ca5f0b6_motif_63ab36bbe88b209b>,
         <https://sappho-digital.com/actualization/motif/bibl_efcd32b0_motif_63ab36bbe88b209b>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_163_motif_63ab36bbe88b209b> .
 
 <https://sappho-digital.com/feature/motif/motif_6ce22ab4ce13cf9e> a intro:INT_Motif ;
     rdfs:label "Motif: Hyazinthe"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_6ce22ab4ce13cf9e> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_6ce22ab4ce13cf9e> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_458b7c88_motif_6ce22ab4ce13cf9e>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_105_motif_6ce22ab4ce13cf9e>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_166_motif_6ce22ab4ce13cf9e> .
@@ -40466,91 +40466,91 @@
 
 <https://sappho-digital.com/feature/motif/motif_7a31b1efe2cb20da> a intro:INT_Motif ;
     rdfs:label "Motif: Zorn"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_7a31b1efe2cb20da> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_7a31b1efe2cb20da> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_4fcb8123_motif_7a31b1efe2cb20da>,
         <https://sappho-digital.com/actualization/motif/bibl_8819a3b3_motif_7a31b1efe2cb20da>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_7a31b1efe2cb20da> .
 
 <https://sappho-digital.com/feature/motif/motif_80440c5206e2b3d4> a intro:INT_Motif ;
     rdfs:label "Motif: Schwan"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_80440c5206e2b3d4> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_80440c5206e2b3d4> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_80440c5206e2b3d4>,
         <https://sappho-digital.com/actualization/motif/bibl_5f1d7d40_motif_80440c5206e2b3d4>,
         <https://sappho-digital.com/actualization/motif/bibl_63209746_motif_80440c5206e2b3d4> .
 
 <https://sappho-digital.com/feature/motif/motif_844c1db25d6fbc84> a intro:INT_Motif ;
     rdfs:label "Motif: Wolke"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_844c1db25d6fbc84> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_844c1db25d6fbc84> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_844c1db25d6fbc84>,
         <https://sappho-digital.com/actualization/motif/bibl_b53e5151_motif_844c1db25d6fbc84>,
         <https://sappho-digital.com/actualization/motif/bibl_e745799e_motif_844c1db25d6fbc84> .
 
 <https://sappho-digital.com/feature/motif/motif_88112d916a887aa5> a intro:INT_Motif ;
     rdfs:label "Motif: Rache"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_88112d916a887aa5> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_88112d916a887aa5> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_88112d916a887aa5>,
         <https://sappho-digital.com/actualization/motif/bibl_9ade79f7_motif_88112d916a887aa5>,
         <https://sappho-digital.com/actualization/motif/bibl_cbfea792_motif_88112d916a887aa5> .
 
 <https://sappho-digital.com/feature/motif/motif_97e73b26b0dc22b0> a intro:INT_Motif ;
     rdfs:label "Motif: Wiederauferstehung"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_97e73b26b0dc22b0> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_97e73b26b0dc22b0> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_97e73b26b0dc22b0>,
         <https://sappho-digital.com/actualization/motif/bibl_b53e5151_motif_97e73b26b0dc22b0>,
         <https://sappho-digital.com/actualization/motif/bibl_e745799e_motif_97e73b26b0dc22b0> .
 
 <https://sappho-digital.com/feature/motif/motif_a9de6af914034ff8> a intro:INT_Motif ;
     rdfs:label "Motif: Harfe"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_a9de6af914034ff8> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_a9de6af914034ff8> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_936bf0a5_motif_a9de6af914034ff8>,
         <https://sappho-digital.com/actualization/motif/bibl_b53a5020_motif_a9de6af914034ff8>,
         <https://sappho-digital.com/actualization/motif/bibl_d85ade6a_motif_a9de6af914034ff8> .
 
 <https://sappho-digital.com/feature/motif/motif_c16c6077a42ad438> a intro:INT_Motif ;
     rdfs:label "Motif: Pektis"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_c16c6077a42ad438> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_c16c6077a42ad438> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_sappho_156_motif_c16c6077a42ad438>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_21351_1-8_motif_c16c6077a42ad438>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_22_motif_c16c6077a42ad438> .
 
 <https://sappho-digital.com/feature/motif/motif_c181a5a5b7398262> a intro:INT_Motif ;
     rdfs:label "Motif: Zunge"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_c181a5a5b7398262> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_c181a5a5b7398262> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_1bf78f84_motif_c181a5a5b7398262>,
         <https://sappho-digital.com/actualization/motif/bibl_4fcb8123_motif_c181a5a5b7398262>,
         <https://sappho-digital.com/actualization/motif/bibl_b47fb393_motif_c181a5a5b7398262> .
 
 <https://sappho-digital.com/feature/motif/motif_d79ec516e61a1f80> a intro:INT_Motif ;
     rdfs:label "Motif: Chor"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_d79ec516e61a1f80> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_d79ec516e61a1f80> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_d79ec516e61a1f80>,
         <https://sappho-digital.com/actualization/motif/bibl_c908fde2_motif_d79ec516e61a1f80>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_70_motif_d79ec516e61a1f80> .
 
 <https://sappho-digital.com/feature/motif/motif_e594796d6e9733cb> a intro:INT_Motif ;
     rdfs:label "Motif: Rot"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_e594796d6e9733cb> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_e594796d6e9733cb> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_936bf0a5_motif_e594796d6e9733cb>,
         <https://sappho-digital.com/actualization/motif/bibl_e2546c7f_motif_e594796d6e9733cb>,
         <https://sappho-digital.com/actualization/motif/bibl_f8609041_motif_e594796d6e9733cb> .
 
 <https://sappho-digital.com/feature/motif/motif_ecfabfc090d9d609> a intro:INT_Motif ;
     rdfs:label "Motif: Weiches Lager"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_ecfabfc090d9d609> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_ecfabfc090d9d609> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_4e970562_motif_ecfabfc090d9d609>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_46_motif_ecfabfc090d9d609>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_94_motif_ecfabfc090d9d609> .
 
 <https://sappho-digital.com/feature/motif/motif_f08832363d803240> a intro:INT_Motif ;
     rdfs:label "Motif: Hoffnung"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_f08832363d803240> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_f08832363d803240> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_f08832363d803240>,
         <https://sappho-digital.com/actualization/motif/bibl_cbfea792_motif_f08832363d803240>,
         <https://sappho-digital.com/actualization/motif/bibl_e26a1604_motif_f08832363d803240> .
 
 <https://sappho-digital.com/feature/motif/motif_f810c10450ef91b3> a intro:INT_Motif ;
     rdfs:label "Motif: Schlange"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_f810c10450ef91b3> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_f810c10450ef91b3> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_632dac82_motif_f810c10450ef91b3>,
         <https://sappho-digital.com/actualization/motif/bibl_9ade79f7_motif_f810c10450ef91b3>,
         <https://sappho-digital.com/actualization/motif/bibl_d85ade6a_motif_f810c10450ef91b3> .
@@ -40655,91 +40655,91 @@
 
 <https://sappho-digital.com/feature/plot/plot_0a6119efed4bdf7d> a intro:INT_Plot ;
     rdfs:label "Plot: Sappho als Mutter"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_0a6119efed4bdf7d> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_0a6119efed4bdf7d> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_5f1d7d40_plot_0a6119efed4bdf7d>,
         <https://sappho-digital.com/actualization/plot/bibl_632dac82_plot_0a6119efed4bdf7d>,
         <https://sappho-digital.com/actualization/plot/bibl_ec11b447_plot_0a6119efed4bdf7d> .
 
 <https://sappho-digital.com/feature/plot/plot_168fc491c40ff2fd> a intro:INT_Plot ;
     rdfs:label "Plot: Sappho als Chorleiterin"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_168fc491c40ff2fd> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_168fc491c40ff2fd> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_168fc491c40ff2fd>,
         <https://sappho-digital.com/actualization/plot/bibl_936bf0a5_plot_168fc491c40ff2fd>,
         <https://sappho-digital.com/actualization/plot/bibl_e745799e_plot_168fc491c40ff2fd> .
 
 <https://sappho-digital.com/feature/plot/plot_30ec8b515802033f> a intro:INT_Plot ;
     rdfs:label "Plot: Sappho-Kerkylas-Ehe"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_30ec8b515802033f> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_30ec8b515802033f> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_30ec8b515802033f>,
         <https://sappho-digital.com/actualization/plot/bibl_8665dcc5_plot_30ec8b515802033f>,
         <https://sappho-digital.com/actualization/plot/bibl_ebc1bb1f_plot_30ec8b515802033f> .
 
 <https://sappho-digital.com/feature/plot/plot_414bc4680cad7ddc> a intro:INT_Plot ;
     rdfs:label "Plot: Charaxos-Rhodopis"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_414bc4680cad7ddc> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_414bc4680cad7ddc> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_458b7c88_plot_414bc4680cad7ddc>,
         <https://sappho-digital.com/actualization/plot/bibl_8665dcc5_plot_414bc4680cad7ddc>,
         <https://sappho-digital.com/actualization/plot/bibl_sappho_5_plot_414bc4680cad7ddc> .
 
 <https://sappho-digital.com/feature/plot/plot_7bd4c599c42360db> a intro:INT_Plot ;
     rdfs:label "Plot: Sapphos adlige Familie"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_7bd4c599c42360db> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_7bd4c599c42360db> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_8665dcc5_plot_7bd4c599c42360db>,
         <https://sappho-digital.com/actualization/plot/bibl_ebc1bb1f_plot_7bd4c599c42360db>,
         <https://sappho-digital.com/actualization/plot/bibl_f4da59f4_plot_7bd4c599c42360db> .
 
 <https://sappho-digital.com/feature/plot/plot_b3deb8ded8bddf04> a intro:INT_Plot ;
     rdfs:label "Plot: Sappho als Liebesdichterin"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_b3deb8ded8bddf04> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_b3deb8ded8bddf04> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_0434022c_plot_b3deb8ded8bddf04>,
         <https://sappho-digital.com/actualization/plot/bibl_5f1d7d40_plot_b3deb8ded8bddf04>,
         <https://sappho-digital.com/actualization/plot/bibl_684109f1_plot_b3deb8ded8bddf04> .
 
 <https://sappho-digital.com/feature/topic/topic_216c06ff845256fe> a intro:INT_Topic ;
     rdfs:label "Topic: Menschlichkeit/Göttlichkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_216c06ff845256fe> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_216c06ff845256fe> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_0491bde2_topic_216c06ff845256fe>,
         <https://sappho-digital.com/actualization/topic/bibl_4e970562_topic_216c06ff845256fe>,
         <https://sappho-digital.com/actualization/topic/bibl_936bf0a5_topic_216c06ff845256fe> .
 
 <https://sappho-digital.com/feature/topic/topic_3c28b27922e5dfea> a intro:INT_Topic ;
     rdfs:label "Topic: Politik"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_3c28b27922e5dfea> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_3c28b27922e5dfea> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_8665dcc5_topic_3c28b27922e5dfea>,
         <https://sappho-digital.com/actualization/topic/bibl_a0bace6b_topic_3c28b27922e5dfea>,
         <https://sappho-digital.com/actualization/topic/bibl_f4da59f4_topic_3c28b27922e5dfea> .
 
 <https://sappho-digital.com/feature/topic/topic_868c77ac61c449bd> a intro:INT_Topic ;
     rdfs:label "Topic: Schlaflosigkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_868c77ac61c449bd> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_868c77ac61c449bd> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_889153c6_topic_868c77ac61c449bd>,
         <https://sappho-digital.com/actualization/topic/bibl_a369dda0_topic_868c77ac61c449bd>,
         <https://sappho-digital.com/actualization/topic/bibl_baaeb54e_topic_868c77ac61c449bd> .
 
 <https://sappho-digital.com/feature/topic/topic_979480c5de919f6e> a intro:INT_Topic ;
     rdfs:label "Topic: Weiblichkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_979480c5de919f6e> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_979480c5de919f6e> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_29dac241_topic_979480c5de919f6e>,
         <https://sappho-digital.com/actualization/topic/bibl_4e970562_topic_979480c5de919f6e>,
         <https://sappho-digital.com/actualization/topic/bibl_69a9167e_topic_979480c5de919f6e> .
 
 <https://sappho-digital.com/feature/topic/topic_b0049a9652bca00f> a intro:INT_Topic ;
     rdfs:label "Topic: Exil"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_b0049a9652bca00f> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_b0049a9652bca00f> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_2660d82e_topic_b0049a9652bca00f>,
         <https://sappho-digital.com/actualization/topic/bibl_8665dcc5_topic_b0049a9652bca00f>,
         <https://sappho-digital.com/actualization/topic/bibl_ebc1bb1f_topic_b0049a9652bca00f> .
 
 <https://sappho-digital.com/feature/topic/topic_b51493c7cb013212> a intro:INT_Topic ;
     rdfs:label "Topic: Jungfräulichkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_b51493c7cb013212> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_b51493c7cb013212> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_sappho_107_topic_b51493c7cb013212>,
         <https://sappho-digital.com/actualization/topic/bibl_sappho_114_topic_b51493c7cb013212>,
         <https://sappho-digital.com/actualization/topic/bibl_sappho_44a_topic_b51493c7cb013212> .
 
 <https://sappho-digital.com/feature/topic/topic_e6ecf2d8c3d52793> a intro:INT_Topic ;
     rdfs:label "Topic: Erinnerung"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_e6ecf2d8c3d52793> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_e6ecf2d8c3d52793> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_3759bef5_topic_e6ecf2d8c3d52793>,
         <https://sappho-digital.com/actualization/topic/bibl_69a9167e_topic_e6ecf2d8c3d52793>,
         <https://sappho-digital.com/actualization/topic/bibl_sappho_147_topic_e6ecf2d8c3d52793> .
@@ -40749,137 +40749,137 @@
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_56775306_person_01ec9bc374eb76b7>,
         <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_01ec9bc374eb76b7>,
         <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_01ec9bc374eb76b7> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_01ec9bc374eb76b7> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_01ec9bc374eb76b7> .
 
 <https://sappho-digital.com/person/person_278199322209770d> a ecrm:E21_Person ;
     rdfs:label "Charaxos"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_458b7c88_person_278199322209770d>,
         <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_278199322209770d>,
         <https://sappho-digital.com/actualization/person_ref/bibl_b705febf_person_278199322209770d> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_278199322209770d> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_278199322209770d> .
 
 <https://sappho-digital.com/person/person_331d06f48bf9d3d9> a ecrm:E21_Person ;
     rdfs:label "Tithonos"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_88439060_person_331d06f48bf9d3d9>,
         <https://sappho-digital.com/actualization/person_ref/bibl_f5e2fa88_person_331d06f48bf9d3d9>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_21351_9-12_21376r_1-8_person_331d06f48bf9d3d9> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_331d06f48bf9d3d9> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_331d06f48bf9d3d9> .
 
 <https://sappho-digital.com/person/person_5c74e76e7da1f025> a ecrm:E21_Person ;
     rdfs:label "Aiolos"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_5c74e76e7da1f025>,
         <https://sappho-digital.com/actualization/person_ref/bibl_632dac82_person_5c74e76e7da1f025>,
         <https://sappho-digital.com/actualization/person_ref/bibl_d85ade6a_person_5c74e76e7da1f025> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_5c74e76e7da1f025> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_5c74e76e7da1f025> .
 
 <https://sappho-digital.com/person/person_66fc054f0477ea23> a ecrm:E21_Person ;
     rdfs:label "Platon"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_2838b3d9_person_66fc054f0477ea23>,
         <https://sappho-digital.com/actualization/person_ref/bibl_5283cfa8_person_66fc054f0477ea23>,
         <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_66fc054f0477ea23> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_66fc054f0477ea23> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_66fc054f0477ea23> .
 
 <https://sappho-digital.com/person/person_7124993358ee4d33> a ecrm:E21_Person ;
     rdfs:label "Telesippa"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_6fcff98a_person_7124993358ee4d33>,
         <https://sappho-digital.com/actualization/person_ref/bibl_a53d809b_person_7124993358ee4d33>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_87_person_7124993358ee4d33> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_7124993358ee4d33> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_7124993358ee4d33> .
 
 <https://sappho-digital.com/person/person_974acb11c098c41b> a ecrm:E21_Person ;
     rdfs:label "Ares"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_88439060_person_974acb11c098c41b>,
         <https://sappho-digital.com/actualization/person_ref/bibl_cbfea792_person_974acb11c098c41b>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_111_person_974acb11c098c41b> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_974acb11c098c41b> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_974acb11c098c41b> .
 
 <https://sappho-digital.com/person/person_97a24d8c828b75ec> a ecrm:E21_Person ;
     rdfs:label "Fischer"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_97a24d8c828b75ec>,
         <https://sappho-digital.com/actualization/person_ref/bibl_e58bccae_person_97a24d8c828b75ec>,
         <https://sappho-digital.com/actualization/person_ref/bibl_e745799e_person_97a24d8c828b75ec> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_97a24d8c828b75ec> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_97a24d8c828b75ec> .
 
 <https://sappho-digital.com/person/person_a2f67175618331bf> a ecrm:E21_Person ;
     rdfs:label "Larichos"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_a2f67175618331bf>,
         <https://sappho-digital.com/actualization/person_ref/bibl_b705febf_person_a2f67175618331bf>,
         <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_a2f67175618331bf> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_a2f67175618331bf> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_a2f67175618331bf> .
 
 <https://sappho-digital.com/person/person_a44f7c86bfc2958d> a ecrm:E21_Person ;
     rdfs:label "Gongyla"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_a44f7c86bfc2958d>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_22_person_a44f7c86bfc2958d>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_95_person_a44f7c86bfc2958d> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_a44f7c86bfc2958d> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_a44f7c86bfc2958d> .
 
 <https://sappho-digital.com/person/person_a8693158074cfc94> a ecrm:E21_Person ;
     rdfs:label "Anakreon"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_a8693158074cfc94>,
         <https://sappho-digital.com/actualization/person_ref/bibl_8fc572e2_person_a8693158074cfc94>,
         <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_a8693158074cfc94> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_a8693158074cfc94> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_a8693158074cfc94> .
 
 <https://sappho-digital.com/person/person_c4b1fa4084e429c3> a ecrm:E21_Person ;
     rdfs:label "Gorgo"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_sappho_103a_person_c4b1fa4084e429c3>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_144_person_c4b1fa4084e429c3>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_29_person_c4b1fa4084e429c3> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_c4b1fa4084e429c3> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_c4b1fa4084e429c3> .
 
 <https://sappho-digital.com/person/person_d2167a313c41ceaa> a ecrm:E21_Person ;
     rdfs:label "Kerkylas von Andros"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_d2167a313c41ceaa>,
         <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_d2167a313c41ceaa>,
         <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_d2167a313c41ceaa> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_d2167a313c41ceaa> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_d2167a313c41ceaa> .
 
 <https://sappho-digital.com/person/person_db532d0c7b2fccca> a ecrm:E21_Person ;
     rdfs:label "Rhamnes"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_8ebf0c28_person_db532d0c7b2fccca>,
         <https://sappho-digital.com/actualization/person_ref/bibl_ba71b2e5_person_db532d0c7b2fccca>,
         <https://sappho-digital.com/actualization/person_ref/bibl_ec11b447_person_db532d0c7b2fccca> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_db532d0c7b2fccca> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_db532d0c7b2fccca> .
 
 <https://sappho-digital.com/person/person_e9b8b1919af5758a> a ecrm:E21_Person ;
     rdfs:label "Hymenaios"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_0643ca58_person_e9b8b1919af5758a>,
         <https://sappho-digital.com/actualization/person_ref/bibl_f7bb70af_person_e9b8b1919af5758a>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_111_person_e9b8b1919af5758a> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_e9b8b1919af5758a> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_e9b8b1919af5758a> .
 
 <https://sappho-digital.com/person/person_f79231e41dd95683> a ecrm:E21_Person ;
     rdfs:label "Artemis"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_f79231e41dd95683>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_44a_person_f79231e41dd95683>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_84_person_f79231e41dd95683> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_f79231e41dd95683> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_f79231e41dd95683> .
 
 <https://sappho-digital.com/place/place_4cab37cdf075289f> a ecrm:E53_Place ;
     rdfs:label "Acheron"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_69a9167e_place_4cab37cdf075289f>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_65_place_4cab37cdf075289f>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_95_place_4cab37cdf075289f> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_4cab37cdf075289f> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_4cab37cdf075289f> .
 
 <https://sappho-digital.com/place/place_7a4fb8e10d66c95f> a ecrm:E53_Place ;
     rdfs:label "Ionien"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_458b7c88_place_7a4fb8e10d66c95f>,
         <https://sappho-digital.com/actualization/place_ref/bibl_5ca5f0b6_place_7a4fb8e10d66c95f>,
         <https://sappho-digital.com/actualization/place_ref/bibl_8665dcc5_place_7a4fb8e10d66c95f> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_7a4fb8e10d66c95f> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_7a4fb8e10d66c95f> .
 
 <https://sappho-digital.com/place/place_9bd33c7fdd67c764> a ecrm:E53_Place ;
     rdfs:label "Athen"@en ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_5aa55e45_place_9bd33c7fdd67c764>,
         <https://sappho-digital.com/actualization/place_ref/bibl_8665dcc5_place_9bd33c7fdd67c764>,
         <https://sappho-digital.com/actualization/place_ref/bibl_8ab38a85_place_9bd33c7fdd67c764> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_9bd33c7fdd67c764> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_9bd33c7fdd67c764> .
 
 <https://sappho-digital.com/textpassage/phrase_2ec47d9b59c1040e> a intro:INT21_TextPassage ;
     rdfs:label "Textpassage: Honigsüß"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/phrase_2ec47d9b59c1040e> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/phrase_2ec47d9b59c1040e> ;
     intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_d85ade6a>,
         <https://sappho-digital.com/expression/bibl_ebc1bb1f>,
         <https://sappho-digital.com/expression/bibl_sappho_112>,
@@ -41033,7 +41033,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_002ca4e56dca366e> a intro:INT_Motif ;
     rdfs:label "Motif: Weibliche Gemeinschaft"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_002ca4e56dca366e> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_002ca4e56dca366e> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_002ca4e56dca366e>,
         <https://sappho-digital.com/actualization/motif/bibl_a53d809b_motif_002ca4e56dca366e>,
         <https://sappho-digital.com/actualization/motif/bibl_b53a5020_motif_002ca4e56dca366e>,
@@ -41041,7 +41041,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_4c9fc6a95d249640> a intro:INT_Motif ;
     rdfs:label "Motif: Veilchen"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_4c9fc6a95d249640> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_4c9fc6a95d249640> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_5ca5f0b6_motif_4c9fc6a95d249640>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_4c9fc6a95d249640>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_21_motif_4c9fc6a95d249640>,
@@ -41049,7 +41049,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_5712449d2e4712f8> a intro:INT_Motif ;
     rdfs:label "Motif: Garten"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_5712449d2e4712f8> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_5712449d2e4712f8> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_5712449d2e4712f8>,
         <https://sappho-digital.com/actualization/motif/bibl_a717f073_motif_5712449d2e4712f8>,
         <https://sappho-digital.com/actualization/motif/bibl_e58bccae_motif_5712449d2e4712f8>,
@@ -41057,7 +41057,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_7b4f6bd41d20b520> a intro:INT_Motif ;
     rdfs:label "Motif: Apfel"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_7b4f6bd41d20b520> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_7b4f6bd41d20b520> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0f7a6b8d_motif_7b4f6bd41d20b520>,
         <https://sappho-digital.com/actualization/motif/bibl_8e053a15_motif_7b4f6bd41d20b520>,
         <https://sappho-digital.com/actualization/motif/bibl_b47fb393_motif_7b4f6bd41d20b520>,
@@ -41065,7 +41065,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_872360a9416bbe76> a intro:INT_Motif ;
     rdfs:label "Motif: Apfelbaum"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_872360a9416bbe76> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_872360a9416bbe76> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_872360a9416bbe76>,
         <https://sappho-digital.com/actualization/motif/bibl_8e053a15_motif_872360a9416bbe76>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_105_motif_872360a9416bbe76>,
@@ -41073,7 +41073,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_a9a67d884bb4bc94> a intro:INT_Motif ;
     rdfs:label "Motif: Veilchenbrust"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_a9a67d884bb4bc94> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_a9a67d884bb4bc94> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_a9a67d884bb4bc94>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_21351_9-12_21376r_1-8_motif_a9a67d884bb4bc94>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_21_motif_a9a67d884bb4bc94>,
@@ -41081,7 +41081,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_b298b875e60b4efb> a intro:INT_Motif ;
     rdfs:label "Motif: Nacktheit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_b298b875e60b4efb> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_b298b875e60b4efb> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_4e970562_motif_b298b875e60b4efb>,
         <https://sappho-digital.com/actualization/motif/bibl_a53d809b_motif_b298b875e60b4efb>,
         <https://sappho-digital.com/actualization/motif/bibl_e2546c7f_motif_b298b875e60b4efb>,
@@ -41089,7 +41089,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_d57e3bd57313bbdd> a intro:INT_Motif ;
     rdfs:label "Motif: Vergöttlichung"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_d57e3bd57313bbdd> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_d57e3bd57313bbdd> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_d57e3bd57313bbdd>,
         <https://sappho-digital.com/actualization/motif/bibl_632dac82_motif_d57e3bd57313bbdd>,
         <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_d57e3bd57313bbdd>,
@@ -41137,7 +41137,7 @@
 
 <https://sappho-digital.com/feature/plot/plot_7088a192832d9d0c> a intro:INT_Plot ;
     rdfs:label "Plot: Alternde Sappho"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_7088a192832d9d0c> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_7088a192832d9d0c> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_2660d82e_plot_7088a192832d9d0c>,
         <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_7088a192832d9d0c>,
         <https://sappho-digital.com/actualization/plot/bibl_97722fa3_plot_7088a192832d9d0c>,
@@ -41145,7 +41145,7 @@
 
 <https://sappho-digital.com/feature/topic/topic_61418e73ecf18fa9> a intro:INT_Topic ;
     rdfs:label "Topic: Menschlichkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_61418e73ecf18fa9> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_61418e73ecf18fa9> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_4110fba1_topic_61418e73ecf18fa9>,
         <https://sappho-digital.com/actualization/topic/bibl_5f1d7d40_topic_61418e73ecf18fa9>,
         <https://sappho-digital.com/actualization/topic/bibl_63209746_topic_61418e73ecf18fa9>,
@@ -41153,7 +41153,7 @@
 
 <https://sappho-digital.com/feature/topic/topic_6c84497f664d562a> a intro:INT_Topic ;
     rdfs:label "Topic: Kriegswesen"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_6c84497f664d562a> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_6c84497f664d562a> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_0bd2c59f_topic_6c84497f664d562a>,
         <https://sappho-digital.com/actualization/topic/bibl_5aa55e45_topic_6c84497f664d562a>,
         <https://sappho-digital.com/actualization/topic/bibl_e58bccae_topic_6c84497f664d562a>,
@@ -41161,7 +41161,7 @@
 
 <https://sappho-digital.com/feature/topic/topic_dd0209b2c71040a5> a intro:INT_Topic ;
     rdfs:label "Topic: Altern"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_dd0209b2c71040a5> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_dd0209b2c71040a5> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_69a9167e_topic_dd0209b2c71040a5>,
         <https://sappho-digital.com/actualization/topic/bibl_sappho_21351_9-12_21376r_1-8_topic_dd0209b2c71040a5>,
         <https://sappho-digital.com/actualization/topic/bibl_sappho_21_topic_dd0209b2c71040a5>,
@@ -41173,7 +41173,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_0eabdfe13c1ff095>,
         <https://sappho-digital.com/actualization/person_ref/bibl_a5039b6f_person_0eabdfe13c1ff095>,
         <https://sappho-digital.com/actualization/person_ref/bibl_d85ade6a_person_0eabdfe13c1ff095> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_0eabdfe13c1ff095> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_0eabdfe13c1ff095> .
 
 <https://sappho-digital.com/person/person_2eb129793d7ca74a> a ecrm:E21_Person ;
     rdfs:label "Hermes"@en ;
@@ -41181,7 +41181,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_2eb129793d7ca74a>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_141_person_2eb129793d7ca74a>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_95_person_2eb129793d7ca74a> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_2eb129793d7ca74a> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_2eb129793d7ca74a> .
 
 <https://sappho-digital.com/person/person_4a8abedda068cc77> a ecrm:E21_Person ;
     rdfs:label "Sklave/Sklavin"@en ;
@@ -41189,7 +41189,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_8ebf0c28_person_4a8abedda068cc77>,
         <https://sappho-digital.com/actualization/person_ref/bibl_e58bccae_person_4a8abedda068cc77>,
         <https://sappho-digital.com/actualization/person_ref/bibl_ec11b447_person_4a8abedda068cc77> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_4a8abedda068cc77> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_4a8abedda068cc77> .
 
 <https://sappho-digital.com/person/person_7715e9ee67577553> a ecrm:E21_Person ;
     rdfs:label "Menelaos"@en ;
@@ -41197,7 +41197,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_b47fb393_person_7715e9ee67577553>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_16_person_7715e9ee67577553>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_17_person_7715e9ee67577553> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_7715e9ee67577553> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_7715e9ee67577553> .
 
 <https://sappho-digital.com/person/person_887e83106aad1200> a ecrm:E21_Person ;
     rdfs:label "Charon"@en ;
@@ -41205,7 +41205,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_887e83106aad1200>,
         <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_887e83106aad1200>,
         <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_887e83106aad1200> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_887e83106aad1200> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_887e83106aad1200> .
 
 <https://sappho-digital.com/person/person_9545062e029ef19b> a ecrm:E21_Person ;
     rdfs:label "Melitta"@en ;
@@ -41213,7 +41213,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_8ebf0c28_person_9545062e029ef19b>,
         <https://sappho-digital.com/actualization/person_ref/bibl_ba71b2e5_person_9545062e029ef19b>,
         <https://sappho-digital.com/actualization/person_ref/bibl_ec11b447_person_9545062e029ef19b> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_9545062e029ef19b> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_9545062e029ef19b> .
 
 <https://sappho-digital.com/person/person_d92f8054b846977e> a ecrm:E21_Person ;
     rdfs:label "Jungfrau"@en ;
@@ -41221,7 +41221,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_112_person_d92f8054b846977e>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_153_person_d92f8054b846977e>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_44_person_d92f8054b846977e> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_d92f8054b846977e> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_d92f8054b846977e> .
 
 <https://sappho-digital.com/person/person_dbb519c32f7f48ce> a ecrm:E21_Person ;
     rdfs:label "Leto"@en ;
@@ -41229,7 +41229,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_cbfea792_person_dbb519c32f7f48ce>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_142_person_dbb519c32f7f48ce>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_44a_person_dbb519c32f7f48ce> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_dbb519c32f7f48ce> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_dbb519c32f7f48ce> .
 
 <https://sappho-digital.com/person/person_e3e42e3bfe456766> a ecrm:E21_Person ;
     rdfs:label "Helena"@en ;
@@ -41237,7 +41237,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_5283cfa8_person_e3e42e3bfe456766>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_16_person_e3e42e3bfe456766>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_23_person_e3e42e3bfe456766> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_e3e42e3bfe456766> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_e3e42e3bfe456766> .
 
 <https://sappho-digital.com/place/place_481812f727302fbe> a ecrm:E53_Place ;
     rdfs:label "Kreta"@en ;
@@ -41245,7 +41245,7 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_8ab38a85_place_481812f727302fbe>,
         <https://sappho-digital.com/actualization/place_ref/bibl_e58bccae_place_481812f727302fbe>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_2_place_481812f727302fbe> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_481812f727302fbe> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_481812f727302fbe> .
 
 <https://sappho-digital.com/place/place_8f3a4ee0def96e05> a ecrm:E53_Place ;
     rdfs:label "Syrakus"@en ;
@@ -41253,7 +41253,7 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_458b7c88_place_8f3a4ee0def96e05>,
         <https://sappho-digital.com/actualization/place_ref/bibl_e745799e_place_8f3a4ee0def96e05>,
         <https://sappho-digital.com/actualization/place_ref/bibl_ebc1bb1f_place_8f3a4ee0def96e05> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_8f3a4ee0def96e05> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_8f3a4ee0def96e05> .
 
 <https://sappho-digital.com/place/place_938d82612b2cbf3a> a ecrm:E53_Place ;
     rdfs:label "Elysium"@en ;
@@ -41261,7 +41261,7 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_938d82612b2cbf3a>,
         <https://sappho-digital.com/actualization/place_ref/bibl_cbfea792_place_938d82612b2cbf3a>,
         <https://sappho-digital.com/actualization/place_ref/bibl_d85ade6a_place_938d82612b2cbf3a> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_938d82612b2cbf3a> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_938d82612b2cbf3a> .
 
 <https://sappho-digital.com/place/place_967849e8809f26b2> a ecrm:E53_Place ;
     rdfs:label "Deutschland"@en ;
@@ -41269,7 +41269,7 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_a0bace6b_place_967849e8809f26b2>,
         <https://sappho-digital.com/actualization/place_ref/bibl_c908fde2_place_967849e8809f26b2>,
         <https://sappho-digital.com/actualization/place_ref/bibl_d85ade6a_place_967849e8809f26b2> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_967849e8809f26b2> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_967849e8809f26b2> .
 
 <https://sappho-digital.com/place/place_c469fa37e1f081e9> a ecrm:E53_Place ;
     rdfs:label "Pieria"@en ;
@@ -41277,7 +41277,7 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_8fc572e2_place_c469fa37e1f081e9>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_103_place_c469fa37e1f081e9>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_55_place_c469fa37e1f081e9> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_c469fa37e1f081e9> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_c469fa37e1f081e9> .
 
 <https://sappho-digital.com/expression/bibl_1585db9d> a lrmoo:F2_Expression ;
     rdfs:label "Dies Buch gehört dem König"@de ;
@@ -41421,7 +41421,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_20ee4027d4def3f7> a intro:INT_Motif ;
     rdfs:label "Motif: Nektar"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_20ee4027d4def3f7> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_20ee4027d4def3f7> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_88439060_motif_20ee4027d4def3f7>,
         <https://sappho-digital.com/actualization/motif/bibl_a667785d_motif_20ee4027d4def3f7>,
         <https://sappho-digital.com/actualization/motif/bibl_d85ade6a_motif_20ee4027d4def3f7>,
@@ -41430,7 +41430,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_278e356ed64cbb3f> a intro:INT_Motif ;
     rdfs:label "Motif: Plejaden"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_278e356ed64cbb3f> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_278e356ed64cbb3f> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_278e356ed64cbb3f>,
         <https://sappho-digital.com/actualization/motif/bibl_889153c6_motif_278e356ed64cbb3f>,
         <https://sappho-digital.com/actualization/motif/bibl_b8a3a15a_motif_278e356ed64cbb3f>,
@@ -41439,7 +41439,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_4592efcd729119a1> a intro:INT_Motif ;
     rdfs:label "Motif: Ziege"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_4592efcd729119a1> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_4592efcd729119a1> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_4592efcd729119a1>,
         <https://sappho-digital.com/actualization/motif/bibl_3761b97f_motif_4592efcd729119a1>,
         <https://sappho-digital.com/actualization/motif/bibl_6fcff98a_motif_4592efcd729119a1>,
@@ -41448,7 +41448,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_481b1c00e6a442c4> a intro:INT_Motif ;
     rdfs:label "Motif: Weinen"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_481b1c00e6a442c4> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_481b1c00e6a442c4> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_632dac82_motif_481b1c00e6a442c4>,
         <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_481b1c00e6a442c4>,
         <https://sappho-digital.com/actualization/motif/bibl_78d95d8c_motif_481b1c00e6a442c4>,
@@ -41457,7 +41457,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_4c934ba7b9f256bf> a intro:INT_Motif ;
     rdfs:label "Motif: Tier"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_4c934ba7b9f256bf> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_4c934ba7b9f256bf> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0491bde2_motif_4c934ba7b9f256bf>,
         <https://sappho-digital.com/actualization/motif/bibl_56775306_motif_4c934ba7b9f256bf>,
         <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_4c934ba7b9f256bf>,
@@ -41466,7 +41466,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_632a07b81eb5d851> a intro:INT_Motif ;
     rdfs:label "Motif: Schweigen"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_632a07b81eb5d851> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_632a07b81eb5d851> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_632a07b81eb5d851>,
         <https://sappho-digital.com/actualization/motif/bibl_cbfea792_motif_632a07b81eb5d851>,
         <https://sappho-digital.com/actualization/motif/bibl_e2546c7f_motif_632a07b81eb5d851>,
@@ -41475,7 +41475,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_67d99b12bd68f38d> a intro:INT_Motif ;
     rdfs:label "Motif: Gleichaltrigkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_67d99b12bd68f38d> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_67d99b12bd68f38d> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_67d99b12bd68f38d>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_30_motif_67d99b12bd68f38d>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_64_motif_67d99b12bd68f38d>,
@@ -41484,7 +41484,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_7939d5d42d13eba9> a intro:INT_Motif ;
     rdfs:label "Motif: Freundschaft"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_7939d5d42d13eba9> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_7939d5d42d13eba9> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_7939d5d42d13eba9>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_121_motif_7939d5d42d13eba9>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_142_motif_7939d5d42d13eba9>,
@@ -41493,7 +41493,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_8aa33913f008eb89> a intro:INT_Motif ;
     rdfs:label "Motif: Biene"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_8aa33913f008eb89> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_8aa33913f008eb89> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_8aa33913f008eb89>,
         <https://sappho-digital.com/actualization/motif/bibl_5ca5f0b6_motif_8aa33913f008eb89>,
         <https://sappho-digital.com/actualization/motif/bibl_936bf0a5_motif_8aa33913f008eb89>,
@@ -41502,7 +41502,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_8dda05b62f2174da> a intro:INT_Motif ;
     rdfs:label "Motif: Wein"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_8dda05b62f2174da> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_8dda05b62f2174da> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0a0e461e_motif_8dda05b62f2174da>,
         <https://sappho-digital.com/actualization/motif/bibl_458b7c88_motif_8dda05b62f2174da>,
         <https://sappho-digital.com/actualization/motif/bibl_a717f073_motif_8dda05b62f2174da>,
@@ -41511,7 +41511,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_8f41e1cc1d433f40> a intro:INT_Motif ;
     rdfs:label "Motif: Zweifel"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_8f41e1cc1d433f40> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_8f41e1cc1d433f40> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_8f41e1cc1d433f40>,
         <https://sappho-digital.com/actualization/motif/bibl_4e970562_motif_8f41e1cc1d433f40>,
         <https://sappho-digital.com/actualization/motif/bibl_69eddc38_motif_8f41e1cc1d433f40>,
@@ -41520,7 +41520,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_f7b450835049e501> a intro:INT_Motif ;
     rdfs:label "Motif: Taube"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_f7b450835049e501> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_f7b450835049e501> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_6fcff98a_motif_f7b450835049e501>,
         <https://sappho-digital.com/actualization/motif/bibl_8fc572e2_motif_f7b450835049e501>,
         <https://sappho-digital.com/actualization/motif/bibl_a717f073_motif_f7b450835049e501>,
@@ -41529,7 +41529,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_f9de876206744971> a intro:INT_Motif ;
     rdfs:label "Motif: Menschlichkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_f9de876206744971> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_f9de876206744971> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_f9de876206744971>,
         <https://sappho-digital.com/actualization/motif/bibl_a0bace6b_motif_f9de876206744971>,
         <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_f9de876206744971>,
@@ -41583,7 +41583,7 @@
 
 <https://sappho-digital.com/feature/plot/plot_1bd6cf31c44d00e5> a intro:INT_Plot ;
     rdfs:label "Plot: Sappho als Lehrerin"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_1bd6cf31c44d00e5> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_1bd6cf31c44d00e5> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_19d5a7ab_plot_1bd6cf31c44d00e5>,
         <https://sappho-digital.com/actualization/plot/bibl_4e970562_plot_1bd6cf31c44d00e5>,
         <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_1bd6cf31c44d00e5>,
@@ -41592,7 +41592,7 @@
 
 <https://sappho-digital.com/feature/plot/plot_42557e8d70c24751> a intro:INT_Plot ;
     rdfs:label "Plot: Göttliche Sappho"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_42557e8d70c24751> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_42557e8d70c24751> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_5283cfa8_plot_42557e8d70c24751>,
         <https://sappho-digital.com/actualization/plot/bibl_b0693a0e_plot_42557e8d70c24751>,
         <https://sappho-digital.com/actualization/plot/bibl_ba71b2e5_plot_42557e8d70c24751>,
@@ -41601,7 +41601,7 @@
 
 <https://sappho-digital.com/feature/plot/plot_6adb2e4795def630> a intro:INT_Plot ;
     rdfs:label "Plot: Unglückliche Sappho"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_6adb2e4795def630> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_6adb2e4795def630> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_00e9aff1_plot_6adb2e4795def630>,
         <https://sappho-digital.com/actualization/plot/bibl_e58bccae_plot_6adb2e4795def630>,
         <https://sappho-digital.com/actualization/plot/bibl_e745799e_plot_6adb2e4795def630>,
@@ -41610,7 +41610,7 @@
 
 <https://sappho-digital.com/feature/plot/plot_ebb7046704a8c30c> a intro:INT_Plot ;
     rdfs:label "Plot: Sappho als Erzieherin"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_ebb7046704a8c30c> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_ebb7046704a8c30c> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_4e970562_plot_ebb7046704a8c30c>,
         <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_ebb7046704a8c30c>,
         <https://sappho-digital.com/actualization/plot/bibl_936bf0a5_plot_ebb7046704a8c30c>,
@@ -41619,7 +41619,7 @@
 
 <https://sappho-digital.com/feature/topic/topic_83a2d3f58ce463ad> a intro:INT_Topic ;
     rdfs:label "Topic: Sapphos Rezeption"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_83a2d3f58ce463ad> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_83a2d3f58ce463ad> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_3d6a534d_topic_83a2d3f58ce463ad>,
         <https://sappho-digital.com/actualization/topic/bibl_5283cfa8_topic_83a2d3f58ce463ad>,
         <https://sappho-digital.com/actualization/topic/bibl_5f1d7d40_topic_83a2d3f58ce463ad>,
@@ -41628,7 +41628,7 @@
 
 <https://sappho-digital.com/feature/topic/topic_85e382a7ed66294c> a intro:INT_Topic ;
     rdfs:label "Topic: Liebeskummer"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_85e382a7ed66294c> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_85e382a7ed66294c> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_0434022c_topic_85e382a7ed66294c>,
         <https://sappho-digital.com/actualization/topic/bibl_78d95d8c_topic_85e382a7ed66294c>,
         <https://sappho-digital.com/actualization/topic/bibl_sappho_130_topic_85e382a7ed66294c>,
@@ -41637,7 +41637,7 @@
 
 <https://sappho-digital.com/feature/topic/topic_d8a87ac0faded437> a intro:INT_Topic ;
     rdfs:label "Topic: Abschied/Verlassen"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_d8a87ac0faded437> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_d8a87ac0faded437> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_2660d82e_topic_d8a87ac0faded437>,
         <https://sappho-digital.com/actualization/topic/bibl_407a0d29_topic_d8a87ac0faded437>,
         <https://sappho-digital.com/actualization/topic/bibl_69a9167e_topic_d8a87ac0faded437>,
@@ -41651,7 +41651,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_133_person_2a23732b2a3c21cf>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_65_person_2a23732b2a3c21cf>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_68_person_2a23732b2a3c21cf> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_2a23732b2a3c21cf> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_2a23732b2a3c21cf> .
 
 <https://sappho-digital.com/person/person_86564f02874aec39> a ecrm:E21_Person ;
     rdfs:label "Hades"@en ;
@@ -41660,7 +41660,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_8fc572e2_person_86564f02874aec39>,
         <https://sappho-digital.com/actualization/person_ref/bibl_cbfea792_person_86564f02874aec39>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_55_person_86564f02874aec39> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_86564f02874aec39> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_86564f02874aec39> .
 
 <https://sappho-digital.com/person/person_9ee0b67040c4734c> a ecrm:E21_Person ;
     rdfs:label "Rhodopis/Doricha"@en ;
@@ -41669,7 +41669,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_9ee0b67040c4734c>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_15_person_9ee0b67040c4734c>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_7_person_9ee0b67040c4734c> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_9ee0b67040c4734c> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_9ee0b67040c4734c> .
 
 <https://sappho-digital.com/place/place_39fc06d60391f952> a ecrm:E53_Place ;
     rdfs:label "Lydien"@en ;
@@ -41678,7 +41678,7 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_16_place_39fc06d60391f952>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_39_place_39fc06d60391f952>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_96_place_39fc06d60391f952> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_39fc06d60391f952> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_39fc06d60391f952> .
 
 <https://sappho-digital.com/place/place_ff6c437a4ca1c9b1> a ecrm:E53_Place ;
     rdfs:label "Lethe"@en ;
@@ -41687,7 +41687,7 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_a5039b6f_place_ff6c437a4ca1c9b1>,
         <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_ff6c437a4ca1c9b1>,
         <https://sappho-digital.com/actualization/place_ref/bibl_cbfea792_place_ff6c437a4ca1c9b1> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_ff6c437a4ca1c9b1> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_ff6c437a4ca1c9b1> .
 
 <https://sappho-digital.com/expression/bibl_843e4821> a lrmoo:F2_Expression ;
     rdfs:label "mit Sappho im Hof"@de ;
@@ -41837,7 +41837,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_08cc6f8757d81249> a intro:INT_Motif ;
     rdfs:label "Motif: Stille"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_08cc6f8757d81249> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_08cc6f8757d81249> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0f7a6b8d_motif_08cc6f8757d81249>,
         <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_08cc6f8757d81249>,
         <https://sappho-digital.com/actualization/motif/bibl_5ca5f0b6_motif_08cc6f8757d81249>,
@@ -41847,7 +41847,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_117bf1151b920a34> a intro:INT_Motif ;
     rdfs:label "Motif: Frühling"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_117bf1151b920a34> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_117bf1151b920a34> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_5ca5f0b6_motif_117bf1151b920a34>,
         <https://sappho-digital.com/actualization/motif/bibl_5f1d7d40_motif_117bf1151b920a34>,
         <https://sappho-digital.com/actualization/motif/bibl_632dac82_motif_117bf1151b920a34>,
@@ -41857,7 +41857,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_12b7c713ac24e9f6> a intro:INT_Motif ;
     rdfs:label "Motif: Neue Sappho"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_12b7c713ac24e9f6> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_12b7c713ac24e9f6> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_29dac241_motif_12b7c713ac24e9f6>,
         <https://sappho-digital.com/actualization/motif/bibl_8df69e81_motif_12b7c713ac24e9f6>,
         <https://sappho-digital.com/actualization/motif/bibl_a5889140_motif_12b7c713ac24e9f6>,
@@ -41867,7 +41867,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_5047cf2d5e1607fa> a intro:INT_Motif ;
     rdfs:label "Motif: Lorbeer"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_5047cf2d5e1607fa> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_5047cf2d5e1607fa> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_5283cfa8_motif_5047cf2d5e1607fa>,
         <https://sappho-digital.com/actualization/motif/bibl_5f1d7d40_motif_5047cf2d5e1607fa>,
         <https://sappho-digital.com/actualization/motif/bibl_ba71b2e5_motif_5047cf2d5e1607fa>,
@@ -41877,7 +41877,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_51e665deaa2486ee> a intro:INT_Motif ;
     rdfs:label "Motif: Bitterkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_51e665deaa2486ee> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_51e665deaa2486ee> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_51e665deaa2486ee>,
         <https://sappho-digital.com/actualization/motif/bibl_8665dcc5_motif_51e665deaa2486ee>,
         <https://sappho-digital.com/actualization/motif/bibl_e2598fbd_motif_51e665deaa2486ee>,
@@ -41887,7 +41887,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_c10f460a9ccb3510> a intro:INT_Motif ;
     rdfs:label "Motif: Insel"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_c10f460a9ccb3510> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_c10f460a9ccb3510> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0491bde2_motif_c10f460a9ccb3510>,
         <https://sappho-digital.com/actualization/motif/bibl_0bd2c59f_motif_c10f460a9ccb3510>,
         <https://sappho-digital.com/actualization/motif/bibl_407a0d29_motif_c10f460a9ccb3510>,
@@ -41957,7 +41957,7 @@
 
 <https://sappho-digital.com/feature/plot/plot_830dcfef58019d56> a intro:INT_Plot ;
     rdfs:label "Plot: Sappho im Exil"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_830dcfef58019d56> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_830dcfef58019d56> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_2660d82e_plot_830dcfef58019d56>,
         <https://sappho-digital.com/actualization/plot/bibl_8665dcc5_plot_830dcfef58019d56>,
         <https://sappho-digital.com/actualization/plot/bibl_8ab38a85_plot_830dcfef58019d56>,
@@ -41967,7 +41967,7 @@
 
 <https://sappho-digital.com/feature/topic/topic_f83ec0822d1cce6e> a intro:INT_Topic ;
     rdfs:label "Topic: Dichtkunst von Frauen"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_f83ec0822d1cce6e> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_f83ec0822d1cce6e> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_3d6a534d_topic_f83ec0822d1cce6e>,
         <https://sappho-digital.com/actualization/topic/bibl_8665dcc5_topic_f83ec0822d1cce6e>,
         <https://sappho-digital.com/actualization/topic/bibl_a0bace6b_topic_f83ec0822d1cce6e>,
@@ -41983,7 +41983,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_5f1d7d40_person_1526106cabf2fa6b>,
         <https://sappho-digital.com/actualization/person_ref/bibl_cbfea792_person_1526106cabf2fa6b>,
         <https://sappho-digital.com/actualization/person_ref/bibl_db8dfab9_person_1526106cabf2fa6b> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_1526106cabf2fa6b> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_1526106cabf2fa6b> .
 
 <https://sappho-digital.com/person/person_1972623f5799ed62> a ecrm:E21_Person ;
     rdfs:label "Homer"@en ;
@@ -41993,7 +41993,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_1972623f5799ed62>,
         <https://sappho-digital.com/actualization/person_ref/bibl_d85ade6a_person_1972623f5799ed62>,
         <https://sappho-digital.com/actualization/person_ref/bibl_f4da59f4_person_1972623f5799ed62> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_1972623f5799ed62> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_1972623f5799ed62> .
 
 <https://sappho-digital.com/person/person_4054b50081c54a12> a ecrm:E21_Person ;
     rdfs:label "Charis"@en ;
@@ -42003,7 +42003,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_44a_person_4054b50081c54a12>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_53_person_4054b50081c54a12>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_81_person_4054b50081c54a12> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_4054b50081c54a12> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_4054b50081c54a12> .
 
 <https://sappho-digital.com/person/person_f42fab276b6fdb13> a ecrm:E21_Person ;
     rdfs:label "Alkaios"@en ;
@@ -42013,7 +42013,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_8fc572e2_person_f42fab276b6fdb13>,
         <https://sappho-digital.com/actualization/person_ref/bibl_d85ade6a_person_f42fab276b6fdb13>,
         <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_f42fab276b6fdb13> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_f42fab276b6fdb13> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_f42fab276b6fdb13> .
 
 <https://sappho-digital.com/place/place_8975b920fcc0ab24> a ecrm:E53_Place ;
     rdfs:label "Ägypten"@en ;
@@ -42023,11 +42023,11 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_a0bace6b_place_8975b920fcc0ab24>,
         <https://sappho-digital.com/actualization/place_ref/bibl_e745799e_place_8975b920fcc0ab24>,
         <https://sappho-digital.com/actualization/place_ref/bibl_f4da59f4_place_8975b920fcc0ab24> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_8975b920fcc0ab24> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_8975b920fcc0ab24> .
 
 <https://sappho-digital.com/textpassage/phrase_993410118d749966> a intro:INT21_TextPassage ;
     rdfs:label "Textpassage: Süßbitter"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/phrase_993410118d749966> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/phrase_993410118d749966> ;
     intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_4e970562>,
         <https://sappho-digital.com/expression/bibl_6fcff98a>,
         <https://sappho-digital.com/expression/bibl_9bb8a741>,
@@ -42232,7 +42232,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_304a5e562a17af49> a intro:INT_Motif ;
     rdfs:label "Motif: Kuss"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_304a5e562a17af49> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_304a5e562a17af49> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_1bf78f84_motif_304a5e562a17af49>,
         <https://sappho-digital.com/actualization/motif/bibl_339f7bbc_motif_304a5e562a17af49>,
         <https://sappho-digital.com/actualization/motif/bibl_5ca5f0b6_motif_304a5e562a17af49>,
@@ -42243,7 +42243,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_320231279067b1d8> a intro:INT_Motif ;
     rdfs:label "Motif: Lyra"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_320231279067b1d8> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_320231279067b1d8> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_31f96313_motif_320231279067b1d8>,
         <https://sappho-digital.com/actualization/motif/bibl_3d6a534d_motif_320231279067b1d8>,
         <https://sappho-digital.com/actualization/motif/bibl_458b7c88_motif_320231279067b1d8>,
@@ -42254,7 +42254,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_33727627b793830a> a intro:INT_Motif ;
     rdfs:label "Motif: Lippe"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_33727627b793830a> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_33727627b793830a> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0491bde2_motif_33727627b793830a>,
         <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_33727627b793830a>,
         <https://sappho-digital.com/actualization/motif/bibl_1bf78f84_motif_33727627b793830a>,
@@ -42265,7 +42265,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_39a10faa6e0647fb> a intro:INT_Motif ;
     rdfs:label "Motif: Honig"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_39a10faa6e0647fb> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_39a10faa6e0647fb> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_39a10faa6e0647fb>,
         <https://sappho-digital.com/actualization/motif/bibl_936bf0a5_motif_39a10faa6e0647fb>,
         <https://sappho-digital.com/actualization/motif/bibl_9ade79f7_motif_39a10faa6e0647fb>,
@@ -42276,7 +42276,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_637a4ceb95c9c2f5> a intro:INT_Motif ;
     rdfs:label "Motif: Abschied/Verlassen"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_637a4ceb95c9c2f5> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_637a4ceb95c9c2f5> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_4e970562_motif_637a4ceb95c9c2f5>,
         <https://sappho-digital.com/actualization/motif/bibl_b53a5020_motif_637a4ceb95c9c2f5>,
         <https://sappho-digital.com/actualization/motif/bibl_b695354d_motif_637a4ceb95c9c2f5>,
@@ -42287,7 +42287,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_751896a2b642d52f> a intro:INT_Motif ;
     rdfs:label "Motif: Fragmenthaftigkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_751896a2b642d52f> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_751896a2b642d52f> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_751896a2b642d52f>,
         <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_751896a2b642d52f>,
         <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_751896a2b642d52f>,
@@ -42298,7 +42298,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_7fe9f2b8afd3cc70> a intro:INT_Motif ;
     rdfs:label "Motif: Wange"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_7fe9f2b8afd3cc70> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_7fe9f2b8afd3cc70> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0491bde2_motif_7fe9f2b8afd3cc70>,
         <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_7fe9f2b8afd3cc70>,
         <https://sappho-digital.com/actualization/motif/bibl_5ae4b5fe_motif_7fe9f2b8afd3cc70>,
@@ -42309,7 +42309,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_9505455eb419f6c3> a intro:INT_Motif ;
     rdfs:label "Motif: Hirtenwesen"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_9505455eb419f6c3> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_9505455eb419f6c3> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_9505455eb419f6c3>,
         <https://sappho-digital.com/actualization/motif/bibl_339f7bbc_motif_9505455eb419f6c3>,
         <https://sappho-digital.com/actualization/motif/bibl_3761b97f_motif_9505455eb419f6c3>,
@@ -42320,7 +42320,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_beeb48d0c7ac4bd1> a intro:INT_Motif ;
     rdfs:label "Motif: Tanz"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_beeb48d0c7ac4bd1> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_beeb48d0c7ac4bd1> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_beeb48d0c7ac4bd1>,
         <https://sappho-digital.com/actualization/motif/bibl_4e970562_motif_beeb48d0c7ac4bd1>,
         <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_beeb48d0c7ac4bd1>,
@@ -42331,7 +42331,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_d80bb67aabd5386f> a intro:INT_Motif ;
     rdfs:label "Motif: Becher/Krug"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_d80bb67aabd5386f> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_d80bb67aabd5386f> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_a717f073_motif_d80bb67aabd5386f>,
         <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_d80bb67aabd5386f>,
         <https://sappho-digital.com/actualization/motif/bibl_ba71b2e5_motif_d80bb67aabd5386f>,
@@ -42342,7 +42342,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_eadc613d365792dc> a intro:INT_Motif ;
     rdfs:label "Motif: Locke"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_eadc613d365792dc> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_eadc613d365792dc> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_eadc613d365792dc>,
         <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_eadc613d365792dc>,
         <https://sappho-digital.com/actualization/motif/bibl_cbfea792_motif_eadc613d365792dc>,
@@ -42353,7 +42353,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_f8ead995947f7500> a intro:INT_Motif ;
     rdfs:label "Motif: Morgen"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_f8ead995947f7500> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_f8ead995947f7500> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_4e970562_motif_f8ead995947f7500>,
         <https://sappho-digital.com/actualization/motif/bibl_5f1d7d40_motif_f8ead995947f7500>,
         <https://sappho-digital.com/actualization/motif/bibl_936bf0a5_motif_f8ead995947f7500>,
@@ -42375,7 +42375,7 @@
 
 <https://sappho-digital.com/feature/plot/plot_efe620bf3882fa2f> a intro:INT_Plot ;
     rdfs:label "Plot: Sappho als Mutter von Kleis"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_efe620bf3882fa2f> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_efe620bf3882fa2f> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_458b7c88_plot_efe620bf3882fa2f>,
         <https://sappho-digital.com/actualization/plot/bibl_4e970562_plot_efe620bf3882fa2f>,
         <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_efe620bf3882fa2f>,
@@ -42386,7 +42386,7 @@
 
 <https://sappho-digital.com/feature/topic/topic_193f7fb77b90540a> a intro:INT_Topic ;
     rdfs:label "Topic: Schönheit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_193f7fb77b90540a> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_193f7fb77b90540a> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_0bd2c59f_topic_193f7fb77b90540a>,
         <https://sappho-digital.com/actualization/topic/bibl_b0693a0e_topic_193f7fb77b90540a>,
         <https://sappho-digital.com/actualization/topic/bibl_sappho_138_topic_193f7fb77b90540a>,
@@ -42414,7 +42414,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_117b_person_38af0ac181d5d397>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_140_person_38af0ac181d5d397>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_168_person_38af0ac181d5d397> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_38af0ac181d5d397> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_38af0ac181d5d397> .
 
 <https://sappho-digital.com/person/person_499bbc9e7596f10d> a ecrm:E21_Person ;
     rdfs:label "Hera"@en ;
@@ -42425,7 +42425,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_f4da59f4_person_499bbc9e7596f10d>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_17_person_499bbc9e7596f10d>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_9_person_499bbc9e7596f10d> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_499bbc9e7596f10d> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_499bbc9e7596f10d> .
 
 <https://sappho-digital.com/person/person_f47881025ad98035> a ecrm:E21_Person ;
     rdfs:label "Dionysos"@en ;
@@ -42436,7 +42436,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_f4da59f4_person_f47881025ad98035>,
         <https://sappho-digital.com/actualization/person_ref/bibl_f5e2fa88_person_f47881025ad98035>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_17_person_f47881025ad98035> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_f47881025ad98035> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_f47881025ad98035> .
 
 <https://sappho-digital.com/place/place_040eb47ff2612816> a ecrm:E53_Place ;
     rdfs:label "Zypern"@en ;
@@ -42447,7 +42447,7 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_35_place_040eb47ff2612816>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_44_place_040eb47ff2612816>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_65_place_040eb47ff2612816> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_040eb47ff2612816> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_040eb47ff2612816> .
 
 <https://sappho-digital.com/place/place_6f62261a950e9311> a ecrm:E53_Place ;
     rdfs:label "Troja"@en ;
@@ -42458,7 +42458,7 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_f4da59f4_place_6f62261a950e9311>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_16_place_6f62261a950e9311>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_44_place_6f62261a950e9311> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_6f62261a950e9311> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_6f62261a950e9311> .
 
 <https://sappho-digital.com/expression/bibl_889153c6> a lrmoo:F2_Expression ;
     rdfs:label "Variationen über ein Fragment von Sappho"@de ;
@@ -42524,7 +42524,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_2d730412302b3df0> a intro:INT_Motif ;
     rdfs:label "Motif: Sehnsucht"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_2d730412302b3df0> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_2d730412302b3df0> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_2d730412302b3df0>,
         <https://sappho-digital.com/actualization/motif/bibl_3759bef5_motif_2d730412302b3df0>,
         <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_2d730412302b3df0>,
@@ -42536,7 +42536,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_4f6e0ef68efa0824> a intro:INT_Motif ;
     rdfs:label "Motif: Schmerz"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_4f6e0ef68efa0824> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_4f6e0ef68efa0824> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_4f6e0ef68efa0824>,
         <https://sappho-digital.com/actualization/motif/bibl_4fcb8123_motif_4f6e0ef68efa0824>,
         <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_4f6e0ef68efa0824>,
@@ -42548,7 +42548,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_5a30a7576a2ef0e9> a intro:INT_Motif ;
     rdfs:label "Motif: Süße Stimme"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_5a30a7576a2ef0e9> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_5a30a7576a2ef0e9> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_5ca5f0b6_motif_5a30a7576a2ef0e9>,
         <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_5a30a7576a2ef0e9>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_153_motif_5a30a7576a2ef0e9>,
@@ -42560,7 +42560,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_c30341434873ce70> a intro:INT_Motif ;
     rdfs:label "Motif: Wahnsinn"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_c30341434873ce70> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_c30341434873ce70> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0434022c_motif_c30341434873ce70>,
         <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_c30341434873ce70>,
         <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_c30341434873ce70>,
@@ -42572,7 +42572,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_e02eb23076791844> a intro:INT_Motif ;
     rdfs:label "Motif: Schwarz"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_e02eb23076791844> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_e02eb23076791844> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0434022c_motif_e02eb23076791844>,
         <https://sappho-digital.com/actualization/motif/bibl_9ade79f7_motif_e02eb23076791844>,
         <https://sappho-digital.com/actualization/motif/bibl_a3992d71_motif_e02eb23076791844>,
@@ -42620,7 +42620,7 @@
 
 <https://sappho-digital.com/feature/plot/plot_43b59f052f3dc73e> a intro:INT_Plot ;
     rdfs:label "Plot: Sappho als homoerotisch Begehrende"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_43b59f052f3dc73e> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_43b59f052f3dc73e> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_339f7bbc_plot_43b59f052f3dc73e>,
         <https://sappho-digital.com/actualization/plot/bibl_4e970562_plot_43b59f052f3dc73e>,
         <https://sappho-digital.com/actualization/plot/bibl_5283cfa8_plot_43b59f052f3dc73e>,
@@ -42632,7 +42632,7 @@
 
 <https://sappho-digital.com/feature/topic/topic_16fb1687f7449a95> a intro:INT_Topic ;
     rdfs:label "Topic: Tod"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_16fb1687f7449a95> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_16fb1687f7449a95> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_19d5a7ab_topic_16fb1687f7449a95>,
         <https://sappho-digital.com/actualization/topic/bibl_4e970562_topic_16fb1687f7449a95>,
         <https://sappho-digital.com/actualization/topic/bibl_63209746_topic_16fb1687f7449a95>,
@@ -42652,7 +42652,7 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_ac07f1e878d38c8d>,
         <https://sappho-digital.com/actualization/place_ref/bibl_e745799e_place_ac07f1e878d38c8d>,
         <https://sappho-digital.com/actualization/place_ref/bibl_f4da59f4_place_ac07f1e878d38c8d> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_ac07f1e878d38c8d> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_ac07f1e878d38c8d> .
 
 <https://sappho-digital.com/expression/bibl_2838b3d9> a lrmoo:F2_Expression ;
     rdfs:label "Lucinde. Ein Roman. Erster Theil"@de ;
@@ -42780,7 +42780,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_24f6269abdf1c989> a intro:INT_Motif ;
     rdfs:label "Motif: Erinnerung"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_24f6269abdf1c989> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_24f6269abdf1c989> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_4e970562_motif_24f6269abdf1c989>,
         <https://sappho-digital.com/actualization/motif/bibl_a3992d71_motif_24f6269abdf1c989>,
         <https://sappho-digital.com/actualization/motif/bibl_b53e5151_motif_24f6269abdf1c989>,
@@ -42793,7 +42793,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_2bae3f2188e05143> a intro:INT_Motif ;
     rdfs:label "Motif: Glückseligkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_2bae3f2188e05143> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_2bae3f2188e05143> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_5283cfa8_motif_2bae3f2188e05143>,
         <https://sappho-digital.com/actualization/motif/bibl_632dac82_motif_2bae3f2188e05143>,
         <https://sappho-digital.com/actualization/motif/bibl_ec11b447_motif_2bae3f2188e05143>,
@@ -42806,7 +42806,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_3030faf4dfb8101d> a intro:INT_Motif ;
     rdfs:label "Motif: Silber"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_3030faf4dfb8101d> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_3030faf4dfb8101d> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_458b7c88_motif_3030faf4dfb8101d>,
         <https://sappho-digital.com/actualization/motif/bibl_5ca5f0b6_motif_3030faf4dfb8101d>,
         <https://sappho-digital.com/actualization/motif/bibl_5f1d7d40_motif_3030faf4dfb8101d>,
@@ -42819,7 +42819,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_7de60080ab357919> a intro:INT_Motif ;
     rdfs:label "Motif: Fuß"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_7de60080ab357919> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_7de60080ab357919> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_407a0d29_motif_7de60080ab357919>,
         <https://sappho-digital.com/actualization/motif/bibl_5f1d7d40_motif_7de60080ab357919>,
         <https://sappho-digital.com/actualization/motif/bibl_a3992d71_motif_7de60080ab357919>,
@@ -42832,7 +42832,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_92328d8c25447861> a intro:INT_Motif ;
     rdfs:label "Motif: Gewitter"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_92328d8c25447861> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_92328d8c25447861> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0491bde2_motif_92328d8c25447861>,
         <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_92328d8c25447861>,
         <https://sappho-digital.com/actualization/motif/bibl_6fcff98a_motif_92328d8c25447861>,
@@ -42858,7 +42858,7 @@
 
 <https://sappho-digital.com/feature/plot/plot_531e3c7365ed869a> a intro:INT_Plot ;
     rdfs:label "Plot: Sappho als Aphrodite-Verehrerin"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_531e3c7365ed869a> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_531e3c7365ed869a> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_00e9aff1_plot_531e3c7365ed869a>,
         <https://sappho-digital.com/actualization/plot/bibl_2660d82e_plot_531e3c7365ed869a>,
         <https://sappho-digital.com/actualization/plot/bibl_4fcb8123_plot_531e3c7365ed869a>,
@@ -42871,7 +42871,7 @@
 
 <https://sappho-digital.com/feature/topic/topic_1de543cc588d6ee3> a intro:INT_Topic ;
     rdfs:label "Topic: Geschlechterrollen"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_1de543cc588d6ee3> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_1de543cc588d6ee3> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_0643ca58_topic_1de543cc588d6ee3>,
         <https://sappho-digital.com/actualization/topic/bibl_0bd2c59f_topic_1de543cc588d6ee3>,
         <https://sappho-digital.com/actualization/topic/bibl_2838b3d9_topic_1de543cc588d6ee3>,
@@ -42893,7 +42893,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_49_person_fe179d791732151d>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_8_person_fe179d791732151d>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_96_person_fe179d791732151d> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_fe179d791732151d> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_fe179d791732151d> .
 
 <https://sappho-digital.com/place/place_1adb2da7993ecc95> a ecrm:E53_Place ;
     rdfs:label "Unterwelt/Hades/Orkus"@en ;
@@ -42906,7 +42906,7 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_a667785d_place_1adb2da7993ecc95>,
         <https://sappho-digital.com/actualization/place_ref/bibl_cbfea792_place_1adb2da7993ecc95>,
         <https://sappho-digital.com/actualization/place_ref/bibl_e745799e_place_1adb2da7993ecc95> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_1adb2da7993ecc95> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_1adb2da7993ecc95> .
 
 <https://sappho-digital.com/place/place_be670e476be162e1> a ecrm:E53_Place ;
     rdfs:label "Olymp"@en ;
@@ -42919,7 +42919,7 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_d85ade6a_place_be670e476be162e1>,
         <https://sappho-digital.com/actualization/place_ref/bibl_e745799e_place_be670e476be162e1>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_27_place_be670e476be162e1> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_be670e476be162e1> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_be670e476be162e1> .
 
 <https://sappho-digital.com/expression/bibl_1bf78f84> a lrmoo:F2_Expression ;
     rdfs:label "Duke, der Logenkönig"@de ;
@@ -43025,7 +43025,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_172883cbad5b3349> a intro:INT_Motif ;
     rdfs:label "Motif: Heller Ton"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_172883cbad5b3349> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_172883cbad5b3349> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_407a0d29_motif_172883cbad5b3349>,
         <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_172883cbad5b3349>,
         <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_172883cbad5b3349>,
@@ -43039,7 +43039,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_38d7d43628e9d018> a intro:INT_Motif ;
     rdfs:label "Motif: Auge"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_38d7d43628e9d018> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_38d7d43628e9d018> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_38d7d43628e9d018>,
         <https://sappho-digital.com/actualization/motif/bibl_4e970562_motif_38d7d43628e9d018>,
         <https://sappho-digital.com/actualization/motif/bibl_5ca5f0b6_motif_38d7d43628e9d018>,
@@ -43053,7 +43053,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_778e6dc2ad3d5401> a intro:INT_Motif ;
     rdfs:label "Motif: Weiß"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_778e6dc2ad3d5401> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_778e6dc2ad3d5401> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0434022c_motif_778e6dc2ad3d5401>,
         <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_778e6dc2ad3d5401>,
         <https://sappho-digital.com/actualization/motif/bibl_5ca5f0b6_motif_778e6dc2ad3d5401>,
@@ -43067,7 +43067,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_de1c36b3db3ce34c> a intro:INT_Motif ;
     rdfs:label "Motif: Jugend"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_de1c36b3db3ce34c> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_de1c36b3db3ce34c> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_2e3cd65f_motif_de1c36b3db3ce34c>,
         <https://sappho-digital.com/actualization/motif/bibl_339f7bbc_motif_de1c36b3db3ce34c>,
         <https://sappho-digital.com/actualization/motif/bibl_4e970562_motif_de1c36b3db3ce34c>,
@@ -43124,7 +43124,7 @@
 
 <https://sappho-digital.com/feature/topic/topic_d0d0d796a787f4a8> a intro:INT_Topic ;
     rdfs:label "Topic: Begehren"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_d0d0d796a787f4a8> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_d0d0d796a787f4a8> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_339f7bbc_topic_d0d0d796a787f4a8>,
         <https://sappho-digital.com/actualization/topic/bibl_78d95d8c_topic_d0d0d796a787f4a8>,
         <https://sappho-digital.com/actualization/topic/bibl_88439060_topic_d0d0d796a787f4a8>,
@@ -43148,7 +43148,7 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_8fc572e2_place_c7da5f2e77438154>,
         <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_c7da5f2e77438154>,
         <https://sappho-digital.com/actualization/place_ref/bibl_e745799e_place_c7da5f2e77438154> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_c7da5f2e77438154> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_c7da5f2e77438154> .
 
 <https://sappho-digital.com/expression/bibl_39b012ab> a lrmoo:F2_Expression ;
     rdfs:label "Mein Lieber Feldmann"@de ;
@@ -43287,7 +43287,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_af8f6ed291383b8c> a intro:INT_Motif ;
     rdfs:label "Motif: Dichtkunst"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_af8f6ed291383b8c> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_af8f6ed291383b8c> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0434022c_motif_af8f6ed291383b8c>,
         <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_af8f6ed291383b8c>,
         <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_af8f6ed291383b8c>,
@@ -43317,7 +43317,7 @@
 
 <https://sappho-digital.com/feature/topic/topic_0424470816a8c5ac> a intro:INT_Topic ;
     rdfs:label "Topic: Ruhm"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_0424470816a8c5ac> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_0424470816a8c5ac> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_2838b3d9_topic_0424470816a8c5ac>,
         <https://sappho-digital.com/actualization/topic/bibl_3d6a534d_topic_0424470816a8c5ac>,
         <https://sappho-digital.com/actualization/topic/bibl_458b7c88_topic_0424470816a8c5ac>,
@@ -43343,7 +43343,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_168b_person_807f37582972882e>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_21351_9-12_21376r_1-8_person_807f37582972882e>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_58_person_807f37582972882e> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_807f37582972882e> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_807f37582972882e> .
 
 <https://sappho-digital.com/person/person_a92154dba89f764f> a ecrm:E21_Person ;
     rdfs:label "Apollon"@en ;
@@ -43358,7 +43358,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_cbfea792_person_a92154dba89f764f>,
         <https://sappho-digital.com/actualization/person_ref/bibl_e745799e_person_a92154dba89f764f>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_44a_person_a92154dba89f764f> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_a92154dba89f764f> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_a92154dba89f764f> .
 
 <https://sappho-digital.com/person/person_b793a3807d130de0> a ecrm:E21_Person ;
     rdfs:label "Kleis"@en,
@@ -43374,7 +43374,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_f4da59f4_person_b793a3807d130de0>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_132_person_b793a3807d130de0>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_98_person_b793a3807d130de0> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_b793a3807d130de0> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_b793a3807d130de0> .
 
 <https://sappho-digital.com/expression/bibl_339f7bbc> a lrmoo:F2_Expression ;
     rdfs:label "Die moderne Sappho. Ein musikalisch-dramatisches Durcheinander ohne Sinn und ohne Verstand. Bestehend aus zwei Akten und einem monodramatischen Finale"@de ;
@@ -43496,7 +43496,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_6defe0a8e240f27b> a intro:INT_Motif ;
     rdfs:label "Motif: Fels"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_6defe0a8e240f27b> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_6defe0a8e240f27b> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_6defe0a8e240f27b>,
         <https://sappho-digital.com/actualization/motif/bibl_4422d6d6_motif_6defe0a8e240f27b>,
         <https://sappho-digital.com/actualization/motif/bibl_632dac82_motif_6defe0a8e240f27b>,
@@ -43512,7 +43512,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_736eb7ef6202472f> a intro:INT_Motif ;
     rdfs:label "Motif: Begehren"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_736eb7ef6202472f> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_736eb7ef6202472f> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_736eb7ef6202472f>,
         <https://sappho-digital.com/actualization/motif/bibl_29dac241_motif_736eb7ef6202472f>,
         <https://sappho-digital.com/actualization/motif/bibl_4e970562_motif_736eb7ef6202472f>,
@@ -43528,7 +43528,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_815301c03c8fd072> a intro:INT_Motif ;
     rdfs:label "Motif: Glanz"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_815301c03c8fd072> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_815301c03c8fd072> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_815301c03c8fd072>,
         <https://sappho-digital.com/actualization/motif/bibl_5ca5f0b6_motif_815301c03c8fd072>,
         <https://sappho-digital.com/actualization/motif/bibl_5f1d7d40_motif_815301c03c8fd072>,
@@ -43544,7 +43544,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_b310d7fa48a3989f> a intro:INT_Motif ;
     rdfs:label "Motif: Ruhm"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_b310d7fa48a3989f> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_b310d7fa48a3989f> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_b310d7fa48a3989f>,
         <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_b310d7fa48a3989f>,
         <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_b310d7fa48a3989f>,
@@ -43560,7 +43560,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_c2ec495b51738811> a intro:INT_Motif ;
     rdfs:label "Motif: Tau"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_c2ec495b51738811> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_c2ec495b51738811> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0434022c_motif_c2ec495b51738811>,
         <https://sappho-digital.com/actualization/motif/bibl_5aa55e45_motif_c2ec495b51738811>,
         <https://sappho-digital.com/actualization/motif/bibl_5f1d7d40_motif_c2ec495b51738811>,
@@ -43576,7 +43576,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_cf45a73d6da82f20> a intro:INT_Motif ;
     rdfs:label "Motif: Todeswunsch"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_cf45a73d6da82f20> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_cf45a73d6da82f20> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0434022c_motif_cf45a73d6da82f20>,
         <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_cf45a73d6da82f20>,
         <https://sappho-digital.com/actualization/motif/bibl_3761b97f_motif_cf45a73d6da82f20>,
@@ -43620,7 +43620,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_117_person_05e200db9312b803>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_141_person_05e200db9312b803>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_30_person_05e200db9312b803> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_05e200db9312b803> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_05e200db9312b803> .
 
 <https://sappho-digital.com/expression/bibl_31f96313> a lrmoo:F2_Expression ;
     rdfs:label "Sapho"@de ;
@@ -43735,7 +43735,7 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_ebc1bb1f_place_21104b06fd2e1311>,
         <https://sappho-digital.com/actualization/place_ref/bibl_f4da59f4_place_21104b06fd2e1311>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_98_place_21104b06fd2e1311> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_21104b06fd2e1311> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_21104b06fd2e1311> .
 
 <https://sappho-digital.com/expression/bibl_sappho_94> a lrmoo:F2_Expression ;
     rdfs:label "Expression of Fragment 94 Voigt"@en ;
@@ -43765,7 +43765,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_62581a673f405e6c> a intro:INT_Motif ;
     rdfs:label "Motif: Meeresküste"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_62581a673f405e6c> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_62581a673f405e6c> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0434022c_motif_62581a673f405e6c>,
         <https://sappho-digital.com/actualization/motif/bibl_1585db9d_motif_62581a673f405e6c>,
         <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_62581a673f405e6c>,
@@ -43783,7 +43783,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_791dc243a6ba1593> a intro:INT_Motif ;
     rdfs:label "Motif: Liebe"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_791dc243a6ba1593> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_791dc243a6ba1593> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_791dc243a6ba1593>,
         <https://sappho-digital.com/actualization/motif/bibl_29dac241_motif_791dc243a6ba1593>,
         <https://sappho-digital.com/actualization/motif/bibl_63209746_motif_791dc243a6ba1593>,
@@ -43801,7 +43801,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_c1c5790bb38d4fbb> a intro:INT_Motif ;
     rdfs:label "Motif: Himmel"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_c1c5790bb38d4fbb> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_c1c5790bb38d4fbb> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_c1c5790bb38d4fbb>,
         <https://sappho-digital.com/actualization/motif/bibl_29dac241_motif_c1c5790bb38d4fbb>,
         <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_c1c5790bb38d4fbb>,
@@ -43819,7 +43819,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_e50316313352d60d> a intro:INT_Motif ;
     rdfs:label "Motif: Sonne"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_e50316313352d60d> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_e50316313352d60d> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_e50316313352d60d>,
         <https://sappho-digital.com/actualization/motif/bibl_407a0d29_motif_e50316313352d60d>,
         <https://sappho-digital.com/actualization/motif/bibl_4e970562_motif_e50316313352d60d>,
@@ -43837,7 +43837,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_e66f181abe9c99b8> a intro:INT_Motif ;
     rdfs:label "Motif: Musik"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_e66f181abe9c99b8> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_e66f181abe9c99b8> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_e66f181abe9c99b8>,
         <https://sappho-digital.com/actualization/motif/bibl_1bf78f84_motif_e66f181abe9c99b8>,
         <https://sappho-digital.com/actualization/motif/bibl_a0bace6b_motif_e66f181abe9c99b8>,
@@ -43855,7 +43855,7 @@
 
 <https://sappho-digital.com/feature/topic/topic_91fbce010840c414> a intro:INT_Topic ;
     rdfs:label "Topic: Dichtkunst"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_91fbce010840c414> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_91fbce010840c414> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_2838b3d9_topic_91fbce010840c414>,
         <https://sappho-digital.com/actualization/topic/bibl_29dac241_topic_91fbce010840c414>,
         <https://sappho-digital.com/actualization/topic/bibl_39b012ab_topic_91fbce010840c414>,
@@ -43887,7 +43887,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_1_person_c7aebd12b1cbd031>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_44a_person_c7aebd12b1cbd031>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_53_person_c7aebd12b1cbd031> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_c7aebd12b1cbd031> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_c7aebd12b1cbd031> .
 
 <https://sappho-digital.com/expression/bibl_0bd2c59f> a lrmoo:F2_Expression ;
     rdfs:label "THE MOST BEAUTIFUL"@de ;
@@ -43983,7 +43983,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_8d88e091e3bb28d8> a intro:INT_Motif ;
     rdfs:label "Motif: Stern"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_8d88e091e3bb28d8> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_8d88e091e3bb28d8> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_8d88e091e3bb28d8>,
         <https://sappho-digital.com/actualization/motif/bibl_0491bde2_motif_8d88e091e3bb28d8>,
         <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_8d88e091e3bb28d8>,
@@ -44021,7 +44021,7 @@
 
 <https://sappho-digital.com/feature/plot/plot_fd168d9b2224361d> a intro:INT_Plot ;
     rdfs:label "Plot: Sappho als Dichterin"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_fd168d9b2224361d> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_fd168d9b2224361d> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_2660d82e_plot_fd168d9b2224361d>,
         <https://sappho-digital.com/actualization/plot/bibl_3759bef5_plot_fd168d9b2224361d>,
         <https://sappho-digital.com/actualization/plot/bibl_39b012ab_plot_fd168d9b2224361d>,
@@ -44157,7 +44157,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_a93562355b8f336c> a intro:INT_Motif ;
     rdfs:label "Motif: Vogel"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_a93562355b8f336c> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_a93562355b8f336c> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_31f96313_motif_a93562355b8f336c>,
         <https://sappho-digital.com/actualization/motif/bibl_4fcb8123_motif_a93562355b8f336c>,
         <https://sappho-digital.com/actualization/motif/bibl_5f1d7d40_motif_a93562355b8f336c>,
@@ -44177,7 +44177,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_b0bf073234a3855a> a intro:INT_Motif ;
     rdfs:label "Motif: Gottesvergleich"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_b0bf073234a3855a> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_b0bf073234a3855a> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_b0bf073234a3855a>,
         <https://sappho-digital.com/actualization/motif/bibl_5283cfa8_motif_b0bf073234a3855a>,
         <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_b0bf073234a3855a>,
@@ -44197,7 +44197,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_d46b25ce34a468d0> a intro:INT_Motif ;
     rdfs:label "Motif: Leier"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_d46b25ce34a468d0> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_d46b25ce34a468d0> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_d46b25ce34a468d0>,
         <https://sappho-digital.com/actualization/motif/bibl_0434022c_motif_d46b25ce34a468d0>,
         <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_d46b25ce34a468d0>,
@@ -44233,7 +44233,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_21351_9-12_21376r_1-8_person_37c2bf8d11811a0e>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_44a_person_37c2bf8d11811a0e>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_64_person_37c2bf8d11811a0e> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_37c2bf8d11811a0e> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_37c2bf8d11811a0e> .
 
 <https://sappho-digital.com/expression/bibl_78d95d8c> a lrmoo:F2_Expression ;
     rdfs:label "Sappho"@de ;
@@ -44262,7 +44262,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_01ca370ea29462e3> a intro:INT_Motif ;
     rdfs:label "Motif: Blume"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_01ca370ea29462e3> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_01ca370ea29462e3> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0434022c_motif_01ca370ea29462e3>,
         <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_01ca370ea29462e3>,
         <https://sappho-digital.com/actualization/motif/bibl_5283cfa8_motif_01ca370ea29462e3>,
@@ -44283,7 +44283,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_6605a54f19f1346b> a intro:INT_Motif ;
     rdfs:label "Motif: Purpur"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_6605a54f19f1346b> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_6605a54f19f1346b> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_6605a54f19f1346b>,
         <https://sappho-digital.com/actualization/motif/bibl_56775306_motif_6605a54f19f1346b>,
         <https://sappho-digital.com/actualization/motif/bibl_5ca5f0b6_motif_6605a54f19f1346b>,
@@ -44304,7 +44304,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_8f940561ee7ea623> a intro:INT_Motif ;
     rdfs:label "Motif: Herz"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_8f940561ee7ea623> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_8f940561ee7ea623> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0434022c_motif_8f940561ee7ea623>,
         <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_8f940561ee7ea623>,
         <https://sappho-digital.com/actualization/motif/bibl_339f7bbc_motif_8f940561ee7ea623>,
@@ -44325,7 +44325,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_ea72ee231feeee11> a intro:INT_Motif ;
     rdfs:label "Motif: Kranz"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_ea72ee231feeee11> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_ea72ee231feeee11> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_3759bef5_motif_ea72ee231feeee11>,
         <https://sappho-digital.com/actualization/motif/bibl_3d6a534d_motif_ea72ee231feeee11>,
         <https://sappho-digital.com/actualization/motif/bibl_56775306_motif_ea72ee231feeee11>,
@@ -44346,7 +44346,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_ff994c162fe2474d> a intro:INT_Motif ;
     rdfs:label "Motif: Träne"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_ff994c162fe2474d> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_ff994c162fe2474d> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_ff994c162fe2474d>,
         <https://sappho-digital.com/actualization/motif/bibl_407a0d29_motif_ff994c162fe2474d>,
         <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_ff994c162fe2474d>,
@@ -44367,7 +44367,7 @@
 
 <https://sappho-digital.com/feature/plot/plot_cc6bf7467ad0c7cf> a intro:INT_Plot ;
     rdfs:label "Plot: Sappho als unglücklich Liebende"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_cc6bf7467ad0c7cf> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_cc6bf7467ad0c7cf> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_4110fba1_plot_cc6bf7467ad0c7cf>,
         <https://sappho-digital.com/actualization/plot/bibl_4422d6d6_plot_cc6bf7467ad0c7cf>,
         <https://sappho-digital.com/actualization/plot/bibl_4fcb8123_plot_cc6bf7467ad0c7cf>,
@@ -44469,7 +44469,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_acf2f74928d12caa> a intro:INT_Motif ;
     rdfs:label "Motif: Gebet"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_acf2f74928d12caa> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_acf2f74928d12caa> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0491bde2_motif_acf2f74928d12caa>,
         <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_acf2f74928d12caa>,
         <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_acf2f74928d12caa>,
@@ -44491,7 +44491,7 @@
 
 <https://sappho-digital.com/feature/plot/plot_6ec13f66820264d7> a intro:INT_Plot ;
     rdfs:label "Plot: Sappho-Phaon-Legende"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_6ec13f66820264d7> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_6ec13f66820264d7> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_458b7c88_plot_6ec13f66820264d7>,
         <https://sappho-digital.com/actualization/plot/bibl_5aa55e45_plot_6ec13f66820264d7>,
         <https://sappho-digital.com/actualization/plot/bibl_632dac82_plot_6ec13f66820264d7>,
@@ -44703,7 +44703,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_e454faf75bf650db> a intro:INT_Motif ;
     rdfs:label "Motif: Mode"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_e454faf75bf650db> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_e454faf75bf650db> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0491bde2_motif_e454faf75bf650db>,
         <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_e454faf75bf650db>,
         <https://sappho-digital.com/actualization/motif/bibl_339f7bbc_motif_e454faf75bf650db>,
@@ -44747,11 +44747,11 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_44a_person_f9d48292bc61bb67>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_47_person_f9d48292bc61bb67>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_54_person_f9d48292bc61bb67> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_f9d48292bc61bb67> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_f9d48292bc61bb67> .
 
 <https://sappho-digital.com/feature/motif/motif_281b95ce63718bed> a intro:INT_Motif ;
     rdfs:label "Motif: Hochzeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_281b95ce63718bed> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_281b95ce63718bed> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_407a0d29_motif_281b95ce63718bed>,
         <https://sappho-digital.com/actualization/motif/bibl_5f1d7d40_motif_281b95ce63718bed>,
         <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_281b95ce63718bed>,
@@ -44776,7 +44776,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_ec830d6c2e83aea3> a intro:INT_Motif ;
     rdfs:label "Motif: Wind"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_ec830d6c2e83aea3> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_ec830d6c2e83aea3> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0491bde2_motif_ec830d6c2e83aea3>,
         <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_ec830d6c2e83aea3>,
         <https://sappho-digital.com/actualization/motif/bibl_458b7c88_motif_ec830d6c2e83aea3>,
@@ -44801,7 +44801,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_f4fe687d6a816b49> a intro:INT_Motif ;
     rdfs:label "Motif: Einsamkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_f4fe687d6a816b49> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_f4fe687d6a816b49> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_f4fe687d6a816b49>,
         <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_f4fe687d6a816b49>,
         <https://sappho-digital.com/actualization/motif/bibl_2838b3d9_motif_f4fe687d6a816b49>,
@@ -44940,7 +44940,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_7abc136b51bb0005> a intro:INT_Motif ;
     rdfs:label "Motif: Klage"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_7abc136b51bb0005> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_7abc136b51bb0005> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_11a107f7_motif_7abc136b51bb0005>,
         <https://sappho-digital.com/actualization/motif/bibl_2e3cd65f_motif_7abc136b51bb0005>,
         <https://sappho-digital.com/actualization/motif/bibl_3759bef5_motif_7abc136b51bb0005>,
@@ -44966,7 +44966,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_d8dc25c9b4d4bd52> a intro:INT_Motif ;
     rdfs:label "Motif: Traum"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_d8dc25c9b4d4bd52> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_d8dc25c9b4d4bd52> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_d8dc25c9b4d4bd52>,
         <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_d8dc25c9b4d4bd52>,
         <https://sappho-digital.com/actualization/motif/bibl_2e3cd65f_motif_d8dc25c9b4d4bd52>,
@@ -44992,7 +44992,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_ee611d65b870ad00> a intro:INT_Motif ;
     rdfs:label "Motif: Mond"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_ee611d65b870ad00> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_ee611d65b870ad00> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_ee611d65b870ad00>,
         <https://sappho-digital.com/actualization/motif/bibl_0491bde2_motif_ee611d65b870ad00>,
         <https://sappho-digital.com/actualization/motif/bibl_0f7a6b8d_motif_ee611d65b870ad00>,
@@ -45044,7 +45044,7 @@
 
 <https://sappho-digital.com/feature/topic/topic_ccb502909ffa7cd8> a intro:INT_Topic ;
     rdfs:label "Topic: Unglückliche Liebe"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_ccb502909ffa7cd8> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_ccb502909ffa7cd8> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_0643ca58_topic_ccb502909ffa7cd8>,
         <https://sappho-digital.com/actualization/topic/bibl_4110fba1_topic_ccb502909ffa7cd8>,
         <https://sappho-digital.com/actualization/topic/bibl_4422d6d6_topic_ccb502909ffa7cd8>,
@@ -45092,7 +45092,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_cbfea792_person_c408a1bcd63c420f>,
         <https://sappho-digital.com/actualization/person_ref/bibl_d85ade6a_person_c408a1bcd63c420f>,
         <https://sappho-digital.com/actualization/person_ref/bibl_e745799e_person_c408a1bcd63c420f> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_c408a1bcd63c420f> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_c408a1bcd63c420f> .
 
 <https://sappho-digital.com/expression/bibl_8ebf0c28> a lrmoo:F2_Expression ;
     rdfs:label "Theaterg’schichten durch Liebe, Intrige, Geld und Dummheit. Posse mit Gesang in zwei Akten"@de ;
@@ -45192,7 +45192,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_3950fcecf002a43a> a intro:INT_Motif ;
     rdfs:label "Motif: Welle"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_3950fcecf002a43a> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_3950fcecf002a43a> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0434022c_motif_3950fcecf002a43a>,
         <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_3950fcecf002a43a>,
         <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_3950fcecf002a43a>,
@@ -45242,7 +45242,7 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_f7bb70af_place_0009a58f625c087b>,
         <https://sappho-digital.com/actualization/place_ref/bibl_fa064c2f_place_0009a58f625c087b>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_106_place_0009a58f625c087b> ;
-    skos:exactMatch <https://sappho-digital.com/voc/place_0009a58f625c087b> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_0009a58f625c087b> .
 
 <https://sappho-digital.com/expression/bibl_c908fde2> a lrmoo:F2_Expression ;
     rdfs:label "Lob der Dichterinnen"@de ;
@@ -45278,7 +45278,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_25f446d346d5ae39> a intro:INT_Motif ;
     rdfs:label "Motif: Schönheit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_25f446d346d5ae39> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_25f446d346d5ae39> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_29dac241_motif_25f446d346d5ae39>,
         <https://sappho-digital.com/actualization/motif/bibl_339f7bbc_motif_25f446d346d5ae39>,
         <https://sappho-digital.com/actualization/motif/bibl_39b012ab_motif_25f446d346d5ae39>,
@@ -45306,7 +45306,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_c9ab4b3812d39197> a intro:INT_Motif ;
     rdfs:label "Motif: Meer"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_c9ab4b3812d39197> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_c9ab4b3812d39197> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_c9ab4b3812d39197>,
         <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_c9ab4b3812d39197>,
         <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_c9ab4b3812d39197>,
@@ -45371,7 +45371,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_f74d0ae71a82bf5d> a intro:INT_Motif ;
     rdfs:label "Motif: Körperlichkeit"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_f74d0ae71a82bf5d> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_f74d0ae71a82bf5d> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0434022c_motif_f74d0ae71a82bf5d>,
         <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_f74d0ae71a82bf5d>,
         <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_f74d0ae71a82bf5d>,
@@ -45431,7 +45431,7 @@
 
 <https://sappho-digital.com/feature/plot/plot_011312b82eb4fc98> a intro:INT_Plot ;
     rdfs:label "Plot: Sapphos Suizid"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_011312b82eb4fc98> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_011312b82eb4fc98> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_00e9aff1_plot_011312b82eb4fc98>,
         <https://sappho-digital.com/actualization/plot/bibl_0434022c_plot_011312b82eb4fc98>,
         <https://sappho-digital.com/actualization/plot/bibl_0a0e461e_plot_011312b82eb4fc98>,
@@ -45461,7 +45461,7 @@
 
 <https://sappho-digital.com/feature/topic/topic_a10417e468b798b0> a intro:INT_Topic ;
     rdfs:label "Topic: Liebe"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/topic_a10417e468b798b0> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/topic_a10417e468b798b0> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topic/bibl_0434022c_topic_a10417e468b798b0>,
         <https://sappho-digital.com/actualization/topic/bibl_0643ca58_topic_a10417e468b798b0>,
         <https://sappho-digital.com/actualization/topic/bibl_0bd2c59f_topic_a10417e468b798b0>,
@@ -45526,7 +45526,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_232c5062cde7d3c1> a intro:INT_Motif ;
     rdfs:label "Motif: Rose"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_232c5062cde7d3c1> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_232c5062cde7d3c1> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_2e3cd65f_motif_232c5062cde7d3c1>,
         <https://sappho-digital.com/actualization/motif/bibl_3759bef5_motif_232c5062cde7d3c1>,
         <https://sappho-digital.com/actualization/motif/bibl_458b7c88_motif_232c5062cde7d3c1>,
@@ -45557,7 +45557,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_25bab1557374fb8e> a intro:INT_Motif ;
     rdfs:label "Motif: Kult"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_25bab1557374fb8e> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_25bab1557374fb8e> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_25bab1557374fb8e>,
         <https://sappho-digital.com/actualization/motif/bibl_0491bde2_motif_25bab1557374fb8e>,
         <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_25bab1557374fb8e>,
@@ -45615,7 +45615,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_56_person_40792a88ba634e66>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_58_person_40792a88ba634e66>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_93_person_40792a88ba634e66> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_40792a88ba634e66> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_40792a88ba634e66> .
 
 <https://sappho-digital.com/expression/bibl_5283cfa8> a lrmoo:F2_Expression ;
     rdfs:label "Laidion oder die Eleusinischen Geheimnisse. Erster Theil"@de ;
@@ -45700,7 +45700,7 @@
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_19d5a7ab> ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/work_ref/bibl_4e970562_work_9b4a173a94427606> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_19d5a7ab> ;
-    skos:exactMatch <https://sappho-digital.com/voc/work_9b4a173a94427606> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/work_9b4a173a94427606> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_002ca4e56dca366e>,
         <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_2e583b17a2474551>,
@@ -45826,7 +45826,7 @@
         <https://viaf.org/viaf/188301495>,
         <https://www.goodreads.com/work/show/3616673>,
         <https://www.wikidata.org/entity/Q1242002> ;
-    skos:exactMatch <https://sappho-digital.com/voc/work_0b367126b900439f> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/work_0b367126b900439f> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_ba71b2e5_motif_01c3eb8edb59de39>,
         <https://sappho-digital.com/actualization/motif/bibl_ba71b2e5_motif_304a5e562a17af49>,
         <https://sappho-digital.com/actualization/motif/bibl_ba71b2e5_motif_5047cf2d5e1607fa>,
@@ -45898,7 +45898,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_5cc0b75e5bf4c183> a intro:INT_Motif ;
     rdfs:label "Motif: Gold"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_5cc0b75e5bf4c183> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_5cc0b75e5bf4c183> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_5cc0b75e5bf4c183>,
         <https://sappho-digital.com/actualization/motif/bibl_3d6a534d_motif_5cc0b75e5bf4c183>,
         <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_5cc0b75e5bf4c183>,
@@ -45933,7 +45933,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_64a381d1facbb9aa> a intro:INT_Motif ;
     rdfs:label "Motif: Feuer"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_64a381d1facbb9aa> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_64a381d1facbb9aa> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_0434022c_motif_64a381d1facbb9aa>,
         <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_64a381d1facbb9aa>,
         <https://sappho-digital.com/actualization/motif/bibl_2838b3d9_motif_64a381d1facbb9aa>,
@@ -45968,7 +45968,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_8d6c4ae5261c1b7f> a intro:INT_Motif ;
     rdfs:label "Motif: Tod"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_8d6c4ae5261c1b7f> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_8d6c4ae5261c1b7f> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_8d6c4ae5261c1b7f>,
         <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_8d6c4ae5261c1b7f>,
         <https://sappho-digital.com/actualization/motif/bibl_295bbaf8_motif_8d6c4ae5261c1b7f>,
@@ -46043,7 +46043,7 @@
 
 <https://sappho-digital.com/feature/plot/plot_86a1ad47f8e7fa03> a intro:INT_Plot ;
     rdfs:label "Plot: Sappho als große Dichterin"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/plot_86a1ad47f8e7fa03> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_86a1ad47f8e7fa03> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_0491bde2_plot_86a1ad47f8e7fa03>,
         <https://sappho-digital.com/actualization/plot/bibl_0a0e461e_plot_86a1ad47f8e7fa03>,
         <https://sappho-digital.com/actualization/plot/bibl_2838b3d9_plot_86a1ad47f8e7fa03>,
@@ -46323,7 +46323,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_71dbf6e67ea5a907> a intro:INT_Motif ;
     rdfs:label "Motif: Natur"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_71dbf6e67ea5a907> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_71dbf6e67ea5a907> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_71dbf6e67ea5a907>,
         <https://sappho-digital.com/actualization/motif/bibl_0491bde2_motif_71dbf6e67ea5a907>,
         <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_71dbf6e67ea5a907>,
@@ -46397,7 +46397,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_64_person_669b106539453871>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_67_person_669b106539453871>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_68_person_669b106539453871> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_669b106539453871> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_669b106539453871> .
 
 <https://sappho-digital.com/expression/bibl_458b7c88> a lrmoo:F2_Expression ;
     rdfs:label "Sappho und Phaon"@de ;
@@ -46446,7 +46446,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_0824726b36365ab5> a intro:INT_Motif ;
     rdfs:label "Motif: Nacht"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_0824726b36365ab5> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_0824726b36365ab5> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_0f7a6b8d_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_19d5a7ab_motif_0824726b36365ab5>,
@@ -46535,7 +46535,7 @@
 
 <https://sappho-digital.com/feature/motif/motif_88df0b1164b2fb91> a intro:INT_Motif ;
     rdfs:label "Motif: Gesang"@de ;
-    skos:exactMatch <https://sappho-digital.com/voc/motif_88df0b1164b2fb91> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/motif_88df0b1164b2fb91> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_88df0b1164b2fb91>,
         <https://sappho-digital.com/actualization/motif/bibl_0bd2c59f_motif_88df0b1164b2fb91>,
         <https://sappho-digital.com/actualization/motif/bibl_1bf78f84_motif_88df0b1164b2fb91>,
@@ -46760,7 +46760,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_86_person_298d1d2696887999>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_90_person_298d1d2696887999>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_96_person_298d1d2696887999> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_298d1d2696887999> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_298d1d2696887999> .
 
 <https://sappho-digital.com/expression/bibl_b0693a0e> a lrmoo:F2_Expression ;
     rdfs:label "Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de ;
@@ -47399,7 +47399,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_1_person_e585b2a779019b7e>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_65_person_e585b2a779019b7e>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_94_person_e585b2a779019b7e> ;
-    skos:exactMatch <https://sappho-digital.com/voc/person_e585b2a779019b7e> .
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_e585b2a779019b7e> .
 
 <https://sappho-digital.com/expression/bibl_4e970562> a lrmoo:F2_Expression ;
     rdfs:label "Immer waren wir Hand in Hand. Erinna an Sappho"@de ;
