@@ -2,7 +2,8 @@
 <rdf:RDF
    xmlns:owl="http://www.w3.org/2002/07/owl#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
 
     <owl:Ontology rdf:about="https://sappho-digital.com/alignments/">
         <rdfs:label xml:lang="en">Sappho Digital Alignments</rdfs:label>
@@ -26,6 +27,7 @@
         <owl:imports rdf:resource="http://data.mimotext.uni-trier.de/entity/"/>
         <owl:imports rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-core#"/>
         <owl:imports rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#"/>
+        <owl:imports rdf:resource="https://sappho-digital.com/ontology/"/>
         <owl:imports rdf:resource="https://schema.org/"/>
         <owl:imports rdf:resource="https://purl.archive.org/urbooks#"/>
         <owl:imports rdf:resource="https://purl.archive.org/urwriters#"/>
@@ -41,7 +43,7 @@
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#hasCreator">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://sappho-digital.com/property/about">
+  <rdf:Description rdf:about="https://sappho-digital.com/ontology/about">
     <skos:closeMatch rdf:resource="http://purl.org/dc/terms/subject"/>
     <skos:closeMatch rdf:resource="http://xmlns.com/foaf/0.1/topic"/>
     <skos:closeMatch rdf:resource="http://data.mimotext.uni-trier.de/entity/P36"/>
@@ -64,7 +66,7 @@
   <rdf:Description rdf:about="http://purl.org/spar/fabio/Expression">
     <skos:closeMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://sappho-digital.com/property/expr_references">
+  <rdf:Description rdf:about="https://sappho-digital.com/ontology/expr_references">
     <skos:closeMatch rdf:resource="http://purl.org/dc/terms/references"/>
     <skos:closeMatch rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#reference"/>
     <skos:narrowMatch rdf:resource="http://data.mimotext.uni-trier.de/entity/P50"/>
@@ -105,7 +107,7 @@
   <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
     <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/P1_is_identified_by"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://sappho-digital.com/property/expr_relation">
+  <rdf:Description rdf:about="https://sappho-digital.com/ontology/expr_relation">
     <skos:closeMatch rdf:resource="http://purl.org/dc/terms/relation"/>
     <skos:closeMatch rdf:resource="http://data.mimotext.uni-trier.de/entity/P34"/>
     <skos:closeMatch rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#hasRelationsWith"/>
@@ -204,7 +206,7 @@
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/Q11">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://sappho-digital.com/property/tp_possibly_cites">
+  <rdf:Description rdf:about="https://sappho-digital.com/ontology/tp_possibly_cites">
     <skos:narrowMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/R75_incorporates"/>
     <skos:narrowMatch rdf:resource="http://purl.org/spar/cito/hasCitedEntity"/>
   </rdf:Description>
@@ -214,10 +216,10 @@
   <rdf:Description rdf:about="http://purl.org/spar/doco/CaptionedBox">
     <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://sappho-digital.com/property/references_person">
+  <rdf:Description rdf:about="https://sappho-digital.com/ontology/references_person">
     <skos:broadMatch rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#refersTo"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://sappho-digital.com/property/has_character">
+  <rdf:Description rdf:about="https://sappho-digital.com/ontology/has_character">
     <skos:closeMatch rdf:resource="https://ontology.golemlab.eu/GP1i_has_character"/>
     <skos:closeMatch rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-core#hasCharacter"/>
     <skos:closeMatch rdf:resource="https://schema.org/character"/>
@@ -256,7 +258,7 @@
     <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
     <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Character"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://sappho-digital.com/property/expr_possibly_cites">
+  <rdf:Description rdf:about="https://sappho-digital.com/ontology/expr_possibly_cites">
     <skos:narrowMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/R76_is_derivative_of"/>
     <skos:narrowMatch rdf:resource="http://purl.org/ontology/bibo/cites"/>
     <skos:narrowMatch rdf:resource="http://purl.org/spar/cito/cites"/>
@@ -332,7 +334,7 @@
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/P21">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P138i_has_representation"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://sappho-digital.com/property/has_portrayal">
+  <rdf:Description rdf:about="https://sappho-digital.com/ontology/has_portrayal">
     <skos:closeMatch rdf:resource="http://purl.org/spar/fabio/hasPortrayal"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://purl.archive.org/urwriters#wasPublishedWhere">
@@ -404,17 +406,17 @@
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#hasTextUnit">
     <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#R30_hasTextPassage"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://sappho-digital.com/property/references_place">
+  <rdf:Description rdf:about="https://sappho-digital.com/ontology/references_place">
     <skos:broadMatch rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#refersTo"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
     <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/P131_is_identified_by"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://sappho-digital.com/property/has_manifestation">
+  <rdf:Description rdf:about="https://sappho-digital.com/ontology/has_manifestation">
     <skos:closeMatch rdf:resource="http://purl.org/spar/fabio/hasManifestation"/>
     <skos:closeMatch rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-core#isRealisedThrough"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://sappho-digital.com/property/has_representation">
+  <rdf:Description rdf:about="https://sappho-digital.com/ontology/has_representation">
     <skos:closeMatch rdf:resource="http://purl.org/spar/fabio/hasRepresentation"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#PoeticWork">

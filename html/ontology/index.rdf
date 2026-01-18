@@ -6,7 +6,7 @@
     xmlns:ecrm="http://erlangen-crm.org/current/"
     xmlns:intro="https://w3id.org/lso/intro/currentbeta#"
     xmlns:lrmoo="http://www.cidoc-crm.org/lrmoo/"
-    xmlns:sappho_prop="https://sappho-digital.com/property/">
+    xmlns:sappho_prop="https://sappho-digital.com/ontology/">
 
   <owl:Ontology rdf:about="https://sappho-digital.com/ontology/">
     <rdfs:label xml:lang="en">Sappho Digital Ontology</rdfs:label>
@@ -15,7 +15,7 @@
     <owl:imports rdf:resource="http://www.cidoc-crm.org/lrmoo/"/>
   </owl:Ontology>
 
-  <owl:ObjectProperty rdf:about="https://sappho-digital.com/property/about">
+  <owl:ObjectProperty rdf:about="https://sappho-digital.com/ontology/about">
     <rdfs:label xml:lang="en">Link from expression to topic</rdfs:label>
     <rdfs:domain rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
     <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Topic"/>
@@ -25,7 +25,7 @@
     </owl:propertyChainAxiom>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://sappho-digital.com/property/expr_relation">
+  <owl:ObjectProperty rdf:about="https://sappho-digital.com/ontology/expr_relation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     <rdfs:label xml:lang="en">Relation between two expressions</rdfs:label>
     <rdfs:domain rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
@@ -41,7 +41,7 @@
     </owl:propertyChainAxiom>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://sappho-digital.com/property/has_manifestation">
+  <owl:ObjectProperty rdf:about="https://sappho-digital.com/ontology/has_manifestation">
     <rdfs:label xml:lang="en">has manifestation</rdfs:label>
     <rdfs:domain rdf:resource="http://www.cidoc-crm.org/lrmoo/F1_Work"/>
     <rdfs:range rdf:resource="http://www.cidoc-crm.org/lrmoo/F3_Manifestation"/>
@@ -51,7 +51,7 @@
     </owl:propertyChainAxiom>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://sappho-digital.com/property/expr_references">
+  <owl:ObjectProperty rdf:about="https://sappho-digital.com/ontology/expr_references">
     <rdfs:label xml:lang="en">Reference from expression to person, place or expression</rdfs:label>
     <rdfs:domain rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
     <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
@@ -64,17 +64,17 @@
     </owl:propertyChainAxiom>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://sappho-digital.com/property/referenced_by_expr">
+  <owl:ObjectProperty rdf:about="https://sappho-digital.com/ontology/referenced_by_expr">
     <rdfs:label xml:lang="en">Person, place or expression referenced by expression</rdfs:label>
     <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
     <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
     <rdfs:domain rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
     <rdfs:range rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
     <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P67i_is_referred_to_by"/>
-    <owl:inverseOf rdf:resource="https://sappho-digital.com/property/expr_references"/>
+    <owl:inverseOf rdf:resource="https://sappho-digital.com/ontology/expr_references"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://sappho-digital.com/property/tp_possibly_cites">
+  <owl:ObjectProperty rdf:about="https://sappho-digital.com/ontology/tp_possibly_cites">
     <rdfs:label xml:lang="en">
       The younger text possibly cites the text passage of the older text
     </rdfs:label>
@@ -87,7 +87,7 @@
     </owl:propertyChainAxiom>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://sappho-digital.com/property/tp_possibly_cited_by">
+  <owl:ObjectProperty rdf:about="https://sappho-digital.com/ontology/tp_possibly_cited_by">
     <rdfs:label xml:lang="en">
       The older text is possibly cited by the younger text passage
     </rdfs:label>
@@ -95,10 +95,10 @@
     <rdfs:range rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
     <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P130i_features_are_also_found_on"/>
     <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P148i_is_component_of"/>
-    <owl:inverseOf rdf:resource="https://sappho-digital.com/property/tp_possibly_cites"/>
+    <owl:inverseOf rdf:resource="https://sappho-digital.com/ontology/tp_possibly_cites"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://sappho-digital.com/property/expr_possibly_cites">
+  <owl:ObjectProperty rdf:about="https://sappho-digital.com/ontology/expr_possibly_cites">
     <rdfs:label xml:lang="en">
       Younger expression possibly cites older expression
     </rdfs:label>
@@ -119,7 +119,7 @@
     </owl:propertyChainAxiom>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://sappho-digital.com/property/expr_possibly_cited_by">
+  <owl:ObjectProperty rdf:about="https://sappho-digital.com/ontology/expr_possibly_cited_by">
     <rdfs:label xml:lang="en">
       Older expression possibly cited by younger expression
     </rdfs:label>
@@ -127,7 +127,7 @@
     <rdfs:range rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
     <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P130i_features_are_also_found_on"/>
     <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P148i_is_component_of"/>
-    <owl:inverseOf rdf:resource="https://sappho-digital.com/property/expr_possibly_cites"/>
+    <owl:inverseOf rdf:resource="https://sappho-digital.com/ontology/expr_possibly_cites"/>
   </owl:ObjectProperty>
 
 </rdf:RDF>
