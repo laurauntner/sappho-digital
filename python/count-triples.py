@@ -7,7 +7,7 @@ import os
 # Paths
 HERE = Path(__file__).resolve().parent
 data_dir = (HERE / "../data/rdf").resolve()
-vocabs_path = (HERE / "../html/vocab/index.ttl").resolve()
+vocabs_path = (HERE / "../documentation/vocab/vocab.ttl").resolve()
 
 files = [
     "authors",
