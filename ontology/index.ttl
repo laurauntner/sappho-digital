@@ -1,0 +1,97 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+@prefix ecrm: <http://erlangen-crm.org/current/> .
+@prefix intro: <https://w3id.org/lso/intro/currentbeta#> .
+@prefix lrmoo: <http://www.cidoc-crm.org/lrmoo/> .
+@prefix sappho_prop: <https://sappho-digital.com/property/> .
+
+<https://sappho-digital.com/ontology/>
+  a owl:Ontology ;
+  rdfs:label "Sappho Digital Ontology"@en ;
+  owl:imports
+    <http://erlangen-crm.org/current/> ,
+    <https://w3id.org/lso/intro/currentbeta#> ,
+    <http://www.cidoc-crm.org/lrmoo/> .
+
+## New Properties ##
+
+sappho_prop:about
+  a owl:ObjectProperty ;
+  rdfs:label "Link from expression to topic"@en ;
+  rdfs:domain lrmoo:F2_Expression ;
+  rdfs:range intro:INT_Topic ;
+  owl:propertyChainAxiom ( intro:R18_showsActualization intro:R17_actualizesFeature ) .
+
+sappho_prop:expr_relation
+  a owl:ObjectProperty, owl:SymmetricProperty ;
+  rdfs:label "Relation between two expressions"@en ;
+  rdfs:domain lrmoo:F2_Expression ;
+  rdfs:range lrmoo:F2_Expression ;
+  owl:propertyChainAxiom (
+    [ owl:inverseOf intro:R18i_actualizationFoundOn ]
+    intro:R24i_isRelatedEntity
+    intro:R24_hasRelatedEntity
+    intro:R18i_actualizationFoundOn
+  ) .
+
+sappho_prop:has_manifestation
+  a owl:ObjectProperty ;
+  rdfs:label "has manifestation"@en ;
+  rdfs:domain lrmoo:F1_Work ;
+  rdfs:range lrmoo:F3_Manifestation ;
+  owl:propertyChainAxiom ( lrmoo:R3_is_realised_in lrmoo:R4i_is_embodied_in ) .
+
+sappho_prop:expr_references
+  a owl:ObjectProperty ;
+  rdfs:label "Reference from expression to person, place or expression"@en ;
+  rdfs:domain lrmoo:F2_Expression ;
+  rdfs:range ecrm:E21_Person, ecrm:E53_Place, lrmoo:F2_Expression ;
+  rdfs:subPropertyOf ecrm:P67_refers_to ;
+  owl:propertyChainAxiom ( intro:R18_showsActualization ecrm:P67_refers_to ) .
+
+sappho_prop:referenced_by_expr
+  a owl:ObjectProperty ;
+  rdfs:label "Person, place or expression referenced by expression"@en ;
+  rdfs:domain ecrm:E21_Person, ecrm:E53_Place, lrmoo:F2_Expression ;
+  rdfs:range lrmoo:F2_Expression ;
+  rdfs:subPropertyOf ecrm:P67i_is_referred_to_by ;
+  owl:inverseOf sappho_prop:expr_references .
+
+sappho_prop:tp_possibly_cites
+  a owl:ObjectProperty ;
+  rdfs:label "The younger text possibly cites the text passage of the older text"@en ;
+  rdfs:domain lrmoo:F2_Expression ;
+  rdfs:range intro:INT21_TextPassage ;
+  rdfs:subPropertyOf ecrm:P130_shows_features_of, ecrm:P148_has_component ;
+  owl:propertyChainAxiom ( intro:R30_hasTextPassage ) .
+
+sappho_prop:tp_possibly_cited_by
+  a owl:ObjectProperty ;
+  rdfs:label "The older text is possibly cited by the younger text passage"@en ;
+  rdfs:domain intro:INT21_TextPassage ;
+  rdfs:range lrmoo:F2_Expression ;
+  rdfs:subPropertyOf ecrm:P130i_features_are_also_found_on, ecrm:P148i_is_component_of ;
+  owl:inverseOf sappho_prop:tp_possibly_cites .
+
+sappho_prop:expr_possibly_cites
+  a owl:ObjectProperty ;
+  rdfs:label "Younger expression possibly cites older expression"@en ;
+  rdfs:domain lrmoo:F2_Expression ;
+  rdfs:range lrmoo:F2_Expression ;
+  rdfs:subPropertyOf ecrm:P130_shows_features_of, ecrm:P148_has_component ;
+  owl:propertyChainAxiom (
+    intro:R30_hasTextPassage
+    [ owl:inverseOf intro:R24_hasRelatedEntity ]
+    intro:R24_hasRelatedEntity
+    [ owl:inverseOf intro:R30i_isTextPassageOf ]
+  ) .
+
+sappho_prop:expr_possibly_cited_by
+  a owl:ObjectProperty ;
+  rdfs:label "Older expression possibly cited by younger expression"@en ;
+  rdfs:domain lrmoo:F2_Expression ;
+  rdfs:range lrmoo:F2_Expression ;
+  rdfs:subPropertyOf ecrm:P130i_features_are_also_found_on, ecrm:P148i_is_component_of ;
+  owl:inverseOf sappho_prop:expr_possibly_cites .
