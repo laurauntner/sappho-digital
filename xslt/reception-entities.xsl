@@ -13,7 +13,7 @@
     <xsl:import href="./partials/html_footer.xsl"/>
 
     <xsl:variable name="receptionEntities" select="doc('../data/rdf/sappho-reception.rdf')"/>
-    <xsl:variable name="vocab" select="doc('../html/vocab/vocab.rdf')"/>
+    <xsl:variable name="vocab" select="doc('../documentation/vocab/vocab.rdf')"/>
 
     <xsl:strip-space elements="*"/>
     <xsl:key name="by-about" match="*[@rdf:about]" use="@rdf:about"/>
