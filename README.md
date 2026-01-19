@@ -14,7 +14,8 @@ This repository contains:
   - Vocabulary: [https://w3id.org/sappho-digital/vocab/](https://w3id.org/sappho-digital/vocab/)
   - Alignments: [https://w3id.org/sappho-digital/vocab/](https://w3id.org/sappho-digital/alignments/)
 - More [files](https://github.com/laurauntner/sappho-digital/tree/main/documentation) documenting the applied data model. To get an idea of the data model, see also the companion repository [wikidata-to-cidoc-crm](https://github.com/laurauntner/wikidata-to-cidoc-crm). This repository contains Python scripts and a Python package for converting structured data from Wikidata into RDF using CIDOC CRM, LRMoo, and INTRO. 
-- Scripts used for data transformation and satistics ([XSLT](https://github.com/laurauntner/sappho-digital/tree/main/xslt) and [Python](https://github.com/laurauntner/sappho-digital/tree/main/python)). 
+- Scripts used for data transformation and satistics ([XSLT](https://github.com/laurauntner/sappho-digital/tree/main/xslt) and [Python](https://github.com/laurauntner/sappho-digital/tree/main/python)).
+- A [Java program](https://github.com/laurauntner/sappho-digital/blob/main/java/src/main/java/Reasoner.java) for reasoning with HermiT.
 
 ⚠️ This repository is under active development.
 
