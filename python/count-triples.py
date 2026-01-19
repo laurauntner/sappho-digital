@@ -2,7 +2,6 @@ from rdflib import Graph, URIRef
 from rdflib.namespace import SKOS, RDF
 from pathlib import Path
 from typing import Optional
-import os
 
 # Paths
 HERE = Path(__file__).resolve().parent
@@ -17,6 +16,10 @@ files = [
     "relations",
     "sappho-reception"
 ]
+
+# --- Reasoner outputs ---
+INFERRED_TTL = data_dir / "sappho-reception_inferred.ttl"
+ASSERTED_INFERRED_TTL = data_dir / "sappho-reception_asserted-and-inferred.ttl"
 
 # Types
 GROUP_KEYS = ["motif", "place", "person", "phrase", "plot", "topic", "work"]
@@ -36,7 +39,8 @@ MATCH_PROPS = [
     SKOS.exactMatch,
 ]
 
-# Helper
+# ---------------- Helpers ----------------
+
 def count_triples(file_path: Path) -> int:
     """Zähle Tripel in einer Turtle-Datei."""
     g = Graph()
@@ -56,7 +60,8 @@ def detect_group(uri: URIRef) -> Optional[str]:
             return key
     return None
 
-# Vocabs
+# ---------------- Vocabs ----------------
+
 def analyze_vocabs(vocabs_file: Path):
     g = Graph()
     g.parse(vocabs_file, format="turtle")
@@ -69,9 +74,9 @@ def analyze_vocabs(vocabs_file: Path):
 
     def init_bucket():
         return {
-            "hierarchy": 0,       
-            "associative": 0,     
-            "wikidata_links": 0,  
+            "hierarchy": 0,
+            "associative": 0,
+            "wikidata_links": 0,
         }
 
     totals = init_bucket()
@@ -81,9 +86,7 @@ def analyze_vocabs(vocabs_file: Path):
         grp = detect_group(s)
 
         h_count = sum(1 for p, o in g.predicate_objects(s) if p in HIERARCHY_PROPS)
-
         a_count = sum(1 for p, o in g.predicate_objects(s) if p in ASSOCIATIVE_PROPS)
-
         w_count = sum(
             1
             for p, o in g.predicate_objects(s)
@@ -130,7 +133,37 @@ def analyze_vocabs(vocabs_file: Path):
         print(f"    - {k}: {per_group[k]['wikidata_links']}")
     print()
 
-# Main
+# ---------------- Reasoner output counts ----------------
+
+def analyze_reasoner_outputs():
+    print("\n=== Reasoner Outputs ===")
+
+    inferred_n = None
+    asserted_inferred_n = None
+
+    # inferred only
+    if INFERRED_TTL.exists():
+        inferred_n = count_triples(INFERRED_TTL)
+        print(f"Inferred only: {inferred_n} Tripel ({INFERRED_TTL.name})")
+    else:
+        print(f"⚠️ Datei nicht gefunden: {INFERRED_TTL}")
+
+    # asserted + inferred
+    if ASSERTED_INFERRED_TTL.exists():
+        asserted_inferred_n = count_triples(ASSERTED_INFERRED_TTL)
+        print(f"Asserted + Inferred: {asserted_inferred_n} Tripel ({ASSERTED_INFERRED_TTL.name})")
+    else:
+        print(f"⚠️ Datei nicht gefunden: {ASSERTED_INFERRED_TTL}")
+
+    # delta = inferred only via subtraction
+    asserted_path = data_dir / "sappho-reception.ttl"
+    if asserted_inferred_n is not None and asserted_path.exists():
+        asserted_n = count_triples(asserted_path)
+        delta = asserted_inferred_n - asserted_n
+        print(f"\nΔ Reine Inferenz (Asserted+Inferred − Asserted): {delta} Tripel")
+
+# ---------------- Main ----------------
+
 def main():
     total = 0
     print("=== Instanzen ===")
@@ -147,6 +180,10 @@ def main():
             print(f"⚠️ Datei nicht gefunden: {ttl_path}")
     print(f"\nGesamtanzahl der Tripel: {total}")
 
+    # Reasoner outputs
+    analyze_reasoner_outputs()
+
+    # SKOS analysis
     if vocabs_path.exists():
         try:
             analyze_vocabs(vocabs_path)
