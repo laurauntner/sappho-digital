@@ -27,12 +27,13 @@
                     <div class="sparql-container">
                         <div class="card-header">
                             <h1>
-                                <xsl:text>!! IN DEVELOPMENT !!</xsl:text>
-                                <br/>
                                 <xsl:value-of select="$doc_title"/>
                             </h1>
                         </div>
                         <div class="sparql-content">
+                            <div class="section">
+                                <p class="align-left">⚠️ in development ⚠️</p>
+                            </div>
                             <div class="section">
                                 <div class="section-title">Datenquelle</div>
                                 <div class="data-source">
@@ -46,11 +47,18 @@
                                 <div class="section-title">SPARQL Query</div>
                                 <div class="query-container">
                                     <textarea id="queryEditor"
-                                        placeholder="Gib hier deine SPARQL-Query ein...">PREFIX rdf:
-                                        &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; PREFIX
-                                        rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; SELECT
-                                        ?subject ?predicate ?object WHERE { ?subject ?predicate
-                                        ?object . } LIMIT 100</textarea>
+                                        placeholder="Gib hier eine SPARQL-Query ein …">
+<xsl:text>
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+
+SELECT ?subject ?predicate ?object
+WHERE {
+  ?subject ?predicate ?object .
+}
+LIMIT 100
+</xsl:text>
+                                    </textarea>
                                 </div>
 
                                 <div class="examples">
@@ -59,12 +67,12 @@
                                         >Beispiel-Queries:</div>
                                     <button class="example-btn" onclick="loadExample('all')">Alle
                                         Tripel</button>
-                                    <button class="example-btn" onclick="loadExample('types')">Alle
-                                        Typen</button>
                                     <button class="example-btn" onclick="loadExample('count')"
                                         >Anzahl Tripel</button>
+                                    <button class="example-btn" onclick="loadExample('types')">Alle
+                                        Klassen</button>
                                     <button class="example-btn" onclick="loadExample('properties')"
-                                        >Verwendete Properties</button>
+                                        >Alle Properties</button>
                                 </div>
                             </div>
 
@@ -74,10 +82,10 @@
                                 <button id="clearBtn" class="sparql-btn" onclick="clearResults()"
                                     >Ergebnisse löschen</button>
                                 <div class="export-controls hidden" id="exportControls">
-                                    <button class="export-btn" onclick="exportResults('csv')">📥 CSV
+                                    <button class="export-btn" onclick="exportResults('csv')">CSV
                                         Export</button>
-                                    <button class="export-btn" onclick="exportResults('json')">📥
-                                        JSON Export</button>
+                                    <button class="export-btn" onclick="exportResults('json')">JSON
+                                        Export</button>
                                 </div>
                             </div>
 
@@ -88,8 +96,8 @@
                     <xsl:call-template name="html_footer"/>
                 </div>
 
-                <script src="https://rdf.js.org/comunica-browser/versions/v4/engines/query-sparql/comunica-browser.js" defer="defer"></script>
-                <script src="js/query.js" defer="defer"></script>
+                <script src="https://rdf.js.org/comunica-browser/versions/v4/engines/query-sparql/comunica-browser.js" defer="defer"/>
+                <script src="js/query.js" defer="defer"/>
             </body>
         </html>
     </xsl:template>
