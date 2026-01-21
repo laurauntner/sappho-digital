@@ -13172,63 +13172,13 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_o708fh9l>,
         <https://sappho-digital.com/manifestation_creation/bibl_149u91j4> .
 
-<https://sappho-digital.com/place/place_00cda017> a ecrm:E53_Place ;
-    rdfs:label "Husum"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_afe533a8> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q21159> .
-
-<https://sappho-digital.com/place/place_0c455ad1> a ecrm:E53_Place ;
-    rdfs:label "Buenos Aires"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_f3eebdf3> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1486> .
-
-<https://sappho-digital.com/place/place_106b3f17> a ecrm:E53_Place ;
-    rdfs:label "Rinteln"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_a871dd80> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q498571> .
-
 <https://sappho-digital.com/place/place_1093e6aa> a ecrm:E53_Place ;
     rdfs:label "Halle"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_a45420a4> .
 
-<https://sappho-digital.com/place/place_1d1718f7> a ecrm:E53_Place ;
-    rdfs:label "Greifswald"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_574806a3> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q4098> .
-
-<https://sappho-digital.com/place/place_1dcf667c> a ecrm:E53_Place ;
-    rdfs:label "Laibach"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_769be9b8> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q437> .
-
-<https://sappho-digital.com/place/place_1e305e2c> a ecrm:E53_Place ;
-    rdfs:label "Norderstedt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_31ed561d> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3928> .
-
-<https://sappho-digital.com/place/place_26d0ccc2> a ecrm:E53_Place ;
-    rdfs:label "Schneeberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_6102de5b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q57941> .
-
-<https://sappho-digital.com/place/place_2832feaf> a ecrm:E53_Place ;
-    rdfs:label "Konstanz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_efd3ad7c> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3834> .
-
-<https://sappho-digital.com/place/place_2878c5c3> a ecrm:E53_Place ;
-    rdfs:label "Offenbach am Main"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_a338be32> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3042> .
-
 <https://sappho-digital.com/place/place_2f511dd6> a ecrm:E53_Place ;
     rdfs:label "St. Michael"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_d0d9834f> .
-
-<https://sappho-digital.com/place/place_3c29d3e1> a ecrm:E53_Place ;
-    rdfs:label "Olmütz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_22c69eac> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q81137> .
 
 <https://sappho-digital.com/place/place_3d8dbe04> a ecrm:E53_Place ;
     rdfs:label "Bordenau"@de ;
@@ -13242,11 +13192,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     rdfs:label "Burghausen"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_4387c6fb> .
 
-<https://sappho-digital.com/place/place_5367e178> a ecrm:E53_Place ;
-    rdfs:label "Liegnitz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_44cee719> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q106274> .
-
 <https://sappho-digital.com/place/place_55687fc7> a ecrm:E53_Place ;
     rdfs:label "Reinbek bei Hamburg"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_f9bbda9e> .
@@ -13259,11 +13204,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     rdfs:label "Breslau"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_ee6c648c> .
 
-<https://sappho-digital.com/place/place_6a607ac8> a ecrm:E53_Place ;
-    rdfs:label "Hildesheim"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_823f9174> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3185> .
-
 <https://sappho-digital.com/place/place_6cc9924b> a ecrm:E53_Place ;
     rdfs:label "Lahr"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_8d4f6eac> .
@@ -13272,46 +13212,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     rdfs:label "Berlin"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_d9643dcb> .
 
-<https://sappho-digital.com/place/place_6d273fb9> a ecrm:E53_Place ;
-    rdfs:label "Dortmund"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_50f7ab48> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1295> .
-
-<https://sappho-digital.com/place/place_6f4ddb78> a ecrm:E53_Place ;
-    rdfs:label "Offenburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_44fc8c94> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q4044> .
-
-<https://sappho-digital.com/place/place_70ba999f> a ecrm:E53_Place ;
-    rdfs:label "Hockenheim"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_dc05201d> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q8336> .
-
-<https://sappho-digital.com/place/place_79486e93> a ecrm:E53_Place ;
-    rdfs:label "Dresden-Blasewitz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_38ed3441> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q8897> .
-
-<https://sappho-digital.com/place/place_79a1323e> a ecrm:E53_Place ;
-    rdfs:label "Marburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_a3e6dbb4> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3869> .
-
-<https://sappho-digital.com/place/place_7aeee4a1> a ecrm:E53_Place ;
-    rdfs:label "Ansbach"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_1bde570a> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q14859> .
-
-<https://sappho-digital.com/place/place_7c29df5a> a ecrm:E53_Place ;
-    rdfs:label "Chemnitz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_18bc2e15> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2795> .
-
-<https://sappho-digital.com/place/place_7fbe2285> a ecrm:E53_Place ;
-    rdfs:label "St. Ingbert"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_38116b1b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q14907> .
-
 <https://sappho-digital.com/place/place_80611954> a ecrm:E53_Place ;
     rdfs:label "Basel"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_51d7e8c7> .
@@ -13319,16 +13219,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
 <https://sappho-digital.com/place/place_80c239e5> a ecrm:E53_Place ;
     rdfs:label "Venedig"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_d4b14eee> .
-
-<https://sappho-digital.com/place/place_81bb34f0> a ecrm:E53_Place ;
-    rdfs:label "Freiburg i. Br."@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_20a66272> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2833> .
-
-<https://sappho-digital.com/place/place_87bc3115> a ecrm:E53_Place ;
-    rdfs:label "Erfurt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_a0565cb3> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1729> .
 
 <https://sappho-digital.com/place/place_88de4c35> a ecrm:E53_Place ;
     rdfs:label "Darmstadt"@de ;
@@ -13342,70 +13232,25 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     rdfs:label "Neustadt am Rübenberg"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_d4b14eee> .
 
-<https://sappho-digital.com/place/place_90f29601> a ecrm:E53_Place ;
-    rdfs:label "Zagreb"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_ea13cdf4> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1435> .
-
 <https://sappho-digital.com/place/place_93f363ca> a ecrm:E53_Place ;
     rdfs:label "Altona"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_afabdd8a> .
-
-<https://sappho-digital.com/place/place_96ef0de9> a ecrm:E53_Place ;
-    rdfs:label "Opava"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_971ed81c> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q156080> .
-
-<https://sappho-digital.com/place/place_9b84e0f6> a ecrm:E53_Place ;
-    rdfs:label "Reutlingen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_94da30d8> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3085> .
-
-<https://sappho-digital.com/place/place_9b99af59> a ecrm:E53_Place ;
-    rdfs:label "Leverkusen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_878b2ec5> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2938> .
 
 <https://sappho-digital.com/place/place_9d7aff47> a ecrm:E53_Place ;
     rdfs:label "Weilerswist"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_d13f4b52> .
 
-<https://sappho-digital.com/place/place_a0137df9> a ecrm:E53_Place ;
-    rdfs:label "Altenburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_983063f3> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q15976> .
-
 <https://sappho-digital.com/place/place_a6617830> a ecrm:E53_Place ;
     rdfs:label "Sopron"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_f0957198> .
-
-<https://sappho-digital.com/place/place_a808e5c5> a ecrm:E53_Place ;
-    rdfs:label "Leitmeritz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_75924aa7> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q384403> .
 
 <https://sappho-digital.com/place/place_a88f4cca> a ecrm:E53_Place ;
     rdfs:label "Ödenburg"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_f0957198> .
 
-<https://sappho-digital.com/place/place_ae9e1d15> a ecrm:E53_Place ;
-    rdfs:label "Gmunden"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_4431d678> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q430449> .
-
-<https://sappho-digital.com/place/place_b086af04> a ecrm:E53_Place ;
-    rdfs:label "Klagenfurt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_fd44d6db> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q41753> .
-
 <https://sappho-digital.com/place/place_b32e19b8> a ecrm:E53_Place ;
     rdfs:label "Krefeld"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_a6975d0c> .
-
-<https://sappho-digital.com/place/place_b5b32385> a ecrm:E53_Place ;
-    rdfs:label "Gießen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_8addb2a6> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3874> .
 
 <https://sappho-digital.com/place/place_b6b4f233> a ecrm:E53_Place ;
     rdfs:label "Heinrichshofen"@de ;
@@ -13415,19 +13260,9 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     rdfs:label "Pfaffenweiler"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_2d0bfae3> .
 
-<https://sappho-digital.com/place/place_ba19b52f> a ecrm:E53_Place ;
-    rdfs:label "Rabenau"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_b402ef0a> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q8218> .
-
 <https://sappho-digital.com/place/place_bb650d49> a ecrm:E53_Place ;
     rdfs:label "Aue"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_034b684d> .
-
-<https://sappho-digital.com/place/place_be96ca51> a ecrm:E53_Place ;
-    rdfs:label "Pforzheim"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_f32fa5e2> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3046> .
 
 <https://sappho-digital.com/place/place_bf64ca28> a ecrm:E53_Place ;
     rdfs:label "Altdorf"@de ;
@@ -13437,11 +13272,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     rdfs:label "Weßling"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_6493f136> .
 
-<https://sappho-digital.com/place/place_c4b1eadd> a ecrm:E53_Place ;
-    rdfs:label "Warendorf"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_ffee1fe7> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2769> .
-
 <https://sappho-digital.com/place/place_c750532d> a ecrm:E53_Place ;
     rdfs:label "Troyes"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_9ad02777> .
@@ -13449,61 +13279,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
 <https://sappho-digital.com/place/place_ca2977d6> a ecrm:E53_Place ;
     rdfs:label "Springe"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_20f57098> .
-
-<https://sappho-digital.com/place/place_ccbee73c> a ecrm:E53_Place ;
-    rdfs:label "Paris"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_34ea7c2b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q90> .
-
-<https://sappho-digital.com/place/place_d35d9642> a ecrm:E53_Place ;
-    rdfs:label "Bischofswerda"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_1182977d> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q81717> .
-
-<https://sappho-digital.com/place/place_d43e78bc> a ecrm:E53_Place ;
-    rdfs:label "Meßkirch"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_62a518d1> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q82724> .
-
-<https://sappho-digital.com/place/place_d5519995> a ecrm:E53_Place ;
-    rdfs:label "Posen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_ac17a500> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q268> .
-
-<https://sappho-digital.com/place/place_d9eca09e> a ecrm:E53_Place ;
-    rdfs:label "Paderborn"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_542fb424> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2971> .
-
-<https://sappho-digital.com/place/place_da490359> a ecrm:E53_Place ;
-    rdfs:label "Frankfurt an der Oder"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_643c9bf6> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q4024> .
-
-<https://sappho-digital.com/place/place_e1c2c4a0> a ecrm:E53_Place ;
-    rdfs:label "Wittenberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_49520b3e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q6837> .
-
-<https://sappho-digital.com/place/place_e3063093> a ecrm:E53_Place ;
-    rdfs:label "Mailand"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_625fc369> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q490> .
-
-<https://sappho-digital.com/place/place_e4f9b171> a ecrm:E53_Place ;
-    rdfs:label "Halle a. d. Saale"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2814> .
-
-<https://sappho-digital.com/place/place_e7af911e> a ecrm:E53_Place ;
-    rdfs:label "Frauenfeld"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_f1ae581b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q68120> .
-
-<https://sappho-digital.com/place/place_e90c98c3> a ecrm:E53_Place ;
-    rdfs:label "Ulm"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_429777c1> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3012> .
 
 <https://sappho-digital.com/place/place_e9cd6cbb> a ecrm:E53_Place ;
     rdfs:label "Frankfurt"@de ;
@@ -13513,28 +13288,13 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     rdfs:label "Grimma"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_9bb3d2af> .
 
-<https://sappho-digital.com/place/place_f4429f06> a ecrm:E53_Place ;
-    rdfs:label "Hagen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_7a172de5> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2871> .
-
 <https://sappho-digital.com/place/place_fb957246> a ecrm:E53_Place ;
     rdfs:label "Jugenheim an der Bergstraße"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_796128cc> .
 
-<https://sappho-digital.com/place/place_fecbc484> a ecrm:E53_Place ;
-    rdfs:label "Eberswalde"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_309c65af> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q9306> .
-
 <https://sappho-digital.com/place/place_ff4aadf1> a ecrm:E53_Place ;
     rdfs:label "Heilbronn"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_07f35f00> .
-
-<https://sappho-digital.com/place/place_ff6ed291> a ecrm:E53_Place ;
-    rdfs:label "Kempten"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_1a5cdafc> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3994> .
 
 <https://sappho-digital.com/publisher/Adolf_Luser> a ecrm:E40_Legal_Body ;
     rdfs:label "Adolf Luser"@de ;
@@ -14828,6 +14588,426 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
 <https://sappho-digital.com/publisher/zeitzoo_verein> a ecrm:E40_Legal_Body ;
     rdfs:label "zeitzoo verein"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_66437386> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1017-P625-50.776207_6.083788> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "50.776207, 6.083788"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_f29f9ace> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1022-P625-48.7775_9.18> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "48.7775, 9.18"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_700b43a2> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1040-P625-49.016666666667_8.4> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "49.016666666667, 8.4"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_2126faa6> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1055-P625-53.55_10> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "53.55, 10"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_f23bb5e2> .
+
+<https://sappho-digital.com/spatial_coordinates/Q106274-P625-51.21006_16.1619> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.21006, 16.1619"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_5367e178> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1085-P625-50.0875_14.421388888888888> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "50.0875, 14.421388888888888"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_e575530b> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1295-P625-51.513888888889_7.4652777777778> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.513888888889, 7.4652777777778"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_6d273fb9> .
+
+<https://sappho-digital.com/spatial_coordinates/Q13298-P625-47.07083333333333_15.438611111111111> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "47.07083333333333, 15.438611111111111"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_6e00929f> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1435-P625-45.81305555555556_15.977222222222222> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "45.81305555555556, 15.977222222222222"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_90f29601> .
+
+<https://sappho-digital.com/spatial_coordinates/Q14817-P625-52.027680555555555_8.9043> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "52.027680555555555, 8.9043"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_d07b6ca0> .
+
+<https://sappho-digital.com/spatial_coordinates/Q14859-P625-49.3_10.583333333333334> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "49.3, 10.583333333333334"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_7aeee4a1> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1486-P625--34.599722222222_-58.381944444444> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "-34.599722222222, -58.381944444444"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_0c455ad1> .
+
+<https://sappho-digital.com/spatial_coordinates/Q14907-P625-49.278888888888886_7.115> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "49.278888888888886, 7.115"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_7fbe2285> .
+
+<https://sappho-digital.com/spatial_coordinates/Q156080-P625-49.938055555556_17.904444444444> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "49.938055555556, 17.904444444444"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_96ef0de9> .
+
+<https://sappho-digital.com/spatial_coordinates/Q157725-P625-48.290833333333_25.934444444444> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "48.290833333333, 25.934444444444"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_e7593ca9> .
+
+<https://sappho-digital.com/spatial_coordinates/Q15976-P625-50.985_12.433333333333> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "50.985, 12.433333333333"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_a0137df9> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1711-P625-52.4_13.066666666667> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "52.4, 13.066666666667"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_e27a0539> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1715-P625-52.374444444444_9.7386111111111> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "52.374444444444, 9.7386111111111"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_6ea98adb> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1718-P625-51.22555555555556_6.776666666666666> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.22555555555556, 6.776666666666666"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_42b32e43> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1720-P625-49.99944444444444_8.27361111111111> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "49.99944444444444, 8.27361111111111"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_efaf7112> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1721-P625-50.0825_8.24> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "50.0825, 8.24"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_2eae9f29> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1726-P625-48.1375_11.575> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "48.1375, 11.575"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_06ec7d19> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1729-P625-50.97805555555556_11.028888888888888> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "50.97805555555556, 11.028888888888888"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_87bc3115> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1731-P625-51.0493286_13.7381437> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.0493286, 13.7381437"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_90bebd2f> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1737-P625-47.505_9.7491666666667> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "47.505, 9.7491666666667"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_99b809f4> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1741-P625-48.208333333333336_16.3725> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "48.208333333333336, 16.3725"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_95b8315b> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1792-P625-54.3482907_18.6540233> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "54.3482907, 18.6540233"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_cb9d8885> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1792-P625-54.35_18.666666666666668> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "54.35, 18.666666666666668"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_cb9d8885> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1799-P625-51.11_17.0325> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.11, 17.0325"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_811c769d> .
+
+<https://sappho-digital.com/spatial_coordinates/Q20352-P625-53.364722222222_13.063611111111> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "53.364722222222, 13.063611111111"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_82cb2da6> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2079-P625-51.339444_12.371111> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.339444, 12.371111"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_efeaa516> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2079-P625-51.33962_12.37129> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.33962, 12.37129"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_efeaa516> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2079-P625-51.3406321_12.3747329> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.3406321, 12.3747329"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_efeaa516> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2079-P625-51.35_12.3833> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.35, 12.3833"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_efeaa516> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2090-P625-49.45388888888889_11.0775> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "49.45388888888889, 11.0775"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_2bd03983> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2112-P625-52.016666666667_8.5333333333333> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "52.016666666667, 8.5333333333333"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_726ed312> .
+
+<https://sappho-digital.com/spatial_coordinates/Q21159-P625-54.476944444444_9.0511111111111> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "54.476944444444, 9.0511111111111"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_00cda017> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2119-P625-49.48777777777778_8.466111111111111> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "49.48777777777778, 8.466111111111111"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_77b5ece6> .
+
+<https://sappho-digital.com/spatial_coordinates/Q24879-P625-53.075833333333335_8.807222222222222> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "53.075833333333335, 8.807222222222222"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_37eb173a> .
+
+<https://sappho-digital.com/spatial_coordinates/Q25607-P625-47.423333333333_9.3772222222222> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "47.423333333333, 9.3772222222222"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_0dcac3bc> .
+
+<https://sappho-digital.com/spatial_coordinates/Q268-P625-52.40833333333333_16.933611111111112> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "52.40833333333333, 16.933611111111112"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_d5519995> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2742-P625-51.9625_7.6255555555556> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.9625, 7.6255555555556"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_afc56847> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2749-P625-48.36888888888889_10.897777777777778> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "48.36888888888889, 10.897777777777778"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_d4135c97> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2769-P625-51.953888888889_7.9933333333333> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.953888888889, 7.9933333333333"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_c4b1eadd> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2773-P625-52.269166666667_10.521111111111> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "52.269166666667, 10.521111111111"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_0e5a73dc> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2795-P625-50.833333333333_12.916666666667> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "50.833333333333, 12.916666666667"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_7c29df5a> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2814-P625-51.48277777777778_11.969722222222222> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.48277777777778, 11.969722222222222"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_e4f9b171> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2833-P625-47.995_7.85> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "47.995, 7.85"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_81bb34f0> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2861-P625-54.083333333333_12.133333333333> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "54.083333333333, 12.133333333333"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_5cef94ac> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2871-P625-51.359444444444_7.475> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.359444444444, 7.475"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_f4429f06> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2936-P625-53.143888888889_8.2138888888889> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "53.143888888889, 8.2138888888889"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_001b460b> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2938-P625-51.033333333333_6.9833333333333> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.033333333333, 6.9833333333333"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_9b99af59> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2966-P625-49.412222222222_8.71> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "49.412222222222, 8.71"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_ec6f644a> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2971-P625-51.71666666666667_8.766666666666667> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.71666666666667, 8.766666666666667"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_d9eca09e> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2973-P625-49.866666666667_8.65> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "49.866666666667, 8.65"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_b30287cd> .
+
+<https://sappho-digital.com/spatial_coordinates/Q2999-P625-49.794444444444_9.9294444444444> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "49.794444444444, 9.9294444444444"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_34f75abc> .
+
+<https://sappho-digital.com/spatial_coordinates/Q3012-P625-48.39841_9.99155> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "48.39841, 9.99155"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_e90c98c3> .
+
+<https://sappho-digital.com/spatial_coordinates/Q3033-P625-51.533888888889_9.9355555555556> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.533888888889, 9.9355555555556"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_a24d0551> .
+
+<https://sappho-digital.com/spatial_coordinates/Q3042-P625-50.1_8.7666666666667> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "50.1, 8.7666666666667"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_2878c5c3> .
+
+<https://sappho-digital.com/spatial_coordinates/Q3046-P625-48.8908846_8.7029532> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "48.8908846, 8.7029532"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_be96ca51> .
+
+<https://sappho-digital.com/spatial_coordinates/Q3046-P625-48.89154_8.7156> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "48.89154, 8.7156"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_be96ca51> .
+
+<https://sappho-digital.com/spatial_coordinates/Q3046-P625-48.89_8.71083> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "48.89, 8.71083"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_be96ca51> .
+
+<https://sappho-digital.com/spatial_coordinates/Q3085-P625-48.483333333333_9.2166666666667> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "48.483333333333, 9.2166666666667"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_9b84e0f6> .
+
+<https://sappho-digital.com/spatial_coordinates/Q3126-P625-49.5925_11.005> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "49.5925, 11.005"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_ce0c1fb4> .
+
+<https://sappho-digital.com/spatial_coordinates/Q3150-P625-50.927222222222_11.586388888889> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "50.927222222222, 11.586388888889"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_1aa97a04> .
+
+<https://sappho-digital.com/spatial_coordinates/Q3185-P625-52.15_9.95> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "52.15, 9.95"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_6a607ac8> .
+
+<https://sappho-digital.com/spatial_coordinates/Q34713-P625-47.8_13.045> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "47.8, 13.045"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_f2646aa0> .
+
+<https://sappho-digital.com/spatial_coordinates/Q365-P625-50.942222222222_6.9577777777778> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "50.942222222222, 6.9577777777778"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_4a15ea49> .
+
+<https://sappho-digital.com/spatial_coordinates/Q3750-P625-50.87818_12.08242> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "50.87818, 12.08242"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_01b3ebf8> .
+
+<https://sappho-digital.com/spatial_coordinates/Q3806-P625-48.52_9.0555555555556> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "48.52, 9.0555555555556"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_ae6e1bfb> .
+
+<https://sappho-digital.com/spatial_coordinates/Q3834-P625-47.663333333333_9.1752777777778> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "47.663333333333, 9.1752777777778"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_2832feaf> .
+
+<https://sappho-digital.com/spatial_coordinates/Q384403-P625-50.53355947692_14.131899491403> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "50.53355947692, 14.131899491403"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_a808e5c5> .
+
+<https://sappho-digital.com/spatial_coordinates/Q3869-P625-50.816666666667_8.7666666666667> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "50.816666666667, 8.7666666666667"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_79a1323e> .
+
+<https://sappho-digital.com/spatial_coordinates/Q3874-P625-50.583333333333336_8.666666666666666> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "50.583333333333336, 8.666666666666666"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_b5b32385> .
+
+<https://sappho-digital.com/spatial_coordinates/Q3928-P625-53.706388888889_10.010277777778> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "53.706388888889, 10.010277777778"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_1e305e2c> .
+
+<https://sappho-digital.com/spatial_coordinates/Q3955-P625-50.98111111111111_11.329444444444444> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "50.98111111111111, 11.329444444444444"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_c35eca96> .
+
+<https://sappho-digital.com/spatial_coordinates/Q3994-P625-47.733333333333334_10.316666666666666> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "47.733333333333334, 10.316666666666666"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_ff6ed291> .
+
+<https://sappho-digital.com/spatial_coordinates/Q4024-P625-52.342083333333335_14.551666666666666> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "52.342083333333335, 14.551666666666666"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_da490359> .
+
+<https://sappho-digital.com/spatial_coordinates/Q4044-P625-48.470833333333_7.9408333333333> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "48.470833333333, 7.9408333333333"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_6f4ddb78> .
+
+<https://sappho-digital.com/spatial_coordinates/Q4098-P625-54.083333333333_13.383333333333> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "54.083333333333, 13.383333333333"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_1d1718f7> .
+
+<https://sappho-digital.com/spatial_coordinates/Q41329-P625-48.30583333333333_14.286388888888888> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "48.30583333333333, 14.286388888888888"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_907e6aad> .
+
+<https://sappho-digital.com/spatial_coordinates/Q41753-P625-46.616666666667_14.3> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "46.616666666667, 14.3"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_b086af04> .
+
+<https://sappho-digital.com/spatial_coordinates/Q430449-P625-47.918055555556_13.799444444444> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "47.918055555556, 13.799444444444"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_ae9e1d15> .
+
+<https://sappho-digital.com/spatial_coordinates/Q490-P625-45.466944444444_9.19> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "45.466944444444, 9.19"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_e3063093> .
+
+<https://sappho-digital.com/spatial_coordinates/Q498571-P625-52.186039_9.079169> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "52.186039, 9.079169"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_106b3f17> .
+
+<https://sappho-digital.com/spatial_coordinates/Q57941-P625-50.594166666667_12.645555555556> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "50.594166666667, 12.645555555556"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_26d0ccc2> .
+
+<https://sappho-digital.com/spatial_coordinates/Q64-P625-52.516666666667_13.383333333333> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "52.516666666667, 13.383333333333"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_d35a02eb> .
+
+<https://sappho-digital.com/spatial_coordinates/Q6602-P625-48.573333333333_7.7522222222222> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "48.573333333333, 7.7522222222222"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_477d8872> .
+
+<https://sappho-digital.com/spatial_coordinates/Q68120-P625-47.555833333333_8.8963888888889> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "47.555833333333, 8.8963888888889"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_e7af911e> .
+
+<https://sappho-digital.com/spatial_coordinates/Q6837-P625-51.8671_12.6484> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.8671, 12.6484"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_e1c2c4a0> .
+
+<https://sappho-digital.com/spatial_coordinates/Q6986-P625-50.948888888889_10.718333333333> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "50.948888888889, 10.718333333333"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_a3670732> .
+
+<https://sappho-digital.com/spatial_coordinates/Q70-P625-46.94798_7.44743> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "46.94798, 7.44743"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_bac82a99> .
+
+<https://sappho-digital.com/spatial_coordinates/Q7030-P625-53.8925_11.465> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "53.8925, 11.465"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_b3271180> .
+
+<https://sappho-digital.com/spatial_coordinates/Q7072-P625-51.895833333333_11.046666666667> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.895833333333, 11.046666666667"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_bb2b3096> .
+
+<https://sappho-digital.com/spatial_coordinates/Q72-P625-47.37444444444444_8.54111111111111> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "47.37444444444444, 8.54111111111111"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_0c1736a7> .
+
+<https://sappho-digital.com/spatial_coordinates/Q78-P625-47.560555555556_7.5905555555556> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "47.560555555556, 7.5905555555556"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_7aaf6c53> .
+
+<https://sappho-digital.com/spatial_coordinates/Q81137-P625-49.593888888889_17.250833333333> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "49.593888888889, 17.250833333333"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_3c29d3e1> .
+
+<https://sappho-digital.com/spatial_coordinates/Q81717-P625-51.1275_14.179722222222> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.1275, 14.179722222222"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_d35d9642> .
+
+<https://sappho-digital.com/spatial_coordinates/Q82053-P625-48.465555555556_9.2261111111111> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "48.465555555556, 9.2261111111111"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_ca5ece67> .
+
+<https://sappho-digital.com/spatial_coordinates/Q8218-P625-50.966666666667_13.633333333333> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "50.966666666667, 13.633333333333"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_ba19b52f> .
+
+<https://sappho-digital.com/spatial_coordinates/Q82724-P625-47.992777777778_9.1125> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "47.992777777778, 9.1125"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_d43e78bc> .
+
+<https://sappho-digital.com/spatial_coordinates/Q8336-P625-49.318055555556_8.5472222222222> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "49.318055555556, 8.5472222222222"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_70ba999f> .
+
+<https://sappho-digital.com/spatial_coordinates/Q8897-P625-51.052777777778_13.795833333333> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "51.052777777778, 13.795833333333"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_79486e93> .
+
+<https://sappho-digital.com/spatial_coordinates/Q90-P625-48.85666666666667_2.352222222222222> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "48.85666666666667, 2.352222222222222"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_ccbee73c> .
+
+<https://sappho-digital.com/spatial_coordinates/Q9306-P625-52.833055555556_13.833055555556> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "52.833055555556, 13.833055555556"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_fecbc484> .
 
 <https://sappho-digital.com/timespan/1494> a ecrm:E52_Time-Span ;
     rdfs:label "1494"^^xsd:gYear ;
@@ -24220,47 +24400,71 @@ Philosophen zu Sanssouci"""@de ;
         <https://sappho-digital.com/manifestation_creation/bibl_65e7174a>,
         <https://sappho-digital.com/manifestation_creation/bibl_e6cac312> .
 
-<https://sappho-digital.com/place/place_001b460b> a ecrm:E53_Place ;
-    rdfs:label "Oldenburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_228d3345>,
-        <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2936> .
+<https://sappho-digital.com/place/place_00cda017> a ecrm:E53_Place ;
+    rdfs:label "Husum"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_afe533a8> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q21159-P625-54.476944444444_9.0511111111111> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q21159> .
 
-<https://sappho-digital.com/place/place_01b3ebf8> a ecrm:E53_Place ;
-    rdfs:label "Gera"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_2318415b>,
-        <https://sappho-digital.com/manifestation_creation/bibl_643f9997> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3750> .
+<https://sappho-digital.com/place/place_0c455ad1> a ecrm:E53_Place ;
+    rdfs:label "Buenos Aires"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_f3eebdf3> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1486-P625--34.599722222222_-58.381944444444> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1486> .
 
-<https://sappho-digital.com/place/place_0dcac3bc> a ecrm:E53_Place ;
-    rdfs:label "St. Gallen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_6bic1haq>,
-        <https://sappho-digital.com/manifestation_creation/bibl_bdcf59c1> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q25607> .
+<https://sappho-digital.com/place/place_106b3f17> a ecrm:E53_Place ;
+    rdfs:label "Rinteln"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_a871dd80> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q498571-P625-52.186039_9.079169> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q498571> .
 
-<https://sappho-digital.com/place/place_0e5a73dc> a ecrm:E53_Place ;
-    rdfs:label "Braunschweig"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_2cc74cd9>,
-        <https://sappho-digital.com/manifestation_creation/bibl_63264ecd> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2773> .
+<https://sappho-digital.com/place/place_1d1718f7> a ecrm:E53_Place ;
+    rdfs:label "Greifswald"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_574806a3> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q4098-P625-54.083333333333_13.383333333333> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q4098> .
 
-<https://sappho-digital.com/place/place_2eae9f29> a ecrm:E53_Place ;
-    rdfs:label "Wiesbaden"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_16c00192>,
-        <https://sappho-digital.com/manifestation_creation/bibl_fb8b583f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1721> .
+<https://sappho-digital.com/place/place_1dcf667c> a ecrm:E53_Place ;
+    rdfs:label "Laibach"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_769be9b8> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q437-P625-46.05138888888889_14.50611111111111> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q437> .
 
-<https://sappho-digital.com/place/place_34f75abc> a ecrm:E53_Place ;
-    rdfs:label "Würzburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_837bf14c>,
-        <https://sappho-digital.com/manifestation_creation/bibl_ad7a16ab> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2999> .
+<https://sappho-digital.com/place/place_1e305e2c> a ecrm:E53_Place ;
+    rdfs:label "Norderstedt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_31ed561d> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q3928-P625-53.706388888889_10.010277777778> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3928> .
 
-<https://sappho-digital.com/place/place_37eb173a> a ecrm:E53_Place ;
-    rdfs:label "Bremen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_815f2c02>,
-        <https://sappho-digital.com/manifestation_creation/bibl_a4214783> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q24879> .
+<https://sappho-digital.com/place/place_26d0ccc2> a ecrm:E53_Place ;
+    rdfs:label "Schneeberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_6102de5b> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q57941-P625-50.594166666667_12.645555555556> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q57941> .
+
+<https://sappho-digital.com/place/place_2832feaf> a ecrm:E53_Place ;
+    rdfs:label "Konstanz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_efd3ad7c> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q3834-P625-47.663333333333_9.1752777777778> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3834> .
+
+<https://sappho-digital.com/place/place_2878c5c3> a ecrm:E53_Place ;
+    rdfs:label "Offenbach am Main"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_a338be32> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q3042-P625-50.1_8.7666666666667> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3042> .
+
+<https://sappho-digital.com/place/place_3c29d3e1> a ecrm:E53_Place ;
+    rdfs:label "Olmütz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_22c69eac> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q81137-P625-49.593888888889_17.250833333333> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q81137> .
+
+<https://sappho-digital.com/place/place_5367e178> a ecrm:E53_Place ;
+    rdfs:label "Liegnitz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_44cee719> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q106274-P625-51.21006_16.1619> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q106274> .
 
 <https://sappho-digital.com/place/place_623b7d9d> a ecrm:E53_Place ;
     rdfs:label "Königsberg"@de ;
@@ -24272,35 +24476,95 @@ Philosophen zu Sanssouci"""@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_5e905991>,
         <https://sappho-digital.com/manifestation_creation/bibl_b60786f5> .
 
-<https://sappho-digital.com/place/place_6ea98adb> a ecrm:E53_Place ;
-    rdfs:label "Hannover"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_5b00249a>,
-        <https://sappho-digital.com/manifestation_creation/bibl_92f7e243> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1715> .
+<https://sappho-digital.com/place/place_6a607ac8> a ecrm:E53_Place ;
+    rdfs:label "Hildesheim"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_823f9174> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q3185-P625-52.15_9.95> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3185> .
 
-<https://sappho-digital.com/place/place_726ed312> a ecrm:E53_Place ;
-    rdfs:label "Bielefeld"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_31b3170b>,
-        <https://sappho-digital.com/manifestation_creation/bibl_42fbb8ad> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2112> .
+<https://sappho-digital.com/place/place_6d273fb9> a ecrm:E53_Place ;
+    rdfs:label "Dortmund"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_50f7ab48> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1295-P625-51.513888888889_7.4652777777778> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1295> .
 
-<https://sappho-digital.com/place/place_79462cb0> a ecrm:E53_Place ;
-    rdfs:label "Ljubljana"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_2e405d53>,
-        <https://sappho-digital.com/manifestation_creation/bibl_769be9b8> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q437> .
+<https://sappho-digital.com/place/place_6f4ddb78> a ecrm:E53_Place ;
+    rdfs:label "Offenburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_44fc8c94> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q4044-P625-48.470833333333_7.9408333333333> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q4044> .
 
-<https://sappho-digital.com/place/place_82cb2da6> a ecrm:E53_Place ;
-    rdfs:label "Neustrelitz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_22037400>,
-        <https://sappho-digital.com/manifestation_creation/bibl_c22ab1ce> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q20352> .
+<https://sappho-digital.com/place/place_70ba999f> a ecrm:E53_Place ;
+    rdfs:label "Hockenheim"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_dc05201d> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q8336-P625-49.318055555556_8.5472222222222> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q8336> .
 
-<https://sappho-digital.com/place/place_99b809f4> a ecrm:E53_Place ;
-    rdfs:label "Bregenz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_a3bc242d>,
-        <https://sappho-digital.com/manifestation_creation/bibl_af3e8b48> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1737> .
+<https://sappho-digital.com/place/place_79486e93> a ecrm:E53_Place ;
+    rdfs:label "Dresden-Blasewitz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_38ed3441> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q8897-P625-51.052777777778_13.795833333333> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q8897> .
+
+<https://sappho-digital.com/place/place_79a1323e> a ecrm:E53_Place ;
+    rdfs:label "Marburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_a3e6dbb4> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q3869-P625-50.816666666667_8.7666666666667> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3869> .
+
+<https://sappho-digital.com/place/place_7aeee4a1> a ecrm:E53_Place ;
+    rdfs:label "Ansbach"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_1bde570a> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q14859-P625-49.3_10.583333333333334> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q14859> .
+
+<https://sappho-digital.com/place/place_7c29df5a> a ecrm:E53_Place ;
+    rdfs:label "Chemnitz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_18bc2e15> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2795-P625-50.833333333333_12.916666666667> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2795> .
+
+<https://sappho-digital.com/place/place_7fbe2285> a ecrm:E53_Place ;
+    rdfs:label "St. Ingbert"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_38116b1b> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q14907-P625-49.278888888888886_7.115> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q14907> .
+
+<https://sappho-digital.com/place/place_81bb34f0> a ecrm:E53_Place ;
+    rdfs:label "Freiburg i. Br."@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_20a66272> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2833-P625-47.995_7.85> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2833> .
+
+<https://sappho-digital.com/place/place_87bc3115> a ecrm:E53_Place ;
+    rdfs:label "Erfurt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_a0565cb3> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1729-P625-50.97805555555556_11.028888888888888> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1729> .
+
+<https://sappho-digital.com/place/place_90f29601> a ecrm:E53_Place ;
+    rdfs:label "Zagreb"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_ea13cdf4> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1435-P625-45.81305555555556_15.977222222222222> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1435> .
+
+<https://sappho-digital.com/place/place_96ef0de9> a ecrm:E53_Place ;
+    rdfs:label "Opava"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_971ed81c> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q156080-P625-49.938055555556_17.904444444444> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q156080> .
+
+<https://sappho-digital.com/place/place_9b84e0f6> a ecrm:E53_Place ;
+    rdfs:label "Reutlingen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_94da30d8> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q3085-P625-48.483333333333_9.2166666666667> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3085> .
+
+<https://sappho-digital.com/place/place_9b99af59> a ecrm:E53_Place ;
+    rdfs:label "Leverkusen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_878b2ec5> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2938-P625-51.033333333333_6.9833333333333> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2938> .
 
 <https://sappho-digital.com/place/place_9c83551a> a ecrm:E53_Place ;
     rdfs:label "Freiburg"@de,
@@ -24308,54 +24572,131 @@ Philosophen zu Sanssouci"""@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_32dd4ca1>,
         <https://sappho-digital.com/manifestation_creation/bibl_35d14ded> .
 
-<https://sappho-digital.com/place/place_afc56847> a ecrm:E53_Place ;
-    rdfs:label "Münster"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_407bf2b9>,
-        <https://sappho-digital.com/manifestation_creation/bibl_dd966591> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2742> .
+<https://sappho-digital.com/place/place_a0137df9> a ecrm:E53_Place ;
+    rdfs:label "Altenburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_983063f3> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q15976-P625-50.985_12.433333333333> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q15976> .
 
-<https://sappho-digital.com/place/place_ca5ece67> a ecrm:E53_Place ;
-    rdfs:label "Pfullingen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_2a28fa55>,
-        <https://sappho-digital.com/manifestation_creation/bibl_2af29a15> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q82053> .
+<https://sappho-digital.com/place/place_a808e5c5> a ecrm:E53_Place ;
+    rdfs:label "Leitmeritz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_75924aa7> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q384403-P625-50.53355947692_14.131899491403> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q384403> .
 
-<https://sappho-digital.com/place/place_ce0c1fb4> a ecrm:E53_Place ;
-    rdfs:label "Erlangen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_921c093e>,
-        <https://sappho-digital.com/manifestation_creation/bibl_983063f3> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3126> .
+<https://sappho-digital.com/place/place_ae9e1d15> a ecrm:E53_Place ;
+    rdfs:label "Gmunden"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_4431d678> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q430449-P625-47.918055555556_13.799444444444> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q430449> .
 
-<https://sappho-digital.com/place/place_d07b6ca0> a ecrm:E53_Place ;
-    rdfs:label "Lemgo"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_5283cfa8>,
-        <https://sappho-digital.com/manifestation_creation/bibl_775bde93> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q14817> .
+<https://sappho-digital.com/place/place_b086af04> a ecrm:E53_Place ;
+    rdfs:label "Klagenfurt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_fd44d6db> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q41753-P625-46.616666666667_14.3> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q41753> .
 
-<https://sappho-digital.com/place/place_e27a0539> a ecrm:E53_Place ;
-    rdfs:label "Potsdam"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_2d304546>,
-        <https://sappho-digital.com/manifestation_creation/bibl_566798a4> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1711> .
+<https://sappho-digital.com/place/place_b5b32385> a ecrm:E53_Place ;
+    rdfs:label "Gießen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_8addb2a6> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q3874-P625-50.583333333333336_8.666666666666666> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3874> .
 
-<https://sappho-digital.com/place/place_ec6f644a> a ecrm:E53_Place ;
-    rdfs:label "Heidelberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_7dec9bba>,
-        <https://sappho-digital.com/manifestation_creation/bibl_c8b4c54e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2966> .
+<https://sappho-digital.com/place/place_ba19b52f> a ecrm:E53_Place ;
+    rdfs:label "Rabenau"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_b402ef0a> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q8218-P625-50.966666666667_13.633333333333> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q8218> .
 
-<https://sappho-digital.com/place/place_f2646aa0> a ecrm:E53_Place ;
-    rdfs:label "Salzburg"@de,
-        "Wien"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_6cb41f7a>,
-        <https://sappho-digital.com/manifestation_creation/bibl_b44363bb> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q34713> .
+<https://sappho-digital.com/place/place_c4b1eadd> a ecrm:E53_Place ;
+    rdfs:label "Warendorf"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_ffee1fe7> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2769-P625-51.953888888889_7.9933333333333> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2769> .
 
-<https://sappho-digital.com/place/place_f29f9ace> a ecrm:E53_Place ;
-    rdfs:label "Aachen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_29588496>,
-        <https://sappho-digital.com/manifestation_creation/bibl_b35fde3c> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1017> .
+<https://sappho-digital.com/place/place_ccbee73c> a ecrm:E53_Place ;
+    rdfs:label "Paris"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_34ea7c2b> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q90-P625-48.85666666666667_2.352222222222222> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q90> .
+
+<https://sappho-digital.com/place/place_d35d9642> a ecrm:E53_Place ;
+    rdfs:label "Bischofswerda"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_1182977d> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q81717-P625-51.1275_14.179722222222> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q81717> .
+
+<https://sappho-digital.com/place/place_d43e78bc> a ecrm:E53_Place ;
+    rdfs:label "Meßkirch"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_62a518d1> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q82724-P625-47.992777777778_9.1125> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q82724> .
+
+<https://sappho-digital.com/place/place_d5519995> a ecrm:E53_Place ;
+    rdfs:label "Posen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_ac17a500> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q268-P625-52.40833333333333_16.933611111111112> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q268> .
+
+<https://sappho-digital.com/place/place_d9eca09e> a ecrm:E53_Place ;
+    rdfs:label "Paderborn"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_542fb424> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2971-P625-51.71666666666667_8.766666666666667> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2971> .
+
+<https://sappho-digital.com/place/place_da490359> a ecrm:E53_Place ;
+    rdfs:label "Frankfurt an der Oder"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_643c9bf6> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q4024-P625-52.342083333333335_14.551666666666666> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q4024> .
+
+<https://sappho-digital.com/place/place_e1c2c4a0> a ecrm:E53_Place ;
+    rdfs:label "Wittenberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_49520b3e> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q6837-P625-51.8671_12.6484> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q6837> .
+
+<https://sappho-digital.com/place/place_e3063093> a ecrm:E53_Place ;
+    rdfs:label "Mailand"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_625fc369> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q490-P625-45.466944444444_9.19> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q490> .
+
+<https://sappho-digital.com/place/place_e4f9b171> a ecrm:E53_Place ;
+    rdfs:label "Halle a. d. Saale"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2814-P625-51.48277777777778_11.969722222222222> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2814> .
+
+<https://sappho-digital.com/place/place_e7af911e> a ecrm:E53_Place ;
+    rdfs:label "Frauenfeld"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_f1ae581b> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q68120-P625-47.555833333333_8.8963888888889> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q68120> .
+
+<https://sappho-digital.com/place/place_e90c98c3> a ecrm:E53_Place ;
+    rdfs:label "Ulm"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_429777c1> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q3012-P625-48.39841_9.99155> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3012> .
+
+<https://sappho-digital.com/place/place_f4429f06> a ecrm:E53_Place ;
+    rdfs:label "Hagen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_7a172de5> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2871-P625-51.359444444444_7.475> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2871> .
+
+<https://sappho-digital.com/place/place_fecbc484> a ecrm:E53_Place ;
+    rdfs:label "Eberswalde"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_309c65af> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q9306-P625-52.833055555556_13.833055555556> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q9306> .
+
+<https://sappho-digital.com/place/place_ff6ed291> a ecrm:E53_Place ;
+    rdfs:label "Kempten"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_1a5cdafc> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q3994-P625-47.733333333333334_10.316666666666666> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3994> .
 
 <https://sappho-digital.com/publisher/Braun> a ecrm:E40_Legal_Body ;
     rdfs:label "Braun"@de ;
@@ -24586,6 +24927,16 @@ Philosophen zu Sanssouci"""@de ;
     rdfs:label "Zeitbilder-Verlag"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_2c7f182d>,
         <https://sappho-digital.com/manifestation_creation/bibl_dd7513ae> .
+
+<https://sappho-digital.com/spatial_coordinates/Q1794-P625-50.11055555555556_8.682222222222222> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "50.11055555555556, 8.682222222222222"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_675a92e1>,
+        <https://sappho-digital.com/place/place_ae5c315b> .
+
+<https://sappho-digital.com/spatial_coordinates/Q437-P625-46.05138888888889_14.50611111111111> a ecrm:E47_Spatial_Coordinates ;
+    rdfs:label "46.05138888888889, 14.50611111111111"^^xsd:string ;
+    ecrm:P87i_identifies <https://sappho-digital.com/place/place_1dcf667c>,
+        <https://sappho-digital.com/place/place_79462cb0> .
 
 <https://sappho-digital.com/timespan/1642> a ecrm:E52_Time-Span ;
     rdfs:label "1642"^^xsd:gYear ;
@@ -30801,93 +31152,146 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_8c9c440f>,
         <https://sappho-digital.com/manifestation_creation/bibl_c4cabf0c> .
 
-<https://sappho-digital.com/place/place_1aa97a04> a ecrm:E53_Place ;
-    rdfs:label "Jena"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_28dc64c6>,
-        <https://sappho-digital.com/manifestation_creation/bibl_9392247d>,
-        <https://sappho-digital.com/manifestation_creation/bibl_eef6e5e0> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3150> .
+<https://sappho-digital.com/place/place_001b460b> a ecrm:E53_Place ;
+    rdfs:label "Oldenburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_228d3345>,
+        <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2936-P625-53.143888888889_8.2138888888889> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2936> .
 
-<https://sappho-digital.com/place/place_477d8872> a ecrm:E53_Place ;
-    rdfs:label "Straßburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_5923a400>,
-        <https://sappho-digital.com/manifestation_creation/bibl_cd8d3483>,
-        <https://sappho-digital.com/manifestation_creation/bibl_dbe47849> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q6602> .
+<https://sappho-digital.com/place/place_01b3ebf8> a ecrm:E53_Place ;
+    rdfs:label "Gera"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_2318415b>,
+        <https://sappho-digital.com/manifestation_creation/bibl_643f9997> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q3750-P625-50.87818_12.08242> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3750> .
 
-<https://sappho-digital.com/place/place_4a15ea49> a ecrm:E53_Place ;
-    rdfs:label "Köln"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_2348e130>,
-        <https://sappho-digital.com/manifestation_creation/bibl_4c622de1>,
-        <https://sappho-digital.com/manifestation_creation/bibl_6c373c88> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q365> .
+<https://sappho-digital.com/place/place_0dcac3bc> a ecrm:E53_Place ;
+    rdfs:label "St. Gallen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_6bic1haq>,
+        <https://sappho-digital.com/manifestation_creation/bibl_bdcf59c1> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q25607-P625-47.423333333333_9.3772222222222> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q25607> .
 
-<https://sappho-digital.com/place/place_675a92e1> a ecrm:E53_Place ;
-    rdfs:label "Breslau"@de,
-        "Frankfurt a. M."@de,
-        "Hamburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_0eed1803>,
-        <https://sappho-digital.com/manifestation_creation/bibl_70c830f9>,
-        <https://sappho-digital.com/manifestation_creation/bibl_7cfe62ea> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1794> .
+<https://sappho-digital.com/place/place_0e5a73dc> a ecrm:E53_Place ;
+    rdfs:label "Braunschweig"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_2cc74cd9>,
+        <https://sappho-digital.com/manifestation_creation/bibl_63264ecd> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2773-P625-52.269166666667_10.521111111111> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2773> .
 
-<https://sappho-digital.com/place/place_907e6aad> a ecrm:E53_Place ;
-    rdfs:label "Linz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_50be4356>,
-        <https://sappho-digital.com/manifestation_creation/bibl_718a2dc9>,
-        <https://sappho-digital.com/manifestation_creation/bibl_f8a59882> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q41329> .
+<https://sappho-digital.com/place/place_2eae9f29> a ecrm:E53_Place ;
+    rdfs:label "Wiesbaden"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_16c00192>,
+        <https://sappho-digital.com/manifestation_creation/bibl_fb8b583f> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1721-P625-50.0825_8.24> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1721> .
 
-<https://sappho-digital.com/place/place_b30287cd> a ecrm:E53_Place ;
-    rdfs:label "Darmstadt"@de,
-        "Neuwied"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6>,
-        <https://sappho-digital.com/manifestation_creation/bibl_c1e2dcfc>,
-        <https://sappho-digital.com/manifestation_creation/bibl_c4cabf0c> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2973> .
+<https://sappho-digital.com/place/place_34f75abc> a ecrm:E53_Place ;
+    rdfs:label "Würzburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_837bf14c>,
+        <https://sappho-digital.com/manifestation_creation/bibl_ad7a16ab> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2999-P625-49.794444444444_9.9294444444444> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2999> .
 
-<https://sappho-digital.com/place/place_b3271180> a ecrm:E53_Place ;
-    rdfs:label "Ludwigslust"@de,
-        "Wismar"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_3ee6f25d>,
-        <https://sappho-digital.com/manifestation_creation/bibl_5e905991>,
-        <https://sappho-digital.com/manifestation_creation/bibl_b60786f5> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q7030> .
+<https://sappho-digital.com/place/place_37eb173a> a ecrm:E53_Place ;
+    rdfs:label "Bremen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_815f2c02>,
+        <https://sappho-digital.com/manifestation_creation/bibl_a4214783> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q24879-P625-53.075833333333335_8.807222222222222> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q24879> .
 
-<https://sappho-digital.com/place/place_bac82a99> a ecrm:E53_Place ;
-    rdfs:label "Bern"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_49df824c>,
-        <https://sappho-digital.com/manifestation_creation/bibl_54cf33e3>,
-        <https://sappho-digital.com/manifestation_creation/bibl_bf96255c> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q70> .
+<https://sappho-digital.com/place/place_6ea98adb> a ecrm:E53_Place ;
+    rdfs:label "Hannover"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_5b00249a>,
+        <https://sappho-digital.com/manifestation_creation/bibl_92f7e243> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1715-P625-52.374444444444_9.7386111111111> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1715> .
 
-<https://sappho-digital.com/place/place_bb2b3096> a ecrm:E53_Place ;
-    rdfs:label "Halberstadt"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_496b8ebf>,
-        <https://sappho-digital.com/manifestation_creation/bibl_5c7d8ce2>,
-        <https://sappho-digital.com/manifestation_creation/bibl_d4bdb33b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q7072> .
+<https://sappho-digital.com/place/place_726ed312> a ecrm:E53_Place ;
+    rdfs:label "Bielefeld"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_31b3170b>,
+        <https://sappho-digital.com/manifestation_creation/bibl_42fbb8ad> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2112-P625-52.016666666667_8.5333333333333> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2112> .
 
-<https://sappho-digital.com/place/place_cb9d8885> a ecrm:E53_Place ;
-    rdfs:label "Dantzig"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_944ec74b>,
-        <https://sappho-digital.com/manifestation_creation/bibl_c8f9e0e3>,
-        <https://sappho-digital.com/manifestation_creation/bibl_d26db0ee> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1792> .
+<https://sappho-digital.com/place/place_79462cb0> a ecrm:E53_Place ;
+    rdfs:label "Ljubljana"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_2e405d53>,
+        <https://sappho-digital.com/manifestation_creation/bibl_769be9b8> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q437-P625-46.05138888888889_14.50611111111111> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q437> .
 
-<https://sappho-digital.com/place/place_e7593ca9> a ecrm:E53_Place ;
-    rdfs:label "Czernowitz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_a27952d9>,
-        <https://sappho-digital.com/manifestation_creation/bibl_a905a05b>,
-        <https://sappho-digital.com/manifestation_creation/bibl_c62408ae> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q157725> .
+<https://sappho-digital.com/place/place_82cb2da6> a ecrm:E53_Place ;
+    rdfs:label "Neustrelitz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_22037400>,
+        <https://sappho-digital.com/manifestation_creation/bibl_c22ab1ce> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q20352-P625-53.364722222222_13.063611111111> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q20352> .
 
-<https://sappho-digital.com/place/place_efaf7112> a ecrm:E53_Place ;
-    rdfs:label "Mainz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_c015b3fd>,
-        <https://sappho-digital.com/manifestation_creation/bibl_cf6f6de3>,
-        <https://sappho-digital.com/manifestation_creation/bibl_e9683c9a> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1720> .
+<https://sappho-digital.com/place/place_99b809f4> a ecrm:E53_Place ;
+    rdfs:label "Bregenz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_a3bc242d>,
+        <https://sappho-digital.com/manifestation_creation/bibl_af3e8b48> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1737-P625-47.505_9.7491666666667> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1737> .
+
+<https://sappho-digital.com/place/place_afc56847> a ecrm:E53_Place ;
+    rdfs:label "Münster"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_407bf2b9>,
+        <https://sappho-digital.com/manifestation_creation/bibl_dd966591> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2742-P625-51.9625_7.6255555555556> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2742> .
+
+<https://sappho-digital.com/place/place_ca5ece67> a ecrm:E53_Place ;
+    rdfs:label "Pfullingen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_2a28fa55>,
+        <https://sappho-digital.com/manifestation_creation/bibl_2af29a15> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q82053-P625-48.465555555556_9.2261111111111> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q82053> .
+
+<https://sappho-digital.com/place/place_ce0c1fb4> a ecrm:E53_Place ;
+    rdfs:label "Erlangen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_921c093e>,
+        <https://sappho-digital.com/manifestation_creation/bibl_983063f3> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q3126-P625-49.5925_11.005> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3126> .
+
+<https://sappho-digital.com/place/place_d07b6ca0> a ecrm:E53_Place ;
+    rdfs:label "Lemgo"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_5283cfa8>,
+        <https://sappho-digital.com/manifestation_creation/bibl_775bde93> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q14817-P625-52.027680555555555_8.9043> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q14817> .
+
+<https://sappho-digital.com/place/place_e27a0539> a ecrm:E53_Place ;
+    rdfs:label "Potsdam"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_2d304546>,
+        <https://sappho-digital.com/manifestation_creation/bibl_566798a4> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1711-P625-52.4_13.066666666667> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1711> .
+
+<https://sappho-digital.com/place/place_ec6f644a> a ecrm:E53_Place ;
+    rdfs:label "Heidelberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_7dec9bba>,
+        <https://sappho-digital.com/manifestation_creation/bibl_c8b4c54e> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2966-P625-49.412222222222_8.71> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2966> .
+
+<https://sappho-digital.com/place/place_f2646aa0> a ecrm:E53_Place ;
+    rdfs:label "Salzburg"@de,
+        "Wien"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_6cb41f7a>,
+        <https://sappho-digital.com/manifestation_creation/bibl_b44363bb> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q34713-P625-47.8_13.045> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q34713> .
+
+<https://sappho-digital.com/place/place_f29f9ace> a ecrm:E53_Place ;
+    rdfs:label "Aachen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_29588496>,
+        <https://sappho-digital.com/manifestation_creation/bibl_b35fde3c> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1017-P625-50.776207_6.083788> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1017> .
 
 <https://sappho-digital.com/publisher/Orell,_Gessner,_Füssli_und_Compagnie> a ecrm:E40_Legal_Body ;
     rdfs:label "Orell, Gessner, Füssli und Compagnie"@de ;
@@ -35547,46 +35951,105 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_5e4f382b>,
         <https://sappho-digital.com/manifestation_creation/bibl_e3a7331b> .
 
-<https://sappho-digital.com/place/place_5cef94ac> a ecrm:E53_Place ;
-    rdfs:label "Rostock"@de,
-        "Wismar"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_5e905991>,
-        <https://sappho-digital.com/manifestation_creation/bibl_a3400322>,
-        <https://sappho-digital.com/manifestation_creation/bibl_b60786f5>,
-        <https://sappho-digital.com/manifestation_creation/bibl_c010fcbd> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2861> .
+<https://sappho-digital.com/place/place_1aa97a04> a ecrm:E53_Place ;
+    rdfs:label "Jena"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_28dc64c6>,
+        <https://sappho-digital.com/manifestation_creation/bibl_9392247d>,
+        <https://sappho-digital.com/manifestation_creation/bibl_eef6e5e0> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q3150-P625-50.927222222222_11.586388888889> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3150> .
 
-<https://sappho-digital.com/place/place_77b5ece6> a ecrm:E53_Place ;
-    rdfs:label "Mannheim"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_1ce2ac8d>,
-        <https://sappho-digital.com/manifestation_creation/bibl_4f886bc9>,
-        <https://sappho-digital.com/manifestation_creation/bibl_d3898944>,
-        <https://sappho-digital.com/manifestation_creation/bibl_e445ceed> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2119> .
+<https://sappho-digital.com/place/place_477d8872> a ecrm:E53_Place ;
+    rdfs:label "Straßburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_5923a400>,
+        <https://sappho-digital.com/manifestation_creation/bibl_cd8d3483>,
+        <https://sappho-digital.com/manifestation_creation/bibl_dbe47849> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q6602-P625-48.573333333333_7.7522222222222> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q6602> .
 
-<https://sappho-digital.com/place/place_a3670732> a ecrm:E53_Place ;
-    rdfs:label "Gotha"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_19c1efd8>,
-        <https://sappho-digital.com/manifestation_creation/bibl_adecb47a>,
-        <https://sappho-digital.com/manifestation_creation/bibl_d2a5780b>,
-        <https://sappho-digital.com/manifestation_creation/bibl_fb4e326d> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q6986> .
+<https://sappho-digital.com/place/place_4a15ea49> a ecrm:E53_Place ;
+    rdfs:label "Köln"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_2348e130>,
+        <https://sappho-digital.com/manifestation_creation/bibl_4c622de1>,
+        <https://sappho-digital.com/manifestation_creation/bibl_6c373c88> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q365-P625-50.942222222222_6.9577777777778> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q365> .
 
-<https://sappho-digital.com/place/place_d4135c97> a ecrm:E53_Place ;
-    rdfs:label "Augsburg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_3bdf0ccc>,
-        <https://sappho-digital.com/manifestation_creation/bibl_95cc53fc>,
-        <https://sappho-digital.com/manifestation_creation/bibl_bde24a4e>,
+<https://sappho-digital.com/place/place_675a92e1> a ecrm:E53_Place ;
+    rdfs:label "Breslau"@de,
+        "Frankfurt a. M."@de,
+        "Hamburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_0eed1803>,
+        <https://sappho-digital.com/manifestation_creation/bibl_70c830f9>,
+        <https://sappho-digital.com/manifestation_creation/bibl_7cfe62ea> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1794-P625-50.11055555555556_8.682222222222222> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1794> .
+
+<https://sappho-digital.com/place/place_907e6aad> a ecrm:E53_Place ;
+    rdfs:label "Linz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_50be4356>,
+        <https://sappho-digital.com/manifestation_creation/bibl_718a2dc9>,
+        <https://sappho-digital.com/manifestation_creation/bibl_f8a59882> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q41329-P625-48.30583333333333_14.286388888888888> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q41329> .
+
+<https://sappho-digital.com/place/place_b30287cd> a ecrm:E53_Place ;
+    rdfs:label "Darmstadt"@de,
+        "Neuwied"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6>,
+        <https://sappho-digital.com/manifestation_creation/bibl_c1e2dcfc>,
         <https://sappho-digital.com/manifestation_creation/bibl_c4cabf0c> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2749> .
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2973-P625-49.866666666667_8.65> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2973> .
 
-<https://sappho-digital.com/place/place_e575530b> a ecrm:E53_Place ;
-    rdfs:label "Prag"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_1776c5ab>,
-        <https://sappho-digital.com/manifestation_creation/bibl_74347c5f>,
-        <https://sappho-digital.com/manifestation_creation/bibl_7667b749>,
-        <https://sappho-digital.com/manifestation_creation/bibl_9274a25b> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1085> .
+<https://sappho-digital.com/place/place_b3271180> a ecrm:E53_Place ;
+    rdfs:label "Ludwigslust"@de,
+        "Wismar"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_3ee6f25d>,
+        <https://sappho-digital.com/manifestation_creation/bibl_5e905991>,
+        <https://sappho-digital.com/manifestation_creation/bibl_b60786f5> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q7030-P625-53.8925_11.465> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q7030> .
+
+<https://sappho-digital.com/place/place_bac82a99> a ecrm:E53_Place ;
+    rdfs:label "Bern"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_49df824c>,
+        <https://sappho-digital.com/manifestation_creation/bibl_54cf33e3>,
+        <https://sappho-digital.com/manifestation_creation/bibl_bf96255c> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q70-P625-46.94798_7.44743> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q70> .
+
+<https://sappho-digital.com/place/place_bb2b3096> a ecrm:E53_Place ;
+    rdfs:label "Halberstadt"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_496b8ebf>,
+        <https://sappho-digital.com/manifestation_creation/bibl_5c7d8ce2>,
+        <https://sappho-digital.com/manifestation_creation/bibl_d4bdb33b> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q7072-P625-51.895833333333_11.046666666667> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q7072> .
+
+<https://sappho-digital.com/place/place_be96ca51> a ecrm:E53_Place ;
+    rdfs:label "Pforzheim"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_f32fa5e2> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q3046-P625-48.8908846_8.7029532>,
+        <https://sappho-digital.com/spatial_coordinates/Q3046-P625-48.89154_8.7156>,
+        <https://sappho-digital.com/spatial_coordinates/Q3046-P625-48.89_8.71083> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3046> .
+
+<https://sappho-digital.com/place/place_e7593ca9> a ecrm:E53_Place ;
+    rdfs:label "Czernowitz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_a27952d9>,
+        <https://sappho-digital.com/manifestation_creation/bibl_a905a05b>,
+        <https://sappho-digital.com/manifestation_creation/bibl_c62408ae> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q157725-P625-48.290833333333_25.934444444444> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q157725> .
+
+<https://sappho-digital.com/place/place_efaf7112> a ecrm:E53_Place ;
+    rdfs:label "Mainz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_c015b3fd>,
+        <https://sappho-digital.com/manifestation_creation/bibl_cf6f6de3>,
+        <https://sappho-digital.com/manifestation_creation/bibl_e9683c9a> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1720-P625-49.99944444444444_8.27361111111111> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1720> .
 
 <https://sappho-digital.com/publisher/Bernhard_Christian_Breitkopf> a ecrm:E40_Legal_Body ;
     rdfs:label "Bernhard Christian Breitkopf"@de ;
@@ -41141,16 +41604,60 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_9ff4d54c>,
         <https://sappho-digital.com/manifestation_creation/bibl_db8eedb2> .
 
-<https://sappho-digital.com/place/place_7aaf6c53> a ecrm:E53_Place ;
-    rdfs:label "Basel"@de,
-        "Freiburg"@de,
-        "Kassel"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_19a76400>,
-        <https://sappho-digital.com/manifestation_creation/bibl_1c25519e>,
-        <https://sappho-digital.com/manifestation_creation/bibl_31a193b7>,
-        <https://sappho-digital.com/manifestation_creation/bibl_35d14ded>,
-        <https://sappho-digital.com/manifestation_creation/bibl_51d7e8c7> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q78> .
+<https://sappho-digital.com/place/place_5cef94ac> a ecrm:E53_Place ;
+    rdfs:label "Rostock"@de,
+        "Wismar"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_5e905991>,
+        <https://sappho-digital.com/manifestation_creation/bibl_a3400322>,
+        <https://sappho-digital.com/manifestation_creation/bibl_b60786f5>,
+        <https://sappho-digital.com/manifestation_creation/bibl_c010fcbd> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2861-P625-54.083333333333_12.133333333333> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2861> .
+
+<https://sappho-digital.com/place/place_77b5ece6> a ecrm:E53_Place ;
+    rdfs:label "Mannheim"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_1ce2ac8d>,
+        <https://sappho-digital.com/manifestation_creation/bibl_4f886bc9>,
+        <https://sappho-digital.com/manifestation_creation/bibl_d3898944>,
+        <https://sappho-digital.com/manifestation_creation/bibl_e445ceed> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2119-P625-49.48777777777778_8.466111111111111> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2119> .
+
+<https://sappho-digital.com/place/place_a3670732> a ecrm:E53_Place ;
+    rdfs:label "Gotha"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_19c1efd8>,
+        <https://sappho-digital.com/manifestation_creation/bibl_adecb47a>,
+        <https://sappho-digital.com/manifestation_creation/bibl_d2a5780b>,
+        <https://sappho-digital.com/manifestation_creation/bibl_fb4e326d> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q6986-P625-50.948888888889_10.718333333333> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q6986> .
+
+<https://sappho-digital.com/place/place_cb9d8885> a ecrm:E53_Place ;
+    rdfs:label "Dantzig"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_944ec74b>,
+        <https://sappho-digital.com/manifestation_creation/bibl_c8f9e0e3>,
+        <https://sappho-digital.com/manifestation_creation/bibl_d26db0ee> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1792-P625-54.3482907_18.6540233>,
+        <https://sappho-digital.com/spatial_coordinates/Q1792-P625-54.35_18.666666666666668> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1792> .
+
+<https://sappho-digital.com/place/place_d4135c97> a ecrm:E53_Place ;
+    rdfs:label "Augsburg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_3bdf0ccc>,
+        <https://sappho-digital.com/manifestation_creation/bibl_95cc53fc>,
+        <https://sappho-digital.com/manifestation_creation/bibl_bde24a4e>,
+        <https://sappho-digital.com/manifestation_creation/bibl_c4cabf0c> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2749-P625-48.36888888888889_10.897777777777778> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2749> .
+
+<https://sappho-digital.com/place/place_e575530b> a ecrm:E53_Place ;
+    rdfs:label "Prag"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_1776c5ab>,
+        <https://sappho-digital.com/manifestation_creation/bibl_74347c5f>,
+        <https://sappho-digital.com/manifestation_creation/bibl_7667b749>,
+        <https://sappho-digital.com/manifestation_creation/bibl_9274a25b> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1085-P625-50.0875_14.421388888888888> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1085> .
 
 <https://sappho-digital.com/publisher/Georg_Müller> a ecrm:E40_Legal_Body ;
     rdfs:label "Georg Müller"@de ;
@@ -42057,48 +42564,17 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_dd6b8fd4>,
         <https://sappho-digital.com/manifestation_creation/bibl_e9398e01> .
 
-<https://sappho-digital.com/place/place_2126faa6> a ecrm:E53_Place ;
-    rdfs:label "Karlsruhe"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_3ac1dfc7>,
-        <https://sappho-digital.com/manifestation_creation/bibl_60d35f59>,
-        <https://sappho-digital.com/manifestation_creation/bibl_8380f90f>,
-        <https://sappho-digital.com/manifestation_creation/bibl_8450a6dc>,
-        <https://sappho-digital.com/manifestation_creation/bibl_8fd4ed65>,
-        <https://sappho-digital.com/manifestation_creation/bibl_a3be2ca8> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1040> .
-
-<https://sappho-digital.com/place/place_6e00929f> a ecrm:E53_Place ;
-    rdfs:label "Graz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_0c7e3721>,
-        <https://sappho-digital.com/manifestation_creation/bibl_149u91j4>,
-        <https://sappho-digital.com/manifestation_creation/bibl_17be783b>,
-        <https://sappho-digital.com/manifestation_creation/bibl_3b2122af>,
-        <https://sappho-digital.com/manifestation_creation/bibl_affda0e4>,
-        <https://sappho-digital.com/manifestation_creation/bibl_dc80353f> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q13298> .
-
-<https://sappho-digital.com/place/place_811c769d> a ecrm:E53_Place ;
-    rdfs:label "Breslau"@de,
-        "Brieg"@de,
-        "Frankfurt a. M."@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_392a92f2>,
-        <https://sappho-digital.com/manifestation_creation/bibl_40463a8a>,
-        <https://sappho-digital.com/manifestation_creation/bibl_70c830f9>,
-        <https://sappho-digital.com/manifestation_creation/bibl_85b1397b>,
-        <https://sappho-digital.com/manifestation_creation/bibl_d791125d>,
-        <https://sappho-digital.com/manifestation_creation/bibl_ee6c648c> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1799> .
-
-<https://sappho-digital.com/place/place_c35eca96> a ecrm:E53_Place ;
-    rdfs:label "Berlin"@de,
-        "Weimar"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_1b76b1c6>,
-        <https://sappho-digital.com/manifestation_creation/bibl_221afbf2>,
-        <https://sappho-digital.com/manifestation_creation/bibl_39f6ce4c>,
-        <https://sappho-digital.com/manifestation_creation/bibl_49136633>,
-        <https://sappho-digital.com/manifestation_creation/bibl_b59af9d2>,
-        <https://sappho-digital.com/manifestation_creation/bibl_d3fc1215> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3955> .
+<https://sappho-digital.com/place/place_7aaf6c53> a ecrm:E53_Place ;
+    rdfs:label "Basel"@de,
+        "Freiburg"@de,
+        "Kassel"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_19a76400>,
+        <https://sappho-digital.com/manifestation_creation/bibl_1c25519e>,
+        <https://sappho-digital.com/manifestation_creation/bibl_31a193b7>,
+        <https://sappho-digital.com/manifestation_creation/bibl_35d14ded>,
+        <https://sappho-digital.com/manifestation_creation/bibl_51d7e8c7> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q78-P625-47.560555555556_7.5905555555556> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q78> .
 
 <https://sappho-digital.com/publisher/Q109538> a ecrm:E40_Legal_Body ;
     rdfs:label "Johann Christian Dieterich"@de ;
@@ -42645,16 +43121,52 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_709a1593>,
         <https://sappho-digital.com/manifestation_creation/bibl_9462d601> .
 
-<https://sappho-digital.com/place/place_90bebd2f> a ecrm:E53_Place ;
-    rdfs:label "Dresden"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_0aa2f93e>,
-        <https://sappho-digital.com/manifestation_creation/bibl_421c27fb>,
-        <https://sappho-digital.com/manifestation_creation/bibl_72514b45>,
-        <https://sappho-digital.com/manifestation_creation/bibl_865e8510>,
-        <https://sappho-digital.com/manifestation_creation/bibl_89381dac>,
-        <https://sappho-digital.com/manifestation_creation/bibl_9ceda030>,
-        <https://sappho-digital.com/manifestation_creation/bibl_afcf139e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1731> .
+<https://sappho-digital.com/place/place_2126faa6> a ecrm:E53_Place ;
+    rdfs:label "Karlsruhe"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_3ac1dfc7>,
+        <https://sappho-digital.com/manifestation_creation/bibl_60d35f59>,
+        <https://sappho-digital.com/manifestation_creation/bibl_8380f90f>,
+        <https://sappho-digital.com/manifestation_creation/bibl_8450a6dc>,
+        <https://sappho-digital.com/manifestation_creation/bibl_8fd4ed65>,
+        <https://sappho-digital.com/manifestation_creation/bibl_a3be2ca8> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1040-P625-49.016666666667_8.4> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1040> .
+
+<https://sappho-digital.com/place/place_6e00929f> a ecrm:E53_Place ;
+    rdfs:label "Graz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_0c7e3721>,
+        <https://sappho-digital.com/manifestation_creation/bibl_149u91j4>,
+        <https://sappho-digital.com/manifestation_creation/bibl_17be783b>,
+        <https://sappho-digital.com/manifestation_creation/bibl_3b2122af>,
+        <https://sappho-digital.com/manifestation_creation/bibl_affda0e4>,
+        <https://sappho-digital.com/manifestation_creation/bibl_dc80353f> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q13298-P625-47.07083333333333_15.438611111111111> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q13298> .
+
+<https://sappho-digital.com/place/place_811c769d> a ecrm:E53_Place ;
+    rdfs:label "Breslau"@de,
+        "Brieg"@de,
+        "Frankfurt a. M."@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_392a92f2>,
+        <https://sappho-digital.com/manifestation_creation/bibl_40463a8a>,
+        <https://sappho-digital.com/manifestation_creation/bibl_70c830f9>,
+        <https://sappho-digital.com/manifestation_creation/bibl_85b1397b>,
+        <https://sappho-digital.com/manifestation_creation/bibl_d791125d>,
+        <https://sappho-digital.com/manifestation_creation/bibl_ee6c648c> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1799-P625-51.11_17.0325> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1799> .
+
+<https://sappho-digital.com/place/place_c35eca96> a ecrm:E53_Place ;
+    rdfs:label "Berlin"@de,
+        "Weimar"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_1b76b1c6>,
+        <https://sappho-digital.com/manifestation_creation/bibl_221afbf2>,
+        <https://sappho-digital.com/manifestation_creation/bibl_39f6ce4c>,
+        <https://sappho-digital.com/manifestation_creation/bibl_49136633>,
+        <https://sappho-digital.com/manifestation_creation/bibl_b59af9d2>,
+        <https://sappho-digital.com/manifestation_creation/bibl_d3fc1215> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q3955-P625-50.98111111111111_11.329444444444444> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3955> .
 
 <https://sappho-digital.com/publisher/Q100748> a ecrm:E40_Legal_Body ;
     rdfs:label "Bernhard Christoph Breitkopf"@de ;
@@ -42918,17 +43430,17 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/expression_creation/bibl_a1f07a09>,
         <https://sappho-digital.com/manifestation_creation/bibl_def73d2f> .
 
-<https://sappho-digital.com/place/place_42b32e43> a ecrm:E53_Place ;
-    rdfs:label "Düsseldorf"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_20f6e022>,
-        <https://sappho-digital.com/manifestation_creation/bibl_39912df8>,
-        <https://sappho-digital.com/manifestation_creation/bibl_4fdd84cc>,
-        <https://sappho-digital.com/manifestation_creation/bibl_7d554b20>,
-        <https://sappho-digital.com/manifestation_creation/bibl_a1aeaaab>,
-        <https://sappho-digital.com/manifestation_creation/bibl_a6975d0c>,
-        <https://sappho-digital.com/manifestation_creation/bibl_b2df6cd0>,
-        <https://sappho-digital.com/manifestation_creation/bibl_f75c9af2> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1718> .
+<https://sappho-digital.com/place/place_90bebd2f> a ecrm:E53_Place ;
+    rdfs:label "Dresden"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_0aa2f93e>,
+        <https://sappho-digital.com/manifestation_creation/bibl_421c27fb>,
+        <https://sappho-digital.com/manifestation_creation/bibl_72514b45>,
+        <https://sappho-digital.com/manifestation_creation/bibl_865e8510>,
+        <https://sappho-digital.com/manifestation_creation/bibl_89381dac>,
+        <https://sappho-digital.com/manifestation_creation/bibl_9ceda030>,
+        <https://sappho-digital.com/manifestation_creation/bibl_afcf139e> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1731-P625-51.0493286_13.7381437> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1731> .
 
 <https://sappho-digital.com/publisher/Q1204376> a ecrm:E40_Legal_Body ;
     rdfs:label "Deutsche Verlags-Anstalt"@de,
@@ -43141,18 +43653,18 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_ddb1e4a7>,
         <https://sappho-digital.com/manifestation_creation/bibl_ff22fb94> .
 
-<https://sappho-digital.com/place/place_2bd03983> a ecrm:E53_Place ;
-    rdfs:label "Nürnberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_0d595730>,
-        <https://sappho-digital.com/manifestation_creation/bibl_13af1138>,
-        <https://sappho-digital.com/manifestation_creation/bibl_2659860a>,
-        <https://sappho-digital.com/manifestation_creation/bibl_2a1027fd>,
-        <https://sappho-digital.com/manifestation_creation/bibl_874f0958>,
-        <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6>,
-        <https://sappho-digital.com/manifestation_creation/bibl_ab449700>,
-        <https://sappho-digital.com/manifestation_creation/bibl_c7994627>,
-        <https://sappho-digital.com/manifestation_creation/bibl_e3da4bfc> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2090> .
+<https://sappho-digital.com/place/place_42b32e43> a ecrm:E53_Place ;
+    rdfs:label "Düsseldorf"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_20f6e022>,
+        <https://sappho-digital.com/manifestation_creation/bibl_39912df8>,
+        <https://sappho-digital.com/manifestation_creation/bibl_4fdd84cc>,
+        <https://sappho-digital.com/manifestation_creation/bibl_7d554b20>,
+        <https://sappho-digital.com/manifestation_creation/bibl_a1aeaaab>,
+        <https://sappho-digital.com/manifestation_creation/bibl_a6975d0c>,
+        <https://sappho-digital.com/manifestation_creation/bibl_b2df6cd0>,
+        <https://sappho-digital.com/manifestation_creation/bibl_f75c9af2> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1718-P625-51.22555555555556_6.776666666666666> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1718> .
 
 <https://sappho-digital.com/timespan/1904> a ecrm:E52_Time-Span ;
     rdfs:label "1904"^^xsd:gYear ;
@@ -43213,19 +43725,19 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://www.goodreads.com/work/show/754665>,
         <https://www.wikidata.org/entity/Q425938> .
 
-<https://sappho-digital.com/place/place_ae6e1bfb> a ecrm:E53_Place ;
-    rdfs:label "Tübingen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_0633c293>,
-        <https://sappho-digital.com/manifestation_creation/bibl_0dbc7645>,
-        <https://sappho-digital.com/manifestation_creation/bibl_3b30174a>,
-        <https://sappho-digital.com/manifestation_creation/bibl_82f3f901>,
+<https://sappho-digital.com/place/place_2bd03983> a ecrm:E53_Place ;
+    rdfs:label "Nürnberg"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_0d595730>,
+        <https://sappho-digital.com/manifestation_creation/bibl_13af1138>,
+        <https://sappho-digital.com/manifestation_creation/bibl_2659860a>,
+        <https://sappho-digital.com/manifestation_creation/bibl_2a1027fd>,
+        <https://sappho-digital.com/manifestation_creation/bibl_874f0958>,
         <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6>,
-        <https://sappho-digital.com/manifestation_creation/bibl_cc8dfe6c>,
-        <https://sappho-digital.com/manifestation_creation/bibl_d844ba48>,
-        <https://sappho-digital.com/manifestation_creation/bibl_da54ba99>,
-        <https://sappho-digital.com/manifestation_creation/bibl_e92c73b9>,
-        <https://sappho-digital.com/manifestation_creation/bibl_e9fb8777> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3806> .
+        <https://sappho-digital.com/manifestation_creation/bibl_ab449700>,
+        <https://sappho-digital.com/manifestation_creation/bibl_c7994627>,
+        <https://sappho-digital.com/manifestation_creation/bibl_e3da4bfc> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2090-P625-49.45388888888889_11.0775> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2090> .
 
 <https://sappho-digital.com/publisher/Q1378263> a ecrm:E40_Legal_Body ;
     rdfs:label "Wallstein"@de ;
@@ -43284,6 +43796,21 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6>,
         <https://sappho-digital.com/manifestation_creation/bibl_d62efb28>,
         <https://sappho-digital.com/manifestation_creation/bibl_d844ba48> .
+
+<https://sappho-digital.com/place/place_ae6e1bfb> a ecrm:E53_Place ;
+    rdfs:label "Tübingen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_0633c293>,
+        <https://sappho-digital.com/manifestation_creation/bibl_0dbc7645>,
+        <https://sappho-digital.com/manifestation_creation/bibl_3b30174a>,
+        <https://sappho-digital.com/manifestation_creation/bibl_82f3f901>,
+        <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6>,
+        <https://sappho-digital.com/manifestation_creation/bibl_cc8dfe6c>,
+        <https://sappho-digital.com/manifestation_creation/bibl_d844ba48>,
+        <https://sappho-digital.com/manifestation_creation/bibl_da54ba99>,
+        <https://sappho-digital.com/manifestation_creation/bibl_e92c73b9>,
+        <https://sappho-digital.com/manifestation_creation/bibl_e9fb8777> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q3806-P625-48.52_9.0555555555556> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3806> .
 
 <https://sappho-digital.com/publisher/Q97527> a ecrm:E40_Legal_Body ;
     rdfs:label "G. J. Göschen"@de,
@@ -43404,26 +43931,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
 <https://sappho-digital.com/id_type/dbpedia> a ecrm:E55_Type ;
     rdfs:label "DBpedia ID"@en .
 
-<https://sappho-digital.com/place/place_0c1736a7> a ecrm:E53_Place ;
-    rdfs:label "München"@de,
-        "Zürich"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_0cdf9ff6>,
-        <https://sappho-digital.com/manifestation_creation/bibl_1fc1e0ed>,
-        <https://sappho-digital.com/manifestation_creation/bibl_30c714e2>,
-        <https://sappho-digital.com/manifestation_creation/bibl_3259d5bb>,
-        <https://sappho-digital.com/manifestation_creation/bibl_32dd4ca1>,
-        <https://sappho-digital.com/manifestation_creation/bibl_36040d62>,
-        <https://sappho-digital.com/manifestation_creation/bibl_5039e75c>,
-        <https://sappho-digital.com/manifestation_creation/bibl_6834de03>,
-        <https://sappho-digital.com/manifestation_creation/bibl_6969e2d1>,
-        <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6>,
-        <https://sappho-digital.com/manifestation_creation/bibl_aca29ff2>,
-        <https://sappho-digital.com/manifestation_creation/bibl_c2705125>,
-        <https://sappho-digital.com/manifestation_creation/bibl_cac5cb34>,
-        <https://sappho-digital.com/manifestation_creation/bibl_da238899>,
-        <https://sappho-digital.com/manifestation_creation/bibl_fffb4021> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q72> .
-
 <https://sappho-digital.com/manifestation_creation/bibl_da54ba99> a lrmoo:F30_Manifestation_Creation ;
     rdfs:label "Manifestation creation of Morgenblatt für gebildete Stände"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/publisher/Q1136691>,
@@ -43467,25 +43974,26 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_d6f2dec9>,
         <https://sappho-digital.com/manifestation_creation/bibl_e92c73b9> .
 
-<https://sappho-digital.com/place/place_a24d0551> a ecrm:E53_Place ;
-    rdfs:label "Göttingen"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_0be682a1>,
-        <https://sappho-digital.com/manifestation_creation/bibl_4359d2a2>,
-        <https://sappho-digital.com/manifestation_creation/bibl_5122d5b2>,
-        <https://sappho-digital.com/manifestation_creation/bibl_572786e3>,
-        <https://sappho-digital.com/manifestation_creation/bibl_5980ddfc>,
-        <https://sappho-digital.com/manifestation_creation/bibl_5aad1021>,
-        <https://sappho-digital.com/manifestation_creation/bibl_837bf14c>,
-        <https://sappho-digital.com/manifestation_creation/bibl_871b8447>,
-        <https://sappho-digital.com/manifestation_creation/bibl_8f06ad3f>,
-        <https://sappho-digital.com/manifestation_creation/bibl_90917f01>,
-        <https://sappho-digital.com/manifestation_creation/bibl_98c87798>,
+<https://sappho-digital.com/place/place_0c1736a7> a ecrm:E53_Place ;
+    rdfs:label "München"@de,
+        "Zürich"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_0cdf9ff6>,
+        <https://sappho-digital.com/manifestation_creation/bibl_1fc1e0ed>,
+        <https://sappho-digital.com/manifestation_creation/bibl_30c714e2>,
+        <https://sappho-digital.com/manifestation_creation/bibl_3259d5bb>,
+        <https://sappho-digital.com/manifestation_creation/bibl_32dd4ca1>,
+        <https://sappho-digital.com/manifestation_creation/bibl_36040d62>,
+        <https://sappho-digital.com/manifestation_creation/bibl_5039e75c>,
+        <https://sappho-digital.com/manifestation_creation/bibl_6834de03>,
+        <https://sappho-digital.com/manifestation_creation/bibl_6969e2d1>,
         <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6>,
-        <https://sappho-digital.com/manifestation_creation/bibl_adecb47a>,
-        <https://sappho-digital.com/manifestation_creation/bibl_b1d86cba>,
-        <https://sappho-digital.com/manifestation_creation/bibl_bdc5a0c4>,
-        <https://sappho-digital.com/manifestation_creation/bibl_ca8be772> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q3033> .
+        <https://sappho-digital.com/manifestation_creation/bibl_aca29ff2>,
+        <https://sappho-digital.com/manifestation_creation/bibl_c2705125>,
+        <https://sappho-digital.com/manifestation_creation/bibl_cac5cb34>,
+        <https://sappho-digital.com/manifestation_creation/bibl_da238899>,
+        <https://sappho-digital.com/manifestation_creation/bibl_fffb4021> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q72-P625-47.37444444444444_8.54111111111111> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q72> .
 
 <https://sappho-digital.com/publisher/Q1136691> a ecrm:E40_Legal_Body ;
     rdfs:label "Cotta"@de,
@@ -43530,6 +44038,27 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/place/place_d4135c97>,
         <https://sappho-digital.com/place/place_efeaa516> ;
     lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_c4cabf0c> .
+
+<https://sappho-digital.com/place/place_a24d0551> a ecrm:E53_Place ;
+    rdfs:label "Göttingen"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_0be682a1>,
+        <https://sappho-digital.com/manifestation_creation/bibl_4359d2a2>,
+        <https://sappho-digital.com/manifestation_creation/bibl_5122d5b2>,
+        <https://sappho-digital.com/manifestation_creation/bibl_572786e3>,
+        <https://sappho-digital.com/manifestation_creation/bibl_5980ddfc>,
+        <https://sappho-digital.com/manifestation_creation/bibl_5aad1021>,
+        <https://sappho-digital.com/manifestation_creation/bibl_837bf14c>,
+        <https://sappho-digital.com/manifestation_creation/bibl_871b8447>,
+        <https://sappho-digital.com/manifestation_creation/bibl_8f06ad3f>,
+        <https://sappho-digital.com/manifestation_creation/bibl_90917f01>,
+        <https://sappho-digital.com/manifestation_creation/bibl_98c87798>,
+        <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6>,
+        <https://sappho-digital.com/manifestation_creation/bibl_adecb47a>,
+        <https://sappho-digital.com/manifestation_creation/bibl_b1d86cba>,
+        <https://sappho-digital.com/manifestation_creation/bibl_bdc5a0c4>,
+        <https://sappho-digital.com/manifestation_creation/bibl_ca8be772> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q3033-P625-51.533888888889_9.9355555555556> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q3033> .
 
 <https://sappho-digital.com/manifestation_creation/bibl_4c622de1> a lrmoo:F30_Manifestation_Creation ;
     rdfs:label "Manifestation creation of Kölnische Zeitung"@en ;
@@ -43618,6 +44147,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_c759131a>,
         <https://sappho-digital.com/manifestation_creation/bibl_d6f2dec9>,
         <https://sappho-digital.com/manifestation_creation/bibl_d9cbf026> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1055-P625-53.55_10> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1055> .
 
 <https://sappho-digital.com/place/place_ae5c315b> a ecrm:E53_Place ;
@@ -43656,6 +44186,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_edbf9cc5>,
         <https://sappho-digital.com/manifestation_creation/bibl_f38327b8>,
         <https://sappho-digital.com/manifestation_creation/bibl_fb68007d> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1794-P625-50.11055555555556_8.682222222222222> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1794> .
 
 <https://sappho-digital.com/place/place_06ec7d19> a ecrm:E53_Place ;
@@ -43698,6 +44229,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_ebc1bb1f>,
         <https://sappho-digital.com/manifestation_creation/bibl_f4da59f4>,
         <https://sappho-digital.com/manifestation_creation/bibl_ff53d330> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1726-P625-48.1375_11.575> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1726> .
 
 <https://sappho-digital.com/place/place_700b43a2> a ecrm:E53_Place ;
@@ -43738,6 +44270,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_ec11b447>,
         <https://sappho-digital.com/manifestation_creation/bibl_f0d806e8>,
         <https://sappho-digital.com/manifestation_creation/bibl_ff22fb94> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1022-P625-48.7775_9.18> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1022> .
 
 <https://sappho-digital.com/manifestation_creation/bibl_574806a3> a lrmoo:F30_Manifestation_Creation ;
@@ -43862,6 +44395,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_fb54feb7>,
         <https://sappho-digital.com/manifestation_creation/bibl_fd81a760>,
         <https://sappho-digital.com/manifestation_creation/bibl_fe2b96a9> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1741-P625-48.208333333333336_16.3725> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1741> .
 
 <https://sappho-digital.com/person/author_7240c9e7> a ecrm:E21_Person ;
@@ -44140,6 +44674,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_f75c9af2>,
         <https://sappho-digital.com/manifestation_creation/bibl_fa67f68f>,
         <https://sappho-digital.com/manifestation_creation/bibl_fc4d31ad> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q64-P625-52.516666666667_13.383333333333> ;
     owl:sameAs <https://www.wikidata.org/entity/Q64> .
 
 <https://sappho-digital.com/place/place_efeaa516> a ecrm:E53_Place ;
@@ -44259,5 +44794,9 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_fe8b2f70>,
         <https://sappho-digital.com/manifestation_creation/bibl_fed3a965>,
         <https://sappho-digital.com/manifestation_creation/bibl_jj152bj6> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q2079-P625-51.339444_12.371111>,
+        <https://sappho-digital.com/spatial_coordinates/Q2079-P625-51.33962_12.37129>,
+        <https://sappho-digital.com/spatial_coordinates/Q2079-P625-51.3406321_12.3747329>,
+        <https://sappho-digital.com/spatial_coordinates/Q2079-P625-51.35_12.3833> ;
     owl:sameAs <https://www.wikidata.org/entity/Q2079> .
 

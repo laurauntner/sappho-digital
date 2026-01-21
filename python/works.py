@@ -57,6 +57,19 @@ def get_claim_vals(entity, prop, expect="auto"):
             vals.append(str(val))
     return vals
 
+def get_p625_coords_as_string(entity: dict) -> list[str]:
+    coords = []
+    for cl in entity.get("claims", {}).get("P625", []):
+        val = cl.get("mainsnak", {}).get("datavalue", {}).get("value")
+        if not isinstance(val, dict):
+            continue
+        lat = val.get("latitude")
+        lon = val.get("longitude")
+        if lat is None or lon is None:
+            continue
+        coords.append(f"{lat}, {lon}")
+    return coords
+
 def normalize_dbpedia_url(url: Optional[str]) -> Optional[str]:
     if not url:
         return None
@@ -311,15 +324,34 @@ for bibl in top_bibls:
         # Ort
         for pubplace_el in bibl.findall("tei:pubPlace", namespaces=NSMAP):
             place_qid = pubplace_el.get("ref")
-            place_ref = pubplace_el.get(f"{XML_NS}id") 
+            place_ref = pubplace_el.get(f"{XML_NS}id")
             place_label = pubplace_el.text.strip() if pubplace_el.text else "Unknown"
-            place_uri = (
-                SD[f"place/{place_ref}"]
-            )
+
+            place_uri = SD[f"place/{place_ref}"]
             g.add((place_uri, RDF.type, ECRM.E53_Place))
             g.add((place_uri, RDFS.label, Literal(place_label, lang="de")))
+
+            qid = None
             if place_qid:
                 g.add((place_uri, OWL.sameAs, URIRef(place_qid)))
+
+                if place_qid.startswith("http"):
+                    qid = place_qid.rstrip("/").split("/")[-1]
+                else:
+                    qid = place_qid.strip()
+
+            if qid and qid.startswith("Q"):
+                place_entity = fetch_wikidata(qid)
+                for coord_str in set(get_p625_coords_as_string(place_entity)):
+                    coord_key = f"{qid}-P625-{coord_str.replace(',', '').replace(' ', '_')}"
+                    coord_uri = SD[f"spatial_coordinates/{coord_key}"]
+
+                    g.add((coord_uri, RDF.type, ECRM.E47_Spatial_Coordinates))
+                    g.add((coord_uri, RDFS.label, Literal(coord_str, datatype=XSD.string)))
+
+                    g.add((place_uri, ECRM.P87_is_identified_by, coord_uri))
+                    g.add((coord_uri, ECRM.P87i_identifies, place_uri))
+
             g.add((place_uri, ECRM.P7i_witnessed, creation_manif_uri))
             g.add((creation_manif_uri, ECRM.P7_took_place_at, place_uri))
 
