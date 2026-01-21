@@ -397,6 +397,7 @@ ecrm:E36_Visual_Item        owl:equivalentClass crm:E36_Visual_Item .
 ecrm:E38_Image              owl:equivalentClass crm:E38_Image .
 ecrm:E40_Legal_Body         owl:equivalentClass crm:E40_Legal_Body .
 ecrm:E42_Identifier         owl:equivalentClass crm:E42_Identifier .
+ecrm:E47_Spatial_Coordinates owl:equivalentClass crm:E47_Spatial_Coordinates .
 ecrm:E52_Time-Span          owl:equivalentClass crm:E52_Time-Span .
 ecrm:E53_Place              owl:equivalentClass crm:E53_Place .
 ecrm:E55_Type               owl:equivalentClass crm:E55_Type .
@@ -447,6 +448,8 @@ ecrm:P65_shows_visual_item      owl:equivalentProperty crm:P65_shows_visual_item
 ecrm:P65i_is_shown_by           owl:equivalentProperty crm:P65i_is_shown_by .
 ecrm:P7_took_place_at           owl:equivalentProperty crm:P7_took_place_at .
 ecrm:P7i_witnessed              owl:equivalentProperty crm:P7i_witnessed .
+ecrm:P87_is_identified_by       owl:equivalentProperty crm:P87_is_identified_by .
+ecrm:P87i_identifies            owl:equivalentProperty crm:P87i_identifies .
 ecrm:P98_brought_into_life      owl:equivalentProperty crm:P98_brought_into_life .
 ecrm:P98i_was_born              owl:equivalentProperty crm:P98i_was_born .
 ecrm:P102_has_title             owl:equivalentProperty crm:P102_has_title .
