@@ -23,6 +23,12 @@
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
 
+    <!-- query -->
+    <xslt in="${index}" out="${target}/query.html" style="./xslt/query.xsl">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
+
     <!-- about -->
     <xslt in="./data/meta/about.xml" out="${target}/about.html" style="./xslt/meta.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>

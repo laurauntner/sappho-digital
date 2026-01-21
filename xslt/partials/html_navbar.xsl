@@ -953,6 +953,9 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link custom-dropdown-link" href="query.html">SPARQL</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
