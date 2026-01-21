@@ -1,156 +1,341 @@
-const QueryEngine = window.Comunica.QueryEngine;
-const myEngine = new QueryEngine();
-let currentResults =[];
+/* query.js — ES5 kompatibel (ohne let/const, ohne Arrow Functions, ohne Template Literals)
+   + robuste Behandlung von result/bindings/variables (fix für "Cannot read properties of undefined (reading 'length')")
+*/
 
-const examples = {
-    all: `PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
-    PREFIX rdfs: &lt; http://www.w3.org/2000/01/rdf-schema#&gt;
-    
-    SELECT ? subject ? predicate ? object
-    WHERE { ? subject ? predicate ? object.
-    }
-    LIMIT 100 `,
-    types: `PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
-    
-    SELECT DISTINCT ? type
-    WHERE { ? subject rdf: type ? type.
-    }
-    `,
-    count: `SELECT (COUNT(*) as ?count)
-    WHERE { ? s ? p ? o.
-    }
-    `,
-    properties: `SELECT DISTINCT ?property
-    WHERE { ? s ? property ? o.
-    }
-    ORDER BY ? property `
-};
+(function () {
+  // Globals (für inline onclick)
+  window.currentResults = [];
 
-function loadExample(type) {
-    document.getElementById('queryEditor').value = examples[type];
-}
-
-async function executeQuery() {
-    const query = document.getElementById('queryEditor').value;
-    const source = document.getElementById('dataSource').value;
-    const resultsDiv = document.getElementById('results');
-    const executeBtn = document.getElementById('executeBtn');
-    
-    executeBtn.disabled = true;
-    resultsDiv.innerHTML = '&lt;div class="status loading"&gt;⏳ Query wird ausgeführt...&lt;/div&gt;';
-    document.getElementById('exportControls').classList.add('hidden');
-    
-    try {
-        const bindingsStream = await myEngine.queryBindings(query, {
-            sources:[source],
-        });
-        
-        const bindings = await bindingsStream.toArray();
-        currentResults = bindings;
-        
-        if (bindings.length === 0) {
-            resultsDiv.innerHTML = '&lt;div class="status success"&gt;✓ Query erfolgreich, aber keine Ergebnisse gefunden.&lt;/div&gt;';
-            executeBtn.disabled = false;
-            return;
-        }
-        
-        const variables = bindings[0].variables;
-        
-        let tableHTML = ` &lt; div class = "status success" &gt; ✓ $ {
-            bindings.length
-        }
-        Ergebnis$ {
-            bindings.length !== 1 ? 'se': ''
-        }
-        gefunden &lt; / div &gt; &lt; div class = "results-table-container" &gt; &lt; table class = "sparql-table" &gt; &lt; thead &gt; &lt; tr class = "sparql-tr" &gt;
-        $ {
-            variables.map(v = &gt; `&lt;th class="sparql-th"&gt;${v.value}&lt;/th&gt;`).join('')
-        } &lt; / tr &gt; &lt; / thead &gt; &lt; tbody &gt;
-        `;
-        
-        bindings.forEach(binding = &gt; {
-            tableHTML += '&lt;tr class="sparql-tr"&gt;';
-            variables.forEach(variable = &gt; {
-                const term = binding. get (variable);
-                if (term) {
-                    const className = term.termType === 'NamedNode' ? 'uri': 'literal';
-                    const value = term.value;
-                    tableHTML += `&lt;td class="sparql-td ${className}"&gt;${value}&lt;/td&gt;`;
-                } else {
-                    tableHTML += '&lt;td class="sparql-td"&gt;-&lt;/td&gt;';
-                }
-            });
-            tableHTML += '&lt;/tr&gt;';
-        });
-        
-        tableHTML += ` &lt; / tbody &gt; &lt; / table &gt; &lt; / div &gt;
-        `;
-        
-        resultsDiv.innerHTML = tableHTML;
-        document.getElementById('exportControls').classList.remove('hidden');
+  function ensureComunica() {
+    if (!window.Comunica || !window.Comunica.QueryEngine) {
+      throw new Error(
+        "Comunica wurde nicht geladen. Prüfe, ob der Comunica <script>-Tag wirklich geladen wird (nicht selbstschließend) und ob die URL stimmt."
+      );
     }
-    catch (error) {
-        resultsDiv.innerHTML = `&lt;div class="status error"&gt;❌ Fehler: ${error.message}&lt;/div&gt;`;
+    if (!window.myEngine) {
+      window.myEngine = new window.Comunica.QueryEngine();
     }
-    
-    executeBtn.disabled = false;
-}
+  }
 
-function clearResults() {
-    document.getElementById('results').innerHTML = '';
-    document.getElementById('exportControls').classList.add('hidden');
-    currentResults =[];
-}
+  function escapeHtml(str) {
+    str = String(str);
+    return str
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
 
-function exportResults(format) {
-    if (currentResults.length === 0) return;
-    
-    const variables = currentResults[0].variables;
-    
-    if (format === 'csv') {
-        let csv = variables.map(v = &gt; v.value).join(',') + '\n';
-        
-        currentResults.forEach(binding = &gt; {
-            const row = variables.map(variable = &gt; {
-                const term = binding. get (variable);
-                const value = term ? term.value: '';
-                return `"${value.replace(/"/g, '""')}"`;
-            }).join(',');
-            csv += row + '\n';
-        });
-        
-        downloadFile(csv, 'results.csv', 'text/csv');
-    } else if (format === 'json') {
-        const json = currentResults.map(binding = &gt; {
-            const obj = {
-            };
-            variables.forEach(variable = &gt; {
-                const term = binding. get (variable);
-                obj[variable.value] = term ? term.value: null;
-            });
-            return obj;
-        });
-        
-        downloadFile(JSON.stringify(json, null, 2), 'results.json', 'application/json');
-    }
-}
-
-function downloadFile(content, filename, mimeType) {
-    const blob = new Blob([content], {
-        type: mimeType
-    });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+  function downloadFile(content, filename, mimeType) {
+    var blob = new Blob([content], { type: mimeType });
+    var url = URL.createObjectURL(blob);
+    var a = document.createElement("a");
     a.href = url;
     a.download = filename;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
-}
+  }
 
-document.getElementById('queryEditor').addEventListener('keydown', function (e) {
-    if ((e.ctrlKey || e.metaKey) &amp;&amp; e.key === 'Enter') {
-        executeQuery();
+  function isArray(x) {
+    return Object.prototype.toString.call(x) === "[object Array]";
+  }
+
+  // Beispielqueries (echte <...> und gültige Variablen)
+  var examples = {
+    all:
+      "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+      "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n\n" +
+      "SELECT ?subject ?predicate ?object\n" +
+      "WHERE {\n" +
+      "  ?subject ?predicate ?object .\n" +
+      "}\n" +
+      "LIMIT 100",
+
+    types:
+      "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n\n" +
+      "SELECT DISTINCT ?type\n" +
+      "WHERE {\n" +
+      "  ?subject rdf:type ?type .\n" +
+      "}\n" +
+      "ORDER BY ?type",
+
+    count:
+      "SELECT (COUNT(*) AS ?count)\n" +
+      "WHERE {\n" +
+      "  ?s ?p ?o .\n" +
+      "}",
+
+    properties:
+      "SELECT DISTINCT ?property\n" +
+      "WHERE {\n" +
+      "  ?s ?property ?o .\n" +
+      "}\n" +
+      "ORDER BY ?property",
+  };
+
+  // ---- Globale Funktionen für onclick ----
+
+  window.loadExample = function (type) {
+    var editor = document.getElementById("queryEditor");
+    if (!editor) return;
+    editor.value = examples[type] || "";
+  };
+
+  window.executeQuery = function () {
+    var queryEl = document.getElementById("queryEditor");
+    var sourceEl = document.getElementById("dataSource");
+    var resultsDiv = document.getElementById("results");
+    var executeBtn = document.getElementById("executeBtn");
+    var exportControls = document.getElementById("exportControls");
+
+    if (!queryEl || !sourceEl || !resultsDiv || !executeBtn || !exportControls) {
+      console.error(
+        "Fehlende DOM-Elemente. Prüfe IDs: queryEditor, dataSource, results, executeBtn, exportControls"
+      );
+      return;
     }
-});
+
+    var query = (queryEl.value || "").replace(/^\s+|\s+$/g, "");
+    var source = (sourceEl.value || "").replace(/^\s+|\s+$/g, "");
+
+    if (!query) {
+      resultsDiv.innerHTML = '<div class="status error">❌ Bitte eine Query eingeben.</div>';
+      return;
+    }
+    if (!source) {
+      resultsDiv.innerHTML = '<div class="status error">❌ Bitte eine Datenquelle (URL) eingeben.</div>';
+      return;
+    }
+
+    executeBtn.disabled = true;
+    resultsDiv.innerHTML = '<div class="status loading">⏳ Query wird ausgeführt...</div>';
+    exportControls.classList.add("hidden");
+
+    try {
+      ensureComunica();
+    } catch (e) {
+      resultsDiv.innerHTML = '<div class="status error">❌ Fehler: ' + escapeHtml(e.message) + "</div>";
+      executeBtn.disabled = false;
+      return;
+    }
+
+    // queryBindings liefert ein Result-Objekt (mit .variables und .toArray()).
+    window.myEngine
+      .queryBindings(query, {
+        // Für TTL hilfreich. Wenn du verschiedene RDF-Formate nutzt, mediaType ggf. weglassen.
+        sources: [{ type: "file", value: source, mediaType: "text/turtle" }],
+      })
+      .then(function (result) {
+        var variables = (result && result.variables) ? result.variables : [];
+
+        // result.toArray() sollte ein Array von Bindings liefern
+        return result.toArray().then(function (bindings) {
+          return { bindings: bindings, variables: variables };
+        });
+      })
+      .then(function (data) {
+        var bindings = data.bindings;
+        var variables = data.variables;
+
+        // Robustheit: bindings MUSS ein Array sein
+        if (!isArray(bindings)) bindings = [];
+
+        window.currentResults = bindings;
+
+        if (bindings.length === 0) {
+          resultsDiv.innerHTML =
+            '<div class="status success">✓ Query erfolgreich, aber keine Ergebnisse gefunden.</div>';
+          return;
+        }
+
+        // Robustheit: variables holen
+        if (!variables || !variables.length) {
+          if (bindings[0] && bindings[0].variables) {
+            variables = bindings[0].variables;
+          }
+        }
+
+        // Letzter Fallback: Keys aus dem Binding (Map)
+        if (!variables || !variables.length) {
+          variables = [];
+          try {
+            if (bindings[0] && typeof bindings[0].forEach === "function") {
+              bindings[0].forEach(function (_v, k) {
+                variables.push(k);
+              });
+            }
+          } catch (e) {
+            variables = [];
+          }
+        }
+
+        // Wenn immer noch keine Variablen gefunden: Abbruch mit Hinweis
+        if (!variables || !variables.length) {
+          resultsDiv.innerHTML =
+            '<div class="status error">❌ Konnte Ergebnis-Variablen nicht bestimmen (unerwartetes Ergebnisformat).</div>';
+          return;
+        }
+
+        var html = "";
+        html +=
+          '<div class="status success">✓ ' +
+          bindings.length +
+          " Ergebnis" +
+          (bindings.length !== 1 ? "se" : "") +
+          " gefunden</div>";
+
+        html += '<div class="results-table-container">';
+        html += '<table class="sparql-table">';
+        html += '<thead><tr class="sparql-tr">';
+
+        for (var i = 0; i < variables.length; i++) {
+          var header = (variables[i] && variables[i].value) ? variables[i].value : String(variables[i]);
+          html += '<th class="sparql-th">' + escapeHtml(header) + "</th>";
+        }
+
+        html += "</tr></thead><tbody>";
+
+        for (var r = 0; r < bindings.length; r++) {
+          var binding = bindings[r];
+          html += '<tr class="sparql-tr">';
+
+          for (var c = 0; c < variables.length; c++) {
+            var v = variables[c];
+            var term = null;
+
+            try {
+              if (binding && typeof binding.get === "function") {
+                // v ist i.d.R. ein RDFJS Variable-Objekt
+                term = binding.get(v);
+
+                // Fallback, falls v.value gebraucht wird
+                if (!term && v && v.value) term = binding.get(v);
+              }
+            } catch (e) {
+              term = null;
+            }
+
+            if (term) {
+              var cls = term.termType === "NamedNode" ? "uri" : "literal";
+              html += '<td class="sparql-td ' + cls + '">' + escapeHtml(term.value) + "</td>";
+            } else {
+              html += '<td class="sparql-td">-</td>';
+            }
+          }
+
+          html += "</tr>";
+        }
+
+        html += "</tbody></table></div>";
+
+        resultsDiv.innerHTML = html;
+        exportControls.classList.remove("hidden");
+      })
+      .catch(function (err) {
+        var msg = err && err.message ? err.message : String(err);
+        resultsDiv.innerHTML = '<div class="status error">❌ Fehler: ' + escapeHtml(msg) + "</div>";
+        console.error(err);
+      })
+      .finally(function () {
+        executeBtn.disabled = false;
+      });
+  };
+
+  window.clearResults = function () {
+    var resultsDiv = document.getElementById("results");
+    var exportControls = document.getElementById("exportControls");
+    if (resultsDiv) resultsDiv.innerHTML = "";
+    if (exportControls) exportControls.classList.add("hidden");
+    window.currentResults = [];
+  };
+
+  window.exportResults = function (format) {
+    var results = window.currentResults;
+    if (!results || results.length === 0) return;
+
+    var variables = results[0] && results[0].variables ? results[0].variables : null;
+
+    // Fallback: Variablen aus Keys ziehen, wenn nicht vorhanden
+    if (!variables || !variables.length) {
+      variables = [];
+      try {
+        results[0].forEach(function (_v, k) {
+          variables.push(k);
+        });
+      } catch (e) {
+        variables = [];
+      }
+    }
+
+    if (!variables || !variables.length) return;
+
+    if (format === "csv") {
+      var csv = "";
+      for (var i = 0; i < variables.length; i++) {
+        var h = (variables[i] && variables[i].value) ? variables[i].value : String(variables[i]);
+        csv += (i ? "," : "") + h;
+      }
+      csv += "\n";
+
+      for (var r = 0; r < results.length; r++) {
+        var binding = results[r];
+        var row = [];
+
+        for (var c = 0; c < variables.length; c++) {
+          var v = variables[c];
+          var term = null;
+          try {
+            term = binding.get(v);
+          } catch (e) {
+            term = null;
+          }
+          var value = term ? String(term.value) : "";
+          value = value.replace(/"/g, '""');
+          row.push('"' + value + '"');
+        }
+
+        csv += row.join(",") + "\n";
+      }
+
+      downloadFile(csv, "results.csv", "text/csv");
+    } else if (format === "json") {
+      var arr = [];
+
+      for (var rr = 0; rr < results.length; rr++) {
+        var b = results[rr];
+        var obj = {};
+
+        for (var cc = 0; cc < variables.length; cc++) {
+          var vv = variables[cc];
+          var key = (vv && vv.value) ? vv.value : String(vv);
+          var t = null;
+          try {
+            t = b.get(vv);
+          } catch (e) {
+            t = null;
+          }
+          obj[key] = t ? t.value : null;
+        }
+
+        arr.push(obj);
+      }
+
+      downloadFile(JSON.stringify(arr, null, 2), "results.json", "application/json");
+    }
+  };
+
+  // Ctrl/Cmd+Enter nur, wenn DOM bereit ist
+  document.addEventListener("DOMContentLoaded", function () {
+    var editor = document.getElementById("queryEditor");
+    if (!editor) return;
+
+    editor.addEventListener("keydown", function (e) {
+      if ((e.ctrlKey || e.metaKey) && e.key === "Enter") {
+        window.executeQuery();
+      }
+    });
+  });
+})();

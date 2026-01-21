@@ -37,7 +37,7 @@
                                 <div class="section-title">Datenquelle</div>
                                 <div class="data-source">
                                     <input type="text" id="dataSource"
-                                        value="https://github.com/laurauntner/sappho-digital/blob/main/data/rdf/sappho-reception_asserted-and-inferred.ttl"
+                                        value="https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/data/rdf/sappho-reception_asserted-and-inferred.ttl"
                                     />
                                 </div>
                             </div>
@@ -88,8 +88,8 @@
                     <xsl:call-template name="html_footer"/>
                 </div>
 
-                <script src="https://cdn.jsdelivr.net/npm/@comunica/query-sparql/dist/comunica-browser.js"/>
-                <script src="js/query.js"/>
+                <script src="https://rdf.js.org/comunica-browser/versions/v4/engines/query-sparql/comunica-browser.js" defer="defer"></script>
+                <script src="js/query.js" defer="defer"></script>
             </body>
         </html>
     </xsl:template>
