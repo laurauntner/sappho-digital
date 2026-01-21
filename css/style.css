@@ -745,34 +745,274 @@ img.icon {
 }
 
 .charts-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  justify-content: start;
-  justify-items: stretch;
-  align-items: start;
-  grid-auto-flow: row;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-content: start;
+    justify-items: stretch;
+    align-items: start;
+    grid-auto-flow: row;
 }
 
+/* SPARQL */
 
-@media (min-width: 640px) {
-  .charts-grid { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
-}
-@media (min-width: 1024px) {
-  .charts-grid { grid-template-columns: repeat(3, 1fr); gap: 3rem; }
+body { overflow-x: auto !important; }
+body.page { overflow: auto !important; }
+
+.sparql-container {
+                        max-width: 1400px !important;
+                        margin: 30px auto !important;
+                        padding: 0 20px !important;
+                    }
+                    
+.sparql-header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
-[data-chart][data-csv]{
-  display:block;
-  width:100%;
-  max-width:100%;
-  float:none;
-  text-align:left;
-  justify-self: stretch;
-  align-self: stretch;
-  break-inside: avoid;
-  -webkit-column-break-inside: avoid;
-  page-break-inside: avoid;
+.sparql-header p {
+    opacity: 0.9;
+    font-size: 14px;
+    margin: 0;
+}
+
+.sparql-content {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.data-source {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#dataSource {
+    flex: 1;
+    padding: 10px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+}
+
+#dataSource:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+#queryEditor {
+    width: 100%;
+    min-height: 250px;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    resize: vertical;
+}
+
+#queryEditor:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.examples {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.example-btn {
+    padding: 8px 15px;
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.2s;
+}
+
+.example-btn:hover {
+    background: #e0e0e0;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.sparql-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+}
+
+#executeBtn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+#executeBtn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+#executeBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+#clearBtn {
+    background: #f0f0f0;
+    color: #333;
+}
+
+#clearBtn:hover {
+    background: #e0e0e0;
+}
+
+.export-controls {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.export-btn {
+    padding: 12px 20px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.export-btn:hover {
+    background: #45a049;
+}
+
+#results {
+    margin-top: 30px;
+}
+
+.status {
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.status.loading {
+    background: #e3f2fd;
+    color: #1976d2;
+}
+
+.status.success {
+    background: #e8f5e9;
+    color: #388e3c;
+}
+
+.status.error {
+    background: #ffebee;
+    color: #c62828;
+}
+
+.results-table-container {
+    overflow-x: auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+}
+
+.sparql-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.sparql-th {
+    background: #f5f5f5;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #e0e0e0;
+    position: sticky;
+    top: 0;
+}
+
+.sparql-td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.sparql-table tbody .sparql-tr:hover {
+    background: #fafafa;
+}
+
+.uri {
+    color: #1976d2;
+    word-break: break-all;
+}
+
+.literal {
+    color: #388e3c;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (min-width : 640px) {
+    .charts-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+@media (min-width : 1024px) {
+    .charts-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+    }
+}
+
+[data-chart][data-csv] {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    float: none;
+    text-align: left;
+    justify-self: stretch;
+    align-self: stretch;
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
 }
 
 @media (min-width : 992px) {
