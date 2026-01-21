@@ -1,9 +1,4 @@
-/* query.js — ES5 kompatibel (ohne let/const, ohne Arrow Functions, ohne Template Literals)
-   + robuste Behandlung von result/bindings/variables (fix für "Cannot read properties of undefined (reading 'length')")
-*/
-
 (function () {
-  // Globals (für inline onclick)
   window.currentResults = [];
 
   function ensureComunica() {
@@ -43,7 +38,7 @@
     return Object.prototype.toString.call(x) === "[object Array]";
   }
 
-  // Beispielqueries (echte <...> und gültige Variablen)
+  // Beispielqueries
   var examples = {
     all:
       "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
@@ -125,7 +120,6 @@
     // queryBindings liefert ein Result-Objekt (mit .variables und .toArray()).
     window.myEngine
       .queryBindings(query, {
-        // Für TTL hilfreich. Wenn du verschiedene RDF-Formate nutzt, mediaType ggf. weglassen.
         sources: [{ type: "file", value: source, mediaType: "text/turtle" }],
       })
       .then(function (result) {
