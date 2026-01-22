@@ -311,7 +311,16 @@
                </div>
                <div class="section">
                   <div class="section-title">Datenquelle</div>
-                  <div class="data-source"><input type="text" id="dataSource" value="https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/data/rdf/sappho-reception_asserted-and-inferred.ttl" /></div>
+                  <div class="data-source"><input type="text" id="dataSource" value="https://sappho-digital.com/sappho-reception_asserted-and-inferred.ttl" /><div class="data-source-suggestions smaller-text">
+                        <div class="hint">Andere Quellen:</div>
+                        <div><button class="example-btn" type="button" onclick="setDataSource('https://sappho-digital.com/authors.ttl')">Nur Autor_innendaten</button></div>
+                        <div><button class="example-btn" type="button" onclick="setDataSource('https://sappho-digital.com/works.ttl')">Nur bibliographische Daten zu
+                              Rezeptionszeugnissen</button></div>
+                        <div><button class="example-btn" type="button" onclick="setDataSource('https://sappho-digital.com/fragments.ttl')">Nur bibliographische Daten zu
+                              Sappho-Fragmenten</button></div>
+                        <div><button class="example-btn" type="button" onclick="setDataSource('https://sappho-digital.com/sappho-reception_asserted-and-inferred.ttl')">Default (alle Daten)</button></div>
+                     </div>
+                  </div>
                </div>
                <div class="section">
                   <div class="section-title">SPARQL Query</div>
@@ -337,5 +346,5 @@ LIMIT 100
                <div id="results"></div>
             </div>
          </div>
-         <div id="wrapper-footer-full"><a href="imprint.html">© Laura Untner 2025 (zuletzt aktualisiert am 21.1.2026, 16:26)</a></div><script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script><script src="js/listStopProp.js"></script><script src="js/navScroll.js"></script></div><script src="https://rdf.js.org/comunica-browser/versions/v4/engines/query-sparql/comunica-browser.js" defer="defer"></script><script src="js/query.js" defer="defer"></script></body>
+         <div id="wrapper-footer-full"><a href="imprint.html">© Laura Untner 2025 (zuletzt aktualisiert am 22.1.2026, 9:46)</a></div><script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script><script src="js/listStopProp.js"></script><script src="js/navScroll.js"></script></div><script src="https://rdf.js.org/comunica-browser/versions/v4/engines/query-sparql/comunica-browser.js" defer="defer"></script><script src="js/query.js" defer="defer"></script></body>
 </html>
