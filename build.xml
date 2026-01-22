@@ -133,6 +133,6 @@
         tofile="html/works.ttl" overwrite="true"/>
     
     <copy file="data/rdf/fragments.ttl"
-        tofile="html/works.ttl" overwrite="true"/>
+        tofile="html/fragments.ttl" overwrite="true"/>
 
 </project>
