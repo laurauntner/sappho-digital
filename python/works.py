@@ -138,6 +138,15 @@ idtype_gnd      = ensure_id_type("gnd",      "GND ID")
 idtype_viaf     = ensure_id_type("viaf",     "VIAF ID")
 idtype_gr       = ensure_id_type("goodreads","Goodreads Work ID")
 
+def ensure_genre_type():
+    gt_uri = SD["genre_type/sappho-digital"]
+    if (gt_uri, RDF.type, ECRM.E55_Type) not in g:
+        g.add((gt_uri, RDF.type, ECRM.E55_Type))
+        g.add((gt_uri, RDFS.label, Literal("Sappho Digital Genre", lang="en")))
+    return gt_uri
+
+genre_type_uri = ensure_genre_type()
+
 for bibl in top_bibls:
     bibl_id = bibl.get("{http://www.w3.org/XML/1998/namespace}id")
     if not bibl_id:
@@ -306,11 +315,12 @@ for bibl in top_bibls:
         g.add((manifestation_uri, RDF.type, LRMOO.F3_Manifestation))
         g.add((manifestation_uri, RDFS.label, Literal(final_manifestation_label, lang="de")))
         g.add((manifestation_uri, LRMOO.R4_embodies, bibl_uri))
-        g.add((manifestation_uri, LRMOO.R24i_was_created_through, creation_manif_uri))
+        g.add((bibl_uri, LRMOO.R4i_is_embodied_in, manifestation_uri))
 
         g.add((creation_manif_uri, RDF.type, LRMOO.F30_Manifestation_Creation))
         g.add((creation_manif_uri, RDFS.label, Literal(f"Manifestation creation of {final_manifestation_label}", lang="en")))
         g.add((creation_manif_uri, LRMOO.R24_created, manifestation_uri))
+        g.add((manifestation_uri, LRMOO.R24i_was_created_through, creation_manif_uri))
 
         # Zeitspanne
         if "when" in date_published.attrib:
@@ -383,6 +393,32 @@ for bibl in top_bibls:
             g.add((creation_expr_uri, ECRM.P14_carried_out_by, person_uri))
             if date_published is not None:
                 g.add((person_uri, ECRM.P14i_performed, creation_manif_uri))
+
+    # Gattung
+    for genre_note in bibl.findall("tei:note[@type='genre']", namespaces=NSMAP):
+        if not (genre_note.text and genre_note.text.strip()):
+            continue
+
+        raw_text = genre_note.text.strip()
+
+        parts = [p.strip() for p in raw_text.split("/") if p.strip()]
+
+        for part in parts:
+            genre_key = part.rstrip("?").strip()
+            if not genre_key:
+                continue
+
+            genre_uri = SD[f"genre/{genre_key}"]
+
+            if (genre_uri, RDF.type, ECRM.E55_Type) not in g:
+                g.add((genre_uri, RDF.type, ECRM.E55_Type))
+
+                g.add((genre_uri, RDFS.label, Literal(genre_key, lang="de")))
+
+                g.add((genre_uri, ECRM.P2_has_type, genre_type_uri))
+                g.add((genre_type_uri, ECRM.P2i_is_type_of, genre_uri))
+
+            g.add((bibl_uri, ECRM.P2_has_type, genre_uri))
 
 # Speichern
 Path(OUTPUT_FILE).parent.mkdir(parents=True, exist_ok=True)

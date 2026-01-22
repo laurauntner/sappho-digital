@@ -8,7 +8,7 @@ import xml.etree.ElementTree as ET
 # Pfade
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = (BASE_DIR / "../data/rdf").resolve()
-XML_DIR = (BASE_DIR / "../../doktorat/Diss/Sappho-Rezeption/XML").resolve() 
+XML_DIR = (BASE_DIR / "../../doktorat/Diss/Sappho-Rezeption/XML").resolve()
 
 WORKS = DATA_DIR / "works.ttl"
 ANALYSIS = DATA_DIR / "analysis.ttl"
@@ -70,6 +70,16 @@ def years_for_f2(f2: URIRef, g_all: Graph) -> List[int]:
                 if yr is not None:
                     years.add(yr)
     return sorted(years)
+
+# Expression-Creation-Jahr (für Vergleich beim jüngeren Werk)
+def expr_creation_year_for_f2(f2: URIRef, g_all: Graph) -> Optional[int]:
+    years = set()
+    for ec in g_all.objects(f2, LRMOO["R17i_was_created_by"]):
+        for ts in g_all.objects(ec, ECRM["P4_has_time_span"]):
+            yr = parse_year_from_timespan_uri(ts)
+            if yr is not None:
+                years.add(yr)
+    return min(years) if years else None
 
 def pick_f1(frag_g: Graph) -> URIRef:
     candidates = list(frag_g.subjects(RDF.type, LRMOO["F1_Work"]))
@@ -137,6 +147,9 @@ g_works = Graph().parse(WORKS, format="turtle")
 g_analysis = Graph().parse(ANALYSIS, format="turtle")
 g_frag = Graph().parse(FRAGMENTS, format="turtle")
 
+# alle F2 aus fragments.ttl merken (Sappho-Fragmente)
+FRAG_F2 = set(g_frag.subjects(RDF.type, LRMOO["F2_Expression"]))
+
 # Union für Jahrermittlung
 g_all = Graph()
 for t in g_works: g_all.add(t)
@@ -157,14 +170,12 @@ f1 = pick_f1(g_frag)
 f1_label = get_label(g_frag, f1, "Work")
 f1_local = local_id(f1)
 
-# F2-F1-Relationen 
+# F2-F1-Relationen  (NUR works.ttl)
 f2_works = set(g_works.subjects(RDF.type, LRMOO["F2_Expression"]))
-f2_analysis = set(g_analysis.subjects(RDF.type, LRMOO["F2_Expression"]))
-f2_works_only = sorted(f2_works - f2_analysis, key=lambda u: str(u))
 
 relations_to_create: List[Dict] = []
 
-for f2 in f2_works_only:
+for f2 in sorted(f2_works, key=lambda u: str(u)):
     relations_to_create.append({
         "ref_uri": f2,
         "referred_uri": f1,
@@ -177,7 +188,7 @@ for f2 in f2_works_only:
 
 # F2-Relationen
 info: Dict[URIRef, Dict] = {}
-for f2 in f2_analysis:
+for f2 in set(g_analysis.subjects(RDF.type, LRMOO["F2_Expression"])):
     r18_keys = set(shorten_r18_key(f2, a) for a in g_analysis.objects(f2, INTRO["R18_showsActualization"]))
     r30_uris = set(str(u) for u in g_analysis.objects(f2, INTRO["R30_hasTextPassage"]))
 
@@ -204,7 +215,7 @@ for f2 in f2_analysis:
         "f2_targets": f2_targets,
         "label": get_label(g_analysis, f2, f2_loc),
         "local": f2_loc,
-        "is_sappho": ("sappho" in f2_loc.lower()),
+        "is_sappho": ("sappho" in f2_loc.lower()) or (f2 in FRAG_F2),
         "years": yrs,
         "year_min": yrs[0] if yrs else None
     }
@@ -252,8 +263,8 @@ for i in range(len(f2_list)):
             "ref_graph": g_analysis,
             "referred_graph": g_analysis,
             "mode": "F2_to_F2_overlap",
-            "trigger_feature_ids": overlap_r18,         
-            "trigger_textpassages": overlap_r30          
+            "trigger_feature_ids": overlap_r18,
+            "trigger_textpassages": overlap_r30
         })
 
 # gerichtete INT31 für direkte F2→F2-Referenzen (X referenziert Y via Work-Ref/P67)
@@ -276,7 +287,6 @@ for src, meta in info.items():
         })
 
 # Hilfsfunktionen für Evidenz
-# Map von Feature-ID Prefix zu (Feature-Pfad, Kind)
 FID_PREFIX_MAP: List[Tuple[str, Tuple[str, str]]] = [
     ("motif_", ("feature/motif",     "motif")),
     ("plot_",  ("feature/plot",      "plot")),
@@ -303,7 +313,6 @@ def collect_f2_evidence(f2: URIRef) -> Tuple[Dict[str, Dict], set]:
     passages = set()
     for a in g_analysis.objects(f2, INTRO["R18_showsActualization"]):
         for feat in g_analysis.objects(a, INTRO["R17_actualizesFeature"]):
-            # Feature-ID + Kind
             if isinstance(feat, URIRef):
                 fid = local_id(feat)
                 kind = infer_kind_from_id(fid)
@@ -341,11 +350,29 @@ for rel in relations_to_create:
     referred_loc = local_id(referred_uri)
     relation_uri, feature_uri, actual_uri = build_relation_uris(ref_loc, referred_loc)
 
+    # Gerichtetheit
+    directional = True
+    if mode in ("F2_to_F2_overlap", "F2_direct_reference"):
+        older_expr = referred_uri
+        younger_expr = ref_uri
+
+        if older_expr in FRAG_F2:
+            directional = True
+        else:
+            older_f3_year = info.get(older_expr, {}).get("year_min")
+            younger_ec_year = expr_creation_year_for_f2(younger_expr, g_all)
+            younger_mc_year = info.get(younger_expr, {}).get("year_min")
+            younger_year = younger_ec_year if younger_ec_year is not None else younger_mc_year
+
+            if older_f3_year is None or younger_year is None or older_f3_year > younger_year:
+                directional = False
+
     # Basis-Kanten
-    out.add((ref_uri, INTRO["R13i_isReferringEntity"], relation_uri))
-    out.add((referred_uri, INTRO["R12i_isReferredToEntity"], relation_uri))
-    out.add((relation_uri, INTRO["R13_hasReferringEntity"], ref_uri))
-    out.add((relation_uri, INTRO["R12_hasReferredToEntity"], referred_uri))
+    if directional:
+        out.add((ref_uri, INTRO["R13i_isReferringEntity"], relation_uri))
+        out.add((referred_uri, INTRO["R12i_isReferredToEntity"], relation_uri))
+        out.add((relation_uri, INTRO["R13_hasReferringEntity"], ref_uri))
+        out.add((relation_uri, INTRO["R12_hasReferredToEntity"], referred_uri))
 
     # INT31 & Interpretation
     rel_label = f"Intertextual relation between »{ref_label}« and »{referred_label}«"
@@ -363,7 +390,7 @@ for rel in relations_to_create:
     out.add((actual_uri, INTRO["R17_actualizesFeature"], feature_uri))
     out.add((actual_uri, INTRO["R21_identifies"], relation_uri))
 
-    # Evidenz (nur Overlaps) für R22/R24 bestimmen ---
+    # Evidenz
     features_a, passages_a = collect_f2_evidence(ref_uri)
     features_b, passages_b = collect_f2_evidence(referred_uri)
 
@@ -380,18 +407,15 @@ for rel in relations_to_create:
             for act in data["actualizations"]:
                 if (act, ECRM["P67_refers_to"], referred_uri) in g_analysis:
                     trigger_fids.add(fid)
-        trigger_passages = set()  # direkte Referenz wird durch Work-Ref-Feature ausgelöst
+        trigger_passages = set()
 
-    # R22: Features, die den Overlap auslösen
     for fid in sorted(trigger_fids):
-        # Feature-URI (identisch auf beiden Seiten)
         feat_uri = infer_feature_uri_from_id(fid) or features_a.get(fid, {}).get("feature_uri") or features_b.get(fid, {}).get("feature_uri")
         if feat_uri is None:
             continue
         out.add((relation_uri, INTRO["R22i_relationIsBasedOnSimilarity"], feat_uri))
         out.add((feat_uri,      INTRO["R22_providesSimilarityForRelation"], relation_uri))
 
-    # R24: Actualizations & Textpassagen & Expressions
     for fid in sorted(trigger_fids):
         for act in features_a.get(fid, {}).get("actualizations", set()):
             out.add((relation_uri, INTRO["R24_hasRelatedEntity"], act))
@@ -400,19 +424,18 @@ for rel in relations_to_create:
             out.add((relation_uri, INTRO["R24_hasRelatedEntity"], act))
             out.add((act,         INTRO["R24i_isRelatedEntity"], relation_uri))
 
-    # Textpassagen, die den Overlap ausgelöst haben
     for tp in sorted(trigger_passages):
         tp_uri = URIRef(tp)
         out.add((relation_uri, INTRO["R24_hasRelatedEntity"], tp_uri))
         out.add((tp_uri,       INTRO["R24i_isRelatedEntity"], relation_uri))
 
-    # Beide Expressions
+    # Beide Expressions immer als RelatedEntity
     out.add((relation_uri, INTRO["R24_hasRelatedEntity"], ref_uri))
     out.add((relation_uri, INTRO["R24_hasRelatedEntity"], referred_uri))
     out.add((ref_uri,      INTRO["R24i_isRelatedEntity"], relation_uri))
     out.add((referred_uri, INTRO["R24i_isRelatedEntity"], relation_uri))
 
-    # rdfs:comment (Seitenangaben) ---
+    # rdfs:comment (Seitenangaben)
     comment_parts = []
     if (ref_uri, RDF.type, LRMOO["F2_Expression"]) in g_all:
         ref_pages = pages_phrase_for(ref_loc)
@@ -426,7 +449,7 @@ for rel in relations_to_create:
         comment = "Für die Analyse wurden " + " sowie ".join(comment_parts) + " herangezogen."
         out.add((relation_uri, RDFS.comment, Literal(comment, lang="de")))
 
-# Aufräumen: nur relevante F2 beibehalten
+# Aufräumen
 if relations_to_create:
     all_f2_in_out = set(out.subjects(RDF.type, LRMOO["F2_Expression"]))
     for f2 in all_f2_in_out:

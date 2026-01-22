@@ -12851,6 +12851,7 @@
     rdfs:label "Sappho schmiegt sich an Romeo"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_7ca33bdb> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_7ca33bdb> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_7ca33bdb> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/person_ref/bibl_7ca33bdb_person_e585b2a779019b7e> .
 
@@ -25247,6 +25248,7 @@
     rdfs:label "Post-Ode, sapphisch"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_11a107f7> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_11a107f7> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_11a107f7> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_11a107f7_motif_7abc136b51bb0005>,
         <https://sappho-digital.com/actualization/person_ref/bibl_11a107f7_person_e585b2a779019b7e> .
@@ -25257,6 +25259,7 @@
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_295bbaf8> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q33058241>,
         <https://sappho-digital.com/identifier/bibl_295bbaf8> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_295bbaf8> ;
     owl:sameAs <https://www.wikidata.org/entity/Q33058241> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_295bbaf8_motif_8d6c4ae5261c1b7f>,
@@ -40214,6 +40217,7 @@
     rdfs:label "computergedicht nr. 2"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_0a0e461e> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_0a0e461e> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_0a0e461e> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_0a0e461e_motif_8dda05b62f2174da>,
         <https://sappho-digital.com/actualization/person_ref/bibl_0a0e461e_person_e585b2a779019b7e>,
@@ -40224,6 +40228,7 @@
     rdfs:label "Nachricht aus Lesbos"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_5ae4b5fe> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_5ae4b5fe> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_5ae4b5fe> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_5ae4b5fe_motif_64a381d1facbb9aa>,
         <https://sappho-digital.com/actualization/motif/bibl_5ae4b5fe_motif_7fe9f2b8afd3cc70>,
@@ -40235,6 +40240,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_7dffe8b1> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_7dffe8b1> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_7dffe8b1> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_7dffe8b1> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_7dffe8b1_motif_25f446d346d5ae39>,
         <https://sappho-digital.com/actualization/person_ref/bibl_7dffe8b1_person_e585b2a779019b7e>,
@@ -40246,6 +40252,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_8e053a15> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_8e053a15> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_8e053a15> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_8e053a15> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_8e053a15_motif_7b4f6bd41d20b520>,
         <https://sappho-digital.com/actualization/motif/bibl_8e053a15_motif_872360a9416bbe76>,
@@ -40256,6 +40263,7 @@
     rdfs:label "Aufnahmen: Sappho"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_e9d96eef> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_e9d96eef> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_e9d96eef> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_e9d96eef_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_e9d96eef_motif_4c934ba7b9f256bf>,
@@ -40266,6 +40274,7 @@
     rdfs:label "Isoliert"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_ffadfa01> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_ffadfa01> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_ffadfa01> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_ffadfa01_motif_4c934ba7b9f256bf>,
         <https://sappho-digital.com/actualization/motif/bibl_ffadfa01_motif_632a07b81eb5d851>,
@@ -40889,6 +40898,7 @@
     rdfs:label "Ich dachte an dich mit verlorenen / Schläfen"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_0f7a6b8d> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_0f7a6b8d> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_0f7a6b8d> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_0f7a6b8d_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_0f7a6b8d_motif_08cc6f8757d81249>,
@@ -40906,6 +40916,7 @@
         <https://sappho-digital.com/identifier/Q425938>,
         <https://sappho-digital.com/identifier/bibl_fa4c6f94>,
         <https://sappho-digital.com/identifier/„Weihnacht!“> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_fa4c6f94> ;
     rdfs:seeAlso <http://commons.wikimedia.org/wiki/Special:FilePath/Weihnacht.jpg> ;
     owl:sameAs <https://d-nb.info/gnd/4490221-9>,
@@ -41286,6 +41297,7 @@
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/4353041-2>,
         <https://sappho-digital.com/identifier/Q105721918>,
         <https://sappho-digital.com/identifier/bibl_1585db9d> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_1585db9d> ;
     owl:sameAs <https://d-nb.info/gnd/4353041-2>,
         <https://www.wikidata.org/entity/Q105721918> ;
@@ -41300,6 +41312,7 @@
     rdfs:label "An diesem Morgen war"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_b8a3a15a> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_b8a3a15a> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_b8a3a15a> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_b8a3a15a_motif_24f6269abdf1c989>,
         <https://sappho-digital.com/actualization/motif/bibl_b8a3a15a_motif_278e356ed64cbb3f>,
@@ -41313,6 +41326,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_fa064c2f> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_fa064c2f> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_fa064c2f> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_fa064c2f> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_fa064c2f_motif_8dda05b62f2174da>,
         <https://sappho-digital.com/actualization/motif/bibl_fa064c2f_motif_ff994c162fe2474d>,
@@ -41693,6 +41707,7 @@
     rdfs:label "mit Sappho im Hof"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_843e4821> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_843e4821> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_843e4821> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_843e4821_motif_751896a2b642d52f>,
         <https://sappho-digital.com/actualization/motif/bibl_843e4821_motif_c10f460a9ccb3510>,
@@ -41706,6 +41721,7 @@
     rdfs:label "Bruchstück, für Sappho"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_a369dda0> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_a369dda0> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_a369dda0> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_a369dda0_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_a369dda0_motif_751896a2b642d52f>,
@@ -41719,6 +41735,7 @@
     rdfs:label "Sappho – Labor"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_baaeb54e> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_baaeb54e> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_baaeb54e> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_baaeb54e_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_baaeb54e_motif_278e356ed64cbb3f>,
@@ -41733,6 +41750,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_e2598fbd> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_e2598fbd> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_e2598fbd> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_e2598fbd> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_e2598fbd_motif_43ccd28d178d02b7>,
         <https://sappho-digital.com/actualization/motif/bibl_e2598fbd_motif_51e665deaa2486ee>,
@@ -41746,6 +41764,7 @@
     rdfs:label "Vexierbild"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_e26a1604> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_e26a1604> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_e26a1604> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_e26a1604_motif_2d730412302b3df0>,
         <https://sappho-digital.com/actualization/motif/bibl_e26a1604_motif_791dc243a6ba1593>,
@@ -42041,6 +42060,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_684109f1> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_684109f1> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_684109f1> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_684109f1> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_684109f1_motif_64a381d1facbb9aa>,
         <https://sappho-digital.com/actualization/motif/bibl_684109f1_motif_791dc243a6ba1593>,
@@ -42055,6 +42075,7 @@
     rdfs:label "Wie du mußte ich fliehen"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_8ab38a85> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_8ab38a85> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_8ab38a85> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_8ab38a85_motif_af8f6ed291383b8c>,
         <https://sappho-digital.com/actualization/motif/bibl_8ab38a85_motif_c9ab4b3812d39197>,
@@ -42070,6 +42091,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_8df69e81> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_8df69e81> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_8df69e81> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_8df69e81> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_8df69e81_motif_12b7c713ac24e9f6>,
         <https://sappho-digital.com/actualization/person_ref/bibl_8df69e81_person_c408a1bcd63c420f>,
@@ -42084,6 +42106,7 @@
     rdfs:label "EROS / beim Lesen der Sappho"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_9bb8a741> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_9bb8a741> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_9bb8a741> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_9bb8a741_motif_152676ea>,
         <https://sappho-digital.com/actualization/motif/bibl_9bb8a741_motif_7abc136b51bb0005>,
@@ -42098,6 +42121,7 @@
     rdfs:label "nach Sappholektüren (und Gennadij Ajgi) / Fingerknöchel Jasmin und fragmentarischer Eros"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_a3992d71> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_a3992d71> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_a3992d71> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_a3992d71_motif_24f6269abdf1c989>,
         <https://sappho-digital.com/actualization/motif/bibl_a3992d71_motif_71dbf6e67ea5a907>,
@@ -42112,6 +42136,7 @@
     rdfs:label "Sappho ist tot. Auf den Tod von Ricarda Huch"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_a88a263f> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_a88a263f> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_a88a263f> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_a88a263f_motif_12b7c713ac24e9f6>,
         <https://sappho-digital.com/actualization/motif/bibl_a88a263f_motif_88df0b1164b2fb91>,
@@ -42126,6 +42151,7 @@
     rdfs:label "Karneval der Sorge"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_efcd32b0> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_efcd32b0> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_efcd32b0> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_efcd32b0_motif_04b4fca3d10aab24>,
         <https://sappho-digital.com/actualization/motif/bibl_efcd32b0_motif_63ab36bbe88b209b>,
@@ -42140,6 +42166,7 @@
     rdfs:label "Sappho"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_f8609041> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_f8609041> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f8609041> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_f8609041_motif_778e6dc2ad3d5401>,
         <https://sappho-digital.com/actualization/motif/bibl_f8609041_motif_78fe5e7fce1afcba>,
@@ -42464,6 +42491,7 @@
     rdfs:label "Variationen über ein Fragment von Sappho"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_889153c6> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_889153c6> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_889153c6> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_889153c6_motif_278e356ed64cbb3f>,
         <https://sappho-digital.com/actualization/motif/bibl_889153c6_motif_8d6c4ae5261c1b7f>,
@@ -42479,6 +42507,7 @@
     rdfs:label "WER GIBT DIR EIN RECHT DEN STUMMEN ZU SPIELEN"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_926d0a7c> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_926d0a7c> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_926d0a7c> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_926d0a7c_motif_01ca370ea29462e3>,
         <https://sappho-digital.com/actualization/motif/bibl_926d0a7c_motif_64a381d1facbb9aa>,
@@ -42495,6 +42524,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_98b2a68e> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_98b2a68e> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_98b2a68e> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_98b2a68e> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_98b2a68e_motif_5cc0b75e5bf4c183>,
         <https://sappho-digital.com/actualization/motif/bibl_98b2a68e_motif_64a381d1facbb9aa>,
@@ -42511,6 +42541,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_a667785d> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_a667785d> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_a667785d> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_a667785d> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_a667785d_motif_152676ea>,
         <https://sappho-digital.com/actualization/motif/bibl_a667785d_motif_20ee4027d4def3f7>,
@@ -42659,6 +42690,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_2838b3d9> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_2838b3d9> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_2838b3d9> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_2838b3d9> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_2838b3d9_motif_64a381d1facbb9aa>,
         <https://sappho-digital.com/actualization/motif/bibl_2838b3d9_motif_88df0b1164b2fb91>,
@@ -42676,6 +42708,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_29dac241> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_29dac241> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_29dac241> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_29dac241> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_29dac241_motif_12b7c713ac24e9f6>,
         <https://sappho-digital.com/actualization/motif/bibl_29dac241_motif_25f446d346d5ae39>,
@@ -42693,6 +42726,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_2e3cd65f> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_2e3cd65f> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_2e3cd65f> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_2e3cd65f> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_2e3cd65f_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_2e3cd65f_motif_190541ca0caf5c3f>,
@@ -42710,6 +42744,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_4422d6d6> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_4422d6d6> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_4422d6d6> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_4422d6d6> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_4422d6d6_motif_203ed612d2946cdf>,
         <https://sappho-digital.com/actualization/motif/bibl_4422d6d6_motif_455f4e9c>,
@@ -42726,6 +42761,7 @@
     rdfs:label "von sappho: 8"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_b6b98051> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_b6b98051> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_b6b98051> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_b6b98051_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_b6b98051_motif_232c5062cde7d3c1>,
@@ -42925,6 +42961,7 @@
     rdfs:label "Duke, der Logenkönig"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_1bf78f84> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_1bf78f84> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_1bf78f84> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_1bf78f84_motif_152676ea>,
         <https://sappho-digital.com/actualization/motif/bibl_1bf78f84_motif_304a5e562a17af49>,
@@ -42943,6 +42980,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_3761b97f> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120143666>,
         <https://sappho-digital.com/identifier/bibl_3761b97f> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_3761b97f> ;
     owl:sameAs <https://www.wikidata.org/entity/Q120143666> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_3761b97f_motif_25bab1557374fb8e>,
@@ -43154,6 +43192,7 @@
     rdfs:label "Mein Lieber Feldmann"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_39b012ab> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_39b012ab> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_39b012ab> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_39b012ab_motif_25f446d346d5ae39>,
         <https://sappho-digital.com/actualization/person_ref/bibl_39b012ab_person_7d3c887eeaa47caf>,
@@ -43173,6 +43212,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_3d6a534d> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_3d6a534d> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_3d6a534d> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_3d6a534d> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_3d6a534d_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_3d6a534d_motif_320231279067b1d8>,
@@ -43191,6 +43231,7 @@
     rdfs:label "Sappho und Apoll"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_97722fa3> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_97722fa3> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_97722fa3> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_97722fa3_motif_2b1f28169974867c>,
         <https://sappho-digital.com/actualization/motif/bibl_97722fa3_motif_88df0b1164b2fb91>,
@@ -43209,6 +43250,7 @@
     rdfs:label "Dich hat Amor gewiß …"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_9ef5617d> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_9ef5617d> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_9ef5617d> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_9ef5617d_motif_15d689c1f40b1d56>,
         <https://sappho-digital.com/actualization/motif/bibl_9ef5617d_motif_163a6344>,
@@ -43227,6 +43269,7 @@
     rdfs:label "fern ufo sah sappho ufern"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_b47fb393> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_b47fb393> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_b47fb393> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_b47fb393_motif_232c5062cde7d3c1>,
         <https://sappho-digital.com/actualization/motif/bibl_b47fb393_motif_38d7d43628e9d018>,
@@ -43381,6 +43424,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_339f7bbc> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_339f7bbc> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_339f7bbc> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_339f7bbc> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_339f7bbc_motif_25f446d346d5ae39>,
         <https://sappho-digital.com/actualization/motif/bibl_339f7bbc_motif_304a5e562a17af49>,
@@ -43400,6 +43444,7 @@
     rdfs:label "Mit Liedern Sapphos"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_56775306> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_56775306> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_56775306> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_56775306_motif_33727627b793830a>,
         <https://sappho-digital.com/actualization/motif/bibl_56775306_motif_4c934ba7b9f256bf>,
@@ -43420,6 +43465,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_a5039b6f> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_a5039b6f> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_a5039b6f> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_a5039b6f> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_a5039b6f_motif_01ca370ea29462e3>,
         <https://sappho-digital.com/actualization/motif/bibl_a5039b6f_motif_3030faf4dfb8101d>,
@@ -43439,6 +43485,7 @@
     rdfs:label "Sapphos Wiederkehr (Gertrud Kolmar, verschollen 1943)"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_a5889140> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_a5889140> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_a5889140> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_a5889140_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_a5889140_motif_12b7c713ac24e9f6>,
@@ -43460,6 +43507,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_b53a5020> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_b53a5020> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_b53a5020> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_b53a5020> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_b53a5020_motif_002ca4e56dca366e>,
         <https://sappho-digital.com/actualization/motif/bibl_b53a5020_motif_25bab1557374fb8e>,
@@ -43479,6 +43527,7 @@
     rdfs:label "Sappho: neu aufgebacken, ausgelegt und nachempfunden"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_f5e2fa88> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_f5e2fa88> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f5e2fa88> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_f5e2fa88_motif_320231279067b1d8>,
         <https://sappho-digital.com/actualization/motif/bibl_f5e2fa88_motif_637a4ceb95c9c2f5>,
@@ -43627,6 +43676,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_31f96313> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_31f96313> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_31f96313> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_31f96313> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_31f96313_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_31f96313_motif_190541ca0caf5c3f>,
@@ -43648,6 +43698,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_8819a3b3> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_8819a3b3> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_8819a3b3> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_8819a3b3> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_8819a3b3_motif_4f6e0ef68efa0824>,
         <https://sappho-digital.com/actualization/motif/bibl_8819a3b3_motif_64a381d1facbb9aa>,
@@ -43893,6 +43944,7 @@
     rdfs:label "THE MOST BEAUTIFUL"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_0bd2c59f> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_0bd2c59f> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_0bd2c59f> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_0bd2c59f_motif_54563a91>,
         <https://sappho-digital.com/actualization/motif/bibl_0bd2c59f_motif_88df0b1164b2fb91>,
@@ -43916,6 +43968,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_3759bef5> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_3759bef5> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_3759bef5> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_3759bef5> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_3759bef5_motif_163a6344>,
         <https://sappho-digital.com/actualization/motif/bibl_3759bef5_motif_232c5062cde7d3c1>,
@@ -43938,6 +43991,7 @@
     rdfs:label "Sappho"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_b695354d> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_b695354d> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_b695354d> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_b695354d_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_b695354d_motif_08cc6f8757d81249>,
@@ -44042,6 +44096,7 @@
     rdfs:label "Die späten Jahre"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_407a0d29> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_407a0d29> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_407a0d29> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_407a0d29_motif_172883cbad5b3349>,
         <https://sappho-digital.com/actualization/motif/bibl_407a0d29_motif_281b95ce63718bed>,
@@ -44065,6 +44120,7 @@
     rdfs:label "XX"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_4fcb8123> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_4fcb8123> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_4fcb8123> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_4fcb8123_motif_4f6e0ef68efa0824>,
         <https://sappho-digital.com/actualization/motif/bibl_4fcb8123_motif_736eb7ef6202472f>,
@@ -44089,6 +44145,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_63209746> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_63209746> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_63209746> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_63209746> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_63209746_motif_3950fcecf002a43a>,
         <https://sappho-digital.com/actualization/motif/bibl_63209746_motif_791dc243a6ba1593>,
@@ -44112,6 +44169,7 @@
     rdfs:label "sappho singers VII"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_6fcff98a> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_6fcff98a> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_6fcff98a> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_6fcff98a_motif_4592efcd729119a1>,
         <https://sappho-digital.com/actualization/motif/bibl_6fcff98a_motif_736eb7ef6202472f>,
@@ -44136,6 +44194,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_db8dfab9> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_db8dfab9> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_db8dfab9> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_db8dfab9> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_db8dfab9_motif_5cc0b75e5bf4c183>,
         <https://sappho-digital.com/actualization/motif/bibl_db8dfab9_motif_6605a54f19f1346b>,
@@ -44240,6 +44299,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_78d95d8c> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_78d95d8c> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_78d95d8c> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_78d95d8c> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_78d95d8c_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_78d95d8c_motif_304a5e562a17af49>,
@@ -44391,6 +44451,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_a717f073> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_a717f073> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_a717f073> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_a717f073> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_a717f073_motif_5712449d2e4712f8>,
         <https://sappho-digital.com/actualization/motif/bibl_a717f073_motif_71dbf6e67ea5a907>,
@@ -44417,6 +44478,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_b705febf> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120165385>,
         <https://sappho-digital.com/identifier/bibl_b705febf> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_b705febf> ;
     owl:sameAs <https://www.wikidata.org/entity/Q120165385> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_b705febf_motif_162e6dfcee6ada53>,
@@ -44517,6 +44579,7 @@
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_5aa55e45> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120181010>,
         <https://sappho-digital.com/identifier/bibl_5aa55e45> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_5aa55e45> ;
     owl:sameAs <https://www.wikidata.org/entity/Q120181010> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_5aa55e45_motif_232c5062cde7d3c1>,
@@ -44597,6 +44660,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_0491bde2> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_0491bde2> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_0491bde2> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_0491bde2> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_0491bde2_motif_25bab1557374fb8e>,
         <https://sappho-digital.com/actualization/motif/bibl_0491bde2_motif_33727627b793830a>,
@@ -44625,6 +44689,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_8fc572e2> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_8fc572e2> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_8fc572e2> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_8fc572e2> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_8fc572e2_motif_232c5062cde7d3c1>,
         <https://sappho-digital.com/actualization/motif/bibl_8fc572e2_motif_580d75823aa2f127>,
@@ -44854,6 +44919,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_9ade79f7> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_9ade79f7> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_9ade79f7> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_9ade79f7> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_9ade79f7_motif_232c5062cde7d3c1>,
         <https://sappho-digital.com/actualization/motif/bibl_9ade79f7_motif_39a10faa6e0647fb>,
@@ -44884,6 +44950,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_b53e5151> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_b53e5151> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_b53e5151> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_b53e5151> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_b53e5151_motif_01c3eb8edb59de39>,
         <https://sappho-digital.com/actualization/motif/bibl_b53e5151_motif_0824726b36365ab5>,
@@ -44913,6 +44980,7 @@
     rdfs:label "Sappho"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_e2546c7f> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_e2546c7f> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_e2546c7f> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_e2546c7f_motif_01ca370ea29462e3>,
         <https://sappho-digital.com/actualization/motif/bibl_e2546c7f_motif_0824726b36365ab5>,
@@ -45099,6 +45167,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_8ebf0c28> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_8ebf0c28> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_8ebf0c28> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_8ebf0c28> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_8ebf0c28_motif_232c5062cde7d3c1>,
         <https://sappho-digital.com/actualization/motif/bibl_8ebf0c28_motif_320231279067b1d8>,
@@ -45130,6 +45199,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_a53d809b> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120198447>,
         <https://sappho-digital.com/identifier/bibl_a53d809b> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_a53d809b> ;
     owl:sameAs <https://www.wikidata.org/entity/Q120198447> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_a53d809b_motif_002ca4e56dca366e>,
@@ -45163,6 +45233,7 @@
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_f7bb70af> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q19179765>,
         <https://sappho-digital.com/identifier/bibl_f7bb70af> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f7bb70af> ;
     owl:sameAs <https://www.wikidata.org/entity/Q19179765> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_f7bb70af_motif_002ca4e56dca366e>,
@@ -45249,6 +45320,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_c908fde2> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_c908fde2> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_c908fde2> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_c908fde2> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_c908fde2_motif_08cc6f8757d81249>,
         <https://sappho-digital.com/actualization/motif/bibl_c908fde2_motif_12b7c713ac24e9f6>,
@@ -45339,6 +45411,7 @@
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_0434022c> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120143547>,
         <https://sappho-digital.com/identifier/bibl_0434022c> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_0434022c> ;
     owl:sameAs <https://www.wikidata.org/entity/Q120143547> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_0434022c_motif_01ca370ea29462e3>,
@@ -45494,6 +45567,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_88439060> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_88439060> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_88439060> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_88439060> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_88439060_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_88439060_motif_117bf1151b920a34>,
@@ -45623,6 +45697,7 @@
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_5283cfa8> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120176718>,
         <https://sappho-digital.com/identifier/bibl_5283cfa8> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_5283cfa8> ;
     owl:sameAs <https://www.wikidata.org/entity/Q120176718> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_5283cfa8_motif_01ca370ea29462e3>,
@@ -45660,6 +45735,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_ebc1bb1f> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120168407>,
         <https://sappho-digital.com/identifier/bibl_ebc1bb1f> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_ebc1bb1f> ;
     owl:sameAs <https://www.wikidata.org/entity/Q120168407> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_ebc1bb1f_motif_455f4e9c>,
@@ -45698,6 +45774,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_19d5a7ab> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_19d5a7ab> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_19d5a7ab> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/work_ref/bibl_4e970562_work_9b4a173a94427606> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_19d5a7ab> ;
     skos:exactMatch <https://w3id.org/sappho-digital/vocab/work_9b4a173a94427606> ;
@@ -45736,6 +45813,7 @@
     rdfs:label "Sappho träumt eine zweite Fahrt ins Exil"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_2660d82e> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_2660d82e> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_2660d82e> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_01ca370ea29462e3>,
         <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_2d730412302b3df0>,
@@ -45774,6 +45852,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_936bf0a5> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_936bf0a5> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_936bf0a5> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_936bf0a5> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_936bf0a5_motif_203ed612d2946cdf>,
         <https://sappho-digital.com/actualization/motif/bibl_936bf0a5_motif_232c5062cde7d3c1>,
@@ -45818,6 +45897,7 @@
         <https://sappho-digital.com/identifier/Q1242002>,
         <https://sappho-digital.com/identifier/Sappho_(play)>,
         <https://sappho-digital.com/identifier/bibl_ba71b2e5> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/work_ref/bibl_8ebf0c28_work_0b367126b900439f>,
         <https://sappho-digital.com/actualization/work_ref/bibl_ec11b447_work_0b367126b900439f> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_ba71b2e5> ;
@@ -45862,6 +45942,7 @@
     rdfs:label "Sappho. Roman"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_f4da59f4> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_f4da59f4> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f4da59f4> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_f4da59f4_motif_25bab1557374fb8e>,
         <https://sappho-digital.com/actualization/motif/bibl_f4da59f4_motif_25f446d346d5ae39>,
@@ -46006,6 +46087,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_0643ca58> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_0643ca58> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_0643ca58> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_0643ca58> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_25bab1557374fb8e>,
         <https://sappho-digital.com/actualization/motif/bibl_0643ca58_motif_33727627b793830a>,
@@ -46081,6 +46163,7 @@
     rdfs:label "Von den plejaden her vierzehn gedichte im hinblick auf Lesbos"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_00e9aff1> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_00e9aff1> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_00e9aff1> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_00e9aff1_motif_25bab1557374fb8e>,
@@ -46122,6 +46205,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_5ca5f0b6> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_5ca5f0b6> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_5ca5f0b6> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_5ca5f0b6> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_5ca5f0b6_motif_01ca370ea29462e3>,
         <https://sappho-digital.com/actualization/motif/bibl_5ca5f0b6_motif_04b4fca3d10aab24>,
@@ -46163,6 +46247,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_a0bace6b> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120199158>,
         <https://sappho-digital.com/identifier/bibl_a0bace6b> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_a0bace6b> ;
     owl:sameAs <https://www.wikidata.org/entity/Q120199158> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_a0bace6b_motif_0824726b36365ab5>,
@@ -46204,6 +46289,7 @@
     rdfs:label "Sappho"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_e58bccae> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_e58bccae> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_e58bccae> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_e58bccae_motif_01ca370ea29462e3>,
         <https://sappho-digital.com/actualization/motif/bibl_e58bccae_motif_0824726b36365ab5>,
@@ -46245,6 +46331,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_ec11b447> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q119292643>,
         <https://sappho-digital.com/identifier/bibl_ec11b447> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_ec11b447> ;
     owl:sameAs <https://www.wikidata.org/entity/Q119292643> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_ec11b447_motif_15d689c1f40b1d56>,
@@ -46404,6 +46491,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_458b7c88> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_458b7c88> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_458b7c88> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_458b7c88> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_458b7c88_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_458b7c88_motif_232c5062cde7d3c1>,
@@ -46491,6 +46579,7 @@
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_632dac82> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120177793>,
         <https://sappho-digital.com/identifier/bibl_632dac82> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_632dac82> ;
     owl:sameAs <https://www.wikidata.org/entity/Q120177793> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_632dac82_motif_117bf1151b920a34>,
@@ -46580,6 +46669,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_4110fba1> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_4110fba1> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_4110fba1> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_4110fba1> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_4110fba1_motif_08cc6f8757d81249>,
@@ -46627,6 +46717,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_69eddc38> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_69eddc38> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_69eddc38> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_69eddc38> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_69eddc38_motif_2d730412302b3df0>,
         <https://sappho-digital.com/actualization/motif/bibl_69eddc38_motif_3030faf4dfb8101d>,
@@ -46767,6 +46858,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_b0693a0e> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_b0693a0e> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_b0693a0e> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_b0693a0e> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_01ca370ea29462e3>,
         <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_232c5062cde7d3c1>,
@@ -46820,6 +46912,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_d85ade6a> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_d85ade6a> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_d85ade6a> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_d85ade6a> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_d85ade6a_motif_01ca370ea29462e3>,
         <https://sappho-digital.com/actualization/motif/bibl_d85ade6a_motif_0824726b36365ab5>,
@@ -46872,6 +46965,7 @@
     rdfs:label "Sappho"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_5f1d7d40> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_5f1d7d40> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_5f1d7d40> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_5f1d7d40_motif_01ca370ea29462e3>,
         <https://sappho-digital.com/actualization/motif/bibl_5f1d7d40_motif_0824726b36365ab5>,
@@ -46933,6 +47027,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_8665dcc5> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_8665dcc5> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_8665dcc5> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_8665dcc5> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_8665dcc5_motif_25bab1557374fb8e>,
         <https://sappho-digital.com/actualization/motif/bibl_8665dcc5_motif_25f446d346d5ae39>,
@@ -46999,6 +47094,7 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_cbfea792> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_cbfea792> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_cbfea792> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_cbfea792> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_cbfea792_motif_01ca370ea29462e3>,
         <https://sappho-digital.com/actualization/motif/bibl_cbfea792_motif_232c5062cde7d3c1>,
@@ -47068,6 +47164,7 @@
     rdfs:label "Sappho. Drama in fünf Akten und einem Vor- und Nachspiel mit Berücksichtigung geschichtlicher und legendärer Züge aus Sapphos Leben"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_e745799e> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_e745799e> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_e745799e> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_e745799e_motif_01ca370ea29462e3>,
         <https://sappho-digital.com/actualization/motif/bibl_e745799e_motif_0824726b36365ab5>,
@@ -47141,6 +47238,7 @@
     rdfs:label "Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_69a9167e> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_69a9167e> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_69a9167e> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_69a9167e_motif_172883cbad5b3349>,
@@ -47405,6 +47503,7 @@
     rdfs:label "Immer waren wir Hand in Hand. Erinna an Sappho"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_4e970562> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_4e970562> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_4e970562> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/motif/bibl_4e970562_motif_0824726b36365ab5>,
         <https://sappho-digital.com/actualization/motif/bibl_4e970562_motif_163a6344>,
