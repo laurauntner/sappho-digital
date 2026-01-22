@@ -95,6 +95,7 @@
 <https://sappho-digital.com/place/XXXX> a ecrm:E53_Place ;
     rdfs:label "XXXX"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/XXXX> ;
+    ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/XXXX>
     owl:sameAs <http://www.wikidata.org/entity/XXXX> .
 
 <https://sappho-digital.com/manifestation/XXXX> a lrmoo:F3_Manifestation ;
