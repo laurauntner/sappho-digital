@@ -38,8 +38,32 @@
                                 <div class="section-title">Datenquelle</div>
                                 <div class="data-source">
                                     <input type="text" id="dataSource"
-                                        value="https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/data/rdf/sappho-reception_asserted-and-inferred.ttl"
-                                    />
+                                        value="https://sappho-digital.com/sappho-reception_asserted-and-inferred.ttl"/>
+                                    <div class="data-source-suggestions smaller-text">
+                                        <div class="hint">Andere Quellen:</div>
+                                        <div>
+                                            <button class="example-btn" type="button"
+                                                onclick="setDataSource('https://sappho-digital.com/authors.ttl')"
+                                                >Nur Autor_innendaten</button>
+                                        </div>
+                                        <div>
+                                            <button class="example-btn" type="button"
+                                                onclick="setDataSource('https://sappho-digital.com/works.ttl')"
+                                                >Nur bibliographische Daten zu
+                                                Rezeptionszeugnissen</button>
+                                        </div>
+                                        <div>
+                                            <button class="example-btn" type="button"
+                                                onclick="setDataSource('https://sappho-digital.com/fragments.ttl')"
+                                                >Nur bibliographische Daten zu
+                                                Sappho-Fragmenten</button>
+                                        </div>
+                                        <div>
+                                            <button class="example-btn" type="button"
+                                                onclick="setDataSource('https://sappho-digital.com/sappho-reception_asserted-and-inferred.ttl')"
+                                                >Default (alle Daten)</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -48,7 +72,7 @@
                                 <div class="query-container">
                                     <textarea id="queryEditor"
                                         placeholder="Gib hier eine SPARQL-Query ein …">
-<xsl:text>
+                                        <xsl:text>
 PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
 PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
 

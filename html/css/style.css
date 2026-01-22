@@ -781,7 +781,7 @@ body.page { overflow: auto !important; }
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    margin-top: 40px;
+    margin-top: 25px;
 }
 
 .section {
@@ -799,9 +799,14 @@ body.page { overflow: auto !important; }
 
 .data-source {
     display: flex;
-    gap: 10px;
-    align-items: center;
-    margin-bottom: 15px;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.data-source-suggestions {
+  display: block;
+  width: 100%;
+  margin-top: 0.5rem;
 }
 
 #dataSource {

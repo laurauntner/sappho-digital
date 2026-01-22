@@ -29,7 +29,7 @@
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
 
-    <!-- about -->
+        <!-- about -->
     <xslt in="./data/meta/about.xml" out="${target}/about.html" style="./xslt/meta.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
@@ -122,5 +122,17 @@
     <delete file="${target}/_bibl-entities-dummy.html"/>
     <delete file="${target}/_reception-entities-dummy.html"/>
     <delete file="${target}/_fragments-dummy.html"/>
+
+    <copy file="data/rdf/sappho-reception_asserted-and-inferred.ttl"
+        tofile="html/sappho-reception_asserted-and-inferred.ttl" overwrite="true"/>
+    
+    <copy file="data/rdf/authors.ttl"
+        tofile="html/authors.ttl" overwrite="true"/>
+    
+    <copy file="data/rdf/works.ttl"
+        tofile="html/works.ttl" overwrite="true"/>
+    
+    <copy file="data/rdf/fragments.ttl"
+        tofile="html/works.ttl" overwrite="true"/>
 
 </project>
