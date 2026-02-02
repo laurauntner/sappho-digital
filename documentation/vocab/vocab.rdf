@@ -210,6 +210,7 @@
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_f2aa906d0ec4e3f4"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_b10a4078d73a7320"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_5a650c393c811ea4"/>
+	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_jg054872d7377l2p"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_803864de40878a17"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_1d5abf4995fa23e4"/>
 </rdf:Description>
@@ -249,6 +250,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_0eabdfe13c1ff095"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_dfc7969c4ebf3533"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_e7a7fad674ab17f4"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_014bz201t84sc854"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/motif_c92ed98fdf8c34f1">
@@ -572,6 +574,7 @@
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/topic_e7a7fad674ab17f4"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/topic_5f98e5b87c9f2f96"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/topic_90253972585e05d8"/>
+	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/topic_014bz201t84sc854"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/topic_6965e0a196d0b97e">
@@ -605,6 +608,7 @@
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/topic_7da8193d94d44125"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/topic_3c28b27922e5dfea"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/topic_1de543cc588d6ee3"/>
+	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/topic_193g937586342d35"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_08ad0013a591aa17"/>
 </rdf:Description>
 
@@ -1283,6 +1287,7 @@
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_8aa33913f008eb89"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_f810c10450ef91b3"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_4592efcd729119a1"/>
+	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_l59pefedf23116a1"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q729"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/ontology/Animal"/>
 </rdf:Description>
@@ -3260,6 +3265,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_a92154dba89f764f"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_91fbce010840c414"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/place_c469fa37e1f081e9"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_014bz201t84sc854"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q66016"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Muses"/>
 </rdf:Description>
@@ -6588,6 +6594,46 @@
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/work_9e0dd0ba7bd9212d"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q123015482"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Sacred_Emily"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/topic_193g937586342d35">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
+	<skos:prefLabel xml:lang="de">Zivilisiertheit</skos:prefLabel>
+	<skos:notation>topic_193g937586342d35</skos:notation>
+	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/topic_173f939586542d39"/>
+	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q281287"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/topic_014bz201t84sc854">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
+	<skos:prefLabel xml:lang="de">Kunstproduktion</skos:prefLabel>
+	<skos:notation>topic_014bz201t84sc854</skos:notation>
+	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/topic_522a85ce59f9c66a"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_48abc1d4ebad9497"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_37c2bf8d11811a0e"/>
+	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q47407603"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/motif_jg054872d7377l2p">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
+	<skos:prefLabel xml:lang="de">Elfenbein</skos:prefLabel>
+	<skos:notation>motif_jg054872d7377l2p</skos:notation>
+	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/motif_ecdd7525fe74838a"/>
+	<skos:exactMatch rdf:resource="https://www.wikidata.org/entity/Q82001"/>
+	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Ivory"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/motif_l59pefedf23116a1">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
+	<skos:prefLabel xml:lang="de">Zikade</skos:prefLabel>
+	<skos:notation>motif_l59pefedf23116a1</skos:notation>
+	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/motif_4c934ba7b9f256bf"/>
+	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q202890"/>
+	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Auchenorrhyncha"/>
 </rdf:Description>
 
 </rdf:RDF>

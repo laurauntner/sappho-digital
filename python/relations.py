@@ -132,10 +132,20 @@ def pages_phrase_for(tid: str) -> str:
     if not d:
         return ""
     parts = []
+
     if d.get("anth"):
         parts.append(f"die Seite(n) {d['anth']} aus der Anthologie")
+
+    # Ausnahmen für die Vorlage-Formulierung
+    vorlage_suffix = {
+        "bibl_632dac82": "aus der Vorlage von 1793",
+        "bibl_4fcb8123": "aus der Vorlage von 2009",
+        "bibl_e2598fbd": "aus der Vorlage von 2021",
+    }.get(tid, "aus dem Erstdruck")
+
     if d.get("vorlage"):
-        parts.append(f"S. {d['vorlage']} aus dem Erstdruck")
+        parts.append(f"S. {d['vorlage']} {vorlage_suffix}")
+
     if not parts:
         return ""
     if len(parts) == 2:

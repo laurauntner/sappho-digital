@@ -152,7 +152,7 @@
   skos:broader :motifs;
   skos:narrower :motif_71dbf6e67ea5a907, :motif_c1c5790bb38d4fbb, :motif_f4cf66993a308196,
     :motif_fcf3b7b61805babd, :motif_6ca05631ae27d928, :motif_a26b7d0dd6b16118, :motif_876aeb61deb4984f,
-    :motif_f2aa906d0ec4e3f4, :motif_b10a4078d73a7320, :motif_5a650c393c811ea4;
+    :motif_f2aa906d0ec4e3f4, :motif_b10a4078d73a7320, :motif_5a650c393c811ea4, :motif_jg054872d7377l2p;
   skos:related :person_803864de40878a17, :person_1d5abf4995fa23e4 .
 
 :motif_cf06ac1a51be3c55 a skos:Concept;
@@ -173,7 +173,7 @@
   skos:narrower :motif_b310d7fa48a3989f, :motif_3b55ac3756f8ab42, :motif_c7adfc594b0535b3,
     :motif_051983025a946344, :motif_e3a227ac72b4e7d3;
   skos:related :motif_5047cf2d5e1607fa, :person_37c2bf8d11811a0e, :topic_91fbce010840c414,
-    :person_0eabdfe13c1ff095, :plot_dfc7969c4ebf3533, :topic_e7a7fad674ab17f4 .
+    :person_0eabdfe13c1ff095, :plot_dfc7969c4ebf3533, :topic_e7a7fad674ab17f4, :topic_014bz201t84sc854 .
 
 :motif_c92ed98fdf8c34f1 a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
@@ -366,7 +366,7 @@
   skos:notation "topic_522a85ce59f9c66a";
   skos:broader :topics;
   skos:narrower :topic_0424470816a8c5ac, :topic_91fbce010840c414, :topic_e7a7fad674ab17f4,
-    :topic_5f98e5b87c9f2f96, :topic_90253972585e05d8 .
+    :topic_5f98e5b87c9f2f96, :topic_90253972585e05d8, :topic_014bz201t84sc854 .
 
 :topic_6965e0a196d0b97e a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
@@ -384,7 +384,8 @@
   skos:broader :topics;
   skos:narrower :topic_193f7fb77b90540a, :topic_b0049a9652bca00f, :topic_7112b97bd8eccdc6,
     :topic_4d0efc6118699f99, :topic_e3f9c28d697807a6, :topic_6c84497f664d562a, :topic_c02e0ff3d2bffc47,
-    :topic_e059b05a9148622d, :topic_7da8193d94d44125, :topic_3c28b27922e5dfea, :topic_1de543cc588d6ee3;
+    :topic_e059b05a9148622d, :topic_7da8193d94d44125, :topic_3c28b27922e5dfea, :topic_1de543cc588d6ee3,
+    :topic_193g937586342d35;
   skos:related :plot_08ad0013a591aa17 .
 
 :topic_9a3a9c83b659fda6 a skos:Concept;
@@ -753,7 +754,7 @@
   skos:notation "motif_4c934ba7b9f256bf";
   skos:broader :motif_b10a4078d73a7320;
   skos:narrower :motif_a93562355b8f336c, :motif_8aa33913f008eb89, :motif_f810c10450ef91b3,
-    :motif_4592efcd729119a1;
+    :motif_4592efcd729119a1, :motif_l59pefedf23116a1;
   skos:exactMatch <http://www.wikidata.org/entity/Q729>, <https://dbpedia.org/ontology/Animal> .
 
 :motif_499787c4944b0ba5 a skos:Concept;
@@ -1845,7 +1846,7 @@
   skos:notation "person_37c2bf8d11811a0e";
   skos:broader :person_14582bf9dd069b37;
   skos:related :motif_48abc1d4ebad9497, :person_e585b2a779019b7e, :person_a92154dba89f764f,
-    :topic_91fbce010840c414, :place_c469fa37e1f081e9;
+    :topic_91fbce010840c414, :place_c469fa37e1f081e9, :topic_014bz201t84sc854;
   skos:exactMatch <http://www.wikidata.org/entity/Q66016>, <https://dbpedia.org/resource/Muses> .
 
 :topic_91fbce010840c414 a skos:Concept;
@@ -3942,3 +3943,32 @@
   skos:notation "work_4f835860e11c2674";
   skos:broader :work_9e0dd0ba7bd9212d;
   skos:exactMatch <http://www.wikidata.org/entity/Q123015482>, <https://dbpedia.org/resource/Sacred_Emily> .
+
+:topic_193g937586342d35 a skos:Concept;
+  skos:inScheme <https://w3id.org/sappho-digital/vocab>;
+  skos:prefLabel "Zivilisiertheit"@de;
+  skos:notation "topic_193g937586342d35";
+  skos:broader :topic_173f939586542d39;
+  skos:exactMatch <http://www.wikidata.org/entity/Q281287> .
+
+:topic_014bz201t84sc854 a skos:Concept;
+  skos:inScheme <https://w3id.org/sappho-digital/vocab>;
+  skos:prefLabel "Kunstproduktion"@de;
+  skos:notation "topic_014bz201t84sc854";
+  skos:broader :topic_522a85ce59f9c66a;
+  skos:related :motif_48abc1d4ebad9497, :person_37c2bf8d11811a0e;
+  skos:exactMatch <http://www.wikidata.org/entity/Q47407603> .
+
+:motif_jg054872d7377l2p a skos:Concept;
+  skos:inScheme <https://w3id.org/sappho-digital/vocab>;
+  skos:prefLabel "Elfenbein"@de;
+  skos:notation "motif_jg054872d7377l2p";
+  skos:broader :motif_ecdd7525fe74838a;
+  skos:exactMatch <https://www.wikidata.org/entity/Q82001>, <https://dbpedia.org/resource/Ivory> .
+
+:motif_l59pefedf23116a1 a skos:Concept;
+  skos:inScheme <https://w3id.org/sappho-digital/vocab>;
+  skos:prefLabel "Zikade"@de;
+  skos:notation "motif_l59pefedf23116a1";
+  skos:broader :motif_4c934ba7b9f256bf;
+  skos:exactMatch <http://www.wikidata.org/entity/Q202890>, <https://dbpedia.org/resource/Auchenorrhyncha> .

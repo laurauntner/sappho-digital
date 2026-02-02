@@ -4682,7 +4682,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q64404" xml:id="author_bf6f469d">Arno Holz</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_06ec7d19">München</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1726,Q2079" xml:id="place_06ec7d19">München</pubPlace>
                     <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1385440" xml:id="publisher_ca058f7f">Piper</publisher>
                     <ref target="https://archive.org/details/bub_gb_8r8sAAAAYAAJ/page/n147/mode/2up">https://archive.org/details/bub_gb_8r8sAAAAYAAJ/page/n147/mode/2up</ref>
@@ -4721,7 +4721,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_8ce06d17">
                         <title type="work">Die neue Rundschau</title>
                     </bibl>
-                    <author xml:id="author_9c90a03f">Richard Dehmel</author>
+                    <author ref="https://www.wikidata.org/entity/Q76590" xml:id="author_9c90a03f">Richard Dehmel</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q481576" xml:id="publisher_26115c29">S. Fischer</publisher>
@@ -5044,7 +5044,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
                     <publisher xml:id="publisher_e4edb5a7">Georg Müller</publisher>
-                    <ref target="http://kvk.bibliothek.kit.edu/view-title/index.php?katalog=ARCHIVE_ORG&amp;url=http%3A%2F%2Farchive.org%2Fdetails%2Fgedichte00bett&amp;signature=YmEdPMjvPSB_AxXc7tVgdT7lAJeKAlPxe2MuwCwAycA&amp;showCoverImg=1">http://kvk.bibliothek.kit.edu/view-title/index.php?katalog=ARCHIVE_ORG&amp;url=http%3A%2F%2Farchive.org%2Fdetails%2Fgedichte00bett&amp;signature=YmEdPMjvPSB_AxXc7tVgdT7lAJeKAlPxe2MuwCwAycA&amp;showCoverImg=1</ref>
+                    <ref target="https://storage.lib.uchicago.edu/pres/2005/pres2005-055.pdf">https://storage.lib.uchicago.edu/pres/2005/pres2005-055.pdf</ref>
                 </bibl>
                 <bibl xml:id="bibl_1e4ef666">
                     <title type="text">Sappho</title>

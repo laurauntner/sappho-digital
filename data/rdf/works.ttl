@@ -1503,7 +1503,7 @@
 <https://sappho-digital.com/digital/bibl_df7d972f> a ecrm:E73_Information_Object ;
     rdfs:label "Digital copy of Sappho"@en ;
     ecrm:P138_represents <https://sappho-digital.com/expression/bibl_df7d972f> ;
-    rdfs:seeAlso <http://kvk.bibliothek.kit.edu/view-title/index.php?katalog=ARCHIVE_ORG&url=http%3A%2F%2Farchive.org%2Fdetails%2Fgedichte00bett&signature=YmEdPMjvPSB_AxXc7tVgdT7lAJeKAlPxe2MuwCwAycA&showCoverImg=1> .
+    rdfs:seeAlso <https://storage.lib.uchicago.edu/pres/2005/pres2005-055.pdf> .
 
 <https://sappho-digital.com/digital/bibl_df87af43> a ecrm:E73_Information_Object ;
     rdfs:label "Digital copy of Herzliebster Jesu, was hast du verbrochen"@en ;
@@ -46113,7 +46113,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_f4da59f4>,
         <https://sappho-digital.com/manifestation_creation/bibl_ff53d330> ;
     ecrm:P87_is_identified_by <https://sappho-digital.com/spatial_coordinates/Q1726-P625-48.1375_11.575> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1726> .
+    owl:sameAs <https://www.wikidata.org/entity/Q1726>,
+        <https://www.wikidata.org/entity/Q1726,Q2079> .
 
 <https://sappho-digital.com/place/place_700b43a2> a ecrm:E53_Place ;
     rdfs:label "Stuttgart"@de ;

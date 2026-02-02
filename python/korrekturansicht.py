@@ -18,7 +18,7 @@ META_TAGS = ("id", "status", "vorlageSeiten", "anthologieSeiten")
 HEADER_CHECKLIST = [
     "Analyse durchgegangen",
     'Personen: ggf. "character" bei @art + @appellation bei Sapphos hinzugefügt',
-    'Werke: ggf. @type="passage" hinzugefügt',
+    'Werke: ggf. @art="passage" hinzugefügt',
     "XML-Datei korrigiert",
     'Status auf "korrigiert" gesetzt',
 ]
