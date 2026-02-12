@@ -318,6 +318,7 @@
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_a18a39883dd84fa9"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_f9de876206744971"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_25f24c9ae6926a3d"/>
+	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_e3647u9e8676bb1l"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/motif_ab661b23423441c6">
@@ -1107,6 +1108,9 @@
 	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
 	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
 	<skos:prefLabel xml:lang="de">Sappho</skos:prefLabel>
+	<skos:altLabel xml:lang="de">Sapho</skos:altLabel>
+	<skos:altLabel xml:lang="de">Saffo</skos:altLabel>
+	<skos:altLabel xml:lang="de">Safo</skos:altLabel>
 	<skos:notation>person_e585b2a779019b7e</skos:notation>
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/person_5771e8248ede2068"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_cf06ac1a51be3c55"/>
@@ -1662,6 +1666,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/place_4f523d00fc5d27fd"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/place_1adb2da7993ecc95"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_d1946e7b74bf22bc"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_e3647u9e8676bb1l"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q35160"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Odyssey"/>
 </rdf:Description>
@@ -2293,6 +2298,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_2a23732b2a3c21cf"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_d1946e7b74bf22bc"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_c02e0ff3d2bffc47"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_e3647u9e8676bb1l"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q165"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Sea"/>
 	<skos:exactMatch rdf:resource="https://schema.org/SeaBodyOfWater"/>
@@ -2354,6 +2360,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_8403b22eecf9a7e8"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_dd90800ee54e2216"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_c02e0ff3d2bffc47"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_e3647u9e8676bb1l"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q16184753"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Caraxos"/>
 </rdf:Description>
@@ -2668,7 +2675,8 @@
 <rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/person_9ee0b67040c4734c">
 	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
 	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
-	<skos:prefLabel xml:lang="de">Rhodopis/Doricha</skos:prefLabel>
+	<skos:prefLabel xml:lang="de">Rhodopis</skos:prefLabel>
+	<skos:altLabel xml:lang="de">Doricha</skos:altLabel>
 	<skos:notation>person_9ee0b67040c4734c</skos:notation>
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/person_5771e8248ede2068"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_e585b2a779019b7e"/>
@@ -2682,6 +2690,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_25f446d346d5ae39"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/place_dc407ad0184a6b43"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_c02e0ff3d2bffc47"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_e3647u9e8676bb1l"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q109278381"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q15504920"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Rhodopis_(hetaera)"/>
@@ -2751,6 +2760,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_71f3b15b4a29d968"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/place_dc407ad0184a6b43"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_c02e0ff3d2bffc47"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_e3647u9e8676bb1l"/>
 	<skos:broadMatch rdf:resource="http://www.wikidata.org/entity/Q91670341"/>
 	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q16184753"/>
 	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q109278381"/>
@@ -4009,6 +4019,7 @@
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_2d21be022480abad"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_304a5e562a17af49"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_d92f8054b846977e"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_b2d8b14d68b73dd5"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/person_c408a1bcd63c420f">
@@ -4214,6 +4225,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_85e382a7ed66294c"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_e059b05a9148622d"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_7da8193d94d44125"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_b3d6b24g6qb93wdj"/>
 	<skos:broadMatch rdf:resource="http://www.wikidata.org/entity/Q177634"/>
 	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q17892"/>
 	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q3031"/>
@@ -4926,11 +4938,14 @@
 	<skos:prefLabel xml:lang="de">Sappho als sittenlose Frau</skos:prefLabel>
 	<skos:notation>plot_b2d8b14d68b73dd5</skos:notation>
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/plot_a3935710c883087b"/>
+	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_b3d6b24g6qb93wdj"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_979480c5de919f6e"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_d0d0d796a787f4a8"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_62827f2ed507b1a4"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/work_59687e2256dfc7f3"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_58aba2ccf82b6543"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_0af359e15219034a"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_43b59f052f3dc73e"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_f83ec0822d1cce6e"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_1de543cc588d6ee3"/>
 	<skos:broadMatch rdf:resource="http://www.wikidata.org/entity/Q467"/>
@@ -4964,6 +4979,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/work_7ddaff9b6814b58b"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_fe179d791732151d"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_0af359e15219034a"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_b2d8b14d68b73dd5"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_55cb3a6f391d86db"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_2603b095dc14c9fd"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_4fa8ba6e36329b8d"/>
@@ -5550,7 +5566,8 @@
 <rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/person_55cb3a6f391d86db">
 	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
 	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
-	<skos:prefLabel xml:lang="de">Anaktoria/Anagora</skos:prefLabel>
+	<skos:prefLabel xml:lang="de">Anaktoria</skos:prefLabel>
+	<skos:altLabel xml:lang="de">Anagora</skos:altLabel>
 	<skos:notation>person_55cb3a6f391d86db</skos:notation>
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/person_a66ff1aaf842f1d4"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_dedcc9b1e7fb8e79"/>
@@ -5586,6 +5603,7 @@
 	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
 	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
 	<skos:prefLabel xml:lang="de">Eirana</skos:prefLabel>
+	<skos:altLabel xml:lang="de">Eriene</skos:altLabel>
 	<skos:notation>person_a766e76721189267</skos:notation>
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/person_a66ff1aaf842f1d4"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_dedcc9b1e7fb8e79"/>
@@ -6634,6 +6652,32 @@
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/motif_4c934ba7b9f256bf"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q202890"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Auchenorrhyncha"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/motif_e3647u9e8676bb1l">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
+	<skos:prefLabel xml:lang="de">Schifffahrt/Seefahrt</skos:prefLabel>
+	<skos:notation>motif_e3647u9e8676bb1l</skos:notation>
+	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/motif_b3f47e9ec671bb4b"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/work_da4bf9fda473cc89"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_c9ab4b3812d39197"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_278199322209770d"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_9ee0b67040c4734c"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_414bc4680cad7ddc"/>
+	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q155930"/>
+	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Maritime_transport"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/plot_b3d6b24g6qb93wdj">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
+	<skos:prefLabel xml:lang="de">Sappho als Pädophile</skos:prefLabel>
+	<skos:notation>plot_b3d6b24g6qb93wdj</skos:notation>
+	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/plot_b2d8b14d68b73dd5"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_dedcc9b1e7fb8e79"/>
+	<skos:broadMatch rdf:resource="https://www.wikidata.org/entity/Q29042975"/>
+	<skos:relatedMatch rdf:resource="https://www.wikidata.org/wiki/Q8388"/>
 </rdf:Description>
 
 </rdf:RDF>

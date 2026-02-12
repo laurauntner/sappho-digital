@@ -208,7 +208,7 @@
   skos:notation "motif_b3f47e9ec671bb4b";
   skos:broader :motifs;
   skos:narrower :motif_68f3d8712ddf8d70, :motif_71f3b15b4a29d968, :motif_a18a39883dd84fa9,
-    :motif_f9de876206744971, :motif_25f24c9ae6926a3d .
+    :motif_f9de876206744971, :motif_25f24c9ae6926a3d, :motif_e3647u9e8676bb1l .
 
 :motif_ab661b23423441c6 a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
@@ -682,6 +682,7 @@
 :person_e585b2a779019b7e a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
   skos:prefLabel "Sappho"@de;
+  skos:altLabel "Sapho"@de, "Saffo"@de, "Safo"@de;
   skos:notation "person_e585b2a779019b7e";
   skos:broader :person_5771e8248ede2068;
   skos:related :motif_cf06ac1a51be3c55, :plot_02612f6f060ef11d, :topic_bdd785a758abd7cd,
@@ -967,7 +968,7 @@
   skos:broader :work_75700d3e9077c098;
   skos:related :person_c7aebd12b1cbd031, :person_2bf51959e0848f5f, :person_db10ad7627a6e7ad,
     :person_1526106cabf2fa6b, :person_2eb129793d7ca74a, :person_5c74e76e7da1f025, :place_4f523d00fc5d27fd,
-    :place_1adb2da7993ecc95, :person_d1946e7b74bf22bc;
+    :place_1adb2da7993ecc95, :person_d1946e7b74bf22bc, :motif_e3647u9e8676bb1l;
   skos:exactMatch <http://www.wikidata.org/entity/Q35160>, <https://dbpedia.org/resource/Odyssey> .
 
 :person_974acb11c098c41b a skos:Concept;
@@ -1317,7 +1318,7 @@
   skos:broader :motif_a26b7d0dd6b16118;
   skos:related :plot_c15e2310c0183ba9, :person_e585b2a779019b7e, :person_db10ad7627a6e7ad,
     :person_278199322209770d, :motif_3950fcecf002a43a, :place_4f523d00fc5d27fd, :person_97a24d8c828b75ec,
-    :person_2a23732b2a3c21cf, :person_d1946e7b74bf22bc, :topic_c02e0ff3d2bffc47;
+    :person_2a23732b2a3c21cf, :person_d1946e7b74bf22bc, :topic_c02e0ff3d2bffc47, :motif_e3647u9e8676bb1l;
   skos:exactMatch <http://www.wikidata.org/entity/Q165>, <https://dbpedia.org/resource/Sea>,
     <https://schema.org/SeaBodyOfWater> .
 
@@ -1353,7 +1354,7 @@
   skos:related :plot_c15e2310c0183ba9, :person_e585b2a779019b7e, :motif_736eb7ef6202472f,
     :motif_c9ab4b3812d39197, :motif_791dc243a6ba1593, :topic_d0d0d796a787f4a8, :person_9ee0b67040c4734c,
     :place_dc407ad0184a6b43, :person_a2f67175618331bf, :person_b793a3807d130de0, :person_8403b22eecf9a7e8,
-    :person_dd90800ee54e2216, :topic_c02e0ff3d2bffc47;
+    :person_dd90800ee54e2216, :topic_c02e0ff3d2bffc47, :motif_e3647u9e8676bb1l;
   skos:exactMatch <http://www.wikidata.org/entity/Q16184753>, <https://dbpedia.org/resource/Caraxos> .
 
 :motif_7b4f6bd41d20b520 a skos:Concept;
@@ -1519,12 +1520,14 @@
 
 :person_9ee0b67040c4734c a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
-  skos:prefLabel "Rhodopis/Doricha"@de;
+  skos:prefLabel "Rhodopis"@de;
+  skos:altLabel "Doricha"@de;
   skos:notation "person_9ee0b67040c4734c";
   skos:broader :person_5771e8248ede2068;
   skos:related :person_e585b2a779019b7e, :motif_736eb7ef6202472f, :person_278199322209770d,
     :motif_791dc243a6ba1593, :topic_d0d0d796a787f4a8, :topic_a10417e468b798b0, :plot_414bc4680cad7ddc,
-    :topic_193f7fb77b90540a, :motif_25f446d346d5ae39, :place_dc407ad0184a6b43, :topic_c02e0ff3d2bffc47;
+    :topic_193f7fb77b90540a, :motif_25f446d346d5ae39, :place_dc407ad0184a6b43, :topic_c02e0ff3d2bffc47,
+    :motif_e3647u9e8676bb1l;
   skos:exactMatch <http://www.wikidata.org/entity/Q109278381>, <http://www.wikidata.org/entity/Q15504920>,
     <https://dbpedia.org/resource/Rhodopis_(hetaera)> .
 
@@ -1553,7 +1556,7 @@
   skos:broader :plot_c15e2310c0183ba9;
   skos:related :person_e585b2a779019b7e, :motif_736eb7ef6202472f, :topic_547b51889f7bce04,
     :motif_791dc243a6ba1593, :topic_d0d0d796a787f4a8, :person_9ee0b67040c4734c, :topic_a10417e468b798b0,
-    :motif_71f3b15b4a29d968, :place_dc407ad0184a6b43, :topic_c02e0ff3d2bffc47;
+    :motif_71f3b15b4a29d968, :place_dc407ad0184a6b43, :topic_c02e0ff3d2bffc47, :motif_e3647u9e8676bb1l;
   skos:broadMatch <http://www.wikidata.org/entity/Q91670341>;
   skos:relatedMatch <http://www.wikidata.org/entity/Q16184753>, <http://www.wikidata.org/entity/Q109278381>,
     <http://www.wikidata.org/entity/Q15504920> .
@@ -2294,7 +2297,7 @@
   skos:broader :motif_f74d0ae71a82bf5d;
   skos:narrower :motif_736eb7ef6202472f, :motif_162e6dfcee6ada53, :motif_2d21be022480abad,
     :motif_304a5e562a17af49;
-  skos:related :person_d92f8054b846977e .
+  skos:related :person_d92f8054b846977e, :plot_b2d8b14d68b73dd5 .
 
 :person_c408a1bcd63c420f a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
@@ -2395,7 +2398,7 @@
     :topic_0af359e15219034a, :person_55cb3a6f391d86db, :person_2603b095dc14c9fd, :person_4fa8ba6e36329b8d,
     :person_a766e76721189267, :person_a44f7c86bfc2958d, :person_c4b1fa4084e429c3, :person_86ef94ea68ce0fe0,
     :person_9545062e029ef19b, :person_7124993358ee4d33, :topic_85e382a7ed66294c, :topic_e059b05a9148622d,
-    :topic_7da8193d94d44125;
+    :topic_7da8193d94d44125, :plot_b3d6b24g6qb93wdj;
   skos:broadMatch <http://www.wikidata.org/entity/Q177634>;
   skos:relatedMatch <http://www.wikidata.org/entity/Q17892>, <http://www.wikidata.org/entity/Q3031> .
 
@@ -2826,8 +2829,10 @@
   skos:prefLabel "Sappho als sittenlose Frau"@de;
   skos:notation "plot_b2d8b14d68b73dd5";
   skos:broader :plot_a3935710c883087b;
+  skos:narrower :plot_b3d6b24g6qb93wdj;
   skos:related :topic_979480c5de919f6e, :topic_d0d0d796a787f4a8, :motif_62827f2ed507b1a4,
-    :work_59687e2256dfc7f3, :topic_0af359e15219034a, :topic_f83ec0822d1cce6e, :topic_1de543cc588d6ee3;
+    :work_59687e2256dfc7f3, :motif_58aba2ccf82b6543, :topic_0af359e15219034a, :plot_43b59f052f3dc73e,
+    :topic_f83ec0822d1cce6e, :topic_1de543cc588d6ee3;
   skos:broadMatch <http://www.wikidata.org/entity/Q467>;
   skos:relatedMatch <http://www.wikidata.org/entity/Q17892>, <http://www.wikidata.org/entity/Q3796713> .
 
@@ -2846,9 +2851,9 @@
   skos:broader :plot_a3935710c883087b;
   skos:narrower :plot_b2aa4b409c0138a8, :plot_cce03921076cb7bf;
   skos:related :topic_d0d0d796a787f4a8, :topic_a10417e468b798b0, :work_7ddaff9b6814b58b,
-    :person_fe179d791732151d, :topic_0af359e15219034a, :person_55cb3a6f391d86db, :person_2603b095dc14c9fd,
-    :person_4fa8ba6e36329b8d, :person_a766e76721189267, :person_a44f7c86bfc2958d, :person_c4b1fa4084e429c3,
-    :person_86ef94ea68ce0fe0, :person_9545062e029ef19b, :person_7124993358ee4d33;
+    :person_fe179d791732151d, :topic_0af359e15219034a, :plot_b2d8b14d68b73dd5, :person_55cb3a6f391d86db,
+    :person_2603b095dc14c9fd, :person_4fa8ba6e36329b8d, :person_a766e76721189267, :person_a44f7c86bfc2958d,
+    :person_c4b1fa4084e429c3, :person_86ef94ea68ce0fe0, :person_9545062e029ef19b, :person_7124993358ee4d33;
   skos:broadMatch <http://www.wikidata.org/entity/Q592>;
   skos:relatedMatch <http://www.wikidata.org/entity/Q17892> .
 
@@ -3231,7 +3236,8 @@
 
 :person_55cb3a6f391d86db a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
-  skos:prefLabel "Anaktoria/Anagora"@de;
+  skos:prefLabel "Anaktoria"@de;
+  skos:altLabel "Anagora"@de;
   skos:notation "person_55cb3a6f391d86db";
   skos:broader :person_a66ff1aaf842f1d4;
   skos:related :plot_dedcc9b1e7fb8e79, :plot_0b092ed64a936159, :plot_43b59f052f3dc73e;
@@ -3254,6 +3260,7 @@
 :person_a766e76721189267 a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
   skos:prefLabel "Eirana"@de;
+  skos:altLabel "Eriene"@de;
   skos:notation "person_a766e76721189267";
   skos:broader :person_a66ff1aaf842f1d4;
   skos:related :plot_dedcc9b1e7fb8e79, :plot_0b092ed64a936159, :plot_43b59f052f3dc73e .
@@ -3972,3 +3979,21 @@
   skos:notation "motif_l59pefedf23116a1";
   skos:broader :motif_4c934ba7b9f256bf;
   skos:exactMatch <http://www.wikidata.org/entity/Q202890>, <https://dbpedia.org/resource/Auchenorrhyncha> .
+
+:motif_e3647u9e8676bb1l a skos:Concept;
+  skos:inScheme <https://w3id.org/sappho-digital/vocab>;
+  skos:prefLabel "Schifffahrt/Seefahrt"@de;
+  skos:notation "motif_e3647u9e8676bb1l";
+  skos:broader :motif_b3f47e9ec671bb4b;
+  skos:related :work_da4bf9fda473cc89, :motif_c9ab4b3812d39197, :person_278199322209770d,
+    :person_9ee0b67040c4734c, :plot_414bc4680cad7ddc;
+  skos:exactMatch <http://www.wikidata.org/entity/Q155930>, <https://dbpedia.org/resource/Maritime_transport> .
+
+:plot_b3d6b24g6qb93wdj a skos:Concept;
+  skos:inScheme <https://w3id.org/sappho-digital/vocab>;
+  skos:prefLabel "Sappho als Pädophile"@de;
+  skos:notation "plot_b3d6b24g6qb93wdj";
+  skos:broader :plot_b2d8b14d68b73dd5;
+  skos:related :plot_dedcc9b1e7fb8e79;
+  skos:broadMatch <https://www.wikidata.org/entity/Q29042975>;
+  skos:relatedMatch <https://www.wikidata.org/wiki/Q8388> .

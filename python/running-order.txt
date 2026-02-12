@@ -5,6 +5,6 @@
 5. update works data: works.py, fragments.py 
 6. update analysis data: analysis.py
 7. update relations data: relations.py
-8. update merged and aligned file: merge.py
+8. update merged file: merge.py
 9. re-run reasoner (in "java" directory): mvn -q clean compile exec:java
 10. count triples: count-triples.py
