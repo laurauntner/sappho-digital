@@ -994,6 +994,38 @@ body.page { overflow: auto !important; }
     display: none;
 }
 
+.stats-two-cols{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.stats-col{
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.stats-col .wikidata-layout{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+.stats-col .wikidata-left,
+.stats-col .wikidata-right{
+  min-width: 0;
+}
+
+@media (max-width: 1100px){
+  .stats-two-cols{
+    grid-template-columns: 1fr;
+  }
+}
+
+
 @media (min-width : 640px) {
     .charts-grid {
         grid-template-columns: repeat(2, 1fr);
