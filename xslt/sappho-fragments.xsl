@@ -32,8 +32,9 @@
         <xsl:variable name="t3" select="replace($t2, 'Expression of\s+', '', 'i')"/>
         <xsl:variable name="t4" select="replace($t3, '»\s*(Fragment[^«»]*Voigt)\s*«', '$1', 'i')"/>
         <xsl:variable name="t5"
-            select="replace($t4, '^\s*(Motif|Topic|Plot|Textpassage)\s*:\s*', '', 'i')"/>
-        <xsl:variable name="t6" select="replace($t5, '\s*\((place|person|work)\)\s*', '', 'i')"/>
+            select="replace($t4, '^\s*(Motif|Topic|Plot|Textpassage|Character)\s*:\s*', '', 'i')"/>
+        <xsl:variable name="t6"
+            select="replace($t5, '\s*\((place|person|work|character)\)\s*', '', 'i')"/>
         <xsl:variable name="t7" select="replace($t6, 'Reference to ', '', 'i')"/>
         <xsl:sequence select="normalize-space($t7)"/>
     </xsl:function>
@@ -63,7 +64,11 @@
                             distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/plot/')])
                         else
                             if ($feature-type = 'person') then
-                                distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/person_ref/')])
+                                distinct-values(
+                                $relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[
+                                matches(., '/feature/person_ref/') or matches(., '/feature/character/')
+                                ]
+                                )
                             else
                                 if ($feature-type = 'place') then
                                     distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/place_ref/')])
@@ -71,14 +76,21 @@
                                     if ($feature-type = 'work') then
                                         distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/work_ref/') or matches(., '/actualization/work_ref/')])
                                     else
-                                        if ($feature-type = 'phrase') then
-                                            distinct-values($relations/intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/textpassage/phrase_')])
+                                        if ($feature-type = 'workpassage') then
+                                            distinct-values(
+                                            $relations/intro:R24_hasRelatedEntity/@rdf:resource[
+                                            matches(., '/textpassage/') and not(matches(., '/textpassage/phrase_'))
+                                            ]
+                                            )
                                         else
-                                            ()
+                                            if ($feature-type = 'phrase') then
+                                                distinct-values($relations/intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/textpassage/phrase_')])
+                                            else
+                                                ()
                 "/>
 
         <xsl:for-each select="$feature-uris">
-            <feature uri="{.}" label="{local:get-label(.)}"/>
+            <feature xmlns="" uri="{.}" label="{local:get-label(.)}"/>
         </xsl:for-each>
     </xsl:function>
 
@@ -119,9 +131,22 @@
         <xsl:variable name="motifs" select="local:get-connected-features($work-id, 'motif')"/>
         <xsl:variable name="topics" select="local:get-connected-features($work-id, 'topic')"/>
         <xsl:variable name="plots" select="local:get-connected-features($work-id, 'plot')"/>
-        <xsl:variable name="persons" select="local:get-connected-features($work-id, 'person')"/>
+        <xsl:variable name="personsRaw" select="local:get-connected-features($work-id, 'person')"/>
+        
+        <xsl:variable name="persons" as="element(feature)*">
+            <xsl:for-each-group select="$personsRaw" group-by="local:norm-label(@label)">
+                <xsl:sort select="current-grouping-key()"/>
+                <xsl:sequence select="
+                    ( current-group()[matches(@uri, '/feature/person_ref/')],
+                    current-group()[1]
+                    )[1]
+                    "/>
+            </xsl:for-each-group>
+        </xsl:variable>
+        
         <xsl:variable name="places" select="local:get-connected-features($work-id, 'place')"/>
         <xsl:variable name="workrefs" select="local:get-connected-features($work-id, 'work')"/>
+        <xsl:variable name="workpassages" select="local:get-connected-features($work-id, 'workpassage')"/>
         <xsl:variable name="phrases" select="local:get-connected-features($work-id, 'phrase')"/>
 
         <xsl:variable name="this-expr-uri"
@@ -203,7 +228,17 @@
                 </xsl:for-each>
             </p>
         </xsl:if>
-
+        
+        <xsl:if test="exists($workpassages)">
+            <p class="align-left">Zitate: 
+                <xsl:for-each select="$workpassages">
+                    <xsl:sort select="lower-case(@label)"/>
+                    <xsl:value-of select="@label"/>
+                    <xsl:if test="position() != last()">, </xsl:if>
+                </xsl:for-each>
+            </p>
+        </xsl:if>
+        
         <xsl:if test="exists($phrases)">
             <p class="align-left">Phrasen: <xsl:for-each select="$phrases">
                     <xsl:sort select="lower-case(@label)"/>
@@ -274,7 +309,7 @@
                                             <p class="align-left">Typ: Werk</p>
 
                                             <p class="align-left">Autorin: Sappho</p>
-                                            
+
                                             <!-- analysis -->
                                             <xsl:call-template name="render-connected-features">
                                                 <xsl:with-param name="work-id" select="$id"/>
@@ -292,5 +327,12 @@
             </xsl:result-document>
         </xsl:for-each>
     </xsl:template>
+    
+    <xsl:function name="local:norm-label" as="xs:string">
+        <xsl:param name="s" as="xs:string?"/>
+        <xsl:variable name="t0" select="normalize-space(string($s))"/>
+        <xsl:variable name="t1" select="lower-case(normalize-unicode($t0, 'NFKC'))"/>
+        <xsl:sequence select="replace($t1, '\s+', ' ')"/>
+    </xsl:function>
 
 </xsl:stylesheet>

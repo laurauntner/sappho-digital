@@ -209,7 +209,7 @@ if (!dataEl || !container) {
     labelRenderedSizeThreshold: 3,
     defaultEdgeType: 'line',
     edgeColor: 'default',
-    defaultEdgeColor: '#c7cdd4'
+    defaultEdgeColor: '#e5ebe5'
   });
 
   renderer.setSetting(
