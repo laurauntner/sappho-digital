@@ -923,7 +923,7 @@
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"
-                                                  href="pers-refs.html">Personenreferenzen</a>
+                                                  href="pers-refs.html">Personenreferenzen und Figuren</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"
@@ -931,7 +931,7 @@
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"
-                                                  href="work-refs.html">Werkreferenzen</a>
+                                                  href="work-refs.html">Werkreferenzen und Zitate</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"

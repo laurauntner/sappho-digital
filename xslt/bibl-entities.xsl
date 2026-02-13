@@ -210,7 +210,7 @@
 
         <!-- person references -->
         <xsl:if test="exists($persons)">
-            <p class="align-left">Personenreferenzen: <xsl:for-each select="$persons">
+            <p class="align-left">Personenreferenzen und Figuren: <xsl:for-each select="$persons">
                     <xsl:sort select="lower-case(@label)"/>
                     <xsl:value-of select="@label"/>
                     <xsl:if test="position() != last()">, </xsl:if>
@@ -230,7 +230,7 @@
 
         <!-- work references -->
         <xsl:if test="exists($work-refs)">
-            <p class="align-left"> Werkreferenzen: <xsl:for-each select="$work-refs">
+            <p class="align-left">Werkreferenzen und Zitate: <xsl:for-each select="$work-refs">
                     <xsl:sort select="lower-case(@label)"/>
                     <xsl:variable name="lbl" select="normalize-space(@label)"/>
                     <!-- im Eingabedokument nach passender bibl-Seite suchen -->

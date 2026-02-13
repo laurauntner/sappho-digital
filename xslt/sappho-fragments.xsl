@@ -180,7 +180,7 @@
         </xsl:if>
 
         <xsl:if test="exists($persons)">
-            <p class="align-left">Personenreferenzen: <xsl:for-each select="$persons">
+            <p class="align-left">Personenreferenzen und Figuren: <xsl:for-each select="$persons">
                     <xsl:sort select="lower-case(@label)"/>
                     <xsl:value-of select="@label"/><xsl:if test="position() != last()">, </xsl:if>
                 </xsl:for-each>
@@ -196,7 +196,7 @@
         </xsl:if>
 
         <xsl:if test="exists($workrefs)">
-            <p class="align-left">Werkreferenzen: <xsl:for-each select="$workrefs">
+            <p class="align-left">Werkreferenzen und Zitate: <xsl:for-each select="$workrefs">
                     <xsl:sort select="lower-case(@label)"/>
                     <xsl:value-of select="normalize-space(@label)"/><xsl:if
                         test="position() != last()">, </xsl:if>

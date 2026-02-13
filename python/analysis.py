@@ -60,6 +60,13 @@ def clean_uri_component(s: str) -> str:
 def last_token(iri: str) -> str:
     return re.split(r"[#/]", iri)[-1]
 
+def _norm_art(s: Optional[str]) -> str:
+    return re.sub(r"\s+", " ", (s or "").strip().lower())
+
+def has_art_token(art: str, token: str) -> bool:
+    toks = re.split(r"\s+", (art or "").strip().lower())
+    return token.lower() in {t for t in toks if t}
+
 # Quellgraph laden
 
 g_src = Graph()
@@ -86,17 +93,17 @@ CAT_TO_VOC_PREFIX = {
     "ort":    "https://w3id.org/sappho-digital/vocab/place_",
     "person": "https://w3id.org/sappho-digital /vocab/person_",
     "phrase": "https://w3id.org/sappho-digital/vocab/phrase_",
-    "werk":     "https://w3id.org/sappho-digital/vocab/work_",
+    "werk":   "https://w3id.org/sappho-digital/vocab/work_",
 }
 
 # Zielpfade (ohne /vocab/) für lokale URIs je Kategorie
 CAT_TO_LOCAL_PATH = {
-    "motiv":  "feature/motif",  
-    "stoff":  "feature/plot",  
-    "thema":  "feature/topic",  
-    "ort":    "place",       
-    "person": "person",        
-    "phrase": "textpassage",   
+    "motiv":  "feature/motif",
+    "stoff":  "feature/plot",
+    "thema":  "feature/topic",
+    "ort":    "place",
+    "person": "person",
+    "phrase": "textpassage",
 }
 
 # Label-Index je Kategorie + globaler Fallback-Index
@@ -143,7 +150,7 @@ def local_uri_from_vocab(cat: str, vocab_uri: URIRef) -> Optional[URIRef]:
     local_path = CAT_TO_LOCAL_PATH.get(cat)
     if not local_path:
         return None
-    token = last_token(str(vocab_uri))  # z.B. motif_a26b7...
+    token = last_token(str(vocab_uri))
     return uri(f"{local_path}/{token}")
 
 def link_exact_match(node_uri: URIRef, vocab_uri: URIRef):
@@ -194,6 +201,7 @@ TYPE_LABEL_DE = {
     "work_ref": "work",
     "place_ref": "place",
     "person_ref": "person",
+    "character": "character",
 }
 
 def add_identifier(g: Graph, id_str: str, thing_uri: URIRef):
@@ -291,35 +299,61 @@ for xml_file in sorted(XML_DIR.glob("*.xml")):
         continue
     text_id = tid_elem.text.strip()
 
-    cats = {k: [] for k in ["motiv","stoff","thema","phrase","werk","ort","person"]}
+    cats = {
+        "motiv": [],
+        "stoff": [],
+        "thema": [],
+        "phrase": [],
+        "werk": [],    
+        "ort": [],
+        "person": [],  
+    }
 
-    for k in cats.keys():
+    for k in list(cats.keys()):
         for el in root.findall(f".//{k}"):
             val = text_or_type(el)
             if not val:
                 continue
-            cats[k].append(val)
 
-    # DF sammeln (Sets: Mehrfachnennungen im selben Dokument zählen nicht)
-    for k in ["motiv","thema","ort","person"]:
+            if k == "person":
+                cats[k].append({
+                    "label": val,
+                    "art": _norm_art(el.get("art")),
+                    "appellation": (el.get("appellation") or "").strip() or None,
+                })
+            elif k == "werk":
+                cats[k].append({
+                    "label": val,
+                    "art": _norm_art(el.get("art")),
+                })
+            else:
+                cats[k].append(val)
+
+    # DF sammeln
+    for k in ["motiv","thema","ort"]:
         for v in set(cats[k]):
             doc_occurs[k][v].add(text_id)
+
+    for v in {p["label"] for p in cats["person"]}:
+        doc_occurs["person"][v].add(text_id)
 
     for phr in set(cats["phrase"]):
         phrase_to_texts.setdefault(phr, set()).add(text_id)
         doc_occurs["phrase"][phr].add(text_id)
         if phr not in distinct_phrase_to_id:
-            # ID wird evtl. später durch Taxonomie-ID ersetzt
             distinct_phrase_to_id[phr] = f"textpassage_{stable_id(phr)}"
 
     elements_per_text[text_id] = cats
 
-    for k in ["motiv","stoff","thema","werk","ort","person"]:
+    for k in ["motiv","stoff","thema","ort"]:
         for v in cats[k]:
             _ = get_or_make_distinct(k, v)
 
-# Erlaubte Werte je Kategorie nach Filterregel (>= 2 Dokumente),
-# Ausnahme: "stoff" und "werk"
+    for w in cats["werk"]:
+        _ = get_or_make_distinct("werk", w["label"])
+    for p in cats["person"]:
+        _ = get_or_make_distinct("person", p["label"])
+
 allowed_values = {
     "motiv":  {v for v, s in doc_occurs["motiv"].items()  if len(s) >= 2},
     "thema":  {v for v, s in doc_occurs["thema"].items()  if len(s) >= 2},
@@ -335,7 +369,6 @@ def passes_filter(cat: str, val: str) -> bool:
 
 # Instanzen erzeugen
 
-# Hilfsfunktionen zum Erzeugen mit Taxonomie-ID-Übernahme
 def get_feature_uri_with_vocab(cat: str, label: str, fallback_id: str) -> Tuple[URIRef, str]:
     voc = find_vocab(cat, label)
     if voc:
@@ -343,7 +376,6 @@ def get_feature_uri_with_vocab(cat: str, label: str, fallback_id: str) -> Tuple[
         if local is not None:
             used_id = last_token(str(voc))
             return local, used_id
-    # Fallback: Logik mit Hash-ID
     return uri(f"{CAT_TO_LOCAL_PATH[cat]}/{fallback_id}"), fallback_id
 
 def get_entity_uri_with_vocab(cat: str, label: str, fallback_id: str) -> Tuple[URIRef, str]:
@@ -364,15 +396,14 @@ for text_id, cats in elements_per_text.items():
     text_uri = txt["uri"]
     text_title = literal_text(txt["label"]) or text_id
 
-    # alle vorhandenen Aussagen zur F2 übernehmen
     for p, o in g_src.predicate_objects(text_uri):
         g.add((text_uri, p, o))
 
-    # INT_Motif (Feature)
+    # INT_Motif
     for v in cats["motiv"]:
         if not passes_filter("motiv", v):
             continue
-        fid_fallback = get_or_make_distinct("motiv", v) 
+        fid_fallback = get_or_make_distinct("motiv", v)
         feat_uri, used_id = get_feature_uri_with_vocab("motiv", v, fid_fallback)
         g.add((feat_uri, RDF.type, INTRO.INT_Motif))
         g.add((feat_uri, RDFS.label, Literal(f"Motif: {v}", lang="de")))
@@ -380,14 +411,12 @@ for text_id, cats in elements_per_text.items():
         voc = find_vocab("motiv", v)
         if voc:
             link_exact_match(feat_uri, voc)
-        act_uri = add_actualization_common(
-            g, "motif", text_id, used_id, feat_uri, v, text_uri, text_title
-        )
+        act_uri = add_actualization_common(g, "motif", text_id, used_id, feat_uri, v, text_uri, text_title)
         g.add((text_uri, INTRO.R18_showsActualization, act_uri))
 
-    # INT_Plot (Feature)
+    # INT_Plot
     for v in cats["stoff"]:
-        fid_fallback = get_or_make_distinct("stoff", v)  
+        fid_fallback = get_or_make_distinct("stoff", v)
         feat_uri, used_id = get_feature_uri_with_vocab("stoff", v, fid_fallback)
         g.add((feat_uri, RDF.type, INTRO.INT_Plot))
         g.add((feat_uri, RDFS.label, Literal(f"Plot: {v}", lang="de")))
@@ -395,16 +424,14 @@ for text_id, cats in elements_per_text.items():
         voc = find_vocab("stoff", v)
         if voc:
             link_exact_match(feat_uri, voc)
-        act_uri = add_actualization_common(
-            g, "plot", text_id, used_id, feat_uri, v, text_uri, text_title
-        )
+        act_uri = add_actualization_common(g, "plot", text_id, used_id, feat_uri, v, text_uri, text_title)
         g.add((text_uri, INTRO.R18_showsActualization, act_uri))
 
-    # INT_Topic (Feature)
+    # INT_Topic
     for v in cats["thema"]:
         if not passes_filter("thema", v):
             continue
-        fid_fallback = get_or_make_distinct("thema", v) 
+        fid_fallback = get_or_make_distinct("thema", v)
         feat_uri, used_id = get_feature_uri_with_vocab("thema", v, fid_fallback)
         g.add((feat_uri, RDF.type, INTRO.INT_Topic))
         g.add((feat_uri, RDFS.label, Literal(f"Topic: {v}", lang="de")))
@@ -412,13 +439,14 @@ for text_id, cats in elements_per_text.items():
         voc = find_vocab("thema", v)
         if voc:
             link_exact_match(feat_uri, voc)
-        act_uri = add_actualization_common(
-            g, "topic", text_id, used_id, feat_uri, v, text_uri, text_title
-        )
+        act_uri = add_actualization_common(g, "topic", text_id, used_id, feat_uri, v, text_uri, text_title)
         g.add((text_uri, INTRO.R18_showsActualization, act_uri))
 
-    # INT18_Reference: WORK
-    for v in cats["werk"]:
+    # INT18_Reference: WORK (+ optional INT21_TextPassage wenn @art enthält "passage")
+    for w in cats["werk"]:
+        v = w["label"]
+        art = w.get("art") or ""
+
         v_clean = clean_uri_component(v)
 
         target = (text_index.get(v)
@@ -432,10 +460,9 @@ for text_id, cats in elements_per_text.items():
 
         voc = find_vocab("werk", ref_label)
         if voc:
-            work_id = last_token(str(voc))             
-            feat_id = work_id                    
+            feat_id = last_token(str(voc))
         else:
-            feat_id = f"{text_id}_{v_clean}"            
+            feat_id = f"{text_id}_{v_clean}"
 
         feat_uri = uri(f"feature/work_ref/{feat_id}")
         g.add((feat_uri, RDF.type, INTRO.INT18_Reference))
@@ -457,15 +484,22 @@ for text_id, cats in elements_per_text.items():
             for p, o in g_src.predicate_objects(ref_target_uri):
                 g.add((ref_target_uri, p, o))
 
+        if has_art_token(art, "passage"):
+            tp_id = f"textpassage_{stable_id(f'{text_id}|{ref_label}|{v}')}"
+            tp_uri = uri(f"textpassage/{tp_id}")
+            g.add((tp_uri, RDF.type, INTRO.INT21_TextPassage))
+            g.add((tp_uri, RDFS.label, Literal(f"Textpassage: {ref_label}", lang="de")))
+            g.add((tp_uri, INTRO.R30i_isTextPassageOf, text_uri))
+            g.add((text_uri, INTRO.R30_hasTextPassage, tp_uri))
 
     # INT18_Reference: PLACE
     for v in cats["ort"]:
         if not passes_filter("ort", v):
             continue
-        pid_fallback = get_or_make_distinct("ort", v) 
+        pid_fallback = get_or_make_distinct("ort", v)
         place_uri_local, used_id = get_entity_uri_with_vocab("ort", v, pid_fallback)
 
-        feat_uri = uri(f"feature/place_ref/{used_id}")  
+        feat_uri = uri(f"feature/place_ref/{used_id}")
         g.add((feat_uri, RDF.type, INTRO.INT18_Reference))
         g.add((feat_uri, RDFS.label, Literal(f"Reference to {v} (place)", lang="en")))
 
@@ -484,11 +518,16 @@ for text_id, cats in elements_per_text.items():
         g.add((place_uri_local, ECRM.P67i_is_referred_to_by, act_uri))
         g.add((text_uri, INTRO.R18_showsActualization, act_uri))
 
-    # INT18_Reference: PERSON
-    for v in cats["person"]:
+    # INT18_Reference: PERSON (+ optional INT_Character; + optional E75_Appellation auf beide Actualizations)
+    for pinfo in cats["person"]:
+        v = pinfo["label"]
+        art = pinfo.get("art") or ""
+        appellation = pinfo.get("appellation")
+
         if not passes_filter("person", v):
             continue
-        per_fallback = get_or_make_distinct("person", v)  
+
+        per_fallback = get_or_make_distinct("person", v)
         person_uri_local, used_id = get_entity_uri_with_vocab("person", v, per_fallback)
 
         feat_uri = uri(f"feature/person_ref/{used_id}")
@@ -510,7 +549,39 @@ for text_id, cats in elements_per_text.items():
         g.add((person_uri_local, ECRM.P67i_is_referred_to_by, act_uri))
         g.add((text_uri, INTRO.R18_showsActualization, act_uri))
 
-# INT21_TextPassage
+        # optional: INT_Character (+ Actualization + Interpretation ist in add_actualization_common enthalten)
+        char_act_uri: Optional[URIRef] = None
+        if has_art_token(art, "character"):
+            char_feat_uri = uri(f"feature/character/{used_id}")
+            g.add((char_feat_uri, RDF.type, INTRO.INT_Character))
+            g.add((char_feat_uri, RDFS.label, Literal(f"Character: {v}", lang="en")))
+
+            char_suffix = f"character_{used_id}"
+            char_act_uri = add_actualization_common(
+                g, "character", text_id, char_suffix, char_feat_uri, v, text_uri, text_title,
+                refers_to_uri=person_uri_local
+            )
+            g.add((text_uri, INTRO.R18_showsActualization, char_act_uri))
+
+        # @appellation -> E75_Conceptual_Object_Appellation an die Aktualisierung(en) hängen:
+        # - immer an person_ref-Actualization
+        # - zusätzlich auch an character-Actualization (falls vorhanden)
+        if appellation:
+            app_id = f"appellation_{stable_id(f'{text_id}|{used_id}|{appellation}')}"
+            app_uri = uri(f"appellation/{app_id}")
+            g.add((app_uri, RDF.type, ECRM.E75_Conceptual_Object_Appellation))
+            g.add((app_uri, RDFS.label, Literal(appellation, lang="de")))
+
+            # person_ref
+            g.add((act_uri, ECRM.P149_is_identified_by, app_uri))
+            g.add((app_uri, ECRM.P149i_identifies, act_uri))
+
+            # optional zusätzlich: character
+            if char_act_uri is not None:
+                g.add((char_act_uri, ECRM.P149_is_identified_by, app_uri))
+                g.add((app_uri, ECRM.P149i_identifies, char_act_uri))
+
+# INT21_TextPassage (aus <phrase> mit DF>=2)
 for phr, old_pid in list(distinct_phrase_to_id.items()):
     docs = phrase_to_texts.get(phr, set())
     if len(docs) < 2:
