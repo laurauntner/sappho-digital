@@ -1064,7 +1064,7 @@ body.page { overflow: auto !important; }
     }
     .dropdown-submenu > .dropdown-menu {
         top: 0;
-        left: 100%;
+        right: 100%;
         margin-left: .25rem;
     }
 }
