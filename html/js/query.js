@@ -108,7 +108,7 @@
         }
         
         executeBtn.disabled = true;
-        resultsDiv.innerHTML = '<div class="status loading">Query wird ausgeführt …</div>';
+        resultsDiv.innerHTML = '<div class="status loading">Query wird clientseitig ausgeführt … Bitte um etwas Geduld.</div>';
         exportControls.classList.add("hidden");
         
         try {
