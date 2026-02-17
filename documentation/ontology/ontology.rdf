@@ -850,7 +850,7 @@
 
   <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/about">
     <rdfs:label xml:lang="en">Link from expression to topic</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202506#INT_Topic"/>
     <owl:propertyChainAxiom rdf:parseType="Collection">
       <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202506#R18_showsActualization"/>
@@ -861,8 +861,8 @@
   <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/expr_relation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
     <rdfs:label xml:lang="en">Relation between two expressions</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
-    <rdfs:range rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
 
     <owl:propertyChainAxiom rdf:parseType="Collection">
       <rdf:Description>
@@ -876,20 +876,20 @@
 
   <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/has_manifestation">
     <rdfs:label xml:lang="en">has manifestation</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.cidoc-crm.org/lrmoo/F1_Work"/>
-    <rdfs:range rdf:resource="http://www.cidoc-crm.org/lrmoo/F3_Manifestation"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"/>
     <owl:propertyChainAxiom rdf:parseType="Collection">
-      <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R3_is_realised_in"/>
-      <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R4i_is_embodied_in"/>
+      <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R3_is_realised_in"/>
+      <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R4i_is_embodied_in"/>
     </owl:propertyChainAxiom>
   </owl:ObjectProperty>
 
   <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/expr_references">
     <rdfs:label xml:lang="en">Reference from expression to person, place or expression</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
     <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
-    <rdfs:range rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P67_refers_to"/>
     <owl:propertyChainAxiom rdf:parseType="Collection">
       <rdf:Description rdf:about="https://w3id.org/lso/intro/beta202506#R18_showsActualization"/>
@@ -901,8 +901,8 @@
     <rdfs:label xml:lang="en">Person, place or expression referenced by expression</rdfs:label>
     <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
     <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
-    <rdfs:domain rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
-    <rdfs:range rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P67i_is_referred_to_by"/>
     <owl:inverseOf rdf:resource="https://w3id.org/sappho-digital/ontology/expr_references"/>
   </owl:ObjectProperty>
@@ -911,7 +911,7 @@
     <rdfs:label xml:lang="en">
       The younger text possibly cites the text passage of the older text
     </rdfs:label>
-    <rdfs:domain rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:range rdf:resource="https://w3id.org/lso/intro/beta202506#INT21_TextPassage"/>
     <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P130_shows_features_of"/>
     <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P148_has_component"/>
@@ -925,7 +925,7 @@
       The older text is possibly cited by the younger text passage
     </rdfs:label>
     <rdfs:domain rdf:resource="https://w3id.org/lso/intro/beta202506#INT21_TextPassage"/>
-    <rdfs:range rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P130i_features_are_also_found_on"/>
     <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P148i_is_component_of"/>
     <owl:inverseOf rdf:resource="https://w3id.org/sappho-digital/ontology/tp_possibly_cites"/>
@@ -935,8 +935,8 @@
     <rdfs:label xml:lang="en">
       Younger expression possibly cites older expression
     </rdfs:label>
-    <rdfs:domain rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
-    <rdfs:range rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P130_shows_features_of"/>
     <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P148_has_component"/>
 
@@ -956,8 +956,8 @@
     <rdfs:label xml:lang="en">
       Older expression possibly cited by younger expression
     </rdfs:label>
-    <rdfs:domain rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
-    <rdfs:range rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
+    <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P130i_features_are_also_found_on"/>
     <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P148i_is_component_of"/>
     <owl:inverseOf rdf:resource="https://w3id.org/sappho-digital/ontology/expr_possibly_cites"/>
