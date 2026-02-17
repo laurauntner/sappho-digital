@@ -191,7 +191,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
   </owl:Class>
 
-  <owl:Class rdf:about="ecrm:E52_Time-Span">
+  <owl:Class rdf:about="http://erlangen-crm.org/current/E52_Time-Span">
     <rdfs:label xml:lang="en">E52 Time-Span</rdfs:label>
     <rdfs:label xml:lang="de">E52 Zeitspanne</rdfs:label>
     <rdfs:label xml:lang="el">E52 Χρονικό Διάστημα</rdfs:label>
@@ -203,7 +203,7 @@
     <rdfs:subClassOf rdf:resource="ecrm:E1_CRM_Entity"/>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:onProperty rdf:about="ecrm:P4i_is_time-span_of"/>
+        <owl:onProperty rdf:about="http://erlangen-crm.org/current/P4i_is_time-span_of"/>
         <owl:someValuesFrom rdf:resource="ecrm:E2_Temporal_Entity"/>
       </owl:Restriction>
     </rdfs:subClassOf>
