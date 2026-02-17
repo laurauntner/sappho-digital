@@ -117,6 +117,13 @@
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
+    
+    <!-- alignments -->
+    <xslt in="./documentation/alignments/alignments.rdf" out="${target}/alignments.html"
+        style="./xslt/alignments.xsl">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
 
     <!-- remove dummies -->
     <delete file="${target}/_bibl-entities-dummy.html"/>

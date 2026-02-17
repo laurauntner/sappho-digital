@@ -903,14 +903,30 @@
                                     role="button" data-bs-toggle="dropdown" aria-expanded="false"
                                     >Analyse</a>
                                 <ul class="dropdown-menu">
+                                    <li class="dropdown-submenu">
+                                        <a
+                                            class="dropdown-item dropdown-toggle custom-dropdown-link"
+                                            href="#">Datenmodell</a>
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                                <a class="dropdown-item custom-dropdown-link"
+                                                  href="ontology.html">Ontologie</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item custom-dropdown-link"
+                                                  href="alignments.html">Ontologie-Alignments</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item custom-dropdown-link"
+                                                  href="vocab.html">Vokabular</a>
+                                            </li>
+                                        </ul>
+                                    </li>
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
                                             href="analyse.html">Erläuterungen zur Analyse</a>
                                     </li>
-                                    <li>
-                                        <a class="dropdown-item custom-dropdown-link"
-                                            href="vocab.html">Vokabular</a>
-                                    </li>
+
                                     <li class="dropdown-submenu">
                                         <a
                                             class="dropdown-item dropdown-toggle custom-dropdown-link"
@@ -923,7 +939,8 @@
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"
-                                                  href="pers-refs.html">Personenreferenzen und Figuren</a>
+                                                  href="pers-refs.html">Personenreferenzen und
+                                                  Figuren</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"
@@ -931,7 +948,8 @@
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"
-                                                  href="work-refs.html">Werkreferenzen und Zitate</a>
+                                                  href="work-refs.html">Werkreferenzen und
+                                                  Zitate</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"
@@ -954,7 +972,8 @@
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link custom-dropdown-link" href="query.html">SPARQL</a>
+                                <a class="nav-link custom-dropdown-link" href="query.html"
+                                    >SPARQL</a>
                             </li>
                         </ul>
                     </div>

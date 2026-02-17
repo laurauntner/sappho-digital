@@ -1023,6 +1023,28 @@ body.page {
     min-width: 0;
 }
 
+.graph-wrap {
+  padding: 1rem;
+}
+
+.graph-meta {
+  margin: 0.5rem 0 1rem 0;
+  font-family: 'Geist';
+  color: #374151;
+}
+
+.graph-meta code {
+  background: #f3f4f6;
+  padding: 0.1rem 0.25rem;
+  border-radius: 6px;
+}
+
+.graph-canvas {
+  height: 800px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
 @media (max-width : 1100px) {
     .stats-two-cols {
         grid-template-columns: 1fr;
