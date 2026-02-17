@@ -31,9 +31,17 @@
 
     const options = {
       physics: {
-        enabled: true,
-        stabilization: { iterations: 200 }
-      },
+          enabled: true,
+          solver: "forceAtlas2Based",
+          stabilization: { iterations: 200 },
+          forceAtlas2Based: {
+            gravitationalConstant: -50,
+            centralGravity: 0.01,
+            springLength: 120,
+            springConstant: 0.08,
+            avoidOverlap: 1
+          }
+        },
       nodes: {
         shape: "dot",
 
