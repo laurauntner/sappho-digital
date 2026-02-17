@@ -18,7 +18,7 @@
 
   <!-- ECRM 240307 / CIDOC-CRM 7.1.3 -->
 
-  <owl:Class rdf:about="E21_Person">
+  <owl:Class rdf:about="ecrm:E21_Person">
     <rdfs:label xml:lang="en">E21 Person</rdfs:label>
     <rdfs:label xml:lang="de">E21 Person</rdfs:label>
     <rdfs:label xml:lang="el">E21 Πρόσωπο</rdfs:label>
@@ -27,18 +27,18 @@
     <rdfs:label xml:lang="ru">E21 Личность</rdfs:label>
     <rdfs:label xml:lang="zh">E21 人物</rdfs:label>
     <skos:notation>E21</skos:notation>
-    <rdfs:subClassOf rdf:resource="E20_Biological_Object"/>
-    <rdfs:subClassOf rdf:resource="E39_Actor"/>
+    <rdfs:subClassOf rdf:resource="ecrm:E20_Biological_Object"/>
+    <rdfs:subClassOf rdf:resource="ecrm:E39_Actor"/>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="P98i_was_born"/>
+        <owl:onProperty rdf:about="ecrm:P98i_was_born"/>
         <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
           >1</owl:cardinality>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="P152_has_parent"/>
+        <owl:onProperty rdf:about="ecrm:P152_has_parent"/>
         <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
           >2</owl:minCardinality>
       </owl:Restriction>
@@ -58,7 +58,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
   </owl:Class>
 
-  <owl:Class rdf:about="E35_Title">
+  <owl:Class rdf:about="ecrm:E35_Title">
     <rdfs:label xml:lang="en">E35 Title</rdfs:label>
     <rdfs:label xml:lang="de">E35 Titel</rdfs:label>
     <rdfs:label xml:lang="el">E35 Τίτλος</rdfs:label>
@@ -67,8 +67,8 @@
     <rdfs:label xml:lang="ru">E35 Заголовок</rdfs:label>
     <rdfs:label xml:lang="zh">E35 题名</rdfs:label>
     <skos:notation>E35</skos:notation>
-    <rdfs:subClassOf rdf:resource="E33_Linguistic_Object"/>
-    <rdfs:subClassOf rdf:resource="E41_Appellation"/>
+    <rdfs:subClassOf rdf:resource="ecrm:E33_Linguistic_Object"/>
+    <rdfs:subClassOf rdf:resource="ecrm:E41_Appellation"/>
     <rdfs:comment xml:lang="en">Scope note: This class comprises the textual strings that within a
       cultural context can be clearly identified as titles due to their form. Being a subclass of
       E41 Appellation, E35 Title can only be used when such a string is actually used as a title of
@@ -83,7 +83,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E35_Title"/>
   </owl:Class>
 
-  <owl:Class rdf:about="E36_Visual_Item">
+  <owl:Class rdf:about="ecrm:E36_Visual_Item">
     <rdfs:label xml:lang="en">E36 Visual Item</rdfs:label>
     <rdfs:label xml:lang="de">E36 Bildliches</rdfs:label>
     <rdfs:label xml:lang="el">E36 Οπτικό Στοιχείο</rdfs:label>
@@ -92,7 +92,7 @@
     <rdfs:label xml:lang="ru">E36 Визуальный Предмет</rdfs:label>
     <rdfs:label xml:lang="zh">E36 可视项</rdfs:label>
     <skos:notation>E36</skos:notation>
-    <rdfs:subClassOf rdf:resource="E73_Information_Object"/>
+    <rdfs:subClassOf rdf:resource="ecrm:E73_Information_Object"/>
     <rdfs:comment xml:lang="en">Scope note: This class comprises the intellectual or conceptual
       aspects of recognisable marks and images. This class does not intend to describe the
       idiosyncratic characteristics of an individual physical embodiment of a visual item, but the
@@ -116,7 +116,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item"/>
   </owl:Class>
 
-  <owl:Class rdf:about="E41_Appellation">
+  <owl:Class rdf:about="ecrm:E41_Appellation">
     <rdfs:label xml:lang="en">E41 Appellation</rdfs:label>
     <rdfs:label xml:lang="de">E41 Benennung</rdfs:label>
     <rdfs:label xml:lang="el">E41 Ονομασία</rdfs:label>
@@ -125,7 +125,7 @@
     <rdfs:label xml:lang="ru">E41 Обозначение</rdfs:label>
     <rdfs:label xml:lang="zh">E41 称谓</rdfs:label>
     <skos:notation>E41</skos:notation>
-    <rdfs:subClassOf rdf:resource="E90_Symbolic_Object"/>
+    <rdfs:subClassOf rdf:resource="ecrm:E90_Symbolic_Object"/>
     <rdfs:comment xml:lang="en">Scope note: This class comprises all signs, either meaningful or
       not, or arrangements of signs following a specific syntax, that are used or can be used to
       refer to and identify a specific instance of some class within a certain context. Instances of
@@ -163,7 +163,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"/>
   </owl:Class>
 
-  <owl:Class rdf:about="E42_Identifier">
+  <owl:Class rdf:about="ecrm:E42_Identifier">
     <rdfs:label xml:lang="en">E42 Identifier</rdfs:label>
     <rdfs:label xml:lang="de">E42 Kennung</rdfs:label>
     <rdfs:label xml:lang="el">E42 Κωδικός Αναγνώρισης</rdfs:label>
@@ -172,7 +172,7 @@
     <rdfs:label xml:lang="ru">E42 Идентификатор Объекта</rdfs:label>
     <rdfs:label xml:lang="zh">E42 标识符</rdfs:label>
     <skos:notation>E42</skos:notation>
-    <rdfs:subClassOf rdf:resource="E41_Appellation"/>
+    <rdfs:subClassOf rdf:resource="ecrm:E41_Appellation"/>
     <rdfs:comment xml:lang="en">Scope note: This class comprises strings or codes assigned to
       instances of E1 CRM Entity in order to identify them uniquely and permanently within the
       context of one or more organisations. Such codes are often known as inventory numbers,
@@ -191,7 +191,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E42_Identifier"/>
   </owl:Class>
 
-  <owl:Class rdf:about="E52_Time-Span">
+  <owl:Class rdf:about="ecrm:E52_Time-Span">
     <rdfs:label xml:lang="en">E52 Time-Span</rdfs:label>
     <rdfs:label xml:lang="de">E52 Zeitspanne</rdfs:label>
     <rdfs:label xml:lang="el">E52 Χρονικό Διάστημα</rdfs:label>
@@ -200,11 +200,11 @@
     <rdfs:label xml:lang="ru">E52 Интервал Времени</rdfs:label>
     <rdfs:label xml:lang="zh">E52 时段</rdfs:label>
     <skos:notation>E52</skos:notation>
-    <rdfs:subClassOf rdf:resource="E1_CRM_Entity"/>
+    <rdfs:subClassOf rdf:resource="ecrm:E1_CRM_Entity"/>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="P4i_is_time-span_of"/>
-        <owl:someValuesFrom rdf:resource="E2_Temporal_Entity"/>
+        <owl:onProperty rdf:about="ecrm:P4i_is_time-span_of"/>
+        <owl:someValuesFrom rdf:resource="ecrm:E2_Temporal_Entity"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:comment xml:lang="en">Scope note: This class comprises abstract temporal extents, in the
@@ -233,7 +233,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span"/>
   </owl:Class>
 
-  <owl:Class rdf:about="E53_Place">
+  <owl:Class rdf:about="ecrm:E53_Place">
     <rdfs:label xml:lang="en">E53 Place</rdfs:label>
     <rdfs:label xml:lang="de">E53 Ort</rdfs:label>
     <rdfs:label xml:lang="el">E53 Τόπος</rdfs:label>
@@ -242,10 +242,10 @@
     <rdfs:label xml:lang="ru">E53 Место</rdfs:label>
     <rdfs:label xml:lang="zh">E53 地点</rdfs:label>
     <skos:notation>E53</skos:notation>
-    <rdfs:subClassOf rdf:resource="E1_CRM_Entity"/>
+    <rdfs:subClassOf rdf:resource="ecrm:E1_CRM_Entity"/>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="P59i_is_located_on_or_within"/>
+        <owl:onProperty rdf:about="ecrm:P59i_is_located_on_or_within"/>
         <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
           >1</owl:maxCardinality>
       </owl:Restriction>
@@ -278,7 +278,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E53_Place"/>
   </owl:Class>
 
-  <owl:Class rdf:about="E55_Type">
+  <owl:Class rdf:about="ecrm:E55_Type">
     <rdfs:label xml:lang="en">E55 Type</rdfs:label>
     <rdfs:label xml:lang="de">E55 Typus</rdfs:label>
     <rdfs:label xml:lang="el">E55 Τύπος</rdfs:label>
@@ -287,10 +287,10 @@
     <rdfs:label xml:lang="ru">E55 Тип</rdfs:label>
     <rdfs:label xml:lang="zh">E55 类型</rdfs:label>
     <skos:notation>E55</skos:notation>
-    <rdfs:subClassOf rdf:resource="E28_Conceptual_Object"/>
+    <rdfs:subClassOf rdf:resource="ecrm:E28_Conceptual_Object"/>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="P135i_was_created_by"/>
+        <owl:onProperty rdf:about="ecrm:P135i_was_created_by"/>
         <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
           >1</owl:maxCardinality>
       </owl:Restriction>
@@ -312,7 +312,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
   </owl:Class>
 
-  <owl:Class rdf:about="E67_Birth">
+  <owl:Class rdf:about="ecrm:E67_Birth">
     <rdfs:label xml:lang="en">E67 Birth</rdfs:label>
     <rdfs:label xml:lang="de">E67 Geburt</rdfs:label>
     <rdfs:label xml:lang="el">E67 Γέννηση</rdfs:label>
@@ -321,23 +321,23 @@
     <rdfs:label xml:lang="ru">E67 Рождение</rdfs:label>
     <rdfs:label xml:lang="zh">E67 出生</rdfs:label>
     <skos:notation>E67</skos:notation>
-    <rdfs:subClassOf rdf:resource="E63_Beginning_of_Existence"/>
+    <rdfs:subClassOf rdf:resource="ecrm:E63_Beginning_of_Existence"/>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="P98_brought_into_life"/>
-        <owl:someValuesFrom rdf:resource="E21_Person"/>
+        <owl:onProperty rdf:about="ecrm:P98_brought_into_life"/>
+        <owl:someValuesFrom rdf:resource="ecrm:E21_Person"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="P97_from_father"/>
-        <owl:someValuesFrom rdf:resource="E21_Person"/>
+        <owl:onProperty rdf:about="ecrm:P97_from_father"/>
+        <owl:someValuesFrom rdf:resource="ecrm:E21_Person"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="P96_by_mother"/>
-        <owl:someValuesFrom rdf:resource="E21_Person"/>
+        <owl:onProperty rdf:about="ecrm:P96_by_mother"/>
+        <owl:someValuesFrom rdf:resource="ecrm:E21_Person"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:comment xml:lang="en">Scope note: This class comprises the births of human beings. E67
@@ -352,7 +352,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E67_Birth"/>
   </owl:Class>
 
-  <owl:Class rdf:about="E69_Death">
+  <owl:Class rdf:about="ecrm:E69_Death">
     <rdfs:label xml:lang="en">E69 Death</rdfs:label>
     <rdfs:label xml:lang="de">E69 Tod</rdfs:label>
     <rdfs:label xml:lang="el">E69 Θάνατος</rdfs:label>
@@ -361,11 +361,11 @@
     <rdfs:label xml:lang="ru">E69 Смерть</rdfs:label>
     <rdfs:label xml:lang="zh">E69 死亡</rdfs:label>
     <skos:notation>E69</skos:notation>
-    <rdfs:subClassOf rdf:resource="E64_End_of_Existence"/>
+    <rdfs:subClassOf rdf:resource="ecrm:E64_End_of_Existence"/>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="P100_was_death_of"/>
-        <owl:someValuesFrom rdf:resource="E21_Person"/>
+        <owl:onProperty rdf:about="ecrm:P100_was_death_of"/>
+        <owl:someValuesFrom rdf:resource="ecrm:E21_Person"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:comment xml:lang="en">Scope note: This class comprises the deaths of human beings. If a
@@ -376,7 +376,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E69_Death"/>
   </owl:Class>
 
-  <owl:Class rdf:about="E73_Information_Object">
+  <owl:Class rdf:about="ecrm:E73_Information_Object">
     <rdfs:label xml:lang="en">E73 Information Object</rdfs:label>
     <rdfs:label xml:lang="de">E73 Informationsgegenstand</rdfs:label>
     <rdfs:label xml:lang="el">E73 Πληροφοριακό Αντικείμενο</rdfs:label>
@@ -385,8 +385,8 @@
     <rdfs:label xml:lang="ru">E73 Информационный Объект</rdfs:label>
     <rdfs:label xml:lang="zh">E73 信息对象</rdfs:label>
     <skos:notation>E73</skos:notation>
-    <rdfs:subClassOf rdf:resource="E89_Propositional_Object"/>
-    <rdfs:subClassOf rdf:resource="E90_Symbolic_Object"/>
+    <rdfs:subClassOf rdf:resource="ecrm:E89_Propositional_Object"/>
+    <rdfs:subClassOf rdf:resource="ecrm:E90_Symbolic_Object"/>
     <rdfs:comment xml:lang="en">Scope note: This class comprises identifiable immaterial items, such
       as poems, jokes, data sets, images, texts, multimedia objects, procedural prescriptions,
       computer program code, algorithm or mathematical formulae, that have an objectively
@@ -406,7 +406,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
   </owl:Class>
 
-  <owl:Class rdf:about="E74_Group">
+  <owl:Class rdf:about="ecrm:E74_Group">
     <rdfs:label xml:lang="en">E74 Group</rdfs:label>
     <rdfs:label xml:lang="de">E74 Menschliche Gruppe</rdfs:label>
     <rdfs:label xml:lang="el">E74 Ομάδα</rdfs:label>
@@ -415,31 +415,31 @@
     <rdfs:label xml:lang="ru">E74 Группа</rdfs:label>
     <rdfs:label xml:lang="zh">E74 团体</rdfs:label>
     <skos:notation>E74</skos:notation>
-    <rdfs:subClassOf rdf:resource="E39_Actor"/>
+    <rdfs:subClassOf rdf:resource="ecrm:E39_Actor"/>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="P144i_gained_member_by"/>
+        <owl:onProperty rdf:about="ecrm:P144i_gained_member_by"/>
         <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
           >2</owl:minCardinality>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="P95i_was_formed_by"/>
+        <owl:onProperty rdf:about="ecrm:P95i_was_formed_by"/>
         <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
           >1</owl:maxCardinality>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="P146i_lost_member_by"/>
+        <owl:onProperty rdf:about="ecrm:P146i_lost_member_by"/>
         <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
           >0</owl:minCardinality>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="P107_has_current_or_former_member"/>
+        <owl:onProperty rdf:about="ecrm:P107_has_current_or_former_member"/>
         <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
           >2</owl:minCardinality>
       </owl:Restriction>
@@ -468,18 +468,18 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E74_Group"/>
   </owl:Class>
 
-  <owl:Class rdf:about="E90_Symbolic_Object">
+  <owl:Class rdf:about="ecrm:E90_Symbolic_Object">
     <rdfs:label xml:lang="en">E90 Symbolic Object</rdfs:label>
     <rdfs:label xml:lang="de">E90 Symbolisches Objekt</rdfs:label>
     <rdfs:label xml:lang="fr">E90 Objet symbolique</rdfs:label>
     <rdfs:label xml:lang="zh">E90 符号对象</rdfs:label>
     <skos:notation>E90</skos:notation>
-    <rdfs:subClassOf rdf:resource="E28_Conceptual_Object"/>
-    <rdfs:subClassOf rdf:resource="E72_Legal_Object"/>
+    <rdfs:subClassOf rdf:resource="ecrm:E28_Conceptual_Object"/>
+    <rdfs:subClassOf rdf:resource="ecrm:E72_Legal_Object"/>
     <rdfs:subClassOf>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="P106_is_composed_of"/>
-        <owl:someValuesFrom rdf:resource="E90_Symbolic_Object"/>
+        <owl:onProperty rdf:about="ecrm:P106_is_composed_of"/>
+        <owl:someValuesFrom rdf:resource="ecrm:E90_Symbolic_Object"/>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:comment xml:lang="en">Scope note: This class comprises identifiable symbols and any
@@ -507,7 +507,7 @@
 
   <!-- LRMOO v1.1.1 -->
 
-  <owl:Class rdf:about="F1_Work">
+  <owl:Class rdf:about="lrmoo:F1_Work">
     <rdfs:label xml:lang="en">F1 Work</rdfs:label>
     <skos:notation>F1</skos:notation>
     <skos:prefLabel xml:lang="en">Work</skos:prefLabel>
@@ -546,7 +546,7 @@
       E89(x) </rdfs:comment>
   </owl:Class>
 
-  <owl:Class rdf:about="F27_Work_Creation">
+  <owl:Class rdf:about="lrmoo:F27_Work_Creation">
     <rdfs:label xml:lang="en">F27 Work Creation</rdfs:label>
     <skos:notation>F27</skos:notation>
     <skos:prefLabel xml:lang="en">Work Creation</skos:prefLabel>
@@ -585,7 +585,7 @@
       - F27(x) ⇒ E65(x) </rdfs:comment>
   </owl:Class>
 
-  <owl:Class rdf:about="F28_Expression_Creation">
+  <owl:Class rdf:about="lrmoo:F28_Expression_Creation">
     <rdfs:label xml:lang="en">F28 Expression Creation</rdfs:label>
     <skos:notation>F28</skos:notation>
     <skos:prefLabel xml:lang="en">Expression Creation</skos:prefLabel>
@@ -622,7 +622,7 @@
       ⇒ E12(x) - F28(x) ⇒ E65(x) </rdfs:comment>
   </owl:Class>
 
-  <owl:Class rdf:about="F2_Expression">
+  <owl:Class rdf:about="lrmoo:F2_Expression">
     <rdfs:label xml:lang="en">F2 Expression</rdfs:label>
     <skos:notation>F2</skos:notation>
     <skos:prefLabel xml:lang="en">Expression</skos:prefLabel>
@@ -668,7 +668,7 @@
     </rdfs:comment>
   </owl:Class>
 
-  <owl:Class rdf:about="F30_Manifestation_Creation">
+  <owl:Class rdf:about="lrmoo:F30_Manifestation_Creation">
     <rdfs:label xml:lang="en">F30 Manifestation Creation</rdfs:label>
     <skos:notation>F30</skos:notation>
     <skos:prefLabel xml:lang="en">Manifestation Creation</skos:prefLabel>
@@ -690,7 +690,7 @@
       Logic: - F30(x) ⇒ E12(x) - F30(x) ⇒ E65(x) </rdfs:comment>
   </owl:Class>
 
-  <owl:Class rdf:about="F3_Manifestation">
+  <owl:Class rdf:about="lrmoo:F3_Manifestation">
     <rdfs:label xml:lang="en">F3 Manifestation</rdfs:label>
     <skos:notation>F3</skos:notation>
     <skos:prefLabel xml:lang="en">Manifestation</skos:prefLabel>
