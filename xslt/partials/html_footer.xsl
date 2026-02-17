@@ -9,7 +9,7 @@
             || ', '
             || format-time(xs:time($run-start), '[H]:[m01]')"/>
         <div id="wrapper-footer-full">
-            <a href="imprint.html">© Laura Untner 2025 (zuletzt aktualisiert am <xsl:value-of
+            <a href="imprint.html">© Laura Untner 2026 (zuletzt aktualisiert am <xsl:value-of
                     select="$build-stamp"/>)</a>
         </div>
         <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"/>
