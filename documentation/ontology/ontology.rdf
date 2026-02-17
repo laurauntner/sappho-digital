@@ -12,7 +12,7 @@
   <owl:Ontology rdf:about="https://w3id.org/sappho-digital/ontology/">
     <rdfs:label xml:lang="en">Sappho Digital Ontology</rdfs:label>
     <owl:imports rdf:resource="http://erlangen-crm.org/current/"/>
-    <owl:imports rdf:resource="https://w3id.org/lso/intro/currentbeta#"/>
+    <owl:imports rdf:resource="https://w3id.org/lso/intro/currentbeta"/>
     <owl:imports rdf:resource="http://www.cidoc-crm.org/lrmoo/"/>
   </owl:Ontology>
 
