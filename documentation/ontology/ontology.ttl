@@ -15,7 +15,728 @@
     <https://w3id.org/lso/intro/currentbeta#> ,
     <http://www.cidoc-crm.org/lrmoo/> .
 
-## New Properties ##
+#################################################################
+# ECRM 240307 / CIDOC-CRM 7.1.3
+#################################################################
+
+<E21_Person> a owl:Class ;
+  rdfs:label "E21 Person"@en, "E21 Person"@de, "E21 Πρόσωπο"@el, "E21 Personne"@fr,
+             "E21 Pessoa"@pt, "E21 Личность"@ru, "E21 人物"@zh ;
+  skos:notation "E21" ;
+  rdfs:subClassOf
+    <E20_Biological_Object> ,
+    <E39_Actor> ,
+    [ a owl:Restriction ;
+      owl:onProperty <P98i_was_born/> ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger
+    ] ,
+    [ a owl:Restriction ;
+      owl:onProperty <P152_has_parent/> ;
+      owl:minCardinality "2"^^xsd:int
+    ] ;
+  rdfs:comment """Scope note: This class comprises real persons who live or are
+      assumed to have lived. Legendary figures that may have existed, such as Ulysses and King
+      Arthur, fall into this class if the documentation refers to them as historical figures. In
+      cases where doubt exists as to whether several persons are in fact identical, multiple
+      instances can be created and linked to indicate their relationship. The CIDOC CRM does not
+      propose a specific form to support reasoning about possible identity. In a bibliographic
+      context, a name presented following the conventions usually employed for personal names will
+      be assumed to correspond to an actual real person (an instance of E21 Person), unless evidence
+      is available to indicate that this is not the case. The fact that a persona may erroneously be
+      classified as an instance of E21 Person does not imply that the concept comprises personae.
+      Examples: - Tut-Ankh-Amun (Edwards and Boltin, 1979) - Nelson Mandela (Brown and Hort, 2006)
+      In First Order Logic: - E21(x) ⇒ E20(x) - E21(x) ⇒ E39(x) """@en ;
+  owl:sameAs <http://www.cidoc-crm.org/cidoc-crm/E21_Person> .
+
+<E35_Title> a owl:Class ;
+  rdfs:label "E35 Title"@en, "E35 Titel"@de, "E35 Τίτλος"@el, "E35 Titre"@fr,
+             "E35 Título"@pt, "E35 Заголовок"@ru, "E35 题名"@zh ;
+  skos:notation "E35" ;
+  rdfs:subClassOf <E33_Linguistic_Object>, <E41_Appellation> ;
+  rdfs:comment """Scope note: This class comprises the textual strings that within a
+      cultural context can be clearly identified as titles due to their form. Being a subclass of
+      E41 Appellation, E35 Title can only be used when such a string is actually used as a title of
+      a work, such as a text, an artwork, or a piece of music. Titles are proper noun phrases or
+      verbal phrases, and should not be confused with generic object names such as “chair”,
+      “painting”, or “book” (the latter are common nouns that stand for instances of E55 Type).
+      Titles may be assigned by the creator of the work itself, or by a social group. This class
+      also comprises the translations of titles that are used as surrogates for the original titles
+      in different social contexts. Examples: - “The Merchant of Venice” (McCullough, 2005) - “Mona
+      Lisa” (Mohen, Menu and Mottin, 2006) - “La Pie” (Bortolatto, 1981) - “Lucy in the Sky with
+      Diamonds” (Lennon, 1967) In First Order Logic: - E35(x) ⇒ E33(x) - E35(x) ⇒ E41(x) """@en ;
+  owl:sameAs <http://www.cidoc-crm.org/cidoc-crm/E35_Title> .
+
+<E36_Visual_Item> a owl:Class ;
+  rdfs:label "E36 Visual Item"@en, "E36 Bildliches"@de, "E36 Οπτικό Στοιχείο"@el,
+             "E36 Entité visuelle"@fr, "E36 Item Visual"@pt, "E36 Визуальный Предмет"@ru,
+             "E36 可视项"@zh ;
+  skos:notation "E36" ;
+  rdfs:subClassOf <E73_Information_Object> ;
+  rdfs:comment """Scope note: This class comprises the intellectual or conceptual
+      aspects of recognisable marks and images. This class does not intend to describe the
+      idiosyncratic characteristics of an individual physical embodiment of a visual item, but the
+      underlying prototype. For example, a mark such as the ICOM logo is generally considered to be
+      the same logo when used on any number of publications. The size, orientation, and colour may
+      change, but the logo remains uniquely identifiable. The same is true of images that are
+      reproduced many times. This means that visual items are independent of their physical support.
+      The E36 Visual Item class provides a means of identifying and linking together instances of
+      E24 Physical Human-Made Thing that carry the same visual symbols, marks, or images, etc. The
+      property P62 depicts (is depicted by) between E24 Physical Human-Made Thing and the depicted
+      subjects (E1 CRM Entity) can be regarded as a shortcut of the more fully developed path from
+      E24 Physical Human-Made Thing through P65 shows visual item (is shown by), E36 Visual Item,
+      P138 represents (has representation) to E1 CRM Entity, which in addition captures the optical
+      features of the depiction. Examples: - the visual appearance of Monet’s “La Pie” (Bortolatto,
+      1981) - the Coca-Cola logo (E34) - the Chi-Rho (E37) - the communist red star (E37) - the
+      surface shape of Auguste Rodin's statue "Le Penseur" [There exist more than 20 copies, even of
+      different size. Therefore, this is a good example that it is only the common surface shape, an
+      immaterial visual item, which justifies displaying these copies as works of Auguste Rodin. As
+      usual practice, Rodin himself did not produce the bronze statue, but only the prototype
+      model.] In First Order Logic: - E36(x) ⇒ E73(x) """@en ;
+  owl:sameAs <http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item> .
+
+<E41_Appellation> a owl:Class ;
+  rdfs:label "E41 Appellation"@en, "E41 Benennung"@de, "E41 Ονομασία"@el,
+             "E41 Appellation"@fr, "E41 Designação"@pt, "E41 Обозначение"@ru,
+             "E41 称谓"@zh ;
+  skos:notation "E41" ;
+  rdfs:subClassOf <E90_Symbolic_Object> ;
+  rdfs:comment """Scope note: This class comprises all signs, either meaningful or
+      not, or arrangements of signs following a specific syntax, that are used or can be used to
+      refer to and identify a specific instance of some class within a certain context. Instances of
+      E41 Appellation do not identify things by their meaning, even if they happen to have one, but
+      by convention, tradition, or agreement. Instances of E41 Appellation are cultural constructs;
+      as such, they have a context, a history, and a use in time and space by some group of users. A
+      given instance of E41 Appellation can have alternative forms, i.e. other instances of E41
+      Appellation that are regarded as equivalent, regardless of the thing it denotes. Different
+      languages may use different appellations for the same thing, such as the names of major
+      cities. Some appellations may be formulated using a valid noun phrase of a particular
+      language. In these cases, the respective instances of E41 Appellation should also be declared
+      as instances of E33 Linguistic Object. Then the language using the appellation can be declared
+      with the property P72 has language: E56 Language. Instances of E41 Appellation may be used to
+      identify any instance of E1 CRM Entity and sometimes are characteristic for instances of more
+      specific subclasses of E1 CRM Entity, such as for instances of E52 Time-Span (for instance
+      “dates”), E39 Actor, E53 Place or E28 Conceptual Object. Postal addresses and E-mail addresses
+      are characteristic examples of identifiers used by services transporting things between
+      clients. Even numerically expressed identifiers for extents in space or time are also regarded
+      as instances of E41 Appellation, such as Gregorian dates or spatial coordinates, even though
+      they allow for determining some time or location by a known procedure starting from a
+      reference point and by virtue of that fact play a double role as instances of E59 Primitive
+      Value. E41 Appellation should not be confused with the act of naming something. Cf. E15
+      Identifier Assignment. Examples: - “Martin” - “Aquae Sulis Minerva” - “the Merchant of Venice”
+      (E35) (McCullough, 2005) - “Spigelia marilandica (L.) L.” [not the species, just the name]
+      (Hershberger, Robacker and Jenkins, 2015) - “information science” [not the science itself, but
+      the name used to refer to the subject matter in an English-speaking context] - “安” [Chinese
+      “an”, meaning “peace”] - “6°5’29”N 45°12’13”W” [example of a spatial coordinate] - “Black
+      queen’s bishop 4” [chess coordinate, example of an identifier in a conceptual space (E89)] -
+      “19-MAR-1922” [example of date] - “+41 22 418 5571” [example of contact point] -
+      “weasel@paveprime.com” [example of contact point] - “CH-1211, Genève” [example of place
+      appellation] - “1-29-3 Otsuka, Bunkyo-ku, Tokyo, 121, Japan” [example of a postal address] -
+      “the poop deck of H.M.S Victory” [example of a section definition on a human-made object
+      (E22)] - “the Venus de Milo’s left buttock” [example of a section definition on a human-made
+      object (E22)] In First Order Logic: - E41(x) ⇒ E90(x) """@en ;
+  owl:sameAs <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> .
+
+<E42_Identifier> a owl:Class ;
+  rdfs:label "E42 Identifier"@en, "E42 Kennung"@de, "E42 Κωδικός Αναγνώρισης"@el,
+             "E42 Identifiant"@fr, "E42 Identificador de Objeto"@pt, "E42 Идентификатор Объекта"@ru,
+             "E42 标识符"@zh ;
+  skos:notation "E42" ;
+  rdfs:subClassOf <E41_Appellation> ;
+  rdfs:comment """Scope note: This class comprises strings or codes assigned to
+      instances of E1 CRM Entity in order to identify them uniquely and permanently within the
+      context of one or more organisations. Such codes are often known as inventory numbers,
+      registration codes, etc. and are typically composed of alphanumeric sequences. Postal
+      addresses, telephone numbers, URLs and e-mail addresses are characteristic examples of
+      identifiers used by services transporting things between clients. The class E42 Identifier is
+      not normally used for machine-generated identifiers used for automated processing unless these
+      are also used by human agents. Examples: - “MM.GE.195” - “13.45.1976” - “OXCMS: 1997.4.1”
+      (fictitious) - “ISSN 0041-5278” [Identifier for “The UNESCO Courier (Print)”] - ISRC
+      “FIFIN8900186” [Identifier for : Kraft (29 min 14 s) / Magnus Lindberg, comp. ; Toimii
+      Ensemble ; Swedish Radio symphony orchestra ; Esa-Pekka Salonen, dir.] - Shelf mark “Res 8 P
+      10” - “Guillaume de Machaut (1300?-1377)” [a controlled personal name heading that follows the
+      French rules] (Reaney, 1974) - “+41 22 418 5571” - “ weasel@paveprime.com” - “Rue David Dufour
+      5, CH-1211, Genève” - “1-29-3 Otsuka, Bunkyo-ku, Tokyo, 121, Japan” In First Order Logic: -
+      E42(x) ⇒ E41(x) """@en ;
+  owl:sameAs <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier> .
+
+<E52_Time-Span> a owl:Class ;
+  rdfs:label "E52 Time-Span"@en, "E52 Zeitspanne"@de, "E52 Χρονικό Διάστημα"@el,
+             "E52 Intervalle temporel"@fr, "E52 Período de Tempo"@pt, "E52 Интервал Времени"@ru,
+             "E52 时段"@zh ;
+  skos:notation "E52" ;
+  rdfs:subClassOf
+    <E1_CRM_Entity> ,
+    [ a owl:Restriction ;
+      owl:onProperty <P4i_is_time-span_of/> ;
+      owl:someValuesFrom <E2_Temporal_Entity>
+    ] ;
+  rdfs:comment """Scope note: This class comprises abstract temporal extents, in the
+      sense of Galilean physics, having a beginning, an end, and a duration. Instances of E52
+      Time-Span have no semantic connotations about phenomena happening within the temporal extent
+      they represent. They do not convey any meaning other than a positioning on the “time-line” of
+      chronology. The actual extent of an instance of E52 Time-Span can be approximated by
+      properties of E52 Time-Span giving inner and outer bounds in the form of dates (instances of
+      E61 Time Primitive). Comparing knowledge about time-spans is fundamental for chronological
+      reasoning. Some instances of E52 Time-Span may be defined as the actual, in principle
+      observable, temporal extent of instances of E2 Temporal Entity via the property P4 has
+      time-span (is time-span of): E52 Time-Span. They constitute phenomenal time-spans as defined
+      in CRMgeo (Doerr &amp; Hiebel 2013). Since our knowledge of history is imperfect and physical
+      phenomena are fuzzy in nature, the extent of phenomenal time-spans can only be described in
+      approximation. An extreme case of approximation, might, for example, define an instance of E52
+      Time-Span having unknown beginning, end and duration. It may, nevertheless, be associated with
+      other descriptions by which people can infer knowledge about it, such as in relative
+      chronologies. Some instances of E52 may be defined precisely as representing a declaration of
+      a temporal extent, as, for instance, done in a business contract. They constitute declarative
+      time-spans as defined in CRMgeo (Doerr &amp; Hiebel 2013) and can be described via the
+      property E61 Time Primitive P170 defines time (time is defined by): E52 Time-Span. When used
+      as a common E52 Time-Span for two events, it will nevertheless describe them as being
+      simultaneous, even if nothing else is known. Examples: - 1961 - From 12-17-1993 to 12-8-1996 -
+      14h30 to 16h22 4(th) July 1945 - 9.30 am 1.1.1999 to 2.00 pm 1.1.1999 - the time-span of the
+      Ming Dynasty (Chan, 2011) In First Order Logic: - E52(x) ⇒ E1(x) """@en ;
+  owl:sameAs <http://www.cidoc-crm.org/cidoc-crm/E52_Time-Span> .
+
+<E53_Place> a owl:Class ;
+  rdfs:label "E53 Place"@en, "E53 Ort"@de, "E53 Τόπος"@el, "E53 Lieu"@fr,
+             "E53 Local"@pt, "E53 Место"@ru, "E53 地点"@zh ;
+  skos:notation "E53" ;
+  rdfs:subClassOf
+    <E1_CRM_Entity> ,
+    [ a owl:Restriction ;
+      owl:onProperty <P59i_is_located_on_or_within/> ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+    ] ;
+  rdfs:comment """Scope note: This class comprises extents in the natural space where
+      people live, in particular on the surface of the Earth, in the pure sense of physics:
+      independent from temporal phenomena and matter. They may serve describing the physical
+      location of things or phenomena or other areas of interest. Geometrically, instances of E53
+      Place constitute single contiguous areas or a finite aggregation of disjoint areas in space
+      which are each individually contiguous. They may have fuzzy boundaries. The instances of E53
+      Place are usually determined by reference to the position of “immobile” objects such as
+      buildings, cities, mountains, rivers, or dedicated geodetic marks, but may also be determined
+      by reference to mobile objects. A Place can be determined by combining a frame of reference
+      and a location with respect to this frame. It is sometimes argued that instances of E53 Place
+      are best identified by global coordinates or absolute reference systems. However, relative
+      references are often more relevant in the context of cultural documentation and tend to be
+      more precise. In particular, people are often interested in position in relation to large,
+      mobile objects, such as ships. For example, the Place at which Nelson died is known with
+      reference to a large mobile object, i.e. H.M.S Victory. A resolution of this Place in terms of
+      absolute coordinates would require knowledge of the movements of the vessel and the precise
+      time of death, either of which may be revised, and the result would lack historical and
+      cultural relevance. Any instance of E18 Physical Thing can serve as a frame of reference for
+      an instance of E53 Place. This may be documented using the property P157 is at rest relative
+      to (provides reference space for). Examples: - the extent of the UK in the year 2003 - the
+      position of the hallmark on the inside of my wedding ring (fictitious) - the place referred to
+      in the phrase: “Fish collected at three miles north of the confluence of the Arve and the
+      Rhone” - here -&gt; &lt;- [the place between these two arrows in one of the reader's paper
+      copy of this document. Each copy constitutes a different place of this spot.] In First Order
+      Logic: - E53(x) ⇒ E1(x) """@en ;
+  owl:sameAs <http://www.cidoc-crm.org/cidoc-crm/E53_Place> .
+
+<E55_Type> a owl:Class ;
+  rdfs:label "E55 Type"@en, "E55 Typus"@de, "E55 Τύπος"@el, "E55 Type"@fr,
+             "E55 Tipo"@pt, "E55 Тип"@ru, "E55 类型"@zh ;
+  skos:notation "E55" ;
+  rdfs:subClassOf
+    <E28_Conceptual_Object> ,
+    [ a owl:Restriction ;
+      owl:onProperty <P135i_was_created_by/> ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+    ] ;
+  rdfs:comment """Scope note: This class comprises concepts denoted by terms from
+      thesauri and controlled vocabularies used to characterize and classify instances of CIDOC CRM
+      classes. Instances of E55 Type represent concepts, in contrast to instances of E41 Appellation
+      which are used to name instances of CIDOC CRM classes. E55 Type provides an interface to
+      domain specific ontologies and thesauri. These can be represented in the CIDOC CRM as
+      subclasses of E55 Type, forming hierarchies of terms, i.e. instances of E55 Type linked via
+      P127 has broader term (has narrower term): E55 Type. Such hierarchies may be extended with
+      additional properties. Examples: - weight, length, depth [types for instances of E54
+      Dimension] - portrait, sketch, animation [types for instances of E36 Visual Item] - French,
+      English, German [types for instances of E56 Language] - excellent, good, poor [types for
+      instances of E3 Condition State] - Ford Model T, chop stick [types for instances of E22
+      Human-Made Object] - cave, doline, scratch [types for instances of E26 Physical Feature] -
+      poem, short story [types for instances of E33 Linguistic Object] - wedding, earthquake,
+      skirmish [types for instances of E5 Event] In First Order Logic: - E55(x) ⇒ E28(x) """@en ;
+  owl:sameAs <http://www.cidoc-crm.org/cidoc-crm/E55_Type> .
+
+<E67_Birth> a owl:Class ;
+  rdfs:label "E67 Birth"@en, "E67 Geburt"@de, "E67 Γέννηση"@el, "E67 Naissance"@fr,
+             "E67 Nascimento"@pt, "E67 Рождение"@ru, "E67 出生"@zh ;
+  skos:notation "E67" ;
+  rdfs:subClassOf
+    <E63_Beginning_of_Existence> ,
+    [ a owl:Restriction ;
+      owl:onProperty <P98_brought_into_life/> ;
+      owl:someValuesFrom <E21_Person>
+    ] ,
+    [ a owl:Restriction ;
+      owl:onProperty <P97_from_father/> ;
+      owl:someValuesFrom <E21_Person>
+    ] ,
+    [ a owl:Restriction ;
+      owl:onProperty <P96_by_mother/> ;
+      owl:someValuesFrom <E21_Person>
+    ] ;
+  rdfs:comment """Scope note: This class comprises the births of human beings. E67
+      Birth is a biological event focussing on the context of people coming into life. (E63
+      Beginning of Existence comprises the coming into life of any living being.) Twins, triplets,
+      etc. are brought into life by the same instance of E67 Birth. The introduction of the E67
+      Birth event as a documentation element allows the description of a range of family
+      relationships in a simple model. Suitable extensions may describe more details and the
+      complexity of motherhood since the advent of modern medicine. In this model, the biological
+      father is not seen as a necessary participant in the E67 Birth. Examples: - the birth of
+      Alexander the Great (Stoneman, 2004) In First Order Logic: - E67(x) ⇒ E63(x) """@en ;
+  owl:sameAs <http://www.cidoc-crm.org/cidoc-crm/E67_Birth> .
+
+<E69_Death> a owl:Class ;
+  rdfs:label "E69 Death"@en, "E69 Tod"@de, "E69 Θάνατος"@el, "E69 Mort"@fr,
+             "E69 Morte"@pt, "E69 Смерть"@ru, "E69 死亡"@zh ;
+  skos:notation "E69" ;
+  rdfs:subClassOf
+    <E64_End_of_Existence> ,
+    [ a owl:Restriction ;
+      owl:onProperty <P100_was_death_of/> ;
+      owl:someValuesFrom <E21_Person>
+    ] ;
+  rdfs:comment """Scope note: This class comprises the deaths of human beings. If a
+      person is killed, their death should be instantiated as E69 Death and as E7 Activity. The
+      death or perishing of other living beings should be documented as instances of E64 End of
+      Existence. Examples: - the murder of Julius Caesar (E69, E7) (Irwin, 1935) - the death of
+      Senator Paul Wellstone (Monast and Tao, 2002) In First Order Logic: - E69(x) ⇒ E64(x) """@en ;
+  owl:sameAs <http://www.cidoc-crm.org/cidoc-crm/E69_Death> .
+
+<E73_Information_Object> a owl:Class ;
+  rdfs:label "E73 Information Object"@en, "E73 Informationsgegenstand"@de,
+             "E73 Πληροφοριακό Αντικείμενο"@el, "E73 Objet informationnel"@fr,
+             "E73 Objeto de Informação"@pt, "E73 Информационный Объект"@ru, "E73 信息对象"@zh ;
+  skos:notation "E73" ;
+  rdfs:subClassOf <E89_Propositional_Object>, <E90_Symbolic_Object> ;
+  rdfs:comment """Scope note: This class comprises identifiable immaterial items, such
+      as poems, jokes, data sets, images, texts, multimedia objects, procedural prescriptions,
+      computer program code, algorithm or mathematical formulae, that have an objectively
+      recognizable structure and are documented as single units. The encoding structure known as a
+      “named graph” also falls under this class, so that each “named graph” is an instance of E73
+      Information Object. An instance of E73 Information Object does not depend on a specific
+      physical carrier, which can include human memory, and it can exist on one or more carriers
+      simultaneously. Instances of E73 Information Object of a linguistic nature should be declared
+      as instances of the E33 Linguistic Object subclass. Instances of E73 Information Object of a
+      documentary nature should be declared as instances of the E31 Document subclass. Conceptual
+      items such as types and classes are not instances of E73 Information Object, nor are ideas
+      without a reproducible expression. Examples: - image BM000038850.JPG from the Clayton
+      Herbarium in London (E31) (Natural History Museum, 2021) - E. A. Poe's “The Raven” (Poe, 1869)
+      - the movie “The Seven Samurai” by Akira Kurosawa (Mellen, 2002) - the text of Huray
+      describing the Maxwell Equations (Huray, 2010) - the Getty AAT as published as Linked Open
+      Data, accessed 1/10/2014 In First Order Logic: - E73(x) ⇒ E89(x) - E73(x) ⇒ E90(x) """@en ;
+  owl:sameAs <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> .
+
+<E74_Group> a owl:Class ;
+  rdfs:label "E74 Group"@en, "E74 Menschliche Gruppe"@de, "E74 Ομάδα"@el, "E74 Groupe"@fr,
+             "E74 Grupo"@pt, "E74 Группа"@ru, "E74 团体"@zh ;
+  skos:notation "E74" ;
+  rdfs:subClassOf
+    <E39_Actor> ,
+    [ a owl:Restriction ;
+      owl:onProperty <P144i_gained_member_by/> ;
+      owl:minCardinality "2"^^xsd:nonNegativeInteger
+    ] ,
+    [ a owl:Restriction ;
+      owl:onProperty <P95i_was_formed_by/> ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+    ] ,
+    [ a owl:Restriction ;
+      owl:onProperty <P146i_lost_member_by/> ;
+      owl:minCardinality "0"^^xsd:nonNegativeInteger
+    ] ,
+    [ a owl:Restriction ;
+      owl:onProperty <P107_has_current_or_former_member/> ;
+      owl:minCardinality "2"^^xsd:nonNegativeInteger
+    ] ;
+  rdfs:comment """Scope note: This class comprises any gatherings or organizations of
+      human individuals or groups that act collectively or in a similar way due to any form of
+      unifying relationship. In the wider sense this class also comprises official positions which
+      used to be regarded in certain contexts as one actor, independent of the current holder of the
+      office, such as the president of a country. In such cases, it may happen that the group never
+      had more than one member. A joint pseudonym (i.e. a name that seems indicative of an
+      individual but that is actually used as a persona by two or more people) is a particular case
+      of E74 Group. A gathering of people becomes an instance of E74 Group when it exhibits
+      organizational characteristics usually typified by a set of ideas or beliefs held in common,
+      or actions performed together. These might be communication, creating some common artifact, a
+      common purpose such as study, worship, business, sports, etc. Nationality can be modelled as
+      membership in an instance of E74 Group. Married couples and other concepts of family are
+      regarded as particular examples of E74 Group. Examples: - the Impressionists (Wilson, 1994) -
+      the Navajo (Correll, 1972) - the Greeks (Williams, 1993) - the peace protestors in New York
+      City on 15(th) February 2003 - Exxon-Mobil (Raymond, 2006) - King Solomon and his wives
+      (Thieberger, 1947) - the President of the Swiss Confederation - Nicolas Bourbaki [the
+      collective pseudonym of a group of mathematicians, predominantly French alumni of the École
+      normale supérieure] (Aczel, 2007) - Betty Crocker (Crocker, 2012) - Ellery Queen [Ellery Queen
+      is a pseudonym created in 1929 by American crime fiction writers Frederic Dannay and Manfred
+      Bennington Lee.] (Wheat, 2005) - Greenpeace - Paveprime Ltd - the National Museum of Denmark
+      In First Order Logic: - E74(x) ⇒ E39(x) """@en ;
+  owl:sameAs <http://www.cidoc-crm.org/cidoc-crm/E74_Group> .
+
+<E90_Symbolic_Object> a owl:Class ;
+  rdfs:label "E90 Symbolic Object"@en, "E90 Symbolisches Objekt"@de, "E90 Objet symbolique"@fr,
+             "E90 符号对象"@zh ;
+  skos:notation "E90" ;
+  rdfs:subClassOf
+    <E28_Conceptual_Object> ,
+    <E72_Legal_Object> ,
+    [ a owl:Restriction ;
+      owl:onProperty <P106_is_composed_of/> ;
+      owl:someValuesFrom <E90_Symbolic_Object>
+    ] ;
+  rdfs:comment """Scope note: This class comprises identifiable symbols and any
+      aggregation of symbols, such as characters, identifiers, traffic signs, emblems, texts, data
+      sets, images, musical scores, multimedia objects, computer program code, or mathematical
+      formulae that have an objectively recognizable structure and that are documented as single
+      units. It includes sets of signs of any nature, which may serve to designate something, or to
+      communicate some propositional content. An instance of E90 Symbolic Object may or may not have
+      a specific meaning, for example an arbitrary character string. In some cases, the content of
+      an instance of E90 Symbolic Object may completely be represented by a serialized digital
+      content model, such as a sequence of ASCII-encoded characters, an XML or HTML document, or a
+      TIFF image. The property P3 has note and its subproperty P190 has symbolic content allow for
+      the description of this content model. In order to disambiguate which symbolic level is the
+      carrier of the meaning, the property P3.1 has type can be used to specify the encoding (e.g.
+      “bit”, “Latin character”, RGB pixel). Examples: - ‘ecognizabl’ - the “no-smoking” sign (E36) -
+      “BM000038850.JPG” (E41) [identifies a digital image] (Natural History Museum, 2021) - image
+      BM000038850.JPG from the Clayton Herbarium in London (E36) [depicts specimen of Verbesina
+      virginica] (Natural History Museum, 2021) - the distribution of form, tone and colour found on
+      Leonardo da Vinci’s painting named “Mona Lisa” in daylight (E36) - the Italian text of Dante’s
+      “Divina Commedia” as found in the authoritative critical edition “La Commedia secondo l’antica
+      vulgata a cura di Giorgio Petrocchi” (E33) (Petrocchi, 1967) In First Order Logic: - E90(x) ⇒
+      E28(x) - E90(x) ⇒ E72(x) """@en ;
+  owl:sameAs <http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object> .
+
+#################################################################
+# LRMOO v1.1.1
+#################################################################
+
+<F1_Work> a owl:Class ;
+  rdfs:label "F1 Work"@en ;
+  skos:notation "F1" ;
+  skos:prefLabel "Work"@en ;
+  rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ;
+  rdfs:comment """Scope note: This class comprises distinct intellectual ideas
+      conveyed in artistic and intellectual creations, such a poems, stories or musical
+      compositions. A Work is the outcome of an intellectual process of one or more persons.
+      Inherent to the notion of work is the existence of recognisable realizations of the work in
+      the form of one or more expressions. Works are often regarded as finished and discrete e.g.
+      when declared as such by the creator of the work or based on the elaboration or logical
+      coherence of its content. However, works may be recognized as existing but unfinished e.g. if
+      the creators deliberately or accidentally never explicitly finished a particular Expression
+      but have left behind partial expressions. In the absence of explicit information about the
+      initial conception, which is rarely available, the first expression created constitutes
+      witness of the beginning of existence of a Work. A Work can evolve over time, such as through
+      revised editions. A Work may be elaborated by one or more Actors simultaneously, in parallel,
+      or over time. Additional expressions of a Work can continue to be created over time. The
+      boundaries of a Work have nothing to do with the value of the intellectual achievement but
+      only with the dominance of a concept. The main purpose of this class is to enable bringing
+      together intellectually equivalent Expressions in order to display to a user all available
+      alternatives of the same intellectual or artistic content. Examples: - Agatha Christie’s
+      ‘Murder on the Orient Express’ [novel] - Mary Shelley’s ‘Frankenstein, or, The Modern
+      Prometheus’ [novel] - Ursula K. Le Guin’s ‘The Earthsea trilogy’ [set of novels] - Ursula K.
+      Le Guin’s ‘The Tombs of Atuan’ [novel which is part of ‘The Earthsea trilogy’] - Homer’s
+      ‘Odyssey’ [ancient Greek epic poem] - Dante’s ‘Divina Commedia’ [narrative poem] - William
+      Shakespeare’s ‘The Tragedy of Hamlet, Prince of Denmark’ [play] - Henry Gray’s ‘Anatomy of the
+      human body’ [scholarly work / reference work] - René Goscinny and Albert Uderzo’s ‘Astérix
+      le Gaulois’ [cartoon] - the ‘Dewey Decimal Classification’ (DDC) [library classification
+      system] - the Ordnance Survey’s 1:50 000 ‘Landranger series’ [collection of maps] - Ludwig van
+      Beethoven’s ‘Symphony No. 9 in D minor’ [symphony] - Johann Sebastian Bach’s ‘Goldberg
+      Variations’ [compositions for keyboard] - Daniel Humair and Damien Varaillon’s ‘Hommage à John
+      Coltrane’ [musical improvisation] - John Lennon and Paul McCartney’s ‘I want to hold your
+      hand’ [song] - François Truffault’s ‘Jules et Jim’ [movie] - Alfred Hitchcock’s ‘Psycho’
+      [movie] - Auguste Rodin’s ‘Le penseur’ (‘The thinker’) [art] - Pablo Picasso’s ‘Guernica’
+      [art] - Katsushika Hokusai’s ‘神奈川沖浪裏’ (‘The Great Wave’) [art] In First Order Logic: - F1(x) ⇒
+      E89(x) """@en .
+
+<F27_Work_Creation> a owl:Class ;
+  rdfs:label "F27 Work Creation"@en ;
+  skos:notation "F27" ;
+  skos:prefLabel "Work Creation"@en ;
+  rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E65_Creation> ;
+  rdfs:comment """Scope note: This class comprises activities by which instances of F1
+      Work come into existence. An instance of F27 Work Creation can serve to document the period a
+      work was coming into existence and the circumstances of it, when these are known. An instance
+      of F27 Work Creation marks the initial creation of an instance of F1 Work through expressions
+      or other externalisations that are sufficiently elaborated so that the characteristic
+      conceptual identity of the work could be recognized as existing. In many cases this will
+      coincide with the first known complete externalisation of an expression of the work. In other
+      cases, the initial creation of an instance of F1 Work may be inferred from multiple, or later,
+      expressions or other forms of evidence. For instance, commissioning of a work may explicitly
+      be agreed on after the presentation of an already complete and detailed elaboration of the
+      work that was not made public. Performances may be prior to written expressions, as in the
+      case of Shakespeare’s works. The work, as an intellectual construction, may evolve from its
+      initial creation onwards, until the last known expression of it. An instance of E39 Actor with
+      which a work is associated through the chain of properties F1 Work. R16i was created by: F27
+      Work Creation. P14 carried out by (performed): E39 Actor corresponds to the notion of the
+      “creator” of the work. In the situation where an expression of one instance of F1 Work serves
+      as source material for the creation of the first expression of a new instance of F1 Work, the
+      direct relationship between the works is indicated using the property R2 is derivative of (has
+      derivative) between the two instances of F1 Work. The link to the specific source expression
+      is indicated with the property P16 used specific object (was used for) using the path: F1
+      Work(1). R3 is realised in: F2 Expression(1). P16i was used for: F27 Work Creation. R16
+      created: F1 Work(2). Examples: - Agatha Christie creating ‘Murder on the Orient Express’ -
+      Mary Shelley creating ‘Frankenstein, or, The Modern Prometheus’ - Dante creating the poem
+      ‘Divina Commedia’ - William Shakespeare creating ‘The Tragedy of Hamlet, Prince of Denmark’ -
+      René Goscinny and Albert Uderzo (collaboratively) creating ‘Astérix le Gaulois’ - Ludwig van
+      Beethoven composing his Symphony No. 9 - Johann Sebastian Bach composing the ‘Goldberg
+      Variations’ - the making of ‘Jules et Jim’, directed by François Truffault - the making of
+      ‘Psycho’, directed by Alfred Hitchcock - Auguste Rodin creating ‘Le Penseur’ (‘The Thinker’) -
+      Picasso creating ‘Guernica’ - Pascal Bonnefois and Marie-Louise Ollier creating ‘Yvain ou Le
+      chevalier au lion : concordance lemmatisée’ [a concordance for the novel ‘Le chevalier au
+      lion’ by Chrétien de Troyes, based on the 1960 edition by Mario Roques] In First Order Logic:
+      - F27(x) ⇒ E65(x) """@en .
+
+<F28_Expression_Creation> a owl:Class ;
+  rdfs:label "F28 Expression Creation"@en ;
+  skos:notation "F28" ;
+  skos:prefLabel "Expression Creation"@en ;
+  rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E12_Production>,
+                  <http://www.cidoc-crm.org/cidoc-crm/E65_Creation> ;
+  rdfs:comment """Scope note: This class comprises activities that result in instances
+      of F2 Expression coming into existence. An instance of F2 Expression is considered to be
+      created when it is captured on a carrier other than the creator’s brain. Although F2
+      Expression is an abstract entity, a conceptual object, the creation of an expression
+      inevitably also affects the physical world: when you scribble the first draft of a poem on a
+      sheet of paper, you produce an instance of F3 Manifestation and an instance of F5 Item.
+      F28 Expression Creation is a subclass of E12 Production because the recording of the
+      expression causes a physical modification of the E18 Physical Thing that serves as the
+      carrier. The creation of an instance of F2 Expression coincides with the creation of the first
+      instance of F3 Manifestation that R4 embodies (is embodied in) this instance of F2 Expression.
+      The P2 has type (is type of) property can be used to specify the type of the instance of
+      F28 Expression Creation (i.e., activities such as translating, revising, or arranging music
+      are types of creation process). The type of the process is distinct from the type of result
+      even though the typology frequently used for instances of the resulting F2 Expressions may
+      imply the category of the instance of the F28 Expression Creation. An instance of F28
+      Expression Creation may use as source material one or more specific instances of F2
+      Expression. When the source expression is documented this is also expressed by the property
+      R76 is derivative of (has derivative). Examples: - Agatha Christie writing the original
+      manuscript for ‘Murder on the Orient Express’ - Elisabeth van Bebber creating the German
+      translation of ‘Murder on the Orient Express’ - Angela Hewitt performing the ‘Goldberg
+      Variations’ at St. Thomas Church (Leipzig Germany) in November 2020 - Angela Hewitt performing
+      the ‘Goldberg Variations’ in Christuskirche (Berlin) on 14-17 December 2015 (for a CD
+      production) - Beethoven scripting the original score for the 9(th) symphony - Jonathan Del Mar
+      editing and creating the score for Beethoven’s 9(th) symphony (as published by Bärenreiter in
+      1997) - the making of the original cut of Hitchcock’s movie ‘Psycho’ - the making of the
+      censored version of Hitchcock’s movie ‘Psycho’ that was released in Britain - Auguste Rodin
+      making the first plaster version of ‘The Thinker’ sculpture - the making of the large-scale
+      version of ‘The Thinker’ by the ‘Fonderie Alexis Rudier in 1904 In First Order Logic: - F28(x)
+      ⇒ E12(x) - F28(x) ⇒ E65(x) """@en .
+
+<F2_Expression> a owl:Class ;
+  rdfs:label "F2 Expression"@en ;
+  skos:notation "F2" ;
+  skos:prefLabel "Expression"@en ;
+  rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> ;
+  rdfs:comment """Scope note: This class comprises the intellectual or artistic
+      realisations of Works in the form of identifiable immaterial objects, such as texts, poems,
+      jokes, musical or choreographic notations, movement pattern, sound pattern, images, multimedia
+      objects, or any combination of such forms. The substance of F2 Expression is signs. An
+      Expression is the outcome of the intellectual or creative process of realizing a Work.
+      Subsequent expressions conveying the same work may be created over time. Expressions do not
+      depend on a specific physical carrier and can exist on one or more carriers simultaneously. As
+      far as bibliographic practice is concerned, only instances of F2 Expression that are
+      externalised on physical carriers other than both the creator’s brain and an auditor’s brain
+      are taken into account. The form of F2 Expression is an inherent characteristic of the F2
+      Expression. Differences in form imply different Expressions (e.g., from text to spoken word, a
+      transcript of a recording). Similarly, differences in language or means of performance imply
+      different Expressions (e.g., translations or arrangements for different instruments). Thus, if
+      a text is revised or modified, the result is considered to be a new F2 Expression. While
+      theoretically any change in signs will result in a new Expression, conventionally the context
+      and use will determine the rules for distinguishing among expressions. An instance of F2
+      Expression which includes spoken or written text may be multiply instantiated as an instance
+      of E33 Linguistic Object. This allows for the association of the E56 Language of the text with
+      the instance of F2 Expression by using the property P72 has language (is language of).
+      Examples: - the original text (in English) by Agatha Christie for her novel ‘Murder on the
+      Orient Express’ - the German text of ‘Murder on the Orient Express’ (as translated by
+      Elisabeth van Bebber and published with the title ‘Mord im Orientexpress’) - the text of the
+      abridged English version of ‘Murder on the Orient Express’ (as published by HarperCollins) -
+      the narrated English text of ‘Murder on the Orient Express’ by David Suchet - the English text
+      of Homer’s ‘Odyssey’ translated by Robert Fagles - the English text of Homer’s ‘Odyssey’
+      translated by Richmond Lattimore - ‘Dewey Decimal Classification’, 23rd edition (DDC23)
+      [English edition] - ‘Classification décimale de Dewey’, 23e édition [French translation of
+      DDC23] - the performance of Bach’s ‘Goldberg Variations’ by Angela Hewitt at St. Thomas Church
+      (Leipzig Germany) in November 2020 - the performance of Bach’s ‘Goldberg Variations’ by Angela
+      Hewitt in Christuskirche (Berlin) on 14-17 December 2015 - the musical score for Bach’s
+      ‘Goldberg Variations’ (as published by Balthasar Schmid in 1741) - Beethoven’s original score
+      for Symphony No. 9 (as expressed by Beethoven’s original hand-written manuscript held by the
+      Berlin State Library) - the score for Beethoven’s Symphony No. 9 that was edited by Jonathan
+      Del Mar and published by Bärenreiter in 1997 - the original cut of Hitchcock’s movie ‘Psycho’
+      - the censored version of Hitchcock’s movie ‘Psycho’ that was released in Britain (with
+      stabbing sounds and visible nude shots removed) - the first plaster version of ‘The Thinker’
+      sculpture made by Auguste Rodin around 1881 - large scale version of Auguste Rodin’s ‘The
+      Thinker’ created at the Fonderie Alexis Rudier in 1904 In First Order Logic: - F2(x) ⇒ E73(x)
+    """@en .
+
+<F30_Manifestation_Creation> a owl:Class ;
+  rdfs:label "F30 Manifestation Creation"@en ;
+  skos:notation "F30" ;
+  skos:prefLabel "Manifestation Creation"@en ;
+  rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E12_Production>,
+                  <http://www.cidoc-crm.org/cidoc-crm/E65_Creation> ;
+  rdfs:comment """Scope note: This class comprises the activities of selecting,
+      arranging and presenting one or more instances of F2 Expression on a carrier or other
+      persistent presentation means with the purpose of communicating it to some public. It includes
+      the specification of the presentation as to sensory impression (such as visual appearance or
+      audio rendition). Examples: - the process of creating the publication ‘Murder on the Orient
+      Express / Agatha Christie’, published by HarperCollins in 2017, including deciding the format,
+      typesetting the text, designing the cover and other features of the publication - the process
+      of making the HTML-version of the English text of Homer’s ‘Odyssey’ (translated by S. H.
+      Butcher and A. Lang), which is available online from the Gutenberg Project - the process of
+      making the engraved copper plates for the first edition of Bach’s ‘Goldberg Variations’ by
+      Balthasar Schmid - the process of making the CD publication ‘Bach Goldberg Variations’,
+      published by Hyperion Records in 2016, including the process of recording the performance,
+      editing, and typesetting the booklet, and design of the overall publication In First Order
+      Logic: - F30(x) ⇒ E12(x) - F30(x) ⇒ E65(x) """@en .
+
+<F3_Manifestation> a owl:Class ;
+  rdfs:label "F3 Manifestation"@en ;
+  skos:notation "F3" ;
+  skos:prefLabel "Manifestation"@en ;
+  rdfs:subClassOf <http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object> ;
+  rdfs:comment """Scope note: This class comprises products rendering one or more
+      Expressions. A Manifestation is defined by both the overall content and the form of its
+      presentation. The substance of F3 Manifestation is not only signs, but also the manner in
+      which they are presented to be consumed by users, including the kind of media adopted. An F3
+      Manifestation is the outcome of a publication process where one or more F2 Expressions are
+      prepared for public dissemination, but it may also be a unique form created directly on some
+      material carrier without the intent of being formally published. An instance of F3
+      Manifestation typically incorporates one or more instances of F2 Expression representing a
+      distinct logical content and all additional input by a publisher such as text layout and cover
+      design. Additionally an F3 Manifestation can be identified by the physical features for the
+      medium of distribution, if applicable. For example, publications in the form of hard-cover and
+      paperback editions would be two distinct instances of F3 Manifestation, even though authorial
+      and editorial content are otherwise identical in both publications. In the case of industrial
+      products such as printed books or music CDs, but also digital material, an instance of F3
+      Manifestation can be regarded as the prototype for all copies of it. In these cases, an
+      instance of F3 Manifestation specifies all of the features or traits that instances of F5 Item
+      display in order to be copies of a particular publication. In the case of industrial products,
+      instances of F3 Manifestation are also instances of E99 Product Type, normally nowadays
+      identified by characteristic identifiers such as ISBN numbers. Examples: - the publication
+      ‘Murder on the Orient Express / Agatha Christie’, published by Collins Crime Club in 1934 -
+      the publication of ‘Murder on the Orient Express / Agatha Christie’, published by
+      HarperCollins in 2017 - the publication ‘Mord im Orientexpress : ein Hercule-Poirot-Roman /
+      Agatha Christie’, published by Deutscher Bücherbund in 1975 - the publication ‘Murder on The
+      Orient Express / Agatha Christie’, narrated by David Suchet, audio book (audio CD) published
+      by HarperCollins in 2005 - the HTML-version of Homer’s ‘Odyssey’ with English text by S. H.
+      Butcher and A. Lang, available online from the Gutenberg Project - the publication ‘The
+      Illustrated Odyssey’, published by Sidgwick &amp; Jackson Ltd in 1980, containing the
+      translated text by E.V. Rieu, an introduction by Jacquetta Hawkes and photographs by Tim
+      Mercer - the publication ‘The Odyssey of Homer’ published by Harper &amp; Row in 1967,
+      containing an introduction and the English translation of the Greek poem by Richmond Lattimore
+      - the CD publication ‘Bach Goldberg Variations’, published by Hyperion Records in 2016,
+      containing a CD with Angela Hewitt’s performances of Bach’s ‘Goldberg Variations’ recorded in
+      Christuskirche (Berlin) on 14-17 December 2015 and a booklet with an introduction to the music
+      by Angela Hewitt in English, French and German - the manuscript known as ‘The Book of Kells’ -
+      the publication containing a text entitled ‘Pop Culture’ (authored by a person named ‘Richard
+      Memeteau’), issued in 2014 by the publisher named ‘Zones’ and distributed in EPUB2 format by a
+      distributor named ‘Editis’ and identified by ISBN ‘978-2-35522-085-2’ - the publication
+      entitled ‘Alfred Hitchcock’s Psycho: 60th Anniversary Edition’, containing one Blu-ray disc
+      with two cuts of the movie, released in 2020 In First Order Logic: - F3(x) ⇒ E73(x)
+    """@en .
+
+#################################################################
+# INTRO beta202506
+#################################################################
+
+intro:INT18_Reference a owl:Class ;
+  rdfs:subClassOf intro:INT9_SemanticFeature, intro:INT_PragmaticFeature ;
+  rdfs:comment """This class comprises references to – usually: real –
+			identifiable objects of any kind. It is not restricted to non-fictional texts resp.
+			images depicting real life objects or events, but can be most easily applied there. The
+			CIDOC CRM property P67 refers to is recommended to establish the link to the referred to
+			entity. There are two options with slightly different semantic and alignment
+			implications: P67 refers to can link this INT18 Reference (or any other feature) to the
+			external entity, which would make the INT18 Reference an E89 Propositional Object (due
+			to P67's domain and range). However, this is in conflict with the conceptual similarity
+			of the F4 Feature and its subclasses to CIDOC CRM's E55 Type. INTRO's suggested – but in
+			no way prescribed – solution is to instead attach P67 refers to to the INT2
+			Actualization of Feature linked to INT18 Reference. The scope of this class also
+			includes references to other images/texts, if one wants to model an interrelation this
+			way."""@en ;
+  rdfs:label "INT18 Reference"@en .
+
+intro:INT21_TextPassage a owl:Class ;
+  rdfs:subClassOf intro:INT1_Passage ;
+  rdfs:comment """The INT21 TextPassage is a means of modelling an identifiable
+			part of an E73 Information Object or its subclasses – without that part being removed
+			from its source Information Object. Examples: – The words 'Abandon all hope ye who enter
+			here' from Canto III of Dante's Inferno. – The first four lines of Rilke's poem
+			"Archaischer Torso Apollos" – The last item on a shopping list. The skos:broadMatch
+			states that the INT21 TextPassage can be regarded as an oa:SpecificResource in the sense
+			that it is a section of a resource. The skos:broadMatch between R41 hasLocation and
+			oa:hasSelector indicates that by replacing R41 hasLocation with oa:hasSelector, multiple
+			selector options from the Web Annotation Ontology can be utilized to specify the INT21
+			TextPassage's location."""@en ;
+  rdfs:label "INT21 Text Passage"@en ;
+  skos:broadMatch oa:SpecificResource .
+
+intro:INT2_ActualizationOfFeature a owl:Class ;
+  rdfs:subClassOf crm:E28_Conceptual_Object ;
+  rdfs:comment """The fact that a text or an image shows – in its own specific way
+			– a certain feature (which itself is an abstract concept and takes form in many
+			texts/images), e. g., a motif, an atmosphere, a theme, a figure of speech. Examples: –
+			the specific actualization of the motif of patricide in Sophokles' "Ödipus Rex". – the
+			specific actualization of the Faust-subject in Goethe's "Faust". – the specific
+			actualization of the iambic pentameter in Rilke's "Archaischer Torso Apollos". – the
+			specific actualization of the Ophelia-character in John Everett Millais' painting
+			"Ophelia". Notes: The INT2 Actualization of Feature can be subject to a I2 Belief as
+			modelled in CRMinf, used like the CRMinf class I4 Proposition Set. """@en ;
+  rdfs:label "INT2 Actualization of Feature"@en .
+
+intro:INT31_IntertextualRelation a owl:Class ;
+  rdfs:subClassOf intro:INT3_Interrelation ;
+  rdfs:comment """This class comprises the abstract notion of a relationship
+			between texts resp. parts thereof. It is not identical to, e. g., a quote, but a quote
+			can be considered a typical case. However, the class does not demand any specific
+			theoretical prerequisites for the relation (like the author's intention, identical
+			wording, etc.), but encompasses relations based on all kinds of theoretical frameworks,
+			including scholarly ('pastiche'), legal ('plagiarism'), or very general notions
+			('quote', 'allusion'). Every INT31 Intertextual Relation has at least two related
+			entities, which are modelled as texts (on any ontological level, including parts
+			thereof) or INT2 Actualizations of Features on these texts. An INT3 Interrelation is
+			possibly identified in an INT2 Actualization of an INT Interpretation and further
+			defined by an INT11 TypeOfInterrelation, or maybe, more precisely, an INT15
+			Intertextuality in Intertextuality Theories. The skos:broadMatch to oa:Annotation
+			indicates that stating the existence of an intertextual relation can be seen as a kind
+			of annotation made to resources, in this case: at least two, the related entities texts
+			(on any ontological level, including parts thereof)."""@en ;
+  rdfs:label "INT31 Intertextual Relation"@en ;
+  skos:broadMatch oa:Annotation .
+
+intro:INT_Character a owl:Class ;
+  rdfs:subClassOf intro:INT9_SemanticFeature ;
+  rdfs:label "INT Character"@en .
+
+intro:INT_Interpretation a owl:Class ;
+  rdfs:subClassOf intro:INT9_SemanticFeature, intro:INT_PragmaticFeature ;
+  rdfs:comment """The result of a interpretative act, possibly: as perceived in
+			research literature. An interpretation can identify references or actualizations or the
+			like. A number of interpretations can together recreate the structure of, e. g., a
+			research paper. Accordingly, apart from linking INT Interpretations to the subjects of
+			the interpretation, like intertextual relations or textual features, they can be linked
+			to each other via R9 has subsequent feature resp. R9i has preceding feature. Examples: –
+			the statement that Umberto Eco's 'The Name of the Rose' features a detective character.
+			– the statement that Umberto Eco's 'The Name of the Rose' contains references to Arthur
+			Conan Doyle's 'Sherlock Holmes'. – the statement that Umberto Eco's 'The Name of the
+			Rose' is set in the 14th century. – the conclusion that Umberto Eco's 'The Name of the
+			Rose' belongs to the genre 'postmodern crime novel'."""@en ;
+  rdfs:label "INT Interpretation"@en .
+
+intro:INT_Motif a owl:Class ;
+  rdfs:subClassOf intro:INT9_SemanticFeature ;
+  rdfs:label "INT Motif"@en .
+
+intro:INT_Plot a owl:Class ;
+  rdfs:subClassOf intro:INT9_SemanticFeature ;
+  rdfs:label "INT Plot"@en .
+
+intro:INT_Topic a owl:Class ;
+  rdfs:subClassOf intro:INT9_SemanticFeature ;
+  rdfs:label "INT Topic"@en .
+
+#################################################################
+# New Properties
+#################################################################
 
 sappho_prop:about
   a owl:ObjectProperty ;
