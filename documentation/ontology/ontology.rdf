@@ -11,9 +11,9 @@
 
   <owl:Ontology rdf:about="https://w3id.org/sappho-digital/ontology/">
     <rdfs:label xml:lang="en">Sappho Digital Ontology</rdfs:label>
-    <owl:imports rdf:resource="http://erlangen-crm.org/current"/>
-    <owl:imports rdf:resource="https://w3id.org/lso/intro/currentbeta"/>
-    <owl:imports rdf:resource="http://www.cidoc-crm.org/lrmoo"/>
+    <owl:imports rdf:resource="http://erlangen-crm.org/current/"/>
+    <owl:imports rdf:resource="https://w3id.org/lso/intro/currentbeta#"/>
+    <owl:imports rdf:resource="http://www.cidoc-crm.org/lrmoo/"/>
   </owl:Ontology>
 
   <!-- ECRM 240307 / CIDOC-CRM 7.1.3 -->
@@ -739,9 +739,9 @@
 
   <!-- INTRO beta202506 -->
 
-  <owl:Class rdf:about="https://w3id.org/lso/intro/beta202506#INT18_Reference">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202506#INT9_SemanticFeature"/>
-		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202506#INT_PragmaticFeature"/>
+  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT18_Reference">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_PragmaticFeature"/>
 		<rdfs:comment xml:lang="en">This class comprises references to – usually: real –
 			identifiable objects of any kind. It is not restricted to non-fictional texts resp.
 			images depicting real life objects or events, but can be most easily applied there. The
@@ -758,8 +758,8 @@
 		<rdfs:label xml:lang="en">INT18 Reference</rdfs:label>
 	</owl:Class>
 
-  <owl:Class rdf:about="https://w3id.org/lso/intro/beta202506#INT21_TextPassage">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202506#INT1_Passage"/>
+  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
 		<rdfs:comment xml:lang="en">The INT21 TextPassage is a means of modelling an identifiable
 			part of an E73 Information Object or its subclasses – without that part being removed
 			from its source Information Object. Examples: – The words 'Abandon all hope ye who enter
@@ -774,7 +774,7 @@
 		<skos:broadMatch rdf:resource="http://www.w3.org/ns/oa#SpecificResource"/>
 	</owl:Class>
 
-  <owl:Class rdf:about="https://w3id.org/lso/intro/beta202506#INT2_ActualizationOfFeature">
+  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature">
 		<rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
 		<rdfs:comment xml:lang="en">The fact that a text or an image shows – in its own specific way
 			– a certain feature (which itself is an abstract concept and takes form in many
@@ -788,8 +788,8 @@
 		<rdfs:label xml:lang="en">INT2 Actualization of Feature</rdfs:label>
 	</owl:Class>
 
-  <owl:Class rdf:about="https://w3id.org/lso/intro/beta202506#INT31_IntertextualRelation">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202506#INT3_Interrelation"/>
+  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT31_IntertextualRelation">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
 		<rdfs:comment xml:lang="en">This class comprises the abstract notion of a relationship
 			between texts resp. parts thereof. It is not identical to, e. g., a quote, but a quote
 			can be considered a typical case. However, the class does not demand any specific
@@ -809,14 +809,14 @@
 		<skos:broadMatch rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
 	</owl:Class>
 
-  <owl:Class rdf:about="https://w3id.org/lso/intro/beta202506#INT_Character">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202506#INT9_SemanticFeature"/>
+  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Character">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
 		<rdfs:label xml:lang="en">INT Character</rdfs:label>
 	</owl:Class>
 
-  <owl:Class rdf:about="https://w3id.org/lso/intro/beta202506#INT_Interpretation">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202506#INT9_SemanticFeature"/>
-		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202506#INT_PragmaticFeature"/>
+  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Interpretation">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_PragmaticFeature"/>
 		<rdfs:comment xml:lang="en">The result of a interpretative act, possibly: as perceived in
 			research literature. An interpretation can identify references or actualizations or the
 			like. A number of interpretations can together recreate the structure of, e. g., a
@@ -831,18 +831,18 @@
 		<rdfs:label xml:lang="en">INT Interpretation</rdfs:label>
 	</owl:Class>
 
-  <owl:Class rdf:about="https://w3id.org/lso/intro/beta202506#INT_Motif">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202506#INT9_SemanticFeature"/>
+  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Motif">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
 		<rdfs:label xml:lang="en">INT Motif</rdfs:label>
 	</owl:Class>
 
-  <owl:Class rdf:about="https://w3id.org/lso/intro/beta202506#INT_Plot">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202506#INT9_SemanticFeature"/>
+  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Plot">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
 		<rdfs:label xml:lang="en">INT Plot</rdfs:label>
 	</owl:Class>
 
-  <owl:Class rdf:about="https://w3id.org/lso/intro/beta202506#INT_Topic">
-		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/beta202506#INT9_SemanticFeature"/>
+  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Topic">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
 		<rdfs:label xml:lang="en">INT Topic</rdfs:label>
 	</owl:Class>
 
