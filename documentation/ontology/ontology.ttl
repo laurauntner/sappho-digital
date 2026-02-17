@@ -4,7 +4,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 @prefix ecrm: <http://erlangen-crm.org/current/> .
-@prefix intro: <https://w3id.org/lso/intro/currentbeta#> .
+@prefix intro: <https://w3id.org/lso/intro/beta202506#> .
 @prefix lrmoo: <http://www.cidoc-crm.org/lrmoo/> .
 @prefix sappho_prop: <https://w3id.org/sappho-digital/ontology/> .
 
@@ -13,7 +13,7 @@
   rdfs:label "Sappho Digital Ontology"@en ;
   owl:imports
     <http://erlangen-crm.org/current/> ,
-    <https://w3id.org/lso/intro/currentbeta> ,
+    <https://w3id.org/lso/intro/beta202506> ,
     <http://www.cidoc-crm.org/lrmoo/> .
 
 ###############################################################################
