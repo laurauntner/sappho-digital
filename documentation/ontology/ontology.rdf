@@ -5,7 +5,7 @@
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:ecrm="http://erlangen-crm.org/current/"
     xmlns:intro="https://w3id.org/lso/intro/beta202506#"
-    xmlns:lrmoo="http://www.cidoc-crm.org/lrmoo/"
+    xmlns:lrmoo="http://iflastandards.info/ns/lrm/lrmoo/"
     xmlns:sappho_prop="https://w3id.org/sappho-digital/ontology/"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
 
@@ -13,7 +13,7 @@
     <rdfs:label xml:lang="en">Sappho Digital Ontology</rdfs:label>
     <owl:imports rdf:resource="http://erlangen-crm.org/current/"/>
     <owl:imports rdf:resource="https://w3id.org/lso/intro/beta202506"/>
-    <owl:imports rdf:resource="http://www.cidoc-crm.org/lrmoo/"/>
+    <owl:imports rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/"/>
   </owl:Ontology>
 
   <!-- ECRM 240307 / CIDOC-CRM 7.1.3 -->

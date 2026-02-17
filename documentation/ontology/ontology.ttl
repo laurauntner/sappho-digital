@@ -5,7 +5,7 @@
 
 @prefix ecrm: <http://erlangen-crm.org/current/> .
 @prefix intro: <https://w3id.org/lso/intro/beta202506#> .
-@prefix lrmoo: <http://www.cidoc-crm.org/lrmoo/> .
+@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
 @prefix sappho_prop: <https://w3id.org/sappho-digital/ontology/> .
 
 <https://w3id.org/sappho-digital/ontology/>
@@ -14,7 +14,7 @@
   owl:imports
     <http://erlangen-crm.org/current/> ,
     <https://w3id.org/lso/intro/beta202506> ,
-    <http://www.cidoc-crm.org/lrmoo/> .
+    <http://iflastandards.info/ns/lrm/lrmoo/> .
 
 ###############################################################################
 # ECRM 240307 / CIDOC-CRM 7.1.3
