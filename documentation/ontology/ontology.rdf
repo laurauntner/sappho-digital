@@ -12,8 +12,8 @@
   <owl:Ontology rdf:about="https://w3id.org/sappho-digital/ontology/">
     <rdfs:label xml:lang="en">Sappho Digital Ontology</rdfs:label>
     <owl:imports rdf:resource="http://erlangen-crm.org/current/"/>
-    <owl:imports rdf:resource="https://w3id.org/lso/intro/beta202506"/>
-    <owl:imports rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/"/>
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/refs/heads/master/INTRO_beta202506.owl"/>
+    <owl:imports rdf:resource="https://cidoc-crm.org/extensions/lrmoo/owl/1.1.1/LRMoo_v1.1.1.owl"/>
   </owl:Ontology>
 
   <!-- ECRM 240307 / CIDOC-CRM 7.1.3 -->
