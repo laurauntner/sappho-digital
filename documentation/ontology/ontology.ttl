@@ -12,9 +12,9 @@
   a owl:Ontology ;
   rdfs:label "Sappho Digital Ontology"@en ;
   owl:imports
-    <http://erlangen-crm.org/current/> ,
-    <https://w3id.org/lso/intro/currentbeta#> ,
-    <http://www.cidoc-crm.org/lrmoo/> .
+    <http://erlangen-crm.org/current> ,
+    <https://w3id.org/lso/intro/currentbeta> ,
+    <http://www.cidoc-crm.org/lrmoo> .
 
 ###############################################################################
 # ECRM 240307 / CIDOC-CRM 7.1.3
