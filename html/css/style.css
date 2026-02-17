@@ -756,15 +756,19 @@ img.icon {
 
 /* SPARQL */
 
-body { overflow-x: auto !important; }
-body.page { overflow: auto !important; }
+body {
+    overflow-x: auto !important;
+}
+body.page {
+    overflow: auto !important;
+}
 
 .sparql-container {
-                        max-width: 1400px !important;
-                        margin: 30px auto !important;
-                        padding: 0 20px !important;
-                    }
-                    
+    max-width: 1400px !important;
+    margin: 30px auto !important;
+    padding: 0 20px !important;
+}
+
 .sparql-header h1 {
     font-size: 28px;
     margin-bottom: 10px;
@@ -804,9 +808,9 @@ body.page { overflow: auto !important; }
 }
 
 .data-source-suggestions {
-  display: block;
-  width: 100%;
-  margin-top: 0.5rem;
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
 }
 
 #dataSource {
@@ -994,35 +998,35 @@ body.page { overflow: auto !important; }
     display: none;
 }
 
-.stats-two-cols{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  align-items: start;
+.stats-two-cols {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: start;
 }
 
-.stats-col{
-  display: flex;
-  flex-direction: column;
-  gap: .75rem;
+.stats-col {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
 }
 
-.stats-col .wikidata-layout{
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 1fr);
-  gap: 1rem;
-  align-items: start;
+.stats-col .wikidata-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 1fr);
+    gap: 1rem;
+    align-items: start;
 }
 
 .stats-col .wikidata-left,
-.stats-col .wikidata-right{
-  min-width: 0;
+.stats-col .wikidata-right {
+    min-width: 0;
 }
 
-@media (max-width: 1100px){
-  .stats-two-cols{
-    grid-template-columns: 1fr;
-  }
+@media (max-width : 1100px) {
+    .stats-two-cols {
+        grid-template-columns: 1fr;
+    }
 }
 
 

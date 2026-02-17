@@ -12,6 +12,7 @@
         <owl:imports rdf:resource="http://purl.org/dc/terms/"/>
         <owl:imports rdf:resource="http://purl.org/spar/doco/"/>
         <owl:imports rdf:resource="http://dracor.org/ontology#"/>
+        <owl:imports rdf:resource="http://www.cidoc-crm.org/cidoc-crm/"/>
         <owl:imports rdf:resource="http://erlangen-crm.org/current/"/>
         <owl:imports rdf:resource="http://erlangen-crm.org/efrbroo/"/>
         <owl:imports rdf:resource="http://purl.org/spar/fabio/"/>

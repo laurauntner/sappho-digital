@@ -1,5 +1,6 @@
 @prefix bibo: <http://purl.org/ontology/bibo/> .
 @prefix cito: <http://purl.org/spar/cito/> .
+@ prefix crm: <http://www.cidoc-crm.org/cidoc-crm/>.
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix doco: <http://purl.org/spar/doco/> .
 @prefix dracor: <http://dracor.org/ontology#> .
@@ -30,6 +31,7 @@
     rdfs:label "Sappho Digital Alignments"@en ;
     owl:imports mimotext:,
         dracor:,
+        crm:,
         ecrm:,
         efrbroo:,
         frbroo:,
