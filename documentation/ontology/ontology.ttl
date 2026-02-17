@@ -7,6 +7,9 @@
 @prefix intro: <https://w3id.org/lso/intro/beta202506#> .
 @prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
 @prefix sappho_prop: <https://w3id.org/sappho-digital/ontology/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix cidoc: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix oa:    <http://www.w3.org/ns/oa#> .
 
 <https://w3id.org/sappho-digital/ontology/>
   a owl:Ontology ;
