@@ -153,7 +153,7 @@ public class Reasoner {
         TurtleDocumentFormat ttlFormat = new TurtleDocumentFormat();
         ttlFormat.setPrefix("ecrm:",  "http://erlangen-crm.org/current/");
         ttlFormat.setPrefix("intro:", "https://w3id.org/lso/intro/currentbeta#");
-        ttlFormat.setPrefix("lrmoo:", "http://www.cidoc-crm.org/lrmoo/");
+        ttlFormat.setPrefix("lrmoo:", "http://iflastandards.info/ns/lrm/lrmoo/");
         ttlFormat.setPrefix("owl:",   "http://www.w3.org/2002/07/owl#");
         ttlFormat.setPrefix("prov:",  "http://www.w3.org/ns/prov#");
         ttlFormat.setPrefix("rdfs:",  "http://www.w3.org/2000/01/rdf-schema#");
@@ -164,7 +164,7 @@ public class Reasoner {
         RDFXMLDocumentFormat rdfxmlFormat = new RDFXMLDocumentFormat();
         rdfxmlFormat.setPrefix("ecrm:",  "http://erlangen-crm.org/current/");
         rdfxmlFormat.setPrefix("intro:", "https://w3id.org/lso/intro/currentbeta#");
-        rdfxmlFormat.setPrefix("lrmoo:", "http://www.cidoc-crm.org/lrmoo/");
+        rdfxmlFormat.setPrefix("lrmoo:", "http://iflastandards.info/ns/lrm/lrmoo/");
         rdfxmlFormat.setPrefix("owl:",   "http://www.w3.org/2002/07/owl#");
         rdfxmlFormat.setPrefix("prov:",  "http://www.w3.org/ns/prov#");
         rdfxmlFormat.setPrefix("rdfs:",  "http://www.w3.org/2000/01/rdf-schema#");
@@ -253,7 +253,7 @@ public class Reasoner {
         // LRMoo
         File lrmooLocal = new File("imports/LRMoo.owl");
         if (lrmooLocal.exists()) {
-            IRI lrmooImportIRI = IRI.create("http://www.cidoc-crm.org/lrmoo/");
+            IRI lrmooImportIRI = IRI.create("http://iflastandards.info/ns/lrm/lrmoo/");
             manager.getIRIMappers().add(new SimpleIRIMapper(lrmooImportIRI, IRI.create(lrmooLocal.toURI())));
         }
 

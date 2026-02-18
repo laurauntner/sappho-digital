@@ -89,7 +89,7 @@ OUTPUT_FILE = "../data/rdf/fragments.ttl"
 # Namespaces
 SD = Namespace("https://sappho-digital.com/")
 ECRM = Namespace("http://erlangen-crm.org/current/")
-LRMOO = Namespace("http://www.cidoc-crm.org/lrmoo/")
+LRMOO = Namespace("http://iflastandards.info/ns/lrm/lrmoo/")
 WD = "http://www.wikidata.org/entity/"
 
 # Graph

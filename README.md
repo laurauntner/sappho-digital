@@ -21,6 +21,13 @@ This repository contains:
 
 ---
 
+Ontology versions used:
+- Erlangen CRM 240307 (based on CIDOC CRM 7.1.3)
+- LRMoo 1.1.1
+- INTRO beta202506
+
+---
+
 For questions, suggestions, or reports of errors, feel free to reach out ([laura.untner@fu-berlin.de](mailto:laura.untner@fu-berlin.de)) or open an issue.
 
 ---

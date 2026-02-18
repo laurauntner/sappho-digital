@@ -33,7 +33,7 @@
         </xsl:element>
         <xsl:element name="ns" namespace="">
             <xsl:attribute name="p" select="'lrmoo'"/>
-            <xsl:attribute name="u" select="'http://www.cidoc-crm.org/lrmoo/'"/>
+            <xsl:attribute name="u" select="'http://iflastandards.info/ns/lrm/lrmoo/'"/>
         </xsl:element>
 
         <xsl:element name="ns" namespace="">

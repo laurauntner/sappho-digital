@@ -24,7 +24,7 @@
         <owl:imports rdf:resource="https://intertextuality.org/extensions/motifs#"/>
         <owl:imports rdf:resource="https://intertextuality.org/extensions/text#"/>
         <owl:imports rdf:resource="https://w3id.org/lso/intro/currentbeta#"/>
-        <owl:imports rdf:resource="http://www.cidoc-crm.org/lrmoo/"/>
+        <owl:imports rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/"/>
         <owl:imports rdf:resource="http://data.mimotext.uni-trier.de/entity/"/>
         <owl:imports rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-core#"/>
         <owl:imports rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#"/>
@@ -60,12 +60,12 @@
     <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Document">
-    <skos:broadMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
-    <skos:broadMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F3_Manifestation"/>
-    <skos:narrowMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F5_Item"/>
+    <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
+    <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"/>
+    <skos:narrowMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F5_Item"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/fabio/Expression">
-    <skos:closeMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <skos:closeMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/sappho-digital/ontology/expr_references">
     <skos:closeMatch rdf:resource="http://purl.org/dc/terms/references"/>
@@ -90,7 +90,7 @@
     <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/E38_Image"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/ontology/bibo/Manuscript">
-    <skos:broadMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.golemlab.eu/G9_Narrative_Unit">
     <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_Feature"/>
@@ -123,13 +123,13 @@
     <skos:narrowMatch rdf:resource="https://purl.archive.org/urwriters#wasInfluencedBy"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://purl.archive.org/urbooks#Manifestation">
-    <skos:closeMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F3_Manifestation"/>
+    <skos:closeMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#gender">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P2_has_type"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://purl.archive.org/urbooks#Expression">
-    <skos:closeMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <skos:closeMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/doco/FormulaBox">
     <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
@@ -208,7 +208,7 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/sappho-digital/ontology/tp_possibly_cites">
-    <skos:narrowMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/R75_incorporates"/>
+    <skos:narrowMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/R75_incorporates"/>
     <skos:narrowMatch rdf:resource="http://purl.org/spar/cito/hasCitedEntity"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/P8">
@@ -238,7 +238,7 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://purl.archive.org/urbooks#realization">
-    <skos:closeMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/R3_realises"/>
+    <skos:closeMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/R3_realises"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/extensions/motifs#Motive">
     <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Motif"/>
@@ -247,7 +247,7 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P7_took_place_at"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/extensions/artifacts#Work">
-    <skos:broadMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/doco/BodyMatter">
     <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
@@ -260,7 +260,7 @@
     <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Character"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/sappho-digital/ontology/expr_possibly_cites">
-    <skos:narrowMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/R76_is_derivative_of"/>
+    <skos:narrowMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/R76_is_derivative_of"/>
     <skos:narrowMatch rdf:resource="http://purl.org/ontology/bibo/cites"/>
     <skos:narrowMatch rdf:resource="http://purl.org/spar/cito/cites"/>
     <skos:narrowMatch rdf:resource="https://schema.org/citation"/>
@@ -278,7 +278,7 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/fabio/Work">
-    <skos:closeMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F1_Work"/>
+    <skos:closeMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.golemlab.eu/G14_Narrative_Stoff">
     <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Plot"/>
@@ -291,16 +291,16 @@
     <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/extensions/text#SingleText">
-    <skos:broadMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/fabio/Item">
-    <skos:closeMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F5_Item"/>
+    <skos:closeMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F5_Item"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/BibliographicResource">
-    <skos:broadMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F3_Manifestation"/>
+    <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/abstract#Reference">
-    <skos:broadMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/doco/Chapter">
     <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
@@ -309,7 +309,7 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dracor.org/ontology#play">
-    <skos:broadMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/abstract#IntertexualSpecification">
     <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT11_TypeOfInterrelation"/>
@@ -345,7 +345,7 @@
     <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/P102_has_title"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/ontology/bibo/Book">
-    <skos:broadMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F3_Manifestation"/>
+    <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#date">
     <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
@@ -421,10 +421,10 @@
     <skos:closeMatch rdf:resource="http://purl.org/spar/fabio/hasRepresentation"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#PoeticWork">
-    <skos:broadMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F1_Work"/>
+    <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://purl.archive.org/urbooks#Work">
-    <skos:closeMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F1_Work"/>
+    <skos:closeMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#birthPlaceOf">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P7i_witnessed"/>
@@ -442,7 +442,7 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/fabio/LiteraryArtisticWork">
-    <skos:broadMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F1_Work"/>
+    <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/abstract#specifiedBy">
     <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#R19i_isTypeOf"/>
@@ -460,7 +460,7 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P2_has_type"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/extensions/text#Text">
-    <skos:broadMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://purl.archive.org/urwriters#wasPublishedBy">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
@@ -475,10 +475,10 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#Intertextuality">
-    <skos:broadMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#Redaction">
-    <skos:broadMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F3_Manifestation"/>
+    <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/hasPart">
     <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#R30_hasTextPassage"/>
@@ -490,7 +490,7 @@
     <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT31_IntertextualRelation"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/Q2">
-    <skos:broadMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F2_Expression"/>
+    <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://schema.org/creator">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
@@ -508,13 +508,13 @@
     <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://purl.archive.org/urbooks#embodimentOf">
-    <skos:closeMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/R4_embodies"/>
+    <skos:closeMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/R4_embodies"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dracor.org/ontology#genre">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/fabio/Manifestation">
-    <skos:closeMatch rdf:resource="http://www.cidoc-crm.org/lrmoo/F3_Manifestation"/>
+    <skos:closeMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#typeOfIntertextuality">
     <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#R19i_isTypeOf"/>
@@ -584,42 +584,42 @@
     <owl:equivalentClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/F2_Expression">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression">
     <owl:equivalentClass rdf:resource="http://erlangen-crm.org/efrbroo/F2_Expression"/>
     <owl:equivalentClass rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F2_Expression"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/F1_Work">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work">
     <owl:equivalentClass rdf:resource="http://erlangen-crm.org/efrbroo/F1_Work"/>
     <owl:equivalentClass rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/F27_Work_Creation">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F27_Work_Creation">
     <owl:equivalentClass rdf:resource="http://erlangen-crm.org/efrbroo/F27_Work_Conception"/>
     <owl:equivalentClass rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F27_Work_Conception"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/F28_Expression_Creation">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation">
     <owl:equivalentClass rdf:resource="http://erlangen-crm.org/efrbroo/F28_Expression_Creation"/>
     <owl:equivalentClass rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F28_Expression_Creation"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/F30_Manifestation_Creation">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F30_Manifestation_Creation">
     <owl:equivalentClass rdf:resource="http://erlangen-crm.org/efrbroo/F30_Publication_Event"/>
     <owl:equivalentClass rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F30_Publication_Event"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/F32_Item_Production_Event">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F32_Item_Production_Event">
     <owl:equivalentClass rdf:resource="http://erlangen-crm.org/efrbroo/F32_Carrier_Production_Event"/>
     <owl:equivalentClass rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F32_Carrier_Production_Event"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/F3_Manifestation">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation">
     <owl:equivalentClass rdf:resource="http://erlangen-crm.org/efrbroo/F3_Manifestation_Product_Type"/>
     <owl:equivalentClass rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation_Product_Type"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/F5_Item">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F5_Item">
     <owl:equivalentClass rdf:resource="http://erlangen-crm.org/efrbroo/F5_Item"/>
     <owl:equivalentClass rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/F5_Item"/>
   </rdf:Description>
@@ -724,100 +724,100 @@
     <owl:equivalentProperty rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P190i_is_content_of"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R10_has_member">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R10_has_member">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R10_has_member"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R10i_is_member_of">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R10i_is_member_of">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R10i_is_member_of"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R16_created">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R16_created">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R16_initiated"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R16_initiated"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R16i_was_created_by">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R16i_was_created_by">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R16i_was_initiated_by"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R16i_was_initiated_by"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R17_created">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R17_created">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R17_created"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R17_created"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R17i_was_created_by">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R17i_was_created_by">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R17i_was_created_by"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R17i_was_created_by"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R19_created_a_realisation_of">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R19_created_a_realisation_of">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R19_created_a_realisation_of"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R19_created_a_realisation_of"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R19i_was_realised_through">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R19i_was_realised_through">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R19i_was_realised_through"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R19i_was_realised_through"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R24_created">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R24_created">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R24_created"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R24_created"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R24i_was_created_through">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R24i_was_created_through">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R24i_was_created_through"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R24i_was_created_through"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R27_materialized">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R27_materialized">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R27_used_as_source_material"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R27_used_as_source_material"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R27i_was_materialized_by">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R27i_was_materialized_by">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R27i_was_used_by"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R27i_was_used_by"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R28_produced">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R28_produced">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R28_produced"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R28_produced"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R28i_was_produced_by">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R28i_was_produced_by">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R28i_was_produced_by"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R28i_was_produced_by"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R3_is_realised_in">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R3_is_realised_in">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R3_is_realised_in"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R3_is_realised_in"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R3i_realises">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R3i_realises">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R3i_realises"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R3i_realises"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R4_embodies">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R4_embodies">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R4i_comprises_carriers_of"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R4i_comprises_carriers_of"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R4i_is_embodied_in">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R4i_is_embodied_in">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R4_carriers_provided_by"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R4_carriers_provided_by"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R7_exemplifies">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R7_exemplifies">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R7_is_example_of"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R7_is_example_of"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://www.cidoc-crm.org/lrmoo/R7i_is_exemplified_by">
+  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R7i_is_exemplified_by">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R7i_has_example"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R7i_has_example"/>
   </rdf:Description>

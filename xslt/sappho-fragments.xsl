@@ -3,7 +3,7 @@
     xmlns="http://www.w3.org/1999/xhtml" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:ecrm="http://erlangen-crm.org/current/" xmlns:lrmoo="http://www.cidoc-crm.org/lrmoo/"
+    xmlns:ecrm="http://erlangen-crm.org/current/" xmlns:lrmoo="http://iflastandards.info/ns/lrm/lrmoo/"
     xmlns:intro="https://w3id.org/lso/intro/currentbeta#" xmlns:local="xyz"
     exclude-result-prefixes="xs rdf rdfs owl ecrm lrmoo intro local">
 

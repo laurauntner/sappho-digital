@@ -6,7 +6,7 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:local="xyz" xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:intro="https://w3id.org/lso/intro/currentbeta#"
-    xmlns:lrmoo="http://www.cidoc-crm.org/lrmoo/" exclude-result-prefixes="tei">
+    xmlns:lrmoo="http://iflastandards.info/ns/lrm/lrmoo/" exclude-result-prefixes="tei">
 
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>

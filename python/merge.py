@@ -7,7 +7,7 @@ from rdflib.collection import Collection
 # Namespaces
 
 ECRM = Namespace("http://erlangen-crm.org/current/")
-LRMOO = Namespace("http://www.cidoc-crm.org/lrmoo/")
+LRMOO = Namespace("http://iflastandards.info/ns/lrm/lrmoo/")
 INTRO = Namespace("https://w3id.org/lso/intro/currentbeta#")
 PROV = Namespace("http://www.w3.org/ns/prov#")
 SAPPHO = Namespace("https://sappho-digital.com/")
