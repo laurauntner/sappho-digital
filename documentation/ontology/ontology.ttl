@@ -25,13 +25,19 @@
     dc:rights "This ontology is distributed under the Creative Commons Attribution 4.0 International Licence (CC-BY 4.0)." ;
     rdfs:comment "This is an ontology developed in the project Sappho Digital by Laura Untner. It reuses CIDOC CRM (Erlangen OWL version), LRMoo and INTRO (the Intertextual, Interpictorial and Intermedial Relations Ontology) to model basic biographical and bibliographical as well as intertextual information."^^xsd:string ;
     dc:description """This ontology has three modules that are connected with each other, see figure 1:
-    <img src="https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/meta.svg" alt="Figure 1: Module overview"/>
+    ![Figure 1: Module overview](https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/meta.svg)
+
     The authors module models basic bibliographic information, see figure 2:
-    <img src="https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/authors_simple.svg" alt="Figure 2: Authors module"/>
+
+    ![Figure 2: Authors module](https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/authors_simple.svg)
+
     The works module models basic biographic information, see figure 3:
-    <img src="https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/works_simple.svg" alt="Figure 3: Works module"/>
+
+    ![Figure 3: Works module](https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/works_simple.svg)
+
     The relations module models intertextual information, see figure 4:
-    <img src="https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/relations_simple.svg" alt="Figure 4: Relations module"/>""" ;
+
+    ![Figure 4: Relations module](https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/relations_simple.svg)""" ;
     schema:image <https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/meta.svg> ;
     schema:image <https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/authors_simple.svg> ;
     schema:image <https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/works_simple.svg> ;
