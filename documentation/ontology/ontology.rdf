@@ -22,17 +22,7 @@
       version), LRMoo and INTRO (the Intertextual, Interpictorial and Intermedial Relations
       Ontology) to model basic biographical and bibliographical as well as intertextual
       information.</rdfs:comment>
-    <dc:description rdf:parseType="Resource">
-      <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq"/>
-      <rdf:_1>This ontology has three modules that are connected with each other, see figure 1:</rdf:_1>
-      <rdf:_2>https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/meta.png</rdf:_2>
-      <rdf:_3>The authors module models basic bibliographic information, see figure 2:</rdf:_3>
-      <rdf:_4>https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/authors_simple.png</rdf:_4>
-      <rdf:_5>The works module models basic biographic information, see figure 3:</rdf:_5>
-      <rdf:_6>https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/works_simple.png</rdf:_6>
-      <rdf:_7>The relations module models intertextual information, see figure 4:</rdf:_7>
-      <rdf:_8>https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/relations_simple.png</rdf:_8>
-    </dc:description>
+    <dc:description>This ontology has three modules that are connected with each other, see figure 1: https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/meta.png - The authors module models basic bibliographic information, see figure 2: https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/authors_simple.png - The works module models basic biographic information, see figure 3: https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/works_simple.png - The relations module models intertextual information, see figure 4: https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/relations_simple.png</dc:description>
     <dc:relation>https://sappho-digital.com</dc:relation>
     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version
       0.1</owl:versionInfo>
