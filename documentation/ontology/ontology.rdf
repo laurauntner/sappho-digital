@@ -22,11 +22,11 @@
       version), LRMoo and INTRO (the Intertextual, Interpictorial and Intermedial Relations
       Ontology) to model basic biographical and bibliographical as well as intertextual
       information.</rdfs:comment>
-    <rdfs:comment>This ontology has three modules that are connected with each other (figure 1), the authors module models basic bibliographic information (figure 2), the works module models basic biographic information (figure 3), and the relations module models intertextual information (figure 4).</rdfs:comment>
-    <dc:description rdf:resource="https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/meta.png"/>
-    <dc:description rdf:resource="https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/authors_simple.png"/>
-    <dc:description rdf:resource="https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/works_simple.png"/>
-    <dc:description rdf:resource="https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/relations_simple.png"/>
+    <dc:description>This ontology has three modules that are connected with each other, see figure 1: https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/meta.png. 
+    The authors module models basic bibliographic information, see figure 2: https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/authors_simple.png. 
+    The works module models basic biographic information, see figure 3: https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/works_simple.png.
+    The relations module models intertextual information, see figure 4: https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/relations_simple.png.</dc:description>
+    <dc:relation>https://sappho-digital.com</dc:relation>
     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version
       0.1</owl:versionInfo>
     <owl:imports rdf:resource="http://erlangen-crm.org/current/"/>
