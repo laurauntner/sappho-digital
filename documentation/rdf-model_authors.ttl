@@ -8,14 +8,14 @@
     rdfs:label "XXXX"@de ;
     ecrm:P100i_died_in <https://sappho-digital.com/death/XXXX> ;
     ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/XXXX> ;
-    ecrm:P138i_has_representation <https://sappho-digital.com/visual_item/XXXX> ; # wdt:P18
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ,
                              <https://sappho-digital.com/identifier/XXXX> ;
     ecrm:P2_has_type <https://sappho-digital.com/gender/XXXX> ; # wdt:P21
     ecrm:P98i_was_born <https://sappho-digital.com/birth/XXXX> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/visual_item/XXXX> ; # wdt:P18
     owl:sameAs <http://www.wikidata.org/entity/XXXX> .
 
-<https://sappho-digital.com/appellation/XXXX> a ecrm:E82_Actor_Appellation ;
+<https://sappho-digital.com/appellation/XXXX> a ecrm:E41_Appellation ;
     rdfs:label "XXXX"@de ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/XXXX> .
 
@@ -80,12 +80,9 @@
     rdfs:label "Wikidata Gender"@en ;
     ecrm:P2i_is_type_of <https://sappho-digital.com/gender/XXXX> .
 
-<https://sappho-digital.com/image/XXXX> a ecrm:E38_Image ;
-    ecrm:P65_shows_visual_item <https://sappho-digital.com/visual_item/XXXX> ;
-    rdfs:seeAlso <http://commons.wikimedia.org/wiki/Special:FilePath/XXXX.JPG> ;
-    prov:wasDerivedFrom <http://www.wikidata.org/entity/XXXX> .
-
 <https://sappho-digital.com/visual_item/XXXX> a ecrm:E36_Visual_Item ;
     rdfs:label "Visual representation of XXXX"@en ;
     ecrm:P138_represents <https://sappho-digital.com/person/XXXX> ;
-    ecrm:P65i_is_shown_by <https://sappho-digital.com/image/XXXX> .
+    ecrm:P65i_is_shown_by <https://sappho-digital.com/image/XXXX> ;
+    rdfs:seeAlso <http://commons.wikimedia.org/wiki/Special:FilePath/XXXX.JPG> ;
+    prov:wasDerivedFrom <http://www.wikidata.org/entity/XXXX> .

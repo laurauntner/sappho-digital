@@ -86,9 +86,6 @@
   <rdf:Description rdf:about="http://purl.org/spar/doco/BackMatter">
     <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Image">
-    <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/E38_Image"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/ontology/bibo/Manuscript">
     <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </rdf:Description>
@@ -180,7 +177,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-    <skos:narrowMatch rdf:resource="http://erlangen-crm.org/current/E40_Legal_Body"/>
+    <skos:narrowMatch rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://schema.org/dateCreated">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
@@ -265,9 +262,6 @@
     <skos:narrowMatch rdf:resource="http://purl.org/spar/cito/cites"/>
     <skos:narrowMatch rdf:resource="https://schema.org/citation"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://purl.org/ontology/bibo/Image">
-    <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/E38_Image"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/publisher">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
   </rdf:Description>
@@ -284,7 +278,7 @@
     <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Plot"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#Organization">
-    <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E40_Legal_Body"/>
+    <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/abstract#Mediator">
     <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_Feature"/>
@@ -360,7 +354,7 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P2_has_type"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#Organisation">
-    <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E40_Legal_Body"/>
+    <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://schema.org/datePublished">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
@@ -399,7 +393,7 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://purl.archive.org/urwriters#Publisher">
-    <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E40_Legal_Body"/>
+    <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/Q33">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
@@ -433,7 +427,7 @@
     <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://purl.archive.org/urwriters#Organization">
-    <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E40_Legal_Body"/>
+    <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/P10">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P7_took_place_at"/>
@@ -536,12 +530,8 @@
     <owl:equivalentClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://erlangen-crm.org/current/E38_Image">
-    <owl:equivalentClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E38_Image"/>
-  </rdf:Description>
-
-  <rdf:Description rdf:about="http://erlangen-crm.org/current/E40_Legal_Body">
-    <owl:equivalentClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E40_Legal_Body"/>
+  <rdf:Description rdf:about="http://erlangen-crm.org/current/E74_Group">
+    <owl:equivalentClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E74_Group"/>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://erlangen-crm.org/current/E42_Identifier">
@@ -560,10 +550,6 @@
     <owl:equivalentClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E55_Type"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://erlangen-crm.org/current/E62_String">
-    <owl:equivalentClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E62_String"/>
-  </rdf:Description>
-
   <rdf:Description rdf:about="http://erlangen-crm.org/current/E67_Birth">
     <owl:equivalentClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E67_Birth"/>
   </rdf:Description>
@@ -576,8 +562,8 @@
     <owl:equivalentClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://erlangen-crm.org/current/E82_Actor_Appellation">
-    <owl:equivalentClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E82_Actor_Appellation"/>
+  <rdf:Description rdf:about="http://erlangen-crm.org/current/E41_Appellation">
+    <owl:equivalentClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"/>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://erlangen-crm.org/current/E90_Symbolic_Object">

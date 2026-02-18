@@ -152,7 +152,7 @@ g.add((SD["person/author_sappho"], ECRM.P2_has_type, SD["gender/female"]))
 g.add((SD["person/author_sappho"], OWL.sameAs, URIRef("http://www.wikidata.org/entity/Q17892")))
 
 # Appellation Sappho
-g.add((SD["appellation/author_sappho"], RDF.type, ECRM.E82_Actor_Appellation))
+g.add((SD["appellation/author_sappho"], RDF.type, ECRM.E41_Appellation))
 g.add((SD["appellation/author_sappho"], RDFS.label, Literal("Sappho", lang="en")))
 g.add((SD["appellation/author_sappho"], ECRM.P131i_identifies, SD["person/author_sappho"]))
 
@@ -178,7 +178,7 @@ g.add((SD["person/editor_bagordo"], ECRM.P1_is_identified_by, SD["identifier/edi
 g.add((SD["person/editor_bagordo"], ECRM.P2_has_type, SD["gender/male"]))
 g.add((SD["person/editor_bagordo"], OWL.sameAs, URIRef("http://www.wikidata.org/entity/Q495907")))
 
-g.add((SD["appellation/editor_bagordo"], RDF.type, ECRM.E82_Actor_Appellation))
+g.add((SD["appellation/editor_bagordo"], RDF.type, ECRM.E41_Appellation))
 g.add((SD["appellation/editor_bagordo"], RDFS.label, Literal("Andreas Bagordo", lang="en")))
 g.add((SD["appellation/editor_bagordo"], ECRM.P131i_identifies, SD["person/editor_bagordo"]))
 
@@ -231,15 +231,11 @@ g.add((manifestation_creation_uri, ECRM.P7_took_place_at, pub_place_uri))
 
 # Title
 g.add((title_uri, RDF.type, ECRM.E35_Title))
+g.add((title_uri, RDFS.label, Literal("Sappho. Gedichte. Griechisch-Deutsch", lang="de")))
 g.add((title_uri, ECRM.P102i_is_title_of, manifestation_uri))
-g.add((title_uri, ECRM.P190_has_symbolic_content, title_string_uri))
-
-g.add((title_string_uri, RDF.type, ECRM.E62_String))
-g.add((title_string_uri, RDFS.label, Literal("Sappho. Gedichte. Griechisch-Deutsch", lang="de")))
-g.add((title_string_uri, ECRM.P190i_is_content_of, title_uri))
 
 # Publisher
-g.add((publisher_uri, RDF.type, ECRM.E40_Legal_Body))
+g.add((publisher_uri, RDF.type, ECRM.E74_Group))
 g.add((publisher_uri, RDFS.label, Literal("Patmos", lang="en")))
 g.add((publisher_uri, ECRM.P14i_performed, manifestation_creation_uri))
 g.add((publisher_uri, OWL.sameAs, URIRef("http://www.wikidata.org/entity/Q1463096")))
@@ -304,12 +300,8 @@ with open(INPUT_FILE, newline='', encoding="utf-8") as f:
         g.add((expr_uri, OWL.sameAs, URIRef(qid_url)))
 
         g.add((title_uri, RDF.type, ECRM.E35_Title))
+        g.add((title_uri, RDFS.label, Literal(f"Fragment {frag_num} Voigt", lang="de")))
         g.add((title_uri, ECRM.P102i_is_title_of, expr_uri))
-        g.add((title_uri, ECRM.P190_has_symbolic_content, title_str_uri))
-
-        g.add((title_str_uri, RDF.type, ECRM.E62_String))
-        g.add((title_str_uri, RDFS.label, Literal(f"Fragment {frag_num} Voigt", lang="de")))
-        g.add((title_str_uri, ECRM.P190i_is_content_of, title_uri))
 
         qid = qid_url.split("/")[-1]
         g.add((SD[f"identifier/{qid}"], RDF.type, ECRM.E42_Identifier))

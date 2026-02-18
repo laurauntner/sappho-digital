@@ -106,9 +106,9 @@ efrbroo:F38_Character skos:broadMatch intro:INT2_ActualizationOfFeature,
 frbroo:F38_Character skos:broadMatch intro:INT2_ActualizationOfFeature,
         intro:INT_Character .
 
-postdata_core:Organisation skos:broadMatch ecrm:E40_Legal_Body .
+postdata_core:Organisation skos:broadMatch ecrm:E74_Group .
 
-postdata_core:Organization skos:broadMatch ecrm:E40_Legal_Body .
+postdata_core:Organization skos:broadMatch ecrm:E74_Group .
 
 postdata_core:Person skos:closeMatch ecrm:E21_Person .
 
@@ -179,8 +179,6 @@ dc:type skos:closeMatch ecrm:P2_has_type .
 
 bibo:Book skos:broadMatch lrmoo:F3_Manifestation .
 
-bibo:Image skos:closeMatch ecrm:E38_Image .
-
 bibo:Manuscript skos:broadMatch lrmoo:F2_Expression .
 
 bibo:Quote skos:broadMatch intro:INT21_TextPassage .
@@ -232,13 +230,11 @@ fabio:Work skos:closeMatch lrmoo:F1_Work .
 fabio:hasPlaceOfPublication skos:broadMatch ecrm:P7_took_place_at .
 
 foaf:Agent skos:broadMatch ecrm:E21_Person ;
-    skos:narrowMatch ecrm:E40_Legal_Body .
+    skos:narrowMatch ecrm:E74_Group .
 
 foaf:Document skos:broadMatch lrmoo:F2_Expression,
         lrmoo:F3_Manifestation ;
     skos:narrowMatch lrmoo:F5_Item .
-
-foaf:Image skos:closeMatch ecrm:E38_Image .
 
 foaf:gender skos:broadMatch ecrm:P2_has_type .
 
@@ -310,13 +306,13 @@ urw:Agent skos:narrowMatch ecrm:E21_Person .
 
 urw:EntityInfluence skos:narrowMatch intro:INT31_IntertextualRelation .
 
-urw:Organization skos:broadMatch ecrm:E40_Legal_Body .
+urw:Organization skos:broadMatch ecrm:E74_Group .
 
 urw:Person skos:closeMatch ecrm:E21_Person .
 
 urw:Place skos:closeMatch ecrm:E53_Place .
 
-urw:Publisher skos:broadMatch ecrm:E40_Legal_Body .
+urw:Publisher skos:broadMatch ecrm:E74_Group .
 
 urw:date skos:closeMatch ecrm:P4_has_time-span .
 
@@ -396,18 +392,15 @@ schema:locationCreated skos:broadMatch ecrm:P7_took_place_at .
 ecrm:E21_Person             owl:equivalentClass crm:E21_Person .
 ecrm:E35_Title              owl:equivalentClass crm:E35_Title .
 ecrm:E36_Visual_Item        owl:equivalentClass crm:E36_Visual_Item .
-ecrm:E38_Image              owl:equivalentClass crm:E38_Image .
-ecrm:E40_Legal_Body         owl:equivalentClass crm:E40_Legal_Body .
+ecrm:E41_Appellation        owl:equivalentClass crm:E41_Appellation .
 ecrm:E42_Identifier         owl:equivalentClass crm:E42_Identifier .
-ecrm:E47_Spatial_Coordinates owl:equivalentClass crm:E47_Spatial_Coordinates .
 ecrm:E52_Time-Span          owl:equivalentClass crm:E52_Time-Span .
 ecrm:E53_Place              owl:equivalentClass crm:E53_Place .
 ecrm:E55_Type               owl:equivalentClass crm:E55_Type .
-ecrm:E62_String             owl:equivalentClass crm:E62_String .
 ecrm:E67_Birth              owl:equivalentClass crm:E67_Birth .
 ecrm:E69_Death              owl:equivalentClass crm:E69_Death .
 ecrm:E73_Information_Object owl:equivalentClass crm:E73_Information_Object .
-ecrm:E82_Actor_Appellation  owl:equivalentClass crm:E82_Actor_Appellation .
+ecrm:E74_Group              owl:equivalentClass crm:E74_Group .
 ecrm:E90_Symbolic_Object    owl:equivalentClass crm:E90_Symbolic_Object .
 
 lrmoo:F2_Expression owl:equivalentClass efrbroo:F2_Expression .

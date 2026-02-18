@@ -518,7 +518,7 @@ for text_id, cats in elements_per_text.items():
         g.add((place_uri_local, ECRM.P67i_is_referred_to_by, act_uri))
         g.add((text_uri, INTRO.R18_showsActualization, act_uri))
 
-    # INT18_Reference: PERSON (+ optional INT_Character; + optional E75_Appellation auf beide Actualizations)
+    # INT18_Reference: PERSON (+ optional INT_Character; + optional E41_Appellation auf beide Actualizations)
     for pinfo in cats["person"]:
         v = pinfo["label"]
         art = pinfo.get("art") or ""
@@ -563,13 +563,13 @@ for text_id, cats in elements_per_text.items():
             )
             g.add((text_uri, INTRO.R18_showsActualization, char_act_uri))
 
-        # @appellation -> E75_Conceptual_Object_Appellation an die Aktualisierung(en) hängen:
+        # @appellation -> E41_Appellation an die Aktualisierung(en) hängen:
         # - immer an person_ref-Actualization
         # - zusätzlich auch an character-Actualization (falls vorhanden)
         if appellation:
             app_id = f"appellation_{stable_id(f'{text_id}|{used_id}|{appellation}')}"
             app_uri = uri(f"appellation/{app_id}")
-            g.add((app_uri, RDF.type, ECRM.E75_Conceptual_Object_Appellation))
+            g.add((app_uri, RDF.type, ECRM.E41_Appellation))
             g.add((app_uri, RDFS.label, Literal(appellation, lang="de")))
 
             # person_ref

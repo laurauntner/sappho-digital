@@ -194,7 +194,7 @@ for el in authors:
     g.add((person_uri, ECRM.P131_is_identified_by, appellation_uri))
     g.add((person_uri, ECRM.P1_is_identified_by, identifier_uri))
 
-    g.add((appellation_uri, RDF.type, ECRM.E82_Actor_Appellation))
+    g.add((appellation_uri, RDF.type, ECRM.E41_Appellation))
     g.add((appellation_uri, RDFS.label, Literal(name, lang="de")))
     g.add((appellation_uri, ECRM.P131i_identifies, person_uri))
 
@@ -367,16 +367,13 @@ for el in authors:
         image = get_claim_val(entity, "P18", val_type=None)
         if image:
             img_name = image.replace(" ", "_")
-            img_uri = SD[f"image/{xml_id}"]
             vis_uri = SD[f"visual_item/{xml_id}"]
-            g.add((img_uri, RDF.type, ECRM.E38_Image))
-            g.add((img_uri, ECRM.P65_shows_visual_item, vis_uri))
-            g.add((img_uri, RDFS.seeAlso, URIRef(WDCOM + img_name)))
-            g.add((img_uri, PROV.wasDerivedFrom, URIRef(WD + qid)))
+            g.add((vis_uri, RDFS.seeAlso, URIRef(WDCOM + img_name)))
+            g.add((vis_uri, PROV.wasDerivedFrom, URIRef(WD + qid)))
             g.add((vis_uri, RDF.type, ECRM.E36_Visual_Item))
             g.add((vis_uri, RDFS.label, Literal(f"Visual representation of {name}", lang="en")))
             g.add((vis_uri, ECRM.P138_represents, person_uri))
-            g.add((vis_uri, ECRM.P65i_is_shown_by, img_uri))
+            g.add((person_uri, ECRM.P138i_has_representation, vis_uri))
 
 # Speichern
 Path(OUTPUT_FILE).parent.mkdir(parents=True, exist_ok=True)

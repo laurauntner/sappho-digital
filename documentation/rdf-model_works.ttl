@@ -35,12 +35,8 @@
     rdfs:seeAlso <<http://commons.wikimedia.org/wiki/Special:FilePath/XXXX.jpg> .
 
 <https://sappho-digital.com/title/expression/Q1242002> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/XXXX> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/XXXX> .
-
-<https://sappho-digital.com/title_string/expression/XXXX> a ecrm:E62_String ;
     rdfs:label "XXXX"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/XXXX> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/XXXX> .
 
 <https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ; 
     rdfs:label "XXXX" ;
@@ -83,7 +79,7 @@
     ecrm:P7_took_place_at <https://sappho-digital.com/place/XXXX> ;
     lrmoo:R24_created <https://sappho-digital.com/manifestation/XXXX> .
 
-<https://sappho-digital.com/publisher/XXXX> a ecrm:E40_Legal_Body ;
+<https://sappho-digital.com/publisher/XXXX> a ecrm:E74_Group ;
     rdfs:label "XXXX"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/XXXX> ;
     owl:sameAs <http://www.wikidata.org/entity/XXXX> .
@@ -105,9 +101,5 @@
     lrmoo:R4_embodies <https://sappho-digital.com/expression/XXXX> .
 
 <https://sappho-digital.com/title/manifestation/XXXX> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/manifestation/XXXX> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/manifestation/XXXX> .
-
-<https://sappho-digital.com/title_string/manifestation/XXXX> a ecrm:E62_String ;
     rdfs:label "XXXX"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/manifestation/XXXX> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/manifestation/XXXX> .

@@ -28,7 +28,7 @@
         <https://sappho-digital.com/work_creation/sappho-work> ;
     owl:sameAs <http://www.wikidata.org/entity/Q17892> .
 
-<https://sappho-digital.com/appellation/author_sappho> a ecrm:E82_Actor_Appellation ;
+<https://sappho-digital.com/appellation/author_sappho> a ecrm:E41_Appellation ;
     rdfs:label "Sappho"@en ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_sappho> .
 
@@ -81,7 +81,7 @@
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/XXXXX> ;
     owl:sameAs <http://www.wikidata.org/entity/Q495907> .
 
-<https://sappho-digital.com/appellation/editor_bagordo> a ecrm:E82_Actor_Appellation ;
+<https://sappho-digital.com/appellation/editor_bagordo> a ecrm:E41_Appellation ;
     rdfs:label "Andreas Bagordo"@en ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/editor_bagordo> .
 
@@ -113,12 +113,8 @@
     owl:sameAs <http://www.wikidata.org/entity/XXXX> .
 
 <https://sappho-digital.com/title/expression/XXXX> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/XXXX> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/XXXX> .
-
-<https://sappho-digital.com/title_string/expression/XXXX> a ecrm:E62_String ;
     rdfs:label "Fragment XXXX Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/XXXX> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/XXXX> .
 
 <https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
     rdfs:label "XXXX" ;
@@ -157,18 +153,14 @@
     ecrm:P102_has_title <https://sappho-digital.com/title/manifestation/sappho_bagordo> .
 
 <https://sappho-digital.com/title/manifestation/sappho_bagordo> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/manifestation/sappho_bagordo> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/manifestation/sappho_bagordo> .
-
-<https://sappho-digital.com/title_string/manifestation/sappho_bagordo> a ecrm:E62_String ;
     rdfs:label "Sappho. Gedichte. Griechisch-Deutsch"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/manifestation/sappho_bagordo> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/manifestation/sappho_bagordo> .
 
 <https://sappho-digital.com/timespan/2009> a ecrm:E52_Time-Span ;
     rdfs:label "2009"^^xsd:gYear ;
     ecrm:P4_is_time-span_of <https://sappho-digital.com/manifestation_creation/sappho_bagordo> .
 
-<https://sappho-digital.com/publisher/publisher_patmos> a ecrm:E40_Legal_Body ;
+<https://sappho-digital.com/publisher/publisher_patmos> a ecrm:E74_Group ;
     rdfs:label "Patmos"@en ;
     ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/sappho_bagordo> ;
     owl:sameAs <http://www.wikidata.org/entity/Q1463096> .

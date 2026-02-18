@@ -395,10 +395,8 @@
                                                   <xsl:variable name="person-iri"
                                                   select="concat('https://sappho-digital.com/person/', @xml:id)"/>
                                                   <xsl:variable name="img" select="
-                                                            $authors//ecrm:E38_Image[
-                                                            ecrm:P65_shows_visual_item
-                                                            /ecrm:E36_Visual_Item
-                                                            /ecrm:P138_represents/@rdf:resource = $person-iri
+                                                            $authors//ecrm:E36_Visual_Item[
+                                                            ecrm:P138_represents/@rdf:resource = $person-iri
                                                             ][1]"/>
                                                   <xsl:variable name="img-url" select="
                                                             string((

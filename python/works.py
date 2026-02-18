@@ -166,11 +166,8 @@ for bibl in top_bibls:
         title_string_uri = SD[f"title_string/expression/{bibl_id}"]
         g.add((bibl_uri, ECRM.P102_has_title, title_uri))
         g.add((title_uri, RDF.type, ECRM.E35_Title))
+        g.add((title_uri, RDFS.label, Literal(title_string, lang="de")))
         g.add((title_uri, ECRM.P102i_is_title_of, bibl_uri))
-        g.add((title_uri, ECRM.P190_has_symbolic_content, title_string_uri))
-        g.add((title_string_uri, RDF.type, ECRM.E62_String))
-        g.add((title_string_uri, RDFS.label, Literal(title_string, lang="de")))
-        g.add((title_string_uri, ECRM.P190i_is_content_of, title_uri))
 
     g.add((bibl_uri, LRMOO.R17i_was_created_by, creation_expr_uri))
 
@@ -353,14 +350,7 @@ for bibl in top_bibls:
             if qid and qid.startswith("Q"):
                 place_entity = fetch_wikidata(qid)
                 for coord_str in set(get_p625_coords_as_string(place_entity)):
-                    coord_key = f"{qid}-P625-{coord_str.replace(',', '').replace(' ', '_')}"
-                    coord_uri = SD[f"spatial_coordinates/{coord_key}"]
-
-                    g.add((coord_uri, RDF.type, ECRM.E47_Spatial_Coordinates))
-                    g.add((coord_uri, RDFS.label, Literal(coord_str, datatype=XSD.string)))
-
-                    g.add((place_uri, ECRM.P87_is_identified_by, coord_uri))
-                    g.add((coord_uri, ECRM.P87i_identifies, place_uri))
+                    g.add((place_uri, RDFS.comment, Literal(coord_str, lang="en")))
 
             g.add((place_uri, ECRM.P7i_witnessed, creation_manif_uri))
             g.add((creation_manif_uri, ECRM.P7_took_place_at, place_uri))
@@ -374,7 +364,7 @@ for bibl in top_bibls:
                     SD[f"publisher/{pub_ref.split('/')[-1]}"]
                     if pub_ref else SD[f"publisher/{pub_label.replace(' ', '_')}"]
                 )
-                g.add((pub_uri, RDF.type, ECRM.E40_Legal_Body))
+                g.add((pub_uri, RDF.type, ECRM.E74_Group))
                 g.add((pub_uri, RDFS.label, Literal(pub_label, lang="de")))
                 if pub_ref:
                     g.add((pub_uri, OWL.sameAs, URIRef(pub_ref)))
