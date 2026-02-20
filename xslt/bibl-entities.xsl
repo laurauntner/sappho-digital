@@ -656,9 +656,9 @@
                 <xsl:variable name="death" select="$rdf//ecrm:E69_Death[@rdf:about = $death-iri]"/>
 
                 <xsl:variable name="bdate"
-                    select="$rdf//ecrm:E52_Time-Span[@rdf:about = $birth/ecrm:P4_has_time_span/@rdf:resource]/rdfs:label"/>
+                    select="$rdf//ecrm:E52_Time-Span[@rdf:about = $birth/ecrm:P4_has_time-span/@rdf:resource]/rdfs:label"/>
                 <xsl:variable name="ddate"
-                    select="$rdf//ecrm:E52_Time-Span[@rdf:about = $death/ecrm:P4_has_time_span/@rdf:resource]/rdfs:label"/>
+                    select="$rdf//ecrm:E52_Time-Span[@rdf:about = $death/ecrm:P4_has_time-span/@rdf:resource]/rdfs:label"/>
 
                 <xsl:variable name="bplace"
                     select="$rdf//ecrm:E53_Place[ecrm:P7i_witnessed/ecrm:E67_Birth[@rdf:about = $birth-iri]]"/>

@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#"
-  xmlns:ecrm="http://erlangen-crm.org/current/" xmlns:intro="https://w3id.org/lso/intro/currentbeta#"
+  xmlns:ecrm="http://erlangen-crm.org/current/"
+  xmlns:intro="https://w3id.org/lso/intro/currentbeta#"
   xmlns:lrmoo="http://iflastandards.info/ns/lrm/lrmoo/"
   xmlns:sappho_prop="https://w3id.org/sappho-digital/ontology/"
   xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:cc="http://creativecommons.org/ns#"
-  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:schema="https://schema.org/" xmlns:oa="oa:http://www.w3.org/ns/oa#">
+  xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:schema="https://schema.org/"
+  xmlns:oa="oa:http://www.w3.org/ns/oa#">
 
   <owl:Ontology rdf:about="https://w3id.org/sappho-digital/ontology/">
     <rdfs:label xml:lang="en">Sappho Digital Ontology</rdfs:label>
@@ -22,10 +24,15 @@
       version), LRMoo and INTRO (the Intertextual, Interpictorial and Intermedial Relations
       Ontology) to model basic biographical and bibliographical as well as intertextual
       information.</rdfs:comment>
-    <dc:description>This ontology has three modules that are connected with each other, see figure 1: https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/meta.png. 
-    The authors module models basic bibliographic information, see figure 2: https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/authors_simple.png. 
-    The works module models basic biographic information, see figure 3: https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/works_simple.png.
-    The relations module models intertextual information, see figure 4: https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/relations_simple.png.</dc:description>
+    <dc:description>This ontology has three modules that are connected with each other, see figure
+      1:
+      https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/meta.png.
+      The authors module models basic bibliographic information, see figure 2:
+      https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/authors_simple.png.
+      The works module models basic biographic information, see figure 3:
+      https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/works_simple.png.
+      The relations module models intertextual information, see figure 4:
+      https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/relations_simple.png.</dc:description>
     <dc:relation>https://sappho-digital.com</dc:relation>
     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version
       0.1</owl:versionInfo>
@@ -525,6 +532,402 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
   </owl:Class>
 
+  <owl:ObjectProperty rdf:about="P100_was_death_of">
+    <rdfs:label xml:lang="en">P100 was death of</rdfs:label>
+    <rdfs:label xml:lang="de">P100 Tod von</rdfs:label>
+    <rdfs:label xml:lang="el">P100 ήταν θάνατος του/της</rdfs:label>
+    <rdfs:label xml:lang="fr">P100 a été la mort de</rdfs:label>
+    <rdfs:label xml:lang="pt">P100 foi a morte para</rdfs:label>
+    <rdfs:label xml:lang="ru">P100 был смертью для</rdfs:label>
+    <rdfs:label xml:lang="zh">P100 死亡的是</rdfs:label>
+    <skos:notation>P100</skos:notation>
+    <rdfs:domain rdf:resource="E69_Death"/>
+    <rdfs:range rdf:resource="E21_Person"/>
+    <owl:inverseOf rdf:resource="P100i_died_in"/>
+    <rdfs:subPropertyOf rdf:resource="P93_took_out_of_existence"/>
+    <rdfs:comment xml:lang="en">Quantification: one to many, necessary (1,n:0,1) Scope note: This
+      property links an instance of E69 Death to the instance of E21 Person that died. An instance
+      of E69 Death may involve multiple people, for example in the case of a battle or disaster.
+      This is not intended for use with general natural history material, only people. Examples: -
+      Mozart’s death (E69) was death of Mozart (E21). (Sitwell, 2017) In First Order Logic: -
+      P100(x,y) ⇒ E69(x) - P100(x,y) ⇒ E21(y) - P100(x,y) ⇒ P93(x,y) </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P100_was_death_of"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="P100i_died_in">
+    <rdfs:label xml:lang="en">P100 died in</rdfs:label>
+    <rdfs:label xml:lang="de">P100 starb in</rdfs:label>
+    <rdfs:label xml:lang="el">P100 πέθανε σε</rdfs:label>
+    <rdfs:label xml:lang="fr">P100 est mort par</rdfs:label>
+    <rdfs:label xml:lang="pt">P100 morreu em</rdfs:label>
+    <rdfs:label xml:lang="ru">P100 умер в</rdfs:label>
+    <rdfs:label xml:lang="zh">P100 死于</rdfs:label>
+    <skos:notation>P100i</skos:notation>
+    <rdfs:domain rdf:resource="E21_Person"/>
+    <rdfs:range rdf:resource="E69_Death"/>
+    <owl:inverseOf rdf:resource="P100_was_death_of"/>
+    <rdfs:subPropertyOf rdf:resource="P93i_was_taken_out_of_existence_by"/>
+    <rdfs:comment xml:lang="en">Quantification of the inverse property: one to many, necessary
+      (1,n:0,1) Scope note of the inverse property: This property links an instance of E69 Death to
+      the instance of E21 Person that died. An instance of E69 Death may involve multiple people,
+      for example in the case of a battle or disaster. This is not intended for use with general
+      natural history material, only people. Examples of the inverse property: - Mozart’s death
+      (E69) was death of Mozart (E21). (Sitwell, 2017) In First Order Logic of the inverse property:
+      - P100(x,y) ⇒ E69(x) - P100(x,y) ⇒ E21(y) - P100(x,y) ⇒ P93(x,y) </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P100i_died_in"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="P102_has_title">
+    <rdfs:label xml:lang="en">P102 has title</rdfs:label>
+    <rdfs:label xml:lang="de">P102 trägt den Titel</rdfs:label>
+    <rdfs:label xml:lang="el">P102 έχει τίτλο</rdfs:label>
+    <rdfs:label xml:lang="fr">P102 a pour titre</rdfs:label>
+    <rdfs:label xml:lang="pt">P102 tem título</rdfs:label>
+    <rdfs:label xml:lang="ru">P102 имеет заголовок</rdfs:label>
+    <rdfs:label xml:lang="zh">P102 有题名</rdfs:label>
+    <skos:notation>P102</skos:notation>
+    <rdfs:domain rdf:resource="E71_Human-Made_Thing"/>
+    <rdfs:range rdf:resource="E35_Title"/>
+    <owl:inverseOf rdf:resource="P102i_is_title_of"/>
+    <rdfs:subPropertyOf rdf:resource="P1_is_identified_by"/>
+    <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n) Scope note: This property
+      associates an instance of E35 Title that has been applied to an instance of E71 Human-Made
+      Thing. The P102.1 has type property of the P102 has title (is title of) property enables the
+      relationship between the title and the thing to be further clarified, for example, if the
+      title was a given title, a supplied title etc. It allows any human-made material or immaterial
+      thing to be given a title. It is possible to imagine a title being created without a specific
+      object in mind. Examples: - The first book of the Old Testament (E33) has title “Genesis”
+      (E35) has type translated title (E55) (E55). (Brueggemann, 1982) - Monet’s painting from
+      1868-1869 held by Musée d’Orsay, Paris, under inventory number RF 1984 164 (E22) has title “La
+      Pie” (E35) has type creator’s title (E55). (Musée d’Orsay, 2020) - Monet’s painting from
+      1868-1869 held by Musée d'Orsay, Paris, under inventory number RF 1984 164 (E22) has title
+      “The Magpie” (E35) has type translated title (E55). (Musée d'Orsay, 2020) Properties: - P102.1
+      has type: E55 Type In First Order Logic: - P102(x,y) ⇒ E71(x) - P102(x,y) ⇒ E35(y) -
+      P102(x,y,z) ⇒ [P102(x,y) ∧ E55(z)] - P102(x,y) ⇒ P1(x,y) </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P102_has_title"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="P102i_is_title_of">
+    <rdfs:label xml:lang="en">P102 is title of</rdfs:label>
+    <rdfs:label xml:lang="de">P102 ist der Titel von</rdfs:label>
+    <rdfs:label xml:lang="el">P102 είναι τίτλος του/της</rdfs:label>
+    <rdfs:label xml:lang="fr">P102 est le titre de</rdfs:label>
+    <rdfs:label xml:lang="pt">P102 é título de</rdfs:label>
+    <rdfs:label xml:lang="ru">P102 является заголовком для</rdfs:label>
+    <rdfs:label xml:lang="zh">P102 题名是</rdfs:label>
+    <skos:notation>P102i</skos:notation>
+    <rdfs:domain rdf:resource="E35_Title"/>
+    <rdfs:range rdf:resource="E71_Human-Made_Thing"/>
+    <owl:inverseOf rdf:resource="P102_has_title"/>
+    <rdfs:subPropertyOf rdf:resource="P1i_identifies"/>
+    <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n) Scope
+      note of the inverse property: This property associates an instance of E35 Title that has been
+      applied to an instance of E71 Human-Made Thing. The P102.1 has type property of the P102 has
+      title (is title of) property enables the relationship between the title and the thing to be
+      further clarified, for example, if the title was a given title, a supplied title etc. It
+      allows any human-made material or immaterial thing to be given a title. It is possible to
+      imagine a title being created without a specific object in mind. Examples of the inverse
+      property: - The first book of the Old Testament (E33) has title “Genesis” (E35) has type
+      translated title (E55) (E55). (Brueggemann, 1982) - Monet’s painting from 1868-1869 held by
+      Musée d’Orsay, Paris, under inventory number RF 1984 164 (E22) has title “La Pie” (E35) has
+      type creator’s title (E55). (Musée d’Orsay, 2020) - Monet’s painting from 1868-1869 held by
+      Musée d'Orsay, Paris, under inventory number RF 1984 164 (E22) has title “The Magpie” (E35)
+      has type translated title (E55). (Musée d'Orsay, 2020) In First Order Logic of the inverse
+      property: - P102(x,y) ⇒ E71(x) - P102(x,y) ⇒ E35(y) - P102(x,y,z) ⇒ [P102(x,y) ∧ E55(z)] -
+      P102(x,y) ⇒ P1(x,y) </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P102i_is_title_of"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="P138_represents">
+    <rdfs:label xml:lang="en">P138 represents</rdfs:label>
+    <rdfs:label xml:lang="de">P138 stellt dar</rdfs:label>
+    <rdfs:label xml:lang="el">P138 παριστάνει</rdfs:label>
+    <rdfs:label xml:lang="fr">P138 représente</rdfs:label>
+    <rdfs:label xml:lang="pt">P138 representa</rdfs:label>
+    <rdfs:label xml:lang="ru">P138 представляет</rdfs:label>
+    <rdfs:label xml:lang="zh">P138 描绘</rdfs:label>
+    <skos:notation>P138</skos:notation>
+    <rdfs:domain rdf:resource="E36_Visual_Item"/>
+    <rdfs:range rdf:resource="E1_CRM_Entity"/>
+    <owl:inverseOf rdf:resource="P138i_has_representation"/>
+    <rdfs:subPropertyOf rdf:resource="P67_refers_to"/>
+    <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n) Scope note: This property
+      establishes the relationship between an instance of E36 Visual Item and the instance of E1 CRM
+      Entity that it visually represents. Any entity may be represented visually. This property is
+      part of the fully developed path from E24 Physical Human-Made Thing through P65 shows visual
+      item (is shown by), E36 Visual Item, P138 represents (has representation) to E1 CRM Entity,
+      which is shortcut by P62 depicts (is depicted by). P138.1 mode of representation allows the
+      nature of the representation to be refined. This property is also used for the relationship
+      between an original and a digitisation of the original by the use of techniques such as
+      digital photography, flatbed or infrared scanning. Digitisation is here seen as a process with
+      a mechanical, causal component rendering the spatial distribution of structural and optical
+      properties of the original and does not necessarily include any visual similarity identifiable
+      by human observation. Examples: - The digital file found at
+      https://www.emunch.no/N/full/No-MM_N0001-01.jpg (E36) represents page 1 of Edward Munch's
+      manuscript MM N 1, Munch-museet (E22) mode of representation Digitisation (E55). - The 3D
+      model VAM_A.200-1946_trace_1M.ply (E73) represents Victoria &amp; Albert Museum’s Madonna and
+      child sculpture (visual work) A.200-1946 (E22) mode of representation 3D surface (E55).
+      Properties: - P138.1 mode of representation: E55 Type In First Order Logic: - P138(x,y) ⇒
+      E36(x) - P138(x,y) ⇒ E1(y) - P138(x,y,z) ⇒ [P138(x,y) ∧ E55(z)] - P138(x,y) ⇒ P67(x,y) </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P138_represents"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="P138i_has_representation">
+    <rdfs:label xml:lang="en">P138 has representation</rdfs:label>
+    <rdfs:label xml:lang="de">P138 wird dargestellt durch</rdfs:label>
+    <rdfs:label xml:lang="el">P138 παριστάνεται από</rdfs:label>
+    <rdfs:label xml:lang="fr">P138 est représenté par</rdfs:label>
+    <rdfs:label xml:lang="pt">P138 tem representação</rdfs:label>
+    <rdfs:label xml:lang="ru">P138 имеет представление</rdfs:label>
+    <rdfs:label xml:lang="zh">P138 有描绘</rdfs:label>
+    <skos:notation>P138i</skos:notation>
+    <rdfs:domain rdf:resource="E1_CRM_Entity"/>
+    <rdfs:range rdf:resource="E36_Visual_Item"/>
+    <owl:inverseOf rdf:resource="P138_represents"/>
+    <rdfs:subPropertyOf rdf:resource="P67i_is_referred_to_by"/>
+    <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n) Scope
+      note of the inverse property: This property establishes the relationship between an instance
+      of E36 Visual Item and the instance of E1 CRM Entity that it visually represents. Any entity
+      may be represented visually. This property is part of the fully developed path from E24
+      Physical Human-Made Thing through P65 shows visual item (is shown by), E36 Visual Item, P138
+      represents (has representation) to E1 CRM Entity, which is shortcut by P62 depicts (is
+      depicted by). P138.1 mode of representation allows the nature of the representation to be
+      refined. This property is also used for the relationship between an original and a
+      digitisation of the original by the use of techniques such as digital photography, flatbed or
+      infrared scanning. Digitisation is here seen as a process with a mechanical, causal component
+      rendering the spatial distribution of structural and optical properties of the original and
+      does not necessarily include any visual similarity identifiable by human observation. Examples
+      of the inverse property: - The digital file found at
+      https://www.emunch.no/N/full/No-MM_N0001-01.jpg (E36) represents page 1 of Edward Munch's
+      manuscript MM N 1, Munch-museet (E22) mode of representation Digitisation (E55). - The 3D
+      model VAM_A.200-1946_trace_1M.ply (E73) represents Victoria &amp; Albert Museum’s Madonna and
+      child sculpture (visual work) A.200-1946 (E22) mode of representation 3D surface (E55). In
+      First Order Logic of the inverse property: - P138(x,y) ⇒ E36(x) - P138(x,y) ⇒ E1(y) -
+      P138(x,y,z) ⇒ [P138(x,y) ∧ E55(z)] - P138(x,y) ⇒ P67(x,y) </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="P14_carried_out_by">
+    <rdfs:label xml:lang="en">P14 carried out by</rdfs:label>
+    <rdfs:label xml:lang="de">P14 wurde ausgeführt von</rdfs:label>
+    <rdfs:label xml:lang="el">P14 πραγματοποιήθηκε από</rdfs:label>
+    <rdfs:label xml:lang="fr">P14 a été effectué par</rdfs:label>
+    <rdfs:label xml:lang="pt">P14 realizada por</rdfs:label>
+    <rdfs:label xml:lang="ru">P14 выполнялся</rdfs:label>
+    <rdfs:label xml:lang="zh">P14 执行者是</rdfs:label>
+    <skos:notation>P14</skos:notation>
+    <rdfs:domain rdf:resource="E7_Activity"/>
+    <rdfs:range rdf:resource="E39_Actor"/>
+    <owl:inverseOf rdf:resource="P14i_performed"/>
+    <rdfs:subPropertyOf rdf:resource="P11_had_participant"/>
+    <rdfs:comment xml:lang="en">Quantification: many to many, necessary (1,n:0,n) Scope note: This
+      property describes the active participation of an instance of E39 Actor in an instance of E7
+      Activity. It implies causal or legal responsibility. The P14.1 in the role of property of the
+      property specifies the nature of an Actor’s participation. Examples: - The painting of the
+      Sistine Chapel (E7) carried out by Michelangelo Buonaroti (E21) in the role of master
+      craftsman (E55). (Goldscheider, 1953) Properties: - P14.1 in the role of: E55 Type In First
+      Order Logic: - P14(x,y) ⇒ E7(x) - P14(x,y)⇒ E39(y) - P14(x,y) ⇒ P11(x,y) - P14(x,y,z) ⇒
+      [P14(x,y) ∧ E55(z)] </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="P14i_performed">
+    <rdfs:label xml:lang="en">P14 performed</rdfs:label>
+    <rdfs:label xml:lang="de">P14 führte aus</rdfs:label>
+    <rdfs:label xml:lang="el">P14 πραγματοποίησε</rdfs:label>
+    <rdfs:label xml:lang="fr">P14 a effectué</rdfs:label>
+    <rdfs:label xml:lang="pt">P14 executou</rdfs:label>
+    <rdfs:label xml:lang="ru">P14 выполнял</rdfs:label>
+    <rdfs:label xml:lang="zh">P14 执行</rdfs:label>
+    <skos:notation>P14i</skos:notation>
+    <rdfs:domain rdf:resource="E39_Actor"/>
+    <rdfs:range rdf:resource="E7_Activity"/>
+    <owl:inverseOf rdf:resource="P14_carried_out_by"/>
+    <rdfs:subPropertyOf rdf:resource="P11i_participated_in"/>
+    <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many, necessary
+      (1,n:0,n) Scope note of the inverse property: This property describes the active participation
+      of an instance of E39 Actor in an instance of E7 Activity. It implies causal or legal
+      responsibility. The P14.1 in the role of property of the property specifies the nature of an
+      Actor’s participation. Examples of the inverse property: - The painting of the Sistine Chapel
+      (E7) carried out by Michelangelo Buonaroti (E21) in the role of master craftsman (E55).
+      (Goldscheider, 1953) In First Order Logic of the inverse property: - P14(x,y) ⇒ E7(x) -
+      P14(x,y)⇒ E39(y) - P14(x,y) ⇒ P11(x,y) - P14(x,y,z) ⇒ [P14(x,y) ∧ E55(z)] </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14i_performed"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="P1_is_identified_by">
+    <rdfs:label xml:lang="en">P1 is identified by</rdfs:label>
+    <rdfs:label xml:lang="de">P1 wird bezeichnet als</rdfs:label>
+    <rdfs:label xml:lang="el">P1 αναγνωρίζεται ως</rdfs:label>
+    <rdfs:label xml:lang="fr">P1 est identifié par</rdfs:label>
+    <rdfs:label xml:lang="pt">P1 é identificado por</rdfs:label>
+    <rdfs:label xml:lang="ru">P1 идентифицируется посредством</rdfs:label>
+    <rdfs:label xml:lang="zh">P1 被标识为</rdfs:label>
+    <skos:notation>P1</skos:notation>
+    <rdfs:domain rdf:resource="E1_CRM_Entity"/>
+    <rdfs:range rdf:resource="E41_Appellation"/>
+    <owl:inverseOf rdf:resource="P1i_identifies"/>
+    <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n) Scope note: This property
+      describes the naming or identification of any real-world item by a name or any other
+      identifier. This property is intended for identifiers in general use, which form part of the
+      world the model intends to describe, and not merely for internal database identifiers which
+      are specific to a technical system, unless these latter also have a more general use outside
+      the technical context. This property includes in particular identification by mathematical
+      expressions such as coordinate systems used for the identification of instances of E53 Place.
+      The property does not reveal anything about when, where and by whom this identifier was used.
+      A more detailed representation can be made using the fully developed (i.e. indirect) path
+      through E15 Identifier Assignment. This property is a shortcut for the path from E1 CRM Entity
+      through P140i was attributed by, E15 Identifier Assignment, P37 assigned to E42 Identifier. It
+      is also a shortcut for the path from E1 CRM Entity through P1 is identified by, E41
+      Appellation, P139 has alternative form to E41 Appellation. Examples: - The capital of Italy
+      (E53) is identified by “Rome” (E41). (Leach, 2017) - Text 25014–32 (E33) is identified by “The
+      Decline and Fall of the Roman Empire” (E35). (Gibbon, 2013) In First Order Logic: - P1(x,y) ⇒
+      E1(x) - P1(x,y) ⇒ E41(y) - P1(x,y) ⇐ (∃z) [E15(z)˄ P140i(x,z) ˄ P37(z,y)] - P1(x,y) ⇐ (∃z)
+      [E41(z)˄ P1(x,z) ˄ P139(z,y)] </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="P1i_identifies">
+    <rdfs:label xml:lang="en">P1 identifies</rdfs:label>
+    <rdfs:label xml:lang="de">P1 bezeichnet</rdfs:label>
+    <rdfs:label xml:lang="el">P1 είναι αναγνωριστικό</rdfs:label>
+    <rdfs:label xml:lang="fr">P1 identifie</rdfs:label>
+    <rdfs:label xml:lang="pt">P1 identifica</rdfs:label>
+    <rdfs:label xml:lang="ru">P1 идентифицирует</rdfs:label>
+    <rdfs:label xml:lang="zh">P1 标识</rdfs:label>
+    <skos:notation>P1i</skos:notation>
+    <rdfs:domain rdf:resource="E41_Appellation"/>
+    <rdfs:range rdf:resource="E1_CRM_Entity"/>
+    <owl:inverseOf rdf:resource="P1_is_identified_by"/>
+    <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n) Scope
+      note of the inverse property: This property describes the naming or identification of any
+      real-world item by a name or any other identifier. This property is intended for identifiers
+      in general use, which form part of the world the model intends to describe, and not merely for
+      internal database identifiers which are specific to a technical system, unless these latter
+      also have a more general use outside the technical context. This property includes in
+      particular identification by mathematical expressions such as coordinate systems used for the
+      identification of instances of E53 Place. The property does not reveal anything about when,
+      where and by whom this identifier was used. A more detailed representation can be made using
+      the fully developed (i.e. indirect) path through E15 Identifier Assignment. This property is a
+      shortcut for the path from E1 CRM Entity through P140i was attributed by, E15 Identifier
+      Assignment, P37 assigned to E42 Identifier. It is also a shortcut for the path from E1 CRM
+      Entity through P1 is identified by, E41 Appellation, P139 has alternative form to E41
+      Appellation. Examples of the inverse property: - The capital of Italy (E53) is identified by
+      “Rome” (E41). (Leach, 2017) - Text 25014–32 (E33) is identified by “The Decline and Fall of
+      the Roman Empire” (E35). (Gibbon, 2013) In First Order Logic of the inverse property: -
+      P1(x,y) ⇒ E1(x) - P1(x,y) ⇒ E41(y) - P1(x,y) ⇐ (∃z) [E15(z)˄ P140i(x,z) ˄ P37(z,y)] - P1(x,y)
+      ⇐ (∃z) [E41(z)˄ P1(x,z) ˄ P139(z,y)] </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P1i_identifies"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="P2_has_type">
+    <rdfs:label xml:lang="en">P2 has type</rdfs:label>
+    <rdfs:label xml:lang="de">P2 hat den Typus</rdfs:label>
+    <rdfs:label xml:lang="el">P2 έχει τύπο</rdfs:label>
+    <rdfs:label xml:lang="fr">P2 a pour type</rdfs:label>
+    <rdfs:label xml:lang="pt">P2 é do tipo</rdfs:label>
+    <rdfs:label xml:lang="ru">P2 имеет тип</rdfs:label>
+    <rdfs:label xml:lang="zh">P2 有类型</rdfs:label>
+    <skos:notation>P2</skos:notation>
+    <rdfs:domain rdf:resource="E1_CRM_Entity"/>
+    <rdfs:range rdf:resource="E55_Type"/>
+    <owl:inverseOf rdf:resource="P2i_is_type_of"/>
+    <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n) Scope note: This property
+      allows sub-typing of CIDOC CRM entities –a form of specialisation – through the use of a
+      terminological hierarchy, or thesaurus. The CIDOC CRM is intended to focus on the high-level
+      entities and relationships needed to describe data structures. Consequently, it does not
+      specialise entities any further than is required for this immediate purpose. However, entities
+      in the isA hierarchy of the CIDOC CRM may by specialised into any number of sub-entities,
+      which can be defined in the E55 Type hierarchy. E41 Appellation, for example, may be
+      specialised into “e-mail address”, “telephone number”, “post office box”, “URL”, etc., none of
+      which figures explicitly in the CIDOC CRM class hierarchy. A comprehensive explanation about
+      refining CIDOC CRM concepts by E55 Type is given in the section “About Types” in the section
+      on “Specific Modelling Constructs” of this document. This property is a shortcut for the path
+      from E1 CRM Entity through P41i was classified by, E17 Type Assignment, P42 assigned to E55
+      Type. Examples: - “enquiries@cidoc-crm.org” (E41) has type e-mail address (E55). (fictitious)
+      In First Order Logic: - P2(x,y) ⇒ E1(x) - P2(x,y) ⇒ E55(y) - P2(x,y) ⇐ (∃z) [E17(z)] ˄
+      P41i(x,z) ˄ P42(z,y)] </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="P2i_is_type_of">
+    <rdfs:label xml:lang="en">P2 is type of</rdfs:label>
+    <rdfs:label xml:lang="de">P2 ist Typus von</rdfs:label>
+    <rdfs:label xml:lang="el">P2 είναι ο τύπος του/της</rdfs:label>
+    <rdfs:label xml:lang="fr">P2 est le type de</rdfs:label>
+    <rdfs:label xml:lang="pt">P2 é o tipo de</rdfs:label>
+    <rdfs:label xml:lang="ru">P2 является типом для</rdfs:label>
+    <rdfs:label xml:lang="zh">P2 是类型</rdfs:label>
+    <skos:notation>P2i</skos:notation>
+    <rdfs:domain rdf:resource="E55_Type"/>
+    <rdfs:range rdf:resource="E1_CRM_Entity"/>
+    <owl:inverseOf rdf:resource="P2_has_type"/>
+    <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n) Scope
+      note of the inverse property: This property allows sub-typing of CIDOC CRM entities –a form of
+      specialisation – through the use of a terminological hierarchy, or thesaurus. The CIDOC CRM is
+      intended to focus on the high-level entities and relationships needed to describe data
+      structures. Consequently, it does not specialise entities any further than is required for
+      this immediate purpose. However, entities in the isA hierarchy of the CIDOC CRM may by
+      specialised into any number of sub-entities, which can be defined in the E55 Type hierarchy.
+      E41 Appellation, for example, may be specialised into “e-mail address”, “telephone number”,
+      “post office box”, “URL”, etc., none of which figures explicitly in the CIDOC CRM class
+      hierarchy. A comprehensive explanation about refining CIDOC CRM concepts by E55 Type is given
+      in the section “About Types” in the section on “Specific Modelling Constructs” of this
+      document. This property is a shortcut for the path from E1 CRM Entity through P41i was
+      classified by, E17 Type Assignment, P42 assigned to E55 Type. Examples of the inverse
+      property: - “enquiries@cidoc-crm.org” (E41) has type e-mail address (E55). (fictitious) In
+      First Order Logic of the inverse property: - P2(x,y) ⇒ E1(x) - P2(x,y) ⇒ E55(y) - P2(x,y) ⇐
+      (∃z) [E17(z)] ˄ P41i(x,z) ˄ P42(z,y)] </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="P4_has_time-span">
+    <rdfs:label xml:lang="en">P4 has time-span</rdfs:label>
+    <rdfs:label xml:lang="de">P4 hat Zeitspanne</rdfs:label>
+    <rdfs:label xml:lang="el">P4 βρισκόταν σε εξέλιξη</rdfs:label>
+    <rdfs:label xml:lang="fr">P4 a pour intervalle temporel</rdfs:label>
+    <rdfs:label xml:lang="pt">P4 tem período de tempo</rdfs:label>
+    <rdfs:label xml:lang="ru">P4 имеет временной отрезок</rdfs:label>
+    <rdfs:label xml:lang="zh">P4 发生时段是</rdfs:label>
+    <skos:notation>P4</skos:notation>
+    <rdfs:domain rdf:resource="E2_Temporal_Entity"/>
+    <rdfs:range rdf:resource="E52_Time-Span"/>
+    <owl:inverseOf rdf:resource="P4i_is_time-span_of"/>
+    <rdfs:comment xml:lang="en">Quantification: many to one, necessary (1,1:0,n) Scope note: This
+      property associates an instance of E2 Temporal Entity with the instance of E52 Time-Span
+      during which it was on-going. The associated instance of E52 Time-Span is understood as the
+      real time-span during which the phenomena making up the temporal entity instance were active.
+      More than one instance of E2 Temporal Entity may share a common instance of E52 Time-Span only
+      if they come into being and end being due to identical declarations or events. Examples: - The
+      Yalta Conference (E7) has time-span Yalta Conference time-span (E52). (Harbutt, 2010) In First
+      Order Logic: - P4(x,y) ⇒ E2(x) - P4(x,y) ⇒ E52(y) </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="P4i_is_time-span_of">
+    <rdfs:label xml:lang="en">P4 is time-span of</rdfs:label>
+    <rdfs:label xml:lang="de">P4 ist Zeitspanne von</rdfs:label>
+    <rdfs:label xml:lang="el">P4 είναι χρονικό διάστημα του/της</rdfs:label>
+    <rdfs:label xml:lang="fr">P4 est l’intervalle temporel de</rdfs:label>
+    <rdfs:label xml:lang="pt">P4 é o período de tempo de</rdfs:label>
+    <rdfs:label xml:lang="ru">P4 является временным отрезком для</rdfs:label>
+    <rdfs:label xml:lang="zh">P4 是时段</rdfs:label>
+    <skos:notation>P4i</skos:notation>
+    <rdfs:domain rdf:resource="E52_Time-Span"/>
+    <rdfs:range rdf:resource="E2_Temporal_Entity"/>
+    <owl:inverseOf rdf:resource="P4_has_time-span"/>
+    <rdfs:comment xml:lang="en">Quantification of the inverse property: many to one, necessary
+      (1,1:0,n) Scope note of the inverse property: This property associates an instance of E2
+      Temporal Entity with the instance of E52 Time-Span during which it was on-going. The
+      associated instance of E52 Time-Span is understood as the real time-span during which the
+      phenomena making up the temporal entity instance were active. More than one instance of E2
+      Temporal Entity may share a common instance of E52 Time-Span only if they come into being and
+      end being due to identical declarations or events. Examples of the inverse property: - The
+      Yalta Conference (E7) has time-span Yalta Conference time-span (E52). (Harbutt, 2010) In First
+      Order Logic of the inverse property: - P4(x,y) ⇒ E2(x) - P4(x,y) ⇒ E52(y) </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P4i_is_time-span_of"/>
+  </owl:ObjectProperty>
+
   <!-- LRMOO v1.1.1 -->
 
   <owl:Class rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work">
@@ -889,7 +1292,8 @@
       </rdf:Description>
       <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R24i_isRelatedEntity"/>
       <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R24_hasRelatedEntity"/>
-      <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R18i_actualizationFoundOn"/>
+      <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R18i_actualizationFoundOn"
+      />
     </owl:propertyChainAxiom>
   </owl:ObjectProperty>
 

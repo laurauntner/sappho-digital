@@ -65,7 +65,7 @@ def years_for_f2(f2: URIRef, g_all: Graph) -> List[int]:
             continue
         created = set(g_all.objects(f30, LRMOO["R24_created"]))
         if manifes & created:
-            for ts in g_all.objects(f30, ECRM["P4_has_time_span"]):
+            for ts in g_all.objects(f30, ECRM["P4_has_time-span"]):
                 yr = parse_year_from_timespan_uri(ts)
                 if yr is not None:
                     years.add(yr)
@@ -75,7 +75,7 @@ def years_for_f2(f2: URIRef, g_all: Graph) -> List[int]:
 def expr_creation_year_for_f2(f2: URIRef, g_all: Graph) -> Optional[int]:
     years = set()
     for ec in g_all.objects(f2, LRMOO["R17i_was_created_by"]):
-        for ts in g_all.objects(ec, ECRM["P4_has_time_span"]):
+        for ts in g_all.objects(ec, ECRM["P4_has_time-span"]):
             yr = parse_year_from_timespan_uri(ts)
             if yr is not None:
                 years.add(yr)

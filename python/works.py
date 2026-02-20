@@ -292,7 +292,7 @@ for bibl in top_bibls:
         g.add((ts_uri, RDF.type, ECRM["E52_Time-Span"]))
         g.add((ts_uri, RDFS.label, Literal(year, datatype=XSD.gYear)))
         g.add((ts_uri, ECRM["P4i_is_time-span_of"], creation_expr_uri))
-        g.add((creation_expr_uri, ECRM.P4_has_time_span, ts_uri))
+        g.add((creation_expr_uri, ECRM["P4_has_time-span"], ts_uri))
 
     # Manifestation
     if date_published is not None:
@@ -325,7 +325,7 @@ for bibl in top_bibls:
             ts_pub_uri = SD[f"timespan/{year_pub}"]
             g.add((ts_pub_uri, RDF.type, ECRM["E52_Time-Span"]))
             g.add((ts_pub_uri, RDFS.label, Literal(year_pub, datatype=XSD.gYear)))
-            g.add((creation_manif_uri, ECRM.P4_has_time_span, ts_pub_uri))
+            g.add((creation_manif_uri, ECRM["P4_has_time-span"], ts_pub_uri))
             g.add((ts_pub_uri, ECRM["P4i_is_time-span_of"], creation_manif_uri))
 
         # Ort
