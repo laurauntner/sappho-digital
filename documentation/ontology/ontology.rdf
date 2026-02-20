@@ -1741,6 +1741,305 @@
     <rdfs:label xml:lang="en">INT Topic</rdfs:label>
   </owl:Class>
 
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R12_hasReferredToEntity">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R24_hasRelatedEntity"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R12i_isReferredToEntity"/>
+    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+          <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
+          <rdf:Description
+            rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:comment xml:lang="en">Links an INT3 Interrelation to the entity referred to in the
+      relationship (a text or image on any ontological level or a feature actualized in the text
+      resp. image in question).</rdfs:comment>
+    <rdfs:label xml:lang="en">R12 has referred to entity</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R12i_isReferredToEntity">
+    <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R12_hasReferredToEntity"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R24i_isRelatedEntity"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+          <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
+          <rdf:Description
+            rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+    <rdfs:label xml:lang="en">R12i is referred to entity</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R13_hasReferringEntity">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R24_hasRelatedEntity"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R13i_isReferringEntity"/>
+    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+          <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
+          <rdf:Description
+            rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:comment xml:lang="en">Links an INT3 Interrelation to a referring entity (a text or image
+      on any ontological level or a feature actualized in the text resp. image in
+      question).</rdfs:comment>
+    <rdfs:label xml:lang="en">R13 has referring entity</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R13i_isReferringEntity">
+    <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R13_hasReferringEntity"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R24i_isRelatedEntity"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+          <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
+          <rdf:Description
+            rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+    <rdfs:label xml:lang="en">R13i is referring entity</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R17_actualizesFeature">
+    <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R17i_featureActualizedIn"/>
+    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+    <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_Feature"/>
+    <rdfs:comment xml:lang="en">Links the specific INT2 Actualization of Feature to the (abstract
+      concept of the) feature it actualizes, an INT4 Feature.</rdfs:comment>
+    <rdfs:label xml:lang="en">R17 actualizes feature</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R17i_featureActualizedIn">
+    <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R17_actualizesFeature"/>
+    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_Feature"/>
+    <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+    <rdfs:label xml:lang="en">R17i feature actualized in</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R18_showsActualization">
+    <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R18i_actualizationFoundOn"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+          <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
+          <rdf:Description
+            rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+    <rdfs:comment xml:lang="en">Links a text or an image (on any ontological level) or an INT2
+      Actualization of Feature to an INT2 Actualization of Feature found on it. (Actualizations
+      found on actualizations – this occurs in cases where, e. g., the actualization of the feature
+      INT Individual Character can be read as the actualization of the feature INT Character Type or
+      INT18 Reference.)</rdfs:comment>
+    <rdfs:label xml:lang="en">R18 shows actualization</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R18i_actualizationFoundOn">
+    <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R18_showsActualization"/>
+    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+          <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
+          <rdf:Description
+            rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:label xml:lang="en">R18i actualization found on</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R21_identifies">
+    <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R21i_isIdentifiedBy"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+          <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+          <rdf:Description
+            rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description
+            rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:comment xml:lang="en">Links an INT2 Actualization of Feature (that is possibly, but not
+      necessarily, specified by a link to the features INT Identification or INT Interpretation) or
+      a text on different levels of granularity to the INT3 Interrelation or the INT2 Actualization
+      of Feature it identifies.</rdfs:comment>
+    <rdfs:label xml:lang="en">R21 identifies</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R21i_isIdentifiedBy">
+    <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R21_identifies"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description
+            rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+          <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+          <rdf:Description
+            rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:label xml:lang="en">R21i is identified by</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty
+    rdf:about="https://w3id.org/lso/intro/currentbeta#R22_providesSimilarityForRelation">
+    <owl:inverseOf
+      rdf:resource="https://w3id.org/lso/intro/currentbeta#R22i_relationIsBasedOnSimilarity"/>
+    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_Feature"/>
+    <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+    <rdfs:comment xml:lang="en">Links an INT4 Feature to an INT3 Interrelation it provides the
+      similarity for, the similarity being the basis for the detection of the INT3 Interrelation.
+      The property states that an INT3 Interrelation is based on a similarity, i. e. the
+      actualization of the same INT4 Feature in two different texts/images; it constitutes an
+      abbreviation of the modelling of two INT2 Actualizations of Feature of the same F4 Feature in
+      the respective texts/images. The term 'similarity' is to be understood in the widest possible
+      way. </rdfs:comment>
+    <rdfs:label xml:lang="en">R22 provides similarity for relation</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty
+    rdf:about="https://w3id.org/lso/intro/currentbeta#R22i_relationIsBasedOnSimilarity">
+    <owl:inverseOf
+      rdf:resource="https://w3id.org/lso/intro/currentbeta#R22_providesSimilarityForRelation"/>
+    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+    <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_Feature"/>
+    <rdfs:label xml:lang="en">R22i relation is based on similarity</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R24_hasRelatedEntity">
+    <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R24i_isRelatedEntity"/>
+    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+          <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
+          <rdf:Description
+            rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:comment xml:lang="en">Links any INT3 Interrelation to a text or image (on any ontological
+      level) or INT2 Actualization of Feature that is part of the INT3 Interrelation. The
+      skos:broadMatch states that this property is a more specific version of oa:hasTarget in the
+      sense that the INT3 Interrelation can be seen as an annotation, the texts/images linked by
+      this relationship as their targets.</rdfs:comment>
+    <rdfs:label xml:lang="en">R24 has related entity</rdfs:label>
+    <skos:broadMatch rdf:resource="http://www.w3.org/ns/oa#hasTarget"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R24i_isRelatedEntity">
+    <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R24_hasRelatedEntity"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+          <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
+          <rdf:Description
+            rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+    <rdfs:label xml:lang="en">R24i is related entity</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R30_hasTextPassage">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R10_hasPassage"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R30i_isTextPassageOf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <rdfs:label xml:lang="en">R30 has text passage</rdfs:label>
+    <rdfs:comment xml:lang="en">Links (usually, exceptions are easily conceivable) a text, like a
+      work or an expression, to an INT21 Text Passage from that text, e. g., a book to a passage on
+      page three of this book.</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R30i_isTextPassageOf">
+    <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R30_hasTextPassage"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R10i_isPassageOf"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+    <rdfs:label xml:lang="en">R30i is text passage of</rdfs:label>
+  </owl:ObjectProperty>
+
   <!-- New properties -->
 
   <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/about">

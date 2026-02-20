@@ -725,6 +725,219 @@ intro:INT_Topic
     rdfs:label      "INT Topic"@en ;
     rdfs:subClassOf intro:INT9_SemanticFeature .
 
+intro:R12_hasReferredToEntity a owl:ObjectProperty ;
+    rdfs:label "R12 has referred to entity"@en ;
+    rdfs:subPropertyOf intro:R24_hasRelatedEntity ;
+    owl:inverseOf intro:R12i_isReferredToEntity ;
+    rdfs:domain intro:INT3_Interrelation ;
+    rdfs:range [ a owl:Class ;
+        owl:unionOf (
+            lrmoo:F1_Work
+            crm:E73_Information_Object
+            intro:INT1_Passage
+            intro:INT2_ActualizationOfFeature
+            intro:INT6_Architext
+        )
+    ] ;
+    rdfs:comment "Links an INT3 Interrelation to the entity referred to in the relationship (a text or image on any ontological level or a feature actualized in the text resp. image in question)."@en .
+
+intro:R12i_isReferredToEntity a owl:ObjectProperty ;
+    rdfs:label "R12i is referred to entity"@en ;
+    owl:inverseOf intro:R12_hasReferredToEntity ;
+    rdfs:subPropertyOf intro:R24i_isRelatedEntity ;
+    rdfs:domain [ a owl:Class ;
+        owl:unionOf (
+            lrmoo:F1_Work
+            crm:E73_Information_Object
+            intro:INT1_Passage
+            intro:INT2_ActualizationOfFeature
+            intro:INT6_Architext
+        )
+    ] ;
+    rdfs:range intro:INT3_Interrelation .
+
+intro:R13_hasReferringEntity a owl:ObjectProperty ;
+    rdfs:label "R13 has referring entity"@en ;
+    rdfs:subPropertyOf intro:R24_hasRelatedEntity ;
+    owl:inverseOf intro:R13i_isReferringEntity ;
+    rdfs:domain intro:INT3_Interrelation ;
+    rdfs:range [ a owl:Class ;
+        owl:unionOf (
+            lrmoo:F1_Work
+            crm:E73_Information_Object
+            intro:INT1_Passage
+            intro:INT2_ActualizationOfFeature
+            intro:INT6_Architext
+        )
+    ] ;
+    rdfs:comment "Links an INT3 Interrelation to a referring entity (a text or image on any ontological level or a feature actualized in the text resp. image in question)."@en .
+
+intro:R13i_isReferringEntity a owl:ObjectProperty ;
+    rdfs:label "R13i is referring entity"@en ;
+    owl:inverseOf intro:R13_hasReferringEntity ;
+    rdfs:subPropertyOf intro:R24i_isRelatedEntity ;
+    rdfs:domain [ a owl:Class ;
+        owl:unionOf (
+            lrmoo:F1_Work
+            crm:E73_Information_Object
+            intro:INT1_Passage
+            intro:INT2_ActualizationOfFeature
+            intro:INT6_Architext
+        )
+    ] ;
+    rdfs:range intro:INT3_Interrelation .
+
+intro:R17_actualizesFeature a owl:ObjectProperty ;
+    rdfs:label "R17 actualizes feature"@en ;
+    owl:inverseOf intro:R17i_featureActualizedIn ;
+    rdfs:domain intro:INT2_ActualizationOfFeature ;
+    rdfs:range intro:INT4_Feature ;
+    rdfs:comment "Links the specific INT2 Actualization of Feature to the (abstract concept of the) feature it actualizes, an INT4 Feature."@en .
+
+intro:R17i_featureActualizedIn a owl:ObjectProperty ;
+    rdfs:label "R17i feature actualized in"@en ;
+    owl:inverseOf intro:R17_actualizesFeature ;
+    rdfs:domain intro:INT4_Feature ;
+    rdfs:range intro:INT2_ActualizationOfFeature .
+
+intro:R18_showsActualization a owl:ObjectProperty ;
+    rdfs:label "R18 shows actualization"@en ;
+    owl:inverseOf intro:R18i_actualizationFoundOn ;
+    rdfs:domain [ a owl:Class ;
+        owl:unionOf (
+            lrmoo:F1_Work
+            crm:E73_Information_Object
+            intro:INT1_Passage
+            intro:INT2_ActualizationOfFeature
+            intro:INT6_Architext
+        )
+    ] ;
+    rdfs:range intro:INT2_ActualizationOfFeature ;
+    rdfs:comment "Links a text or an image (on any ontological level) or an INT2 Actualization of Feature to an INT2 Actualization of Feature found on it. (Actualizations found on actualizations – this occurs in cases where, e. g., the actualization of the feature INT Individual Character can be read as the actualization of the feature INT Character Type or INT18 Reference.)"@en .
+
+intro:R18i_actualizationFoundOn a owl:ObjectProperty ;
+    rdfs:label "R18i actualization found on"@en ;
+    owl:inverseOf intro:R18_showsActualization ;
+    rdfs:domain intro:INT2_ActualizationOfFeature ;
+    rdfs:range [ a owl:Class ;
+        owl:unionOf (
+            lrmoo:F1_Work
+            crm:E73_Information_Object
+            intro:INT1_Passage
+            intro:INT2_ActualizationOfFeature
+            intro:INT6_Architext
+        )
+    ] .
+
+intro:R21_identifies a owl:ObjectProperty ;
+    rdfs:label "R21 identifies"@en ;
+    rdfs:subPropertyOf crm:P67_refers_to ;
+    owl:inverseOf intro:R21i_isIdentifiedBy ;
+    rdfs:domain [ a owl:Class ;
+        owl:unionOf (
+            lrmoo:F1_Work
+            crm:E73_Information_Object
+            intro:INT1_Passage
+            intro:INT6_Architext
+            intro:INT2_ActualizationOfFeature
+        )
+    ] ;
+    rdfs:range [ a owl:Class ;
+        owl:unionOf (
+            intro:INT2_ActualizationOfFeature
+            intro:INT3_Interrelation
+        )
+    ] ;
+    rdfs:comment "Links an INT2 Actualization of Feature (that is possibly, but not necessarily, specified by a link to the features INT Identification or INT Interpretation) or a text on different levels of granularity to the INT3 Interrelation or the INT2 Actualization of Feature it identifies."@en .
+
+intro:R21i_isIdentifiedBy a owl:ObjectProperty ;
+    rdfs:label "R21i is identified by"@en ;
+    owl:inverseOf intro:R21_identifies ;
+    rdfs:subPropertyOf crm:P67i_is_referred_to_by ;
+    rdfs:domain [ a owl:Class ;
+        owl:unionOf (
+            intro:INT2_ActualizationOfFeature
+            intro:INT3_Interrelation
+        )
+    ] ;
+    rdfs:range [ a owl:Class ;
+        owl:unionOf (
+            lrmoo:F1_Work
+            crm:E73_Information_Object
+            intro:INT1_Passage
+            intro:INT6_Architext
+            intro:INT2_ActualizationOfFeature
+        )
+    ] .
+
+intro:R22_providesSimilarityForRelation a owl:ObjectProperty ;
+    rdfs:label "R22 provides similarity for relation"@en ;
+    owl:inverseOf intro:R22i_relationIsBasedOnSimilarity ;
+    rdfs:domain intro:INT4_Feature ;
+    rdfs:range intro:INT3_Interrelation ;
+    rdfs:comment "Links an INT4 Feature to an INT3 Interrelation it provides the similarity for, the similarity being the basis for the detection of the INT3 Interrelation. The property states that an INT3 Interrelation is based on a similarity, i. e. the actualization of the same INT4 Feature in two different texts/images; it constitutes an abbreviation of the modelling of two INT2 Actualizations of Feature of the same F4 Feature in the respective texts/images. The term 'similarity' is to be understood in the widest possible way."@en .
+
+intro:R22i_relationIsBasedOnSimilarity a owl:ObjectProperty ;
+    rdfs:label "R22i relation is based on similarity"@en ;
+    owl:inverseOf intro:R22_providesSimilarityForRelation ;
+    rdfs:domain intro:INT3_Interrelation ;
+    rdfs:range intro:INT4_Feature .
+
+intro:R24_hasRelatedEntity a owl:ObjectProperty ;
+    rdfs:label "R24 has related entity"@en ;
+    owl:inverseOf intro:R24i_isRelatedEntity ;
+    rdfs:domain intro:INT3_Interrelation ;
+    rdfs:range [ a owl:Class ;
+        owl:unionOf (
+            lrmoo:F1_Work
+            crm:E73_Information_Object
+            intro:INT1_Passage
+            intro:INT2_ActualizationOfFeature
+            intro:INT6_Architext
+        )
+    ] ;
+    rdfs:comment "Links any INT3 Interrelation to a text or image (on any ontological level) or INT2 Actualization of Feature that is part of the INT3 Interrelation. The skos:broadMatch states that this property is a more specific version of oa:hasTarget in the sense that the INT3 Interrelation can be seen as an annotation, the texts/images linked by this relationship as their targets."@en ;
+    skos:broadMatch oa:hasTarget .
+
+intro:R24i_isRelatedEntity a owl:ObjectProperty ;
+    rdfs:label "R24i is related entity"@en ;
+    owl:inverseOf intro:R24_hasRelatedEntity ;
+    rdfs:domain [ a owl:Class ;
+        owl:unionOf (
+            lrmoo:F1_Work
+            crm:E73_Information_Object
+            intro:INT1_Passage
+            intro:INT2_ActualizationOfFeature
+            intro:INT6_Architext
+        )
+    ] ;
+    rdfs:range intro:INT3_Interrelation .
+
+intro:R30_hasTextPassage a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:label "R30 has text passage"@en ;
+    rdfs:subPropertyOf intro:R10_hasPassage ;
+    owl:inverseOf intro:R30i_isTextPassageOf ;
+    rdfs:domain [ a owl:Class ;
+        owl:unionOf (
+            crm:E73_Information_Object
+            intro:INT1_Passage
+        )
+    ] ;
+    rdfs:range intro:INT21_TextPassage ;
+    rdfs:comment "Links (usually, exceptions are easily conceivable) a text, like a work or an expression, to an INT21 Text Passage from that text, e. g., a book to a passage on page three of this book."@en .
+
+intro:R30i_isTextPassageOf a owl:ObjectProperty, owl:TransitiveProperty ;
+    rdfs:label "R30i is text passage of"@en ;
+    owl:inverseOf intro:R30_hasTextPassage ;
+    rdfs:subPropertyOf intro:R10i_isPassageOf ;
+    rdfs:domain intro:INT21_TextPassage ;
+    rdfs:range [ a owl:Class ;
+        owl:unionOf (
+            crm:E73_Information_Object
+            intro:INT1_Passage
+        )
+    ] .
+
 #################################################################
 # New Properties
 #################################################################
