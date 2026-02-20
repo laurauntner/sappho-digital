@@ -282,7 +282,7 @@ with open(INPUT_FILE, newline='', encoding="utf-8") as f:
 
         g.add((frag_uri, RDF.type, ECRM.E90_Symbolic_Object))
         g.add((frag_uri, RDFS.label, Literal(f"Fragment {frag_num} Voigt", lang="en")))
-        g.add((frag_uri, LRMOO.R10i_is_member_of, SD["work/sappho-work"]))
+        g.add((frag_uri, LRMOO.R10_is_member_of, SD["work/sappho-work"]))
 
         g.add((expr_creation_uri, RDF.type, LRMOO.F28_Expression_Creation))
         g.add((expr_creation_uri, RDFS.label, Literal(f"Expression creation of Fragment {frag_num} Voigt", lang="en")))
@@ -355,7 +355,7 @@ with open(INPUT_FILE, newline='', encoding="utf-8") as f:
 
 work_uri = SD["work/sappho-work"]
 for frag_uri in all_fragments:
-    g.add((work_uri, LRMOO.R10_has_member, frag_uri))
+    g.add((work_uri, LRMOO.R10i_has_member, frag_uri))
 
 # Manifestation-Knoten (Sammel-Embodiment)
 manifestation_uri = SD["manifestation/sappho_bagordo"]

@@ -16,7 +16,7 @@
     rdfs:label "Sappho’s Work"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_sappho> ;
     lrmoo:R16i_was_created_by <https://sappho-digital.com/work_creation/sappho-work> ;
-    lrmoo:R10_has_member <https://sappho-digital.com/fragment/XXXX> .
+    lrmoo:R10i_has_member <https://sappho-digital.com/fragment/XXXX> .
 
 <https://sappho-digital.com/person/author_sappho> a ecrm:E21_Person ;
     rdfs:label "Sappho" ;
@@ -64,7 +64,7 @@
 
 <https://sappho-digital.com/fragment/XXXX> a ecrm:E90_Symbolic_Object ;
     rdfs:label "Fragment XXXX Voigt"@en ;
-    lrmoo:R10i_is_member_of <https://sappho-digital.com/work/sappho-work> .
+    lrmoo:R10_is_member_of <https://sappho-digital.com/work/sappho-work> .
 
 <https://sappho-digital.com/expression_creation/XXXX> a lrmoo:F28_Expression_Creation ;
     rdfs:label "Expression creation of Fragment XXXX Voigt"@en ;

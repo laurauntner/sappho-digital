@@ -544,7 +544,7 @@
     ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_sappho> ;
     lrmoo:R16i_was_created_by <https://sappho-digital.com/work_creation/sappho-work> ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/work_ref/XXXX_sappho_work> ; # new
-    lrmoo:R10_has_member <https://sappho-digital.com/fragment/XXXX> .
+    lrmoo:R10i_has_member <https://sappho-digital.com/fragment/XXXX> .
 
 <https://sappho-digital.com/feature/work_ref/sappho_work> a intro:INT18_Reference ; # reference to Sappho’s work as a whole
     rdfs:label "Reference to Sappho’s work"@en ; 
