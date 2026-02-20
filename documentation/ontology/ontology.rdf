@@ -532,7 +532,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
   </owl:Class>
 
-  <owl:ObjectProperty rdf:about="P100_was_death_of">
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P100_was_death_of">
     <rdfs:label xml:lang="en">P100 was death of</rdfs:label>
     <rdfs:label xml:lang="de">P100 Tod von</rdfs:label>
     <rdfs:label xml:lang="el">P100 ήταν θάνατος του/της</rdfs:label>
@@ -541,10 +541,10 @@
     <rdfs:label xml:lang="ru">P100 был смертью для</rdfs:label>
     <rdfs:label xml:lang="zh">P100 死亡的是</rdfs:label>
     <skos:notation>P100</skos:notation>
-    <rdfs:domain rdf:resource="E69_Death"/>
-    <rdfs:range rdf:resource="E21_Person"/>
-    <owl:inverseOf rdf:resource="P100i_died_in"/>
-    <rdfs:subPropertyOf rdf:resource="P93_took_out_of_existence"/>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E69_Death"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P100i_died_in"/>
+    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P93_took_out_of_existence"/>
     <rdfs:comment xml:lang="en">Quantification: one to many, necessary (1,n:0,1) Scope note: This
       property links an instance of E69 Death to the instance of E21 Person that died. An instance
       of E69 Death may involve multiple people, for example in the case of a battle or disaster.
@@ -554,7 +554,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P100_was_death_of"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="P100i_died_in">
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P100i_died_in">
     <rdfs:label xml:lang="en">P100 died in</rdfs:label>
     <rdfs:label xml:lang="de">P100 starb in</rdfs:label>
     <rdfs:label xml:lang="el">P100 πέθανε σε</rdfs:label>
@@ -563,10 +563,11 @@
     <rdfs:label xml:lang="ru">P100 умер в</rdfs:label>
     <rdfs:label xml:lang="zh">P100 死于</rdfs:label>
     <skos:notation>P100i</skos:notation>
-    <rdfs:domain rdf:resource="E21_Person"/>
-    <rdfs:range rdf:resource="E69_Death"/>
-    <owl:inverseOf rdf:resource="P100_was_death_of"/>
-    <rdfs:subPropertyOf rdf:resource="P93i_was_taken_out_of_existence_by"/>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E69_Death"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P100_was_death_of"/>
+    <rdfs:subPropertyOf
+      rdf:resource="http://erlangen-crm.org/current/P93i_was_taken_out_of_existence_by"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: one to many, necessary
       (1,n:0,1) Scope note of the inverse property: This property links an instance of E69 Death to
       the instance of E21 Person that died. An instance of E69 Death may involve multiple people,
@@ -577,7 +578,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P100i_died_in"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="P102_has_title">
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P102_has_title">
     <rdfs:label xml:lang="en">P102 has title</rdfs:label>
     <rdfs:label xml:lang="de">P102 trägt den Titel</rdfs:label>
     <rdfs:label xml:lang="el">P102 έχει τίτλο</rdfs:label>
@@ -586,10 +587,10 @@
     <rdfs:label xml:lang="ru">P102 имеет заголовок</rdfs:label>
     <rdfs:label xml:lang="zh">P102 有题名</rdfs:label>
     <skos:notation>P102</skos:notation>
-    <rdfs:domain rdf:resource="E71_Human-Made_Thing"/>
-    <rdfs:range rdf:resource="E35_Title"/>
-    <owl:inverseOf rdf:resource="P102i_is_title_of"/>
-    <rdfs:subPropertyOf rdf:resource="P1_is_identified_by"/>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E71_Human-Made_Thing"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E35_Title"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P102i_is_title_of"/>
+    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P1_is_identified_by"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n) Scope note: This property
       associates an instance of E35 Title that has been applied to an instance of E71 Human-Made
       Thing. The P102.1 has type property of the P102 has title (is title of) property enables the
@@ -607,7 +608,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P102_has_title"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="P102i_is_title_of">
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P102i_is_title_of">
     <rdfs:label xml:lang="en">P102 is title of</rdfs:label>
     <rdfs:label xml:lang="de">P102 ist der Titel von</rdfs:label>
     <rdfs:label xml:lang="el">P102 είναι τίτλος του/της</rdfs:label>
@@ -616,10 +617,10 @@
     <rdfs:label xml:lang="ru">P102 является заголовком для</rdfs:label>
     <rdfs:label xml:lang="zh">P102 题名是</rdfs:label>
     <skos:notation>P102i</skos:notation>
-    <rdfs:domain rdf:resource="E35_Title"/>
-    <rdfs:range rdf:resource="E71_Human-Made_Thing"/>
-    <owl:inverseOf rdf:resource="P102_has_title"/>
-    <rdfs:subPropertyOf rdf:resource="P1i_identifies"/>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E35_Title"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E71_Human-Made_Thing"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P102_has_title"/>
+    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P1i_identifies"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n) Scope
       note of the inverse property: This property associates an instance of E35 Title that has been
       applied to an instance of E71 Human-Made Thing. The P102.1 has type property of the P102 has
@@ -638,7 +639,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P102i_is_title_of"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="P138_represents">
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P138_represents">
     <rdfs:label xml:lang="en">P138 represents</rdfs:label>
     <rdfs:label xml:lang="de">P138 stellt dar</rdfs:label>
     <rdfs:label xml:lang="el">P138 παριστάνει</rdfs:label>
@@ -647,10 +648,10 @@
     <rdfs:label xml:lang="ru">P138 представляет</rdfs:label>
     <rdfs:label xml:lang="zh">P138 描绘</rdfs:label>
     <skos:notation>P138</skos:notation>
-    <rdfs:domain rdf:resource="E36_Visual_Item"/>
-    <rdfs:range rdf:resource="E1_CRM_Entity"/>
-    <owl:inverseOf rdf:resource="P138i_has_representation"/>
-    <rdfs:subPropertyOf rdf:resource="P67_refers_to"/>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E36_Visual_Item"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P138i_has_representation"/>
+    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P67_refers_to"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n) Scope note: This property
       establishes the relationship between an instance of E36 Visual Item and the instance of E1 CRM
       Entity that it visually represents. Any entity may be represented visually. This property is
@@ -672,7 +673,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P138_represents"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="P138i_has_representation">
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P138i_has_representation">
     <rdfs:label xml:lang="en">P138 has representation</rdfs:label>
     <rdfs:label xml:lang="de">P138 wird dargestellt durch</rdfs:label>
     <rdfs:label xml:lang="el">P138 παριστάνεται από</rdfs:label>
@@ -681,10 +682,10 @@
     <rdfs:label xml:lang="ru">P138 имеет представление</rdfs:label>
     <rdfs:label xml:lang="zh">P138 有描绘</rdfs:label>
     <skos:notation>P138i</skos:notation>
-    <rdfs:domain rdf:resource="E1_CRM_Entity"/>
-    <rdfs:range rdf:resource="E36_Visual_Item"/>
-    <owl:inverseOf rdf:resource="P138_represents"/>
-    <rdfs:subPropertyOf rdf:resource="P67i_is_referred_to_by"/>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E36_Visual_Item"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P138_represents"/>
+    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P67i_is_referred_to_by"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n) Scope
       note of the inverse property: This property establishes the relationship between an instance
       of E36 Visual Item and the instance of E1 CRM Entity that it visually represents. Any entity
@@ -707,7 +708,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P138i_has_representation"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="P14_carried_out_by">
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P14_carried_out_by">
     <rdfs:label xml:lang="en">P14 carried out by</rdfs:label>
     <rdfs:label xml:lang="de">P14 wurde ausgeführt von</rdfs:label>
     <rdfs:label xml:lang="el">P14 πραγματοποιήθηκε από</rdfs:label>
@@ -716,10 +717,10 @@
     <rdfs:label xml:lang="ru">P14 выполнялся</rdfs:label>
     <rdfs:label xml:lang="zh">P14 执行者是</rdfs:label>
     <skos:notation>P14</skos:notation>
-    <rdfs:domain rdf:resource="E7_Activity"/>
-    <rdfs:range rdf:resource="E39_Actor"/>
-    <owl:inverseOf rdf:resource="P14i_performed"/>
-    <rdfs:subPropertyOf rdf:resource="P11_had_participant"/>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
+    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11_had_participant"/>
     <rdfs:comment xml:lang="en">Quantification: many to many, necessary (1,n:0,n) Scope note: This
       property describes the active participation of an instance of E39 Actor in an instance of E7
       Activity. It implies causal or legal responsibility. The P14.1 in the role of property of the
@@ -731,7 +732,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="P14i_performed">
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P14i_performed">
     <rdfs:label xml:lang="en">P14 performed</rdfs:label>
     <rdfs:label xml:lang="de">P14 führte aus</rdfs:label>
     <rdfs:label xml:lang="el">P14 πραγματοποίησε</rdfs:label>
@@ -740,10 +741,10 @@
     <rdfs:label xml:lang="ru">P14 выполнял</rdfs:label>
     <rdfs:label xml:lang="zh">P14 执行</rdfs:label>
     <skos:notation>P14i</skos:notation>
-    <rdfs:domain rdf:resource="E39_Actor"/>
-    <rdfs:range rdf:resource="E7_Activity"/>
-    <owl:inverseOf rdf:resource="P14_carried_out_by"/>
-    <rdfs:subPropertyOf rdf:resource="P11i_participated_in"/>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E7_Activity"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
+    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many, necessary
       (1,n:0,n) Scope note of the inverse property: This property describes the active participation
       of an instance of E39 Actor in an instance of E7 Activity. It implies causal or legal
@@ -755,7 +756,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14i_performed"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="P1_is_identified_by">
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P1_is_identified_by">
     <rdfs:label xml:lang="en">P1 is identified by</rdfs:label>
     <rdfs:label xml:lang="de">P1 wird bezeichnet als</rdfs:label>
     <rdfs:label xml:lang="el">P1 αναγνωρίζεται ως</rdfs:label>
@@ -764,9 +765,9 @@
     <rdfs:label xml:lang="ru">P1 идентифицируется посредством</rdfs:label>
     <rdfs:label xml:lang="zh">P1 被标识为</rdfs:label>
     <skos:notation>P1</skos:notation>
-    <rdfs:domain rdf:resource="E1_CRM_Entity"/>
-    <rdfs:range rdf:resource="E41_Appellation"/>
-    <owl:inverseOf rdf:resource="P1i_identifies"/>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E41_Appellation"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P1i_identifies"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n) Scope note: This property
       describes the naming or identification of any real-world item by a name or any other
       identifier. This property is intended for identifiers in general use, which form part of the
@@ -787,7 +788,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P1_is_identified_by"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="P1i_identifies">
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P1i_identifies">
     <rdfs:label xml:lang="en">P1 identifies</rdfs:label>
     <rdfs:label xml:lang="de">P1 bezeichnet</rdfs:label>
     <rdfs:label xml:lang="el">P1 είναι αναγνωριστικό</rdfs:label>
@@ -796,9 +797,9 @@
     <rdfs:label xml:lang="ru">P1 идентифицирует</rdfs:label>
     <rdfs:label xml:lang="zh">P1 标识</rdfs:label>
     <skos:notation>P1i</skos:notation>
-    <rdfs:domain rdf:resource="E41_Appellation"/>
-    <rdfs:range rdf:resource="E1_CRM_Entity"/>
-    <owl:inverseOf rdf:resource="P1_is_identified_by"/>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E41_Appellation"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P1_is_identified_by"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n) Scope
       note of the inverse property: This property describes the naming or identification of any
       real-world item by a name or any other identifier. This property is intended for identifiers
@@ -820,7 +821,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P1i_identifies"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="P2_has_type">
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P2_has_type">
     <rdfs:label xml:lang="en">P2 has type</rdfs:label>
     <rdfs:label xml:lang="de">P2 hat den Typus</rdfs:label>
     <rdfs:label xml:lang="el">P2 έχει τύπο</rdfs:label>
@@ -829,9 +830,9 @@
     <rdfs:label xml:lang="ru">P2 имеет тип</rdfs:label>
     <rdfs:label xml:lang="zh">P2 有类型</rdfs:label>
     <skos:notation>P2</skos:notation>
-    <rdfs:domain rdf:resource="E1_CRM_Entity"/>
-    <rdfs:range rdf:resource="E55_Type"/>
-    <owl:inverseOf rdf:resource="P2i_is_type_of"/>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P2i_is_type_of"/>
     <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n) Scope note: This property
       allows sub-typing of CIDOC CRM entities –a form of specialisation – through the use of a
       terminological hierarchy, or thesaurus. The CIDOC CRM is intended to focus on the high-level
@@ -850,7 +851,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2_has_type"/>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="P2i_is_type_of">
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P2i_is_type_of">
     <rdfs:label xml:lang="en">P2 is type of</rdfs:label>
     <rdfs:label xml:lang="de">P2 ist Typus von</rdfs:label>
     <rdfs:label xml:lang="el">P2 είναι ο τύπος του/της</rdfs:label>
@@ -859,9 +860,9 @@
     <rdfs:label xml:lang="ru">P2 является типом для</rdfs:label>
     <rdfs:label xml:lang="zh">P2 是类型</rdfs:label>
     <skos:notation>P2i</skos:notation>
-    <rdfs:domain rdf:resource="E55_Type"/>
-    <rdfs:range rdf:resource="E1_CRM_Entity"/>
-    <owl:inverseOf rdf:resource="P2_has_type"/>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P2_has_type"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n) Scope
       note of the inverse property: This property allows sub-typing of CIDOC CRM entities –a form of
       specialisation – through the use of a terminological hierarchy, or thesaurus. The CIDOC CRM is
@@ -880,8 +881,8 @@
       (∃z) [E17(z)] ˄ P41i(x,z) ˄ P42(z,y)] </rdfs:comment>
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of"/>
   </owl:ObjectProperty>
-  
-  <owl:ObjectProperty rdf:about="P4_has_time-span">
+
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P4_has_time-span">
     <rdfs:label xml:lang="en">P4 has time-span</rdfs:label>
     <rdfs:label xml:lang="de">P4 hat Zeitspanne</rdfs:label>
     <rdfs:label xml:lang="el">P4 βρισκόταν σε εξέλιξη</rdfs:label>
@@ -890,9 +891,9 @@
     <rdfs:label xml:lang="ru">P4 имеет временной отрезок</rdfs:label>
     <rdfs:label xml:lang="zh">P4 发生时段是</rdfs:label>
     <skos:notation>P4</skos:notation>
-    <rdfs:domain rdf:resource="E2_Temporal_Entity"/>
-    <rdfs:range rdf:resource="E52_Time-Span"/>
-    <owl:inverseOf rdf:resource="P4i_is_time-span_of"/>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E52_Time-Span"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P4i_is_time-span_of"/>
     <rdfs:comment xml:lang="en">Quantification: many to one, necessary (1,1:0,n) Scope note: This
       property associates an instance of E2 Temporal Entity with the instance of E52 Time-Span
       during which it was on-going. The associated instance of E52 Time-Span is understood as the
@@ -903,8 +904,8 @@
       Order Logic: - P4(x,y) ⇒ E2(x) - P4(x,y) ⇒ E52(y) </rdfs:comment>
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"/>
   </owl:ObjectProperty>
-  
-  <owl:ObjectProperty rdf:about="P4i_is_time-span_of">
+
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P4i_is_time-span_of">
     <rdfs:label xml:lang="en">P4 is time-span of</rdfs:label>
     <rdfs:label xml:lang="de">P4 ist Zeitspanne von</rdfs:label>
     <rdfs:label xml:lang="el">P4 είναι χρονικό διάστημα του/της</rdfs:label>
@@ -913,9 +914,9 @@
     <rdfs:label xml:lang="ru">P4 является временным отрезком для</rdfs:label>
     <rdfs:label xml:lang="zh">P4 是时段</rdfs:label>
     <skos:notation>P4i</skos:notation>
-    <rdfs:domain rdf:resource="E52_Time-Span"/>
-    <rdfs:range rdf:resource="E2_Temporal_Entity"/>
-    <owl:inverseOf rdf:resource="P4_has_time-span"/>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E52_Time-Span"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E2_Temporal_Entity"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to one, necessary
       (1,1:0,n) Scope note of the inverse property: This property associates an instance of E2
       Temporal Entity with the instance of E52 Time-Span during which it was on-going. The
@@ -926,6 +927,194 @@
       Yalta Conference (E7) has time-span Yalta Conference time-span (E52). (Harbutt, 2010) In First
       Order Logic of the inverse property: - P4(x,y) ⇒ E2(x) - P4(x,y) ⇒ E52(y) </rdfs:comment>
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P4i_is_time-span_of"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P67_refers_to">
+    <rdfs:label xml:lang="en">P67 refers to</rdfs:label>
+    <rdfs:label xml:lang="de">P67 verweist auf</rdfs:label>
+    <rdfs:label xml:lang="el">P67 αναφέρεται σε</rdfs:label>
+    <rdfs:label xml:lang="fr">P67 renvoie à</rdfs:label>
+    <rdfs:label xml:lang="pt">P67 referencia</rdfs:label>
+    <rdfs:label xml:lang="ru">P67 ссылается на</rdfs:label>
+    <rdfs:label xml:lang="zh">P67 涉及</rdfs:label>
+    <skos:notation>P67</skos:notation>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E89_Propositional_Object"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P67i_is_referred_to_by"/>
+    <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n) Scope note: This property
+      documents that an instance of E89 Propositional Object makes a statement about an instance of
+      E1 CRM Entity. P67 refers to (is referred to by) has the P67.1 has type link to an instance of
+      E55 Type. This is intended to allow a more detailed description of the type of reference. This
+      differs from P129 is about (is subject of), which describes the primary subject or subjects of
+      the instance of E89 Propositional Object. Examples: - The eBay auction listing of 4(th) July
+      2002 (E73) refers to silver cup 232 (E22) has type item for sale (E55). (fictitious)
+      Properties: - P67.1 has type: E55 Type In First Order Logic: - P67(x,y) ⇒ E89(x) - P67(x,y) ⇒
+      E1(y) - P67(x,y,z) ⇒ [P67(x,y) ∧ E55(z)] </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67_refers_to"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P67i_is_referred_to_by">
+    <rdfs:label xml:lang="en">P67 is referred to by</rdfs:label>
+    <rdfs:label xml:lang="de">P67 wird angeführt von</rdfs:label>
+    <rdfs:label xml:lang="el">P67 αναφέρεται από</rdfs:label>
+    <rdfs:label xml:lang="fr">P67 fait l'objet d'un renvoi par</rdfs:label>
+    <rdfs:label xml:lang="pt">P67 é referenciado por</rdfs:label>
+    <rdfs:label xml:lang="ru">P67 имеет ссылку на себя от</rdfs:label>
+    <rdfs:label xml:lang="zh">P67 被涉及</rdfs:label>
+    <skos:notation>P67i</skos:notation>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E1_CRM_Entity"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E89_Propositional_Object"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P67_refers_to"/>
+    <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n) Scope
+      note of the inverse property: This property documents that an instance of E89 Propositional
+      Object makes a statement about an instance of E1 CRM Entity. P67 refers to (is referred to by)
+      has the P67.1 has type link to an instance of E55 Type. This is intended to allow a more
+      detailed description of the type of reference. This differs from P129 is about (is subject
+      of), which describes the primary subject or subjects of the instance of E89 Propositional
+      Object. Examples of the inverse property: - The eBay auction listing of 4(th) July 2002 (E73)
+      refers to silver cup 232 (E22) has type item for sale (E55). (fictitious) In First Order Logic
+      of the inverse property: - P67(x,y) ⇒ E89(x) - P67(x,y) ⇒ E1(y) - P67(x,y,z) ⇒ [P67(x,y) ∧
+      E55(z)] </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P7_took_place_at">
+    <rdfs:label xml:lang="en">P7 took place at</rdfs:label>
+    <rdfs:label xml:lang="de">P7 fand statt in</rdfs:label>
+    <rdfs:label xml:lang="el">P7 έλαβε χώρα σε</rdfs:label>
+    <rdfs:label xml:lang="fr">P7 a eu lieu dans</rdfs:label>
+    <rdfs:label xml:lang="pt">P7 ocorreu em</rdfs:label>
+    <rdfs:label xml:lang="ru">P7 совершался на</rdfs:label>
+    <rdfs:label xml:lang="zh">P7 发生地在</rdfs:label>
+    <skos:notation>P7</skos:notation>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E4_Period"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P7i_witnessed"/>
+    <rdfs:comment xml:lang="en">Quantification: many to many, necessary (1,n:0,n) Scope note: This
+      property describes the spatial location of an instance of E4 Period. The related instance of
+      E53 Place should be seen as a wider approximation of the geometric area within which the
+      phenomena that characterise the period in question occurred, see below. P7 took place at
+      (witnessed) does not convey any meaning other than spatial positioning (frequently on the
+      surface of the earth). For example, the period “Révolution française” can be said to have
+      taken place in “France in 1789”; the “Victorian” period may be said to have taken place in
+      “Britain from 1837-1901” and its colonies, as well as other parts of Europe and North America.
+      An instance of E4 Period can take place at multiple non-contiguous, non-overlapping locations.
+      Any place where something happened includes the spatial projection of the happening given in
+      the same geometric reference system. For instance, HMS Victory, as place of Lord Nelson's
+      dying, includes the location of his body relative to the hull of HMS Victory at his time of
+      death as the most precise location of his death. By the definition of P161 has spatial
+      projection, an instance of E4 Period takes place on all its spatial projections to respective
+      reference systems, that is, instances of E53 Place. Therefore, this property implies the more
+      fully developed path from E4 Period through P161 has spatial projection, E53 Place, P89 falls
+      within to E53 Place, where both places are defined in the same geometric reference system. The
+      relation between an instance of E53 Place and its reference system can conveniently be
+      documented via the property P157 is at rest relative to (provides reference space for).
+      Something that has happened at a given place can also be considered to have happened at a
+      smaller place within it: for example, it is reasonable to say Caesar’s murder took place in
+      Rome, but also on the Forum Romanum, and more precisely in the Curia. It is characteristic for
+      different historical sources to use varying precision in such statements, without being in
+      contradiction with each other. This may be due to lack of knowledge or to the relevance of the
+      precision for the purpose of the statement. In information integration, the more precise
+      statement improves the overall knowledge. Examples: - The period “Révolution française” (E4)
+      took place at the area covered by France in 1789 (E53). (Bertaud, 2004) In First Order Logic:
+      - P7(x,y) ⇒ E4(x) - P7(x,y) ⇒ E53(y) - P7(x,y) ⇒ (∃z,u) [P157(y,u) ˄ P157(z,u) ˄ P161(x,z) ˄
+      P89(z,y)] - [E4(x) ˄ P157(y,u) ˄ P157(v,u) ˄ P7(x,y) ˄ P161(x,z) ˄ P89(z,v) ˄ P89(v,y)] ⇒
+      P7(x,v) </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P7i_witnessed">
+    <rdfs:label xml:lang="en">P7 witnessed</rdfs:label>
+    <rdfs:label xml:lang="de">P7 bezeugte</rdfs:label>
+    <rdfs:label xml:lang="el">P7 υπήρξε τόπος του</rdfs:label>
+    <rdfs:label xml:lang="fr">P7 a été témoin de</rdfs:label>
+    <rdfs:label xml:lang="pt">P7 testemunhou</rdfs:label>
+    <rdfs:label xml:lang="ru">P7 был местом совершения</rdfs:label>
+    <rdfs:label xml:lang="zh">P7 发生过</rdfs:label>
+    <skos:notation>P7i</skos:notation>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E4_Period"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P7_took_place_at"/>
+    <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many, necessary
+      (1,n:0,n) Scope note of the inverse property: This property describes the spatial location of
+      an instance of E4 Period. The related instance of E53 Place should be seen as a wider
+      approximation of the geometric area within which the phenomena that characterise the period in
+      question occurred, see below. P7 took place at (witnessed) does not convey any meaning other
+      than spatial positioning (frequently on the surface of the earth). For example, the period
+      “Révolution française” can be said to have taken place in “France in 1789”; the “Victorian”
+      period may be said to have taken place in “Britain from 1837-1901” and its colonies, as well
+      as other parts of Europe and North America. An instance of E4 Period can take place at
+      multiple non-contiguous, non-overlapping locations. Any place where something happened
+      includes the spatial projection of the happening given in the same geometric reference system.
+      For instance, HMS Victory, as place of Lord Nelson's dying, includes the location of his body
+      relative to the hull of HMS Victory at his time of death as the most precise location of his
+      death. By the definition of P161 has spatial projection, an instance of E4 Period takes place
+      on all its spatial projections to respective reference systems, that is, instances of E53
+      Place. Therefore, this property implies the more fully developed path from E4 Period through
+      P161 has spatial projection, E53 Place, P89 falls within to E53 Place, where both places are
+      defined in the same geometric reference system. The relation between an instance of E53 Place
+      and its reference system can conveniently be documented via the property P157 is at rest
+      relative to (provides reference space for). Something that has happened at a given place can
+      also be considered to have happened at a smaller place within it: for example, it is
+      reasonable to say Caesar’s murder took place in Rome, but also on the Forum Romanum, and more
+      precisely in the Curia. It is characteristic for different historical sources to use varying
+      precision in such statements, without being in contradiction with each other. This may be due
+      to lack of knowledge or to the relevance of the precision for the purpose of the statement. In
+      information integration, the more precise statement improves the overall knowledge. Examples
+      of the inverse property: - The period “Révolution française” (E4) took place at the area
+      covered by France in 1789 (E53). (Bertaud, 2004) In First Order Logic of the inverse property:
+      - P7(x,y) ⇒ E4(x) - P7(x,y) ⇒ E53(y) - P7(x,y) ⇒ (∃z,u) [P157(y,u) ˄ P157(z,u) ˄ P161(x,z) ˄
+      P89(z,y)] - [E4(x) ˄ P157(y,u) ˄ P157(v,u) ˄ P7(x,y) ˄ P161(x,z) ˄ P89(z,v) ˄ P89(v,y)] ⇒
+      P7(x,v) </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P7i_witnessed"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P98_brought_into_life">
+    <rdfs:label xml:lang="en">P98 brought into life</rdfs:label>
+    <rdfs:label xml:lang="de">P98 brachte zur Welt</rdfs:label>
+    <rdfs:label xml:lang="el">P98 έφερε στη ζωή</rdfs:label>
+    <rdfs:label xml:lang="fr">P98 a donné vie à</rdfs:label>
+    <rdfs:label xml:lang="pt">P98 trouxe à vida</rdfs:label>
+    <rdfs:label xml:lang="ru">P98 породил</rdfs:label>
+    <rdfs:label xml:lang="zh">P98 诞生了</rdfs:label>
+    <skos:notation>P98</skos:notation>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E67_Birth"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P98i_was_born"/>
+    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P92_brought_into_existence"/>
+    <rdfs:comment xml:lang="en">Quantification: one to many, dependent (0,n:1,1) Scope note: This
+      property links an instance of E67 Birth event to an instance of E21 Person in the role of
+      offspring. Twins, triplets etc. are brought into life by the same instance of E67 Birth. This
+      is not intended for use with general Natural History material, only people. There is no
+      explicit method for modelling conception and gestation except by using extensions. Examples: -
+      The Birth of Queen Elizabeth II (E67) brought into life Queen Elizabeth II (E21). (Parker,
+      2002) In First Order Logic: - P98(x,y) ⇒ E67(x) - P98(x,y) ⇒ E21(y) - P98(x,y) ⇒ P92(x,y) </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P98_brought_into_life"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P98i_was_born">
+    <rdfs:label xml:lang="en">P98 was born</rdfs:label>
+    <rdfs:label xml:lang="de">P98 wurde geboren durch</rdfs:label>
+    <rdfs:label xml:lang="el">P98 γεννήθηκε</rdfs:label>
+    <rdfs:label xml:lang="fr">P98 est né</rdfs:label>
+    <rdfs:label xml:lang="pt">P98 veio à vida pelo</rdfs:label>
+    <rdfs:label xml:lang="ru">P98 был рожден</rdfs:label>
+    <rdfs:label xml:lang="zh">P98 被诞生</rdfs:label>
+    <skos:notation>P98i</skos:notation>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E67_Birth"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P98_brought_into_life"/>
+    <rdfs:subPropertyOf
+      rdf:resource="http://erlangen-crm.org/current/P92i_was_brought_into_existence_by"/>
+    <rdfs:comment xml:lang="en">Quantification of the inverse property: one to many, dependent
+      (0,n:1,1) Scope note of the inverse property: This property links an instance of E67 Birth
+      event to an instance of E21 Person in the role of offspring. Twins, triplets etc. are brought
+      into life by the same instance of E67 Birth. This is not intended for use with general Natural
+      History material, only people. There is no explicit method for modelling conception and
+      gestation except by using extensions. Examples of the inverse property: - The Birth of Queen
+      Elizabeth II (E67) brought into life Queen Elizabeth II (E21). (Parker, 2002) In First Order
+      Logic of the inverse property: - P98(x,y) ⇒ E67(x) - P98(x,y) ⇒ E21(y) - P98(x,y) ⇒ P92(x,y) </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P98i_was_born"/>
   </owl:ObjectProperty>
 
   <!-- LRMOO v1.1.1 -->

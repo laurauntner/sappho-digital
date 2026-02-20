@@ -272,6 +272,235 @@ ecrm:E90_Symbolic_Object
     rdfs:comment    """Scope note: This class comprises identifiable symbols and any aggregation of symbols, such as characters, identifiers, traffic signs, emblems, texts, data sets, images, musical scores, multimedia objects, computer program code, or mathematical formulae that have an objectively recognizable structure and that are documented as single units. It includes sets of signs of any nature, which may serve to designate something, or to communicate some propositional content. An instance of E90 Symbolic Object may or may not have a specific meaning, for example an arbitrary character string. In some cases, the content of an instance of E90 Symbolic Object may completely be represented by a serialized digital content model, such as a sequence of ASCII-encoded characters, an XML or HTML document, or a TIFF image. The property P3 has note and its subproperty P190 has symbolic content allow for the description of this content model. In order to disambiguate which symbolic level is the carrier of the meaning, the property P3.1 has type can be used to specify the encoding (e.g. "bit", "Latin character", RGB pixel). Examples: - 'ecognizabl' - the "no-smoking" sign (E36) - "BM000038850.JPG" (E41) [identifies a digital image] (Natural History Museum, 2021) - image BM000038850.JPG from the Clayton Herbarium in London (E36) [depicts specimen of Verbesina virginica] (Natural History Museum, 2021) - the distribution of form, tone and colour found on Leonardo da Vinci's painting named "Mona Lisa" in daylight (E36) - the Italian text of Dante's "Divina Commedia" as found in the authoritative critical edition "La Commedia secondo l'antica vulgata a cura di Giorgio Petrocchi" (E33) (Petrocchi, 1967) In First Order Logic: - E90(x) ⇒ E28(x) - E90(x) ⇒ E72(x)"""@en ;
     owl:sameAs      cidoc:E90_Symbolic_Object .
 
+ecrm:P100_was_death_of a owl:ObjectProperty ;
+    rdfs:label "P100 was death of"@en, "P100 Tod von"@de, "P100 ήταν θάνατος του/της"@el,
+               "P100 a été la mort de"@fr, "P100 foi a morte para"@pt,
+               "P100 был смертью для"@ru, "P100 死亡的是"@zh ;
+    skos:notation "P100" ;
+    rdfs:domain ecrm:E69_Death ;
+    rdfs:range ecrm:E21_Person ;
+    owl:inverseOf ecrm:P100i_died_in ;
+    rdfs:subPropertyOf ecrm:P93_took_out_of_existence ;
+    rdfs:comment """Quantification: one to many, necessary (1,n:0,1) Scope note: This property links an instance of E69 Death to the instance of E21 Person that died. An instance of E69 Death may involve multiple people, for example in the case of a battle or disaster. This is not intended for use with general natural history material, only people. Examples: - Mozart's death (E69) was death of Mozart (E21). (Sitwell, 2017) In First Order Logic: - P100(x,y) ⇒ E69(x) - P100(x,y) ⇒ E21(y) - P100(x,y) ⇒ P93(x,y)"""@en ;
+    owl:sameAs crm:P100_was_death_of .
+
+ecrm:P100i_died_in a owl:ObjectProperty ;
+    rdfs:label "P100 died in"@en, "P100 starb in"@de, "P100 πέθανε σε"@el,
+               "P100 est mort par"@fr, "P100 morreu em"@pt,
+               "P100 умер в"@ru, "P100 死于"@zh ;
+    skos:notation "P100i" ;
+    rdfs:domain ecrm:E21_Person ;
+    rdfs:range ecrm:E69_Death ;
+    owl:inverseOf ecrm:P100_was_death_of ;
+    rdfs:subPropertyOf ecrm:P93i_was_taken_out_of_existence_by ;
+    rdfs:comment """Quantification of the inverse property: one to many, necessary (1,n:0,1) Scope note of the inverse property: This property links an instance of E69 Death to the instance of E21 Person that died. An instance of E69 Death may involve multiple people, for example in the case of a battle or disaster. This is not intended for use with general natural history material, only people. Examples of the inverse property: - Mozart's death (E69) was death of Mozart (E21). (Sitwell, 2017) In First Order Logic of the inverse property: - P100(x,y) ⇒ E69(x) - P100(x,y) ⇒ E21(y) - P100(x,y) ⇒ P93(x,y)"""@en ;
+    owl:sameAs crm:P100i_died_in .
+
+ecrm:P102_has_title a owl:ObjectProperty ;
+    rdfs:label "P102 has title"@en, "P102 trägt den Titel"@de, "P102 έχει τίτλο"@el,
+               "P102 a pour titre"@fr, "P102 tem título"@pt,
+               "P102 имеет заголовок"@ru, "P102 有题名"@zh ;
+    skos:notation "P102" ;
+    rdfs:domain ecrm:E71_Human-Made_Thing ;
+    rdfs:range ecrm:E35_Title ;
+    owl:inverseOf ecrm:P102i_is_title_of ;
+    rdfs:subPropertyOf ecrm:P1_is_identified_by ;
+    rdfs:comment """Quantification: many to many (0,n:0,n) Scope note: This property associates an instance of E35 Title that has been applied to an instance of E71 Human-Made Thing. The P102.1 has type property of the P102 has title (is title of) property enables the relationship between the title and the thing to be further clarified, for example, if the title was a given title, a supplied title etc. It allows any human-made material or immaterial thing to be given a title. It is possible to imagine a title being created without a specific object in mind. Examples: - The first book of the Old Testament (E33) has title "Genesis" (E35) has type translated title (E55) (E55). (Brueggemann, 1982) - Monet's painting from 1868-1869 held by Musée d'Orsay, Paris, under inventory number RF 1984 164 (E22) has title "La Pie" (E35) has type creator's title (E55). (Musée d'Orsay, 2020) - Monet's painting from 1868-1869 held by Musée d'Orsay, Paris, under inventory number RF 1984 164 (E22) has title "The Magpie" (E35) has type translated title (E55). (Musée d'Orsay, 2020) Properties: - P102.1 has type: E55 Type In First Order Logic: - P102(x,y) ⇒ E71(x) - P102(x,y) ⇒ E35(y) - P102(x,y,z) ⇒ [P102(x,y) ∧ E55(z)] - P102(x,y) ⇒ P1(x,y)"""@en ;
+    owl:sameAs crm:P102_has_title .
+
+ecrm:P102i_is_title_of a owl:ObjectProperty ;
+    rdfs:label "P102 is title of"@en, "P102 ist der Titel von"@de, "P102 είναι τίτλος του/της"@el,
+               "P102 est le titre de"@fr, "P102 é título de"@pt,
+               "P102 является заголовком для"@ru, "P102 题名是"@zh ;
+    skos:notation "P102i" ;
+    rdfs:domain ecrm:E35_Title ;
+    rdfs:range ecrm:E71_Human-Made_Thing ;
+    owl:inverseOf ecrm:P102_has_title ;
+    rdfs:subPropertyOf ecrm:P1i_identifies ;
+    rdfs:comment """Quantification of the inverse property: many to many (0,n:0,n) Scope note of the inverse property: This property associates an instance of E35 Title that has been applied to an instance of E71 Human-Made Thing. The P102.1 has type property of the P102 has title (is title of) property enables the relationship between the title and the thing to be further clarified, for example, if the title was a given title, a supplied title etc. It allows any human-made material or immaterial thing to be given a title. It is possible to imagine a title being created without a specific object in mind. Examples of the inverse property: - The first book of the Old Testament (E33) has title "Genesis" (E35) has type translated title (E55) (E55). (Brueggemann, 1982) - Monet's painting from 1868-1869 held by Musée d'Orsay, Paris, under inventory number RF 1984 164 (E22) has title "La Pie" (E35) has type creator's title (E55). (Musée d'Orsay, 2020) - Monet's painting from 1868-1869 held by Musée d'Orsay, Paris, under inventory number RF 1984 164 (E22) has title "The Magpie" (E35) has type translated title (E55). (Musée d'Orsay, 2020) In First Order Logic of the inverse property: - P102(x,y) ⇒ E71(x) - P102(x,y) ⇒ E35(y) - P102(x,y,z) ⇒ [P102(x,y) ∧ E55(z)] - P102(x,y) ⇒ P1(x,y)"""@en ;
+    owl:sameAs crm:P102i_is_title_of .
+
+ecrm:P138_represents a owl:ObjectProperty ;
+    rdfs:label "P138 represents"@en, "P138 stellt dar"@de, "P138 παριστάνει"@el,
+               "P138 représente"@fr, "P138 representa"@pt,
+               "P138 представляет"@ru, "P138 描绘"@zh ;
+    skos:notation "P138" ;
+    rdfs:domain ecrm:E36_Visual_Item ;
+    rdfs:range ecrm:E1_CRM_Entity ;
+    owl:inverseOf ecrm:P138i_has_representation ;
+    rdfs:subPropertyOf ecrm:P67_refers_to ;
+    rdfs:comment """Quantification: many to many (0,n:0,n) Scope note: This property establishes the relationship between an instance of E36 Visual Item and the instance of E1 CRM Entity that it visually represents. Any entity may be represented visually. This property is part of the fully developed path from E24 Physical Human-Made Thing through P65 shows visual item (is shown by), E36 Visual Item, P138 represents (has representation) to E1 CRM Entity, which is shortcut by P62 depicts (is depicted by). P138.1 mode of representation allows the nature of the representation to be refined. This property is also used for the relationship between an original and a digitisation of the original by the use of techniques such as digital photography, flatbed or infrared scanning. Digitisation is here seen as a process with a mechanical, causal component rendering the spatial distribution of structural and optical properties of the original and does not necessarily include any visual similarity identifiable by human observation. Examples: - The digital file found at https://www.emunch.no/N/full/No-MM_N0001-01.jpg (E36) represents page 1 of Edward Munch's manuscript MM N 1, Munch-museet (E22) mode of representation Digitisation (E55). - The 3D model VAM_A.200-1946_trace_1M.ply (E73) represents Victoria & Albert Museum's Madonna and child sculpture (visual work) A.200-1946 (E22) mode of representation 3D surface (E55). Properties: - P138.1 mode of representation: E55 Type In First Order Logic: - P138(x,y) ⇒ E36(x) - P138(x,y) ⇒ E1(y) - P138(x,y,z) ⇒ [P138(x,y) ∧ E55(z)] - P138(x,y) ⇒ P67(x,y)"""@en ;
+    owl:sameAs crm:P138_represents .
+
+ecrm:P138i_has_representation a owl:ObjectProperty ;
+    rdfs:label "P138 has representation"@en, "P138 wird dargestellt durch"@de, "P138 παριστάνεται από"@el,
+               "P138 est représenté par"@fr, "P138 tem representação"@pt,
+               "P138 имеет представление"@ru, "P138 有描绘"@zh ;
+    skos:notation "P138i" ;
+    rdfs:domain ecrm:E1_CRM_Entity ;
+    rdfs:range ecrm:E36_Visual_Item ;
+    owl:inverseOf ecrm:P138_represents ;
+    rdfs:subPropertyOf ecrm:P67i_is_referred_to_by ;
+    rdfs:comment """Quantification of the inverse property: many to many (0,n:0,n) Scope note of the inverse property: This property establishes the relationship between an instance of E36 Visual Item and the instance of E1 CRM Entity that it visually represents. Any entity may be represented visually. This property is part of the fully developed path from E24 Physical Human-Made Thing through P65 shows visual item (is shown by), E36 Visual Item, P138 represents (has representation) to E1 CRM Entity, which is shortcut by P62 depicts (is depicted by). P138.1 mode of representation allows the nature of the representation to be refined. This property is also used for the relationship between an original and a digitisation of the original by the use of techniques such as digital photography, flatbed or infrared scanning. Digitisation is here seen as a process with a mechanical, causal component rendering the spatial distribution of structural and optical properties of the original and does not necessarily include any visual similarity identifiable by human observation. Examples of the inverse property: - The digital file found at https://www.emunch.no/N/full/No-MM_N0001-01.jpg (E36) represents page 1 of Edward Munch's manuscript MM N 1, Munch-museet (E22) mode of representation Digitisation (E55). - The 3D model VAM_A.200-1946_trace_1M.ply (E73) represents Victoria & Albert Museum's Madonna and child sculpture (visual work) A.200-1946 (E22) mode of representation 3D surface (E55). In First Order Logic of the inverse property: - P138(x,y) ⇒ E36(x) - P138(x,y) ⇒ E1(y) - P138(x,y,z) ⇒ [P138(x,y) ∧ E55(z)] - P138(x,y) ⇒ P67(x,y)"""@en ;
+    owl:sameAs crm:P138i_has_representation .
+
+ecrm:P14_carried_out_by a owl:ObjectProperty ;
+    rdfs:label "P14 carried out by"@en, "P14 wurde ausgeführt von"@de, "P14 πραγματοποιήθηκε από"@el,
+               "P14 a été effectué par"@fr, "P14 realizada por"@pt,
+               "P14 выполнялся"@ru, "P14 执行者是"@zh ;
+    skos:notation "P14" ;
+    rdfs:domain ecrm:E7_Activity ;
+    rdfs:range ecrm:E39_Actor ;
+    owl:inverseOf ecrm:P14i_performed ;
+    rdfs:subPropertyOf ecrm:P11_had_participant ;
+    rdfs:comment """Quantification: many to many, necessary (1,n:0,n) Scope note: This property describes the active participation of an instance of E39 Actor in an instance of E7 Activity. It implies causal or legal responsibility. The P14.1 in the role of property of the property specifies the nature of an Actor's participation. Examples: - The painting of the Sistine Chapel (E7) carried out by Michelangelo Buonaroti (E21) in the role of master craftsman (E55). (Goldscheider, 1953) Properties: - P14.1 in the role of: E55 Type In First Order Logic: - P14(x,y) ⇒ E7(x) - P14(x,y)⇒ E39(y) - P14(x,y) ⇒ P11(x,y) - P14(x,y,z) ⇒ [P14(x,y) ∧ E55(z)]"""@en ;
+    owl:sameAs crm:P14_carried_out_by .
+
+ecrm:P14i_performed a owl:ObjectProperty ;
+    rdfs:label "P14 performed"@en, "P14 führte aus"@de, "P14 πραγματοποίησε"@el,
+               "P14 a effectué"@fr, "P14 executou"@pt,
+               "P14 выполнял"@ru, "P14 执行"@zh ;
+    skos:notation "P14i" ;
+    rdfs:domain ecrm:E39_Actor ;
+    rdfs:range ecrm:E7_Activity ;
+    owl:inverseOf ecrm:P14_carried_out_by ;
+    rdfs:subPropertyOf ecrm:P11i_participated_in ;
+    rdfs:comment """Quantification of the inverse property: many to many, necessary (1,n:0,n) Scope note of the inverse property: This property describes the active participation of an instance of E39 Actor in an instance of E7 Activity. It implies causal or legal responsibility. The P14.1 in the role of property of the property specifies the nature of an Actor's participation. Examples of the inverse property: - The painting of the Sistine Chapel (E7) carried out by Michelangelo Buonaroti (E21) in the role of master craftsman (E55). (Goldscheider, 1953) In First Order Logic of the inverse property: - P14(x,y) ⇒ E7(x) - P14(x,y)⇒ E39(y) - P14(x,y) ⇒ P11(x,y) - P14(x,y,z) ⇒ [P14(x,y) ∧ E55(z)]"""@en ;
+    owl:sameAs crm:P14i_performed .
+
+ecrm:P1_is_identified_by a owl:ObjectProperty ;
+    rdfs:label "P1 is identified by"@en, "P1 wird bezeichnet als"@de, "P1 αναγνωρίζεται ως"@el,
+               "P1 est identifié par"@fr, "P1 é identificado por"@pt,
+               "P1 идентифицируется посредством"@ru, "P1 被标识为"@zh ;
+    skos:notation "P1" ;
+    rdfs:domain ecrm:E1_CRM_Entity ;
+    rdfs:range ecrm:E41_Appellation ;
+    owl:inverseOf ecrm:P1i_identifies ;
+    rdfs:comment """Quantification: many to many (0,n:0,n) Scope note: This property describes the naming or identification of any real-world item by a name or any other identifier. This property is intended for identifiers in general use, which form part of the world the model intends to describe, and not merely for internal database identifiers which are specific to a technical system, unless these latter also have a more general use outside the technical context. This property includes in particular identification by mathematical expressions such as coordinate systems used for the identification of instances of E53 Place. The property does not reveal anything about when, where and by whom this identifier was used. A more detailed representation can be made using the fully developed (i.e. indirect) path through E15 Identifier Assignment. This property is a shortcut for the path from E1 CRM Entity through P140i was attributed by, E15 Identifier Assignment, P37 assigned to E42 Identifier. It is also a shortcut for the path from E1 CRM Entity through P1 is identified by, E41 Appellation, P139 has alternative form to E41 Appellation. Examples: - The capital of Italy (E53) is identified by "Rome" (E41). (Leach, 2017) - Text 25014–32 (E33) is identified by "The Decline and Fall of the Roman Empire" (E35). (Gibbon, 2013) In First Order Logic: - P1(x,y) ⇒ E1(x) - P1(x,y) ⇒ E41(y) - P1(x,y) ⇐ (∃z) [E15(z)˄ P140i(x,z) ˄ P37(z,y)] - P1(x,y) ⇐ (∃z) [E41(z)˄ P1(x,z) ˄ P139(z,y)]"""@en ;
+    owl:sameAs crm:P1_is_identified_by .
+
+ecrm:P1i_identifies a owl:ObjectProperty ;
+    rdfs:label "P1 identifies"@en, "P1 bezeichnet"@de, "P1 είναι αναγνωριστικό"@el,
+               "P1 identifie"@fr, "P1 identifica"@pt,
+               "P1 идентифицирует"@ru, "P1 标识"@zh ;
+    skos:notation "P1i" ;
+    rdfs:domain ecrm:E41_Appellation ;
+    rdfs:range ecrm:E1_CRM_Entity ;
+    owl:inverseOf ecrm:P1_is_identified_by ;
+    rdfs:comment """Quantification of the inverse property: many to many (0,n:0,n) Scope note of the inverse property: This property describes the naming or identification of any real-world item by a name or any other identifier. This property is intended for identifiers in general use, which form part of the world the model intends to describe, and not merely for internal database identifiers which are specific to a technical system, unless these latter also have a more general use outside the technical context. This property includes in particular identification by mathematical expressions such as coordinate systems used for the identification of instances of E53 Place. The property does not reveal anything about when, where and by whom this identifier was used. A more detailed representation can be made using the fully developed (i.e. indirect) path through E15 Identifier Assignment. This property is a shortcut for the path from E1 CRM Entity through P140i was attributed by, E15 Identifier Assignment, P37 assigned to E42 Identifier. It is also a shortcut for the path from E1 CRM Entity through P1 is identified by, E41 Appellation, P139 has alternative form to E41 Appellation. Examples of the inverse property: - The capital of Italy (E53) is identified by "Rome" (E41). (Leach, 2017) - Text 25014–32 (E33) is identified by "The Decline and Fall of the Roman Empire" (E35). (Gibbon, 2013) In First Order Logic of the inverse property: - P1(x,y) ⇒ E1(x) - P1(x,y) ⇒ E41(y) - P1(x,y) ⇐ (∃z) [E15(z)˄ P140i(x,z) ˄ P37(z,y)] - P1(x,y) ⇐ (∃z) [E41(z)˄ P1(x,z) ˄ P139(z,y)]"""@en ;
+    owl:sameAs crm:P1i_identifies .
+
+ecrm:P2_has_type a owl:ObjectProperty ;
+    rdfs:label "P2 has type"@en, "P2 hat den Typus"@de, "P2 έχει τύπο"@el,
+               "P2 a pour type"@fr, "P2 é do tipo"@pt,
+               "P2 имеет тип"@ru, "P2 有类型"@zh ;
+    skos:notation "P2" ;
+    rdfs:domain ecrm:E1_CRM_Entity ;
+    rdfs:range ecrm:E55_Type ;
+    owl:inverseOf ecrm:P2i_is_type_of ;
+    rdfs:comment """Quantification: many to many (0,n:0,n) Scope note: This property allows sub-typing of CIDOC CRM entities –a form of specialisation – through the use of a terminological hierarchy, or thesaurus. The CIDOC CRM is intended to focus on the high-level entities and relationships needed to describe data structures. Consequently, it does not specialise entities any further than is required for this immediate purpose. However, entities in the isA hierarchy of the CIDOC CRM may by specialised into any number of sub-entities, which can be defined in the E55 Type hierarchy. E41 Appellation, for example, may be specialised into "e-mail address", "telephone number", "post office box", "URL", etc., none of which figures explicitly in the CIDOC CRM class hierarchy. A comprehensive explanation about refining CIDOC CRM concepts by E55 Type is given in the section "About Types" in the section on "Specific Modelling Constructs" of this document. This property is a shortcut for the path from E1 CRM Entity through P41i was classified by, E17 Type Assignment, P42 assigned to E55 Type. Examples: - "enquiries@cidoc-crm.org" (E41) has type e-mail address (E55). (fictitious) In First Order Logic: - P2(x,y) ⇒ E1(x) - P2(x,y) ⇒ E55(y) - P2(x,y) ⇐ (∃z) [E17(z)] ˄ P41i(x,z) ˄ P42(z,y)]"""@en ;
+    owl:sameAs crm:P2_has_type .
+
+ecrm:P2i_is_type_of a owl:ObjectProperty ;
+    rdfs:label "P2 is type of"@en, "P2 ist Typus von"@de, "P2 είναι ο τύπος του/της"@el,
+               "P2 est le type de"@fr, "P2 é o tipo de"@pt,
+               "P2 является типом для"@ru, "P2 是类型"@zh ;
+    skos:notation "P2i" ;
+    rdfs:domain ecrm:E55_Type ;
+    rdfs:range ecrm:E1_CRM_Entity ;
+    owl:inverseOf ecrm:P2_has_type ;
+    rdfs:comment """Quantification of the inverse property: many to many (0,n:0,n) Scope note of the inverse property: This property allows sub-typing of CIDOC CRM entities –a form of specialisation – through the use of a terminological hierarchy, or thesaurus. The CIDOC CRM is intended to focus on the high-level entities and relationships needed to describe data structures. Consequently, it does not specialise entities any further than is required for this immediate purpose. However, entities in the isA hierarchy of the CIDOC CRM may by specialised into any number of sub-entities, which can be defined in the E55 Type hierarchy. E41 Appellation, for example, may be specialised into "e-mail address", "telephone number", "post office box", "URL", etc., none of which figures explicitly in the CIDOC CRM class hierarchy. A comprehensive explanation about refining CIDOC CRM concepts by E55 Type is given in the section "About Types" in the section on "Specific Modelling Constructs" of this document. This property is a shortcut for the path from E1 CRM Entity through P41i was classified by, E17 Type Assignment, P42 assigned to E55 Type. Examples of the inverse property: - "enquiries@cidoc-crm.org" (E41) has type e-mail address (E55). (fictitious) In First Order Logic of the inverse property: - P2(x,y) ⇒ E1(x) - P2(x,y) ⇒ E55(y) - P2(x,y) ⇐ (∃z) [E17(z)] ˄ P41i(x,z) ˄ P42(z,y)]"""@en ;
+    owl:sameAs crm:P2i_is_type_of .
+
+ecrm:P4_has_time-span a owl:ObjectProperty ;
+    rdfs:label "P4 has time-span"@en, "P4 hat Zeitspanne"@de, "P4 βρισκόταν σε εξέλιξη"@el,
+               "P4 a pour intervalle temporel"@fr, "P4 tem período de tempo"@pt,
+               "P4 имеет временной отрезок"@ru, "P4 发生时段是"@zh ;
+    skos:notation "P4" ;
+    rdfs:domain ecrm:E2_Temporal_Entity ;
+    rdfs:range ecrm:E52_Time-Span ;
+    owl:inverseOf ecrm:P4i_is_time-span_of ;
+    rdfs:comment """Quantification: many to one, necessary (1,1:0,n) Scope note: This property associates an instance of E2 Temporal Entity with the instance of E52 Time-Span during which it was on-going. The associated instance of E52 Time-Span is understood as the real time-span during which the phenomena making up the temporal entity instance were active. More than one instance of E2 Temporal Entity may share a common instance of E52 Time-Span only if they come into being and end being due to identical declarations or events. Examples: - The Yalta Conference (E7) has time-span Yalta Conference time-span (E52). (Harbutt, 2010) In First Order Logic: - P4(x,y) ⇒ E2(x) - P4(x,y) ⇒ E52(y)"""@en ;
+    owl:sameAs crm:P4_has_time-span .
+
+ecrm:P4i_is_time-span_of a owl:ObjectProperty ;
+    rdfs:label "P4 is time-span of"@en, "P4 ist Zeitspanne von"@de, "P4 είναι χρονικό διάστημα του/της"@el,
+               "P4 est l'intervalle temporel de"@fr, "P4 é o período de tempo de"@pt,
+               "P4 является временным отрезком для"@ru, "P4 是时段"@zh ;
+    skos:notation "P4i" ;
+    rdfs:domain ecrm:E52_Time-Span ;
+    rdfs:range ecrm:E2_Temporal_Entity ;
+    owl:inverseOf ecrm:P4_has_time-span ;
+    rdfs:comment """Quantification of the inverse property: many to one, necessary (1,1:0,n) Scope note of the inverse property: This property associates an instance of E2 Temporal Entity with the instance of E52 Time-Span during which it was on-going. The associated instance of E52 Time-Span is understood as the real time-span during which the phenomena making up the temporal entity instance were active. More than one instance of E2 Temporal Entity may share a common instance of E52 Time-Span only if they come into being and end being due to identical declarations or events. Examples of the inverse property: - The Yalta Conference (E7) has time-span Yalta Conference time-span (E52). (Harbutt, 2010) In First Order Logic of the inverse property: - P4(x,y) ⇒ E2(x) - P4(x,y) ⇒ E52(y)"""@en ;
+    owl:sameAs crm:P4i_is_time-span_of .
+
+ecrm:P67_refers_to a owl:ObjectProperty ;
+    rdfs:label "P67 refers to"@en, "P67 verweist auf"@de, "P67 αναφέρεται σε"@el,
+               "P67 renvoie à"@fr, "P67 referencia"@pt,
+               "P67 ссылается на"@ru, "P67 涉及"@zh ;
+    skos:notation "P67" ;
+    rdfs:domain ecrm:E89_Propositional_Object ;
+    rdfs:range ecrm:E1_CRM_Entity ;
+    owl:inverseOf ecrm:P67i_is_referred_to_by ;
+    rdfs:comment """Quantification: many to many (0,n:0,n) Scope note: This property documents that an instance of E89 Propositional Object makes a statement about an instance of E1 CRM Entity. P67 refers to (is referred to by) has the P67.1 has type link to an instance of E55 Type. This is intended to allow a more detailed description of the type of reference. This differs from P129 is about (is subject of), which describes the primary subject or subjects of the instance of E89 Propositional Object. Examples: - The eBay auction listing of 4(th) July 2002 (E73) refers to silver cup 232 (E22) has type item for sale (E55). (fictitious) Properties: - P67.1 has type: E55 Type In First Order Logic: - P67(x,y) ⇒ E89(x) - P67(x,y) ⇒ E1(y) - P67(x,y,z) ⇒ [P67(x,y) ∧ E55(z)]"""@en ;
+    owl:sameAs crm:P67_refers_to .
+
+ecrm:P67i_is_referred_to_by a owl:ObjectProperty ;
+    rdfs:label "P67 is referred to by"@en, "P67 wird angeführt von"@de, "P67 αναφέρεται από"@el,
+               "P67 fait l'objet d'un renvoi par"@fr, "P67 é referenciado por"@pt,
+               "P67 имеет ссылку на себя от"@ru, "P67 被涉及"@zh ;
+    skos:notation "P67i" ;
+    rdfs:domain ecrm:E1_CRM_Entity ;
+    rdfs:range ecrm:E89_Propositional_Object ;
+    owl:inverseOf ecrm:P67_refers_to ;
+    rdfs:comment """Quantification of the inverse property: many to many (0,n:0,n) Scope note of the inverse property: This property documents that an instance of E89 Propositional Object makes a statement about an instance of E1 CRM Entity. P67 refers to (is referred to by) has the P67.1 has type link to an instance of E55 Type. This is intended to allow a more detailed description of the type of reference. This differs from P129 is about (is subject of), which describes the primary subject or subjects of the instance of E89 Propositional Object. Examples of the inverse property: - The eBay auction listing of 4(th) July 2002 (E73) refers to silver cup 232 (E22) has type item for sale (E55). (fictitious) In First Order Logic of the inverse property: - P67(x,y) ⇒ E89(x) - P67(x,y) ⇒ E1(y) - P67(x,y,z) ⇒ [P67(x,y) ∧ E55(z)]"""@en ;
+    owl:sameAs crm:P67i_is_referred_to_by .
+
+ecrm:P7_took_place_at a owl:ObjectProperty ;
+    rdfs:label "P7 took place at"@en, "P7 fand statt in"@de, "P7 έλαβε χώρα σε"@el,
+               "P7 a eu lieu dans"@fr, "P7 ocorreu em"@pt,
+               "P7 совершался на"@ru, "P7 发生地在"@zh ;
+    skos:notation "P7" ;
+    rdfs:domain ecrm:E4_Period ;
+    rdfs:range ecrm:E53_Place ;
+    owl:inverseOf ecrm:P7i_witnessed ;
+    rdfs:comment """Quantification: many to many, necessary (1,n:0,n) Scope note: This property describes the spatial location of an instance of E4 Period. The related instance of E53 Place should be seen as a wider approximation of the geometric area within which the phenomena that characterise the period in question occurred, see below. P7 took place at (witnessed) does not convey any meaning other than spatial positioning (frequently on the surface of the earth). For example, the period "Révolution française" can be said to have taken place in "France in 1789"; the "Victorian" period may be said to have taken place in "Britain from 1837-1901" and its colonies, as well as other parts of Europe and North America. An instance of E4 Period can take place at multiple non-contiguous, non-overlapping locations. Any place where something happened includes the spatial projection of the happening given in the same geometric reference system. For instance, HMS Victory, as place of Lord Nelson's dying, includes the location of his body relative to the hull of HMS Victory at his time of death as the most precise location of his death. By the definition of P161 has spatial projection, an instance of E4 Period takes place on all its spatial projections to respective reference systems, that is, instances of E53 Place. Therefore, this property implies the more fully developed path from E4 Period through P161 has spatial projection, E53 Place, P89 falls within to E53 Place, where both places are defined in the same geometric reference system. The relation between an instance of E53 Place and its reference system can conveniently be documented via the property P157 is at rest relative to (provides reference space for). Something that has happened at a given place can also be considered to have happened at a smaller place within it: for example, it is reasonable to say Caesar's murder took place in Rome, but also on the Forum Romanum, and more precisely in the Curia. It is characteristic for different historical sources to use varying precision in such statements, without being in contradiction with each other. This may be due to lack of knowledge or to the relevance of the precision for the purpose of the statement. In information integration, the more precise statement improves the overall knowledge. Examples: - The period "Révolution française" (E4) took place at the area covered by France in 1789 (E53). (Bertaud, 2004) In First Order Logic: - P7(x,y) ⇒ E4(x) - P7(x,y) ⇒ E53(y) - P7(x,y) ⇒ (∃z,u) [P157(y,u) ˄ P157(z,u) ˄ P161(x,z) ˄ P89(z,y)] - [E4(x) ˄ P157(y,u) ˄ P157(v,u) ˄ P7(x,y) ˄ P161(x,z) ˄ P89(z,v) ˄ P89(v,y)] ⇒ P7(x,v)"""@en ;
+    owl:sameAs crm:P7_took_place_at .
+
+ecrm:P7i_witnessed a owl:ObjectProperty ;
+    rdfs:label "P7 witnessed"@en, "P7 bezeugte"@de, "P7 υπήρξε τόπος του"@el,
+               "P7 a été témoin de"@fr, "P7 testemunhou"@pt,
+               "P7 был местом совершения"@ru, "P7 发生过"@zh ;
+    skos:notation "P7i" ;
+    rdfs:domain ecrm:E53_Place ;
+    rdfs:range ecrm:E4_Period ;
+    owl:inverseOf ecrm:P7_took_place_at ;
+    rdfs:comment """Quantification of the inverse property: many to many, necessary (1,n:0,n) Scope note of the inverse property: This property describes the spatial location of an instance of E4 Period. The related instance of E53 Place should be seen as a wider approximation of the geometric area within which the phenomena that characterise the period in question occurred, see below. P7 took place at (witnessed) does not convey any meaning other than spatial positioning (frequently on the surface of the earth). For example, the period "Révolution française" can be said to have taken place in "France in 1789"; the "Victorian" period may be said to have taken place in "Britain from 1837-1901" and its colonies, as well as other parts of Europe and North America. An instance of E4 Period can take place at multiple non-contiguous, non-overlapping locations. Any place where something happened includes the spatial projection of the happening given in the same geometric reference system. For instance, HMS Victory, as place of Lord Nelson's dying, includes the location of his body relative to the hull of HMS Victory at his time of death as the most precise location of his death. By the definition of P161 has spatial projection, an instance of E4 Period takes place on all its spatial projections to respective reference systems, that is, instances of E53 Place. Therefore, this property implies the more fully developed path from E4 Period through P161 has spatial projection, E53 Place, P89 falls within to E53 Place, where both places are defined in the same geometric reference system. The relation between an instance of E53 Place and its reference system can conveniently be documented via the property P157 is at rest relative to (provides reference space for). Something that has happened at a given place can also be considered to have happened at a smaller place within it: for example, it is reasonable to say Caesar's murder took place in Rome, but also on the Forum Romanum, and more precisely in the Curia. It is characteristic for different historical sources to use varying precision in such statements, without being in contradiction with each other. This may be due to lack of knowledge or to the relevance of the precision for the purpose of the statement. In information integration, the more precise statement improves the overall knowledge. Examples of the inverse property: - The period "Révolution française" (E4) took place at the area covered by France in 1789 (E53). (Bertaud, 2004) In First Order Logic of the inverse property: - P7(x,y) ⇒ E4(x) - P7(x,y) ⇒ E53(y) - P7(x,y) ⇒ (∃z,u) [P157(y,u) ˄ P157(z,u) ˄ P161(x,z) ˄ P89(z,y)] - [E4(x) ˄ P157(y,u) ˄ P157(v,u) ˄ P7(x,y) ˄ P161(x,z) ˄ P89(z,v) ˄ P89(v,y)] ⇒ P7(x,v)"""@en ;
+    owl:sameAs crm:P7i_witnessed .
+
+ecrm:P98_brought_into_life a owl:ObjectProperty ;
+    rdfs:label "P98 brought into life"@en, "P98 brachte zur Welt"@de, "P98 έφερε στη ζωή"@el,
+               "P98 a donné vie à"@fr, "P98 trouxe à vida"@pt,
+               "P98 породил"@ru, "P98 诞生了"@zh ;
+    skos:notation "P98" ;
+    rdfs:domain ecrm:E67_Birth ;
+    rdfs:range ecrm:E21_Person ;
+    owl:inverseOf ecrm:P98i_was_born ;
+    rdfs:subPropertyOf ecrm:P92_brought_into_existence ;
+    rdfs:comment """Quantification: one to many, dependent (0,n:1,1) Scope note: This property links an instance of E67 Birth event to an instance of E21 Person in the role of offspring. Twins, triplets etc. are brought into life by the same instance of E67 Birth. This is not intended for use with general Natural History material, only people. There is no explicit method for modelling conception and gestation except by using extensions. Examples: - The Birth of Queen Elizabeth II (E67) brought into life Queen Elizabeth II (E21). (Parker, 2002) In First Order Logic: - P98(x,y) ⇒ E67(x) - P98(x,y) ⇒ E21(y) - P98(x,y) ⇒ P92(x,y)"""@en ;
+    owl:sameAs crm:P98_brought_into_life .
+
+ecrm:P98i_was_born a owl:ObjectProperty ;
+    rdfs:label "P98 was born"@en, "P98 wurde geboren durch"@de, "P98 γεννήθηκε"@el,
+               "P98 est né"@fr, "P98 veio à vida pelo"@pt,
+               "P98 был рожден"@ru, "P98 被诞生"@zh ;
+    skos:notation "P98i" ;
+    rdfs:domain ecrm:E21_Person ;
+    rdfs:range ecrm:E67_Birth ;
+    owl:inverseOf ecrm:P98_brought_into_life ;
+    rdfs:subPropertyOf ecrm:P92i_was_brought_into_existence_by ;
+    rdfs:comment """Quantification of the inverse property: one to many, dependent (0,n:1,1) Scope note of the inverse property: This property links an instance of E67 Birth event to an instance of E21 Person in the role of offspring. Twins, triplets etc. are brought into life by the same instance of E67 Birth. This is not intended for use with general Natural History material, only people. There is no explicit method for modelling conception and gestation except by using extensions. Examples of the inverse property: - The Birth of Queen Elizabeth II (E67) brought into life Queen Elizabeth II (E21). (Parker, 2002) In First Order Logic of the inverse property: - P98(x,y) ⇒ E67(x) - P98(x,y) ⇒ E21(y) - P98(x,y) ⇒ P92(x,y)"""@en ;
+    owl:sameAs crm:P98i_was_born .
 
 ###############################################################################
 # LRMoo v1.1.1
