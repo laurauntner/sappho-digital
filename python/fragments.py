@@ -205,7 +205,7 @@ g.add((SD["work_creation/sappho-work"], RDFS.label, Literal("Creation of Sappho�
 g.add((SD["work_creation/sappho-work"], ECRM.P14_carried_out_by, SD["person/author_sappho"]))
 g.add((SD["work_creation/sappho-work"], LRMOO.R16_created, SD["work/sappho-work"]))
 
-# Andreas Bagordos Edition
+# Andreas Bagordos Translation
 manifestation_uri = SD["manifestation/sappho_bagordo"]
 manifestation_creation_uri = SD["manifestation_creation/sappho_bagordo"]
 title_uri = SD["title/manifestation/sappho_bagordo"]
@@ -216,13 +216,13 @@ time_span_uri = SD["timespan/2009"]
 
 # Manifestation
 g.add((manifestation_uri, RDF.type, LRMOO.F3_Manifestation))
-g.add((manifestation_uri, RDFS.label, Literal("Andreas Bagordo’s Sappho edition", lang="en")))
+g.add((manifestation_uri, RDFS.label, Literal("Andreas Bagordo’s Sappho translation", lang="en")))
 g.add((manifestation_uri, LRMOO.R24i_was_created_through, manifestation_creation_uri))
 g.add((manifestation_uri, ECRM.P102_has_title, title_uri))
 
 # Manifestation Creation
 g.add((manifestation_creation_uri, RDF.type, LRMOO.F30_Manifestation_Creation))
-g.add((manifestation_creation_uri, RDFS.label, Literal("Manifestation creation of Andreas Bagordo’s Sappho edition", lang="en")))
+g.add((manifestation_creation_uri, RDFS.label, Literal("Manifestation creation of Andreas Bagordo’s Sappho translation", lang="en")))
 g.add((manifestation_creation_uri, LRMOO.R24_created, manifestation_uri))
 g.add((manifestation_creation_uri, ECRM.P14_carried_out_by, SD["person/editor_bagordo"]))
 g.add((manifestation_creation_uri, ECRM.P14_carried_out_by, publisher_uri))
@@ -360,7 +360,7 @@ for frag_uri in all_fragments:
 # Manifestation-Knoten (Sammel-Embodiment)
 manifestation_uri = SD["manifestation/sappho_bagordo"]
 g.add((manifestation_uri, RDF.type, LRMOO.F3_Manifestation))
-g.add((manifestation_uri, RDFS.label, Literal("Andreas Bagordo’s Sappho edition", lang="en")))
+g.add((manifestation_uri, RDFS.label, Literal("Andreas Bagordo’s Sappho translation", lang="en")))
 
 for expr_uri in all_expressions:
     g.add((manifestation_uri, LRMOO.R4_embodies, expr_uri))
