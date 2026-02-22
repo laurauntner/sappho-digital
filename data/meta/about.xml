@@ -44,14 +44,14 @@
                         >Anthologie zur literarischen Sappho-Rezeption im deutschsprachigen
                         Raum</ref> mündete. Nun verbinde ich mein Wissen über die Sappho-Rezeption
                     mit meinen Kenntnissen im Bereich der Digital Humanities.</p>
-                <p>Die hier aufbereiteten <hi rend="bold">Daten</hi> werden sich letzten Endes aus
-                    drei Teilen zusammensetzen:</p>
+                <p>Die hier aufbereiteten <hi rend="bold">Daten</hi> bestehen aus vier Teilen:</p>
                 <list>
                     <item>einem für Menschen leicht lesbaren tabellarischen Verzeichnis aller
                         bekannten produktiv-literarischen Rezeptionszeugnisse zu Sappho aus dem
                         deutschsprachigen Raum,</item>
-                    <item>einer OWL-Ontologie mit detailliertem Wissen über diese
-                        Rezeptionszeugnisse und</item>
+                    <item>einer OWL-Ontologie zur formalen Modellierung von detailliertem Wissen
+                        über diese Rezeptionszeugnisse,</item>
+                    <item>einem semantischen Graphen mit diesem detaillierten Wissen und</item>
                     <item>einer SKOS-Taxonomie zur Klassifizierung wiederkehrender Elemente in der
                         literarischen Sappho-Rezeption.</item>
                 </list>
@@ -65,14 +65,15 @@
             </div>
             <div>
                 <head>Projektstand</head>
-                <p>Aktuell ist das <hi rend="bold">Verzeichnis der Rezeptionszeugnisse</hi> so weit
-                    bearbeitet, dass es auszugsweise veröffentlicht werden kann. Es werden fünf
-                    Zugänge angeboten: Es können Belege für <ref target="toc-alle.html">alle</ref>,
-                        <ref target="toc-prosa.html">prosaische</ref>, <ref target="toc-lyrik.html"
-                        >lyrische</ref>, <ref target="toc-drama.html">dramatische</ref> und <ref
+                <p>Aktuell (Stand: Februar 2026) ist das <hi rend="bold">Verzeichnis der
+                        Rezeptionszeugnisse</hi> so weit bearbeitet, dass es auszugsweise
+                    veröffentlicht werden kann. Es werden fünf Zugänge angeboten: Es können Belege
+                    für <ref target="toc-alle.html">alle</ref>, <ref target="toc-prosa.html"
+                        >prosaische</ref>, <ref target="toc-lyrik.html">lyrische</ref>, <ref
+                        target="toc-drama.html">dramatische</ref> und <ref
                         target="toc-sonstige.html">sonstige</ref> Rezeptionszeugnisse (z. B. Comics)
                     eingesehen werden.</p>
-                <p>Neben der Gattungszugehörigkeit sind aktuell folgende Informationen erfasst und
+                <p>Neben der Gattungszugehörigkeit sind folgende Informationen erfasst und
                     durchsuchbar:</p>
                 <list>
                     <item>Jahr der Entstehung,</item>
@@ -89,28 +90,35 @@
                 <p>Das Verzeichnis wird laufend aktualisiert und erweitert. Zu vielen
                     Rezeptionszeugnissen sind bereits fast alle Informationen vorhanden, zu manchen
                     fehlen noch einige.</p>
-                <p>Auf GitHub findet sich ein <ref
-                        target="https://github.com/laurauntner/wikidata-to-cidoc-crm"
-                        >Repositorium</ref> mit Python-Skripten zur Transformation strukturierter
-                    biographischer, bibliographischer und intertextueller Daten aus Wikidata, die
-                    mithilfe von CIDOC CRM, LRMoo und INTRO in RDF überführt werden. Es bietet einen
-                    ersten Einblick in die OWL-Ontologie, die auch im Rahmen dieses Projekts zur
-                    Anwendung kommen wird.</p>
-                <p>Ergebnisse der exemplarischen Analyse und OWL-Modellierung werden fortlaufend in
-                    den Reiter »Rezeptionsphänomene« integriert. Mehr Informationen zur Analyse sind
-                        <ref target="analyse.html">hier</ref> zu finden.</p>
-                <p>Die SKOS-Taxonomie ist in einem Beta-Status <ref target="vocab.html">hier</ref>
-                    zu finden.</p>
+                <p>Die <hi rend="bold">OWL-Ontologie</hi> basierend auf der Erlangen OWL-Version des
+                    CIDOC Conceptual Reference Models (CRM; <ref
+                        target="http://erlangen-crm.org/current/">ECRM</ref> 240307, basierend auf
+                    CIDOC CRM 7.1.3), der objektorientierten Version des IFLA Library Reference
+                    Models (<ref target="http://iflastandards.info/ns/lrm/lrmoo/">LRMoo</ref>;
+                    v1.1.1) und <ref target="https://w3id.org/lso/intro/currentbeta#">INTRO</ref>
+                    (the Intertextual, Interpictorial and Intermedial Relations Ontology;
+                    beta202506) ist <ref target="ontology.html">hier</ref> zu finden.</p>
+                <p>Das <hi rend="bold">SKOS-Vokabular</hi> ist <ref target="vocab.html">hier</ref>
+                    einsehbar.</p>
+                <p>Sowohl die Ontologie als auch das Vokabular werden fortlaufend
+                    weiterentwickelt.</p>
+                <p><hi rend="bold">Ontologie-Alignments</hi> werden <ref target="alignments.html"
+                        >hier</ref> visualisiert.</p>
+                <p><hi rend="bold">Ergebnisse der exemplarischen Analyse</hi> werden in den Reiter
+                    »Rezeptionsphänomene« integriert. Mehr Informationen zur Analyse sind <ref
+                        target="analyse.html">hier</ref> zu finden. Außerdem ist der Graph <ref
+                        target="query.html">hier</ref> via <hi rend="bold">SPARQL</hi>
+                    abfragbar.</p>
                 <p>Mit einer Fertigstellung des Projekts ist 2027 zu rechnen. Bis dahin wird die
                     Webseite fortlaufend erweitert.</p>
             </div>
             <div>
                 <head>Daten</head>
                 <p><hi rend="bold">Excel-Tabellen</hi> mit den Daten aus den Verzeichnissen können
-                    in den Unterseiten geladen werden. <hi rend="bold">XML/TEI-Dateien</hi> sind
-                    über <ref
-                        target="https://github.com/laurauntner/sappho-digital/tree/main/data/lists"
-                        >GitHub</ref> frei zugänglich.</p>
+                    in den Unterseiten geladen werden. <hi rend="bold">XML/TEI- sowie
+                        RDF-Dateien</hi> sind über <ref
+                        target="https://github.com/laurauntner/sappho-digital/">GitHub</ref> frei
+                    zugänglich.</p>
                 <p>Grundsätzlich können alle bereitgestellten Daten unter Nennung der Quelle frei
                     weiterverwendet werden.</p>
             </div>
@@ -137,15 +145,6 @@
                 <p>Um eine bessere Reproduzierbarkeit zu gewährleisten, empfiehlt es sich, den
                     Zeitpunkt der letzten Aktualisierung der Daten in der untersten Zeile der
                     Webseite anzugeben.</p>
-                <p>Wer auf das <hi rend="bold">Projekt</hi> selbst verweisen möchte, kann diese
-                    Vorlage verwenden:</p>
-                <p>Laura Untner: Paradigmen einer digitalen Rezeptionswissenschaft.
-                    Produktiv-literarische Rezeptionsphänomene als Linked Data am Beispiel der
-                    deutschsprachigen literarischen Sappho-Rezeption. In: Joëlle Weis, Estelle
-                    Bunout und Thomas Haider (Hg.): DHd 2024: DH Quo Vadis. 10. Tagung des Verbands
-                    »Digital Humanities im deutschsprachigen Raum«. Passau 2024, <ref
-                        target="https://doi.org/10.5281/zenodo.10698386"
-                        >https://doi.org/10.5281/zenodo.10698386</ref>.</p>
             </div>
             <div>
                 <head>Über mich</head>
