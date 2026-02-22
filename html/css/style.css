@@ -687,6 +687,7 @@ img.icon {
     opacity: .9;
     color: #000;
 }
+
 .graph-legend .dot {
     display: inline-block;
     width: 10px;
@@ -695,6 +696,7 @@ img.icon {
     margin-right: .35rem;
     vertical-align: middle;
 }
+
 .dot-frag {
     background: #5e17eb;
 }
