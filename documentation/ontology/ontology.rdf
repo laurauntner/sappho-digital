@@ -19,11 +19,10 @@
     <cc:licence rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
     <dc:rights>This ontology is distributed under the Creative Commons Attribution 4.0 International
       Licence (CC-BY 4.0).</dc:rights>
-    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is an ontology
+    <dc:description>This is an ontology
       developed in the project Sappho Digital by Laura Untner. It reuses the Erlangen OWL version of the CIDOC Conceptual Reference Model (CRM; ECRM 240307, based on CIDOC CRM 7.1.3), the object-oriented version of IFLA’s Library Reference Model (LRMoo; v1.1.1) and INTRO (the Intertextual, Interpictorial and Intermedial Relations
       Ontology; beta202506) to model basic biographical and bibliographical as well as intertextual
-      information.</rdfs:comment>
-    <dc:description>This ontology has three modules that are connected with each other, see figure
+      information. The ontology has three modules that are connected with each other, see figure
       1:
       https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/meta.png.
       The authors module models basic bibliographic information, see figure 2:
