@@ -142,7 +142,7 @@
     <copy file="data/rdf/fragments.ttl"
         tofile="html/fragments.ttl" overwrite="true"/>
     
-    <copy file="documentation/ontology.html"
+    <copy file="documentation/ontology/ontology.html"
         tofile="html/ontology.html" overwrite="true"/>
 
 </project>
