@@ -1,14 +1,14 @@
 @prefix ecrm: <http://erlangen-crm.org/current/> .
-@prefix lrmoo: <http://www.cidoc-crm.org/lrmoo/> .
+@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://sappho-digital.com/appellation/author_sappho> a ecrm:E82_Actor_Appellation ;
+<https://sappho-digital.com/appellation/author_sappho> a ecrm:E41_Appellation ;
     rdfs:label "Sappho"@en ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/author_sappho> .
 
-<https://sappho-digital.com/appellation/editor_bagordo> a ecrm:E82_Actor_Appellation ;
+<https://sappho-digital.com/appellation/editor_bagordo> a ecrm:E41_Appellation ;
     rdfs:label "Andreas Bagordo"@en ;
     ecrm:P131i_identifies <https://sappho-digital.com/person/editor_bagordo> .
 
@@ -3216,7 +3216,7 @@
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/sappho_bagordo> ;
     owl:sameAs <http://www.wikidata.org/entity/Q1718> .
 
-<https://sappho-digital.com/publisher/publisher_patmos> a ecrm:E40_Legal_Body ;
+<https://sappho-digital.com/publisher/publisher_patmos> a ecrm:E74_Group ;
     rdfs:label "Patmos"@en ;
     ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/sappho_bagordo> ;
     owl:sameAs <http://www.wikidata.org/entity/Q1463096> .
@@ -3225,797 +3225,797 @@
     rdfs:label "2009"^^xsd:gYear ;
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/sappho_bagordo> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_1> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_1> a ecrm:E35_Title ;
     rdfs:label "Fragment 1 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_1> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_1> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_100> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_100> a ecrm:E35_Title ;
     rdfs:label "Fragment 100 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_100> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_100> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_101> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_101> a ecrm:E35_Title ;
     rdfs:label "Fragment 101 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_101> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_101> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_101a> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_101a> a ecrm:E35_Title ;
     rdfs:label "Fragment 101a Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_101a> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_101a> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_102> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_102> a ecrm:E35_Title ;
     rdfs:label "Fragment 102 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_102> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_102> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_103> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_103> a ecrm:E35_Title ;
     rdfs:label "Fragment 103 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_103> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_103> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_103a> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_103a> a ecrm:E35_Title ;
     rdfs:label "Fragment 103a Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_103a> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_103a> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_103b> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_103b> a ecrm:E35_Title ;
     rdfs:label "Fragment 103b Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_103b> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_103b> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_103c> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_103c> a ecrm:E35_Title ;
     rdfs:label "Fragment 103c Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_103c> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_103c> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_104> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_104> a ecrm:E35_Title ;
     rdfs:label "Fragment 104 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_104> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_104> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_105> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_105> a ecrm:E35_Title ;
     rdfs:label "Fragment 105 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_105> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_105> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_106> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_106> a ecrm:E35_Title ;
     rdfs:label "Fragment 106 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_106> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_106> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_107> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_107> a ecrm:E35_Title ;
     rdfs:label "Fragment 107 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_107> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_107> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_108> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_108> a ecrm:E35_Title ;
     rdfs:label "Fragment 108 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_108> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_108> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_109> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_109> a ecrm:E35_Title ;
     rdfs:label "Fragment 109 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_109> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_109> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_110> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_110> a ecrm:E35_Title ;
     rdfs:label "Fragment 110 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_110> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_110> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_111> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_111> a ecrm:E35_Title ;
     rdfs:label "Fragment 111 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_111> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_111> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_112> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_112> a ecrm:E35_Title ;
     rdfs:label "Fragment 112 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_112> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_112> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_113> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_113> a ecrm:E35_Title ;
     rdfs:label "Fragment 113 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_113> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_113> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_114> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_114> a ecrm:E35_Title ;
     rdfs:label "Fragment 114 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_114> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_114> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_115> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_115> a ecrm:E35_Title ;
     rdfs:label "Fragment 115 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_115> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_115> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_116> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_116> a ecrm:E35_Title ;
     rdfs:label "Fragment 116 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_116> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_116> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_117> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_117> a ecrm:E35_Title ;
     rdfs:label "Fragment 117 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_117> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_117> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_117a> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_117a> a ecrm:E35_Title ;
     rdfs:label "Fragment 117a Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_117a> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_117a> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_117b> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_117b> a ecrm:E35_Title ;
     rdfs:label "Fragment 117b Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_117b> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_117b> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_118> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_118> a ecrm:E35_Title ;
     rdfs:label "Fragment 118 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_118> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_118> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_119> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_119> a ecrm:E35_Title ;
     rdfs:label "Fragment 119 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_119> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_119> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_12> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_12> a ecrm:E35_Title ;
     rdfs:label "Fragment 12 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_12> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_12> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_120> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_120> a ecrm:E35_Title ;
     rdfs:label "Fragment 120 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_120> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_120> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_121> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_121> a ecrm:E35_Title ;
     rdfs:label "Fragment 121 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_121> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_121> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_122> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_122> a ecrm:E35_Title ;
     rdfs:label "Fragment 122 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_122> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_122> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_123> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_123> a ecrm:E35_Title ;
     rdfs:label "Fragment 123 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_123> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_123> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_124> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_124> a ecrm:E35_Title ;
     rdfs:label "Fragment 124 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_124> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_124> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_125> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_125> a ecrm:E35_Title ;
     rdfs:label "Fragment 125 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_125> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_125> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_126> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_126> a ecrm:E35_Title ;
     rdfs:label "Fragment 126 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_126> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_126> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_127> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_127> a ecrm:E35_Title ;
     rdfs:label "Fragment 127 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_127> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_127> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_128> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_128> a ecrm:E35_Title ;
     rdfs:label "Fragment 128 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_128> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_128> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_129> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_129> a ecrm:E35_Title ;
     rdfs:label "Fragment 129 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_129> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_129> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_130> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_130> a ecrm:E35_Title ;
     rdfs:label "Fragment 130 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_130> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_130> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_132> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_132> a ecrm:E35_Title ;
     rdfs:label "Fragment 132 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_132> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_132> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_133> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_133> a ecrm:E35_Title ;
     rdfs:label "Fragment 133 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_133> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_133> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_134> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_134> a ecrm:E35_Title ;
     rdfs:label "Fragment 134 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_134> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_134> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_135> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_135> a ecrm:E35_Title ;
     rdfs:label "Fragment 135 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_135> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_135> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_136> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_136> a ecrm:E35_Title ;
     rdfs:label "Fragment 136 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_136> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_136> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_137> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_137> a ecrm:E35_Title ;
     rdfs:label "Fragment 137 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_137> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_137> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_138> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_138> a ecrm:E35_Title ;
     rdfs:label "Fragment 138 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_138> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_138> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_139> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_139> a ecrm:E35_Title ;
     rdfs:label "Fragment 139 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_139> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_139> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_140> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_140> a ecrm:E35_Title ;
     rdfs:label "Fragment 140 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_140> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_140> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_141> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_141> a ecrm:E35_Title ;
     rdfs:label "Fragment 141 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_141> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_141> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_142> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_142> a ecrm:E35_Title ;
     rdfs:label "Fragment 142 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_142> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_142> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_143> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_143> a ecrm:E35_Title ;
     rdfs:label "Fragment 143 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_143> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_143> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_144> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_144> a ecrm:E35_Title ;
     rdfs:label "Fragment 144 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_144> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_144> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_145> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_145> a ecrm:E35_Title ;
     rdfs:label "Fragment 145 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_145> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_145> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_146> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_146> a ecrm:E35_Title ;
     rdfs:label "Fragment 146 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_146> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_146> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_147> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_147> a ecrm:E35_Title ;
     rdfs:label "Fragment 147 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_147> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_147> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_148> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_148> a ecrm:E35_Title ;
     rdfs:label "Fragment 148 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_148> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_148> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_149> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_149> a ecrm:E35_Title ;
     rdfs:label "Fragment 149 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_149> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_149> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_15> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_15> a ecrm:E35_Title ;
     rdfs:label "Fragment 15 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_15> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_15> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_150> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_150> a ecrm:E35_Title ;
     rdfs:label "Fragment 150 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_150> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_150> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_151> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_151> a ecrm:E35_Title ;
     rdfs:label "Fragment 151 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_151> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_151> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_152> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_152> a ecrm:E35_Title ;
     rdfs:label "Fragment 152 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_152> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_152> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_153> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_153> a ecrm:E35_Title ;
     rdfs:label "Fragment 153 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_153> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_153> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_154> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_154> a ecrm:E35_Title ;
     rdfs:label "Fragment 154 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_154> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_154> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_155> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_155> a ecrm:E35_Title ;
     rdfs:label "Fragment 155 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_155> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_155> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_156> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_156> a ecrm:E35_Title ;
     rdfs:label "Fragment 156 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_156> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_156> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_157> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_157> a ecrm:E35_Title ;
     rdfs:label "Fragment 157 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_157> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_157> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_158> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_158> a ecrm:E35_Title ;
     rdfs:label "Fragment 158 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_158> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_158> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_159> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_159> a ecrm:E35_Title ;
     rdfs:label "Fragment 159 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_159> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_159> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_16> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_16> a ecrm:E35_Title ;
     rdfs:label "Fragment 16 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_16> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_16> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_160> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_160> a ecrm:E35_Title ;
     rdfs:label "Fragment 160 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_160> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_160> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_161> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_161> a ecrm:E35_Title ;
     rdfs:label "Fragment 161 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_161> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_161> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_162> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_162> a ecrm:E35_Title ;
     rdfs:label "Fragment 162 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_162> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_162> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_163> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_163> a ecrm:E35_Title ;
     rdfs:label "Fragment 163 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_163> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_163> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_164> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_164> a ecrm:E35_Title ;
     rdfs:label "Fragment 164 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_164> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_164> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_165> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_165> a ecrm:E35_Title ;
     rdfs:label "Fragment 165 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_165> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_165> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_166> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_166> a ecrm:E35_Title ;
     rdfs:label "Fragment 166 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_166> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_166> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_167> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_167> a ecrm:E35_Title ;
     rdfs:label "Fragment 167 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_167> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_167> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_168> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_168> a ecrm:E35_Title ;
     rdfs:label "Fragment 168 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_168> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_168> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_168a> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_168a> a ecrm:E35_Title ;
     rdfs:label "Fragment 168a Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_168a> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_168a> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_168b> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_168b> a ecrm:E35_Title ;
     rdfs:label "Fragment 168b Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_168b> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_168b> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_168c> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_168c> a ecrm:E35_Title ;
     rdfs:label "Fragment 168c Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_168c> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_168c> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_169> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_169> a ecrm:E35_Title ;
     rdfs:label "Fragment 169 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_169> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_169> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_169a> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_169a> a ecrm:E35_Title ;
     rdfs:label "Fragment 169a Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_169a> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_169a> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_17> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_17> a ecrm:E35_Title ;
     rdfs:label "Fragment 17 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_17> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_17> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_170> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_170> a ecrm:E35_Title ;
     rdfs:label "Fragment 170 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_170> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_170> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_171> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_171> a ecrm:E35_Title ;
     rdfs:label "Fragment 171 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_171> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_171> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_172> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_172> a ecrm:E35_Title ;
     rdfs:label "Fragment 172 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_172> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_172> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_173> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_173> a ecrm:E35_Title ;
     rdfs:label "Fragment 173 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_173> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_173> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_174> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_174> a ecrm:E35_Title ;
     rdfs:label "Fragment 174 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_174> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_174> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_175> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_175> a ecrm:E35_Title ;
     rdfs:label "Fragment 175 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_175> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_175> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_176> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_176> a ecrm:E35_Title ;
     rdfs:label "Fragment 176 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_176> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_176> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_177> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_177> a ecrm:E35_Title ;
     rdfs:label "Fragment 177 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_177> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_177> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_179> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_179> a ecrm:E35_Title ;
     rdfs:label "Fragment 179 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_179> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_179> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_18> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_18> a ecrm:E35_Title ;
     rdfs:label "Fragment 18 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_18> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_18> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_180> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_180> a ecrm:E35_Title ;
     rdfs:label "Fragment 180 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_180> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_180> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_181> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_181> a ecrm:E35_Title ;
     rdfs:label "Fragment 181 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_181> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_181> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_182> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_182> a ecrm:E35_Title ;
     rdfs:label "Fragment 182 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_182> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_182> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_183> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_183> a ecrm:E35_Title ;
     rdfs:label "Fragment 183 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_183> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_183> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_184> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_184> a ecrm:E35_Title ;
     rdfs:label "Fragment 184 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_184> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_184> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_185> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_185> a ecrm:E35_Title ;
     rdfs:label "Fragment 185 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_185> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_185> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_186> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_186> a ecrm:E35_Title ;
     rdfs:label "Fragment 186 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_186> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_186> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_187> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_187> a ecrm:E35_Title ;
     rdfs:label "Fragment 187 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_187> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_187> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_188> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_188> a ecrm:E35_Title ;
     rdfs:label "Fragment 188 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_188> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_188> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_189> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_189> a ecrm:E35_Title ;
     rdfs:label "Fragment 189 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_189> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_189> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_19> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_19> a ecrm:E35_Title ;
     rdfs:label "Fragment 19 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_19> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_19> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_190> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_190> a ecrm:E35_Title ;
     rdfs:label "Fragment 190 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_190> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_190> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_191> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_191> a ecrm:E35_Title ;
     rdfs:label "Fragment 191 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_191> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_191> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_192> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_192> a ecrm:E35_Title ;
     rdfs:label "Fragment 192 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_192> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_192> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_2> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_2> a ecrm:E35_Title ;
     rdfs:label "Fragment 2 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_2> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_2> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_20> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_20> a ecrm:E35_Title ;
     rdfs:label "Fragment 20 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_20> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_20> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_21> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_21> a ecrm:E35_Title ;
     rdfs:label "Fragment 21 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_21> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_21> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_21351_1-8> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_21351_1-8> a ecrm:E35_Title ;
     rdfs:label "Fragment 21351,1–8 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_21351_1-8> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_21351_1-8> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_21351_9-12_21376r_1-8> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_21351_9-12_21376r_1-8> a ecrm:E35_Title ;
     rdfs:label "Fragment 21351,9–12+21376r,1–8 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_21351_9-12_21376r_1-8> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_21351_9-12_21376r_1-8> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_22> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_22> a ecrm:E35_Title ;
     rdfs:label "Fragment 22 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_22> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_22> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_23> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_23> a ecrm:E35_Title ;
     rdfs:label "Fragment 23 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_23> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_23> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_24> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_24> a ecrm:E35_Title ;
     rdfs:label "Fragment 24 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_24> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_24> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_25> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_25> a ecrm:E35_Title ;
     rdfs:label "Fragment 25 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_25> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_25> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_26> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_26> a ecrm:E35_Title ;
     rdfs:label "Fragment 26 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_26> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_26> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_27> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_27> a ecrm:E35_Title ;
     rdfs:label "Fragment 27 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_27> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_27> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_28> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_28> a ecrm:E35_Title ;
     rdfs:label "Fragment 28 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_28> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_28> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_29> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_29> a ecrm:E35_Title ;
     rdfs:label "Fragment 29 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_29> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_29> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_3> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_3> a ecrm:E35_Title ;
     rdfs:label "Fragment 3 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_3> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_3> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_30> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_30> a ecrm:E35_Title ;
     rdfs:label "Fragment 30 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_30> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_30> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_31> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_31> a ecrm:E35_Title ;
     rdfs:label "Fragment 31 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_31> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_31> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_32> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_32> a ecrm:E35_Title ;
     rdfs:label "Fragment 32 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_32> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_32> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_33> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_33> a ecrm:E35_Title ;
     rdfs:label "Fragment 33 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_33> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_33> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_34> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_34> a ecrm:E35_Title ;
     rdfs:label "Fragment 34 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_34> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_34> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_35> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_35> a ecrm:E35_Title ;
     rdfs:label "Fragment 35 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_35> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_35> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_36> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_36> a ecrm:E35_Title ;
     rdfs:label "Fragment 36 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_36> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_36> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_37> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_37> a ecrm:E35_Title ;
     rdfs:label "Fragment 37 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_37> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_37> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_38> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_38> a ecrm:E35_Title ;
     rdfs:label "Fragment 38 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_38> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_38> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_39> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_39> a ecrm:E35_Title ;
     rdfs:label "Fragment 39 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_39> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_39> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_4> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_4> a ecrm:E35_Title ;
     rdfs:label "Fragment 4 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_4> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_4> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_40> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_40> a ecrm:E35_Title ;
     rdfs:label "Fragment 40 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_40> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_40> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_41> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_41> a ecrm:E35_Title ;
     rdfs:label "Fragment 41 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_41> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_41> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_42> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_42> a ecrm:E35_Title ;
     rdfs:label "Fragment 42 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_42> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_42> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_43> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_43> a ecrm:E35_Title ;
     rdfs:label "Fragment 43 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_43> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_43> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_44> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_44> a ecrm:E35_Title ;
     rdfs:label "Fragment 44 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_44> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_44> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_44a> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_44a> a ecrm:E35_Title ;
     rdfs:label "Fragment 44a Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_44a> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_44a> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_45> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_45> a ecrm:E35_Title ;
     rdfs:label "Fragment 45 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_45> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_45> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_46> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_46> a ecrm:E35_Title ;
     rdfs:label "Fragment 46 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_46> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_46> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_47> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_47> a ecrm:E35_Title ;
     rdfs:label "Fragment 47 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_47> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_47> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_48> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_48> a ecrm:E35_Title ;
     rdfs:label "Fragment 48 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_48> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_48> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_49> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_49> a ecrm:E35_Title ;
     rdfs:label "Fragment 49 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_49> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_49> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_5> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_5> a ecrm:E35_Title ;
     rdfs:label "Fragment 5 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_5> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_5> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_50> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_50> a ecrm:E35_Title ;
     rdfs:label "Fragment 50 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_50> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_50> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_51> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_51> a ecrm:E35_Title ;
     rdfs:label "Fragment 51 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_51> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_51> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_52> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_52> a ecrm:E35_Title ;
     rdfs:label "Fragment 52 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_52> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_52> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_53> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_53> a ecrm:E35_Title ;
     rdfs:label "Fragment 53 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_53> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_53> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_54> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_54> a ecrm:E35_Title ;
     rdfs:label "Fragment 54 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_54> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_54> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_55> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_55> a ecrm:E35_Title ;
     rdfs:label "Fragment 55 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_55> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_55> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_56> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_56> a ecrm:E35_Title ;
     rdfs:label "Fragment 56 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_56> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_56> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_57> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_57> a ecrm:E35_Title ;
     rdfs:label "Fragment 57 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_57> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_57> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_58> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_58> a ecrm:E35_Title ;
     rdfs:label "Fragment 58 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_58> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_58> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_59> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_59> a ecrm:E35_Title ;
     rdfs:label "Fragment 59 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_59> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_59> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_6> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_6> a ecrm:E35_Title ;
     rdfs:label "Fragment 6 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_6> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_6> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_60> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_60> a ecrm:E35_Title ;
     rdfs:label "Fragment 60 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_60> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_60> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_61> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_61> a ecrm:E35_Title ;
     rdfs:label "Fragment 61 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_61> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_61> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_62> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_62> a ecrm:E35_Title ;
     rdfs:label "Fragment 62 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_62> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_62> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_63> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_63> a ecrm:E35_Title ;
     rdfs:label "Fragment 63 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_63> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_63> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_64> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_64> a ecrm:E35_Title ;
     rdfs:label "Fragment 64 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_64> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_64> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_65> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_65> a ecrm:E35_Title ;
     rdfs:label "Fragment 65 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_65> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_65> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_66> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_66> a ecrm:E35_Title ;
     rdfs:label "Fragment 66 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_66> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_66> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_67> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_67> a ecrm:E35_Title ;
     rdfs:label "Fragment 67 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_67> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_67> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_68> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_68> a ecrm:E35_Title ;
     rdfs:label "Fragment 68 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_68> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_68> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_69> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_69> a ecrm:E35_Title ;
     rdfs:label "Fragment 69 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_69> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_69> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_7> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_7> a ecrm:E35_Title ;
     rdfs:label "Fragment 7 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_7> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_7> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_70> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_70> a ecrm:E35_Title ;
     rdfs:label "Fragment 70 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_70> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_70> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_71> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_71> a ecrm:E35_Title ;
     rdfs:label "Fragment 71 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_71> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_71> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_72> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_72> a ecrm:E35_Title ;
     rdfs:label "Fragment 72 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_72> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_72> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_73> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_73> a ecrm:E35_Title ;
     rdfs:label "Fragment 73 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_73> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_73> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_74> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_74> a ecrm:E35_Title ;
     rdfs:label "Fragment 74 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_74> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_74> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_75> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_75> a ecrm:E35_Title ;
     rdfs:label "Fragment 75 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_75> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_75> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_76> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_76> a ecrm:E35_Title ;
     rdfs:label "Fragment 76 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_76> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_76> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_77> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_77> a ecrm:E35_Title ;
     rdfs:label "Fragment 77 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_77> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_77> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_78> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_78> a ecrm:E35_Title ;
     rdfs:label "Fragment 78 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_78> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_78> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_79> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_79> a ecrm:E35_Title ;
     rdfs:label "Fragment 79 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_79> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_79> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_8> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_8> a ecrm:E35_Title ;
     rdfs:label "Fragment 8 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_8> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_8> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_80> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_80> a ecrm:E35_Title ;
     rdfs:label "Fragment 80 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_80> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_80> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_81> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_81> a ecrm:E35_Title ;
     rdfs:label "Fragment 81 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_81> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_81> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_82> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_82> a ecrm:E35_Title ;
     rdfs:label "Fragment 82 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_82> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_82> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_83> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_83> a ecrm:E35_Title ;
     rdfs:label "Fragment 83 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_83> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_83> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_84> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_84> a ecrm:E35_Title ;
     rdfs:label "Fragment 84 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_84> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_84> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_85> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_85> a ecrm:E35_Title ;
     rdfs:label "Fragment 85 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_85> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_85> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_86> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_86> a ecrm:E35_Title ;
     rdfs:label "Fragment 86 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_86> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_86> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_87> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_87> a ecrm:E35_Title ;
     rdfs:label "Fragment 87 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_87> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_87> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_88> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_88> a ecrm:E35_Title ;
     rdfs:label "Fragment 88 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_88> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_88> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_9> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_9> a ecrm:E35_Title ;
     rdfs:label "Fragment 9 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_9> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_9> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_90> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_90> a ecrm:E35_Title ;
     rdfs:label "Fragment 90 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_90> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_90> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_91> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_91> a ecrm:E35_Title ;
     rdfs:label "Fragment 91 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_91> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_91> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_92> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_92> a ecrm:E35_Title ;
     rdfs:label "Fragment 92 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_92> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_92> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_93> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_93> a ecrm:E35_Title ;
     rdfs:label "Fragment 93 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_93> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_93> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_94> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_94> a ecrm:E35_Title ;
     rdfs:label "Fragment 94 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_94> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_94> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_95> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_95> a ecrm:E35_Title ;
     rdfs:label "Fragment 95 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_95> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_95> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_96> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_96> a ecrm:E35_Title ;
     rdfs:label "Fragment 96 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_96> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_96> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_97> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_97> a ecrm:E35_Title ;
     rdfs:label "Fragment 97 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_97> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_97> .
 
-<https://sappho-digital.com/title_string/expression/bibl_sappho_98> a ecrm:E62_String ;
+<https://sappho-digital.com/title/expression/bibl_sappho_98> a ecrm:E35_Title ;
     rdfs:label "Fragment 98 Voigt"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/expression/bibl_sappho_98> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_98> .
 
-<https://sappho-digital.com/title_string/manifestation/sappho_bagordo> a ecrm:E62_String ;
+<https://sappho-digital.com/title/manifestation/sappho_bagordo> a ecrm:E35_Title ;
     rdfs:label "Sappho. Gedichte. Griechisch-Deutsch"@de ;
-    ecrm:P190i_is_content_of <https://sappho-digital.com/title/manifestation/sappho_bagordo> .
+    ecrm:P102i_is_title_of <https://sappho-digital.com/manifestation/sappho_bagordo> .
 
 <https://sappho-digital.com/work_creation/sappho-work> a lrmoo:F27_Work_Creation ;
     rdfs:label "Creation of Sappho’s Work"@en ;
@@ -4056,798 +4056,6 @@
     rdfs:label "editor_bagordo" ;
     ecrm:P1i_identifies <https://sappho-digital.com/person/editor_bagordo> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_1> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_1> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_1> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_100> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_100> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_100> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_101> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_101> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_101> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_101a> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_101a> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_101a> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_102> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_102> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_102> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_103> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_103> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_103> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_103a> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_103a> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_103a> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_103b> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_103b> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_103b> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_103c> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_103c> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_103c> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_104> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_104> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_104> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_105> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_105> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_105> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_106> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_106> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_106> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_107> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_107> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_107> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_108> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_108> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_108> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_109> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_109> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_109> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_110> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_110> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_110> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_111> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_111> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_111> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_112> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_112> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_112> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_113> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_113> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_113> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_114> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_114> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_114> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_115> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_115> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_115> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_116> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_116> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_116> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_117> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_117> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_117> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_117a> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_117a> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_117a> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_117b> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_117b> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_117b> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_118> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_118> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_118> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_119> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_119> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_119> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_12> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_12> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_12> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_120> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_120> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_120> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_121> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_121> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_121> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_122> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_122> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_122> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_123> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_123> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_123> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_124> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_124> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_124> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_125> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_125> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_125> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_126> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_126> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_126> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_127> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_127> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_127> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_128> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_128> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_128> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_129> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_129> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_129> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_130> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_130> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_130> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_132> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_132> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_132> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_133> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_133> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_133> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_134> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_134> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_134> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_135> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_135> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_135> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_136> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_136> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_136> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_137> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_137> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_137> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_138> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_138> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_138> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_139> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_139> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_139> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_140> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_140> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_140> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_141> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_141> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_141> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_142> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_142> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_142> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_143> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_143> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_143> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_144> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_144> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_144> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_145> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_145> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_145> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_146> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_146> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_146> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_147> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_147> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_147> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_148> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_148> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_148> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_149> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_149> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_149> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_15> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_15> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_15> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_150> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_150> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_150> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_151> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_151> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_151> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_152> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_152> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_152> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_153> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_153> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_153> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_154> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_154> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_154> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_155> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_155> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_155> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_156> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_156> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_156> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_157> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_157> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_157> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_158> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_158> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_158> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_159> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_159> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_159> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_16> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_16> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_16> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_160> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_160> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_160> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_161> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_161> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_161> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_162> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_162> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_162> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_163> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_163> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_163> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_164> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_164> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_164> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_165> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_165> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_165> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_166> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_166> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_166> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_167> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_167> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_167> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_168> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_168> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_168> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_168a> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_168a> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_168a> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_168b> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_168b> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_168b> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_168c> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_168c> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_168c> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_169> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_169> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_169> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_169a> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_169a> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_169a> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_17> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_17> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_17> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_170> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_170> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_170> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_171> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_171> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_171> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_172> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_172> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_172> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_173> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_173> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_173> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_174> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_174> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_174> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_175> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_175> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_175> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_176> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_176> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_176> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_177> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_177> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_177> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_179> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_179> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_179> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_18> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_18> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_18> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_180> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_180> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_180> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_181> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_181> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_181> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_182> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_182> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_182> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_183> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_183> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_183> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_184> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_184> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_184> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_185> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_185> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_185> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_186> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_186> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_186> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_187> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_187> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_187> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_188> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_188> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_188> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_189> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_189> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_189> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_19> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_19> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_19> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_190> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_190> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_190> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_191> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_191> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_191> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_192> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_192> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_192> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_2> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_2> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_2> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_20> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_20> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_20> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_21> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_21> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_21> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_21351_1-8> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_21351_1-8> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_21351_1-8> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_21351_9-12_21376r_1-8> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_21351_9-12_21376r_1-8> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_21351_9-12_21376r_1-8> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_22> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_22> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_22> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_23> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_23> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_23> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_24> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_24> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_24> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_25> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_25> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_25> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_26> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_26> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_26> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_27> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_27> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_27> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_28> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_28> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_28> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_29> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_29> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_29> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_3> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_3> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_3> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_30> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_30> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_30> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_31> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_31> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_31> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_32> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_32> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_32> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_33> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_33> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_33> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_34> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_34> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_34> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_35> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_35> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_35> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_36> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_36> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_36> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_37> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_37> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_37> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_38> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_38> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_38> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_39> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_39> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_39> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_4> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_4> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_4> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_40> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_40> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_40> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_41> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_41> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_41> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_42> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_42> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_42> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_43> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_43> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_43> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_44> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_44> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_44> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_44a> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_44a> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_44a> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_45> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_45> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_45> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_46> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_46> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_46> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_47> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_47> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_47> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_48> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_48> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_48> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_49> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_49> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_49> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_5> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_5> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_5> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_50> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_50> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_50> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_51> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_51> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_51> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_52> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_52> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_52> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_53> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_53> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_53> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_54> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_54> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_54> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_55> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_55> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_55> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_56> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_56> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_56> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_57> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_57> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_57> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_58> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_58> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_58> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_59> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_59> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_59> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_6> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_6> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_6> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_60> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_60> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_60> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_61> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_61> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_61> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_62> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_62> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_62> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_63> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_63> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_63> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_64> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_64> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_64> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_65> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_65> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_65> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_66> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_66> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_66> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_67> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_67> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_67> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_68> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_68> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_68> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_69> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_69> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_69> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_7> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_7> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_7> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_70> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_70> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_70> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_71> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_71> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_71> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_72> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_72> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_72> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_73> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_73> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_73> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_74> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_74> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_74> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_75> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_75> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_75> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_76> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_76> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_76> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_77> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_77> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_77> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_78> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_78> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_78> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_79> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_79> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_79> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_8> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_8> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_8> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_80> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_80> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_80> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_81> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_81> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_81> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_82> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_82> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_82> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_83> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_83> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_83> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_84> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_84> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_84> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_85> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_85> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_85> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_86> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_86> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_86> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_87> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_87> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_87> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_88> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_88> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_88> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_9> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_9> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_9> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_90> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_90> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_90> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_91> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_91> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_91> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_92> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_92> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_92> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_93> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_93> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_93> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_94> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_94> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_94> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_95> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_95> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_95> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_96> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_96> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_96> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_97> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_97> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_97> .
-
-<https://sappho-digital.com/title/expression/bibl_sappho_98> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_sappho_98> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/expression/bibl_sappho_98> .
-
-<https://sappho-digital.com/title/manifestation/sappho_bagordo> a ecrm:E35_Title ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/manifestation/sappho_bagordo> ;
-    ecrm:P190_has_symbolic_content <https://sappho-digital.com/title_string/manifestation/sappho_bagordo> .
 
 <https://sappho-digital.com/fragment/bibl_sappho_1> a ecrm:E90_Symbolic_Object ;
     rdfs:label "Fragment 1 Voigt"@en ;

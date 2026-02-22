@@ -687,6 +687,7 @@ img.icon {
     opacity: .9;
     color: #000;
 }
+
 .graph-legend .dot {
     display: inline-block;
     width: 10px;
@@ -695,6 +696,7 @@ img.icon {
     margin-right: .35rem;
     vertical-align: middle;
 }
+
 .dot-frag {
     background: #5e17eb;
 }
@@ -756,15 +758,19 @@ img.icon {
 
 /* SPARQL */
 
-body { overflow-x: auto !important; }
-body.page { overflow: auto !important; }
+body {
+    overflow-x: auto !important;
+}
+body.page {
+    overflow: auto !important;
+}
 
 .sparql-container {
-                        max-width: 1400px !important;
-                        margin: 30px auto !important;
-                        padding: 0 20px !important;
-                    }
-                    
+    max-width: 1400px !important;
+    margin: 30px auto !important;
+    padding: 0 20px !important;
+}
+
 .sparql-header h1 {
     font-size: 28px;
     margin-bottom: 10px;
@@ -804,9 +810,9 @@ body.page { overflow: auto !important; }
 }
 
 .data-source-suggestions {
-  display: block;
-  width: 100%;
-  margin-top: 0.5rem;
+    display: block;
+    width: 100%;
+    margin-top: 0.5rem;
 }
 
 #dataSource {
@@ -994,35 +1000,57 @@ body.page { overflow: auto !important; }
     display: none;
 }
 
-.stats-two-cols{
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  align-items: start;
+.stats-two-cols {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    align-items: start;
 }
 
-.stats-col{
-  display: flex;
-  flex-direction: column;
-  gap: .75rem;
+.stats-col {
+    display: flex;
+    flex-direction: column;
+    gap: .75rem;
 }
 
-.stats-col .wikidata-layout{
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 1fr);
-  gap: 1rem;
-  align-items: start;
+.stats-col .wikidata-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 1fr);
+    gap: 1rem;
+    align-items: start;
 }
 
 .stats-col .wikidata-left,
-.stats-col .wikidata-right{
-  min-width: 0;
+.stats-col .wikidata-right {
+    min-width: 0;
 }
 
-@media (max-width: 1100px){
-  .stats-two-cols{
-    grid-template-columns: 1fr;
-  }
+.graph-wrap {
+  padding: 1rem;
+}
+
+.graph-meta {
+  margin: 0.5rem 0 1rem 0;
+  font-family: 'Geist';
+  color: #374151;
+}
+
+.graph-meta code {
+  background: #f3f4f6;
+  padding: 0.1rem 0.25rem;
+  border-radius: 6px;
+}
+
+.graph-canvas {
+  height: 800px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+}
+
+@media (max-width : 1100px) {
+    .stats-two-cols {
+        grid-template-columns: 1fr;
+    }
 }
 
 
