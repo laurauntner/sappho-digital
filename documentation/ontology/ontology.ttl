@@ -90,22 +90,6 @@ ecrm:E36_Visual_Item
     rdfs:comment    """Scope note: This class comprises the intellectual or conceptual aspects of recognisable marks and images. This class does not intend to describe the idiosyncratic characteristics of an individual physical embodiment of a visual item, but the underlying prototype. For example, a mark such as the ICOM logo is generally considered to be the same logo when used on any number of publications. The size, orientation, and colour may change, but the logo remains uniquely identifiable. The same is true of images that are reproduced many times. This means that visual items are independent of their physical support. The E36 Visual Item class provides a means of identifying and linking together instances of E24 Physical Human-Made Thing that carry the same visual symbols, marks, or images, etc. The property P62 depicts (is depicted by) between E24 Physical Human-Made Thing and the depicted subjects (E1 CRM Entity) can be regarded as a shortcut of the more fully developed path from E24 Physical Human-Made Thing through P65 shows visual item (is shown by), E36 Visual Item, P138 represents (has representation) to E1 CRM Entity, which in addition captures the optical features of the depiction. Examples: - the visual appearance of Monet's "La Pie" (Bortolatto, 1981) - the Coca-Cola logo (E34) - the Chi-Rho (E37) - the communist red star (E37) - the surface shape of Auguste Rodin's statue "Le Penseur" [There exist more than 20 copies, even of different size. Therefore, this is a good example that it is only the common surface shape, an immaterial visual item, which justifies displaying these copies as works of Auguste Rodin. As usual practice, Rodin himself did not produce the bronze statue, but only the prototype model.] In First Order Logic: - E36(x) ⇒ E73(x)"""@en ;
     owl:sameAs      cidoc:E36_Visual_Item .
 
-
-ecrm:E41_Appellation
-    a               owl:Class ;
-    rdfs:label      "E41 Appellation"@en ,
-                    "E41 Benennung"@de ,
-                    "E41 Ονομασία"@el ,
-                    "E41 Appellation"@fr ,
-                    "E41 Designação"@pt ,
-                    "E41 Обозначение"@ru ,
-                    "E41 称谓"@zh ;
-    skos:notation   "E41" ;
-    rdfs:subClassOf ecrm:E90_Symbolic_Object ;
-    rdfs:comment    """Scope note: This class comprises all signs, either meaningful or not, or arrangements of signs following a specific syntax, that are used or can be used to refer to and identify a specific instance of some class within a certain context. Instances of E41 Appellation do not identify things by their meaning, even if they happen to have one, but by convention, tradition, or agreement. Instances of E41 Appellation are cultural constructs; as such, they have a context, a history, and a use in time and space by some group of users. A given instance of E41 Appellation can have alternative forms, i.e. other instances of E41 Appellation that are regarded as equivalent, regardless of the thing it denotes. Different languages may use different appellations for the same thing, such as the names of major cities. Some appellations may be formulated using a valid noun phrase of a particular language. In these cases, the respective instances of E41 Appellation should also be declared as instances of E33 Linguistic Object. Then the language using the appellation can be declared with the property P72 has language: E56 Language. Instances of E41 Appellation may be used to identify any instance of E1 CRM Entity and sometimes are characteristic for instances of more specific subclasses of E1 CRM Entity, such as for instances of E52 Time-Span (for instance "dates"), E39 Actor, E53 Place or E28 Conceptual Object. Postal addresses and E-mail addresses are characteristic examples of identifiers used by services transporting things between clients. Even numerically expressed identifiers for extents in space or time are also regarded as instances of E41 Appellation, such as Gregorian dates or spatial coordinates, even though they allow for determining some time or location by a known procedure starting from a reference point and by virtue of that fact play a double role as instances of E59 Primitive Value. E41 Appellation should not be confused with the act of naming something. Cf. E15 Identifier Assignment. Examples: - "Martin" - "Aquae Sulis Minerva" - "the Merchant of Venice" (E35) (McCullough, 2005) - "Spigelia marilandica (L.) L." [not the species, just the name] (Hershberger, Robacker and Jenkins, 2015) - "information science" [not the science itself, but the name used to refer to the subject matter in an English-speaking context] - "安" [Chinese "an", meaning "peace"] - "6°5'29"N 45°12'13"W" [example of a spatial coordinate] - "Black queen's bishop 4" [chess coordinate, example of an identifier in a conceptual space (E89)] - "19-MAR-1922" [example of date] - "+41 22 418 5571" [example of contact point] - "weasel@paveprime.com" [example of contact point] - "CH-1211, Genève" [example of place appellation] - "1-29-3 Otsuka, Bunkyo-ku, Tokyo, 121, Japan" [example of a postal address] - "the poop deck of H.M.S Victory" [example of a section definition on a human-made object (E22)] - "the Venus de Milo's left buttock" [example of a section definition on a human-made object (E22)] In First Order Logic: - E41(x) ⇒ E90(x)"""@en ;
-    owl:sameAs      cidoc:E41_Appellation .
-
-
 ecrm:E42_Identifier
     a               owl:Class ;
     rdfs:label      "E42 Identifier"@en ,
@@ -504,6 +488,28 @@ ecrm:P98i_was_born a owl:ObjectProperty ;
     rdfs:subPropertyOf ecrm:P92i_was_brought_into_existence_by ;
     rdfs:comment """Quantification of the inverse property: one to many, dependent (0,n:1,1) Scope note of the inverse property: This property links an instance of E67 Birth event to an instance of E21 Person in the role of offspring. Twins, triplets etc. are brought into life by the same instance of E67 Birth. This is not intended for use with general Natural History material, only people. There is no explicit method for modelling conception and gestation except by using extensions. Examples of the inverse property: - The Birth of Queen Elizabeth II (E67) brought into life Queen Elizabeth II (E21). (Parker, 2002) In First Order Logic of the inverse property: - P98(x,y) ⇒ E67(x) - P98(x,y) ⇒ E21(y) - P98(x,y) ⇒ P92(x,y)"""@en ;
     owl:sameAs crm:P98i_was_born .
+
+ecrm:P165_incorporates a owl:ObjectProperty ;
+    rdfs:label "P165 incorporates"@en ;
+    rdfs:label "P165 inclut"@fr ;
+    skos:notation "P165" ;
+    rdfs:domain ecrm:E73_Information_Object ;
+    rdfs:range ecrm:E90_Symbolic_Object ;
+    owl:inverseOf ecrm:P165i_is_incorporated_in ;
+    rdfs:subPropertyOf ecrm:P106_is_composed_of ;
+    rdfs:comment """Quantification: many to many (0,n:0,n) Scope note: This property associates an instance of E73 Information Object with an instance of E90 Symbolic Object (or any of its subclasses) that was included in it. This property makes it possible to recognise the autonomous status of the incorporated signs, which were created in a distinct context, and can be incorporated in many instances of E73 Information Object, and to highlight the difference between structural and accidental whole-part relationships between conceptual entities. It accounts for many cultural facts that are quite frequent and significant: the inclusion of a poem in an anthology, the re-use of an operatic aria in a new opera, the use of a reproduction of a painting for a book cover or a CD booklet, the integration of textual quotations, the presence of lyrics in a song that sets those lyrics to music, the presence of the text of a play in a movie based on that play, etc. In particular, this property allows for modelling relationships of different levels of symbolic specificity, such as the natural language words making up a particular text, the characters making up the words and punctuation, the choice of fonts and page layout for the characters. When restricted to information objects, that is, seen as a property with E73 Information Object as domain and range the property is transitive. A digital photograph of a manuscript page incorporates the text of a manuscript page, if the respective text is defined as a sequence of symbols of a particular type, such as Latin characters, and the resolution and quality of the digital image is sufficient to resolve these symbols so they are readable on the digital image. This property is asymmetric."""@en ;
+    owl:sameAs crm:P165_incorporates .
+
+ecrm:P165i_is_incorporated_in a owl:ObjectProperty ;
+    rdfs:label "P165 is incorporated in"@en ;
+    rdfs:label "P165 est inclus dans"@fr ;
+    skos:notation "P165i" ;
+    rdfs:domain ecrm:E90_Symbolic_Object ;
+    rdfs:range ecrm:E73_Information_Object ;
+    owl:inverseOf ecrm:P165_incorporates ;
+    rdfs:subPropertyOf ecrm:P106i_forms_part_of ;
+    rdfs:comment """Quantification of the inverse property: many to many (0,n:0,n) Scope note of the inverse property: This property associates an instance of E73 Information Object with an instance of E90 Symbolic Object (or any of its subclasses) that was included in it. This property makes it possible to recognise the autonomous status of the incorporated signs, which were created in a distinct context, and can be incorporated in many instances of E73 Information Object, and to highlight the difference between structural and accidental whole-part relationships between conceptual entities."""@en ;
+    owl:sameAs crm:P165i_is_incorporated_in .
 
 ###############################################################################
 # LRMoo v1.1.1
@@ -945,86 +951,81 @@ intro:R30i_isTextPassageOf a owl:ObjectProperty, owl:TransitiveProperty ;
 # New Properties
 #################################################################
 
-sappho_prop:about
-  a owl:ObjectProperty ;
-  rdfs:label "Link from expression to topic"@en ;
-  rdfs:domain lrmoo:F2_Expression ;
-  rdfs:range intro:INT_Topic ;
-  owl:propertyChainAxiom ( intro:R18_showsActualization intro:R17_actualizesFeature ) .
+sappho_prop:about a owl:ObjectProperty ;
+    rdfs:label "about"@en ;
+    rdfs:comment "Link from an F2_Expression to a INT_Topic."@en ;
+    rdfs:domain lrmoo:F2_Expression ;
+    rdfs:range intro:INT_Topic ;
+    owl:propertyChainAxiom ( intro:R18_showsActualization intro:R17_actualizesFeature ) .
 
-sappho_prop:expr_relation
-  a owl:ObjectProperty, owl:SymmetricProperty ;
-  rdfs:label "Relation between two expressions"@en ;
-  rdfs:domain lrmoo:F2_Expression ;
-  rdfs:range lrmoo:F2_Expression ;
-  owl:propertyChainAxiom (
-    [ owl:inverseOf intro:R18i_actualizationFoundOn ]
-    intro:R24i_isRelatedEntity
-    intro:R24_hasRelatedEntity
-    intro:R18i_actualizationFoundOn
-  ) .
+sappho_prop:expr_relation a owl:ObjectProperty, owl:SymmetricProperty ;
+    rdfs:label "expr_relation"@en ;
+    rdfs:comment "A relation between two F2_Expressions."@en ;
+    rdfs:domain lrmoo:F2_Expression ;
+    rdfs:range lrmoo:F2_Expression ;
+    owl:propertyChainAxiom (
+        [ owl:inverseOf intro:R18i_actualizationFoundOn ]
+        intro:R24i_isRelatedEntity
+        intro:R24_hasRelatedEntity
+        intro:R18i_actualizationFoundOn
+    ) .
 
-sappho_prop:has_manifestation
-  a owl:ObjectProperty ;
-  rdfs:label "has manifestation"@en ;
-  rdfs:domain lrmoo:F1_Work ;
-  rdfs:range lrmoo:F3_Manifestation ;
-  owl:propertyChainAxiom ( lrmoo:R3_is_realised_in lrmoo:R4i_is_embodied_in ) .
+sappho_prop:has_manifestation a owl:ObjectProperty ;
+    rdfs:label "has manifestation"@en ;
+    rdfs:comment "A F1_Work has a F3_Manifestation."@en ;
+    rdfs:domain lrmoo:F1_Work ;
+    rdfs:range lrmoo:F3_Manifestation ;
+    owl:propertyChainAxiom ( lrmoo:R3_is_realised_in lrmoo:R4i_is_embodied_in ) .
 
-sappho_prop:refers_to_helper
-  a owl:ObjectProperty ;
-  rdfs:label "Helper: refers_to used in property chains"@en ;
-  rdfs:subPropertyOf ecrm:P67_refers_to .
+sappho_prop:expr_references a owl:ObjectProperty ;
+    rdfs:label "expr_references"@en ;
+    rdfs:comment "A reference from an F2_Expression to a E21_Person, a E53_Place or a F2_Expression."@en ;
+    rdfs:domain lrmoo:F2_Expression ;
+    rdfs:range crm:E21_Person, crm:E53_Place, lrmoo:F2_Expression ;
+    rdfs:subPropertyOf crm:P67_refers_to ;
+    owl:propertyChainAxiom ( intro:R18_showsActualization crm:P67_refers_to ) .
 
-sappho_prop:expr_references
-  a owl:ObjectProperty ;
-  rdfs:label "Reference from expression to person, place or expression"@en ;
-  rdfs:domain lrmoo:F2_Expression ;
-  rdfs:range ecrm:E21_Person, ecrm:E53_Place, lrmoo:F2_Expression ;
-  rdfs:subPropertyOf ecrm:P67_refers_to ;
-  owl:propertyChainAxiom ( intro:R18_showsActualization sappho_prop:refers_to_helper ) .
+sappho_prop:referenced_by_expr a owl:ObjectProperty ;
+    rdfs:label "referenced_by_expr"@en ;
+    rdfs:comment "A E21_Person, E53_Place or F2_Expression is referenced by a F2_Expression."@en ;
+    rdfs:domain crm:E21_Person, crm:E53_Place, lrmoo:F2_Expression ;
+    rdfs:range lrmoo:F2_Expression ;
+    rdfs:subPropertyOf crm:P67i_is_referred_to_by ;
+    owl:inverseOf sappho_prop:expr_references .
 
-sappho_prop:referenced_by_expr
-  a owl:ObjectProperty ;
-  rdfs:label "Person, place or expression referenced by expression"@en ;
-  rdfs:domain ecrm:E21_Person, ecrm:E53_Place, lrmoo:F2_Expression ;
-  rdfs:range lrmoo:F2_Expression ;
-  rdfs:subPropertyOf ecrm:P67i_is_referred_to_by ;
-  owl:inverseOf sappho_prop:expr_references .
+sappho_prop:tp_possibly_cites a owl:ObjectProperty ;
+    rdfs:label "tp_possibly_cites"@en ;
+    rdfs:comment "A F2_Expression possibly cites an INT21_TextPassage."@en ;
+    rdfs:domain lrmoo:F2_Expression ;
+    rdfs:range intro:INT21_TextPassage ;
+    rdfs:subPropertyOf crm:P130_shows_features_of, crm:P148_has_component ;
+    owl:propertyChainAxiom ( intro:R30_hasTextPassage ) .
 
-sappho_prop:tp_possibly_cites
-  a owl:ObjectProperty ;
-  rdfs:label "The younger text possibly cites the text passage of the older text"@en ;
-  rdfs:domain lrmoo:F2_Expression ;
-  rdfs:range intro:INT21_TextPassage ;
-  rdfs:subPropertyOf ecrm:P130_shows_features_of, ecrm:P148_has_component ;
-  owl:propertyChainAxiom ( intro:R30_hasTextPassage ) .
+sappho_prop:tp_possibly_cited_by a owl:ObjectProperty ;
+    rdfs:label "tp_possibly_cited_by"@en ;
+    rdfs:comment "An INT21_TextPassage is possibly cited by a F2_Expression."@en ;
+    rdfs:domain intro:INT21_TextPassage ;
+    rdfs:range lrmoo:F2_Expression ;
+    rdfs:subPropertyOf crm:P130i_features_are_also_found_on, crm:P148i_is_component_of ;
+    owl:inverseOf sappho_prop:tp_possibly_cites .
 
-sappho_prop:tp_possibly_cited_by
-  a owl:ObjectProperty ;
-  rdfs:label "The older text is possibly cited by the younger text passage"@en ;
-  rdfs:domain intro:INT21_TextPassage ;
-  rdfs:range lrmoo:F2_Expression ;
-  rdfs:subPropertyOf ecrm:P130i_features_are_also_found_on, ecrm:P148i_is_component_of ;
-  owl:inverseOf sappho_prop:tp_possibly_cites .
+sappho_prop:expr_possibly_cites a owl:ObjectProperty ;
+    rdfs:label "expr_possibly_cites"@en ;
+    rdfs:comment "A F2_Expression possibly cites another F2_Expression."@en ;
+    rdfs:domain lrmoo:F2_Expression ;
+    rdfs:range lrmoo:F2_Expression ;
+    rdfs:subPropertyOf crm:P130_shows_features_of, crm:P148_has_component ;
+    owl:propertyChainAxiom (
+        intro:R30_hasTextPassage
+        [ owl:inverseOf intro:R24_hasRelatedEntity ]
+        intro:R24_hasRelatedEntity
+        [ owl:inverseOf intro:R30i_isTextPassageOf ]
+    ) .
 
-sappho_prop:expr_possibly_cites
-  a owl:ObjectProperty ;
-  rdfs:label "Younger expression possibly cites older expression"@en ;
-  rdfs:domain lrmoo:F2_Expression ;
-  rdfs:range lrmoo:F2_Expression ;
-  rdfs:subPropertyOf ecrm:P130_shows_features_of, ecrm:P148_has_component ;
-  owl:propertyChainAxiom (
-    intro:R30_hasTextPassage
-    [ owl:inverseOf intro:R24_hasRelatedEntity ]
-    intro:R24_hasRelatedEntity
-    [ owl:inverseOf intro:R30i_isTextPassageOf ]
-  ) .
-
-sappho_prop:expr_possibly_cited_by
-  a owl:ObjectProperty ;
-  rdfs:label "Older expression possibly cited by younger expression"@en ;
-  rdfs:domain lrmoo:F2_Expression ;
-  rdfs:range lrmoo:F2_Expression ;
-  rdfs:subPropertyOf ecrm:P130i_features_are_also_found_on, ecrm:P148i_is_component_of ;
-  owl:inverseOf sappho_prop:expr_possibly_cites .
+sappho_prop:expr_possibly_cited_by a owl:ObjectProperty ;
+    rdfs:label "expr_possibly_cited_by"@en ;
+    rdfs:comment "A F2_Expression is possibly cited by another F2_Expression."@en ;
+    rdfs:domain lrmoo:F2_Expression ;
+    rdfs:range lrmoo:F2_Expression ;
+    rdfs:subPropertyOf crm:P130i_features_are_also_found_on, crm:P148i_is_component_of ;
+    owl:inverseOf sappho_prop:expr_possibly_cites .

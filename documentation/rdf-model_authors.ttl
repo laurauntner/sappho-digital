@@ -7,17 +7,12 @@
 <https://sappho-digital.com/person/XXXX> a ecrm:E21_Person ;
     rdfs:label "XXXX"@de ;
     ecrm:P100i_died_in <https://sappho-digital.com/death/XXXX> ;
-    ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/XXXX> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ,
                              <https://sappho-digital.com/identifier/XXXX> ;
     ecrm:P2_has_type <https://sappho-digital.com/gender/XXXX> ; # wdt:P21
     ecrm:P98i_was_born <https://sappho-digital.com/birth/XXXX> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/visual_item/XXXX> ; # wdt:P18
     owl:sameAs <http://www.wikidata.org/entity/XXXX> .
-
-<https://sappho-digital.com/appellation/XXXX> a ecrm:E41_Appellation ;
-    rdfs:label "XXXX"@de ;
-    ecrm:P131i_identifies <https://sappho-digital.com/person/XXXX> .
 
 <https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
     rdfs:label "XXXX" ;

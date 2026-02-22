@@ -191,12 +191,7 @@ for el in authors:
 
     g.add((person_uri, RDF.type, ECRM.E21_Person))
     g.add((person_uri, RDFS.label, Literal(name, lang="de")))
-    g.add((person_uri, ECRM.P131_is_identified_by, appellation_uri))
     g.add((person_uri, ECRM.P1_is_identified_by, identifier_uri))
-
-    g.add((appellation_uri, RDF.type, ECRM.E41_Appellation))
-    g.add((appellation_uri, RDFS.label, Literal(name, lang="de")))
-    g.add((appellation_uri, ECRM.P131i_identifies, person_uri))
 
     g.add((identifier_uri, RDF.type, ECRM.E42_Identifier))
     g.add((identifier_uri, RDFS.label, Literal(xml_id)))

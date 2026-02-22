@@ -141,53 +141,6 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item"/>
   </owl:Class>
 
-  <owl:Class rdf:about="http://erlangen-crm.org/current/E41_Appellation">
-    <rdfs:label xml:lang="en">E41 Appellation</rdfs:label>
-    <rdfs:label xml:lang="de">E41 Benennung</rdfs:label>
-    <rdfs:label xml:lang="el">E41 Ονομασία</rdfs:label>
-    <rdfs:label xml:lang="fr">E41 Appellation</rdfs:label>
-    <rdfs:label xml:lang="pt">E41 Designação</rdfs:label>
-    <rdfs:label xml:lang="ru">E41 Обозначение</rdfs:label>
-    <rdfs:label xml:lang="zh">E41 称谓</rdfs:label>
-    <skos:notation>E41</skos:notation>
-    <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
-    <rdfs:comment xml:lang="en">Scope note: This class comprises all signs, either meaningful or
-      not, or arrangements of signs following a specific syntax, that are used or can be used to
-      refer to and identify a specific instance of some class within a certain context. Instances of
-      E41 Appellation do not identify things by their meaning, even if they happen to have one, but
-      by convention, tradition, or agreement. Instances of E41 Appellation are cultural constructs;
-      as such, they have a context, a history, and a use in time and space by some group of users. A
-      given instance of E41 Appellation can have alternative forms, i.e. other instances of E41
-      Appellation that are regarded as equivalent, regardless of the thing it denotes. Different
-      languages may use different appellations for the same thing, such as the names of major
-      cities. Some appellations may be formulated using a valid noun phrase of a particular
-      language. In these cases, the respective instances of E41 Appellation should also be declared
-      as instances of E33 Linguistic Object. Then the language using the appellation can be declared
-      with the property P72 has language: E56 Language. Instances of E41 Appellation may be used to
-      identify any instance of E1 CRM Entity and sometimes are characteristic for instances of more
-      specific subclasses of E1 CRM Entity, such as for instances of E52 Time-Span (for instance
-      “dates”), E39 Actor, E53 Place or E28 Conceptual Object. Postal addresses and E-mail addresses
-      are characteristic examples of identifiers used by services transporting things between
-      clients. Even numerically expressed identifiers for extents in space or time are also regarded
-      as instances of E41 Appellation, such as Gregorian dates or spatial coordinates, even though
-      they allow for determining some time or location by a known procedure starting from a
-      reference point and by virtue of that fact play a double role as instances of E59 Primitive
-      Value. E41 Appellation should not be confused with the act of naming something. Cf. E15
-      Identifier Assignment. Examples: - “Martin” - “Aquae Sulis Minerva” - “the Merchant of Venice”
-      (E35) (McCullough, 2005) - “Spigelia marilandica (L.) L.” [not the species, just the name]
-      (Hershberger, Robacker and Jenkins, 2015) - “information science” [not the science itself, but
-      the name used to refer to the subject matter in an English-speaking context] - “安” [Chinese
-      “an”, meaning “peace”] - “6°5’29”N 45°12’13”W” [example of a spatial coordinate] - “Black
-      queen’s bishop 4” [chess coordinate, example of an identifier in a conceptual space (E89)] -
-      “19-MAR-1922” [example of date] - “+41 22 418 5571” [example of contact point] -
-      “weasel@paveprime.com” [example of contact point] - “CH-1211, Genève” [example of place
-      appellation] - “1-29-3 Otsuka, Bunkyo-ku, Tokyo, 121, Japan” [example of a postal address] -
-      “the poop deck of H.M.S Victory” [example of a section definition on a human-made object
-      (E22)] - “the Venus de Milo’s left buttock” [example of a section definition on a human-made
-      object (E22)] In First Order Logic: - E41(x) ⇒ E90(x) </rdfs:comment>
-    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"/>
-  </owl:Class>
-
   <owl:Class rdf:about="http://erlangen-crm.org/current/E42_Identifier">
     <rdfs:label xml:lang="en">E42 Identifier</rdfs:label>
     <rdfs:label xml:lang="de">E42 Kennung</rdfs:label>
@@ -1116,6 +1069,85 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P98i_was_born"/>
   </owl:ObjectProperty>
 
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P165_incorporates">
+    <rdfs:label xml:lang="en">P165 incorporates</rdfs:label>
+    <rdfs:label xml:lang="fr">P165 inclut</rdfs:label>
+    <skos:notation>P165</skos:notation>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E73_Information_Object"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P165i_is_incorporated_in"/>
+    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P106_is_composed_of"/>
+    <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n) Scope note: This property
+      associates an instance of E73 Information Object with an instance of E90 Symbolic Object (or
+      any of its subclasses) that was included in it. This property makes it possible to recognise
+      the autonomous status of the incorporated signs, which were created in a distinct context, and
+      can be incorporated in many instances of E73 Information Object, and to highlight the
+      difference between structural and accidental whole-part relationships between conceptual
+      entities. It accounts for many cultural facts that are quite frequent and significant: the
+      inclusion of a poem in an anthology, the re-use of an operatic aria in a new opera, the use of
+      a reproduction of a painting for a book cover or a CD booklet, the integration of textual
+      quotations, the presence of lyrics in a song that sets those lyrics to music, the presence of
+      the text of a play in a movie based on that play, etc. In particular, this property allows for
+      modelling relationships of different levels of symbolic specificity, such as the natural
+      language words making up a particular text, the characters making up the words and
+      punctuation, the choice of fonts and page layout for the characters. When restricted to
+      information objects, that is, seen as a property with E73 Information Object as domain and
+      range the property is transitive. A digital photograph of a manuscript page incorporates the
+      text of a manuscript page, if the respective text is defined as a sequence of symbols of a
+      particular type, such as Latin characters, and the resolution and quality of the digital image
+      is sufficient to resolve these symbols so they are readable on the digital image. This
+      property is asymmetric. Examples: - The content of Charles-Moïse Briquet’s ‘Les Filigranes:
+      dictionnaire historique des marques du papier’ (E32) incorporates the visual aspect of the
+      watermark used around 1358-61 by some Spanish papermaker(s) and identified as ‘Briquet 4019’
+      (E37). (Briquet, 1985) - The visual content of Jacopo Amigoni’s painting known as ‘The Singer
+      Farinelli and friends’ (E36) incorporates the musical notation of Farinelli’s musical work
+      entitled ‘La Partenza’ (E73). (National Gallery of Victoria) - The visual content of Nicolas
+      Poussin’s painting entitled ‘Les Bergers d’Arcadie’ (E36) incorporates the Latin phrase ‘Et in
+      Arcadia ego’ (E33). (Wikipedia, 2020) In First Order Logic: - P165(x,y) ⇒ E73(x) - P165(x,y) ⇒
+      E90(y) - P165(x,y) ⇒ P106(x,y) - P165(x,y) ⇒ ¬P165(y,x) </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P165_incorporates"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/165i_is_incorporated_in">
+    <rdfs:label xml:lang="en">P165 is incorporated in</rdfs:label>
+    <rdfs:label xml:lang="fr">P165 est inclus dans</rdfs:label>
+    <skos:notation>P165i</skos:notation>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E73_Information_Object"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P165_incorporates"/>
+    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P106i_forms_part_of"/>
+    <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n) Scope
+      note of the inverse property: This property associates an instance of E73 Information Object
+      with an instance of E90 Symbolic Object (or any of its subclasses) that was included in it.
+      This property makes it possible to recognise the autonomous status of the incorporated signs,
+      which were created in a distinct context, and can be incorporated in many instances of E73
+      Information Object, and to highlight the difference between structural and accidental
+      whole-part relationships between conceptual entities. It accounts for many cultural facts that
+      are quite frequent and significant: the inclusion of a poem in an anthology, the re-use of an
+      operatic aria in a new opera, the use of a reproduction of a painting for a book cover or a CD
+      booklet, the integration of textual quotations, the presence of lyrics in a song that sets
+      those lyrics to music, the presence of the text of a play in a movie based on that play, etc.
+      In particular, this property allows for modelling relationships of different levels of
+      symbolic specificity, such as the natural language words making up a particular text, the
+      characters making up the words and punctuation, the choice of fonts and page layout for the
+      characters. When restricted to information objects, that is, seen as a property with E73
+      Information Object as domain and range the property is transitive. A digital photograph of a
+      manuscript page incorporates the text of a manuscript page, if the respective text is defined
+      as a sequence of symbols of a particular type, such as Latin characters, and the resolution
+      and quality of the digital image is sufficient to resolve these symbols so they are readable
+      on the digital image. This property is asymmetric. Examples of the inverse property: - The
+      content of Charles-Moïse Briquet’s ‘Les Filigranes: dictionnaire historique des marques du
+      papier’ (E32) incorporates the visual aspect of the watermark used around 1358-61 by some
+      Spanish papermaker(s) and identified as ‘Briquet 4019’ (E37). (Briquet, 1985) - The visual
+      content of Jacopo Amigoni’s painting known as ‘The Singer Farinelli and friends’ (E36)
+      incorporates the musical notation of Farinelli’s musical work entitled ‘La Partenza’ (E73).
+      (National Gallery of Victoria) - The visual content of Nicolas Poussin’s painting entitled
+      ‘Les Bergers d’Arcadie’ (E36) incorporates the Latin phrase ‘Et in Arcadia ego’ (E33).
+      (Wikipedia, 2020) In First Order Logic of the inverse property: - P165(x,y) ⇒ E73(x) -
+      P165(x,y) ⇒ E90(y) - P165(x,y) ⇒ P106(x,y) - P165(x,y) ⇒ ¬P165(y,x) </rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P165i_is_incorporated_in"/>
+  </owl:ObjectProperty>
+
   <!-- LRMOO v1.1.1 -->
 
   <owl:Class rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work">
@@ -2042,7 +2074,8 @@
   <!-- New properties -->
 
   <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/about">
-    <rdfs:label xml:lang="en">Link from expression to topic</rdfs:label>
+    <rdfs:label xml:lang="en">about</rdfs:label>
+    <rdfs:comment xml:lang="en">Link from an F2_Expression to a INT_Topic.</rdfs:comment>
     <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Topic"/>
     <owl:propertyChainAxiom rdf:parseType="Collection">
@@ -2053,10 +2086,10 @@
 
   <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/expr_relation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-    <rdfs:label xml:lang="en">Relation between two expressions</rdfs:label>
+    <rdfs:label xml:lang="en">expr_relation</rdfs:label>
+    <rdfs:comment xml:lang="en">A relation between two F2_Expressions.</rdfs:comment>
     <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
-
     <owl:propertyChainAxiom rdf:parseType="Collection">
       <rdf:Description>
         <owl:inverseOf
@@ -2071,6 +2104,7 @@
 
   <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/has_manifestation">
     <rdfs:label xml:lang="en">has manifestation</rdfs:label>
+    <rdfs:comment xml:lang="en">An F1_Work has a F3_Manifestation.</rdfs:comment>
     <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
     <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"/>
     <owl:propertyChainAxiom rdf:parseType="Collection">
@@ -2080,7 +2114,8 @@
   </owl:ObjectProperty>
 
   <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/expr_references">
-    <rdfs:label xml:lang="en">Reference from expression to person, place or expression</rdfs:label>
+    <rdfs:label xml:lang="en">expr_references</rdfs:label>
+    <rdfs:comment xml:lang="en">A reference from an F2_Expression to a E21_Person, a E53_Place or a F2_Expression.</rdfs:comment>
     <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
     <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
@@ -2093,7 +2128,8 @@
   </owl:ObjectProperty>
 
   <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/referenced_by_expr">
-    <rdfs:label xml:lang="en">Person, place or expression referenced by expression</rdfs:label>
+    <rdfs:label xml:lang="en">referenced_by_expr</rdfs:label>
+    <rdfs:comment xml:lang="en">A E21_Person, E53_Place or F2_Expression is referenced by a F2_Expression.</rdfs:comment>
     <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
     <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
     <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
@@ -2103,7 +2139,8 @@
   </owl:ObjectProperty>
 
   <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/tp_possibly_cites">
-    <rdfs:label xml:lang="en"> The younger text possibly cites the text passage of the older text </rdfs:label>
+    <rdfs:label xml:lang="en">tp_possibly_cites</rdfs:label>
+    <rdfs:comment xml:lang="en">A F2_Expression possibly cites an INT21_TextPassage.</rdfs:comment>
     <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
     <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P130_shows_features_of"/>
@@ -2114,7 +2151,8 @@
   </owl:ObjectProperty>
 
   <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by">
-    <rdfs:label xml:lang="en"> The older text is possibly cited by the younger text passage </rdfs:label>
+    <rdfs:label xml:lang="en">tp_possibly_cited_by</rdfs:label>
+    <rdfs:comment xml:lang="en">An INT21_TextPassage is possibly cited by a F2_Expression.</rdfs:comment>
     <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
     <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:subPropertyOf
@@ -2124,12 +2162,12 @@
   </owl:ObjectProperty>
 
   <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/expr_possibly_cites">
-    <rdfs:label xml:lang="en"> Younger expression possibly cites older expression </rdfs:label>
+    <rdfs:label xml:lang="en">expr_possibly_cites</rdfs:label>
+    <rdfs:comment xml:lang="en">A F2_Expression possibly cites another F2_Expression.</rdfs:comment>
     <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P130_shows_features_of"/>
     <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P148_has_component"/>
-
     <owl:propertyChainAxiom rdf:parseType="Collection">
       <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R30_hasTextPassage"/>
       <rdf:Description>
@@ -2143,7 +2181,8 @@
   </owl:ObjectProperty>
 
   <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by">
-    <rdfs:label xml:lang="en"> Older expression possibly cited by younger expression </rdfs:label>
+    <rdfs:label xml:lang="en">expr_possibly_cited_by</rdfs:label>
+    <rdfs:comment xml:lang="en">A F2_Expression is possibly cited by another F2_Expression.</rdfs:comment>
     <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:subPropertyOf

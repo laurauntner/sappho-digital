@@ -20,17 +20,12 @@
 
 <https://sappho-digital.com/person/author_sappho> a ecrm:E21_Person ;
     rdfs:label "Sappho" ;
-    ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/author_sappho> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q17892> ,
                              <https://sappho-digital.com/identifier/author_sappho> ;
     ecrm:P2_has_type <https://sappho-digital.com/gender/female> ;
     ecrm:P14i_performed <https://sappho-digital.com/work/sappho-work>,
         <https://sappho-digital.com/work_creation/sappho-work> ;
     owl:sameAs <http://www.wikidata.org/entity/Q17892> .
-
-<https://sappho-digital.com/appellation/author_sappho> a ecrm:E41_Appellation ;
-    rdfs:label "Sappho"@en ;
-    ecrm:P131i_identifies <https://sappho-digital.com/person/author_sappho> .
 
 <https://sappho-digital.com/identifier/author_sappho> a ecrm:E42_Identifier ;
     rdfs:label "author_sappho" ;
@@ -64,26 +59,21 @@
 
 <https://sappho-digital.com/fragment/XXXX> a ecrm:E90_Symbolic_Object ;
     rdfs:label "Fragment XXXX Voigt"@en ;
-    lrmoo:R10_is_member_of <https://sappho-digital.com/work/sappho-work> .
+    lrmoo:R10_is_member_of <https://sappho-digital.com/work/sappho-work> ;
+    ecrm:P165i_is_incorporated_in <https://sappho-digital.com/expression/XXXX> .
 
 <https://sappho-digital.com/expression_creation/XXXX> a lrmoo:F28_Expression_Creation ;
     rdfs:label "Expression creation of Fragment XXXX Voigt"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/person/editor_bagordo> ;
-    lrmoo:R17_created <https://sappho-digital.com/expression/XXXX> ;
-    lrmoo:R19_created_a_realisation_of <https://sappho-digital.com/fragment/XXXX> .
+    lrmoo:R17_created <https://sappho-digital.com/expression/XXXX> .
 
 <https://sappho-digital.com/person/editor_bagordo> a ecrm:E21_Person ;
     rdfs:label "Andreas Bagordo" ;
-    ecrm:P131_is_identified_by <https://sappho-digital.com/appellation/editor_bagordo> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q495907> ,
                              <https://sappho-digital.com/identifier/editor_bagordo> ;
     ecrm:P2_has_type <https://sappho-digital.com/gender/male> ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/XXXXX> ;
     owl:sameAs <http://www.wikidata.org/entity/Q495907> .
-
-<https://sappho-digital.com/appellation/editor_bagordo> a ecrm:E41_Appellation ;
-    rdfs:label "Andreas Bagordo"@en ;
-    ecrm:P131i_identifies <https://sappho-digital.com/person/editor_bagordo> .
 
 <https://sappho-digital.com/identifier/editor_bagordo> a ecrm:E42_Identifier ;
     rdfs:label "editor_bagordo" ;
@@ -103,8 +93,8 @@
 
 <https://sappho-digital.com/expression/XXXX> a lrmoo:F2_Expression ;
     rdfs:label "Expression of Fragment XXXX Voigt"@en ;
-    lrmoo:R3i_realises <https://sappho-digital.com/fragment/XXXX> ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/XXXX> ;
+    ecrm:P165_incorporates <https://sappho-digital.com/title/fragment/XXXX> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/XXXX> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXXX> ,
                             <https://sappho-digital.com/identifier/XXXXX> ;

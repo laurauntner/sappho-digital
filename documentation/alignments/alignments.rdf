@@ -234,9 +234,6 @@
   <rdf:Description rdf:about="http://purl.org/ontology/bibo/editor">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purl.archive.org/urbooks#realization">
-    <skos:closeMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/R3_realises"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/extensions/motifs#Motive">
     <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Motif"/>
   </rdf:Description>
@@ -562,10 +559,6 @@
     <owl:equivalentClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://erlangen-crm.org/current/E41_Appellation">
-    <owl:equivalentClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E41_Appellation"/>
-  </rdf:Description>
-
   <rdf:Description rdf:about="http://erlangen-crm.org/current/E90_Symbolic_Object">
     <owl:equivalentClass rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object"/>
   </rdf:Description>
@@ -620,14 +613,6 @@
 
   <rdf:Description rdf:about="http://erlangen-crm.org/current/P100i_died_in">
     <owl:equivalentProperty rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P100i_died_in"/>
-  </rdf:Description>
-
-  <rdf:Description rdf:about="http://erlangen-crm.org/current/P131_is_identified_by">
-    <owl:equivalentProperty rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P131_is_identified_by"/>
-  </rdf:Description>
-
-  <rdf:Description rdf:about="http://erlangen-crm.org/current/P131i_identifies">
-    <owl:equivalentProperty rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P131i_identifies"/>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://erlangen-crm.org/current/P138_represents">
@@ -702,6 +687,14 @@
     <owl:equivalentProperty rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P14i_performed"/>
   </rdf:Description>
 
+  <rdf:Description rdf:about="http://erlangen-crm.org/current/P165_incorporates">
+    <owl:equivalentProperty rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P165_incorporates"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://erlangen-crm.org/current/P165i_is_incorporated_in">
+    <owl:equivalentProperty rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P165i_is_incorporated_in"/>
+  </rdf:Description>
+
   <rdf:Description rdf:about="http://erlangen-crm.org/current/P190_has_symbolic_content">
     <owl:equivalentProperty rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P190_has_symbolic_content"/>
   </rdf:Description>
@@ -738,16 +731,6 @@
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R17i_was_created_by"/>
   </rdf:Description>
 
-  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R19_created_a_realisation_of">
-    <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R19_created_a_realisation_of"/>
-    <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R19_created_a_realisation_of"/>
-  </rdf:Description>
-
-  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R19i_was_realised_through">
-    <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R19i_was_realised_through"/>
-    <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R19i_was_realised_through"/>
-  </rdf:Description>
-
   <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R24_created">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R24_created"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R24_created"/>
@@ -776,16 +759,6 @@
   <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R28i_was_produced_by">
     <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R28i_was_produced_by"/>
     <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R28i_was_produced_by"/>
-  </rdf:Description>
-
-  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R3_is_realised_in">
-    <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R3_is_realised_in"/>
-    <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R3_is_realised_in"/>
-  </rdf:Description>
-
-  <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R3i_realises">
-    <owl:equivalentProperty rdf:resource="http://erlangen-crm.org/efrbroo/R3i_realises"/>
-    <owl:equivalentProperty rdf:resource="http://iflastandards.info/ns/fr/frbr/frbroo/R3i_realises"/>
   </rdf:Description>
 
   <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R4_embodies">

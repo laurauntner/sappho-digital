@@ -145,16 +145,10 @@ g.add((SD["genre_type/sappho-digital"], ECRM.P2i_is_type_of, SD["genre/lyrik"]))
 # Autorin Sappho
 g.add((SD["person/author_sappho"], RDF.type, ECRM.E21_Person))
 g.add((SD["person/author_sappho"], RDFS.label, Literal("Sappho")))
-g.add((SD["person/author_sappho"], ECRM.P131_is_identified_by, SD["appellation/author_sappho"]))
 g.add((SD["person/author_sappho"], ECRM.P1_is_identified_by, SD["identifier/Q17892"]))
 g.add((SD["person/author_sappho"], ECRM.P1_is_identified_by, SD["identifier/author_sappho"]))
 g.add((SD["person/author_sappho"], ECRM.P2_has_type, SD["gender/female"]))
 g.add((SD["person/author_sappho"], OWL.sameAs, URIRef("http://www.wikidata.org/entity/Q17892")))
-
-# Appellation Sappho
-g.add((SD["appellation/author_sappho"], RDF.type, ECRM.E41_Appellation))
-g.add((SD["appellation/author_sappho"], RDFS.label, Literal("Sappho", lang="en")))
-g.add((SD["appellation/author_sappho"], ECRM.P131i_identifies, SD["person/author_sappho"]))
 
 # Identifiers Sappho
 g.add((SD["identifier/author_sappho"], RDF.type, ECRM.E42_Identifier))
@@ -172,15 +166,10 @@ g.add((SD["id_type/wikidata"], ECRM.P2i_is_type_of, SD["identifier/Q17892"]))
 # Editor Bagordo
 g.add((SD["person/editor_bagordo"], RDF.type, ECRM.E21_Person))
 g.add((SD["person/editor_bagordo"], RDFS.label, Literal("Andreas Bagordo")))
-g.add((SD["person/editor_bagordo"], ECRM.P131_is_identified_by, SD["appellation/editor_bagordo"]))
 g.add((SD["person/editor_bagordo"], ECRM.P1_is_identified_by, SD["identifier/Q495907"]))
 g.add((SD["person/editor_bagordo"], ECRM.P1_is_identified_by, SD["identifier/editor_bagordo"]))
 g.add((SD["person/editor_bagordo"], ECRM.P2_has_type, SD["gender/male"]))
 g.add((SD["person/editor_bagordo"], OWL.sameAs, URIRef("http://www.wikidata.org/entity/Q495907")))
-
-g.add((SD["appellation/editor_bagordo"], RDF.type, ECRM.E41_Appellation))
-g.add((SD["appellation/editor_bagordo"], RDFS.label, Literal("Andreas Bagordo", lang="en")))
-g.add((SD["appellation/editor_bagordo"], ECRM.P131i_identifies, SD["person/editor_bagordo"]))
 
 g.add((SD["identifier/editor_bagordo"], RDF.type, ECRM.E42_Identifier))
 g.add((SD["identifier/editor_bagordo"], RDFS.label, Literal("editor_bagordo")))
@@ -282,20 +271,20 @@ with open(INPUT_FILE, newline='', encoding="utf-8") as f:
 
         g.add((frag_uri, RDF.type, ECRM.E90_Symbolic_Object))
         g.add((frag_uri, RDFS.label, Literal(f"Fragment {frag_num} Voigt", lang="en")))
+        g.add((frag_uri, ECRM.P165i_is_incorporated_in, expr_uri))
         g.add((frag_uri, LRMOO.R10_is_member_of, SD["work/sappho-work"]))
 
         g.add((expr_creation_uri, RDF.type, LRMOO.F28_Expression_Creation))
         g.add((expr_creation_uri, RDFS.label, Literal(f"Expression creation of Fragment {frag_num} Voigt", lang="en")))
         g.add((expr_creation_uri, ECRM.P14_carried_out_by, SD["person/editor_bagordo"]))
         g.add((expr_creation_uri, LRMOO.R17_created, expr_uri))
-        g.add((expr_creation_uri, LRMOO.R19_created_a_realisation_of, frag_uri))
 
         g.add((expr_uri, RDF.type, LRMOO.F2_Expression))
         g.add((expr_uri, RDFS.label, Literal(f"Expression of Fragment {frag_num} Voigt", lang="en")))
-        g.add((expr_uri, LRMOO.R3i_realises, frag_uri))
         g.add((expr_uri, LRMOO.R17i_was_created_by, expr_creation_uri))
         g.add((expr_uri, ECRM.P102_has_title, title_uri))
         g.add((expr_uri, ECRM.P2_has_type, SD["genre/lyrik"]))
+        g.add((expr_uri, ECRM.P165_incorporates, frag_uri))
         g.add((expr_uri, LRMOO.R4i_is_embodied_in, SD["manifestation/sappho_bagordo"]))
         g.add((expr_uri, OWL.sameAs, URIRef(qid_url)))
 

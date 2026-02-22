@@ -418,21 +418,18 @@
                 ]
                 "/>
 
-        <!-- Appellations: Actualization -> P149_is_identified_by -> E75 label -->
+        <!-- Label -->
         <xsl:sequence select="
-                distinct-values(
+            distinct-values(
                 for $a in $actsOnText
                 return
                     normalize-space(
-                    string((
-                    key('by-about',
-                    key('by-about', $a, $receptionEntities)/ecrm:P149_is_identified_by/@rdf:resource,
-                    $receptionEntities
-                    )/rdfs:label
-                    )[1])
+                        string(
+                            key('by-about', $a, $receptionEntities)/rdfs:label[1]
+                        )
                     )
-                )[. != '']
-                "/>
+            )[. != '']
+        "/>
     </xsl:function>
 
     <xsl:template name="render-label-or-link">

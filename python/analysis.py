@@ -518,7 +518,7 @@ for text_id, cats in elements_per_text.items():
         g.add((place_uri_local, ECRM.P67i_is_referred_to_by, act_uri))
         g.add((text_uri, INTRO.R18_showsActualization, act_uri))
 
-    # INT18_Reference: PERSON (+ optional INT_Character; + optional E41_Appellation auf beide Actualizations)
+# INT18_Reference: PERSON (+ optional INT_Character; + optional rdfs:label via appellation)
     for pinfo in cats["person"]:
         v = pinfo["label"]
         art = pinfo.get("art") or ""
@@ -526,6 +526,8 @@ for text_id, cats in elements_per_text.items():
 
         if not passes_filter("person", v):
             continue
+
+        label = appellation if appellation else v
 
         per_fallback = get_or_make_distinct("person", v)
         person_uri_local, used_id = get_entity_uri_with_vocab("person", v, per_fallback)
@@ -543,7 +545,7 @@ for text_id, cats in elements_per_text.items():
             link_exact_match(person_uri_local, voc)
 
         act_uri = add_actualization_common(
-            g, "person_ref", text_id, used_id, feat_uri, v, text_uri, text_title,
+            g, "person_ref", text_id, used_id, feat_uri, label, text_uri, text_title,
             refers_to_uri=person_uri_local
         )
         g.add((person_uri_local, ECRM.P67i_is_referred_to_by, act_uri))
@@ -556,30 +558,11 @@ for text_id, cats in elements_per_text.items():
             g.add((char_feat_uri, RDF.type, INTRO.INT_Character))
             g.add((char_feat_uri, RDFS.label, Literal(f"Character: {v}", lang="en")))
 
-            char_suffix = f"character_{used_id}"
             char_act_uri = add_actualization_common(
-                g, "character", text_id, char_suffix, char_feat_uri, v, text_uri, text_title,
+                g, "character", text_id, f"character_{used_id}", char_feat_uri, label, text_uri, text_title,
                 refers_to_uri=person_uri_local
             )
             g.add((text_uri, INTRO.R18_showsActualization, char_act_uri))
-
-        # @appellation -> E41_Appellation an die Aktualisierung(en) hängen:
-        # - immer an person_ref-Actualization
-        # - zusätzlich auch an character-Actualization (falls vorhanden)
-        if appellation:
-            app_id = f"appellation_{stable_id(f'{text_id}|{used_id}|{appellation}')}"
-            app_uri = uri(f"appellation/{app_id}")
-            g.add((app_uri, RDF.type, ECRM.E41_Appellation))
-            g.add((app_uri, RDFS.label, Literal(appellation, lang="de")))
-
-            # person_ref
-            g.add((act_uri, ECRM.P149_is_identified_by, app_uri))
-            g.add((app_uri, ECRM.P149i_identifies, act_uri))
-
-            # optional zusätzlich: character
-            if char_act_uri is not None:
-                g.add((char_act_uri, ECRM.P149_is_identified_by, app_uri))
-                g.add((app_uri, ECRM.P149i_identifies, char_act_uri))
 
 # INT21_TextPassage (aus <phrase> mit DF>=2)
 for phr, old_pid in list(distinct_phrase_to_id.items()):
