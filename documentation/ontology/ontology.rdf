@@ -31,7 +31,14 @@
       The works module models basic biographic information, see figure 3:
       https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/works_simple.png.
       The relations module models intertextual information, see figure 4:
-      https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/relations_simple.png.</dc:description>
+      https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/relations_simple.png. 
+      For alignments with the Bibliographic Ontology (BIBO), 
+      the FRBR-aligned Bibliographic Ontology (FaBiO), the Citation Typing Ontology (CiTO), 
+      Dublin Core (DC), the Document Components Ontology (DoCo), the DraCor Ontology, 
+      the Friends of a Friend (FOAF) Ontology, 
+      the Functional Requirements for Bibliographic Records object-oriented (FRBRoo) extension to the the CIDOC Conceptual Reference Model, 
+      the GOLEM Ontology for Narrative and Fiction, the Intertextuality Ontology, the Mining and Modeling Text (MiMoText) Ontology, 
+      the OntoPoetry/POSTDATA ontology (core and analysis modules), Schema.org, and the Ontologies of Under-Represented Writers and Books see https://github.com/laurauntner/sappho-digital/tree/main/documentation/alignments.</dc:description>
     <dc:relation>https://sappho-digital.com</dc:relation>
     <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version
       0.1</owl:versionInfo>
