@@ -731,6 +731,11 @@ intro:INT_Topic
     rdfs:label      "INT Topic"@en ;
     rdfs:subClassOf intro:INT9_SemanticFeature .
 
+intro:INT_Topos
+    a               owl:Class ;
+    rdfs:label      "INT Topos"@en ;
+    rdfs:subClassOf intro:INT9_SemanticFeature .
+
 intro:R12_hasReferredToEntity a owl:ObjectProperty ;
     rdfs:label "R12 has referred to entity"@en ;
     rdfs:subPropertyOf intro:R24_hasRelatedEntity ;

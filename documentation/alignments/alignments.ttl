@@ -211,6 +211,18 @@ doco:Section skos:narrowMatch intro:INT21_TextPassage .
 
 doco:Table skos:narrowMatch intro:INT21_TextPassage .
 
+doco:Part              skos:narrowMatch intro:INT_Topos .
+
+intertext_ab:Mediator  skos:narrowMatch intro:INT_Topos .
+
+bibo:Quote             skos:broadMatch  intro:INT_Topos .
+
+fabio:Quotation        skos:broadMatch  intro:INT_Topos .
+
+intertext_tx:TextSegment skos:narrowMatch intro:INT_Topos .
+
+postdata_core:TextUnit skos:narrowMatch intro:INT_Topos .
+
 doco:Title skos:closeMatch ecrm:E35_Title .
 
 fabio:DigitalItem skos:broadMatch ecrm:E73_Information_Object .

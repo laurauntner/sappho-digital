@@ -132,6 +132,8 @@
                                 <https://sappho-digital.com/actualization/plot/XXXX_XXXX>,
                                 <https://sappho-digital.com/actualization/topic/XXXX_XXXX>,
                                 <https://sappho-digital.com/actualization/topic/XXXX_XXXX>,
+                                <https://sappho-digital.com/actualization/topos/XXXX>,
+                                <https://sappho-digital.com/actualization/topos/XXXX>,
                                 <https://sappho-digital.com/actualization/work_ref/XXXX_XXXX>,
                                 <https://sappho-digital.com/textpassage/XXXX_XXXX>,
                                 <https://sappho-digital.com/textpassage/XXXX_XXXX>,
@@ -309,6 +311,59 @@
     rdfs:label "Text passage in XXXX"@en ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> ;
     intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/XXXX> .
+
+# Topoi
+
+<https://sappho-digital.com/feature/topos/XXXX> a intro:INT_Topos ;
+    rdfs:label "XXXX (topos)"@en ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/XXXX> ,
+                             <https://sappho-digital.com/identifier/XXXX> ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/topos/XXXX_XXXX>,
+                                    <https://sappho-digital.com/actualization/topos/XXXX_XXXX> ;
+    intro:R22_providesSimilarityForRelation <https://sappho-digital.com/relation/XXXX_XXXX> ;
+    owl:sameAs <http://www.wikidata.org/entity/XXXX> .
+
+<https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P1i_identifies <https://sappho-digital.com/feature/topos/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/XXXX> a ecrm:E42_Identifier ;
+    rdfs:label "XXXX"@en ;
+    ecrm:P1i_identifies <https://sappho-digital.com/feature/motif/XXXX> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
+<https://sappho-digital.com/actualization/topos/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/topos/XXXX> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/XXXX> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/topos/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/topos/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/topos/XXXX> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/XXXX> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/XXXX_XXXX> .
+
+<https://sappho-digital.com/feature/interpretation/XXXX_XXXX> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> .
+
+<https://sappho-digital.com/actualization/interpretation/XXXX_XXXX> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation of XXXX in XXXX"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/XXXX_XXXX> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/topos/XXXX_XXXX> .
 
 # Characters
 

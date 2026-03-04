@@ -1778,6 +1778,11 @@
     <rdfs:label xml:lang="en">INT Topic</rdfs:label>
   </owl:Class>
 
+  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Topos">
+		<rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+		<rdfs:label xml:lang="en">INT Topos</rdfs:label>
+	</owl:Class>
+
   <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R12_hasReferredToEntity">
     <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R24_hasRelatedEntity"/>
     <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R12i_isReferredToEntity"/>

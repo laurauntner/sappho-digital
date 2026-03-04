@@ -510,6 +510,24 @@
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#typeOfIntertextuality">
     <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#R19i_isTypeOf"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/doco/Part">
+      <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Topos"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://intertextuality.org/abstract#Mediator">
+      <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Topos"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/ontology/bibo/Quote">
+      <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Topos"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/spar/fabio/Quotation">
+      <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Topos"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://intertextuality.org/extensions/text#TextSegment">
+      <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Topos"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#TextUnit">
+      <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Topos"/>
+  </rdf:Description>
 
   <!-- ######################################################### -->
   <!-- equivalentClass -->
