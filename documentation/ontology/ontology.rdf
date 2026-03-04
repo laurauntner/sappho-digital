@@ -2131,7 +2131,6 @@
     <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
     <rdfs:range rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
     <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
-    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P67_refers_to"/>
     <owl:propertyChainAxiom rdf:parseType="Collection">
       <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R18_showsActualization"/>
       <rdf:Description rdf:about="http://erlangen-crm.org/current/P67_refers_to"/>
@@ -2145,7 +2144,6 @@
     <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
     <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
-    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P67i_is_referred_to_by"/>
     <owl:inverseOf rdf:resource="https://w3id.org/sappho-digital/ontology/expr_references"/>
   </owl:ObjectProperty>
 
@@ -2154,8 +2152,6 @@
     <rdfs:comment xml:lang="en">A F2_Expression possibly cites an INT21_TextPassage.</rdfs:comment>
     <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
-    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P130_shows_features_of"/>
-    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P148_has_component"/>
     <owl:propertyChainAxiom rdf:parseType="Collection">
       <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R30_hasTextPassage"/>
     </owl:propertyChainAxiom>
@@ -2166,9 +2162,6 @@
     <rdfs:comment xml:lang="en">An INT21_TextPassage is possibly cited by a F2_Expression.</rdfs:comment>
     <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
     <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
-    <rdfs:subPropertyOf
-      rdf:resource="http://erlangen-crm.org/current/P130i_features_are_also_found_on"/>
-    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P148i_is_component_of"/>
     <owl:inverseOf rdf:resource="https://w3id.org/sappho-digital/ontology/tp_possibly_cites"/>
   </owl:ObjectProperty>
 
@@ -2177,8 +2170,6 @@
     <rdfs:comment xml:lang="en">A F2_Expression possibly cites another F2_Expression.</rdfs:comment>
     <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
-    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P130_shows_features_of"/>
-    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P148_has_component"/>
     <owl:propertyChainAxiom rdf:parseType="Collection">
       <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R30_hasTextPassage"/>
       <rdf:Description>
@@ -2196,9 +2187,6 @@
     <rdfs:comment xml:lang="en">A F2_Expression is possibly cited by another F2_Expression.</rdfs:comment>
     <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
     <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
-    <rdfs:subPropertyOf
-      rdf:resource="http://erlangen-crm.org/current/P130i_features_are_also_found_on"/>
-    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P148i_is_component_of"/>
     <owl:inverseOf rdf:resource="https://w3id.org/sappho-digital/ontology/expr_possibly_cites"/>
   </owl:ObjectProperty>
 

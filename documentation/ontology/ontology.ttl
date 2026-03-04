@@ -984,7 +984,6 @@ sappho_prop:expr_references a owl:ObjectProperty ;
     rdfs:comment "A reference from an F2_Expression to a E21_Person, a E53_Place or a F2_Expression."@en ;
     rdfs:domain lrmoo:F2_Expression ;
     rdfs:range crm:E21_Person, crm:E53_Place, lrmoo:F2_Expression ;
-    rdfs:subPropertyOf crm:P67_refers_to ;
     owl:propertyChainAxiom ( intro:R18_showsActualization crm:P67_refers_to ) .
 
 sappho_prop:referenced_by_expr a owl:ObjectProperty ;
@@ -992,7 +991,6 @@ sappho_prop:referenced_by_expr a owl:ObjectProperty ;
     rdfs:comment "A E21_Person, E53_Place or F2_Expression is referenced by a F2_Expression."@en ;
     rdfs:domain crm:E21_Person, crm:E53_Place, lrmoo:F2_Expression ;
     rdfs:range lrmoo:F2_Expression ;
-    rdfs:subPropertyOf crm:P67i_is_referred_to_by ;
     owl:inverseOf sappho_prop:expr_references .
 
 sappho_prop:tp_possibly_cites a owl:ObjectProperty ;
@@ -1000,7 +998,6 @@ sappho_prop:tp_possibly_cites a owl:ObjectProperty ;
     rdfs:comment "A F2_Expression possibly cites an INT21_TextPassage."@en ;
     rdfs:domain lrmoo:F2_Expression ;
     rdfs:range intro:INT21_TextPassage ;
-    rdfs:subPropertyOf crm:P130_shows_features_of, crm:P148_has_component ;
     owl:propertyChainAxiom ( intro:R30_hasTextPassage ) .
 
 sappho_prop:tp_possibly_cited_by a owl:ObjectProperty ;
@@ -1008,7 +1005,6 @@ sappho_prop:tp_possibly_cited_by a owl:ObjectProperty ;
     rdfs:comment "An INT21_TextPassage is possibly cited by a F2_Expression."@en ;
     rdfs:domain intro:INT21_TextPassage ;
     rdfs:range lrmoo:F2_Expression ;
-    rdfs:subPropertyOf crm:P130i_features_are_also_found_on, crm:P148i_is_component_of ;
     owl:inverseOf sappho_prop:tp_possibly_cites .
 
 sappho_prop:expr_possibly_cites a owl:ObjectProperty ;
@@ -1016,7 +1012,6 @@ sappho_prop:expr_possibly_cites a owl:ObjectProperty ;
     rdfs:comment "A F2_Expression possibly cites another F2_Expression."@en ;
     rdfs:domain lrmoo:F2_Expression ;
     rdfs:range lrmoo:F2_Expression ;
-    rdfs:subPropertyOf crm:P130_shows_features_of, crm:P148_has_component ;
     owl:propertyChainAxiom (
         intro:R30_hasTextPassage
         [ owl:inverseOf intro:R24_hasRelatedEntity ]
@@ -1029,5 +1024,4 @@ sappho_prop:expr_possibly_cited_by a owl:ObjectProperty ;
     rdfs:comment "A F2_Expression is possibly cited by another F2_Expression."@en ;
     rdfs:domain lrmoo:F2_Expression ;
     rdfs:range lrmoo:F2_Expression ;
-    rdfs:subPropertyOf crm:P130i_features_are_also_found_on, crm:P148i_is_component_of ;
     owl:inverseOf sappho_prop:expr_possibly_cites .
