@@ -92,7 +92,7 @@ CAT_TO_VOC_PREFIX = {
     "werk":   "https://w3id.org/sappho-digital/vocab/work_",
     "ort":    "https://w3id.org/sappho-digital/vocab/place_",
     "person": "https://w3id.org/sappho-digital /vocab/person_",
-    "phrase": "https://w3id.org/sappho-digital/vocab/phrase_",
+    "topos": "https://w3id.org/sappho-digital/vocab/topos_",
     "werk":   "https://w3id.org/sappho-digital/vocab/work_",
 }
 
@@ -103,7 +103,7 @@ CAT_TO_LOCAL_PATH = {
     "thema":  "feature/topic",
     "ort":    "place",
     "person": "person",
-    "phrase": "textpassage",
+    "topos": "feature/topos",
 }
 
 # Label-Index je Kategorie + globaler Fallback-Index
@@ -198,6 +198,7 @@ TYPE_LABEL_DE = {
     "motif": "motif",
     "plot": "plot",
     "topic": "topic",
+    "topos": "topos",
     "work_ref": "work",
     "place_ref": "place",
     "person_ref": "person",
@@ -251,6 +252,7 @@ def add_actualization_common(
     g.add((interp_act_uri, RDFS.label, Literal(f"Interpretation of {feature_label} ({typ}) in {text_title}", lang="de")))
     g.add((interp_act_uri, INTRO.R17_actualizesFeature, interp_feat_uri))
     g.add((interp_act_uri, INTRO.R21_identifies, act_uri))
+    g.add((act_uri, INTRO.R21i_isIdentifiedBy, interp_act_uri))
 
     return act_uri
 
@@ -259,9 +261,9 @@ def add_actualization_common(
 elements_per_text = {}
 distinct_value_to_id = {k: {} for k in ["motiv","stoff","thema","werk","ort","person"]}
 
-# Phrasen
-distinct_phrase_to_id: Dict[str, str] = {}
-phrase_to_texts: Dict[str, set] = {}
+# Topoi
+distinct_topos_to_id: Dict[str, str] = {}
+topos_to_texts: Dict[str, set] = {}
 
 # Dokument-Frequenzen (Sets pro Wert)
 doc_occurs = {
@@ -269,7 +271,7 @@ doc_occurs = {
     "thema": defaultdict(set),
     "ort": defaultdict(set),
     "person": defaultdict(set),
-    "phrase": defaultdict(set),
+    "topos": defaultdict(set),
     # "stoff" und "werk" sind explizit ausgenommen
 }
 
@@ -303,7 +305,7 @@ for xml_file in sorted(XML_DIR.glob("*.xml")):
         "motiv": [],
         "stoff": [],
         "thema": [],
-        "phrase": [],
+        "topos": [],
         "werk": [],    
         "ort": [],
         "person": [],  
@@ -337,11 +339,11 @@ for xml_file in sorted(XML_DIR.glob("*.xml")):
     for v in {p["label"] for p in cats["person"]}:
         doc_occurs["person"][v].add(text_id)
 
-    for phr in set(cats["phrase"]):
-        phrase_to_texts.setdefault(phr, set()).add(text_id)
-        doc_occurs["phrase"][phr].add(text_id)
-        if phr not in distinct_phrase_to_id:
-            distinct_phrase_to_id[phr] = f"textpassage_{stable_id(phr)}"
+    for phr in set(cats["topos"]):
+        topos_to_texts.setdefault(phr, set()).add(text_id)
+        doc_occurs["topos"][phr].add(text_id)
+        if phr not in distinct_topos_to_id:
+            distinct_topos_to_id[phr] = f"topos_{stable_id(phr)}"
 
     elements_per_text[text_id] = cats
 
@@ -359,7 +361,7 @@ allowed_values = {
     "thema":  {v for v, s in doc_occurs["thema"].items()  if len(s) >= 2},
     "ort":    {v for v, s in doc_occurs["ort"].items()    if len(s) >= 2},
     "person": {v for v, s in doc_occurs["person"].items() if len(s) >= 2},
-    "phrase": {v for v, s in doc_occurs["phrase"].items() if len(s) >= 2},
+    "topos": {v for v, s in doc_occurs["topos"].items() if len(s) >= 2},
 }
 
 def passes_filter(cat: str, val: str) -> bool:
@@ -444,53 +446,63 @@ for text_id, cats in elements_per_text.items():
 
     # INT18_Reference: WORK (+ optional INT21_TextPassage wenn @art enthält "passage")
     for w in cats["werk"]:
-        v = w["label"]
-        art = w.get("art") or ""
+            v = w["label"]
+            art = w.get("art") or ""
 
-        v_clean = clean_uri_component(v)
+            v_clean = clean_uri_component(v)
 
-        target = (text_index.get(v)
-                or text_index.get(v.replace("bibl_", ""))
-                or text_index.get(f"bibl_{v}"))
-        ref_target_uri = target["uri"] if target else None
-        ref_label = literal_text(target["label"]) if (target and target.get("label")) else v
+            target = (text_index.get(v)
+                    or text_index.get(v.replace("bibl_", ""))
+                    or text_index.get(f"bibl_{v}"))
+            ref_target_uri = target["uri"] if target else None
+            ref_label = literal_text(target["label"]) if (target and target.get("label")) else v
 
-        if ref_label.strip().lower() == "sappho-work":
-            ref_label = "Sappho’s Work"
+            if ref_label.strip().lower() == "sappho-work":
+                ref_label = "Sappho's Work"
 
-        voc = find_vocab("werk", ref_label)
-        if voc:
-            feat_id = last_token(str(voc))
-        else:
-            feat_id = f"{text_id}_{v_clean}"
+            voc = find_vocab("werk", ref_label)
+            if voc:
+                feat_id = last_token(str(voc))
+            else:
+                feat_id = with_prefix("work_ref", ref_label)
 
-        feat_uri = uri(f"feature/work_ref/{feat_id}")
-        g.add((feat_uri, RDF.type, INTRO.INT18_Reference))
-        g.add((feat_uri, RDFS.label, Literal(f"Reference to {ref_label} (work)", lang="en")))
+            feat_uri = uri(f"feature/work_ref/{feat_id}")
+            g.add((feat_uri, RDF.type, INTRO.INT18_Reference))
+            g.add((feat_uri, RDFS.label, Literal(f"Reference to {ref_label} (work)", lang="en")))
+            add_identifier(g, feat_id, feat_uri)
 
-        if ref_target_uri is not None:
-            voc_target = voc or find_vocab("werk", ref_label)
-            if voc_target:
-                link_exact_match(ref_target_uri, voc_target)
+            if ref_target_uri is not None:
+                voc_target = voc or find_vocab("werk", ref_label)
+                if voc_target:
+                    link_exact_match(ref_target_uri, voc_target)
 
-        act_uri = add_actualization_common(
-            g, "work_ref", text_id, feat_id, feat_uri, ref_label, text_uri, text_title,
-            refers_to_uri=ref_target_uri
-        )
-        g.add((text_uri, INTRO.R18_showsActualization, act_uri))
+            if has_art_token(art, "passage"):
+                tp_id = f"textpassage_{stable_id(f'{text_id}|{ref_label}|{v}')}"
+                tp_uri = uri(f"textpassage/{tp_id}")
+                g.add((tp_uri, RDF.type, INTRO.INT21_TextPassage))
+                g.add((tp_uri, RDFS.label, Literal(f"Passage from {ref_label}", lang="de")))
+                g.add((tp_uri, INTRO.R30i_isTextPassageOf, text_uri))
+                g.add((text_uri, INTRO.R30_hasTextPassage, tp_uri))
+                if ref_target_uri is not None:
+                    g.add((tp_uri, INTRO.R30i_isTextPassageOf, ref_target_uri))
+                    g.add((ref_target_uri, INTRO.R30_hasTextPassage, tp_uri))
+            else:
+                tp_uri = None
 
-        if ref_target_uri is not None:
-            g.add((ref_target_uri, ECRM.P67i_is_referred_to_by, act_uri))
-            for p, o in g_src.predicate_objects(ref_target_uri):
-                g.add((ref_target_uri, p, o))
+            act_uri = add_actualization_common(
+                g, "work_ref", text_id, feat_id, feat_uri, ref_label, text_uri, text_title,
+                refers_to_uri=ref_target_uri
+            )
+            g.add((text_uri, INTRO.R18_showsActualization, act_uri))
 
-        if has_art_token(art, "passage"):
-            tp_id = f"textpassage_{stable_id(f'{text_id}|{ref_label}|{v}')}"
-            tp_uri = uri(f"textpassage/{tp_id}")
-            g.add((tp_uri, RDF.type, INTRO.INT21_TextPassage))
-            g.add((tp_uri, RDFS.label, Literal(f"Textpassage: {ref_label}", lang="de")))
-            g.add((tp_uri, INTRO.R30i_isTextPassageOf, text_uri))
-            g.add((text_uri, INTRO.R30_hasTextPassage, tp_uri))
+            if ref_target_uri is not None:
+                g.add((ref_target_uri, ECRM.P67i_is_referred_to_by, act_uri))
+                for p, o in g_src.predicate_objects(ref_target_uri):
+                    g.add((ref_target_uri, p, o))
+
+            if tp_uri is not None:
+                g.add((tp_uri, INTRO.R18_showsActualization, act_uri))
+                g.add((act_uri, INTRO.R18i_actualizationFoundOn, tp_uri))
 
     # INT18_Reference: PLACE
     for v in cats["ort"]:
@@ -564,34 +576,26 @@ for text_id, cats in elements_per_text.items():
             )
             g.add((text_uri, INTRO.R18_showsActualization, char_act_uri))
 
-# INT21_TextPassage (aus <phrase> mit DF>=2)
-for phr, old_pid in list(distinct_phrase_to_id.items()):
-    docs = phrase_to_texts.get(phr, set())
-    if len(docs) < 2:
-        continue
-
-    voc = find_vocab("phrase", phr)
-    if voc:
-        pid = last_token(str(voc))
-        tp_uri = local_uri_from_vocab("phrase", voc)
-    else:
-        pid = old_pid
-        tp_uri = uri(f"textpassage/{pid}")
-
-    g.add((tp_uri, RDF.type, INTRO.INT21_TextPassage))
-    g.add((tp_uri, RDFS.label, Literal(f"Textpassage: {phr}", lang="de")))
-    if voc:
-        link_exact_match(tp_uri, voc)
-
-    for tid in sorted(docs):
-        txt = text_index.get(tid) or text_index.get(tid.replace("bibl_", "")) or text_index.get(f"bibl_{tid}")
-        if not txt and "sappho" in tid.lower():
-            txt = text_index.get(tid) or text_index.get(f"bibl_{tid}")
-        if not txt:
+# INT_Topos (aus <topos> mit DF>=2)
+    for phr in cats["topos"]:
+        if not passes_filter("topos", phr):
             continue
-        text_uri = txt["uri"]
-        g.add((tp_uri, INTRO.R30i_isTextPassageOf, text_uri))
-        g.add((text_uri, INTRO.R30_hasTextPassage, tp_uri))
+
+        topos_id = distinct_topos_to_id.get(phr) or f"topos_{stable_id(phr)}"
+        feat_uri = uri(f"feature/topos/{topos_id}")
+
+        g.add((feat_uri, RDF.type, INTRO.INT_Topos))
+        g.add((feat_uri, RDFS.label, Literal(f"{phr} (topos)", lang="de")))
+        add_identifier(g, topos_id, feat_uri)
+
+        voc = find_vocab("topos", phr)
+        if voc:
+            link_exact_match(feat_uri, voc)
+
+        act_uri = add_actualization_common(
+            g, "topos", text_id, topos_id, feat_uri, phr, text_uri, text_title
+        )
+        g.add((text_uri, INTRO.R18_showsActualization, act_uri))
 
 # Schreiben
 

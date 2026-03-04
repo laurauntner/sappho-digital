@@ -24,13 +24,13 @@
       Ontology; beta202506) to model basic biographical and bibliographical as well as intertextual
       information. The ontology has three modules that are connected with each other, see figure
       1:
-      https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/meta.png.
+      https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/meta.png.
       The authors module models basic bibliographic information, see figure 2:
-      https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/authors_simple.png.
+      https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/authors_simple.png.
       The works module models basic biographic information, see figure 3:
-      https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/works_simple.png.
+      https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/works_simple.png.
       The relations module models intertextual information, see figure 4:
-      https://raw.githubusercontent.com/laurauntner/wikidata-to-cidoc-crm/refs/heads/main/docs/relations_simple.png. 
+      https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/relations_simple.png. 
       For alignments with the Bibliographic Ontology (BIBO), 
       the FRBR-aligned Bibliographic Ontology (FaBiO), the Citation Typing Ontology (CiTO), 
       Dublin Core (DC), the Document Components Ontology (DoCo), the DraCor Ontology, 

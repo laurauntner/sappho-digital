@@ -420,16 +420,16 @@
 
         <!-- Label -->
         <xsl:sequence select="
-            distinct-values(
+                distinct-values(
                 for $a in $actsOnText
                 return
                     normalize-space(
-                        string(
-                            key('by-about', $a, $receptionEntities)/rdfs:label[1]
-                        )
+                    string(
+                    key('by-about', $a, $receptionEntities)/rdfs:label[1]
                     )
-            )[. != '']
-        "/>
+                    )
+                )[. != '']
+                "/>
     </xsl:function>
 
     <xsl:template name="render-label-or-link">
@@ -483,8 +483,8 @@
                 data($sim[matches(., '/feature/character/')]),
                 data($sim[matches(., '/feature/place_ref/')]),
                 data($sim[matches(., '/feature/work_ref/') or matches(., '/actualization/work_ref/')]),
-                data($phr[matches(., '/textpassage/phrase_')]),
-                data($phr[matches(., '/textpassage/') and not(matches(., '/textpassage/phrase_'))]),
+                data($sim[matches(., '/feature/topos/')]),
+                data($phr[matches(., '/textpassage/')]),
                 data($sim[matches(., '/feature/motif/')]),
                 data($sim[matches(., '/feature/topic/')]),
                 data($sim[matches(., '/feature/plot/')])
@@ -499,7 +499,7 @@
         <xsl:sequence select="count(u:common-uris($rel))"/>
     </xsl:function>
 
-    <!-- get items of one kind for rendering (motifs/topics/plots/persons/places/works/phrases) -->
+    <!-- get items of one kind for rendering (motifs/topics/plots/persons/places/works/topoi) -->
     <xsl:function name="u:commons" as="xs:string*">
         <xsl:param name="rel" as="element(intro:INT31_IntertextualRelation)"/>
         <xsl:param name="kind" as="xs:string"/>
@@ -511,6 +511,9 @@
             </xsl:when>
             <xsl:when test="$kind = 'topics'">
                 <xsl:sequence select="distinct-values(data($sim[matches(., '/feature/topic/')]))"/>
+            </xsl:when>
+            <xsl:when test="$kind = 'topoi'">
+                <xsl:sequence select="distinct-values(data($sim[matches(., '/feature/topos/')]))"/>
             </xsl:when>
             <xsl:when test="$kind = 'plots'">
                 <xsl:sequence select="distinct-values(data($sim[matches(., '/feature/plot/')]))"/>
@@ -548,14 +551,9 @@
                         distinct-values(
                         data($phr[
                         matches(., '/textpassage/')
-                        and not(matches(., '/textpassage/phrase_'))
                         ])
                         )
                         "/>
-            </xsl:when>
-            <xsl:when test="$kind = 'phrases'">
-                <xsl:sequence
-                    select="distinct-values(data($phr[matches(., '/textpassage/phrase_')]))"/>
             </xsl:when>
             <xsl:otherwise/>
         </xsl:choose>
@@ -832,9 +830,9 @@
 
                     <xsl:call-template name="emit-kind-list">
                         <xsl:with-param name="rel" select="$rel"/>
-                        <xsl:with-param name="kind" select="'phrases'"/>
-                        <xsl:with-param name="sg" select="'Gemeinsame Phrase:'"/>
-                        <xsl:with-param name="pl" select="'Gemeinsame Phrasen:'"/>
+                        <xsl:with-param name="kind" select="'topoi'"/>
+                        <xsl:with-param name="sg" select="'Gemeinsamer Topos:'"/>
+                        <xsl:with-param name="pl" select="'Gemeinsame Topoi:'"/>
                     </xsl:call-template>
                 </details>
             </li>
@@ -956,26 +954,20 @@
                     <xsl:variable name="itemsWithCounts">
                         <xsl:for-each select="$items">
                             <xsl:variable name="this" select="."/>
-                            <xsl:variable name="occRels" select="
-                                    if ($kind = 'phrases')
-                                    then
-                                        $rels[intro:R24_hasRelatedEntity/@rdf:resource = $this]
-                                    else
-                                        $rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
+                            <xsl:variable name="occRels"
+                                select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
                             <xsl:variable name="occTexts"
                                 select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
                             <item name="{u:label($this)}" display="{u:label($this)}"
                                 n="{count($occTexts)}"/>
                         </xsl:for-each>
                     </xsl:variable>
-
                     <xsl:variable name="topItems" as="element(item)*">
                         <xsl:perform-sort select="$itemsWithCounts/item[@n &gt; 0]">
                             <xsl:sort select="number(@n)" data-type="number" order="descending"/>
                             <xsl:sort select="lower-case(@display)"/>
                         </xsl:perform-sort>
                     </xsl:variable>
-
                     <xsl:sequence select="$topItems[position() &lt;= $top]"/>
                 </xsl:otherwise>
             </xsl:choose>
@@ -1407,12 +1399,16 @@
                 $receptionEntities//intro:INT21_TextPassage[@rdf:about[matches(., '/textpassage/textpassage_')]]/@rdf:about
                 )
                 "/>
-        <xsl:variable name="u_phrases"
-            select="distinct-values($rels/intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/textpassage/phrase_')])"/>
         <xsl:variable name="u_motifs"
             select="distinct-values($rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/motif/')])"/>
         <xsl:variable name="u_topics"
             select="distinct-values($rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/topic/')])"/>
+        <xsl:variable name="u_topoi" as="xs:string*" select="
+                distinct-values(
+                $receptionEntities//intro:INT2_ActualizationOfFeature
+                /intro:R17_actualizesFeature/@rdf:resource[matches(., '/feature/topos/')]
+                )
+                "/>
         <xsl:variable name="u_plots"
             select="distinct-values($rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/plot/')])"/>
 
@@ -1971,12 +1967,12 @@
             </html>
         </xsl:result-document>
 
-        <!-- text passages -->
-        <xsl:result-document href="../html/text-passages.html">
+        <!-- topoi -->
+        <xsl:result-document href="../html/topoi.html">
             <html lang="de">
                 <head>
                     <xsl:call-template name="html_head">
-                        <xsl:with-param name="html_title" select="'Phrasen'"/>
+                        <xsl:with-param name="html_title" select="'Rhetorische Topoi'"/>
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
@@ -1987,22 +1983,20 @@
                         <div class="container-fluid">
                             <div class="card">
                                 <div class="card-header">
-                                    <h1>Phrasen</h1>
-                                    <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vocab.html">Vokabular</a>. Mehr Informationen
-                                        zur exemplarischen Analyse sind <a href="analyse.html"
-                                            >hier</a> zu finden.</p>
+                                    <h1>Rhetorische Topoi</h1>
+                                    <p class="align-left">Mehr Informationen zur exemplarischen
+                                        Analyse sind <a href="analyse.html">hier</a> zu finden.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
                                         <div class="wikidata-left">
                                             <ul class="skos-tree">
-                                                <xsl:for-each select="$u_phrases">
+                                                <xsl:for-each select="$u_topoi">
                                                   <xsl:sort select="lower-case(u:label(.))"/>
                                                   <li>
                                                   <xsl:variable name="this" select="."/>
                                                   <xsl:variable name="occRels"
-                                                  select="$rels[intro:R24_hasRelatedEntity/@rdf:resource = $this]"/>
+                                                  select="$rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $this]"/>
                                                   <xsl:variable name="occTexts"
                                                   select="distinct-values(data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource))"/>
                                                   <xsl:variable name="n" select="count($occTexts)"/>
@@ -2050,11 +2044,10 @@
                                         </div>
                                         <xsl:call-template name="emit-right-barchart">
                                             <xsl:with-param name="rels" select="$rels"/>
-                                            <xsl:with-param name="items" select="$u_phrases"/>
-                                            <xsl:with-param name="kind" select="'phrases'"/>
-                                            <xsl:with-param name="chart-id" select="'chart-phrases'"/>
-                                            <xsl:with-param name="chart-title"
-                                                select="'Top Phrasen'"/>
+                                            <xsl:with-param name="items" select="$u_topoi"/>
+                                            <xsl:with-param name="kind" select="'topoi'"/>
+                                            <xsl:with-param name="chart-id" select="'chart-topoi'"/>
+                                            <xsl:with-param name="chart-title" select="'Top Topoi'"/>
                                             <xsl:with-param name="top" select="20"/>
                                         </xsl:call-template>
                                     </div>

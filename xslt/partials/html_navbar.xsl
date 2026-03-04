@@ -953,7 +953,7 @@
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"
-                                                  href="text-passages.html">Phrasen</a>
+                                                  href="topoi.html">Rhetorische Topoi</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"

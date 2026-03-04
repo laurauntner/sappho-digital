@@ -240,7 +240,6 @@
 	<skos:notation>motif_2f658ec3c5ec3ae4</skos:notation>
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/motifs"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_8d6c4ae5261c1b7f"/>
-	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_97e73b26b0dc22b0"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_2b1f28169974867c"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_de1c36b3db3ce34c"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_8e292f9623cb3869"/>
@@ -1019,6 +1018,9 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_b793a3807d130de0"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_8403b22eecf9a7e8"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_dd90800ee54e2216"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_9gjw6ed64q936259"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_1d09led62af39159"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_6ec13g678102l4q7"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q17892"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Sappho"/>
 </rdf:Description>
@@ -1318,6 +1320,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_edd73d43dbe4b946"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_fe179d791732151d"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_1e6e628ea0192e31"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_0b99wedh4a136n57"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q316"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Love"/>
 </rdf:Description>
@@ -1611,15 +1614,7 @@
 </rdf:Description>
 
 <rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/motif_97e73b26b0dc22b0">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
-	<skos:prefLabel xml:lang="de">Vergöttlichung</skos:prefLabel>
-	<skos:notation>motif_97e73b26b0dc22b0</skos:notation>
-	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/motif_2f658ec3c5ec3ae4"/>
-	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_afe138550cd16d0b"/>
-	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_16fb1687f7449a95"/>
-	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q580995"/>
-	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Apotheosis"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_474qcv6j03aq7nd0"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/motif_2b1f28169974867c">
@@ -1716,7 +1711,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_e9b8b1919af5758a"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_664342af9e58739b"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_05e200db9312b803"/>
-	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_30ec8b515802033f"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_0b99wedh4a136n57"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q8445"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/ontology/Marriage"/>
 </rdf:Description>
@@ -2336,6 +2331,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_edd73d43dbe4b946"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_fe179d791732151d"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_1e6e628ea0192e31"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_0b99wedh4a136n57"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q775842"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Desire"/>
 </rdf:Description>
@@ -2386,9 +2382,9 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_edd73d43dbe4b946"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_fe179d791732151d"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_1e6e628ea0192e31"/>
-	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_30ec8b515802033f"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_304a5e562a17af49"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_43b59f052f3dc73e"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_0b99wedh4a136n57"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q775842"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Desire"/>
 </rdf:Description>
@@ -2435,8 +2431,8 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_664342af9e58739b"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_edd73d43dbe4b946"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_1e6e628ea0192e31"/>
-	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_30ec8b515802033f"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_43b59f052f3dc73e"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_0b99wedh4a136n57"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q316"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Love"/>
 </rdf:Description>
@@ -2734,6 +2730,8 @@
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_0b092ed64a936159"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_b2d8b14d68b73dd5"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_43b59f052f3dc73e"/>
+	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_3146c4f80jad1ddx"/>
+	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_418b146d0caa7dnm"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_791dc243a6ba1593"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_736eb7ef6202472f"/>
 </rdf:Description>
@@ -2746,6 +2744,8 @@
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/plot_02612f6f060ef11d"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_dedcc9b1e7fb8e79"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_5087850a55fd0874"/>
+	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_9gjw6ed64q936259"/>
+	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_1d09led62af39159"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_830dcfef58019d56"/>
 </rdf:Description>
 
@@ -2804,13 +2804,13 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_c1c5790bb38d4fbb"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_5047cf2d5e1607fa"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_8d6c4ae5261c1b7f"/>
-	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_97e73b26b0dc22b0"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_16fb1687f7449a95"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_669b106539453871"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_6ec13f66820264d7"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_42557e8d70c24751"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/place_938d82612b2cbf3a"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_011312b82eb4fc98"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_474qcv6j03aq7nd0"/>
 	<skos:closeMatch rdf:resource="http://www.wikidata.org/entity/Q580995"/>
 </rdf:Description>
 
@@ -2825,6 +2825,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_42557e8d70c24751"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/place_be670e476be162e1"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/place_ac07f1e878d38c8d"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_474qcv6j03aq7nd0"/>
 	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q12767209"/>
 	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q1379405"/>
 </rdf:Description>
@@ -2918,7 +2919,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_e9b8b1919af5758a"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_664342af9e58739b"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_05e200db9312b803"/>
-	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_30ec8b515802033f"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_0b99wedh4a136n57"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q8445"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/ontology/Marriage"/>
 </rdf:Description>
@@ -2948,7 +2949,7 @@
 	<skos:notation>plot_0b092ed64a936159</skos:notation>
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/plot_a3935710c883087b"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_cc6bf7467ad0c7cf"/>
-	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_30ec8b515802033f"/>
+	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_0b99wedh4a136n57"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_6965e0a196d0b97e"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_791dc243a6ba1593"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_736eb7ef6202472f"/>
@@ -3137,7 +3138,6 @@
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/topic_f6d80c8d012ca95d"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_0eabdfe13c1ff095"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_8d6c4ae5261c1b7f"/>
-	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_97e73b26b0dc22b0"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_2b1f28169974867c"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_8e292f9623cb3869"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/place_1adb2da7993ecc95"/>
@@ -3595,6 +3595,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_e9b8b1919af5758a"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_281b95ce63718bed"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_bf1a16fc1e6ba956"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_914fc268bcaq7dlc"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q3196"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Fire"/>
 </rdf:Description>
@@ -4030,6 +4031,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_6ec13f66820264d7"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_42557e8d70c24751"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/place_938d82612b2cbf3a"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_474qcv6j03aq7nd0"/>
 	<skos:closeMatch rdf:resource="http://www.wikidata.org/entity/Q580995"/>
 </rdf:Description>
 
@@ -4354,6 +4356,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_d57e3bd57313bbdd"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_b0bf073234a3855a"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/place_938d82612b2cbf3a"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_474qcv6j03aq7nd0"/>
 	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q580995"/>
 	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q17892"/>
 </rdf:Description>
@@ -4490,6 +4493,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_193f7fb77b90540a"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_25f446d346d5ae39"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/place_040eb47ff2612816"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_6ec13g678102l4q7"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q163920"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Adonis"/>
 </rdf:Description>
@@ -4509,6 +4513,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_f42fab276b6fdb13"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/place_9bd33c7fdd67c764"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/place_7a4fb8e10d66c95f"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_1d09led62af39159"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q213484"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Anacreon"/>
 </rdf:Description>
@@ -4711,6 +4716,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_a8693158074cfc94"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_9865138458182890"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/place_a47b52347c0cc636"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_9gjw6ed64q936259"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q212872"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Alcaeus"/>
 </rdf:Description>
@@ -4986,6 +4992,7 @@
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_168fc491c40ff2fd"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_ebb7046704a8c30c"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_1bd6cf31c44d00e5"/>
+	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_6ec13g678102l4q7"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_91fbce010840c414"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_791dc243a6ba1593"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_24f6269abdf1c989"/>
@@ -5469,6 +5476,7 @@
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_547b51889f7bce04"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_64a381d1facbb9aa"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_05e200db9312b803"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_0b99wedh4a136n57"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q506770"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Hymen_(god)"/>
 </rdf:Description>
@@ -5669,15 +5677,10 @@
 	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
 	<skos:prefLabel xml:lang="de">Sappho-Stoff mit Fokus auf die Sappho-Kerkylas-Ehe</skos:prefLabel>
 	<skos:notation>plot_30ec8b515802033f</skos:notation>
-	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/plot_0b092ed64a936159"/>
-	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_71f3b15b4a29d968"/>
-	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_d0d0d796a787f4a8"/>
-	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_a10417e468b798b0"/>
-	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_547b51889f7bce04"/>
+	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/plot_0b99wedh4a136n57"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_b44d4c1bda5009f2"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_d2167a313c41ceaa"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_0a6119efed4bdf7d"/>
-	<skos:broadMatch rdf:resource="http://www.wikidata.org/entity/Q8445"/>
 	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q17892"/>
 	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q85870889"/>
 </rdf:Description>
@@ -5780,6 +5783,7 @@
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/motif_71f3b15b4a29d968"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_64a381d1facbb9aa"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_ea433b378d53e195"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_0b99wedh4a136n57"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q49836"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/Wedding"/>
 </rdf:Description>
@@ -5906,6 +5910,7 @@
 	<skos:prefLabel xml:lang="de">Heirat</skos:prefLabel>
 	<skos:notation>motif_803e6cdc78c0c5a1</skos:notation>
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/motif_71f3b15b4a29d968"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_0b99wedh4a136n57"/>
 	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q8445"/>
 	<skos:closeMatch rdf:resource="http://www.wikidata.org/entity/Q49836"/>
 </rdf:Description>
@@ -6010,6 +6015,8 @@
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/plot_dfc7969c4ebf3533"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_b3deb8ded8bddf04"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_86a1ad47f8e7fa03"/>
+	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_914fc268bcaq7dlc"/>
+	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_474qcv6j03aq7nd0"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_91fbce010840c414"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/place_265da080030b40ab"/>
 	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q17892"/>
@@ -6618,6 +6625,107 @@
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/place_cdf504e86348b33a"/>
 	<skos:exactMatch rdf:resource="http://www.wikidata.org/entity/Q21"/>
 	<skos:exactMatch rdf:resource="https://dbpedia.org/resource/England"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/plot_0b99wedh4a136n57">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
+	<skos:prefLabel xml:lang="de">Sappho-Stoff mit Fokus auf die verheiratete Sappho</skos:prefLabel>
+	<skos:notation>plot_0b99wedh4a136n57</skos:notation>
+	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/plot_0b092ed64a936159"/>
+	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_30ec8b515802033f"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_791dc243a6ba1593"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_71f3b15b4a29d968"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_736eb7ef6202472f"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_d0d0d796a787f4a8"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_a10417e468b798b0"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_547b51889f7bce04"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_e9b8b1919af5758a"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_281b95ce63718bed"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_803e6cdc78c0c5a1"/>
+	<skos:broadMatch rdf:resource="http://www.wikidata.org/entity/Q8445"/>
+	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q17892"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/plot_9gjw6ed64q936259">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
+	<skos:prefLabel xml:lang="de">Sappho-Stoff mit Fokus auf die Sappho-Alkaios-Beziehung</skos:prefLabel>
+	<skos:notation>plot_9gjw6ed64q936259</skos:notation>
+	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/plot_b83cd3a9f03a61c4"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_e585b2a779019b7e"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_f42fab276b6fdb13"/>
+	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q17892"/>
+	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q212872"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/plot_1d09led62af39159">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
+	<skos:prefLabel xml:lang="de">Sappho-Stoff mit Fokus auf die Sappho-Anakreon-Beziehung</skos:prefLabel>
+	<skos:notation>plot_1d09led62af39159</skos:notation>
+	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/plot_b83cd3a9f03a61c4"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_e585b2a779019b7e"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_a8693158074cfc94"/>
+	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q17892"/>
+	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q213484"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/plot_6ec13g678102l4q7">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
+	<skos:prefLabel xml:lang="de">Sappho-Stoff mit Fokus auf Sappho als Adonis-Verehrerin</skos:prefLabel>
+	<skos:notation>plot_6ec13g678102l4q7</skos:notation>
+	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/plot_dedcc9b1e7fb8e79"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_e585b2a779019b7e"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_38af0ac181d5d397"/>
+	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q17892"/>
+	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q163920"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/plot_3146c4f80jad1ddx">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
+	<skos:prefLabel xml:lang="de">Sappho-Stoff mit Fokus auf Sappho als bisexuell Begehrende</skos:prefLabel>
+	<skos:notation>plot_3146c4f80jad1ddx</skos:notation>
+	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/plot_a3935710c883087b"/>
+	<skos:broadMatch rdf:resource="http://www.wikidata.org/entity/Q43200"/>
+	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q17892"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/plot_418b146d0caa7dnm">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
+	<skos:prefLabel xml:lang="de">Sappho-Stoff mit Fokus auf Sappho als Phädophile</skos:prefLabel>
+	<skos:notation>plot_418b146d0caa7dnm</skos:notation>
+	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/plot_a3935710c883087b"/>
+	<skos:broadMatch rdf:resource="http://www.wikidata.org/entity/Q8388"/>
+	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q17892"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/plot_914fc268bcaq7dlc">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
+	<skos:prefLabel xml:lang="de">Sappho-Stoff mit Fokus auf die Verbrennung von Sapphos Werk</skos:prefLabel>
+	<skos:notation>plot_914fc268bcaq7dlc</skos:notation>
+	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/plot_fd168d9b2224361d"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_64a381d1facbb9aa"/>
+	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q17892"/>
+	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q22702"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/plot_474qcv6j03aq7nd0">
+	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
+	<skos:prefLabel xml:lang="de">Sappho-Stoff mit Fokus auf Sapphos Konflikt zwischen Kunst und Leben</skos:prefLabel>
+	<skos:notation>plot_474qcv6j03aq7nd0</skos:notation>
+	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/plot_fd168d9b2224361d"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_97e73b26b0dc22b0"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_afe138550cd16d0b"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_216c06ff845256fe"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_d57e3bd57313bbdd"/>
+	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/plot_42557e8d70c24751"/>
+	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q17892"/>
 </rdf:Description>
 
 </rdf:RDF>

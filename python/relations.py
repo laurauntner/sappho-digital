@@ -200,12 +200,16 @@ for f2 in sorted(f2_works, key=lambda u: str(u)):
 info: Dict[URIRef, Dict] = {}
 for f2 in set(g_analysis.subjects(RDF.type, LRMOO["F2_Expression"])):
     r18_keys = set(shorten_r18_key(f2, a) for a in g_analysis.objects(f2, INTRO["R18_showsActualization"]))
-    r30_uris = set(str(u) for u in g_analysis.objects(f2, INTRO["R30_hasTextPassage"]))
-
+    
+    r30_uris = set()
     work_keys = set()
     f2_targets = set()
 
     for a in g_analysis.objects(f2, INTRO["R18_showsActualization"]):
+        for tp in g_analysis.objects(a, INTRO["R18i_actualizationFoundOn"]):
+            if "/textpassage/" in str(tp):
+                r30_uris.add(str(tp))
+        # Work-Refs und F2-Targets
         for feat in g_analysis.objects(a, INTRO["R17_actualizesFeature"]):
             if (feat, RDF.type, INTRO["INT18_Reference"]) in g_analysis:
                 if str(feat).startswith(BASE + "feature/work_ref/"):
@@ -301,6 +305,7 @@ FID_PREFIX_MAP: List[Tuple[str, Tuple[str, str]]] = [
     ("motif_", ("feature/motif",     "motif")),
     ("plot_",  ("feature/plot",      "plot")),
     ("topic_", ("feature/topic",     "topic")),
+    ("topos_", ("feature/topos",     "topos")),
     ("person_",("feature/person_ref","person_ref")),
     ("character_",("feature/character","character")),
     ("place_", ("feature/place_ref", "place_ref")),
@@ -327,6 +332,7 @@ def infer_kind_from_feature_uri(feat: URIRef) -> Optional[str]:
     if "/feature/motif/" in s: return "motif"
     if "/feature/plot/" in s: return "plot"
     if "/feature/topic/" in s: return "topic"
+    if "/feature/topos/" in s: return "topos"
     if "/feature/person_ref/" in s: return "person_ref"
     if "/feature/place_ref/" in s: return "place_ref"
     if "/feature/work_ref/" in s: return "work_ref"
@@ -341,14 +347,14 @@ def collect_f2_evidence(f2: URIRef) -> Tuple[Dict[str, Dict], set]:
             if isinstance(feat, URIRef):
                 kind = infer_kind_from_feature_uri(feat) or infer_kind_from_id(local_id(feat))
                 if kind:
-                    fid = local_id(feat)
                     entry = features_map.setdefault(
                         str(feat),
                         {"kind": kind, "feature_uri": feat, "actualizations": set()}
                     )
                     entry["actualizations"].add(a)
-    for tp in g_analysis.objects(f2, INTRO["R30_hasTextPassage"]):
-        passages.add(tp)
+        for tp in g_analysis.objects(a, INTRO["R18i_actualizationFoundOn"]):
+            if "/textpassage/" in str(tp):
+                passages.add(str(tp))
     return features_map, passages
 
 # Materialisierung

@@ -139,8 +139,8 @@
   skos:prefLabel "Lebens- und Altersmotive"@de;
   skos:notation "motif_2f658ec3c5ec3ae4";
   skos:broader :motifs;
-  skos:narrower :motif_8d6c4ae5261c1b7f, :motif_97e73b26b0dc22b0, :motif_2b1f28169974867c,
-    :motif_de1c36b3db3ce34c, :motif_8e292f9623cb3869, :motif_67d99b12bd68f38d .
+  skos:narrower :motif_8d6c4ae5261c1b7f, :motif_2b1f28169974867c, :motif_de1c36b3db3ce34c,
+    :motif_8e292f9623cb3869, :motif_67d99b12bd68f38d .
 
 :motif_b3f47e9ec671bb4b a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
@@ -578,7 +578,8 @@
     :motif_d46b25ce34a468d0, :motif_320231279067b1d8, :motif_c16c6077a42ad438, :topic_f6d80c8d012ca95d,
     :person_9865138458182890, :person_66fc054f0477ea23, :place_a47b52347c0cc636, :place_8f3a4ee0def96e05,
     :place_dc407ad0184a6b43, :person_98fe1bf71475363b, :person_a2f67175618331bf, :person_b793a3807d130de0,
-    :person_8403b22eecf9a7e8, :person_dd90800ee54e2216;
+    :person_8403b22eecf9a7e8, :person_dd90800ee54e2216, :plot_9gjw6ed64q936259, :plot_1d09led62af39159,
+    :plot_6ec13g678102l4q7;
   skos:exactMatch <http://www.wikidata.org/entity/Q17892>, <https://dbpedia.org/resource/Sappho> .
 
 :motif_b310d7fa48a3989f a skos:Concept;
@@ -743,7 +744,7 @@
     :person_499bbc9e7596f10d, :person_4a2654173d9042b0, :person_38af0ac181d5d397, :person_9ee0b67040c4734c,
     :person_d2167a313c41ceaa, :plot_dedcc9b1e7fb8e79, :person_c408a1bcd63c420f, :plot_b3deb8ded8bddf04,
     :person_fd527c6f3b4cd056, :person_9cb6996a0396db3d, :person_e9b8b1919af5758a, :person_664342af9e58739b,
-    :person_edd73d43dbe4b946, :person_fe179d791732151d, :person_1e6e628ea0192e31;
+    :person_edd73d43dbe4b946, :person_fe179d791732151d, :person_1e6e628ea0192e31, :plot_0b99wedh4a136n57;
   skos:exactMatch <http://www.wikidata.org/entity/Q316>, <https://dbpedia.org/resource/Love> .
 
 :motif_2d730412302b3df0 a skos:Concept;
@@ -920,13 +921,7 @@
     :person_9cb6996a0396db3d, :plot_7088a192832d9d0c;
   skos:exactMatch <http://www.wikidata.org/entity/Q4>, <https://dbpedia.org/resource/Death> .
 
-:motif_97e73b26b0dc22b0 a skos:Concept;
-  skos:inScheme <https://w3id.org/sappho-digital/vocab>;
-  skos:prefLabel "Vergöttlichung"@de;
-  skos:notation "motif_97e73b26b0dc22b0";
-  skos:broader :motif_2f658ec3c5ec3ae4;
-  skos:related :topic_afe138550cd16d0b, :topic_16fb1687f7449a95;
-  skos:exactMatch <http://www.wikidata.org/entity/Q580995>, <https://dbpedia.org/resource/Apotheosis> .
+:motif_97e73b26b0dc22b0 skos:related :plot_474qcv6j03aq7nd0 .
 
 :motif_2b1f28169974867c a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
@@ -983,7 +978,7 @@
   skos:related :person_e585b2a779019b7e, :person_298d1d2696887999, :plot_414bc4680cad7ddc,
     :topic_b44d4c1bda5009f2, :topic_d8a87ac0faded437, :person_499bbc9e7596f10d, :person_d92f8054b846977e,
     :person_d2167a313c41ceaa, :person_e9b8b1919af5758a, :person_664342af9e58739b, :person_05e200db9312b803,
-    :plot_30ec8b515802033f;
+    :plot_0b99wedh4a136n57;
   skos:exactMatch <http://www.wikidata.org/entity/Q8445>, <https://dbpedia.org/ontology/Marriage> .
 
 :motif_a18a39883dd84fa9 a skos:Concept;
@@ -1359,7 +1354,7 @@
     :motif_64a381d1facbb9aa, :motif_7b4f6bd41d20b520, :person_e3e42e3bfe456766, :person_4a2654173d9042b0,
     :person_38af0ac181d5d397, :person_a8693158074cfc94, :person_9ee0b67040c4734c, :plot_dedcc9b1e7fb8e79,
     :person_c408a1bcd63c420f, :person_fd527c6f3b4cd056, :person_664342af9e58739b, :plot_6adb2e4795def630,
-    :person_edd73d43dbe4b946, :person_fe179d791732151d, :person_1e6e628ea0192e31;
+    :person_edd73d43dbe4b946, :person_fe179d791732151d, :person_1e6e628ea0192e31, :plot_0b99wedh4a136n57;
   skos:exactMatch <http://www.wikidata.org/entity/Q775842>, <https://dbpedia.org/resource/Desire> .
 
 :topic_d0d0d796a787f4a8 a skos:Concept;
@@ -1377,7 +1372,7 @@
     :person_a8693158074cfc94, :person_9ee0b67040c4734c, :plot_dedcc9b1e7fb8e79, :person_c408a1bcd63c420f,
     :place_040eb47ff2612816, :person_fd527c6f3b4cd056, :plot_cc6bf7467ad0c7cf, :person_664342af9e58739b,
     :plot_b2d8b14d68b73dd5, :plot_6adb2e4795def630, :person_edd73d43dbe4b946, :person_fe179d791732151d,
-    :person_1e6e628ea0192e31, :plot_30ec8b515802033f, :motif_304a5e562a17af49, :plot_43b59f052f3dc73e;
+    :person_1e6e628ea0192e31, :motif_304a5e562a17af49, :plot_43b59f052f3dc73e, :plot_0b99wedh4a136n57;
   skos:exactMatch <http://www.wikidata.org/entity/Q775842>, <https://dbpedia.org/resource/Desire> .
 
 :topic_a10417e468b798b0 a skos:Concept;
@@ -1394,8 +1389,8 @@
     :plot_6ec13f66820264d7, :person_4a2654173d9042b0, :person_38af0ac181d5d397, :person_9ee0b67040c4734c,
     :person_d2167a313c41ceaa, :plot_dedcc9b1e7fb8e79, :person_c408a1bcd63c420f, :plot_b3deb8ded8bddf04,
     :person_fd527c6f3b4cd056, :person_9cb6996a0396db3d, :plot_cc6bf7467ad0c7cf, :person_e9b8b1919af5758a,
-    :person_664342af9e58739b, :person_edd73d43dbe4b946, :person_1e6e628ea0192e31, :plot_30ec8b515802033f,
-    :plot_43b59f052f3dc73e;
+    :person_664342af9e58739b, :person_edd73d43dbe4b946, :person_1e6e628ea0192e31, :plot_43b59f052f3dc73e,
+    :plot_0b99wedh4a136n57;
   skos:exactMatch <http://www.wikidata.org/entity/Q316>, <https://dbpedia.org/resource/Love> .
 
 :person_f9d48292bc61bb67 a skos:Concept;
@@ -1552,7 +1547,8 @@
   skos:prefLabel "Sappho-Stoff mit Fokus auf Romantik und Sexualität"@de;
   skos:notation "plot_a3935710c883087b";
   skos:broader :plot_02612f6f060ef11d;
-  skos:narrower :plot_0b092ed64a936159, :plot_b2d8b14d68b73dd5, :plot_43b59f052f3dc73e;
+  skos:narrower :plot_0b092ed64a936159, :plot_b2d8b14d68b73dd5, :plot_43b59f052f3dc73e,
+    :plot_3146c4f80jad1ddx, :plot_418b146d0caa7dnm;
   skos:related :motif_791dc243a6ba1593, :motif_736eb7ef6202472f .
 
 :plot_b83cd3a9f03a61c4 a skos:Concept;
@@ -1560,7 +1556,8 @@
   skos:prefLabel "Sappho-Stoff mit Fokus auf Familie und Umfeld"@de;
   skos:notation "plot_b83cd3a9f03a61c4";
   skos:broader :plot_02612f6f060ef11d;
-  skos:narrower :plot_dedcc9b1e7fb8e79, :plot_5087850a55fd0874;
+  skos:narrower :plot_dedcc9b1e7fb8e79, :plot_5087850a55fd0874, :plot_9gjw6ed64q936259,
+    :plot_1d09led62af39159;
   skos:related :plot_830dcfef58019d56 .
 
 :plot_cc3d0841ee1cc1f2 a skos:Concept;
@@ -1596,8 +1593,8 @@
   skos:notation "topic_afe138550cd16d0b";
   skos:broader :topic_bdd785a758abd7cd;
   skos:related :motif_c1c5790bb38d4fbb, :motif_5047cf2d5e1607fa, :motif_8d6c4ae5261c1b7f,
-    :motif_97e73b26b0dc22b0, :topic_16fb1687f7449a95, :person_669b106539453871, :plot_6ec13f66820264d7,
-    :plot_42557e8d70c24751, :place_938d82612b2cbf3a, :plot_011312b82eb4fc98;
+    :topic_16fb1687f7449a95, :person_669b106539453871, :plot_6ec13f66820264d7, :plot_42557e8d70c24751,
+    :place_938d82612b2cbf3a, :plot_011312b82eb4fc98, :plot_474qcv6j03aq7nd0;
   skos:closeMatch <http://www.wikidata.org/entity/Q580995> .
 
 :topic_216c06ff845256fe a skos:Concept;
@@ -1606,7 +1603,7 @@
   skos:notation "topic_216c06ff845256fe";
   skos:broader :topic_bdd785a758abd7cd;
   skos:related :place_1adb2da7993ecc95, :person_807f37582972882e, :plot_42557e8d70c24751,
-    :place_be670e476be162e1, :place_ac07f1e878d38c8d;
+    :place_be670e476be162e1, :place_ac07f1e878d38c8d, :plot_474qcv6j03aq7nd0;
   skos:relatedMatch <http://www.wikidata.org/entity/Q12767209>, <http://www.wikidata.org/entity/Q1379405> .
 
 :topic_61418e73ecf18fa9 a skos:Concept;
@@ -1659,7 +1656,7 @@
     :person_298d1d2696887999, :plot_414bc4680cad7ddc, :topic_b44d4c1bda5009f2, :work_9a6fa5b72a8235b6,
     :motif_64a381d1facbb9aa, :person_499bbc9e7596f10d, :person_d92f8054b846977e, :person_d2167a313c41ceaa,
     :plot_dedcc9b1e7fb8e79, :person_e9b8b1919af5758a, :person_664342af9e58739b, :person_05e200db9312b803,
-    :plot_30ec8b515802033f;
+    :plot_0b99wedh4a136n57;
   skos:exactMatch <http://www.wikidata.org/entity/Q8445>, <https://dbpedia.org/ontology/Marriage> .
 
 :topic_b44d4c1bda5009f2 a skos:Concept;
@@ -1677,7 +1674,7 @@
   skos:prefLabel "Sappho-Stoff mit Fokus auf Sappho als Liebende"@de;
   skos:notation "plot_0b092ed64a936159";
   skos:broader :plot_a3935710c883087b;
-  skos:narrower :plot_cc6bf7467ad0c7cf, :plot_30ec8b515802033f;
+  skos:narrower :plot_cc6bf7467ad0c7cf, :plot_0b99wedh4a136n57;
   skos:related :topic_6965e0a196d0b97e, :motif_791dc243a6ba1593, :motif_736eb7ef6202472f,
     :motif_25f446d346d5ae39, :person_d2167a313c41ceaa, :person_c408a1bcd63c420f, :person_fe179d791732151d,
     :person_55cb3a6f391d86db, :person_2603b095dc14c9fd, :person_4fa8ba6e36329b8d, :person_a766e76721189267,
@@ -1790,10 +1787,10 @@
   skos:notation "topic_16fb1687f7449a95";
   skos:broader :topic_9a3a9c83b659fda6;
   skos:narrower :topic_f6d80c8d012ca95d;
-  skos:related :person_0eabdfe13c1ff095, :motif_8d6c4ae5261c1b7f, :motif_97e73b26b0dc22b0,
-    :motif_2b1f28169974867c, :motif_8e292f9623cb3869, :place_1adb2da7993ecc95, :topic_afe138550cd16d0b,
-    :work_b36331eb746b025a, :motif_d57e3bd57313bbdd, :person_fe75cd740876c3e4, :person_86564f02874aec39,
-    :person_887e83106aad1200, :person_4e64c1b5997afbc9, :person_9cb6996a0396db3d, :plot_7088a192832d9d0c;
+  skos:related :person_0eabdfe13c1ff095, :motif_8d6c4ae5261c1b7f, :motif_2b1f28169974867c,
+    :motif_8e292f9623cb3869, :place_1adb2da7993ecc95, :topic_afe138550cd16d0b, :work_b36331eb746b025a,
+    :motif_d57e3bd57313bbdd, :person_fe75cd740876c3e4, :person_86564f02874aec39, :person_887e83106aad1200,
+    :person_4e64c1b5997afbc9, :person_9cb6996a0396db3d, :plot_7088a192832d9d0c;
   skos:exactMatch <http://www.wikidata.org/entity/Q4>, <https://dbpedia.org/resource/Death> .
 
 :topic_dd0209b2c71040a5 a skos:Concept;
@@ -2049,7 +2046,7 @@
   skos:notation "motif_64a381d1facbb9aa";
   skos:broader :motif_fcf3b7b61805babd;
   skos:related :motif_736eb7ef6202472f, :topic_547b51889f7bce04, :motif_162e6dfcee6ada53,
-    :person_e9b8b1919af5758a, :motif_281b95ce63718bed, :person_bf1a16fc1e6ba956;
+    :person_e9b8b1919af5758a, :motif_281b95ce63718bed, :person_bf1a16fc1e6ba956, :plot_914fc268bcaq7dlc;
   skos:exactMatch <http://www.wikidata.org/entity/Q3196>, <https://dbpedia.org/resource/Fire> .
 
 :motif_f8ead995947f7500 a skos:Concept;
@@ -2330,7 +2327,7 @@
   skos:notation "motif_d57e3bd57313bbdd";
   skos:broader :motif_68f3d8712ddf8d70;
   skos:related :motif_5047cf2d5e1607fa, :topic_16fb1687f7449a95, :plot_6ec13f66820264d7,
-    :plot_42557e8d70c24751, :place_938d82612b2cbf3a;
+    :plot_42557e8d70c24751, :place_938d82612b2cbf3a, :plot_474qcv6j03aq7nd0;
   skos:closeMatch <http://www.wikidata.org/entity/Q580995> .
 
 :motif_acf2f74928d12caa a skos:Concept;
@@ -2511,7 +2508,7 @@
   skos:notation "plot_42557e8d70c24751";
   skos:broader :plot_86a1ad47f8e7fa03;
   skos:related :topic_afe138550cd16d0b, :topic_216c06ff845256fe, :motif_d57e3bd57313bbdd,
-    :motif_b0bf073234a3855a, :place_938d82612b2cbf3a;
+    :motif_b0bf073234a3855a, :place_938d82612b2cbf3a, :plot_474qcv6j03aq7nd0;
   skos:relatedMatch <http://www.wikidata.org/entity/Q580995>, <http://www.wikidata.org/entity/Q17892> .
 
 :place_938d82612b2cbf3a a skos:Concept;
@@ -2593,7 +2590,7 @@
   skos:broader :person_e6e1e08c60e5a04d;
   skos:related :person_e585b2a779019b7e, :motif_791dc243a6ba1593, :motif_7abc136b51bb0005,
     :motif_736eb7ef6202472f, :topic_d0d0d796a787f4a8, :topic_a10417e468b798b0, :person_298d1d2696887999,
-    :topic_193f7fb77b90540a, :motif_25f446d346d5ae39, :place_040eb47ff2612816;
+    :topic_193f7fb77b90540a, :motif_25f446d346d5ae39, :place_040eb47ff2612816, :plot_6ec13g678102l4q7;
   skos:exactMatch <http://www.wikidata.org/entity/Q163920>, <https://dbpedia.org/resource/Adonis> .
 
 :person_a8693158074cfc94 a skos:Concept;
@@ -2603,7 +2600,7 @@
   skos:broader :person_06c6360bcd505db1;
   skos:related :person_e585b2a779019b7e, :topic_91fbce010840c414, :motif_8dda05b62f2174da,
     :motif_736eb7ef6202472f, :topic_d0d0d796a787f4a8, :motif_af8f6ed291383b8c, :person_f42fab276b6fdb13,
-    :place_9bd33c7fdd67c764, :place_7a4fb8e10d66c95f;
+    :place_9bd33c7fdd67c764, :place_7a4fb8e10d66c95f, :plot_1d09led62af39159;
   skos:exactMatch <http://www.wikidata.org/entity/Q213484>, <https://dbpedia.org/resource/Anacreon> .
 
 :person_9ee0b67040c4734c a skos:Concept;
@@ -2729,7 +2726,7 @@
   skos:broader :person_06c6360bcd505db1;
   skos:related :person_e585b2a779019b7e, :topic_91fbce010840c414, :motif_8dda05b62f2174da,
     :motif_af8f6ed291383b8c, :place_0009a58f625c087b, :topic_3c28b27922e5dfea, :person_a8693158074cfc94,
-    :person_9865138458182890, :place_a47b52347c0cc636;
+    :person_9865138458182890, :place_a47b52347c0cc636, :plot_9gjw6ed64q936259;
   skos:exactMatch <http://www.wikidata.org/entity/Q212872>, <https://dbpedia.org/resource/Alcaeus> .
 
 :motif_d46b25ce34a468d0 a skos:Concept;
@@ -2902,7 +2899,7 @@
   skos:notation "plot_dedcc9b1e7fb8e79";
   skos:broader :plot_b83cd3a9f03a61c4;
   skos:narrower :plot_531e3c7365ed869a, :plot_168fc491c40ff2fd, :plot_ebb7046704a8c30c,
-    :plot_1bd6cf31c44d00e5;
+    :plot_1bd6cf31c44d00e5, :plot_6ec13g678102l4q7;
   skos:related :topic_91fbce010840c414, :motif_791dc243a6ba1593, :motif_24f6269abdf1c989,
     :motif_637a4ceb95c9c2f5, :motif_de1c36b3db3ce34c, :motif_736eb7ef6202472f, :topic_d0d0d796a787f4a8,
     :topic_a10417e468b798b0, :topic_193f7fb77b90540a, :motif_25f446d346d5ae39, :topic_b51493c7cb013212,
@@ -3175,7 +3172,7 @@
   skos:notation "person_e9b8b1919af5758a";
   skos:broader :person_e6e1e08c60e5a04d;
   skos:related :motif_791dc243a6ba1593, :motif_71f3b15b4a29d968, :topic_a10417e468b798b0,
-    :topic_547b51889f7bce04, :motif_64a381d1facbb9aa, :person_05e200db9312b803;
+    :topic_547b51889f7bce04, :motif_64a381d1facbb9aa, :person_05e200db9312b803, :plot_0b99wedh4a136n57;
   skos:exactMatch <http://www.wikidata.org/entity/Q506770>, <https://dbpedia.org/resource/Hymen_(god)> .
 
 :person_664342af9e58739b a skos:Concept;
@@ -3289,10 +3286,8 @@
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
   skos:prefLabel "Sappho-Stoff mit Fokus auf die Sappho-Kerkylas-Ehe"@de;
   skos:notation "plot_30ec8b515802033f";
-  skos:broader :plot_0b092ed64a936159;
-  skos:related :motif_71f3b15b4a29d968, :topic_d0d0d796a787f4a8, :topic_a10417e468b798b0,
-    :topic_547b51889f7bce04, :topic_b44d4c1bda5009f2, :person_d2167a313c41ceaa, :plot_0a6119efed4bdf7d;
-  skos:broadMatch <http://www.wikidata.org/entity/Q8445>;
+  skos:broader :plot_0b99wedh4a136n57;
+  skos:related :topic_b44d4c1bda5009f2, :person_d2167a313c41ceaa, :plot_0a6119efed4bdf7d;
   skos:relatedMatch <http://www.wikidata.org/entity/Q17892>, <http://www.wikidata.org/entity/Q85870889> .
 
 :person_2a23732b2a3c21cf a skos:Concept;
@@ -3355,7 +3350,7 @@
   skos:prefLabel "Hochzeit"@de;
   skos:notation "motif_281b95ce63718bed";
   skos:broader :motif_71f3b15b4a29d968;
-  skos:related :motif_64a381d1facbb9aa, :motif_ea433b378d53e195;
+  skos:related :motif_64a381d1facbb9aa, :motif_ea433b378d53e195, :plot_0b99wedh4a136n57;
   skos:exactMatch <http://www.wikidata.org/entity/Q49836>, <https://dbpedia.org/resource/Wedding> .
 
 :place_7a4fb8e10d66c95f a skos:Concept;
@@ -3439,6 +3434,7 @@
   skos:prefLabel "Heirat"@de;
   skos:notation "motif_803e6cdc78c0c5a1";
   skos:broader :motif_71f3b15b4a29d968;
+  skos:related :plot_0b99wedh4a136n57;
   skos:relatedMatch <http://www.wikidata.org/entity/Q8445>;
   skos:closeMatch <http://www.wikidata.org/entity/Q49836> .
 
@@ -3511,7 +3507,8 @@
   skos:prefLabel "Sappho-Stoff mit Fokus auf Sappho als Dichterin"@de;
   skos:notation "plot_fd168d9b2224361d";
   skos:broader :plot_dfc7969c4ebf3533;
-  skos:narrower :plot_b3deb8ded8bddf04, :plot_86a1ad47f8e7fa03;
+  skos:narrower :plot_b3deb8ded8bddf04, :plot_86a1ad47f8e7fa03, :plot_914fc268bcaq7dlc,
+    :plot_474qcv6j03aq7nd0;
   skos:related :topic_91fbce010840c414, :place_265da080030b40ab;
   skos:relatedMatch <http://www.wikidata.org/entity/Q17892>, <http://www.wikidata.org/entity/Q107230508>,
     <http://www.wikidata.org/entity/Q49757> .
@@ -3936,3 +3933,72 @@
   skos:notation "place_65cc743dd1fdd3c3";
   skos:broader :place_cdf504e86348b33a;
   skos:exactMatch <http://www.wikidata.org/entity/Q21>, <https://dbpedia.org/resource/England> .
+
+:plot_0b99wedh4a136n57 a skos:Concept;
+  skos:inScheme <https://w3id.org/sappho-digital/vocab>;
+  skos:prefLabel "Sappho-Stoff mit Fokus auf die verheiratete Sappho"@de;
+  skos:notation "plot_0b99wedh4a136n57";
+  skos:broader :plot_0b092ed64a936159;
+  skos:narrower :plot_30ec8b515802033f;
+  skos:related :motif_791dc243a6ba1593, :motif_71f3b15b4a29d968, :motif_736eb7ef6202472f,
+    :topic_d0d0d796a787f4a8, :topic_a10417e468b798b0, :topic_547b51889f7bce04, :person_e9b8b1919af5758a,
+    :motif_281b95ce63718bed, :motif_803e6cdc78c0c5a1;
+  skos:broadMatch <http://www.wikidata.org/entity/Q8445>;
+  skos:relatedMatch <http://www.wikidata.org/entity/Q17892> .
+
+:plot_9gjw6ed64q936259 a skos:Concept;
+  skos:inScheme <https://w3id.org/sappho-digital/vocab>;
+  skos:prefLabel "Sappho-Stoff mit Fokus auf die Sappho-Alkaios-Beziehung"@de;
+  skos:notation "plot_9gjw6ed64q936259";
+  skos:broader :plot_b83cd3a9f03a61c4;
+  skos:related :person_e585b2a779019b7e, :person_f42fab276b6fdb13;
+  skos:relatedMatch <http://www.wikidata.org/entity/Q17892>, <http://www.wikidata.org/entity/Q212872> .
+
+:plot_1d09led62af39159 a skos:Concept;
+  skos:inScheme <https://w3id.org/sappho-digital/vocab>;
+  skos:prefLabel "Sappho-Stoff mit Fokus auf die Sappho-Anakreon-Beziehung"@de;
+  skos:notation "plot_1d09led62af39159";
+  skos:broader :plot_b83cd3a9f03a61c4;
+  skos:related :person_e585b2a779019b7e, :person_a8693158074cfc94;
+  skos:relatedMatch <http://www.wikidata.org/entity/Q17892>, <http://www.wikidata.org/entity/Q213484> .
+
+:plot_6ec13g678102l4q7 a skos:Concept;
+  skos:inScheme <https://w3id.org/sappho-digital/vocab>;
+  skos:prefLabel "Sappho-Stoff mit Fokus auf Sappho als Adonis-Verehrerin"@de;
+  skos:notation "plot_6ec13g678102l4q7";
+  skos:broader :plot_dedcc9b1e7fb8e79;
+  skos:related :person_e585b2a779019b7e, :person_38af0ac181d5d397;
+  skos:relatedMatch <http://www.wikidata.org/entity/Q17892>, <http://www.wikidata.org/entity/Q163920> .
+
+:plot_3146c4f80jad1ddx a skos:Concept;
+  skos:inScheme <https://w3id.org/sappho-digital/vocab>;
+  skos:prefLabel "Sappho-Stoff mit Fokus auf Sappho als bisexuell Begehrende"@de;
+  skos:notation "plot_3146c4f80jad1ddx";
+  skos:broader :plot_a3935710c883087b;
+  skos:broadMatch <http://www.wikidata.org/entity/Q43200>;
+  skos:relatedMatch <http://www.wikidata.org/entity/Q17892> .
+
+:plot_418b146d0caa7dnm a skos:Concept;
+  skos:inScheme <https://w3id.org/sappho-digital/vocab>;
+  skos:prefLabel "Sappho-Stoff mit Fokus auf Sappho als Phädophile"@de;
+  skos:notation "plot_418b146d0caa7dnm";
+  skos:broader :plot_a3935710c883087b;
+  skos:broadMatch <http://www.wikidata.org/entity/Q8388>;
+  skos:relatedMatch <http://www.wikidata.org/entity/Q17892> .
+
+:plot_914fc268bcaq7dlc a skos:Concept;
+  skos:inScheme <https://w3id.org/sappho-digital/vocab>;
+  skos:prefLabel "Sappho-Stoff mit Fokus auf die Verbrennung von Sapphos Werk"@de;
+  skos:notation "plot_914fc268bcaq7dlc";
+  skos:broader :plot_fd168d9b2224361d;
+  skos:related :motif_64a381d1facbb9aa;
+  skos:relatedMatch <http://www.wikidata.org/entity/Q17892>, <http://www.wikidata.org/entity/Q22702> .
+
+:plot_474qcv6j03aq7nd0 a skos:Concept;
+  skos:inScheme <https://w3id.org/sappho-digital/vocab>;
+  skos:prefLabel "Sappho-Stoff mit Fokus auf Sapphos Konflikt zwischen Kunst und Leben"@de;
+  skos:notation "plot_474qcv6j03aq7nd0";
+  skos:broader :plot_fd168d9b2224361d;
+  skos:related :motif_97e73b26b0dc22b0, :topic_afe138550cd16d0b, :topic_216c06ff845256fe,
+    :motif_d57e3bd57313bbdd, :plot_42557e8d70c24751;
+  skos:relatedMatch <http://www.wikidata.org/entity/Q17892> .
