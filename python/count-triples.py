@@ -22,7 +22,7 @@ INFERRED_TTL = data_dir / "sappho-reception_inferred.ttl"
 ASSERTED_INFERRED_TTL = data_dir / "sappho-reception_asserted-and-inferred.ttl"
 
 # Types
-GROUP_KEYS = ["motif", "place", "person", "phrase", "plot", "topic", "work"]
+GROUP_KEYS = ["motif", "place", "person", "topos", "plot", "topic", "work"]
 
 # broader + narrower
 HIERARCHY_PROPS = [SKOS.broader, SKOS.narrower]
