@@ -8,7 +8,7 @@ For a detailed description of the project and the data, see the [project website
 
 This repository contains:
 - [XML/TEI files](https://github.com/laurauntner/sappho-digital/tree/main/data/lists) listing testimonies of the productive literary reception of Sappho.
-- [RDF/XML and RDF/Turtle files](https://github.com/laurauntner/sappho-digital/tree/main/data/rdf) with information about these productive literary reception testimonies: about the authors, the works, intertextual features in 99 exemplary texts, and their relationships to each other as well as to Sappho’s work ("sappho-reception" is the combined file).
+- [RDF/XML, Turtle and JSON-LD files](https://github.com/laurauntner/sappho-digital/tree/main/data/rdf) with information about these productive literary reception testimonies: about the authors, the works, intertextual features in 99 exemplary texts, and their relationships to each other as well as to Sappho’s work ("sappho-reception" is the combined file).
 - An [OWL-ontology](https://github.com/laurauntner/sappho-digital/tree/main/documentation/ontology), a [SKOS-vocabulary](https://github.com/laurauntner/sappho-digital/tree/main/documentation/vocab) and [ontology alignments](https://github.com/laurauntner/sappho-digital/tree/main/documentation/alignments). URIs:
   - Ontology: [https://w3id.org/sappho-digital/ontology/](https://w3id.org/sappho-digital/ontology/), see also [https://sappho-digital.com/ontology.html](https://sappho-digital.com/ontology.html)
   - Vocabulary: [https://w3id.org/sappho-digital/vocab/](https://w3id.org/sappho-digital/vocab/), see also [https://sappho-digital.com/vocab.html](https://sappho-digital.com/vocab.html)

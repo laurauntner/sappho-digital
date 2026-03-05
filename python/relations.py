@@ -495,7 +495,10 @@ if relations_to_create:
 
 # Serialisieren
 OUTFILE.parent.mkdir(parents=True, exist_ok=True)
-out.serialize(destination=str(OUTFILE), format="turtle")
+out.serialize(destination=OUTFILE.as_posix(), format="turtle")
 
-OUTFILE_RDF = OUTFILE.with_suffix(".rdf")
-out.serialize(destination=str(OUTFILE_RDF), format="pretty-xml", encoding="utf-8")
+OUT_RDF = OUTFILE.with_suffix(".rdf")
+out.serialize(destination=OUT_RDF.as_posix(), format="pretty-xml", encoding="utf-8")
+
+OUT_JSONLD = OUTFILE.with_suffix(".jsonld")
+out.serialize(destination=OUT_JSONLD.as_posix(), format="json-ld", encoding="utf-8")

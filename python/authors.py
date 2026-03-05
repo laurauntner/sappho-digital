@@ -376,3 +376,6 @@ g.serialize(destination=OUTPUT_FILE, format="turtle")
 
 xml_output = OUTPUT_FILE.replace(".ttl", ".rdf")
 g.serialize(destination=xml_output, format="pretty-xml")
+
+jsonld_output = OUTPUT_FILE.replace(".ttl", ".jsonld")
+g.serialize(destination=jsonld_output, format="json-ld")

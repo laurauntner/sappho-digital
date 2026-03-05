@@ -604,3 +604,6 @@ g.serialize(destination=OUT_TTL.as_posix(), format="turtle")
 
 OUT_RDF = OUT_TTL.with_suffix(".rdf")
 g.serialize(destination=OUT_RDF.as_posix(), format="pretty-xml", encoding="utf-8")
+
+OUT_JSONLD = OUT_TTL.with_suffix(".jsonld")
+g.serialize(destination=OUT_JSONLD.as_posix(), format="json-ld", encoding="utf-8")

@@ -83,6 +83,12 @@ def main():
     g.serialize(destination=tmp_rdf.as_posix(), format="pretty-xml", encoding="utf-8")
     Path(tmp_rdf).replace(rdf_out)
 
+    # JSON-LD
+    jsonld_out = out_path.with_suffix(".jsonld")
+    tmp_jsonld = jsonld_out.with_suffix(".jsonld.tmp")
+    g.serialize(destination=tmp_jsonld.as_posix(), format="json-ld", encoding="utf-8")
+    Path(tmp_jsonld).replace(jsonld_out)
+
     print(f"\nFertig. Dateien gespeichert:\n  {out_path}\n  {rdf_out}")
     print(f"Gesamtzahl Tripel: {len(g)}")
 
