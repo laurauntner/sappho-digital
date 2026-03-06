@@ -1,0 +1,1425 @@
+{
+  "@context": {
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "dc": "http://purl.org/dc/elements/1.1/",
+    "cc": "http://creativecommons.org/ns#",
+    "ecrm": "http://erlangen-crm.org/current/",
+    "crm": "http://www.cidoc-crm.org/cidoc-crm/",
+    "lrmoo": "http://iflastandards.info/ns/lrm/lrmoo/",
+    "intro": "https://w3id.org/lso/intro/currentbeta#",
+    "sappho": "https://w3id.org/sappho-digital/ontology/",
+    "schema": "https://schema.org/"
+  },
+  "@graph": [
+
+    {
+      "@id": "https://w3id.org/sappho-digital/ontology/",
+      "@type": "owl:Ontology",
+      "rdfs:label": { "@value": "Sappho Digital Ontology", "@language": "en" },
+      "dc:title": { "@value": "Sappho Digital Ontology", "@language": "en" },
+      "dc:creator": [
+        { "@id": "https://orcid.org/0000-0002-9649-0870" },
+        { "@value": "Laura Untner", "@type": "xsd:string" }
+      ],
+      "dc:issued": { "@value": "2026-02-01", "@type": "xsd:date" },
+      "dc:modified": { "@value": "2026-02-18", "@type": "xsd:date" },
+      "cc:licence": { "@id": "https://creativecommons.org/licenses/by/4.0/" },
+      "dc:rights": "This ontology is distributed under the Creative Commons Attribution 4.0 International Licence (CC-BY 4.0).",
+      "dc:description": "This is an ontology developed in the project Sappho Digital by Laura Untner. It reuses the Erlangen OWL version of the CIDOC Conceptual Reference Model (CRM; ECRM 240307, based on CIDOC CRM 7.1.3), the object-oriented version of IFLA's Library Reference Model (LRMoo; v1.1.1) and INTRO (the Intertextual, Interpictorial and Intermedial Relations Ontology; beta202506) to model basic biographical and bibliographical as well as intertextual information.",
+      "dc:relation": "https://sappho-digital.com",
+      "owl:versionInfo": { "@value": "Version 0.1", "@type": "xsd:string" },
+      "owl:imports": [
+        { "@id": "http://erlangen-crm.org/current/" },
+        { "@id": "https://raw.githubusercontent.com/BOberreither/INTRO/refs/heads/master/INTRO_CurrentBeta.owl" },
+        { "@id": "https://cidoc-crm.org/extensions/lrmoo/owl/1.1.1/LRMoo_v1.1.1.owl" }
+      ]
+    },
+
+    {
+      "@id": "ecrm:E21_Person",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        { "@value": "E21 Person", "@language": "en" },
+        { "@value": "E21 Person", "@language": "de" },
+        { "@value": "E21 Πρόσωπο", "@language": "el" },
+        { "@value": "E21 Personne", "@language": "fr" },
+        { "@value": "E21 Pessoa", "@language": "pt" },
+        { "@value": "E21 Личность", "@language": "ru" },
+        { "@value": "E21 人物", "@language": "zh" }
+      ],
+      "skos:notation": "E21",
+      "rdfs:subClassOf": [
+        { "@id": "ecrm:E20_Biological_Object" },
+        { "@id": "ecrm:E39_Actor" },
+        {
+          "@type": "owl:Restriction",
+          "owl:onProperty": { "@id": "ecrm:P98i_was_born" },
+          "owl:cardinality": { "@value": "1", "@type": "xsd:nonNegativeInteger" }
+        },
+        {
+          "@type": "owl:Restriction",
+          "owl:onProperty": { "@id": "ecrm:P152_has_parent" },
+          "owl:minCardinality": { "@value": "2", "@type": "xsd:int" }
+        }
+      ],
+      "rdfs:comment": { "@value": "This class comprises real persons who live or are assumed to have lived. Legendary figures that may have existed, such as Ulysses and King Arthur, fall into this class if the documentation refers to them as historical figures.", "@language": "en" },
+      "owl:sameAs": { "@id": "crm:E21_Person" }
+    },
+
+    {
+      "@id": "ecrm:E35_Title",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        { "@value": "E35 Title", "@language": "en" },
+        { "@value": "E35 Titel", "@language": "de" },
+        { "@value": "E35 Τίτλος", "@language": "el" },
+        { "@value": "E35 Titre", "@language": "fr" },
+        { "@value": "E35 Título", "@language": "pt" },
+        { "@value": "E35 Заголовок", "@language": "ru" },
+        { "@value": "E35 题名", "@language": "zh" }
+      ],
+      "skos:notation": "E35",
+      "rdfs:subClassOf": [
+        { "@id": "ecrm:E33_Linguistic_Object" },
+        { "@id": "ecrm:E41_Appellation" }
+      ],
+      "rdfs:comment": { "@value": "This class comprises the textual strings that within a cultural context can be clearly identified as titles due to their form.", "@language": "en" },
+      "owl:sameAs": { "@id": "crm:E35_Title" }
+    },
+
+    {
+      "@id": "ecrm:E36_Visual_Item",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        { "@value": "E36 Visual Item", "@language": "en" },
+        { "@value": "E36 Bildliches", "@language": "de" },
+        { "@value": "E36 Οπτικό Στοιχείο", "@language": "el" },
+        { "@value": "E36 Entité visuelle", "@language": "fr" },
+        { "@value": "E36 Item Visual", "@language": "pt" },
+        { "@value": "E36 Визуальный Предмет", "@language": "ru" },
+        { "@value": "E36 可视项", "@language": "zh" }
+      ],
+      "skos:notation": "E36",
+      "rdfs:subClassOf": { "@id": "ecrm:E73_Information_Object" },
+      "rdfs:comment": { "@value": "This class comprises the intellectual or conceptual aspects of recognisable marks and images.", "@language": "en" },
+      "owl:sameAs": { "@id": "crm:E36_Visual_Item" }
+    },
+
+    {
+      "@id": "ecrm:E42_Identifier",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        { "@value": "E42 Identifier", "@language": "en" },
+        { "@value": "E42 Kennung", "@language": "de" },
+        { "@value": "E42 Κωδικός Αναγνώρισης", "@language": "el" },
+        { "@value": "E42 Identifiant", "@language": "fr" },
+        { "@value": "E42 Identificador de Objeto", "@language": "pt" },
+        { "@value": "E42 Идентификатор Объекта", "@language": "ru" },
+        { "@value": "E42 标识符", "@language": "zh" }
+      ],
+      "skos:notation": "E42",
+      "rdfs:subClassOf": { "@id": "ecrm:E41_Appellation" },
+      "rdfs:comment": { "@value": "This class comprises strings or codes assigned to instances of E1 CRM Entity in order to identify them uniquely and permanently within the context of one or more organisations.", "@language": "en" },
+      "owl:sameAs": { "@id": "crm:E42_Identifier" }
+    },
+
+    {
+      "@id": "ecrm:E52_Time-Span",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        { "@value": "E52 Time-Span", "@language": "en" },
+        { "@value": "E52 Zeitspanne", "@language": "de" },
+        { "@value": "E52 Χρονικό Διάστημα", "@language": "el" },
+        { "@value": "E52 Intervalle temporel", "@language": "fr" },
+        { "@value": "E52 Período de Tempo", "@language": "pt" },
+        { "@value": "E52 Интервал Времени", "@language": "ru" },
+        { "@value": "E52 时段", "@language": "zh" }
+      ],
+      "skos:notation": "E52",
+      "rdfs:subClassOf": [
+        { "@id": "ecrm:E1_CRM_Entity" },
+        {
+          "@type": "owl:Restriction",
+          "owl:onProperty": { "@id": "ecrm:P4i_is_time-span_of" },
+          "owl:someValuesFrom": { "@id": "ecrm:E2_Temporal_Entity" }
+        }
+      ],
+      "rdfs:comment": { "@value": "This class comprises abstract temporal extents, in the sense of Galilean physics, having a beginning, an end, and a duration.", "@language": "en" },
+      "owl:sameAs": { "@id": "crm:E52_Time-Span" }
+    },
+
+    {
+      "@id": "ecrm:E53_Place",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        { "@value": "E53 Place", "@language": "en" },
+        { "@value": "E53 Ort", "@language": "de" },
+        { "@value": "E53 Τόπος", "@language": "el" },
+        { "@value": "E53 Lieu", "@language": "fr" },
+        { "@value": "E53 Local", "@language": "pt" },
+        { "@value": "E53 Место", "@language": "ru" },
+        { "@value": "E53 地点", "@language": "zh" }
+      ],
+      "skos:notation": "E53",
+      "rdfs:subClassOf": [
+        { "@id": "ecrm:E1_CRM_Entity" },
+        {
+          "@type": "owl:Restriction",
+          "owl:onProperty": { "@id": "ecrm:P59i_is_located_on_or_within" },
+          "owl:maxCardinality": { "@value": "1", "@type": "xsd:nonNegativeInteger" }
+        }
+      ],
+      "rdfs:comment": { "@value": "This class comprises extents in the natural space where people live, in particular on the surface of the Earth, in the pure sense of physics.", "@language": "en" },
+      "owl:sameAs": { "@id": "crm:E53_Place" }
+    },
+
+    {
+      "@id": "ecrm:E55_Type",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        { "@value": "E55 Type", "@language": "en" },
+        { "@value": "E55 Typus", "@language": "de" },
+        { "@value": "E55 Τύπος", "@language": "el" },
+        { "@value": "E55 Type", "@language": "fr" },
+        { "@value": "E55 Tipo", "@language": "pt" },
+        { "@value": "E55 Тип", "@language": "ru" },
+        { "@value": "E55 类型", "@language": "zh" }
+      ],
+      "skos:notation": "E55",
+      "rdfs:subClassOf": [
+        { "@id": "ecrm:E28_Conceptual_Object" },
+        {
+          "@type": "owl:Restriction",
+          "owl:onProperty": { "@id": "ecrm:P135i_was_created_by" },
+          "owl:maxCardinality": { "@value": "1", "@type": "xsd:nonNegativeInteger" }
+        }
+      ],
+      "rdfs:comment": { "@value": "This class comprises concepts denoted by terms from thesauri and controlled vocabularies used to characterize and classify instances of CIDOC CRM classes.", "@language": "en" },
+      "owl:sameAs": { "@id": "crm:E55_Type" }
+    },
+
+    {
+      "@id": "ecrm:E67_Birth",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        { "@value": "E67 Birth", "@language": "en" },
+        { "@value": "E67 Geburt", "@language": "de" },
+        { "@value": "E67 Γέννηση", "@language": "el" },
+        { "@value": "E67 Naissance", "@language": "fr" },
+        { "@value": "E67 Nascimento", "@language": "pt" },
+        { "@value": "E67 Рождение", "@language": "ru" },
+        { "@value": "E67 出生", "@language": "zh" }
+      ],
+      "skos:notation": "E67",
+      "rdfs:subClassOf": [
+        { "@id": "ecrm:E63_Beginning_of_Existence" },
+        {
+          "@type": "owl:Restriction",
+          "owl:onProperty": { "@id": "ecrm:P98_brought_into_life" },
+          "owl:someValuesFrom": { "@id": "ecrm:E21_Person" }
+        },
+        {
+          "@type": "owl:Restriction",
+          "owl:onProperty": { "@id": "ecrm:P97_from_father" },
+          "owl:someValuesFrom": { "@id": "ecrm:E21_Person" }
+        },
+        {
+          "@type": "owl:Restriction",
+          "owl:onProperty": { "@id": "ecrm:P96_by_mother" },
+          "owl:someValuesFrom": { "@id": "ecrm:E21_Person" }
+        }
+      ],
+      "rdfs:comment": { "@value": "This class comprises the births of human beings.", "@language": "en" },
+      "owl:sameAs": { "@id": "crm:E67_Birth" }
+    },
+
+    {
+      "@id": "ecrm:E69_Death",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        { "@value": "E69 Death", "@language": "en" },
+        { "@value": "E69 Tod", "@language": "de" },
+        { "@value": "E69 Θάνατος", "@language": "el" },
+        { "@value": "E69 Mort", "@language": "fr" },
+        { "@value": "E69 Morte", "@language": "pt" },
+        { "@value": "E69 Смерть", "@language": "ru" },
+        { "@value": "E69 死亡", "@language": "zh" }
+      ],
+      "skos:notation": "E69",
+      "rdfs:subClassOf": [
+        { "@id": "ecrm:E64_End_of_Existence" },
+        {
+          "@type": "owl:Restriction",
+          "owl:onProperty": { "@id": "ecrm:P100_was_death_of" },
+          "owl:someValuesFrom": { "@id": "ecrm:E21_Person" }
+        }
+      ],
+      "rdfs:comment": { "@value": "This class comprises the deaths of human beings.", "@language": "en" },
+      "owl:sameAs": { "@id": "crm:E69_Death" }
+    },
+
+    {
+      "@id": "ecrm:E73_Information_Object",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        { "@value": "E73 Information Object", "@language": "en" },
+        { "@value": "E73 Informationsgegenstand", "@language": "de" },
+        { "@value": "E73 Πληροφοριακό Αντικείμενο", "@language": "el" },
+        { "@value": "E73 Objet informationnel", "@language": "fr" },
+        { "@value": "E73 Objeto de Informação", "@language": "pt" },
+        { "@value": "E73 Информационный Объект", "@language": "ru" },
+        { "@value": "E73 信息对象", "@language": "zh" }
+      ],
+      "skos:notation": "E73",
+      "rdfs:subClassOf": [
+        { "@id": "ecrm:E89_Propositional_Object" },
+        { "@id": "ecrm:E90_Symbolic_Object" }
+      ],
+      "rdfs:comment": { "@value": "This class comprises identifiable immaterial items, such as poems, jokes, data sets, images, texts, multimedia objects, procedural prescriptions, computer program code, algorithm or mathematical formulae, that have an objectively recognizable structure and are documented as single units.", "@language": "en" },
+      "owl:sameAs": { "@id": "crm:E73_Information_Object" }
+    },
+
+    {
+      "@id": "ecrm:E74_Group",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        { "@value": "E74 Group", "@language": "en" },
+        { "@value": "E74 Menschliche Gruppe", "@language": "de" },
+        { "@value": "E74 Ομάδα", "@language": "el" },
+        { "@value": "E74 Groupe", "@language": "fr" },
+        { "@value": "E74 Grupo", "@language": "pt" },
+        { "@value": "E74 Группа", "@language": "ru" },
+        { "@value": "E74 团体", "@language": "zh" }
+      ],
+      "skos:notation": "E74",
+      "rdfs:subClassOf": [
+        { "@id": "ecrm:E39_Actor" },
+        {
+          "@type": "owl:Restriction",
+          "owl:onProperty": { "@id": "ecrm:P144i_gained_member_by" },
+          "owl:minCardinality": { "@value": "2", "@type": "xsd:nonNegativeInteger" }
+        },
+        {
+          "@type": "owl:Restriction",
+          "owl:onProperty": { "@id": "ecrm:P95i_was_formed_by" },
+          "owl:maxCardinality": { "@value": "1", "@type": "xsd:nonNegativeInteger" }
+        },
+        {
+          "@type": "owl:Restriction",
+          "owl:onProperty": { "@id": "ecrm:P107_has_current_or_former_member" },
+          "owl:minCardinality": { "@value": "2", "@type": "xsd:nonNegativeInteger" }
+        }
+      ],
+      "rdfs:comment": { "@value": "This class comprises any gatherings or organizations of human individuals or groups that act collectively or in a similar way due to any form of unifying relationship.", "@language": "en" },
+      "owl:sameAs": { "@id": "crm:E74_Group" }
+    },
+
+    {
+      "@id": "ecrm:E90_Symbolic_Object",
+      "@type": "owl:Class",
+      "rdfs:label": [
+        { "@value": "E90 Symbolic Object", "@language": "en" },
+        { "@value": "E90 Symbolisches Objekt", "@language": "de" },
+        { "@value": "E90 Objet symbolique", "@language": "fr" },
+        { "@value": "E90 符号对象", "@language": "zh" }
+      ],
+      "skos:notation": "E90",
+      "rdfs:subClassOf": [
+        { "@id": "ecrm:E28_Conceptual_Object" },
+        { "@id": "ecrm:E72_Legal_Object" },
+        {
+          "@type": "owl:Restriction",
+          "owl:onProperty": { "@id": "ecrm:P106_is_composed_of" },
+          "owl:someValuesFrom": { "@id": "ecrm:E90_Symbolic_Object" }
+        }
+      ],
+      "rdfs:comment": { "@value": "This class comprises identifiable symbols and any aggregation of symbols, such as characters, identifiers, traffic signs, emblems, texts, data sets, images, musical scores, multimedia objects, computer program code, or mathematical formulae that have an objectively recognizable structure.", "@language": "en" },
+      "owl:sameAs": { "@id": "crm:E90_Symbolic_Object" }
+    },
+
+    {
+      "@id": "ecrm:P100_was_death_of",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P100 was death of", "@language": "en" },
+        { "@value": "P100 Tod von", "@language": "de" },
+        { "@value": "P100 a été la mort de", "@language": "fr" },
+        { "@value": "P100 死亡的是", "@language": "zh" }
+      ],
+      "skos:notation": "P100",
+      "rdfs:domain": { "@id": "ecrm:E69_Death" },
+      "rdfs:range": { "@id": "ecrm:E21_Person" },
+      "owl:inverseOf": { "@id": "ecrm:P100i_died_in" },
+      "rdfs:subPropertyOf": { "@id": "ecrm:P93_took_out_of_existence" },
+      "owl:sameAs": { "@id": "crm:P100_was_death_of" }
+    },
+
+    {
+      "@id": "ecrm:P100i_died_in",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P100 died in", "@language": "en" },
+        { "@value": "P100 starb in", "@language": "de" },
+        { "@value": "P100 est mort par", "@language": "fr" },
+        { "@value": "P100 死于", "@language": "zh" }
+      ],
+      "skos:notation": "P100i",
+      "rdfs:domain": { "@id": "ecrm:E21_Person" },
+      "rdfs:range": { "@id": "ecrm:E69_Death" },
+      "owl:inverseOf": { "@id": "ecrm:P100_was_death_of" },
+      "rdfs:subPropertyOf": { "@id": "ecrm:P93i_was_taken_out_of_existence_by" },
+      "owl:sameAs": { "@id": "crm:P100i_died_in" }
+    },
+
+    {
+      "@id": "ecrm:P102_has_title",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P102 has title", "@language": "en" },
+        { "@value": "P102 trägt den Titel", "@language": "de" },
+        { "@value": "P102 a pour titre", "@language": "fr" },
+        { "@value": "P102 有题名", "@language": "zh" }
+      ],
+      "skos:notation": "P102",
+      "rdfs:domain": { "@id": "ecrm:E71_Human-Made_Thing" },
+      "rdfs:range": { "@id": "ecrm:E35_Title" },
+      "owl:inverseOf": { "@id": "ecrm:P102i_is_title_of" },
+      "rdfs:subPropertyOf": { "@id": "ecrm:P1_is_identified_by" },
+      "owl:sameAs": { "@id": "crm:P102_has_title" }
+    },
+
+    {
+      "@id": "ecrm:P102i_is_title_of",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P102 is title of", "@language": "en" },
+        { "@value": "P102 ist der Titel von", "@language": "de" },
+        { "@value": "P102 est le titre de", "@language": "fr" },
+        { "@value": "P102 题名是", "@language": "zh" }
+      ],
+      "skos:notation": "P102i",
+      "rdfs:domain": { "@id": "ecrm:E35_Title" },
+      "rdfs:range": { "@id": "ecrm:E71_Human-Made_Thing" },
+      "owl:inverseOf": { "@id": "ecrm:P102_has_title" },
+      "rdfs:subPropertyOf": { "@id": "ecrm:P1i_identifies" },
+      "owl:sameAs": { "@id": "crm:P102i_is_title_of" }
+    },
+
+    {
+      "@id": "ecrm:P138_represents",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P138 represents", "@language": "en" },
+        { "@value": "P138 stellt dar", "@language": "de" },
+        { "@value": "P138 représente", "@language": "fr" },
+        { "@value": "P138 描绘", "@language": "zh" }
+      ],
+      "skos:notation": "P138",
+      "rdfs:domain": { "@id": "ecrm:E36_Visual_Item" },
+      "rdfs:range": { "@id": "ecrm:E1_CRM_Entity" },
+      "owl:inverseOf": { "@id": "ecrm:P138i_has_representation" },
+      "rdfs:subPropertyOf": { "@id": "ecrm:P67_refers_to" },
+      "owl:sameAs": { "@id": "crm:P138_represents" }
+    },
+
+    {
+      "@id": "ecrm:P138i_has_representation",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P138 has representation", "@language": "en" },
+        { "@value": "P138 wird dargestellt durch", "@language": "de" },
+        { "@value": "P138 est représenté par", "@language": "fr" },
+        { "@value": "P138 有描绘", "@language": "zh" }
+      ],
+      "skos:notation": "P138i",
+      "rdfs:domain": { "@id": "ecrm:E1_CRM_Entity" },
+      "rdfs:range": { "@id": "ecrm:E36_Visual_Item" },
+      "owl:inverseOf": { "@id": "ecrm:P138_represents" },
+      "rdfs:subPropertyOf": { "@id": "ecrm:P67i_is_referred_to_by" },
+      "owl:sameAs": { "@id": "crm:P138i_has_representation" }
+    },
+
+    {
+      "@id": "ecrm:P14_carried_out_by",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P14 carried out by", "@language": "en" },
+        { "@value": "P14 wurde ausgeführt von", "@language": "de" },
+        { "@value": "P14 a été effectué par", "@language": "fr" },
+        { "@value": "P14 执行者是", "@language": "zh" }
+      ],
+      "skos:notation": "P14",
+      "rdfs:domain": { "@id": "ecrm:E7_Activity" },
+      "rdfs:range": { "@id": "ecrm:E39_Actor" },
+      "owl:inverseOf": { "@id": "ecrm:P14i_performed" },
+      "rdfs:subPropertyOf": { "@id": "ecrm:P11_had_participant" },
+      "owl:sameAs": { "@id": "crm:P14_carried_out_by" }
+    },
+
+    {
+      "@id": "ecrm:P14i_performed",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P14 performed", "@language": "en" },
+        { "@value": "P14 führte aus", "@language": "de" },
+        { "@value": "P14 a effectué", "@language": "fr" },
+        { "@value": "P14 执行", "@language": "zh" }
+      ],
+      "skos:notation": "P14i",
+      "rdfs:domain": { "@id": "ecrm:E39_Actor" },
+      "rdfs:range": { "@id": "ecrm:E7_Activity" },
+      "owl:inverseOf": { "@id": "ecrm:P14_carried_out_by" },
+      "rdfs:subPropertyOf": { "@id": "ecrm:P11i_participated_in" },
+      "owl:sameAs": { "@id": "crm:P14i_performed" }
+    },
+
+    {
+      "@id": "ecrm:P1_is_identified_by",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P1 is identified by", "@language": "en" },
+        { "@value": "P1 wird bezeichnet als", "@language": "de" },
+        { "@value": "P1 est identifié par", "@language": "fr" },
+        { "@value": "P1 被标识为", "@language": "zh" }
+      ],
+      "skos:notation": "P1",
+      "rdfs:domain": { "@id": "ecrm:E1_CRM_Entity" },
+      "rdfs:range": { "@id": "ecrm:E41_Appellation" },
+      "owl:inverseOf": { "@id": "ecrm:P1i_identifies" },
+      "owl:sameAs": { "@id": "crm:P1_is_identified_by" }
+    },
+
+    {
+      "@id": "ecrm:P1i_identifies",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P1 identifies", "@language": "en" },
+        { "@value": "P1 bezeichnet", "@language": "de" },
+        { "@value": "P1 identifie", "@language": "fr" },
+        { "@value": "P1 标识", "@language": "zh" }
+      ],
+      "skos:notation": "P1i",
+      "rdfs:domain": { "@id": "ecrm:E41_Appellation" },
+      "rdfs:range": { "@id": "ecrm:E1_CRM_Entity" },
+      "owl:inverseOf": { "@id": "ecrm:P1_is_identified_by" },
+      "owl:sameAs": { "@id": "crm:P1i_identifies" }
+    },
+
+    {
+      "@id": "ecrm:P2_has_type",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P2 has type", "@language": "en" },
+        { "@value": "P2 hat den Typus", "@language": "de" },
+        { "@value": "P2 a pour type", "@language": "fr" },
+        { "@value": "P2 有类型", "@language": "zh" }
+      ],
+      "skos:notation": "P2",
+      "rdfs:domain": { "@id": "ecrm:E1_CRM_Entity" },
+      "rdfs:range": { "@id": "ecrm:E55_Type" },
+      "owl:inverseOf": { "@id": "ecrm:P2i_is_type_of" },
+      "owl:sameAs": { "@id": "crm:P2_has_type" }
+    },
+
+    {
+      "@id": "ecrm:P2i_is_type_of",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P2 is type of", "@language": "en" },
+        { "@value": "P2 ist Typus von", "@language": "de" },
+        { "@value": "P2 est le type de", "@language": "fr" },
+        { "@value": "P2 是类型", "@language": "zh" }
+      ],
+      "skos:notation": "P2i",
+      "rdfs:domain": { "@id": "ecrm:E55_Type" },
+      "rdfs:range": { "@id": "ecrm:E1_CRM_Entity" },
+      "owl:inverseOf": { "@id": "ecrm:P2_has_type" },
+      "owl:sameAs": { "@id": "crm:P2i_is_type_of" }
+    },
+
+    {
+      "@id": "ecrm:P4_has_time-span",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P4 has time-span", "@language": "en" },
+        { "@value": "P4 hat Zeitspanne", "@language": "de" },
+        { "@value": "P4 a pour intervalle temporel", "@language": "fr" },
+        { "@value": "P4 发生时段是", "@language": "zh" }
+      ],
+      "skos:notation": "P4",
+      "rdfs:domain": { "@id": "ecrm:E2_Temporal_Entity" },
+      "rdfs:range": { "@id": "ecrm:E52_Time-Span" },
+      "owl:inverseOf": { "@id": "ecrm:P4i_is_time-span_of" },
+      "owl:sameAs": { "@id": "crm:P4_has_time-span" }
+    },
+
+    {
+      "@id": "ecrm:P4i_is_time-span_of",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P4 is time-span of", "@language": "en" },
+        { "@value": "P4 ist Zeitspanne von", "@language": "de" },
+        { "@value": "P4 est l'intervalle temporel de", "@language": "fr" },
+        { "@value": "P4 是时段", "@language": "zh" }
+      ],
+      "skos:notation": "P4i",
+      "rdfs:domain": { "@id": "ecrm:E52_Time-Span" },
+      "rdfs:range": { "@id": "ecrm:E2_Temporal_Entity" },
+      "owl:inverseOf": { "@id": "ecrm:P4_has_time-span" },
+      "owl:sameAs": { "@id": "crm:P4i_is_time-span_of" }
+    },
+
+    {
+      "@id": "ecrm:P67_refers_to",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P67 refers to", "@language": "en" },
+        { "@value": "P67 verweist auf", "@language": "de" },
+        { "@value": "P67 renvoie à", "@language": "fr" },
+        { "@value": "P67 涉及", "@language": "zh" }
+      ],
+      "skos:notation": "P67",
+      "rdfs:domain": { "@id": "ecrm:E89_Propositional_Object" },
+      "rdfs:range": { "@id": "ecrm:E1_CRM_Entity" },
+      "owl:inverseOf": { "@id": "ecrm:P67i_is_referred_to_by" },
+      "owl:sameAs": { "@id": "crm:P67_refers_to" }
+    },
+
+    {
+      "@id": "ecrm:P67i_is_referred_to_by",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P67 is referred to by", "@language": "en" },
+        { "@value": "P67 wird angeführt von", "@language": "de" },
+        { "@value": "P67 fait l'objet d'un renvoi par", "@language": "fr" },
+        { "@value": "P67 被涉及", "@language": "zh" }
+      ],
+      "skos:notation": "P67i",
+      "rdfs:domain": { "@id": "ecrm:E1_CRM_Entity" },
+      "rdfs:range": { "@id": "ecrm:E89_Propositional_Object" },
+      "owl:inverseOf": { "@id": "ecrm:P67_refers_to" },
+      "owl:sameAs": { "@id": "crm:P67i_is_referred_to_by" }
+    },
+
+    {
+      "@id": "ecrm:P7_took_place_at",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P7 took place at", "@language": "en" },
+        { "@value": "P7 fand statt in", "@language": "de" },
+        { "@value": "P7 a eu lieu dans", "@language": "fr" },
+        { "@value": "P7 发生地在", "@language": "zh" }
+      ],
+      "skos:notation": "P7",
+      "rdfs:domain": { "@id": "ecrm:E4_Period" },
+      "rdfs:range": { "@id": "ecrm:E53_Place" },
+      "owl:inverseOf": { "@id": "ecrm:P7i_witnessed" },
+      "owl:sameAs": { "@id": "crm:P7_took_place_at" }
+    },
+
+    {
+      "@id": "ecrm:P7i_witnessed",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P7 witnessed", "@language": "en" },
+        { "@value": "P7 bezeugte", "@language": "de" },
+        { "@value": "P7 a été témoin de", "@language": "fr" },
+        { "@value": "P7 发生过", "@language": "zh" }
+      ],
+      "skos:notation": "P7i",
+      "rdfs:domain": { "@id": "ecrm:E53_Place" },
+      "rdfs:range": { "@id": "ecrm:E4_Period" },
+      "owl:inverseOf": { "@id": "ecrm:P7_took_place_at" },
+      "owl:sameAs": { "@id": "crm:P7i_witnessed" }
+    },
+
+    {
+      "@id": "ecrm:P98_brought_into_life",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P98 brought into life", "@language": "en" },
+        { "@value": "P98 brachte zur Welt", "@language": "de" },
+        { "@value": "P98 a donné vie à", "@language": "fr" },
+        { "@value": "P98 诞生了", "@language": "zh" }
+      ],
+      "skos:notation": "P98",
+      "rdfs:domain": { "@id": "ecrm:E67_Birth" },
+      "rdfs:range": { "@id": "ecrm:E21_Person" },
+      "owl:inverseOf": { "@id": "ecrm:P98i_was_born" },
+      "rdfs:subPropertyOf": { "@id": "ecrm:P92_brought_into_existence" },
+      "owl:sameAs": { "@id": "crm:P98_brought_into_life" }
+    },
+
+    {
+      "@id": "ecrm:P98i_was_born",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P98 was born", "@language": "en" },
+        { "@value": "P98 wurde geboren durch", "@language": "de" },
+        { "@value": "P98 est né", "@language": "fr" },
+        { "@value": "P98 被诞生", "@language": "zh" }
+      ],
+      "skos:notation": "P98i",
+      "rdfs:domain": { "@id": "ecrm:E21_Person" },
+      "rdfs:range": { "@id": "ecrm:E67_Birth" },
+      "owl:inverseOf": { "@id": "ecrm:P98_brought_into_life" },
+      "rdfs:subPropertyOf": { "@id": "ecrm:P92i_was_brought_into_existence_by" },
+      "owl:sameAs": { "@id": "crm:P98i_was_born" }
+    },
+
+    {
+      "@id": "ecrm:P165_incorporates",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P165 incorporates", "@language": "en" },
+        { "@value": "P165 inclut", "@language": "fr" }
+      ],
+      "skos:notation": "P165",
+      "rdfs:domain": { "@id": "ecrm:E73_Information_Object" },
+      "rdfs:range": { "@id": "ecrm:E90_Symbolic_Object" },
+      "owl:inverseOf": { "@id": "ecrm:P165i_is_incorporated_in" },
+      "rdfs:subPropertyOf": { "@id": "ecrm:P106_is_composed_of" },
+      "owl:sameAs": { "@id": "crm:P165_incorporates" }
+    },
+
+    {
+      "@id": "ecrm:165i_is_incorporated_in",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P165 is incorporated in", "@language": "en" },
+        { "@value": "P165 est inclus dans", "@language": "fr" }
+      ],
+      "skos:notation": "P165i",
+      "rdfs:domain": { "@id": "ecrm:E90_Symbolic_Object" },
+      "rdfs:range": { "@id": "ecrm:E73_Information_Object" },
+      "owl:inverseOf": { "@id": "ecrm:P165_incorporates" },
+      "rdfs:subPropertyOf": { "@id": "ecrm:P106i_forms_part_of" },
+      "owl:sameAs": { "@id": "crm:P165i_is_incorporated_in" }
+    },
+
+    {
+      "@id": "lrmoo:F1_Work",
+      "@type": "owl:Class",
+      "rdfs:label": { "@value": "F1 Work", "@language": "en" },
+      "skos:notation": "F1",
+      "skos:prefLabel": { "@value": "Work", "@language": "en" },
+      "rdfs:subClassOf": { "@id": "crm:E89_Propositional_Object" },
+      "rdfs:comment": { "@value": "This class comprises distinct intellectual ideas conveyed in artistic and intellectual creations, such as poems, stories or musical compositions.", "@language": "en" }
+    },
+
+    {
+      "@id": "lrmoo:F27_Work_Creation",
+      "@type": "owl:Class",
+      "rdfs:label": { "@value": "F27 Work Creation", "@language": "en" },
+      "skos:notation": "F27",
+      "skos:prefLabel": { "@value": "Work Creation", "@language": "en" },
+      "rdfs:subClassOf": { "@id": "crm:E65_Creation" },
+      "rdfs:comment": { "@value": "This class comprises activities by which instances of F1 Work come into existence.", "@language": "en" }
+    },
+
+    {
+      "@id": "lrmoo:F28_Expression_Creation",
+      "@type": "owl:Class",
+      "rdfs:label": { "@value": "F28 Expression Creation", "@language": "en" },
+      "skos:notation": "F28",
+      "skos:prefLabel": { "@value": "Expression Creation", "@language": "en" },
+      "rdfs:subClassOf": [
+        { "@id": "crm:E12_Production" },
+        { "@id": "crm:E65_Creation" }
+      ],
+      "rdfs:comment": { "@value": "This class comprises activities that result in instances of F2 Expression coming into existence.", "@language": "en" }
+    },
+
+    {
+      "@id": "lrmoo:F2_Expression",
+      "@type": "owl:Class",
+      "rdfs:label": { "@value": "F2 Expression", "@language": "en" },
+      "skos:notation": "F2",
+      "skos:prefLabel": { "@value": "Expression", "@language": "en" },
+      "rdfs:subClassOf": { "@id": "crm:E73_Information_Object" },
+      "rdfs:comment": { "@value": "This class comprises the intellectual or artistic realisations of Works in the form of identifiable immaterial objects, such as texts, poems, jokes, musical or choreographic notations, movement pattern, sound pattern, images, multimedia objects, or any combination of such forms.", "@language": "en" }
+    },
+
+    {
+      "@id": "lrmoo:F30_Manifestation_Creation",
+      "@type": "owl:Class",
+      "rdfs:label": { "@value": "F30 Manifestation Creation", "@language": "en" },
+      "skos:notation": "F30",
+      "skos:prefLabel": { "@value": "Manifestation Creation", "@language": "en" },
+      "rdfs:subClassOf": [
+        { "@id": "crm:E12_Production" },
+        { "@id": "crm:E65_Creation" }
+      ],
+      "rdfs:comment": { "@value": "This class comprises the activities of selecting, arranging and presenting one or more instances of F2 Expression on a carrier or other persistent presentation means with the purpose of communicating it to some public.", "@language": "en" }
+    },
+
+    {
+      "@id": "lrmoo:F3_Manifestation",
+      "@type": "owl:Class",
+      "rdfs:label": { "@value": "F3 Manifestation", "@language": "en" },
+      "skos:notation": "F3",
+      "skos:prefLabel": { "@value": "Manifestation", "@language": "en" },
+      "rdfs:subClassOf": { "@id": "crm:E73_Information_Object" },
+      "rdfs:comment": { "@value": "This class comprises products rendering one or more Expressions.", "@language": "en" }
+    },
+
+    {
+      "@id": "lrmoo:R10_is_member_of",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R10 is member of", "@language": "en" },
+      "skos:notation": "R10",
+      "skos:prefLabel": { "@value": "is member of", "@language": "en" },
+      "rdfs:domain": { "@id": "lrmoo:F1_Work" },
+      "rdfs:range": { "@id": "crm:E28_Conceptual_Object" },
+      "owl:inverseOf": { "@id": "lrmoo:R10i_has_member" }
+    },
+
+    {
+      "@id": "lrmoo:R10i_has_member",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R10i has member", "@language": "en" },
+      "skos:notation": "R10i",
+      "skos:prefLabel": { "@value": "has member", "@language": "en" },
+      "rdfs:domain": { "@id": "crm:E28_Conceptual_Object" },
+      "rdfs:range": { "@id": "lrmoo:F1_Work" },
+      "owl:inverseOf": { "@id": "lrmoo:R10_is_member_of" }
+    },
+
+    {
+      "@id": "lrmoo:R16_created",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R16 created", "@language": "en" },
+      "skos:notation": "R16",
+      "skos:prefLabel": { "@value": "created", "@language": "en" },
+      "rdfs:domain": { "@id": "lrmoo:F27_Work_Creation" },
+      "rdfs:range": { "@id": "lrmoo:F1_Work" },
+      "owl:inverseOf": { "@id": "lrmoo:R16i_was_created_by" },
+      "rdfs:subPropertyOf": { "@id": "crm:P94_has_created" }
+    },
+
+    {
+      "@id": "lrmoo:R16i_was_created_by",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R16i was created by", "@language": "en" },
+      "skos:notation": "R16i",
+      "skos:prefLabel": { "@value": "was created by", "@language": "en" },
+      "rdfs:domain": { "@id": "lrmoo:F1_Work" },
+      "rdfs:range": { "@id": "lrmoo:F27_Work_Creation" },
+      "owl:inverseOf": { "@id": "lrmoo:R16_created" },
+      "rdfs:subPropertyOf": { "@id": "crm:P94i_was_created_by" }
+    },
+
+    {
+      "@id": "lrmoo:R17_created",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R17 created", "@language": "en" },
+      "skos:notation": "R17",
+      "skos:prefLabel": { "@value": "created", "@language": "en" },
+      "rdfs:domain": { "@id": "lrmoo:F28_Expression_Creation" },
+      "rdfs:range": { "@id": "lrmoo:F2_Expression" },
+      "owl:inverseOf": { "@id": "lrmoo:R17i_was_created_by" },
+      "rdfs:subPropertyOf": { "@id": "crm:P94_has_created" }
+    },
+
+    {
+      "@id": "lrmoo:R17i_was_created_by",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R17i was created by", "@language": "en" },
+      "skos:notation": "R17i",
+      "skos:prefLabel": { "@value": "was created by", "@language": "en" },
+      "rdfs:domain": { "@id": "lrmoo:F2_Expression" },
+      "rdfs:range": { "@id": "lrmoo:F28_Expression_Creation" },
+      "owl:inverseOf": { "@id": "lrmoo:R17_created" },
+      "rdfs:subPropertyOf": { "@id": "crm:P94i_was_created_by" }
+    },
+
+    {
+      "@id": "lrmoo:R24_created",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R24 created", "@language": "en" },
+      "skos:notation": "R24",
+      "skos:prefLabel": { "@value": "created", "@language": "en" },
+      "rdfs:domain": { "@id": "lrmoo:F30_Manifestation_Creation" },
+      "rdfs:range": { "@id": "lrmoo:F3_Manifestation" },
+      "owl:inverseOf": { "@id": "lrmoo:R24i_was_created_through" },
+      "rdfs:subPropertyOf": { "@id": "crm:P94_has_created" }
+    },
+
+    {
+      "@id": "lrmoo:R24i_was_created_through",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R24i was created through", "@language": "en" },
+      "skos:notation": "R24i",
+      "skos:prefLabel": { "@value": "was created through", "@language": "en" },
+      "rdfs:domain": { "@id": "lrmoo:F3_Manifestation" },
+      "rdfs:range": { "@id": "lrmoo:F30_Manifestation_Creation" },
+      "owl:inverseOf": { "@id": "lrmoo:R24_created" },
+      "rdfs:subPropertyOf": { "@id": "crm:P94i_was_created_by" }
+    },
+
+    {
+      "@id": "lrmoo:R4_embodies",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R4 embodies", "@language": "en" },
+      "skos:notation": "R4",
+      "skos:prefLabel": { "@value": "embodies", "@language": "en" },
+      "rdfs:domain": { "@id": "lrmoo:F3_Manifestation" },
+      "rdfs:range": { "@id": "lrmoo:F2_Expression" },
+      "owl:inverseOf": { "@id": "lrmoo:R4i_is_embodied_in" },
+      "rdfs:subPropertyOf": { "@id": "crm:P165_incorporates" }
+    },
+
+    {
+      "@id": "lrmoo:R4i_is_embodied_in",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R4i is embodied in", "@language": "en" },
+      "skos:notation": "R4i",
+      "skos:prefLabel": { "@value": "is embodied in", "@language": "en" },
+      "rdfs:domain": { "@id": "lrmoo:F2_Expression" },
+      "rdfs:range": { "@id": "lrmoo:F3_Manifestation" },
+      "owl:inverseOf": { "@id": "lrmoo:R4_embodies" },
+      "rdfs:subPropertyOf": { "@id": "crm:P165i_is_incorporated_in" }
+    },
+
+    {
+      "@id": "intro:INT18_Reference",
+      "@type": "owl:Class",
+      "rdfs:label": { "@value": "INT18 Reference", "@language": "en" },
+      "rdfs:subClassOf": [
+        { "@id": "intro:INT9_SemanticFeature" },
+        { "@id": "intro:INT_PragmaticFeature" }
+      ],
+      "rdfs:comment": { "@value": "This class comprises references to usually real identifiable objects of any kind.", "@language": "en" }
+    },
+
+    {
+      "@id": "intro:INT21_TextPassage",
+      "@type": "owl:Class",
+      "rdfs:label": { "@value": "INT21 Text Passage", "@language": "en" },
+      "rdfs:subClassOf": { "@id": "intro:INT1_Passage" },
+      "rdfs:comment": { "@value": "The INT21 TextPassage is a means of modelling an identifiable part of an E73 Information Object or its subclasses – without that part being removed from its source Information Object.", "@language": "en" },
+      "skos:broadMatch": { "@id": "http://www.w3.org/ns/oa#SpecificResource" }
+    },
+
+    {
+      "@id": "intro:INT2_ActualizationOfFeature",
+      "@type": "owl:Class",
+      "rdfs:label": { "@value": "INT2 Actualization of Feature", "@language": "en" },
+      "rdfs:subClassOf": { "@id": "crm:E28_Conceptual_Object" },
+      "rdfs:comment": { "@value": "The fact that a text or an image shows – in its own specific way – a certain feature (which itself is an abstract concept and takes form in many texts/images).", "@language": "en" }
+    },
+
+    {
+      "@id": "intro:INT31_IntertextualRelation",
+      "@type": "owl:Class",
+      "rdfs:label": { "@value": "INT31 Intertextual Relation", "@language": "en" },
+      "rdfs:subClassOf": { "@id": "intro:INT3_Interrelation" },
+      "rdfs:comment": { "@value": "This class comprises the abstract notion of a relationship between texts resp. parts thereof.", "@language": "en" },
+      "skos:broadMatch": { "@id": "http://www.w3.org/ns/oa#Annotation" }
+    },
+
+    {
+      "@id": "intro:INT_Character",
+      "@type": "owl:Class",
+      "rdfs:label": { "@value": "INT Character", "@language": "en" },
+      "rdfs:subClassOf": { "@id": "intro:INT9_SemanticFeature" }
+    },
+
+    {
+      "@id": "intro:INT_Interpretation",
+      "@type": "owl:Class",
+      "rdfs:label": { "@value": "INT Interpretation", "@language": "en" },
+      "rdfs:subClassOf": [
+        { "@id": "intro:INT9_SemanticFeature" },
+        { "@id": "intro:INT_PragmaticFeature" }
+      ],
+      "rdfs:comment": { "@value": "The result of an interpretative act, possibly as perceived in research literature.", "@language": "en" }
+    },
+
+    {
+      "@id": "intro:INT_Motif",
+      "@type": "owl:Class",
+      "rdfs:label": { "@value": "INT Motif", "@language": "en" },
+      "rdfs:subClassOf": { "@id": "intro:INT9_SemanticFeature" }
+    },
+
+    {
+      "@id": "intro:INT_Plot",
+      "@type": "owl:Class",
+      "rdfs:label": { "@value": "INT Plot", "@language": "en" },
+      "rdfs:subClassOf": { "@id": "intro:INT9_SemanticFeature" }
+    },
+
+    {
+      "@id": "intro:INT_Topic",
+      "@type": "owl:Class",
+      "rdfs:label": { "@value": "INT Topic", "@language": "en" },
+      "rdfs:subClassOf": { "@id": "intro:INT9_SemanticFeature" }
+    },
+
+    {
+      "@id": "intro:INT_Topos",
+      "@type": "owl:Class",
+      "rdfs:label": { "@value": "INT Topos", "@language": "en" },
+      "rdfs:subClassOf": { "@id": "intro:INT9_SemanticFeature" }
+    },
+
+    {
+      "@id": "intro:R12_hasReferredToEntity",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R12 has referred to entity", "@language": "en" },
+      "rdfs:subPropertyOf": { "@id": "intro:R24_hasRelatedEntity" },
+      "owl:inverseOf": { "@id": "intro:R12i_isReferredToEntity" },
+      "rdfs:domain": { "@id": "intro:INT3_Interrelation" },
+      "rdfs:range": {
+        "@type": "owl:Class",
+        "owl:unionOf": {
+          "@list": [
+            { "@id": "lrmoo:F1_Work" },
+            { "@id": "crm:E73_Information_Object" },
+            { "@id": "intro:INT1_Passage" },
+            { "@id": "intro:INT2_ActualizationOfFeature" },
+            { "@id": "intro:INT6_Architext" }
+          ]
+        }
+      },
+      "rdfs:comment": { "@value": "Links an INT3 Interrelation to the entity referred to in the relationship.", "@language": "en" }
+    },
+
+    {
+      "@id": "intro:R12i_isReferredToEntity",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R12i is referred to entity", "@language": "en" },
+      "owl:inverseOf": { "@id": "intro:R12_hasReferredToEntity" },
+      "rdfs:subPropertyOf": { "@id": "intro:R24i_isRelatedEntity" },
+      "rdfs:domain": {
+        "@type": "owl:Class",
+        "owl:unionOf": {
+          "@list": [
+            { "@id": "lrmoo:F1_Work" },
+            { "@id": "crm:E73_Information_Object" },
+            { "@id": "intro:INT1_Passage" },
+            { "@id": "intro:INT2_ActualizationOfFeature" },
+            { "@id": "intro:INT6_Architext" }
+          ]
+        }
+      },
+      "rdfs:range": { "@id": "intro:INT3_Interrelation" }
+    },
+
+    {
+      "@id": "intro:R13_hasReferringEntity",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R13 has referring entity", "@language": "en" },
+      "rdfs:subPropertyOf": { "@id": "intro:R24_hasRelatedEntity" },
+      "owl:inverseOf": { "@id": "intro:R13i_isReferringEntity" },
+      "rdfs:domain": { "@id": "intro:INT3_Interrelation" },
+      "rdfs:range": {
+        "@type": "owl:Class",
+        "owl:unionOf": {
+          "@list": [
+            { "@id": "lrmoo:F1_Work" },
+            { "@id": "crm:E73_Information_Object" },
+            { "@id": "intro:INT1_Passage" },
+            { "@id": "intro:INT2_ActualizationOfFeature" },
+            { "@id": "intro:INT6_Architext" }
+          ]
+        }
+      },
+      "rdfs:comment": { "@value": "Links an INT3 Interrelation to a referring entity.", "@language": "en" }
+    },
+
+    {
+      "@id": "intro:R13i_isReferringEntity",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R13i is referring entity", "@language": "en" },
+      "owl:inverseOf": { "@id": "intro:R13_hasReferringEntity" },
+      "rdfs:subPropertyOf": { "@id": "intro:R24i_isRelatedEntity" },
+      "rdfs:domain": {
+        "@type": "owl:Class",
+        "owl:unionOf": {
+          "@list": [
+            { "@id": "lrmoo:F1_Work" },
+            { "@id": "crm:E73_Information_Object" },
+            { "@id": "intro:INT1_Passage" },
+            { "@id": "intro:INT2_ActualizationOfFeature" },
+            { "@id": "intro:INT6_Architext" }
+          ]
+        }
+      },
+      "rdfs:range": { "@id": "intro:INT3_Interrelation" }
+    },
+
+    {
+      "@id": "intro:R17_actualizesFeature",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R17 actualizes feature", "@language": "en" },
+      "owl:inverseOf": { "@id": "intro:R17i_featureActualizedIn" },
+      "rdfs:domain": { "@id": "intro:INT2_ActualizationOfFeature" },
+      "rdfs:range": { "@id": "intro:INT4_Feature" },
+      "rdfs:comment": { "@value": "Links the specific INT2 Actualization of Feature to the (abstract concept of the) feature it actualizes.", "@language": "en" }
+    },
+
+    {
+      "@id": "intro:R17i_featureActualizedIn",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R17i feature actualized in", "@language": "en" },
+      "owl:inverseOf": { "@id": "intro:R17_actualizesFeature" },
+      "rdfs:domain": { "@id": "intro:INT4_Feature" },
+      "rdfs:range": { "@id": "intro:INT2_ActualizationOfFeature" }
+    },
+
+    {
+      "@id": "intro:R18_showsActualization",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R18 shows actualization", "@language": "en" },
+      "owl:inverseOf": { "@id": "intro:R18i_actualizationFoundOn" },
+      "rdfs:domain": {
+        "@type": "owl:Class",
+        "owl:unionOf": {
+          "@list": [
+            { "@id": "lrmoo:F1_Work" },
+            { "@id": "crm:E73_Information_Object" },
+            { "@id": "intro:INT1_Passage" },
+            { "@id": "intro:INT2_ActualizationOfFeature" },
+            { "@id": "intro:INT6_Architext" }
+          ]
+        }
+      },
+      "rdfs:range": { "@id": "intro:INT2_ActualizationOfFeature" },
+      "rdfs:comment": { "@value": "Links a text or an image (on any ontological level) or an INT2 Actualization of Feature to an INT2 Actualization of Feature found on it.", "@language": "en" }
+    },
+
+    {
+      "@id": "intro:R18i_actualizationFoundOn",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R18i actualization found on", "@language": "en" },
+      "owl:inverseOf": { "@id": "intro:R18_showsActualization" },
+      "rdfs:domain": { "@id": "intro:INT2_ActualizationOfFeature" },
+      "rdfs:range": {
+        "@type": "owl:Class",
+        "owl:unionOf": {
+          "@list": [
+            { "@id": "lrmoo:F1_Work" },
+            { "@id": "crm:E73_Information_Object" },
+            { "@id": "intro:INT1_Passage" },
+            { "@id": "intro:INT2_ActualizationOfFeature" },
+            { "@id": "intro:INT6_Architext" }
+          ]
+        }
+      }
+    },
+
+    {
+      "@id": "intro:R21_identifies",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R21 identifies", "@language": "en" },
+      "rdfs:subPropertyOf": { "@id": "crm:P67_refers_to" },
+      "owl:inverseOf": { "@id": "intro:R21i_isIdentifiedBy" },
+      "rdfs:domain": {
+        "@type": "owl:Class",
+        "owl:unionOf": {
+          "@list": [
+            { "@id": "lrmoo:F1_Work" },
+            { "@id": "crm:E73_Information_Object" },
+            { "@id": "intro:INT1_Passage" },
+            { "@id": "intro:INT6_Architext" },
+            { "@id": "intro:INT2_ActualizationOfFeature" }
+          ]
+        }
+      },
+      "rdfs:range": {
+        "@type": "owl:Class",
+        "owl:unionOf": {
+          "@list": [
+            { "@id": "intro:INT2_ActualizationOfFeature" },
+            { "@id": "intro:INT3_Interrelation" }
+          ]
+        }
+      },
+      "rdfs:comment": { "@value": "Links an INT2 Actualization of Feature or a text on different levels of granularity to the INT3 Interrelation or the INT2 Actualization of Feature it identifies.", "@language": "en" }
+    },
+
+    {
+      "@id": "intro:R21i_isIdentifiedBy",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R21i is identified by", "@language": "en" },
+      "owl:inverseOf": { "@id": "intro:R21_identifies" },
+      "rdfs:subPropertyOf": { "@id": "crm:P67i_is_referred_to_by" },
+      "rdfs:domain": {
+        "@type": "owl:Class",
+        "owl:unionOf": {
+          "@list": [
+            { "@id": "intro:INT2_ActualizationOfFeature" },
+            { "@id": "intro:INT3_Interrelation" }
+          ]
+        }
+      },
+      "rdfs:range": {
+        "@type": "owl:Class",
+        "owl:unionOf": {
+          "@list": [
+            { "@id": "lrmoo:F1_Work" },
+            { "@id": "crm:E73_Information_Object" },
+            { "@id": "intro:INT1_Passage" },
+            { "@id": "intro:INT6_Architext" },
+            { "@id": "intro:INT2_ActualizationOfFeature" }
+          ]
+        }
+      }
+    },
+
+    {
+      "@id": "intro:R22_providesSimilarityForRelation",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R22 provides similarity for relation", "@language": "en" },
+      "owl:inverseOf": { "@id": "intro:R22i_relationIsBasedOnSimilarity" },
+      "rdfs:domain": { "@id": "intro:INT4_Feature" },
+      "rdfs:range": { "@id": "intro:INT3_Interrelation" },
+      "rdfs:comment": { "@value": "Links an INT4 Feature to an INT3 Interrelation it provides the similarity for.", "@language": "en" }
+    },
+
+    {
+      "@id": "intro:R22i_relationIsBasedOnSimilarity",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R22i relation is based on similarity", "@language": "en" },
+      "owl:inverseOf": { "@id": "intro:R22_providesSimilarityForRelation" },
+      "rdfs:domain": { "@id": "intro:INT3_Interrelation" },
+      "rdfs:range": { "@id": "intro:INT4_Feature" }
+    },
+
+    {
+      "@id": "intro:R24_hasRelatedEntity",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R24 has related entity", "@language": "en" },
+      "owl:inverseOf": { "@id": "intro:R24i_isRelatedEntity" },
+      "rdfs:domain": { "@id": "intro:INT3_Interrelation" },
+      "rdfs:range": {
+        "@type": "owl:Class",
+        "owl:unionOf": {
+          "@list": [
+            { "@id": "lrmoo:F1_Work" },
+            { "@id": "crm:E73_Information_Object" },
+            { "@id": "intro:INT1_Passage" },
+            { "@id": "intro:INT2_ActualizationOfFeature" },
+            { "@id": "intro:INT6_Architext" }
+          ]
+        }
+      },
+      "rdfs:comment": { "@value": "Links any INT3 Interrelation to a text or image (on any ontological level) or INT2 Actualization of Feature that is part of the INT3 Interrelation.", "@language": "en" },
+      "skos:broadMatch": { "@id": "http://www.w3.org/ns/oa#hasTarget" }
+    },
+
+    {
+      "@id": "intro:R24i_isRelatedEntity",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R24i is related entity", "@language": "en" },
+      "owl:inverseOf": { "@id": "intro:R24_hasRelatedEntity" },
+      "rdfs:domain": {
+        "@type": "owl:Class",
+        "owl:unionOf": {
+          "@list": [
+            { "@id": "lrmoo:F1_Work" },
+            { "@id": "crm:E73_Information_Object" },
+            { "@id": "intro:INT1_Passage" },
+            { "@id": "intro:INT2_ActualizationOfFeature" },
+            { "@id": "intro:INT6_Architext" }
+          ]
+        }
+      },
+      "rdfs:range": { "@id": "intro:INT3_Interrelation" }
+    },
+
+    {
+      "@id": "intro:R30_hasTextPassage",
+      "@type": [ "owl:ObjectProperty", "owl:TransitiveProperty" ],
+      "rdfs:label": { "@value": "R30 has text passage", "@language": "en" },
+      "rdfs:subPropertyOf": { "@id": "intro:R10_hasPassage" },
+      "owl:inverseOf": { "@id": "intro:R30i_isTextPassageOf" },
+      "rdfs:domain": {
+        "@type": "owl:Class",
+        "owl:unionOf": {
+          "@list": [
+            { "@id": "crm:E73_Information_Object" },
+            { "@id": "intro:INT1_Passage" }
+          ]
+        }
+      },
+      "rdfs:range": { "@id": "intro:INT21_TextPassage" },
+      "rdfs:comment": { "@value": "Links a text to an INT21 Text Passage from that text.", "@language": "en" }
+    },
+
+    {
+      "@id": "intro:R30i_isTextPassageOf",
+      "@type": [ "owl:ObjectProperty", "owl:TransitiveProperty" ],
+      "rdfs:label": { "@value": "R30i is text passage of", "@language": "en" },
+      "owl:inverseOf": { "@id": "intro:R30_hasTextPassage" },
+      "rdfs:subPropertyOf": { "@id": "intro:R10i_isPassageOf" },
+      "rdfs:domain": { "@id": "intro:INT21_TextPassage" },
+      "rdfs:range": {
+        "@type": "owl:Class",
+        "owl:unionOf": {
+          "@list": [
+            { "@id": "crm:E73_Information_Object" },
+            { "@id": "intro:INT1_Passage" }
+          ]
+        }
+      }
+    },
+
+    {
+      "@id": "sappho:about",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "about", "@language": "en" },
+      "rdfs:comment": { "@value": "Link from an F2_Expression to a INT_Topic.", "@language": "en" },
+      "rdfs:domain": { "@id": "lrmoo:F2_Expression" },
+      "rdfs:range": { "@id": "intro:INT_Topic" },
+      "owl:propertyChainAxiom": {
+        "@list": [
+          { "@id": "intro:R18_showsActualization" },
+          { "@id": "intro:R17_actualizesFeature" }
+        ]
+      }
+    },
+
+    {
+      "@id": "sappho:expr_relation",
+      "@type": [ "owl:ObjectProperty", "owl:SymmetricProperty" ],
+      "rdfs:label": { "@value": "expr_relation", "@language": "en" },
+      "rdfs:comment": { "@value": "A relation between two F2_Expressions.", "@language": "en" },
+      "rdfs:domain": { "@id": "lrmoo:F2_Expression" },
+      "rdfs:range": { "@id": "lrmoo:F2_Expression" },
+      "owl:propertyChainAxiom": {
+        "@list": [
+          {
+            "@type": "owl:ObjectProperty",
+            "owl:inverseOf": { "@id": "intro:R18i_actualizationFoundOn" }
+          },
+          { "@id": "intro:R24i_isRelatedEntity" },
+          { "@id": "intro:R24_hasRelatedEntity" },
+          { "@id": "intro:R18i_actualizationFoundOn" }
+        ]
+      }
+    },
+
+    {
+      "@id": "sappho:has_manifestation",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "has manifestation", "@language": "en" },
+      "rdfs:comment": { "@value": "An F1_Work has a F3_Manifestation.", "@language": "en" },
+      "rdfs:domain": { "@id": "lrmoo:F1_Work" },
+      "rdfs:range": { "@id": "lrmoo:F3_Manifestation" },
+      "owl:propertyChainAxiom": {
+        "@list": [
+          { "@id": "lrmoo:R3_is_realised_in" },
+          { "@id": "lrmoo:R4i_is_embodied_in" }
+        ]
+      }
+    },
+
+    {
+      "@id": "sappho:expr_references",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "expr_references", "@language": "en" },
+      "rdfs:comment": { "@value": "A reference from an F2_Expression to a E21_Person, a E53_Place or a F2_Expression.", "@language": "en" },
+      "rdfs:domain": { "@id": "lrmoo:F2_Expression" },
+      "rdfs:range": {
+        "@type": "owl:Class",
+        "owl:unionOf": {
+          "@list": [
+            { "@id": "ecrm:E21_Person" },
+            { "@id": "ecrm:E53_Place" },
+            { "@id": "lrmoo:F2_Expression" }
+          ]
+        }
+      },
+      "owl:propertyChainAxiom": {
+        "@list": [
+          { "@id": "intro:R18_showsActualization" },
+          { "@id": "ecrm:P67_refers_to" }
+        ]
+      }
+    },
+
+    {
+      "@id": "sappho:referenced_by_expr",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "referenced_by_expr", "@language": "en" },
+      "rdfs:comment": { "@value": "A E21_Person, E53_Place or F2_Expression is referenced by a F2_Expression.", "@language": "en" },
+      "rdfs:domain": {
+        "@type": "owl:Class",
+        "owl:unionOf": {
+          "@list": [
+            { "@id": "ecrm:E21_Person" },
+            { "@id": "ecrm:E53_Place" },
+            { "@id": "lrmoo:F2_Expression" }
+          ]
+        }
+      },
+      "rdfs:range": { "@id": "lrmoo:F2_Expression" },
+      "owl:inverseOf": { "@id": "sappho:expr_references" }
+    },
+
+    {
+      "@id": "sappho:tp_possibly_cites",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "tp_possibly_cites", "@language": "en" },
+      "rdfs:comment": { "@value": "A F2_Expression possibly cites an INT21_TextPassage.", "@language": "en" },
+      "rdfs:domain": { "@id": "lrmoo:F2_Expression" },
+      "rdfs:range": { "@id": "intro:INT21_TextPassage" },
+      "owl:propertyChainAxiom": {
+        "@list": [
+          { "@id": "intro:R30_hasTextPassage" }
+        ]
+      }
+    },
+
+    {
+      "@id": "sappho:tp_possibly_cited_by",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "tp_possibly_cited_by", "@language": "en" },
+      "rdfs:comment": { "@value": "An INT21_TextPassage is possibly cited by a F2_Expression.", "@language": "en" },
+      "rdfs:domain": { "@id": "intro:INT21_TextPassage" },
+      "rdfs:range": { "@id": "lrmoo:F2_Expression" },
+      "owl:inverseOf": { "@id": "sappho:tp_possibly_cites" }
+    },
+
+    {
+      "@id": "sappho:expr_possibly_cites",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "expr_possibly_cites", "@language": "en" },
+      "rdfs:comment": { "@value": "A F2_Expression possibly cites another F2_Expression.", "@language": "en" },
+      "rdfs:domain": { "@id": "lrmoo:F2_Expression" },
+      "rdfs:range": { "@id": "lrmoo:F2_Expression" },
+      "owl:propertyChainAxiom": {
+        "@list": [
+          { "@id": "intro:R30_hasTextPassage" },
+          {
+            "@type": "owl:ObjectProperty",
+            "owl:inverseOf": { "@id": "intro:R24_hasRelatedEntity" }
+          },
+          { "@id": "intro:R24_hasRelatedEntity" },
+          {
+            "@type": "owl:ObjectProperty",
+            "owl:inverseOf": { "@id": "intro:R30i_isTextPassageOf" }
+          }
+        ]
+      }
+    },
+
+    {
+      "@id": "sappho:expr_possibly_cited_by",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "expr_possibly_cited_by", "@language": "en" },
+      "rdfs:comment": { "@value": "A F2_Expression is possibly cited by another F2_Expression.", "@language": "en" },
+      "rdfs:domain": { "@id": "lrmoo:F2_Expression" },
+      "rdfs:range": { "@id": "lrmoo:F2_Expression" },
+      "owl:inverseOf": { "@id": "sappho:expr_possibly_cites" }
+    }
+
+  ]
+}
