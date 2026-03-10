@@ -1,10 +1,3 @@
-"""
-RDF → XML-Zwischenformat für XSLT-Weiterverarbeitung
-
-Usage:
-    python rdf_network.py input.ttl output.xml
-"""
-
 import sys
 import re
 import xml.etree.ElementTree as ET
@@ -137,8 +130,6 @@ def all_objs(g, subject, predicate):
 
 
 def page_exists(url):
-    """Prueft ob die lokale HTML-Datei fuer diese URL existiert.
-    Externe URLs (nicht unter BASE) werden nicht geprueft."""
     if not url or not url.startswith(BASE):
         return True
     rel  = url[len(BASE):]
@@ -146,7 +137,6 @@ def page_exists(url):
     return path.exists()
 
 def resolve_url(uri, classes, g):
-    """Gibt (page_url, warning_or_None) zurueck."""
 
     # E21_Person
     if "http://erlangen-crm.org/current/E21_Person" in classes:
@@ -344,7 +334,6 @@ def resolve_url(uri, classes, g):
 
     return "", f"KEIN URL-MAPPING fuer {uri} (Klassen: {', '.join(sorted(classes)) or 'keine'})"
 
-
 def build_graph_data(g):
     labels       = get_labels(g)
     degree       = defaultdict(int)
@@ -421,7 +410,6 @@ def resolve_all_urls(nodes, g):
         url, warn = resolve_url(uri, classes, g)
         if warn:
             warnings.append(warn)
-        # Existenzpruefung: lokale URLs nur setzen wenn HTML-Datei vorhanden
         if url and url.startswith(BASE) and not page_exists(url):
             warnings.append(f"HTML nicht gefunden (kein Link gesetzt): {url} <- {uri}")
             url = ""
@@ -508,7 +496,6 @@ def main():
     class_stats     = build_class_stats(nodes)
     int31_neighbors = compute_int31_neighbors(nodes, edges)
 
-    print(f"INT31-Nachbarn: {len(int31_neighbors):,}")
     print("Löse URLs auf …")
 
     url_map, warnings = resolve_all_urls(nodes, g)
@@ -524,9 +511,7 @@ def main():
     root    = build_xml(nodes, edges, class_stats, int31_neighbors, total_triples, url_map)
     xml_str = pretty_print(root)
     Path(OUTPUT_FILE).write_text(xml_str, encoding="utf-8")
-
-    print(f"Nodes:  {len(nodes):,}")
-    print(f"Edges:  {len(edges):,}")
+    
     print(f"✓ gespeichert: {OUTPUT_FILE}")
 
 

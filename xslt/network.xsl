@@ -10,9 +10,6 @@
     <xsl:import href="./partials/html_head.xsl"/>
     <xsl:import href="./partials/html_footer.xsl"/>
 
-    <!-- ══════════════════════════════════════════════════════════
-         Root
-         ══════════════════════════════════════════════════════════ -->
     <xsl:template match="/">
         <xsl:variable name="doc_title" select="'Netzwerkvisualisierung'"/>
         <xsl:variable name="total_fmt"
@@ -87,7 +84,7 @@
                                         Klassen links filtern, was sichtbar ist. Rechts können
                                         Instanzen ausgewählt werden. </div>
 
-                                    <!-- ══ Gepinnter Tooltip-Overlay ══ -->
+                                    <!-- Tooltip -->
                                     <div id="node-tooltip">
                                         <button id="node-tooltip-close" title="Schließen">&#x2715;</button>
                                         <div id="node-tooltip-body"/>
@@ -115,9 +112,8 @@
                                     </div>
 
                                 </div>
-                                <!-- #layout -->
 
-                                <!-- Inline-Styles für den Tooltip (kein separates CSS nötig) -->
+                                <!-- Inline-Styles für den Tooltip -->
                                 <style type="text/css">
                                     #node-tooltip {
                                         display: none;
@@ -157,7 +153,7 @@
                                     #node-tooltip a:hover { color: #6d28d9; }
                                 </style>
 
-                                <!-- ── Daten als JSON-Blöcke ── -->
+                                <!-- JSON -->
 
                                 <script id="network-nodes" type="application/json">
                                     <xsl:call-template name="nodes-json"/>
@@ -183,28 +179,18 @@
                                     <xsl:call-template name="meta-json"/>
                                 </script>
 
-                                <!-- Anwendungslogik (extern) -->
                                 <script src="js/network.js" defer="defer"/>
 
                             </div>
-                            <!-- .card-body -->
                         </div>
-                        <!-- .card -->
                     </div>
-                    <!-- .container-fluid -->
 
                     <xsl:call-template name="html_footer"/>
 
                 </div>
-                <!-- #page -->
             </body>
         </html>
     </xsl:template>
-
-
-    <!-- ══════════════════════════════════════════════════════════
-         JSON-Serialisierer
-         ══════════════════════════════════════════════════════════ -->
 
     <!-- nodes -->
     <xsl:template name="nodes-json">
@@ -277,7 +263,7 @@
         <xsl:text>]</xsl:text>
     </xsl:template>
 
-    <!-- classStats: {"uri": count, ...} -->
+    <!-- classStats -->
     <xsl:template name="class-stats-json">
         <xsl:text>{</xsl:text>
         <xsl:for-each select="/network/classStats/classStat">
@@ -293,7 +279,7 @@
         <xsl:text>}</xsl:text>
     </xsl:template>
 
-    <!-- NS_COLORS: {"prefix": "#hex", ...} -->
+    <!-- NS_COLORS -->
     <xsl:template name="ns-colors-json">
         <xsl:text>{</xsl:text>
         <xsl:for-each select="/network/meta/colors/color">
@@ -311,7 +297,7 @@
         <xsl:text>}</xsl:text>
     </xsl:template>
 
-    <!-- KNOWN_NS: {"nsUri": "prefix", ...} -->
+    <!-- KNOWN_NS -->
     <xsl:template name="known-ns-json">
         <xsl:text>{</xsl:text>
         <xsl:for-each select="/network/meta/namespaces/ns">
@@ -365,10 +351,6 @@
         <xsl:text>]}</xsl:text>
     </xsl:template>
 
-
-    <!-- ══════════════════════════════════════════════════════════
-         Utility: JSON-String escaping
-         ══════════════════════════════════════════════════════════ -->
     <xsl:template name="jstr">
         <xsl:param name="s" select="''"/>
         <xsl:variable name="a" select="replace($s, '\\', '\\\\')"/>
