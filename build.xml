@@ -117,13 +117,27 @@
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
-    
+
     <!-- alignments -->
     <xslt in="./documentation/alignments/alignments.rdf" out="${target}/alignments.html"
         style="./xslt/alignments.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
+
+    <!-- network -->
+    <exec executable="python3" failonerror="true">
+        <arg value="./python/network.py"/>
+        <arg value="./data/rdf/sappho-reception.ttl"/>
+        <arg value="${target}/network-data.xml"/>
+    </exec>
+
+    <xslt in="${target}/network-data.xml" out="${target}/network.html" style="xslt/network.xsl">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
+
+    <delete file="${target}/network-data.xml"/>
 
     <!-- remove dummies -->
     <delete file="${target}/_bibl-entities-dummy.html"/>
@@ -132,17 +146,13 @@
 
     <copy file="data/rdf/sappho-reception_asserted-and-inferred.ttl"
         tofile="html/sappho-reception_asserted-and-inferred.ttl" overwrite="true"/>
-    
-    <copy file="data/rdf/authors.ttl"
-        tofile="html/authors.ttl" overwrite="true"/>
-    
-    <copy file="data/rdf/works.ttl"
-        tofile="html/works.ttl" overwrite="true"/>
-    
-    <copy file="data/rdf/fragments.ttl"
-        tofile="html/fragments.ttl" overwrite="true"/>
-    
-    <copy file="documentation/ontology/ontology.html"
-        tofile="html/ontology.html" overwrite="true"/>
+
+    <copy file="data/rdf/authors.ttl" tofile="html/authors.ttl" overwrite="true"/>
+
+    <copy file="data/rdf/works.ttl" tofile="html/works.ttl" overwrite="true"/>
+
+    <copy file="data/rdf/fragments.ttl" tofile="html/fragments.ttl" overwrite="true"/>
+
+    <copy file="documentation/ontology/ontology.html" tofile="html/ontology.html" overwrite="true"/>
 
 </project>

@@ -45,11 +45,6 @@
                                         <a class="dropdown-item custom-dropdown-link"
                                             href="buch.html">Primärtexte</a>
                                     </li>
-                                    <li>
-                                        <a class="dropdown-item custom-dropdown-link"
-                                            href="https://github.com/laurauntner/sappho-digital"
-                                            >Daten auf GitHub</a>
-                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
@@ -971,9 +966,25 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link custom-dropdown-link" href="query.html"
-                                    >SPARQL</a>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle custom-dropdown-link"
+                                    href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                    >Daten</a>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
+                                            href="query.html">SPARQL</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
+                                            href="network.html">Netzwerkvisualisierung</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
+                                            href="https://github.com/laurauntner/sappho-digital"
+                                            >GitHub</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>

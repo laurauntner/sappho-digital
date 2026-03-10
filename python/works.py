@@ -161,7 +161,7 @@ for bibl in top_bibls:
     # Expression
     g.add((bibl_uri, RDF.type, LRMOO.F2_Expression))
     if title_string:
-        g.add((bibl_uri, RDFS.label, Literal(title_string, lang="de")))
+        g.add((bibl_uri, RDFS.label, Literal(title_string or "[??]", lang="de")))
         title_uri = SD[f"title/expression/{bibl_id}"]
         title_string_uri = SD[f"title_string/expression/{bibl_id}"]
         g.add((bibl_uri, ECRM.P102_has_title, title_uri))
@@ -360,10 +360,9 @@ for bibl in top_bibls:
             if pub.text:
                 pub_label = pub.text.strip()
                 pub_ref = pub.get("ref")
-                pub_uri = (
-                    SD[f"publisher/{pub_ref.split('/')[-1]}"]
-                    if pub_ref else SD[f"publisher/{pub_label.replace(' ', '_')}"]
-                )
+                pub_xml_id = pub.get("{http://www.w3.org/XML/1998/namespace}id")
+                local_key = pub_xml_id or (pub_ref.split("/")[-1] if pub_ref else pub_label.replace(" ", "_"))
+                pub_uri = SD[f"publisher/{local_key}"]
                 g.add((pub_uri, RDF.type, ECRM.E74_Group))
                 g.add((pub_uri, RDFS.label, Literal(pub_label, lang="de")))
                 if pub_ref:

@@ -1,10 +1,14 @@
 1. update xml data: excel-to-tei.py
 2. update skos data: export data from VocBench
 3. update analysis helpers: get-tags.py, get-frequent-tags.py, mfw_idf.py
+
 4. update authors data: authors.py
 5. update works data: works.py, fragments.py 
 6. update analysis data: analysis.py
 7. update relations data: relations.py
 8. update merged file: merge.py
+
+### 4–5 kurz: python3 authors.py && python3 works.py && python3 fragments.py && python3 analysis.py && python3 relations.py && python3 merge.py ###
+
 9. re-run reasoner (in "java" directory): mvn -q clean compile exec:java
 10. count triples: count-triples.py
