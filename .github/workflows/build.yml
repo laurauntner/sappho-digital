@@ -22,6 +22,14 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y --no-install-recommends ant ant-contrib
 
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install Python dependencies
+      run: pip install rdflib
+
     - name: Prepare Data
       run: |
         ant -f ./build.xml
