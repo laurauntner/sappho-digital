@@ -128,7 +128,7 @@
     <!-- network -->
     <exec executable="python3" failonerror="true">
         <arg value="python/network.py"/>
-        <arg value="./data/rdf/sappho-reception.ttl"/>
+        <arg value="data/rdf/sappho-reception.ttl"/>
         <arg value="${target}/network-data.xml"/>
     </exec>
 
