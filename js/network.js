@@ -1,19 +1,8 @@
-/*
-  network.js
-  Interaktionslogik für die RDF-Netzwerkvisualisierung.
-
-  Liest alle Daten aus den vom XSLT erzeugten JSON-Blöcken:
-    #network-nodes        – Array von Node-Objekten
-    #network-edges        – Array von Edge-Objekten
-    #network-class-stats  – Objekt { classUri: count }
-    #network-ns-colors    – Objekt { prefix: "#hex" }
-    #network-known-ns     – Objekt { nsUri: prefix }
-    #network-meta         – Konfig-Objekt (totalTriples, startUri, hiddenByDefault, …)
-*/
-
 document.fonts.ready.then(function () {
 
 (function () {
+  if (window._networkInitialized) return;
+  window._networkInitialized = true;
 
   // ── Daten aus DOM lesen ──────────────────────────────────────
   function readJSON(id) {
@@ -114,7 +103,6 @@ document.fonts.ready.then(function () {
         stabilization: { enabled: true, iterations: 500, onlyDynamicEdges: false },
         adaptiveTimestep: true,
       },
-      // Eigene Tooltips übernehmen – vis-Tooltip deaktivieren
       interaction: { tooltipDelay: 99999, hover: true },
     }
   );
@@ -165,18 +153,15 @@ document.fonts.ready.then(function () {
   }
   function escAttr(s) { return String(s).replace(/'/g, "&#39;"); }
 
-  // Gibt HTML-String zurück (kein DOM-Element – wir rendern in eigenes Overlay)
   function buildTooltipHtml(label, cls, uri, pageUrl) {
     var html = "<b>" + escHtml(label) + "</b>";
     if (cls) {
       html += "<br><span style='color:#888;font-size:11px'>" + escHtml(cls) + "</span>";
     }
-    // URI immer als reiner Text (nicht klickbar)
     if (uri) {
       html += "<br><span style='color:#888;font-size:10px'>URI: </span>"
             + "<span style='color:#aaa;font-size:10px;word-break:break-all'>" + escHtml(uri) + "</span>";
     }
-    // pageUrl (aufgelöste HTML-Seite) als klickbarer Link
     if (pageUrl) {
       html += "<br><span style='color:#888;font-size:10px'>More Info: </span>"
             + "<a href='" + escAttr(pageUrl) + "' target='_blank' rel='noopener'>"
@@ -188,7 +173,7 @@ document.fonts.ready.then(function () {
   // ── Gepinnter Tooltip ────────────────────────────────────────
   var tooltip      = document.getElementById("node-tooltip");
   var tooltipBody  = document.getElementById("node-tooltip-body");
-  var pinnedNodeId = null;   // null = kein Tooltip gepinnt
+  var pinnedNodeId = null;
 
   document.getElementById("node-tooltip-close").onclick = function (e) {
     e.stopPropagation();
@@ -225,7 +210,7 @@ document.fonts.ready.then(function () {
   network.on("hoverNode", function (params) {
     if (pinnedNodeId !== null) return;
     var id = params.node;
-    if (typeof id === "string") return; // Plus-Knoten überspringen
+    if (typeof id === "string") return;
     var ev = params.event;
     var cx = ev.center ? ev.center.x : (ev.clientX || 0);
     var cy = ev.center ? ev.center.y : (ev.clientY || 0);
@@ -272,7 +257,7 @@ document.fonts.ready.then(function () {
     var cy = ev.center ? ev.center.y : (ev.clientY || 0);
     showTooltip(id, cx, cy, true);
 
-    // Knoten immer expandieren (analog zum Original)
+    // Knoten immer expandieren
     expandNode(id, !exploredIds.has(id));
   });
 
@@ -297,6 +282,7 @@ document.fonts.ready.then(function () {
 
   // ── Kern-Render ──────────────────────────────────────────────
   function renderGraph() {
+    console.trace("renderGraph called, visibleIds.size=" + visibleIds.size + " activeClasses.size=" + activeClasses.size);
     var ed = ALL_EDGES.filter(function (e) {
       if (!visibleIds.has(e.from) || !visibleIds.has(e.to)) return false;
       var nf = NODE_BY_ID[e.from], nt = NODE_BY_ID[e.to];
@@ -318,7 +304,7 @@ document.fonts.ready.then(function () {
         label: truncateLabel(n.label),
         color: nodeColor(n),
         value: Math.log1p(n.degree) * 10,
-        title: undefined,   // vis-eigene Tooltips deaktiviert
+        title: undefined,
         borderWidth: exploredIds.has(id) ? 3 : 1,
       }));
     });
@@ -571,11 +557,31 @@ document.fonts.ready.then(function () {
     rebuild();
   };
 
+  // ── BUGFIX: "Alle abwählen" – alle State-Sets und vis.js-DataSets
+  //    vollständig leeren, damit der Graph garantiert leer gerendert wird.
   document.getElementById("btn-none").onclick = function () {
     activeClasses.clear();
     syncClassCheckboxes();
     instModeActive = false;
-    rebuild();
+    exploredIds.clear();
+    pinnedIds.clear();
+    visibleIds.clear();
+    checkedNodeIds.clear();
+    nodeLoadOffset = {};
+    hideTooltip();
+    if (_physicsTimer) clearTimeout(_physicsTimer);
+    network.setOptions({ physics: { enabled: false } });
+    edgesDS.clear();
+    nodesDS.clear();
+    // vis.js zeigt trotz leerem DataSet noch den alten Canvas-Inhalt –
+    // Canvas direkt leeren als Fallback
+    setTimeout(function () {
+      var canvas = document.querySelector("#graph canvas");
+      if (canvas) {
+        var ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+    }, 50);
   };
 
   // ── Rechte Sidebar ───────────────────────────────────────────
@@ -594,7 +600,7 @@ document.fonts.ready.then(function () {
     return nodes.sort(function (a, b) { return a.label.localeCompare(b.label); });
   }
 
-  // ── Instanzliste: graying via data-Attribut statt DOM-Iteration ──
+  // ── Instanzliste: graying via data-Attribut ──
   function updateInstanceListGraying() {
     _vScroll.renderedIds = new Set(nodesDS.getIds());
     _vScrollPaint();
@@ -619,7 +625,7 @@ document.fonts.ready.then(function () {
   var _vScroll = {
     nodes:       [],
     showClass:   false,
-    itemH:       26,     // px – muss zum CSS passen
+    itemH:       26,
     overscan:    5,
     scrollEl:    null,
     renderedIds: null,
@@ -739,26 +745,19 @@ document.fonts.ready.then(function () {
   };
 
   document.getElementById("btn-inst-none").onclick = function () {
-    var toCollapse = Array.from(checkedNodeIds);
     document.querySelectorAll(".inst-item.checked").forEach(function (el) {
       el.classList.remove("checked");
       var check = el.querySelector(".inst-check");
       if (check) check.textContent = "";
     });
-    toCollapse.forEach(function (id) {
-      checkedNodeIds.delete(id); exploredIds.delete(id);
-      pinnedIds.delete(id); delete nodeLoadOffset[id];
-    });
-    visibleIds = new Set();
-    exploredIds.forEach(function (eid) {
-      visibleIds.add(eid);
-      getNeighborsSortedByDegree(eid).slice(0, nodeLoadOffset[eid] || EXPAND_STEP)
-        .forEach(function (nb) { visibleIds.add(nb.id); });
-    });
-    pinnedIds.forEach(function (pid) { visibleIds.add(pid); });
+    checkedNodeIds.clear();
+    exploredIds.clear();
+    pinnedIds.clear();
+    visibleIds.clear();
+    nodeLoadOffset = {};
     hideTooltip();
-    if (visibleIds.size === 0 && startNode) expandNode(startNode.id, true);
-    else renderGraph();
+    edgesDS.clear();
+    nodesDS.clear();
     updateInstanceListGraying();
   };
 
@@ -833,6 +832,6 @@ document.fonts.ready.then(function () {
     }, "image/png");
   };
 
-})(); // Ende IIFE
+})();
 
-}); // Ende document.fonts.ready.then
+});

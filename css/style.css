@@ -1008,7 +1008,17 @@ body.page {
 
 .graph-wrap {
     padding: 1rem;
-    max-width: 1600px;
+    max-width: 80%;
+}
+
+.graph-wrap-alignments {
+    padding: 1rem;
+}
+
+.graph-canvas-alignments {
+    height: 800px !important;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
 }
 
 .graph-wrap .card {
@@ -1041,7 +1051,7 @@ body.page {
 
 #layout {
     display: grid;
-    grid-template-columns: 270px 1fr 310px;
+    grid-template-columns: minmax(160px, 15vw) 1fr minmax(200px, 18vw);
     height: 100vh;
     overflow: hidden;
     font-family: 'Segoe UI', system-ui, sans-serif;
@@ -1324,9 +1334,9 @@ body.page {
 #inst-toolbar button:hover { background: #8B5CF6; color: #fff; }
 
 #graph-hint {
-    position: fixed;
-    bottom: 24px;
-    left: 290px;
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
     background: rgba(255,255,255,0.97);
     border: 1px solid #e0e0e0;
     border-radius: 8px;
