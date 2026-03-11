@@ -160,10 +160,11 @@ for bibl in top_bibls:
 
     # Expression
     g.add((bibl_uri, RDF.type, LRMOO.F2_Expression))
+
+    g.add((bibl_uri, RDFS.label, Literal(title_string or "[??]", lang="de")))
+
     if title_string:
-        g.add((bibl_uri, RDFS.label, Literal(title_string or "[??]", lang="de")))
         title_uri = SD[f"title/expression/{bibl_id}"]
-        title_string_uri = SD[f"title_string/expression/{bibl_id}"]
         g.add((bibl_uri, ECRM.P102_has_title, title_uri))
         g.add((title_uri, RDF.type, ECRM.E35_Title))
         g.add((title_uri, RDFS.label, Literal(title_string, lang="de")))
@@ -218,7 +219,6 @@ for bibl in top_bibls:
             db_id_uri = SD[f"identifier/{db_key}"]
             g.add((bibl_uri, ECRM.P1_is_identified_by, db_id_uri))
             g.add((db_id_uri, RDF.type, ECRM.E42_Identifier))
-            # Label NUR der Teil nach /resource/
             g.add((db_id_uri, RDFS.label, Literal(db_key)))
             g.add((db_id_uri, ECRM.P1i_identifies, bibl_uri))
             g.add((db_id_uri, ECRM.P2_has_type, idtype_dbpedia))
@@ -261,7 +261,6 @@ for bibl in top_bibls:
             g.add((gr_uri, RDFS.label, Literal(gr)))
             g.add((gr_uri, ECRM.P1i_identifies, bibl_uri))
             g.add((gr_uri, ECRM.P2_has_type, idtype_gr))
-            # kanonischer Formatter für P8383:
             g.add((bibl_uri, OWL.sameAs, URIRef(f"https://www.goodreads.com/work/show/{gr}")))
 
         # Wikimedia Image
@@ -305,7 +304,8 @@ for bibl in top_bibls:
             nested_id = bibl_id
             work_title = title_string
 
-        final_manifestation_label = work_title or "[??]"
+        final_manifestation_label = work_title or title_string or "[??]"
+
         manifestation_uri = SD[f"manifestation/{nested_id}"]
         creation_manif_uri = SD[f"manifestation_creation/{nested_id}"]
 
@@ -389,7 +389,6 @@ for bibl in top_bibls:
             continue
 
         raw_text = genre_note.text.strip()
-
         parts = [p.strip() for p in raw_text.split("/") if p.strip()]
 
         for part in parts:
@@ -401,9 +400,7 @@ for bibl in top_bibls:
 
             if (genre_uri, RDF.type, ECRM.E55_Type) not in g:
                 g.add((genre_uri, RDF.type, ECRM.E55_Type))
-
                 g.add((genre_uri, RDFS.label, Literal(genre_key, lang="de")))
-
                 g.add((genre_uri, ECRM.P2_has_type, genre_type_uri))
                 g.add((genre_type_uri, ECRM.P2i_is_type_of, genre_uri))
 
