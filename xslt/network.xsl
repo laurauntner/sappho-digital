@@ -77,16 +77,18 @@
                                     <!-- Hint overlay -->
                                     <div id="graph-hint">
                                         <span class="hint-close">&#x2715;</span>
-                                        <b>Hinweise:</b> Startpunkt ist »Von den plejaden her
+                                        <b>Hinweis:</b> Startpunkt ist »Von den plejaden her
                                         vierzehn gedichte im hinblick auf Lesbos« von Johannes
                                         Poethen. <b>Klick</b> auf einen Knoten klappt seine
                                         Verbindungen auf. <b>Doppelklick</b> klappt sie wieder zu.
-                                        Klassen links filtern, was sichtbar ist. Rechts können
-                                        Instanzen ausgewählt werden. </div>
+                                        Klick auf <b>Plus</b>-Knoten öffnet fünf weitere
+                                        Verbindungen. <b>Klassen</b> links filtern, was sichtbar
+                                        ist. Rechts sind <b>Instanzen</b> wählbar.</div>
 
                                     <!-- Tooltip -->
                                     <div id="node-tooltip">
-                                        <button id="node-tooltip-close" title="Schließen">&#x2715;</button>
+                                        <button id="node-tooltip-close" title="Schließen"
+                                            >&#x2715;</button>
                                         <div id="node-tooltip-body"/>
                                     </div>
 
@@ -123,7 +125,7 @@
                                         border: 1px solid #e2e8f0;
                                         border-radius: 8px;
                                         padding: 10px 28px 10px 14px;
-                                        box-shadow: 0 4px 20px rgba(0,0,0,.15);
+                                        box-shadow: 0 4px 20px rgba(0, 0, 0, .15);
                                         max-width: 280px;
                                         font-size: 12px;
                                         line-height: 1.6;
@@ -143,15 +145,18 @@
                                         line-height: 1;
                                         padding: 0;
                                     }
-                                    #node-tooltip-close:hover { color: #475569; }
+                                    #node-tooltip-close:hover {
+                                        color: #475569;
+                                    }
                                     #node-tooltip a {
                                         color: #8B5CF6;
                                         font-size: 10px;
                                         word-break: break-all;
                                         text-decoration: underline;
                                     }
-                                    #node-tooltip a:hover { color: #6d28d9; }
-                                </style>
+                                    #node-tooltip a:hover {
+                                        color: #6d28d9;
+                                    }</style>
 
                                 <!-- JSON -->
 

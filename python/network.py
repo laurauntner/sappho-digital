@@ -136,12 +136,33 @@ def page_exists(url):
     path = HTML_OUT_DIR / rel
     return path.exists()
 
-def resolve_url(uri, classes, g):
+def extract_bibl_from_uri(uri):
+    for part in uri.split("/"):
+        if not part.startswith("bibl_"):
+            continue
+        identifier = re.split(r'_bibl_', part, maxsplit=1)[0]
+        segs = identifier.split("_")
+        kept = ["bibl"]
+        id_started = False 
+        for seg in segs[1:]:
+            is_pure_alpha = bool(re.fullmatch(r'[a-zA-Z]+', seg))
+            has_hyphen    = '-' in seg
+            if id_started and is_pure_alpha:
+                break
+            if has_hyphen and not re.match(r'\d', seg):
+                break
+            kept.append(seg)
+            if not is_pure_alpha:
+                id_started = True
+        return "_".join(kept)
+    return None
+
+def resolve_url(uri, classes, g, labels):
 
     # E21_Person
     if "http://erlangen-crm.org/current/E21_Person" in classes:
         lid = local_id(uri)
-        if lid.startswith("author_"):   return BASE + lid + ".html", None
+        if lid.startswith("author_"):   return BASE + "analyse.html", None
         if lid.startswith("person_"):   return BASE + "pers-refs.html", None
         if lid.startswith("editor_"):   return "", None
         return uri, f"E21_Person: unbekanntes Muster: {uri}"
@@ -150,7 +171,7 @@ def resolve_url(uri, classes, g):
     if "http://erlangen-crm.org/current/E35_Title" in classes:
         lid = local_id(uri)
         if lid.startswith("bibl_"):     return BASE + lid + ".html", None
-        return BASE + "buch.html", None
+        return BASE + "analyse.html", None
 
     # E36_Visual_Item
     if "http://erlangen-crm.org/current/E36_Visual_Item" in classes:
@@ -162,34 +183,50 @@ def resolve_url(uri, classes, g):
     if "http://erlangen-crm.org/current/E42_Identifier" in classes:
         lid     = local_id(uri)
         id_type = first_obj(g, uri, P2_HAS_TYPE) or ""
-        if re.fullmatch(r'Q\d+', lid):
-            return f"https://www.wikidata.org/entity/{lid}", None
-        if "id_type/dbpedia"   in id_type:
-            for _, _, o in g.triples((URIRef(uri), URIRef(RDFS_SEE_ALSO), None)):
-                return f"https://dbpedia.org/resource/{str(o)}", None
+
+        if "id_type/dbpedia" in id_type:
+            label = labels.get(uri)
+            if label: return f"https://dbpedia.org/resource/{label}", None
             return uri, f"E42_Identifier (dbpedia): kein rdfs:label fuer {uri}"
-        if "id_type/wikidata"  in id_type: return "https://www.wikidata.org", None
-        if "id_type/gnd"       in id_type: return "https://www.dnb.de/DE/Professionell/Standardisierung/GND/gnd_node.html", None
-        if "id_type/viaf"      in id_type: return "https://viaf.org", None
-        if "id_type/goodreads" in id_type: return "https://www.goodreads.com", None
+
+        if "id_type/wikidata" in id_type:
+            label = labels.get(uri)
+            if label: return f"https://www.wikidata.org/entity/{label}", None
+            return uri, f"E42_Identifier (wikidata): kein rdfs:label fuer {uri}"
+
+        if "id_type/gnd" in id_type:
+            label = labels.get(uri)
+            if label: return f"https://d-nb.info/gnd/{label}", None
+            return uri, f"E42_Identifier (gnd): kein rdfs:label fuer {uri}"
+
+        if "id_type/viaf" in id_type:
+            label = labels.get(uri)
+            if label: return f"http://viaf.org/viaf/{label}", None
+            return uri, f"E42_Identifier (viaf): kein rdfs:label fuer {uri}"
+
+        if "id_type/goodreads" in id_type:
+            label = labels.get(uri)
+            if label: return f"https://www.goodreads.com/work/show/{label}", None
+            return uri, f"E42_Identifier (goodreads): kein rdfs:label fuer {uri}"
+
         identifies = first_obj(g, uri, P1I_IDENTIFIES)
         if identifies:
             t_lid = local_id(identifies)
-            if t_lid.startswith("author_"):  return BASE + t_lid + ".html", None
+            if t_lid.startswith("author_"):  return BASE + "analyse.html", None
             if t_lid.startswith("bibl_"):    return BASE + t_lid + ".html", None
             if t_lid.startswith("motif_"):   return BASE + "motifs.html", None
             if t_lid.startswith("plot_"):    return BASE + "plots.html", None
             if t_lid.startswith("topic_"):   return BASE + "topics.html", None
             if t_lid.startswith("topos_"):   return BASE + "topoi.html", None
             if t_lid.startswith("person_"):  return BASE + "pers-refs.html", None
-            if t_lid.startswith("editor_"):  return BASE + "buch.html", None
+            if t_lid.startswith("editor_"):  return BASE + "analyse.html", None
             if t_lid.startswith("place_"):   return BASE + "place-refs.html", None
             if "/work_ref/"  in identifies:  return BASE + "work-refs.html", None
             if "/place_ref/" in identifies:  return BASE + "place-refs.html", None
-            if "/timespan/"  in identifies:  return BASE + "buch.html", None
             return uri, f"E42_Identifier: P1i_identifies-Ziel nicht erkannt: {identifies}"
+
         if lid.startswith("bibl_"):   return BASE + lid + ".html", None
-        if lid.startswith("author_"): return BASE + lid + ".html", None
+        if lid.startswith("author_"): return BASE + "analyse.html", None
         return uri, f"E42_Identifier: kein Mapping fuer {uri} (Typ: {id_type or 'unbekannt'})"
 
     # E52_Time-Span
@@ -201,7 +238,7 @@ def resolve_url(uri, classes, g):
                          first_obj(g, o_str, P100_WAS_DEATH_OF)
                 if person: return BASE + local_id(str(person)) + ".html", None
             if o_lid.startswith("bibl_"): return BASE + o_lid + ".html", None
-        return BASE + "buch.html", None
+        return BASE + "analyse.html", None
 
     # E53_Place
     if "http://erlangen-crm.org/current/E53_Place" in classes:
@@ -223,8 +260,6 @@ def resolve_url(uri, classes, g):
         if "/id_type/goodreads"       in uri: return "https://www.goodreads.com", None
         if "/id_type/sappho-digital"  in uri or "/gender/" in uri or "/genre_type/" in uri: return BASE, None
         if "/gender_type/wikidata"    in uri: return "https://www.wikidata.org", None
-        lid = local_id(uri)
-        if re.fullmatch(r'Q\d+', lid): return f"https://www.wikidata.org/wiki/{lid}", None
         return uri, f"E55_Type: kein Mapping fuer {uri}"
 
     # E67_Birth
@@ -248,7 +283,7 @@ def resolve_url(uri, classes, g):
     # E74_Group
     if "http://erlangen-crm.org/current/E74_Group" in classes:
         lid = local_id(uri)
-        if lid.startswith("publisher_"): return BASE + lid + ".html", None
+        if lid.startswith("publisher_"): return BASE + "analyse.html", None
         return uri, f"E74_Group: unbekanntes Muster: {uri}"
 
     # E90_Symbolic_Object
@@ -292,16 +327,17 @@ def resolve_url(uri, classes, g):
         if expr:
             lid = local_id(str(expr))
             if lid.startswith("bibl_"): return BASE + lid + ".html", None
-        for part in uri.split("/"):
-            if part.startswith("bibl_"):
-                m = re.match(r'(bibl_[A-Za-z0-9]+)', part)
-                if m: return BASE + m.group(1) + ".html", None
+        bibl_id = extract_bibl_from_uri(uri)
+        if bibl_id:
+            return BASE + bibl_id + ".html", None
         return uri, f"INT2_ActualizationOfFeature: kein bibl_ auflösbar fuer {uri}"
 
     # INT21_TextPassage
     if "https://w3id.org/lso/intro/currentbeta#INT21_TextPassage" in classes:
-        expr = first_obj(g, uri, R30I_IS_PASSAGE_OF)
-        if expr: return BASE + local_id(str(expr)), None
+        exprs = all_objs(g, uri, R30I_IS_PASSAGE_OF)
+        if exprs:
+            urls = ",".join(BASE + local_id(str(e)) + ".html" for e in exprs)
+            return urls, None
         return uri, f"INT21_TextPassage: kein R30i_isTextPassageOf fuer {uri}"
 
     # INT31_IntertextualRelation
@@ -310,7 +346,7 @@ def resolve_url(uri, classes, g):
 
     # F1_Work
     if "http://iflastandards.info/ns/lrm/lrmoo/F1_Work" in classes:
-        return BASE + "buch.html", None
+        return BASE + "analyse.html", None
 
     # F2_Expression
     if "http://iflastandards.info/ns/lrm/lrmoo/F2_Expression" in classes:
@@ -318,19 +354,25 @@ def resolve_url(uri, classes, g):
 
     # F27_Work_Creation
     if "http://iflastandards.info/ns/lrm/lrmoo/F27_Work_Creation" in classes:
-        return BASE + "buch.html", None
+        return BASE + "analyse.html", None
 
     # F28_Expression_Creation
     if "http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation" in classes:
-        return BASE + local_id(uri) + ".html", None
+        lid = local_id(uri)
+        if lid.startswith("bibl_"): return BASE + lid + ".html", None
+        return BASE + "analyse.html", None
 
     # F3_Manifestation
     if "http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation" in classes:
-        return BASE + local_id(uri) + ".html", None
+        lid = local_id(uri)
+        if lid.startswith("bibl_"): return BASE + lid + ".html", None
+        return BASE + "analyse.html", None
 
     # F30_Manifestation_Creation
     if "http://iflastandards.info/ns/lrm/lrmoo/F30_Manifestation_Creation" in classes:
-        return BASE + local_id(uri) + ".html", None
+        lid = local_id(uri)
+        if lid.startswith("bibl_"): return BASE + lid + ".html", None
+        return BASE + "analyse.html", None
 
     return "", f"KEIN URL-MAPPING fuer {uri} (Klassen: {', '.join(sorted(classes)) or 'keine'})"
 
@@ -377,7 +419,7 @@ def build_graph_data(g):
             "label": shorten(ps), "predicate": ps,
         })
 
-    return nodes, edges
+    return nodes, edges, labels
 
 
 def build_class_stats(nodes):
@@ -398,7 +440,7 @@ def compute_int31_neighbors(nodes, edges):
     return sorted(neighbors)
 
 
-def resolve_all_urls(nodes, g):
+def resolve_all_urls(nodes, g, labels):
     url_map  = {}
     warnings = []
     for n in nodes:
@@ -407,12 +449,23 @@ def resolve_all_urls(nodes, g):
         if uri.startswith("_:"):
             url_map[n["id"]] = ""
             continue
-        url, warn = resolve_url(uri, classes, g)
+        url, warn = resolve_url(uri, classes, g, labels)
         if warn:
             warnings.append(warn)
-        if url and url.startswith(BASE) and not page_exists(url):
-            warnings.append(f"HTML nicht gefunden (kein Link gesetzt): {url} <- {uri}")
-            url = ""
+
+        # Komma-getrennte URLs einzeln prüfen
+        if url:
+            valid_urls = []
+            for single_url in url.split(","):
+                single_url = single_url.strip()
+                if not single_url:
+                    continue
+                if single_url.startswith(BASE) and not page_exists(single_url):
+                    warnings.append(f"HTML nicht gefunden (kein Link gesetzt): {single_url} <- {uri}")
+                else:
+                    valid_urls.append(single_url)
+            url = ",".join(valid_urls)
+
         url_map[n["id"]] = url
     return url_map, warnings
 
@@ -492,13 +545,13 @@ def main():
     total_triples = len(g)
     print(f"Tripel: {total_triples:,}")
 
-    nodes, edges    = build_graph_data(g)
-    class_stats     = build_class_stats(nodes)
-    int31_neighbors = compute_int31_neighbors(nodes, edges)
+    nodes, edges, labels = build_graph_data(g)
+    class_stats          = build_class_stats(nodes)
+    int31_neighbors      = compute_int31_neighbors(nodes, edges)
 
     print("Löse URLs auf …")
 
-    url_map, warnings = resolve_all_urls(nodes, g)
+    url_map, warnings = resolve_all_urls(nodes, g, labels)
 
     if warnings:
         print(f"\n⚠️  {len(warnings)} URL-Mapping-Warnungen:")
@@ -511,7 +564,7 @@ def main():
     root    = build_xml(nodes, edges, class_stats, int31_neighbors, total_triples, url_map)
     xml_str = pretty_print(root)
     Path(OUTPUT_FILE).write_text(xml_str, encoding="utf-8")
-    
+
     print(f"✓ gespeichert: {OUTPUT_FILE}")
 
 
