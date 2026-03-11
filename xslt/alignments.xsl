@@ -280,7 +280,7 @@
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
 
-                    <div class="container-fluid graph-wrap">
+                    <div class="container-fluid graph-wrap-alignments">
                         <div class="card">
                             <div class="card-header">
                                 <h1>
@@ -336,7 +336,7 @@
                                 <p>Das Netzwerk lässt sich mit der Maus (Klicken, Überfahren,
                                     Zoomen) sowie mit den Steuerelementen rechts und links unten
                                     navigieren.</p>
-                                <div id="graph" class="graph-canvas"/>
+                                <div id="graph" class="graph-canvas-alignments"/>
 
                                 <script id="graph-nodes" type="application/json">
                                     <xsl:text>[</xsl:text>

@@ -1,6 +1,8 @@
 document.fonts.ready.then(function () {
 
 (function () {
+  if (window._networkInitialized) return;
+  window._networkInitialized = true;
 
   // ── Daten aus DOM lesen ──────────────────────────────────────
   function readJSON(id) {
@@ -280,6 +282,7 @@ document.fonts.ready.then(function () {
 
   // ── Kern-Render ──────────────────────────────────────────────
   function renderGraph() {
+    console.trace("renderGraph called, visibleIds.size=" + visibleIds.size + " activeClasses.size=" + activeClasses.size);
     var ed = ALL_EDGES.filter(function (e) {
       if (!visibleIds.has(e.from) || !visibleIds.has(e.to)) return false;
       var nf = NODE_BY_ID[e.from], nt = NODE_BY_ID[e.to];
@@ -554,11 +557,31 @@ document.fonts.ready.then(function () {
     rebuild();
   };
 
+  // ── BUGFIX: "Alle abwählen" – alle State-Sets und vis.js-DataSets
+  //    vollständig leeren, damit der Graph garantiert leer gerendert wird.
   document.getElementById("btn-none").onclick = function () {
     activeClasses.clear();
     syncClassCheckboxes();
     instModeActive = false;
-    rebuild();
+    exploredIds.clear();
+    pinnedIds.clear();
+    visibleIds.clear();
+    checkedNodeIds.clear();
+    nodeLoadOffset = {};
+    hideTooltip();
+    if (_physicsTimer) clearTimeout(_physicsTimer);
+    network.setOptions({ physics: { enabled: false } });
+    edgesDS.clear();
+    nodesDS.clear();
+    // vis.js zeigt trotz leerem DataSet noch den alten Canvas-Inhalt –
+    // Canvas direkt leeren als Fallback
+    setTimeout(function () {
+      var canvas = document.querySelector("#graph canvas");
+      if (canvas) {
+        var ctx = canvas.getContext("2d");
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+    }, 50);
   };
 
   // ── Rechte Sidebar ───────────────────────────────────────────
@@ -722,26 +745,19 @@ document.fonts.ready.then(function () {
   };
 
   document.getElementById("btn-inst-none").onclick = function () {
-    var toCollapse = Array.from(checkedNodeIds);
     document.querySelectorAll(".inst-item.checked").forEach(function (el) {
       el.classList.remove("checked");
       var check = el.querySelector(".inst-check");
       if (check) check.textContent = "";
     });
-    toCollapse.forEach(function (id) {
-      checkedNodeIds.delete(id); exploredIds.delete(id);
-      pinnedIds.delete(id); delete nodeLoadOffset[id];
-    });
-    visibleIds = new Set();
-    exploredIds.forEach(function (eid) {
-      visibleIds.add(eid);
-      getNeighborsSortedByDegree(eid).slice(0, nodeLoadOffset[eid] || EXPAND_STEP)
-        .forEach(function (nb) { visibleIds.add(nb.id); });
-    });
-    pinnedIds.forEach(function (pid) { visibleIds.add(pid); });
+    checkedNodeIds.clear();
+    exploredIds.clear();
+    pinnedIds.clear();
+    visibleIds.clear();
+    nodeLoadOffset = {};
     hideTooltip();
-    if (visibleIds.size === 0 && startNode) expandNode(startNode.id, true);
-    else renderGraph();
+    edgesDS.clear();
+    nodesDS.clear();
     updateInstanceListGraying();
   };
 
