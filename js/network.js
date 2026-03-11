@@ -163,9 +163,13 @@ document.fonts.ready.then(function () {
             + "<span style='color:#aaa;font-size:10px;word-break:break-all'>" + escHtml(uri) + "</span>";
     }
     if (pageUrl) {
-      html += "<br><span style='color:#888;font-size:10px'>More Info: </span>"
-            + "<a href='" + escAttr(pageUrl) + "' target='_blank' rel='noopener'>"
-            + escHtml(pageUrl) + "</a>";
+      var urls = pageUrl.split(",");
+      html += "<br><span style='color:#888;font-size:10px'>More Info: </span>";
+      urls.forEach(function(u, i) {
+        u = u.trim();
+        if (i > 0) html += "<span style='color:#888'>, </span>";
+        html += "<a href='" + escAttr(u) + "' target='_blank' rel='noopener'>" + escHtml(u) + "</a>";
+      });
     }
     return html;
   }
@@ -282,7 +286,6 @@ document.fonts.ready.then(function () {
 
   // ── Kern-Render ──────────────────────────────────────────────
   function renderGraph() {
-    console.trace("renderGraph called, visibleIds.size=" + visibleIds.size + " activeClasses.size=" + activeClasses.size);
     var ed = ALL_EDGES.filter(function (e) {
       if (!visibleIds.has(e.from) || !visibleIds.has(e.to)) return false;
       var nf = NODE_BY_ID[e.from], nt = NODE_BY_ID[e.to];
@@ -557,8 +560,6 @@ document.fonts.ready.then(function () {
     rebuild();
   };
 
-  // ── BUGFIX: "Alle abwählen" – alle State-Sets und vis.js-DataSets
-  //    vollständig leeren, damit der Graph garantiert leer gerendert wird.
   document.getElementById("btn-none").onclick = function () {
     activeClasses.clear();
     syncClassCheckboxes();
@@ -573,8 +574,6 @@ document.fonts.ready.then(function () {
     network.setOptions({ physics: { enabled: false } });
     edgesDS.clear();
     nodesDS.clear();
-    // vis.js zeigt trotz leerem DataSet noch den alten Canvas-Inhalt –
-    // Canvas direkt leeren als Fallback
     setTimeout(function () {
       var canvas = document.querySelector("#graph canvas");
       if (canvas) {
@@ -593,14 +592,102 @@ document.fonts.ready.then(function () {
   var activeTab      = "F2";
   var checkedNodeIds = new Set();
 
-  function getInstanceNodes(tabKey) {
-    var nodes = tabKey === "ALL"
-      ? ALL_NODES.filter(function (n) { return n.classes.length > 0; })
-      : ALL_NODES.filter(function (n) { return n.classes.indexOf(INSTANCE_CLASSES[tabKey]) !== -1; });
-    return nodes.sort(function (a, b) { return a.label.localeCompare(b.label); });
+  // ── Vorberechneter, vorsortierter Cache pro Tab ───────
+  var INSTANCE_CACHE = {};
+
+  function buildInstanceCache(tabKey) {
+    if (INSTANCE_CACHE[tabKey]) return INSTANCE_CACHE[tabKey];
+
+    var nodes;
+    if (tabKey === "ALL") {
+      nodes = ALL_NODES.filter(function (n) { return n.classes.length > 0; });
+    } else {
+      var cls = INSTANCE_CLASSES[tabKey];
+      nodes = ALL_NODES.filter(function (n) { return n.classes.indexOf(cls) !== -1; });
+    }
+
+    nodes.sort(function (a, b) { return a.label.localeCompare(b.label); });
+
+    // Lowercase-Felder vorberechnen – einmalig
+    nodes.forEach(function (n) {
+      n._labelLower = n.label.toLowerCase();
+      n._uriLower   = n.uri   ? n.uri.toLowerCase()   : "";
+      n._clsLower   = n.classes.length > 0
+        ? n.classes[0].split(/[#\/]/).pop().toLowerCase()
+        : "";
+    });
+
+    INSTANCE_CACHE[tabKey] = nodes;
+    return nodes;
   }
 
-  // ── Instanzliste: graying via data-Attribut ──
+  // ── Binäre Suche für Prefix-Matching ─────────────────
+  function binarySearchPrefix(nodes, prefix) {
+    var lo = 0, hi = nodes.length;
+    // Untergrenze: erstes Element >= prefix
+    while (lo < hi) {
+      var mid = (lo + hi) >>> 1;
+      nodes[mid]._labelLower < prefix ? (lo = mid + 1) : (hi = mid);
+    }
+    var start = lo;
+    // Obergrenze: erstes Element, das nicht mehr mit prefix beginnt
+    hi = nodes.length;
+    while (lo < hi) {
+      var mid2 = (lo + hi) >>> 1;
+      nodes[mid2]._labelLower.startsWith(prefix) ? (lo = mid2 + 1) : (hi = mid2);
+    }
+    return nodes.slice(start, lo);
+  }
+
+  // ── Kombinierte Suche mit Prefix-Optimierung ─────────
+  function searchInstanceNodes(tabKey, q) {
+    var all = buildInstanceCache(tabKey);
+
+    if (!q) {
+      // Checked nodes nach oben sortieren, Rest bleibt wie er ist
+      if (checkedNodeIds.size === 0) return all;
+      var checked   = all.filter(function (n) { return checkedNodeIds.has(n.id); });
+      var unchecked = all.filter(function (n) { return !checkedNodeIds.has(n.id); });
+      return checked.concat(unchecked);
+    }
+
+    var results;
+
+    if (/^[a-z0-9äöüß\s\-_]+$/i.test(q)) {
+      // Schritt 1: schnelle Prefix-Suche via binärer Suche
+      var prefixMatches = binarySearchPrefix(all, q);
+
+      // Schritt 2: zusätzlich Substring-Treffer (die nicht schon Prefix-Treffer sind)
+      // Nur durchsuchen wenn Prefix-Ergebnis nicht bereits groß genug
+      var prefixSet = new Set(prefixMatches.map(function (n) { return n.id; }));
+      var substringMatches = all.filter(function (n) {
+        if (prefixSet.has(n.id)) return false;
+        return n._labelLower.includes(q)
+          || n._uriLower.includes(q)
+          || n._clsLower.includes(q);
+      });
+
+      results = prefixMatches.concat(substringMatches);
+    } else {
+      // Fallback: reine Substring-Suche (z.B. bei URI-Fragmenten mit Sonderzeichen)
+      results = all.filter(function (n) {
+        return n._labelLower.includes(q)
+          || n._uriLower.includes(q)
+          || n._clsLower.includes(q);
+      });
+    }
+
+    // Checked nodes immer oben anzeigen, auch wenn sie zum Suchbegriff passen
+    if (checkedNodeIds.size > 0) {
+      var checkedResults   = results.filter(function (n) { return checkedNodeIds.has(n.id); });
+      var uncheckedResults = results.filter(function (n) { return !checkedNodeIds.has(n.id); });
+      results = checkedResults.concat(uncheckedResults);
+    }
+
+    return results;
+  }
+
+  // ── Instanzliste: graying via data-Attribut ──────────────────
   function updateInstanceListGraying() {
     _vScroll.renderedIds = new Set(nodesDS.getIds());
     _vScrollPaint();
@@ -631,6 +718,7 @@ document.fonts.ready.then(function () {
     renderedIds: null,
   };
 
+  // Scroll-Container einmalig ermitteln und cachen
   function _vScrollGetScrollParent() {
     if (_vScroll.scrollEl) return _vScroll.scrollEl;
     var el = document.getElementById("instance-list").parentElement;
@@ -665,7 +753,9 @@ document.fonts.ready.then(function () {
       var n          = nodes[i];
       var isChecked  = checkedNodeIds.has(n.id);
       var isInactive = !renderedIds.has(n.id) && !isChecked;
-      var clsShort   = n.classes.length > 0 ? n.classes[0].split(/[#\/]/).pop() : "";
+      var clsShort   = n._clsLower
+        ? n.classes[0].split(/[#\/]/).pop()
+        : (n.classes.length > 0 ? n.classes[0].split(/[#\/]/).pop() : "");
       var labelText  = showClass && clsShort ? n.label + " (" + clsShort + ")" : n.label;
       var title      = n.label + (clsShort ? " (" + clsShort + ")" : "");
 
@@ -684,41 +774,67 @@ document.fonts.ready.then(function () {
     list.innerHTML = parts.join("");
   }
 
+  // onscroll nur einmal setzen (nicht bei jedem renderInstanceList-Aufruf)
+  (function initScroll() {
+    var scrollEl = _vScrollGetScrollParent();
+    scrollEl.addEventListener("scroll", _vScrollPaint, { passive: true });
+  })();
+
   function renderInstanceList(q) {
-    var nodes = getInstanceNodes(activeTab);
-    if (q) nodes = nodes.filter(function (n) { return n.label.toLowerCase().includes(q); });
+    var nodes = searchInstanceNodes(activeTab, q);
 
     _vScroll.nodes       = nodes;
     _vScroll.showClass   = (activeTab === "ALL");
     _vScroll.renderedIds = new Set(nodesDS.getIds());
 
     var scrollEl = _vScrollGetScrollParent();
-    scrollEl.onscroll = _vScrollPaint;
     scrollEl.scrollTop = 0;
 
     var list = document.getElementById("instance-list");
     list.style.position = "relative";
+    // Gesamthöhe explizit setzen, damit der Scrollcontainer die richtige Höhe hat
+    list.style.height = (nodes.length * _vScroll.itemH) + "px";
 
     _vScrollPaint();
 
-    list.onclick = function (e) {
-      var el = e.target.closest(".inst-item[data-nid]");
-      if (!el) return;
-      var id    = +el.dataset.nid;
-      var n     = NODE_BY_ID[id];
-      if (!n) return;
-      var check = el.querySelector(".inst-check");
-      if (checkedNodeIds.has(id)) {
-        el.classList.remove("checked"); check.textContent = "";
-        collapseNode(id);
-      } else {
-        checkedNodeIds.add(id); el.classList.add("checked"); check.textContent = "✓";
-        expandNode(id, true, true);
-      }
-      _vScroll.renderedIds = new Set(nodesDS.getIds());
-      _vScrollPaint();
-    };
+    // Event-Delegation nur einmal registrieren
+    if (!list._clickInitialized) {
+      list._clickInitialized = true;
+      list.addEventListener("click", function (e) {
+        var el = e.target.closest(".inst-item[data-nid]");
+        if (!el) return;
+        var id    = +el.dataset.nid;
+        var n     = NODE_BY_ID[id];
+        if (!n) return;
+        var check = el.querySelector(".inst-check");
+        if (checkedNodeIds.has(id)) {
+          el.classList.remove("checked"); check.textContent = "";
+          collapseNode(id);
+        } else {
+          checkedNodeIds.add(id); el.classList.add("checked"); check.textContent = "✓";
+          expandNode(id, true, true);
+        }
+        _vScroll.renderedIds = new Set(nodesDS.getIds());
+        _vScrollPaint();
+      });
+    }
   }
+
+  // ── Debounce für Instanz-Suche ───────────────────────
+  var _instSearchTimer = null;
+  document.getElementById("instance-search").oninput = function () {
+    var q = this.value.trim().toLowerCase();
+
+    // Sofortiges visuelles Feedback: Suchfeld leicht abdunkeln
+    this.style.opacity = "0.6";
+    var inputEl = this;
+
+    clearTimeout(_instSearchTimer);
+    _instSearchTimer = setTimeout(function () {
+      inputEl.style.opacity = "1";
+      renderInstanceList(q);
+    }, 200);
+  };
 
   document.querySelectorAll(".inst-tab").forEach(function (tab) {
     tab.onclick = function () {
@@ -726,13 +842,11 @@ document.fonts.ready.then(function () {
       tab.classList.add("active");
       activeTab = tab.dataset.cls;
       document.getElementById("instance-search").value = "";
+      // Cache für neuen Tab vorwärmen (läuft einmalig beim Tab-Wechsel)
+      buildInstanceCache(activeTab);
       renderInstanceList("");
     };
   });
-
-  document.getElementById("instance-search").oninput = function () {
-    renderInstanceList(this.value.trim().toLowerCase());
-  };
 
   document.getElementById("btn-inst-default").onclick = function () {
     instModeActive = false; checkedNodeIds.clear();
@@ -778,6 +892,12 @@ document.fonts.ready.then(function () {
 
   // ── Start ────────────────────────────────────────────────────
   buildClassFilter();
+
+  // Instanz-Caches für alle Tabs vorwärmen (im Hintergrund, nach dem ersten Paint)
+  setTimeout(function () {
+    Object.keys(INSTANCE_CLASSES).forEach(function (key) { buildInstanceCache(key); });
+    buildInstanceCache("ALL");
+  }, 500);
 
   startNode = ALL_NODES.filter(function (n) { return n.uri === START_URI; })[0] || null;
   if (!startNode) {
