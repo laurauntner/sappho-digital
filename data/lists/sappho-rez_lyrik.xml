@@ -336,7 +336,7 @@
                 <bibl xml:id="bibl_4926994b">
                     <title type="text">Christe du Beystand deiner Creutz-Gemeine</title>
                     <date type="created" when="1644">1644</date>
-                    <author xml:id="author_dbd41688">Matthias Apelles von Löwenstein</author>
+                    <author ref="https://www.wikidata.org/entity/Q990515" xml:id="author_dbd41688">Matthias Apelles von Löwenstern</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
                 <bibl xml:id="bibl_c6abf006">
@@ -683,7 +683,7 @@
                     <bibl xml:id="bibl_874f0958">
                         <title type="work">Gründliche Anleitung zur Teutschen accuraten Reim- und Dicht-Kunst</title>
                     </bibl>
-                    <author xml:id="author_b75e61a3">Magnus Daniel Omeis</author>
+                    <author ref="https://www.wikidata.org/entity/Q1884530" xml:id="author_b75e61a3">Magnus Daniel Omeis</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace xml:id="place_2bd03983">Nürnberg</pubPlace>
                     <pubPlace xml:id="place_bf64ca28">Altdorf</pubPlace>
@@ -696,7 +696,7 @@
                     <bibl xml:id="bibl_874f0958">
                         <title type="work">Gründliche Anleitung zur Teutschen accuraten Reim- und Dicht-Kunst</title>
                     </bibl>
-                    <author xml:id="author_b75e61a3">Magnus Daniel Omeis</author>
+                    <author ref="https://www.wikidata.org/entity/Q1884530" xml:id="author_b75e61a3">Magnus Daniel Omeis</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace xml:id="place_2bd03983">Nürnberg</pubPlace>
                     <pubPlace xml:id="place_bf64ca28">Altdorf</pubPlace>
@@ -709,7 +709,7 @@
                     <bibl xml:id="bibl_874f0958">
                         <title type="work">Gründliche Anleitung zur Teutschen accuraten Reim- und Dicht-Kunst</title>
                     </bibl>
-                    <author xml:id="author_b75e61a3">Magnus Daniel Omeis</author>
+                    <author ref="https://www.wikidata.org/entity/Q1884530" xml:id="author_b75e61a3">Magnus Daniel Omeis</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace xml:id="place_2bd03983">Nürnberg</pubPlace>
                     <pubPlace xml:id="place_bf64ca28">Altdorf</pubPlace>
@@ -734,7 +734,7 @@
                     <bibl xml:id="bibl_8e8089bd">
                         <title type="work">Philanders von der Linde Galante Gedichte</title>
                     </bibl>
-                    <author xml:id="author_1ab6fe01">Philander von der Linde [d. i. Johann Burkhardt Mencke]</author>
+                    <author ref="https://www.wikidata.org/entity/Q105229" xml:id="author_1ab6fe01">Philander von der Linde [d. i. Johann Burckhardt Mencke]</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher xml:id="publisher_dfadc43f">Johann Friedrich Gleditsch und Sohn</publisher>
@@ -868,7 +868,7 @@
                     <bibl xml:id="bibl_a0565cb3">
                         <title type="work">Poetische Rosen in Knospen</title>
                     </bibl>
-                    <author xml:id="author_9933fb08">Ludwig Wilhelm von Lagnau</author>
+                    <author ref="https://www.wikidata.org/entity/Q131775549" xml:id="author_9933fb08">Ludwig Wilhelm von Lagnau</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1729" xml:id="place_87bc3115">Erfurt</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q112498331" xml:id="publisher_e74b710c">Johann Heinrich Nonne</publisher>
@@ -1108,7 +1108,7 @@
                     <bibl xml:id="bibl_19c1efd8">
                         <title type="work">Oden und Lieder</title>
                     </bibl>
-                    <author xml:id="author_7d8f4782">Christoph Eusebius Suppius</author>
+                    <author ref="https://www.wikidata.org/entity/Q55126807" xml:id="author_7d8f4782">Christoph Eusebius Suppius</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q6986" xml:id="place_a3670732">Gotha</pubPlace>
                     <publisher xml:id="publisher_af729ce6">Reyher</publisher>
@@ -1120,7 +1120,7 @@
                     <bibl xml:id="bibl_19c1efd8">
                         <title type="work">Oden und Lieder</title>
                     </bibl>
-                    <author xml:id="author_7d8f4782">Christoph Eusebius Suppius</author>
+                    <author ref="https://www.wikidata.org/entity/Q55126807" xml:id="author_7d8f4782">Christoph Eusebius Suppius</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q6986" xml:id="place_a3670732">Gotha</pubPlace>
                     <publisher xml:id="publisher_af729ce6">Reyher</publisher>
@@ -1131,7 +1131,7 @@
                     <bibl xml:id="bibl_da238899">
                         <title type="work">Critische Lobgedichte und Elegien</title>
                     </bibl>
-                    <author xml:id="author_e542f0bc">Johann Jacob Bodmer</author>
+                    <author ref="https://www.wikidata.org/entity/Q115588" xml:id="author_e542f0bc">Johann Jacob Bodmer</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q72" xml:id="place_0c1736a7">Zürich</pubPlace>
                     <publisher xml:id="publisher_45b9fc69">Orell und Comp.</publisher>
@@ -2122,7 +2122,7 @@ Philosophen zu Sanssouci</title>
                 <bibl xml:id="bibl_cd328f18">
                     <title type="text">Der Eislauf</title>
                     <date type="created" when="1764">1764</date>
-                    <author xml:id="author_1d625859">Novalis</author>
+                    <author ref="https://www.wikidata.org/entity/Q60684" xml:id="author_1d625859">Novalis</author>
                     <note type="genre">Lyrik</note>
                     <ref target="https://www.projekt-gutenberg.org/novalis/gedichte/chap009.html">https://www.projekt-gutenberg.org/novalis/gedichte/chap009.html</ref>
                 </bibl>
@@ -2267,7 +2267,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_d4bdb33b">
                         <title type="work">Sinngedichte</title>
                     </bibl>
-                    <author xml:id="author_230b0f40">Leopold Friedrich Günther von Goeckingk</author>
+                    <author ref="https://www.wikidata.org/entity/Q98454" xml:id="author_230b0f40">Leopold Friedrich Günther von Goeckingk</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q7072" xml:id="place_bb2b3096">Halberstadt</pubPlace>
                     <ref target="https://books.google.de/books?id=gWKdEu5SQOkC">https://books.google.de/books?id=gWKdEu5SQOkC</ref>
@@ -2327,7 +2327,7 @@ Philosophen zu Sanssouci</title>
                 <bibl xml:id="bibl_afeba87d">
                     <title type="text">Bei Zurücksendung der Lettres de Babet</title>
                     <date type="created" notBefore="1772" notAfter="1775">1772–1775</date>
-                    <author xml:id="author_230b0f40">Leopold Friedrich Günther von Goeckingk</author>
+                    <author ref="https://www.wikidata.org/entity/Q98454" xml:id="author_230b0f40">Leopold Friedrich Günther von Goeckingk</author>
                     <note type="genre">Lyrik</note>
                     <ref target="http://www.zeno.org/Literatur/M/Goeckingk,+Leopold+Friedrich+G%C3%BCnther+von/Gedichte/Lieder+zweier+Liebenden/Erstes+Buch/Bei+Zur%C3%BCcksendung+der+Lettres+de+Babet">http://www.zeno.org/Literatur/M/Goeckingk,+Leopold+Friedrich+G%C3%BCnther+von/Gedichte/Lieder+zweier+Liebenden/Erstes+Buch/Bei+Zur%C3%BCcksendung+der+Lettres+de+Babet</ref>
                 </bibl>
@@ -2459,7 +2459,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_39bd45eb">
                         <title type="work">Lieder zweier Liebenden</title>
                     </bibl>
-                    <author xml:id="author_230b0f40">Leopold Friedrich Günther von Goeckingk</author>
+                    <author ref="https://www.wikidata.org/entity/Q98454" xml:id="author_230b0f40">Leopold Friedrich Günther von Goeckingk</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher xml:id="publisher_0449d307">Weidmanns Erden und Reich</publisher>
@@ -2471,7 +2471,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_94da30d8">
                         <title type="work">Poetische Schriften</title>
                     </bibl>
-                    <author xml:id="author_d4eead4e">Justus Friedrich Wilhelm Zachariae</author>
+                    <author ref="https://www.wikidata.org/entity/Q75169" xml:id="author_d4eead4e">Justus Friedrich Wilhelm Zachariae</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3085" xml:id="place_9b84e0f6">Reutlingen</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q55849923" xml:id="publisher_c034b35a">Johann Georg Fleischhauer</publisher>
@@ -2482,7 +2482,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_94da30d8">
                         <title type="work">Poetische Schriften</title>
                     </bibl>
-                    <author xml:id="author_d4eead4e">Justus Friedrich Wilhelm Zachariae</author>
+                    <author ref="https://www.wikidata.org/entity/Q75169" xml:id="author_d4eead4e">Justus Friedrich Wilhelm Zachariae</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3085" xml:id="place_9b84e0f6">Reutlingen</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q55849923" xml:id="publisher_c034b35a">Johann Georg Fleischhauer</publisher>
@@ -2493,7 +2493,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_94da30d8">
                         <title type="work">Poetische Schriften</title>
                     </bibl>
-                    <author xml:id="author_d4eead4e">Justus Friedrich Wilhelm Zachariae</author>
+                    <author ref="https://www.wikidata.org/entity/Q75169" xml:id="author_d4eead4e">Justus Friedrich Wilhelm Zachariae</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3085" xml:id="place_9b84e0f6">Reutlingen</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q55849923" xml:id="publisher_c034b35a">Johann Georg Fleischhauer</publisher>
@@ -2505,7 +2505,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_0cf5ddf3">
                         <title type="work">Gedichte. Erster Theil</title>
                     </bibl>
-                    <author xml:id="author_230b0f40">Leopold Friedrich Günther von Goeckingk</author>
+                    <author ref="https://www.wikidata.org/entity/Q98454" xml:id="author_230b0f40">Leopold Friedrich Günther von Goeckingk</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q324653" xml:id="publisher_e1311f86">Johann Gottlieb Immanuel Breitkopf</publisher>
@@ -2563,7 +2563,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_0eed1803">
                         <title type="work">Goekingks Sämtliche Gedichte, Bd. 3</title>
                     </bibl>
-                    <author xml:id="author_230b0f40">Leopold Friedrich Günther von Goeckingk</author>
+                    <author ref="https://www.wikidata.org/entity/Q98454" xml:id="author_230b0f40">Leopold Friedrich Günther von Goeckingk</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1794" xml:id="place_675a92e1">Frankfurt a. M.</pubPlace>
                     <publisher xml:id="publisher_34543015">Johnn Christian Hermann</publisher>
@@ -2608,7 +2608,7 @@ Philosophen zu Sanssouci</title>
                 <bibl xml:id="bibl_32ad81e5">
                     <title type="text">Antwort des Herrn von Heß</title>
                     <date type="created" notAfter="1782">n. n. 1782</date>
-                    <author xml:id="author_230b0f40">Leopold Friedrich Günther von Goeckingk</author>
+                    <author ref="https://www.wikidata.org/entity/Q98454" xml:id="author_230b0f40">Leopold Friedrich Günther von Goeckingk</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
                 <bibl xml:id="bibl_f7328ce8">
@@ -2663,7 +2663,7 @@ Philosophen zu Sanssouci</title>
                 <bibl xml:id="bibl_c3da1ba9">
                     <title type="text">An die Dichterin Karschin, in Berlin</title>
                     <date type="created" when="1787">1787</date>
-                    <author xml:id="author_230b0f40">Leopold Friedrich Günther von Goeckingk</author>
+                    <author ref="https://www.wikidata.org/entity/Q98454" xml:id="author_230b0f40">Leopold Friedrich Günther von Goeckingk</author>
                     <note type="genre">Lyrik</note>
                     <ref target="http://www.zeno.org/Literatur/M/Goeckingk,+Leopold+Friedrich+G%C3%BCnther+von/Gedichte/Episteln.+Zweiter+Teil/An+die+Dichterin+Karschin,+in+Berlin">http://www.zeno.org/Literatur/M/Goeckingk,+Leopold+Friedrich+G%C3%BCnther+von/Gedichte/Episteln.+Zweiter+Teil/An+die+Dichterin+Karschin,+in+Berlin</ref>
                 </bibl>
@@ -2736,7 +2736,7 @@ Philosophen zu Sanssouci</title>
                 <bibl xml:id="bibl_4284dc51">
                     <title type="text">Der Abend</title>
                     <date type="created" when="1789">1789</date>
-                    <author xml:id="author_1d625859">Novalis</author>
+                    <author ref="https://www.wikidata.org/entity/Q60684" xml:id="author_1d625859">Novalis</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
                 <bibl xml:id="bibl_6113f128">
@@ -2771,7 +2771,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_ecc9e512">
                         <title type="work">Blumenlese der Musen</title>
                     </bibl>
-                    <author xml:id="author_64200121">Ignatz Liebel</author>
+                    <author ref="https://www.wikidata.org/entity/Q21545809" xml:id="author_64200121">Ignaz Liebel</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q95032046" xml:id="publisher_df613b47">Franz Jacob Kaiserer</publisher>
@@ -3114,7 +3114,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_eef6e5e0">
                         <title type="work">Feldblumen auf Ungarns Fluren, Bd. 2</title>
                     </bibl>
-                    <author xml:id="author_31efc428">Therese von Artner</author>
+                    <author ref="https://www.wikidata.org/entity/Q86956" xml:id="author_31efc428">Therese von Artner</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3150" xml:id="place_1aa97a04">Jena</pubPlace>
                     <publisher xml:id="publisher_4e50ef14">J. G. Voigt</publisher>
@@ -3179,25 +3179,25 @@ Philosophen zu Sanssouci</title>
                 <bibl xml:id="bibl_31935ede">
                     <title type="text">An den Sklaven 2</title>
                     <date type="created" notAfter="1801">n. n. 1801</date>
-                    <author xml:id="author_1d625859">Novalis</author>
+                    <author ref="https://www.wikidata.org/entity/Q60684" xml:id="author_1d625859">Novalis</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
                 <bibl xml:id="bibl_6104a228">
                     <title type="text">An Gleim</title>
                     <date type="created" notAfter="1801">n. n. 1801</date>
-                    <author xml:id="author_1d625859">Novalis</author>
+                    <author ref="https://www.wikidata.org/entity/Q60684" xml:id="author_1d625859">Novalis</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
                 <bibl xml:id="bibl_520c8c85">
                     <title type="text">Erato</title>
                     <date type="created" notAfter="1801">n. n. 1801</date>
-                    <author xml:id="author_1d625859">Novalis</author>
+                    <author ref="https://www.wikidata.org/entity/Q60684" xml:id="author_1d625859">Novalis</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
                 <bibl xml:id="bibl_45252539">
                     <title type="text">Als ich an G. Höltys Gedichte schickte</title>
                     <date type="created" notAfter="1801">n. n. 1801</date>
-                    <author xml:id="author_1d625859">Novalis</author>
+                    <author ref="https://www.wikidata.org/entity/Q60684" xml:id="author_1d625859">Novalis</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q19211868" xml:id="bibl_dac4aa14">
@@ -3326,7 +3326,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_aa132bb6">
                         <title type="work">Gedichte</title>
                     </bibl>
-                    <author xml:id="author_b4b4af98">Karl Woltmann</author>
+                    <author ref="https://www.wikidata.org/entity/Q92378,Q101957" xml:id="author_b4b4af98">Karl Woltmann</author>
                     <author xml:id="author_8c3d27e1">Karoline Woltmann</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
@@ -3339,7 +3339,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_0633c293">
                         <title type="work">Neuere Gedichte</title>
                     </bibl>
-                    <author ref="https://www.wikidata.org/entity/Q86956" xml:id="author_6bc845c6">Theone [d. i. Therese von Artner]</author>
+                    <author ref="https://www.wikidata.org/entity/Q86956" xml:id="author_31efc428">Theone [d. i. Therese von Artner]</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3806" xml:id="place_ae6e1bfb">Tübingen</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1136691" xml:id="publisher_d7432893">J. G. Cotta’sche Buchhandlung</publisher>
@@ -3549,7 +3549,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_cd79b63c">
                         <title type="work">Erato. Taschenbuch für das Jahr 1821</title>
                     </bibl>
-                    <author xml:id="author_05c379b4">Johann Möser</author>
+                    <author ref="https://www.wikidata.org/entity/Q43799" xml:id="author_05c379b4">Johann Möser</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher xml:id="publisher_5b161884">J. G. Affermann</publisher>
@@ -3623,7 +3623,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_aa132bb6">
                         <title type="work">Gedichte</title>
                     </bibl>
-                    <author xml:id="author_73873639">Nikolaus Lenau</author>
+                    <author ref="https://www.wikidata.org/entity/Q84280" xml:id="author_73873639">Nikolaus Lenau</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <pubPlace xml:id="place_ae6e1bfb">Tübingen</pubPlace>
@@ -3637,7 +3637,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_aa132bb6">
                         <title type="work">Gedichte</title>
                     </bibl>
-                    <author xml:id="author_73873639">Nikolaus Lenau</author>
+                    <author ref="https://www.wikidata.org/entity/Q84280" xml:id="author_73873639">Nikolaus Lenau</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <pubPlace xml:id="place_ae6e1bfb">Tübingen</pubPlace>
@@ -3651,7 +3651,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_aa132bb6">
                         <title type="work">Gedichte</title>
                     </bibl>
-                    <author xml:id="author_73873639">Nikolaus Lenau</author>
+                    <author ref="https://www.wikidata.org/entity/Q84280" xml:id="author_73873639">Nikolaus Lenau</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <pubPlace xml:id="place_ae6e1bfb">Tübingen</pubPlace>
@@ -3806,7 +3806,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_efd3ad7c">
                     <title type="text">Mosaik. Heinrich des Vierten erste Liebe. Ein Gedicht in drey Gesängen</title>
                     <date type="published" when="1828">1828</date>
-                    <author xml:id="author_104b735b">Wilhelm von Normann</author>
+                    <author ref="https://www.wikidata.org/entity/Q19917996" xml:id="author_104b735b">Wilhelm von Normann</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3834" xml:id="place_2832feaf">Konstanz</pubPlace>
                     <publisher xml:id="publisher_f389e9d6">Wallis</publisher>
@@ -4022,7 +4022,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_aa132bb6">
                         <title type="work">Gedichte</title>
                     </bibl>
-                    <author xml:id="author_fcd37174">Apollonius August von Maltitz</author>
+                    <author ref="https://www.wikidata.org/entity/Q4780410" xml:id="author_fcd37174">Apollonius August von Maltitz</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
                     <publisher xml:id="publisher_c0d43aa5">Georg Franz</publisher>
@@ -4031,7 +4031,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_8fe4fc06">
                     <title type="text">Erinnerung</title>
                     <date type="created" when="1838">1838</date>
-                    <author xml:id="author_73873639">Nikolaus Lenau</author>
+                    <author ref="https://www.wikidata.org/entity/Q84280" xml:id="author_73873639">Nikolaus Lenau</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
                 <bibl xml:id="bibl_e7a471e6">
@@ -4199,7 +4199,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_536dab1c">
                     <title type="text"/>
                     <date type="created" notAfter="1853">n. n. 1853</date>
-                    <author xml:id="author_a4d5d984">August Kopisch</author>
+                    <author ref="https://www.wikidata.org/entity/Q88387" xml:id="author_a4d5d984">August Kopisch</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
                 <bibl xml:id="bibl_98c17ab1">
@@ -4231,7 +4231,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_5e8eb7a5">
                         <title type="work">Sinnen und Minnen. Ein Jugendleben in Liedern</title>
                     </bibl>
-                    <author xml:id="author_4efc3589">Robert Hamerling</author>
+                    <author ref="https://www.wikidata.org/entity/Q79088" xml:id="author_4efc3589">Robert Hamerling</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1055" xml:id="place_f23bb5e2">Hamburg</pubPlace>
                     <publisher xml:id="publisher_3c16c7d7">J. F. Richter</publisher>
@@ -4347,7 +4347,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_babd6d45">
                     <title type="text">Die Tochter des Diaios. Dramatisches Gedicht in fünf Acten</title>
                     <date type="published" when="1873">1873</date>
-                    <author xml:id="author_e39e7468">Carl Hepp</author>
+                    <author ref="https://www.wikidata.org/entity/Q55674728" xml:id="author_e39e7468">Carl Hepp</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher xml:id="publisher_2c3f530f">Wilhelm Müller</publisher>
@@ -4525,7 +4525,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_ddb1e4a7">
                         <title type="work">Hundert Lieder und Gesänge</title>
                     </bibl>
-                    <author xml:id="author_caa5df32">Georg Ebers</author>
+                    <author ref="https://www.wikidata.org/entity/Q62765" xml:id="author_caa5df32">Georg Ebers</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
                 <bibl xml:id="bibl_bc979776">
@@ -5035,7 +5035,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_3259d5bb">
                         <title type="work">Die Wiese. Gedichte</title>
                     </bibl>
-                    <author xml:id="author_bb878fae">Ludwig Goldscheider</author>
+                    <author ref="https://www.wikidata.org/entity/Q1425761" xml:id="author_bb878fae">Ludwig Goldscheider</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace xml:id="place_0c1736a7">Zürich</pubPlace>
                     <pubPlace xml:id="place_95b8315b">Leipzig</pubPlace>
@@ -5090,7 +5090,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_3229164a">
                         <title type="work">Attische Sonette</title>
                     </bibl>
-                    <author xml:id="author_529d41df">Theodor Däubler</author>
+                    <author ref="https://www.wikidata.org/entity/Q1937725" xml:id="author_529d41df">Theodor Däubler</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q316015" xml:id="publisher_308da38b">Insel</publisher>
@@ -5423,7 +5423,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_bf96255c">
                         <title type="work">Der Bund</title>
                     </bibl>
-                    <author xml:id="author_596c5eeb">Martha Hofmann</author>
+                    <author ref="https://www.wikidata.org/entity/Q56334680" xml:id="author_596c5eeb">Martha Hofmann</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q70" xml:id="place_bac82a99">Bern</pubPlace>
                     <publisher xml:id="publisher_b7c3e68c">Tamedia</publisher>
@@ -5493,7 +5493,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_39f6ce4c">
                         <title type="work">Wenn ich schon sterben muß. Gedichte</title>
                     </bibl>
-                    <author xml:id="author_9de2c173">Inge Müller</author>
+                    <author ref="https://www.wikidata.org/entity/Q75236" xml:id="author_9de2c173">Inge Müller</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace xml:id="place_c35eca96">Berlin</pubPlace>
                     <pubPlace xml:id="place_d35a02eb">Weimar</pubPlace>
@@ -5571,7 +5571,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e623029b">
                     <title type="text">Unter dem sapphischen Mond. Deutsche Frauenlyrik seit 1900</title>
                     <date type="published" when="1957">1957</date>
-                    <author xml:id="author_071ddf43">Oda Schaefer</author>
+                    <author ref="https://www.wikidata.org/entity/Q96336" xml:id="author_071ddf43">Oda Schaefer</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1385440" xml:id="publisher_ca058f7f">Piper</publisher>
@@ -5652,7 +5652,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_d7221f83">
                         <title type="work">Der grüne Ton. Späte und frühe Gedichte</title>
                     </bibl>
-                    <author xml:id="author_7ce93079">Oda Schaefer</author>
+                    <author ref="https://www.wikidata.org/entity/Q96336" xml:id="author_7ce93079">Oda Schaefer</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1385440" xml:id="publisher_ca058f7f">Piper</publisher>
@@ -5862,7 +5862,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_be27ad26">
                         <title type="work">Sturzacker. Gedichte 1980–1984</title>
                     </bibl>
-                    <author xml:id="author_43f15a85">Gabriele Eckart</author>
+                    <author ref="https://www.wikidata.org/entity/Q1490234" xml:id="author_43f15a85">Gabriele Eckart</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher xml:id="publisher_6598d007">Der Morgen</publisher>
@@ -5928,7 +5928,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_7dec9bba">
                         <title type="work">Midlands. Gedichte</title>
                     </bibl>
-                    <author xml:id="author_a6c5a134">Jürgen Theobaldy</author>
+                    <author ref="https://www.wikidata.org/entity/Q125458" xml:id="author_a6c5a134">Jürgen Theobaldy</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2966" xml:id="place_ec6f644a">Heidelberg</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1170858" xml:id="publisher_5825c9b9">Das Wunderhorn</publisher>
@@ -6203,7 +6203,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_d90e720c">
                         <title type="work">Die Erfindung der Poesie</title>
                     </bibl>
-                    <author xml:id="author_b5793641">Raoul Schrott</author>
+                    <author ref="https://www.wikidata.org/entity/Q94500" xml:id="author_b5793641">Raoul Schrott</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1794" xml:id="place_ae5c315b">Frankfurt a. M.</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1301287" xml:id="publisher_abd7afdd">Eichborn</publisher>
@@ -6226,7 +6226,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_dc80353f">
                         <title type="work">Manuskripte. Zeitschrift für Literatur, Kunst und Kritik</title>
                     </bibl>
-                    <author xml:id="author_b5793641">Raoul Schrott</author>
+                    <author ref="https://www.wikidata.org/entity/Q94500" xml:id="author_b5793641">Raoul Schrott</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q13298" xml:id="place_6e00929f">Graz</pubPlace>
                     <publisher xml:id="publisher_dd42fc80">Manuskripte</publisher>
@@ -6237,7 +6237,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_dc80353f">
                         <title type="work">Manuskripte. Zeitschrift für Literatur, Kunst und Kritik</title>
                     </bibl>
-                    <author xml:id="author_b5793641">Raoul Schrott</author>
+                    <author ref="https://www.wikidata.org/entity/Q94500" xml:id="author_b5793641">Raoul Schrott</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q13298" xml:id="place_6e00929f">Graz</pubPlace>
                     <publisher xml:id="publisher_dd42fc80">Manuskripte</publisher>
@@ -6245,7 +6245,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_8f0c2931">
                     <title type="text"/>
                     <date type="published" notAfter="1997">n. n. 1997</date>
-                    <author xml:id="author_9de2c173">Inge Müller</author>
+                    <author ref="https://www.wikidata.org/entity/Q75236" xml:id="author_9de2c173">Inge Müller</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
                 <bibl xml:id="bibl_f175864d">
@@ -6406,7 +6406,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_edbf9cc5">
                         <title type="work">Grund zu Schafen</title>
                     </bibl>
-                    <author xml:id="author_5fac6550">Marion Poschmann</author>
+                    <author ref="https://www.wikidata.org/entity/Q1475115" xml:id="author_5fac6550">Marion Poschmann</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1794" xml:id="place_ae5c315b">Frankfurt a. M.</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1445052" xml:id="publisher_d460d344">Frankfurter Verlagsanstalt</publisher>
@@ -6417,7 +6417,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_edbf9cc5">
                         <title type="work">Grund zu Schafen</title>
                     </bibl>
-                    <author xml:id="author_5fac6550">Marion Poschmann</author>
+                    <author ref="https://www.wikidata.org/entity/Q1475115" xml:id="author_5fac6550">Marion Poschmann</author>
                     <note type="genre">Lyrik</note>
                     <publisher ref="https://www.wikidata.org/entity/Q1445052" xml:id="publisher_d460d344">Frankfurter Verlagsanstalt</publisher>
                 </bibl>
@@ -6458,7 +6458,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_20f57098">
                         <title type="work">Wilde Nelken</title>
                     </bibl>
-                    <author xml:id="author_a6c5a134">Jürgen Theobaldy</author>
+                    <author ref="https://www.wikidata.org/entity/Q125458" xml:id="author_a6c5a134">Jürgen Theobaldy</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace xml:id="place_ca2977d6">Springe</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q227430" xml:id="publisher_c2df99ed">zu Klampen</publisher>
@@ -6663,7 +6663,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_682723e7">
                         <title type="work">BELLA triste</title>
                     </bibl>
-                    <author xml:id="author_5fac6550">Marion Poschmann</author>
+                    <author ref="https://www.wikidata.org/entity/Q1475115" xml:id="author_5fac6550">Marion Poschmann</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q301609" xml:id="publisher_af0aeb0c">Suhrkamp</publisher>
@@ -6674,7 +6674,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_057fb420">
                         <title type="work">Florida-Räume</title>
                     </bibl>
-                    <author xml:id="author_31067ec6">Ann Cotten</author>
+                    <author ref="https://www.wikidata.org/entity/Q436917" xml:id="author_31067ec6">Ann Cotten</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q301609" xml:id="publisher_af0aeb0c">Suhrkamp</publisher>
@@ -6800,7 +6800,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
-                    <author xml:id="author_5102104a">Rick Reuther</author>
+                    <author ref="https://www.wikidata.org/entity/Q95759599" xml:id="author_5102104a">Rick Reuther</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="place_1d1718f7">Greifswald</pubPlace>
                     <publisher xml:id="publisher_5fb17386">Freiraum</publisher>
@@ -6866,7 +6866,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
-                    <author xml:id="author_b7c003bf">Richard Duraj</author>
+                    <author ref="https://www.wikidata.org/entity/Q95337306,Q136969377" xml:id="author_b7c003bf">Richard Duraj</author>
                     <author xml:id="author_b7c003bo">Andreas Bülhoff</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="place_1d1718f7">Greifswald</pubPlace>
@@ -6900,7 +6900,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
-                    <author xml:id="author_5102104aauthor_5102104p">Rick Reuther</author>
+                    <author ref="https://www.wikidata.org/entity/Q95759599,Q130793376" xml:id="author_5102104aauthor_5102104p">Rick Reuther</author>
                     <author>Christiane Heidrich</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="place_1d1718f7">Greifswald</pubPlace>
@@ -6923,7 +6923,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
-                    <author xml:id="author_3549f84b">Mascha Golda</author>
+                    <author ref="https://www.wikidata.org/entity/Q138660612" xml:id="author_3549f84b">Mascha Golda</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="place_1d1718f7">Greifswald</pubPlace>
                     <publisher xml:id="publisher_5fb17386">Freiraum</publisher>
@@ -6978,7 +6978,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
-                    <author xml:id="author_92b8583a">Philipp Günzel</author>
+                    <author ref="https://www.wikidata.org/entity/Q138660694" xml:id="author_92b8583a">Philipp Günzel</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="place_1d1718f7">Greifswald</pubPlace>
                     <publisher xml:id="publisher_5fb17386">Freiraum</publisher>
@@ -6989,7 +6989,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
-                    <author xml:id="author_c70afc2e">Bianka Hadler</author>
+                    <author ref="https://www.wikidata.org/entity/Q136865646" xml:id="author_c70afc2e">Bianka Hadler</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="place_1d1718f7">Greifswald</pubPlace>
                     <publisher xml:id="publisher_5fb17386">Freiraum</publisher>
@@ -7066,7 +7066,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
-                    <author xml:id="author_999e1542">Marianna Lanz</author>
+                    <author ref="https://www.wikidata.org/entity/Q138660648" xml:id="author_999e1542">Marianna Lanz</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="place_1d1718f7">Greifswald</pubPlace>
                     <publisher xml:id="publisher_5fb17386">Freiraum</publisher>
@@ -7077,7 +7077,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
-                    <author xml:id="author_999e1542">Marianna Lanz</author>
+                    <author ref="https://www.wikidata.org/entity/Q138660648" xml:id="author_999e1542">Marianna Lanz</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="place_1d1718f7">Greifswald</pubPlace>
                     <publisher xml:id="publisher_5fb17386">Freiraum</publisher>
@@ -7802,7 +7802,7 @@ my music is lost, i bite my tongue. Ein Abgesang</title>
                     <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
-                    <author xml:id="author_3cc08935">Sylvia Treudl</author>
+                    <author ref="https://www.wikidata.org/entity/Q95196516" xml:id="author_3cc08935">Sylvia Treudl</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q120176413" xml:id="publisher_6e58e21f">Edition Aramo</publisher>
@@ -7813,7 +7813,7 @@ my music is lost, i bite my tongue. Ein Abgesang</title>
                     <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
-                    <author xml:id="author_3cc08935">Sylvia Treudl</author>
+                    <author ref="https://www.wikidata.org/entity/Q95196516" xml:id="author_3cc08935">Sylvia Treudl</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q120176413" xml:id="publisher_6e58e21f">Edition Aramo</publisher>
@@ -7824,7 +7824,7 @@ my music is lost, i bite my tongue. Ein Abgesang</title>
                     <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
-                    <author xml:id="author_3cc08935">Sylvia Treudl</author>
+                    <author ref="https://www.wikidata.org/entity/Q95196516" xml:id="author_3cc08935">Sylvia Treudl</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q120176413" xml:id="publisher_6e58e21f">Edition Aramo</publisher>
@@ -7835,7 +7835,7 @@ my music is lost, i bite my tongue. Ein Abgesang</title>
                     <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
-                    <author xml:id="author_3cc08935">Sylvia Treudl</author>
+                    <author ref="https://www.wikidata.org/entity/Q95196516" xml:id="author_3cc08935">Sylvia Treudl</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q120176413" xml:id="publisher_6e58e21f">Edition Aramo</publisher>
@@ -7846,7 +7846,7 @@ my music is lost, i bite my tongue. Ein Abgesang</title>
                     <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
-                    <author xml:id="author_3cc08935">Sylvia Treudl</author>
+                    <author ref="https://www.wikidata.org/entity/Q95196516" xml:id="author_3cc08935">Sylvia Treudl</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q120176413" xml:id="publisher_6e58e21f">Edition Aramo</publisher>
@@ -7857,7 +7857,7 @@ my music is lost, i bite my tongue. Ein Abgesang</title>
                     <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
-                    <author xml:id="author_3cc08935">Sylvia Treudl</author>
+                    <author ref="https://www.wikidata.org/entity/Q95196516" xml:id="author_3cc08935">Sylvia Treudl</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q120176413" xml:id="publisher_6e58e21f">Edition Aramo</publisher>
@@ -7868,7 +7868,7 @@ my music is lost, i bite my tongue. Ein Abgesang</title>
                     <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
-                    <author xml:id="author_3cc08935">Sylvia Treudl</author>
+                    <author ref="https://www.wikidata.org/entity/Q95196516" xml:id="author_3cc08935">Sylvia Treudl</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q120176413" xml:id="publisher_6e58e21f">Edition Aramo</publisher>
@@ -7879,7 +7879,7 @@ my music is lost, i bite my tongue. Ein Abgesang</title>
                     <bibl xml:id="bibl_def73d2f">
                         <title type="work">Dichterin im Fokus: Sappho</title>
                     </bibl>
-                    <author xml:id="author_3cc08935">Sylvia Treudl</author>
+                    <author ref="https://www.wikidata.org/entity/Q95196516" xml:id="author_3cc08935">Sylvia Treudl</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q120176413" xml:id="publisher_6e58e21f">Edition Aramo</publisher>
@@ -8349,7 +8349,7 @@ my music is lost, i bite my tongue. Ein Abgesang</title>
                     <bibl xml:id="bibl_eaee432a">
                         <title type="work">Im Flugwind flüchtender Tage</title>
                     </bibl>
-                    <author xml:id="author_3032bec0">Friederike Harter</author>
+                    <author ref="https://www.wikidata.org/entity/Q133737106" xml:id="author_3032bec0">Friederike Harter</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q113938145" xml:id="publisher_62a47e59">Aphaia</publisher>
@@ -8407,7 +8407,7 @@ my music is lost, i bite my tongue. Ein Abgesang</title>
                 <bibl xml:id="bibl_c8b4c54e">
                     <title type="text">amoretten in netzen. Gedichte</title>
                     <date type="published" when="2024">2024</date>
-                    <author xml:id="author_0820d3ce">Lara Rüter</author>
+                    <author ref="https://www.wikidata.org/entity/Q136985603" xml:id="author_0820d3ce">Lara Rüter</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2966" xml:id="place_ec6f644a">Heidelberg</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1170858" xml:id="publisher_5825c9b9">Das Wunderhorn</publisher>

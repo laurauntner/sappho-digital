@@ -414,7 +414,8 @@
                 <bibl ref="https://www.wikidata.org/entity/Q120198447" xml:id="bibl_a53d809b">
                     <title type="text">Sappho und alle die danach kamen</title>
                     <date type="published" when="1978">1978</date>
-                    <author xml:id="author_34fd5b25">Mara Krauss, Lesbentheater München</author>
+                    <author ref="https://www.wikidata.org/entity/Q120198457,Q112813243" xml:id="author_34fd5b25">Mara Krauss</author>
+                    <author>Lesbentheater München</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q113299315" xml:id="publisher_0d69d285">come out lesbenverlag</publisher>

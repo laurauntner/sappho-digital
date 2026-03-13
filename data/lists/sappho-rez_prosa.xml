@@ -91,7 +91,7 @@
                     <bibl xml:id="bibl_6ecaf99a">
                         <title type="work">Kleine sinnreiche und scherzhafte Schriften</title>
                     </bibl>
-                    <author xml:id="author_d4eead4e">Justus Friedrich Wilhelm Zachariae</author>
+                    <author ref="https://www.wikidata.org/entity/Q75169" xml:id="author_d4eead4e">Justus Friedrich Wilhelm Zachariae</author>
                     <note type="genre">Prosa</note>
                     <pubPlace xml:id="place_ae5c315b">Frankfurt</pubPlace>
                     <ref target="https://books.google.at/books?id=a89LAAAAcAAJ">https://books.google.at/books?id=a89LAAAAcAAJ</ref>
@@ -496,7 +496,7 @@
                     <bibl xml:id="bibl_b3d0f556">
                         <title type="work">Der Österreichische Zuschauer. Zeitschrift für Kunst, Wissenschaft und geistiges Leben</title>
                     </bibl>
-                    <author xml:id="author_31f5aba0">Carl Frühauf</author>
+                    <author ref="https://www.wikidata.org/entity/Q94578406" xml:id="author_31f5aba0">Carl Frühauf</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q98834927" xml:id="publisher_09a6d808">Karl Ueberreuter</publisher>
@@ -528,7 +528,7 @@
                     <bibl xml:id="bibl_a282c8c8">
                         <title type="work">Oesterreichischees Morgenblatt</title>
                     </bibl>
-                    <author xml:id="author_15edc521">Carl Raimung Frühauf</author>
+                    <author xml:id="author_15edc521">Carl Raimund Frühauf</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=osm&amp;datum=18420101">https://anno.onb.ac.at/cgi-content/anno?aid=osm&amp;datum=18420101</ref>
@@ -605,7 +605,7 @@
                 <bibl ref="https://www.wikidata.org/entity/Q2298931" xml:id="bibl_9143a07d">
                     <title type="text">Soll und Haben</title>
                     <date type="published" when="1855">1855</date>
-                    <author xml:id="author_1b1d8a73">Gustav Freytag</author>
+                    <author ref="https://www.wikidata.org/entity/Q58811" xml:id="author_1b1d8a73">Gustav Freytag</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher xml:id="publisher_1bb3a48e">Hirzel</publisher>
@@ -678,7 +678,7 @@
                 <bibl xml:id="bibl_35d7709d">
                     <title type="text">Die verlorene Handschrift. 3 Teile</title>
                     <date type="published" when="1864">1864</date>
-                    <author xml:id="author_1b1d8a73">Gustav Freytag</author>
+                    <author ref="https://www.wikidata.org/entity/Q58811" xml:id="author_1b1d8a73">Gustav Freytag</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1468453" xml:id="publisher_1bb3a48e">S. Hirzel</publisher>
@@ -687,7 +687,7 @@
                 <bibl xml:id="bibl_8665dcc5">
                     <title type="text">Eine Aegyptische Königstochter. Historischer Roman. Erster Band</title>
                     <date type="published" when="1864">1864</date>
-                    <author xml:id="author_caa5df32">Georg Ebers</author>
+                    <author ref="https://www.wikidata.org/entity/Q62765" xml:id="author_caa5df32">Georg Ebers</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1288576" xml:id="publisher_0049cb52">Eduard Hallberger</publisher>
@@ -696,7 +696,7 @@
                 <bibl xml:id="bibl_55579bca">
                     <title type="text">Eine Aegyptische Königstochter. Zweiter Band</title>
                     <date type="published" when="1864">1864</date>
-                    <author xml:id="author_caa5df32">Georg Ebers</author>
+                    <author ref="https://www.wikidata.org/entity/Q62765" xml:id="author_caa5df32">Georg Ebers</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1288576" xml:id="publisher_0049cb52">Eduard Hallberger</publisher>
@@ -705,7 +705,7 @@
                 <bibl xml:id="bibl_3869ade7">
                     <title type="text">Eine Aegyptische Königstochter. Dritter Band</title>
                     <date type="published" when="1864">1864</date>
-                    <author xml:id="author_caa5df32">Georg Ebers</author>
+                    <author ref="https://www.wikidata.org/entity/Q62765" xml:id="author_caa5df32">Georg Ebers</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1288576" xml:id="publisher_0049cb52">Eduard Hallberger</publisher>
@@ -795,7 +795,7 @@
                 <bibl xml:id="bibl_f894f0c1">
                     <title type="text">Aspasia. Ein Künstler- und Liebesroman aus Alt-Hellas</title>
                     <date type="published" when="1875">1875</date>
-                    <author xml:id="author_4efc3589">Robert Hamerling</author>
+                    <author ref="https://www.wikidata.org/entity/Q79088" xml:id="author_4efc3589">Robert Hamerling</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q105064504" xml:id="publisher_03598dbb">Hesse &amp; Becker</publisher>
@@ -879,7 +879,7 @@
                 <bibl xml:id="bibl_ff22fb94">
                     <title type="text">Die Schwestern: Roman</title>
                     <date type="published" when="1880">1880</date>
-                    <author xml:id="author_caa5df32">Georg Ebers</author>
+                    <author ref="https://www.wikidata.org/entity/Q62765" xml:id="author_caa5df32">Georg Ebers</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1288576" xml:id="publisher_72957607">Verlag von Eduard Hallberger</publisher>
@@ -887,7 +887,7 @@
                 <bibl xml:id="bibl_9b8bb035">
                     <title type="text">Der Kaiser, Bd. 1</title>
                     <date type="published" when="1881">1881</date>
-                    <author xml:id="author_caa5df32">Georg Ebers</author>
+                    <author ref="https://www.wikidata.org/entity/Q62765" xml:id="author_caa5df32">Georg Ebers</author>
                     <note type="genre">Prosa</note>
                     <pubPlace xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
@@ -939,9 +939,10 @@
                     <bibl xml:id="bibl_fd81a760">
                         <title type="work">Ost und West</title>
                     </bibl>
-                    <author xml:id="author_cb06c3ad">E. Jegher</author>
+                    <author ref="https://www.wikidata.org/entity/Q138659021" xml:id="author_cb06c3ad">E. Jegher</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
+                    <ref target="https://www.google.de/books/edition/Ost_und_West/Ejrh5yzURLAC?hl=de&amp;gbpv=1">https://www.google.de/books/edition/Ost_und_West/Ejrh5yzURLAC?hl=de&amp;gbpv=1</ref>
                 </bibl>
                 <bibl xml:id="bibl_3a424965">
                     <title type="text">Jetta: historischer Roman aus der Zeit der Völkerwanderung</title>
@@ -954,7 +955,7 @@
                 <bibl xml:id="bibl_2cb6f632">
                     <title type="text">Serapis: Historischer Roman</title>
                     <date type="published" when="1885">1885</date>
-                    <author xml:id="author_caa5df32">Georg Ebers</author>
+                    <author ref="https://www.wikidata.org/entity/Q62765" xml:id="author_caa5df32">Georg Ebers</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1204376" xml:id="publisher_f49e3b89">Deutsche Verlagsanstalt</publisher>
@@ -992,7 +993,7 @@
                 <bibl xml:id="bibl_b2c80eed">
                     <title type="text">Die Nilbraut</title>
                     <date type="published" when="1887">1887</date>
-                    <author xml:id="author_caa5df32">Georg Ebers</author>
+                    <author ref="https://www.wikidata.org/entity/Q62765" xml:id="author_caa5df32">Georg Ebers</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1204376" xml:id="publisher_f49e3b89">Deutsche Verlagsanstalt</publisher>
@@ -1003,7 +1004,7 @@
                     <bibl xml:id="bibl_e445ceed">
                         <title type="work">General-Anzeiger der Stadt Mannheim und Umgebung</title>
                     </bibl>
-                    <author xml:id="author_a2000df4">W. Egbert</author>
+                    <author ref="https://www.wikidata.org/entity/Q88371647" xml:id="author_a2000df4">W. Egbert [= Ferdinande Grieben]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2119" xml:id="place_77b5ece6">Mannheim</pubPlace>
                     <ref target="https://www.deutsche-digitale-bibliothek.de/newspaper/item/S3LFALUZ2QLRC46QZTLNHVIIOJNNP5YR">https://www.deutsche-digitale-bibliothek.de/newspaper/item/S3LFALUZ2QLRC46QZTLNHVIIOJNNP5YR</ref>
@@ -1043,7 +1044,7 @@
                     <bibl xml:id="bibl_60d35f59">
                         <title type="work">Badischer Beobachter</title>
                     </bibl>
-                    <author xml:id="author_b7f8b162">Cary Groß</author>
+                    <author ref="https://www.wikidata.org/entity/Q94750412" xml:id="author_b7f8b162">Cary Groß [= Christiane Gmeiner]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1040" xml:id="place_2126faa6">Karlsruhe</pubPlace>
                 </bibl>
@@ -1080,7 +1081,7 @@
                     <bibl xml:id="bibl_30f2876b">
                         <title type="work">Das Gymnasium zu Stolpenburg. Novellen</title>
                     </bibl>
-                    <author xml:id="author_f51c0829">Hans Hoffmann</author>
+                    <author ref="https://www.wikidata.org/entity/Q1580286" xml:id="author_f51c0829">Hans Hoffmann</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1505554" xml:id="publisher_ff2c645a">Paetel</publisher>
@@ -1151,7 +1152,7 @@
                 <bibl xml:id="bibl_ab99e30c">
                     <title type="text">Per aspera: Historischer Roman</title>
                     <date type="published" when="1892">1892</date>
-                    <author xml:id="author_caa5df32">Georg Ebers</author>
+                    <author ref="https://www.wikidata.org/entity/Q62765" xml:id="author_caa5df32">Georg Ebers</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher xml:id="publisher_422b9b31">Tauchnitz</publisher>
@@ -1275,7 +1276,7 @@
                 <bibl xml:id="bibl_1a5cdafc">
                     <title type="text">Sapphos Verse. Byzantinischer Roman</title>
                     <date type="published" when="1902">1902</date>
-                    <author xml:id="author_ed04744d">Karl Roth</author>
+                    <author ref="https://www.wikidata.org/entity/Q94763349" xml:id="author_ed04744d">Karl Roth</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3994" xml:id="place_ff6ed291">Kempten</pubPlace>
                     <publisher xml:id="publisher_9b5a7b05">Kösel</publisher>
@@ -1483,7 +1484,7 @@
                     <bibl xml:id="bibl_865e8510">
                         <title type="work">Dresdner neueste Nachrichten</title>
                     </bibl>
-                    <author xml:id="author_c47cb36d">Richard Boß</author>
+                    <author ref="https://www.wikidata.org/entity/Q104409188" xml:id="author_c47cb36d">Richard Boß</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1731" xml:id="place_90bebd2f">Dresden</pubPlace>
                 </bibl>
@@ -1591,7 +1592,7 @@
                     <bibl xml:id="bibl_8450a6dc">
                         <title type="work">Karlsruher Tagblatt</title>
                     </bibl>
-                    <author xml:id="author_0400cde1">Ernst Georgy</author>
+                    <author ref="https://www.wikidata.org/entity/Q1372193" xml:id="author_0400cde1">Ernst Georgy [= Margarete Michaelson]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1040" xml:id="place_2126faa6">Karlsruhe</pubPlace>
                 </bibl>
@@ -1774,7 +1775,7 @@
                     <bibl xml:id="bibl_4c622de1">
                         <title type="work">Kölnische Zeitung</title>
                     </bibl>
-                    <author xml:id="author_01a14763">Wilhelm Herbert</author>
+                    <author ref="https://www.wikidata.org/entity/Q19238757" xml:id="author_01a14763">Wilhelm Herbert [= Wilhelm Mayer]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
                     <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
@@ -1807,7 +1808,7 @@
                     <bibl xml:id="bibl_c44e27f0">
                         <title type="work">Die Muskete</title>
                     </bibl>
-                    <author xml:id="author_754cff19">Hans Rewald</author>
+                    <author ref="https://www.wikidata.org/entity/Q94918646" xml:id="author_754cff19">Hans Rewald</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                 </bibl>
@@ -1946,7 +1947,7 @@
                     <bibl xml:id="bibl_7667b749">
                         <title type="work">Feierabend</title>
                     </bibl>
-                    <author xml:id="author_480cb744">Willy Möbus</author>
+                    <author ref="https://www.wikidata.org/entity/Q94876834" xml:id="author_480cb744">Willy Möbus</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1085" xml:id="place_e575530b">Prag</pubPlace>
                     <ref target="https://www.deutsche-digitale-bibliothek.de/newspaper/item/2DHJGILISUQTEOMXFANXHG5CXS3JJ3NS">https://www.deutsche-digitale-bibliothek.de/newspaper/item/2DHJGILISUQTEOMXFANXHG5CXS3JJ3NS</ref>
@@ -1993,7 +1994,7 @@
                 <bibl xml:id="bibl_21d85a5a">
                     <title type="text">Flucht aus Buddhas Gesetz: Roman</title>
                     <date type="published" when="1937">1937</date>
-                    <author xml:id="author_9cc4db92">Ravi Ravendro [d. i. Karl Siegfried Döhring]</author>
+                    <author ref="https://www.wikidata.org/entity/Q103704" xml:id="author_9cc4db92">Ravi Ravendro [d. i. Karl Siegfried Döhring]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher xml:id="publisher_70464083">Wegweiser-Verlag</publisher>
@@ -2004,7 +2005,7 @@
                     <bibl xml:id="bibl_34ea7c2b">
                         <title type="work">Pariser Tageszeitung. Quotidien Anti-Hitlerien</title>
                     </bibl>
-                    <author xml:id="author_eba562d8">Irmgard Keun</author>
+                    <author ref="https://www.wikidata.org/entity/Q71461" xml:id="author_eba562d8">Irmgard Keun</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q90" xml:id="place_ccbee73c">Paris</pubPlace>
                     <ref target="https://www.deutsche-digitale-bibliothek.de/newspaper/item/MRAA3R3SIXX5VRWARRX4NHDKU7KS5GUA">https://www.deutsche-digitale-bibliothek.de/newspaper/item/MRAA3R3SIXX5VRWARRX4NHDKU7KS5GUA</ref>
@@ -2033,7 +2034,7 @@
                     <bibl xml:id="bibl_74347c5f">
                         <title type="work">Sozialdemokrat. Zentralorgan der Deutschen Sozialdemokratischen Arbeiterpartei in der Tschechoslowakischen Republik</title>
                     </bibl>
-                    <author xml:id="author_5ce38272">Lili Körber</author>
+                    <author ref="https://www.wikidata.org/entity/Q1824957" xml:id="author_5ce38272">Lili Körber</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1085" xml:id="place_e575530b">Prag</pubPlace>
                 </bibl>
@@ -2063,7 +2064,7 @@
                     <bibl xml:id="bibl_4c622de1">
                         <title type="work">Kölnische Zeitung</title>
                     </bibl>
-                    <author xml:id="author_6aef9f13">Otto Nebelthau</author>
+                    <author ref="https://www.wikidata.org/entity/Q1121888" xml:id="author_6aef9f13">Otto Nebelthau</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
                     <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
@@ -2127,7 +2128,7 @@
                 <bibl xml:id="bibl_7a172de5">
                     <title type="text">Sappho, Sängerin archäischer Liebe</title>
                     <date type="published" when="1973">1973</date>
-                    <author xml:id="author_3c1158f0">Hubert Ludo Gerwald/Hubertus von Beyer</author>
+                    <author ref="https://www.wikidata.org/entity/Q55675548" xml:id="author_3c1158f0">Hubert Ludo Gerwald [= Hubertus von Beyer]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2871" xml:id="place_f4429f06">Hagen</pubPlace>
                     <publisher xml:id="publisher_31d180f3">Pantheon-Sondervertrieb</publisher>
@@ -2146,7 +2147,7 @@
                     <bibl xml:id="bibl_b44363bb">
                         <title type="work">Zypressen</title>
                     </bibl>
-                    <author xml:id="author_13e83054">Inge Merkel</author>
+                    <author ref="https://www.wikidata.org/entity/Q88078" xml:id="author_13e83054">Inge Merkel</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q34713" xml:id="place_f2646aa0">Salzburg</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2145655" xml:id="publisher_f13bea0a">Residenz</publisher>
@@ -2276,7 +2277,7 @@
                     <bibl xml:id="bibl_57d01e34">
                         <title type="work">Mehrstimmiges Grün. Gedichte und Prosa</title>
                     </bibl>
-                    <author xml:id="author_a6c5a134">Jürgen Theobaldy</author>
+                    <author ref="https://www.wikidata.org/entity/Q125458" xml:id="author_a6c5a134">Jürgen Theobaldy</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q316922" xml:id="publisher_87308a85">Aufbau</publisher>
@@ -2318,7 +2319,7 @@
                 <bibl xml:id="bibl_f11bc50a">
                     <title type="text">Sappho küßt die Welt. Geschichten von Lesben aus vier Kontinenten</title>
                     <date type="published" when="1999">1999</date>
-                    <author xml:id="author_39519faa">Käthe H. Fleckenstein</author>
+                    <author ref="https://www.wikidata.org/entity/Q95194437" xml:id="author_39519faa">Käthe H. Fleckenstein</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2122937" xml:id="publisher_8f72e265">Querverlag</publisher>
@@ -2334,7 +2335,7 @@
                 <bibl xml:id="bibl_d038a92c">
                     <title type="text">Sappho küsst die Sterne. Neue deutschsprachige Literatur von Lesben</title>
                     <date type="published" when="2004">2004</date>
-                    <author xml:id="author_5f9e41d8">Ilona Bubeck</author>
+                    <author ref="https://www.wikidata.org/entity/Q138660925" xml:id="author_5f9e41d8">Ilona Bubeck</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2122937" xml:id="publisher_8f72e265">Querverlag</publisher>
@@ -2391,7 +2392,7 @@
                 <bibl xml:id="bibl_31ed561d">
                     <title type="text">Das Mädchen aus Eresos. Die Jugend der altgriechischen Dichterin Sappho</title>
                     <date type="published" when="2010">2010</date>
-                    <author xml:id="author_a1430648">Heinrich B. Siedentopf</author>
+                    <author ref="https://www.wikidata.org/entity/Q1596615" xml:id="author_a1430648">Heinrich B. Siedentopf</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3928" xml:id="place_1e305e2c">Norderstedt</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q831576" xml:id="publisher_1865843b">Books on Demand</publisher>
@@ -2429,7 +2430,7 @@
                 <bibl ref="https://www.wikidata.org/entity/Q120143666" xml:id="bibl_3761b97f">
                     <title type="text">Sapphos Sprung</title>
                     <date type="published" when="2021">2021</date>
-                    <author xml:id="author_fbea9be0">Karen Aydin</author>
+                    <author ref="https://www.wikidata.org/entity/Q113734274" xml:id="author_fbea9be0">Karen Aydin</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1794" xml:id="place_ae5c315b">Frankfurt a. M.</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q120143682" xml:id="publisher_9cc67f7d">edition federleicht</publisher>
