@@ -439,7 +439,7 @@
                 <bibl xml:id="bibl_c82571f6">
                     <title type="text">Sapphos Welt</title>
                     <date type="published" when="2019">2019</date>
-                    <author xml:id="author_2308f519">Leonie Sowa</author>
+                    <author ref="https://www.wikidata.org/entity/Q138661019" xml:id="author_2308f519">Leonie Sowa</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>

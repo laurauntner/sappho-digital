@@ -131,8 +131,8 @@
                 </bibl>
                 <bibl xml:id="bibl_270e4234">
                     <title type="text">Jammer und Elend</title>
-                    <date type="created" when="1650">17. Jahrhundert?</date>
-                    <author xml:id="author_fce3757f">Andreas Bythner</author>
+                    <date type="created" when="1650">17. Jahrhundert</date>
+                    <author ref="https://www.wikidata.org/entity/Q137392028" xml:id="author_fce3757f">Andreas Bythner</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
                 <bibl xml:id="bibl_44cee719">
@@ -152,7 +152,7 @@
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q60946" xml:id="author_900e54eb">Martin Opitz</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_5d522693">Breslau</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1799,Q214640" xml:id="place_5d522693">Breslau</pubPlace>
                     <pubPlace xml:id="place_811c769d">Brieg</pubPlace>
                     <publisher xml:id="publisher_92d4347b">Müller</publisher>
                     <publisher xml:id="publisher_a163ee88">Gründer</publisher>
@@ -395,7 +395,7 @@
                     <date type="published" when="1651">1651</date>
                     <author ref="https://www.wikidata.org/entity/Q1451332" xml:id="author_1f254435">Christoph Kaldenbach</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_623b7d9d">Königsberg</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q4120832" xml:id="place_623b7d9d">Königsberg</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q131866012" xml:id="publisher_dd137503">Pascha Mense</publisher>
                 </bibl>
                 <bibl xml:id="bibl_1a30e2e6">
@@ -404,7 +404,7 @@
                     <bibl xml:id="bibl_0079799c">
                         <title type="work">Veer Schertz-Gedichte</title>
                     </bibl>
-                    <author xml:id="author_352648f9">Hans Willmsen L. Rost [d. i. Johann Lauremberg]</author>
+                    <author ref="https://www.wikidata.org/entity/Q97596" xml:id="author_352648f9">Hans Willmsen L. Rost [d. i. Johann Lauremberg]</author>
                     <note type="genre">Lyrik</note>
                     <ref target="http://diglib.hab.de/drucke/lo-4314/start.htm?image=00134">http://diglib.hab.de/drucke/lo-4314/start.htm?image=00134</ref>
                 </bibl>
@@ -571,7 +571,7 @@
                     <bibl xml:id="bibl_28dc64c6">
                         <title type="work">Zwey und Siebenzig neue Himmel-süsse Jesus-Lieder</title>
                     </bibl>
-                    <author xml:id="author_9bf8b65c">Ahasverus Fritsch</author>
+                    <author ref="https://www.wikidata.org/entity/Q85638" xml:id="author_9bf8b65c">Ahasverus Fritsch</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3150" xml:id="place_1aa97a04">Jena</pubPlace>
                     <publisher xml:id="publisher_f61a1035">Georg Sengenwaldt</publisher>
@@ -580,7 +580,7 @@
                 <bibl xml:id="bibl_6e9aefb7">
                     <title type="text">Jerusalem, nimm doch einmal zu Herzen</title>
                     <date type="created" notAfter="1674">n. n. 1674</date>
-                    <author xml:id="author_bb41bf7f">Johann Frentzel</author>
+                    <author ref="https://www.wikidata.org/entity/Q55843849" xml:id="author_bb41bf7f">Johann Frentzel</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
                 <bibl xml:id="bibl_4922219a">
@@ -617,8 +617,8 @@
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q66942" xml:id="author_719065e7">Daniel Casper von Lohenstein</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_e9cd6cbb">Frankfurt</pubPlace>
-                    <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1794,Q2079" xml:id="place_efeaa516">Frankfurt a. M.</pubPlace>
+                    <pubPlace xml:id="place_ae5c315b">Leipzig</pubPlace>
                     <publisher xml:id="publisher_e1761a5c">Michael Blochberger</publisher>
                     <ref target="https://books.google.at/books?id=D5sazq4HLWUC">https://books.google.at/books?id=D5sazq4HLWUC</ref>
                 </bibl>
@@ -630,7 +630,7 @@
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1598366" xml:id="author_d9712b29">Heinrich Mühlpfort</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_675a92e1">Breslau</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1799,Q1794" xml:id="place_675a92e1">Breslau</pubPlace>
                     <pubPlace xml:id="place_811c769d">Frankfurt a. M.</pubPlace>
                     <publisher xml:id="publisher_8bdcddc7">Johann Georg Steck</publisher>
                     <publisher xml:id="publisher_c81d3ecc">Johann Philipp Andreä</publisher>
@@ -685,7 +685,7 @@
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1884530" xml:id="author_b75e61a3">Magnus Daniel Omeis</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_2bd03983">Nürnberg</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2090,Q435295" xml:id="place_2bd03983">Nürnberg</pubPlace>
                     <pubPlace xml:id="place_bf64ca28">Altdorf</pubPlace>
                     <publisher xml:id="publisher_6646a309">Wolfgang Michahelles und Johann Adolph</publisher>
                     <publisher xml:id="publisher_95e290fb">Heinrich Meyer</publisher>
@@ -698,7 +698,7 @@
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1884530" xml:id="author_b75e61a3">Magnus Daniel Omeis</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_2bd03983">Nürnberg</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2090,Q435295" xml:id="place_2bd03983">Nürnberg</pubPlace>
                     <pubPlace xml:id="place_bf64ca28">Altdorf</pubPlace>
                     <publisher xml:id="publisher_6646a309">Wolfgang Michahelles und Johann Adolph</publisher>
                     <publisher xml:id="publisher_95e290fb">Heinrich Meyer</publisher>
@@ -711,7 +711,7 @@
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1884530" xml:id="author_b75e61a3">Magnus Daniel Omeis</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_2bd03983">Nürnberg</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2090,Q435295" xml:id="place_2bd03983">Nürnberg</pubPlace>
                     <pubPlace xml:id="place_bf64ca28">Altdorf</pubPlace>
                     <publisher xml:id="publisher_6646a309">Wolfgang Michahelles und Johann Adolph</publisher>
                     <publisher xml:id="publisher_95e290fb">Heinrich Meyer</publisher>
@@ -1255,7 +1255,7 @@
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q77488" xml:id="author_ec30f867">Heinrich Wilhelm von Gerstenberg</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_93f363ca">Altona</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1630" xml:id="place_93f363ca">Altona</pubPlace>
                     <publisher xml:id="publisher_a7ff99e7">David Jversen</publisher>
                     <ref target="https://digitale.bibliothek.uni-halle.de/vd18/content/pageview/5449901">https://digitale.bibliothek.uni-halle.de/vd18/content/pageview/5449901</ref>
                 </bibl>
@@ -2243,7 +2243,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_f85c4b6e">
                         <title type="work">Sämmtliche Werke</title>
                     </bibl>
-                    <author xml:id="author_6deae303">Wilhelm Heinse</author>
+                    <author ref="https://www.wikidata.org/entity/Q64489" xml:id="author_6deae303">Johann Jakob Wilhelm Heinse</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q316015" xml:id="publisher_308da38b">Insel</publisher>
@@ -2255,7 +2255,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_64cb8d87">
                         <title type="work">Daniel Schiebelers Auserlesene Gedichte</title>
                     </bibl>
-                    <author xml:id="author_e92e913e">Daniel Schiebeler</author>
+                    <author ref="https://www.wikidata.org/entity/Q1162542" xml:id="author_e92e913e">Daniel Schiebeler</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1055" xml:id="place_f23bb5e2">Hamburg</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q213880" xml:id="publisher_78a6e891">Johann Joachim Christoph Bode</publisher>
@@ -2442,7 +2442,7 @@ Philosophen zu Sanssouci</title>
                     <ref target="https://www.deutschestextarchiv.de/book/view/buerger_gedichte_1778">https://www.deutschestextarchiv.de/book/view/buerger_gedichte_1778</ref>
                 </bibl>
                 <bibl xml:id="bibl_c76430f0">
-                    <title type="text">An den Verfasser des Lebens der Sappho [d. i. Wilhelm Heinse]</title>
+                    <title type="text">An den Verfasser des Lebens der Sappho [d. i. Johann Jakob Wilhelm Heinse]</title>
                     <date type="published" when="1776">1776</date>
                     <bibl xml:id="bibl_f75c9af2">
                         <title type="work">Iris</title>
@@ -2721,9 +2721,9 @@ Philosophen zu Sanssouci</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q213993" xml:id="author_c4954682">Friedrich von Matthisson</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_43424d20">Lauenburg</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q492380,Q1055" xml:id="place_43424d20">Lauenburg</pubPlace>
                     <pubPlace xml:id="place_f23bb5e2">Hamburg</pubPlace>
-                    <publisher xml:id="publisher_164bb66e">Behrenberg</publisher>
+                    <publisher xml:id="publisher_164bb66e">Berenberg</publisher>
                     <publisher xml:id="publisher_e545cda3">Bohn</publisher>
                     <ref target="https://viewer.onb.ac.at/108CBEAC">https://viewer.onb.ac.at/108CBEAC</ref>
                 </bibl>
@@ -3244,7 +3244,7 @@ Philosophen zu Sanssouci</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q62188" xml:id="author_bf64847b">Johann Heinrich Voß</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_623b7d9d">Königsberg</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q4120832" xml:id="place_623b7d9d">Königsberg</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q19197384" xml:id="publisher_114bd9af">Friedrich Nicolovius</publisher>
                     <ref target="https://www.digitale-sammlungen.de/de/view/bsb11304954">https://www.digitale-sammlungen.de/de/view/bsb11304954</ref>
                 </bibl>
@@ -3262,7 +3262,7 @@ Philosophen zu Sanssouci</title>
                 <bibl xml:id="bibl_7a31e2da">
                     <title type="text">Dieser Jüngling scheinet mir gleich zu seyn</title>
                     <date type="created" notAfter="1803">n. n. 1803</date>
-                    <author xml:id="author_6deae303">Wilhelm Heinse</author>
+                    <author ref="https://www.wikidata.org/entity/Q64489" xml:id="author_6deae303">Johann Jakob Wilhelm Heinse</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
                 <bibl xml:id="bibl_3ad1b69a">
@@ -4323,7 +4323,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q96692" xml:id="author_374deda4">Ludwig Eichrodt</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_6cc9924b">Lahr</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q7039" xml:id="place_6cc9924b">Lahr</pubPlace>
                     <publisher xml:id="publisher_0c92f3f4">Moritz Schauenburg</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Eichrodt,+Ludwig/Gedichte/Lyrische+Karrikaturen/Lyrische+Karrikaturen/Mode-Ode">http://www.zeno.org/Literatur/M/Eichrodt,+Ludwig/Gedichte/Lyrische+Karrikaturen/Lyrische+Karrikaturen/Mode-Ode</ref>
                 </bibl>
@@ -5067,7 +5067,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_a3be2ca8">
                         <title type="work">Die »Pyramide«. Wochenschrift zum Karlsruher Tagblatt</title>
                     </bibl>
-                    <author xml:id="author_3c04d271">Margarete Wittmers</author>
+                    <author ref="https://www.wikidata.org/entity/Q29167535" xml:id="author_3c04d271">Margarete Wittmers</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1040" xml:id="place_2126faa6">Karlsruhe</pubPlace>
                     <ref target="https://digital.blb-karlsruhe.de/blbz/periodical/pageview/2450292">https://digital.blb-karlsruhe.de/blbz/periodical/pageview/2450292</ref>
@@ -5080,7 +5080,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1493001" xml:id="author_6c69db4e">Rudolf von Delius</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_700b43a2">Stuttgart</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1022,Q715" xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <pubPlace xml:id="place_ff4aadf1">Heilbronn</pubPlace>
                     <publisher xml:id="publisher_8fba5226">Seifert</publisher>
                 </bibl>
@@ -5357,7 +5357,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q1595310" xml:id="author_fefd92e0">Peter Gan</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace xml:id="place_0c1736a7">Zürich</pubPlace>
-                    <pubPlace xml:id="place_9c83551a">Freiburg</pubPlace>
+                    <pubPlace xml:id="place_81bb34f0">Freiburg i. Br.</pubPlace>
                     <publisher xml:id="publisher_cd4009a2">Atlantis</publisher>
                 </bibl>
                 <bibl xml:id="bibl_56546794">
@@ -5368,7 +5368,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1466002" xml:id="author_cbc43ec0">Fritz Diettrich</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_7aaf6c53">Kassel</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2865,Q78" xml:id="place_7aaf6c53">Kassel</pubPlace>
                     <pubPlace xml:id="place_80611954">Basel</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q659697" xml:id="publisher_7f6cad85">Bärenreiter</publisher>
                 </bibl>
@@ -5729,7 +5729,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q96266" xml:id="author_57ed33d2">Wulf Kirsten</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_42b32e43">Düsseldorf</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1718,Q2805" xml:id="place_42b32e43">Düsseldorf</pubPlace>
                     <pubPlace xml:id="place_b32e19b8">Krefeld</pubPlace>
                     <publisher xml:id="publisher_cb8aafb4">Sassafras</publisher>
                 </bibl>
@@ -5828,7 +5828,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q125451" xml:id="author_9894d650">Karl Mickel</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_1093e6aa">Halle</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2814,Q2079" xml:id="place_e4f9b171">Halle a. d. Saale</pubPlace>
                     <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1940109" xml:id="publisher_f36324f0">Mitteldeutscher Verlag</publisher>
                 </bibl>
@@ -5908,7 +5908,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q60873" xml:id="author_cc996ae4">Rose Ausländer</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_b9d17afd">Pfaffenweiler</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q632889" xml:id="place_b9d17afd">Pfaffenweiler</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q120143651" xml:id="publisher_82b91cc2">Pfaffenweiler Presse</publisher>
                 </bibl>
                 <bibl xml:id="bibl_8723cf23">
@@ -5917,9 +5917,9 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_4387c6fb">
                         <title type="work">Fugen zwischen Wolken und Wind</title>
                     </bibl>
-                    <author xml:id="author_11b502bb">Anna Valeria Vogl-Hüger</author>
+                    <author ref="https://www.wikidata.org/entity/Q94738685" xml:id="author_11b502bb">Anna Valeria Vogl-Hüger</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_49b1f0b4">Burghausen</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q262669" xml:id="place_49b1f0b4">Burghausen</pubPlace>
                     <publisher xml:id="publisher_c1bd79b1">Blick-Punkt</publisher>
                 </bibl>
                 <bibl xml:id="bibl_a369dda0">
@@ -6034,7 +6034,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q96912" xml:id="author_2f14b48f">Heinz Piontek</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_7aaf6c53">Freiburg</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2833,Q78,Q1741" xml:id="place_81bb34f0">Freiburg i. Br.</pubPlace>
                     <pubPlace xml:id="place_95b8315b">Basel</pubPlace>
                     <pubPlace xml:id="place_9c83551a">Wien</pubPlace>
                     <publisher xml:id="publisher_5da691f2">Herder</publisher>
@@ -6278,7 +6278,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1560405" xml:id="author_389820a7">Volker Ebersbach</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_f01900a0">Grimma</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q10780" xml:id="place_f01900a0">Grimma</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q120167798" xml:id="publisher_0edd67a8">Heidrun Popp</publisher>
                 </bibl>
                 <bibl xml:id="bibl_0a0e461e">
@@ -6299,9 +6299,9 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_31a193b7">
                         <title type="work">Holder die Polder. Oden, Elegien, Andere</title>
                     </bibl>
-                    <author xml:id="author_1e490102">Urs Allemann</author>
+                    <author ref="https://www.wikidata.org/entity/Q2501230" xml:id="author_1e490102">Urs Allemann</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_7aaf6c53">Basel</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q78,Q1741" xml:id="place_7aaf6c53">Basel</pubPlace>
                     <pubPlace xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher xml:id="publisher_95a221fa">Weil am Rhein</publisher>
                     <publisher xml:id="publisher_a3306f3f">Engeler</publisher>
@@ -6460,7 +6460,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q125458" xml:id="author_a6c5a134">Jürgen Theobaldy</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_ca2977d6">Springe</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q622891" xml:id="place_ca2977d6">Springe</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q227430" xml:id="publisher_c2df99ed">zu Klampen</publisher>
                 </bibl>
                 <bibl xml:id="bibl_285a1195">
@@ -6641,7 +6641,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q67921" xml:id="author_bbd2f350">Peter Rühmkorf</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_55687fc7">Reinbek bei Hamburg</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q516405" xml:id="place_55687fc7">Reinbek bei Hamburg</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q646071" xml:id="publisher_ba9ff1cf">Rowohlt</publisher>
                 </bibl>
                 <bibl xml:id="bibl_d670d27b">
@@ -6652,7 +6652,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q98940" xml:id="author_a378003d">Hugo Dittberner</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_3d8dbe04">Bordenau</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q893404,Q100636524,Q7014" xml:id="place_3d8dbe04">Bordenau</pubPlace>
                     <pubPlace xml:id="place_80c239e5">Venedig</pubPlace>
                     <pubPlace xml:id="place_8c8dfa84">Neustadt am Rübenberg</pubPlace>
                     <publisher xml:id="publisher_dceeae69">San-Marco-Handpresse</publisher>
@@ -6739,7 +6739,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q19959103" xml:id="author_c912b998">Jürgen Bulla</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_bfa9fbd2">Weßling</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q536419" xml:id="place_bfa9fbd2">Weßling</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q589506" xml:id="publisher_3ae4c8a9">Anton G. Leitner</publisher>
                 </bibl>
                 <bibl xml:id="bibl_3363e3bf">
@@ -7154,7 +7154,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
-                    <author xml:id="author_aed70136">Christoph Georg Rohrbach</author>
+                    <author ref="https://www.wikidata.org/entity/Q117450190" xml:id="author_aed70136">Christoph Georg Rohrbach</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="place_1d1718f7">Greifswald</pubPlace>
                     <publisher xml:id="publisher_5fb17386">Freiraum</publisher>
@@ -7198,7 +7198,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_574806a3">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
-                    <author xml:id="author_8d5f4364">Elena L. Steinbrecher</author>
+                    <author ref="https://www.wikidata.org/entity/Q95201837" xml:id="author_8d5f4364">Elena L. Steinbrecher</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="place_1d1718f7">Greifswald</pubPlace>
                     <publisher xml:id="publisher_5fb17386">Freiraum</publisher>
@@ -7310,7 +7310,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q108407156" xml:id="author_b2f5ff47">Gundula Schiffer</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_9d7aff47">Weilerswist</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q240039" xml:id="place_9d7aff47">Weilerswist</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1484714" xml:id="publisher_eef544c6">Ralf Liebe</publisher>
                 </bibl>
                 <bibl xml:id="bibl_df9fa140">
@@ -8357,7 +8357,7 @@ my music is lost, i bite my tongue. Ein Abgesang</title>
                 <bibl xml:id="bibl_16c00192">
                     <title type="text">Sappho. Gedichte und Fragmente ausgewählt und zeitgenössisch verdeutscht von Christian Wollek</title>
                     <date type="published" when="2023">2023</date>
-                    <author xml:id="author_606f3655">Christian Wollek</author>
+                    <author ref="https://www.wikidata.org/entity/Q132699492" xml:id="author_606f3655">Christian Wollek</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1721" xml:id="place_2eae9f29">Wiesbaden</pubPlace>
                     <publisher xml:id="publisher_a794d806">allbärn</publisher>
@@ -8389,7 +8389,7 @@ my music is lost, i bite my tongue. Ein Abgesang</title>
                     <date type="published" when="2023">2023</date>
                     <author ref="https://www.wikidata.org/entity/Q1081994" xml:id="author_8328fab0">Christian Steinbacher (nach Anne Carson)</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace xml:id="place_8a388ba2">Schupfart</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q66314" xml:id="place_8a388ba2">Schupfart</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2501295" xml:id="publisher_7052b30b">Urs Engeler</publisher>
                 </bibl>
                 <bibl xml:id="bibl_38d4f7cf">
