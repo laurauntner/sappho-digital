@@ -36,7 +36,8 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
       <link rel="stylesheet" href="css/style.css" type="text/css" />
-      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.css" /><script src="https://code.highcharts.com/highcharts.js"></script><script src="https://code.highcharts.com/modules/timeline.js"></script><script src="https://code.highcharts.com/modules/data.js"></script></head>
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.css" /><script src="https://code.highcharts.com/highcharts.js"></script><script src="https://code.highcharts.com/modules/timeline.js"></script><script src="https://code.highcharts.com/modules/data.js"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+   </head>
    <body class="page" data-tei-file="sappho-rez_drama.xml" data-show-genres="false">
       <div class="hfeed site" id="page">
          <div class="sticky-top"><a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a><nav class="navbar navbar-expand-lg">
@@ -298,6 +299,7 @@
                                     <li><a class="dropdown-item custom-dropdown-link" href="plots.html">Stoffe</a></li>
                                  </ul>
                               </li>
+                              <li><a class="dropdown-item custom-dropdown-link" href="statistics.html">Statistik</a></li>
                            </ul>
                         </li>
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle custom-dropdown-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Daten</a><ul class="dropdown-menu">
@@ -317,9 +319,58 @@
                   <h1>Dramatische Rezeptionszeugnisse</h1>
                </div>
                <div class="card-body">
-                  <div id="container" style="padding-bottom: 50px; display: flex; justify-content: center;">
-                     <div id="container-timeline" style="width: 60%; height: 200px; margin: auto;"></div>
-                  </div><script src="./js/statistics.js"></script><div id="screen-too-small">Das Fenster ist zu klein, um die Tabelle
+                  <div style="display:flex; gap:1.5rem; align-items:flex-start; padding-bottom:.5rem;">
+                     <div id="heatmap-section" style="flex:0 0 45%;">
+                        <div id="map"></div>
+                        <div id="slider-wrapper"><label for="year-slider">Jahr:</label><input type="range" id="year-slider" min="1" max="1" value="1" step="1" /><span id="slider-display">–</span><button id="btn-play" class="btn btn-sm btn-outline-secondary"> ▶
+                              Abspielen </button></div>
+                     </div>
+                     <div id="container-timeline" style="flex:1; height:190px; margin-top:0; align-self:center;"></div>
+                  </div><script>window.heatmapData = [
+  {lat:48.36888888888889,lng:10.897777777777778,year:1539,place:"Augsburg"},
+  {lat:53.55,lng:10,year:1785,place:"Hamburg"},
+  {lat:51.339444,lng:12.371111,year:1796,place:"Leipzig"},
+  {lat:48.36888888888889,lng:10.897777777777778,year:1790,place:"Augsburg"},
+  {lat:51.339444,lng:12.371111,year:1792,place:"Leipzig"},
+  {lat:51.339444,lng:12.371111,year:1792,place:"Leipzig"},
+  {lat:52.516666666667,lng:13.383333333333,year:1793,place:"Berlin"},
+  {lat:52.516666666667,lng:13.383333333333,year:1805,place:"Berlin"},
+  {lat:52.516666666667,lng:13.383333333333,year:1816,place:"Berlin"},
+  {lat:48.208333333333336,lng:16.3725,year:1818,place:"Wien"},
+  {lat:48.208333333333336,lng:16.3725,year:1820,place:"Wien"},
+  {lat:51.339444,lng:12.371111,year:1819,place:"Leipzig"},
+  {lat:51.339444,lng:12.371111,year:1819,place:"Leipzig"},
+  {lat:48.208333333333336,lng:16.3725,year:1819,place:"Wien"},
+  {lat:48.208333333333336,lng:16.3725,year:1820,place:"Wien"},
+  {lat:48.208333333333336,lng:16.3725,year:1821,place:"Wien"},
+  {lat:51.339444,lng:12.371111,year:1823,place:"Leipzig"},
+  {lat:52.516666666667,lng:13.383333333333,year:1823,place:"Berlin"},
+  {lat:49.99944444444444,lng:8.27361111111111,year:1824,place:"Mainz"},
+  {lat:53.55,lng:10,year:1827,place:"Hamburg"},
+  {lat:48.7775,lng:9.18,year:1829,place:"Stuttgart"},
+  {lat:48.52,lng:9.0555555555556,year:1829,place:"Tübingen"},
+  {lat:50.594166666667,lng:12.645555555556,year:1828,place:"Schneeberg"},
+  {lat:46.616666666667,lng:14.3,year:1831,place:"Klagenfurt"},
+  {lat:52.516666666667,lng:13.383333333333,year:1843,place:"Berlin"},
+  {lat:48.208333333333336,lng:16.3725,year:1854,place:"Wien"},
+  {lat:48.208333333333336,lng:16.3725,year:1860,place:"Wien"},
+  {lat:51.339444,lng:12.371111,year:1892,place:"Leipzig"},
+  {lat:51.339444,lng:12.371111,year:1865,place:"Leipzig"},
+  {lat:52.516666666667,lng:13.383333333333,year:1887,place:"Berlin"},
+  {lat:48.7775,lng:9.18,year:1889,place:"Stuttgart"},
+  {lat:48.208333333333336,lng:16.3725,year:1891,place:"Wien"},
+  {lat:52.516666666667,lng:13.383333333333,year:1900,place:"Berlin"},
+  {lat:48.208333333333336,lng:16.3725,year:1936,place:"Wien"},
+  {lat:52.516666666667,lng:13.383333333333,year:1936,place:"Berlin"},
+  {lat:46.94798,lng:7.44743,year:1951,place:"Bern"},
+  {lat:48.208333333333336,lng:16.3725,year:1953,place:"Wien"},
+  {lat:48.1375,lng:11.575,year:1977,place:"München"},
+  {lat:48.1375,lng:11.575,year:1978,place:"München"},
+  {lat:54.083333333333,lng:12.133333333333,year:1989,place:"Rostock"},
+  {lat:52.516666666667,lng:13.383333333333,year:2015,place:"Berlin"},
+  {lat:51.339444,lng:12.371111,year:2019,place:"Leipzig"},
+];
+</script><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script><script src="js/heatmap.js"></script><script src="./js/statistics.js"></script><div id="screen-too-small">Das Fenster ist zu klein, um die Tabelle
                      darstellen zu können.</div>
                   <table class="table table-striped display" id="tocTable" style="width:100%">
                      <thead>
@@ -1012,8 +1063,8 @@
                            <td class="export-only">https://www.wikidata.org/entity/Q120198447</td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_34fd5b25.html" class="link-plain">Mara Krauss, Lesbentheater München</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_34fd5b25.html" class="link-plain">Mara Krauss</a><a href="https://www.wikidata.org/entity/Q120198457,Q112813243" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a>, <a href=".html" class="link-plain">Lesbentheater München</a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q120198457,Q112813243, </td>
                            <td><a href="place_06ec7d19.html" class="link-plain">München</a><a href="https://www.wikidata.org/entity/Q1726" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1726</td>
                            <td><a href="publisher_0d69d285.html" class="link-plain">come out lesbenverlag</a><a href="https://www.wikidata.org/entity/Q113299315" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -1063,8 +1114,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_2308f519.html" class="link-plain">Leonie Sowa</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_2308f519.html" class="link-plain">Leonie Sowa</a><a href="https://www.wikidata.org/entity/Q138661019" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q138661019</td>
                            <td><a href="place_efeaa516.html" class="link-plain">Leipzig</a><a href="https://www.wikidata.org/entity/Q2079" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q2079</td>
                            <td><a href="publisher_a2cb3e64.html" class="link-plain">unveröffentlicht</a></td>
@@ -1077,7 +1128,7 @@
                </div>
             </div>
          </div>
-         <div id="wrapper-footer-full"><a href="imprint.html">© Laura Untner 2026 (zuletzt aktualisiert am 11.3.2026, 13:01)</a></div><script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script><script src="js/listStopProp.js"></script><script src="js/navScroll.js"></script><script src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js"></script><script src="js/dt.js"></script><script>
+         <div id="wrapper-footer-full"><a href="imprint.html">© Laura Untner 2026 (zuletzt aktualisiert am 16.3.2026, 17:46)</a></div><script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script><script src="js/listStopProp.js"></script><script src="js/navScroll.js"></script><script src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js"></script><script src="js/dt.js"></script><script>
                         $(document).ready(function () {
                             createDataTable('tocTable');
                         });

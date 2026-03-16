@@ -36,7 +36,8 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
       <link rel="stylesheet" href="css/style.css" type="text/css" />
-      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.css" /><script src="https://code.highcharts.com/highcharts.js"></script><script src="https://code.highcharts.com/modules/timeline.js"></script><script src="https://code.highcharts.com/modules/data.js"></script></head>
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.css" /><script src="https://code.highcharts.com/highcharts.js"></script><script src="https://code.highcharts.com/modules/timeline.js"></script><script src="https://code.highcharts.com/modules/data.js"></script><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+   </head>
    <body class="page" data-tei-file="sappho-rez_prosa.xml" data-show-genres="false">
       <div class="hfeed site" id="page">
          <div class="sticky-top"><a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a><nav class="navbar navbar-expand-lg">
@@ -298,6 +299,7 @@
                                     <li><a class="dropdown-item custom-dropdown-link" href="plots.html">Stoffe</a></li>
                                  </ul>
                               </li>
+                              <li><a class="dropdown-item custom-dropdown-link" href="statistics.html">Statistik</a></li>
                            </ul>
                         </li>
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle custom-dropdown-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Daten</a><ul class="dropdown-menu">
@@ -317,9 +319,273 @@
                   <h1>Prosaische Rezeptionszeugnisse</h1>
                </div>
                <div class="card-body">
-                  <div id="container" style="padding-bottom: 50px; display: flex; justify-content: center;">
-                     <div id="container-timeline" style="width: 60%; height: 200px; margin: auto;"></div>
-                  </div><script src="./js/statistics.js"></script><div id="screen-too-small">Das Fenster ist zu klein, um die Tabelle
+                  <div style="display:flex; gap:1.5rem; align-items:flex-start; padding-bottom:.5rem;">
+                     <div id="heatmap-section" style="flex:0 0 45%;">
+                        <div id="map"></div>
+                        <div id="slider-wrapper"><label for="year-slider">Jahr:</label><input type="range" id="year-slider" min="1" max="1" value="1" step="1" /><span id="slider-display">–</span><button id="btn-play" class="btn btn-sm btn-outline-secondary"> ▶
+                              Abspielen </button></div>
+                     </div>
+                     <div id="container-timeline" style="flex:1; height:190px; margin-top:0; align-self:center;"></div>
+                  </div><script>window.heatmapData = [
+  {lat:47.560555555556,lng:7.5905555555556,year:1494,place:"Basel"},
+  {lat:48.573333333333,lng:7.7522222222222,year:1557,place:"Straßburg"},
+  {lat:50.11055555555556,lng:8.682222222222222,year:1666,place:"Frankfurt a. M."},
+  {lat:51.339444,lng:12.371111,year:1689,place:"Leipzig"},
+  {lat:48.39841,lng:9.99155,year:1690,place:"Ulm"},
+  {lat:51.339444,lng:12.371111,year:1743,place:"Leipzig"},
+  {lat:50.11055555555556,lng:8.682222222222222,year:1763,place:"Frankfurt"},
+  {lat:51.339444,lng:12.371111,year:1772,place:"Leipzig"},
+  {lat:50.98111111111111,lng:11.329444444444444,year:1774,place:"Weimar"},
+  {lat:52.027680555555555,lng:8.9043,year:1774,place:"Lemgo"},
+  {lat:52.516666666667,lng:13.383333333333,year:1775,place:"Berlin"},
+  {lat:52.516666666667,lng:13.383333333333,year:1775,place:"Stettin"},
+  {lat:51.339444,lng:12.371111,year:1977,place:"Leipzig"},
+  {lat:48.208333333333336,lng:16.3725,year:1783,place:"Wien"},
+  {lat:52.516666666667,lng:13.383333333333,year:1795,place:"Berlin"},
+  {lat:52.516666666667,lng:13.383333333333,year:1796,place:"Berlin"},
+  {lat:52.027680555555555,lng:8.9043,year:1787,place:"Lemgo"},
+  {lat:51.339444,lng:12.371111,year:1791,place:"Leipzig"},
+  {lat:51.339444,lng:12.371111,year:1793,place:"Leipzig"},
+  {lat:51.339444,lng:12.371111,year:1794,place:"Leipzig"},
+  {lat:51.339444,lng:12.371111,year:1799,place:"Leipzig"},
+  {lat:52.516666666667,lng:13.383333333333,year:1799,place:"Berlin"},
+  {lat:50.87818,lng:12.08242,year:1799,place:"Gera"},
+  {lat:51.339444,lng:12.371111,year:1799,place:"Leipzig"},
+  {lat:48.52,lng:9.0555555555556,year:1800,place:"Tübingen"},
+  {lat:51.339444,lng:12.371111,year:1800,place:"Leipzig"},
+  {lat:51.339444,lng:12.371111,year:1800,place:"Leipzig"},
+  {lat:50.11055555555556,lng:8.682222222222222,year:1804,place:"Hamburg"},
+  {lat:53.55,lng:10,year:1804,place:"Frankfurt a. M."},
+  {lat:52.516666666667,lng:13.383333333333,year:1804,place:"Berlin"},
+  {lat:48.52,lng:9.0555555555556,year:1807,place:"Tübingen"},
+  {lat:52.516666666667,lng:13.383333333333,year:1810,place:"Berlin"},
+  {lat:47.07083333333333,lng:15.438611111111111,year:1813,place:"Graz"},
+  {lat:52.40833333333333,lng:16.933611111111112,year:1815,place:"Posen"},
+  {lat:51.339444,lng:12.371111,year:1820,place:"Leipzig"},
+  {lat:48.208333333333336,lng:16.3725,year:1820,place:"Wien"},
+  {lat:51.0493286,lng:13.7381437,year:1820,place:"Dresden"},
+  {lat:51.339444,lng:12.371111,year:1820,place:"Leipzig"},
+  {lat:48.208333333333336,lng:16.3725,year:1821,place:"Leipzig"},
+  {lat:51.339444,lng:12.371111,year:1821,place:"Wien"},
+  {lat:53.55,lng:10,year:1826,place:"Hamburg"},
+  {lat:51.0493286,lng:13.7381437,year:1828,place:"Dresden"},
+  {lat:51.339444,lng:12.371111,year:1828,place:"Leipzig"},
+  {lat:52.516666666667,lng:13.383333333333,year:1830,place:"Berlin"},
+  {lat:48.208333333333336,lng:16.3725,year:1834,place:"Wien"},
+  {lat:49.48777777777778,lng:8.466111111111111,year:1834,place:"Mannheim"},
+  {lat:52.516666666667,lng:13.383333333333,year:1834,place:"Berlin"},
+  {lat:51.0493286,lng:13.7381437,year:1834,place:"Dresden"},
+  {lat:51.339444,lng:12.371111,year:1834,place:"Leipzig"},
+  {lat:50.87818,lng:12.08242,year:1835,place:"Gera"},
+  {lat:52.516666666667,lng:13.383333333333,year:1835,place:"Berlin"},
+  {lat:47.07083333333333,lng:15.438611111111111,year:1836,place:"Graz"},
+  {lat:45.466944444444,lng:9.19,year:1837,place:"Mailand"},
+  {lat:48.208333333333336,lng:16.3725,year:1838,place:"Wien"},
+  {lat:48.7775,lng:9.18,year:1840,place:"Stuttgart"},
+  {lat:48.7775,lng:9.18,year:1841,place:"Stuttgart"},
+  {lat:48.208333333333336,lng:16.3725,year:1842,place:"Wien"},
+  {lat:54.083333333333,lng:12.133333333333,year:1877,place:"Wismar"},
+  {lat:53.8925,lng:11.465,year:1877,place:"Ludwigslust"},
+  {lat:45.81305555555556,lng:15.977222222222222,year:1848,place:"Zagreb"},
+  {lat:51.0493286,lng:13.7381437,year:1852,place:"Dresden"},
+  {lat:49.938055555556,lng:17.904444444444,year:1853,place:"Opava"},
+  {lat:52.516666666667,lng:13.383333333333,year:1854,place:"Berlin"},
+  {lat:51.339444,lng:12.371111,year:1855,place:"Leipzig"},
+  {lat:50.11055555555556,lng:8.682222222222222,year:1855,place:"Frankfurt a. M."},
+  {lat:51.339444,lng:12.371111,year:1855,place:"Leipzig"},
+  {lat:50.11055555555556,lng:8.682222222222222,year:1856,place:"Frankfurt a. M."},
+  {lat:48.30583333333333,lng:14.286388888888888,year:1856,place:"Linz"},
+  {lat:51.339444,lng:12.371111,year:1858,place:"Leipzig"},
+  {lat:50.942222222222,lng:6.9577777777778,year:1859,place:"Köln"},
+  {lat:50.585277777778,lng:12.700833333333,year:1864,place:"Aue"},
+  {lat:51.339444,lng:12.371111,year:1864,place:"Leipzig"},
+  {lat:48.7775,lng:9.18,year:1864,place:"Stuttgart"},
+  {lat:48.7775,lng:9.18,year:1864,place:"Stuttgart"},
+  {lat:48.7775,lng:9.18,year:1864,place:"Stuttgart"},
+  {lat:50.942222222222,lng:6.9577777777778,year:1866,place:"Köln"},
+  {lat:49.016666666667,lng:8.4,year:1868,place:"Karlsruhe"},
+  {lat:54.083333333333,lng:12.133333333333,year:1868,place:"Wismar"},
+  {lat:53.8925,lng:11.465,year:1868,place:"Ludwigslust"},
+  {lat:51.339444,lng:12.371111,year:1869,place:"Leipzig"},
+  {lat:51.339444,lng:12.371111,year:1874,place:"Leipzig"},
+  {lat:51.339444,lng:12.371111,year:1875,place:"Leipzig"},
+  {lat:48.298888888889,lng:4.0780555555556,year:1875,place:"Troyes"},
+  {lat:49.016666666667,lng:8.4,year:1875,place:"Karlsruhe"},
+  {lat:52.016666666667,lng:8.5333333333333,year:1876,place:"Bielefeld"},
+  {lat:51.339444,lng:12.371111,year:1876,place:"Leipzig"},
+  {lat:51.339444,lng:12.371111,year:1876,place:"Leipzig"},
+  {lat:50.0875,lng:14.421388888888888,year:1878,place:"Prag"},
+  {lat:52.516666666667,lng:13.383333333333,year:1879,place:"Berlin"},
+  {lat:48.7775,lng:9.18,year:1879,place:"Stuttgart"},
+  {lat:51.339444,lng:12.371111,year:1879,place:"Leipzig"},
+  {lat:51.339444,lng:12.371111,year:1880,place:"Leipzig"},
+  {lat:48.7775,lng:9.18,year:1880,place:"Stuttgart"},
+  {lat:48.7775,lng:9.18,year:1881,place:"Stuttgart"},
+  {lat:51.339444,lng:12.371111,year:1881,place:"Leipzig"},
+  {lat:52.516666666667,lng:13.383333333333,year:1881,place:"Berlin"},
+  {lat:48.208333333333336,lng:16.3725,year:1883,place:"Wien"},
+  {lat:51.339444,lng:12.371111,year:1883,place:"Leipzig"},
+  {lat:48.208333333333336,lng:16.3725,year:1883,place:"Wien"},
+  {lat:48.208333333333336,lng:16.3725,year:1884,place:"Wien"},
+  {lat:51.339444,lng:12.371111,year:1884,place:"Leipzig"},
+  {lat:48.7775,lng:9.18,year:1885,place:"Stuttgart"},
+  {lat:51.339444,lng:12.371111,year:1886,place:"Leipzig"},
+  {lat:50.833333333333,lng:12.916666666667,year:1886,place:"Chemnitz"},
+  {lat:48.208333333333336,lng:16.3725,year:1886,place:"Wien"},
+  {lat:48.7775,lng:9.18,year:1887,place:"Stuttgart"},
+  {lat:49.48777777777778,lng:8.466111111111111,year:1888,place:"Mannheim"},
+  {lat:51.0493286,lng:13.7381437,year:1888,place:"Dresden"},
+  {lat:51.339444,lng:12.371111,year:1888,place:"Leipzig"},
+  {lat:51.0493286,lng:13.7381437,year:1888,place:"Dresden"},
+  {lat:49.016666666667,lng:8.4,year:1888,place:"Karlsruhe"},
+  {lat:51.339444,lng:12.371111,year:1889,place:"Leipzig"},
+  {lat:51.0493286,lng:13.7381437,year:1889,place:"Dresden"},
+  {lat:51.339444,lng:12.371111,year:1889,place:"Leipzig"},
+  {lat:52.516666666667,lng:13.383333333333,year:1891,place:"Berlin"},
+  {lat:53.8925,lng:11.465,year:1891,place:"Wismar"},
+  {lat:52.516666666667,lng:13.383333333333,year:1891,place:"Berlin"},
+  {lat:48.30583333333333,lng:14.286388888888888,year:1891,place:"Linz"},
+  {lat:52.516666666667,lng:13.383333333333,year:1891,place:"Berlin"},
+  {lat:48.290833333333,lng:25.934444444444,year:1891,place:"Czernowitz"},
+  {lat:49.593888888889,lng:17.250833333333,year:1891,place:"Olmütz"},
+  {lat:51.339444,lng:12.371111,year:1892,place:"Leipzig"},
+  {lat:52.516666666667,lng:13.383333333333,year:1892,place:"Berlin"},
+  {lat:52.269166666667,lng:10.521111111111,year:1892,place:"Braunschweig"},
+  {lat:51.339444,lng:12.371111,year:1893,place:"Leipzig"},
+  {lat:51.11,lng:17.0325,year:1894,place:"Breslau"},
+  {lat:52.374444444444,lng:9.7386111111111,year:1895,place:"Hannover"},
+  {lat:52.516666666667,lng:13.383333333333,year:1897,place:"Berlin"},
+  {lat:48.7775,lng:9.18,year:1896,place:"Stuttgart"},
+  {lat:47.995,lng:7.85,year:1897,place:"Freiburg i. Br."},
+  {lat:48.290833333333,lng:25.934444444444,year:1898,place:"Czernowitz"},
+  {lat:51.11,lng:17.0325,year:1898,place:"Breslau"},
+  {lat:52.516666666667,lng:13.383333333333,year:1899,place:"Berlin"},
+  {lat:51.0493286,lng:13.7381437,year:1902,place:"Dresden"},
+  {lat:47.733333333333334,lng:10.316666666666666,year:1902,place:"Kempten"},
+  {lat:51.0493286,lng:13.7381437,year:1902,place:"Dresden"},
+  {lat:48.7775,lng:9.18,year:1902,place:"Stuttgart"},
+  {lat:48.208333333333336,lng:16.3725,year:1902,place:"Wien"},
+  {lat:52.516666666667,lng:13.383333333333,year:1902,place:"Berlin"},
+  {lat:52.516666666667,lng:13.383333333333,year:1902,place:"Berlin"},
+  {lat:51.1275,lng:14.179722222222,year:1903,place:"Bischofswerda"},
+  {lat:52.516666666667,lng:13.383333333333,year:1904,place:"Berlin"},
+  {lat:48.208333333333336,lng:16.3725,year:1904,place:"Wien"},
+  {lat:52.516666666667,lng:13.383333333333,year:1904,place:"Berlin"},
+  {lat:51.339444,lng:12.371111,year:1904,place:"Leipzig"},
+  {lat:50.942222222222,lng:6.9577777777778,year:1904,place:"Köln"},
+  {lat:52.516666666667,lng:13.383333333333,year:1904,place:"Berlin"},
+  {lat:51.339444,lng:12.371111,year:1904,place:"Leipzig"},
+  {lat:48.208333333333336,lng:16.3725,year:1905,place:"Wien"},
+  {lat:51.339444,lng:12.371111,year:1905,place:"Leipzig"},
+  {lat:51.339444,lng:12.371111,year:1906,place:"Leipzig"},
+  {lat:48.208333333333336,lng:16.3725,year:1906,place:"Wien"},
+  {lat:51.339444,lng:12.371111,year:1906,place:"Leipzig"},
+  {lat:51.339444,lng:12.371111,year:1906,place:"Leipzig"},
+  {lat:48.7775,lng:9.18,year:1906,place:"Stuttgart"},
+  {lat:48.290833333333,lng:25.934444444444,year:1907,place:"Czernowitz"},
+  {lat:51.0493286,lng:13.7381437,year:1907,place:"Dresden"},
+  {lat:52.516666666667,lng:13.383333333333,year:1908,place:"Berlin"},
+  {lat:51.179166666667,lng:13.826111111111,year:1908,place:"Ottendorf-Okrilla"},
+  {lat:52.516666666667,lng:13.383333333333,year:1908,place:"Berlin"},
+  {lat:52.374444444444,lng:9.7386111111111,year:1908,place:"Hannover"},
+  {lat:51.339444,lng:12.371111,year:1909,place:"Leipzig"},
+  {lat:49.7544,lng:8.63389,year:1909,place:"Jugenheim an der Bergstraße"},
+  {lat:52.374444444444,lng:9.7386111111111,year:1909,place:"Hannover"},
+  {lat:48.208333333333336,lng:16.3725,year:1909,place:"Wien"},
+  {lat:51.339444,lng:12.371111,year:1910,place:"Leipzig"},
+  {lat:49.016666666667,lng:8.4,year:1910,place:"Karlsruhe"},
+  {lat:51.953888888889,lng:7.9933333333333,year:1911,place:"Warendorf"},
+  {lat:52.516666666667,lng:13.383333333333,year:1911,place:"Berlin"},
+  {lat:52.516666666667,lng:13.383333333333,year:1911,place:"Berlin"},
+  {lat:47.505,lng:9.7491666666667,year:1911,place:"Bregenz"},
+  {lat:52.516666666667,lng:13.383333333333,year:1912,place:"Berlin"},
+  {lat:52.516666666667,lng:13.383333333333,year:1913,place:"Berlin"},
+  {lat:48.7775,lng:9.18,year:1913,place:"Stuttgart"},
+  {lat:51.052777777778,lng:13.795833333333,year:1914,place:"Dresden-Blasewitz"},
+  {lat:48.8908846,lng:8.7029532,year:1916,place:"Pforzheim"},
+  {lat:48.208333333333336,lng:16.3725,year:1918,place:"Wien"},
+  {lat:52.516666666667,lng:13.383333333333,year:1918,place:"Berlin"},
+  {lat:52.516666666667,lng:13.383333333333,year:1919,place:"Berlin"},
+  {lat:48.7775,lng:9.18,year:1919,place:"Stuttgart"},
+  {lat:52.516666666667,lng:13.383333333333,year:1922,place:"Berlin"},
+  {lat:52.516666666667,lng:13.383333333333,year:1922,place:"Berlin"},
+  {lat:52.516666666667,lng:13.383333333333,year:1922,place:"Berlin"},
+  {lat:48.7775,lng:9.18,year:1922,place:"Stuttgart"},
+  {lat:50.942222222222,lng:6.9577777777778,year:1922,place:"Köln"},
+  {lat:48.30583333333333,lng:14.286388888888888,year:1922,place:"Linz"},
+  {lat:48.208333333333336,lng:16.3725,year:1924,place:"Wien"},
+  {lat:52.516666666667,lng:13.383333333333,year:1924,place:"Berlin"},
+  {lat:48.1375,lng:11.575,year:1925,place:"München"},
+  {lat:51.513888888889,lng:7.4652777777778,year:1925,place:"Dortmund"},
+  {lat:51.339444,lng:12.371111,year:1926,place:"Leipzig"},
+  {lat:52.516666666667,lng:13.383333333333,year:1926,place:"Berlin"},
+  {lat:50.942222222222,lng:6.9577777777778,year:1926,place:"Köln"},
+  {lat:50.942222222222,lng:6.9577777777778,year:1926,place:"Köln"},
+  {lat:47.505,lng:9.7491666666667,year:1927,place:"Bregenz"},
+  {lat:47.07083333333333,lng:15.438611111111111,year:1928,place:"Graz"},
+  {lat:52.016666666667,lng:8.5333333333333,year:1932,place:"Bielefeld"},
+  {lat:48.7775,lng:9.18,year:1932,place:"Stuttgart"},
+  {lat:48.208333333333336,lng:16.3725,year:1933,place:"Berlin"},
+  {lat:52.516666666667,lng:13.383333333333,year:1933,place:"Wien"},
+  {lat:51.339444,lng:12.371111,year:1933,place:"Leipzig"},
+  {lat:50.0875,lng:14.421388888888888,year:1933,place:"Prag"},
+  {lat:51.339444,lng:12.371111,year:1933,place:"Leipzig"},
+  {lat:49.48777777777778,lng:8.466111111111111,year:1935,place:"Mannheim"},
+  {lat:52.516666666667,lng:13.383333333333,year:1935,place:"Berlin"},
+  {lat:47.683333333333,lng:16.583333333333,year:1935,place:"Sopron"},
+  {lat:52.516666666667,lng:13.383333333333,year:1937,place:"Berlin"},
+  {lat:48.85666666666667,lng:2.352222222222222,year:1937,place:"Paris"},
+  {lat:51.71666666666667,lng:8.766666666666667,year:1937,place:"Paderborn"},
+  {lat:51.0493286,lng:13.7381437,year:1938,place:"Dresden"},
+  {lat:50.0875,lng:14.421388888888888,year:1938,place:"Prag"},
+  {lat:51.0493286,lng:13.7381437,year:1938,place:"Dresden"},
+  {lat:48.208333333333336,lng:16.3725,year:1938,place:"Wien"},
+  {lat:50.942222222222,lng:6.9577777777778,year:1939,place:"Köln"},
+  {lat:47.37444444444444,lng:8.54111111111111,year:1941,place:"Zürich"},
+  {lat:53.55,lng:10,year:1942,place:"Hamburg"},
+  {lat:-34.599722222222,lng:-58.381944444444,year:1945,place:"Buenos Aires"},
+  {lat:50.11055555555556,lng:8.682222222222222,year:1972,place:"Frankfurt a. M."},
+  {lat:53.55,lng:10,year:1955,place:"Hamburg"},
+  {lat:53.55,lng:10,year:1969,place:"Hamburg"},
+  {lat:51.359444444444,lng:7.475,year:1973,place:"Hagen"},
+  {lat:48.1375,lng:11.575,year:1981,place:"München"},
+  {lat:47.8,lng:13.045,year:1983,place:"Salzburg"},
+  {lat:49.866666666667,lng:8.65,year:1983,place:"Neuwied"},
+  {lat:53.55,lng:10,year:1983,place:"Hamburg"},
+  {lat:52.516666666667,lng:13.383333333333,year:1983,place:"Berlin"},
+  {lat:46.556944444444,lng:14.759444444444,year:1983,place:"St. Michael"},
+  {lat:50.98111111111111,lng:11.329444444444444,year:1983,place:"Berlin"},
+  {lat:52.516666666667,lng:13.383333333333,year:1983,place:"Weimar"},
+  {lat:48.1375,lng:11.575,year:1984,place:"München"},
+  {lat:48.1375,lng:11.575,year:1986,place:"München"},
+  {lat:52.516666666667,lng:13.383333333333,year:1986,place:"Berlin"},
+  {lat:53.55,lng:10,year:1986,place:"Hamburg"},
+  {lat:50.11055555555556,lng:8.682222222222222,year:1988,place:"Frankfurt a. M."},
+  {lat:48.1375,lng:11.575,year:1990,place:"München"},
+  {lat:53.55,lng:10,year:1992,place:"Hamburg"},
+  {lat:47.37444444444444,lng:8.54111111111111,year:1992,place:"Zürich"},
+  {lat:51.339444,lng:12.371111,year:1993,place:"Leipzig"},
+  {lat:52.516666666667,lng:13.383333333333,year:1994,place:"Berlin"},
+  {lat:50.11055555555556,lng:8.682222222222222,year:1996,place:"Frankfurt a. M."},
+  {lat:50.11055555555556,lng:8.682222222222222,year:2005,place:"Frankfurt a. M."},
+  {lat:52.516666666667,lng:13.383333333333,year:1997,place:"Berlin"},
+  {lat:52.516666666667,lng:13.383333333333,year:1999,place:"Berlin"},
+  {lat:48.1375,lng:11.575,year:2001,place:"München"},
+  {lat:52.516666666667,lng:13.383333333333,year:2004,place:"Berlin"},
+  {lat:48.19810555555556,lng:10.986286111111111,year:2005,place:"Heinrichshofen"},
+  {lat:47.992777777778,lng:9.1125,year:2005,place:"Meßkirch"},
+  {lat:48.1375,lng:11.575,year:2006,place:"München"},
+  {lat:50.942222222222,lng:6.9577777777778,year:2007,place:"Köln"},
+  {lat:50.11055555555556,lng:8.682222222222222,year:2008,place:"Frankfurt a. M."},
+  {lat:50.11055555555556,lng:8.682222222222222,year:2008,place:"Frankfurt a. M."},
+  {lat:53.706388888889,lng:10.010277777778,year:2010,place:"Norderstedt"},
+  {lat:48.208333333333336,lng:16.3725,year:2012,place:"Wien"},
+  {lat:54.083333333333,lng:13.383333333333,year:2014,place:"Greifswald"},
+  {lat:52.516666666667,lng:13.383333333333,year:2018,place:"Berlin"},
+  {lat:50.11055555555556,lng:8.682222222222222,year:2021,place:"Frankfurt a. M."},
+  {lat:52.516666666667,lng:13.383333333333,year:2023,place:"Berlin"},
+];
+</script><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script><script src="js/heatmap.js"></script><script src="./js/statistics.js"></script><div id="screen-too-small">Das Fenster ist zu klein, um die Tabelle
                      darstellen zu können.</div>
                   <table class="table table-striped display" id="tocTable" style="width:100%">
                      <thead>
@@ -445,8 +711,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_6ecaf99a.html" class="link-plain">Kleine sinnreiche und scherzhafte Schriften</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_d4eead4e.html" class="link-plain">Justus Friedrich Wilhelm Zachariae</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_d4eead4e.html" class="link-plain">Justus Friedrich Wilhelm Zachariae</a><a href="https://www.wikidata.org/entity/Q75169" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q75169</td>
                            <td><a href="place_ae5c315b.html" class="link-plain">Frankfurt</a></td>
                            <td class="export-only"></td>
                            <td></td>
@@ -493,8 +759,8 @@
                            <td class="export-only">https://www.wikidata.org/entity/Q120176718</td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_6deae303.html" class="link-plain">Wilhelm Heinse</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_6deae303.html" class="link-plain">Johann Jakob Wilhelm Heinse</a><a href="https://www.wikidata.org/entity/Q64489" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q64489</td>
                            <td><a href="place_d07b6ca0.html" class="link-plain">Lemgo</a><a href="https://www.wikidata.org/entity/Q14817" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q14817</td>
                            <td><a href="publisher_0e177ca1.html" class="link-plain">Meyersche Buchhandlung</a><a href="https://www.wikidata.org/entity/Q120176780" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -511,8 +777,8 @@
                            <td class="export-only"></td>
                            <td><a href="author_ea8781b9.html" class="link-plain">Friedrich Nicolai</a><a href="https://www.wikidata.org/entity/Q215853" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q215853</td>
-                           <td><a href="place_6cee4661.html" class="link-plain">Berlin</a>, <a href="place_d35a02eb.html" class="link-plain">Stettin</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="place_d35a02eb.html" class="link-plain">Berlin</a><a href="https://www.wikidata.org/entity/Q64,Q393" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a>, <a href="place_d35a02eb.html" class="link-plain">Stettin</a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q64,Q393, </td>
                            <td><a href="publisher_f1e25fd6.html" class="link-plain">Nicolai</a></td>
                            <td class="export-only"></td>
                            <td><a href="https://www.deutschestextarchiv.de/book/view/nicolai_nothanker02_1775" target="_blank" class="link-plain"> Online </a></td>
@@ -557,8 +823,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_6deae303.html" class="link-plain">Wilhelm Heinse</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_6deae303.html" class="link-plain">Johann Jakob Wilhelm Heinse</a><a href="https://www.wikidata.org/entity/Q64489" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q64489</td>
                            <td><a href="place_d35a02eb.html" class="link-plain">Berlin</a><a href="https://www.wikidata.org/entity/Q64" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q64</td>
                            <td><a href="publisher_dff83d77.html" class="link-plain">Vossische Buchhandlung</a></td>
@@ -573,8 +839,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_6deae303.html" class="link-plain">Wilhelm Heinse</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_6deae303.html" class="link-plain">Wilhelm Heinse</a><a href="https://www.wikidata.org/entity/Q64489" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q64489</td>
                            <td><a href="place_d35a02eb.html" class="link-plain">Berlin</a><a href="https://www.wikidata.org/entity/Q64" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q64</td>
                            <td><a href="publisher_dff83d77.html" class="link-plain">Vossische Buchhandlung</a></td>
@@ -590,8 +856,8 @@
                            <td class="export-only">https://www.wikidata.org/entity/Q120403015</td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_6deae303.html" class="link-plain">Wilhelm Heinse</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_6deae303.html" class="link-plain">Johann Jakob Wilhelm Heinse</a><a href="https://www.wikidata.org/entity/Q64489" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q64489</td>
                            <td><a href="place_d07b6ca0.html" class="link-plain">Lemgo</a><a href="https://www.wikidata.org/entity/Q14817" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q14817</td>
                            <td><a href="publisher_0e177ca1.html" class="link-plain">Meyersche Buchhandlung</a><a href="https://www.wikidata.org/entity/Q120176780" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -686,8 +952,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_d6da3022.html" class="link-plain">Jean Paul</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_d6da3022.html" class="link-plain">Jean Paul</a><a href="https://www.wikidata.org/entity/Q77079" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q77079</td>
                            <td><a href="place_01b3ebf8.html" class="link-plain">Gera</a>, <a href="place_efeaa516.html" class="link-plain">Leipzig</a></td>
                            <td class="export-only"></td>
                            <td><a href="publisher_211c7f89.html" class="link-plain">Heinsius</a></td>
@@ -894,8 +1160,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_f337748e.html" class="link-plain">W. G. Beckers Taschenbuch zum geselligen Vergnügen auf das Jahr 1921</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_77a67df6.html" class="link-plain">Achim von Arnim</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_6b97b3e5.html" class="link-plain">Ludwig Achim von Arnim</a><a href="https://www.wikidata.org/entity/Q70988" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q70988</td>
                            <td><a href="place_95b8315b.html" class="link-plain">Leipzig</a>, <a href="place_efeaa516.html" class="link-plain">Wien</a></td>
                            <td class="export-only"></td>
                            <td><a href="publisher_5c6827bb.html" class="link-plain">Georg Joachim Göschen</a>, <a href="publisher_9c2127ee.html" class="link-plain">Carl Gerold’s Sohn Verlag</a></td>
@@ -1086,8 +1352,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_b3d0f556.html" class="link-plain">Der Österreichische Zuschauer. Zeitschrift für Kunst, Wissenschaft und geistiges Leben</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_31f5aba0.html" class="link-plain">Carl Frühauf</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_31f5aba0.html" class="link-plain">Carl Frühauf</a><a href="https://www.wikidata.org/entity/Q94578406" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q94578406</td>
                            <td><a href="place_95b8315b.html" class="link-plain">Wien</a><a href="https://www.wikidata.org/entity/Q1741" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1741</td>
                            <td><a href="publisher_09a6d808.html" class="link-plain">Karl Ueberreuter</a><a href="https://www.wikidata.org/entity/Q98834927" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -1118,8 +1384,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_da54ba99.html" class="link-plain">Morgenblatt für gebildete Stände</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_1b017ab5.html" class="link-plain">Alexander von Ungern-Sternberg</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_1b017ab5.html" class="link-plain">Alexander von Ungern-Sternberg</a><a href="https://www.wikidata.org/entity/Q2643490" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q2643490</td>
                            <td><a href="place_700b43a2.html" class="link-plain">Stuttgart</a><a href="https://www.wikidata.org/entity/Q1022" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1022</td>
                            <td><a href="publisher_d7432893.html" class="link-plain">Cotta’sche Verlagsbuchhandlung</a><a href="https://www.wikidata.org/entity/Q1136691" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -1134,7 +1400,7 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_a282c8c8.html" class="link-plain">Oesterreichischees Morgenblatt</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_15edc521.html" class="link-plain">Carl Raimung Frühauf</a></td>
+                           <td><a href="author_15edc521.html" class="link-plain">Carl Raimund Frühauf</a></td>
                            <td class="export-only"></td>
                            <td><a href="place_95b8315b.html" class="link-plain">Wien</a><a href="https://www.wikidata.org/entity/Q1741" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1741</td>
@@ -1150,8 +1416,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_39912df8.html" class="link-plain">Blätter für Scherz und Ernst</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_f8859041.html" class="link-plain">Franz von Elling</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_f8859041.html" class="link-plain">Franz von Elling [= Karl Müller]</a><a href="https://www.wikidata.org/entity/Q4310020" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q4310020</td>
                            <td><a href="place_42b32e43.html" class="link-plain">Düsseldorf</a><a href="https://www.wikidata.org/entity/Q1718" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1718</td>
                            <td></td>
@@ -1184,8 +1450,8 @@
                            <td class="export-only"></td>
                            <td><a href="author_b8ba5902.html" class="link-plain">Fritz Reuter</a><a href="https://www.wikidata.org/entity/Q76492" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q76492</td>
-                           <td><a href="place_5cef94ac.html" class="link-plain">Wismar</a>, <a href="place_64f9e1da.html" class="link-plain">Rostock</a>, <a href="place_b3271180.html" class="link-plain">Ludwigslust</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="place_5cef94ac.html" class="link-plain">Wismar</a><a href="https://www.wikidata.org/entity/Q7030,Q2861,Q156119" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a>, <a href="place_64f9e1da.html" class="link-plain">Rostock</a>, <a href="place_b3271180.html" class="link-plain">Ludwigslust</a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q7030,Q2861,Q156119, </td>
                            <td><a href="publisher_006305f7.html" class="link-plain">Hinstorff’sche Buchhandlung</a></td>
                            <td class="export-only"></td>
                            <td><a href="https://books.google.de/books?id=zToXV_6eq10C" target="_blank" class="link-plain"> Online </a></td>
@@ -1246,8 +1512,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_1c589986.html" class="link-plain">Willibald Alexis [d. i. W. Häring]</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_1c589986.html" class="link-plain">Willibald Alexis</a><a href="https://www.wikidata.org/entity/Q77312" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q77312</td>
                            <td><a href="place_d35a02eb.html" class="link-plain">Berlin</a><a href="https://www.wikidata.org/entity/Q64" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q64</td>
                            <td><a href="publisher_838f9583.html" class="link-plain">Barthol Verlag</a></td>
@@ -1262,8 +1528,8 @@
                            <td class="export-only">https://www.wikidata.org/entity/Q2298931</td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_1b1d8a73.html" class="link-plain">Gustav Freytag</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_1b1d8a73.html" class="link-plain">Gustav Freytag</a><a href="https://www.wikidata.org/entity/Q58811" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q58811</td>
                            <td><a href="place_efeaa516.html" class="link-plain">Leipzig</a><a href="https://www.wikidata.org/entity/Q2079" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q2079</td>
                            <td><a href="publisher_1bb3a48e.html" class="link-plain">Hirzel</a></td>
@@ -1376,8 +1642,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="place_bb650d49.html" class="link-plain">Aue</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="place_bb650d49.html" class="link-plain">Aue</a><a href="https://www.wikidata.org/entity/Q57948" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q57948</td>
                            <td><a href="publisher_4ca9edad.html" class="link-plain">Gärtner</a></td>
                            <td class="export-only"></td>
                            <td><a href="https://www.deutsche-digitale-bibliothek.de/newspaper/item/3JUUDPAJD737R4DGZCUW55LTQD2ZO7UM" target="_blank" class="link-plain"> Online </a></td>
@@ -1390,8 +1656,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_1b1d8a73.html" class="link-plain">Gustav Freytag</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_1b1d8a73.html" class="link-plain">Gustav Freytag</a><a href="https://www.wikidata.org/entity/Q58811" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q58811</td>
                            <td><a href="place_efeaa516.html" class="link-plain">Leipzig</a><a href="https://www.wikidata.org/entity/Q2079" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q2079</td>
                            <td><a href="publisher_1bb3a48e.html" class="link-plain">S. Hirzel</a><a href="https://www.wikidata.org/entity/Q1468453" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -1406,8 +1672,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_caa5df32.html" class="link-plain">Georg Ebers</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_caa5df32.html" class="link-plain">Georg Ebers</a><a href="https://www.wikidata.org/entity/Q62765" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q62765</td>
                            <td><a href="place_700b43a2.html" class="link-plain">Stuttgart</a><a href="https://www.wikidata.org/entity/Q1022" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1022</td>
                            <td><a href="publisher_0049cb52.html" class="link-plain">Eduard Hallberger</a><a href="https://www.wikidata.org/entity/Q1288576" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -1422,8 +1688,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_caa5df32.html" class="link-plain">Georg Ebers</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_caa5df32.html" class="link-plain">Georg Ebers</a><a href="https://www.wikidata.org/entity/Q62765" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q62765</td>
                            <td><a href="place_700b43a2.html" class="link-plain">Stuttgart</a><a href="https://www.wikidata.org/entity/Q1022" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1022</td>
                            <td><a href="publisher_0049cb52.html" class="link-plain">Eduard Hallberger</a><a href="https://www.wikidata.org/entity/Q1288576" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -1438,8 +1704,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_caa5df32.html" class="link-plain">Georg Ebers</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_caa5df32.html" class="link-plain">Georg Ebers</a><a href="https://www.wikidata.org/entity/Q62765" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q62765</td>
                            <td><a href="place_700b43a2.html" class="link-plain">Stuttgart</a><a href="https://www.wikidata.org/entity/Q1022" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1022</td>
                            <td><a href="publisher_0049cb52.html" class="link-plain">Eduard Hallberger</a><a href="https://www.wikidata.org/entity/Q1288576" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -1566,8 +1832,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_4efc3589.html" class="link-plain">Robert Hamerling</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_4efc3589.html" class="link-plain">Robert Hamerling</a><a href="https://www.wikidata.org/entity/Q79088" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q79088</td>
                            <td><a href="place_efeaa516.html" class="link-plain">Leipzig</a><a href="https://www.wikidata.org/entity/Q2079" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q2079</td>
                            <td><a href="publisher_03598dbb.html" class="link-plain">Hesse &amp; Becker</a><a href="https://www.wikidata.org/entity/Q105064504" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -1584,8 +1850,8 @@
                            <td class="export-only"></td>
                            <td><a href="author_8c1adbea.html" class="link-plain">Antoine Pithon</a></td>
                            <td class="export-only"></td>
-                           <td><a href="place_c750532d.html" class="link-plain">Troyes</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="place_c750532d.html" class="link-plain">Troyes</a><a href="https://www.wikidata.org/entity/Q5489" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q5489</td>
                            <td></td>
                            <td class="export-only"></td>
                            <td></td>
@@ -1710,8 +1976,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_caa5df32.html" class="link-plain">Georg Ebers</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_caa5df32.html" class="link-plain">Georg Ebers</a><a href="https://www.wikidata.org/entity/Q62765" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q62765</td>
                            <td><a href="place_700b43a2.html" class="link-plain">Stuttgart</a><a href="https://www.wikidata.org/entity/Q1022" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1022</td>
                            <td><a href="publisher_72957607.html" class="link-plain">Verlag von Eduard Hallberger</a><a href="https://www.wikidata.org/entity/Q1288576" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -1726,8 +1992,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_caa5df32.html" class="link-plain">Georg Ebers</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_caa5df32.html" class="link-plain">Georg Ebers</a><a href="https://www.wikidata.org/entity/Q62765" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q62765</td>
                            <td><a href="place_700b43a2.html" class="link-plain">Stuttgart</a>, <a href="place_efeaa516.html" class="link-plain">Leipzig</a></td>
                            <td class="export-only"></td>
                            <td><a href="publisher_0049cb52.html" class="link-plain">Hallberger</a><a href="https://www.wikidata.org/entity/Q1288576" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -1806,14 +2072,14 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_fd81a760.html" class="link-plain">Ost und West</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_cb06c3ad.html" class="link-plain">E. Jegher</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_cb06c3ad.html" class="link-plain">E. Jegher</a><a href="https://www.wikidata.org/entity/Q138659021" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q138659021</td>
                            <td><a href="place_95b8315b.html" class="link-plain">Wien</a><a href="https://www.wikidata.org/entity/Q1741" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1741</td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td></td>
-                           <td class="export-only"></td>
+                           <td><a href="https://www.google.de/books/edition/Ost_und_West/Ejrh5yzURLAC?hl=de&amp;gbpv=1" target="_blank" class="link-plain"> Online </a></td>
+                           <td class="export-only">https://www.google.de/books/edition/Ost_und_West/Ejrh5yzURLAC?hl=de&amp;gbpv=1</td>
                         </tr>
                         <tr>
                            <td></td>
@@ -1838,8 +2104,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_caa5df32.html" class="link-plain">Georg Ebers</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_caa5df32.html" class="link-plain">Georg Ebers</a><a href="https://www.wikidata.org/entity/Q62765" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q62765</td>
                            <td><a href="place_700b43a2.html" class="link-plain">Stuttgart</a><a href="https://www.wikidata.org/entity/Q1022" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1022</td>
                            <td><a href="publisher_f49e3b89.html" class="link-plain">Deutsche Verlagsanstalt</a><a href="https://www.wikidata.org/entity/Q1204376" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -1902,8 +2168,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_caa5df32.html" class="link-plain">Georg Ebers</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_caa5df32.html" class="link-plain">Georg Ebers</a><a href="https://www.wikidata.org/entity/Q62765" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q62765</td>
                            <td><a href="place_700b43a2.html" class="link-plain">Stuttgart</a><a href="https://www.wikidata.org/entity/Q1022" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1022</td>
                            <td><a href="publisher_f49e3b89.html" class="link-plain">Deutsche Verlagsanstalt</a><a href="https://www.wikidata.org/entity/Q1204376" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -1918,8 +2184,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_e445ceed.html" class="link-plain">General-Anzeiger der Stadt Mannheim und Umgebung</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_a2000df4.html" class="link-plain">W. Egbert</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_a2000df4.html" class="link-plain">W. Egbert [= Ferdinande Grieben]</a><a href="https://www.wikidata.org/entity/Q88371647" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q88371647</td>
                            <td><a href="place_77b5ece6.html" class="link-plain">Mannheim</a><a href="https://www.wikidata.org/entity/Q2119" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q2119</td>
                            <td></td>
@@ -1982,8 +2248,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_60d35f59.html" class="link-plain">Badischer Beobachter</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_b7f8b162.html" class="link-plain">Cary Groß</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_b7f8b162.html" class="link-plain">Cary Groß [= Christiane Gmeiner]</a><a href="https://www.wikidata.org/entity/Q94750412" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q94750412</td>
                            <td><a href="place_2126faa6.html" class="link-plain">Karlsruhe</a><a href="https://www.wikidata.org/entity/Q1040" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1040</td>
                            <td></td>
@@ -2046,8 +2312,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_30f2876b.html" class="link-plain">Das Gymnasium zu Stolpenburg. Novellen</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_f51c0829.html" class="link-plain">Hans Hoffmann</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_f51c0829.html" class="link-plain">Hans Hoffmann</a><a href="https://www.wikidata.org/entity/Q1580286" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q1580286</td>
                            <td><a href="place_d35a02eb.html" class="link-plain">Berlin</a><a href="https://www.wikidata.org/entity/Q64" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q64</td>
                            <td><a href="publisher_ff2c645a.html" class="link-plain">Paetel</a><a href="https://www.wikidata.org/entity/Q1505554" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -2158,8 +2424,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_caa5df32.html" class="link-plain">Georg Ebers</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_caa5df32.html" class="link-plain">Georg Ebers</a><a href="https://www.wikidata.org/entity/Q62765" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q62765</td>
                            <td><a href="place_efeaa516.html" class="link-plain">Leipzig</a><a href="https://www.wikidata.org/entity/Q2079" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q2079</td>
                            <td><a href="publisher_422b9b31.html" class="link-plain">Tauchnitz</a></td>
@@ -2366,8 +2632,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_ed04744d.html" class="link-plain">Karl Roth</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_ed04744d.html" class="link-plain">Karl Roth</a><a href="https://www.wikidata.org/entity/Q94763349" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q94763349</td>
                            <td><a href="place_ff6ed291.html" class="link-plain">Kempten</a><a href="https://www.wikidata.org/entity/Q3994" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q3994</td>
                            <td><a href="publisher_9b5a7b05.html" class="link-plain">Kösel</a></td>
@@ -2446,8 +2712,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_4c622de1.html" class="link-plain">Kölnische Zeitung</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_1f6498c6.html" class="link-plain">Anton Frhrn. v. Perfall</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_1f6498c6.html" class="link-plain">Anton von Perfall</a><a href="https://www.wikidata.org/entity/Q92209" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q92209</td>
                            <td><a href="place_4a15ea49.html" class="link-plain">Köln</a><a href="https://www.wikidata.org/entity/Q365" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q365</td>
                            <td><a href="publisher_d7fe38b6.html" class="link-plain">DuMont</a></td>
@@ -2686,8 +2952,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_a27952d9.html" class="link-plain">Czernowitzer Allgemeine Zeitung</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_055df85b.html" class="link-plain">Lela Davitschoff</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_055df85b.html" class="link-plain">Lela Davitschoff</a><a href="https://www.wikidata.org/entity/Q138661143" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q138661143</td>
                            <td><a href="place_e7593ca9.html" class="link-plain">Czernowitz</a><a href="https://www.wikidata.org/entity/Q157725" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q157725</td>
                            <td></td>
@@ -2702,8 +2968,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_865e8510.html" class="link-plain">Dresdner neueste Nachrichten</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_c47cb36d.html" class="link-plain">Richard Boß</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_c47cb36d.html" class="link-plain">Richard Boß</a><a href="https://www.wikidata.org/entity/Q104409188" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q104409188</td>
                            <td><a href="place_90bebd2f.html" class="link-plain">Dresden</a><a href="https://www.wikidata.org/entity/Q1731" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1731</td>
                            <td></td>
@@ -2736,8 +3002,8 @@
                            <td class="export-only"></td>
                            <td><a href="author_f5a8b647.html" class="link-plain">Franz Zistler</a><a href="https://www.wikidata.org/entity/Q94693790" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q94693790</td>
-                           <td><a href="place_5845ab31.html" class="link-plain">Ottendorf-Okrilla</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="place_5845ab31.html" class="link-plain">Ottendorf-Okrilla</a><a href="https://www.wikidata.org/entity/Q93276" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q93276</td>
                            <td></td>
                            <td class="export-only"></td>
                            <td></td>
@@ -2816,8 +3082,8 @@
                            <td class="export-only"></td>
                            <td><a href="author_3ca88707.html" class="link-plain">Wilhelm Walloth</a><a href="https://www.wikidata.org/entity/Q91858" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q91858</td>
-                           <td><a href="place_fb957246.html" class="link-plain">Jugenheim an der Bergstraße</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="place_fb957246.html" class="link-plain">Jugenheim an der Bergstraße</a><a href="https://www.wikidata.org/entity/Q1305986" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q1305986</td>
                            <td><a href="publisher_45bfa6ec.html" class="link-plain">Sueviaverlag</a></td>
                            <td class="export-only"></td>
                            <td></td>
@@ -2878,8 +3144,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_8450a6dc.html" class="link-plain">Karlsruher Tagblatt</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_0400cde1.html" class="link-plain">Ernst Georgy</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_0400cde1.html" class="link-plain">Ernst Georgy [= Margarete Michaelson]</a><a href="https://www.wikidata.org/entity/Q1372193" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q1372193</td>
                            <td><a href="place_2126faa6.html" class="link-plain">Karlsruhe</a><a href="https://www.wikidata.org/entity/Q1040" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1040</td>
                            <td></td>
@@ -3102,8 +3368,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_fee2ec24.html" class="link-plain">Rudolf Presber</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_fee2ec24.html" class="link-plain">Rudolf Presber</a><a href="https://www.wikidata.org/entity/Q1593671" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q1593671</td>
                            <td><a href="place_700b43a2.html" class="link-plain">Stuttgart</a><a href="https://www.wikidata.org/entity/Q1022" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1022</td>
                            <td><a href="publisher_f49e3b89.html" class="link-plain">Deutsche Verlagsanstalt</a><a href="https://www.wikidata.org/entity/Q1204376" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -3182,8 +3448,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_4c622de1.html" class="link-plain">Kölnische Zeitung</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_01a14763.html" class="link-plain">Wilhelm Herbert</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_01a14763.html" class="link-plain">Wilhelm Herbert [= Wilhelm Mayer]</a><a href="https://www.wikidata.org/entity/Q19238757" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q19238757</td>
                            <td><a href="place_4a15ea49.html" class="link-plain">Köln</a><a href="https://www.wikidata.org/entity/Q365" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q365</td>
                            <td><a href="publisher_d7fe38b6.html" class="link-plain">DuMont</a></td>
@@ -3230,8 +3496,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_c44e27f0.html" class="link-plain">Die Muskete</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_754cff19.html" class="link-plain">Hans Rewald</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_754cff19.html" class="link-plain">Hans Rewald</a><a href="https://www.wikidata.org/entity/Q94918646" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q94918646</td>
                            <td><a href="place_95b8315b.html" class="link-plain">Wien</a><a href="https://www.wikidata.org/entity/Q1741" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1741</td>
                            <td></td>
@@ -3422,8 +3688,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_fee2ec24.html" class="link-plain">Rudolf Presber</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_fee2ec24.html" class="link-plain">Rudolf Presber</a><a href="https://www.wikidata.org/entity/Q1593671" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q1593671</td>
                            <td><a href="place_700b43a2.html" class="link-plain">Stuttgart</a><a href="https://www.wikidata.org/entity/Q1022" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1022</td>
                            <td><a href="publisher_f49e3b89.html" class="link-plain">Deutsche Verlagsanstalt</a><a href="https://www.wikidata.org/entity/Q1204376" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -3454,8 +3720,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_7667b749.html" class="link-plain">Feierabend</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_480cb744.html" class="link-plain">Willy Möbus</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_480cb744.html" class="link-plain">Willy Möbus</a><a href="https://www.wikidata.org/entity/Q94876834" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q94876834</td>
                            <td><a href="place_e575530b.html" class="link-plain">Prag</a><a href="https://www.wikidata.org/entity/Q1085" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1085</td>
                            <td></td>
@@ -3520,8 +3786,8 @@
                            <td class="export-only"></td>
                            <td><a href="author_20474163.html" class="link-plain">Rudolf Becht</a></td>
                            <td class="export-only"></td>
-                           <td><a href="place_a6617830.html" class="link-plain">Sopron</a>, <a href="place_a88f4cca.html" class="link-plain">Ödenburg</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="place_a6617830.html" class="link-plain">Sopron</a><a href="https://www.wikidata.org/entity/Q168648" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q168648</td>
                            <td><a href="publisher_91cc6e1b.html" class="link-plain">Röttig-Romwalter</a></td>
                            <td class="export-only"></td>
                            <td></td>
@@ -3534,8 +3800,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_9cc4db92.html" class="link-plain">Ravi Ravendro [d. i. Karl Siegfried Döhring]</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_9cc4db92.html" class="link-plain">Ravi Ravendro [d. i. Karl Siegfried Döhring]</a><a href="https://www.wikidata.org/entity/Q103704" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q103704</td>
                            <td><a href="place_d35a02eb.html" class="link-plain">Berlin</a><a href="https://www.wikidata.org/entity/Q64" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q64</td>
                            <td><a href="publisher_70464083.html" class="link-plain">Wegweiser-Verlag</a></td>
@@ -3550,8 +3816,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_34ea7c2b.html" class="link-plain">Pariser Tageszeitung. Quotidien Anti-Hitlerien</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_eba562d8.html" class="link-plain">Irmgard Keun</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_eba562d8.html" class="link-plain">Irmgard Keun</a><a href="https://www.wikidata.org/entity/Q71461" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q71461</td>
                            <td><a href="place_ccbee73c.html" class="link-plain">Paris</a><a href="https://www.wikidata.org/entity/Q90" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q90</td>
                            <td></td>
@@ -3599,8 +3865,8 @@
                            <td><a href="bibl_74347c5f.html" class="link-plain">Sozialdemokrat. Zentralorgan der Deutschen Sozialdemokratischen Arbeiterpartei in
                                  der Tschechoslowakischen Republik</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_5ce38272.html" class="link-plain">Lili Körber</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_5ce38272.html" class="link-plain">Lili Körber</a><a href="https://www.wikidata.org/entity/Q1824957" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q1824957</td>
                            <td><a href="place_e575530b.html" class="link-plain">Prag</a><a href="https://www.wikidata.org/entity/Q1085" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1085</td>
                            <td></td>
@@ -3647,8 +3913,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_4c622de1.html" class="link-plain">Kölnische Zeitung</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_6aef9f13.html" class="link-plain">Otto Nebelthau</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_6aef9f13.html" class="link-plain">Otto Nebelthau</a><a href="https://www.wikidata.org/entity/Q1121888" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q1121888</td>
                            <td><a href="place_4a15ea49.html" class="link-plain">Köln</a><a href="https://www.wikidata.org/entity/Q365" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q365</td>
                            <td><a href="publisher_d7fe38b6.html" class="link-plain">DuMont</a></td>
@@ -3759,8 +4025,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_3c1158f0.html" class="link-plain">Hubert Ludo Gerwald/Hubertus von Beyer</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_3c1158f0.html" class="link-plain">Hubert Ludo Gerwald [= Hubertus von Beyer]</a><a href="https://www.wikidata.org/entity/Q55675548" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q55675548</td>
                            <td><a href="place_f4429f06.html" class="link-plain">Hagen</a><a href="https://www.wikidata.org/entity/Q2871" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q2871</td>
                            <td><a href="publisher_31d180f3.html" class="link-plain">Pantheon-Sondervertrieb</a></td>
@@ -3791,8 +4057,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_b44363bb.html" class="link-plain">Zypressen</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_13e83054.html" class="link-plain">Inge Merkel</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_13e83054.html" class="link-plain">Inge Merkel</a><a href="https://www.wikidata.org/entity/Q88078" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q88078</td>
                            <td><a href="place_f2646aa0.html" class="link-plain">Salzburg</a><a href="https://www.wikidata.org/entity/Q34713" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q34713</td>
                            <td><a href="publisher_f13bea0a.html" class="link-plain">Residenz</a><a href="https://www.wikidata.org/entity/Q2145655" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -3809,8 +4075,8 @@
                            <td class="export-only"></td>
                            <td><a href="author_8139a4e6.html" class="link-plain">Irmtraud Morgner</a><a href="https://www.wikidata.org/entity/Q68137" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q68137</td>
-                           <td><a href="place_88de4c35.html" class="link-plain">Darmstadt</a>, <a href="place_b30287cd.html" class="link-plain">Neuwied</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="place_88de4c35.html" class="link-plain">Darmstadt</a><a href="https://www.wikidata.org/entity/Q2973,Q3967" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a>, <a href="place_b30287cd.html" class="link-plain">Neuwied</a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q2973,Q3967, </td>
                            <td><a href="publisher_2406f66e.html" class="link-plain">Luchterhand</a><a href="https://www.wikidata.org/entity/Q1564874" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1564874</td>
                            <td></td>
@@ -3858,8 +4124,8 @@
                            <td class="export-only"></td>
                            <td><a href="author_41f6be4f.html" class="link-plain">Ottilie Schenk</a><a href="https://www.wikidata.org/entity/Q95186926" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q95186926</td>
-                           <td><a href="place_2f511dd6.html" class="link-plain">St. Michael</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="place_2f511dd6.html" class="link-plain">St. Michael</a><a href="https://www.wikidata.org/entity/Q664452" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q664452</td>
                            <td><a href="publisher_4a3ccdbe.html" class="link-plain">Bläschke</a></td>
                            <td class="export-only"></td>
                            <td></td>
@@ -4016,8 +4282,8 @@
                            <td class="export-only"></td>
                            <td><a href="bibl_57d01e34.html" class="link-plain">Mehrstimmiges Grün. Gedichte und Prosa</a></td>
                            <td class="export-only"></td>
-                           <td><a href="author_a6c5a134.html" class="link-plain">Jürgen Theobaldy</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_a6c5a134.html" class="link-plain">Jürgen Theobaldy</a><a href="https://www.wikidata.org/entity/Q125458" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q125458</td>
                            <td><a href="place_d35a02eb.html" class="link-plain">Berlin</a><a href="https://www.wikidata.org/entity/Q64" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q64</td>
                            <td><a href="publisher_87308a85.html" class="link-plain">Aufbau</a><a href="https://www.wikidata.org/entity/Q316922" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -4064,8 +4330,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_9e73b47f.html" class="link-plain">Madeleine Marti</a>, <a href="author_9e73b47y.html" class="link-plain">Marianne Ulmi</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_9e73b47f.html" class="link-plain">Madeleine Marti</a><a href="https://www.wikidata.org/entity/Q128796825" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a>, <a href="author_9e73b47y.html" class="link-plain">Marianne Ulmi</a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q128796825, </td>
                            <td><a href="place_d35a02eb.html" class="link-plain">Berlin</a><a href="https://www.wikidata.org/entity/Q64" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q64</td>
                            <td><a href="publisher_8f72e265.html" class="link-plain">Querverlag</a><a href="https://www.wikidata.org/entity/Q2122937" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -4080,8 +4346,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_39519faa.html" class="link-plain">Käthe H. Fleckenstein</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_39519faa.html" class="link-plain">Käthe H. Fleckenstein</a><a href="https://www.wikidata.org/entity/Q95194437" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q95194437</td>
                            <td><a href="place_d35a02eb.html" class="link-plain">Berlin</a><a href="https://www.wikidata.org/entity/Q64" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q64</td>
                            <td><a href="publisher_8f72e265.html" class="link-plain">Querverlag</a><a href="https://www.wikidata.org/entity/Q2122937" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -4112,8 +4378,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_5f9e41d8.html" class="link-plain">Ilona Bubeck</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_5f9e41d8.html" class="link-plain">Ilona Bubeck</a><a href="https://www.wikidata.org/entity/Q138660925" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q138660925</td>
                            <td><a href="place_d35a02eb.html" class="link-plain">Berlin</a><a href="https://www.wikidata.org/entity/Q64" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q64</td>
                            <td><a href="publisher_8f72e265.html" class="link-plain">Querverlag</a><a href="https://www.wikidata.org/entity/Q2122937" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -4130,8 +4396,8 @@
                            <td class="export-only"></td>
                            <td><a href="author_8d60dbcb.html" class="link-plain">Tami van Dalen [d. i. Tami Dahlheim]</a><a href="https://www.wikidata.org/entity/Q120165473" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q120165473</td>
-                           <td><a href="place_b6b4f233.html" class="link-plain">Heinrichshofen</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="place_b6b4f233.html" class="link-plain">Heinrichshofen</a><a href="https://www.wikidata.org/entity/Q61063562" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q61063562</td>
                            <td><a href="publisher_143d11f9.html" class="link-plain">Thiasos</a></td>
                            <td class="export-only"></td>
                            <td></td>
@@ -4144,8 +4410,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_83b5918c.html" class="link-plain">Martina Mainka</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_83b5918c.html" class="link-plain">Martina Mainka</a><a href="https://www.wikidata.org/entity/Q138661086" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q138661086</td>
                            <td><a href="place_d43e78bc.html" class="link-plain">Meßkirch</a><a href="https://www.wikidata.org/entity/Q82724" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q82724</td>
                            <td><a href="publisher_d4f4b121.html" class="link-plain">Gmeiner</a><a href="https://www.wikidata.org/entity/Q1532897" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -4224,8 +4490,8 @@
                            <td class="export-only"></td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_a1430648.html" class="link-plain">Heinrich B. Siedentopf</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_a1430648.html" class="link-plain">Heinrich B. Siedentopf</a><a href="https://www.wikidata.org/entity/Q1596615" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q1596615</td>
                            <td><a href="place_1e305e2c.html" class="link-plain">Norderstedt</a><a href="https://www.wikidata.org/entity/Q3928" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q3928</td>
                            <td><a href="publisher_1865843b.html" class="link-plain">Books on Demand</a><a href="https://www.wikidata.org/entity/Q831576" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -4288,8 +4554,8 @@
                            <td class="export-only">https://www.wikidata.org/entity/Q120143666</td>
                            <td></td>
                            <td class="export-only"></td>
-                           <td><a href="author_fbea9be0.html" class="link-plain">Karen Aydin</a></td>
-                           <td class="export-only"></td>
+                           <td><a href="author_fbea9be0.html" class="link-plain">Karen Aydin</a><a href="https://www.wikidata.org/entity/Q113734274" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
+                           <td class="export-only">https://www.wikidata.org/entity/Q113734274</td>
                            <td><a href="place_ae5c315b.html" class="link-plain">Frankfurt a. M.</a><a href="https://www.wikidata.org/entity/Q1794" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
                            <td class="export-only">https://www.wikidata.org/entity/Q1794</td>
                            <td><a href="publisher_9cc67f7d.html" class="link-plain">edition federleicht</a><a href="https://www.wikidata.org/entity/Q120143682" target="_blank"><img src="images/wiki.png" alt="Wikidata" title="Wikidata-Eintrag öffnen" class="icon" /></a></td>
@@ -4318,7 +4584,7 @@
                </div>
             </div>
          </div>
-         <div id="wrapper-footer-full"><a href="imprint.html">© Laura Untner 2026 (zuletzt aktualisiert am 11.3.2026, 13:01)</a></div><script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script><script src="js/listStopProp.js"></script><script src="js/navScroll.js"></script><script src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js"></script><script src="js/dt.js"></script><script>
+         <div id="wrapper-footer-full"><a href="imprint.html">© Laura Untner 2026 (zuletzt aktualisiert am 16.3.2026, 17:46)</a></div><script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script><script src="js/listStopProp.js"></script><script src="js/navScroll.js"></script><script src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js"></script><script src="js/dt.js"></script><script>
                         $(document).ready(function () {
                             createDataTable('tocTable');
                         });
