@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0" xmlns="http://www.w3.org/1999/xhtml"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" exclude-result-prefixes="xsl tei xs">
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:ecrm="http://erlangen-crm.org/current/"
+    exclude-result-prefixes="xsl tei xs rdf rdfs ecrm">
 
     <xsl:output encoding="UTF-8" method="xhtml" indent="yes" omit-xml-declaration="yes"/>
 
@@ -9,11 +12,14 @@
     <xsl:import href="./partials/html_head.xsl"/>
     <xsl:import href="./partials/html_footer.xsl"/>
 
+    <xsl:variable name="rdf_doc" select="document('../data/rdf/sappho-reception.rdf')"/>
+
     <xsl:template match="/">
         <xsl:variable name="doc_title" select="//tei:title[@type = 'main']"/>
         <xsl:variable name="filename" select="tokenize(base-uri(), '/')[last()]"/>
         <xsl:variable name="show_genres" select="contains($filename, 'sappho-rez_alle')"/>
         <xsl:variable name="show_timeline" select="not(contains($filename, 'sappho-rez_sonstige'))"/>
+        <xsl:variable name="show_heatmap" select="not(contains($filename, 'sappho-rez_sonstige'))"/>
 
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
         <html xmlns="http://www.w3.org/1999/xhtml">
@@ -24,6 +30,56 @@
                 <script src="https://code.highcharts.com/highcharts.js"/>
                 <script src="https://code.highcharts.com/modules/timeline.js"/>
                 <script src="https://code.highcharts.com/modules/data.js"/>
+
+                <xsl:if test="$show_heatmap">
+                    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+                    <style>
+                        #heatmap-section {
+                            margin-bottom: 0;
+                        }
+                        #map {
+                            height: 190px;
+                            width: 100%;
+                            border-radius: 6px;
+                            border: 1px solid #dee2e6;
+                        }
+                        #slider-wrapper {
+                            display: flex;
+                            align-items: center;
+                            gap: .75rem;
+                            margin-top: .5rem;
+                            flex-wrap: wrap;
+                        }
+                        #slider-wrapper label {
+                            font-weight: 500;
+                            white-space: nowrap;
+                            font-size: .85rem;
+                        }
+                        #year-slider {
+                            flex: 1;
+                            min-width: 120px;
+                            accent-color: rgba(94, 23, 235, 1);
+                        }
+                        #slider-display {
+                            font-weight: 600;
+                            min-width: 6rem;
+                            text-align: center;
+                            font-size: .85rem;
+                        }
+                        #btn-play {
+                            white-space: nowrap;
+                            font-size: .8rem;
+                            padding: .2rem .6rem;
+                            border-color: rgba(94, 23, 235, .6);
+                            color: rgba(94, 23, 235, 1);
+                        }
+                        #btn-play:hover {
+                            background: rgba(94, 23, 235, .08);
+                        }
+                        .dataTables_wrapper {
+                            margin-top: 1.5rem;
+                        }</style>
+                </xsl:if>
             </head>
             <body class="page" data-tei-file="{$filename}" data-show-genres="{$show_genres}">
                 <div class="hfeed site" id="page">
@@ -36,25 +92,98 @@
                                 </h1>
                             </div>
                             <div class="card-body">
-                                <xsl:if test="$show_timeline">
+
+                                <xsl:if test="$show_heatmap">
                                     <xsl:choose>
                                         <xsl:when test="$show_genres">
-                                            <div id="container"
-                                                style="display: flex; justify-content: space-between; padding-bottom: 50px">
-                                                <div id="container-timeline"
-                                                  style="margin: auto; width: 70%; height: 200px;"/>
+                                            <div
+                                                style="display:flex; gap:1.5rem; align-items:flex-start; padding-bottom:.5rem;">
+                                                <div id="heatmap-section" style="flex:0 0 65%;">
+                                                  <div id="map"/>
+                                                  <div id="slider-wrapper">
+                                                  <label for="year-slider">Jahr:</label>
+                                                  <input type="range" id="year-slider" min="1"
+                                                  max="1" value="1" step="1"/>
+                                                  <span id="slider-display">–</span>
+                                                  <button id="btn-play"
+                                                  class="btn btn-sm btn-outline-secondary"> &#9654;
+                                                  Abspielen </button>
+
+                                                  </div>
+                                                </div>
                                                 <div id="container-genres"
-                                                  style="margin: auto; width: 30%; height: 200px;"/>
+                                                  style="flex:0 0 35%; height:190px; margin-top:0;"
+                                                />
                                             </div>
+                                            <div id="container-timeline"
+                                                style="width:100%; height:220px; padding-bottom:20px;"
+                                            />
                                         </xsl:when>
                                         <xsl:otherwise>
-                                            <div id="container"
-                                                style="padding-bottom: 50px; display: flex; justify-content: center;">
+                                            <div
+                                                style="display:flex; gap:1.5rem; align-items:flex-start; padding-bottom:.5rem;">
+                                                <div id="heatmap-section" style="flex:0 0 45%;">
+                                                  <div id="map"/>
+                                                  <div id="slider-wrapper">
+                                                  <label for="year-slider">Jahr:</label>
+                                                  <input type="range" id="year-slider" min="1"
+                                                  max="1" value="1" step="1"/>
+                                                  <span id="slider-display">–</span>
+                                                  <button id="btn-play"
+                                                  class="btn btn-sm btn-outline-secondary"> &#9654;
+                                                  Abspielen </button>
+
+                                                  </div>
+                                                </div>
                                                 <div id="container-timeline"
-                                                  style="width: 60%; height: 200px; margin: auto;"/>
+                                                  style="flex:1; height:190px; margin-top:0; align-self:center;"
+                                                />
                                             </div>
                                         </xsl:otherwise>
                                     </xsl:choose>
+
+                                    <script>
+                                        <xsl:text>window.heatmapData = [&#10;</xsl:text>
+                                        <xsl:for-each select="//tei:listBibl/tei:bibl">
+                                            <xsl:variable name="year_raw" select="normalize-space(tei:date[@type = 'published']/@when)"/>
+                                            <xsl:variable name="year" select="
+                                                    if (matches($year_raw, '\d{4}'))
+                                                    then
+                                                        number(substring($year_raw, 1, 4))
+                                                    else
+                                                        0"/>
+                                            <xsl:if test="$year &gt; 0">
+                                                <xsl:for-each select="tei:pubPlace">
+                                                    <xsl:variable name="place_id" select="@xml:id"/>
+                                                    <xsl:variable name="place_name" select="normalize-space(.)"/>
+                                                    <xsl:variable name="rdf_place" select="
+                                                            $rdf_doc//ecrm:E53_Place[
+                                                            ends-with(@rdf:about, $place_id)
+                                                            ]"/>
+                                                    <xsl:variable name="coords_raw" select="normalize-space($rdf_place/rdfs:comment[1])"/>
+                                                    <xsl:if test="matches($coords_raw, '^-?\d')">
+                                                        <xsl:variable name="lat" select="normalize-space(tokenize($coords_raw, ',')[1])"/>
+                                                        <xsl:variable name="lng" select="normalize-space(tokenize($coords_raw, ',')[2])"/>
+                                                        <xsl:text>  {lat:</xsl:text>
+                                                        <xsl:value-of select="$lat"/>
+                                                        <xsl:text>,lng:</xsl:text>
+                                                        <xsl:value-of select="$lng"/>
+                                                        <xsl:text>,year:</xsl:text>
+                                                        <xsl:value-of select="$year"/>
+                                                        <xsl:text>,place:"</xsl:text>
+                                                        <xsl:value-of select="replace($place_name, '&quot;', '\\&quot;')"/>
+                                                        <xsl:text>"},&#10;</xsl:text>
+                                                    </xsl:if>
+                                                </xsl:for-each>
+                                            </xsl:if>
+                                        </xsl:for-each>
+                                        <xsl:text>];&#10;</xsl:text>
+                                    </script>
+
+                                    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"/>
+                                    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"/>
+                                    <script src="js/heatmap.js"/>
+
                                 </xsl:if>
 
                                 <script src="./js/statistics.js"/>
@@ -249,6 +378,7 @@
                                         </xsl:for-each>
                                     </tbody>
                                 </table>
+
                             </div>
                         </div>
                     </div>

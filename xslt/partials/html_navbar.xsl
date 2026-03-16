@@ -921,7 +921,6 @@
                                         <a class="dropdown-item custom-dropdown-link"
                                             href="analyse.html">Erläuterungen zur Analyse</a>
                                     </li>
-
                                     <li class="dropdown-submenu">
                                         <a
                                             class="dropdown-item dropdown-toggle custom-dropdown-link"
@@ -964,11 +963,15 @@
                                             </li>
                                         </ul>
                                     </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
+                                            href="statistics.html">Statistik</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle custom-dropdown-link"
-                                    href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"
+                                <a class="nav-link dropdown-toggle custom-dropdown-link" href="#"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false"
                                     >Daten</a>
                                 <ul class="dropdown-menu">
                                     <li>
