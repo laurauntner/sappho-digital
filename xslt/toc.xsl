@@ -33,52 +33,6 @@
 
                 <xsl:if test="$show_heatmap">
                     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
-                    <style>
-                        #heatmap-section {
-                            margin-bottom: 0;
-                        }
-                        #map {
-                            height: 190px;
-                            width: 100%;
-                            border-radius: 6px;
-                            border: 1px solid #dee2e6;
-                        }
-                        #slider-wrapper {
-                            display: flex;
-                            align-items: center;
-                            gap: .75rem;
-                            margin-top: .5rem;
-                            flex-wrap: wrap;
-                        }
-                        #slider-wrapper label {
-                            font-weight: 500;
-                            white-space: nowrap;
-                            font-size: .85rem;
-                        }
-                        #year-slider {
-                            flex: 1;
-                            min-width: 120px;
-                            accent-color: rgba(94, 23, 235, 1);
-                        }
-                        #slider-display {
-                            font-weight: 600;
-                            min-width: 6rem;
-                            text-align: center;
-                            font-size: .85rem;
-                        }
-                        #btn-play {
-                            white-space: nowrap;
-                            font-size: .8rem;
-                            padding: .2rem .6rem;
-                            border-color: rgba(94, 23, 235, .6);
-                            color: rgba(94, 23, 235, 1);
-                        }
-                        #btn-play:hover {
-                            background: rgba(94, 23, 235, .08);
-                        }
-                        .dataTables_wrapper {
-                            margin-top: 1.5rem;
-                        }</style>
                 </xsl:if>
             </head>
             <body class="page" data-tei-file="{$filename}" data-show-genres="{$show_genres}">
