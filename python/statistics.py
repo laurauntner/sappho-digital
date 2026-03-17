@@ -1,14 +1,3 @@
-#!/usr/bin/env python3
-"""
-statistics.py
-Liest sappho-reception.ttl, berechnet Feature-Statistiken und schreibt
-eine statistics-data.xml, die anschließend von statistics.xsl zu HTML
-verarbeitet wird.
-
-Aufruf (via ant):
-    python3 python/statistics.py data/rdf/sappho-reception.ttl target/statistics-data.xml
-"""
-
 import re
 import sys
 import xml.etree.ElementTree as ET
@@ -17,7 +6,7 @@ from typing import Optional
 from rdflib import Graph, Namespace, URIRef
 from rdflib.namespace import RDF, RDFS
 
-# ── Namespaces ────────────────────────────────────────────────────────────────
+# Namespaces
 
 LRMOO = Namespace("http://iflastandards.info/ns/lrm/lrmoo/")
 INTRO  = Namespace("https://w3id.org/lso/intro/currentbeta#")
@@ -26,7 +15,7 @@ F2_Expression          = LRMOO.F2_Expression
 R18_showsActualization = INTRO.R18_showsActualization
 R17_actualizesFeature  = INTRO.R17_actualizesFeature
 
-# ── Feature-Typ aus URI ───────────────────────────────────────────────────────
+# Feature-Typ aus URI
 
 FEATURE_TYPES = [
     ("person_ref", "/person_ref/",  "Personenreferenzen"),
@@ -45,15 +34,13 @@ def feature_type(uri: str) -> Optional[str]:
     return None
 
 
-# ── Hauptlogik ────────────────────────────────────────────────────────────────
-
 def main(ttl_path: str, xml_out: str) -> None:
     print(f"Lese {ttl_path} ...", file=sys.stderr)
     g = Graph()
     g.parse(ttl_path, format="turtle")
     print(f"  {len(g)} Tripel geladen.", file=sys.stderr)
 
-    # ── F2-Instanzen klassifizieren ───────────────────────────────────────────
+    # F2-Instanzen klassifizieren
     sappho_f2    = set()
     reception_f2 = set()
 
@@ -64,13 +51,12 @@ def main(ttl_path: str, xml_out: str) -> None:
         elif "bibl_" in uri:
             reception_f2.add(subj)
 
-    # ── Actualization-Index aufbauen: actualization_uri → set(feature_uri) ───
+    # Actualization-Index aufbauen
     act_to_features: dict[URIRef, set[URIRef]] = defaultdict(set)
     for act, _, feat in g.triples((None, R17_actualizesFeature, None)):
         act_to_features[act].add(feat)
 
-    # ── F2 → Features-Index aufbauen ─────────────────────────────────────────
-    # f2_to_features[f2_uri] = set of feature URIs
+    # Features-Index aufbauen
     def build_f2_index(f2_set: set) -> dict:
         idx: dict[URIRef, set[URIRef]] = defaultdict(set)
         for f2 in f2_set:
@@ -92,9 +78,8 @@ def main(ttl_path: str, xml_out: str) -> None:
     print(f"  Sappho-Fragmente mit Aktualisierungen:    {n_sappho}", file=sys.stderr)
     print(f"  Rezeptionszeugnisse mit Aktualisierungen: {n_reception}", file=sys.stderr)
 
-    # ── Label-Lookup ──────────────────────────────────────────────────────────
+    # Label-Lookup
     def get_label(uri: URIRef) -> str:
-        # Bevorzuge englisches Label, dann deutsches, dann beliebiges, dann URI-Fragment
         en = de = any_label = None
         for _, _, label in g.triples((uri, RDFS.label, None)):
             lang = getattr(label, "language", None)
@@ -117,10 +102,9 @@ def main(ttl_path: str, xml_out: str) -> None:
         s = re.sub(r'\s*\(person\)\s*$', '', s)
         return s.strip()
 
-    # ── Pro Feature-Typ: distinkte Features zählen ────────────────────────────
+    # Pro Feature-Typ: distinkte Features zählen
     for ftype_key, pattern, ftype_label in FEATURE_TYPES:
 
-        # Alle Feature-URIs die in irgendeiner Gruppe vorkommen
         all_feat_uris: set[URIRef] = set()
         for feats in sappho_idx.values():
             for f in feats:
@@ -133,14 +117,13 @@ def main(ttl_path: str, xml_out: str) -> None:
 
         print(f"  {ftype_label}: {len(all_feat_uris)} distinkte Features", file=sys.stderr)
 
-    # ── XML aufbauen ──────────────────────────────────────────────────────────
+    # XML aufbauen
     root_el = ET.Element("statistics")
     root_el.set("nSappho",    str(n_sappho))
     root_el.set("nReception", str(n_reception))
 
     for ftype_key, pattern, ftype_label in FEATURE_TYPES:
 
-        # Alle Feature-URIs
         feat_counts: dict[URIRef, dict] = {}
 
         all_feat_uris: set[URIRef] = set()
@@ -166,7 +149,6 @@ def main(ttl_path: str, xml_out: str) -> None:
                 "pct_r": round(cr / n_reception  * 100, 2) if n_reception > 0 else 0.0,
             }
 
-        # Sortierung: cr absteigend, cs absteigend, label aufsteigend
         sorted_feats = sorted(
             feat_counts.items(),
             key=lambda x: (-x[1]["cr"], -x[1]["cs"], x[1]["label"].lower())
@@ -186,7 +168,7 @@ def main(ttl_path: str, xml_out: str) -> None:
             item_el.set("pctSappho",      f'{d["pct_s"]:.2f}')
             item_el.set("pctReception",   f'{d["pct_r"]:.2f}')
 
-    # ── XML schreiben ─────────────────────────────────────────────────────────
+    # XML schreiben
     tree = ET.ElementTree(root_el)
     ET.indent(tree, space="  ")
     tree.write(xml_out, encoding="utf-8", xml_declaration=True)

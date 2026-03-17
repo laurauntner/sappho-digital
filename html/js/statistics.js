@@ -1,13 +1,3 @@
-// statistics.js
-// Erwartet globales DATA-Objekt aus dem inline <script> im HTML:
-// {
-//   nSappho:    <int>,
-//   nReception: <int>,
-//   categories: [
-//     { key, label, n, items: [{ label, countSappho, countReception, pctSappho, pctReception }, ...] }
-//   ]
-// }
-
 const C = {
   s:     'rgba(94,23,235,0.75)',
   sLine: '#5e17eb',
@@ -15,68 +5,68 @@ const C = {
   rLine: '#6b7280',
 };
 
-// Alle erzeugten Chart-Instanzen (für späteres Destroy)
 const charts = {};
 
-// ── Balkenhöhe: 32px pro Item, min 200px, kein hartes Maximum ────────────────
+// Balkenhöhe
 function canvasHeight(n) {
-  return Math.max(200, n * 32 + 60);
+  return Math.max(120, n * 32 + 40);
 }
 
-// ── Eine Kategorie-Sektion aufbauen ───────────────────────────────────────────
-function buildCategory(cat, index) {
+// X-Achsen-Maximum: nächste runde Zahl über dem tatsächlichen Maximum
+function xMax(items) {
+  const max = Math.max(
+    ...items.map(i => parseFloat(i.pctSappho)),
+    ...items.map(i => parseFloat(i.pctReception))
+  );
+  // nächste 5er-Stufe über dem Maximum + 5% Puffer
+  const padded = max * 1.05;
+  return Math.min(100, Math.ceil(padded / 5) * 5);
+}
+
+// Eine Kategorie-Sektion aufbauen (standardmäßig zugeklappt)
+function buildCategory(cat) {
   const section = document.createElement('div');
-  section.className = 'card stat-cat';
+  section.className = 'card cat';
   section.id = 'cat-' + cat.key;
 
-  // Header
   const head = document.createElement('div');
-  head.className = 'card-header open';
-  head.innerHTML = `
-    <h2>${cat.label}</h2>
-    <span class="cat-meta">${cat.n} distinkte Features</span>
-  `;
+  head.className = 'card-header';
+  head.innerHTML = `<span class="arrow">▶</span><h2>${cat.label}</h2>`;
 
-  // Body
   const body = document.createElement('div');
   body.className = 'card-body';
   body.id = 'body-' + cat.key;
 
-  // Canvas
   const wrap = document.createElement('div');
   wrap.className = 'chart-wrap';
   const canvas = document.createElement('canvas');
   canvas.id = 'chart-' + cat.key;
-  const h = canvasHeight(cat.items.length);
-  canvas.height = h;
+  canvas.style.height = canvasHeight(cat.items.length) + 'px';
   wrap.appendChild(canvas);
   body.appendChild(wrap);
 
   section.appendChild(head);
   section.appendChild(body);
 
-  // Toggle
   head.addEventListener('click', () => {
-    const isOpen = head.classList.contains('open');
-    head.classList.toggle('open', !isOpen);  // für CSS falls gewünscht
-    body.classList.toggle('hidden', isOpen);
+    const isOpen = body.classList.contains('visible');
+    body.classList.toggle('visible', !isOpen);
+    head.classList.toggle('open', !isOpen);
+    if (!isOpen && !charts[cat.key]) {
+      renderChart(cat);
+    }
   });
 
   return section;
 }
 
-// ── Chart für eine Kategorie rendern ─────────────────────────────────────────
+// Chart rendern
 function renderChart(cat) {
   const ctx = document.getElementById('chart-' + cat.key).getContext('2d');
-
-  // Bestehenden Chart zerstören falls vorhanden
-  if (charts[cat.key]) {
-    charts[cat.key].destroy();
-  }
-
-  const labels   = cat.items.map(i => i.label);
-  const pctS     = cat.items.map(i => parseFloat(i.pctSappho));
-  const pctR     = cat.items.map(i => parseFloat(i.pctReception));
+  const labels = cat.items.map(i => i.label);
+  const pctS   = cat.items.map(i => parseFloat(i.pctSappho));
+  const pctR   = cat.items.map(i => parseFloat(i.pctReception));
+  const maxX   = xMax(cat.items);
 
   charts[cat.key] = new Chart(ctx, {
     type: 'bar',
@@ -102,23 +92,21 @@ function renderChart(cat) {
       ],
     },
     options: {
-      indexAxis: 'y',           // horizontale Balken
+      indexAxis: 'y',
       responsive: true,
       maintainAspectRatio: false,
-      interaction: { mode: 'index', intersect: false },
+      interaction: { mode: 'nearest', axis: 'y', intersect: true },
       plugins: {
-        legend: {
-          display: false,        // globale Legende im HTML reicht
-        },
+        legend: { display: false },
         tooltip: {
           callbacks: {
             label: ctx => {
               const d = cat.items[ctx.dataIndex];
               const isSappho = ctx.datasetIndex === 0;
-              const count  = isSappho ? d.countSappho   : d.countReception;
-              const total  = isSappho ? DATA.nSappho     : DATA.nReception;
-              const pct    = ctx.parsed.x.toFixed(2);
-              const name   = isSappho ? 'Sappho' : 'Rezeption';
+              const count = isSappho ? d.countSappho   : d.countReception;
+              const total = isSappho ? DATA.nSappho     : DATA.nReception;
+              const pct   = ctx.parsed.x.toFixed(2);
+              const name  = isSappho ? 'Sappho' : 'Rezeption';
               return ` ${name}: ${pct}% (${count}/${total})`;
             },
           },
@@ -127,18 +115,12 @@ function renderChart(cat) {
       scales: {
         x: {
           min: 0,
-          max: 100,
-          ticks: {
-            font: { family: 'system-ui', size: 11 },
-            callback: v => v + '%',
-          },
+          max: maxX,
+          ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => v + '%', stepSize: 5 },
           grid: { color: 'rgba(0,0,0,0.06)' },
         },
         y: {
-          ticks: {
-            font: { family: 'system-ui', size: 12 },
-            autoSkip: false,
-          },
+          ticks: { font: { family: 'Geist, system-ui', size: 12 }, autoSkip: false },
           grid: { display: false },
         },
       },
@@ -146,20 +128,11 @@ function renderChart(cat) {
   });
 }
 
-// ── Init ──────────────────────────────────────────────────────────────────────
+// Init
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('cats');
-
-  DATA.categories.forEach((cat, i) => {
-    if (cat.items.length === 0) return;  // leere Kategorien überspringen
-
-    const section = buildCategory(cat, i);
-    container.appendChild(section);
-
-    // Canvas-Höhe setzen
-    const canvas = section.querySelector('canvas');
-    canvas.style.height = canvasHeight(cat.items.length) + 'px';
-
-    renderChart(cat);
+  DATA.categories.forEach(cat => {
+    if (cat.items.length === 0) return;
+    container.appendChild(buildCategory(cat));
   });
 });
