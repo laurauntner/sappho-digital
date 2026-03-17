@@ -138,6 +138,20 @@
     </xslt>
 
     <delete file="${target}/network-data.xml"/>
+    
+    <!-- statistics -->
+    <exec executable="python3" failonerror="true">
+        <arg value="python/statistics.py"/>
+        <arg value="data/rdf/sappho-reception.ttl"/>
+        <arg value="${target}/statistics-data.xml"/>
+    </exec>
+    
+    <xslt in="${target}/statistics-data.xml" out="${target}/statistics.html" style="xslt/statistics.xsl">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
+    
+    <delete file="${target}/statistics-data.xml"/>
 
     <!-- remove dummies -->
     <delete file="${target}/_bibl-entities-dummy.html"/>
