@@ -140,7 +140,7 @@
 
                                 </xsl:if>
 
-                                <script src="./js/statistics.js"/>
+                                <script src="./js/toc-statistics.js"/>
                                 <div id="screen-too-small">Das Fenster ist zu klein, um die Tabelle
                                     darstellen zu können.</div>
 

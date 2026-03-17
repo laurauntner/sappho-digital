@@ -1,176 +1,165 @@
-document.addEventListener("DOMContentLoaded", function () {
-    Highcharts.setOptions({
-        chart: {
-            style: {
-                fontFamily: 'Geist'
-            }
-        }
-    });
+// statistics.js
+// Erwartet globales DATA-Objekt aus dem inline <script> im HTML:
+// {
+//   nSappho:    <int>,
+//   nReception: <int>,
+//   categories: [
+//     { key, label, n, items: [{ label, countSappho, countReception, pctSappho, pctReception }, ...] }
+//   ]
+// }
 
-    const fileName = document.body.getAttribute("data-tei-file");
-    const showGenres = document.body.getAttribute("data-show-genres") === "true";
-    const url = "https://raw.githubusercontent.com/laurauntner/sappho-digital/main/data/lists/" + fileName;
+const C = {
+  s:     'rgba(94,23,235,0.75)',
+  sLine: '#5e17eb',
+  r:     'rgba(107,114,128,0.75)',
+  rLine: '#6b7280',
+};
 
-    fetch(url)
-        .then(response => response.text())
-        .then(data => {
-            const parser = new DOMParser();
-            const xmlDoc = parser.parseFromString(data, "text/xml");
+// Alle erzeugten Chart-Instanzen (für späteres Destroy)
+const charts = {};
 
-            // TEI-Namespace
-            const nsResolver = (prefix) => {
-                const ns = { 'tei': 'http://www.tei-c.org/ns/1.0' };
-                return ns[prefix] || null;
-            };
+// ── Balkenhöhe: 32px pro Item, min 200px, kein hartes Maximum ────────────────
+function canvasHeight(n) {
+  return Math.max(200, n * 32 + 60);
+}
 
-            // Timeline aus bibl/date
-            const dateCounts = {};
-            const biblElements = xmlDoc.evaluate("//tei:bibl", xmlDoc, nsResolver, XPathResult.ANY_TYPE, null);
-            let bibl = biblElements.iterateNext();
+// ── Eine Kategorie-Sektion aufbauen ───────────────────────────────────────────
+function buildCategory(cat, index) {
+  const section = document.createElement('div');
+  section.className = 'card stat-cat';
+  section.id = 'cat-' + cat.key;
 
-            while (bibl) {
-                // Erst date[@type="created"], sonst date[@type="published"]
-                let dateElement = xmlDoc.evaluate(".//tei:date[@type='created']", bibl, nsResolver, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-                if (!dateElement) {
-                    dateElement = xmlDoc.evaluate(".//tei:date[@type='published']", bibl, nsResolver, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-                }
+  // Header
+  const head = document.createElement('div');
+  head.className = 'card-header open';
+  head.innerHTML = `
+    <h2>${cat.label}</h2>
+    <span class="cat-meta">${cat.n} distinkte Features</span>
+  `;
 
-                if (dateElement) {
-                    const when = dateElement.getAttribute("when");
-                    const notBefore = dateElement.getAttribute("notBefore");
-                    const notAfter = dateElement.getAttribute("notAfter");
+  // Body
+  const body = document.createElement('div');
+  body.className = 'card-body';
+  body.id = 'body-' + cat.key;
 
-                    let year = null;
-                    if (when) {
-                        year = parseInt(when);
-                    } else if (notBefore && notAfter) {
-                        year = Math.round((parseInt(notBefore) + parseInt(notAfter)) / 2);
-                    } else if (notBefore) {
-                        year = parseInt(notBefore);
-                    } else if (notAfter) {
-                        year = parseInt(notAfter);
-                    }
+  // Canvas
+  const wrap = document.createElement('div');
+  wrap.className = 'chart-wrap';
+  const canvas = document.createElement('canvas');
+  canvas.id = 'chart-' + cat.key;
+  const h = canvasHeight(cat.items.length);
+  canvas.height = h;
+  wrap.appendChild(canvas);
+  body.appendChild(wrap);
 
-                    if (year && !isNaN(year)) {
-                        dateCounts[year] = (dateCounts[year] || 0) + 1;
-                    }
-                }
+  section.appendChild(head);
+  section.appendChild(body);
 
-                bibl = biblElements.iterateNext();
-            }
+  // Toggle
+  head.addEventListener('click', () => {
+    const isOpen = head.classList.contains('open');
+    head.classList.toggle('open', !isOpen);  // für CSS falls gewünscht
+    body.classList.toggle('hidden', isOpen);
+  });
 
-            const timelineData = Object.keys(dateCounts)
-                .map(year => [Date.UTC(parseInt(year), 0, 1), dateCounts[year]])
-                .sort((a, b) => a[0] - b[0]);
+  return section;
+}
 
-            // Genre-Zählung (nur bei "alle")
-            let genreData = [];
-            if (showGenres) {
-                const genres = {
-                    'Prosa': 0,
-                    'Lyrik': 0,
-                    'Drama': 0,
-                    'Sonstige': 0
-                };
+// ── Chart für eine Kategorie rendern ─────────────────────────────────────────
+function renderChart(cat) {
+  const ctx = document.getElementById('chart-' + cat.key).getContext('2d');
 
-                Array.from(xmlDoc.getElementsByTagNameNS("http://www.tei-c.org/ns/1.0", "note")).forEach(note => {
-                    const text = note.textContent.toLowerCase();
-                    if (text.includes("lyrik")) {
-                        genres["Lyrik"]++;
-                    } else if (text.includes("prosa")) {
-                        genres["Prosa"]++;
-                    } else if (text.includes("drama")) {
-                        genres["Drama"]++;
-                    } else {
-                        genres["Sonstige"]++;
-                    }
-                });
+  // Bestehenden Chart zerstören falls vorhanden
+  if (charts[cat.key]) {
+    charts[cat.key].destroy();
+  }
 
-                const baseColor = 'rgba(94, 23, 235,';
-                const colorVariants = [
-                    `${baseColor} 0.9)`,
-                    `${baseColor} 0.7)`,
-                    `${baseColor} 0.5)`,
-                    `${baseColor} 0.3)`,
-                    `${baseColor} 0.1)`
-                ];
+  const labels   = cat.items.map(i => i.label);
+  const pctS     = cat.items.map(i => parseFloat(i.pctSappho));
+  const pctR     = cat.items.map(i => parseFloat(i.pctReception));
 
-                const genreLinks = {
-                    'Prosa': 'https://sappho-digital.com/toc-prosa.html',
-                    'Lyrik': 'https://sappho-digital.com/toc-lyrik.html',
-                    'Drama': 'https://sappho-digital.com/toc-drama.html',
-                    'Sonstige': 'https://sappho-digital.com/toc-sonstige.html'
-                };
+  charts[cat.key] = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: `Sappho-Fragmente (n=${DATA.nSappho})`,
+          data: pctS,
+          backgroundColor: C.s,
+          borderColor: C.sLine,
+          borderWidth: 1,
+          borderRadius: 2,
+        },
+        {
+          label: `Rezeptionszeugnisse (n=${DATA.nReception})`,
+          data: pctR,
+          backgroundColor: C.r,
+          borderColor: C.rLine,
+          borderWidth: 1,
+          borderRadius: 2,
+        },
+      ],
+    },
+    options: {
+      indexAxis: 'y',           // horizontale Balken
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          display: false,        // globale Legende im HTML reicht
+        },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const d = cat.items[ctx.dataIndex];
+              const isSappho = ctx.datasetIndex === 0;
+              const count  = isSappho ? d.countSappho   : d.countReception;
+              const total  = isSappho ? DATA.nSappho     : DATA.nReception;
+              const pct    = ctx.parsed.x.toFixed(2);
+              const name   = isSappho ? 'Sappho' : 'Rezeption';
+              return ` ${name}: ${pct}% (${count}/${total})`;
+            },
+          },
+        },
+      },
+      scales: {
+        x: {
+          min: 0,
+          max: 100,
+          ticks: {
+            font: { family: 'system-ui', size: 11 },
+            callback: v => v + '%',
+          },
+          grid: { color: 'rgba(0,0,0,0.06)' },
+        },
+        y: {
+          ticks: {
+            font: { family: 'system-ui', size: 12 },
+            autoSkip: false,
+          },
+          grid: { display: false },
+        },
+      },
+    },
+  });
+}
 
-                genreData = Object.entries(genres).map(([genre, count], index) => ({
-                    name: genre,
-                    y: count,
-                    color: colorVariants[index % colorVariants.length],
-                    url: genreLinks[genre] || ''
-                }));
-            }
+// ── Init ──────────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('cats');
 
-            // Timeline anzeigen
-            Highcharts.chart('container-timeline', {
-                chart: {
-                    type: 'line'
-                },
-                title: {
-                    text: null
-                },
-                xAxis: {
-                    type: 'datetime',
-                    title: { text: 'Jahre' }
-                },
-                yAxis: {
-                    title: { text: 'Werke' },
-                    endOnTick: false
-                },
-                legend: {
-                    enabled: false
-                },
-                tooltip: {
-                    formatter: function () {
-                        return 'Jahr: ' + Highcharts.dateFormat('%Y', this.x) + '<br/>Werke: ' + this.y;
-                    }
-                },
-                series: [{
-                    name: 'Werke',
-                    data: timelineData,
-                    color: 'rgba(94, 23, 235, 0.7)'
-                }]
-            });
+  DATA.categories.forEach((cat, i) => {
+    if (cat.items.length === 0) return;  // leere Kategorien überspringen
 
-            // Genre-Pie-Chart (nur bei "alle") ===
-            if (showGenres) {
-                Highcharts.chart('container-genres', {
-                    chart: {
-                        type: 'pie'
-                    },
-                    title: {
-                        text: null
-                    },
-                    plotOptions: {
-                        pie: {
-                            allowPointSelect: true,
-                            cursor: 'pointer',
-                            events: {
-                                click: function (event) {
-                                    const point = event.point;
-                                    if (point.options.url) {
-                                        window.open(point.options.url, '_blank');
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    series: [{
-                        name: 'Rezeptionszeugnisse',
-                        colorByPoint: true,
-                        data: genreData
-                    }]
-                });
-            }
-        })
-        .catch(error => console.error('Error fetching the XML:', error));
+    const section = buildCategory(cat, i);
+    container.appendChild(section);
+
+    // Canvas-Höhe setzen
+    const canvas = section.querySelector('canvas');
+    canvas.style.height = canvasHeight(cat.items.length) + 'px';
+
+    renderChart(cat);
+  });
 });

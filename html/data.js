@@ -1,0 +1,5 @@
+
+// data.js – automatisch generiert durch sappho-feature-stats.xsl
+// Nicht manuell bearbeiten.
+const DATA = {"nSappho":0,"nReception":0,"features":[{"key":"person_ref","label":"Personenreferenzen","countSappho":0,"countReception":0,"pctSappho":0.0,"pctReception":0.0},{"key":"place_ref","label":"Ortsreferenzen","countSappho":0,"countReception":0,"pctSappho":0.0,"pctReception":0.0},{"key":"character","label":"Figuren","countSappho":0,"countReception":0,"pctSappho":0.0,"pctReception":0.0},{"key":"topos","label":"Rhetorische Topoi","countSappho":0,"countReception":0,"pctSappho":0.0,"pctReception":0.0},{"key":"motif","label":"Motive","countSappho":0,"countReception":0,"pctSappho":0.0,"pctReception":0.0},{"key":"topic","label":"Themen","countSappho":0,"countReception":0,"pctSappho":0.0,"pctReception":0.0},{"key":"plot","label":"Stoffe","countSappho":0,"countReception":0,"pctSappho":0.0,"pctReception":0.0}]};
+    

@@ -12,3 +12,5 @@
 
 9. re-run reasoner (in "java" directory): mvn -q clean compile exec:java
 10. count triples: count-triples.py
+
+[networks.py and statistics.py are part of build.xml]
