@@ -1,176 +1,138 @@
-document.addEventListener("DOMContentLoaded", function () {
-    Highcharts.setOptions({
-        chart: {
-            style: {
-                fontFamily: 'Geist'
-            }
-        }
-    });
+const C = {
+  s:     'rgba(94,23,235,0.75)',
+  sLine: '#5e17eb',
+  r:     'rgba(107,114,128,0.75)',
+  rLine: '#6b7280',
+};
 
-    const fileName = document.body.getAttribute("data-tei-file");
-    const showGenres = document.body.getAttribute("data-show-genres") === "true";
-    const url = "https://raw.githubusercontent.com/laurauntner/sappho-digital/main/data/lists/" + fileName;
+const charts = {};
 
-    fetch(url)
-        .then(response => response.text())
-        .then(data => {
-            const parser = new DOMParser();
-            const xmlDoc = parser.parseFromString(data, "text/xml");
+// Balkenhöhe
+function canvasHeight(n) {
+  return Math.max(120, n * 32 + 40);
+}
 
-            // TEI-Namespace
-            const nsResolver = (prefix) => {
-                const ns = { 'tei': 'http://www.tei-c.org/ns/1.0' };
-                return ns[prefix] || null;
-            };
+// X-Achsen-Maximum: nächste runde Zahl über dem tatsächlichen Maximum
+function xMax(items) {
+  const max = Math.max(
+    ...items.map(i => parseFloat(i.pctSappho)),
+    ...items.map(i => parseFloat(i.pctReception))
+  );
+  // nächste 5er-Stufe über dem Maximum + 5% Puffer
+  const padded = max * 1.05;
+  return Math.min(100, Math.ceil(padded / 5) * 5);
+}
 
-            // Timeline aus bibl/date
-            const dateCounts = {};
-            const biblElements = xmlDoc.evaluate("//tei:bibl", xmlDoc, nsResolver, XPathResult.ANY_TYPE, null);
-            let bibl = biblElements.iterateNext();
+// Eine Kategorie-Sektion aufbauen (standardmäßig zugeklappt)
+function buildCategory(cat) {
+  const section = document.createElement('div');
+  section.className = 'card cat';
+  section.id = 'cat-' + cat.key;
 
-            while (bibl) {
-                // Erst date[@type="created"], sonst date[@type="published"]
-                let dateElement = xmlDoc.evaluate(".//tei:date[@type='created']", bibl, nsResolver, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-                if (!dateElement) {
-                    dateElement = xmlDoc.evaluate(".//tei:date[@type='published']", bibl, nsResolver, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
-                }
+  const head = document.createElement('div');
+  head.className = 'card-header';
+  head.innerHTML = `<span class="arrow">▶</span><h2>${cat.label}</h2>`;
 
-                if (dateElement) {
-                    const when = dateElement.getAttribute("when");
-                    const notBefore = dateElement.getAttribute("notBefore");
-                    const notAfter = dateElement.getAttribute("notAfter");
+  const body = document.createElement('div');
+  body.className = 'card-body';
+  body.id = 'body-' + cat.key;
 
-                    let year = null;
-                    if (when) {
-                        year = parseInt(when);
-                    } else if (notBefore && notAfter) {
-                        year = Math.round((parseInt(notBefore) + parseInt(notAfter)) / 2);
-                    } else if (notBefore) {
-                        year = parseInt(notBefore);
-                    } else if (notAfter) {
-                        year = parseInt(notAfter);
-                    }
+  const wrap = document.createElement('div');
+  wrap.className = 'chart-wrap';
+  const canvas = document.createElement('canvas');
+  canvas.id = 'chart-' + cat.key;
+  canvas.style.height = canvasHeight(cat.items.length) + 'px';
+  wrap.appendChild(canvas);
+  body.appendChild(wrap);
 
-                    if (year && !isNaN(year)) {
-                        dateCounts[year] = (dateCounts[year] || 0) + 1;
-                    }
-                }
+  section.appendChild(head);
+  section.appendChild(body);
 
-                bibl = biblElements.iterateNext();
-            }
+  head.addEventListener('click', () => {
+    const isOpen = body.classList.contains('visible');
+    body.classList.toggle('visible', !isOpen);
+    head.classList.toggle('open', !isOpen);
+    if (!isOpen && !charts[cat.key]) {
+      renderChart(cat);
+    }
+  });
 
-            const timelineData = Object.keys(dateCounts)
-                .map(year => [Date.UTC(parseInt(year), 0, 1), dateCounts[year]])
-                .sort((a, b) => a[0] - b[0]);
+  return section;
+}
 
-            // Genre-Zählung (nur bei "alle")
-            let genreData = [];
-            if (showGenres) {
-                const genres = {
-                    'Prosa': 0,
-                    'Lyrik': 0,
-                    'Drama': 0,
-                    'Sonstige': 0
-                };
+// Chart rendern
+function renderChart(cat) {
+  const ctx = document.getElementById('chart-' + cat.key).getContext('2d');
+  const labels = cat.items.map(i => i.label);
+  const pctS   = cat.items.map(i => parseFloat(i.pctSappho));
+  const pctR   = cat.items.map(i => parseFloat(i.pctReception));
+  const maxX   = xMax(cat.items);
 
-                Array.from(xmlDoc.getElementsByTagNameNS("http://www.tei-c.org/ns/1.0", "note")).forEach(note => {
-                    const text = note.textContent.toLowerCase();
-                    if (text.includes("lyrik")) {
-                        genres["Lyrik"]++;
-                    } else if (text.includes("prosa")) {
-                        genres["Prosa"]++;
-                    } else if (text.includes("drama")) {
-                        genres["Drama"]++;
-                    } else {
-                        genres["Sonstige"]++;
-                    }
-                });
+  charts[cat.key] = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: `Sappho-Fragmente (n=${DATA.nSappho})`,
+          data: pctS,
+          backgroundColor: C.s,
+          borderColor: C.sLine,
+          borderWidth: 1,
+          borderRadius: 2,
+        },
+        {
+          label: `Rezeptionszeugnisse (n=${DATA.nReception})`,
+          data: pctR,
+          backgroundColor: C.r,
+          borderColor: C.rLine,
+          borderWidth: 1,
+          borderRadius: 2,
+        },
+      ],
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'nearest', axis: 'y', intersect: true },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const d = cat.items[ctx.dataIndex];
+              const isSappho = ctx.datasetIndex === 0;
+              const count = isSappho ? d.countSappho   : d.countReception;
+              const total = isSappho ? DATA.nSappho     : DATA.nReception;
+              const pct   = ctx.parsed.x.toFixed(2);
+              const name  = isSappho ? 'Sappho' : 'Rezeption';
+              return ` ${name}: ${pct}% (${count}/${total})`;
+            },
+          },
+        },
+      },
+      scales: {
+        x: {
+          min: 0,
+          max: maxX,
+          ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => v + '%', stepSize: 5 },
+          grid: { color: 'rgba(0,0,0,0.06)' },
+        },
+        y: {
+          ticks: { font: { family: 'Geist, system-ui', size: 12 }, autoSkip: false },
+          grid: { display: false },
+        },
+      },
+    },
+  });
+}
 
-                const baseColor = 'rgba(94, 23, 235,';
-                const colorVariants = [
-                    `${baseColor} 0.9)`,
-                    `${baseColor} 0.7)`,
-                    `${baseColor} 0.5)`,
-                    `${baseColor} 0.3)`,
-                    `${baseColor} 0.1)`
-                ];
-
-                const genreLinks = {
-                    'Prosa': 'https://sappho-digital.com/toc-prosa.html',
-                    'Lyrik': 'https://sappho-digital.com/toc-lyrik.html',
-                    'Drama': 'https://sappho-digital.com/toc-drama.html',
-                    'Sonstige': 'https://sappho-digital.com/toc-sonstige.html'
-                };
-
-                genreData = Object.entries(genres).map(([genre, count], index) => ({
-                    name: genre,
-                    y: count,
-                    color: colorVariants[index % colorVariants.length],
-                    url: genreLinks[genre] || ''
-                }));
-            }
-
-            // Timeline anzeigen
-            Highcharts.chart('container-timeline', {
-                chart: {
-                    type: 'line'
-                },
-                title: {
-                    text: null
-                },
-                xAxis: {
-                    type: 'datetime',
-                    title: { text: 'Jahre' }
-                },
-                yAxis: {
-                    title: { text: 'Werke' },
-                    endOnTick: false
-                },
-                legend: {
-                    enabled: false
-                },
-                tooltip: {
-                    formatter: function () {
-                        return 'Jahr: ' + Highcharts.dateFormat('%Y', this.x) + '<br/>Werke: ' + this.y;
-                    }
-                },
-                series: [{
-                    name: 'Werke',
-                    data: timelineData,
-                    color: 'rgba(94, 23, 235, 0.7)'
-                }]
-            });
-
-            // Genre-Pie-Chart (nur bei "alle") ===
-            if (showGenres) {
-                Highcharts.chart('container-genres', {
-                    chart: {
-                        type: 'pie'
-                    },
-                    title: {
-                        text: null
-                    },
-                    plotOptions: {
-                        pie: {
-                            allowPointSelect: true,
-                            cursor: 'pointer',
-                            events: {
-                                click: function (event) {
-                                    const point = event.point;
-                                    if (point.options.url) {
-                                        window.open(point.options.url, '_blank');
-                                    }
-                                }
-                            }
-                        }
-                    },
-                    series: [{
-                        name: 'Rezeptionszeugnisse',
-                        colorByPoint: true,
-                        data: genreData
-                    }]
-                });
-            }
-        })
-        .catch(error => console.error('Error fetching the XML:', error));
+// Init
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('cats');
+  DATA.categories.forEach(cat => {
+    if (cat.items.length === 0) return;
+    container.appendChild(buildCategory(cat));
+  });
 });
