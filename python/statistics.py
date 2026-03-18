@@ -168,6 +168,122 @@ def main(ttl_path: str, xml_out: str) -> None:
             item_el.set("pctSappho",      f'{d["pct_s"]:.2f}')
             item_el.set("pctReception",   f'{d["pct_r"]:.2f}')
 
+    # -------------------------------------------------------------------------
+    # Statistik 2: Pro Sappho-Fragment – Aktualisierungen in Rezeptionszeugnissen
+    # -------------------------------------------------------------------------
+    # Namespaces für Statistik 2
+    INTRO_NS  = Namespace("https://w3id.org/lso/intro/currentbeta#")
+    ECRM_NS   = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
+
+    INT18_Reference          = INTRO_NS.INT18_Reference
+    R17i_featureIsActualizedIn = INTRO_NS["R17i_featureIsActualizedIn"]
+    R18i_actualizationFoundOn  = INTRO_NS["R18i_actualizationFoundOn"]
+    P67_refers_to              = ECRM_NS.P67_refers_to
+
+    # Alle INT18_Reference-Instanzen mit "Voigt" im rdfs:label sammeln
+    # Label-Format: "Reference to Expression of Fragment 158 Voigt (work)"
+    import re as _re
+
+    voigt_refs: dict[URIRef, str] = {}   # Feature-URI → Fragment-Label ("158 Voigt")
+    # Suche über alle rdfs:label-Tripel: Subjects mit "Voigt" im Label
+    # und "/work_ref/" in der URI (da INT18_Reference = work_ref-Feature)
+    for ref_uri, _, lbl in g.triples((None, RDFS.label, None)):
+        lbl_str = str(lbl)
+        if "Voigt" not in lbl_str:
+            continue
+        uri_str = str(ref_uri)
+        if "/work_ref/" not in uri_str:
+            continue
+        # Nur Feature-URIs (nicht Aktualisierungs-URIs)
+        if "/actualization/" in uri_str:
+            continue
+        m = _re.search(r'Fragment\s+([\w]+(?:\s+\w+)*?\s*Voigt)', lbl_str)
+        frag_label = m.group(1).strip() if m else lbl_str
+        # Bereits gefundene behalten (en-Label bevorzugen)
+        if ref_uri not in voigt_refs or getattr(lbl, 'language', None) == 'en':
+            voigt_refs[ref_uri] = frag_label
+
+    print(f"  INT18_References mit Voigt: {len(voigt_refs)}", file=sys.stderr)
+
+    # Pro INT18_Reference (work_ref mit Voigt-Label):
+    # 1. Via R17i_featureIsActualizedIn zur Aktualisierung
+    # 2. Via R18i_actualizationFoundOn zur bibl_-Expression
+    # 3. Alle Features dieser bibl_-Expression aus reception_idx sammeln
+
+    # Aufbau: frag_label -> { ftype_key -> { feat_uri -> count } }
+    frag_data: dict[str, dict[str, dict[URIRef, int]]] = {}
+
+    for ref_uri, frag_label in voigt_refs.items():
+        if frag_label not in frag_data:
+            frag_data[frag_label] = {k: {} for k, _, _ in FEATURE_TYPES}
+
+        for _, _, act_uri in g.triples((ref_uri, R17i_featureIsActualizedIn, None)):
+            # Finde die bibl_-Expression dieser Aktualisierung
+            bibl_expr = None
+            for _, _, src in g.triples((act_uri, R18i_actualizationFoundOn, None)):
+                src_str = str(src)
+                if "/expression/bibl_" in src_str and "bibl_sappho_" not in src_str:
+                    bibl_expr = src
+                    break
+            if bibl_expr is None:
+                continue
+
+            # Alle Features dieser bibl_-Expression aus reception_idx
+            all_feats = reception_idx.get(bibl_expr, set())
+            for feat_uri in all_feats:
+                ftype = feature_type(str(feat_uri))
+                if ftype is None:
+                    continue
+                counts = frag_data[frag_label][ftype]
+                counts[feat_uri] = counts.get(feat_uri, 0) + 1
+
+    # Fragmente ohne jegliche Daten entfernen
+    frag_data = {
+        fl: ftypes for fl, ftypes in frag_data.items()
+        if any(feat_counts for feat_counts in ftypes.values())
+    }
+
+    print(f"  Fragmente mit Rezeptionsdaten: {len(frag_data)}", file=sys.stderr)
+
+    # Numerische Sortierung der Voigt-Nummern: "31 Voigt" → 31, "168b Voigt" → 168
+    def voigt_sort_key(label: str):
+        m = _re.match(r'(\d+)', label)
+        num = int(m.group(1)) if m else 9999
+        # Suffix (a, b, …) als zweites Kriterium
+        suffix = _re.sub(r'^\d+', '', label.split()[0]) if m else label
+        return (num, suffix)
+
+    sorted_frags = sorted(frag_data.keys(), key=voigt_sort_key)
+
+    # XML-Block <fragments> aufbauen
+    frags_el = ET.SubElement(root_el, "fragments")
+    frags_el.set("n", str(len(sorted_frags)))
+
+    for frag_label in sorted_frags:
+        frag_el = ET.SubElement(frags_el, "fragment")
+        frag_el.set("label", frag_label)
+
+        ftypes = frag_data[frag_label]
+        for ftype_key, pattern, ftype_display in FEATURE_TYPES:
+            feat_counts = ftypes.get(ftype_key, {})
+            if not feat_counts:
+                continue
+
+            ftype_el = ET.SubElement(frag_el, "featureType")
+            ftype_el.set("key",   ftype_key)
+            ftype_el.set("label", ftype_display)
+            ftype_el.set("total", str(sum(feat_counts.values())))
+
+            sorted_feats = sorted(
+                feat_counts.items(),
+                key=lambda x: (-x[1], get_label(x[0]).lower())
+            )
+            for feat_uri, count in sorted_feats:
+                feat_el = ET.SubElement(ftype_el, "item")
+                feat_el.set("label", get_label(feat_uri))
+                feat_el.set("uri",   str(feat_uri))
+                feat_el.set("count", str(count))
+
     # XML schreiben
     tree = ET.ElementTree(root_el)
     ET.indent(tree, space="  ")
