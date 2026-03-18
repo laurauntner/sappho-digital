@@ -135,6 +135,8 @@
                 <h1>
                   <xsl:value-of select="$doc_title"/>
                 </h1>
+                <p>Nähere Informationen zur exemplarischen Analyse sind <a href="analyse.html"
+                    >hier</a> zu finden.</p>
               </div>
               <div class="card-body">
                 <div class="stats-wrap">
