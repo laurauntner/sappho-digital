@@ -19,8 +19,8 @@ R17_actualizesFeature  = INTRO.R17_actualizesFeature
 
 FEATURE_TYPES = [
     ("person_ref", "/person_ref/",  "Personenreferenzen"),
-    ("place_ref",  "/place_ref/",   "Ortsreferenzen"),
     ("character",  "/character/",   "Figuren"),
+    ("place_ref",  "/place_ref/",   "Ortsreferenzen"),
     ("topos",      "/topos/",       "Rhetorische Topoi"),
     ("motif",      "/motif/",       "Motive"),
     ("topic",      "/topic/",       "Themen"),
@@ -168,10 +168,7 @@ def main(ttl_path: str, xml_out: str) -> None:
             item_el.set("pctSappho",      f'{d["pct_s"]:.2f}')
             item_el.set("pctReception",   f'{d["pct_r"]:.2f}')
 
-    # -------------------------------------------------------------------------
-    # Statistik 2: Pro Sappho-Fragment – Aktualisierungen in Rezeptionszeugnissen
-    # -------------------------------------------------------------------------
-    # Namespaces für Statistik 2
+    # Pro Sappho-Fragment – Aktualisierungen in Rezeptionszeugnissen
     INTRO_NS  = Namespace("https://w3id.org/lso/intro/currentbeta#")
     ECRM_NS   = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
 
@@ -181,29 +178,38 @@ def main(ttl_path: str, xml_out: str) -> None:
     P67_refers_to              = ECRM_NS.P67_refers_to
 
     # Alle INT18_Reference-Instanzen mit "Voigt" im rdfs:label sammeln
-    # Label-Format: "Reference to Expression of Fragment 158 Voigt (work)"
     import re as _re
 
-    voigt_refs: dict[URIRef, str] = {}   # Feature-URI → Fragment-Label ("158 Voigt")
-    # Suche über alle rdfs:label-Tripel: Subjects mit "Voigt" im Label
-    # und "/work_ref/" in der URI (da INT18_Reference = work_ref-Feature)
+    voigt_refs: dict[URIRef, str] = {}             
+    voigt_ref_to_sappho: dict[URIRef, URIRef] = {} 
+
     for ref_uri, _, lbl in g.triples((None, RDFS.label, None)):
         lbl_str = str(lbl)
         if "Voigt" not in lbl_str:
             continue
         uri_str = str(ref_uri)
-        if "/work_ref/" not in uri_str:
+        if "/work_ref/" not in uri_str or "/actualization/" in uri_str:
             continue
-        # Nur Feature-URIs (nicht Aktualisierungs-URIs)
-        if "/actualization/" in uri_str:
-            continue
-        m = _re.search(r'Fragment\s+([\w]+(?:\s+\w+)*?\s*Voigt)', lbl_str)
+        m = _re.search(r'(?:Fragment|Fr\.)\s+(.*?Voigt(?:\s*\([^)]+\))*)\s*\(work\)', lbl_str)
         frag_label = m.group(1).strip() if m else lbl_str
-        # Bereits gefundene behalten (en-Label bevorzugen)
         if ref_uri not in voigt_refs or getattr(lbl, 'language', None) == 'en':
             voigt_refs[ref_uri] = frag_label
 
-    print(f"  INT18_References mit Voigt: {len(voigt_refs)}", file=sys.stderr)
+    # Sappho-F2-URI aus dem Fragment-Label ableiten:
+    BASE = "https://sappho-digital.com/expression/bibl_sappho_"
+    for ref_uri, frag_label in voigt_refs.items():
+        m = _re.match(r'(\S+)\s+Voigt', frag_label)
+        if not m:
+            continue
+        voigt_num = m.group(1)
+        sappho_uri = URIRef(BASE + voigt_num)
+        if sappho_uri in sappho_idx:
+            voigt_ref_to_sappho[ref_uri] = sappho_uri
+        else:
+            print(f"  WARNUNG: {sappho_uri} nicht in sappho_idx", file=sys.stderr)
+
+    print(f"  INT18_References mit Voigt:   {len(voigt_refs)}", file=sys.stderr)
+    print(f"  davon mit Sappho-F2 URI:      {len(voigt_ref_to_sappho)}", file=sys.stderr)
 
     # Pro INT18_Reference (work_ref mit Voigt-Label):
     # 1. Via R17i_featureIsActualizedIn zur Aktualisierung
@@ -211,11 +217,14 @@ def main(ttl_path: str, xml_out: str) -> None:
     # 3. Alle Features dieser bibl_-Expression aus reception_idx sammeln
 
     # Aufbau: frag_label -> { ftype_key -> { feat_uri -> count } }
-    frag_data: dict[str, dict[str, dict[URIRef, int]]] = {}
+    frag_data:     dict[str, dict[str, dict[URIRef, int]]] = {}
+    frag_biblsets: dict[str, set[URIRef]] = {}   # frag_label -> set of bibl_expr URIs
+    frag_sappho_f2: dict[str, URIRef] = {}       # frag_label -> sappho F2 URI
 
     for ref_uri, frag_label in voigt_refs.items():
         if frag_label not in frag_data:
-            frag_data[frag_label] = {k: {} for k, _, _ in FEATURE_TYPES}
+            frag_data[frag_label]     = {k: {} for k, _, _ in FEATURE_TYPES}
+            frag_biblsets[frag_label] = set()
 
         for _, _, act_uri in g.triples((ref_uri, R17i_featureIsActualizedIn, None)):
             # Finde die bibl_-Expression dieser Aktualisierung
@@ -227,6 +236,12 @@ def main(ttl_path: str, xml_out: str) -> None:
                     break
             if bibl_expr is None:
                 continue
+
+            frag_biblsets[frag_label].add(bibl_expr)
+
+            # Sappho-F2 aus voigt_ref_to_sappho-Index
+            if frag_label not in frag_sappho_f2 and ref_uri in voigt_ref_to_sappho:
+                frag_sappho_f2[frag_label] = voigt_ref_to_sappho[ref_uri]
 
             # Alle Features dieser bibl_-Expression aus reception_idx
             all_feats = reception_idx.get(bibl_expr, set())
@@ -244,12 +259,16 @@ def main(ttl_path: str, xml_out: str) -> None:
     }
 
     print(f"  Fragmente mit Rezeptionsdaten: {len(frag_data)}", file=sys.stderr)
+    print(f"  Davon mit Sappho-F2 gefunden:  {len(frag_sappho_f2)}", file=sys.stderr)
+    if frag_sappho_f2:
+        sample = next(iter(frag_sappho_f2.items()))
+        feats = sappho_idx.get(sample[1], set())
+        print(f"  Beispiel: '{sample[0]}' -> {sample[1]} -> {len(feats)} Sappho-Features", file=sys.stderr)
 
     # Numerische Sortierung der Voigt-Nummern: "31 Voigt" → 31, "168b Voigt" → 168
     def voigt_sort_key(label: str):
         m = _re.match(r'(\d+)', label)
         num = int(m.group(1)) if m else 9999
-        # Suffix (a, b, …) als zweites Kriterium
         suffix = _re.sub(r'^\d+', '', label.split()[0]) if m else label
         return (num, suffix)
 
@@ -261,7 +280,28 @@ def main(ttl_path: str, xml_out: str) -> None:
 
     for frag_label in sorted_frags:
         frag_el = ET.SubElement(frags_el, "fragment")
-        frag_el.set("label", frag_label)
+        frag_el.set("label",  frag_label)
+        frag_el.set("nBibl",  str(len(frag_biblsets.get(frag_label, set()))))
+
+        # Sappho-eigene Features ausgeben
+        sappho_f2_uri = frag_sappho_f2.get(frag_label)
+        if sappho_f2_uri is not None:
+            sappho_feats = sappho_idx.get(sappho_f2_uri, set())
+            sf_el = ET.SubElement(frag_el, "sapphoFeatures")
+            for ftype_key, pattern, ftype_display in FEATURE_TYPES:
+                type_feats = sorted(
+                    [f for f in sappho_feats if pattern in str(f)],
+                    key=lambda f: get_label(f).lower()
+                )
+                if not type_feats:
+                    continue
+                sft_el = ET.SubElement(sf_el, "featureType")
+                sft_el.set("key",   ftype_key)
+                sft_el.set("label", ftype_display)
+                for feat_uri in type_feats:
+                    sfi_el = ET.SubElement(sft_el, "item")
+                    sfi_el.set("label", get_label(feat_uri))
+                    sfi_el.set("uri",   str(feat_uri))
 
         ftypes = frag_data[frag_label]
         for ftype_key, pattern, ftype_display in FEATURE_TYPES:
