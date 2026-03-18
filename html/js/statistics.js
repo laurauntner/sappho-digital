@@ -464,15 +464,15 @@ document.addEventListener('DOMContentLoaded', initSankey);
 // ── Statistik 3 ──────────────────────────
 
 const FTYPE_META = {
-    person_ref:   { label: 'Personenreferenz', color: '#f59e0b' },
-    character:    { label: 'Figur',            color: '#3b82f6' },
-    place_ref:    { label: 'Ortsreferenz',     color: '#10b981' },
-    topos:        { label: 'Rhetorischer Topos',  color: '#ef4444' },
-    motif:        { label: 'Motiv',             color: '#8b5cf6' },
-    topic:        { label: 'Thema',             color: '#06b6d4' },
-    plot:         { label: 'Stoff',             color: '#f97316' },
-    work_ref:     { label: 'Werkreferenz',     color: '#e11d48' },
-    text_passage: { label: 'Zitat',             color: '#84cc16' },
+    person_ref:   { label: 'Personenreferenzen', color: '#f59e0b' },
+    character:    { label: 'Figuren',            color: '#3b82f6' },
+    place_ref:    { label: 'Ortsreferenzen',     color: '#10b981' },
+    topos:        { label: 'Rhetorische Topoi',  color: '#ef4444' },
+    motif:        { label: 'Motive',             color: '#8b5cf6' },
+    topic:        { label: 'Themen',             color: '#06b6d4' },
+    plot:         { label: 'Stoffe',             color: '#f97316' },
+    work_ref:     { label: 'Werkreferenzen',     color: '#e11d48' },
+    text_passage: { label: 'Zitate',             color: '#84cc16' },
 };
 
 // Tooltip
