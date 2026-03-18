@@ -1,5 +1,3 @@
-// ── Statistik 1 ──────────────────────────
-
 const C = {
     s: 'rgba(94,23,235,0.75)',
     sLine: '#5e17eb',
@@ -149,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// ── Statistik 2 ──────────────────────────
+// ── Sankey ────────────────────────────────────────────────────────────────────
 
 const FTYPE_COLORS = {
     person_ref: '#f59e0b',
@@ -182,7 +180,7 @@ function initSankey() {
     sel.addEventListener('change', () => renderSankey2(sel.value));
 }
 
-// Tooltip
+// Tooltip (lazy init on first use)
 let _tip = null;
 function getTip() {
     if (!_tip) {
@@ -461,21 +459,21 @@ function renderSankey2(fragLabel) {
 document.addEventListener('DOMContentLoaded', initSankey);
 
 
-// ── Statistik 3 ──────────────────────────
+
+// ── Statistik 3 ──────────────────────────────────────────────────────────────
 
 const FTYPE_META = {
-    person_ref:   { label: 'Personenreferenzen', color: '#f59e0b' },
-    character:    { label: 'Figuren',            color: '#3b82f6' },
-    place_ref:    { label: 'Ortsreferenzen',     color: '#10b981' },
-    topos:        { label: 'Rhetorische Topoi',  color: '#ef4444' },
-    motif:        { label: 'Motive',             color: '#8b5cf6' },
-    topic:        { label: 'Themen',             color: '#06b6d4' },
-    plot:         { label: 'Stoffe',             color: '#f97316' },
-    work_ref:     { label: 'Werkreferenzen',     color: '#e11d48' },
-    text_passage: { label: 'Zitate',             color: '#84cc16' },
+    person_ref:   { label: 'Personenreferenzen', singular: 'Personenreferenz',    color: '#f59e0b' },
+    character:    { label: 'Figuren',            singular: 'Figur',               color: '#3b82f6' },
+    place_ref:    { label: 'Ortsreferenzen',     singular: 'Ortsreferenz',        color: '#10b981' },
+    topos:        { label: 'Rhetorische Topoi',  singular: 'Rhetorischer Topos',  color: '#ef4444' },
+    motif:        { label: 'Motive',             singular: 'Motiv',               color: '#8b5cf6' },
+    topic:        { label: 'Themen',             singular: 'Thema',               color: '#06b6d4' },
+    plot:         { label: 'Stoffe',             singular: 'Stoff',               color: '#f97316' },
+    work_ref:     { label: 'Werkreferenzen',     singular: 'Werkreferenz',        color: '#e11d48' },
+    text_passage: { label: 'Zitate',             singular: 'Zitat',               color: '#84cc16' },
 };
 
-// Tooltip
 let _pdTip = null;
 function getPdTip() {
     if (!_pdTip) {
@@ -488,23 +486,10 @@ function getPdTip() {
     }
     return _pdTip;
 }
-function pdTipShow(e, html) {
-    const t = getPdTip();
-    t.innerHTML = html;
-    t.style.display = 'block';
-    pdTipMove(e);
-}
-function pdTipMove(e) {
-    const t = getPdTip();
-    t.style.left = (e.clientX + 14) + 'px';
-    t.style.top  = (e.clientY - 36) + 'px';
-}
-function pdTipHide() {
-    const t = getPdTip();
-    t.style.display = 'none';
-}
+function pdTipShow(e, html) { const t = getPdTip(); t.innerHTML = html; t.style.display = 'block'; pdTipMove(e); }
+function pdTipMove(e) { const t = getPdTip(); t.style.left = (e.clientX + 14) + 'px'; t.style.top = (e.clientY - 36) + 'px'; }
+function pdTipHide() { getPdTip().style.display = 'none'; }
 
-// SVG-Bubble-Chart
 function buildBubbleChart(features, decades, container, showType = false) {
     container.innerHTML = '';
     if (!features.length || !decades.length) {
@@ -512,13 +497,11 @@ function buildBubbleChart(features, decades, container, showType = false) {
         return;
     }
 
-    // Zellwert: Summe über alle Gattungen
     const cellN = (feat, dec) => {
         const cell = feat.cells.find(c => c.d === dec);
         return cell ? cell.n : 0;
     };
 
-    // Features ohne Daten entfernen, nach Total absteigend sortieren
     const active = features
         .map(f => ({ feat: f, total: decades.reduce((s, d) => s + cellN(f, d), 0) }))
         .filter(x => x.total > 0)
@@ -529,7 +512,6 @@ function buildBubbleChart(features, decades, container, showType = false) {
         return;
     }
 
-    const nRows = active.length;
     const nCols = decades.length;
 
     let maxN = 0;
@@ -537,36 +519,29 @@ function buildBubbleChart(features, decades, container, showType = false) {
         decades.forEach(dec => { const v = cellN(feat, dec); if (v > maxN) maxN = v; })
     );
 
-    const ROW_H1  = 30;   // einzeilige Zeilenhöhe
-    const ROW_H2  = 44;   // zweizeilige Zeilenhöhe
+    const ROW_H1  = 30;
+    const ROW_H2  = 44;
     const COL_W   = 64;
     const LABEL_W = 200;
     const HDR_H   = 60;
     const PAD_B   = 8;
-    const FONT_W  = 7.0;  // konservativere Schätzung für breite Zeichen
+    const FONT_W  = 7.0;
     const MAX_W   = LABEL_W - 18;
-    const MAX_CHARS_1 = Math.floor(MAX_W / FONT_W) - 2;    // früh umbrechen
-    const MAX_CHARS_2 = Math.floor(MAX_W / FONT_W);         // Zeichen pro Zeile (zweizeilig)
+    const MAX_CHARS_1 = Math.floor(MAX_W / FONT_W) - 2;
+    const MAX_CHARS_2 = Math.floor(MAX_W / FONT_W);
 
     const rowMeta = active.map(({ feat }) => {
         const label = feat.label;
-        if (label.length <= MAX_CHARS_1) {
-            return { lines: [label], h: ROW_H1 };
-        }
-
+        if (label.length <= MAX_CHARS_1) return { lines: [label], h: ROW_H1 };
         const words = label.split(' ');
-        let best = null;
-        let current = '';
+        let best = null, current = '';
         for (let i = 0; i < words.length - 1; i++) {
             current = current ? current + ' ' + words[i] : words[i];
             const rest = words.slice(i + 1).join(' ');
-            if (current.length <= MAX_CHARS_2 && rest.length <= MAX_CHARS_2) {
+            if (current.length <= MAX_CHARS_2 && rest.length <= MAX_CHARS_2)
                 best = { line1: current, line2: rest };
-            }
         }
-        if (best) {
-            return { lines: [best.line1, best.line2], h: ROW_H2 };
-        }
+        if (best) return { lines: [best.line1, best.line2], h: ROW_H2 };
         const mid = Math.floor(label.length / 2);
         const breakAt = label.lastIndexOf(' ', mid + 6);
         const split = breakAt > 4 ? breakAt : MAX_CHARS_2;
@@ -576,16 +551,12 @@ function buildBubbleChart(features, decades, container, showType = false) {
         return { lines: [line1, line2], h: ROW_H2 };
     });
 
-    // Kumulierte Y-Positionen
     const rowY = [];
     let curY = HDR_H;
     rowMeta.forEach(m => { rowY.push(curY); curY += m.h; });
     const totalRowH = curY - HDR_H;
 
-    const R_MAX   = Math.min(ROW_H1, COL_W) / 2 + 3;
-    const R_MIN   = 0;
-
-    // Starke Potenz-Skalierung
+    const R_MAX  = Math.min(ROW_H1, COL_W) / 2 + 3;
     const scaleR = v => v === 0 ? 0 : 0.8 + (R_MAX - 0.8) * Math.pow(v / maxN, 0.45);
 
     const svgW = LABEL_W + nCols * COL_W + 8;
@@ -593,79 +564,51 @@ function buildBubbleChart(features, decades, container, showType = false) {
 
     const ns  = 'http://www.w3.org/2000/svg';
     const svg = document.createElementNS(ns, 'svg');
-    svg.setAttribute('width',  svgW);
+    svg.setAttribute('width', svgW);
     svg.setAttribute('height', svgH);
-    svg.style.cssText =
-        'font-family:Geist,system-ui,sans-serif;font-size:11px;overflow:visible;display:block';
+    svg.style.cssText = 'font-family:Geist,system-ui,sans-serif;font-size:11px;overflow:visible;display:block';
 
     const mk  = tag => document.createElementNS(ns, tag);
-    const set = (el, attrs) => {
-        Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
-        return el;
-    };
+    const set = (el, attrs) => { Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v)); return el; };
     const txt = (x, y, content, attrs = {}) => {
-        const t = mk('text');
-        set(t, { x, y, ...attrs });
-        t.textContent = content;
-        return t;
+        const t = mk('text'); set(t, { x, y, ...attrs }); t.textContent = content; return t;
     };
 
-    // Spalten-Header
     const decLabel = d => d === 'n/a' ? 'o. J.' : d.replace(/(\d+)s$/, '$1er');
+
     decades.forEach((dec, ci) => {
         const cx = LABEL_W + ci * COL_W + COL_W / 2;
         svg.appendChild(txt(cx, HDR_H - 6, decLabel(dec), {
             'text-anchor': 'middle',
             transform: `rotate(-40,${cx},${HDR_H - 6})`,
-            'font-size': '10px',
-            fill: '#6b7280',
+            'font-size': '10px', fill: '#6b7280',
         }));
-        // Gitternetzlinie
         svg.appendChild(set(mk('line'), {
-            x1: cx, y1: HDR_H,
-            x2: cx, y2: HDR_H + totalRowH,
+            x1: cx, y1: HDR_H, x2: cx, y2: HDR_H + totalRowH,
             stroke: 'rgba(0,0,0,0.06)', 'stroke-width': 1,
         }));
     });
 
-    // Zeilen
-    active.forEach(({ feat, total }, ri) => {
+    active.forEach(({ feat }, ri) => {
         const y0    = rowY[ri];
         const rh    = rowMeta[ri].h;
         const yc    = y0 + rh / 2;
         const color = (FTYPE_META[feat.ftype] || {}).color || '#6b7280';
 
-        // Zebra-Hintergrund
         if (ri % 2 === 0) {
-            svg.appendChild(set(mk('rect'), {
-                x: 0, y: y0, width: svgW, height: rh,
-                fill: 'rgba(0,0,0,0.022)',
-            }));
+            svg.appendChild(set(mk('rect'), { x: 0, y: y0, width: svgW, height: rh, fill: 'rgba(0,0,0,0.022)' }));
         }
+        svg.appendChild(set(mk('rect'), { x: 0, y: y0 + 1, width: 3, height: rh - 2, fill: color, rx: 1 }));
 
-        // Typ-Farbstreifen
-        svg.appendChild(set(mk('rect'), {
-            x: 0, y: y0 + 1, width: 3, height: rh - 2,
-            fill: color, rx: 1,
-        }));
-
-        // Feature-Label
         const lines = rowMeta[ri].lines;
         if (lines.length === 1) {
-            svg.appendChild(txt(LABEL_W - 8, yc, lines[0], {
-                'text-anchor': 'end', dy: '0.35em', fill: '#1f2937',
-            }));
+            svg.appendChild(txt(LABEL_W - 8, yc, lines[0], { 'text-anchor': 'end', dy: '0.35em', fill: '#1f2937' }));
         } else {
             const lineH = 13;
-            svg.appendChild(txt(LABEL_W - 8, yc - lineH / 2, lines[0], {
-                'text-anchor': 'end', dy: '0em', fill: '#1f2937',
-            }));
-            svg.appendChild(txt(LABEL_W - 8, yc + lineH / 2, lines[1], {
-                'text-anchor': 'end', dy: '0.9em', fill: '#1f2937',
-            }));
+            svg.appendChild(txt(LABEL_W - 8, yc - lineH / 2, lines[0], { 'text-anchor': 'end', dy: '0em',   fill: '#1f2937' }));
+            svg.appendChild(txt(LABEL_W - 8, yc + lineH / 2, lines[1], { 'text-anchor': 'end', dy: '0.9em', fill: '#1f2937' }));
         }
 
-        // Blasen
         decades.forEach((dec, ci) => {
             const v = cellN(feat, dec);
             if (v === 0) return;
@@ -681,7 +624,6 @@ function buildBubbleChart(features, decades, container, showType = false) {
             circle.style.cursor = 'default';
             svg.appendChild(circle);
 
-            // Zahl in Blase
             if (r >= 8) {
                 svg.appendChild(txt(cx, yc, v, {
                     'text-anchor': 'middle', dy: '0.35em',
@@ -690,8 +632,7 @@ function buildBubbleChart(features, decades, container, showType = false) {
                 }));
             }
 
-            // Tooltip
-            const ftypeLabel = (FTYPE_META[feat.ftype] || {}).label || feat.ftype;
+            const ftypeLabel = (FTYPE_META[feat.ftype] || {}).singular || feat.ftype;
             const tipHtml = `<strong>${feat.label}</strong>`
                 + (showType ? `<br><span style="font-size:10px;color:rgba(255,255,255,0.75)">(${ftypeLabel})</span>` : '')
                 + `<br>${decLabel(dec)}: <strong>${v}</strong> Rezeptionszeugnis${v !== 1 ? 'se' : ''}`;
@@ -702,52 +643,39 @@ function buildBubbleChart(features, decades, container, showType = false) {
     });
 
     const scroller = document.createElement('div');
-    scroller.style.cssText =
-        'overflow-x:auto;overflow-y:auto;max-height:600px;padding-bottom:4px';
+    scroller.style.cssText = 'overflow-x:auto;overflow-y:auto;max-height:600px;padding-bottom:4px';
     scroller.appendChild(svg);
     container.appendChild(scroller);
 }
 
-// Initialisierung
 function initPdist() {
     const pd = DATA.phenomenaDist;
     if (!pd || !pd.features || pd.features.length === 0) return;
 
-    // Typ-Legende aufbauen
     const legendWrap = document.getElementById('pdist-type-legend');
     if (legendWrap) {
-        const ftypesSeen = [...new Set(pd.features.map(f => f.ftype))];
         const ftypeOrder = Object.keys(FTYPE_META);
-        ftypesSeen.sort((a, b) =>
-            (ftypeOrder.indexOf(a) + 1 || 99) - (ftypeOrder.indexOf(b) + 1 || 99));
-        ftypesSeen.forEach(ft => {
-            const m = FTYPE_META[ft] || { label: ft, color: '#6b7280' };
-            const span = document.createElement('span');
-            span.style.cssText = 'display:inline-flex;align-items:center;gap:5px';
-            span.innerHTML =
-                `<span style="display:inline-block;width:11px;height:11px;border-radius:50%;`
-                + `background:${m.color};opacity:0.8;flex-shrink:0"></span>${m.label}`;
-            legendWrap.appendChild(span);
-        });
+        [...new Set(pd.features.map(f => f.ftype))]
+            .sort((a, b) => (ftypeOrder.indexOf(a) + 1 || 99) - (ftypeOrder.indexOf(b) + 1 || 99))
+            .forEach(ft => {
+                const m = FTYPE_META[ft] || { label: ft, color: '#6b7280' };
+                const span = document.createElement('span');
+                span.style.cssText = 'display:inline-flex;align-items:center;gap:5px';
+                span.innerHTML = `<span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:${m.color};opacity:0.8;flex-shrink:0"></span>${m.label}`;
+                legendWrap.appendChild(span);
+            });
     }
 
-    // Top-N-Listener
-    const selTopN = document.getElementById('sel-pdist-topn');
-    if (selTopN) selTopN.addEventListener('change', renderPdistOverview);
-
-    // Überblick rendern
+    document.getElementById('sel-pdist-topn')?.addEventListener('change', renderPdistOverview);
     renderPdistOverview();
-
-    // Typ-Sektionen aufbauen
     buildPdistTypeSections();
 }
 
 function renderPdistOverview() {
-    const pd    = DATA.phenomenaDist;
-    const topN  = parseInt(document.getElementById('sel-pdist-topn').value) || 30;
-    const topFeats = pd.features.slice(0, topN);
-    const wrap  = document.getElementById('pdist-overview-wrap');
-    if (wrap) buildBubbleChart(topFeats, pd.decades || [], wrap, true);
+    const pd   = DATA.phenomenaDist;
+    const topN = parseInt(document.getElementById('sel-pdist-topn').value) || 30;
+    const wrap = document.getElementById('pdist-overview-wrap');
+    if (wrap) buildBubbleChart(pd.features.slice(0, topN), pd.decades || [], wrap, true);
 }
 
 function buildPdistTypeSections() {
@@ -756,42 +684,37 @@ function buildPdistTypeSections() {
     if (!container) return;
 
     const ftypeOrder = Object.keys(FTYPE_META);
-    const ftypes = [...new Set(pd.features.map(f => f.ftype))]
-        .sort((a, b) =>
-            (ftypeOrder.indexOf(a) + 1 || 99) - (ftypeOrder.indexOf(b) + 1 || 99)
-        );
+    [...new Set(pd.features.map(f => f.ftype))]
+        .sort((a, b) => (ftypeOrder.indexOf(a) + 1 || 99) - (ftypeOrder.indexOf(b) + 1 || 99))
+        .forEach(ft => {
+            const meta    = FTYPE_META[ft] || { label: ft, color: '#6b7280' };
+            const section = document.createElement('div');
+            section.className = 'card cat';
 
-    ftypes.forEach(ft => {
-        const meta    = FTYPE_META[ft] || { label: ft, color: '#6b7280' };
-        const section = document.createElement('div');
-        section.className = 'card cat';
+            const head = document.createElement('div');
+            head.className = 'card-header';
+            head.innerHTML = `<span class="arrow">▶</span><h2>${meta.label}</h2>`;
 
-        const head = document.createElement('div');
-        head.className = 'card-header';
-        head.innerHTML = `<span class="arrow">▶</span><h2>${meta.label}</h2>`;
+            const body = document.createElement('div');
+            body.className = 'card-body';
 
-        const body = document.createElement('div');
-        body.className = 'card-body';
+            const chartWrap = document.createElement('div');
+            chartWrap.style.minHeight = '40px';
+            body.appendChild(chartWrap);
+            section.appendChild(head);
+            section.appendChild(body);
+            container.appendChild(section);
 
-        const chartWrap = document.createElement('div');
-        chartWrap.style.minHeight = '40px';
-        body.appendChild(chartWrap);
-
-        section.appendChild(head);
-        section.appendChild(body);
-        container.appendChild(section);
-
-        head.addEventListener('click', () => {
-            const isOpen = body.classList.contains('visible');
-            body.classList.toggle('visible', !isOpen);
-            head.classList.toggle('open', !isOpen);
-            if (!isOpen && !chartWrap.dataset.rendered) {
-                const feats = pd.features.filter(f => f.ftype === ft);
-                buildBubbleChart(feats, pd.decades || [], chartWrap);
-                chartWrap.dataset.rendered = '1';
-            }
+            head.addEventListener('click', () => {
+                const isOpen = body.classList.contains('visible');
+                body.classList.toggle('visible', !isOpen);
+                head.classList.toggle('open', !isOpen);
+                if (!isOpen && !chartWrap.dataset.rendered) {
+                    buildBubbleChart(pd.features.filter(f => f.ftype === ft), pd.decades || [], chartWrap);
+                    chartWrap.dataset.rendered = '1';
+                }
+            });
         });
-    });
 }
 
 document.addEventListener('DOMContentLoaded', initPdist);
