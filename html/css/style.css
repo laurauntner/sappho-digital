@@ -1614,8 +1614,8 @@ body[data-tei-file] .dataTables_wrapper {
     border: 1px solid #dee2e6;
     border-radius: 6px;
     padding: 1.5rem;
-    margin-top: 2rem;
     margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 .stats-subtitle {
     font-size: 1.1rem;
@@ -1780,7 +1780,7 @@ body[data-tei-file] .dataTables_wrapper {
     border-radius: 2px;
     flex-shrink: 0;
 }
-/* ── Statistik 3: Phänomene nach Zeit & Gattung ────────────────────────────── */
+
 .stat3-controls {
     display: flex;
     flex-wrap: wrap;
@@ -1805,4 +1805,12 @@ body[data-tei-file] .dataTables_wrapper {
 }
 #pdist-canvas {
     width: 100% !important;
+}
+.pdist-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.2rem;
+    font-size: 0.8rem;
+    color: #4b5563;
+    margin-bottom: 0.6rem;
 }

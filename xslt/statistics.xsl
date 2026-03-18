@@ -104,13 +104,53 @@
       </xsl:for-each>
     </xsl:variable>
 
+    <xsl:variable name="pdist-decade-json" as="xs:string*">
+      <xsl:for-each select="statistics/phenomenaDist/meta/decade">
+        <xsl:sequence select="concat('&quot;', @key, '&quot;')"/>
+      </xsl:for-each>
+    </xsl:variable>
+
+    <xsl:variable name="pdist-genre-json" as="xs:string*">
+      <xsl:for-each select="statistics/phenomenaDist/meta/genre">
+        <xsl:sequence select="concat('&quot;', replace(@key, '&quot;', '\\&quot;'), '&quot;')"/>
+      </xsl:for-each>
+    </xsl:variable>
+
+    <xsl:variable name="pdist-feat-json" as="xs:string*">
+      <xsl:for-each select="statistics/phenomenaDist/features/feature">
+        <xsl:variable name="cells-json" as="xs:string*">
+          <xsl:for-each select="cell">
+            <xsl:sequence
+              select="concat('{&quot;d&quot;:&quot;', @decade, '&quot;,&quot;n&quot;:', @n, '}')"/>
+          </xsl:for-each>
+        </xsl:variable>
+        <xsl:sequence select="
+            concat(
+            '{',
+            '&quot;uri&quot;:&quot;', replace(@uri, '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;label&quot;:&quot;', replace(@label, '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;ftype&quot;:&quot;', @ftype, '&quot;,',
+            '&quot;total&quot;:', @total, ',',
+            '&quot;cells&quot;:[', string-join($cells-json, ','), ']',
+            '}'
+            )"/>
+      </xsl:for-each>
+    </xsl:variable>
+
     <xsl:variable name="json" as="xs:string" select="
         concat(
         '{',
         '&quot;nSappho&quot;:', statistics/@nSappho, ',',
         '&quot;nReception&quot;:', statistics/@nReception, ',',
         '&quot;categories&quot;:[', string-join($cat-json-items, ','), '],',
-        '&quot;fragments&quot;:[', string-join($frag-json-items, ','), ']',
+        '&quot;fragments&quot;:[', string-join($frag-json-items, ','), '],',
+        '&quot;phenomenaDist&quot;:{',
+        '&quot;nRecords&quot;:', (statistics/phenomenaDist/@nRecords, '0')[1], ',',
+        '&quot;nFeatures&quot;:', (statistics/phenomenaDist/@nFeatures, '0')[1], ',',
+        '&quot;decades&quot;:[', string-join($pdist-decade-json, ','), '],',
+        '&quot;genres&quot;:[', string-join($pdist-genre-json, ','), '],',
+        '&quot;features&quot;:[', string-join($pdist-feat-json, ','), ']',
+        '}',
         '}'
         )"/>
 
@@ -180,6 +220,33 @@
                     <div id="sankey-svg-wrap" style="display:none"/>
                     <div id="sankey-legend" style="display:none" class="sankey-legend"/>
                   </div>
+                </div>
+                <div class="stats-wrap" id="stat3-wrap">
+                  <p class="stats-subtitle">Statistik 3: Phänomene im Laufe der Zeit</p>
+                  <p class="stats-desc">Wie verteilen sich konkrete Phänomene über die Zeit? Die
+                    Blasengröße zeigt, in wie vielen Rezeptionszeugnissen eines Jahrzehnts ein
+                    Phänomen annotiert ist; die Farbe kennzeichnet den Phänomentyp.</p>
+                  <p class="stats-subtitle" style="font-size:0.82rem;margin-bottom:0.75rem"
+                    >Überblick (Top-N)</p>
+                  <div
+                    style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;margin-bottom:1rem">
+                    <div class="stat3-control-group">
+                      <label>Anzahl:</label>
+                      <select id="sel-pdist-topn" class="stat2-select">
+                        <option value="20">Top 20</option>
+                        <option value="30" selected="selected">Top 30</option>
+                        <option value="50">Top 50</option>
+                        <option value="100">Top 100</option>
+                      </select>
+                    </div>
+                    <div id="pdist-type-legend"
+                      style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.4rem 1.1rem;font-size:0.8rem;color:#4b5563"
+                    />
+                  </div>
+                  <div id="pdist-overview-wrap"/>
+                  <p class="stats-subtitle" style="font-size:0.82rem;margin:1.2rem 0 0.5rem">Nach
+                    Phänomentyp</p>
+                  <div id="pdist-type-sections"/>
                 </div>
                 <div class="stats-wrap">
                   <p class="stats-subtitle">## more coming soon ##</p>

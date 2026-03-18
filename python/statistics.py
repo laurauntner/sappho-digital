@@ -11,9 +11,21 @@ from rdflib.namespace import RDF, RDFS
 LRMOO = Namespace("http://iflastandards.info/ns/lrm/lrmoo/")
 INTRO  = Namespace("https://w3id.org/lso/intro/currentbeta#")
 
+ECRM    = Namespace("http://erlangen-crm.org/current/")
+LRMOO_  = LRMOO  # alias for clarity below
+
 F2_Expression          = LRMOO.F2_Expression
+F28_Expression_Creation = LRMOO.F28_Expression_Creation
+F30_Manifestation_Creation = LRMOO.F30_Manifestation_Creation
+R17_created            = LRMOO.R17_created
 R18_showsActualization = INTRO.R18_showsActualization
 R17_actualizesFeature  = INTRO.R17_actualizesFeature
+R30_hasTextPassage     = INTRO["R30_hasTextPassage"]
+R30i_isTextPassageOf   = INTRO["R30i_isTextPassageOf"]
+
+P4_has_time_span       = ECRM["P4_has_time-span"]
+P2_has_type            = ECRM.P2_has_type
+P9_consists_of         = ECRM.P9_consists_of
 
 # Feature-Typ aus URI
 
@@ -25,10 +37,15 @@ FEATURE_TYPES = [
     ("motif",      "/motif/",       "Motive"),
     ("topic",      "/topic/",       "Themen"),
     ("plot",       "/plot/",        "Stoffe"),
+    ("work_ref",   "/work_ref/",    "Werkreferenzen"),
+]
+
+ALL_PHENOM_TYPES = FEATURE_TYPES + [
+    ("text_passage", "/text_passage/", "Zitate"),
 ]
 
 def feature_type(uri: str) -> Optional[str]:
-    for key, pattern, _ in FEATURE_TYPES:
+    for key, pattern, _ in ALL_PHENOM_TYPES:
         if pattern in uri:
             return key
     return None
@@ -170,7 +187,7 @@ def main(ttl_path: str, xml_out: str) -> None:
 
     # Pro Sappho-Fragment – Aktualisierungen in Rezeptionszeugnissen
     INTRO_NS  = Namespace("https://w3id.org/lso/intro/currentbeta#")
-    ECRM_NS   = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
+    ECRM_NS   = Namespace("http://erlangen-crm.org/current/")
 
     INT18_Reference          = INTRO_NS.INT18_Reference
     R17i_featureIsActualizedIn = INTRO_NS["R17i_featureIsActualizedIn"]
@@ -323,6 +340,233 @@ def main(ttl_path: str, xml_out: str) -> None:
                 feat_el.set("label", get_label(feat_uri))
                 feat_el.set("uri",   str(feat_uri))
                 feat_el.set("count", str(count))
+
+    # ── Phänomene nach Zeit & Gattung ─────────────────────────────────────────
+    # Für jede Rezeptionszeugnis-F2:
+    #   1. Gattung via ecrm:P2_has_type → ecrm:E55_Type (URI enthält /genre/…)
+    #   2. Jahr via F28 (F2 –R17i_was_created_by→ F28 –P4_has_time-span→ TS)
+    #      Fallback F30: F2 –R4i_is_embodied_in→ F3 –R24i_was_created_through→ F30
+    #                    –P4_has_time-span→ TS
+    #   3. Konkrete Features (URIRef + Label) aus reception_idx
+    #      + INT18_Reference (work_ref) via R17i_featureIsActualizedIn
+    #      + INT21_TextPassage via R30_hasTextPassage / R30i_isTextPassageOf
+
+    R17i_was_created_by      = LRMOO["R17i_was_created_by"]
+    R4i_is_embodied_in       = LRMOO["R4i_is_embodied_in"]
+    R24i_was_created_through = LRMOO["R24i_was_created_through"]
+
+    GENRE_BASE = "https://sappho-digital.com/genre/"
+    GENRE_LABELS = {
+        "lyrik":   "Lyrik",
+        "prosa":   "Prosa",
+        "drama":   "Drama",
+        "Comic":   "Comic",
+    }
+
+    def get_genre(f2_uri: URIRef) -> str:
+        for _, _, type_uri in g.triples((f2_uri, P2_has_type, None)):
+            t = str(type_uri)
+            if GENRE_BASE in t:
+                key = t.split(GENRE_BASE)[-1].strip("/")
+                return GENRE_LABELS.get(key, key)
+        return "Unbekannt"
+
+    def extract_year(ts_uri: URIRef) -> Optional[int]:
+        # URI-Muster: …/timespan/1961 oder …/timespan/1961-1965
+        m = re.search(r'/timespan/(\d{4})', str(ts_uri))
+        if m:
+            return int(m.group(1))
+        # rdfs:label (kann xsd:gYear oder plain literal sein)
+        for _, _, lbl in g.triples((ts_uri, RDFS.label, None)):
+            m2 = re.search(r'\b(\d{4})\b', str(lbl))
+            if m2:
+                return int(m2.group(1))
+        return None
+
+    def get_year_for_f2(f2_uri: URIRef) -> Optional[int]:
+        # Pfad 1: F2 –R17i_was_created_by→ F28 –P4_has_time-span→ TS
+        for _, _, f28 in g.triples((f2_uri, R17i_was_created_by, None)):
+            for _, _, ts in g.triples((f28, P4_has_time_span, None)):
+                y = extract_year(ts)
+                if y is not None:
+                    return y
+        # Pfad 2: F2 –R4i_is_embodied_in→ F3 –R24i_was_created_through→ F30
+        #          –P4_has_time-span→ TS
+        for _, _, f3 in g.triples((f2_uri, R4i_is_embodied_in, None)):
+            for _, _, f30 in g.triples((f3, R24i_was_created_through, None)):
+                for _, _, ts in g.triples((f30, P4_has_time_span, None)):
+                    y = extract_year(ts)
+                    if y is not None:
+                        return y
+        return None
+
+    # work_ref: INT18_Reference-Instanzen, die via R17i_featureIsActualizedIn
+    # an einer Aktualisierung hängen, die ihrerseits via R18i_actualizationFoundOn
+    # an dieser F2 hängt – also genau wie in frag_data, aber für alle F2.
+    R17i_featureIsActualizedIn = INTRO["R17i_featureIsActualizedIn"]
+    R18i_actualizationFoundOn  = INTRO["R18i_actualizationFoundOn"]
+
+    def get_work_refs(f2_uri: URIRef) -> set[URIRef]:
+        """Alle work_ref-Features (INT18_Reference), die an Aktualisierungen
+        dieser F2 hängen und nicht bereits in reception_idx sind."""
+        refs: set[URIRef] = set()
+        # Alle Aktualisierungen dieser F2
+        for _, _, act in g.triples((f2_uri, R18_showsActualization, None)):
+            # Alle Features dieser Aktualisierung
+            for _, _, feat in g.triples((act, R17_actualizesFeature, None)):
+                if "/work_ref/" in str(feat):
+                    refs.add(feat)
+        return refs
+
+    def get_text_passages(f2_uri: URIRef) -> set[URIRef]:
+        """INT21_TextPassage-Instanzen via R30_hasTextPassage oder R30i_isTextPassageOf."""
+        tps: set[URIRef] = set()
+        for _, _, tp in g.triples((f2_uri, R30_hasTextPassage, None)):
+            tps.add(tp)
+        for tp, _, _ in g.triples((None, R30i_isTextPassageOf, f2_uri)):
+            tps.add(tp)
+        return tps
+
+    # ── Haupt-Loop: pro Rezeptionszeugnis alle konkreten Features sammeln ──────
+    # dist_records: Liste von {uri, year, genre, features: set[URIRef],
+    #                          text_passages: set[URIRef]}
+    dist_records = []
+
+    for f2 in reception_f2:
+        if f2 not in reception_with_act:
+            continue
+
+        year  = get_year_for_f2(f2)
+        genre = get_genre(f2)
+
+        # Alle Feature-URIs (Figuren, Personen, Orte, Topoi, Motive, Themen, Stoffe, work_ref)
+        features: set[URIRef] = set(reception_idx.get(f2, set()))
+        # work_refs sind in reception_idx enthalten wenn sie über R17_actualizesFeature
+        # verknüpft sind – get_work_refs dient als Sicherheitsnetz
+        features |= get_work_refs(f2)
+
+        text_passages = get_text_passages(f2)
+
+        if not features and not text_passages:
+            continue
+
+        dist_records.append({
+            "uri":           str(f2),
+            "year":          year,
+            "genre":         genre,
+            "features":      features,
+            "text_passages": text_passages,
+        })
+
+    print(f"  PhenomDist-Einträge: {len(dist_records)} "
+          f"(ohne Jahr: {sum(1 for r in dist_records if r['year'] is None)})",
+          file=sys.stderr)
+
+    # ── Aggregation: feat_uri × decade × genre → Anzahl Zeugnisse ─────────────
+    # Wir wollen wissen: in wie vielen Zeugnissen taucht Feature X
+    # im Jahrzehnt D / Gattung G auf?
+
+    def decade(y: Optional[int]) -> str:
+        if y is None:
+            return "n/a"
+        return f"{(y // 10) * 10}s"
+
+    # feat_uri → { decade → { genre → count } }
+    # Wir zählen: wie viele Zeugnisse enthalten dieses Feature im Jahrzehnt D (Gattung G)?
+    feat_dist:   dict[URIRef, dict[str, dict[str, int]]] = defaultdict(
+                     lambda: defaultdict(lambda: defaultdict(int)))
+    feat_labels: dict[URIRef, str] = {}
+    feat_ftype:  dict[URIRef, str] = {}
+
+    genres_seen:  set[str] = set()
+    decades_seen: set[str] = set()
+
+    n_with_year    = 0
+    n_without_year = 0
+
+    for rec in dist_records:
+        dec = decade(rec["year"])
+        gen = rec["genre"]
+        genres_seen.add(gen)
+        decades_seen.add(dec)
+        if rec["year"] is not None:
+            n_with_year += 1
+        else:
+            n_without_year += 1
+
+        for feat_uri in rec["features"]:
+            feat_dist[feat_uri][dec][gen] += 1
+            if feat_uri not in feat_labels:
+                feat_labels[feat_uri] = get_label(feat_uri)
+                feat_ftype[feat_uri]  = feature_type(str(feat_uri)) or "other"
+
+        for tp_uri in rec["text_passages"]:
+            feat_dist[tp_uri][dec][gen] += 1
+            if tp_uri not in feat_labels:
+                feat_labels[tp_uri] = get_label(tp_uri)
+                feat_ftype[tp_uri]  = "text_passage"
+
+    print(f"  Distinkte Phänomene in PhenomDist: {len(feat_dist)}", file=sys.stderr)
+    print(f"  Zeugnisse mit Jahr: {n_with_year}, ohne Jahr: {n_without_year}", file=sys.stderr)
+
+    # Sortierung
+    def decade_sort(d: str) -> int:
+        m = re.match(r'(\d+)', d)
+        return int(m.group(1)) if m else 9999
+
+    sorted_decades = sorted([d for d in decades_seen if d != "n/a"], key=decade_sort)
+    if "n/a" in decades_seen:
+        sorted_decades.append("n/a")
+
+    genre_order = ["Lyrik", "Prosa", "Drama", "Comic", "Unbekannt"]
+    sorted_genres = [g for g in genre_order if g in genres_seen]
+    sorted_genres += [g for g in sorted(genres_seen) if g not in genre_order]
+
+    # Gesamtcount pro Feature = Summe über alle Jahrzehnte und Gattungen
+    def feat_total(fu: URIRef) -> int:
+        return sum(
+            cnt
+            for dec_dict in feat_dist[fu].values()
+            for cnt in dec_dict.values()
+        )
+
+    feat_totals  = {fu: feat_total(fu) for fu in feat_dist}
+    sorted_feats = sorted(feat_dist.keys(),
+                          key=lambda fu: (-feat_totals[fu], feat_labels.get(fu, "").lower()))
+
+    # ── XML-Block <phenomenaDist> ──────────────────────────────────────────────
+    pdist_el = ET.SubElement(root_el, "phenomenaDist")
+    pdist_el.set("nRecords",    str(len(dist_records)))
+    pdist_el.set("nWithYear",   str(n_with_year))
+    pdist_el.set("nWithoutYear",str(n_without_year))
+    pdist_el.set("nFeatures",   str(len(feat_dist)))
+
+    # Metadaten: Jahrzehnte und Gattungen
+    meta_el = ET.SubElement(pdist_el, "meta")
+    for dec in sorted_decades:
+        d_el = ET.SubElement(meta_el, "decade")
+        d_el.set("key", dec)
+    for gen in sorted_genres:
+        g_el = ET.SubElement(meta_el, "genre")
+        g_el.set("key", gen)
+
+    # Pro Feature: Label, Typ, Gesamtzahl,
+    # dann pro Jahrzehnt die Summe + Aufschlüsselung nach Gattung
+    feats_el = ET.SubElement(pdist_el, "features")
+    for feat_uri in sorted_feats:
+        fe = ET.SubElement(feats_el, "feature")
+        fe.set("uri",   str(feat_uri))
+        fe.set("label", feat_labels.get(feat_uri, str(feat_uri).split("/")[-1]))
+        fe.set("ftype", feat_ftype.get(feat_uri, "other"))
+        fe.set("total", str(feat_totals[feat_uri]))
+        for dec in sorted_decades:
+            dec_dict = feat_dist[feat_uri].get(dec, {})
+            dec_total = sum(dec_dict.values())
+            if dec_total == 0:
+                continue
+            cell_el = ET.SubElement(fe, "cell")
+            cell_el.set("decade", dec)
+            cell_el.set("n",      str(dec_total))
 
     # XML schreiben
     tree = ET.ElementTree(root_el)
