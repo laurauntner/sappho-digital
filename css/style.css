@@ -1614,6 +1614,8 @@ body[data-tei-file] .dataTables_wrapper {
     border: 1px solid #dee2e6;
     border-radius: 6px;
     padding: 1.5rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 .stats-subtitle {
     font-size: 1.1rem;
@@ -1777,4 +1779,38 @@ body[data-tei-file] .dataTables_wrapper {
     height: 10px;
     border-radius: 2px;
     flex-shrink: 0;
+}
+
+.stat3-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    align-items: center;
+    margin-bottom: 1.25rem;
+}
+.stat3-control-group {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+}
+.stat3-control-group label {
+    color: #6b7280;
+    white-space: nowrap;
+}
+#pdist-chart-wrap {
+    position: relative;
+    width: 100%;
+    min-height: 260px;
+}
+#pdist-canvas {
+    width: 100% !important;
+}
+.pdist-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.2rem;
+    font-size: 0.8rem;
+    color: #4b5563;
+    margin-bottom: 0.6rem;
 }

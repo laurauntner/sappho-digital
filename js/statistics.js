@@ -1,3 +1,5 @@
+// ── Statistik 1 ──────────────────────────
+
 const C = {
     s: 'rgba(94,23,235,0.75)',
     sLine: '#5e17eb',
@@ -147,7 +149,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// ── Sankey ────────────────────────────────────────────────────────────────────
+// ── Statistik 2 ──────────────────────────
 
 const FTYPE_COLORS = {
     person_ref: '#f59e0b',
@@ -180,7 +182,7 @@ function initSankey() {
     sel.addEventListener('change', () => renderSankey2(sel.value));
 }
 
-// Tooltip (lazy init on first use)
+// Tooltip
 let _tip = null;
 function getTip() {
     if (!_tip) {
@@ -213,8 +215,9 @@ function renderSankey2(fragLabel) {
     hideTip();
 
     if (!fragLabel) {
-        placeholder.style.display = '';
+        placeholder.style.display = 'none';
         svgWrap.style.display     = 'none';
+        svgWrap.innerHTML         = '';
         legend.style.display      = 'none';
         return;
     }
@@ -456,3 +459,339 @@ function renderSankey2(fragLabel) {
 }
 
 document.addEventListener('DOMContentLoaded', initSankey);
+
+
+// ── Statistik 3 ──────────────────────────
+
+const FTYPE_META = {
+    person_ref:   { label: 'Personenreferenz', color: '#f59e0b' },
+    character:    { label: 'Figur',            color: '#3b82f6' },
+    place_ref:    { label: 'Ortsreferenz',     color: '#10b981' },
+    topos:        { label: 'Rhetorischer Topos',  color: '#ef4444' },
+    motif:        { label: 'Motiv',             color: '#8b5cf6' },
+    topic:        { label: 'Thema',             color: '#06b6d4' },
+    plot:         { label: 'Stoff',             color: '#f97316' },
+    work_ref:     { label: 'Werkreferenz',     color: '#e11d48' },
+    text_passage: { label: 'Zitat',             color: '#84cc16' },
+};
+
+// Tooltip
+let _pdTip = null;
+function getPdTip() {
+    if (!_pdTip) {
+        _pdTip = document.createElement('div');
+        _pdTip.style.cssText =
+            'position:fixed;background:#1f2937;color:#fff;font-size:12px;'
+            + 'font-family:Geist,system-ui,sans-serif;padding:5px 9px;border-radius:5px;'
+            + 'pointer-events:none;display:none;z-index:9999;white-space:nowrap;line-height:1.5';
+        document.body.appendChild(_pdTip);
+    }
+    return _pdTip;
+}
+function pdTipShow(e, html) {
+    const t = getPdTip();
+    t.innerHTML = html;
+    t.style.display = 'block';
+    pdTipMove(e);
+}
+function pdTipMove(e) {
+    const t = getPdTip();
+    t.style.left = (e.clientX + 14) + 'px';
+    t.style.top  = (e.clientY - 36) + 'px';
+}
+function pdTipHide() {
+    const t = getPdTip();
+    t.style.display = 'none';
+}
+
+// SVG-Bubble-Chart
+function buildBubbleChart(features, decades, container, showType = false) {
+    container.innerHTML = '';
+    if (!features.length || !decades.length) {
+        container.innerHTML = '<p style="color:#9ca3af;padding:0.5rem 0">Keine Daten.</p>';
+        return;
+    }
+
+    // Zellwert: Summe über alle Gattungen
+    const cellN = (feat, dec) => {
+        const cell = feat.cells.find(c => c.d === dec);
+        return cell ? cell.n : 0;
+    };
+
+    // Features ohne Daten entfernen, nach Total absteigend sortieren
+    const active = features
+        .map(f => ({ feat: f, total: decades.reduce((s, d) => s + cellN(f, d), 0) }))
+        .filter(x => x.total > 0)
+        .sort((a, b) => b.total - a.total);
+
+    if (!active.length) {
+        container.innerHTML = '<p style="color:#9ca3af;padding:0.5rem 0">Keine Daten.</p>';
+        return;
+    }
+
+    const nRows = active.length;
+    const nCols = decades.length;
+
+    let maxN = 0;
+    active.forEach(({ feat }) =>
+        decades.forEach(dec => { const v = cellN(feat, dec); if (v > maxN) maxN = v; })
+    );
+
+    const ROW_H1  = 30;   // einzeilige Zeilenhöhe
+    const ROW_H2  = 44;   // zweizeilige Zeilenhöhe
+    const COL_W   = 64;
+    const LABEL_W = 200;
+    const HDR_H   = 60;
+    const PAD_B   = 8;
+    const FONT_W  = 7.0;  // konservativere Schätzung für breite Zeichen
+    const MAX_W   = LABEL_W - 18;
+    const MAX_CHARS_1 = Math.floor(MAX_W / FONT_W) - 2;    // früh umbrechen
+    const MAX_CHARS_2 = Math.floor(MAX_W / FONT_W);         // Zeichen pro Zeile (zweizeilig)
+
+    const rowMeta = active.map(({ feat }) => {
+        const label = feat.label;
+        if (label.length <= MAX_CHARS_1) {
+            return { lines: [label], h: ROW_H1 };
+        }
+
+        const words = label.split(' ');
+        let best = null;
+        let current = '';
+        for (let i = 0; i < words.length - 1; i++) {
+            current = current ? current + ' ' + words[i] : words[i];
+            const rest = words.slice(i + 1).join(' ');
+            if (current.length <= MAX_CHARS_2 && rest.length <= MAX_CHARS_2) {
+                best = { line1: current, line2: rest };
+            }
+        }
+        if (best) {
+            return { lines: [best.line1, best.line2], h: ROW_H2 };
+        }
+        const mid = Math.floor(label.length / 2);
+        const breakAt = label.lastIndexOf(' ', mid + 6);
+        const split = breakAt > 4 ? breakAt : MAX_CHARS_2;
+        const line1 = label.slice(0, split).trimEnd();
+        const line2Raw = label.slice(split).trimStart();
+        const line2 = line2Raw.length > MAX_CHARS_2 ? line2Raw.slice(0, MAX_CHARS_2 - 1) + '…' : line2Raw;
+        return { lines: [line1, line2], h: ROW_H2 };
+    });
+
+    // Kumulierte Y-Positionen
+    const rowY = [];
+    let curY = HDR_H;
+    rowMeta.forEach(m => { rowY.push(curY); curY += m.h; });
+    const totalRowH = curY - HDR_H;
+
+    const R_MAX   = Math.min(ROW_H1, COL_W) / 2 + 3;
+    const R_MIN   = 0;
+
+    // Starke Potenz-Skalierung
+    const scaleR = v => v === 0 ? 0 : 0.8 + (R_MAX - 0.8) * Math.pow(v / maxN, 0.45);
+
+    const svgW = LABEL_W + nCols * COL_W + 8;
+    const svgH = HDR_H + totalRowH + PAD_B;
+
+    const ns  = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('width',  svgW);
+    svg.setAttribute('height', svgH);
+    svg.style.cssText =
+        'font-family:Geist,system-ui,sans-serif;font-size:11px;overflow:visible;display:block';
+
+    const mk  = tag => document.createElementNS(ns, tag);
+    const set = (el, attrs) => {
+        Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v));
+        return el;
+    };
+    const txt = (x, y, content, attrs = {}) => {
+        const t = mk('text');
+        set(t, { x, y, ...attrs });
+        t.textContent = content;
+        return t;
+    };
+
+    // Spalten-Header
+    const decLabel = d => d === 'n/a' ? 'o. J.' : d.replace(/(\d+)s$/, '$1er');
+    decades.forEach((dec, ci) => {
+        const cx = LABEL_W + ci * COL_W + COL_W / 2;
+        svg.appendChild(txt(cx, HDR_H - 6, decLabel(dec), {
+            'text-anchor': 'middle',
+            transform: `rotate(-40,${cx},${HDR_H - 6})`,
+            'font-size': '10px',
+            fill: '#6b7280',
+        }));
+        // Gitternetzlinie
+        svg.appendChild(set(mk('line'), {
+            x1: cx, y1: HDR_H,
+            x2: cx, y2: HDR_H + totalRowH,
+            stroke: 'rgba(0,0,0,0.06)', 'stroke-width': 1,
+        }));
+    });
+
+    // Zeilen
+    active.forEach(({ feat, total }, ri) => {
+        const y0    = rowY[ri];
+        const rh    = rowMeta[ri].h;
+        const yc    = y0 + rh / 2;
+        const color = (FTYPE_META[feat.ftype] || {}).color || '#6b7280';
+
+        // Zebra-Hintergrund
+        if (ri % 2 === 0) {
+            svg.appendChild(set(mk('rect'), {
+                x: 0, y: y0, width: svgW, height: rh,
+                fill: 'rgba(0,0,0,0.022)',
+            }));
+        }
+
+        // Typ-Farbstreifen
+        svg.appendChild(set(mk('rect'), {
+            x: 0, y: y0 + 1, width: 3, height: rh - 2,
+            fill: color, rx: 1,
+        }));
+
+        // Feature-Label
+        const lines = rowMeta[ri].lines;
+        if (lines.length === 1) {
+            svg.appendChild(txt(LABEL_W - 8, yc, lines[0], {
+                'text-anchor': 'end', dy: '0.35em', fill: '#1f2937',
+            }));
+        } else {
+            const lineH = 13;
+            svg.appendChild(txt(LABEL_W - 8, yc - lineH / 2, lines[0], {
+                'text-anchor': 'end', dy: '0em', fill: '#1f2937',
+            }));
+            svg.appendChild(txt(LABEL_W - 8, yc + lineH / 2, lines[1], {
+                'text-anchor': 'end', dy: '0.9em', fill: '#1f2937',
+            }));
+        }
+
+        // Blasen
+        decades.forEach((dec, ci) => {
+            const v = cellN(feat, dec);
+            if (v === 0) return;
+
+            const cx = LABEL_W + ci * COL_W + COL_W / 2;
+            const r  = scaleR(v);
+
+            const circle = set(mk('circle'), {
+                cx, cy: yc, r,
+                fill: color, 'fill-opacity': 0.70,
+                stroke: color, 'stroke-width': 1, 'stroke-opacity': 0.9,
+            });
+            circle.style.cursor = 'default';
+            svg.appendChild(circle);
+
+            // Zahl in Blase
+            if (r >= 8) {
+                svg.appendChild(txt(cx, yc, v, {
+                    'text-anchor': 'middle', dy: '0.35em',
+                    'font-size': Math.min(10, r * 1.1) + 'px',
+                    fill: '#fff', 'pointer-events': 'none',
+                }));
+            }
+
+            // Tooltip
+            const ftypeLabel = (FTYPE_META[feat.ftype] || {}).label || feat.ftype;
+            const tipHtml = `<strong>${feat.label}</strong>`
+                + (showType ? `<br><span style="font-size:10px;color:rgba(255,255,255,0.75)">(${ftypeLabel})</span>` : '')
+                + `<br>${decLabel(dec)}: <strong>${v}</strong> Rezeptionszeugnis${v !== 1 ? 'se' : ''}`;
+            circle.addEventListener('mouseenter', e => pdTipShow(e, tipHtml));
+            circle.addEventListener('mousemove',  e => pdTipMove(e));
+            circle.addEventListener('mouseleave', pdTipHide);
+        });
+    });
+
+    const scroller = document.createElement('div');
+    scroller.style.cssText =
+        'overflow-x:auto;overflow-y:auto;max-height:600px;padding-bottom:4px';
+    scroller.appendChild(svg);
+    container.appendChild(scroller);
+}
+
+// Initialisierung
+function initPdist() {
+    const pd = DATA.phenomenaDist;
+    if (!pd || !pd.features || pd.features.length === 0) return;
+
+    // Typ-Legende aufbauen
+    const legendWrap = document.getElementById('pdist-type-legend');
+    if (legendWrap) {
+        const ftypesSeen = [...new Set(pd.features.map(f => f.ftype))];
+        const ftypeOrder = Object.keys(FTYPE_META);
+        ftypesSeen.sort((a, b) =>
+            (ftypeOrder.indexOf(a) + 1 || 99) - (ftypeOrder.indexOf(b) + 1 || 99));
+        ftypesSeen.forEach(ft => {
+            const m = FTYPE_META[ft] || { label: ft, color: '#6b7280' };
+            const span = document.createElement('span');
+            span.style.cssText = 'display:inline-flex;align-items:center;gap:5px';
+            span.innerHTML =
+                `<span style="display:inline-block;width:11px;height:11px;border-radius:50%;`
+                + `background:${m.color};opacity:0.8;flex-shrink:0"></span>${m.label}`;
+            legendWrap.appendChild(span);
+        });
+    }
+
+    // Top-N-Listener
+    const selTopN = document.getElementById('sel-pdist-topn');
+    if (selTopN) selTopN.addEventListener('change', renderPdistOverview);
+
+    // Überblick rendern
+    renderPdistOverview();
+
+    // Typ-Sektionen aufbauen
+    buildPdistTypeSections();
+}
+
+function renderPdistOverview() {
+    const pd    = DATA.phenomenaDist;
+    const topN  = parseInt(document.getElementById('sel-pdist-topn').value) || 30;
+    const topFeats = pd.features.slice(0, topN);
+    const wrap  = document.getElementById('pdist-overview-wrap');
+    if (wrap) buildBubbleChart(topFeats, pd.decades || [], wrap, true);
+}
+
+function buildPdistTypeSections() {
+    const pd        = DATA.phenomenaDist;
+    const container = document.getElementById('pdist-type-sections');
+    if (!container) return;
+
+    const ftypeOrder = Object.keys(FTYPE_META);
+    const ftypes = [...new Set(pd.features.map(f => f.ftype))]
+        .sort((a, b) =>
+            (ftypeOrder.indexOf(a) + 1 || 99) - (ftypeOrder.indexOf(b) + 1 || 99)
+        );
+
+    ftypes.forEach(ft => {
+        const meta    = FTYPE_META[ft] || { label: ft, color: '#6b7280' };
+        const section = document.createElement('div');
+        section.className = 'card cat';
+
+        const head = document.createElement('div');
+        head.className = 'card-header';
+        head.innerHTML = `<span class="arrow">▶</span><h2>${meta.label}</h2>`;
+
+        const body = document.createElement('div');
+        body.className = 'card-body';
+
+        const chartWrap = document.createElement('div');
+        chartWrap.style.minHeight = '40px';
+        body.appendChild(chartWrap);
+
+        section.appendChild(head);
+        section.appendChild(body);
+        container.appendChild(section);
+
+        head.addEventListener('click', () => {
+            const isOpen = body.classList.contains('visible');
+            body.classList.toggle('visible', !isOpen);
+            head.classList.toggle('open', !isOpen);
+            if (!isOpen && !chartWrap.dataset.rendered) {
+                const feats = pd.features.filter(f => f.ftype === ft);
+                buildBubbleChart(feats, pd.decades || [], chartWrap);
+                chartWrap.dataset.rendered = '1';
+            }
+        });
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initPdist);
