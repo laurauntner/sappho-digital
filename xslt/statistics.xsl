@@ -252,6 +252,9 @@
                     <div id="sankey-legend" style="display:none" class="sankey-legend"/>
                   </div>
                 </div>
+                <div class="stats-wrap">
+                  <p class="stats-subtitle">## more coming soon ##</p>
+                </div>
               </div>
             </div>
           </div>
