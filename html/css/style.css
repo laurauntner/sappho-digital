@@ -1861,7 +1861,6 @@ body[data-tei-file] .dataTables_wrapper {
 }
 
 #sankey-placeholder2,
-#sankey-svg-wrap,
 #sankey-legend,
 #pc-placeholder {
     display: none;

@@ -272,8 +272,8 @@
               <div class="card-body">
                 <div class="stats-wrap">
                   <p class="stats-subtitle">Statistik 1: Alle Phänomene im Vergleich</p>
-                  <p class="stats-desc">Welche Phänomene werden in den Sappho-Fragmenten und in
-                    ihren Rezeptionszeugnissen aktualisiert – und wo liegen die auffälligsten
+                  <p class="stats-desc">Welche Phänomene werden in Sappho-Fragmenten sowie in
+                    Rezeptionszeugnissen aktualisiert – und wo liegen die auffälligsten
                     Übereinstimmungen oder Verschiebungen?</p>
                   <div class="meta-bar">
                     <div class="meta-card s">
@@ -293,6 +293,20 @@
                     <span><span class="dot dot-s"/>Sappho-Fragmente</span>
                     <span><span class="dot dot-r"/>Rezeptionszeugnisse</span>
                   </div>
+                  <p class="stats-subtitle stats-subtitle-sm">Überblick (Top-N)</p>
+                  <div class="control-col-wrap">
+                    <div class="stat3-control-group">
+                      <label>Anzahl:</label>
+                      <select id="sel-cat-topn" class="stat2-select">
+                        <option value="20">Top 20</option>
+                        <option value="30" selected="selected">Top 30</option>
+                        <option value="50">Top 50</option>
+                        <option value="100">Top 100</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div id="cat-overview-wrap"/>
+                  <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
                   <div id="cats"/>
                 </div>
                 <div class="stats-wrap" id="stat2-wrap">
@@ -424,10 +438,10 @@
                   </div>
                   <div id="pd-meta-bar"/>
                   <div class="legend">
-                    <span><span class="dot dot-r-ref"/>Referenzen in Rezeptionszeugnissen</span>
-                    <span><span class="dot dot-r-char"/>Figuren in Rezeptionszeugnissen</span>
                     <span><span class="dot dot-s-ref"/>Referenzen in Sappho-Fragmenten</span>
                     <span><span class="dot dot-s-char"/>Figuren in Sappho-Fragmenten</span>
+                    <span><span class="dot dot-r-ref"/>Referenzen in Rezeptionszeugnissen</span>
+                    <span><span class="dot dot-r-char"/>Figuren in Rezeptionszeugnissen</span>
                   </div>
                   <div class="chart-wrap">
                     <div id="pd-chart-wrap"/>

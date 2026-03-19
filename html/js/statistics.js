@@ -138,8 +138,209 @@ function renderChart(cat) {
     });
 }
 
+// Überblick-Chart für Stat1 (alle Kategorien, Top-N, nach pctReception sortiert)
+function renderCatOverview() {
+    const topN = parseInt(document.getElementById('sel-cat-topn')?.value || '30');
+    const wrap = document.getElementById('cat-overview-wrap');
+    if (!wrap) return;
+
+    const allItems = [];
+    DATA.categories.forEach(cat => {
+        cat.items.forEach(item => {
+            allItems.push({ ...item, catKey: cat.key, catLabel: cat.label });
+        });
+    });
+
+    allItems.sort((a, b) => parseFloat(b.pctReception) - parseFloat(a.pctReception));
+    const items = allItems.slice(0, topN);
+
+    const labels    = items.map(i => i.label);
+    const pctS      = items.map(i => parseFloat(i.pctSappho));
+    const pctR      = items.map(i => parseFloat(i.pctReception));
+    const typeColors = items.map(i => (FTYPE_META[i.catKey] || {}).color || '#6b7280');
+    const maxX      = xMax(items);
+    const height    = canvasHeight(items.length);
+
+    wrap.innerHTML = `<div class="chart-wrap"><canvas id="chart-cat-overview" style="height:${height}px"></canvas></div>`;
+    const canvas = document.getElementById('chart-cat-overview');
+    const ctx = canvas.getContext('2d');
+
+    // Plugin: nur 3px Typfarb-Streifen links
+    // Zeilenumbruch-Logik
+    const FONT_SIZE = 11;
+    const FONT_W    = 6.5;
+    const splitLabel = (label, maxW) => {
+        const maxChars1 = Math.floor((maxW - 16) / FONT_W) - 2;
+        const maxChars2 = Math.floor((maxW - 16) / FONT_W);
+        if (label.length <= maxChars1) return [label];
+        const words = label.split(' ');
+        let best = null, current = '';
+        for (let i = 0; i < words.length - 1; i++) {
+            current = current ? current + ' ' + words[i] : words[i];
+            const rest = words.slice(i + 1).join(' ');
+            if (current.length <= maxChars2 && rest.length <= maxChars2)
+                best = { line1: current, line2: rest };
+        }
+        if (best) return [best.line1, best.line2];
+        const mid = Math.floor(label.length / 2);
+        const breakAt = label.lastIndexOf(' ', mid + 6);
+        const split = breakAt > 4 ? breakAt : maxChars2;
+        const line1 = label.slice(0, split).trimEnd();
+        const line2Raw = label.slice(split).trimStart();
+        const line2 = line2Raw.length > maxChars2 ? line2Raw.slice(0, maxChars2 - 1) + '…' : line2Raw;
+        return [line1, line2];
+    };
+
+    const typeStripePlugin = {
+        id: 'typeStripe',
+        afterDraw(chart) {
+            const { ctx: c, scales: { y }, chartArea } = chart;
+            const labelW = chartArea.left;
+
+            items.forEach((item, i) => {
+                const color  = typeColors[i];
+                const top    = y.getPixelForValue(i) - y.height / items.length / 2;
+                const bottom = y.getPixelForValue(i) + y.height / items.length / 2;
+                const h      = bottom - top;
+                const lines  = splitLabel(labels[i], labelW);
+
+                c.save();
+
+                // Farbiger Hintergrund (Deckkraft 0.8 wie Legenden-Kästchen)
+                c.globalAlpha = 0.8;
+                c.fillStyle = color;
+                c.fillRect(0, top, labelW, h);
+                c.globalAlpha = 1;
+
+                // Text
+                c.fillStyle = '#1f2937';
+                c.font = `${FONT_SIZE}px Geist, system-ui, sans-serif`;
+                c.textAlign    = 'right';
+                c.textBaseline = 'middle';
+                const x = labelW - 6;
+                if (lines.length === 1) {
+                    c.fillText(lines[0], x, top + h / 2);
+                } else {
+                    c.fillText(lines[0], x, top + h / 2 - 7);
+                    c.fillText(lines[1], x, top + h / 2 + 7);
+                }
+
+                c.restore();
+            });
+        },
+    };
+
+    // Legende als SVG links neben dem Chart aufbauen (einmalig, nach Chart-Render)
+    const buildSideLegend = () => {
+        const existing = wrap.querySelector('.cat-side-legend');
+        if (existing) existing.remove();
+
+        // Einzigartige Kategorien in Reihenfolge ihres ersten Auftretens
+        const seen = [];
+        items.forEach(item => {
+            if (!seen.find(s => s.key === item.catKey)) {
+                seen.push({ key: item.catKey, label: item.catLabel, color: (FTYPE_META[item.catKey] || {}).color || '#6b7280' });
+            }
+        });
+
+        const legendEl = document.createElement('div');
+        legendEl.className = 'cat-side-legend';
+        legendEl.style.cssText = 'display:flex;flex-direction:column;gap:6px;justify-content:center;padding:4px 6px 4px 0;flex-shrink:0;';
+
+        seen.forEach(s => {
+            const row = document.createElement('div');
+            row.style.cssText = 'display:flex;align-items:center;gap:5px;white-space:nowrap;font-size:11px;font-family:Geist,system-ui,sans-serif;color:#374151;';
+            row.innerHTML = `<span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${s.color};flex-shrink:0"></span>${s.label}`;
+            legendEl.appendChild(row);
+        });
+
+        const chartWrap = wrap.querySelector('.chart-wrap');
+        chartWrap.style.cssText = 'display:flex;align-items:flex-start;gap:8px;overflow-x:auto;';
+        chartWrap.insertBefore(legendEl, chartWrap.firstChild);
+    };
+
+    const chartInstance = new Chart(ctx, {
+        type: 'bar',
+        plugins: [typeStripePlugin],
+        data: {
+            labels,
+            datasets: [
+                {
+                    label: `Sappho-Fragmente (n=${DATA.nSappho})`,
+                    data: pctS,
+                    backgroundColor: C.s,
+                    borderColor: C.sLine,
+                    borderWidth: 1,
+                    borderRadius: 2,
+                },
+                {
+                    label: `Rezeptionszeugnisse (n=${DATA.nReception})`,
+                    data: pctR,
+                    backgroundColor: C.r,
+                    borderColor: C.rLine,
+                    borderWidth: 1,
+                    borderRadius: 2,
+                },
+            ],
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            layout: { padding: { left: 0 } },
+            interaction: { mode: 'nearest', axis: 'y', intersect: true },
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    enabled: false,
+                    external: ({ chart, tooltip }) => {
+                        if (tooltip.opacity === 0) { pdTipHide(); return; }
+                        const idx = tooltip.dataPoints?.[0]?.dataIndex;
+                        if (idx == null) return;
+                        const item     = items[idx];
+                        const singular = (FTYPE_META[item.catKey] || {}).singular || item.catLabel;
+                        const pctS     = parseFloat(item.pctSappho).toFixed(2);
+                        const pctR     = parseFloat(item.pctReception).toFixed(2);
+                        const html =
+                            `<strong>${item.label}</strong>`
+                            + `<br><span style="font-size:10px;color:rgba(255,255,255,0.75)">(${singular})</span>`
+                            + `<br><span style="color:rgba(255,255,255,0.85)">Sappho: ${pctS}% (${item.countSappho}/${DATA.nSappho})</span>`
+                            + `<br><span style="color:rgba(255,255,255,0.85)">Rezeption: ${pctR}% (${item.countReception}/${DATA.nReception})</span>`;
+                        const t   = getPdTip();
+                        t.innerHTML     = html;
+                        t.style.display = 'block';
+                        const e = tooltip._eventPosition;
+                        if (e) {
+                            const pos = chart.canvas.getBoundingClientRect();
+                            t.style.left = (pos.left + window.scrollX + e.x + 14) + 'px';
+                            t.style.top  = (pos.top  + window.scrollY + e.y - 28) + 'px';
+                        }
+                    },
+                },
+            },
+            scales: {
+                x: {
+                    min: 0, max: maxX,
+                    ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => v + '%', stepSize: 5 },
+                    grid: { color: 'rgba(0,0,0,0.06)' },
+                },
+                y: {
+                    ticks: { font: { family: 'Geist, system-ui', size: 12 }, autoSkip: false, color: 'transparent' },
+                    grid: { display: false },
+                    afterFit(scale) { scale.width = 220; },
+                },
+            },
+        },
+    });
+    buildSideLegend();
+}
+
 // Init
 document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('sel-cat-topn')?.addEventListener('change', renderCatOverview);
+    renderCatOverview();
+
+    // Detailkategorien
     const container = document.getElementById('cats');
     DATA.categories.forEach(cat => {
         if (cat.items.length === 0) return;
@@ -178,6 +379,11 @@ function initSankey() {
     });
 
     sel.addEventListener('change', () => renderSankey2(sel.value));
+
+    if (sel.options.length > 1) {
+        sel.selectedIndex = 1;
+        renderSankey2(sel.value);
+    }
 }
 
 // Tooltip (lazy init on first use)
@@ -1125,6 +1331,11 @@ function initPlotComponents() {
     const redraw = () => renderPlotComponents(sel.value, parseInt(selTop?.value || '5'));
     sel.addEventListener('change', redraw);
     selTop?.addEventListener('change', redraw);
+
+    if (sel.options.length > 1) {
+        sel.selectedIndex = 1;
+        setTimeout(redraw, 0);
+    }
 }
 
 function renderPlotComponents(plotUri, topN) {
@@ -1450,22 +1661,6 @@ function renderPersonDuality() {
             labels,
             datasets: [
                 {
-                    label: `pers_ref – Rezeption (n=${DATA.nReception})`,
-                    data: recPrData,
-                    backgroundColor: PD6.recPr,
-                    borderColor: PD6.recPrLine,
-                    borderWidth: 1,
-                    borderRadius: 2,
-                },
-                {
-                    label: `character – Rezeption (n=${DATA.nReception})`,
-                    data: recChData,
-                    backgroundColor: PD6.recCh,
-                    borderColor: PD6.recChLine,
-                    borderWidth: 1,
-                    borderRadius: 2,
-                },
-                {
                     label: `pers_ref – Sappho (n=${DATA.nSappho})`,
                     data: sapPrData,
                     backgroundColor: PD6.sapPr,
@@ -1478,6 +1673,22 @@ function renderPersonDuality() {
                     data: sapChData,
                     backgroundColor: PD6.sapCh,
                     borderColor: PD6.sapChLine,
+                    borderWidth: 1,
+                    borderRadius: 2,
+                },
+                {
+                    label: `pers_ref – Rezeption (n=${DATA.nReception})`,
+                    data: recPrData,
+                    backgroundColor: PD6.recPr,
+                    borderColor: PD6.recPrLine,
+                    borderWidth: 1,
+                    borderRadius: 2,
+                },
+                {
+                    label: `character – Rezeption (n=${DATA.nReception})`,
+                    data: recChData,
+                    backgroundColor: PD6.recCh,
+                    borderColor: PD6.recChLine,
                     borderWidth: 1,
                     borderRadius: 2,
                 },
@@ -1495,10 +1706,10 @@ function renderPersonDuality() {
                         label: ctx => {
                             const p = persons[ctx.dataIndex];
                             const configs = [
-                                { lbl: 'Referenz in Rezeptionszeugnissen', n: p.persRefN, total: DATA.nReception },
-                                { lbl: 'Figur in Rezeptionszeugnissen',    n: p.charN,   total: DATA.nReception },
                                 { lbl: 'Referenz in Sappho-Fragmenten',    n: p.sapPrN,  total: DATA.nSappho    },
                                 { lbl: 'Figur in Sappho-Fragmenten',       n: p.sapChN,  total: DATA.nSappho    },
+                                { lbl: 'Referenz in Rezeptionszeugnissen', n: p.persRefN, total: DATA.nReception },
+                                { lbl: 'Figur in Rezeptionszeugnissen',    n: p.charN,   total: DATA.nReception },
                             ];
                             const { lbl, n, total } = configs[ctx.datasetIndex];
                             const pct = ctx.parsed.x.toFixed(2);
