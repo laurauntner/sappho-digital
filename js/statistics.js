@@ -1082,3 +1082,305 @@ function initGdist() {
 }
 
 document.addEventListener('DOMContentLoaded', initGdist);
+
+
+// ── Statistik 5: Stoff-Komponenten – Sunburst ────────────────────────────────
+
+let _pcTip = null;
+function getPcTip() {
+    if (!_pcTip) {
+        _pcTip = document.createElement('div');
+        _pcTip.style.cssText =
+            'position:fixed;background:#1f2937;color:#fff;font-size:12px;'
+            + 'font-family:Geist,system-ui,sans-serif;padding:6px 10px;border-radius:5px;'
+            + 'pointer-events:none;display:none;z-index:9999;white-space:nowrap;line-height:1.5';
+        document.body.appendChild(_pcTip);
+    }
+    return _pcTip;
+}
+function pcTipShow(e, html) {
+    const t = getPcTip(); t.innerHTML = html; t.style.display = 'block'; pcTipMove(e);
+}
+function pcTipMove(e) {
+    const t = getPcTip();
+    t.style.left = (e.clientX + 14) + 'px';
+    t.style.top  = (e.clientY - 34) + 'px';
+}
+function pcTipHide() { if (_pcTip) _pcTip.style.display = 'none'; }
+
+function initPlotComponents() {
+    const sel    = document.getElementById('sel-pc-plot');
+    const selTop = document.getElementById('sel-pc-topn');
+    if (!sel) return;
+
+    const plots = DATA.plotComponents || [];
+    if (!plots.length) { document.getElementById('stat5-wrap')?.remove(); return; }
+
+    plots.forEach(p => {
+        const opt = document.createElement('option');
+        opt.value = p.uri;
+        opt.textContent = p.label;
+        sel.appendChild(opt);
+    });
+
+    const redraw = () => renderPlotComponents(sel.value, parseInt(selTop?.value || '5'));
+    sel.addEventListener('change', redraw);
+    selTop?.addEventListener('change', redraw);
+}
+
+function renderPlotComponents(plotUri, topN) {
+    const placeholder = document.getElementById('pc-placeholder');
+    const svgWrap     = document.getElementById('pc-svg-wrap');
+    const legend      = document.getElementById('pc-legend');
+
+    pcTipHide();
+    svgWrap.innerHTML    = '';
+    legend.style.display = 'none';
+
+    if (!plotUri) { placeholder.style.display = 'none'; return; }
+
+    const plot = (DATA.plotComponents || []).find(p => p.uri === plotUri);
+    if (!plot) return;
+
+    const FTYPE_ORDER = ['person_ref','character','place_ref','topos','motif','topic','work_ref','text_passage'];
+
+    // Daten nach Typ filtern
+    const byType = {};
+    FTYPE_ORDER.forEach(k => { byType[k] = []; });
+    (plot.coFeatures || []).forEach(cf => { if (byType[cf.ftype]) byType[cf.ftype].push(cf); });
+    if (topN > 0) FTYPE_ORDER.forEach(k => { byType[k] = byType[k].slice(0, topN); });
+
+    const activeTypes = FTYPE_ORDER.filter(k => byType[k].length > 0);
+    if (!activeTypes.length) {
+        placeholder.textContent = 'Keine Co-Phänomene gefunden.';
+        placeholder.style.display = '';
+        return;
+    }
+    placeholder.style.display = 'none';
+
+    const totalWeight = activeTypes.reduce((s, k) => s + byType[k].reduce((a, c) => a + c.n, 0), 0);
+
+    // ── SVG-Setup ────────────────────────────────────────────────────────
+    const NS = 'http://www.w3.org/2000/svg';
+    const mk  = tag => document.createElementNS(NS, tag);
+    const setA = (el, attrs) => { Object.entries(attrs).forEach(([k,v]) => el.setAttribute(k,v)); return el; };
+
+    const wrapW = svgWrap.getBoundingClientRect().width || 720;
+    const W     = Math.max(500, Math.min(wrapW, 860));
+    const CX = W / 2, CY = W / 2, H = W;
+
+    const R_CENTER  = 85;
+    const R_INNER_S = R_CENTER + 10;
+    const R_INNER_E = R_INNER_S + Math.round((W / 2 - R_CENTER - 14) * 0.25);
+    const R_OUTER_S = R_INNER_E + 5;
+    const R_OUTER_E = W / 2 - 2;
+
+    const GAP_TYPE  = 0.012;   // Spalt zwischen Typen
+    const GAP_FEAT  = 0.003;   // Spalt zwischen Phänomenen innerhalb eines Typs
+
+    const svg = setA(mk('svg'), { width: W, height: H, viewBox: `0 0 ${W} ${H}` });
+    svg.style.fontFamily = 'Geist, system-ui, sans-serif';
+    svg.style.overflow   = 'visible';
+
+    const polarXY = (r, a) => [CX + r * Math.cos(a), CY + r * Math.sin(a)];
+
+    // Donut-Pfad
+    function donutPath(r0, r1, a0, a1) {
+        const lg = (a1 - a0 > Math.PI) ? 1 : 0;
+        const [ax, ay] = polarXY(r0, a0); const [bx, by] = polarXY(r0, a1);
+        const [cx, cy] = polarXY(r1, a1); const [dx, dy] = polarXY(r1, a0);
+        return `M${ax},${ay} A${r0},${r0} 0 ${lg} 1 ${bx},${by} L${cx},${cy} A${r1},${r1} 0 ${lg} 0 ${dx},${dy} Z`;
+    }
+
+    // Rotiertes Label entlang des Bogens
+    function rotatedLabel(text, rLabel, aMid, fontSize, fill, bold, pointerEvents) {
+        const el = setA(mk('text'), {
+            'text-anchor':       'middle',
+            'dominant-baseline': 'middle',
+            'font-size':         fontSize + 'px',
+            'font-weight':       bold ? '700' : '400',
+            fill,
+            'pointer-events':    pointerEvents ? 'auto' : 'none',
+        });
+        el.textContent = text;
+
+        // Rotationswinkel: tangential
+        const deg    = aMid * 180 / Math.PI;
+        const flip   = (aMid > Math.PI / 2 && aMid < 3 * Math.PI / 2);
+        const rot    = flip ? deg + 90 : deg - 90;
+        const [lx, ly] = polarXY(rLabel, aMid);
+        el.setAttribute('transform', `translate(${lx},${ly}) rotate(${rot})`);
+        return el;
+    }
+
+    // ── Winkel-Layout ────────────────────────────────────────────────────
+    const START = -Math.PI / 2;
+    let cursor  = START;
+    const totalGapType = GAP_TYPE * activeTypes.length;
+    const usable       = 2 * Math.PI - totalGapType;
+
+    const typeSegs = [];
+    activeTypes.forEach(k => {
+        const items   = byType[k];
+        const typeSum = items.reduce((s, c) => s + c.n, 0);
+        const span    = (typeSum / totalWeight) * usable;
+        const a0      = cursor + GAP_TYPE / 2;
+        const a1      = a0 + span;
+        cursor       += span + GAP_TYPE;
+
+        // Phänomen-Segmente: proportional zu n, mit kleinem Spalt
+        const totalFeatGap  = GAP_FEAT * Math.max(0, items.length - 1);
+        const usableFeatArc = (a1 - a0) - totalFeatGap;
+        let fc = a0;
+        const itemSegs = items.map(cf => {
+            const fs  = (cf.n / typeSum) * usableFeatArc;
+            const fa0 = fc;
+            const fa1 = fc + fs;
+            fc        = fa1 + GAP_FEAT;
+            return { cf, a0: fa0, a1: fa1 };
+        });
+
+        typeSegs.push({ k, color: (FTYPE_META[k]||{}).color||'#6b7280', a0, a1, items: itemSegs });
+    });
+
+    // ── Innerer Ring ─────────────────────────────────────────────────────
+    typeSegs.forEach(({ k, color, a0, a1 }) => {
+        const fullLabel = (FTYPE_META[k]||{}).label || k;
+        const path = setA(mk('path'), {
+            d: donutPath(R_INNER_S, R_INNER_E, a0, a1),
+            fill: color, 'fill-opacity': '0.88',
+            stroke: '#fff', 'stroke-width': '1.5',
+        });
+        path.style.cursor = 'default';
+        path.addEventListener('mouseenter', e => pcTipShow(e, `<strong>${fullLabel}</strong>`));
+        path.addEventListener('mousemove',  e => pcTipMove(e));
+        path.addEventListener('mouseleave', pcTipHide);
+        svg.appendChild(path);
+
+        // Label: rotiert, mittig im inneren Ring
+        const aMid   = (a0 + a1) / 2;
+        const rMid   = (R_INNER_S + R_INNER_E) / 2;
+        const arcLen = (a1 - a0) * rMid;
+        const rDepth = R_INNER_E - R_INNER_S;
+        const label  = fullLabel;
+        const fs     = Math.min(11, Math.max(8, rDepth * 0.40));
+        const maxC   = Math.floor(arcLen / (fs * 0.60));
+        const short  = label.length > maxC ? label.slice(0, maxC - 1) + '…' : label;
+
+        if (arcLen >= short.length * fs * 0.55 + 6) {
+            svg.appendChild(rotatedLabel(short, rMid, aMid, fs, '#fff', true, false));
+        }
+    });
+
+    // ── Äußerer Ring ─────────────────────────────────────────────────────
+    typeSegs.forEach(({ k, color, items }) => {
+        items.forEach(({ cf, a0, a1 }) => {
+            if (a1 - a0 < 0.002) return;
+
+            const pct     = Math.round(cf.n / plot.nDocs * 100);
+            const tipHtml = `<strong>${cf.label}</strong>`
+                + `<br><span style="font-size:10px;color:rgba(255,255,255,0.75)">`
+                + `${(FTYPE_META[cf.ftype]||{}).singular || cf.ftype}</span>`
+                + `<br>${cf.n} Rezeptionszeugnis${cf.n!==1?'se':''} (${pct}%)`;
+
+            // Strichbreite skaliert mit Segmentgröße für deutlichere Kontraste
+            const segFrac  = (a1 - a0) / (2 * Math.PI);
+            const strokeW  = segFrac > 0.04 ? 1.8 : segFrac > 0.015 ? 1.0 : 0.4;
+
+            const path = setA(mk('path'), {
+                d: donutPath(R_OUTER_S, R_OUTER_E, a0, a1),
+                fill: color, 'fill-opacity': '0.22',
+                stroke: '#fff', 'stroke-width': String(strokeW),
+            });
+            path.style.cursor = 'default';
+            path.addEventListener('mouseenter', e => {
+                path.setAttribute('fill-opacity','0.50');
+                pcTipShow(e, tipHtml);
+            });
+            path.addEventListener('mousemove',  e => pcTipMove(e));
+            path.addEventListener('mouseleave', () => {
+                path.setAttribute('fill-opacity','0.22');
+                pcTipHide();
+            });
+            svg.appendChild(path);
+
+            // Radiales Label im äußeren Segment: Text zeigt von innen nach außen
+            const aMid   = (a0 + a1) / 2;
+            const rDepth = R_OUTER_E - R_OUTER_S;
+            const arcLen = (a1 - a0) * ((R_OUTER_S + R_OUTER_E) / 2);
+            const fs     = Math.min(9.5, Math.max(7, rDepth * 0.17));
+
+            if (arcLen >= 20) {
+                const maxC  = Math.floor(rDepth * 0.88 / (fs * 0.58));
+                const label = cf.label.length > maxC ? cf.label.slice(0, maxC - 1) + '…' : cf.label;
+
+                const deg  = aMid * 180 / Math.PI;
+                const flip = (aMid > Math.PI / 2 && aMid < 3 * Math.PI / 2);
+                const rot  = flip ? deg + 180 : deg;
+
+                const rLabel = (R_OUTER_S + R_OUTER_E) / 2;
+                const [lx, ly] = polarXY(rLabel, aMid);
+
+                const el = setA(mk('text'), {
+                    'text-anchor':       'middle',
+                    'dominant-baseline': 'middle',
+                    'font-size':         fs + 'px',
+                    fill:                '#374151',
+                    'pointer-events':    'none',
+                    transform:           `translate(${lx},${ly}) rotate(${rot})`,
+                });
+                el.textContent = label;
+                svg.appendChild(el);
+            }
+        });
+    });
+
+    // ── Zentrum ──────────────────────────────────────────────────────────
+    svg.appendChild(setA(mk('circle'), {
+        cx: CX, cy: CY, r: R_CENTER,
+        fill: '#5e17eb', 'fill-opacity': '0.10',
+        stroke: '#5e17eb', 'stroke-width': '2',
+    }));
+
+    const CF = 12, CLH = CF * 1.3;
+    const maxC = Math.floor((R_CENTER * 1.65) / (CF * 0.58));
+    const cLines = [];
+    let cCur = '';
+    plot.label.split(' ').forEach(w => {
+        const test = cCur ? cCur + ' ' + w : w;
+        if (test.length > maxC && cCur) { cLines.push(cCur); cCur = w; }
+        else cCur = test;
+    });
+    if (cCur) cLines.push(cCur);
+
+    const totalCH = cLines.length * CLH + CF * 1.4;
+    const cY0     = CY - totalCH / 2 + CLH / 2;
+    cLines.forEach((line, i) => {
+        svg.appendChild(setA(mk('text'), {
+            x: CX, y: cY0 + i * CLH,
+            'text-anchor': 'middle', 'dominant-baseline': 'middle',
+            'font-size': CF + 'px', 'font-weight': '700', fill: '#5e17eb',
+        })).textContent = line;
+    });
+    svg.appendChild(setA(mk('text'), {
+        x: CX, y: cY0 + cLines.length * CLH + 2,
+        'text-anchor': 'middle', 'dominant-baseline': 'middle',
+        'font-size': '10px', fill: '#9ca3af',
+    })).textContent = `n=${plot.nDocs}`;
+
+    svgWrap.appendChild(svg);
+
+    // ── Legende ───────────────────────────────────────────────────────────
+    legend.style.display = 'flex';
+    legend.innerHTML = '';
+    activeTypes.forEach(k => {
+        const m = FTYPE_META[k] || { label: k, color: '#6b7280' };
+        const span = document.createElement('span');
+        span.style.cssText = 'display:inline-flex;align-items:center;gap:5px';
+        span.innerHTML = `<span style="display:inline-block;width:11px;height:11px;border-radius:2px;`
+            + `background:${m.color};opacity:0.85;flex-shrink:0"></span>${m.label}`;
+        legend.appendChild(span);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initPlotComponents);
