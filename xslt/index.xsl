@@ -31,11 +31,20 @@
                                     <h3>Die literarische Sappho-Rezeption im deutschsprachigen
                                         Raum</h3>
                                     <p>Auf dieser Webseite werden Informationen zur literarischen
-                                        Sappho-Rezeption im deutschsprachigen Raum gesammelt.</p>
+                                        Sappho-Rezeption im deutschsprachigen Raum gesammelt. Mehr
+                                        als 1.000 literarische Rezeptionszeugnisse vom 15. bis zum
+                                        21. Jahrhundert sind hier verzeichnet. Knapp 100 wurden
+                                        exemplarisch analysiert.</p>
+                                    <p>Wo anfangen? Einfach scrollen – unten finden sich vier mögliche
+                                        Einstiege. ↓</p>
                                     <p>–– work in progress ––</p>
                                     <button class="btn btn-secondary button"
                                         onclick="window.location.href='about.html'">Über das
                                         Projekt</button>
+                                    <p class="smaller-text disclaimer">Disclaimer: The raw data is largely
+                                        annotated with English-language labels and structured for
+                                        broad reuse. The website itself, however, is primarily
+                                        intended for German-speaking users.</p>
                                 </div>
                             </div>
                         </div>
@@ -62,13 +71,13 @@
                                 <a href="bibliographie.html" class="index-link">
                                     <div class="card index-card d-flex flex-column">
                                         <div class="card-body item-center">
-                                            <img src="images/search.png" title="search.png"
+                                            <img src="images/analysis.png" title="search.png"
                                                 alt="Flaticon" class="smaller-img"/>
                                         </div>
                                         <div class="card-header">
-                                            <h5>Bibliographie</h5>
-                                            <p>Sekundärliteratur zur literarischen
-                                                <br/>Sappho-Rezeption</p>
+                                            <h5>Statistik</h5>
+                                            <p>Exemplarische statistische Auswertungen <br/>zur
+                                                literarischen Sappho-Rezeption</p>
                                         </div>
                                     </div>
                                 </a>
@@ -77,18 +86,19 @@
                                 <a href="analyse.html" class="index-link">
                                     <div class="card index-card d-flex flex-column">
                                         <div class="card-body item-center">
-                                            <img src="images/analysis.png" title="analysis.png"
+                                            <img src="images/network.png" title="analysis.png"
                                                 alt="Flaticon" class="smaller-img"/>
                                         </div>
                                         <div class="card-header">
-                                            <h5>Analyse</h5>
-                                            <p>Erläuterungen zur <br/>exemplarischen Analyse</p>
+                                            <h5>Netzwerkvisualisierung</h5>
+                                            <p>Netzwerkvisualisierung <br/>aller Daten</p>
                                         </div>
                                     </div>
                                 </a>
                             </div>
                             <div class="col-md-6 col-lg-6 col-sm-12">
-                                <a href="https://github.com/laurauntner/sappho-digital" class="index-link">
+                                <a href="https://github.com/laurauntner/sappho-digital"
+                                    class="index-link">
                                     <div class="card index-card d-flex flex-column">
                                         <div class="card-body item-center">
                                             <img src="images/data.png" title="data.png"
