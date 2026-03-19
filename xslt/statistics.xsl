@@ -104,6 +104,36 @@
       </xsl:for-each>
     </xsl:variable>
 
+    <xsl:variable name="gdist-genre-json" as="xs:string*">
+      <xsl:for-each select="statistics/genreDist/meta/genre">
+        <xsl:sequence
+          select="concat('{&quot;key&quot;:&quot;', replace(@key, '&quot;', '\\&quot;'), '&quot;,&quot;n&quot;:', @n, '}')"
+        />
+      </xsl:for-each>
+    </xsl:variable>
+
+    <xsl:variable name="gdist-feat-json" as="xs:string*">
+      <xsl:for-each select="statistics/genreDist/features/feature">
+        <xsl:variable name="gcells-json" as="xs:string*">
+          <xsl:for-each select="genreCell">
+            <xsl:sequence
+              select="concat('{&quot;g&quot;:&quot;', replace(@genre, '&quot;', '\\&quot;'), '&quot;,&quot;n&quot;:', @n, '}')"
+            />
+          </xsl:for-each>
+        </xsl:variable>
+        <xsl:sequence select="
+            concat(
+            '{',
+            '&quot;uri&quot;:&quot;', replace(@uri, '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;label&quot;:&quot;', replace(@label, '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;ftype&quot;:&quot;', @ftype, '&quot;,',
+            '&quot;total&quot;:', @total, ',',
+            '&quot;cells&quot;:[', string-join($gcells-json, ','), ']',
+            '}'
+            )"/>
+      </xsl:for-each>
+    </xsl:variable>
+
     <xsl:variable name="pdist-decade-json" as="xs:string*">
       <xsl:for-each select="statistics/phenomenaDist/meta/decade">
         <xsl:sequence select="concat('&quot;', @key, '&quot;')"/>
@@ -150,6 +180,12 @@
         '&quot;decades&quot;:[', string-join($pdist-decade-json, ','), '],',
         '&quot;genres&quot;:[', string-join($pdist-genre-json, ','), '],',
         '&quot;features&quot;:[', string-join($pdist-feat-json, ','), ']',
+        '},',
+        '&quot;genreDist&quot;:{',
+        '&quot;nRecords&quot;:', (statistics/genreDist/@nRecords, '0')[1], ',',
+        '&quot;nFeatures&quot;:', (statistics/genreDist/@nFeatures, '0')[1], ',',
+        '&quot;genres&quot;:[', string-join($gdist-genre-json, ','), '],',
+        '&quot;features&quot;:[', string-join($gdist-feat-json, ','), ']',
         '}',
         '}'
         )"/>
@@ -248,8 +284,39 @@
                     Phänomentyp</p>
                   <div id="pdist-type-sections"/>
                 </div>
-                <div class="stats-wrap">
-                  <p class="stats-subtitle">## more coming soon ##</p>
+                <div class="stats-wrap" id="stat4-wrap">
+                  <style>
+                    .arrow-hidden {
+                        visibility: hidden
+                    }</style>
+                  <p class="stats-subtitle">Statistik 4: Phänomene nach Gattung</p>
+                  <p class="stats-desc">Welche Phänomene dominieren in welcher Gattung? Die
+                    Farbintensität der Zellen zeigt die Häufigkeit innerhalb jeder Gattung; die
+                    Farbe kennzeichnet den Phänomentyp.</p>
+                  <p class="stats-subtitle" style="font-size:0.82rem;margin-bottom:0.75rem"
+                    >Überblick (Top-N)</p>
+                  <div
+                    style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;margin-bottom:1rem">
+                    <div class="stat3-control-group">
+                      <label>Anzahl:</label>
+                      <select id="sel-gdist-topn" class="stat2-select">
+                        <option value="20">Top 20</option>
+                        <option value="30" selected="selected">Top 30</option>
+                        <option value="50">Top 50</option>
+                        <option value="100">Top 100</option>
+                      </select>
+                    </div>
+                    <div id="gdist-type-legend"
+                      style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.4rem 1.1rem;font-size:0.8rem;color:#4b5563"
+                    />
+                  </div>
+                  <div id="gdist-overview-wrap"/>
+                  <p class="stats-subtitle" style="font-size:0.82rem;margin:1.2rem 0 0.5rem">Nach
+                    Gattung</p>
+                  <div id="gdist-genre-sections"/>
+                  <p class="stats-subtitle" style="font-size:0.82rem;margin:1.2rem 0 0.5rem">Nach
+                    Phänomentyp</p>
+                  <div id="gdist-type-sections"/>
                 </div>
               </div>
             </div>

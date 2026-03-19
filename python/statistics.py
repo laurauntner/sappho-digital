@@ -443,6 +443,68 @@ def main(ttl_path: str, xml_out: str) -> None:
                 cell_el.set("decade", dec)
                 cell_el.set("n",      str(dec_total))
 
+    # ── Statistik 4: Phänomene nach Gattung ──────────────────────────────────
+
+    genre_dist_feat:   dict[URIRef, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    genre_dist_labels: dict[URIRef, str] = {}
+    genre_dist_ftype:  dict[URIRef, str] = {}
+    genres_stat4:      set[str] = set()
+
+    for rec in dist_records:
+        gen = rec["genre"]
+        genres_stat4.add(gen)
+        for feat_uri in rec["features"]:
+            genre_dist_feat[feat_uri][gen] += 1
+            if feat_uri not in genre_dist_labels:
+                genre_dist_labels[feat_uri] = get_label(feat_uri)
+                genre_dist_ftype[feat_uri]  = feature_type(str(feat_uri)) or "other"
+        for tp_uri in rec["text_passages"]:
+            genre_dist_feat[tp_uri][gen] += 1
+            if tp_uri not in genre_dist_labels:
+                genre_dist_labels[tp_uri] = get_label(tp_uri)
+                genre_dist_ftype[tp_uri]  = "text_passage"
+
+    def feat_genre_total(fu: URIRef) -> int:
+        return sum(genre_dist_feat[fu].values())
+
+    genre_n: dict[str, int] = defaultdict(int)
+    for rec in dist_records:
+        genre_n[rec["genre"]] += 1
+
+    sorted_genres4 = [g for g in genre_order if g in genres_stat4]
+    sorted_genres4 += [g for g in sorted(genres_stat4) if g not in genre_order]
+
+    sorted_feats4 = sorted(
+        genre_dist_feat.keys(),
+        key=lambda fu: (-feat_genre_total(fu), genre_dist_labels.get(fu, "").lower())
+    )
+
+    print(f"  GenreDist-Phänomene: {len(sorted_feats4)}", file=sys.stderr)
+
+    gdist_el = ET.SubElement(root_el, "genreDist")
+    gdist_el.set("nRecords",  str(len(dist_records)))
+    gdist_el.set("nFeatures", str(len(sorted_feats4)))
+
+    gmeta_el = ET.SubElement(gdist_el, "meta")
+    for gen in sorted_genres4:
+        g_el = ET.SubElement(gmeta_el, "genre")
+        g_el.set("key", gen)
+        g_el.set("n",   str(genre_n.get(gen, 0)))
+
+    gfeats_el = ET.SubElement(gdist_el, "features")
+    for feat_uri in sorted_feats4:
+        fe = ET.SubElement(gfeats_el, "feature")
+        fe.set("uri",   str(feat_uri))
+        fe.set("label", genre_dist_labels.get(feat_uri, str(feat_uri).split("/")[-1]))
+        fe.set("ftype", genre_dist_ftype.get(feat_uri, "other"))
+        fe.set("total", str(feat_genre_total(feat_uri)))
+        for gen in sorted_genres4:
+            cnt = genre_dist_feat[feat_uri].get(gen, 0)
+            if cnt:
+                gc_el = ET.SubElement(fe, "genreCell")
+                gc_el.set("genre", gen)
+                gc_el.set("n",     str(cnt))
+
     tree = ET.ElementTree(root_el)
     ET.indent(tree, space="  ")
     tree.write(xml_out, encoding="utf-8", xml_declaration=True)
