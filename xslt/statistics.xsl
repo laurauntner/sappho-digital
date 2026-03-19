@@ -473,7 +473,7 @@
                 </div>
                 <div class="stats-wrap" id="stat7-wrap">
                   <p class="stats-subtitle" style="text-align:center">Statistik 7: Werkreferenzen
-                    und Zitate im Vergleich</p>
+                    und Zitate</p>
                   <p class="stats-desc" style="text-align:center">Welche Werke werden in den
                       <xsl:value-of select="statistics/workCitation/@nReception"/> analysierten
                     Rezeptionszeugnissen nicht nur referenziert, sondern auch zitiert?</p>
