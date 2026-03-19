@@ -77,7 +77,7 @@ function renderChart(cat) {
                     data: pctS,
                     backgroundColor: C.s,
                     borderColor: C.sLine,
-                    borderWidth: 1,
+                    borderWidth: 2,
                     borderRadius: 2,
                 },
                 {
@@ -85,7 +85,7 @@ function renderChart(cat) {
                     data: pctR,
                     backgroundColor: C.r,
                     borderColor: C.rLine,
-                    borderWidth: 1,
+                    borderWidth: 2,
                     borderRadius: 2,
                 },
             ],
@@ -206,11 +206,10 @@ function renderCatOverview() {
 
                 c.save();
 
-                // Farbiger Hintergrund (Deckkraft 0.8 wie Legenden-Kästchen)
-                c.globalAlpha = 0.8;
-                c.fillStyle = color;
-                c.fillRect(0, top, labelW, h);
-                c.globalAlpha = 1;
+                // Farbiger Rahmen um das Label-Feld
+                c.strokeStyle = color;
+                c.lineWidth   = 1.5;
+                c.strokeRect(0.75, top + 1, labelW - 1.5, h - 2);
 
                 // Text
                 c.fillStyle = '#1f2937';
@@ -270,7 +269,7 @@ function renderCatOverview() {
                     data: pctS,
                     backgroundColor: C.s,
                     borderColor: C.sLine,
-                    borderWidth: 1,
+                    borderWidth: 2,
                     borderRadius: 2,
                 },
                 {
@@ -278,7 +277,7 @@ function renderCatOverview() {
                     data: pctR,
                     backgroundColor: C.r,
                     borderColor: C.rLine,
-                    borderWidth: 1,
+                    borderWidth: 2,
                     borderRadius: 2,
                 },
             ],
@@ -1750,3 +1749,142 @@ function initPersonDuality() {
 }
 
 document.addEventListener('DOMContentLoaded', initPersonDuality);
+// ── Statistik 7: Werkreferenzen × Zitate ─────────────────────────────────
+
+let wc7Chart = null;
+
+// ─── Tooltip-Instanz für Stat 7 ─────────────────────────────────────────────
+let _wc7Tip = null;
+function getWc7Tip() {
+    if (!_wc7Tip) {
+        _wc7Tip = document.createElement('div');
+        _wc7Tip.style.cssText =
+            'position:fixed;background:#1f2937;color:#fff;font-size:12px;'
+            + 'font-family:Geist,system-ui,sans-serif;padding:5px 9px;border-radius:5px;'
+            + 'pointer-events:none;display:none;z-index:9999;white-space:nowrap;line-height:1.5';
+        document.body.appendChild(_wc7Tip);
+    }
+    return _wc7Tip;
+}
+function wc7TipHide() { if (_wc7Tip) _wc7Tip.style.display = 'none'; }
+
+// Bereinigt Labels: "Reference to " am Anfang entfernen
+function wc7CleanLabel(label) {
+    return label.replace(/^Reference to\s+/i, '').replace(/^Expression of\s+/i, '');
+}
+
+// ─── Balkendiagramm ──────────────────────────────────────────────────────────
+function renderWorkCitation() {
+    const wc   = DATA.workCitation;
+    const wrap = document.getElementById('wc-chart-wrap');
+    if (!wc || !wc.works || !wrap) return;
+
+    const works = wc.works
+        .filter(w => w.refN > 0)
+        .slice()
+        .sort((a, b) => b.bothN - a.bothN || b.refN - a.refN);
+
+    if (!works.length) {
+        wrap.innerHTML = '<p style="color:#9ca3af;padding:0.5rem 0">Keine Daten.</p>';
+        return;
+    }
+
+    const labels  = works.map(w => wc7CleanLabel(w.label));
+    const pctRef  = works.map(w => parseFloat(w.pctRef));
+    const pctBoth = works.map(w => parseFloat(w.pctBoth));
+
+    const rawMax = Math.max(...pctRef, 0.1);
+    const maxX   = Math.min(100, Math.ceil(rawMax * 1.05 / 5) * 5) || 10;
+    const height = canvasHeight(works.length);
+
+    wrap.innerHTML = `<canvas id="wc-bar-canvas" style="width:100%;height:${height}px"/>`;
+    const canvas = document.getElementById('wc-bar-canvas');
+
+    if (wc7Chart) { wc7Chart.destroy(); wc7Chart = null; }
+
+    wc7Chart = new Chart(canvas.getContext('2d'), {
+        type: 'bar',
+        data: {
+            labels,
+            datasets: [
+                {
+                    label: `Referenziert (n=${wc.nReception})`,
+                    data:  pctRef,
+                    backgroundColor: 'rgba(107,114,128,0.75)',
+                    borderColor:     '#6b7280',
+                    borderWidth: 1,
+                    borderRadius: 2,
+                },
+                {
+                    label: `Referenziert und zitiert (n=${wc.nReception})`,
+                    data:  pctBoth,
+                    backgroundColor: 'rgba(8,145,178,0.75)',
+                    borderColor:     '#0891b2',
+                    borderWidth: 1,
+                    borderRadius: 2,
+                },
+            ],
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: { mode: 'nearest', axis: 'y', intersect: true },
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    enabled: false,
+                    external: ({ chart, tooltip }) => {
+                        if (tooltip.opacity === 0) { wc7TipHide(); return; }
+                        const idx = tooltip.dataPoints?.[0]?.dataIndex;
+                        if (idx == null) return;
+                        const w    = works[idx];
+                        const pctR = parseFloat(w.pctRef).toFixed(2);
+                        const pctB = parseFloat(w.pctBoth).toFixed(2);
+                        const html =
+                            `<strong>${wc7CleanLabel(w.label)}</strong>`
+                            + `<br><span style="color:rgba(255,255,255,0.85)">Referenziert: ${pctR}% (${w.refN}/${wc.nReception})</span>`
+                            + `<br><span style="color:rgba(255,255,255,0.85)">Referenziert und zitiert: ${pctB}% (${w.bothN}/${wc.nReception})</span>`;
+                        const t = getWc7Tip();
+                        t.innerHTML     = html;
+                        t.style.display = 'block';
+                        const e = tooltip._eventPosition;
+                        if (e) {
+                            const pos = chart.canvas.getBoundingClientRect();
+                            t.style.left = (pos.left + window.scrollX + e.x + 14) + 'px';
+                            t.style.top  = (pos.top  + window.scrollY + e.y - 36) + 'px';
+                        }
+                    },
+                },
+            },
+            scales: {
+                x: {
+                    min: 0, max: maxX,
+                    ticks: {
+                        font: { family: 'Geist, system-ui', size: 11 },
+                        callback: v => v + '%',
+                        stepSize: 5,
+                    },
+                    grid: { color: 'rgba(0,0,0,0.06)' },
+                },
+                y: {
+                    ticks: {
+                        font: { family: 'Geist, system-ui', size: 12 },
+                        autoSkip: false,
+                    },
+                    grid: { display: false },
+                },
+            },
+        },
+    });
+
+}
+
+// ─── Init ────────────────────────────────────────────────────────────────────
+function initWorkCitation() {
+    const wc = DATA.workCitation;
+    if (!wc || !wc.works || wc.works.length === 0) return;
+    renderWorkCitation();
+}
+
+document.addEventListener('DOMContentLoaded', initWorkCitation);
