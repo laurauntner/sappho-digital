@@ -27,20 +27,19 @@
                         <div class="row intro">
                             <div class="col-md-6 col-lg-6 col-sm-12">
                                 <div class="intro_left">
-                                    <h1 class="uppercase">Sappho Digital</h1>
-                                    <h3>Die literarische Sappho-Rezeption im deutschsprachigen
-                                        Raum</h3>
+                                    <h1>Sappho Digital</h1>
+                                    <h3>Die literarische Sappho-Rezeption <br/>im
+                                        deutschsprachigen Raum</h3>
                                     <p>Auf dieser Webseite werden Informationen zur literarischen
                                         Sappho-Rezeption im deutschsprachigen Raum gesammelt. Mehr
-                                        als 1.000 literarische Rezeptionszeugnisse vom 15. bis zum
-                                        21. Jahrhundert sind hier verzeichnet. Knapp 100 wurden
-                                        exemplarisch analysiert.</p>
-                                    <p>Wo anfangen? Einfach scrollen – unten finden sich vier
-                                        mögliche Einstiege. ↓</p>
-                                    <p>–– work in progress ––</p>
+                                        als <b>1.000 literarische Rezeptionszeugnisse vom 15. bis
+                                            zum 21. Jahrhundert</b> sind hier verzeichnet. Knapp 100
+                                        wurden exemplarisch analysiert.</p>
+                                    <p><b>Wo anfangen? Einfach scrollen – unten finden sich vier
+                                            mögliche Einstiege. ↓</b></p>
                                     <button class="btn btn-secondary button"
                                         onclick="window.location.href='about.html'">Über das
-                                        Projekt</button>
+                                        Projekt (work in progress)</button>
                                     <p class="smaller-text disclaimer">Disclaimer: The raw data is
                                         largely annotated with English-language labels and
                                         structured for broad reuse. The website itself, however, is
