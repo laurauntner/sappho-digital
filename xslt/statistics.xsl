@@ -290,8 +290,8 @@
                     </div>
                   </div>
                   <div class="legend">
-                    <span><span class="dot" style="background:var(--s)"/>Sappho-Fragmente</span>
-                    <span><span class="dot" style="background:var(--r)"/>Rezeptionszeugnisse</span>
+                    <span><span class="dot dot-s"/>Sappho-Fragmente</span>
+                    <span><span class="dot dot-r"/>Rezeptionszeugnisse</span>
                   </div>
                   <div id="cats"/>
                 </div>
@@ -307,9 +307,9 @@
                     </select>
                   </div>
                   <div id="sankey-wrap2">
-                    <div id="sankey-placeholder2" class="sankey-placeholder" style="display:none"/>
-                    <div id="sankey-svg-wrap" style="display:none"/>
-                    <div id="sankey-legend" style="display:none" class="sankey-legend"/>
+                    <div id="sankey-placeholder2" class="sankey-placeholder"/>
+                    <div id="sankey-svg-wrap"/>
+                    <div id="sankey-legend" class="sankey-legend"/>
                   </div>
                 </div>
                 <div class="stats-wrap" id="stat3-wrap">
@@ -317,10 +317,8 @@
                   <p class="stats-desc">Wie verteilen sich konkrete Phänomene über die Zeit? Die
                     Blasengröße zeigt, in wie vielen Rezeptionszeugnissen eines Jahrzehnts ein
                     Phänomen annotiert ist; die Farbe kennzeichnet den Phänomentyp.</p>
-                  <p class="stats-subtitle" style="font-size:0.82rem;margin-bottom:0.75rem"
-                    >Überblick (Top-N)</p>
-                  <div
-                    style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;margin-bottom:1rem">
+                  <p class="stats-subtitle stats-subtitle-sm">Überblick (Top-N)</p>
+                  <div class="control-col-wrap">
                     <div class="stat3-control-group">
                       <label>Anzahl:</label>
                       <select id="sel-pdist-topn" class="stat2-select">
@@ -330,13 +328,10 @@
                         <option value="100">Top 100</option>
                       </select>
                     </div>
-                    <div id="pdist-type-legend"
-                      style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.4rem 1.1rem;font-size:0.8rem;color:#4b5563"
-                    />
+                    <div id="pdist-type-legend" class="type-legend"/>
                   </div>
                   <div id="pdist-overview-wrap"/>
-                  <p class="stats-subtitle" style="font-size:0.82rem;margin:1.2rem 0 0.5rem">Nach
-                    Phänomentyp</p>
+                  <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
                   <div id="pdist-type-sections"/>
                 </div>
                 <div class="stats-wrap" id="stat4-wrap">
@@ -344,10 +339,8 @@
                   <p class="stats-desc">Welche Phänomene dominieren in welcher Gattung? Die
                     Farbintensität der Zellen zeigt die Häufigkeit innerhalb jeder Gattung; die
                     Farbe kennzeichnet den Phänomentyp.</p>
-                  <p class="stats-subtitle" style="font-size:0.82rem;margin-bottom:0.75rem"
-                    >Überblick (Top-N)</p>
-                  <div
-                    style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;margin-bottom:1rem">
+                  <p class="stats-subtitle stats-subtitle-sm">Überblick (Top-N)</p>
+                  <div class="control-col-wrap">
                     <div class="stat3-control-group">
                       <label>Anzahl:</label>
                       <select id="sel-gdist-topn" class="stat2-select">
@@ -357,16 +350,12 @@
                         <option value="100">Top 100</option>
                       </select>
                     </div>
-                    <div id="gdist-type-legend"
-                      style="display:flex;flex-wrap:wrap;justify-content:center;gap:0.4rem 1.1rem;font-size:0.8rem;color:#4b5563"
-                    />
+                    <div id="gdist-type-legend" class="type-legend"/>
                   </div>
                   <div id="gdist-overview-wrap"/>
-                  <p class="stats-subtitle" style="font-size:0.82rem;margin:1.2rem 0 0.5rem">Nach
-                    Gattung</p>
+                  <p class="stats-subtitle stats-subtitle-sm-top">Nach Gattung</p>
                   <div id="gdist-genre-sections"/>
-                  <p class="stats-subtitle" style="font-size:0.82rem;margin:1.2rem 0 0.5rem">Nach
-                    Phänomentyp</p>
+                  <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
                   <div id="gdist-type-sections"/>
                 </div>
                 <div class="stats-wrap" id="stat5-wrap">
@@ -374,8 +363,7 @@
                   <p class="stats-desc">Welche Phänomene treten gemeinsam mit einem bestimmten Stoff
                     auf? Der innere Ring zeigt die Phänomentypen, der äußere Ring die einzelnen
                     Phänomene; die Segmentbreite entspricht der relativen Häufigkeit.</p>
-                  <div
-                    style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;margin-bottom:1rem">
+                  <div class="control-col-wrap">
                     <div class="stat3-control-group">
                       <label for="sel-pc-plot">Stoff:</label>
                       <select id="sel-pc-plot" class="stat2-select">
@@ -392,11 +380,9 @@
                       </select>
                     </div>
                   </div>
-                  <div id="pc-placeholder" class="sankey-placeholder" style="display:none"/>
+                  <div id="pc-placeholder" class="sankey-placeholder"/>
                   <div id="pc-svg-wrap"/>
-                  <div id="pc-legend"
-                    style="display:none;flex-wrap:wrap;justify-content:center;gap:0.4rem 1.1rem;font-size:0.8rem;color:#4b5563;margin-top:0.75rem"
-                  />
+                  <div id="pc-legend"/>
                 </div>
                 <div class="stats-wrap" id="stat6-wrap">
                   <p class="stats-subtitle">Statistik 6: Personenreferenzen und Figuren</p>
@@ -418,8 +404,7 @@
                       <span class="lbl">Analysierte Rezeptionszeugnisse</span>
                     </div>
                   </div>
-                  <div
-                    style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;margin-bottom:1rem">
+                  <div class="control-col-wrap">
                     <div class="stat3-control-group">
                       <label for="sel-pd-topn">Anzahl:</label>
                       <select id="sel-pd-topn" class="stat2-select">
@@ -437,19 +422,12 @@
                       </select>
                     </div>
                   </div>
-                  <div id="pd-meta-bar"
-                    style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-bottom:0.9rem;font-size:0.82rem;color:#6b7280"/>
+                  <div id="pd-meta-bar"/>
                   <div class="legend">
-                    <span><span class="dot" style="background:rgba(107,114,128,0.75)"/>Referenzen in
-                      Rezeptionszeugnissen</span>
-                    <span><span class="dot"
-                        style="background:rgba(107,114,128,0.35);border:1.5px solid #6b7280"
-                      />Figuren in Rezeptionszeugnissen</span>
-                    <span><span class="dot" style="background:rgba(94,23,235,0.75)"/>Referenzen in
-                      Sappho-Fragmenten</span>
-                    <span><span class="dot"
-                        style="background:rgba(94,23,235,0.35);border:1.5px solid #5e17eb"/>Figuren
-                      in Sappho-Fragmenten</span>
+                    <span><span class="dot dot-r-ref"/>Referenzen in Rezeptionszeugnissen</span>
+                    <span><span class="dot dot-r-char"/>Figuren in Rezeptionszeugnissen</span>
+                    <span><span class="dot dot-s-ref"/>Referenzen in Sappho-Fragmenten</span>
+                    <span><span class="dot dot-s-char"/>Figuren in Sappho-Fragmenten</span>
                   </div>
                   <div class="chart-wrap">
                     <div id="pd-chart-wrap"/>

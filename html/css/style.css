@@ -1837,3 +1837,79 @@ body[data-tei-file] .dataTables_wrapper {
 .arrow-hidden {
     visibility: hidden;
 }
+
+.dot-s {
+    background: var(--s);
+}
+.dot-r {
+    background: var(--r);
+}
+
+.dot-r-ref {
+    background: rgba(107, 114, 128, 0.75);
+}
+.dot-r-char {
+    background: rgba(107, 114, 128, 0.35);
+    border: 1.5px solid #6b7280;
+}
+.dot-s-ref {
+    background: rgba(94, 23, 235, 0.75);
+}
+.dot-s-char {
+    background: rgba(94, 23, 235, 0.35);
+    border: 1.5px solid #5e17eb;
+}
+
+#sankey-placeholder2,
+#sankey-svg-wrap,
+#sankey-legend,
+#pc-placeholder {
+    display: none;
+}
+
+.stats-subtitle-sm {
+    font-size: 0.82rem;
+    margin-bottom: 0.75rem;
+}
+
+.stats-subtitle-sm-top {
+    font-size: 0.82rem;
+    margin: 1.2rem 0 0.5rem;
+}
+
+.control-col-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.type-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem 1.1rem;
+    font-size: 0.8rem;
+    color: #4b5563;
+}
+
+#pd-meta-bar {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0.9rem;
+    font-size: 0.82rem;
+    color: #6b7280;
+}
+
+#pc-legend {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem 1.1rem;
+    font-size: 0.8rem;
+    color: #4b5563;
+    margin-top: 0.75rem;
+}
