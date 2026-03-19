@@ -718,3 +718,367 @@ function buildPdistTypeSections() {
 }
 
 document.addEventListener('DOMContentLoaded', initPdist);
+
+// ── Statistik 4: Phänomene nach Gattung (Heatmap) ────────────────────────────
+
+function buildHeatmap(features, genreObjs, container, showType = false, singleGenre = null) {
+    container.innerHTML = '';
+
+    // genreObjs is [{key, n}, ...]; extract key strings for internal use
+    const genres     = genreObjs.map(g => (typeof g === 'string' ? g : g.key));
+    const genreN     = Object.fromEntries(genreObjs.map(g =>
+        typeof g === 'string' ? [g, null] : [g.key, g.n]));
+
+    const activeCols = singleGenre ? [singleGenre] : genres;
+
+    const cellN = (feat, genre) => {
+        const cell = feat.cells.find(c => c.g === genre);
+        return cell ? cell.n : 0;
+    };
+
+    let active;
+    if (singleGenre) {
+        active = features
+            .map(f => ({ feat: f, total: cellN(f, singleGenre) }))
+            .filter(x => x.total > 0)
+            .sort((a, b) => b.total - a.total);
+    } else {
+        active = features
+            .map(f => ({ feat: f, total: activeCols.reduce((s, g) => s + cellN(f, g), 0) }))
+            .filter(x => x.total > 0)
+            .sort((a, b) => b.total - a.total);
+    }
+
+    if (!active.length) {
+        container.innerHTML = '<p style="color:#9ca3af;padding:0.5rem 0">Keine Daten.</p>';
+        return;
+    }
+
+    // Per-column totals for % calculation, and per-column max for opacity
+    const colTotal = {};
+    const colMax   = {};
+    activeCols.forEach(g => {
+        colTotal[g] = active.reduce((s, { feat }) => s + cellN(feat, g), 0) || 1;
+        colMax[g]   = Math.max(1, ...active.map(({ feat }) => cellN(feat, g)));
+    });
+
+    const ROW_H1  = 26;
+    const ROW_H2  = 40;
+    const COL_W   = singleGenre ? 350 : 265;
+    const LABEL_W = 240;
+    const HDR_H   = singleGenre ? 0 : 46;
+    const PAD_B   = 8;
+    const FONT_W  = 7.0;
+    const MAX_W   = LABEL_W - 18;
+    const MAX_CHARS_1 = Math.floor(MAX_W / FONT_W) - 2;
+    const MAX_CHARS_2 = Math.floor(MAX_W / FONT_W);
+
+    const rowMeta = active.map(({ feat }) => {
+        const label = feat.label;
+        if (label.length <= MAX_CHARS_1) return { lines: [label], h: ROW_H1 };
+        const words = label.split(' ');
+        let best = null, current = '';
+        for (let i = 0; i < words.length - 1; i++) {
+            current = current ? current + ' ' + words[i] : words[i];
+            const rest = words.slice(i + 1).join(' ');
+            if (current.length <= MAX_CHARS_2 && rest.length <= MAX_CHARS_2)
+                best = { line1: current, line2: rest };
+        }
+        if (best) return { lines: [best.line1, best.line2], h: ROW_H2 };
+        const mid = Math.floor(label.length / 2);
+        const breakAt = label.lastIndexOf(' ', mid + 6);
+        const split = breakAt > 4 ? breakAt : MAX_CHARS_2;
+        const line1 = label.slice(0, split).trimEnd();
+        const line2Raw = label.slice(split).trimStart();
+        const line2 = line2Raw.length > MAX_CHARS_2 ? line2Raw.slice(0, MAX_CHARS_2 - 1) + '…' : line2Raw;
+        return { lines: [line1, line2], h: ROW_H2 };
+    });
+
+    const rowY = [];
+    let curY = HDR_H;
+    rowMeta.forEach(m => { rowY.push(curY); curY += m.h; });
+    const totalRowH = curY - HDR_H;
+
+    const nRows = active.length;
+    const svgW  = LABEL_W + activeCols.length * COL_W + 8;
+    const svgH  = HDR_H + totalRowH + PAD_B;
+
+    const ns  = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(ns, 'svg');
+    svg.setAttribute('width',  svgW);
+    svg.setAttribute('height', svgH);
+    svg.style.cssText = 'font-family:Geist,system-ui,sans-serif;font-size:11px;display:block';
+
+    const mk  = tag => document.createElementNS(ns, tag);
+    const set = (el, attrs) => { Object.entries(attrs).forEach(([k, v]) => el.setAttribute(k, v)); return el; };
+    const txt = (x, y, content, attrs = {}) => {
+        const t = mk('text'); set(t, { x, y, ...attrs }); t.textContent = content; return t;
+    };
+
+    // Column headers (overview only) – genre name + n=
+    if (!singleGenre) {
+        activeCols.forEach((genre, ci) => {
+            const cx = LABEL_W + ci * COL_W + COL_W / 2;
+            svg.appendChild(txt(cx, 16, genre, {
+                'text-anchor': 'middle',
+                'font-size': '11px',
+                fill: '#374151',
+                'font-weight': '600',
+            }));
+            const nVal = genreN[genre];
+            if (nVal !== null && nVal !== undefined) {
+                svg.appendChild(txt(cx, 32, `n = ${nVal}`, {
+                    'text-anchor': 'middle',
+                    'font-size': '10px',
+                    fill: '#9ca3af',
+                }));
+            }
+            svg.appendChild(set(mk('line'), {
+                x1: cx, y1: HDR_H, x2: cx, y2: HDR_H + totalRowH,
+                stroke: 'rgba(0,0,0,0.06)', 'stroke-width': 1,
+            }));
+        });
+    }
+
+    // Rows
+    active.forEach(({ feat }, ri) => {
+        const y0    = rowY[ri];
+        const rh    = rowMeta[ri].h;
+        const yc    = y0 + rh / 2;
+        const color = (FTYPE_META[feat.ftype] || {}).color || '#6b7280';
+
+        if (ri % 2 === 0) {
+            svg.appendChild(set(mk('rect'), {
+                x: 0, y: y0, width: svgW, height: rh,
+                fill: 'rgba(0,0,0,0.018)',
+            }));
+        }
+
+        svg.appendChild(set(mk('rect'), {
+            x: 0, y: y0 + 2, width: 3, height: rh - 4,
+            fill: color, rx: 1,
+        }));
+
+        const rawLabel = feat.label;
+        const lines    = rowMeta[ri].lines;
+        const ftypeLbl = (FTYPE_META[feat.ftype] || {}).singular || feat.ftype;
+        if (lines.length === 1) {
+            const labelEl = txt(LABEL_W - 8, yc, lines[0], {
+                'text-anchor': 'end', dy: '0.35em',
+                'font-size': '11px', fill: '#1f2937',
+            });
+            if (showType) {
+                labelEl.addEventListener('mouseenter', e => pdTipShow(e,
+                    `<strong>${rawLabel}</strong><br><span style="font-size:10px;color:rgba(255,255,255,0.75)">${ftypeLbl}</span>`));
+                labelEl.addEventListener('mousemove',  e => pdTipMove(e));
+                labelEl.addEventListener('mouseleave', pdTipHide);
+                labelEl.style.cursor = 'default';
+            }
+            svg.appendChild(labelEl);
+        } else {
+            const lineH = 13;
+            [
+                [lines[0], yc - lineH / 2, '0em'],
+                [lines[1], yc + lineH / 2, '0.9em'],
+            ].forEach(([line, y, dy]) => {
+                const labelEl = txt(LABEL_W - 8, y, line, {
+                    'text-anchor': 'end', dy,
+                    'font-size': '11px', fill: '#1f2937',
+                });
+                if (showType) {
+                    labelEl.addEventListener('mouseenter', e => pdTipShow(e,
+                        `<strong>${rawLabel}</strong><br><span style="font-size:10px;color:rgba(255,255,255,0.75)">${ftypeLbl}</span>`));
+                    labelEl.addEventListener('mousemove',  e => pdTipMove(e));
+                    labelEl.addEventListener('mouseleave', pdTipHide);
+                    labelEl.style.cursor = 'default';
+                }
+                svg.appendChild(labelEl);
+            });
+        }
+
+        // Cells
+        activeCols.forEach((genre, ci) => {
+            const v   = cellN(feat, genre);
+            const pct = (v / colTotal[genre] * 100);
+            const cx  = LABEL_W + ci * COL_W;
+            const cw  = COL_W - 3;
+
+            const opacity = v === 0 ? 0 : 0.12 + 0.88 * Math.pow(v / colMax[genre], 0.6);
+
+            svg.appendChild(set(mk('rect'), {
+                x: cx + 1, y: y0 + 2, width: cw, height: rh - 4,
+                fill: color, 'fill-opacity': opacity, rx: 2,
+            }));
+
+            if (v > 0) {
+                const onDark    = opacity > 0.50;
+                const textFill  = onDark ? '#fff' : color;
+                const cellLabel = `${v} (${pct < 1 ? pct.toFixed(1) : Math.round(pct)}%)`;
+                svg.appendChild(txt(cx + COL_W / 2, yc, cellLabel, {
+                    'text-anchor': 'middle', dy: '0.35em',
+                    'font-size': '10px',
+                    fill: textFill,
+                    'font-weight': onDark ? '600' : '400',
+                    'pointer-events': 'none',
+                }));
+            }
+
+            const tipTarget = set(mk('rect'), {
+                x: cx + 1, y: y0 + 2, width: cw, height: rh - 4,
+                fill: 'transparent',
+            });
+            tipTarget.style.cursor = 'default';
+            const ftypeLabel = (FTYPE_META[feat.ftype] || {}).singular || feat.ftype;
+            const tipHtml = `<strong>${rawLabel}</strong>`
+                + (showType ? `<br><span style="font-size:10px;color:rgba(255,255,255,0.75)">(${ftypeLabel})</span>` : '')
+                + `<br>${genre}: <strong>${v}</strong> Rezeptionszeugnis${v !== 1 ? 'se' : ''}`
+                + (v > 0 ? ` (${pct < 1 ? pct.toFixed(1) : Math.round(pct)}%)` : '');
+            tipTarget.addEventListener('mouseenter', e => pdTipShow(e, tipHtml));
+            tipTarget.addEventListener('mousemove',  e => pdTipMove(e));
+            tipTarget.addEventListener('mouseleave', pdTipHide);
+            svg.appendChild(tipTarget);
+        });
+    });
+
+    const scroller = document.createElement('div');
+    scroller.style.cssText = 'overflow-x:auto;overflow-y:auto;max-height:600px;padding-bottom:4px';
+    scroller.appendChild(svg);
+    container.appendChild(scroller);
+}
+
+function renderGdistOverview() {
+    const gd      = DATA.genreDist;
+    const topN    = parseInt(document.getElementById('sel-gdist-topn')?.value) || 30;
+    const wrap    = document.getElementById('gdist-overview-wrap');
+    const genreObjs = (gd.genres || []).filter(g => g.key !== 'Unbekannt');
+    if (wrap) buildHeatmap(gd.features.slice(0, topN), genreObjs, wrap, true);
+}
+
+function buildGdistGenreSections() {
+    const gd        = DATA.genreDist;
+    const container = document.getElementById('gdist-genre-sections');
+    if (!container) return;
+
+    const genreOrder  = ['Lyrik', 'Prosa', 'Drama', 'Comic'];
+    const genreObjs   = gd.genres || [];   // [{key, n}, ...]
+    const genreKeys   = genreObjs.map(g => g.key).filter(k => k !== 'Unbekannt');
+    const genreNMap   = Object.fromEntries(genreObjs.map(g => [g.key, g.n]));
+
+    const sorted = [...genreKeys].sort((a, b) => {
+        const ia = genreOrder.indexOf(a), ib = genreOrder.indexOf(b);
+        return (ia === -1 ? 99 : ia) - (ib === -1 ? 99 : ib);
+    });
+
+    const allGenres = [...new Set([...sorted, ...genreOrder.filter(g => !sorted.includes(g))])];
+
+    allGenres.forEach(genre => {
+        const hasData = sorted.includes(genre);
+        const nVal    = genreNMap[genre];
+        const nLabel  = (hasData && nVal !== undefined) ? ` <span style="font-size:0.78rem;color:#6b7280;font-weight:400">(n = ${nVal})</span>` : '';
+        const section = document.createElement('div');
+        section.className = 'card cat';
+
+        const head = document.createElement('div');
+        head.className = 'card-header';
+        head.innerHTML =
+            `<span class="arrow${hasData ? '' : ' arrow-hidden'}">▶</span>`
+            + `<h2>${genre}${nLabel}</h2>`
+            + (!hasData
+                ? `<span style="margin-left:0.75rem;font-size:0.78rem;color:#9ca3af;font-weight:400">– noch keine analysierten Rezeptionszeugnisse</span>`
+                : '');
+
+        if (!hasData) {
+            head.style.cursor = 'default';
+            head.querySelector('h2').style.color = '#9ca3af';
+            section.appendChild(head);
+            container.appendChild(section);
+            return;
+        }
+
+        const body = document.createElement('div');
+        body.className = 'card-body';
+
+        const chartWrap = document.createElement('div');
+        chartWrap.style.minHeight = '40px';
+        body.appendChild(chartWrap);
+        section.appendChild(head);
+        section.appendChild(body);
+        container.appendChild(section);
+
+        head.addEventListener('click', () => {
+            const isOpen = body.classList.contains('visible');
+            body.classList.toggle('visible', !isOpen);
+            head.classList.toggle('open', !isOpen);
+            if (!isOpen && !chartWrap.dataset.rendered) {
+                buildHeatmap(gd.features, gd.genres || [], chartWrap, true, genre);
+                chartWrap.dataset.rendered = '1';
+            }
+        });
+    });
+}
+
+function buildGdistTypeSections4() {
+    const gd        = DATA.genreDist;
+    const container = document.getElementById('gdist-type-sections');
+    if (!container) return;
+
+    const ftypeOrder = Object.keys(FTYPE_META);
+    [...new Set(gd.features.map(f => f.ftype))]
+        .sort((a, b) => (ftypeOrder.indexOf(a) + 1 || 99) - (ftypeOrder.indexOf(b) + 1 || 99))
+        .forEach(ft => {
+            const meta    = FTYPE_META[ft] || { label: ft, color: '#6b7280' };
+            const section = document.createElement('div');
+            section.className = 'card cat';
+
+            const head = document.createElement('div');
+            head.className = 'card-header';
+            head.innerHTML = `<span class="arrow">▶</span><h2>${meta.label}</h2>`;
+
+            const body = document.createElement('div');
+            body.className = 'card-body';
+
+            const chartWrap = document.createElement('div');
+            chartWrap.style.minHeight = '40px';
+            body.appendChild(chartWrap);
+            section.appendChild(head);
+            section.appendChild(body);
+            container.appendChild(section);
+
+            head.addEventListener('click', () => {
+                const isOpen = body.classList.contains('visible');
+                body.classList.toggle('visible', !isOpen);
+                head.classList.toggle('open', !isOpen);
+                if (!isOpen && !chartWrap.dataset.rendered) {
+                    const genreObjs = (gd.genres || []).filter(g => g.key !== 'Unbekannt');
+                    buildHeatmap(gd.features.filter(f => f.ftype === ft), genreObjs, chartWrap, false);
+                    chartWrap.dataset.rendered = '1';
+                }
+            });
+        });
+}
+
+function initGdist() {
+    const gd = DATA.genreDist;
+    if (!gd || !gd.features || gd.features.length === 0) return;
+
+    const legendWrap = document.getElementById('gdist-type-legend');
+    if (legendWrap) {
+        const ftypeOrder = Object.keys(FTYPE_META);
+        [...new Set(gd.features.map(f => f.ftype))]
+            .sort((a, b) => (ftypeOrder.indexOf(a) + 1 || 99) - (ftypeOrder.indexOf(b) + 1 || 99))
+            .forEach(ft => {
+                const m    = FTYPE_META[ft] || { label: ft, color: '#6b7280' };
+                const span = document.createElement('span');
+                span.style.cssText = 'display:inline-flex;align-items:center;gap:5px';
+                span.innerHTML = `<span style="display:inline-block;width:11px;height:11px;border-radius:2px;background:${m.color};opacity:0.8;flex-shrink:0"></span>${m.label}`;
+                legendWrap.appendChild(span);
+            });
+    }
+
+    document.getElementById('sel-gdist-topn')?.addEventListener('change', renderGdistOverview);
+    renderGdistOverview();
+    buildGdistGenreSections();
+    buildGdistTypeSections4();
+}
+
+document.addEventListener('DOMContentLoaded', initGdist);
