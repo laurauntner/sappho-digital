@@ -285,10 +285,6 @@
                   <div id="pdist-type-sections"/>
                 </div>
                 <div class="stats-wrap" id="stat4-wrap">
-                  <style>
-                    .arrow-hidden {
-                        visibility: hidden
-                    }</style>
                   <p class="stats-subtitle">Statistik 4: Phänomene nach Gattung</p>
                   <p class="stats-desc">Welche Phänomene dominieren in welcher Gattung? Die
                     Farbintensität der Zellen zeigt die Häufigkeit innerhalb jeder Gattung; die

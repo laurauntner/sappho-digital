@@ -1814,3 +1814,7 @@ body[data-tei-file] .dataTables_wrapper {
     color: #4b5563;
     margin-bottom: 0.6rem;
 }
+
+.arrow-hidden {
+    visibility: hidden;
+}

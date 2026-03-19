@@ -719,7 +719,7 @@ function buildPdistTypeSections() {
 
 document.addEventListener('DOMContentLoaded', initPdist);
 
-// ── Statistik 4 ────────────────────────────
+// ── Statistik 4: Phänomene nach Gattung (Heatmap) ────────────────────────────
 
 function buildHeatmap(features, genreObjs, container, showType = false, singleGenre = null) {
     container.innerHTML = '';
@@ -762,16 +762,46 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
         colMax[g]   = Math.max(1, ...active.map(({ feat }) => cellN(feat, g)));
     });
 
-    const ROW_H   = 26;
+    const ROW_H1  = 26;
+    const ROW_H2  = 40;
     const COL_W   = singleGenre ? 350 : 265;
     const LABEL_W = 240;
-    // Header: two lines (name + n=) when showing multiple genres
     const HDR_H   = singleGenre ? 0 : 46;
     const PAD_B   = 8;
+    const FONT_W  = 7.0;
+    const MAX_W   = LABEL_W - 18;
+    const MAX_CHARS_1 = Math.floor(MAX_W / FONT_W) - 2;
+    const MAX_CHARS_2 = Math.floor(MAX_W / FONT_W);
+
+    const rowMeta = active.map(({ feat }) => {
+        const label = feat.label;
+        if (label.length <= MAX_CHARS_1) return { lines: [label], h: ROW_H1 };
+        const words = label.split(' ');
+        let best = null, current = '';
+        for (let i = 0; i < words.length - 1; i++) {
+            current = current ? current + ' ' + words[i] : words[i];
+            const rest = words.slice(i + 1).join(' ');
+            if (current.length <= MAX_CHARS_2 && rest.length <= MAX_CHARS_2)
+                best = { line1: current, line2: rest };
+        }
+        if (best) return { lines: [best.line1, best.line2], h: ROW_H2 };
+        const mid = Math.floor(label.length / 2);
+        const breakAt = label.lastIndexOf(' ', mid + 6);
+        const split = breakAt > 4 ? breakAt : MAX_CHARS_2;
+        const line1 = label.slice(0, split).trimEnd();
+        const line2Raw = label.slice(split).trimStart();
+        const line2 = line2Raw.length > MAX_CHARS_2 ? line2Raw.slice(0, MAX_CHARS_2 - 1) + '…' : line2Raw;
+        return { lines: [line1, line2], h: ROW_H2 };
+    });
+
+    const rowY = [];
+    let curY = HDR_H;
+    rowMeta.forEach(m => { rowY.push(curY); curY += m.h; });
+    const totalRowH = curY - HDR_H;
 
     const nRows = active.length;
     const svgW  = LABEL_W + activeCols.length * COL_W + 8;
-    const svgH  = HDR_H + nRows * ROW_H + PAD_B;
+    const svgH  = HDR_H + totalRowH + PAD_B;
 
     const ns  = 'http://www.w3.org/2000/svg';
     const svg = document.createElementNS(ns, 'svg');
@@ -804,7 +834,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
                 }));
             }
             svg.appendChild(set(mk('line'), {
-                x1: cx, y1: HDR_H, x2: cx, y2: HDR_H + nRows * ROW_H,
+                x1: cx, y1: HDR_H, x2: cx, y2: HDR_H + totalRowH,
                 stroke: 'rgba(0,0,0,0.06)', 'stroke-width': 1,
             }));
         });
@@ -812,38 +842,59 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
 
     // Rows
     active.forEach(({ feat }, ri) => {
-        const y0    = HDR_H + ri * ROW_H;
-        const yc    = y0 + ROW_H / 2;
+        const y0    = rowY[ri];
+        const rh    = rowMeta[ri].h;
+        const yc    = y0 + rh / 2;
         const color = (FTYPE_META[feat.ftype] || {}).color || '#6b7280';
 
         if (ri % 2 === 0) {
             svg.appendChild(set(mk('rect'), {
-                x: 0, y: y0, width: svgW, height: ROW_H,
+                x: 0, y: y0, width: svgW, height: rh,
                 fill: 'rgba(0,0,0,0.018)',
             }));
         }
 
         svg.appendChild(set(mk('rect'), {
-            x: 0, y: y0 + 2, width: 3, height: ROW_H - 4,
+            x: 0, y: y0 + 2, width: 3, height: rh - 4,
             fill: color, rx: 1,
         }));
 
-        const MAX_CHARS = 28;
-        const rawLabel  = feat.label;
-        const label     = rawLabel.length > MAX_CHARS ? rawLabel.slice(0, MAX_CHARS - 1) + '…' : rawLabel;
-        const labelEl   = txt(LABEL_W - 8, yc, label, {
-            'text-anchor': 'end', dy: '0.35em',
-            'font-size': '11px', fill: '#1f2937',
-        });
-        if (showType || rawLabel.length > MAX_CHARS) {
-            const ftypeLbl = (FTYPE_META[feat.ftype] || {}).singular || feat.ftype;
-            labelEl.addEventListener('mouseenter', e => pdTipShow(e,
-                `<strong>${rawLabel}</strong><br><span style="font-size:10px;color:rgba(255,255,255,0.75)">${ftypeLbl}</span>`));
-            labelEl.addEventListener('mousemove',  e => pdTipMove(e));
-            labelEl.addEventListener('mouseleave', pdTipHide);
-            labelEl.style.cursor = 'default';
+        const rawLabel = feat.label;
+        const lines    = rowMeta[ri].lines;
+        const ftypeLbl = (FTYPE_META[feat.ftype] || {}).singular || feat.ftype;
+        if (lines.length === 1) {
+            const labelEl = txt(LABEL_W - 8, yc, lines[0], {
+                'text-anchor': 'end', dy: '0.35em',
+                'font-size': '11px', fill: '#1f2937',
+            });
+            if (showType) {
+                labelEl.addEventListener('mouseenter', e => pdTipShow(e,
+                    `<strong>${rawLabel}</strong><br><span style="font-size:10px;color:rgba(255,255,255,0.75)">${ftypeLbl}</span>`));
+                labelEl.addEventListener('mousemove',  e => pdTipMove(e));
+                labelEl.addEventListener('mouseleave', pdTipHide);
+                labelEl.style.cursor = 'default';
+            }
+            svg.appendChild(labelEl);
+        } else {
+            const lineH = 13;
+            [
+                [lines[0], yc - lineH / 2, '0em'],
+                [lines[1], yc + lineH / 2, '0.9em'],
+            ].forEach(([line, y, dy]) => {
+                const labelEl = txt(LABEL_W - 8, y, line, {
+                    'text-anchor': 'end', dy,
+                    'font-size': '11px', fill: '#1f2937',
+                });
+                if (showType) {
+                    labelEl.addEventListener('mouseenter', e => pdTipShow(e,
+                        `<strong>${rawLabel}</strong><br><span style="font-size:10px;color:rgba(255,255,255,0.75)">${ftypeLbl}</span>`));
+                    labelEl.addEventListener('mousemove',  e => pdTipMove(e));
+                    labelEl.addEventListener('mouseleave', pdTipHide);
+                    labelEl.style.cursor = 'default';
+                }
+                svg.appendChild(labelEl);
+            });
         }
-        svg.appendChild(labelEl);
 
         // Cells
         activeCols.forEach((genre, ci) => {
@@ -852,19 +903,16 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
             const cx  = LABEL_W + ci * COL_W;
             const cw  = COL_W - 3;
 
-            // Strong contrast: power curve with exponent 0.6, min opacity 0 (empty = blank)
             const opacity = v === 0 ? 0 : 0.12 + 0.88 * Math.pow(v / colMax[genre], 0.6);
 
-            const cellRect = set(mk('rect'), {
-                x: cx + 1, y: y0 + 2, width: cw, height: ROW_H - 4,
+            svg.appendChild(set(mk('rect'), {
+                x: cx + 1, y: y0 + 2, width: cw, height: rh - 4,
                 fill: color, 'fill-opacity': opacity, rx: 2,
-            });
-            svg.appendChild(cellRect);
+            }));
 
             if (v > 0) {
-                // Show count + percentage. Switch text colour based on opacity.
-                const onDark   = opacity > 0.50;
-                const textFill = onDark ? '#fff' : color;
+                const onDark    = opacity > 0.50;
+                const textFill  = onDark ? '#fff' : color;
                 const cellLabel = `${v} (${pct < 1 ? pct.toFixed(1) : Math.round(pct)}%)`;
                 svg.appendChild(txt(cx + COL_W / 2, yc, cellLabel, {
                     'text-anchor': 'middle', dy: '0.35em',
@@ -875,9 +923,8 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
                 }));
             }
 
-            // Invisible hit target for tooltip
             const tipTarget = set(mk('rect'), {
-                x: cx + 1, y: y0 + 2, width: cw, height: ROW_H - 4,
+                x: cx + 1, y: y0 + 2, width: cw, height: rh - 4,
                 fill: 'transparent',
             });
             tipTarget.style.cursor = 'default';
