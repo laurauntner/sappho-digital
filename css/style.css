@@ -6,7 +6,10 @@
     background-position: center;
     align-items: center;
     justify-content: center;
-    text-align: left;
+    text-align: justify;
+    text-align-last: left;
+    hyphens: auto;
+    word-spacing: -0.09em;
 }
 
 .intro_left {
@@ -20,12 +23,28 @@
     margin-top: 10px !important;
     margin-bottom: 1px !important;
     letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-align: center !important;
 }
 
 .intro_left h3 {
     padding: .5em 0 !important;
     margin-bottom: 20px !important;
     margin-top: 1px !important;
+    text-align: center !important;
+}
+
+.intro_left button {
+    display: block;
+    margin: 20px auto;
+}
+
+.intro_left h1,
+.intro_left h3 {
+    text-align: center !important;
+    text-align-last: center !important;
+    width: 100%;
+    display: block;
 }
 
 .cover {
@@ -56,10 +75,6 @@ h3 {
     align-items: center;
     vertical-align: middle;
     display: flex;
-}
-
-.uppercase {
-    text-transform: uppercase;
 }
 
 .custom-logo-link img {
