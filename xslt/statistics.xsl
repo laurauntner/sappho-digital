@@ -167,6 +167,33 @@
       </xsl:for-each>
     </xsl:variable>
 
+    <xsl:variable name="plotcomp-plot-json" as="xs:string*">
+      <xsl:for-each select="statistics/plotComponents/plot">
+        <xsl:variable name="cofeat-json" as="xs:string*">
+          <xsl:for-each select="coFeature">
+            <xsl:sequence select="
+                concat(
+                '{',
+                '&quot;uri&quot;:&quot;', replace(@uri, '&quot;', '\\&quot;'), '&quot;,',
+                '&quot;label&quot;:&quot;', replace(@label, '&quot;', '\\&quot;'), '&quot;,',
+                '&quot;ftype&quot;:&quot;', @ftype, '&quot;,',
+                '&quot;n&quot;:', @n,
+                '}'
+                )"/>
+          </xsl:for-each>
+        </xsl:variable>
+        <xsl:sequence select="
+            concat(
+            '{',
+            '&quot;uri&quot;:&quot;', replace(@uri, '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;label&quot;:&quot;', replace(@label, '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;nDocs&quot;:', @nDocs, ',',
+            '&quot;coFeatures&quot;:[', string-join($cofeat-json, ','), ']',
+            '}'
+            )"/>
+      </xsl:for-each>
+    </xsl:variable>
+
     <xsl:variable name="json" as="xs:string" select="
         concat(
         '{',
@@ -186,7 +213,8 @@
         '&quot;nFeatures&quot;:', (statistics/genreDist/@nFeatures, '0')[1], ',',
         '&quot;genres&quot;:[', string-join($gdist-genre-json, ','), '],',
         '&quot;features&quot;:[', string-join($gdist-feat-json, ','), ']',
-        '}',
+        '},',
+        '&quot;plotComponents&quot;:[', string-join($plotcomp-plot-json, ','), ']',
         '}'
         )"/>
 
@@ -313,6 +341,35 @@
                   <p class="stats-subtitle" style="font-size:0.82rem;margin:1.2rem 0 0.5rem">Nach
                     Phänomentyp</p>
                   <div id="gdist-type-sections"/>
+                </div>
+                <div class="stats-wrap" id="stat5-wrap">
+                  <p class="stats-subtitle">Statistik 5: Stoff-Komponenten</p>
+                  <p class="stats-desc">Welche Phänomene treten gemeinsam mit einem bestimmten Stoff
+                    auf? Der innere Ring zeigt die Phänomentypen, der äußere Ring die einzelnen
+                    Phänomene; die Segmentbreite entspricht der relativen Häufigkeit.</p>
+                  <div
+                    style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;margin-bottom:1rem">
+                    <div class="stat3-control-group">
+                      <label for="sel-pc-plot">Stoff:</label>
+                      <select id="sel-pc-plot" class="stat2-select">
+                        <option value="">&#8212; Stoff wählen &#8212;</option>
+                      </select>
+                    </div>
+                    <div class="stat3-control-group">
+                      <label for="sel-pc-topn">Anzeigen:</label>
+                      <select id="sel-pc-topn" class="stat2-select">
+                        <option value="3">Top 3 pro Typ</option>
+                        <option value="5" selected="selected">Top 5 pro Typ</option>
+                        <option value="10">Top 10 pro Typ</option>
+                        <option value="0">Alle</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div id="pc-placeholder" class="sankey-placeholder" style="display:none"/>
+                  <div id="pc-svg-wrap"/>
+                  <div id="pc-legend"
+                    style="display:none;flex-wrap:wrap;justify-content:center;gap:0.4rem 1.1rem;font-size:0.8rem;color:#4b5563;margin-top:0.75rem"
+                  />
                 </div>
               </div>
             </div>

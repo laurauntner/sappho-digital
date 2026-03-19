@@ -505,6 +505,82 @@ def main(ttl_path: str, xml_out: str) -> None:
                 gc_el.set("genre", gen)
                 gc_el.set("n",     str(cnt))
 
+    # ── Statistik 5: Stoff-Komponenten ───────────────────────
+
+    # Vollständiges Feature-Set pro Rezeptionszeugnis aufbauen
+    rec_all_feats: dict[URIRef, set] = {}
+    for rec in dist_records:
+        f2_uri = URIRef(rec["uri"])
+        combined: set = set(rec["features"]) | set(rec["text_passages"])
+        rec_all_feats[f2_uri] = combined
+
+    # Alle Plot-URIs finden
+    plot_uris: set[URIRef] = set()
+    for feats in rec_all_feats.values():
+        for feat in feats:
+            if "/plot/" in str(feat):
+                plot_uris.add(feat)
+
+    print(f"  Distinkte Stoffe (plot): {len(plot_uris)}", file=sys.stderr)
+
+    # Co-occurrence berechnen
+    plot_docs:    dict[URIRef, set] = defaultdict(set)
+    plot_cooccur: dict[URIRef, dict] = defaultdict(lambda: defaultdict(int))
+
+    for f2_uri, feats in rec_all_feats.items():
+        plots_in_doc = {f for f in feats if "/plot/" in str(f)}
+        for plot_uri in plots_in_doc:
+            plot_docs[plot_uri].add(f2_uri)
+            for other in feats:
+                if other == plot_uri:
+                    continue
+                ft = feature_type(str(other))
+                if ft is not None:
+                    plot_cooccur[plot_uri][other] += 1
+                elif "/text_passage/" in str(other):
+                    plot_cooccur[plot_uri][other] += 1
+
+    # XML aufbauen
+    pc_el = ET.SubElement(root_el, "plotComponents")
+    pc_el.set("nPlots",   str(len(plot_uris)))
+    pc_el.set("nRecords", str(len(dist_records)))
+
+    # Plots nach Häufigkeit sortieren (häufigste zuerst), dann alphabetisch
+    sorted_plots = sorted(
+        plot_uris,
+        key=lambda u: (-len(plot_docs[u]), get_label(u).lower())
+    )
+
+    for plot_uri in sorted_plots:
+        n_docs = len(plot_docs[plot_uri])
+        if n_docs == 0:
+            continue
+
+        plot_el = ET.SubElement(pc_el, "plot")
+        plot_el.set("uri",   str(plot_uri))
+        plot_el.set("label", get_label(plot_uri))
+        plot_el.set("nDocs", str(n_docs))
+
+        # Co-features nach Häufigkeit sortieren
+        cofeats_sorted = sorted(
+            plot_cooccur[plot_uri].items(),
+            key=lambda x: (-x[1], get_label(x[0]).lower())
+        )
+        for co_uri, co_n in cofeats_sorted:
+            ft = feature_type(str(co_uri))
+            if ft is None:
+                if "/text_passage/" in str(co_uri):
+                    ft = "text_passage"
+                else:
+                    continue
+            cf_el = ET.SubElement(plot_el, "coFeature")
+            cf_el.set("uri",   str(co_uri))
+            cf_el.set("label", get_label(co_uri))
+            cf_el.set("ftype", ft)
+            cf_el.set("n",     str(co_n))
+
+    print(f"  PlotComponents: {len(sorted_plots)} Stoffe verarbeitet", file=sys.stderr)
+
     tree = ET.ElementTree(root_el)
     ET.indent(tree, space="  ")
     tree.write(xml_out, encoding="utf-8", xml_declaration=True)
