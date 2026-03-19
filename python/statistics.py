@@ -581,6 +581,94 @@ def main(ttl_path: str, xml_out: str) -> None:
 
     print(f"  PlotComponents: {len(sorted_plots)} Stoffe verarbeitet", file=sys.stderr)
 
+    # ── Statistik 6: Personenreferenzen vs. Figuren ───────────────────────────
+
+    def count_persons_in_index(f2_index: dict) -> tuple[dict, dict, dict, dict]:
+        """Gibt (pr_count, ch_count, pr_labels, pr_by_id, ch_by_id) zurück."""
+        pr_count: dict[URIRef, int] = defaultdict(int)
+        ch_count: dict[URIRef, int] = defaultdict(int)
+        pr_lbls:  dict[URIRef, str] = {}
+        for f2, feats in f2_index.items():
+            for feat_uri in feats:
+                s = str(feat_uri)
+                if "/person_ref/" in s:
+                    pr_count[feat_uri] += 1
+                    if feat_uri not in pr_lbls:
+                        pr_lbls[feat_uri] = get_label(feat_uri)
+                elif "/character/" in s:
+                    ch_count[feat_uri] += 1
+        _pr_by_id: dict[str, URIRef] = {}
+        for uri in pr_count:
+            seg = str(uri).rstrip("/").split("/")[-1]
+            _pr_by_id[seg] = uri
+        _ch_by_id: dict[str, URIRef] = {}
+        for uri in ch_count:
+            seg = str(uri).rstrip("/").split("/")[-1]
+            _ch_by_id[seg] = uri
+        return pr_count, ch_count, pr_lbls, _pr_by_id, _ch_by_id
+
+    # Rezeptionszeugnisse
+    rec_pr_count, rec_ch_count, rec_pr_labels, rec_pr_by_id, rec_ch_by_id = \
+        count_persons_in_index(reception_idx)
+
+    # Sappho-Fragmente
+    sap_pr_count, sap_ch_count, sap_pr_labels, sap_pr_by_id, sap_ch_by_id = \
+        count_persons_in_index(sappho_idx)
+
+    all_ids: set[str] = set(rec_pr_by_id) | set(sap_pr_by_id)
+
+    pd_el = ET.SubElement(root_el, "personDuality")
+    pd_el.set("nPersonRef",      str(len(rec_pr_by_id)))
+    pd_el.set("nCharacter",      str(len(rec_ch_by_id)))
+    pd_el.set("nBoth",           str(len(set(rec_pr_by_id) & set(rec_ch_by_id))))
+    pd_el.set("nSapphoPersonRef", str(len(sap_pr_by_id)))
+    pd_el.set("nSapphoCharacter", str(len(sap_ch_by_id)))
+
+    persons_sorted = sorted(
+        all_ids,
+        key=lambda seg: (
+            -(rec_pr_count.get(rec_pr_by_id.get(seg), 0)),
+            -(rec_ch_count.get(rec_ch_by_id.get(seg), 0)),
+            -(sap_pr_count.get(sap_pr_by_id.get(seg), 0)),
+        )
+    )
+
+    for seg in persons_sorted:
+        rec_pr_uri = rec_pr_by_id.get(seg)
+        rec_ch_uri = rec_ch_by_id.get(seg)
+        sap_pr_uri = sap_pr_by_id.get(seg)
+        sap_ch_uri = sap_ch_by_id.get(seg)
+
+        rec_pr_n = rec_pr_count.get(rec_pr_uri, 0) if rec_pr_uri else 0
+        rec_ch_n = rec_ch_count.get(rec_ch_uri, 0) if rec_ch_uri else 0
+        sap_pr_n = sap_pr_count.get(sap_pr_uri, 0) if sap_pr_uri else 0
+        sap_ch_n = sap_ch_count.get(sap_ch_uri, 0) if sap_ch_uri else 0
+
+        pct_rec_pr = round(rec_pr_n / n_reception * 100, 2) if n_reception > 0 else 0.0
+        pct_rec_ch = round(rec_ch_n / n_reception * 100, 2) if n_reception > 0 else 0.0
+        pct_sap_pr = round(sap_pr_n / n_sappho    * 100, 2) if n_sappho    > 0 else 0.0
+        pct_sap_ch = round(sap_ch_n / n_sappho    * 100, 2) if n_sappho    > 0 else 0.0
+
+        label = (rec_pr_labels.get(rec_pr_uri)
+                 or sap_pr_labels.get(sap_pr_uri)
+                 or get_label(rec_pr_uri or sap_pr_uri))
+
+        p_el = ET.SubElement(pd_el, "person")
+        p_el.set("label",      label)
+        p_el.set("persRefN",   str(rec_pr_n))
+        p_el.set("charN",      str(rec_ch_n))
+        p_el.set("sapPrN",     str(sap_pr_n))
+        p_el.set("sapChN",     str(sap_ch_n))
+        p_el.set("pctRecPr",   f"{pct_rec_pr:.2f}")
+        p_el.set("pctRecCh",   f"{pct_rec_ch:.2f}")
+        p_el.set("pctSapPr",   f"{pct_sap_pr:.2f}")
+        p_el.set("pctSapCh",   f"{pct_sap_ch:.2f}")
+
+    print(f"  PersonDuality: {len(persons_sorted)} Personen gesamt, "
+          f"Rezeption: {len(rec_pr_by_id)} pers_ref / {len(rec_ch_by_id)} character, "
+          f"Sappho: {len(sap_pr_by_id)} pers_ref / {len(sap_ch_by_id)} character",
+          file=sys.stderr)
+
     tree = ET.ElementTree(root_el)
     ET.indent(tree, space="  ")
     tree.write(xml_out, encoding="utf-8", xml_declaration=True)

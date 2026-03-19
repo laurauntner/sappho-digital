@@ -194,6 +194,25 @@
       </xsl:for-each>
     </xsl:variable>
 
+    <xsl:variable name="personduality-json" as="xs:string*">
+      <xsl:for-each select="statistics/personDuality/person">
+        <xsl:sequence select="
+            concat(
+            '{',
+            '&quot;label&quot;:&quot;', replace(replace(@label, '\\', '\\\\'), '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;persRefN&quot;:', @persRefN, ',',
+            '&quot;charN&quot;:', @charN, ',',
+            '&quot;sapPrN&quot;:', @sapPrN, ',',
+            '&quot;sapChN&quot;:', @sapChN, ',',
+            '&quot;pctRecPr&quot;:', @pctRecPr, ',',
+            '&quot;pctRecCh&quot;:', @pctRecCh, ',',
+            '&quot;pctSapPr&quot;:', @pctSapPr, ',',
+            '&quot;pctSapCh&quot;:', @pctSapCh,
+            '}'
+            )"/>
+      </xsl:for-each>
+    </xsl:variable>
+
     <xsl:variable name="json" as="xs:string" select="
         concat(
         '{',
@@ -214,7 +233,15 @@
         '&quot;genres&quot;:[', string-join($gdist-genre-json, ','), '],',
         '&quot;features&quot;:[', string-join($gdist-feat-json, ','), ']',
         '},',
-        '&quot;plotComponents&quot;:[', string-join($plotcomp-plot-json, ','), ']',
+        '&quot;plotComponents&quot;:[', string-join($plotcomp-plot-json, ','), '],',
+        '&quot;personDuality&quot;:{',
+        '&quot;nPersonRef&quot;:', (statistics/personDuality/@nPersonRef, '0')[1], ',',
+        '&quot;nCharacter&quot;:', (statistics/personDuality/@nCharacter, '0')[1], ',',
+        '&quot;nBoth&quot;:', (statistics/personDuality/@nBoth, '0')[1], ',',
+        '&quot;nSapphoPersonRef&quot;:', (statistics/personDuality/@nSapphoPersonRef, '0')[1], ',',
+        '&quot;nSapphoCharacter&quot;:', (statistics/personDuality/@nSapphoCharacter, '0')[1], ',',
+        '&quot;persons&quot;:[', string-join($personduality-json, ','), ']',
+        '}',
         '}'
         )"/>
 
@@ -370,6 +397,63 @@
                   <div id="pc-legend"
                     style="display:none;flex-wrap:wrap;justify-content:center;gap:0.4rem 1.1rem;font-size:0.8rem;color:#4b5563;margin-top:0.75rem"
                   />
+                </div>
+                <div class="stats-wrap" id="stat6-wrap">
+                  <p class="stats-subtitle">Statistik 6: Personenreferenzen und Figuren</p>
+                  <p class="stats-desc">Welche Personen und Personentypen werden in
+                    Sappho-Fragmenten sowie in Rezeptionszeugnissen besonders häufig nicht nur
+                    referenziert, sondern treten auch als Figuren auf? Der Vergleich zeigt pro
+                    Person bzw. Personentyp die Referenz- und Figurenhäufigkeit.</p>
+                  <div class="meta-bar">
+                    <div class="meta-card s">
+                      <span class="num">
+                        <xsl:value-of select="statistics/@nSappho"/>
+                      </span>
+                      <span class="lbl">Sappho-Fragmente mit Annotationen</span>
+                    </div>
+                    <div class="meta-card r">
+                      <span class="num">
+                        <xsl:value-of select="statistics/@nReception"/>
+                      </span>
+                      <span class="lbl">Analysierte Rezeptionszeugnisse</span>
+                    </div>
+                  </div>
+                  <div
+                    style="display:flex;flex-direction:column;align-items:center;gap:0.6rem;margin-bottom:1rem">
+                    <div class="stat3-control-group">
+                      <label for="sel-pd-topn">Anzahl:</label>
+                      <select id="sel-pd-topn" class="stat2-select">
+                        <option value="20">Top 20</option>
+                        <option value="30" selected="selected">Top 30</option>
+                        <option value="50">Top 50</option>
+                        <option value="0">Alle</option>
+                      </select>
+                    </div>
+                    <div class="stat3-control-group">
+                      <label for="sel-pd-filter">   Filter:</label>
+                      <select id="sel-pd-filter" class="stat2-select">
+                        <option value="all">Alle Personenreferenzen</option>
+                        <option value="both">Nur auch als Figur</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div id="pd-meta-bar"
+                    style="display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-bottom:0.9rem;font-size:0.82rem;color:#6b7280"/>
+                  <div class="legend">
+                    <span><span class="dot" style="background:rgba(107,114,128,0.75)"/>Referenzen in
+                      Rezeptionszeugnissen</span>
+                    <span><span class="dot"
+                        style="background:rgba(107,114,128,0.35);border:1.5px solid #6b7280"
+                      />Figuren in Rezeptionszeugnissen</span>
+                    <span><span class="dot" style="background:rgba(94,23,235,0.75)"/>Referenzen in
+                      Sappho-Fragmenten</span>
+                    <span><span class="dot"
+                        style="background:rgba(94,23,235,0.35);border:1.5px solid #5e17eb"/>Figuren
+                      in Sappho-Fragmenten</span>
+                  </div>
+                  <div class="chart-wrap">
+                    <div id="pd-chart-wrap"/>
+                  </div>
                 </div>
               </div>
             </div>

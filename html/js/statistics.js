@@ -1335,7 +1335,6 @@ function renderPlotComponents(plotUri, topN) {
         });
     });
 
-    // ── Zentrum ──────────────────────────────────────────────────────────
     svg.appendChild(setA(mk('circle'), {
         cx: CX, cy: CY, r: R_CENTER,
         fill: '#5e17eb', 'fill-opacity': '0.10',
@@ -1370,7 +1369,6 @@ function renderPlotComponents(plotUri, topN) {
 
     svgWrap.appendChild(svg);
 
-    // ── Legende ───────────────────────────────────────────────────────────
     legend.style.display = 'flex';
     legend.innerHTML = '';
     activeTypes.forEach(k => {
@@ -1384,3 +1382,161 @@ function renderPlotComponents(plotUri, topN) {
 }
 
 document.addEventListener('DOMContentLoaded', initPlotComponents);
+
+// ── Statistik 6: Personenreferenzen und Figuren (Balkendiagramm) ─────────────
+
+const PD6 = {
+    recPr:     'rgba(107,114,128,0.75)',
+    recPrLine: '#6b7280',
+    recCh:     'rgba(107,114,128,0.35)',
+    recChLine: '#6b7280',
+    sapPr:     'rgba(94,23,235,0.75)',
+    sapPrLine: '#5e17eb',
+    sapCh:     'rgba(94,23,235,0.35)',
+    sapChLine: '#5e17eb',
+};
+
+let pd6Chart = null;
+
+function renderPersonDuality() {
+    const pd      = DATA.personDuality;
+    const wrap    = document.getElementById('pd-chart-wrap');
+    const metaBar = document.getElementById('pd-meta-bar');
+    if (!pd || !pd.persons || !wrap) return;
+
+    const topN   = parseInt(document.getElementById('sel-pd-topn').value) || 0;
+    const filter = document.getElementById('sel-pd-filter').value;
+
+    if (metaBar) {
+        metaBar.innerHTML =
+            `<span>Rezeptionszeugnisse: <strong>${pd.nPersonRef}</strong> Referenzen; <strong>${pd.nBoth}</strong> auch als Figuren</span>`
+            + `<span style="margin-left:1.2rem">Sappho-Fragmente: <strong>${pd.nSapphoPersonRef}</strong> Referenzen; <strong>${pd.nSapphoCharacter}</strong> auch als Figuren</span>`;
+    }
+
+    let persons = pd.persons.slice();
+    if (filter === 'both') persons = persons.filter(p => p.charN > 0 || p.sapChN > 0);
+    if (topN > 0) persons = persons.slice(0, topN);
+
+    persons.sort((a, b) =>
+        parseFloat(b.pctRecPr) - parseFloat(a.pctRecPr) ||
+        parseFloat(b.pctRecCh) - parseFloat(a.pctRecCh)
+    );
+
+    wrap.innerHTML = '';
+    if (!persons.length) {
+        wrap.innerHTML = '<p style="color:#9ca3af;padding:0.5rem 0">Keine Daten.</p>';
+        return;
+    }
+
+    const canvas = document.createElement('canvas');
+    canvas.style.height = canvasHeight(persons.length) + 'px';
+    wrap.appendChild(canvas);
+
+    const labels    = persons.map(p => p.label);
+    const recPrData = persons.map(p => parseFloat(p.pctRecPr));
+    const recChData = persons.map(p => parseFloat(p.pctRecCh));
+    const sapPrData = persons.map(p => parseFloat(p.pctSapPr));
+    const sapChData = persons.map(p => parseFloat(p.pctSapCh));
+
+    const allVals = [...recPrData, ...recChData, ...sapPrData, ...sapChData];
+    const rawMax  = Math.max(...allVals);
+    const padded  = rawMax * 1.05;
+    const maxX    = Math.min(100, Math.ceil(padded / 5) * 5) || 10;
+
+    if (pd6Chart) { pd6Chart.destroy(); pd6Chart = null; }
+
+    pd6Chart = new Chart(canvas.getContext('2d'), {
+        type: 'bar',
+        data: {
+            labels,
+            datasets: [
+                {
+                    label: `pers_ref – Rezeption (n=${DATA.nReception})`,
+                    data: recPrData,
+                    backgroundColor: PD6.recPr,
+                    borderColor: PD6.recPrLine,
+                    borderWidth: 1,
+                    borderRadius: 2,
+                },
+                {
+                    label: `character – Rezeption (n=${DATA.nReception})`,
+                    data: recChData,
+                    backgroundColor: PD6.recCh,
+                    borderColor: PD6.recChLine,
+                    borderWidth: 1,
+                    borderRadius: 2,
+                },
+                {
+                    label: `pers_ref – Sappho (n=${DATA.nSappho})`,
+                    data: sapPrData,
+                    backgroundColor: PD6.sapPr,
+                    borderColor: PD6.sapPrLine,
+                    borderWidth: 1,
+                    borderRadius: 2,
+                },
+                {
+                    label: `character – Sappho (n=${DATA.nSappho})`,
+                    data: sapChData,
+                    backgroundColor: PD6.sapCh,
+                    borderColor: PD6.sapChLine,
+                    borderWidth: 1,
+                    borderRadius: 2,
+                },
+            ],
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: { mode: 'nearest', axis: 'y', intersect: true },
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: ctx => {
+                            const p = persons[ctx.dataIndex];
+                            const configs = [
+                                { lbl: 'Referenz in Rezeptionszeugnissen', n: p.persRefN, total: DATA.nReception },
+                                { lbl: 'Figur in Rezeptionszeugnissen',    n: p.charN,   total: DATA.nReception },
+                                { lbl: 'Referenz in Sappho-Fragmenten',    n: p.sapPrN,  total: DATA.nSappho    },
+                                { lbl: 'Figur in Sappho-Fragmenten',       n: p.sapChN,  total: DATA.nSappho    },
+                            ];
+                            const { lbl, n, total } = configs[ctx.datasetIndex];
+                            const pct = ctx.parsed.x.toFixed(2);
+                            return ` ${lbl}: ${pct}% (${n}/${total})`;
+                        },
+                    },
+                },
+            },
+            scales: {
+                x: {
+                    min: 0,
+                    max: maxX,
+                    ticks: {
+                        font: { family: 'Geist, system-ui', size: 11 },
+                        callback: v => v + '%',
+                        stepSize: 5,
+                    },
+                    grid: { color: 'rgba(0,0,0,0.06)' },
+                },
+                y: {
+                    ticks: {
+                        font: { family: 'Geist, system-ui', size: 12 },
+                        autoSkip: false,
+                    },
+                    grid: { display: false },
+                },
+            },
+        },
+    });
+}
+
+function initPersonDuality() {
+    const pd = DATA.personDuality;
+    if (!pd || !pd.persons || pd.persons.length === 0) return;
+    document.getElementById('sel-pd-topn')?.addEventListener('change',   renderPersonDuality);
+    document.getElementById('sel-pd-filter')?.addEventListener('change', renderPersonDuality);
+    renderPersonDuality();
+}
+
+document.addEventListener('DOMContentLoaded', initPersonDuality);
