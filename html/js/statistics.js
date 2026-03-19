@@ -755,11 +755,9 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
     }
 
     // Per-column totals for % calculation, and per-column max for opacity
-    const colTotal = {};
     const colMax   = {};
     activeCols.forEach(g => {
-        colTotal[g] = active.reduce((s, { feat }) => s + cellN(feat, g), 0) || 1;
-        colMax[g]   = Math.max(1, ...active.map(({ feat }) => cellN(feat, g)));
+        colMax[g] = Math.max(1, ...active.map(({ feat }) => cellN(feat, g)));
     });
 
     const ROW_H1  = 26;
@@ -899,7 +897,8 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
         // Cells
         activeCols.forEach((genre, ci) => {
             const v   = cellN(feat, genre);
-            const pct = (v / colTotal[genre] * 100);
+            const nDocs = genreN[genre];
+            const pct = (nDocs > 0 ? v / nDocs * 100 : 0);
             const cx  = LABEL_W + ci * COL_W;
             const cw  = COL_W - 3;
 
@@ -960,7 +959,7 @@ function buildGdistGenreSections() {
     if (!container) return;
 
     const genreOrder  = ['Lyrik', 'Prosa', 'Drama', 'Comic'];
-    const genreObjs   = gd.genres || [];   // [{key, n}, ...]
+    const genreObjs   = gd.genres || [];
     const genreKeys   = genreObjs.map(g => g.key).filter(k => k !== 'Unbekannt');
     const genreNMap   = Object.fromEntries(genreObjs.map(g => [g.key, g.n]));
 
