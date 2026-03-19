@@ -213,6 +213,24 @@
       </xsl:for-each>
     </xsl:variable>
 
+    <xsl:variable name="wc-works-json" as="xs:string*">
+      <xsl:for-each select="statistics/workCitation/work">
+        <xsl:sequence select="
+            concat(
+            '{',
+            '&quot;label&quot;:&quot;', replace(replace(@label, '\\', '\\\\'), '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;uri&quot;:&quot;', replace(replace(@uri, '\\', '\\\\'), '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;refN&quot;:', @refN, ',',
+            '&quot;citeN&quot;:', @citeN, ',',
+            '&quot;bothN&quot;:', @bothN, ',',
+            '&quot;pctRef&quot;:', @pctRef, ',',
+            '&quot;pctCite&quot;:', @pctCite, ',',
+            '&quot;pctBoth&quot;:', @pctBoth,
+            '}'
+            )"/>
+      </xsl:for-each>
+    </xsl:variable>
+
     <xsl:variable name="json" as="xs:string" select="
         concat(
         '{',
@@ -241,6 +259,12 @@
         '&quot;nSapphoPersonRef&quot;:', (statistics/personDuality/@nSapphoPersonRef, '0')[1], ',',
         '&quot;nSapphoCharacter&quot;:', (statistics/personDuality/@nSapphoCharacter, '0')[1], ',',
         '&quot;persons&quot;:[', string-join($personduality-json, ','), ']',
+        '},',
+        '&quot;workCitation&quot;:{',
+        '&quot;nWorks&quot;:', (statistics/workCitation/@nWorks, '0')[1], ',',
+        '&quot;nReception&quot;:', (statistics/workCitation/@nReception, '0')[1], ',',
+        '&quot;nTP&quot;:', (statistics/workCitation/@nTP, '0')[1], ',',
+        '&quot;works&quot;:[', string-join($wc-works-json, ','), ']',
         '}',
         '}'
         )"/>
@@ -446,6 +470,19 @@
                   <div class="chart-wrap">
                     <div id="pd-chart-wrap"/>
                   </div>
+                </div>
+                <div class="stats-wrap" id="stat7-wrap">
+                  <p class="stats-subtitle" style="text-align:center">Statistik 7: Werkreferenzen
+                    und Zitate im Vergleich</p>
+                  <p class="stats-desc" style="text-align:center">Welche Werke werden in den
+                      <xsl:value-of select="statistics/workCitation/@nReception"/> analysierten
+                    Rezeptionszeugnissen nicht nur referenziert, sondern auch zitiert?</p>
+                  <div id="wc-meta-bar"/>
+                  <div class="legend">
+                    <span><span class="dot dot-wc-ref"/>Nur referenziert</span>
+                    <span><span class="dot dot-wc-both"/>Referenziert und zitiert</span>
+                  </div>
+                  <div id="wc-chart-wrap" class="chart-wrap"/>
                 </div>
               </div>
             </div>

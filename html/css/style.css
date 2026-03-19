@@ -1912,3 +1912,30 @@ body[data-tei-file] .dataTables_wrapper {
     color: #4b5563;
     margin-top: 0.75rem;
 }
+
+.dot-wc-both {
+    background: rgba(8, 145, 178, 0.75);
+    border-radius: 50%;
+}
+.dot-wc-ref {
+    background: rgba(107, 114, 128, 0.75);
+    border-radius: 50%;
+}
+.dot-wc-cite {
+    background: rgba(220, 38, 38, 0.65);
+    border-radius: 50%;
+}
+
+#wc-meta-bar {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 0.9rem;
+    font-size: 0.82rem;
+    color: #6b7280;
+}
+
+#wc-chart-wrap {
+    overflow-x: auto;
+}

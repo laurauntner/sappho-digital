@@ -669,6 +669,96 @@ def main(ttl_path: str, xml_out: str) -> None:
           f"Sappho: {len(sap_pr_by_id)} pers_ref / {len(sap_ch_by_id)} character",
           file=sys.stderr)
 
+    # ── Statistik 7: Werkreferenzen × Zitate ─────────────────────────────────
+
+    INT21_TextPassage = INTRO["INT21_TextPassage"]
+
+    # Menge aller TextPassage-URIs
+    all_tp_uris: set[URIRef] = set(g.subjects(RDF.type, INT21_TextPassage))
+    print(f"  INT21_TextPassage gesamt: {len(all_tp_uris)}", file=sys.stderr)
+
+    # tp → {work_ref_uri, ...}  (via R18_showsActualization → R17_actualizesFeature)
+    tp_to_cited_works: dict[URIRef, set[URIRef]] = defaultdict(set)
+    for tp_uri in all_tp_uris:
+        for _, _, act in g.triples((tp_uri, R18_showsActualization, None)):
+            for _, _, feat in g.triples((act, R17_actualizesFeature, None)):
+                if "/work_ref/" in str(feat):
+                    tp_to_cited_works[tp_uri].add(feat)
+
+    # tp → {f2_uri, ...}  (via R30i_isTextPassageOf)
+    tp_to_f2: dict[URIRef, set[URIRef]] = defaultdict(set)
+    for tp_uri in all_tp_uris:
+        for _, _, f2 in g.triples((tp_uri, R30i_isTextPassageOf, None)):
+            if f2 in reception_f2:
+                tp_to_f2[tp_uri].add(f2)
+
+    # Pro work_ref-URI: Mengen der Rezeptionszeugnisse, die referenzieren/zitieren
+    work_ref_docs: dict[URIRef, set[URIRef]] = defaultdict(set)
+    work_cite_docs: dict[URIRef, set[URIRef]] = defaultdict(set)
+
+    # referenzieren: direkt aus reception_idx (work_refs via get_work_refs)
+    for f2 in reception_f2:
+        for wr in get_work_refs(f2):
+            work_ref_docs[wr].add(f2)
+
+    # zitieren: über tp_to_cited_works + tp_to_f2
+    for tp_uri, cited_works in tp_to_cited_works.items():
+        for f2 in tp_to_f2.get(tp_uri, set()):
+            for wr in cited_works:
+                work_cite_docs[wr].add(f2)
+
+    all_work_uris = set(work_ref_docs) | set(work_cite_docs)
+    print(f"  Werke (work_ref) gesamt:       {len(all_work_uris)}", file=sys.stderr)
+    print(f"  davon nur referenziert:        "
+          f"{sum(1 for w in all_work_uris if w in work_ref_docs and w not in work_cite_docs)}",
+          file=sys.stderr)
+    print(f"  davon nur zitiert:             "
+          f"{sum(1 for w in all_work_uris if w not in work_ref_docs and w in work_cite_docs)}",
+          file=sys.stderr)
+    print(f"  davon referenziert und zitiert: "
+          f"{sum(1 for w in all_work_uris if w in work_ref_docs and w in work_cite_docs)}",
+          file=sys.stderr)
+
+    sorted_works = sorted(
+        all_work_uris,
+        key=lambda w: (
+            -len(work_ref_docs[w] & work_cite_docs[w]),
+            -len(work_ref_docs[w]),
+            -len(work_cite_docs[w]),
+            get_label(w).lower()
+        )
+    )
+
+    wc_el = ET.SubElement(root_el, "workCitation")
+    wc_el.set("nWorks",     str(len(all_work_uris)))
+    wc_el.set("nReception", str(n_reception))
+    wc_el.set("nTP",        str(len(all_tp_uris)))
+
+    for wr_uri in sorted_works:
+        ref_docs  = work_ref_docs.get(wr_uri, set())
+        cite_docs = work_cite_docs.get(wr_uri, set())
+        both_docs = ref_docs & cite_docs
+
+        ref_n  = len(ref_docs)
+        cite_n = len(cite_docs)
+        both_n = len(both_docs)
+
+        pct_ref  = round(ref_n  / n_reception * 100, 2) if n_reception > 0 else 0.0
+        pct_cite = round(cite_n / n_reception * 100, 2) if n_reception > 0 else 0.0
+        pct_both = round(both_n / n_reception * 100, 2) if n_reception > 0 else 0.0
+
+        w_el = ET.SubElement(wc_el, "work")
+        w_el.set("label",   get_label(wr_uri))
+        w_el.set("uri",     str(wr_uri))
+        w_el.set("refN",    str(ref_n))
+        w_el.set("citeN",   str(cite_n))
+        w_el.set("bothN",   str(both_n))
+        w_el.set("pctRef",  f"{pct_ref:.2f}")
+        w_el.set("pctCite", f"{pct_cite:.2f}")
+        w_el.set("pctBoth", f"{pct_both:.2f}")
+
+    print(f"  WorkCitation: {len(sorted_works)} Werke in XML geschrieben", file=sys.stderr)
+
     tree = ET.ElementTree(root_el)
     ET.indent(tree, space="  ")
     tree.write(xml_out, encoding="utf-8", xml_declaration=True)
