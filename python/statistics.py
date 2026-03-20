@@ -759,6 +759,137 @@ def main(ttl_path: str, xml_out: str) -> None:
 
     print(f"  WorkCitation: {len(sorted_works)} Werke in XML geschrieben", file=sys.stderr)
 
+    # ── Statistik 8: INT31 Co-Occurrence ─────────────────────────────────────
+    #
+    # Fragestellung: Welche Phänomene sind am häufigsten die Grundlage von
+    # INT31_IntertextualRelation-Knoten (über R22i_relationIsBasedOnSimilarity),
+    # und welche treten besonders häufig gemeinsam an einem INT31-Knoten auf?
+    #
+    # Filter: Nur INT31-Knoten, bei denen mindestens eine der über
+    # R24_hasRelatedEntity verknüpften F2-Expressionen in reception_with_act liegt.
+    #
+    # Pfade:
+    #   INT31 --R24_hasRelatedEntity-->         F2  (muss in reception_with_act)
+    #   INT31 --R22i_relationIsBasedOnSimilarity--> Feature
+
+    INT31_IntertextualRelation       = INTRO["INT31_IntertextualRelation"]
+    R22i_relationIsBasedOnSimilarity = INTRO["R22i_relationIsBasedOnSimilarity"]
+    R24_hasRelatedEntity             = INTRO["R24_hasRelatedEntity"]
+
+    from itertools import combinations as _combinations
+
+    # Alle INT31-Knoten einsammeln
+    int31_nodes_all: set[URIRef] = set(g.subjects(RDF.type, INT31_IntertextualRelation))
+    print(f"  INT31-Knoten gesamt: {len(int31_nodes_all)}", file=sys.stderr)
+
+    # Filter: mindestens eine verknüpfte F2 in reception_with_act
+    # Zitate (INT21_TextPassage) werden über den korrekten Pfad gesammelt:
+    #   INT31 --R22i--> Feature --R17i_featureIsActualizedIn--> INT2
+    #                                --R18i_actualizationFoundOn--> TextPassage
+    # Dabei wird nur die Aktualisierung berücksichtigt, deren zugehörige F2
+    # (ebenfalls via R18i_actualizationFoundOn) in reception_with_act liegt.
+    R17i_featureIsActualizedIn = INTRO["R17i_featureIsActualizedIn"]
+
+    int31_to_feats: dict[URIRef, set[URIRef]] = {}
+    n_filtered_out = 0
+    for node in int31_nodes_all:
+        related     = {obj for _, _, obj in g.triples((node, R24_hasRelatedEntity, None))}
+        relevant_f2 = related.intersection(reception_with_act | sappho_with_act)
+        if not relevant_f2:
+            n_filtered_out += 1
+            continue
+        feats: set[URIRef] = set()
+        for _, _, feat in g.triples((node, R22i_relationIsBasedOnSimilarity, None)):
+            ft = feature_type(str(feat))
+            if ft is not None:
+                # normales Phänomen (kein Zitat)
+                feats.add(feat)
+            # Zitate: über die Aktualisierungen dieses Features
+            for _, _, act in g.triples((feat, R17i_featureIsActualizedIn, None)):
+                # Prüfen: gehört diese Aktualisierung zu einer unserer F2?
+                act_f2s = {obj for _, _, obj in g.triples((act, R18i_actualizationFoundOn, None))
+                           if obj in reception_with_act | sappho_with_act}
+                if not act_f2s.intersection(relevant_f2):
+                    continue
+                # TextPassagen dieser Aktualisierung einsammeln
+                for _, _, target in g.triples((act, R18i_actualizationFoundOn, None)):
+                    if "/textpassage/" in str(target):
+                        feats.add(target)
+        if feats:
+            int31_to_feats[node] = feats
+
+    n_int31_relevant  = len(int31_nodes_all) - n_filtered_out
+    n_int31_with_feats = len(int31_to_feats)
+    print(f"  INT31 mit reception_with_act-Bezug: {n_int31_relevant}", file=sys.stderr)
+    print(f"  davon mit Features:                 {n_int31_with_feats}", file=sys.stderr)
+
+    # ── 1. Häufigkeit einzelner Phänomene als INT31-Grundlage ────────────────
+    feat_int31_count: dict[URIRef, int] = defaultdict(int)
+    for feats in int31_to_feats.values():
+        for f in feats:
+            feat_int31_count[f] += 1
+
+    # ── 2. Paar-Co-Occurrence (konkrete Phänomene) ───────────────────────────
+    pair_count: dict[tuple[URIRef, URIRef], int] = defaultdict(int)
+    for feats in int31_to_feats.values():
+        feat_list = sorted(feats)
+        for a, b in _combinations(feat_list, 2):
+            pair_count[(a, b)] += 1
+
+    print(f"  Distinkte Phänomene: {len(feat_int31_count)}", file=sys.stderr)
+    print(f"  Distinkte Paare:     {len(pair_count)}", file=sys.stderr)
+
+    # ── XML aufbauen ─────────────────────────────────────────────────────────
+    co_el = ET.SubElement(root_el, "int31CoOccurrence")
+    co_el.set("nInt31All",       str(len(int31_nodes_all)))
+    co_el.set("nInt31Relevant",  str(n_int31_relevant))
+    co_el.set("nInt31WithFeats", str(n_int31_with_feats))
+
+    # Häufigkeiten einzelner Phänomene
+    def int31_ftype(uri: URIRef) -> str:
+        """feature_type fuer Statistik 8: schliesst auch INT21_TextPassage ein."""
+        ft = feature_type(str(uri))
+        if ft is not None:
+            return ft
+        if g.value(uri, RDF.type) == INT21_TextPassage or            (RDF.type, INT21_TextPassage) in g.predicate_objects(uri):
+            return "text_passage"
+        # Fallback: RDF-Typ pruefen
+        for _, _, rtype in g.triples((uri, RDF.type, None)):
+            if "TextPassage" in str(rtype):
+                return "text_passage"
+        return "other"
+
+    sorted_feats_int31 = sorted(
+        feat_int31_count.items(),
+        key=lambda x: (-x[1], get_label(x[0]).lower())
+    )
+    freqs_el = ET.SubElement(co_el, "featFrequencies")
+    for feat_uri, cnt in sorted_feats_int31:
+        ft = int31_ftype(feat_uri)
+        fe = ET.SubElement(freqs_el, "feat")
+        fe.set("uri",   str(feat_uri))
+        fe.set("label", get_label(feat_uri))
+        fe.set("ftype", ft)
+        fe.set("n",     str(cnt))
+
+    # Paar-Co-Occurrence (alle, sortiert nach Häufigkeit)
+    sorted_pairs = sorted(pair_count.items(), key=lambda x: (-x[1], get_label(x[0][0]).lower()))
+    pairs_el = ET.SubElement(co_el, "featPairs")
+    for (ua, ub), cnt in sorted_pairs:
+        fta = int31_ftype(ua)
+        ftb = int31_ftype(ub)
+        pe = ET.SubElement(pairs_el, "featPair")
+        pe.set("uriA",   str(ua))
+        pe.set("labelA", get_label(ua))
+        pe.set("ftypeA", fta)
+        pe.set("uriB",   str(ub))
+        pe.set("labelB", get_label(ub))
+        pe.set("ftypeB", ftb)
+        pe.set("n",      str(cnt))
+
+    print(f"  INT31CoOccurrence: {len(sorted_feats_int31)} Phänomene, "
+          f"{len(sorted_pairs)} Paare in XML geschrieben", file=sys.stderr)
+
     tree = ET.ElementTree(root_el)
     ET.indent(tree, space="  ")
     tree.write(xml_out, encoding="utf-8", xml_declaration=True)

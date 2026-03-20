@@ -213,6 +213,37 @@
       </xsl:for-each>
     </xsl:variable>
 
+    <xsl:variable name="int31-feat-freq-json" as="xs:string*">
+      <xsl:for-each select="statistics/int31CoOccurrence/featFrequencies/feat">
+        <xsl:sequence select="
+            concat(
+            '{',
+            '&quot;uri&quot;:&quot;', replace(@uri, '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;label&quot;:&quot;', replace(replace(@label, '\\', '\\\\'), '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;ftype&quot;:&quot;', @ftype, '&quot;,',
+            '&quot;n&quot;:', @n,
+            '}'
+            )"/>
+      </xsl:for-each>
+    </xsl:variable>
+
+    <xsl:variable name="int31-pair-json" as="xs:string*">
+      <xsl:for-each select="statistics/int31CoOccurrence/featPairs/featPair">
+        <xsl:sequence select="
+            concat(
+            '{',
+            '&quot;uriA&quot;:&quot;', replace(@uriA, '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;labelA&quot;:&quot;', replace(replace(@labelA, '\\', '\\\\'), '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;ftypeA&quot;:&quot;', @ftypeA, '&quot;,',
+            '&quot;uriB&quot;:&quot;', replace(@uriB, '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;labelB&quot;:&quot;', replace(replace(@labelB, '\\', '\\\\'), '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;ftypeB&quot;:&quot;', @ftypeB, '&quot;,',
+            '&quot;n&quot;:', @n,
+            '}'
+            )"/>
+      </xsl:for-each>
+    </xsl:variable>
+
     <xsl:variable name="wc-works-json" as="xs:string*">
       <xsl:for-each select="statistics/workCitation/work">
         <xsl:sequence select="
@@ -265,6 +296,13 @@
         '&quot;nReception&quot;:', (statistics/workCitation/@nReception, '0')[1], ',',
         '&quot;nTP&quot;:', (statistics/workCitation/@nTP, '0')[1], ',',
         '&quot;works&quot;:[', string-join($wc-works-json, ','), ']',
+        '},',
+        '&quot;int31CoOccurrence&quot;:{',
+        '&quot;nInt31All&quot;:', (statistics/int31CoOccurrence/@nInt31All, '0')[1], ',',
+        '&quot;nInt31Relevant&quot;:', (statistics/int31CoOccurrence/@nInt31Relevant, '0')[1], ',',
+        '&quot;nInt31WithFeats&quot;:', (statistics/int31CoOccurrence/@nInt31WithFeats, '0')[1], ',',
+        '&quot;featFrequencies&quot;:[', string-join($int31-feat-freq-json, ','), '],',
+        '&quot;featPairs&quot;:[', string-join($int31-pair-json, ','), ']',
         '}',
         '}'
         )"/>
@@ -483,6 +521,60 @@
                     <span><span class="dot dot-wc-both"/>Referenziert und zitiert</span>
                   </div>
                   <div id="wc-chart-wrap" class="chart-wrap"/>
+                </div>
+                <div class="stats-wrap" id="stat8-wrap">
+                  <p class="stats-subtitle">Statistik 8: Phänomene als Grundlage intertextueller
+                    Relationen</p>
+                  <p class="stats-desc">Welche Phänomene sind am häufigsten ausschlaggebend für
+                    intertextuelle Relationen zwischen Sappho-Fragmenten und Rezeptionszeugnissen
+                    sowie zwischen Fragmenten und Rezeptionszeugnissen untereinander?</p>
+                  <div id="int31-meta-bar" style="text-align:center"/>
+
+                  <p class="stats-subtitle stats-subtitle-sm">Phänomentypen als Basis für
+                    intertextuelle Beziehungen</p>
+                  <div class="control-col-wrap">
+                    <div id="int31-ftype-legend" class="type-legend"/>
+                  </div>
+                  <div id="int31-ftype-bar-wrap" class="chart-wrap"/>
+
+                  <p class="stats-subtitle stats-subtitle-sm-top">Kookkurrenzen von
+                    Einzelphänomenen</p>
+                  <p class="stats-desc"
+                    style="text-align:center;max-width:640px;margin:0 auto 0.75rem"> Im inneren Ring
+                    sind die Phänomentypen, im äußeren die einzelnen Phänomene. Die Segmentbreite
+                    gibt deren Häufigkeit an. Die Sehnen in der Mitte verbinden Phänomene, die
+                    besonders häufig gemeinsam in intertextuellen Relationen auftreten – Breite und
+                    Deckkraft skalieren mit der Kookkurrenzstärke.</p>
+                  <div class="control-col-wrap">
+                    <div class="stat3-control-group">
+                      <label for="sel-int31-topn">Phänomene im Diagramm:</label>
+                      <select id="sel-int31-topn" class="stat2-select">
+                        <option value="5">Top 5</option>
+                        <option value="10" selected="selected">Top 10</option>
+                        <option value="15">Top 15</option>
+                        <option value="20">Top 20</option>
+                        <option value="0">Alle</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div id="int31-sunburst-wrap"
+                    style="display:flex;justify-content:center;margin-top:0.5rem"/>
+                  <div id="int31-sunburst-legend" class="sankey-legend" style="margin-top:0.5rem"/>
+
+                  <p class="stats-subtitle stats-subtitle-sm-top">Häufigste
+                    Phänomen-Kombinationen</p>
+                  <div class="control-col-wrap">
+                    <div class="stat3-control-group">
+                      <label for="sel-int31-pairs-topn">Anzahl:</label>
+                      <select id="sel-int31-pairs-topn" class="stat2-select">
+                        <option value="20">Top 20</option>
+                        <option value="30" selected="selected">Top 30</option>
+                        <option value="50">Top 50</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div id="int31-pairs-wrap" style="display:flex;justify-content:center"/>
+
                 </div>
               </div>
             </div>
