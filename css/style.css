@@ -766,7 +766,7 @@ body.page {
 }
 
 .sparql-container {
-    max-width: 1400px !important;
+    max-width: 1200px !important;
     margin: 30px auto !important;
     padding: 0 20px !important;
 }
@@ -1628,7 +1628,7 @@ body[data-tei-file] .dataTables_wrapper {
     --r-line: #6b7280;
 }
 .stats-wrap {
-    max-width: 80%;
+    max-width: 100%;
     margin: 0 auto;
     border: 1px solid #dee2e6;
     border-radius: 6px;
@@ -1642,6 +1642,45 @@ body[data-tei-file] .dataTables_wrapper {
     margin-bottom: 1rem;
     margin-top: 0.25rem;
 }
+
+.stats-toc {
+    margin: 1.25rem 0 0;
+    padding: 0.85rem 1.25rem 0.85rem 1.5rem;
+    background: #f8f9fa;
+    border-left: 4px solid #6c757d;
+    border-radius: 4px;
+}
+.stats-toc-title {
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #495057;
+}
+.stats-toc-list {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+.stats-toc-list li {
+    margin-bottom: 0.3rem;
+}
+.stats-toc-list a {
+    text-decoration: none;
+    color: #495057;
+    font-size: 0.9rem;
+}
+.stats-toc-list a:hover {
+    text-decoration: underline;
+    color: #212529;
+}
+html {
+    scroll-behavior: smooth;
+}
+.stats-wrap {
+    scroll-margin-top: 4rem;
+}
+
 .meta-bar {
     display: flex;
     gap: 1rem;

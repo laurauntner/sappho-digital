@@ -2317,6 +2317,174 @@ function renderInt31Pairs() {
     wrap.appendChild(scroller);
 }
 
+// ── Statistik 9: Top-N INT31-Knoten ───────────────
+
+function renderInt31TopNodes() {
+    const tn   = DATA.int31TopNodes;
+    const wrap = document.getElementById('stat9-cards-wrap');
+    if (!tn || !wrap) return;
+
+    const topN    = parseInt(document.getElementById('sel-stat9-topn')?.value || '5');
+    const relType = document.getElementById('sel-stat9-reltype')?.value || 'all';
+
+    const filtered = relType === 'all'
+        ? (tn.nodes || [])
+        : (tn.nodes || []).filter(n => n.relType === relType);
+    const nodes = filtered.slice(0, topN);
+
+    wrap.innerHTML = '';
+
+    nodes.forEach((node, rank) => {
+        const texts = node.texts || [];
+        const basis = node.basis || [];
+
+        // ── Karte ─────────────────────────────────────────────────────────
+        const card = document.createElement('div');
+        card.style.cssText =
+            'background:#fff;border:1.5px solid #e5e7eb;border-radius:10px;'
+            + 'padding:16px 18px 14px;margin-bottom:18px;'
+            + 'box-shadow:0 1px 4px rgba(0,0,0,0.06)';
+
+        // ── Kopfzeile ─────
+        const header = document.createElement('div');
+        header.style.cssText =
+            'display:flex;align-items:center;justify-content:space-between;'
+            + 'gap:8px;margin-bottom:8px';
+
+        const badge = document.createElement('span');
+        badge.style.cssText =
+            'display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;'
+            + 'width:22px;height:22px;border-radius:50%;background:#5e17eb;'
+            + 'color:#fff;font-size:11px;font-weight:700;line-height:1';
+        badge.textContent = String(rank + 1);
+
+        const pillFeat = document.createElement('span');
+        pillFeat.style.cssText =
+            'flex-shrink:0;font-size:11px;padding:2px 9px;border-radius:99px;'
+            + 'background:rgba(94,23,235,0.08);color:#5e17eb;font-weight:600;white-space:nowrap';
+        pillFeat.textContent = `${node.nFeats} gemeinsame Phänomene`;
+
+        header.appendChild(badge);
+        header.appendChild(pillFeat);
+        card.appendChild(header);
+
+        // ── Titel ───────────────────────────────
+        const title = document.createElement('p');
+        title.style.cssText =
+            'text-align:center;font-size:13px;font-weight:600;color:#1f2937;'
+            + 'margin:0 0 12px;line-height:1.45;word-break:break-word';
+        title.textContent = node.cardLabel;
+        card.appendChild(title);
+
+        // ── Verbundene Texte ──────────────────────────────
+        const textHead = document.createElement('p');
+        textHead.style.cssText =
+            'font-size:11px;font-weight:700;color:#9ca3af;margin:0 0 5px;'
+            + 'text-transform:uppercase;letter-spacing:0.05em;text-align:center';
+        textHead.textContent = 'Verbundene Texte';
+        card.appendChild(textHead);
+
+        const textList = document.createElement('div');
+        textList.style.cssText =
+            'display:flex;flex-wrap:wrap;gap:4px;margin-bottom:14px;justify-content:center';
+
+        texts.forEach(t => {
+            const isSap = t.isSappho;
+            const chip  = document.createElement('a');
+            chip.href   = t.pageUrl || '#';
+            chip.target = '_blank';
+            chip.rel    = 'noopener noreferrer';
+            chip.style.cssText =
+                'display:inline-flex;align-items:center;gap:4px;font-size:11px;padding:2px 8px;'
+                + 'border-radius:99px;max-width:260px;text-decoration:none;'
+                + (isSap
+                    ? 'background:rgba(94,23,235,0.08);color:#5e17eb;border:1px solid rgba(94,23,235,0.2)'
+                    : 'background:#f3f4f6;color:#374151;border:1px solid #e5e7eb');
+            const dot = document.createElement('span');
+            dot.style.cssText =
+                'display:inline-block;width:6px;height:6px;border-radius:50%;flex-shrink:0;'
+                + `background:${isSap ? '#5e17eb' : '#6b7280'}`;
+            const lbl = document.createElement('span');
+            lbl.style.cssText = 'overflow:hidden;text-overflow:ellipsis;white-space:nowrap';
+            lbl.textContent   = t.label;
+            lbl.title         = t.label;
+            chip.appendChild(dot);
+            chip.appendChild(lbl);
+            textList.appendChild(chip);
+        });
+        card.appendChild(textList);
+
+        // ── Trennlinie ────────────────────────────────────────────────────
+        const hr = document.createElement('div');
+        hr.style.cssText = 'border-top:1px solid #f3f4f6;margin-bottom:10px';
+        card.appendChild(hr);
+
+        // ── Grundlage der Ähnlichkeit ───────────────────────
+        if (basis.length) {
+            const bHead = document.createElement('p');
+            bHead.style.cssText =
+                'font-size:11px;font-weight:700;color:#9ca3af;margin:0 0 6px;'
+                + 'text-transform:uppercase;letter-spacing:0.05em';
+            bHead.textContent = 'Grundlage der Ähnlichkeit';
+            card.appendChild(bHead);
+
+            const ftypeOrder = [
+                'person_ref','character','place_ref','topos','motif',
+                'topic','plot','text_passage','work_ref','other',
+            ];
+            const ftypeLabels = {
+                person_ref:   'Personenreferenzen',
+                character:    'Figuren',
+                place_ref:    'Ortsreferenzen',
+                topos:        'Rhetorische Topoi',
+                motif:        'Motive',
+                topic:        'Themen',
+                plot:         'Stoffe',
+                text_passage: 'Textpassagen',
+                work_ref:     'Werkreferenzen',
+                other:        'Sonstige',
+            };
+
+            const byType = {};
+            basis.forEach(b => {
+                const ft = b.ftype || 'other';
+                if (!byType[ft]) byType[ft] = [];
+                byType[ft].push(b.label.replace(/\s+/g, ' ').trim());
+            });
+
+            const basisWrap = document.createElement('div');
+            basisWrap.style.cssText = 'display:flex;flex-direction:column;gap:3px';
+
+            ftypeOrder.forEach(ft => {
+                const items = byType[ft];
+                if (!items || !items.length) return;
+                const color = (FTYPE_META[ft] || {}).color || '#6b7280';
+
+                const row = document.createElement('div');
+                row.style.cssText = 'display:flex;align-items:flex-start;gap:6px;text-align:left';
+
+                const typeLbl = document.createElement('span');
+                typeLbl.style.cssText =
+                    `font-size:10.5px;font-weight:700;color:${color};`
+                    + 'white-space:nowrap;padding-top:1px;min-width:110px;flex-shrink:0';
+                typeLbl.textContent = (ftypeLabels[ft] || ft) + ':';
+
+                const itemsSpan = document.createElement('span');
+                itemsSpan.style.cssText = 'font-size:10.5px;color:#4b5563;line-height:1.5;text-align:left';
+                itemsSpan.textContent   = items.join(', ');
+
+                row.appendChild(typeLbl);
+                row.appendChild(itemsSpan);
+                basisWrap.appendChild(row);
+            });
+
+            card.appendChild(basisWrap);
+        }
+
+        wrap.appendChild(card);
+    });
+}
+
 // ── Init ─────────────────────────────────────────────────────────────────────
 function initInt31CoOccurrence() {
     const co = DATA.int31CoOccurrence;
@@ -2327,9 +2495,12 @@ function initInt31CoOccurrence() {
 
     document.getElementById('sel-int31-topn')?.addEventListener('change', renderInt31Sunburst);
     document.getElementById('sel-int31-pairs-topn')?.addEventListener('change', renderInt31Pairs);
+    document.getElementById('sel-stat9-topn')?.addEventListener('change', renderInt31TopNodes);
+    document.getElementById('sel-stat9-reltype')?.addEventListener('change', renderInt31TopNodes);
 
     renderInt31Sunburst();
     renderInt31Pairs();
+    renderInt31TopNodes();
 }
 
 document.addEventListener('DOMContentLoaded', initInt31CoOccurrence);
