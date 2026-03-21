@@ -1195,7 +1195,10 @@
                                     <p class="align-left"> Alle (im weitesten Sinne) intertextuellen
                                         Beziehungen zwischen den exemplarisch analysierten Texten.
                                         Mehr Informationen zur exemplarischen Analyse sind <a
-                                            href="analyse.html">hier</a> zu finden.</p>
+                                            href="analyse.html">hier</a> zu finden. Statistische
+                                        Auswertungen werden <a href="statistics.html">hier</a>
+                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
+                                            href="network.html">hier</a> verfübar.</p>
 
                                     <div class="graph-toolbar">
                                         <label style="margin-left:.5rem; font-size: .9rem">Gewicht
@@ -1503,7 +1506,10 @@
                                     <p class="align-left"> Für eine hierarchische Ansicht siehe das
                                             <a href="vocab.html">Vokabular</a>. Mehr Informationen
                                         zur exemplarischen Analyse sind <a href="analyse.html"
-                                            >hier</a> zu finden. </p>
+                                            >hier</a> zu finden. Statistische
+                                        Auswertungen werden <a href="statistics.html">hier</a>
+                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
+                                            href="network.html">hier</a> verfübar.</p>
                                 </div>
 
                                 <div class="card-body skos-wrap">
@@ -1723,7 +1729,10 @@
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
                                             <a href="vocab.html">Vokabular</a>. Mehr Informationen
                                         zur exemplarischen Analyse sind <a href="analyse.html"
-                                            >hier</a> zu finden.</p>
+                                            >hier</a> zu finden. Statistische
+                                        Auswertungen werden <a href="statistics.html">hier</a>
+                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
+                                            href="network.html">hier</a> verfübar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -1818,7 +1827,10 @@
                                     <p class="align-left"> Für eine hierarchische Ansicht siehe das
                                             <a href="vocab.html">Vokabular</a>. Mehr Informationen
                                         zur exemplarischen Analyse sind <a href="analyse.html"
-                                            >hier</a> zu finden. </p>
+                                            >hier</a> zu finden. Statistische
+                                        Auswertungen werden <a href="statistics.html">hier</a>
+                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
+                                            href="network.html">hier</a> verfübar.</p>
                                 </div>
 
                                 <div class="card-body skos-wrap">
@@ -2047,7 +2059,10 @@
                                 <div class="card-header">
                                     <h1>Rhetorische Topoi</h1>
                                     <p class="align-left">Mehr Informationen zur exemplarischen
-                                        Analyse sind <a href="analyse.html">hier</a> zu finden.</p>
+                                        Analyse sind <a href="analyse.html">hier</a> zu finden. Statistische
+                                        Auswertungen werden <a href="statistics.html">hier</a>
+                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
+                                            href="network.html">hier</a> verfübar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -2140,7 +2155,10 @@
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
                                             <a href="vocab.html">Vokabular</a>. Mehr Informationen
                                         zur exemplarischen Analyse sind <a href="analyse.html"
-                                            >hier</a> zu finden.</p>
+                                            >hier</a> zu finden. Statistische
+                                        Auswertungen werden <a href="statistics.html">hier</a>
+                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
+                                            href="network.html">hier</a> verfübar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -2233,7 +2251,10 @@
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
                                             <a href="vocab.html">Vokabular</a>. Mehr Informationen
                                         zur exemplarischen Analyse sind <a href="analyse.html"
-                                            >hier</a> zu finden.</p>
+                                            >hier</a> zu finden. Statistische
+                                        Auswertungen werden <a href="statistics.html">hier</a>
+                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
+                                            href="network.html">hier</a> verfübar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -2323,7 +2344,10 @@
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
                                             <a href="vocab.html">Vokabular</a>. Mehr Informationen
                                         zur exemplarischen Analyse sind <a href="analyse.html"
-                                            >hier</a> zu finden.</p>
+                                            >hier</a> zu finden. Statistische
+                                        Auswertungen werden <a href="statistics.html">hier</a>
+                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
+                                            href="network.html">hier</a> verfübar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">

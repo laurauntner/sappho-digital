@@ -330,6 +330,8 @@
                 </h1>
                 <p>Nähere Informationen zur exemplarischen Analyse sind <a href="analyse.html"
                     >hier</a> zu finden.</p>
+                <p>Eine Netzwerkvisualisierung aller Daten ist <a href="network.html">hier</a>
+                  verfügbar.</p>
               </div>
               <div class="card-body">
                 <div class="stats-wrap">
