@@ -332,6 +332,9 @@
                     >hier</a> zu finden.</p>
                 <p>Eine Netzwerkvisualisierung aller Daten ist <a href="network.html">hier</a>
                   verfügbar.</p>
+                <p>Häufigkeitsverteilungen einzelner Phänomene und Auflistungen aller
+                  intertextuellen Beziehungen können über den Reiter »Rezeptionsphänomene« (in
+                  »Analyse«) angesteuert werden.</p>
               </div>
               <div class="card-body">
                 <div class="stats-wrap">
