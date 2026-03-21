@@ -1198,7 +1198,7 @@
                                             href="analyse.html">hier</a> zu finden. Statistische
                                         Auswertungen werden <a href="statistics.html">hier</a>
                                         aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
-                                            href="network.html">hier</a> verfübar.</p>
+                                            href="network.html">hier</a> verfügbar.</p>
 
                                     <div class="graph-toolbar">
                                         <label style="margin-left:.5rem; font-size: .9rem">Gewicht
@@ -1509,7 +1509,7 @@
                                             >hier</a> zu finden. Statistische
                                         Auswertungen werden <a href="statistics.html">hier</a>
                                         aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
-                                            href="network.html">hier</a> verfübar.</p>
+                                            href="network.html">hier</a> verfügbar.</p>
                                 </div>
 
                                 <div class="card-body skos-wrap">
@@ -1732,7 +1732,7 @@
                                             >hier</a> zu finden. Statistische
                                         Auswertungen werden <a href="statistics.html">hier</a>
                                         aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
-                                            href="network.html">hier</a> verfübar.</p>
+                                            href="network.html">hier</a> verfügbar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -1830,7 +1830,7 @@
                                             >hier</a> zu finden. Statistische
                                         Auswertungen werden <a href="statistics.html">hier</a>
                                         aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
-                                            href="network.html">hier</a> verfübar.</p>
+                                            href="network.html">hier</a> verfügbar.</p>
                                 </div>
 
                                 <div class="card-body skos-wrap">
@@ -2062,7 +2062,7 @@
                                         Analyse sind <a href="analyse.html">hier</a> zu finden. Statistische
                                         Auswertungen werden <a href="statistics.html">hier</a>
                                         aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
-                                            href="network.html">hier</a> verfübar.</p>
+                                            href="network.html">hier</a> verfügbar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -2158,7 +2158,7 @@
                                             >hier</a> zu finden. Statistische
                                         Auswertungen werden <a href="statistics.html">hier</a>
                                         aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
-                                            href="network.html">hier</a> verfübar.</p>
+                                            href="network.html">hier</a> verfügbar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -2254,7 +2254,7 @@
                                             >hier</a> zu finden. Statistische
                                         Auswertungen werden <a href="statistics.html">hier</a>
                                         aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
-                                            href="network.html">hier</a> verfübar.</p>
+                                            href="network.html">hier</a> verfügbar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -2347,7 +2347,7 @@
                                             >hier</a> zu finden. Statistische
                                         Auswertungen werden <a href="statistics.html">hier</a>
                                         aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
-                                            href="network.html">hier</a> verfübar.</p>
+                                            href="network.html">hier</a> verfügbar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
