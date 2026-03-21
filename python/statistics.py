@@ -87,10 +87,17 @@ def main(ttl_path: str, xml_out: str) -> None:
         s = re.sub(r'^Motif:\s*',     '', s)
         s = re.sub(r'^Topic:\s*',     '', s)
         s = re.sub(r'^Character:\s*', '', s)
-        s = re.sub(r'\s*\(topos\)\s*$',  '', s)
-        s = re.sub(r'\s*\(place\)\s*$',  '', s)
-        s = re.sub(r'\s*\(person\)\s*$', '', s)
-        s = re.sub(r'\s*\(work\)\s*$',   '', s)
+        s = re.sub(r'(?i)^[Rr]eference\s+to\s+', '', s)
+        s = re.sub(r'(?i)^Passage\s+from\s+',    '', s)
+        s = re.sub(r'(?i)^Expression\s+of\s+',   '', s)
+        s = re.sub(r'\s*\(topos\)\s*$',   '', s)
+        s = re.sub(r'\s*\(place\)\s*$',   '', s, flags=re.IGNORECASE)
+        s = re.sub(r'\s*\(person\)\s*$',  '', s, flags=re.IGNORECASE)
+        s = re.sub(r'\s*\(work\)\s*$',    '', s, flags=re.IGNORECASE)
+        s = re.sub(r'\s*\(character\)\s*$', '', s, flags=re.IGNORECASE)
+        s = re.sub(r'\s*\(motif\)\s*$',   '', s, flags=re.IGNORECASE)
+        s = re.sub(r'\s*\(topic\)\s*$',   '', s, flags=re.IGNORECASE)
+        s = re.sub(r'\s*\(plot\)\s*$',    '', s, flags=re.IGNORECASE)
         return s.strip()
 
     def get_label(uri: URIRef) -> str:
@@ -867,6 +874,124 @@ def main(ttl_path: str, xml_out: str) -> None:
 
     print(f"  INT31CoOccurrence: {len(sorted_feats_int31)} Phänomene, "
           f"{len(sorted_pairs)} Paare in XML geschrieben", file=sys.stderr)
+
+    # ── Statistik 9: Top-N INT31-Knoten ───
+
+    BASE_URL = "https://sappho-digital.com/"
+
+    def f2_page_url(f2_uri: URIRef) -> str:
+        """Konstruiert die HTML-Seiten-URL zu einer F2_Expression-URI.
+        Muster analog network.py (F2_Expression): BASE + local_id + .html"""
+        lid = str(f2_uri).rstrip("/").rsplit("/", 1)[-1].rsplit("#", 1)[-1]
+        return BASE_URL + lid + ".html"
+
+    def best_label_for_f2(f2_uri: URIRef) -> str:
+        """Bevorzugt deutsches oder englisches rdfs:label, dann URI-Fragment."""
+        en = de = any_lbl = None
+        for _, _, lbl in g.triples((f2_uri, RDFS.label, None)):
+            lang = getattr(lbl, "language", None)
+            if lang == "de":   de      = str(lbl)
+            elif lang == "en": en      = str(lbl)
+            else:              any_lbl = str(lbl)
+        raw = de or en or any_lbl
+        if raw is None:
+            return str(f2_uri).rstrip("/").rsplit("/", 1)[-1]
+        return clean_label(raw)
+
+    top_nodes_sorted = sorted(
+        int31_to_feats.items(),
+        key=lambda x: (-len(x[1]), str(x[0]))
+    )
+
+    TOP_PER_TYPE = 20
+    seen_uris: set[URIRef] = set()
+    top_nodes: list[tuple] = []
+
+    for rel_type_key in ("reception", "mixed", "sappho"):
+        count = 0
+        for node_uri, feats in top_nodes_sorted:
+            if node_uri in seen_uris:
+                continue
+            related_all   = [obj for _, _, obj in g.triples((node_uri, R24_hasRelatedEntity, None))]
+            related_check = [u for u in related_all
+                             if "/textpassage/" not in str(u).lower()
+                             and u in (sappho_f2 | reception_f2)]
+            hs = any(f2 in sappho_f2    for f2 in related_check)
+            hr = any(f2 in reception_f2 for f2 in related_check)
+            if hs and hr:   rt = "mixed"
+            elif hs:        rt = "sappho"
+            else:           rt = "reception"
+            if rt != rel_type_key:
+                continue
+            top_nodes.append((node_uri, feats, rt))
+            seen_uris.add(node_uri)
+            count += 1
+            if count >= TOP_PER_TYPE:
+                break
+        print(f"  Stat9 – {rel_type_key}: {count} Knoten exportiert", file=sys.stderr)
+
+    print(f"  Stat9 – Top-{TOP_PER_TYPE} je relType exportiert, gesamt: {len(top_nodes)}",
+          file=sys.stderr)
+
+    # relType-Verteilung
+    from collections import Counter as _Counter
+    rel_type_counts: dict[str, int] = _Counter()
+    for node_uri, feats in top_nodes_sorted:
+        related_all = [obj for _, _, obj in g.triples((node_uri, R24_hasRelatedEntity, None))]
+        related_f2_check = [u for u in related_all
+                             if "/textpassage/" not in str(u).lower()
+                             and u in (sappho_f2 | reception_f2)]
+        hs = any(f2 in sappho_f2    for f2 in related_f2_check)
+        hr = any(f2 in reception_f2 for f2 in related_f2_check)
+        if hs and hr:   rel_type_counts["mixed"]     += 1
+        elif hs:        rel_type_counts["sappho"]    += 1
+        else:           rel_type_counts["reception"] += 1
+    print(f"  Stat9 – relType-Verteilung (alle {len(top_nodes_sorted)} Knoten): "
+          f"{dict(rel_type_counts)}", file=sys.stderr)
+
+    top_nodes_el = ET.SubElement(root_el, "int31TopNodes")
+    top_nodes_el.set("nTotal", str(len(int31_to_feats)))
+
+    for node_uri, feats, rel_type in top_nodes:
+        # Verbundene F2 – Textpassagen herausfiltern
+        related_f2s_all = sorted(
+            {obj for _, _, obj in g.triples((node_uri, R24_hasRelatedEntity, None))},
+            key=lambda u: str(u)
+        )
+        related_f2s = [u for u in related_f2s_all
+                       if "/textpassage/" not in str(u).lower()
+                       and u in (sappho_f2 | reception_f2)]
+
+        # Karten-Label
+        text_labels_for_title = [best_label_for_f2(f2) for f2 in related_f2s]
+        card_label = " × ".join(text_labels_for_title) if text_labels_for_title else str(node_uri).split("/")[-1]
+
+        node_el = ET.SubElement(top_nodes_el, "node")
+        node_el.set("uri",       str(node_uri))
+        node_el.set("cardLabel", card_label)
+        node_el.set("nFeats",    str(len(feats)))
+        node_el.set("nTexts",    str(len(related_f2s)))
+        node_el.set("relType",   rel_type)
+
+        texts_el = ET.SubElement(node_el, "connectedTexts")
+        for f2 in related_f2s:
+            te = ET.SubElement(texts_el, "text")
+            te.set("uri",      str(f2))
+            te.set("label",    best_label_for_f2(f2))
+            te.set("pageUrl",  f2_page_url(f2))
+            te.set("isSappho", "true" if f2 in sappho_f2 else "false")
+
+        # Features und Textpassagen, die die Ähnlichkeit begründen
+        feats_el = ET.SubElement(node_el, "basisFeatures")
+        feats_el.set("n", str(len(feats)))
+        for feat_uri in sorted(feats, key=lambda u: get_label(u).lower()):
+            ft = int31_ftype(feat_uri)
+            be = ET.SubElement(feats_el, "feat")
+            be.set("uri",   str(feat_uri))
+            be.set("label", get_label(feat_uri))
+            be.set("ftype", ft)
+
+    print(f"  INT31TopNodes: Top-{TOP_PER_TYPE} je relType in XML geschrieben", file=sys.stderr)
 
     tree = ET.ElementTree(root_el)
     ET.indent(tree, space="  ")

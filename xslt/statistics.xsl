@@ -262,6 +262,50 @@
       </xsl:for-each>
     </xsl:variable>
 
+    <xsl:variable name="int31-topnodes-json" as="xs:string*">
+      <xsl:for-each select="statistics/int31TopNodes/node">
+        <xsl:variable name="texts-json" as="xs:string*">
+          <xsl:for-each select="connectedTexts/text">
+            <xsl:sequence select="
+                concat(
+                '{',
+                '&quot;uri&quot;:&quot;', replace(@uri, '&quot;', '\\&quot;'), '&quot;,',
+                '&quot;label&quot;:&quot;', replace(replace(@label, '\\', '\\\\'), '&quot;', '\\&quot;'), '&quot;,',
+                '&quot;pageUrl&quot;:&quot;', replace(@pageUrl, '&quot;', '\\&quot;'), '&quot;,',
+                '&quot;isSappho&quot;:', if (@isSappho = 'true') then
+                  'true'
+                else
+                  'false',
+                '}'
+                )"/>
+          </xsl:for-each>
+        </xsl:variable>
+        <xsl:variable name="basis-json" as="xs:string*">
+          <xsl:for-each select="basisFeatures/feat">
+            <xsl:sequence select="
+                concat(
+                '{',
+                '&quot;uri&quot;:&quot;', replace(@uri, '&quot;', '\\&quot;'), '&quot;,',
+                '&quot;label&quot;:&quot;', replace(replace(@label, '\\', '\\\\'), '&quot;', '\\&quot;'), '&quot;,',
+                '&quot;ftype&quot;:&quot;', @ftype, '&quot;',
+                '}'
+                )"/>
+          </xsl:for-each>
+        </xsl:variable>
+        <xsl:sequence select="
+            concat(
+            '{',
+            '&quot;uri&quot;:&quot;', replace(@uri, '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;cardLabel&quot;:&quot;', replace(replace(@cardLabel, '\\', '\\\\'), '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;nFeats&quot;:', @nFeats, ',',
+            '&quot;relType&quot;:&quot;', @relType, '&quot;,',
+            '&quot;texts&quot;:[', string-join($texts-json, ','), '],',
+            '&quot;basis&quot;:[', string-join($basis-json, ','), ']',
+            '}'
+            )"/>
+      </xsl:for-each>
+    </xsl:variable>
+
     <xsl:variable name="json" as="xs:string" select="
         concat(
         '{',
@@ -303,6 +347,10 @@
         '&quot;nInt31WithFeats&quot;:', (statistics/int31CoOccurrence/@nInt31WithFeats, '0')[1], ',',
         '&quot;featFrequencies&quot;:[', string-join($int31-feat-freq-json, ','), '],',
         '&quot;featPairs&quot;:[', string-join($int31-pair-json, ','), ']',
+        '},',
+        '&quot;int31TopNodes&quot;:{',
+        '&quot;nTotal&quot;:', (statistics/int31TopNodes/@nTotal, '0')[1], ',',
+        '&quot;nodes&quot;:[', string-join($int31-topnodes-json, ','), ']',
         '}',
         '}'
         )"/>
@@ -361,8 +409,10 @@
                       <a href="#stat7-wrap">Werkreferenzen und Zitate</a>
                     </li>
                     <li>
-                      <a href="#stat8-wrap">Phänomene als Grundlage intertextueller
-                        Relationen</a>
+                      <a href="#stat8-wrap">Phänomene als Grundlage intertextueller Relationen</a>
+                    </li>
+                    <li>
+                      <a href="#stat9-wrap">Intertextuelle Beziehungen und Textähnlichkeiten</a>
                     </li>
                   </ol>
                 </nav>
@@ -612,6 +662,33 @@
                   </div>
                   <div id="int31-pairs-wrap" style="display:flex;justify-content:center"/>
 
+                </div>
+                <div class="stats-wrap" id="stat9-wrap">
+                  <p class="stats-subtitle">Statistik 9: Intertextuelle Beziehungen und
+                    Textähnlichkeiten</p>
+                  <p class="stats-desc">Welche intertextuellen Relationen verbinden die meisten
+                    Phänomene? Sichtbar wird, zwischen welchen Texten die reichhaltigsten impliziten
+                    Ähnlichkeiten bestehen – unabhängig von expliziten Referenzen.</p>
+                  <div class="control-col-wrap">
+                    <div class="stat3-control-group">
+                      <label for="sel-stat9-topn">Anzahl:</label>
+                      <select id="sel-stat9-topn" class="stat2-select">
+                        <option value="5" selected="selected">Top 5</option>
+                        <option value="10">Top 10</option>
+                        <option value="20">Top 20</option>
+                      </select>
+                    </div>
+                    <div class="stat3-control-group">
+                      <label for="sel-stat9-reltype">Beziehungstyp:</label>
+                      <select id="sel-stat9-reltype" class="stat2-select">
+                        <option value="all">Alle</option>
+                        <option value="reception">Nur zwischen Rezeptionszeugnissen</option>
+                        <option value="mixed">Nur zwischen Rezeptionszeugnissen und
+                          Fragmenten</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div id="stat9-cards-wrap"/>
                 </div>
               </div>
             </div>
