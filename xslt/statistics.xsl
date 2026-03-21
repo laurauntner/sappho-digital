@@ -322,7 +322,7 @@
       <body class="page">
         <div class="hfeed site" id="page">
           <xsl:call-template name="nav_bar"/>
-          <div class="container">
+          <div class="container-fluid">
             <div class="card">
               <div class="card-header">
                 <h1>
@@ -335,9 +335,41 @@
                 <p>Häufigkeitsverteilungen einzelner Phänomene und Auflistungen aller
                   intertextuellen Beziehungen können über den Reiter »Rezeptionsphänomene« (in
                   »Analyse«) angesteuert werden.</p>
+
+                <nav class="stats-toc smaller-text" aria-label="Inhaltsverzeichnis">
+                  <p class="stats-toc-title">Inhaltsverzeichnis</p>
+                  <ol class="stats-toc-list">
+                    <li>
+                      <a href="#stat1-wrap">Alle Phänomene im Vergleich</a>
+                    </li>
+                    <li>
+                      <a href="#stat2-wrap">Phänomene nach Fragment-Referenz</a>
+                    </li>
+                    <li>
+                      <a href="#stat3-wrap">Phänomene im Laufe der Zeit</a>
+                    </li>
+                    <li>
+                      <a href="#stat4-wrap">Phänomene nach Gattung</a>
+                    </li>
+                    <li>
+                      <a href="#stat5-wrap">Stoff-Komponenten</a>
+                    </li>
+                    <li>
+                      <a href="#stat6-wrap">Personenreferenzen und Figuren</a>
+                    </li>
+                    <li>
+                      <a href="#stat7-wrap">Werkreferenzen und Zitate</a>
+                    </li>
+                    <li>
+                      <a href="#stat8-wrap">Phänomene als Grundlage intertextueller
+                        Relationen</a>
+                    </li>
+                  </ol>
+                </nav>
+
               </div>
               <div class="card-body">
-                <div class="stats-wrap">
+                <div class="stats-wrap" id="stat1-wrap">
                   <p class="stats-subtitle">Statistik 1: Alle Phänomene im Vergleich</p>
                   <p class="stats-desc">Welche Phänomene werden in Sappho-Fragmenten sowie in
                     Rezeptionszeugnissen aktualisiert – und wo liegen die auffälligsten
@@ -496,7 +528,7 @@
                       </select>
                     </div>
                     <div class="stat3-control-group">
-                      <label for="sel-pd-filter">   Filter:</label>
+                      <label for="sel-pd-filter"> Filter:</label>
                       <select id="sel-pd-filter" class="stat2-select">
                         <option value="all">Alle Personenreferenzen</option>
                         <option value="both">Nur auch als Figur</option>
