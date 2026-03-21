@@ -1888,3 +1888,448 @@ function initWorkCitation() {
 }
 
 document.addEventListener('DOMContentLoaded', initWorkCitation);
+
+// ── Statistik 8: INT31 Co-Occurrence ─────────────────────────────────────────
+
+let _int31Tip = null;
+function getInt31Tip() {
+    if (!_int31Tip) {
+        _int31Tip = document.createElement('div');
+        _int31Tip.style.cssText =
+            'position:fixed;background:#1f2937;color:#fff;font-size:12px;'
+            + 'font-family:Geist,system-ui,sans-serif;padding:5px 9px;border-radius:5px;'
+            + 'pointer-events:none;display:none;z-index:9999;white-space:nowrap;line-height:1.5';
+        document.body.appendChild(_int31Tip);
+    }
+    return _int31Tip;
+}
+function int31TipShow(e, html) {
+    const t = getInt31Tip(); t.innerHTML = html; t.style.display = 'block'; int31TipMove(e);
+}
+function int31TipMove(e) {
+    const t = getInt31Tip();
+    t.style.left = (e.clientX + 14) + 'px';
+    t.style.top  = (e.clientY - 36) + 'px';
+}
+function int31TipHide() { if (_int31Tip) _int31Tip.style.display = 'none'; }
+
+// ── Meta-Bar ─────────────────────────────────────────────────────────────────
+function renderInt31MetaBar() {
+    const co   = DATA.int31CoOccurrence;
+    const wrap = document.getElementById('int31-meta-bar');
+    if (!co || !wrap) return;
+    wrap.innerHTML =
+        `<div style="text-align:center;margin-bottom:0.5rem">`
+        + `<span style="font-size:2rem;font-weight:700;color:#1f2937">${co.nInt31All}</span>`
+        + `<span style="font-size:0.9rem;color:#6b7280;margin-left:0.5rem">intertextuelle Relationen gesamt</span>`
+        + `</div>`;
+}
+
+// ── Phänomentyp-Balken ───────────────────────────────────────────────────────
+function renderInt31FtypeBar() {
+    const co   = DATA.int31CoOccurrence;
+    const wrap = document.getElementById('int31-ftype-bar-wrap');
+    if (!co || !wrap) return;
+
+    const typeSum = {};
+    (co.featFrequencies || []).forEach(f => {
+        typeSum[f.ftype] = (typeSum[f.ftype] || 0) + f.n;
+    });
+
+    const items = Object.keys(FTYPE_META)
+        .filter(k => typeSum[k] > 0)
+        .map(k => ({ key: k, label: (FTYPE_META[k] || {}).label || k, n: typeSum[k] }));
+
+    if (!items.length) { wrap.innerHTML = '<p style="color:#9ca3af">Keine Daten.</p>'; return; }
+
+    const legWrap = document.getElementById('int31-ftype-legend');
+    if (legWrap) {
+        legWrap.innerHTML = '';
+        items.forEach(it => {
+            const m = FTYPE_META[it.key] || { color: '#6b7280' };
+            const span = document.createElement('span');
+            span.style.cssText = 'display:inline-flex;align-items:center;gap:5px';
+            span.innerHTML = `<span style="display:inline-block;width:11px;height:11px;border-radius:2px;background:${m.color};opacity:0.85;flex-shrink:0"></span>${it.label}`;
+            legWrap.appendChild(span);
+        });
+    }
+
+    const total  = co.nInt31WithFeats || 1;
+    const labels = items.map(it => it.label);
+    const pcts   = items.map(it => parseFloat((it.n / total * 100).toFixed(2)));
+    const colors = items.map(it => (FTYPE_META[it.key] || {}).color || '#6b7280');
+    const height = canvasHeight(items.length);
+    wrap.innerHTML = `<canvas id="int31-ftype-canvas" style="height:${height}px"></canvas>`;
+    const ctx = document.getElementById('int31-ftype-canvas').getContext('2d');
+    const maxX = Math.min(100, Math.ceil(Math.max(...pcts, 1) * 1.05 / 5) * 5) || 10;
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels,
+            datasets: [{ label: `INT31-Knoten (n=${total})`, data: pcts,
+                backgroundColor: colors.map(c => c + 'bf'), borderColor: colors,
+                borderWidth: 1.5, borderRadius: 3 }],
+        },
+        options: {
+            indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+            plugins: { legend: { display: false },
+                tooltip: { callbacks: { label: ctx2 => {
+                    const it = items[ctx2.dataIndex];
+                    return ` ${it.n} INT31-Knoten (${ctx2.parsed.x.toFixed(2)}%)`;
+                }}}},
+            scales: {
+                x: { min: 0, max: maxX,
+                    ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => v + '%', stepSize: 10 },
+                    grid: { color: 'rgba(0,0,0,0.06)' } },
+                y: { ticks: { font: { family: 'Geist, system-ui', size: 12 }, autoSkip: false },
+                    grid: { display: false } },
+            },
+        },
+    });
+}
+
+// ── Sunburst + Sehnen ────────────────────────────────────────────────────────
+function renderInt31Sunburst() {
+    const co      = DATA.int31CoOccurrence;
+    const wrap    = document.getElementById('int31-sunburst-wrap');
+    const legWrap = document.getElementById('int31-sunburst-legend');
+    if (!co || !wrap) return;
+
+    const topN = parseInt(document.getElementById('sel-int31-topn')?.value || '10');
+
+    const feats = topN > 0 ? co.featFrequencies.slice(0, topN) : co.featFrequencies;
+    if (!feats.length) {
+        wrap.innerHTML = '<p style="color:#9ca3af;text-align:center">Keine Daten.</p>';
+        return;
+    }
+
+    const featUris = new Set(feats.map(f => f.uri));
+    const total    = co.nInt31WithFeats || 1;
+
+    const pairIndex = {};
+    (co.featPairs || []).forEach(p => {
+        if (!featUris.has(p.uriA) || !featUris.has(p.uriB)) return;
+        pairIndex[p.uriA + '|||' + p.uriB] = p.n;
+        pairIndex[p.uriB + '|||' + p.uriA] = p.n;
+    });
+    const maxPair = Math.max(1, ...Object.values(pairIndex));
+
+    const typeOrder = Object.keys(FTYPE_META);
+    const byType = {};
+    typeOrder.forEach(k => { byType[k] = []; });
+    feats.forEach(f => { if (byType[f.ftype]) byType[f.ftype].push(f); });
+    const activeTypes = typeOrder.filter(k => byType[k] && byType[k].length > 0);
+
+    const NS   = 'http://www.w3.org/2000/svg';
+    const mk   = tag => document.createElementNS(NS, tag);
+    const setA = (el, attrs) => { Object.entries(attrs).forEach(([k,v]) => el.setAttribute(k,v)); return el; };
+
+    const wrapW = wrap.getBoundingClientRect().width || 720;
+    const W     = Math.max(520, Math.min(wrapW - 20, 860));
+    const CX = W / 2, CY = W / 2;
+
+    const R_CHORD_IN  = W * 0.22;
+    const R_INNER_S   = R_CHORD_IN + W * 0.005;
+    const R_INNER_E   = R_INNER_S  + W * 0.055;
+    const R_OUTER_S   = R_INNER_E  + W * 0.010;
+    const R_OUTER_E   = W * 0.43;
+
+    const GAP_TYPE = 0.014;
+    const GAP_FEAT = 0.004;
+
+    const svg = setA(mk('svg'), { width: W, height: W, viewBox: `0 0 ${W} ${W}` });
+    svg.style.cssText = 'font-family:Geist,system-ui,sans-serif;overflow:visible';
+
+    const polar = (r, a) => [CX + r * Math.cos(a), CY + r * Math.sin(a)];
+
+    function donutPath(r0, r1, a0, a1) {
+        const lg = (a1 - a0) > Math.PI ? 1 : 0;
+        const [ax,ay] = polar(r0,a0); const [bx,by] = polar(r0,a1);
+        const [cx2,cy2] = polar(r1,a1); const [dx,dy] = polar(r1,a0);
+        return `M${ax},${ay} A${r0},${r0} 0 ${lg} 1 ${bx},${by} L${cx2},${cy2} A${r1},${r1} 0 ${lg} 0 ${dx},${dy} Z`;
+    }
+
+    const logN      = f => Math.log1p(f.n);
+    const START     = -Math.PI / 2;
+    const totalGapT = GAP_TYPE * activeTypes.length;
+    const usableT   = 2 * Math.PI - totalGapT;
+    const typeSums  = activeTypes.map(k => byType[k].reduce((s, f) => s + logN(f), 0));
+    const typeGrand = typeSums.reduce((a, b) => a + b, 0) || 1;
+
+    const featAngle = {};
+    const typeSegs  = [];
+    let cursor = START;
+
+    activeTypes.forEach((k, ti) => {
+        const typeSpan = (typeSums[ti] / typeGrand) * usableT;
+        const ta0 = cursor + GAP_TYPE / 2;
+        const ta1 = ta0 + typeSpan;
+        cursor += typeSpan + GAP_TYPE;
+
+        const items        = byType[k];
+        const typeSum      = typeSums[ti] || 1;
+        const totalFeatGap = GAP_FEAT * Math.max(0, items.length - 1);
+        const usableFeat   = (ta1 - ta0) - totalFeatGap;
+
+        let fc = ta0;
+        const itemSegs = items.map(f => {
+            const span = (logN(f) / typeSum) * usableFeat;
+            const fa0  = fc;
+            const fa1  = fc + span;
+            fc = fa1 + GAP_FEAT;
+            const aMid = (fa0 + fa1) / 2;
+            featAngle[f.uri] = { a0: fa0, a1: fa1, aMid };
+            return { f, a0: fa0, a1: fa1, aMid };
+        });
+
+        typeSegs.push({ k, color: (FTYPE_META[k]||{}).color||'#6b7280', ta0, ta1, itemSegs });
+    });
+
+    // Sehnen
+    const chordGroup = mk('g');
+    feats.forEach((fA, iA) => {
+        feats.forEach((fB, iB) => {
+            if (iB <= iA) return;
+            const n = pairIndex[fA.uri + '|||' + fB.uri];
+            if (!n) return;
+            const angA = featAngle[fA.uri];
+            const angB = featAngle[fB.uri];
+            if (!angA || !angB) return;
+
+            const colorA  = (FTYPE_META[fA.ftype]||{}).color || '#6b7280';
+            const [ax,ay] = polar(R_INNER_S, angA.aMid);
+            const [bx,by] = polar(R_INNER_S, angB.aMid);
+            const strokeW = 1.5 + Math.pow(n / maxPair, 0.55) * 7;
+            const opacity = 0.20 + 0.60 * Math.pow(n / maxPair, 0.5);
+
+            const path = setA(mk('path'), {
+                d: `M${ax},${ay} Q${CX},${CY} ${bx},${by}`,
+                fill: 'none', stroke: colorA,
+                'stroke-width':   strokeW.toFixed(1),
+                'stroke-opacity': opacity.toFixed(2),
+                'stroke-linecap': 'round',
+            });
+            path.style.cursor = 'default';
+
+            const ftA = (FTYPE_META[fA.ftype]||{}).singular || fA.ftype;
+            const ftB = (FTYPE_META[fB.ftype]||{}).singular || fB.ftype;
+            const pct = (n / total * 100).toFixed(1);
+            const tipHtml =
+                `<strong>${fA.label}</strong> <span style="color:rgba(255,255,255,0.6)">(${ftA})</span>`
+                + `<br>× <strong>${fB.label}</strong> <span style="color:rgba(255,255,255,0.6)">(${ftB})</span>`
+                + `<br><strong>${n}</strong> gemeinsame INT31-Knoten (${pct}%)`;
+
+            path.addEventListener('mouseenter', e => { path.setAttribute('stroke-opacity','0.92'); int31TipShow(e,tipHtml); });
+            path.addEventListener('mousemove',  e => int31TipMove(e));
+            path.addEventListener('mouseleave', () => { path.setAttribute('stroke-opacity',opacity.toFixed(2)); int31TipHide(); });
+            chordGroup.appendChild(path);
+        });
+    });
+    svg.appendChild(chordGroup);
+
+    // Innerer Ring (Typen)
+    typeSegs.forEach(({ k, color, ta0, ta1 }) => {
+        const label = (FTYPE_META[k]||{}).label || k;
+        const arcEl = setA(mk('path'), {
+            d: donutPath(R_INNER_S, R_INNER_E, ta0, ta1),
+            fill: color, 'fill-opacity': '0.88',
+            stroke: '#fff', 'stroke-width': '1.0',
+        });
+        arcEl.style.cursor = 'default';
+        arcEl.addEventListener('mouseenter', e => int31TipShow(e, `<strong>${label}</strong>`));
+        arcEl.addEventListener('mousemove',  e => int31TipMove(e));
+        arcEl.addEventListener('mouseleave', int31TipHide);
+        svg.appendChild(arcEl);
+
+        const aMid   = (ta0 + ta1) / 2;
+        const rMid   = (R_INNER_S + R_INNER_E) / 2;
+        const arcLen = (ta1 - ta0) * rMid;
+        const rDepth = R_INNER_E - R_INNER_S;
+        const fs     = Math.min(10, Math.max(7, rDepth * 0.38));
+        const maxC   = Math.floor(arcLen / (fs * 0.58));
+        const short  = label.length > maxC ? label.slice(0, maxC - 1) + '…' : label;
+        if (arcLen >= short.length * fs * 0.52 + 4) {
+            const [lx, ly] = polar(rMid, aMid);
+            const deg  = aMid * 180 / Math.PI;
+            const flip = aMid > Math.PI / 2 && aMid < 3 * Math.PI / 2;
+            svg.appendChild(setA(mk('text'), {
+                'text-anchor': 'middle', 'dominant-baseline': 'middle',
+                'font-size': fs + 'px', 'font-weight': '700',
+                fill: '#fff', 'pointer-events': 'none',
+                transform: `translate(${lx},${ly}) rotate(${flip ? deg+90 : deg-90})`,
+            })).textContent = short;
+        }
+    });
+
+    // Äußerer Ring (Phänomene)
+    typeSegs.forEach(({ k, color, itemSegs }) => {
+        itemSegs.forEach(({ f, a0, a1, aMid }) => {
+            if (a1 - a0 < 0.002) return;
+            const pct    = (f.n / total * 100).toFixed(1);
+            const ft     = (FTYPE_META[f.ftype]||{}).singular || f.ftype;
+            const tipHtml =
+                `<strong>${f.label}</strong>`
+                + `<br><span style="font-size:10px;color:rgba(255,255,255,0.7)">(${ft})</span>`
+                + `<br><strong>${f.n}</strong> INT31-Knoten (${pct}%)`;
+
+            const segFrac = (a1 - a0) / (2 * Math.PI);
+            const strokeW = segFrac > 0.04 ? 1.8 : segFrac > 0.015 ? 1.0 : 0.4;
+
+            const pathEl = setA(mk('path'), {
+                d: donutPath(R_OUTER_S, R_OUTER_E, a0, a1),
+                fill: color, 'fill-opacity': '0.22',
+                stroke: '#fff', 'stroke-width': String(strokeW),
+            });
+            pathEl.style.cursor = 'default';
+            pathEl.addEventListener('mouseenter', e => { pathEl.setAttribute('fill-opacity','0.55'); int31TipShow(e,tipHtml); });
+            pathEl.addEventListener('mousemove',  e => int31TipMove(e));
+            pathEl.addEventListener('mouseleave', () => { pathEl.setAttribute('fill-opacity','0.22'); int31TipHide(); });
+            svg.appendChild(pathEl);
+
+            const rDepth = R_OUTER_E - R_OUTER_S;
+            const arcLen = (a1 - a0) * ((R_OUTER_S + R_OUTER_E) / 2);
+            const fs     = Math.min(9, Math.max(6.5, rDepth * 0.16));
+            if (arcLen >= 18) {
+                const maxC = Math.floor(rDepth * 0.88 / (fs * 0.58));
+                const lbl  = f.label.length > maxC ? f.label.slice(0, maxC - 1) + '…' : f.label;
+                const deg  = aMid * 180 / Math.PI;
+                const flip = aMid > Math.PI / 2 && aMid < 3 * Math.PI / 2;
+                const [lx, ly] = polar((R_OUTER_S + R_OUTER_E) / 2, aMid);
+                svg.appendChild(setA(mk('text'), {
+                    'text-anchor': 'middle', 'dominant-baseline': 'middle',
+                    'font-size': fs + 'px', fill: '#374151', 'pointer-events': 'none',
+                    transform: `translate(${lx},${ly}) rotate(${flip ? deg+180 : deg})`,
+                })).textContent = lbl;
+            }
+        });
+    });
+
+    // Zentraler Kreis
+    const R_CENTRE_VIS = R_CHORD_IN * 0.55;
+    svg.appendChild(setA(mk('circle'), {
+        cx: CX, cy: CY, r: R_CENTRE_VIS,
+        fill: '#5e17eb', 'fill-opacity': '0.07',
+        stroke: '#5e17eb', 'stroke-width': '1.5',
+    }));
+
+    wrap.innerHTML = '';
+    wrap.appendChild(svg);
+
+    // Legende
+    if (legWrap) {
+        legWrap.style.cssText = 'display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px;margin-top:0.75rem';
+        legWrap.innerHTML = '';
+        activeTypes.forEach(k => {
+            const m = FTYPE_META[k] || { label: k, color: '#6b7280' };
+            const span = document.createElement('span');
+            span.style.cssText = 'display:inline-flex;align-items:center;gap:5px;font-size:11px';
+            span.innerHTML = `<span style="display:inline-block;width:11px;height:11px;border-radius:2px;`
+                + `background:${m.color};opacity:0.85;flex-shrink:0"></span>${m.label}`;
+            legWrap.appendChild(span);
+        });
+    }
+}
+
+// ── Kombinationsliste ────────────────────────────────────────────────────────
+function renderInt31Pairs() {
+    const co   = DATA.int31CoOccurrence;
+    const wrap = document.getElementById('int31-pairs-wrap');
+    if (!co || !wrap) return;
+
+    const topN  = Math.min(50, parseInt(document.getElementById('sel-int31-pairs-topn')?.value || '30'));
+    const pairs = co.featPairs.slice(0, topN);
+    if (!pairs.length) { wrap.innerHTML = '<p style="color:#9ca3af">Keine Paare gefunden.</p>'; return; }
+
+    const total  = co.nInt31WithFeats || 1;
+    const maxN   = pairs[0]?.n || 1;
+
+    const NS   = 'http://www.w3.org/2000/svg';
+    const mkE  = tag => document.createElementNS(NS, tag);
+    const setA = (el, attrs) => { Object.entries(attrs).forEach(([k,v]) => el.setAttribute(k,v)); return el; };
+
+    const BAR_H    = 18;
+    const GAP_Y    = 4;
+    const LABEL_W  = 520;
+    const BAR_MAX  = 320;
+    const COUNT_W  = 80;
+    const FONT_W   = 6.2;
+    const MAX_HALF = Math.floor((LABEL_W / 2 - 10) / FONT_W);
+    const PAD_B    = 8;
+
+    const svgW = LABEL_W + BAR_MAX + COUNT_W;
+    const svgH = pairs.length * (BAR_H + GAP_Y) + PAD_B;
+
+    const svg = setA(mkE('svg'), { width: svgW, height: svgH,
+        viewBox: `0 0 ${svgW} ${svgH}`, preserveAspectRatio: 'xMinYMin meet' });
+    svg.style.cssText = 'font-family:Geist,system-ui,sans-serif;display:block;overflow:visible;width:100%';
+
+    pairs.forEach((pair, ri) => {
+        const y0     = ri * (BAR_H + GAP_Y);
+        const yc     = y0 + BAR_H / 2;
+        const colorA = (FTYPE_META[pair.ftypeA]||{}).color || '#6b7280';
+        const colorB = (FTYPE_META[pair.ftypeB]||{}).color || '#6b7280';
+
+        if (ri % 2 === 0)
+            svg.appendChild(setA(mkE('rect'), { x:0, y:y0, width:svgW, height:BAR_H, fill:'rgba(0,0,0,0.018)' }));
+
+        const shortA = pair.labelA.length > MAX_HALF ? pair.labelA.slice(0, MAX_HALF-1) + '…' : pair.labelA;
+        svg.appendChild(setA(mkE('text'), { x: LABEL_W/2-6, y: yc,
+            'text-anchor':'end', 'dominant-baseline':'middle', 'font-size':'10.5px', fill:colorA,
+        })).textContent = shortA;
+
+        svg.appendChild(setA(mkE('text'), { x: LABEL_W/2, y: yc,
+            'text-anchor':'middle', 'dominant-baseline':'middle', 'font-size':'10px', fill:'#9ca3af',
+        })).textContent = '×';
+
+        const shortB = pair.labelB.length > MAX_HALF ? pair.labelB.slice(0, MAX_HALF-1) + '…' : pair.labelB;
+        svg.appendChild(setA(mkE('text'), { x: LABEL_W/2+6, y: yc,
+            'text-anchor':'start', 'dominant-baseline':'middle', 'font-size':'10.5px', fill:colorB,
+        })).textContent = shortB;
+
+        const barW  = Math.max(2, Math.round((pair.n / maxN) * BAR_MAX));
+        const halfW = Math.round(barW / 2);
+        svg.appendChild(setA(mkE('rect'), { x:LABEL_W, y:y0+2, width:halfW, height:BAR_H-4, fill:colorA, 'fill-opacity':'0.65', rx:2 }));
+        svg.appendChild(setA(mkE('rect'), { x:LABEL_W+halfW, y:y0+2, width:barW-halfW, height:BAR_H-4, fill:colorB, 'fill-opacity':'0.65' }));
+
+        const pct = (pair.n / total * 100).toFixed(1);
+        svg.appendChild(setA(mkE('text'), { x:LABEL_W+barW+5, y:yc,
+            'dominant-baseline':'middle', 'font-size':'10px', fill:'#6b7280' }))
+            .textContent = `${pair.n} (${pct}%)`;
+
+        const overlay = setA(mkE('rect'), { x:0, y:y0, width:svgW, height:BAR_H, fill:'transparent' });
+        overlay.style.cursor = 'default';
+        const ftA = (FTYPE_META[pair.ftypeA]||{}).singular || pair.ftypeA;
+        const ftB = (FTYPE_META[pair.ftypeB]||{}).singular || pair.ftypeB;
+        const tipHtml = `<strong>${pair.labelA}</strong> <span style="color:rgba(255,255,255,0.6)">(${ftA})</span>`
+            + `<br>× <strong>${pair.labelB}</strong> <span style="color:rgba(255,255,255,0.6)">(${ftB})</span>`
+            + `<br><strong>${pair.n}</strong> gemeinsame INT31-Knoten (${pct}%)`;
+        overlay.addEventListener('mouseenter', e => int31TipShow(e, tipHtml));
+        overlay.addEventListener('mousemove',  e => int31TipMove(e));
+        overlay.addEventListener('mouseleave', int31TipHide);
+        svg.appendChild(overlay);
+    });
+
+    const scroller = document.createElement('div');
+    scroller.style.cssText = 'overflow-x:auto;overflow-y:auto;max-height:700px;padding-bottom:4px';
+    scroller.appendChild(svg);
+    wrap.innerHTML = '';
+    wrap.appendChild(scroller);
+}
+
+// ── Init ─────────────────────────────────────────────────────────────────────
+function initInt31CoOccurrence() {
+    const co = DATA.int31CoOccurrence;
+    if (!co || !co.featFrequencies.length) return;
+
+    renderInt31MetaBar();
+    renderInt31FtypeBar();
+
+    document.getElementById('sel-int31-topn')?.addEventListener('change', renderInt31Sunburst);
+    document.getElementById('sel-int31-pairs-topn')?.addEventListener('change', renderInt31Pairs);
+
+    renderInt31Sunburst();
+    renderInt31Pairs();
+}
+
+document.addEventListener('DOMContentLoaded', initInt31CoOccurrence);
