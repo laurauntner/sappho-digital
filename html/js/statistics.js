@@ -1889,16 +1889,6 @@ function initWorkCitation() {
 
 document.addEventListener('DOMContentLoaded', initWorkCitation);
 
-
-
-
-
-
-
-
-
-
-
 // ── Statistik 8: INT31 Co-Occurrence ─────────────────────────────────────────
 
 let _int31Tip = null;
@@ -2008,7 +1998,6 @@ function renderInt31Sunburst() {
 
     const topN = parseInt(document.getElementById('sel-int31-topn')?.value || '10');
 
-    // Alle Paare werden gezeichnet (kein minN-Filter mehr)
     const feats = topN > 0 ? co.featFrequencies.slice(0, topN) : co.featFrequencies;
     if (!feats.length) {
         wrap.innerHTML = '<p style="color:#9ca3af;text-align:center">Keine Daten.</p>';
@@ -2045,7 +2034,6 @@ function renderInt31Sunburst() {
     const R_INNER_E   = R_INNER_S  + W * 0.055;
     const R_OUTER_S   = R_INNER_E  + W * 0.010;
     const R_OUTER_E   = W * 0.43;
-    // Kein R_LABEL mehr – externe Labels entfallen
 
     const GAP_TYPE = 0.014;
     const GAP_FEAT = 0.004;
@@ -2098,7 +2086,7 @@ function renderInt31Sunburst() {
         typeSegs.push({ k, color: (FTYPE_META[k]||{}).color||'#6b7280', ta0, ta1, itemSegs });
     });
 
-    // Sehnen zuerst
+    // Sehnen
     const chordGroup = mk('g');
     feats.forEach((fA, iA) => {
         feats.forEach((fB, iB) => {
@@ -2140,7 +2128,7 @@ function renderInt31Sunburst() {
     });
     svg.appendChild(chordGroup);
 
-    // Innerer Ring (Typen) mit Labels
+    // Innerer Ring (Typen)
     typeSegs.forEach(({ k, color, ta0, ta1 }) => {
         const label = (FTYPE_META[k]||{}).label || k;
         const arcEl = setA(mk('path'), {
@@ -2174,7 +2162,7 @@ function renderInt31Sunburst() {
         }
     });
 
-    // Äußerer Ring (Phänomene) – keine externen Labels
+    // Äußerer Ring (Phänomene)
     typeSegs.forEach(({ k, color, itemSegs }) => {
         itemSegs.forEach(({ f, a0, a1, aMid }) => {
             if (a1 - a0 < 0.002) return;
@@ -2199,7 +2187,6 @@ function renderInt31Sunburst() {
             pathEl.addEventListener('mouseleave', () => { pathEl.setAttribute('fill-opacity','0.22'); int31TipHide(); });
             svg.appendChild(pathEl);
 
-            // Label nur im Segment selbst, kein externes Label
             const rDepth = R_OUTER_E - R_OUTER_S;
             const arcLen = (a1 - a0) * ((R_OUTER_S + R_OUTER_E) / 2);
             const fs     = Math.min(9, Math.max(6.5, rDepth * 0.16));
@@ -2218,7 +2205,7 @@ function renderInt31Sunburst() {
         });
     });
 
-    // Zentraler Kreis (ohne Beschriftung)
+    // Zentraler Kreis
     const R_CENTRE_VIS = R_CHORD_IN * 0.55;
     svg.appendChild(setA(mk('circle'), {
         cx: CX, cy: CY, r: R_CENTRE_VIS,
@@ -2229,7 +2216,7 @@ function renderInt31Sunburst() {
     wrap.innerHTML = '';
     wrap.appendChild(svg);
 
-    // Legende zentriert
+    // Legende
     if (legWrap) {
         legWrap.style.cssText = 'display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px;margin-top:0.75rem';
         legWrap.innerHTML = '';
@@ -2263,7 +2250,7 @@ function renderInt31Pairs() {
 
     const BAR_H    = 18;
     const GAP_Y    = 4;
-    const LABEL_W  = 520;   // Label-Spalte
+    const LABEL_W  = 520;
     const BAR_MAX  = 320;
     const COUNT_W  = 80;
     const FONT_W   = 6.2;
