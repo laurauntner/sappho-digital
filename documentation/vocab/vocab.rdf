@@ -1081,7 +1081,7 @@
 <rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/topic_91fbce010840c414">
 	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
 	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
-	<skos:prefLabel xml:lang="de">Dichtkunst (Thema)</skos:prefLabel>
+	<skos:prefLabel xml:lang="de">Dichtkunst</skos:prefLabel>
 	<skos:notation>topic_91fbce010840c414</skos:notation>
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/topic_522a85ce59f9c66a"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/topic_f83ec0822d1cce6e"/>
@@ -1501,7 +1501,7 @@
 <rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/motif_1cd4207b96382696">
 	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
 	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
-	<skos:prefLabel xml:lang="de">Vergessen (Motiv)</skos:prefLabel>
+	<skos:prefLabel xml:lang="de">Vergessen</skos:prefLabel>
 	<skos:notation>motif_1cd4207b96382696</skos:notation>
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/motif_2126df79f7250a93"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/topic_e6ecf2d8c3d52793"/>
@@ -1596,7 +1596,7 @@
 <rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/motif_71f3b15b4a29d968">
 	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
 	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
-	<skos:prefLabel xml:lang="de">Ehe (Motiv)</skos:prefLabel>
+	<skos:prefLabel xml:lang="de">Ehe</skos:prefLabel>
 	<skos:notation>motif_71f3b15b4a29d968</skos:notation>
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/motif_b3f47e9ec671bb4b"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/motif_281b95ce63718bed"/>
@@ -3623,7 +3623,7 @@
 <rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/topic_979480c5de919f6e">
 	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
 	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
-	<skos:prefLabel xml:lang="de">Weiblichkeit (Thema)</skos:prefLabel>
+	<skos:prefLabel xml:lang="de">Weiblichkeit</skos:prefLabel>
 	<skos:notation>topic_979480c5de919f6e</skos:notation>
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/topic_1de543cc588d6ee3"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_e585b2a779019b7e"/>
@@ -4352,7 +4352,7 @@
 <rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/motif_751896a2b642d52f">
 	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
 	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
-	<skos:prefLabel xml:lang="de">Fragmenthaftigkeit (Motiv)</skos:prefLabel>
+	<skos:prefLabel xml:lang="de">Fragmenthaftigkeit</skos:prefLabel>
 	<skos:notation>motif_751896a2b642d52f</skos:notation>
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/motif_051983025a946344"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_e585b2a779019b7e"/>
@@ -4423,7 +4423,7 @@
 <rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/topic_f6d80c8d012ca95d">
 	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
 	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
-	<skos:prefLabel xml:lang="de">Suizid (Thema)</skos:prefLabel>
+	<skos:prefLabel xml:lang="de">Suizid</skos:prefLabel>
 	<skos:notation>topic_f6d80c8d012ca95d</skos:notation>
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/topic_16fb1687f7449a95"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/person_e585b2a779019b7e"/>
@@ -5414,7 +5414,7 @@
 <rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/topic_ccb502909ffa7cd8">
 	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
 	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
-	<skos:prefLabel xml:lang="de">Unglückliche Liebe (Thema)</skos:prefLabel>
+	<skos:prefLabel xml:lang="de">Unglückliche Liebe</skos:prefLabel>
 	<skos:notation>topic_ccb502909ffa7cd8</skos:notation>
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/topic_a10417e468b798b0"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/topic_85e382a7ed66294c"/>
@@ -6241,7 +6241,7 @@
 <rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/plot_418b146d0caa7dnm">
 	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
 	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
-	<skos:prefLabel xml:lang="de">Sappho-Stoff mit Fokus auf Sappho als Phädophile</skos:prefLabel>
+	<skos:prefLabel xml:lang="de">Sappho-Stoff mit Fokus auf Sappho als Pädophile</skos:prefLabel>
 	<skos:notation>plot_418b146d0caa7dnm</skos:notation>
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/plot_a3935710c883087b"/>
 	<skos:broadMatch rdf:resource="http://www.wikidata.org/entity/Q8388"/>

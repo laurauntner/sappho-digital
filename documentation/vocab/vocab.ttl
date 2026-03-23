@@ -625,7 +625,7 @@
 
 :topic_91fbce010840c414 a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
-  skos:prefLabel "Dichtkunst (Thema)"@de;
+  skos:prefLabel "Dichtkunst"@de;
   skos:notation "topic_91fbce010840c414";
   skos:broader :topic_522a85ce59f9c66a;
   skos:narrower :topic_f83ec0822d1cce6e;
@@ -867,7 +867,7 @@
 
 :motif_1cd4207b96382696 a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
-  skos:prefLabel "Vergessen (Motiv)"@de;
+  skos:prefLabel "Vergessen"@de;
   skos:notation "motif_1cd4207b96382696";
   skos:broader :motif_2126df79f7250a93;
   skos:related :topic_e6ecf2d8c3d52793, :place_ff6c437a4ca1c9b1;
@@ -925,7 +925,7 @@
 
 :motif_71f3b15b4a29d968 a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
-  skos:prefLabel "Ehe (Motiv)"@de;
+  skos:prefLabel "Ehe"@de;
   skos:notation "motif_71f3b15b4a29d968";
   skos:broader :motif_b3f47e9ec671bb4b;
   skos:narrower :motif_281b95ce63718bed, :motif_803e6cdc78c0c5a1;
@@ -2109,7 +2109,7 @@
 
 :topic_979480c5de919f6e a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
-  skos:prefLabel "Weiblichkeit (Thema)"@de;
+  skos:prefLabel "Weiblichkeit"@de;
   skos:notation "topic_979480c5de919f6e";
   skos:broader :topic_1de543cc588d6ee3;
   skos:related :person_e585b2a779019b7e, :place_0009a58f625c087b, :person_f79231e41dd95683,
@@ -2539,7 +2539,7 @@
 
 :motif_751896a2b642d52f a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
-  skos:prefLabel "Fragmenthaftigkeit (Motiv)"@de;
+  skos:prefLabel "Fragmenthaftigkeit"@de;
   skos:notation "motif_751896a2b642d52f";
   skos:broader :motif_051983025a946344;
   skos:related :person_e585b2a779019b7e;
@@ -2589,7 +2589,7 @@
 
 :topic_f6d80c8d012ca95d a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
-  skos:prefLabel "Suizid (Thema)"@de;
+  skos:prefLabel "Suizid"@de;
   skos:notation "topic_f6d80c8d012ca95d";
   skos:broader :topic_16fb1687f7449a95;
   skos:related :person_e585b2a779019b7e, :work_7ddaff9b6814b58b, :plot_6ec13f66820264d7,
@@ -3174,7 +3174,7 @@
 
 :topic_ccb502909ffa7cd8 a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
-  skos:prefLabel "Unglückliche Liebe (Thema)"@de;
+  skos:prefLabel "Unglückliche Liebe"@de;
   skos:notation "topic_ccb502909ffa7cd8";
   skos:broader :topic_a10417e468b798b0;
   skos:narrower :topic_85e382a7ed66294c;
@@ -3746,7 +3746,7 @@
 
 :plot_418b146d0caa7dnm a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
-  skos:prefLabel "Sappho-Stoff mit Fokus auf Sappho als Phädophile"@de;
+  skos:prefLabel "Sappho-Stoff mit Fokus auf Sappho als Pädophile"@de;
   skos:notation "plot_418b146d0caa7dnm";
   skos:broader :plot_a3935710c883087b;
   skos:broadMatch <http://www.wikidata.org/entity/Q8388>;
