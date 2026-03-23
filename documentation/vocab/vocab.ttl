@@ -11,10 +11,7 @@
 <https://w3id.org/sappho-digital/vocab/> a owl:Ontology .
 
 <https://w3id.org/sappho-digital/vocab> a skos:ConceptScheme;
-  skos:scopeNote """Dieses Vokabular dient der systematischen Erfassung von wiederkehrenden
-			Motiven, Themen, Stoffen, Personen bzw. Figuren, Orten, Phrasen bzw. Zitaten und
-			referenzierten Werken in der literarischen Rezeption Sapphos von der Antike bis in die
-			Gegenwart.""";
+  skos:scopeNote "Dieses Vokabular dient der systematischen Erfassung von wiederkehrenden Motiven, Themen, Stoffen, Personen bzw. Figuren, Orten, rhetorischen Topoi und referenzierten Werken in der literarischen Rezeption Sapphos von der Antike bis in die Gegenwart.";
   skos:hasTopConcept :motifs, :places, :persons, :topoi, :plots, :topics, :works;
   skos:prefLabel "Vokabular zur literarischen Sappho-Rezeption"@de .
 

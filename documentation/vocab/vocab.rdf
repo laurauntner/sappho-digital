@@ -16,10 +16,7 @@
 
 <rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab">
 	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-	<skos:scopeNote>Dieses Vokabular dient der systematischen Erfassung von wiederkehrenden
-			Motiven, Themen, Stoffen, Personen bzw. Figuren, Orten, Phrasen bzw. Zitaten und
-			referenzierten Werken in der literarischen Rezeption Sapphos von der Antike bis in die
-			Gegenwart.</skos:scopeNote>
+	<skos:scopeNote>Dieses Vokabular dient der systematischen Erfassung von wiederkehrenden Motiven, Themen, Stoffen, Personen bzw. Figuren, Orten, rhetorischen Topoi und referenzierten Werken in der literarischen Rezeption Sapphos von der Antike bis in die Gegenwart.</skos:scopeNote>
 	<skos:hasTopConcept rdf:resource="https://w3id.org/sappho-digital/vocab/motifs"/>
 	<skos:hasTopConcept rdf:resource="https://w3id.org/sappho-digital/vocab/places"/>
 	<skos:hasTopConcept rdf:resource="https://w3id.org/sappho-digital/vocab/persons"/>
