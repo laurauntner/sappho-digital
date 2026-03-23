@@ -2557,7 +2557,6 @@
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_b2d8b14d68b73dd5"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_43b59f052f3dc73e"/>
 	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_3146c4f80jad1ddx"/>
-	<skos:narrower rdf:resource="https://w3id.org/sappho-digital/vocab/plot_418b146d0caa7dnm"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_791dc243a6ba1593"/>
 	<skos:related rdf:resource="https://w3id.org/sappho-digital/vocab/motif_736eb7ef6202472f"/>
 </rdf:Description>
@@ -6235,16 +6234,6 @@
 	<skos:notation>plot_3146c4f80jad1ddx</skos:notation>
 	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/plot_a3935710c883087b"/>
 	<skos:broadMatch rdf:resource="http://www.wikidata.org/entity/Q43200"/>
-	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q17892"/>
-</rdf:Description>
-
-<rdf:Description rdf:about="https://w3id.org/sappho-digital/vocab/plot_418b146d0caa7dnm">
-	<rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-	<skos:inScheme rdf:resource="https://w3id.org/sappho-digital/vocab"/>
-	<skos:prefLabel xml:lang="de">Sappho-Stoff mit Fokus auf Sappho als Pädophile</skos:prefLabel>
-	<skos:notation>plot_418b146d0caa7dnm</skos:notation>
-	<skos:broader rdf:resource="https://w3id.org/sappho-digital/vocab/plot_a3935710c883087b"/>
-	<skos:broadMatch rdf:resource="http://www.wikidata.org/entity/Q8388"/>
 	<skos:relatedMatch rdf:resource="http://www.wikidata.org/entity/Q17892"/>
 </rdf:Description>
 

@@ -73,6 +73,7 @@
                                             <xsl:call-template name="render-concept">
                                                 <xsl:with-param name="node" select="$top"/>
                                                 <xsl:with-param name="open" select="false()"/>
+                                                <xsl:with-param name="toplevel" select="true()"/>
                                             </xsl:call-template>
                                         </xsl:for-each>
                                     </ul>
@@ -100,6 +101,7 @@
     <xsl:template name="render-concept">
         <xsl:param name="node" as="element()"/>
         <xsl:param name="open" as="xs:boolean" select="false()"/>
+        <xsl:param name="toplevel" as="xs:boolean" select="false()"/>
 
         <xsl:variable name="narrowerUris" select="$node/skos:narrower/@rdf:resource"/>
         <xsl:variable name="children" select="$node/ancestor::rdf:RDF/*[@rdf:about = $narrowerUris]"/>
@@ -152,6 +154,16 @@
                                 <xsl:with-param name="n" select="$node"/>
                             </xsl:call-template>
                         </summary>
+                        <xsl:if test="not($toplevel)">
+                            <xsl:variable name="vocabId" select="replace($thisAbout, '^.*/', '')"/>
+                            <xsl:if test="$vocabId != ''">
+                                <div class="vocab-id smaller-text indent">
+                                    <strong>ID:</strong>
+                                    <xsl:text> </xsl:text>
+                                    <xsl:value-of select="$vocabId"/>
+                                </div>
+                            </xsl:if>
+                        </xsl:if>
 
                         <div class="skos-children">
                             <xsl:if test="$node/skos:definition or $node/skos:scopeNote">
@@ -172,6 +184,75 @@
                                             />
                                         </p>
                                     </xsl:if>
+                                </div>
+                            </xsl:if>
+
+                            <!-- externe SKOS-Matches -->
+                            <xsl:variable name="matchProps"
+                                select="$node/*[contains(local-name(), 'Match') and namespace-uri() = 'http://www.w3.org/2004/02/skos/core#']"/>
+                            <xsl:if test="exists($matchProps)">
+                                <div class="skos-note">
+                                    <xsl:for-each-group select="$matchProps" group-by="local-name()">
+                                        <xsl:sort select="local-name()"/>
+                                        <div class="smaller-text indent">
+                                            <strong>
+                                                <xsl:text>skos:</xsl:text>
+                                                <xsl:value-of select="local-name()"/>
+                                                <xsl:text>:</xsl:text>
+                                            </strong>
+                                            <xsl:text> </xsl:text>
+                                            <xsl:for-each select="current-group()">
+                                                <a href="{@rdf:resource}" target="_blank"
+                                                  rel="noopener">
+                                                  <xsl:value-of select="@rdf:resource"/>
+                                                </a>
+                                                <xsl:if test="position() != last()">, </xsl:if>
+                                            </xsl:for-each>
+                                        </div>
+                                    </xsl:for-each-group>
+                                </div>
+                            </xsl:if>
+
+                            <!-- interne skos:related -->
+                            <xsl:variable name="relatedUris"
+                                select="$node/skos:related/@rdf:resource"/>
+                            <xsl:if test="exists($relatedUris)">
+                                <div class="skos-note">
+                                    <div class="smaller-text indent">
+                                        <strong>skos:related:</strong>
+                                        <xsl:text> </xsl:text>
+                                        <xsl:variable name="relatedItems">
+                                            <xsl:for-each select="$relatedUris">
+                                                <xsl:variable name="relUri" select="string(.)"/>
+                                                <xsl:variable name="relNode"
+                                                  select="$vocab/rdf:RDF/*[@rdf:about = $relUri]"/>
+                                                <xsl:variable name="relRawLabel"
+                                                  select="string(($relNode/skos:prefLabel[@xml:lang = 'de'], $relNode/skos:prefLabel[@xml:lang = 'en'], $relNode/skos:prefLabel, $relNode/rdfs:label, $relUri)[1])"/>
+                                                <xsl:variable name="relTypeMatch"
+                                                  select="replace($relRawLabel, '^.*\(([^)]*)\)\s*$', '$1')"/>
+                                                <xsl:variable name="relType" select="
+                                                        if ($relTypeMatch != $relRawLabel) then
+                                                            $relTypeMatch
+                                                        else
+                                                            ''"/>
+                                                <xsl:variable name="relLabel"
+                                                  select="normalize-space(replace($relRawLabel, '\s*\([^)]*\)\s*$', ''))"/>
+                                                <item label="{$relLabel}" type="{$relType}"
+                                                  uri="{$relUri}"/>
+                                            </xsl:for-each>
+                                        </xsl:variable>
+                                        <xsl:for-each select="$relatedItems/item">
+                                            <xsl:sort select="@type"/>
+                                            <xsl:sort select="lower-case(@label)"/>
+                                            <xsl:value-of select="@label"/>
+                                            <xsl:if test="@type != ''">
+                                                <xsl:text> (</xsl:text>
+                                                <xsl:value-of select="@type"/>
+                                                <xsl:text>)</xsl:text>
+                                            </xsl:if>
+                                            <xsl:if test="position() != last()">, </xsl:if>
+                                        </xsl:for-each>
+                                    </div>
                                 </div>
                             </xsl:if>
 
@@ -204,35 +285,113 @@
                     </details>
                 </xsl:when>
                 <xsl:otherwise>
-                    <span class="leaf">
-                        <xsl:call-template name="label">
-                            <xsl:with-param name="n" select="$node"/>
-                        </xsl:call-template>
-                    </span>
-
-                    <xsl:if test="$node/skos:definition or $node/skos:scopeNote">
-                        <div class="skos-note">
-                            <xsl:value-of
-                                select="normalize-space(($node/skos:definition[@xml:lang = 'de'], $node/skos:scopeNote[@xml:lang = 'de'], $node/skos:definition, $node/skos:scopeNote)[1])"
-                            />
-                        </div>
-                    </xsl:if>
-
-                    <xsl:if test="count($occTexts) &gt; 0">
-                        <div class="skos-note">
-                            <div class="smaller-text indent">
-                                <strong>Vorkommnis in:</strong>
+                    <details open="open" onclick="return false" style="cursor:default">
+                        <summary class="has-children leaf-summary">
+                            <xsl:call-template name="label">
+                                <xsl:with-param name="n" select="$node"/>
+                            </xsl:call-template>
+                        </summary>
+                        <xsl:variable name="vocabId" select="replace($thisAbout, '^.*/', '')"/>
+                        <xsl:if test="$vocabId != ''">
+                            <div class="vocab-id smaller-text indent">
+                                <strong>ID:</strong>
                                 <xsl:text> </xsl:text>
-                                <xsl:for-each select="$occTexts">
-                                    <xsl:sort select="lower-case(u:label(.))"/>
-                                    <xsl:call-template name="render-label-or-link">
-                                        <xsl:with-param name="uri" select="."/>
-                                    </xsl:call-template>
-                                    <xsl:if test="position() != last()">, </xsl:if>
-                                </xsl:for-each>
+                                <xsl:value-of select="$vocabId"/>
                             </div>
-                        </div>
-                    </xsl:if>
+                        </xsl:if>
+
+                        <xsl:if test="$node/skos:definition or $node/skos:scopeNote">
+                            <div class="skos-note">
+                                <xsl:value-of
+                                    select="normalize-space(($node/skos:definition[@xml:lang = 'de'], $node/skos:scopeNote[@xml:lang = 'de'], $node/skos:definition, $node/skos:scopeNote)[1])"
+                                />
+                            </div>
+                        </xsl:if>
+
+                        <!-- externe SKOS-Matches -->
+                        <xsl:variable name="matchPropsLeaf"
+                            select="$node/*[contains(local-name(), 'Match') and namespace-uri() = 'http://www.w3.org/2004/02/skos/core#']"/>
+                        <xsl:if test="exists($matchPropsLeaf)">
+                            <div class="skos-note">
+                                <xsl:for-each-group select="$matchPropsLeaf" group-by="local-name()">
+                                    <xsl:sort select="local-name()"/>
+                                    <div class="smaller-text indent">
+                                        <strong>
+                                            <xsl:text>skos:</xsl:text>
+                                            <xsl:value-of select="local-name()"/>
+                                            <xsl:text>:</xsl:text>
+                                        </strong>
+                                        <xsl:text> </xsl:text>
+                                        <xsl:for-each select="current-group()">
+                                            <a href="{@rdf:resource}" target="_blank" rel="noopener">
+                                                <xsl:value-of select="@rdf:resource"/>
+                                            </a>
+                                            <xsl:if test="position() != last()">, </xsl:if>
+                                        </xsl:for-each>
+                                    </div>
+                                </xsl:for-each-group>
+                            </div>
+                        </xsl:if>
+
+                        <!-- interne skos:related -->
+                        <xsl:variable name="relatedUrisLeaf"
+                            select="$node/skos:related/@rdf:resource"/>
+                        <xsl:if test="exists($relatedUrisLeaf)">
+                            <div class="skos-note">
+                                <div class="smaller-text indent">
+                                    <strong>skos:related:</strong>
+                                    <xsl:text> </xsl:text>
+                                    <xsl:variable name="relatedItemsLeaf">
+                                        <xsl:for-each select="$relatedUrisLeaf">
+                                            <xsl:variable name="relUri" select="string(.)"/>
+                                            <xsl:variable name="relNode"
+                                                select="$vocab/rdf:RDF/*[@rdf:about = $relUri]"/>
+                                            <xsl:variable name="relRawLabel"
+                                                select="string(($relNode/skos:prefLabel[@xml:lang = 'de'], $relNode/skos:prefLabel[@xml:lang = 'en'], $relNode/skos:prefLabel, $relNode/rdfs:label, $relUri)[1])"/>
+                                            <xsl:variable name="relTypeMatch"
+                                                select="replace($relRawLabel, '^.*\(([^)]*)\)\s*$', '$1')"/>
+                                            <xsl:variable name="relType" select="
+                                                    if ($relTypeMatch != $relRawLabel) then
+                                                        $relTypeMatch
+                                                    else
+                                                        ''"/>
+                                            <xsl:variable name="relLabel"
+                                                select="normalize-space(replace($relRawLabel, '\s*\([^)]*\)\s*$', ''))"/>
+                                            <item label="{$relLabel}" type="{$relType}"
+                                                uri="{$relUri}"/>
+                                        </xsl:for-each>
+                                    </xsl:variable>
+                                    <xsl:for-each select="$relatedItemsLeaf/item">
+                                        <xsl:sort select="@type"/>
+                                        <xsl:sort select="lower-case(@label)"/>
+                                        <xsl:value-of select="@label"/>
+                                        <xsl:if test="@type != ''">
+                                            <xsl:text> (</xsl:text>
+                                            <xsl:value-of select="@type"/>
+                                            <xsl:text>)</xsl:text>
+                                        </xsl:if>
+                                        <xsl:if test="position() != last()">, </xsl:if>
+                                    </xsl:for-each>
+                                </div>
+                            </div>
+                        </xsl:if>
+
+                        <xsl:if test="count($occTexts) &gt; 0">
+                            <div class="skos-note">
+                                <div class="smaller-text indent">
+                                    <strong>Vorkommnis in:</strong>
+                                    <xsl:text> </xsl:text>
+                                    <xsl:for-each select="$occTexts">
+                                        <xsl:sort select="lower-case(u:label(.))"/>
+                                        <xsl:call-template name="render-label-or-link">
+                                            <xsl:with-param name="uri" select="."/>
+                                        </xsl:call-template>
+                                        <xsl:if test="position() != last()">, </xsl:if>
+                                    </xsl:for-each>
+                                </div>
+                            </div>
+                        </xsl:if>
+                    </details>
                 </xsl:otherwise>
             </xsl:choose>
         </li>

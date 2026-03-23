@@ -1465,7 +1465,7 @@
   skos:notation "plot_a3935710c883087b";
   skos:broader :plot_02612f6f060ef11d;
   skos:narrower :plot_0b092ed64a936159, :plot_b2d8b14d68b73dd5, :plot_43b59f052f3dc73e,
-    :plot_3146c4f80jad1ddx, :plot_418b146d0caa7dnm;
+    :plot_3146c4f80jad1ddx;
   skos:related :motif_791dc243a6ba1593, :motif_736eb7ef6202472f .
 
 :plot_b83cd3a9f03a61c4 a skos:Concept;
@@ -3742,14 +3742,6 @@
   skos:notation "plot_3146c4f80jad1ddx";
   skos:broader :plot_a3935710c883087b;
   skos:broadMatch <http://www.wikidata.org/entity/Q43200>;
-  skos:relatedMatch <http://www.wikidata.org/entity/Q17892> .
-
-:plot_418b146d0caa7dnm a skos:Concept;
-  skos:inScheme <https://w3id.org/sappho-digital/vocab>;
-  skos:prefLabel "Sappho-Stoff mit Fokus auf Sappho als Pädophile"@de;
-  skos:notation "plot_418b146d0caa7dnm";
-  skos:broader :plot_a3935710c883087b;
-  skos:broadMatch <http://www.wikidata.org/entity/Q8388>;
   skos:relatedMatch <http://www.wikidata.org/entity/Q17892> .
 
 :plot_914fc268bcaq7dlc a skos:Concept;
