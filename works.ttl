@@ -9999,12 +9999,14 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/place/place_3d8dbe04> a ecrm:E53_Place ;
     rdfs:label "Bordenau"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_d4b14eee> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q893404,Q100636524,Q7014> .
+    rdfs:comment "52.4583, 9.48056"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q893404> .
 
 <https://sappho-digital.com/place/place_43424d20> a ecrm:E53_Place ;
     rdfs:label "Lauenburg"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_d6f2dec9> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q492380,Q1055> .
+    rdfs:comment "53.375833333333, 10.558888888889"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q492380> .
 
 <https://sappho-digital.com/place/place_49b1f0b4> a ecrm:E53_Place ;
     rdfs:label "Burghausen"@de ;
@@ -10033,7 +10035,8 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/place/place_5d522693> a ecrm:E53_Place ;
     rdfs:label "Breslau"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_ee6c648c> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1799,Q214640> .
+    rdfs:comment "51.11, 17.0325"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1799> .
 
 <https://sappho-digital.com/place/place_6a607ac8> a ecrm:E53_Place ;
     rdfs:label "Hildesheim"@de ;
@@ -10097,11 +10100,14 @@ Philosophen zu Sanssouci"""@en ;
 
 <https://sappho-digital.com/place/place_80611954> a ecrm:E53_Place ;
     rdfs:label "Basel"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_51d7e8c7> .
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_51d7e8c7> ;
+    rdfs:comment "47.560555555556, 7.5905555555556"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q78> .
 
 <https://sappho-digital.com/place/place_80c239e5> a ecrm:E53_Place ;
     rdfs:label "Venedig"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_d4b14eee> .
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_d4b14eee> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q100636524> .
 
 <https://sappho-digital.com/place/place_87bc3115> a ecrm:E53_Place ;
     rdfs:label "Erfurt"@de ;
@@ -10112,7 +10118,8 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/place/place_88de4c35> a ecrm:E53_Place ;
     rdfs:label "Darmstadt"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_c1e2dcfc> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2973,Q3967> .
+    rdfs:comment "49.866666666667, 8.65"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2973> .
 
 <https://sappho-digital.com/place/place_8a388ba2> a ecrm:E53_Place ;
     rdfs:label "Schupfart"@de ;
@@ -10122,7 +10129,9 @@ Philosophen zu Sanssouci"""@en ;
 
 <https://sappho-digital.com/place/place_8c8dfa84> a ecrm:E53_Place ;
     rdfs:label "Neustadt am Rübenberg"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_d4b14eee> .
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_d4b14eee> ;
+    rdfs:comment "52.5055, 9.46358"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q7014> .
 
 <https://sappho-digital.com/place/place_90f29601> a ecrm:E53_Place ;
     rdfs:label "Zagreb"@de ;
@@ -10156,7 +10165,9 @@ Philosophen zu Sanssouci"""@en ;
 
 <https://sappho-digital.com/place/place_9c83551a> a ecrm:E53_Place ;
     rdfs:label "Wien"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_35d14ded> .
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_35d14ded> ;
+    rdfs:comment "48.208333333333336, 16.3725"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1741> .
 
 <https://sappho-digital.com/place/place_9d7aff47> a ecrm:E53_Place ;
     rdfs:label "Weilerswist"@de ;
@@ -10196,7 +10207,9 @@ Philosophen zu Sanssouci"""@en ;
 
 <https://sappho-digital.com/place/place_b32e19b8> a ecrm:E53_Place ;
     rdfs:label "Krefeld"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_a6975d0c> .
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_a6975d0c> ;
+    rdfs:comment "51.333333333333, 6.5666666666667"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2805> .
 
 <https://sappho-digital.com/place/place_b5b32385> a ecrm:E53_Place ;
     rdfs:label "Gießen"@de ;
@@ -10238,7 +10251,9 @@ Philosophen zu Sanssouci"""@en ;
 
 <https://sappho-digital.com/place/place_bf64ca28> a ecrm:E53_Place ;
     rdfs:label "Altdorf"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_874f0958> .
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_874f0958> ;
+    rdfs:comment "49.3875, 11.356944444444"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q435295> .
 
 <https://sappho-digital.com/place/place_bfa9fbd2> a ecrm:E53_Place ;
     rdfs:label "Weßling"@de ;
@@ -10352,7 +10367,9 @@ Philosophen zu Sanssouci"""@en ;
 
 <https://sappho-digital.com/place/place_ff4aadf1> a ecrm:E53_Place ;
     rdfs:label "Heilbronn"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_07f35f00> .
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_07f35f00> ;
+    rdfs:comment "49.140428, 9.217953"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q715> .
 
 <https://sappho-digital.com/place/place_ff6ed291> a ecrm:E53_Place ;
     rdfs:label "Kempten"@de ;
@@ -23639,7 +23656,9 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
 <https://sappho-digital.com/place/place_64f9e1da> a ecrm:E53_Place ;
     rdfs:label "Rostock"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_5e905991>,
-        <https://sappho-digital.com/manifestation_creation/bibl_b60786f5> .
+        <https://sappho-digital.com/manifestation_creation/bibl_b60786f5> ;
+    rdfs:comment "54.083333333333, 12.133333333333"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2861> .
 
 <https://sappho-digital.com/place/place_6ea98adb> a ecrm:E53_Place ;
     rdfs:label "Hannover"@de ;
@@ -23716,8 +23735,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_a45420a4>,
         <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6> ;
     rdfs:comment "51.48277777777778, 11.969722222222222"@en ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2814>,
-        <https://www.wikidata.org/entity/Q2814,Q2079> .
+    owl:sameAs <https://www.wikidata.org/entity/Q2814> .
 
 <https://sappho-digital.com/place/place_ec6f644a> a ecrm:E53_Place ;
     rdfs:label "Heidelberg"@de ;
@@ -26559,9 +26577,10 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_0eed1803>,
         <https://sappho-digital.com/manifestation_creation/bibl_70c830f9>,
         <https://sappho-digital.com/manifestation_creation/bibl_7cfe62ea> ;
-    rdfs:comment "50.11055555555556, 8.682222222222222"@en ;
+    rdfs:comment "50.11055555555556, 8.682222222222222"@en,
+        "51.11, 17.0325"@en ;
     owl:sameAs <https://www.wikidata.org/entity/Q1794>,
-        <https://www.wikidata.org/entity/Q1799,Q1794> .
+        <https://www.wikidata.org/entity/Q1799> .
 
 <https://sappho-digital.com/place/place_81bb34f0> a ecrm:E53_Place ;
     rdfs:label "Freiburg i. Br."@de ;
@@ -26569,8 +26588,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_32dd4ca1>,
         <https://sappho-digital.com/manifestation_creation/bibl_35d14ded> ;
     rdfs:comment "47.995, 7.85"@en ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2833>,
-        <https://www.wikidata.org/entity/Q2833,Q78,Q1741> .
+    owl:sameAs <https://www.wikidata.org/entity/Q2833> .
 
 <https://sappho-digital.com/place/place_907e6aad> a ecrm:E53_Place ;
     rdfs:label "Linz"@de ;
@@ -26586,8 +26604,10 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6>,
         <https://sappho-digital.com/manifestation_creation/bibl_c1e2dcfc>,
         <https://sappho-digital.com/manifestation_creation/bibl_c4cabf0c> ;
-    rdfs:comment "49.866666666667, 8.65"@en ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2973> .
+    rdfs:comment "49.866666666667, 8.65"@en,
+        "50.428611111111, 7.4613888888889"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2973>,
+        <https://www.wikidata.org/entity/Q3967> .
 
 <https://sappho-digital.com/place/place_b3271180> a ecrm:E53_Place ;
     rdfs:label "Ludwigslust"@de,
@@ -26595,8 +26615,10 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_3ee6f25d>,
         <https://sappho-digital.com/manifestation_creation/bibl_5e905991>,
         <https://sappho-digital.com/manifestation_creation/bibl_b60786f5> ;
-    rdfs:comment "53.8925, 11.465"@en ;
-    owl:sameAs <https://www.wikidata.org/entity/Q7030> .
+    rdfs:comment "53.33325, 11.50235"@en,
+        "53.8925, 11.465"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q156119>,
+        <https://www.wikidata.org/entity/Q7030> .
 
 <https://sappho-digital.com/place/place_bac82a99> a ecrm:E53_Place ;
     rdfs:label "Bern"@de ;
@@ -32401,9 +32423,10 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_a3400322>,
         <https://sappho-digital.com/manifestation_creation/bibl_b60786f5>,
         <https://sappho-digital.com/manifestation_creation/bibl_c010fcbd> ;
-    rdfs:comment "54.083333333333, 12.133333333333"@en ;
+    rdfs:comment "53.8925, 11.465"@en,
+        "54.083333333333, 12.133333333333"@en ;
     owl:sameAs <https://www.wikidata.org/entity/Q2861>,
-        <https://www.wikidata.org/entity/Q7030,Q2861,Q156119> .
+        <https://www.wikidata.org/entity/Q7030> .
 
 <https://sappho-digital.com/place/place_77b5ece6> a ecrm:E53_Place ;
     rdfs:label "Mannheim"@de ;
@@ -32421,10 +32444,10 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_1c25519e>,
         <https://sappho-digital.com/manifestation_creation/bibl_31a193b7>,
         <https://sappho-digital.com/manifestation_creation/bibl_51d7e8c7> ;
-    rdfs:comment "47.560555555556, 7.5905555555556"@en ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2865,Q78>,
-        <https://www.wikidata.org/entity/Q78>,
-        <https://www.wikidata.org/entity/Q78,Q1741> .
+    rdfs:comment "47.560555555556, 7.5905555555556"@en,
+        "51.315777777778, 9.4979166666667"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2865>,
+        <https://www.wikidata.org/entity/Q78> .
 
 <https://sappho-digital.com/place/place_a3670732> a ecrm:E53_Place ;
     rdfs:label "Gotha"@de ;
@@ -40042,8 +40065,12 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_85b1397b>,
         <https://sappho-digital.com/manifestation_creation/bibl_d791125d>,
         <https://sappho-digital.com/manifestation_creation/bibl_ee6c648c> ;
-    rdfs:comment "51.11, 17.0325"@en ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1799> .
+    rdfs:comment "50.11055555555556, 8.682222222222222"@en,
+        "50.86666666666667, 17.466666666666665"@en,
+        "51.11, 17.0325"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1794>,
+        <https://www.wikidata.org/entity/Q1799>,
+        <https://www.wikidata.org/entity/Q214640> .
 
 <https://sappho-digital.com/place/place_c35eca96> a ecrm:E53_Place ;
     rdfs:label "Berlin"@de,
@@ -40932,8 +40959,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_b2df6cd0>,
         <https://sappho-digital.com/manifestation_creation/bibl_f75c9af2> ;
     rdfs:comment "51.22555555555556, 6.776666666666666"@en ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1718>,
-        <https://www.wikidata.org/entity/Q1718,Q2805> .
+    owl:sameAs <https://www.wikidata.org/entity/Q1718> .
 
 <https://sappho-digital.com/publisher/publisher_3ae6012a> a ecrm:E74_Group ;
     rdfs:label "Carl Ernst Bohn"@de ;
@@ -41168,8 +41194,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_c7994627>,
         <https://sappho-digital.com/manifestation_creation/bibl_e3da4bfc> ;
     rdfs:comment "49.45388888888889, 11.0775"@en ;
-    owl:sameAs <https://www.wikidata.org/entity/Q2090>,
-        <https://www.wikidata.org/entity/Q2090,Q435295> .
+    owl:sameAs <https://www.wikidata.org/entity/Q2090> .
 
 <https://sappho-digital.com/timespan/1904> a ecrm:E52_Time-Span ;
     rdfs:label "1904"^^xsd:gYear ;
@@ -41805,8 +41830,13 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_edbf9cc5>,
         <https://sappho-digital.com/manifestation_creation/bibl_f38327b8>,
         <https://sappho-digital.com/manifestation_creation/bibl_fb68007d> ;
-    rdfs:comment "50.11055555555556, 8.682222222222222"@en ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1794> .
+    rdfs:comment "50.11055555555556, 8.682222222222222"@en,
+        "51.339444, 12.371111"@en,
+        "51.33962, 12.37129"@en,
+        "51.3406321, 12.3747329"@en,
+        "51.35, 12.3833"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1794>,
+        <https://www.wikidata.org/entity/Q2079> .
 
 <https://sappho-digital.com/place/place_06ec7d19> a ecrm:E53_Place ;
     rdfs:label "München"@de,
@@ -41849,8 +41879,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_f4da59f4>,
         <https://sappho-digital.com/manifestation_creation/bibl_ff53d330> ;
     rdfs:comment "48.1375, 11.575"@en ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1726>,
-        <https://www.wikidata.org/entity/Q1726,Q2079> .
+    owl:sameAs <https://www.wikidata.org/entity/Q1726> .
 
 <https://sappho-digital.com/place/place_700b43a2> a ecrm:E53_Place ;
     rdfs:label "Stuttgart"@de ;
@@ -41891,8 +41920,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_f0d806e8>,
         <https://sappho-digital.com/manifestation_creation/bibl_ff22fb94> ;
     rdfs:comment "48.7775, 9.18"@en ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1022>,
-        <https://www.wikidata.org/entity/Q1022,Q715> .
+    owl:sameAs <https://www.wikidata.org/entity/Q1022> .
 
 <https://sappho-digital.com/manifestation_creation/bibl_574806a3> a lrmoo:F30_Manifestation_Creation ;
     rdfs:label "Manifestation creation of Muse, die zehnte. Antworten auf Sappho von Mytilene"@en ;
@@ -42117,8 +42145,10 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_fb54feb7>,
         <https://sappho-digital.com/manifestation_creation/bibl_fd81a760>,
         <https://sappho-digital.com/manifestation_creation/bibl_fe2b96a9> ;
-    rdfs:comment "48.208333333333336, 16.3725"@en ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1741> .
+    rdfs:comment "47.560555555556, 7.5905555555556"@en,
+        "48.208333333333336, 16.3725"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1741>,
+        <https://www.wikidata.org/entity/Q78> .
 
 <https://sappho-digital.com/manifestation/bibl_def73d2f> a lrmoo:F3_Manifestation ;
     rdfs:label "Dichterin im Fokus: Sappho"@de ;
@@ -42463,9 +42493,10 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_f75c9af2>,
         <https://sappho-digital.com/manifestation_creation/bibl_fa67f68f>,
         <https://sappho-digital.com/manifestation_creation/bibl_fc4d31ad> ;
-    rdfs:comment "52.516666666667, 13.383333333333"@en ;
-    owl:sameAs <https://www.wikidata.org/entity/Q64>,
-        <https://www.wikidata.org/entity/Q64,Q393> .
+    rdfs:comment "52.516666666667, 13.383333333333"@en,
+        "53.424722222222, 14.555277777778"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q393>,
+        <https://www.wikidata.org/entity/Q64> .
 
 <https://sappho-digital.com/place/place_efeaa516> a ecrm:E53_Place ;
     rdfs:label "Frankfurt a. M."@de,
@@ -42585,11 +42616,12 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_fe8b2f70>,
         <https://sappho-digital.com/manifestation_creation/bibl_fed3a965>,
         <https://sappho-digital.com/manifestation_creation/bibl_jj152bj6> ;
-    rdfs:comment "51.339444, 12.371111"@en,
+    rdfs:comment "50.11055555555556, 8.682222222222222"@en,
+        "51.339444, 12.371111"@en,
         "51.33962, 12.37129"@en,
         "51.3406321, 12.3747329"@en,
         "51.35, 12.3833"@en ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1794,Q2079>,
+    owl:sameAs <https://www.wikidata.org/entity/Q1794>,
         <https://www.wikidata.org/entity/Q2079> .
 
 <https://sappho-digital.com/genre/Prosa> a ecrm:E55_Type ;
