@@ -57,7 +57,7 @@
                     <title type="text">Faon, Nireus, hernach Saffo, zuletzt noch Anakreon</title>
                     <date type="created" notBefore="1789" notAfter="1793">1789–1793</date>
                     <date type="published" when="1796">1796</date>
-                    <bibl xml:id="bibl_19ed404e">
+                    <bibl xml:id="bibl_19ed404e" ref="https://www.wikidata.org/entity/Q120256383">
                         <title type="work">C. M. Wielands sämmtliche Werke, Bd. 25: Göttergespräche. Gespräche im Elysium</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q154010" xml:id="author_7ea2d8de">Christoph Martin Wieland</author>
@@ -387,7 +387,7 @@
                 <bibl xml:id="bibl_e745799e">
                     <title type="text">Sappho. Drama in fünf Akten und einem Vor- und Nachspiel mit Berücksichtigung geschichtlicher und legendärer Züge aus Sapphos Leben</title>
                     <date type="published" when="1951">1951</date>
-                    <bibl xml:id="bibl_54cf33e3">
+                    <bibl xml:id="bibl_54cf33e3" ref="https://www.wikidata.org/entity/Q120198534">
                         <title type="work">Sappho. Orpheus und Eurydike. Dramatische Dichtungen</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q120198541" xml:id="author_55676bb1">Maria Modena [d. i. Erna Kreis-Weber]</author>
@@ -414,8 +414,8 @@
                 <bibl ref="https://www.wikidata.org/entity/Q120198447" xml:id="bibl_a53d809b">
                     <title type="text">Sappho und alle die danach kamen</title>
                     <date type="published" when="1978">1978</date>
-                    <author ref="https://www.wikidata.org/entity/Q120198457,Q112813243" xml:id="author_34fd5b25">Mara Krauss</author>
-                    <author>Lesbentheater München</author>
+                    <author ref="https://www.wikidata.org/entity/Q120198457" xml:id="author_34fd5b25">Mara Krauss</author>
+                    <author ref="https://www.wikidata.org/entity/Q112813243">Lesbentheater München</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q113299315" xml:id="publisher_0d69d285">come out lesbenverlag</publisher>

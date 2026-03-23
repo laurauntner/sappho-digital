@@ -235,7 +235,14 @@
                                                 <td class="export-only">
                                                   <xsl:for-each select="tei:author">
                                                   <xsl:if test="@ref">
-                                                  <xsl:value-of select="@ref"/>
+                                                  <xsl:value-of select="
+                                                                    string-join(
+                                                                    for $p in tei:pubPlace[@ref]
+                                                                    return
+                                                                        $p/@ref,
+                                                                    ', '
+                                                                    )
+                                                                    "/>
                                                   <xsl:if test="position() != last()">, </xsl:if>
                                                   </xsl:if>
                                                   </xsl:for-each>
@@ -286,7 +293,14 @@
                                                 <td class="export-only">
                                                   <xsl:for-each select="tei:pubPlace">
                                                   <xsl:if test="@ref">
-                                                  <xsl:value-of select="@ref"/>
+                                                  <xsl:value-of select="
+                                                                    string-join(
+                                                                    for $p in tei:pubPlace[@ref]
+                                                                    return
+                                                                        $p/@ref,
+                                                                    ', '
+                                                                    )
+                                                                    "/>
                                                   <xsl:if test="position() != last()">, </xsl:if>
                                                   </xsl:if>
                                                   </xsl:for-each>
@@ -308,7 +322,14 @@
                                                 <td class="export-only">
                                                   <xsl:for-each select="tei:publisher">
                                                   <xsl:if test="@ref">
-                                                  <xsl:value-of select="@ref"/>
+                                                  <xsl:value-of select="
+                                                                    string-join(
+                                                                    for $p in tei:pubPlace[@ref]
+                                                                    return
+                                                                        $p/@ref,
+                                                                    ', '
+                                                                    )
+                                                                    "/>
                                                   <xsl:if test="position() != last()">, </xsl:if>
                                                   </xsl:if>
                                                   </xsl:for-each>

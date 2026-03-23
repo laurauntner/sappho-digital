@@ -318,6 +318,8 @@
     <xsl:template match="/">
         <xsl:for-each-group select="//tei:*[@xml:id]" group-by="@xml:id">
             <xsl:variable name="id" select="current-grouping-key()"/>
+            <xsl:variable name="all-refs"
+                select="current-group()/@ref[normalize-space()]"/>
             <xsl:variable name="label">
                 <xsl:choose>
                     <xsl:when test="self::tei:bibl">
@@ -342,8 +344,7 @@
                         <xsl:call-template name="html_head">
                             <xsl:with-param name="html_title" select="$label"/>
                         </xsl:call-template>
-                        <xsl:if
-                            test="(@ref and (self::tei:author or self::tei:bibl or self::tei:pubPlace))">
+                        <xsl:if test="exists($all-refs) and (self::tei:author or self::tei:bibl or self::tei:pubPlace)">
                             <script src="js/bibl-entities.js" defer="defer"/>
                         </xsl:if>
                     </head>
@@ -351,8 +352,15 @@
 
                         <!-- wikidata ids -->
                         <xsl:attribute name="data-wikidata">
-                            <xsl:value-of select="substring-after(@ref, 'entity/')"/>
+                            <xsl:value-of select="
+                                string-join(
+                                for $r in $all-refs
+                                return substring-after($r, 'entity/'),
+                                ' '
+                                )
+                                "/>
                         </xsl:attribute>
+                        
 
                         <div class="hfeed site" id="page">
                             <xsl:call-template name="nav_bar"/>

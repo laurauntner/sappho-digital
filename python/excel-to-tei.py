@@ -190,16 +190,19 @@ def generate_tei(df_filtered, title_text):
 
         # Enthaltene Werke
         work_titles = [row["Enthalten in"].strip()] if row["Enthalten in"].strip() else []
+        work_qid = row["Hauptwerk QID"].strip() if "Hauptwerk QID" in row else ""
         work_ids = [t.strip() for t in row["Interne Hauptwerk-ID"].split(",") if t.strip()]
         for i, title_text in enumerate(work_titles):
             work_bibl = ET.Element("bibl")
             if i < len(work_ids):
                 work_bibl.attrib["xml:id"] = work_ids[i]
+            if work_qid:
+                work_bibl.attrib["ref"] = f"https://www.wikidata.org/entity/{work_qid}"
             ET.SubElement(work_bibl, "title", {"type": "work"}).text = title_text
             bibl.append(work_bibl)
 
         authors = [a.strip() for a in row["Autor_in"].split(" und ") if a.strip()]
-        qids = [q.strip() for q in row["Autor_in QID"].split(" und ")] if "Autor_in QID" in row else []
+        qids = [q.strip() for q in row["Autor_in QID"].split(",") if q.strip()] if "Autor_in QID" in row else []
         ids = [i.strip() for i in row["Interne Autor_in-ID"].split(",") if i.strip()]
 
         for i, author in enumerate(authors):
@@ -214,23 +217,25 @@ def generate_tei(df_filtered, title_text):
         if row["Gattung"].strip():
             ET.SubElement(bibl, "note", {"type": "genre"}).text = row["Gattung"].strip()
 
-        for i, place in enumerate(row["Publikationsort/Aufführungsort"].split("/")):
-            place = place.strip()
-            qid = row["Publikationsort QID"].split("/")[i].strip() if i < len(row["Publikationsort QID"].split("/")) else ""
+        place_texts = [p.strip() for p in row["Publikationsort/Aufführungsort"].split("/") if p.strip()]
+        place_qids = [q.strip() for q in row["Publikationsort QID"].split(",") if q.strip()]
+        place_ids = [t.strip() for t in row["Interne Ort-ID"].split(",") if t.strip()]
+        for i, place in enumerate(place_texts):
+            qid = place_qids[i] if i < len(place_qids) else ""
             elem = create_element_with_ref("pubPlace", place, qid)
-            ids = [t.strip() for t in row["Interne Ort-ID"].split(",") if t.strip()]
-            if elem is not None and i < len(ids):
-                elem.attrib["xml:id"] = ids[i]
+            if elem is not None and i < len(place_ids):
+                elem.attrib["xml:id"] = place_ids[i]
             if elem is not None:
                 bibl.append(elem)
 
-        for i, verlag in enumerate(row["Verlag"].split("/")):
-            verlag = verlag.strip()
-            qid = row["Verlag QID"].split("/")[i].strip() if i < len(row["Verlag QID"].split("/")) else ""
+        verlag_texts = [v.strip() for v in row["Verlag"].split("/") if v.strip()]
+        verlag_qids = [q.strip() for q in row["Verlag QID"].split(",") if q.strip()]
+        verlag_ids = [t.strip() for t in row["Interne Verlag-ID"].split(",") if t.strip()]
+        for i, verlag in enumerate(verlag_texts):
+            qid = verlag_qids[i] if i < len(verlag_qids) else ""
             elem = create_element_with_ref("publisher", verlag, qid)
-            ids = [t.strip() for t in row["Interne Verlag-ID"].split(",") if t.strip()]
-            if elem is not None and i < len(ids):
-                elem.attrib["xml:id"] = ids[i]
+            if elem is not None and i < len(verlag_ids):
+                elem.attrib["xml:id"] = verlag_ids[i]
             if elem is not None:
                 bibl.append(elem)
 
