@@ -306,6 +306,23 @@
       </xsl:for-each>
     </xsl:variable>
 
+
+    <xsl:variable name="stat10-int31hist-json" as="xs:string*">
+      <xsl:for-each select="statistics/stat10AvgRelations/int31Hist/bucket">
+        <xsl:sequence
+          select="concat('{&quot;label&quot;:&quot;', @label, '&quot;,&quot;sappho&quot;:', @sappho, ',&quot;reception&quot;:', @reception, '}')"
+        />
+      </xsl:for-each>
+    </xsl:variable>
+
+    <xsl:variable name="stat10-sharedhist-json" as="xs:string*">
+      <xsl:for-each select="statistics/stat10AvgRelations/sharedHist/bucket">
+        <xsl:sequence
+          select="concat('{&quot;label&quot;:&quot;', @label, '&quot;,&quot;sappho&quot;:', @sappho, ',&quot;reception&quot;:', @reception, '}')"
+        />
+      </xsl:for-each>
+    </xsl:variable>
+
     <xsl:variable name="json" as="xs:string" select="
         concat(
         '{',
@@ -351,6 +368,16 @@
         '&quot;int31TopNodes&quot;:{',
         '&quot;nTotal&quot;:', (statistics/int31TopNodes/@nTotal, '0')[1], ',',
         '&quot;nodes&quot;:[', string-join($int31-topnodes-json, ','), ']',
+        '},',
+        '&quot;stat10AvgRelations&quot;:{',
+        '&quot;avgSapphoInt31&quot;:', (statistics/stat10AvgRelations/@avgSapphoInt31, '0')[1], ',',
+        '&quot;avgReceptionInt31&quot;:', (statistics/stat10AvgRelations/@avgReceptionInt31, '0')[1], ',',
+        '&quot;avgSapphoShared&quot;:', (statistics/stat10AvgRelations/@avgSapphoShared, '0')[1], ',',
+        '&quot;avgReceptionShared&quot;:', (statistics/stat10AvgRelations/@avgReceptionShared, '0')[1], ',',
+        '&quot;nSappho&quot;:', (statistics/stat10AvgRelations/@nSappho, '0')[1], ',',
+        '&quot;nReception&quot;:', (statistics/stat10AvgRelations/@nReception, '0')[1], ',',
+        '&quot;int31Hist&quot;:[', string-join($stat10-int31hist-json, ','), '],',
+        '&quot;sharedHist&quot;:[', string-join($stat10-sharedhist-json, ','), ']',
         '}',
         '}'
         )"/>
@@ -413,6 +440,10 @@
                     </li>
                     <li>
                       <a href="#stat9-wrap">Intertextuelle Beziehungen und Textähnlichkeiten</a>
+                    </li>
+                    <li>
+                      <a href="#stat10-wrap">Durchschnittliche Relationen und gemeinsame
+                        Phänomene</a>
                     </li>
                   </ol>
                 </nav>
@@ -689,6 +720,14 @@
                     </div>
                   </div>
                   <div id="stat9-cards-wrap"/>
+                </div>
+                <div class="stats-wrap" id="stat10-wrap">
+                  <p class="stats-subtitle">Statistik 10: Durchschnittliche intertextuelle
+                    Beziehungen und gemeinsame Phänomene</p>
+                  <p class="stats-desc">Wie viele intertextuelle Relationen verbinden einen Text im
+                    Durchschnitt mit anderen? Und wie viele Phänomene teilt ein Text im Schnitt mit
+                    seinen intertextuell verbundenen Texten?</p>
+                  <div id="stat10-wrap-inner"/>
                 </div>
               </div>
             </div>

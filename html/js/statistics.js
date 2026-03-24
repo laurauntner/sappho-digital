@@ -2504,3 +2504,181 @@ function initInt31CoOccurrence() {
 }
 
 document.addEventListener('DOMContentLoaded', initInt31CoOccurrence);
+
+// ── Statistik 10: Ø Intertextuelle Relationen & gemeinsame Phänomene ─────────
+
+let _stat10Charts = {};
+
+function initStat10() {
+    const d = DATA.stat10AvgRelations;
+    if (!d) return;
+
+    const wrap = document.getElementById('stat10-wrap-inner');
+    if (!wrap) return;
+
+    // ── Kennzahlen-Karten ────────────────────────────────────────────────────
+    const kpiGrid = document.createElement('div');
+    kpiGrid.style.cssText =
+        'display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));' +
+        'gap:1rem;margin-bottom:1.5rem';
+
+    const kpiData = [
+        {
+            label:  'Ø Intertextuelle Relationen',
+            sublbl: 'pro Sappho-Fragment',
+            value:  d.avgSapphoInt31,
+            color:  '#5e17eb',
+            n:      d.nSappho,
+        },
+        {
+            label:  'Ø Intertextuelle Relationen',
+            sublbl: 'pro Rezeptionszeugnis',
+            value:  d.avgReceptionInt31,
+            color:  '#6b7280',
+            n:      d.nReception,
+        },
+        {
+            label:  'Ø gemeinsame Phänomene',
+            sublbl: 'pro Sappho-Fragment',
+            value:  d.avgSapphoShared,
+            color:  '#5e17eb',
+            n:      d.nSappho,
+        },
+        {
+            label:  'Ø gemeinsame Phänomene',
+            sublbl: 'pro Rezeptionszeugnis',
+            value:  d.avgReceptionShared,
+            color:  '#6b7280',
+            n:      d.nReception,
+        },
+    ];
+
+    kpiData.forEach(k => {
+        const card = document.createElement('div');
+        card.style.cssText =
+            'border:1px solid #e5e7eb;border-radius:8px;padding:1rem 1.25rem;' +
+            'text-align:center;background:#fff';
+        card.innerHTML =
+            `<div style="font-size:.78rem;font-weight:700;color:#6b7280;` +
+            `text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem">${k.label}</div>` +
+            `<div style="font-size:2rem;font-weight:700;color:${k.color};line-height:1.1">${k.value}</div>` +
+            `<div style="font-size:.78rem;color:#9ca3af;margin-top:.25rem">${k.sublbl}</div>` +
+            `<div style="font-size:.72rem;color:#d1d5db;margin-top:.1rem">n = ${k.n}</div>`;
+        kpiGrid.appendChild(card);
+    });
+    wrap.appendChild(kpiGrid);
+
+    // ── Legende ───────────────────────────────────────────────────────────────
+    const legend = document.createElement('div');
+    legend.className = 'legend';
+    legend.innerHTML =
+        `<span><span class="dot dot-s"></span>Sappho-Fragmente (n=${d.nSappho})</span>` +
+        `<span><span class="dot dot-r"></span>Rezeptionszeugnisse (n=${d.nReception})</span>`;
+    wrap.appendChild(legend);
+
+    // ── Hilfsfunktion: grouped bar chart ─────────────────────────────────────
+    function renderGroupedBar(canvasId, histData, title, xLabel) {
+        const labels = histData.map(b => b.label);
+        const sapData = histData.map(b => b.sappho);
+        const recData = histData.map(b => b.reception);
+        const maxVal  = Math.max(...sapData, ...recData, 1);
+        const maxY    = Math.ceil(maxVal * 1.1 / 5) * 5 || 10;
+
+        const ctx = document.getElementById(canvasId).getContext('2d');
+        _stat10Charts[canvasId] = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels,
+                datasets: [
+                    {
+                        label: `Sappho-Fragmente (n=${d.nSappho})`,
+                        data:  sapData,
+                        backgroundColor: C.s,
+                        borderColor:     C.sLine,
+                        borderWidth: 1.5,
+                        borderRadius: 3,
+                    },
+                    {
+                        label: `Rezeptionszeugnisse (n=${d.nReception})`,
+                        data:  recData,
+                        backgroundColor: C.r,
+                        borderColor:     C.rLine,
+                        borderWidth: 1.5,
+                        borderRadius: 3,
+                    },
+                ],
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    title: {
+                        display: !!title,
+                        text: title,
+                        font: { family: 'Geist, system-ui', size: 13, weight: '600' },
+                        color: '#374151',
+                        padding: { bottom: 8 },
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: ctx2 => {
+                                const isSap  = ctx2.datasetIndex === 0;
+                                const total  = isSap ? d.nSappho : d.nReception;
+                                const name   = isSap ? 'Sappho-Fragmente' : 'Rezeptionszeugnisse';
+                                const count  = ctx2.parsed.y;
+                                const pct    = total > 0 ? (count / total * 100).toFixed(1) : '0.0';
+                                return ` ${name}: ${count} ${count === 1 ? 'Text' : 'Texte'} (${pct}%)`;
+                            },
+                        },
+                    },
+                },
+                scales: {
+                    x: {
+                        title: {
+                            display: !!xLabel,
+                            text: xLabel,
+                            font: { family: 'Geist, system-ui', size: 11 },
+                            color: '#6b7280',
+                        },
+                        ticks: { font: { family: 'Geist, system-ui', size: 11 } },
+                        grid:  { display: false },
+                    },
+                    y: {
+                        min: 0,
+                        max: maxY,
+                        title: {
+                            display: true,
+                            text: 'Anzahl Texte',
+                            font: { family: 'Geist, system-ui', size: 11 },
+                            color: '#6b7280',
+                        },
+                        ticks: { font: { family: 'Geist, system-ui', size: 11 }, stepSize: 5 },
+                        grid:  { color: 'rgba(0,0,0,0.06)' },
+                    },
+                },
+            },
+        });
+    }
+
+    // INT31-Histogramm
+    const int31Section = document.createElement('div');
+    int31Section.style.marginBottom = '2rem';
+    int31Section.innerHTML =
+        `<p class="stats-subtitle stats-subtitle-sm">` +
+        `Anzahl intertextueller Relationen pro Text</p>` +
+        `<div class="chart-wrap"><canvas id="stat10-int31-hist" style="height:260px"></canvas></div>`;
+    wrap.appendChild(int31Section);
+    renderGroupedBar('stat10-int31-hist', d.int31Hist,  '', 'Anzahl intertextueller Relationen');
+
+    // Shared-Phänomene-Histogramm
+    const sharedSection = document.createElement('div');
+    sharedSection.innerHTML =
+        `<p class="stats-subtitle stats-subtitle-sm">` +
+        `Durchschnittliche Anzahl gemeinsamer Phänomene pro Text</p>` +
+        `<div class="chart-wrap"><canvas id="stat10-shared-hist" style="height:260px"></canvas></div>`;
+    wrap.appendChild(sharedSection);
+    renderGroupedBar('stat10-shared-hist', d.sharedHist, '', 'Ø gemeinsame Phänomene');
+}
+
+document.addEventListener('DOMContentLoaded', initStat10);

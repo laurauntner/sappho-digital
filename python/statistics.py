@@ -993,6 +993,101 @@ def main(ttl_path: str, xml_out: str) -> None:
 
     print(f"  INT31TopNodes: Top-{TOP_PER_TYPE} je relType in XML geschrieben", file=sys.stderr)
 
+    # ── Statistik 10: Durchschnittliche intertextuelle Beziehungen & gemeinsame Phänomene ──
+
+    f2_to_int31: dict[URIRef, set[URIRef]] = defaultdict(set)
+    for node_uri in int31_to_feats:
+        related_all = [obj for _, _, obj in g.triples((node_uri, R24_hasRelatedEntity, None))]
+        for obj in related_all:
+            if "/textpassage/" not in str(obj).lower() and obj in (sappho_with_act | reception_with_act):
+                f2_to_int31[obj].add(node_uri)
+
+    sappho_int31_counts    = [len(f2_to_int31.get(f2, set())) for f2 in sappho_with_act]
+    reception_int31_counts = [len(f2_to_int31.get(f2, set())) for f2 in reception_with_act]
+
+    avg_sappho_int31    = round(sum(sappho_int31_counts)    / len(sappho_int31_counts),    2) if sappho_int31_counts    else 0.0
+    avg_reception_int31 = round(sum(reception_int31_counts) / len(reception_int31_counts), 2) if reception_int31_counts else 0.0
+
+    def make_histogram(counts: list, buckets: list) -> list:
+        result = []
+        for lo, hi in buckets:
+            if hi is None:
+                n = sum(1 for c in counts if c >= lo)
+            else:
+                n = sum(1 for c in counts if lo <= c < hi)
+            result.append(n)
+        return result
+
+    INT31_BUCKETS = [(0,10),(10,25),(25,50),(50,100),(100,150),(150,200),(200,None)]
+
+    sappho_int31_hist    = make_histogram(sappho_int31_counts,    INT31_BUCKETS)
+    reception_int31_hist = make_histogram(reception_int31_counts, INT31_BUCKETS)
+
+    f2_shared_phenom_counts: dict[URIRef, list[int]] = defaultdict(list)
+    for node_uri, feats in int31_to_feats.items():
+        related_f2s = [
+            obj for _, _, obj in g.triples((node_uri, R24_hasRelatedEntity, None))
+            if "/textpassage/" not in str(obj).lower()
+            and obj in (sappho_with_act | reception_with_act)
+        ]
+        n_feats = len(feats)
+        for f2 in related_f2s:
+            f2_shared_phenom_counts[f2].append(n_feats)
+
+    def avg_shared(f2_set):
+        vals = []
+        for f2 in f2_set:
+            counts_list = f2_shared_phenom_counts.get(f2, [])
+            if counts_list:
+                vals.append(sum(counts_list) / len(counts_list))
+        return round(sum(vals) / len(vals), 2) if vals else 0.0
+
+    avg_sappho_shared    = avg_shared(sappho_with_act)
+    avg_reception_shared = avg_shared(reception_with_act)
+
+    sappho_shared_hist_vals    = []
+    reception_shared_hist_vals = []
+    for f2 in sappho_with_act:
+        lst = f2_shared_phenom_counts.get(f2, [])
+        sappho_shared_hist_vals.append(round(sum(lst)/len(lst)) if lst else 0)
+    for f2 in reception_with_act:
+        lst = f2_shared_phenom_counts.get(f2, [])
+        reception_shared_hist_vals.append(round(sum(lst)/len(lst)) if lst else 0)
+
+    SHARED_BUCKETS = [(0,1),(1,2),(2,3),(3,4),(4,5),(5,None)]
+    sappho_shared_hist    = make_histogram(sappho_shared_hist_vals,    SHARED_BUCKETS)
+    reception_shared_hist = make_histogram(reception_shared_hist_vals, SHARED_BUCKETS)
+
+    print(f"  Stat10 – Ø INT31/Sappho: {avg_sappho_int31}, Ø INT31/Rezeption: {avg_reception_int31}", file=sys.stderr)
+    print(f"  Stat10 – Ø Shared/Sappho: {avg_sappho_shared}, Ø Shared/Rezeption: {avg_reception_shared}", file=sys.stderr)
+
+    # XML
+    stat10_el = ET.SubElement(root_el, "stat10AvgRelations")
+    stat10_el.set("avgSapphoInt31",     str(avg_sappho_int31))
+    stat10_el.set("avgReceptionInt31",  str(avg_reception_int31))
+    stat10_el.set("avgSapphoShared",    str(avg_sappho_shared))
+    stat10_el.set("avgReceptionShared", str(avg_reception_shared))
+    stat10_el.set("nSappho",            str(n_sappho))
+    stat10_el.set("nReception",         str(n_reception))
+
+    int31hist_el = ET.SubElement(stat10_el, "int31Hist")
+    BUCKET_LABELS = ["0–9","10–24","25–49","50–99","100–149","150–199","200+"]
+    for i, (lo, hi) in enumerate(INT31_BUCKETS):
+        b_el = ET.SubElement(int31hist_el, "bucket")
+        b_el.set("label",     BUCKET_LABELS[i])
+        b_el.set("sappho",    str(sappho_int31_hist[i]))
+        b_el.set("reception", str(reception_int31_hist[i]))
+
+    sharedhist_el = ET.SubElement(stat10_el, "sharedHist")
+    SHARED_LABELS = ["0","1","2","3","4","5+"]
+    for i, (lo, hi) in enumerate(SHARED_BUCKETS):
+        b_el = ET.SubElement(sharedhist_el, "bucket")
+        b_el.set("label",     SHARED_LABELS[i])
+        b_el.set("sappho",    str(sappho_shared_hist[i]))
+        b_el.set("reception", str(reception_shared_hist[i]))
+
+    print(f"  Stat10 in XML geschrieben.", file=sys.stderr)
+
     tree = ET.ElementTree(root_el)
     ET.indent(tree, space="  ")
     tree.write(xml_out, encoding="utf-8", xml_declaration=True)
