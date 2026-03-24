@@ -206,17 +206,37 @@ function renderCatOverview() {
 
                 c.save();
 
-                // Farbiger Rahmen um das Label-Feld
-                c.strokeStyle = color;
-                c.lineWidth   = 1.5;
-                c.strokeRect(0.75, top + 1, labelW - 1.5, h - 2);
-
                 // Text
                 c.fillStyle = '#1f2937';
                 c.font = `${FONT_SIZE}px Geist, system-ui, sans-serif`;
-                c.textAlign    = 'right';
+                c.textAlign = 'right';
                 c.textBaseline = 'middle';
+                
                 const x = labelW - 6;
+                const gap = 6;      // Abstand zwischen Punkt und Text
+                const radius = 3;
+                
+                // breiteste Zeile bestimmen
+                const longestLine = lines.reduce((a, b) => (
+                    c.measureText(a).width > c.measureText(b).width ? a : b
+                ), lines[0]);
+                
+                const textWidth = c.measureText(longestLine).width;
+                
+                // linker Anfang des Textes
+                const textLeft = x - textWidth;
+                
+                // Punkt links vor den Text
+                const dotX = textLeft - gap - radius;
+                const dotY = top + h / 2;
+                
+                c.beginPath();
+                c.fillStyle = color;
+                c.arc(dotX, dotY, radius, 0, Math.PI * 2);
+                c.fill();
+                
+                // Text zeichnen
+                c.fillStyle = '#1f2937';
                 if (lines.length === 1) {
                     c.fillText(lines[0], x, top + h / 2);
                 } else {
