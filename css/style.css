@@ -300,6 +300,7 @@ h3 {
 
 .align-left {
     text-align: left;
+    hyphens: auto;
 }
 
 .dataTables_filter {
