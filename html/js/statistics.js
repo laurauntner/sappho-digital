@@ -2682,3 +2682,407 @@ function initStat10() {
 }
 
 document.addEventListener('DOMContentLoaded', initStat10);
+// ══════════════════════════════════════════════════════════════════════════════
+// Statistik 11: Anna Louisa Karsch – Porträt
+// ══════════════════════════════════════════════════════════════════════════════
+
+const ALK_PURPLE      = 'rgba(94,23,235,0.80)';
+const ALK_PURPLE_LINE = '#5e17eb';
+const ALK_GRAY        = 'rgba(107,114,128,0.65)';
+const ALK_GRAY_LINE   = '#6b7280';
+
+let _stat11Charts = {};
+
+function _alkBarH(canvasId, labels, values, color, borderColor, maxX, tooltipFn) {
+    const ctx = document.getElementById(canvasId);
+    if (!ctx) return null;
+    return new Chart(ctx.getContext('2d'), {
+        type: 'bar',
+        data: {
+            labels,
+            datasets: [{
+                data: values,
+                backgroundColor: color,
+                borderColor: borderColor,
+                borderWidth: 2,
+                borderRadius: 2,
+            }],
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: tooltipFn || (ctx2 => ` ${ctx2.parsed.x}`),
+                    },
+                },
+            },
+            scales: {
+                x: {
+                    min: 0,
+                    max: maxX,
+                    ticks: { font: { family: 'Geist, system-ui', size: 11 } },
+                    grid: { color: 'rgba(0,0,0,0.06)' },
+                },
+                y: {
+                    ticks: { font: { family: 'Geist, system-ui', size: 12 }, autoSkip: false },
+                    grid: { display: false },
+                },
+            },
+        },
+    });
+}
+
+function _alkBarV(canvasId, labels, values, color, borderColor) {
+    const ctx = document.getElementById(canvasId);
+    if (!ctx) return null;
+    const maxY = Math.ceil(Math.max(...values, 1) * 1.15 / 2) * 2;
+    return new Chart(ctx.getContext('2d'), {
+        type: 'bar',
+        data: {
+            labels,
+            datasets: [{
+                data: values,
+                backgroundColor: color,
+                borderColor: borderColor,
+                borderWidth: 2,
+                borderRadius: 3,
+            }],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: ctx2 => ` ${ctx2.parsed.y} Werk${ctx2.parsed.y === 1 ? '' : 'e'}`,
+                    },
+                },
+            },
+            scales: {
+                x: {
+                    ticks: { font: { family: 'Geist, system-ui', size: 11 } },
+                    grid: { display: false },
+                },
+                y: {
+                    min: 0,
+                    max: maxY,
+                    title: {
+                        display: true,
+                        text: 'Anzahl Werke',
+                        font: { family: 'Geist, system-ui', size: 11 },
+                        color: '#6b7280',
+                    },
+                    ticks: { font: { family: 'Geist, system-ui', size: 11 }, stepSize: 1, precision: 0 },
+                    grid: { color: 'rgba(0,0,0,0.06)' },
+                },
+            },
+        },
+    });
+}
+
+function initStat11() {
+    const alk = DATA.alk;
+    if (!alk) return;
+
+    const wrap = document.getElementById('stat11-wrap-inner');
+    if (!wrap) return;
+
+    // Globale Feature-Map für Dominanzberechnung (einmal aufbauen)
+    const globalFeatMap = {};
+    if (DATA.categories) {
+        DATA.categories.forEach(cat => {
+            cat.items.forEach(item => {
+                globalFeatMap[item.label] = { n: item.countReception, catKey: cat.key };
+            });
+        });
+    }
+
+    // ── 1. Header-Panel: Foto + Beschreibung ─────────────────────────────────
+    const header = document.createElement('div');
+    header.style.cssText =
+        'display:flex;gap:1.5rem;align-items:flex-start;flex-wrap:wrap;' +
+        'margin-bottom:1.75rem;padding-bottom:1.5rem;border-bottom:1px solid #e5e7eb';
+
+    if (alk.imgUrl) {
+        const imgWrap = document.createElement('div');
+        imgWrap.style.cssText = 'flex:0 0 auto;text-align:center';
+        const img = document.createElement('img');
+        img.src    = alk.imgUrl;
+        img.alt    = alk.name;
+        img.title  = alk.name;
+        img.style.cssText =
+            'width:140px;height:auto;border-radius:6px;' +
+            'box-shadow:0 2px 8px rgba(0,0,0,.15);display:block;margin:0 auto .5rem';
+        const cap = document.createElement('div');
+        cap.style.cssText = 'font-size:.7rem;color:#9ca3af;max-width:140px;line-height:1.3';
+        cap.textContent   = 'Wikimedia Commons';
+        imgWrap.appendChild(img);
+        imgWrap.appendChild(cap);
+        header.appendChild(imgWrap);
+    }
+
+    const bio = document.createElement('div');
+    bio.style.cssText = 'flex:1 1 240px';
+
+    const descEl = document.createElement('p');
+    descEl.style.cssText = 'font-size:.9rem;color:#374151;line-height:1.6;margin:0 0 .75rem';
+    descEl.innerHTML =
+        `Anna Louisa Karsch (1722\u20131791) ist eine bedeutende Lyrikerin des deutschen ` +
+        `18.\u202FJahrhunderts und wurde zu Lebzeiten als \u203adeutsche Sappho\u2039 gefeiert. ` +
+        `Nachweisbar stammen <strong>${alk.nWorks}</strong> Sappho-Rezeptionszeugnisse aus ihrer Feder.`;
+    bio.appendChild(descEl);
+
+    const links = document.createElement('div');
+    links.style.cssText = 'display:flex;gap:.6rem;flex-wrap:wrap';
+    [[alk.wikidata, 'Wikidata', '#5e17eb'],
+     [alk.gnd,      'GND',      '#6b7280']].forEach(([href, lbl, col]) => {
+        if (!href) return;
+        const a = document.createElement('a');
+        a.href   = href;
+        a.target = '_blank';
+        a.rel    = 'noopener';
+        a.style.cssText =
+            `font-size:.78rem;padding:.25rem .65rem;border-radius:4px;` +
+            `background:${col};color:#fff;text-decoration:none;font-weight:600;`;
+        a.textContent = '\u2197 ' + lbl;
+        links.appendChild(a);
+    });
+    bio.appendChild(links);
+    header.appendChild(bio);
+    wrap.appendChild(header);
+
+    // ── 2. KPI-Karten ────────────────────────────────────────────────────────
+    const kpiGrid = document.createElement('div');
+    kpiGrid.style.cssText =
+        'display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));' +
+        'gap:1rem;margin-bottom:1.75rem';
+
+    const kpis = [
+        { label: 'Rezeptionszeugnisse', sublbl: `von ${alk.nReceptionTotal} im Gesamtkorpus`,
+          value: alk.nWorks, color: ALK_PURPLE_LINE },
+        { label: 'Anteil am Gesamtkorpus', sublbl: 'aller analysierten Werke',
+          value: alk.nReceptionTotal > 0
+              ? (alk.nWorks / alk.nReceptionTotal * 100).toFixed(1) + '\u202f%' : '\u2013',
+          color: ALK_PURPLE_LINE },
+        { label: 'Themen',             sublbl: 'distinct', value: (alk.topics   || []).length, color: '#06b6d4' },
+        { label: 'Motive',             sublbl: 'distinct', value: (alk.motifs   || []).length, color: '#8b5cf6' },
+        { label: 'Stoffe',             sublbl: 'distinct', value: (alk.plots    || []).length, color: '#f97316' },
+        { label: 'Personenreferenzen', sublbl: 'distinct', value: (alk.persons  || []).length, color: '#f59e0b' },
+        { label: 'Ortsreferenzen',     sublbl: 'distinct', value: (alk.places   || []).length, color: '#10b981' },
+        { label: 'Rhetorische Topoi',  sublbl: 'distinct', value: (alk.topoi    || []).length, color: '#ef4444' },
+    ];
+
+    kpis.forEach(k => {
+        const card = document.createElement('div');
+        card.style.cssText =
+            'border:1px solid #e5e7eb;border-radius:8px;padding:1rem 1.25rem;' +
+            'text-align:center;background:#fff';
+        card.innerHTML =
+            `<div style="font-size:.72rem;font-weight:700;color:#6b7280;` +
+            `text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem">${k.label}</div>` +
+            `<div style="font-size:2rem;font-weight:700;color:${k.color};line-height:1.1">${k.value}</div>` +
+            `<div style="font-size:.75rem;color:#9ca3af;margin-top:.25rem">${k.sublbl}</div>`;
+        kpiGrid.appendChild(card);
+    });
+    wrap.appendChild(kpiGrid);
+
+    // ── 3. Werke nach Jahrzehnt ───────────────────────────────────────────────
+    if (alk.decadesDist && alk.decadesDist.length > 0) {
+        const sec = document.createElement('div');
+        sec.style.marginBottom = '1.75rem';
+        const knownDecades = alk.decadesDist.filter(d => d.decade !== 'unbekannt');
+        const unkDecade    = alk.decadesDist.find(d => d.decade === 'unbekannt');
+        const dLabels = knownDecades.map(d => d.decade + 'er');
+        const dValues = knownDecades.map(d => d.n);
+        if (unkDecade) { dLabels.push('unbekannt'); dValues.push(unkDecade.n); }
+        sec.innerHTML =
+            `<p class="stats-subtitle stats-subtitle-sm">Werke nach Jahrzehnt</p>` +
+            `<p class="stats-desc" style="margin-top:-.5rem">Zeitliche Verteilung der ` +
+            `Sappho-Rezeptionszeugnisse nach Entstehungs- oder Publikationsjahrzehnt.</p>` +
+            `<div class="chart-wrap"><canvas id="stat11-decades-chart" style="height:220px"></canvas></div>`;
+        wrap.appendChild(sec);
+        _stat11Charts['decades'] = _alkBarV(
+            'stat11-decades-chart', dLabels, dValues, ALK_PURPLE, ALK_PURPLE_LINE
+        );
+    }
+
+    // ── 4. Feature-Sektionen: je Balkendiagramm + Dominanz-Zeile darunter ────
+
+    // Dominanz-Zeile unter einem Balkenchart rendern
+    function renderDominanzRow(container, feats, canvasId) {
+        if (!feats.length || alk.nReceptionTotal === 0 || !DATA.categories) return;
+
+        const domItems = feats
+            .filter(f => globalFeatMap[f.label] && globalFeatMap[f.label].n > 0)
+            .map(f => {
+                const alkRate    = f.n / alk.nWorks;
+                const globalRate = globalFeatMap[f.label].n / alk.nReceptionTotal;
+                const ratio      = globalRate > 0 ? alkRate / globalRate : 0;
+                return { label: f.label, alkN: f.n, globalN: globalFeatMap[f.label].n, ratio };
+            })
+            .sort((a, b) => b.ratio - a.ratio)
+            .slice(0, 15);
+
+        if (!domItems.length) return;
+
+        const domCanvasId = canvasId + '-dom';
+        const domH        = canvasHeight(domItems.length);
+        const domRow      = document.createElement('div');
+        domRow.style.cssText = 'margin-top:.75rem';
+        domRow.innerHTML =
+            `<p class="stats-subtitle-sm-top" style="font-size:.78rem;color:#6b7280;margin-bottom:.4rem">` +
+            `Dominanzfaktor vs. Gesamtkorpus (Top\u202f15) – ` +
+            `<span style="font-size:.74rem">wie viel häufiger als im Schnitt aller Rezeptionszeugnisse; ` +
+            `Strichlinie\u202f=\u202fErwartungswert</span></p>` +
+            `<div class="chart-wrap">` +
+            `<canvas id="${domCanvasId}" style="height:${domH}px"></canvas></div>`;
+        container.appendChild(domRow);
+
+        const domLabels = domItems.map(d => d.label);
+        const domRatios = domItems.map(d => +d.ratio.toFixed(2));
+        const domMaxX   = Math.max(2, Math.ceil(Math.max(...domRatios) * 1.1 / 0.5) * 0.5);
+
+        const domCtx = document.getElementById(domCanvasId);
+        if (!domCtx) return;
+
+        _stat11Charts[domCanvasId] = new Chart(domCtx.getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels: domLabels,
+                datasets: [{
+                    data: domRatios,
+                    backgroundColor: domItems.map(d =>
+                        d.ratio >= 1.5 ? ALK_PURPLE
+                        : d.ratio >= 1.0 ? 'rgba(94,23,235,0.45)'
+                        : ALK_GRAY
+                    ),
+                    borderColor: domItems.map(d =>
+                        d.ratio >= 1.0 ? ALK_PURPLE_LINE : ALK_GRAY_LINE
+                    ),
+                    borderWidth: 2,
+                    borderRadius: 2,
+                }],
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: ctx2 => {
+                                const d = domItems[ctx2.dataIndex];
+                                return [
+                                    ` Faktor: ${d.ratio.toFixed(2)}\u00d7`,
+                                    ` ALK: ${d.alkN}/${alk.nWorks} Werke`,
+                                    ` Gesamt: ${d.globalN}/${alk.nReceptionTotal}`,
+                                ];
+                            },
+                        },
+                    },
+                },
+                scales: {
+                    x: {
+                        min: 0,
+                        max: domMaxX,
+                        ticks: {
+                            font: { family: 'Geist, system-ui', size: 11 },
+                            callback: v => v + '\u00d7',
+                        },
+                        grid: { color: 'rgba(0,0,0,0.06)' },
+                    },
+                    y: {
+                        ticks: { font: { family: 'Geist, system-ui', size: 11 }, autoSkip: false },
+                        grid: { display: false },
+                    },
+                },
+            },
+            plugins: [{
+                id: 'alkRefLine_' + domCanvasId,
+                afterDraw(chart) {
+                    if (chart.canvas.id !== domCanvasId) return;
+                    const { ctx: c, scales: { x }, chartArea } = chart;
+                    const xPos = x.getPixelForValue(1.0);
+                    if (xPos < chartArea.left || xPos > chartArea.right) return;
+                    c.save();
+                    c.setLineDash([4, 3]);
+                    c.strokeStyle = 'rgba(107,114,128,0.45)';
+                    c.lineWidth   = 1.5;
+                    c.beginPath();
+                    c.moveTo(xPos, chartArea.top);
+                    c.lineTo(xPos, chartArea.bottom);
+                    c.stroke();
+                    c.restore();
+                },
+            }],
+        });
+    }
+
+    function buildTopFeatSection(featKey, label, desc, canvasId, color, borderCol) {
+        const feats = (alk[featKey] || []).slice(0, 20);
+        if (feats.length === 0) return;
+        const sec = document.createElement('div');
+        sec.style.marginBottom = '1.75rem';
+        const h = canvasHeight(feats.length);
+        sec.innerHTML =
+            `<p class="stats-subtitle stats-subtitle-sm">${label}</p>` +
+            `<p class="stats-desc" style="margin-top:-.5rem">${desc}</p>` +
+            `<div class="chart-wrap">` +
+            `<canvas id="${canvasId}" style="height:${h}px"></canvas></div>`;
+        wrap.appendChild(sec);
+
+        const labels = feats.map(f => f.label);
+        const values = feats.map(f => f.n);
+        const maxX   = Math.max(2, Math.ceil(values[0] * 1.15 / 2) * 2);
+        _stat11Charts[canvasId] = _alkBarH(
+            canvasId, labels, values, color, borderCol, maxX,
+            ctx2 => {
+                const f   = feats[ctx2.dataIndex];
+                const pct = alk.nWorks > 0 ? (f.n / alk.nWorks * 100).toFixed(1) : '0.0';
+                return ` ${f.n} Werk${f.n === 1 ? '' : 'e'} (${pct}\u202f% des Korpus)`;
+            }
+        );
+        // Dominanz-Zeile direkt darunter
+        renderDominanzRow(sec, feats, canvasId);
+    }
+
+    buildTopFeatSection('topics',   'Häufigste Themen (Top\u202f20)',
+        'Welche Themen dominieren in den Sappho-Rezeptionszeugnissen von Anna Louisa Karsch?',
+        'stat11-topics-chart',   ALK_PURPLE,  ALK_PURPLE_LINE);
+
+    buildTopFeatSection('motifs',   'Häufigste Motive (Top\u202f20)',
+        'Welche Motive treten in den annotierten Werken besonders häufig auf?',
+        'stat11-motifs-chart',   'rgba(94,23,235,0.45)', ALK_PURPLE_LINE);
+
+    buildTopFeatSection('plots',    'Häufigste Stoffe (Top\u202f20)',
+        'Welche Sappho-Stoffe werden von Anna Louisa Karsch bevorzugt aufgegriffen?',
+        'stat11-plots-chart',    ALK_GRAY,    ALK_GRAY_LINE);
+
+    buildTopFeatSection('persons',  'Häufigste Personenreferenzen und Figuren (Top\u202f20)',
+        'Welche Personen und Figuren werden in den Werken besonders häufig referenziert?',
+        'stat11-persons-chart',  '#f59e0b',   '#d97706');
+
+    buildTopFeatSection('places',   'Häufigste Ortsreferenzen (Top\u202f20)',
+        'Welche Orte werden in den Werken besonders häufig referenziert?',
+        'stat11-places-chart',   '#10b981',   '#059669');
+
+    buildTopFeatSection('topoi',    'Häufigste rhetorische Topoi (Top\u202f20)',
+        'Welche rhetorischen Topoi treten besonders häufig auf?',
+        'stat11-topoi-chart',    '#ef4444',   '#dc2626');
+
+    buildTopFeatSection('workRefs', 'Häufigste Werkreferenzen und Zitate (Top\u202f20)',
+        'Welche Werke werden besonders häufig referenziert oder zitiert?',
+        'stat11-workrfs-chart',  '#e11d48',   '#be123c');
+
+    buildTopFeatSection('phrases',  'Häufigste Zitate und Textpassagen (Top\u202f20)',
+        'Welche Sappho-Passagen werden besonders häufig aufgegriffen?',
+        'stat11-phrases-chart',  '#84cc16',   '#65a30d');
+}
+
+document.addEventListener('DOMContentLoaded', initStat11);

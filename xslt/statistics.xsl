@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  version="2.0" exclude-result-prefixes="xsl xs">
+  xmlns:ecrm="http://erlangen-crm.org/current/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:intro="https://w3id.org/lso/intro/currentbeta#"
+  xmlns:lrmoo="http://iflastandards.info/ns/lrm/lrmoo/" xmlns:local="xyz" version="2.0"
+  exclude-result-prefixes="xsl xs ecrm rdf rdfs owl intro lrmoo local">
 
   <xsl:output encoding="UTF-8" media-type="text/html" method="xhtml" version="1.0" indent="yes"
     omit-xml-declaration="yes"/>
@@ -9,6 +14,48 @@
   <xsl:import href="./partials/html_navbar.xsl"/>
   <xsl:import href="./partials/html_head.xsl"/>
   <xsl:import href="./partials/html_footer.xsl"/>
+
+  <!-- helper function for labels – mirrors bibl-entities.xsl -->
+  <xsl:variable name="works" select="doc('../data/rdf/works.rdf')"/>
+  <xsl:variable name="receptionEntities" select="doc('../data/rdf/sappho-reception.rdf')"/>
+
+  <xsl:key name="by-about" match="*[@rdf:about]" use="@rdf:about"/>
+
+  <xsl:function name="local:get-label" as="xs:string">
+    <xsl:param name="uri" as="xs:string"/>
+    <xsl:variable name="entity" select="key('by-about', $uri, $receptionEntities)"/>
+    <xsl:variable name="raw" select="normalize-space(($entity/rdfs:label, $entity/@rdf:about)[1])"/>
+    <xsl:variable name="t1"
+      select="replace($raw, '^\s*intertextual relation(ship)? between\s+', 'Intertextuelle Beziehung zwischen ', 'i')"/>
+    <xsl:variable name="t2" select="replace($t1, '\s+and\s+', ' und ')"/>
+    <xsl:variable name="t3" select="replace($t2, 'Expression of\s+', '', 'i')"/>
+    <xsl:variable name="t4" select="replace($t3, '»\s*(Fragment[^«»]*Voigt)\s*«', '$1', 'i')"/>
+    <xsl:variable name="t5"
+      select="replace($t4, '^\s*(Motif|Topic|Plot|Textpassage|Character)\s*:\s*', '', 'i')"/>
+    <xsl:variable name="t6"
+      select="replace($t5, '\s*\((place|person|work|character)\)\s*', '', 'i')"/>
+    <xsl:variable name="t7" select="replace($t6, 'Reference to ', '', 'i')"/>
+    <xsl:sequence select="normalize-space($t7)"/>
+  </xsl:function>
+
+  <!-- Jahrzehnt-Hilfsfunktion für ALK (Top-Level, XSLT-2.0-kompatibel) -->
+  <xsl:function name="local:alk-decade-key" as="xs:string">
+    <xsl:param name="expr-id" as="xs:string"/>
+    <xsl:variable name="uri" select="concat('https://sappho-digital.com/expression/', $expr-id)"/>
+    <xsl:variable name="yr" select="
+        string(($works//*[@rdf:about = $uri]//ecrm:P82a_begin_of_the_begin,
+        $works//*[@rdf:about = $uri]//rdfs:label[@xml:lang = 'de'])[1])"/>
+    <xsl:variable name="y4" select="
+        if (matches($yr, '^\d{4}')) then
+          xs:integer(substring($yr, 1, 4))
+        else
+          0"/>
+    <xsl:sequence select="
+        if ($y4 gt 0) then
+          string(($y4 idiv 10) * 10)
+        else
+          'unbekannt'"/>
+  </xsl:function>
 
   <xsl:template match="/">
 
@@ -323,6 +370,283 @@
       </xsl:for-each>
     </xsl:variable>
 
+
+    <!-- ══════════════════════════════════════════════════════════════════
+         Statistik 11: Anna Louisa Karsch – Variablen
+         ══════════════════════════════════════════════════════════════ -->
+    <xsl:variable name="alk-authors" select="doc('../data/rdf/authors.rdf')"/>
+    <xsl:variable name="alk-person-uri" select="'https://sappho-digital.com/person/author_7240c9e7'"/>
+
+    <!-- Bild-URL aus E36_Visual_Item -->
+    <xsl:variable name="alk-img-url" as="xs:string" select="
+        string((
+        $alk-authors//ecrm:E36_Visual_Item[
+        ecrm:P138_represents/@rdf:resource = $alk-person-uri
+        ][1]/rdfs:seeAlso/@rdf:resource,
+        $alk-authors//ecrm:E36_Visual_Item[
+        ecrm:P138_represents/@rdf:resource = $alk-person-uri
+        ][1]/rdfs:seeAlso/text()
+        )[1])"/>
+
+    <!-- ALK expression-IDs via lrmoo:F28_Expression_Creation -->
+    <!-- Schritt 1: alle expression_creation-URIs die die Person ausgeführt hat -->
+    <xsl:variable name="alk-expr-creation-uris" as="xs:string*">
+      <xsl:for-each select="
+          $alk-authors//ecrm:E21_Person[@rdf:about = $alk-person-uri]
+          /ecrm:P14i_performed/@rdf:resource[contains(., '/expression_creation/')]">
+        <xsl:sequence select="string(.)"/>
+      </xsl:for-each>
+    </xsl:variable>
+    <!-- Schritt 2: aus works.rdf die F28-Knoten auflösen → expression-IDs -->
+    <xsl:variable name="alk-expr-ids" as="xs:string*">
+      <xsl:for-each select="$alk-expr-creation-uris">
+        <xsl:variable name="ec-uri" select="."/>
+        <xsl:variable name="expr-uri" select="
+            string((
+            $works//lrmoo:F28_Expression_Creation[@rdf:about = $ec-uri]/lrmoo:R17_created/@rdf:resource,
+            $receptionEntities//lrmoo:F28_Expression_Creation[@rdf:about = $ec-uri]/lrmoo:R17_created/@rdf:resource
+            )[1])"/>
+        <xsl:if test="$expr-uri != ''">
+          <xsl:sequence select="tokenize($expr-uri, '/')[last()]"/>
+        </xsl:if>
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:variable name="alk-n-works" select="count($alk-expr-ids)"/>
+
+    <!-- Werke pro Jahrzehnt -->
+    <xsl:variable name="alk-decade-json" as="xs:string*">
+      <xsl:for-each-group select="$alk-expr-ids" group-by="local:alk-decade-key(.)">
+        <xsl:sort select="current-grouping-key()"/>
+        <xsl:sequence select="
+            concat(
+            '{&quot;decade&quot;:&quot;', current-grouping-key(), '&quot;,',
+            '&quot;n&quot;:', count(current-group()), '}'
+            )"/>
+      </xsl:for-each-group>
+    </xsl:variable>
+
+    <!-- Themen für alle ALK-Texte -->
+    <xsl:variable name="alk-topics-raw" as="xs:string*">
+      <xsl:for-each select="$alk-expr-ids">
+        <xsl:variable name="expr-uri" select="concat('https://sappho-digital.com/expression/', .)"/>
+        <xsl:for-each select="
+            $receptionEntities//intro:INT31_IntertextualRelation[
+            intro:R13_hasReferringEntity/@rdf:resource = $expr-uri or
+            intro:R12_hasReferredToEntity/@rdf:resource = $expr-uri
+            ]/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[
+            matches(., '/feature/topic/')
+            ]">
+          <xsl:sequence select="string(.)"/>
+        </xsl:for-each>
+      </xsl:for-each>
+    </xsl:variable>
+
+    <!-- Motive für alle ALK-Texte -->
+    <xsl:variable name="alk-motifs-raw" as="xs:string*">
+      <xsl:for-each select="$alk-expr-ids">
+        <xsl:variable name="expr-uri" select="concat('https://sappho-digital.com/expression/', .)"/>
+        <xsl:for-each select="
+            $receptionEntities//intro:INT31_IntertextualRelation[
+            intro:R13_hasReferringEntity/@rdf:resource = $expr-uri or
+            intro:R12_hasReferredToEntity/@rdf:resource = $expr-uri
+            ]/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[
+            matches(., '/feature/motif/')
+            ]">
+          <xsl:sequence select="string(.)"/>
+        </xsl:for-each>
+      </xsl:for-each>
+    </xsl:variable>
+
+    <!-- Stoffe für alle ALK-Texte -->
+    <xsl:variable name="alk-plots-raw" as="xs:string*">
+      <xsl:for-each select="$alk-expr-ids">
+        <xsl:variable name="expr-uri" select="concat('https://sappho-digital.com/expression/', .)"/>
+        <xsl:for-each select="
+            $receptionEntities//intro:INT31_IntertextualRelation[
+            intro:R13_hasReferringEntity/@rdf:resource = $expr-uri or
+            intro:R12_hasReferredToEntity/@rdf:resource = $expr-uri
+            ]/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[
+            matches(., '/feature/plot/')
+            ]">
+          <xsl:sequence select="string(.)"/>
+        </xsl:for-each>
+      </xsl:for-each>
+    </xsl:variable>
+
+    <!-- Aggregierte Themen: distinct URI → Label + Häufigkeit -->
+    <xsl:variable name="alk-topics-json" as="xs:string*">
+      <xsl:for-each-group select="$alk-topics-raw" group-by=".">
+        <xsl:sort select="count(current-group())" order="descending"/>
+        <xsl:sequence select="
+            concat(
+            '{&quot;label&quot;:&quot;',
+            replace(local:get-label(current-grouping-key()), '&quot;', ''),
+            '&quot;,&quot;n&quot;:', count(current-group()), '}'
+            )"/>
+      </xsl:for-each-group>
+    </xsl:variable>
+
+    <!-- Aggregierte Motive -->
+    <xsl:variable name="alk-motifs-json" as="xs:string*">
+      <xsl:for-each-group select="$alk-motifs-raw" group-by=".">
+        <xsl:sort select="count(current-group())" order="descending"/>
+        <xsl:sequence select="
+            concat(
+            '{&quot;label&quot;:&quot;',
+            replace(local:get-label(current-grouping-key()), '&quot;', ''),
+            '&quot;,&quot;n&quot;:', count(current-group()), '}'
+            )"/>
+      </xsl:for-each-group>
+    </xsl:variable>
+
+    <!-- Aggregierte Stoffe -->
+    <xsl:variable name="alk-plots-json" as="xs:string*">
+      <xsl:for-each-group select="$alk-plots-raw" group-by=".">
+        <xsl:sort select="count(current-group())" order="descending"/>
+        <xsl:sequence select="
+            concat(
+            '{&quot;label&quot;:&quot;',
+            replace(local:get-label(current-grouping-key()), '&quot;', ''),
+            '&quot;,&quot;n&quot;:', count(current-group()), '}'
+            )"/>
+      </xsl:for-each-group>
+    </xsl:variable>
+
+    <!-- Personenreferenzen -->
+    <xsl:variable name="alk-persons-raw" as="xs:string*">
+      <xsl:for-each select="$alk-expr-ids">
+        <xsl:variable name="expr-uri" select="concat('https://sappho-digital.com/expression/', .)"/>
+        <xsl:for-each select="
+            $receptionEntities//intro:INT31_IntertextualRelation[
+            intro:R13_hasReferringEntity/@rdf:resource = $expr-uri or
+            intro:R12_hasReferredToEntity/@rdf:resource = $expr-uri
+            ]/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[
+            matches(., '/feature/person_ref/') or matches(., '/feature/character/')
+            ]">
+          <xsl:sequence select="string(.)"/>
+        </xsl:for-each>
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:variable name="alk-persons-json" as="xs:string*">
+      <xsl:for-each-group select="$alk-persons-raw" group-by=".">
+        <xsl:sort select="count(current-group())" order="descending"/>
+        <xsl:sequence select="
+            concat(
+            '{&quot;label&quot;:&quot;',
+            replace(local:get-label(current-grouping-key()), '&quot;', ''),
+            '&quot;,&quot;n&quot;:', count(current-group()), '}'
+            )"/>
+      </xsl:for-each-group>
+    </xsl:variable>
+
+    <!-- Ortsreferenzen -->
+    <xsl:variable name="alk-places-raw" as="xs:string*">
+      <xsl:for-each select="$alk-expr-ids">
+        <xsl:variable name="expr-uri" select="concat('https://sappho-digital.com/expression/', .)"/>
+        <xsl:for-each select="
+            $receptionEntities//intro:INT31_IntertextualRelation[
+            intro:R13_hasReferringEntity/@rdf:resource = $expr-uri or
+            intro:R12_hasReferredToEntity/@rdf:resource = $expr-uri
+            ]/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[
+            matches(., '/feature/place_ref/')
+            ]">
+          <xsl:sequence select="string(.)"/>
+        </xsl:for-each>
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:variable name="alk-places-json" as="xs:string*">
+      <xsl:for-each-group select="$alk-places-raw" group-by=".">
+        <xsl:sort select="count(current-group())" order="descending"/>
+        <xsl:sequence select="
+            concat(
+            '{&quot;label&quot;:&quot;',
+            replace(local:get-label(current-grouping-key()), '&quot;', ''),
+            '&quot;,&quot;n&quot;:', count(current-group()), '}'
+            )"/>
+      </xsl:for-each-group>
+    </xsl:variable>
+
+    <!-- Rhetorische Topoi -->
+    <xsl:variable name="alk-topoi-raw" as="xs:string*">
+      <xsl:for-each select="$alk-expr-ids">
+        <xsl:variable name="expr-uri" select="concat('https://sappho-digital.com/expression/', .)"/>
+        <xsl:for-each select="
+            $receptionEntities//intro:INT31_IntertextualRelation[
+            intro:R13_hasReferringEntity/@rdf:resource = $expr-uri or
+            intro:R12_hasReferredToEntity/@rdf:resource = $expr-uri
+            ]/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[
+            matches(., '/feature/topos/')
+            ]">
+          <xsl:sequence select="string(.)"/>
+        </xsl:for-each>
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:variable name="alk-topoi-json" as="xs:string*">
+      <xsl:for-each-group select="$alk-topoi-raw" group-by=".">
+        <xsl:sort select="count(current-group())" order="descending"/>
+        <xsl:sequence select="
+            concat(
+            '{&quot;label&quot;:&quot;',
+            replace(local:get-label(current-grouping-key()), '&quot;', ''),
+            '&quot;,&quot;n&quot;:', count(current-group()), '}'
+            )"/>
+      </xsl:for-each-group>
+    </xsl:variable>
+
+    <!-- Werkreferenzen und Zitate -->
+    <xsl:variable name="alk-workrfs-raw" as="xs:string*">
+      <xsl:for-each select="$alk-expr-ids">
+        <xsl:variable name="expr-uri" select="concat('https://sappho-digital.com/expression/', .)"/>
+        <xsl:for-each select="
+            $receptionEntities//intro:INT31_IntertextualRelation[
+            intro:R13_hasReferringEntity/@rdf:resource = $expr-uri or
+            intro:R12_hasReferredToEntity/@rdf:resource = $expr-uri
+            ]/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[
+            matches(., '/feature/work_ref/') or matches(., '/actualization/work_ref/')
+            ]">
+          <xsl:sequence select="string(.)"/>
+        </xsl:for-each>
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:variable name="alk-workrfs-json" as="xs:string*">
+      <xsl:for-each-group select="$alk-workrfs-raw" group-by=".">
+        <xsl:sort select="count(current-group())" order="descending"/>
+        <xsl:sequence select="
+            concat(
+            '{&quot;label&quot;:&quot;',
+            replace(local:get-label(current-grouping-key()), '&quot;', ''),
+            '&quot;,&quot;n&quot;:', count(current-group()), '}'
+            )"/>
+      </xsl:for-each-group>
+    </xsl:variable>
+
+    <!-- Zitate (Textpassagen) -->
+    <xsl:variable name="alk-phrases-raw" as="xs:string*">
+      <xsl:for-each select="$alk-expr-ids">
+        <xsl:variable name="expr-uri" select="concat('https://sappho-digital.com/expression/', .)"/>
+        <xsl:for-each select="
+            $receptionEntities//intro:INT31_IntertextualRelation[
+            intro:R13_hasReferringEntity/@rdf:resource = $expr-uri or
+            intro:R12_hasReferredToEntity/@rdf:resource = $expr-uri
+            ]/intro:R24_hasRelatedEntity/@rdf:resource[
+            matches(., '/textpassage/')
+            ]">
+          <xsl:sequence select="string(.)"/>
+        </xsl:for-each>
+      </xsl:for-each>
+    </xsl:variable>
+    <xsl:variable name="alk-phrases-json" as="xs:string*">
+      <xsl:for-each-group select="$alk-phrases-raw" group-by=".">
+        <xsl:sort select="count(current-group())" order="descending"/>
+        <xsl:sequence select="
+            concat(
+            '{&quot;label&quot;:&quot;',
+            replace(local:get-label(current-grouping-key()), '&quot;', ''),
+            '&quot;,&quot;n&quot;:', count(current-group()), '}'
+            )"/>
+      </xsl:for-each-group>
+    </xsl:variable>
+
     <xsl:variable name="json" as="xs:string" select="
         concat(
         '{',
@@ -378,6 +702,23 @@
         '&quot;nReception&quot;:', (statistics/stat10AvgRelations/@nReception, '0')[1], ',',
         '&quot;int31Hist&quot;:[', string-join($stat10-int31hist-json, ','), '],',
         '&quot;sharedHist&quot;:[', string-join($stat10-sharedhist-json, ','), ']',
+        '},',
+        '&quot;alk&quot;:{',
+        '&quot;name&quot;:&quot;Anna Louisa Karsch&quot;,',
+        '&quot;imgUrl&quot;:&quot;', $alk-img-url, '&quot;,',
+        '&quot;wikidata&quot;:&quot;https://www.wikidata.org/entity/Q469571&quot;,',
+        '&quot;gnd&quot;:&quot;https://d-nb.info/gnd/118560328&quot;,',
+        '&quot;nWorks&quot;:', $alk-n-works, ',',
+        '&quot;nReceptionTotal&quot;:', statistics/@nReception, ',',
+        '&quot;decadesDist&quot;:[', string-join($alk-decade-json, ','), '],',
+        '&quot;topics&quot;:[', string-join($alk-topics-json, ','), '],',
+        '&quot;motifs&quot;:[', string-join($alk-motifs-json, ','), '],',
+        '&quot;plots&quot;:[', string-join($alk-plots-json, ','), '],',
+        '&quot;persons&quot;:[', string-join($alk-persons-json, ','), '],',
+        '&quot;places&quot;:[', string-join($alk-places-json, ','), '],',
+        '&quot;topoi&quot;:[', string-join($alk-topoi-json, ','), '],',
+        '&quot;workRefs&quot;:[', string-join($alk-workrfs-json, ','), '],',
+        '&quot;phrases&quot;:[', string-join($alk-phrases-json, ','), ']',
         '}',
         '}'
         )"/>
@@ -444,6 +785,10 @@
                     <li>
                       <a href="#stat10-wrap">Durchschnittliche Relationen und gemeinsame
                         Phänomene</a>
+                    </li>
+                    <li>
+                      <a href="#stat11-wrap">Fallbeispiel Anna Louisa Karsch – ›die größte deutsche
+                        Sappho‹</a>
                     </li>
                   </ol>
                 </nav>
@@ -728,6 +1073,11 @@
                     Durchschnitt mit anderen? Und wie viele Phänomene teilt ein Text im Schnitt mit
                     seinen intertextuell verbundenen Texten?</p>
                   <div id="stat10-wrap-inner"/>
+                </div>
+                <div class="stats-wrap" id="stat11-wrap">
+                  <p class="stats-subtitle">Statistik 11: Fallbeispiel Anna Louisa Karsch – ›die
+                    größte deutsche Sappho‹</p>
+                  <div id="stat11-wrap-inner"/>
                 </div>
               </div>
             </div>
