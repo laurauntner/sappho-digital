@@ -756,46 +756,42 @@
                   <p class="stats-toc-title">Inhaltsverzeichnis</p>
                   <ol class="stats-toc-list">
                     <li>
-                      <a href="#stat1-wrap">Alle Phänomene im Vergleich</a>
+                      <a href="#stat1">Alle Phänomene im Vergleich</a>
                     </li>
                     <li>
-                      <a href="#stat2-wrap">Phänomene nach Fragment-Referenz</a>
+                      <a href="#stat2">Phänomene nach Fragment-Referenz</a>
                     </li>
                     <li>
-                      <a href="#stat3-wrap">Phänomene im Laufe der Zeit</a>
+                      <a href="#stat3">Phänomene im Laufe der Zeit</a>
                     </li>
                     <li>
-                      <a href="#stat4-wrap">Phänomene nach Gattung</a>
+                      <a href="#stat4">Phänomene nach Gattung</a>
                     </li>
                     <li>
-                      <a href="#stat5-wrap">Stoff-Komponenten</a>
+                      <a href="#stat5">Stoff-Komponenten</a>
                     </li>
                     <li>
-                      <a href="#stat6-wrap">Personenreferenzen und Figuren</a>
+                      <a href="#stat6">Personenreferenzen und Figuren</a>
                     </li>
                     <li>
-                      <a href="#stat7-wrap">Werkreferenzen und Zitate</a>
+                      <a href="#stat7">Werkreferenzen und Zitate</a>
                     </li>
                     <li>
-                      <a href="#stat8-wrap">Phänomene als Grundlage intertextueller Relationen</a>
+                      <a href="#stat8">Phänomene als Grundlage intertextueller Relationen</a>
                     </li>
                     <li>
-                      <a href="#stat9-wrap">Intertextuelle Beziehungen und Textähnlichkeiten</a>
+                      <a href="#stat9">Intertextuelle Beziehungen und Textähnlichkeiten</a>
                     </li>
                     <li>
-                      <a href="#stat10-wrap">Durchschnittliche Relationen und gemeinsame
+                      <a href="#stat10">Durchschnittliche Relationen und gemeinsame
                         Phänomene</a>
-                    </li>
-                    <li>
-                      <a href="#stat11-wrap">Fallbeispiel Anna Louisa Karsch – ›die größte deutsche
-                        Sappho‹</a>
                     </li>
                   </ol>
                 </nav>
 
               </div>
               <div class="card-body">
-                <div class="stats-wrap" id="stat1-wrap">
+                <div class="stats-wrap" id="stat1">
                   <p class="stats-subtitle">Statistik 1: Alle Phänomene im Vergleich</p>
                   <p class="stats-desc">Welche Phänomene werden in Sappho-Fragmenten sowie in
                     Rezeptionszeugnissen aktualisiert – und wo liegen die auffälligsten
@@ -834,7 +830,7 @@
                   <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
                   <div id="cats"/>
                 </div>
-                <div class="stats-wrap" id="stat2-wrap">
+                <div class="stats-wrap" id="stat2">
                   <p class="stats-subtitle">Statistik 2: Phänomene nach Fragment-Referenz</p>
                   <p class="stats-desc">Welche Phänomene werden in Rezeptionszeugnissen, die auf
                     bestimmte Fragmente Bezug nehmen, übernommen, welche ausgelassen – und welche
@@ -851,7 +847,7 @@
                     <div id="sankey-legend" class="sankey-legend"/>
                   </div>
                 </div>
-                <div class="stats-wrap" id="stat3-wrap">
+                <div class="stats-wrap" id="stat3">
                   <p class="stats-subtitle">Statistik 3: Phänomene im Laufe der Zeit</p>
                   <p class="stats-desc">Wie verteilen sich konkrete Phänomene über die Zeit? Die
                     Blasengröße zeigt, in wie vielen Rezeptionszeugnissen eines Jahrzehnts ein
@@ -873,7 +869,7 @@
                   <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
                   <div id="pdist-type-sections"/>
                 </div>
-                <div class="stats-wrap" id="stat4-wrap">
+                <div class="stats-wrap" id="stat4">
                   <p class="stats-subtitle">Statistik 4: Phänomene nach Gattung</p>
                   <p class="stats-desc">Welche Phänomene dominieren in welcher Gattung? Die
                     Farbintensität der Zellen zeigt die Häufigkeit innerhalb jeder Gattung; die
@@ -897,7 +893,7 @@
                   <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
                   <div id="gdist-type-sections"/>
                 </div>
-                <div class="stats-wrap" id="stat5-wrap">
+                <div class="stats-wrap" id="stat5">
                   <p class="stats-subtitle">Statistik 5: Stoff-Komponenten</p>
                   <p class="stats-desc">Welche Phänomene treten gemeinsam mit einem bestimmten Stoff
                     auf? Der innere Ring zeigt die Phänomentypen, der äußere Ring die einzelnen
@@ -923,7 +919,7 @@
                   <div id="pc-svg-wrap"/>
                   <div id="pc-legend"/>
                 </div>
-                <div class="stats-wrap" id="stat6-wrap">
+                <div class="stats-wrap" id="stat6">
                   <p class="stats-subtitle">Statistik 6: Personenreferenzen und Figuren</p>
                   <p class="stats-desc">Welche Personen und Personentypen werden in
                     Sappho-Fragmenten sowie in Rezeptionszeugnissen besonders häufig nicht nur
@@ -972,7 +968,7 @@
                     <div id="pd-chart-wrap"/>
                   </div>
                 </div>
-                <div class="stats-wrap" id="stat7-wrap">
+                <div class="stats-wrap" id="stat7">
                   <p class="stats-subtitle" style="text-align:center">Statistik 7: Werkreferenzen
                     und Zitate</p>
                   <p class="stats-desc" style="text-align:center">Welche Werke werden in den
@@ -985,7 +981,7 @@
                   </div>
                   <div id="wc-chart-wrap" class="chart-wrap"/>
                 </div>
-                <div class="stats-wrap" id="stat8-wrap">
+                <div class="stats-wrap" id="stat8">
                   <p class="stats-subtitle">Statistik 8: Phänomene als Grundlage intertextueller
                     Relationen</p>
                   <p class="stats-desc">Welche Phänomene sind am häufigsten ausschlaggebend für
@@ -1039,7 +1035,7 @@
                   <div id="int31-pairs-wrap" style="display:flex;justify-content:center"/>
 
                 </div>
-                <div class="stats-wrap" id="stat9-wrap">
+                <div class="stats-wrap" id="stat9">
                   <p class="stats-subtitle">Statistik 9: Intertextuelle Beziehungen und
                     Textähnlichkeiten</p>
                   <p class="stats-desc">Welche intertextuellen Relationen verbinden die meisten
@@ -1066,18 +1062,13 @@
                   </div>
                   <div id="stat9-cards-wrap"/>
                 </div>
-                <div class="stats-wrap" id="stat10-wrap">
+                <div class="stats-wrap" id="stat10">
                   <p class="stats-subtitle">Statistik 10: Durchschnittliche intertextuelle
                     Beziehungen und gemeinsame Phänomene</p>
                   <p class="stats-desc">Wie viele intertextuelle Relationen verbinden einen Text im
                     Durchschnitt mit anderen? Und wie viele Phänomene teilt ein Text im Schnitt mit
                     seinen intertextuell verbundenen Texten?</p>
                   <div id="stat10-wrap-inner"/>
-                </div>
-                <div class="stats-wrap" id="stat11-wrap">
-                  <p class="stats-subtitle">Statistik 11: Fallbeispiel Anna Louisa Karsch – ›die
-                    größte deutsche Sappho‹</p>
-                  <div id="stat11-wrap-inner"/>
                 </div>
               </div>
             </div>
