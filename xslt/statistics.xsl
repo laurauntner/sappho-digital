@@ -403,21 +403,23 @@
                 <h1>
                   <xsl:value-of select="$doc_title"/>
                 </h1>
-                <p class="align-left">Diese Seite bietet einen Überblick über exemplarische statistische Auswertungen
-                  der annotierten Sappho-Fragmente und der analysierten Rezeptionszeugnisse. Die
-                  einzelnen Abschnitte zeigen unter anderem alle Phänomene im Vergleich, ihre
-                  Verteilung nach Fragment-Referenz, im Laufe der Zeit und nach Gattung sowie
-                  Zusammenhänge von Stoff-Komponenten, Personenreferenzen, Werkreferenzen und
-                  Zitaten. Darüber hinaus werden Phänomene als Grundlage intertextueller Relationen,
-                  besonders dichte intertextuelle Beziehungen sowie durchschnittliche Relationen und
-                  gemeinsame Phänomene sichtbar gemacht.</p>
-                <p class="align-left">Nähere Informationen zur exemplarischen Analyse sind <a href="analyse.html"
-                    >hier</a> zu finden.</p>
-                <p class="align-left">Eine Netzwerkvisualisierung aller Daten ist <a href="network.html">hier</a>
-                  verfügbar.</p>
-                <p class="align-left">Häufigkeitsverteilungen einzelner Phänomene und Auflistungen aller
-                  intertextuellen Beziehungen können über den Reiter »Rezeptionsphänomene« (in
-                  »Analyse«) angesteuert werden.</p>
+                <p class="align-left">Diese Seite bietet einen Überblick über exemplarische
+                  statistische Auswertungen der annotierten Sappho-Fragmente und der analysierten
+                  Rezeptionszeugnisse. Die einzelnen Abschnitte zeigen unter anderem alle Phänomene
+                  im Vergleich, ihre Verteilung nach Fragment-Referenz, im Laufe der Zeit und nach
+                  Gattung sowie Zusammenhänge von Stoff-Komponenten, Personenreferenzen,
+                  Werkreferenzen und Zitaten. Darüber hinaus werden Phänomene als Grundlage
+                  intertextueller Relationen, besonders dichte intertextuelle Beziehungen sowie
+                  durchschnittliche Relationen und gemeinsame Phänomene sichtbar gemacht.</p>
+                <p class="align-left">Nähere Informationen zur exemplarischen Analyse sind <a
+                    href="analyse.html">hier</a> zu finden.</p>
+                <p class="align-left">Eine Netzwerkvisualisierung aller Daten ist <a
+                    href="network.html">hier</a> verfügbar.</p>
+                <p class="align-left">Einfache Häufigkeitsverteilungen einzelner Phänomene und
+                  Auflistungen aller intertextuellen Beziehungen können über den Reiter
+                  »Rezeptionsphänomene« (in »Analyse«) angesteuert werden. Häufigkeitsverteilungen
+                  zu zeitlichen und räumlichen Schwerpunkten finden sich in den einzelnen
+                  Verzeichnissen über den Reiter »Rezeptionszeugnisse« (in »Texte«).</p>
 
                 <nav class="stats-toc smaller-text" aria-label="Inhaltsverzeichnis">
                   <p class="stats-toc-title">Inhaltsverzeichnis</p>
