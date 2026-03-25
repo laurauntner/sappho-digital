@@ -294,6 +294,31 @@ h3 {
     margin-top: 2.5em;
 }
 
+.dh-award-badge {
+    background-color: rgba(94, 23, 235, 0.1);
+    color: #5e17eb;
+    border: 1px solid rgba(94, 23, 235, 0.3);
+    font-size: 0.75em;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    padding: 0.35em 0.65em;
+    text-decoration: none !important;
+    transition: background-color 0.2s, color 0.2s;
+    display: block;
+}
+
+.dh-award-badge:hover {
+    background-color: rgba(94, 23, 235, 0.85);
+    color: white;
+}
+
+.navbar-badges {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3em;
+}
+
 .custom-dropdown-link {
     color: black;
 }
