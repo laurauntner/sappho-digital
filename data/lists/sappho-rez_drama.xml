@@ -200,7 +200,7 @@
                 <bibl xml:id="bibl_4166923c">
                     <title type="text">Sappho, oder der leukadische Fels. Eine Komödie</title>
                     <date type="published" when="1823">1823</date>
-                    <author xml:id="author_9eaa8590">P. Berthold</author>
+                    <author ref="https://www.wikidata.org/entity/Q2343847" xml:id="author_9eaa8590">P. Berthold [= Stephan Schütze]</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q20171465" xml:id="publisher_fd5fc96c">Carl Cnobloch</publisher>
@@ -320,7 +320,7 @@
                     <bibl xml:id="bibl_792f9c50">
                         <title type="work">La Mara. Classisches und Romantisches aus der Tonwelt</title>
                     </bibl>
-                    <author xml:id="author_561ed57e">L[udwig?] Foglár</author>
+                    <author ref="https://www.wikidata.org/entity/Q1874386" xml:id="author_561ed57e">Ludwig Foglár</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q634246" xml:id="publisher_269a93ab">Breitkopf und Härtel</publisher>

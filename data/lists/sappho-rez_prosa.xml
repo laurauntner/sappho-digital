@@ -528,7 +528,7 @@
                     <bibl xml:id="bibl_a282c8c8">
                         <title type="work">Oesterreichischees Morgenblatt</title>
                     </bibl>
-                    <author xml:id="author_15edc521">Carl Raimund Frühauf</author>
+                    <author ref="https://www.wikidata.org/entity/Q94578406" xml:id="author_15edc521">Karl Raimund Frühauf</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=osm&amp;datum=18420101">https://anno.onb.ac.at/cgi-content/anno?aid=osm&amp;datum=18420101</ref>
@@ -590,7 +590,7 @@
                     <bibl xml:id="bibl_971ed81c">
                         <title type="work">Troppauer-Zeitung</title>
                     </bibl>
-                    <author xml:id="author_b1037de0">Julius Krebs</author>
+                    <author ref="https://www.wikidata.org/entity/Q55674445" xml:id="author_b1037de0">Julius Krebs</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q156080" xml:id="place_96ef0de9">Opava</pubPlace>
                 </bibl>
@@ -717,7 +717,7 @@
                     <bibl xml:id="bibl_4c622de1">
                         <title type="work">Kölnische Zeitung</title>
                     </bibl>
-                    <author xml:id="author_bbe8c0e3">Wilhelm Fischer</author>
+                    <author ref="https://www.wikidata.org/entity/Q41784052" xml:id="author_bbe8c0e3">Wilhelm Fischer</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
                     <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
@@ -1364,7 +1364,7 @@
                     <bibl xml:id="bibl_286cebb8">
                         <title type="work">Berliner Tageblatt und Handels-Zeitung</title>
                     </bibl>
-                    <author xml:id="author_7f467cac">Paul Bleck</author>
+                    <author ref="https://www.wikidata.org/entity/Q138793242" xml:id="author_7f467cac">Paul Bleck</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q71476" xml:id="publisher_4d29e5ab">Rudolf Mosse</publisher>
@@ -1512,7 +1512,7 @@
                     <bibl xml:id="bibl_286cebb8">
                         <title type="work">Berliner Tageblatt und Handels-Zeitung</title>
                     </bibl>
-                    <author xml:id="author_be909366">Wolf von Tainach</author>
+                    <author ref="https://www.wikidata.org/entity/Q138793128" xml:id="author_be909366">Wolf von Tainach</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q71476" xml:id="publisher_4d29e5ab">Rudolf Mosse</publisher>
@@ -1534,7 +1534,7 @@
                     <bibl xml:id="bibl_816be51a">
                         <title type="work">Leipziger Tageblatt und Handelszeitung</title>
                     </bibl>
-                    <author xml:id="author_c1ad6949">A. Noel</author>
+                    <author ref="https://www.wikidata.org/entity/Q19124298" xml:id="author_c1ad6949">A. Noel [= Leontine Stern]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                 </bibl>
@@ -1630,7 +1630,7 @@
                     <bibl xml:id="bibl_286cebb8">
                         <title type="work">Berliner Tageblatt und Handels-Zeitung</title>
                     </bibl>
-                    <author xml:id="author_44fc8463">Marianne Erik</author>
+                    <author ref="https://www.wikidata.org/entity/Q138793210" xml:id="author_44fc8463">Marianne Erik</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q71476" xml:id="publisher_4d29e5ab">Rudolf Mosse</publisher>
@@ -1786,7 +1786,7 @@
                     <bibl xml:id="bibl_718a2dc9">
                         <title type="work">Tagblatt</title>
                     </bibl>
-                    <author xml:id="author_22c147ee">Frida Raimann</author>
+                    <author ref="https://www.wikidata.org/entity/Q138795161" xml:id="author_22c147ee">Frieda Raimann</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q41329" xml:id="place_907e6aad">Linz</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q62479989" xml:id="publisher_98a66576">Gutenberg-Weiguny &amp; Comp.</publisher>
@@ -2071,7 +2071,7 @@
                 <bibl xml:id="bibl_2dce403c">
                     <title type="text">An eine Freundin</title>
                     <date type="published" when="1941">1941</date>
-                    <bibl xml:id="bibl_cac5cb34">
+                    <bibl xml:id="bibl_cac5cb34" ref="https://www.wikidata.org/entity/Q691539">
                         <title type="work">Menschenrecht. Blätter zur Aufklärung gegen Ächtung und Vorurteil</title>
                     </bibl>
                     <author xml:id="author_a0790a3f">Phoebe</author>
@@ -2310,7 +2310,7 @@
                     <title type="text">Sappho küsst Europa. Geschichten von Lesben aus 20 Längern</title>
                     <date type="published" when="1997">1997</date>
                     <author ref="https://www.wikidata.org/entity/Q128796825" xml:id="author_9e73b47f">Madeleine Marti</author>
-                    <author xml:id="author_9e73b47y">Marianne Ulmi</author>
+                    <author ref="https://www.wikidata.org/entity/Q138793840" xml:id="author_9e73b47y">Marianne Ulmi</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2122937" xml:id="publisher_8f72e265">Querverlag</publisher>
