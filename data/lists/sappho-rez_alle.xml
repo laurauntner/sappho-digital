@@ -38,7 +38,7 @@
                     <bibl xml:id="bibl_5923a400">
                         <title type="work">Passio Christi</title>
                     </bibl>
-                    <author xml:id="author_33727565">Martin Myllius/Müller</author>
+                    <author ref="https://www.wikidata.org/entity/Q55676250" xml:id="author_33727565">Martin Mylius</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q6602" xml:id="place_477d8872">Straßburg</pubPlace>
                     <publisher xml:id="publisher_12b77ecc">Johannes Haselberg</publisher>
@@ -49,7 +49,7 @@
                     <bibl xml:id="bibl_5923a400">
                         <title type="work">Passio Christi</title>
                     </bibl>
-                    <author xml:id="author_33727565">Martin Myllius/Müller</author>
+                    <author ref="https://www.wikidata.org/entity/Q55676250" xml:id="author_33727565">Martin Mylius</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q6602" xml:id="place_477d8872">Straßburg</pubPlace>
                     <publisher xml:id="publisher_12b77ecc">Johannes Haselberg</publisher>
@@ -359,7 +359,7 @@
                     <bibl xml:id="bibl_40463a8a">
                         <title type="work">Deutscher Gedichte Frühling</title>
                     </bibl>
-                    <author xml:id="author_736f1879">Andreas Tschernig</author>
+                    <author ref="https://www.wikidata.org/entity/Q108205" xml:id="author_736f1879">Andreas Tschernig</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1799" xml:id="place_811c769d">Breslau</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q24948209" xml:id="publisher_7410d167">Georg Baumann</publisher>
@@ -4225,7 +4225,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_f965201c">
                         <title type="work">Zeitung für die elegante Welt</title>
                     </bibl>
-                    <author xml:id="author_2e7fc8d9">Richard Roos</author>
+                    <author ref="https://www.wikidata.org/entity/Q1262931" xml:id="author_2e7fc8d9">Richard Roos [= Karl August Engelhardt]</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher xml:id="publisher_7b364dff">Verlag von Georg Voß</publisher>
@@ -5749,7 +5749,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e87b8899">
                     <title type="text">Sappho. Griechische Novelle</title>
                     <date type="published" when="1886">1886</date>
-                    <author xml:id="author_6fd5058e">Johannes Flach</author>
+                    <author ref="https://www.wikidata.org/entity/Q1333149" xml:id="author_6fd5058e">Hans Flach</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q105044954" xml:id="publisher_a4818aac">Carl Reißner</publisher>
@@ -7375,7 +7375,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_c1ceb83a">
                     <title type="text">Giuliano. Ein Roman</title>
                     <date type="published" when="1933">1933</date>
-                    <author xml:id="author_fcd61c9a">Edward Stucken</author>
+                    <author ref="https://www.wikidata.org/entity/Q99798" xml:id="author_fcd61c9a">Eduard Stucken</author>
                     <note type="genre">Prosa</note>
                     <pubPlace xml:id="place_95b8315b">Berlin</pubPlace>
                     <pubPlace xml:id="place_d35a02eb">Wien</pubPlace>
@@ -9016,7 +9016,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_38116b1b">
                         <title type="work">Farbflecken auf einem Mondrian-Bild. Gedichte</title>
                     </bibl>
-                    <author xml:id="author_e521ef1b">Richard Dove</author>
+                    <author ref="https://www.wikidata.org/entity/Q1310313" xml:id="author_e521ef1b">Richard Dove</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q14907" xml:id="place_7fbe2285">St. Ingbert</pubPlace>
                     <publisher xml:id="publisher_eabe67c3">Edition Thaleia</publisher>
@@ -9256,7 +9256,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_2348e130">
                     <title type="text">Der Wolkenprinz. Frauenroman</title>
                     <date type="published" when="2007">2007</date>
-                    <author xml:id="author_da7ab3c4">Irene Seydlitz</author>
+                    <author ref="https://www.wikidata.org/entity/Q138795462" xml:id="author_da7ab3c4">Irene Seydlitz</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
                     <publisher xml:id="publisher_796e889a">Fredebold und Fischer</publisher>
@@ -10000,7 +10000,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_574806a3" ref="https://www.wikidata.org/entity/Q120179880">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
-                    <author xml:id="author_38b6a218">Brigitte Struzyk</author>
+                    <author ref="https://www.wikidata.org/entity/Q916715" xml:id="author_38b6a218">Brigitte Struzyk</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="place_1d1718f7">Greifswald</pubPlace>
                     <publisher xml:id="publisher_5fb17386">Freiraum</publisher>
@@ -10107,7 +10107,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_534fad67">
                     <title type="text">Sappho geht stiften</title>
                     <date type="published" when="2015">2015</date>
-                    <author xml:id="author_f6acb7c3">Astrid Osterland</author>
+                    <author ref="https://www.wikidata.org/entity/Q138795544" xml:id="author_f6acb7c3">Astrid Osterland</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
