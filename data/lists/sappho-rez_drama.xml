@@ -72,7 +72,7 @@
                     <bibl xml:id="bibl_bde24a4e">
                         <title type="work">Sapho. Ein Melodrama nebst anderen Gedichten</title>
                     </bibl>
-                    <author xml:id="author_27500efc">J. J. H–b–r [d. i. Johann Joseph von Huber]</author>
+                    <author ref="https://www.wikidata.org/entity/Q1694998" xml:id="author_27500efc">J. J. H–b–r [= Johann Joseph Anton Huber]</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2749" xml:id="place_d4135c97">Augsburg</pubPlace>
                     <publisher xml:id="publisher_ce3cd0df">Kayser</publisher>
@@ -264,7 +264,7 @@
                     <bibl xml:id="bibl_fd44d6db">
                         <title type="work">Carinthia. Zeitschrift für Vaterlandskunde, Belehrung und Unterhaltung</title>
                     </bibl>
-                    <author xml:id="author_6f996abd">Budik</author>
+                    <author ref="https://www.wikidata.org/entity/Q55887367" xml:id="author_6f996abd">Peter Alcantara Budik</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q41753" xml:id="place_b086af04">Klagenfurt</pubPlace>
                 </bibl>
@@ -390,7 +390,7 @@
                     <bibl xml:id="bibl_54cf33e3" ref="https://www.wikidata.org/entity/Q120198534">
                         <title type="work">Sappho. Orpheus und Eurydike. Dramatische Dichtungen</title>
                     </bibl>
-                    <author ref="https://www.wikidata.org/entity/Q120198541" xml:id="author_55676bb1">Maria Modena [d. i. Erna Kreis-Weber]</author>
+                    <author ref="https://www.wikidata.org/entity/Q120198541" xml:id="author_55676bb1">Maria Modena [= Erna Kreis-Weber]</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q70" xml:id="place_bac82a99">Bern</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q818226" xml:id="publisher_68999454">Benteli</publisher>

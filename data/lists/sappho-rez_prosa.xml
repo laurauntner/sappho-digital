@@ -282,7 +282,7 @@
                     <bibl xml:id="bibl_7cfe62ea">
                         <title type="work">Gedichte und Phantasien</title>
                     </bibl>
-                    <author ref="https://www.wikidata.org/entity/Q62053" xml:id="author_2397260a">Tian [d. i. Karoline von Günderrode]</author>
+                    <author ref="https://www.wikidata.org/entity/Q62053" xml:id="author_2397260a">Tian [= Karoline von Günderrode]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace xml:id="place_675a92e1">Hamburg</pubPlace>
                     <pubPlace xml:id="place_f23bb5e2">Frankfurt a. M.</pubPlace>
@@ -813,7 +813,7 @@
                     <bibl xml:id="bibl_60d35f59">
                         <title type="work">Badischer Beobachter</title>
                     </bibl>
-                    <author xml:id="author_653eb09d">F. Ztg.</author>
+                    <author ref="https://www.wikidata.org/entity/Q138834408" xml:id="author_653eb09d">F. Ztg.</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1040" xml:id="place_2126faa6">Karlsruhe</pubPlace>
                 </bibl>
@@ -871,7 +871,7 @@
                 <bibl xml:id="bibl_e58bccae">
                     <title type="text">Sappho</title>
                     <date type="published" when="1880">1880</date>
-                    <author ref="https://www.wikidata.org/entity/Q57629" xml:id="author_9a3d3005">Carmen Sylva [d. i. Elisabeth zu Wied]</author>
+                    <author ref="https://www.wikidata.org/entity/Q57629" xml:id="author_9a3d3005">Carmen Sylva [= Elisabeth zu Wied]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q19446818" xml:id="publisher_f8cbb425">F. A. Brockhaus</publisher>
@@ -1135,7 +1135,7 @@
                     <bibl xml:id="bibl_c62408ae">
                         <title type="work">Bukowinaer Nachrichten</title>
                     </bibl>
-                    <author xml:id="author_90c06ca4">Georg Biagosch</author>
+                    <author ref="https://www.wikidata.org/entity/Q138834314" xml:id="author_90c06ca4">Georg Biagosch</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q157725" xml:id="place_e7593ca9">Czernowitz</pubPlace>
                 </bibl>
@@ -1145,7 +1145,7 @@
                     <bibl xml:id="bibl_22c69eac">
                         <title type="work">Mährisches Tagblatt</title>
                     </bibl>
-                    <author xml:id="author_284d7796">A. von Tannus</author>
+                    <author ref="https://www.wikidata.org/entity/Q138834728" xml:id="author_284d7796">A. von Tannus</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q81137" xml:id="place_3c29d3e1">Olmütz</pubPlace>
                 </bibl>
@@ -1447,7 +1447,7 @@
                 <bibl xml:id="bibl_dd7513ae">
                     <title type="text">Gräfin Vera und ihr Hof. Intimes aus dem roten Gotha</title>
                     <date type="published" when="1906">1906</date>
-                    <author xml:id="author_fbe3f87b">UETYL</author>
+                    <author ref="https://www.wikidata.org/entity/Q138834380" xml:id="author_fbe3f87b">Uetyil</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher xml:id="publisher_f8a3a067">Zeitbilder-Verlag</publisher>
@@ -1523,7 +1523,7 @@
                     <bibl xml:id="bibl_5b00249a">
                         <title type="work">Hannoverscher Kurier</title>
                     </bibl>
-                    <author xml:id="author_71cadc01">Ursula Zöge von Mauteuffel</author>
+                    <author ref="https://www.wikidata.org/entity/Q111443487" xml:id="author_71cadc01">Ursula Zoege von Manteuffel</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1715" xml:id="place_6ea98adb">Hannover</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q125019578" xml:id="publisher_da7a15f3">Gebrüder Jänecke</publisher>
@@ -1572,7 +1572,7 @@
                     <bibl xml:id="bibl_73114485">
                         <title type="work">Die Postanstaltsbeamtin</title>
                     </bibl>
-                    <author xml:id="author_b0bb2731">Florentine Kazelle</author>
+                    <author ref="https://www.wikidata.org/entity/Q138834647" xml:id="author_b0bb2731">Florentine Kazelle</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno-plus?aid=pbe&amp;datum=1909&amp;page=21&amp;size=45&amp;qid=LCTNSEEQ0H8BU4FH3ZU42CQR1BHBWG">https://anno.onb.ac.at/cgi-content/anno-plus?aid=pbe&amp;datum=1909&amp;page=21&amp;size=45&amp;qid=LCTNSEEQ0H8BU4FH3ZU42CQR1BHBWG</ref>
@@ -1688,7 +1688,7 @@
                     <bibl xml:id="bibl_f32fa5e2">
                         <title type="work">Pforzheimer Anzeiger</title>
                     </bibl>
-                    <author xml:id="author_5c2c08ee">A. L. Lindner</author>
+                    <author ref="https://www.wikidata.org/entity/Q138834444" xml:id="author_5c2c08ee">A. L. Lindner</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3046" xml:id="place_be96ca51">Pforzheim</pubPlace>
                 </bibl>
@@ -1993,7 +1993,7 @@
                 <bibl xml:id="bibl_21d85a5a">
                     <title type="text">Flucht aus Buddhas Gesetz: Roman</title>
                     <date type="published" when="1937">1937</date>
-                    <author ref="https://www.wikidata.org/entity/Q103704" xml:id="author_9cc4db92">Ravi Ravendro [d. i. Karl Siegfried Döhring]</author>
+                    <author ref="https://www.wikidata.org/entity/Q103704" xml:id="author_9cc4db92">Ravi Ravendro [= Karl Siegfried Döhring]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher xml:id="publisher_70464083">Wegweiser-Verlag</publisher>
@@ -2043,7 +2043,7 @@
                     <bibl xml:id="bibl_afcf139e">
                         <title type="work">Sächsische Volkszeitung</title>
                     </bibl>
-                    <author xml:id="author_92ac5a47">Dyk</author>
+                    <author ref="https://www.wikidata.org/entity/Q138834401" xml:id="author_92ac5a47">Dyk</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1731" xml:id="place_90bebd2f">Dresden</pubPlace>
                 </bibl>
@@ -2342,7 +2342,7 @@
                 <bibl ref="https://www.wikidata.org/entity/Q120165385" xml:id="bibl_b705febf">
                     <title type="text">SAPPHO »und dass ich dich lieben werde …«. Erinnerungen der Poetin und ihrer Hetären</title>
                     <date type="published" when="2005">2005</date>
-                    <author ref="https://www.wikidata.org/entity/Q120165473" xml:id="author_8d60dbcb">Tami van Dalen [d. i. Tami Dahlheim]</author>
+                    <author ref="https://www.wikidata.org/entity/Q120165473" xml:id="author_8d60dbcb">Tami van Dalen [= Tami Dahlheim]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q61063562" xml:id="place_b6b4f233">Heinrichshofen</pubPlace>
                     <publisher xml:id="publisher_143d11f9">Thiasos</publisher>

@@ -404,7 +404,7 @@
                     <bibl xml:id="bibl_0079799c">
                         <title type="work">Veer Schertz-Gedichte</title>
                     </bibl>
-                    <author ref="https://www.wikidata.org/entity/Q97596" xml:id="author_352648f9">Hans Willmsen L. Rost [d. i. Johann Lauremberg]</author>
+                    <author ref="https://www.wikidata.org/entity/Q97596" xml:id="author_352648f9">Hans Willmsen L. Rost [= Johann Lauremberg]</author>
                     <note type="genre">Lyrik</note>
                     <ref target="http://diglib.hab.de/drucke/lo-4314/start.htm?image=00134">http://diglib.hab.de/drucke/lo-4314/start.htm?image=00134</ref>
                 </bibl>
@@ -734,7 +734,7 @@
                     <bibl xml:id="bibl_8e8089bd">
                         <title type="work">Philanders von der Linde Galante Gedichte</title>
                     </bibl>
-                    <author ref="https://www.wikidata.org/entity/Q105229" xml:id="author_1ab6fe01">Philander von der Linde [d. i. Johann Burckhardt Mencke]</author>
+                    <author ref="https://www.wikidata.org/entity/Q105229" xml:id="author_1ab6fe01">Philander von der Linde [= Johann Burckhardt Mencke]</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher xml:id="publisher_dfadc43f">Johann Friedrich Gleditsch und Sohn</publisher>
@@ -964,7 +964,7 @@
                     <bibl xml:id="bibl_6d27343b">
                         <title type="work">Belustigungen des Verstandes und des Witzes. Auf das Jahr 1741</title>
                     </bibl>
-                    <author xml:id="author_012750d4">C.</author>
+                    <author ref="https://www.wikidata.org/entity/Q111106" xml:id="author_012750d4">C. [= Karl Christian Gärtner]</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher xml:id="publisher_5c508781">Bernhard Christian Breitkopf</publisher>
@@ -1039,7 +1039,7 @@
                     <bibl xml:id="bibl_28f85a25">
                         <title type="work">Belustigungen des Verstandes und Witzes. Auf das Jahr 1744</title>
                     </bibl>
-                    <author ref="https://www.wikidata.org/entity/Q111106" xml:id="author_86bf4efd">G. [d. i. Karl Christian Gärtner?]</author>
+                    <author ref="https://www.wikidata.org/entity/Q111106" xml:id="author_86bf4efd">G. [= Karl Christian Gärtner?]</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q100748" xml:id="publisher_8d967df7">Bernhard Christoph Breitkopf</publisher>
@@ -3339,7 +3339,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_0633c293">
                         <title type="work">Neuere Gedichte</title>
                     </bibl>
-                    <author ref="https://www.wikidata.org/entity/Q86956" xml:id="author_31efc428">Theone [d. i. Therese von Artner]</author>
+                    <author ref="https://www.wikidata.org/entity/Q86956" xml:id="author_31efc428">Theone [= Therese von Artner]</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3806" xml:id="place_ae6e1bfb">Tübingen</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1136691" xml:id="publisher_d7432893">J. G. Cotta’sche Buchhandlung</publisher>
@@ -3351,7 +3351,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_da54ba99">
                         <title type="work">Morgenblatt für gebildete Stände</title>
                     </bibl>
-                    <author xml:id="author_fe383a4c">Hg.</author>
+                    <author ref="https://www.wikidata.org/entity/Q138834433" xml:id="author_bb3b0c3b">Hg.</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1136691" xml:id="publisher_d7432893">Cotta’sche Verlagsbuchhandlung</publisher>
@@ -3448,7 +3448,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_da54ba99">
                         <title type="work">Morgenblatt für gebildete Stände</title>
                     </bibl>
-                    <author xml:id="author_bb3b0c3b">Hg.</author>
+                    <author ref="https://www.wikidata.org/entity/Q138834433" xml:id="author_bb3b0c3b">Hg.</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1136691" xml:id="publisher_d7432893">Cotta’sche Verlagsbuchhandlung</publisher>
@@ -3817,7 +3817,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_20f6e022">
                         <title type="work">Düsseldorfer Zeitung</title>
                     </bibl>
-                    <author xml:id="author_b5830131">A***</author>
+                    <author ref="https://www.wikidata.org/entity/Q138834702" xml:id="author_b5830131">A***</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1718" xml:id="place_42b32e43">Düsseldorf</pubPlace>
                 </bibl>
@@ -3939,7 +3939,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_c564852a">
                         <title type="work">Wiener Zeitschrift für Kunst, Literatur, Theater und Mode</title>
                     </bibl>
-                    <author xml:id="author_2b39c490">A. J. Laschan</author>
+                    <author ref="https://www.wikidata.org/entity/Q138834308" xml:id="author_2b39c490">A. J. Laschan</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=wzz&amp;datum=18330718">https://anno.onb.ac.at/cgi-content/anno?aid=wzz&amp;datum=18330718</ref>
@@ -4616,7 +4616,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_dfe57cf2" ref="https://www.wikidata.org/entity/Q120198486">
                         <title type="work">Auf Kypros</title>
                     </bibl>
-                    <author ref="https://www.wikidata.org/entity/Q54859903" xml:id="author_a18ae9df">Marie Madeleine [d. i. Marie Madeleine Baronin von Puttkamer]</author>
+                    <author ref="https://www.wikidata.org/entity/Q54859903" xml:id="author_a18ae9df">Marie Madeleine [= Marie Madeleine Baronin von Puttkamer]</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q120198496" xml:id="publisher_a55ad5ae">Vita, Deutsches Verlagshaus</publisher>
@@ -4910,7 +4910,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_6fc79236">
                     <title type="text"/>
                     <date type="published" when="1909">1909?</date>
-                    <author xml:id="author_06d10730">Lange</author>
+                    <author ref="https://www.wikidata.org/entity/Q138834637" xml:id="author_06d10730">Lange</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
                 <bibl xml:id="bibl_65ee8c2a">
@@ -6469,7 +6469,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_371af9c3">
                         <title type="work">Jahrbuch für Literatur, Bd. 12</title>
                     </bibl>
-                    <author xml:id="author_07b90eb1">Bernd Weiden</author>
+                    <author ref="https://www.wikidata.org/entity/Q138834623" xml:id="author_07b90eb1">Bernd Weiden</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1794" xml:id="place_ae5c315b">Frankfurt a. M.</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q51893513" xml:id="publisher_0bf3ea62">Brandes &amp; Apsel</publisher>
@@ -6912,7 +6912,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_574806a3" ref="https://www.wikidata.org/entity/Q120179880">
                         <title type="work">Muse, die zehnte. Antworten auf Sappho von Mytilene</title>
                     </bibl>
-                    <author xml:id="author_e566ba30">Jenny Feuerstein</author>
+                    <author ref="https://www.wikidata.org/entity/Q95205305" xml:id="author_e566ba30">Jenny Feuerstein</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="place_1d1718f7">Greifswald</pubPlace>
                     <publisher xml:id="publisher_5fb17386">Freiraum</publisher>
