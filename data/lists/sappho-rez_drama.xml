@@ -371,6 +371,14 @@
                     <publisher ref="https://www.wikidata.org/entity/Q481576" xml:id="publisher_26115c29">S. Fischer</publisher>
                     <ref target="https://books.google.de/books?id=paEMAQAAIAAJ">https://books.google.de/books?id=paEMAQAAIAAJ</ref>
                 </bibl>
+                <bibl xml:id="bibl_dde25dfe">
+                    <title type="text">Sappho</title>
+                    <date type="published" when="1900">1900?</date>
+                    <author ref="https://www.wikidata.org/entity/Q215550" xml:id="author_46b84eb9">Rudolf Levy</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
+                    <publisher xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
+                </bibl>
                 <bibl xml:id="bibl_b1600f12">
                     <title type="text">Der Kanzler von Tirol. Schauspiel in 5 Akten und einem Epilog</title>
                     <date type="created" when="1926">1926</date>
@@ -402,14 +410,6 @@
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q62477247" xml:id="publisher_1e45dd20">Donau-Verlag</publisher>
-                </bibl>
-                <bibl xml:id="bibl_dde25dfe">
-                    <title type="text">Sappho</title>
-                    <date type="published" when="1977">1977</date>
-                    <author xml:id="author_46b84eb9">Rudolf Levy</author>
-                    <note type="genre">Drama</note>
-                    <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
-                    <publisher xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q120198447" xml:id="bibl_a53d809b">
                     <title type="text">Sappho und alle die danach kamen</title>

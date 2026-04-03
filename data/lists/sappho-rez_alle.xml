@@ -942,7 +942,7 @@
                     <bibl xml:id="bibl_a0565cb3">
                         <title type="work">Poetische Rosen in Knospen</title>
                     </bibl>
-                    <author xml:id="author_cd06f885">Anonym</author>
+                    <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1729" xml:id="place_87bc3115">Erfurt</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q112498331" xml:id="publisher_e74b710c">Johann Heinrich Nonne</publisher>
@@ -1065,7 +1065,7 @@
                     <bibl xml:id="bibl_9db1eec3">
                         <title type="work">Belustigungen des Verstandes und Witzes. Auf das Jahr 1743</title>
                     </bibl>
-                    <author xml:id="author_8f86c2e4">b. n. e.</author>
+                    <author ref="https://www.wikidata.org/entity/Q67322" xml:id="author_8f86c2e4">b. n. e. [= Johann Elias Schlegel?]</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q100748" xml:id="publisher_8d967df7">Bernhard Christoph Breitkopf</publisher>
@@ -3229,7 +3229,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_ce6706d2">
                         <title type="work">Deutsche Monatsschrift</title>
                     </bibl>
-                    <author xml:id="author_cd06f885">Anonym</author>
+                    <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno-plus?aid=dms&amp;datum=1794&amp;page=930&amp;size=45&amp;qid=XYXAF94PXCPFGNL12QANBY9IZ4T701">https://anno.onb.ac.at/cgi-content/anno-plus?aid=dms&amp;datum=1794&amp;page=930&amp;size=45&amp;qid=XYXAF94PXCPFGNL12QANBY9IZ4T701</ref>
@@ -3599,7 +3599,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_1776c5ab">
                         <title type="work">Alles, und das Höchste, was sich von Gott und über Unsterblichkeit denken läßt, dann Lider und Gedichte zur Enthüllung jener Wahrheiten, di stete Zufridenheit bei frohen Mute und ächter Güte begründen</title>
                     </bibl>
-                    <author xml:id="author_1f7bb685">Johann Roth</author>
+                    <author ref="https://www.wikidata.org/entity/Q94989682" xml:id="author_1f7bb685">Johann Wenzel Roth</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1085" xml:id="place_e575530b">Prag</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q112396266" xml:id="publisher_7313bc09">Kaspar Widtmann</publisher>
@@ -3887,7 +3887,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_ac17a500">
                     <title type="text">Schwester Monika</title>
                     <date type="published" when="1815">1815</date>
-                    <author xml:id="author_cd06f885">Anonym</author>
+                    <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q268" xml:id="place_d5519995">Posen</pubPlace>
                     <publisher xml:id="publisher_3e982034">Kühn</publisher>
@@ -4012,7 +4012,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_ec77dcf8">
                         <title type="work">Der Sammler</title>
                     </bibl>
-                    <author xml:id="author_cd06f885">Anonym</author>
+                    <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                 </bibl>
@@ -4582,7 +4582,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_ec77dcf8">
                         <title type="work">Der Sammler</title>
                     </bibl>
-                    <author xml:id="author_cd06f885">Anonym</author>
+                    <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=sam&amp;datum=18340408">https://anno.onb.ac.at/cgi-content/anno?aid=sam&amp;datum=18340408</ref>
@@ -4625,11 +4625,12 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_72514b45">
                         <title type="work">Abend-Zeitung</title>
                     </bibl>
-                    <author xml:id="author_1441e802">Louis Graf von Ostrowski</author>
+                    <author ref="https://www.wikidata.org/entity/Q138867453" xml:id="author_1441e802">Bernhard Louis Graf von Ostrowski</author>
                     <note type="genre">Prosa</note>
                     <pubPlace xml:id="place_90bebd2f">Dresden</pubPlace>
                     <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher xml:id="publisher_40b57b80">Arnold</publisher>
+                    <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=abe&amp;datum=18340724&amp;seite=1&amp;zoom=33">https://anno.onb.ac.at/cgi-content/anno?aid=abe&amp;datum=18340724&amp;seite=1&amp;zoom=33</ref>
                 </bibl>
                 <bibl xml:id="bibl_6091804d">
                     <title type="text">Sappho</title>
@@ -4637,7 +4638,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_c564852a">
                         <title type="work">Wiener Zeitschrift für Kunst, Literatur, Theater und Mode</title>
                     </bibl>
-                    <author xml:id="author_50e0d270">Fitzinger</author>
+                    <author ref="https://www.wikidata.org/entity/Q61268603" xml:id="author_50e0d270">Franz Fitzinger</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=wzz&amp;datum=18330523">https://anno.onb.ac.at/cgi-content/anno?aid=wzz&amp;datum=18330523</ref>
@@ -4702,7 +4703,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_625fc369">
                         <title type="work">Echo. Zeitschrift für Literatur, Kunst und Mode in Italien</title>
                     </bibl>
-                    <author xml:id="author_cd06f885">Anonym</author>
+                    <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q490" xml:id="place_e3063093">Mailand</pubPlace>
                     <publisher xml:id="publisher_c946c8ca">Alois Pirola</publisher>
@@ -4927,7 +4928,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_44fc8c94">
                         <title type="work">Wochenblatt für die Amtsbezirke Offenburg, Oberkirch, Achern, Rheinbischofsheim, Kork, Gengenbach, Haslach und Wolfach</title>
                     </bibl>
-                    <author xml:id="author_cd06f885">Anonym</author>
+                    <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4044" xml:id="place_6f4ddb78">Offenburg</pubPlace>
                     <ref target="https://www.deutsche-digitale-bibliothek.de/newspaper/item/XZLUUEJZPJB5UIXJW75OLE5YN2PR2CW6">https://www.deutsche-digitale-bibliothek.de/newspaper/item/XZLUUEJZPJB5UIXJW75OLE5YN2PR2CW6</ref>
@@ -4994,7 +4995,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_a1aeaaab">
                         <title type="work">Düsseldorfer Journal und Kreis-Blatt</title>
                     </bibl>
-                    <author xml:id="author_cd06f885">Anonym</author>
+                    <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1718" xml:id="place_42b32e43">Düsseldorf</pubPlace>
                     <ref target="https://www.deutsche-digitale-bibliothek.de/newspaper/item/6S4PB7VHOGHSHPOIG7KBIREH2CAODW5Y">https://www.deutsche-digitale-bibliothek.de/newspaper/item/6S4PB7VHOGHSHPOIG7KBIREH2CAODW5Y</ref>
@@ -5005,7 +5006,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_9ceda030">
                         <title type="work">Dresdner Journal</title>
                     </bibl>
-                    <author xml:id="author_cd06f885">Anonym</author>
+                    <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1731" xml:id="place_90bebd2f">Dresden</pubPlace>
                     <ref target="https://www.deutsche-digitale-bibliothek.de/newspaper/item/AKHUD5I3CN2QTTATHEOQOPQCRYTIFOLW">https://www.deutsche-digitale-bibliothek.de/newspaper/item/AKHUD5I3CN2QTTATHEOQOPQCRYTIFOLW</ref>
@@ -5182,7 +5183,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_75924aa7">
                         <title type="work">Leitmeritzer Wochenblatt, 29. 8. 1863, S. 4</title>
                     </bibl>
-                    <author xml:id="author_cd06f885">Anonym</author>
+                    <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q384403" xml:id="place_a808e5c5">Leitmeritz</pubPlace>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=lwb&amp;datum=18630829">https://anno.onb.ac.at/cgi-content/anno?aid=lwb&amp;datum=18630829</ref>
@@ -5387,7 +5388,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_f89bba72">
                         <title type="work">Die Bombe</title>
                     </bibl>
-                    <author xml:id="author_cd06f885">Anonym</author>
+                    <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=bom&amp;datum=18730223">https://anno.onb.ac.at/cgi-content/anno?aid=bom&amp;datum=18730223</ref>
@@ -5459,7 +5460,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_9ad02777">
                     <title type="text">Das Quartier der Sappho</title>
                     <date type="published" when="1875">1875</date>
-                    <author xml:id="author_8c1adbea">Antoine Pithon</author>
+                    <author ref="https://www.wikidata.org/entity/Q138867777" xml:id="author_8c1adbea">Antoine Pithon</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q5489" xml:id="place_c750532d">Troyes</pubPlace>
                 </bibl>
@@ -5558,7 +5559,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_bfee669e">
                         <title type="work">Kikeriki</title>
                     </bibl>
-                    <author xml:id="author_cd06f885">Anonym</author>
+                    <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=kik&amp;datum=18790508">https://anno.onb.ac.at/cgi-content/anno?aid=kik&amp;datum=18790508</ref>
@@ -5862,7 +5863,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_9ceda030">
                         <title type="work">Dresdner Journal</title>
                     </bibl>
-                    <author xml:id="author_a8b72e6a">A. Haupt</author>
+                    <author ref="https://www.wikidata.org/entity/Q138867546" xml:id="author_a8b72e6a">A. Haupt</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1731" xml:id="place_90bebd2f">Dresden</pubPlace>
                 </bibl>
@@ -6102,7 +6103,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_5b00249a">
                         <title type="work">Hannoverscher Kurier</title>
                     </bibl>
-                    <author xml:id="author_28d4cefb">A. von Limburg</author>
+                    <author ref="https://www.wikidata.org/entity/Q138865724" xml:id="author_28d4cefb">A. von Limburg</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1715" xml:id="place_6ea98adb">Hannover</pubPlace>
                 </bibl>
@@ -6199,6 +6200,14 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q120198496" xml:id="publisher_a55ad5ae">Vita, Deutsches Verlagshaus</publisher>
+                </bibl>
+                <bibl xml:id="bibl_dde25dfe">
+                    <title type="text">Sappho</title>
+                    <date type="published" when="1900">1900?</date>
+                    <author ref="https://www.wikidata.org/entity/Q215550" xml:id="author_46b84eb9">Rudolf Levy</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
+                    <publisher xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
                 </bibl>
                 <bibl xml:id="bibl_a18dcad6">
                     <title type="text">Lesbos</title>
@@ -6883,7 +6892,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_af3e8b48">
                         <title type="work">Bregenzer Tagblatt</title>
                     </bibl>
-                    <author xml:id="author_9fdee6ae">Walter Hogarth</author>
+                    <author ref="https://www.wikidata.org/entity/Q138865856" xml:id="author_9fdee6ae">Walter Hogarth</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1737" xml:id="place_99b809f4">Bregenz</pubPlace>
                 </bibl>
@@ -6997,7 +7006,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_fe2b96a9">
                         <title type="work">Österreichische Illustrierte Zeitung</title>
                     </bibl>
-                    <author xml:id="author_590bdd03">H. Teichmann</author>
+                    <author ref="https://www.wikidata.org/entity/Q138867687" xml:id="author_590bdd03">H. Teichmann</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                 </bibl>
@@ -7358,7 +7367,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_31b3170b">
                         <title type="work">Die schöne Frau</title>
                     </bibl>
-                    <author xml:id="author_83349cbd">Anita</author>
+                    <author ref="https://www.wikidata.org/entity/Q138867727" xml:id="author_83349cbd">Anita</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2112" xml:id="place_726ed312">Bielefeld</pubPlace>
                     <publisher xml:id="publisher_a7c24b4c">Gustav Thomas</publisher>
@@ -8235,14 +8244,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher xml:id="publisher_19d7d5d6">Neue Deutsche Hefte</publisher>
-                </bibl>
-                <bibl xml:id="bibl_dde25dfe">
-                    <title type="text">Sappho</title>
-                    <date type="published" when="1977">1977</date>
-                    <author xml:id="author_46b84eb9">Rudolf Levy</author>
-                    <note type="genre">Drama</note>
-                    <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
-                    <publisher xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
                 </bibl>
                 <bibl xml:id="bibl_1981d940">
                     <title type="text">Der Besuch</title>

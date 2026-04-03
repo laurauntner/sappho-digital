@@ -330,7 +330,7 @@
                 <bibl xml:id="bibl_ac17a500">
                     <title type="text">Schwester Monika</title>
                     <date type="published" when="1815">1815</date>
-                    <author xml:id="author_cd06f885">Anonym</author>
+                    <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q268" xml:id="place_d5519995">Posen</pubPlace>
                     <publisher xml:id="publisher_3e982034">Kühn</publisher>
@@ -353,7 +353,7 @@
                     <bibl xml:id="bibl_ec77dcf8">
                         <title type="work">Der Sammler</title>
                     </bibl>
-                    <author xml:id="author_cd06f885">Anonym</author>
+                    <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                 </bibl>
@@ -416,7 +416,7 @@
                     <bibl xml:id="bibl_ec77dcf8">
                         <title type="work">Der Sammler</title>
                     </bibl>
-                    <author xml:id="author_cd06f885">Anonym</author>
+                    <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=sam&amp;datum=18340408">https://anno.onb.ac.at/cgi-content/anno?aid=sam&amp;datum=18340408</ref>
@@ -446,11 +446,12 @@
                     <bibl xml:id="bibl_72514b45">
                         <title type="work">Abend-Zeitung</title>
                     </bibl>
-                    <author xml:id="author_1441e802">Louis Graf von Ostrowski</author>
+                    <author ref="https://www.wikidata.org/entity/Q138867453" xml:id="author_1441e802">Bernhard Louis Graf von Ostrowski</author>
                     <note type="genre">Prosa</note>
                     <pubPlace xml:id="place_90bebd2f">Dresden</pubPlace>
                     <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher xml:id="publisher_40b57b80">Arnold</publisher>
+                    <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=abe&amp;datum=18340724&amp;seite=1&amp;zoom=33">https://anno.onb.ac.at/cgi-content/anno?aid=abe&amp;datum=18340724&amp;seite=1&amp;zoom=33</ref>
                 </bibl>
                 <bibl xml:id="bibl_643f9997">
                     <title type="text">Sappho, ein romantisches Gemälde</title>
@@ -485,7 +486,7 @@
                     <bibl xml:id="bibl_625fc369">
                         <title type="work">Echo. Zeitschrift für Literatur, Kunst und Mode in Italien</title>
                     </bibl>
-                    <author xml:id="author_cd06f885">Anonym</author>
+                    <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q490" xml:id="place_e3063093">Mailand</pubPlace>
                     <publisher xml:id="publisher_c946c8ca">Alois Pirola</publisher>
@@ -579,7 +580,7 @@
                     <bibl xml:id="bibl_9ceda030">
                         <title type="work">Dresdner Journal</title>
                     </bibl>
-                    <author xml:id="author_cd06f885">Anonym</author>
+                    <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1731" xml:id="place_90bebd2f">Dresden</pubPlace>
                     <ref target="https://www.deutsche-digitale-bibliothek.de/newspaper/item/AKHUD5I3CN2QTTATHEOQOPQCRYTIFOLW">https://www.deutsche-digitale-bibliothek.de/newspaper/item/AKHUD5I3CN2QTTATHEOQOPQCRYTIFOLW</ref>
@@ -803,7 +804,7 @@
                 <bibl xml:id="bibl_9ad02777">
                     <title type="text">Das Quartier der Sappho</title>
                     <date type="published" when="1875">1875</date>
-                    <author xml:id="author_8c1adbea">Antoine Pithon</author>
+                    <author ref="https://www.wikidata.org/entity/Q138867777" xml:id="author_8c1adbea">Antoine Pithon</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q5489" xml:id="place_c750532d">Troyes</pubPlace>
                 </bibl>
@@ -1034,7 +1035,7 @@
                     <bibl xml:id="bibl_9ceda030">
                         <title type="work">Dresdner Journal</title>
                     </bibl>
-                    <author xml:id="author_a8b72e6a">A. Haupt</author>
+                    <author ref="https://www.wikidata.org/entity/Q138867546" xml:id="author_a8b72e6a">A. Haupt</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1731" xml:id="place_90bebd2f">Dresden</pubPlace>
                 </bibl>
@@ -1203,7 +1204,7 @@
                     <bibl xml:id="bibl_5b00249a">
                         <title type="work">Hannoverscher Kurier</title>
                     </bibl>
-                    <author xml:id="author_28d4cefb">A. von Limburg</author>
+                    <author ref="https://www.wikidata.org/entity/Q138865724" xml:id="author_28d4cefb">A. von Limburg</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1715" xml:id="place_6ea98adb">Hannover</pubPlace>
                 </bibl>
@@ -1642,7 +1643,7 @@
                     <bibl xml:id="bibl_af3e8b48">
                         <title type="work">Bregenzer Tagblatt</title>
                     </bibl>
-                    <author xml:id="author_9fdee6ae">Walter Hogarth</author>
+                    <author ref="https://www.wikidata.org/entity/Q138865856" xml:id="author_9fdee6ae">Walter Hogarth</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1737" xml:id="place_99b809f4">Bregenz</pubPlace>
                 </bibl>
@@ -1698,7 +1699,7 @@
                     <bibl xml:id="bibl_fe2b96a9">
                         <title type="work">Österreichische Illustrierte Zeitung</title>
                     </bibl>
-                    <author xml:id="author_590bdd03">H. Teichmann</author>
+                    <author ref="https://www.wikidata.org/entity/Q138867687" xml:id="author_590bdd03">H. Teichmann</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                 </bibl>
@@ -1917,7 +1918,7 @@
                     <bibl xml:id="bibl_31b3170b">
                         <title type="work">Die schöne Frau</title>
                     </bibl>
-                    <author xml:id="author_83349cbd">Anita</author>
+                    <author ref="https://www.wikidata.org/entity/Q138867727" xml:id="author_83349cbd">Anita</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2112" xml:id="place_726ed312">Bielefeld</pubPlace>
                     <publisher xml:id="publisher_a7c24b4c">Gustav Thomas</publisher>
