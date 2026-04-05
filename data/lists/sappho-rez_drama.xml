@@ -130,8 +130,8 @@
                 <bibl xml:id="bibl_19d9dbc7">
                     <title type="text">Seppherl, komisches Melodrama als Parodie mit Gesang in 3 Aufzügen [oder »Jungfer Sepherl«]</title>
                     <date type="published" when="1818">1818</date>
-                    <author xml:id="author_012750d4">C.</author>
-                    <author xml:id="author_012750d5">H.</author>
+                    <author ref="https://www.wikidata.org/entity/Q138881526" xml:id="author_012750d4">Chorin</author>
+                    <author ref="https://www.wikidata.org/entity/Q138881545" xml:id="author_012750d5">Hirsch</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
@@ -357,7 +357,7 @@
                     <bibl xml:id="bibl_440fa063">
                         <title type="work">Wiener Humor. Sammlung von humoristischen Vorträgen</title>
                     </bibl>
-                    <author xml:id="author_688d152d">Fr. Rotter</author>
+                    <author ref="https://www.wikidata.org/entity/Q138914759" xml:id="author_688d152d">Fr. Rotter</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher xml:id="publisher_eca87393">Nationaler Verlag</publisher>

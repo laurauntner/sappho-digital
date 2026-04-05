@@ -154,7 +154,7 @@
                     <bibl xml:id="bibl_b370eb1a">
                         <title type="work">Provinzialnachrichten aus den Kaiserl. Königl. Staaten</title>
                     </bibl>
-                    <author xml:id="author_a24b6787">Amoroso?</author>
+                    <author ref="https://www.wikidata.org/entity/Q138914874" xml:id="author_a24b6787">Amoroso</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=pkk&amp;datum=17830920">https://anno.onb.ac.at/cgi-content/anno?aid=pkk&amp;datum=17830920</ref>
@@ -342,7 +342,7 @@
                     <bibl xml:id="bibl_f965201c">
                         <title type="work">Zeitung für die elegante Welt</title>
                     </bibl>
-                    <author xml:id="author_249f3397">Karl Seib</author>
+                    <author ref="https://www.wikidata.org/entity/Q138895886" xml:id="author_249f3397">Karl Seib</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher xml:id="publisher_7b364dff">Verlag von Georg Voß</publisher>
@@ -456,7 +456,7 @@
                 <bibl xml:id="bibl_643f9997">
                     <title type="text">Sappho, ein romantisches Gemälde</title>
                     <date type="published" when="1835">1835</date>
-                    <author xml:id="author_05bbc90a">L. G. Förster</author>
+                    <author ref="https://www.wikidata.org/entity/Q55849978" xml:id="author_05bbc90a">Lebrecht Gotthilf Förster</author>
                     <note type="genre">Prosa?</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3750" xml:id="place_01b3ebf8">Gera</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q94898960" xml:id="publisher_d911c923">Friedrich Schumann</publisher>
@@ -476,7 +476,7 @@
                     <bibl xml:id="bibl_affda0e4">
                         <title type="work">Der Aufmerksame</title>
                     </bibl>
-                    <author xml:id="author_dc27326b">Carl Eichel</author>
+                    <author ref="https://www.wikidata.org/entity/Q56101863" xml:id="author_dc27326b">Carl Eichel</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q13298" xml:id="place_6e00929f">Graz</pubPlace>
                 </bibl>
@@ -643,7 +643,7 @@
                     <bibl xml:id="bibl_50be4356">
                         <title type="work">Oesterreichisches Bürger-Blatt</title>
                     </bibl>
-                    <author xml:id="author_d31427b4">Raoul</author>
+                    <author ref="https://www.wikidata.org/entity/Q138896150" xml:id="author_d31427b4">Raoul</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q41329" xml:id="place_907e6aad">Linz</pubPlace>
                 </bibl>
@@ -855,7 +855,7 @@
                     <bibl xml:id="bibl_2ccc6a75">
                         <title type="work">Norddeutsche allgemeine Zeitung</title>
                     </bibl>
-                    <author xml:id="author_507bad6b">D. Beta</author>
+                    <author ref="https://www.wikidata.org/entity/Q138895284" xml:id="author_507bad6b">D. Beta</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                 </bibl>
@@ -1063,7 +1063,7 @@
                     <bibl xml:id="bibl_9ceda030">
                         <title type="work">Dresdner Journal</title>
                     </bibl>
-                    <author xml:id="author_5ab12677">T. Pauly</author>
+                    <author ref="https://www.wikidata.org/entity/Q138914603" xml:id="author_5ab12677">T. Pauly</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1731" xml:id="place_90bebd2f">Dresden</pubPlace>
                 </bibl>
@@ -1125,7 +1125,7 @@
                     <bibl xml:id="bibl_286cebb8">
                         <title type="work">Berliner Tageblatt und Handels-Zeitung</title>
                     </bibl>
-                    <author xml:id="author_0aedf092">M. Stahl</author>
+                    <author ref="https://www.wikidata.org/entity/Q138868153" xml:id="author_0aedf092">Marie Stahl [= Marie Dieckmann]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q71476" xml:id="publisher_4d29e5ab">Rudolf Mosse</publisher>
@@ -1545,7 +1545,7 @@
                     <bibl xml:id="bibl_816be51a">
                         <title type="work">Leipziger Tageblatt und Handelszeitung</title>
                     </bibl>
-                    <author xml:id="author_9f9d51bc">Bob</author>
+                    <author ref="https://www.wikidata.org/entity/Q138895363" xml:id="author_9f9d51bc">Bob</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                 </bibl>
@@ -1679,7 +1679,7 @@
                     <bibl xml:id="bibl_38ed3441">
                         <title type="work">Sächsische Dorfzeitung und Elbgaupresse</title>
                     </bibl>
-                    <author xml:id="author_a3810329">H. Steinbach</author>
+                    <author ref="https://www.wikidata.org/entity/Q138881623" xml:id="author_a3810329">H. Steinbach [= Hedwig Müller]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace xml:id="place_79486e93">Dresden-Blasewitz</pubPlace>
                 </bibl>
@@ -1896,16 +1896,6 @@
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1737" xml:id="place_99b809f4">Bregenz</pubPlace>
                 </bibl>
-                <bibl xml:id="bibl_e6e74ba6">
-                    <title type="text">Der Sprung ins Leben. Roman</title>
-                    <date type="published" when="1928">1928</date>
-                    <bibl xml:id="bibl_0c7e3721">
-                        <title type="work">Arbeiterwille</title>
-                    </bibl>
-                    <author xml:id="author_346ff930">Max Castman</author>
-                    <note type="genre">Prosa</note>
-                    <pubPlace ref="https://www.wikidata.org/entity/Q13298" xml:id="place_6e00929f">Graz</pubPlace>
-                </bibl>
                 <bibl xml:id="bibl_a49a9cb4">
                     <title type="text">Römische Sappho</title>
                     <date type="published" when="1931">1931?</date>
@@ -1986,7 +1976,7 @@
                     <bibl xml:id="bibl_f0957198">
                         <title type="work">Oedenburger Zeitung</title>
                     </bibl>
-                    <author xml:id="author_20474163">Rudolf Becht</author>
+                    <author ref="https://www.wikidata.org/entity/Q138879374" xml:id="author_20474163">Rudolf Becht</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q168648" xml:id="place_a6617830">Sopron</pubPlace>
                     <publisher xml:id="publisher_91cc6e1b">Röttig-Romwalter</publisher>
@@ -2054,7 +2044,7 @@
                     <bibl xml:id="bibl_c44e27f0">
                         <title type="work">Die Muskete</title>
                     </bibl>
-                    <author xml:id="author_89fb856e">R. A.</author>
+                    <author ref="https://www.wikidata.org/entity/Q138895959" xml:id="author_89fb856e">R. A.</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                 </bibl>
@@ -2075,7 +2065,7 @@
                     <bibl xml:id="bibl_cac5cb34" ref="https://www.wikidata.org/entity/Q691539">
                         <title type="work">Menschenrecht. Blätter zur Aufklärung gegen Ächtung und Vorurteil</title>
                     </bibl>
-                    <author xml:id="author_a0790a3f">Phoebe</author>
+                    <author ref="https://www.wikidata.org/entity/Q138868045" xml:id="author_a0790a3f">Phoebe</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q72" xml:id="place_0c1736a7">Zürich</pubPlace>
                     <publisher xml:id="publisher_9050d310">Verlag Der Kreis</publisher>

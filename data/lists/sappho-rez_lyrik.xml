@@ -3145,12 +3145,6 @@ Philosophen zu Sanssouci</title>
                     <publisher ref="https://www.wikidata.org/entity/Q105465982" xml:id="publisher_bb42115b">Bayrhoffer</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Sommer,+Elise/Gedichte/Poetische+Versuche/Am+Geburtstage+des+letztverstorbenen+F%C3%BCrsten+zu+Wittgenstein-Berlenburg">http://www.zeno.org/Literatur/M/Sommer,+Elise/Gedichte/Poetische+Versuche/Am+Geburtstage+des+letztverstorbenen+F%C3%BCrsten+zu+Wittgenstein-Berlenburg</ref>
                 </bibl>
-                <bibl xml:id="bibl_3fd78a10">
-                    <title type="text">Die sieben Wort am Kreuz</title>
-                    <date type="created" when="1850">19. Jahrhundert</date>
-                    <author xml:id="author_64bb077c">Z. Werner</author>
-                    <note type="genre">Lyrik</note>
-                </bibl>
                 <bibl xml:id="bibl_1aca788a">
                     <title type="text">Thränen</title>
                     <date type="created" when="1800">1800?</date>
@@ -4004,7 +3998,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_da54ba99">
                         <title type="work">Morgenblatt für gebildete Stände</title>
                     </bibl>
-                    <author xml:id="author_ed251267">J. G. M.</author>
+                    <author ref="https://www.wikidata.org/entity/Q55903318" xml:id="author_ed251267">J. G. M.</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q54676621" xml:id="publisher_f9f09c49">Christian Ernst Kollmann</publisher>
@@ -4057,7 +4051,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_b3d0f556">
                         <title type="work">Der Österreichische Zuschauer. Zeitschrift für Kunst, Wissenschaft und geistiges Leben</title>
                     </bibl>
-                    <author xml:id="author_013a094f">Balduin</author>
+                    <author ref="https://www.wikidata.org/entity/Q138896196" xml:id="author_013a094f">Balduin</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q98834927" xml:id="publisher_09a6d808">Karl Ueberreuter</publisher>
@@ -4086,7 +4080,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_11303d4b">
                         <title type="work">Thusnelda</title>
                     </bibl>
-                    <author xml:id="author_a1af1a8c">H. F. Pöschl</author>
+                    <author ref="https://www.wikidata.org/entity/Q138896075" xml:id="author_a1af1a8c">Heinrich Ernst Pöschl</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=thu&amp;datum=18430722">https://anno.onb.ac.at/cgi-content/anno?aid=thu&amp;datum=18430722</ref>
@@ -4216,14 +4210,16 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <ref target="https://books.google.de/books?id=ODtCAQAAMAAJ">https://books.google.de/books?id=ODtCAQAAMAAJ</ref>
                 </bibl>
                 <bibl xml:id="bibl_afe2492c">
-                    <title type="text">Dietätische Lebensregeln</title>
-                    <date type="published" when="1858">1858</date>
+                    <title type="text">Die Getränke</title>
+                    <date type="published" when="1783">1783</date>
                     <bibl xml:id="bibl_4431d678">
-                        <title type="work">Gmundner Wochenblatt</title>
+                        <title type="work">Dietätische Lebensregeln oder Belehrung wie es anzufangen ein hohes Alter zu erlangen</title>
                     </bibl>
-                    <author xml:id="author_5713be4b">Dr. Triller</author>
+                    <author ref="https://www.wikidata.org/entity/Q1162958" xml:id="author_5713be4b">Daniel Wilhelm Triller</author>
                     <note type="genre">Lyrik</note>
-                    <pubPlace ref="https://www.wikidata.org/entity/Q430449" xml:id="place_ae9e1d15">Gmunden</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1794" xml:id="place_ae5c315b">Frankfurt a. M.</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q55677460" xml:id="publisher_ow51bne2">Johann Georg Fleischer</publisher>
                 </bibl>
                 <bibl xml:id="bibl_fbefb3d2">
                     <title type="text"/>
@@ -4330,8 +4326,9 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_e66096f3">
                     <title type="text">Jenes Lied der liebedurchglühten Sappho</title>
                     <date type="published" notAfter="1870">n. n. 1870</date>
-                    <author xml:id="author_964bd09f">Georg Scherer</author>
+                    <author ref="https://www.wikidata.org/entity/Q13417729" xml:id="author_964bd09f">Georg Scherer</author>
                     <note type="genre">Lyrik</note>
+                    <ref target="https://www.google.com/books/edition/Gedichte/wOMHNu0O-ewC?hl=de&amp;gbpv=1">https://www.google.com/books/edition/Gedichte/wOMHNu0O-ewC?hl=de&amp;gbpv=1</ref>
                 </bibl>
                 <bibl xml:id="bibl_29426174">
                     <title type="text">Fanni Elßler (sapphisch)</title>
@@ -4931,7 +4928,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_b402ef0a">
                         <title type="work">Rabenauer Anzeiger</title>
                     </bibl>
-                    <author xml:id="author_8ca253a9">[Pseudonym:] Sappho</author>
+                    <author ref="https://www.wikidata.org/entity/Q138868010" xml:id="author_8ca253a9">[Pseudonym:] Sappho</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q8218" xml:id="place_ba19b52f">Rabenau</pubPlace>
                     <ref target="https://www.deutsche-digitale-bibliothek.de/newspaper/item/7CC3LNUOWMGHTF75ASTYMFCIGBCKM3CL">https://www.deutsche-digitale-bibliothek.de/newspaper/item/7CC3LNUOWMGHTF75ASTYMFCIGBCKM3CL</ref>
@@ -4989,7 +4986,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_38ed3441">
                         <title type="work">Sächsische Dorfzeitung und Elbgaupresse</title>
                     </bibl>
-                    <author xml:id="author_9937a634">Generaloberst von Beselen</author>
+                    <author ref="https://www.wikidata.org/entity/Q138867927" xml:id="author_9937a634">Generaloberst von Beselen</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q8897" xml:id="place_79486e93">Dresden-Blasewitz</pubPlace>
                 </bibl>
@@ -5805,7 +5802,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_d10a3096">
                     <title type="text">Zu spät</title>
                     <date type="published" notAfter="1980">n. n. 1980</date>
-                    <author xml:id="author_5c941644">Kurz</author>
+                    <author ref="https://www.wikidata.org/entity/Q138881668" xml:id="author_5c941644">Kurz</author>
                     <note type="genre">Lyrik</note>
                 </bibl>
                 <bibl xml:id="bibl_8ab38a85">
@@ -5884,7 +5881,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_b4fa7508">
                         <title type="work">Spuren im Spiegellicht. Eine Lyrik-Anthologie</title>
                     </bibl>
-                    <author xml:id="author_6d62ff4f">Beate Petras</author>
+                    <author ref="https://www.wikidata.org/entity/Q131780948" xml:id="author_6d62ff4f">Beate Petras</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q19310590" xml:id="publisher_aa252f7b">Union</publisher>
@@ -6157,7 +6154,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <bibl xml:id="bibl_6c373c88">
                         <title type="work">Die Frau. 60 Versuche des Mensch-Mannes und der Menschin Frau, sich zu nähern – in Wort und Bild. Anthologie</title>
                     </bibl>
-                    <author xml:id="author_9fbed8ef">Traute Bühler-Kistenberger</author>
+                    <author ref="https://www.wikidata.org/entity/Q95205036" xml:id="author_9fbed8ef">Traute Bühler-Kistenberger</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
                     <publisher xml:id="publisher_753b9c36">Wort und Mensch</publisher>
