@@ -12,6 +12,17 @@ function canvasHeight(n) {
     return Math.max(120, n * 32 + 40);
 }
 
+
+// Macht Label-Array für Chart.js eindeutig ohne sichtbare Änderung
+function uniqueLabels(labelArr) {
+    const seen = {};
+    return labelArr.map(l => {
+        if (seen[l] === undefined) { seen[l] = 0; return l; }
+        seen[l]++;
+        return l + '\u200b'.repeat(seen[l]);
+    });
+}
+
 // X-Achsen-Maximum: nächste runde Zahl über dem tatsächlichen Maximum
 function xMax(items) {
     const max = Math.max(
@@ -62,7 +73,7 @@ function buildCategory(cat) {
 // Chart rendern
 function renderChart(cat) {
     const ctx = document.getElementById('chart-' + cat.key).getContext('2d');
-    const labels = cat.items.map(i => i.label);
+    const labels = uniqueLabels(cat.items.map(i => i.label));
     const pctS = cat.items.map(i => parseFloat(i.pctSappho));
     const pctR = cat.items.map(i => parseFloat(i.pctReception));
     const maxX = xMax(cat.items);
@@ -129,8 +140,9 @@ function renderChart(cat) {
                 y: {
                     ticks: {
                         font: { family: 'Geist, system-ui', size: 12 },
-                        autoSkip: false
+                        autoSkip: false,
                     },
+                    grid: { display: false },
                     grid: { display: false },
                 },
             },
@@ -154,7 +166,7 @@ function renderCatOverview() {
     allItems.sort((a, b) => parseFloat(b.pctReception) - parseFloat(a.pctReception));
     const items = allItems.slice(0, topN);
 
-    const labels    = items.map(i => i.label);
+    const labels    = uniqueLabels(items.map(i => i.label));
     const pctS      = items.map(i => parseFloat(i.pctSappho));
     const pctR      = items.map(i => parseFloat(i.pctReception));
     const typeColors = items.map(i => (FTYPE_META[i.catKey] || {}).color || '#6b7280');
@@ -1661,7 +1673,7 @@ function renderPersonDuality() {
     canvas.style.height = canvasHeight(persons.length) + 'px';
     wrap.appendChild(canvas);
 
-    const labels    = persons.map(p => p.label);
+    const labels    = uniqueLabels(persons.map(p => p.label));
     const recPrData = persons.map(p => parseFloat(p.pctRecPr));
     const recChData = persons.map(p => parseFloat(p.pctRecCh));
     const sapPrData = persons.map(p => parseFloat(p.pctSapPr));
@@ -1809,7 +1821,7 @@ function renderWorkCitation() {
         return;
     }
 
-    const labels  = works.map(w => wc7CleanLabel(w.label));
+    const labels  = uniqueLabels(works.map(w => wc7CleanLabel(w.label)));
     const pctRef  = works.map(w => parseFloat(w.pctRef));
     const pctBoth = works.map(w => parseFloat(w.pctBoth));
 
@@ -1975,7 +1987,7 @@ function renderInt31FtypeBar() {
     }
 
     const total  = co.nInt31WithFeats || 1;
-    const labels = items.map(it => it.label);
+    const labels = uniqueLabels(items.map(it => it.label));
     const pcts   = items.map(it => parseFloat((it.n / total * 100).toFixed(2)));
     const colors = items.map(it => (FTYPE_META[it.key] || {}).color || '#6b7280');
     const height = canvasHeight(items.length);
@@ -3007,7 +3019,7 @@ function renderGenderPhenomSections() {
                 renderGenderPhenomSections();
             });
 
-        const overviewLabels   = topItems.map(f => f.label);
+        const overviewLabels   = uniqueLabels(topItems.map(f => f.label));
         const overviewTypeCols = topItems.map(f => (FTYPE_META[f.ftype] || {}).color || '#6b7280');
         const pctOf = (n, tot) => tot > 0 ? parseFloat((n / tot * 100).toFixed(2)) : 0;
         const ovMale  = topItems.map(f => { const c = f.cells.find(x => x.g === 'male');   return pctOf(c ? c.n : 0, pd.nMale);   });
@@ -3218,7 +3230,7 @@ function renderGenderPhenomSections() {
             .sort((a, b) => b.gCount - a.gCount)
             .slice(0, n > 0 ? n : pd.features.length);
 
-        const labels = sorted.map(f => f.label);
+        const labels = uniqueLabels(sorted.map(f => f.label));
         const data   = sorted.map(f => tot > 0 ? parseFloat((f.gCount / tot * 100).toFixed(2)) : 0);
         const maxX   = Math.min(100, Math.ceil(Math.max(...data) * 1.05 / 5) * 5) || 10;
         // Kompaktere Zeilenhöhe für halbe Breite
@@ -3348,7 +3360,7 @@ function renderGenderPhenomSections() {
 }
 
 function renderGenderPhenomChart(ft, items, pd, canvas) {
-    const labels   = items.map(f => f.label);
+    const labels   = uniqueLabels(items.map(f => f.label));
     const pctOf    = (n, tot) => tot > 0 ? parseFloat((n / tot * 100).toFixed(2)) : 0;
     const maleData = items.map(f => { const c = f.cells.find(x => x.g === 'male');   return pctOf(c ? c.n : 0, pd.nMale);   });
     const femData  = items.map(f => { const c = f.cells.find(x => x.g === 'female'); return pctOf(c ? c.n : 0, pd.nFemale); });
@@ -3426,8 +3438,10 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
                     ticks: {
                         font: { family: 'Geist, system-ui', size: 12 },
                         autoSkip: false,
+                        color: 'transparent',
                     },
                     grid: { display: false },
+                    afterFit(scale) { scale.width = 220; },
                 },
             },
         },

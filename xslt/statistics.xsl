@@ -342,8 +342,7 @@
       <xsl:for-each select="statistics/genderStats/genderPhenomDist/features/feature">
         <xsl:variable name="gcells-json" as="xs:string*">
           <xsl:for-each select="genderCell">
-            <xsl:sequence select="
-                concat(
+            <xsl:sequence select="concat(
                 '{',
                 '&quot;g&quot;:&quot;', @gender, '&quot;,',
                 '&quot;n&quot;:', @n,
@@ -351,10 +350,9 @@
                 )"/>
           </xsl:for-each>
         </xsl:variable>
-        <xsl:sequence select="
-            concat(
+        <xsl:sequence select="concat(
             '{',
-            '&quot;uri&quot;:&quot;', replace(@uri, '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;uri&quot;:&quot;',   replace(@uri,   '&quot;', '\\&quot;'), '&quot;,',
             '&quot;label&quot;:&quot;', replace(replace(@label, '\\', '\\\\'), '&quot;', '\\&quot;'), '&quot;,',
             '&quot;ftype&quot;:&quot;', @ftype, '&quot;,',
             '&quot;total&quot;:', @total, ',',
@@ -435,20 +433,20 @@
         '&quot;sharedHist&quot;:[', string-join($stat10-sharedhist-json, ','), ']',
         '},',
         '&quot;genderStats&quot;:{',
-        '&quot;nMale&quot;:', (statistics/genderStats/@nMale, '0')[1], ',',
-        '&quot;nFemale&quot;:', (statistics/genderStats/@nFemale, '0')[1], ',',
-        '&quot;nUnknown&quot;:', (statistics/genderStats/@nUnknown, '0')[1], ',',
-        '&quot;nTotal&quot;:', (statistics/genderStats/@nTotal, '0')[1], ',',
-        '&quot;nTextsMale&quot;:', (statistics/genderStats/@nTextsMale, '0')[1], ',',
-        '&quot;nTextsFemale&quot;:', (statistics/genderStats/@nTextsFemale, '0')[1], ',',
-        '&quot;nTextsUnknown&quot;:', (statistics/genderStats/@nTextsUnknown, '0')[1], ',',
-        '&quot;nTextsTotal&quot;:', (statistics/genderStats/@nTextsTotal, '0')[1], ',',
+        '&quot;nMale&quot;:',         (statistics/genderStats/@nMale,    '0')[1], ',',
+        '&quot;nFemale&quot;:',        (statistics/genderStats/@nFemale,  '0')[1], ',',
+        '&quot;nUnknown&quot;:',       (statistics/genderStats/@nUnknown, '0')[1], ',',
+        '&quot;nTotal&quot;:',         (statistics/genderStats/@nTotal,   '0')[1], ',',
+        '&quot;nTextsMale&quot;:',     (statistics/genderStats/@nTextsMale,    '0')[1], ',',
+        '&quot;nTextsFemale&quot;:',   (statistics/genderStats/@nTextsFemale,  '0')[1], ',',
+        '&quot;nTextsUnknown&quot;:',  (statistics/genderStats/@nTextsUnknown, '0')[1], ',',
+        '&quot;nTextsTotal&quot;:',    (statistics/genderStats/@nTextsTotal,   '0')[1], ',',
         '&quot;timeDist&quot;:[', string-join($gender-timedist-json, ','), '],',
         '&quot;phenomDist&quot;:{',
         '&quot;nFeatures&quot;:', (statistics/genderStats/genderPhenomDist/@nFeatures, '0')[1], ',',
-        '&quot;nMale&quot;:', (statistics/genderStats/genderPhenomDist/@nMale, '0')[1], ',',
-        '&quot;nFemale&quot;:', (statistics/genderStats/genderPhenomDist/@nFemale, '0')[1], ',',
-        '&quot;nUnknown&quot;:', (statistics/genderStats/genderPhenomDist/@nUnknown, '0')[1], ',',
+        '&quot;nMale&quot;:',     (statistics/genderStats/genderPhenomDist/@nMale,     '0')[1], ',',
+        '&quot;nFemale&quot;:',   (statistics/genderStats/genderPhenomDist/@nFemale,   '0')[1], ',',
+        '&quot;nUnknown&quot;:',  (statistics/genderStats/genderPhenomDist/@nUnknown,  '0')[1], ',',
         '&quot;features&quot;:[', string-join($gender-phenom-json, ','), ']',
         '},',
         '&quot;genreGender&quot;:[', string-join($genre-gender-json, ','), ']',
@@ -817,13 +815,8 @@
                 </div>
                 <div class="stats-wrap" id="stat11">
                   <p class="stats-subtitle">Statistik 11: Gender</p>
-                  <p class="stats-desc">Wie sieht die Geschlechterverteilung aus &#8211; insgesamt,
-                    im Zeitverlauf und nach Ph&#228;nomenen? Die Gender-Angaben stammen von Wikidata
-                    und sind dementsprechend bin&#228;r und zumeist keine Selbstidentifikationen.
-                    F&#252;r die Ph&#228;nomene wurden au&#223;erdem nur die Autor_innen der
-                    exemplarisch analysierten Rezeptionszeugnisse ber&#252;cksichtigt.</p>
-                  <div id="gender-tab-bar"
-                    style="display:flex;justify-content:center;gap:.5rem;margin-bottom:1.25rem;flex-wrap:wrap"/>
+                  <p class="stats-desc">Wie sieht die Geschlechterverteilung aus &#8211; insgesamt, im Zeitverlauf und nach Ph&#228;nomenen? Die Gender-Angaben stammen von Wikidata, sind dementsprechend bin&#228;r und zumeist keine Selbstidentifikationen. F&#252;r die Ph&#228;nomene wurden au&#223;erdem nur die Autor_innen der exemplarisch analysierten Rezeptionszeugnisse ber&#252;cksichtigt.</p>
+                  <div id="gender-tab-bar" style="display:flex;justify-content:center;gap:.5rem;margin-bottom:1.25rem;flex-wrap:wrap"/>
                   <div id="gender-pane-overview">
                     <div id="stat11-kpi-wrap"/>
                     <div style="display:flex;justify-content:center;margin-bottom:1.5rem">

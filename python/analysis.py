@@ -454,25 +454,28 @@ for text_id, cats in elements_per_text.items():
         act_uri = add_actualization_common(g, "motif", text_id, used_id, feat_uri, v, text_uri, text_title)
         g.add((text_uri, INTRO.R18_showsActualization, act_uri))
 
-    # INT_Plot
-    for sinfo in cats["stoff"]:
-        v = sinfo["label"]
-        modus = sinfo.get("modus", "")
-        # Vokabular-Lookup: erst mit Modus in Klammern, dann ohne
-        voc = (find_vocab("stoff", f"{v} ({modus})") if modus else None) or find_vocab("stoff", v)
-        fid_fallback = get_or_make_distinct("stoff", v)
-        if voc:
-            feat_uri = local_uri_from_vocab("stoff", voc) or uri(f"feature/plot/{fid_fallback}")
-            used_id  = last_token(str(voc))
-        else:
-            feat_uri, used_id = uri(f"feature/plot/{fid_fallback}"), fid_fallback
-        g.add((feat_uri, RDF.type, INTRO.INT_Plot))
-        g.add((feat_uri, RDFS.label, Literal(f"Plot: {v}" + (f" ({modus})" if modus else ""), lang="de")))
-        add_identifier(g, used_id, feat_uri)
-        if voc:
-            link_exact_match(feat_uri, voc)
-        act_uri = add_actualization_common(g, "plot", text_id, used_id, feat_uri, v, text_uri, text_title)
-        g.add((text_uri, INTRO.R18_showsActualization, act_uri))
+        # INT_Plot
+        for sinfo in cats["stoff"]:
+            v     = sinfo["label"]
+            modus = sinfo.get("modus", "")
+            v_with_modus = f"{v} ({modus})" if modus else v
+            voc = find_vocab("stoff", v_with_modus) if modus else find_vocab("stoff", v)
+            fid_fallback = get_or_make_distinct("stoff", v_with_modus)
+            if voc:
+                feat_uri = local_uri_from_vocab("stoff", voc) or uri(f"feature/plot/{fid_fallback}")
+                used_id  = last_token(str(voc))
+            else:
+                feat_uri, used_id = uri(f"feature/plot/{fid_fallback}"), fid_fallback
+    
+            g.add((feat_uri, RDF.type, INTRO.INT_Plot))
+            g.add((feat_uri, RDFS.label, Literal(f"Plot: {v_with_modus}", lang="de")))
+            add_identifier(g, used_id, feat_uri)
+            if voc:
+                link_exact_match(feat_uri, voc)
+            act_uri = add_actualization_common(
+                g, "plot", text_id, used_id, feat_uri, v_with_modus, text_uri, text_title
+            )
+            g.add((text_uri, INTRO.R18_showsActualization, act_uri))
 
     # INT_Topic
     for v in cats["thema"]:

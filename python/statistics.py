@@ -1183,33 +1183,40 @@ def main(ttl_path: str, xml_out: str) -> None:
 
     # ── Stat 12: Zeitliche Verteilung nach Geschlecht ─────────────────────────
     # Alle Texte aller Autor_innen (nicht nur analysierte Zeugnisse).
-    # Jede Person → alle ihre F2-Expressionen via P14i_performed → Jahr → Jahrzehnt.
-    # Ein Text kann mehreren Autor_innen gehören; er zählt dann für jedes Geschlecht einmal.
-    decade_gender_counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    # Pro Jahrzehnt werden DISTINKTE Texte pro Geschlecht gezählt.
+    # Ein Text mit Autor_innen beider Geschlechter zählt für jedes Geschlecht einmal,
+    # aber nie doppelt für dasselbe Geschlecht.
     decades_gender_seen: set[str] = set()
 
     # f2 → set of gender_keys für ALLE Texte (nicht nur analysierte)
+    # Nur via R17i_was_created_by (keine Doppelzählung über performed direkt)
     all_f2_genders: dict[URIRef, set[str]] = defaultdict(set)
     for person, gk in all_persons.items():
         for _, _, performed in g.triples((person, P14i_performed, None)):
             for f2 in g.subjects(LRMOO["R17i_was_created_by"], performed):
-                if "/bibl_sappho_" not in str(f2):   # Sappho-Fragmente ausschließen
+                if "/bibl_sappho_" not in str(f2):
                     all_f2_genders[f2].add(gk)
-            if performed in reception_f2 or "/expression/bibl_" in str(performed):
-                if "/bibl_sappho_" not in str(performed):
-                    all_f2_genders[performed].add(gk)
 
     print(f"  Gender – Zeitverlauf: {len(all_f2_genders)} Texte mit Genderzuordnung",
           file=sys.stderr)
 
+    # Pro Jahrzehnt: distinkte F2-URIs pro Geschlecht sammeln, dann zählen
+    decade_gender_texts: dict[str, dict[str, set]] = defaultdict(
+        lambda: {"male": set(), "female": set(), "unknown": set()}
+    )
     for f2, genders in all_f2_genders.items():
         year = get_year_for_f2(f2)
         if year is None:
-            continue          # Texte ohne Jahresangabe weglassen
+            continue
         dec = decade(year)
         decades_gender_seen.add(dec)
         for gk in genders:
-            decade_gender_counts[dec][gk] += 1
+            decade_gender_texts[dec][gk].add(f2)
+
+    decade_gender_counts: dict[str, dict[str, int]] = {
+        dec: {gk: len(texts) for gk, texts in gk_dict.items()}
+        for dec, gk_dict in decade_gender_texts.items()
+    }
 
     sorted_decades_gender = sorted(
         [d for d in decades_gender_seen if d != "n/a"], key=decade_sort
