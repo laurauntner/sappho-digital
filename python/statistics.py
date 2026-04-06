@@ -107,7 +107,7 @@ def main(ttl_path: str, xml_out: str) -> None:
             if lang == "en":   en        = str(label)
             elif lang == "de": de        = str(label)
             else:              any_label = str(label)
-        raw = en or de or any_label or str(uri).split("/")[-1]
+        raw = de or en or any_label or str(uri).split("/")[-1]
         return clean_label(raw)
 
     # ── Statistik 1: Kategorien ───────────────────────────────────────────────
@@ -1087,6 +1087,221 @@ def main(ttl_path: str, xml_out: str) -> None:
         b_el.set("reception", str(reception_shared_hist[i]))
 
     print(f"  Stat10 in XML geschrieben.", file=sys.stderr)
+
+    # ── Statistik 11–14: Gender ───────────────────────────────────────────────
+    #
+    # Das Geschlecht hängt als E55_Type an E21_Person via P2_has_type.
+    # URI-Muster: .../gender/Q6581097  (männlich)
+    #             .../gender/Q6581072  (weiblich)
+    #             alles andere         (unbekannt/divers)
+    #
+    # Autor_innen werden über P14i_performed → F28 / F30 → F2_Expression
+    # mit den Rezeptionszeugnissen verknüpft.
+    # Wir nutzen die bereits geladenen Tripel; kein neues Parsen nötig.
+
+    E21_Person       = ECRM["E21_Person"]
+    P2_has_type_prop = ECRM["P2_has_type"]          # alias (P2_has_type already defined above)
+    P14i_performed   = ECRM["P14i_performed"]
+
+    GENDER_MALE    = "https://sappho-digital.com/gender/Q6581097"
+    GENDER_FEMALE  = "https://sappho-digital.com/gender/Q6581072"
+
+    def gender_key(person_uri: URIRef) -> str:
+        """Gibt 'male', 'female' oder 'unknown' zurück."""
+        for _, _, t in g.triples((person_uri, P2_has_type_prop, None)):
+            ts = str(t)
+            if ts == GENDER_MALE:
+                return "male"
+            if ts == GENDER_FEMALE:
+                return "female"
+        return "unknown"
+
+    # Alle E21_Person-Knoten mit Geschlecht
+    all_persons: dict[URIRef, str] = {}
+    for person in g.subjects(RDF.type, E21_Person):
+        all_persons[person] = gender_key(person)
+
+    n_male    = sum(1 for g2 in all_persons.values() if g2 == "male")
+    n_female  = sum(1 for g2 in all_persons.values() if g2 == "female")
+    n_unknown = sum(1 for g2 in all_persons.values() if g2 == "unknown")
+    print(f"  Gender – männlich: {n_male}, weiblich: {n_female}, unbekannt: {n_unknown}",
+          file=sys.stderr)
+
+    # Rezeptionszeugnis → Geschlecht(er) der Autor_innen
+    # Ein Zeugnis kann mehrere Autor_innen haben → wir speichern alle zugehörigen Geschlechter.
+    # Zuordnung: E21_Person –P14i_performed–> (F28_Expression_Creation | F30_Manifestation_Creation)
+    # Diese Knoten sind via R17i_was_created_by / R24i_was_created_through mit F2 verknüpft.
+    # Einfacherer Weg: Person –P14i_performed–> X, schauen ob X in g zu einer F2 führt.
+    # Wir bauen: f2_uri → set of gender_keys
+
+    f2_genders: dict[URIRef, set[str]] = defaultdict(set)
+
+    for person, gk in all_persons.items():
+        for _, _, performed in g.triples((person, P14i_performed, None)):
+            # performed kann F28_ExpressionCreation oder F30_ManifestationCreation sein
+            # F28 → F2 via R17i_was_created_by (inverse: F2 –R17i_was_created_by–> F28)
+            for f2 in g.subjects(LRMOO["R17i_was_created_by"], performed):
+                if f2 in reception_f2:
+                    f2_genders[f2].add(gk)
+            # Manche Zeugnisse hängen über F30 → F3 → F2 (R4i_is_embodied_in)
+            # F30 hat P94i_was_created_by / R24i_was_created_through  → F3 → F4i_is_embodied_in → F2
+            # Alternativ: performed ist eine F28 die über R4i_is_embodied_in mit F3 verbunden ist
+            # Direkter: performed → R17i_was_created_by_inverse gibt F2
+            # Wir prüfen auch ob performed selbst eine bekannte F2 ist (Sonderfall)
+            if performed in reception_f2:
+                f2_genders[performed].add(gk)
+
+    # Für Zeugnisse ohne Autor_innen-Treffer: explizit "unknown" setzen
+    for f2 in reception_with_act:
+        if f2 not in f2_genders:
+            f2_genders[f2].add("unknown")
+
+    print(f"  Gender – Rezeptionszeugnisse mit Genderzuordnung: {len(f2_genders)}",
+          file=sys.stderr)
+
+    # ── Stat 11: Gesamtverteilung ─────────────────────────────────────────────
+    # Zählung auf Autoren-Ebene (eindeutige Personen)
+    gender_el = ET.SubElement(root_el, "genderStats")
+    gender_el.set("nMale",    str(n_male))
+    gender_el.set("nFemale",  str(n_female))
+    gender_el.set("nUnknown", str(n_unknown))
+    gender_el.set("nTotal",   str(len(all_persons)))
+
+    # Zählung auf Zeugnisebene (ein Zeugnis zählt für alle Geschlechter seiner Autor_innen;
+    # Zeugnisse mit gemischtem Autorschaft erscheinen in mehreren Gruppen)
+    texts_by_gender: dict[str, set[URIRef]] = {"male": set(), "female": set(), "unknown": set()}
+    for f2, genders in f2_genders.items():
+        if f2 not in reception_with_act:
+            continue
+        for gk in genders:
+            texts_by_gender[gk].add(f2)
+
+    gender_el.set("nTextsMale",    str(len(texts_by_gender["male"])))
+    gender_el.set("nTextsFemale",  str(len(texts_by_gender["female"])))
+    gender_el.set("nTextsUnknown", str(len(texts_by_gender["unknown"])))
+    gender_el.set("nTextsTotal",   str(len(reception_with_act)))
+
+    # ── Stat 12: Zeitliche Verteilung nach Geschlecht ─────────────────────────
+    # Alle Texte aller Autor_innen (nicht nur analysierte Zeugnisse).
+    # Jede Person → alle ihre F2-Expressionen via P14i_performed → Jahr → Jahrzehnt.
+    # Ein Text kann mehreren Autor_innen gehören; er zählt dann für jedes Geschlecht einmal.
+    decade_gender_counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    decades_gender_seen: set[str] = set()
+
+    # f2 → set of gender_keys für ALLE Texte (nicht nur analysierte)
+    all_f2_genders: dict[URIRef, set[str]] = defaultdict(set)
+    for person, gk in all_persons.items():
+        for _, _, performed in g.triples((person, P14i_performed, None)):
+            for f2 in g.subjects(LRMOO["R17i_was_created_by"], performed):
+                if "/bibl_sappho_" not in str(f2):   # Sappho-Fragmente ausschließen
+                    all_f2_genders[f2].add(gk)
+            if performed in reception_f2 or "/expression/bibl_" in str(performed):
+                if "/bibl_sappho_" not in str(performed):
+                    all_f2_genders[performed].add(gk)
+
+    print(f"  Gender – Zeitverlauf: {len(all_f2_genders)} Texte mit Genderzuordnung",
+          file=sys.stderr)
+
+    for f2, genders in all_f2_genders.items():
+        year = get_year_for_f2(f2)
+        if year is None:
+            continue          # Texte ohne Jahresangabe weglassen
+        dec = decade(year)
+        decades_gender_seen.add(dec)
+        for gk in genders:
+            decade_gender_counts[dec][gk] += 1
+
+    sorted_decades_gender = sorted(
+        [d for d in decades_gender_seen if d != "n/a"], key=decade_sort
+    )
+    if "n/a" in decades_gender_seen:
+        sorted_decades_gender.append("n/a")
+
+    timedist_el = ET.SubElement(gender_el, "genderTimeDist")
+    for dec in sorted_decades_gender:
+        d_el = ET.SubElement(timedist_el, "decade")
+        d_el.set("key",     dec)
+        d_el.set("male",    str(decade_gender_counts[dec]["male"]))
+        d_el.set("female",  str(decade_gender_counts[dec]["female"]))
+        d_el.set("unknown", str(decade_gender_counts[dec]["unknown"]))
+
+    # ── Stat 13: Phänomene nach Geschlecht ───────────────────────────────────
+    # Analog zu genreDist (Stat 4), aber Gattung → Geschlecht.
+    # Ein Phänomen kann von Texten mehrerer Geschlechter aktualisiert werden.
+    gender_phenom_feat:   dict[URIRef, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    gender_phenom_labels: dict[URIRef, str] = {}
+    gender_phenom_ftype:  dict[URIRef, str] = {}
+
+    for f2 in reception_with_act:
+        genders = f2_genders.get(f2, {"unknown"})
+        feats_here = set(reception_idx.get(f2, set())) | get_work_refs(f2)
+        for feat_uri in feats_here:
+            for gk in genders:
+                gender_phenom_feat[feat_uri][gk] += 1
+            if feat_uri not in gender_phenom_labels:
+                gender_phenom_labels[feat_uri] = get_label(feat_uri)
+                gender_phenom_ftype[feat_uri]  = feature_type(str(feat_uri)) or "other"
+
+    def feat_gender_total(fu: URIRef) -> int:
+        return sum(gender_phenom_feat[fu].values())
+
+    sorted_feats_gender = sorted(
+        gender_phenom_feat.keys(),
+        key=lambda fu: (-feat_gender_total(fu), gender_phenom_labels.get(fu, "").lower())
+    )
+
+    gender_phenom_n: dict[str, int] = {
+        "male":    len(texts_by_gender["male"]),
+        "female":  len(texts_by_gender["female"]),
+        "unknown": len(texts_by_gender["unknown"]),
+    }
+
+    print(f"  GenderPhenom – Phänomene: {len(sorted_feats_gender)}", file=sys.stderr)
+
+    gpfeat_el = ET.SubElement(gender_el, "genderPhenomDist")
+    gpfeat_el.set("nFeatures", str(len(sorted_feats_gender)))
+    for gk, gn in gender_phenom_n.items():
+        gpfeat_el.set(f"n{gk.capitalize()}", str(gn))
+
+    gfeat_container = ET.SubElement(gpfeat_el, "features")
+    for feat_uri in sorted_feats_gender:
+        fe = ET.SubElement(gfeat_container, "feature")
+        fe.set("uri",   str(feat_uri))
+        fe.set("label", gender_phenom_labels.get(feat_uri, str(feat_uri).split("/")[-1]))
+        fe.set("ftype", gender_phenom_ftype.get(feat_uri, "other"))
+        fe.set("total", str(feat_gender_total(feat_uri)))
+        for gk in ("male", "female", "unknown"):
+            cnt = gender_phenom_feat[feat_uri].get(gk, 0)
+            if cnt:
+                gc_el = ET.SubElement(fe, "genderCell")
+                gc_el.set("gender", gk)
+                gc_el.set("n",      str(cnt))
+
+    # ── Stat 14: Gattung × Geschlecht ─────────────────────────────────────────
+    # Welche Gattungen dominieren bei welchem Geschlecht?
+    genre_gender_counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    genres_gender_seen: set[str] = set()
+
+    for f2 in reception_with_act:
+        gen     = get_genre(f2)
+        genders = f2_genders.get(f2, {"unknown"})
+        genres_gender_seen.add(gen)
+        for gk in genders:
+            genre_gender_counts[gen][gk] += 1
+
+    sorted_genres_gender = [g2 for g2 in genre_order if g2 in genres_gender_seen]
+    sorted_genres_gender += [g2 for g2 in sorted(genres_gender_seen) if g2 not in genre_order]
+
+    gg_el = ET.SubElement(gender_el, "genreGenderDist")
+    gg_el.set("nGenres", str(len(sorted_genres_gender)))
+    for gen in sorted_genres_gender:
+        g_el = ET.SubElement(gg_el, "genre")
+        g_el.set("key",     gen)
+        g_el.set("male",    str(genre_gender_counts[gen]["male"]))
+        g_el.set("female",  str(genre_gender_counts[gen]["female"]))
+        g_el.set("unknown", str(genre_gender_counts[gen]["unknown"]))
+
+    print(f"  Gender-Statistiken in XML geschrieben.", file=sys.stderr)
 
     tree = ET.ElementTree(root_el)
     ET.indent(tree, space="  ")

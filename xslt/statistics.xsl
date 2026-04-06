@@ -323,6 +323,61 @@
       </xsl:for-each>
     </xsl:variable>
 
+    <!-- Gender (Stat 11) -->
+    <xsl:variable name="gender-timedist-json" as="xs:string*">
+      <xsl:for-each select="statistics/genderStats/genderTimeDist/decade">
+        <xsl:sequence select="
+            concat(
+            '{',
+            '&quot;key&quot;:&quot;', @key, '&quot;,',
+            '&quot;male&quot;:', @male, ',',
+            '&quot;female&quot;:', @female, ',',
+            '&quot;unknown&quot;:', @unknown,
+            '}'
+            )"/>
+      </xsl:for-each>
+    </xsl:variable>
+
+    <xsl:variable name="gender-phenom-json" as="xs:string*">
+      <xsl:for-each select="statistics/genderStats/genderPhenomDist/features/feature">
+        <xsl:variable name="gcells-json" as="xs:string*">
+          <xsl:for-each select="genderCell">
+            <xsl:sequence select="
+                concat(
+                '{',
+                '&quot;g&quot;:&quot;', @gender, '&quot;,',
+                '&quot;n&quot;:', @n,
+                '}'
+                )"/>
+          </xsl:for-each>
+        </xsl:variable>
+        <xsl:sequence select="
+            concat(
+            '{',
+            '&quot;uri&quot;:&quot;', replace(@uri, '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;label&quot;:&quot;', replace(replace(@label, '\\', '\\\\'), '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;ftype&quot;:&quot;', @ftype, '&quot;,',
+            '&quot;total&quot;:', @total, ',',
+            '&quot;cells&quot;:[', string-join($gcells-json, ','), ']',
+            '}'
+            )"/>
+      </xsl:for-each>
+    </xsl:variable>
+
+    <xsl:variable name="genre-gender-json" as="xs:string*">
+      <xsl:for-each select="statistics/genderStats/genreGenderDist/genre">
+        <xsl:sequence select="
+            concat(
+            '{',
+            '&quot;key&quot;:&quot;', replace(@key, '&quot;', '\\&quot;'), '&quot;,',
+            '&quot;male&quot;:', @male, ',',
+            '&quot;female&quot;:', @female, ',',
+            '&quot;unknown&quot;:', @unknown,
+            '}'
+            )"/>
+      </xsl:for-each>
+    </xsl:variable>
+
     <xsl:variable name="json" as="xs:string" select="
         concat(
         '{',
@@ -378,6 +433,25 @@
         '&quot;nReception&quot;:', (statistics/stat10AvgRelations/@nReception, '0')[1], ',',
         '&quot;int31Hist&quot;:[', string-join($stat10-int31hist-json, ','), '],',
         '&quot;sharedHist&quot;:[', string-join($stat10-sharedhist-json, ','), ']',
+        '},',
+        '&quot;genderStats&quot;:{',
+        '&quot;nMale&quot;:', (statistics/genderStats/@nMale, '0')[1], ',',
+        '&quot;nFemale&quot;:', (statistics/genderStats/@nFemale, '0')[1], ',',
+        '&quot;nUnknown&quot;:', (statistics/genderStats/@nUnknown, '0')[1], ',',
+        '&quot;nTotal&quot;:', (statistics/genderStats/@nTotal, '0')[1], ',',
+        '&quot;nTextsMale&quot;:', (statistics/genderStats/@nTextsMale, '0')[1], ',',
+        '&quot;nTextsFemale&quot;:', (statistics/genderStats/@nTextsFemale, '0')[1], ',',
+        '&quot;nTextsUnknown&quot;:', (statistics/genderStats/@nTextsUnknown, '0')[1], ',',
+        '&quot;nTextsTotal&quot;:', (statistics/genderStats/@nTextsTotal, '0')[1], ',',
+        '&quot;timeDist&quot;:[', string-join($gender-timedist-json, ','), '],',
+        '&quot;phenomDist&quot;:{',
+        '&quot;nFeatures&quot;:', (statistics/genderStats/genderPhenomDist/@nFeatures, '0')[1], ',',
+        '&quot;nMale&quot;:', (statistics/genderStats/genderPhenomDist/@nMale, '0')[1], ',',
+        '&quot;nFemale&quot;:', (statistics/genderStats/genderPhenomDist/@nFemale, '0')[1], ',',
+        '&quot;nUnknown&quot;:', (statistics/genderStats/genderPhenomDist/@nUnknown, '0')[1], ',',
+        '&quot;features&quot;:[', string-join($gender-phenom-json, ','), ']',
+        '},',
+        '&quot;genreGender&quot;:[', string-join($genre-gender-json, ','), ']',
         '}',
         '}'
         )"/>
@@ -453,6 +527,9 @@
                     </li>
                     <li>
                       <a href="#stat10">Durchschnittliche Relationen und gemeinsame Phänomene</a>
+                    </li>
+                    <li>
+                      <a href="#stat11">Gender: Überblick, Zeitverlauf, Phänomene</a>
                     </li>
                   </ol>
                 </nav>
@@ -737,6 +814,42 @@
                     Durchschnitt mit anderen? Und wie viele Phänomene teilt ein Text im Schnitt mit
                     seinen intertextuell verbundenen Texten?</p>
                   <div id="stat10-wrap-inner"/>
+                </div>
+                <div class="stats-wrap" id="stat11">
+                  <p class="stats-subtitle">Statistik 11: Gender</p>
+                  <p class="stats-desc">Wie sieht die Geschlechterverteilung aus &#8211; insgesamt,
+                    im Zeitverlauf und nach Ph&#228;nomenen? Die Gender-Angaben stammen von Wikidata
+                    und sind dementsprechend bin&#228;r und zumeist keine Selbstidentifikationen.
+                    F&#252;r die Ph&#228;nomene wurden au&#223;erdem nur die Autor_innen der
+                    exemplarisch analysierten Rezeptionszeugnisse ber&#252;cksichtigt.</p>
+                  <div id="gender-tab-bar"
+                    style="display:flex;justify-content:center;gap:.5rem;margin-bottom:1.25rem;flex-wrap:wrap"/>
+                  <div id="gender-pane-overview">
+                    <div id="stat11-kpi-wrap"/>
+                    <div style="display:flex;justify-content:center;margin-bottom:1.5rem">
+                      <canvas id="chart-gender-donut" style="max-width:300px;max-height:300px"/>
+                    </div>
+                  </div>
+                  <div id="gender-pane-time" style="display:none">
+                    <div class="control-col-wrap">
+                      <div class="stat3-control-group">
+                        <label for="sel-gender-time-mode">Anzeige:</label>
+                        <select id="sel-gender-time-mode" class="stat2-select">
+                          <option value="stacked">Gestapelt (absolut)</option>
+                          <option value="percent">Prozentualer Anteil</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="chart-wrap">
+                      <canvas id="chart-gender-time" style="height:320px"/>
+                    </div>
+                  </div>
+                  <div id="gender-pane-phenom" style="display:none">
+                    <div class="control-col-wrap">
+                      <div id="gender-phenom-type-legend" class="type-legend"/>
+                    </div>
+                    <div id="gender-phenom-overview-wrap"/>
+                  </div>
                 </div>
               </div>
             </div>
