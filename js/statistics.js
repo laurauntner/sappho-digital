@@ -12,6 +12,17 @@ function canvasHeight(n) {
     return Math.max(120, n * 32 + 40);
 }
 
+
+// Macht Label-Array für Chart.js eindeutig ohne sichtbare Änderung
+function uniqueLabels(labelArr) {
+    const seen = {};
+    return labelArr.map(l => {
+        if (seen[l] === undefined) { seen[l] = 0; return l; }
+        seen[l]++;
+        return l + '\u200b'.repeat(seen[l]);
+    });
+}
+
 // X-Achsen-Maximum: nächste runde Zahl über dem tatsächlichen Maximum
 function xMax(items) {
     const max = Math.max(
@@ -62,7 +73,7 @@ function buildCategory(cat) {
 // Chart rendern
 function renderChart(cat) {
     const ctx = document.getElementById('chart-' + cat.key).getContext('2d');
-    const labels = cat.items.map(i => i.label);
+    const labels = uniqueLabels(cat.items.map(i => i.label));
     const pctS = cat.items.map(i => parseFloat(i.pctSappho));
     const pctR = cat.items.map(i => parseFloat(i.pctReception));
     const maxX = xMax(cat.items);
@@ -129,8 +140,9 @@ function renderChart(cat) {
                 y: {
                     ticks: {
                         font: { family: 'Geist, system-ui', size: 12 },
-                        autoSkip: false
+                        autoSkip: false,
                     },
+                    grid: { display: false },
                     grid: { display: false },
                 },
             },
@@ -154,7 +166,7 @@ function renderCatOverview() {
     allItems.sort((a, b) => parseFloat(b.pctReception) - parseFloat(a.pctReception));
     const items = allItems.slice(0, topN);
 
-    const labels    = items.map(i => i.label);
+    const labels    = uniqueLabels(items.map(i => i.label));
     const pctS      = items.map(i => parseFloat(i.pctSappho));
     const pctR      = items.map(i => parseFloat(i.pctReception));
     const typeColors = items.map(i => (FTYPE_META[i.catKey] || {}).color || '#6b7280');
@@ -1661,7 +1673,7 @@ function renderPersonDuality() {
     canvas.style.height = canvasHeight(persons.length) + 'px';
     wrap.appendChild(canvas);
 
-    const labels    = persons.map(p => p.label);
+    const labels    = uniqueLabels(persons.map(p => p.label));
     const recPrData = persons.map(p => parseFloat(p.pctRecPr));
     const recChData = persons.map(p => parseFloat(p.pctRecCh));
     const sapPrData = persons.map(p => parseFloat(p.pctSapPr));
@@ -1809,7 +1821,7 @@ function renderWorkCitation() {
         return;
     }
 
-    const labels  = works.map(w => wc7CleanLabel(w.label));
+    const labels  = uniqueLabels(works.map(w => wc7CleanLabel(w.label)));
     const pctRef  = works.map(w => parseFloat(w.pctRef));
     const pctBoth = works.map(w => parseFloat(w.pctBoth));
 
@@ -1975,7 +1987,7 @@ function renderInt31FtypeBar() {
     }
 
     const total  = co.nInt31WithFeats || 1;
-    const labels = items.map(it => it.label);
+    const labels = uniqueLabels(items.map(it => it.label));
     const pcts   = items.map(it => parseFloat((it.n / total * 100).toFixed(2)));
     const colors = items.map(it => (FTYPE_META[it.key] || {}).color || '#6b7280');
     const height = canvasHeight(items.length);
@@ -2702,3 +2714,888 @@ function initStat10() {
 }
 
 document.addEventListener('DOMContentLoaded', initStat10);
+
+// ── Statistik 11: Gender (Überblick · Zeitverlauf · Phänomene) ──────────────
+
+const GENDER_META = {
+    male:    { label: 'Autoren',      color: 'rgba(234,88,12,0.75)',   line: '#ea580c' },
+    female:  { label: 'Autorinnen',   color: 'rgba(22,163,74,0.75)',   line: '#16a34a' },
+    unknown: { label: 'Kein Eintrag', color: 'rgba(156,163,175,0.55)', line: '#9ca3af' },
+};
+
+// ── Tab-Steuerung ─────────────────────────────────────────────────────────────
+const GENDER_TABS = [
+    { id: 'overview', label: 'Überblick'   },
+    { id: 'time',     label: 'Zeitverlauf' },
+    { id: 'genre',    label: 'Gattungen'   },
+    { id: 'phenom',   label: 'Phänomene'   },
+];
+let _genderActiveTab   = 'overview';
+let _genderChartInited = { overview: false, time: false, genre: false, phenom: false };
+
+function buildGenderTabs() {
+    const bar = document.getElementById('gender-tab-bar');
+    if (!bar) return;
+    GENDER_TABS.forEach(tab => {
+        const btn = document.createElement('button');
+        btn.id = 'gender-tab-btn-' + tab.id;
+        btn.textContent = tab.label;
+        btn.style.cssText =
+            'padding:.4rem 1.1rem;border-radius:.375rem;font-size:.875rem;' +
+            'font-family:Geist,system-ui,sans-serif;cursor:pointer;transition:all .15s;' +
+            'border:1px solid #d1d5db;background:#fff;color:#374151;';
+        btn.addEventListener('click', () => switchGenderTab(tab.id));
+        bar.appendChild(btn);
+    });
+    highlightGenderTab(_genderActiveTab);
+}
+
+function highlightGenderTab(activeId) {
+    GENDER_TABS.forEach(tab => {
+        const btn = document.getElementById('gender-tab-btn-' + tab.id);
+        if (!btn) return;
+        if (tab.id === activeId) {
+            btn.style.background  = '#5e17eb';
+            btn.style.color       = '#fff';
+            btn.style.borderColor = '#5e17eb';
+        } else {
+            btn.style.background  = '#fff';
+            btn.style.color       = '#374151';
+            btn.style.borderColor = '#d1d5db';
+        }
+    });
+}
+
+function switchGenderTab(tabId) {
+    _genderActiveTab = tabId;
+    highlightGenderTab(tabId);
+    GENDER_TABS.forEach(tab => {
+        const pane = document.getElementById('gender-pane-' + tab.id);
+        if (pane) pane.style.display = tab.id === tabId ? '' : 'none';
+    });
+    if (tabId === 'overview' && !_genderChartInited.overview) {
+        renderGenderOverview();
+        _genderChartInited.overview = true;
+    }
+    if (tabId === 'time' && !_genderChartInited.time) {
+        renderGenderTimeChart();
+        _genderChartInited.time = true;
+    }
+    if (tabId === 'genre' && !_genderChartInited.genre) {
+        renderGenderGenreChart();
+        _genderChartInited.genre = true;
+    }
+    if (tabId === 'phenom' && !_genderChartInited.phenom) {
+        renderGenderPhenomSections();
+        _genderChartInited.phenom = true;
+    }
+}
+
+// ── Pane 1: Überblick (alle Autor_innen) ─────────────────────────────────────
+function renderGenderOverview() {
+    const d = DATA.genderStats;
+    if (!d) return;
+
+    const kpiWrap = document.getElementById('stat11-kpi-wrap');
+    if (kpiWrap && !kpiWrap.hasChildNodes()) {
+        const kpiGrid = document.createElement('div');
+        kpiGrid.style.cssText =
+            'display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));' +
+            'gap:1rem;margin-bottom:1.5rem';
+        [
+            { label: 'Autoren',               val: d.nMale,    color: GENDER_META.male.line   },
+            { label: 'Autorinnen',             val: d.nFemale,  color: GENDER_META.female.line },
+            { label: 'Kein Gender-Eintrag',     val: d.nUnknown, color: GENDER_META.unknown.line },
+        ].forEach(k => {
+            const card = document.createElement('div');
+            card.style.cssText =
+                'border:1px solid #e5e7eb;border-radius:8px;padding:1rem 1.25rem;' +
+                'text-align:center;background:#fff';
+            card.innerHTML =
+                `<div style="font-size:.78rem;font-weight:700;color:#6b7280;text-transform:uppercase;` +
+                `letter-spacing:.06em;margin-bottom:.3rem">${k.label}</div>` +
+                `<div style="font-size:2rem;font-weight:700;color:${k.color};line-height:1.1">${k.val}</div>` +
+                `<div style="font-size:.78rem;color:#9ca3af;margin-top:.25rem">gesamt</div>`;
+            kpiGrid.appendChild(card);
+        });
+        kpiWrap.appendChild(kpiGrid);
+    }
+
+    const donutCanvas = document.getElementById('chart-gender-donut');
+    if (!donutCanvas || donutCanvas._chartInited) return;
+    donutCanvas._chartInited = true;
+
+    const total = d.nMale + d.nFemale + d.nUnknown;
+    new Chart(donutCanvas.getContext('2d'), {
+        type: 'doughnut',
+        data: {
+            labels: [
+                `Autoren – ${d.nMale} (${(d.nMale/total*100).toFixed(1)}%)`,
+                `Autorinnen – ${d.nFemale} (${(d.nFemale/total*100).toFixed(1)}%)`,
+                `Kein Eintrag – ${d.nUnknown} (${(d.nUnknown/total*100).toFixed(1)}%)`,
+            ],
+            datasets: [{
+                data: [d.nMale, d.nFemale, d.nUnknown],
+                backgroundColor: [GENDER_META.male.color, GENDER_META.female.color, GENDER_META.unknown.color],
+                borderColor:     [GENDER_META.male.line,  GENDER_META.female.line,  GENDER_META.unknown.line],
+                borderWidth: 2,
+            }],
+        },
+        options: {
+            responsive: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: { font: { family: 'Geist, system-ui', size: 12 }, padding: 14 },
+                },
+                tooltip: {
+                    callbacks: {
+                        label: ctx => {
+                            const v = ctx.parsed;
+                            const pct = total > 0 ? (v / total * 100).toFixed(1) : '0.0';
+                            return ` ${v} (${pct}%)`;
+                        },
+                    },
+                },
+            },
+        },
+    });
+}
+
+// ── Pane 2: Zeitverlauf (alle Autor_innen) ────────────────────────────────────
+let _genderTimeChart = null;
+
+function renderGenderTimeChart() {
+    const d = DATA.genderStats;
+    if (!d || !d.timeDist || !d.timeDist.length) return;
+    const ctx = document.getElementById('chart-gender-time')?.getContext('2d');
+    if (!ctx) return;
+
+    const mode      = document.getElementById('sel-gender-time-mode')?.value || 'stacked';
+    const isPercent = mode === 'percent';
+
+    const decLabels = d.timeDist.map(b => b.key === 'n/a' ? 'o. J.' : b.key.replace(/(\d+)s$/, '$1er'));
+    const maleRaw   = d.timeDist.map(b => b.male);
+    const femRaw    = d.timeDist.map(b => b.female);
+    const unkRaw    = d.timeDist.map(b => b.unknown);
+
+    const toPct = arr => arr.map((v, i) => {
+        const t = maleRaw[i] + femRaw[i] + unkRaw[i];
+        return t > 0 ? parseFloat((v / t * 100).toFixed(1)) : 0;
+    });
+
+    const datasets = [
+        { label: 'Autoren',      data: isPercent ? toPct(maleRaw) : maleRaw,
+          backgroundColor: GENDER_META.male.color,    borderColor: GENDER_META.male.line,    borderWidth: 1.5, borderRadius: 2 },
+        { label: 'Autorinnen',   data: isPercent ? toPct(femRaw)  : femRaw,
+          backgroundColor: GENDER_META.female.color,  borderColor: GENDER_META.female.line,  borderWidth: 1.5, borderRadius: 2 },
+        { label: 'Kein Eintrag', data: isPercent ? toPct(unkRaw)  : unkRaw,
+          backgroundColor: GENDER_META.unknown.color, borderColor: GENDER_META.unknown.line, borderWidth: 1.5, borderRadius: 2 },
+    ];
+
+    if (_genderTimeChart) {
+        _genderTimeChart.data.labels   = decLabels;
+        _genderTimeChart.data.datasets = datasets;
+        _genderTimeChart.options.scales.y.max = isPercent ? 100 : undefined;
+        _genderTimeChart.options.scales.y.ticks.callback = isPercent ? v => v + '%' : v => v;
+        _genderTimeChart.update();
+        return;
+    }
+
+    _genderTimeChart = new Chart(ctx, {
+        type: 'bar',
+        data: { labels: decLabels, datasets },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: { font: { family: 'Geist, system-ui', size: 12 }, padding: 12 },
+                },
+                tooltip: {
+                    mode: 'index',
+                    callbacks: {
+                        label: c => {
+                            const v = c.parsed.y;
+                            return isPercent
+                                ? ` ${c.dataset.label}: ${v.toFixed(1)}%`
+                                : ` ${c.dataset.label}: ${v}`;
+                        },
+                    },
+                },
+            },
+            scales: {
+                x: {
+                    stacked: true,
+                    ticks: { font: { family: 'Geist, system-ui', size: 11 } },
+                    grid: { display: false },
+                },
+                y: {
+                    stacked: true,
+                    max: isPercent ? 100 : undefined,
+                    ticks: {
+                        font: { family: 'Geist, system-ui', size: 11 },
+                        callback: isPercent ? v => v + '%' : v => v,
+                    },
+                    grid: { color: 'rgba(0,0,0,0.06)' },
+                },
+            },
+        },
+    });
+}
+
+// ── Pane 3: Gattungen × Geschlecht ──────────────────────────────────────────
+let _genderGenreChart = null;
+
+function renderGenderGenreChart() {
+    const d = DATA.genderStats;
+    if (!d || !d.genreGender || !d.genreGender.length) return;
+    const ctx = document.getElementById('chart-gender-genre')?.getContext('2d');
+    if (!ctx) return;
+
+    const mode      = document.getElementById('sel-gender-genre-mode')?.value || 'stacked';
+    const isPercent = mode === 'percent';
+
+    const genres   = d.genreGender;
+    const labels   = genres.map(g => g.key);
+    const maleRaw  = genres.map(g => g.male);
+    const femRaw   = genres.map(g => g.female);
+    const unkRaw   = genres.map(g => g.unknown);
+
+    const toPct = arr => arr.map((v, i) => {
+        const t = maleRaw[i] + femRaw[i] + unkRaw[i];
+        return t > 0 ? parseFloat((v / t * 100).toFixed(1)) : 0;
+    });
+    // 0 → null damit kein Stummel erscheint; minBarLength gilt nur für > 0
+    const nullZero = arr => arr.map(v => v === 0 ? null : v);
+    const nullZeroPct = arr => arr.map(v => v === 0 ? null : v);
+
+    const datasets = [
+        { label: 'Autoren',      data: isPercent ? nullZeroPct(toPct(maleRaw)) : nullZero(maleRaw),
+          backgroundColor: GENDER_META.male.color,    borderColor: GENDER_META.male.line,    borderWidth: 1.5, borderRadius: 3, minBarLength: 3 },
+        { label: 'Autorinnen',   data: isPercent ? nullZeroPct(toPct(femRaw))  : nullZero(femRaw),
+          backgroundColor: GENDER_META.female.color,  borderColor: GENDER_META.female.line,  borderWidth: 1.5, borderRadius: 3, minBarLength: 3 },
+        { label: 'Kein Eintrag', data: isPercent ? nullZeroPct(toPct(unkRaw))  : nullZero(unkRaw),
+          backgroundColor: GENDER_META.unknown.color, borderColor: GENDER_META.unknown.line, borderWidth: 1.5, borderRadius: 3, minBarLength: 3 },
+    ];
+
+    if (_genderGenreChart) {
+        _genderGenreChart.data.datasets = datasets;
+        _genderGenreChart.options.scales.y.max = isPercent ? 100 : undefined;
+        _genderGenreChart.options.scales.y.min = 0;
+        _genderGenreChart.options.scales.y.ticks.precision = 0;
+        _genderGenreChart.options.scales.y.ticks.callback = isPercent ? v => v + '%' : v => v;
+        _genderGenreChart.options.scales.y.title.text =
+            isPercent ? 'Prozentualer Anteil' : 'Anzahl Texte';
+        _genderGenreChart.update();
+        return;
+    }
+
+    _genderGenreChart = new Chart(ctx, {
+        type: 'bar',
+        data: { labels, datasets },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: { font: { family: 'Geist, system-ui', size: 12 }, padding: 12 },
+                },
+                tooltip: {
+                    mode: 'index',
+                    callbacks: {
+                        label: c => {
+                            const g   = genres[c.dataIndex];
+                            const tot = g.male + g.female + g.unknown;
+                            const v   = c.parsed.y;
+                            if (isPercent) return ` ${c.dataset.label}: ${v.toFixed(1)}%`;
+                            const pct = tot > 0 ? (v / tot * 100).toFixed(1) : '0.0';
+                            return ` ${c.dataset.label}: ${v} (${pct}% der Gattung)`;
+                        },
+                    },
+                },
+            },
+            scales: {
+                x: {
+                    stacked: true,
+                    ticks: { font: { family: 'Geist, system-ui', size: 12 } },
+                    grid: { display: false },
+                },
+                y: {
+                    stacked: true,
+                    min: 0,
+                    max: isPercent ? 100 : undefined,
+                    title: {
+                        display: true,
+                        text: isPercent ? 'Prozentualer Anteil' : 'Anzahl Texte',
+                        font: { family: 'Geist, system-ui', size: 11 },
+                        color: '#6b7280',
+                    },
+                    ticks: {
+                        font: { family: 'Geist, system-ui', size: 11 },
+                        precision: 0,
+                        callback: isPercent ? v => v + '%' : v => v,
+                    },
+                    grid: { color: 'rgba(0,0,0,0.06)' },
+                },
+            },
+        },
+    });
+}
+
+// ── Pane 3: Phänomene – aufklappbare Sektionen pro Phänomentyp (wie Stat 1) ──
+
+const _genderPhenomCharts = {};
+
+function renderGenderPhenomSections() {
+    const pd   = DATA.genderStats?.phenomDist;
+    if (!pd || !pd.features || !pd.features.length) return;
+
+    // Typenlegende aufbauen
+    const legendWrap = document.getElementById('gender-phenom-type-legend');
+    if (legendWrap) {
+        legendWrap.innerHTML = '';
+        const ftypes = [...new Set(pd.features.map(f => f.ftype))];
+        ftypes.forEach(ft => {
+            const m = FTYPE_META[ft] || { label: ft, color: '#6b7280' };
+            const span = document.createElement('span');
+            span.style.cssText = 'display:inline-flex;align-items:center;gap:5px';
+            span.innerHTML = `<span style="display:inline-block;width:11px;height:11px;border-radius:2px;background:${m.color};flex-shrink:0"></span>${m.label}`;
+            legendWrap.appendChild(span);
+        });
+    }
+
+    // Phänomene nach Typ gruppieren (Reihenfolge wie FTYPE_META)
+    const ftypeOrder = Object.keys(FTYPE_META);
+    const byType = {};
+    pd.features.forEach(f => {
+        if (!byType[f.ftype]) byType[f.ftype] = [];
+        byType[f.ftype].push(f);
+    });
+
+    const wrap = document.getElementById('gender-phenom-overview-wrap');
+    if (!wrap) return;
+    wrap.innerHTML = '';
+
+    // ── Überblicks-Chart Top-N ────────────────────────────────────────────────
+    const topN   = parseInt(document.getElementById('sel-gender-phenom-topn')?.value || '30');
+    const topItems = pd.features.slice(0, topN > 0 ? topN : pd.features.length);
+
+    if (topItems.length) {
+        const overviewTitle = document.createElement('p');
+        overviewTitle.className = 'stats-subtitle stats-subtitle-sm';
+        overviewTitle.textContent = 'Überblick (Top-N)';
+        wrap.appendChild(overviewTitle);
+
+        const ovLegend = document.createElement('div');
+        ovLegend.className = 'legend';
+        ovLegend.style.marginBottom = '.75rem';
+        ovLegend.innerHTML =
+            `<span><span class="dot" style="background:${GENDER_META.male.color};border:1.5px solid ${GENDER_META.male.line}"></span>` +
+            `Autoren (n=${pd.nMale})</span>` +
+            `<span><span class="dot" style="background:${GENDER_META.female.color};border:1.5px solid ${GENDER_META.female.line}"></span>` +
+            `Autorinnen (n=${pd.nFemale})</span>`;
+        wrap.appendChild(ovLegend);
+
+        const controlRow = document.createElement('div');
+        controlRow.className = 'control-col-wrap';
+        controlRow.style.marginBottom = '.75rem';
+        controlRow.innerHTML =
+            `<div class="stat3-control-group">` +
+            `<label>Anzahl:</label>` +
+            `<select id="sel-gender-phenom-topn" class="stat2-select">` +
+            `<option value="20"${topN===20?' selected':''}>Top 20</option>` +
+            `<option value="30"${topN===30?' selected':''}>Top 30</option>` +
+            `<option value="50"${topN===50?' selected':''}>Top 50</option>` +
+            `<option value="100"${topN===100?' selected':''}>Top 100</option>` +
+            `</select></div>`;
+        wrap.appendChild(controlRow);
+
+        document.getElementById('sel-gender-phenom-topn')
+            ?.addEventListener('change', () => {
+                Object.keys(_genderPhenomCharts).forEach(k => {
+                    const c = _genderPhenomCharts[k]; if (c) c.destroy();
+                    delete _genderPhenomCharts[k];
+                });
+                renderGenderPhenomSections();
+            });
+
+        const overviewLabels   = uniqueLabels(topItems.map(f => f.label));
+        const overviewTypeCols = topItems.map(f => (FTYPE_META[f.ftype] || {}).color || '#6b7280');
+        const pctOf = (n, tot) => tot > 0 ? parseFloat((n / tot * 100).toFixed(2)) : 0;
+        const ovMale  = topItems.map(f => { const c = f.cells.find(x => x.g === 'male');   return pctOf(c ? c.n : 0, pd.nMale);   });
+        const ovFem   = topItems.map(f => { const c = f.cells.find(x => x.g === 'female'); return pctOf(c ? c.n : 0, pd.nFemale); });
+        const ovMaxX  = Math.min(100, Math.ceil(Math.max(...ovMale, ...ovFem) * 1.05 / 5) * 5) || 10;
+        const ovH     = canvasHeight(topItems.length);
+
+        const ovWrap  = document.createElement('div');
+        ovWrap.className = 'chart-wrap';
+        ovWrap.style.marginBottom = '1.5rem';
+        const ovCanvas = document.createElement('canvas');
+        ovCanvas.id = 'chart-gender-phenom-overview';
+        ovCanvas.style.height = ovH + 'px';
+        ovWrap.appendChild(ovCanvas);
+        wrap.appendChild(ovWrap);
+
+        // Typ-Streifen-Plugin (analog Stat 1)
+        const FS = 11, FW = 6.5;
+        const splitLov = (lbl, maxW) => {
+            const c1 = Math.floor((maxW - 16) / FW) - 2;
+            const c2 = Math.floor((maxW - 16) / FW);
+            if (lbl.length <= c1) return [lbl];
+            const words = lbl.split(' ');
+            let best = null, cur = '';
+            for (let i = 0; i < words.length - 1; i++) {
+                cur = cur ? cur + ' ' + words[i] : words[i];
+                const rest = words.slice(i + 1).join(' ');
+                if (cur.length <= c2 && rest.length <= c2) best = { line1: cur, line2: rest };
+            }
+            if (best) return [best.line1, best.line2];
+            const mid = Math.floor(lbl.length / 2);
+            const brk = lbl.lastIndexOf(' ', mid + 6);
+            const sp  = brk > 4 ? brk : c2;
+            const l2r = lbl.slice(sp).trimStart();
+            return [lbl.slice(0, sp).trimEnd(), l2r.length > c2 ? l2r.slice(0, c2 - 1) + '…' : l2r];
+        };
+        const ovStripe = {
+            id: 'genderOvStripe',
+            afterDraw(chart) {
+                const { ctx: c, scales: { y }, chartArea } = chart;
+                const lw = chartArea.left;
+                topItems.forEach((item, i) => {
+                    const color = overviewTypeCols[i];
+                    const top   = y.getPixelForValue(i) - y.height / topItems.length / 2;
+                    const bot   = y.getPixelForValue(i) + y.height / topItems.length / 2;
+                    const h     = bot - top;
+                    const lines = splitLov(overviewLabels[i], lw);
+                    c.save();
+                    c.font = `${FS}px Geist, system-ui, sans-serif`;
+                    c.textAlign = 'right'; c.textBaseline = 'middle';
+                    const x = lw - 6, gap = 6, r = 3;
+                    const tw = c.measureText(lines.reduce((a, b) => c.measureText(a).width > c.measureText(b).width ? a : b, lines[0])).width;
+                    c.beginPath(); c.fillStyle = color;
+                    c.arc(x - tw - gap - r, top + h / 2, r, 0, Math.PI * 2); c.fill();
+                    c.fillStyle = '#1f2937';
+                    if (lines.length === 1) c.fillText(lines[0], x, top + h / 2);
+                    else { c.fillText(lines[0], x, top + h / 2 - 7); c.fillText(lines[1], x, top + h / 2 + 7); }
+                    c.restore();
+                });
+            },
+        };
+
+        new Chart(ovCanvas.getContext('2d'), {
+            type: 'bar',
+            plugins: [ovStripe],
+            data: {
+                labels: overviewLabels,
+                datasets: [
+                    { label: `Autoren (n=${pd.nMale})`,   data: ovMale, backgroundColor: GENDER_META.male.color,   borderColor: GENDER_META.male.line,   borderWidth: 2, borderRadius: 2 },
+                    { label: `Autorinnen (n=${pd.nFemale})`, data: ovFem,  backgroundColor: GENDER_META.female.color, borderColor: GENDER_META.female.line, borderWidth: 2, borderRadius: 2 },
+                ],
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                layout: { padding: { left: 0 } },
+                interaction: { mode: 'nearest', axis: 'y', intersect: true },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: c => {
+                                const f    = topItems[c.dataIndex];
+                                const isMale = c.datasetIndex === 0;
+                                const gk   = isMale ? 'male' : 'female';
+                                const tot  = isMale ? pd.nMale : pd.nFemale;
+                                const cell = f.cells.find(x => x.g === gk);
+                                const cnt  = cell ? cell.n : 0;
+                                const name = isMale ? 'Autoren' : 'Autorinnen';
+                                return ` ${name}: ${c.parsed.x.toFixed(2)}% (${cnt}/${tot})`;
+                            },
+                        },
+                    },
+                },
+                scales: {
+                    x: {
+                        min: 0, max: ovMaxX,
+                        ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => v + '%', stepSize: 5 },
+                        grid: { color: 'rgba(0,0,0,0.06)' },
+                    },
+                    y: {
+                        ticks: { font: { family: 'Geist, system-ui', size: 12 }, autoSkip: false, color: 'transparent' },
+                        grid: { display: false },
+                        afterFit(scale) { scale.width = 220; },
+                    },
+                },
+            },
+        });
+
+    }
+
+    // ── Top-N pro Geschlecht: zwei Spalten nebeneinander ───────────────────────
+    const genderTopTitle = document.createElement('p');
+    genderTopTitle.className = 'stats-subtitle stats-subtitle-sm-top';
+    genderTopTitle.textContent = 'Top-Phänomene nach Geschlecht';
+    wrap.appendChild(genderTopTitle);
+
+    // Top-N Dropdown
+    const gTopControls = document.createElement('div');
+    gTopControls.className = 'control-col-wrap';
+    gTopControls.style.marginBottom = '.75rem';
+    gTopControls.innerHTML =
+        `<div class="stat3-control-group"><label for="sel-gender-top-n">Anzahl:</label>` +
+        `<select id="sel-gender-top-n" class="stat2-select">` +
+        `<option value="10">Top 10</option>` +
+        `<option value="20" selected>Top 20</option>` +
+        `<option value="30">Top 30</option>` +
+        `<option value="50">Top 50</option>` +
+        `</select></div>`;
+    wrap.appendChild(gTopControls);
+
+    // Zwei-Spalten-Container
+    const gTopCols = document.createElement('div');
+    gTopCols.style.cssText = 'display:grid;grid-template-columns:1fr 1fr;gap:1rem;align-items:start;min-width:0';
+    wrap.appendChild(gTopCols);
+
+    const gTopWrapM = document.createElement('div');
+    gTopWrapM.id = 'gender-top-wrap-male';
+    gTopCols.appendChild(gTopWrapM);
+
+    const gTopWrapF = document.createElement('div');
+    gTopWrapF.id = 'gender-top-wrap-female';
+    gTopCols.appendChild(gTopWrapF);
+
+    let _gTopChartM = null;
+    let _gTopChartF = null;
+
+    // Typ-Streifen-Plugin — kompaktere Labels für halbe Breite
+    const FS2 = 10, FW2 = 6.0;
+    const splitG = (lbl, maxW) => {
+        const c1 = Math.floor((maxW - 12) / FW2) - 2;
+        const c2 = Math.floor((maxW - 12) / FW2);
+        if (lbl.length <= c1) return [lbl];
+        const words = lbl.split(' ');
+        let best = null, cur = '';
+        for (let i = 0; i < words.length - 1; i++) {
+            cur = cur ? cur + ' ' + words[i] : words[i];
+            const rest = words.slice(i + 1).join(' ');
+            if (cur.length <= c2 && rest.length <= c2) best = { line1: cur, line2: rest };
+        }
+        if (best) return [best.line1, best.line2];
+        const mid = Math.floor(lbl.length / 2);
+        const brk = lbl.lastIndexOf(' ', mid + 6);
+        const sp  = brk > 4 ? brk : c2;
+        const l2r = lbl.slice(sp).trimStart();
+        return [lbl.slice(0, sp).trimEnd(), l2r.length > c2 ? l2r.slice(0, c2 - 1) + '…' : l2r];
+    };
+
+    function makeGenderColStripe(sortedItems, id) {
+        return {
+            id,
+            afterDraw(chart) {
+                const { ctx: c, scales: { y }, chartArea } = chart;
+                const lw = chartArea.left;
+                sortedItems.forEach((item, i) => {
+                    const color = (FTYPE_META[item.ftype] || {}).color || '#6b7280';
+                    const top   = y.getPixelForValue(i) - y.height / sortedItems.length / 2;
+                    const bot   = y.getPixelForValue(i) + y.height / sortedItems.length / 2;
+                    const h     = bot - top;
+                    const lines = splitG(item.label, lw);
+                    c.save();
+                    c.font = `${FS2}px Geist, system-ui, sans-serif`;
+                    c.textAlign = 'right'; c.textBaseline = 'middle';
+                    const x = lw - 5, gap = 5, r = 3;
+                    const tw = c.measureText(lines.reduce((a, b) => c.measureText(a).width > c.measureText(b).width ? a : b, lines[0])).width;
+                    c.beginPath(); c.fillStyle = color;
+                    c.arc(x - tw - gap - r, top + h / 2, r, 0, Math.PI * 2); c.fill();
+                    c.fillStyle = '#1f2937';
+                    if (lines.length === 1) c.fillText(lines[0], x, top + h / 2);
+                    else { c.fillText(lines[0], x, top + h / 2 - 6); c.fillText(lines[1], x, top + h / 2 + 6); }
+                    c.restore();
+                });
+            },
+        };
+    }
+
+    function renderGenderColChart(gk, wrapEl, existingChart) {
+        const n      = parseInt(document.getElementById('sel-gender-top-n')?.value || '20');
+        const isMale = gk === 'male';
+        const tot    = isMale ? pd.nMale : pd.nFemale;
+        const color  = isMale ? GENDER_META.male.color  : GENDER_META.female.color;
+        const line   = isMale ? GENDER_META.male.line   : GENDER_META.female.line;
+        const title  = isMale ? 'Autoren' : 'Autorinnen';
+
+        const sorted = [...pd.features]
+            .map(f => { const cell = f.cells.find(x => x.g === gk); return { ...f, gCount: cell ? cell.n : 0 }; })
+            .sort((a, b) => b.gCount - a.gCount)
+            .slice(0, n > 0 ? n : pd.features.length);
+
+        const labels = uniqueLabels(sorted.map(f => f.label));
+        const data   = sorted.map(f => tot > 0 ? parseFloat((f.gCount / tot * 100).toFixed(2)) : 0);
+        const maxX   = Math.min(100, Math.ceil(Math.max(...data) * 1.05 / 5) * 5) || 10;
+        // Kompaktere Zeilenhöhe für halbe Breite
+        const chartH = Math.max(120, sorted.length * 26 + 40);
+
+        if (existingChart) { existingChart.destroy(); }
+        wrapEl.innerHTML = '';
+        const colTitle = document.createElement('p');
+        colTitle.style.cssText = `font-size:.85rem;font-weight:700;color:${line};text-align:center;` +
+            `margin-bottom:.4rem;text-transform:uppercase;letter-spacing:.04em`;
+        colTitle.textContent = title;
+        wrapEl.appendChild(colTitle);
+        const colChartWrap = document.createElement('div');
+        colChartWrap.style.cssText = `overflow-x:auto;width:100%`;
+        const colCanvas = document.createElement('canvas');
+        colCanvas.width  = 400;
+        colCanvas.height = chartH;
+        colCanvas.style.cssText = `display:block;width:100%;height:${chartH}px`;
+        colChartWrap.appendChild(colCanvas);
+        wrapEl.appendChild(colChartWrap);
+
+        const stripe = makeGenderColStripe(sorted, 'genderColStripe-' + gk);
+        const chart = new Chart(colCanvas.getContext('2d'), {
+            type: 'bar',
+            plugins: [stripe],
+            data: {
+                labels,
+                datasets: [{ label: title, data, backgroundColor: color, borderColor: line, borderWidth: 1.5, borderRadius: 2 }],
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                layout: { padding: { left: 0 } },
+                interaction: { mode: 'nearest', axis: 'y', intersect: true },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: c => {
+                                const f    = sorted[c.dataIndex];
+                                const cell = f.cells.find(x => x.g === gk);
+                                const cnt  = cell ? cell.n : 0;
+                                return ` ${isMale ? 'Autoren' : 'Autorinnen'}: ${c.parsed.x.toFixed(2)}% (${cnt}/${tot})`;
+                            },
+                        },
+                    },
+                },
+                scales: {
+                    x: {
+                        min: 0, max: maxX,
+                        ticks: { font: { family: 'Geist, system-ui', size: 10 }, callback: v => v + '%', stepSize: 5 },
+                        grid: { color: 'rgba(0,0,0,0.06)' },
+                    },
+                    y: {
+                        ticks: { font: { family: 'Geist, system-ui', size: 10 }, autoSkip: false, color: 'transparent' },
+                        grid: { display: false },
+                        afterFit(scale) {
+                            // Breite dynamisch aus dem längsten Label berechnen
+                            const maxLen = labels.reduce((m, l) => Math.max(m, l.length), 0);
+                            scale.width = Math.min(200, Math.max(100, maxLen * 6 + 28));
+                        },
+                    },
+                },
+            },
+        });
+        return chart;
+    }
+
+    function renderGenderTopCharts() {
+        _gTopChartM = renderGenderColChart('male',   gTopWrapM, _gTopChartM);
+        _gTopChartF = renderGenderColChart('female', gTopWrapF, _gTopChartF);
+    }
+
+    renderGenderTopCharts();
+    document.getElementById('sel-gender-top-n')?.addEventListener('change', renderGenderTopCharts);
+
+    const phenomTypTitle = document.createElement('p');
+    phenomTypTitle.className = 'stats-subtitle stats-subtitle-sm-top';
+    phenomTypTitle.textContent = 'Nach Phänomentyp';
+    wrap.appendChild(phenomTypTitle);
+
+    const orderedTypes = ftypeOrder.filter(ft => byType[ft]);
+
+    orderedTypes.forEach(ft => {
+        const items    = byType[ft];
+        const ftMeta   = FTYPE_META[ft] || { label: ft, color: '#6b7280' };
+        const sectionId = 'gender-phenom-cat-' + ft;
+
+        const section = document.createElement('div');
+        section.className = 'card cat';
+        section.id = sectionId;
+
+        const head = document.createElement('div');
+        head.className = 'card-header';
+        head.innerHTML = `<span class="arrow">&#9658;</span><h2>${ftMeta.label}</h2>`;
+
+        const body = document.createElement('div');
+        body.className = 'card-body';
+        body.id = 'gender-phenom-body-' + ft;
+
+        const chartWrap = document.createElement('div');
+        chartWrap.className = 'chart-wrap';
+        const canvas = document.createElement('canvas');
+        canvas.id = 'chart-gender-phenom-' + ft;
+        canvas.style.height = canvasHeight(items.length) + 'px';
+        chartWrap.appendChild(canvas);
+        body.appendChild(chartWrap);
+
+        section.appendChild(head);
+        section.appendChild(body);
+
+        head.addEventListener('click', () => {
+            const isOpen = body.classList.contains('visible');
+            body.classList.toggle('visible', !isOpen);
+            head.classList.toggle('open', !isOpen);
+            if (!isOpen && !_genderPhenomCharts[ft]) {
+                renderGenderPhenomChart(ft, items, pd, canvas);
+            }
+        });
+
+        wrap.appendChild(section);
+    });
+}
+
+function renderGenderPhenomChart(ft, items, pd, canvas) {
+    const labels   = uniqueLabels(items.map(f => f.label));
+    const pctOf    = (n, tot) => tot > 0 ? parseFloat((n / tot * 100).toFixed(2)) : 0;
+    const maleData = items.map(f => { const c = f.cells.find(x => x.g === 'male');   return pctOf(c ? c.n : 0, pd.nMale);   });
+    const femData  = items.map(f => { const c = f.cells.find(x => x.g === 'female'); return pctOf(c ? c.n : 0, pd.nFemale); });
+
+    const maxX = Math.min(100,
+        Math.ceil(Math.max(...maleData, ...femData) * 1.05 / 5) * 5
+    ) || 10;
+
+    const FS = 11, FW = 6.5;
+    const typeColors = items.map(f => (FTYPE_META[f.ftype] || {}).color || '#6b7280');
+    const stripePlugin = {
+        id: 'genderPhenomStripe_' + ft,
+        afterDraw(chart) {
+            const { ctx: c, scales: { y }, chartArea } = chart;
+            const lw = chartArea.left;
+            items.forEach((item, i) => {
+                const color = typeColors[i];
+                const top   = y.getPixelForValue(i) - y.height / items.length / 2;
+                const bot   = y.getPixelForValue(i) + y.height / items.length / 2;
+                const h     = bot - top;
+                const lbl   = item.label;
+                const maxC  = Math.floor((lw - 16) / FW);
+                const disp  = lbl.length > maxC ? lbl.slice(0, maxC - 1) + '…' : lbl;
+                c.save();
+                c.font = `${FS}px Geist, system-ui, sans-serif`;
+                c.textAlign = 'right'; c.textBaseline = 'middle';
+                const x = lw - 6, gap = 6, r = 3;
+                const tw = c.measureText(disp).width;
+                c.beginPath(); c.fillStyle = color;
+                c.arc(x - tw - gap - r, top + h / 2, r, 0, Math.PI * 2); c.fill();
+                c.fillStyle = '#1f2937';
+                c.fillText(disp, x, top + h / 2);
+                c.restore();
+            });
+        },
+    };
+
+    _genderPhenomCharts[ft] = new Chart(canvas.getContext('2d'), {
+        type: 'bar',
+        plugins: [stripePlugin],
+        data: {
+            labels,
+            datasets: [
+                {
+                    label: `Autoren (n=${pd.nMale})`,
+                    data: maleData,
+                    backgroundColor: GENDER_META.male.color,
+                    borderColor:     GENDER_META.male.line,
+                    borderWidth: 2,
+                    borderRadius: 2,
+                },
+                {
+                    label: `Autorinnen (n=${pd.nFemale})`,
+                    data: femData,
+                    backgroundColor: GENDER_META.female.color,
+                    borderColor:     GENDER_META.female.line,
+                    borderWidth: 2,
+                    borderRadius: 2,
+                },
+            ],
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            interaction: { mode: 'nearest', axis: 'y', intersect: true },
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: ctx => {
+                            const f    = items[ctx.dataIndex];
+                            const isMale = ctx.datasetIndex === 0;
+                            const gk   = isMale ? 'male' : 'female';
+                            const tot  = isMale ? pd.nMale : pd.nFemale;
+                            const cell = f.cells.find(x => x.g === gk);
+                            const cnt  = cell ? cell.n : 0;
+                            const pct  = ctx.parsed.x.toFixed(2);
+                            const name = isMale ? 'Autoren' : 'Autorinnen';
+                            const uCell = f.cells.find(x => x.g === 'unknown');
+                            const uCnt  = uCell ? uCell.n : 0;
+                            const uPct  = pd.nUnknown > 0 ? (uCnt / pd.nUnknown * 100).toFixed(2) : '0.00';
+                            const lines = [` ${name}: ${pct}% (${cnt}/${tot})`];
+                            if (ctx.datasetIndex === 1) {
+                                lines.push(` Kein Eintrag: ${uPct}% (${uCnt}/${pd.nUnknown})`);
+                            }
+                            return lines;
+                        },
+                    },
+                },
+            },
+            scales: {
+                x: {
+                    min: 0,
+                    max: maxX,
+                    ticks: {
+                        font: { family: 'Geist, system-ui', size: 11 },
+                        callback: v => v + '%',
+                        stepSize: 5,
+                    },
+                    grid: { color: 'rgba(0,0,0,0.06)' },
+                },
+                y: {
+                    ticks: {
+                        font: { family: 'Geist, system-ui', size: 12 },
+                        autoSkip: false,
+                        color: 'transparent',
+                    },
+                    grid: { display: false },
+                    afterFit(scale) { scale.width = 220; },
+                },
+            },
+        },
+    });
+}
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+    if (!DATA.genderStats) return;
+    buildGenderTabs();
+    renderGenderOverview();
+    _genderChartInited.overview = true;
+    document.getElementById('sel-gender-time-mode')
+        ?.addEventListener('change', renderGenderTimeChart);
+    document.getElementById('sel-gender-genre-mode')
+        ?.addEventListener('change', renderGenderGenreChart);
+    document.getElementById('sel-gender-phenom-topn')
+        ?.addEventListener('change', () => {
+            _genderChartInited.phenom = false;
+            Object.keys(_genderPhenomCharts).forEach(k => {
+                const c = _genderPhenomCharts[k];
+                if (c) c.destroy();
+                delete _genderPhenomCharts[k];
+            });
+            renderGenderPhenomSections();
+            _genderChartInited.phenom = true;
+        });
+});

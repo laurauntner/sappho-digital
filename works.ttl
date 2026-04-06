@@ -1615,6 +1615,11 @@
     ecrm:P138_represents <https://sappho-digital.com/expression/bibl_d8a04de4> ;
     rdfs:seeAlso <http://www.zeno.org/Literatur/M/Lenz,+Jakob+Michael+Reinhold/Erz%C3%A4hlprosa/Der+Landprediger/Zweiter+Teil> .
 
+<https://sappho-digital.com/digital/bibl_d942939e> a ecrm:E73_Information_Object ;
+    rdfs:label "Digital copy of Scenen aus meinem Leben"@en ;
+    ecrm:P138_represents <https://sappho-digital.com/expression/bibl_d942939e> ;
+    rdfs:seeAlso <https://anno.onb.ac.at/cgi-content/anno?aid=abe&datum=18340724&seite=1&zoom=33> .
+
 <https://sappho-digital.com/digital/bibl_d9643dcb> a ecrm:E73_Information_Object ;
     rdfs:label "Digital copy of Das Leben und die Meinungen des Herrn Magister Sebaldus Nothanker, Bd. 2"@en ;
     ecrm:P138_represents <https://sappho-digital.com/expression/bibl_d9643dcb> ;
@@ -1764,6 +1769,11 @@
     rdfs:label "Digital copy of Einleitung"@en ;
     ecrm:P138_represents <https://sappho-digital.com/expression/bibl_e61f95eb> ;
     rdfs:seeAlso <https://www.digitale-sammlungen.de/de/view/bsb10116364> .
+
+<https://sappho-digital.com/digital/bibl_e66096f3> a ecrm:E73_Information_Object ;
+    rdfs:label "Digital copy of Jenes Lied der liebedurchglühten Sappho"@en ;
+    ecrm:P138_represents <https://sappho-digital.com/expression/bibl_e66096f3> ;
+    rdfs:seeAlso <https://www.google.com/books/edition/Gedichte/wOMHNu0O-ewC?hl=de&gbpv=1> .
 
 <https://sappho-digital.com/digital/bibl_e6bb83f8> a ecrm:E73_Information_Object ;
     rdfs:label "Digital copy of Der Frühlingsabend"@en ;
@@ -3747,11 +3757,6 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/identifier/bibl_3fbe3ed3> a ecrm:E42_Identifier ;
     rdfs:label "bibl_3fbe3ed3" ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_3fbe3ed3> ;
-    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
-
-<https://sappho-digital.com/identifier/bibl_3fd78a10> a ecrm:E42_Identifier ;
-    rdfs:label "bibl_3fd78a10" ;
-    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_3fd78a10> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
 <https://sappho-digital.com/identifier/bibl_4029bfaa> a ecrm:E42_Identifier ;
@@ -7214,11 +7219,6 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_e6dbb488> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
-<https://sappho-digital.com/identifier/bibl_e6e74ba6> a ecrm:E42_Identifier ;
-    rdfs:label "bibl_e6e74ba6" ;
-    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_e6e74ba6> ;
-    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
-
 <https://sappho-digital.com/identifier/bibl_e745799e> a ecrm:E42_Identifier ;
     rdfs:label "bibl_e745799e" ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_e745799e> ;
@@ -7805,7 +7805,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_dc90edfe> .
 
 <https://sappho-digital.com/person/author_012750d5> a ecrm:E21_Person ;
-    rdfs:label "H."@de ;
+    rdfs:label "Hirsch"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_19d9dbc7>,
         <https://sappho-digital.com/manifestation_creation/bibl_19d9dbc7> .
 
@@ -7859,7 +7859,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_80ce6226> .
 
 <https://sappho-digital.com/person/author_05bbc90a> a ecrm:E21_Person ;
-    rdfs:label "L. G. Förster"@de ;
+    rdfs:label "Lebrecht Gotthilf Förster"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_643f9997>,
         <https://sappho-digital.com/manifestation_creation/bibl_643f9997> .
 
@@ -7899,7 +7899,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_1bde570a> .
 
 <https://sappho-digital.com/person/author_0aedf092> a ecrm:E21_Person ;
-    rdfs:label "M. Stahl"@de ;
+    rdfs:label "Marie Stahl [= Marie Dieckmann]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_7161b279>,
         <https://sappho-digital.com/manifestation_creation/bibl_286cebb8> .
 
@@ -7933,7 +7933,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_6834de03> .
 
 <https://sappho-digital.com/person/author_0feff6a0> a ecrm:E21_Person ;
-    rdfs:label "H. F. Delius"@de ;
+    rdfs:label "Heinrich Friedrich Delius"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_8fe3bc53>,
         <https://sappho-digital.com/manifestation_creation/bibl_a3c6860a> .
 
@@ -7962,7 +7962,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6> .
 
 <https://sappho-digital.com/person/author_135d0b69> a ecrm:E21_Person ;
-    rdfs:label "Jean Laurent"@de ;
+    rdfs:label "Jean Laurent [= Karel Ulepič]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_cb1f43fd>,
         <https://sappho-digital.com/manifestation_creation/bibl_769be9b8> .
 
@@ -7977,7 +7977,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_6bic1haq> .
 
 <https://sappho-digital.com/person/author_1441e802> a ecrm:E21_Person ;
-    rdfs:label "Louis Graf von Ostrowski"@de ;
+    rdfs:label "Bernhard Louis Graf von Ostrowski"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_d942939e>,
         <https://sappho-digital.com/manifestation_creation/bibl_72514b45> .
 
@@ -7992,7 +7992,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_a871dd80> .
 
 <https://sappho-digital.com/person/author_15edc521> a ecrm:E21_Person ;
-    rdfs:label "Carl Raimund Frühauf"@de ;
+    rdfs:label "Karl Raimund Frühauf"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_060fb665>,
         <https://sappho-digital.com/manifestation_creation/bibl_a282c8c8> .
 
@@ -8006,7 +8006,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_ae229b15> .
 
 <https://sappho-digital.com/person/author_1ab6fe01> a ecrm:E21_Person ;
-    rdfs:label "Philander von der Linde [d. i. Johann Burckhardt Mencke]"@de ;
+    rdfs:label "Philander von der Linde [= Johann Burckhardt Mencke]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_35b8e8e5>,
         <https://sappho-digital.com/manifestation_creation/bibl_8e8089bd> .
 
@@ -8056,7 +8056,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_4c622de1> .
 
 <https://sappho-digital.com/person/author_1f7bb685> a ecrm:E21_Person ;
-    rdfs:label "Johann Roth"@de ;
+    rdfs:label "Johann Wenzel Roth"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_02a278de>,
         <https://sappho-digital.com/manifestation_creation/bibl_1776c5ab> .
 
@@ -8090,7 +8090,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_421c27fb> .
 
 <https://sappho-digital.com/person/author_22c147ee> a ecrm:E21_Person ;
-    rdfs:label "Frida Raimann"@de ;
+    rdfs:label "Frieda Raimann"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_5d213aae>,
         <https://sappho-digital.com/manifestation_creation/bibl_718a2dc9> .
 
@@ -8100,7 +8100,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_c82571f6> .
 
 <https://sappho-digital.com/person/author_2397260a> a ecrm:E21_Person ;
-    rdfs:label "Tian [d. i. Karoline von Günderrode]"@de ;
+    rdfs:label "Tian [= Karoline von Günderrode]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_b53e5151>,
         <https://sappho-digital.com/manifestation_creation/bibl_7cfe62ea> .
 
@@ -8125,7 +8125,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_c564852a> .
 
 <https://sappho-digital.com/person/author_27500efc> a ecrm:E21_Person ;
-    rdfs:label "J. J. H–b–r [d. i. Johann Joseph von Huber]"@de ;
+    rdfs:label "J. J. H–b–r [= Johann Joseph Anton Huber]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_632dac82>,
         <https://sappho-digital.com/manifestation_creation/bibl_bde24a4e> .
 
@@ -8165,7 +8165,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_c564852a> .
 
 <https://sappho-digital.com/person/author_2bca9740> a ecrm:E21_Person ;
-    rdfs:label "Joseph Emmanuel Hilscher"@de ;
+    rdfs:label "Joseph Emanuel Hilscher"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_2527654c>,
         <https://sappho-digital.com/manifestation_creation/bibl_769be9b8> .
 
@@ -8185,7 +8185,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_1583b2d6> .
 
 <https://sappho-digital.com/person/author_2e7fc8d9> a ecrm:E21_Person ;
-    rdfs:label "Richard Roos"@de ;
+    rdfs:label "Richard Roos [= Karl August Engelhardt]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_55ef54ac>,
         <https://sappho-digital.com/manifestation_creation/bibl_f965201c> .
 
@@ -8242,11 +8242,6 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_82769b77>,
         <https://sappho-digital.com/manifestation_creation/bibl_574806a3> .
 
-<https://sappho-digital.com/person/author_346ff930> a ecrm:E21_Person ;
-    rdfs:label "Max Castman"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_e6e74ba6>,
-        <https://sappho-digital.com/manifestation_creation/bibl_0c7e3721> .
-
 <https://sappho-digital.com/person/author_34ad0706> a ecrm:E21_Person ;
     rdfs:label "Ignaz Franz Castelli?"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_a95d687d>,
@@ -8258,7 +8253,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_a53d809b> .
 
 <https://sappho-digital.com/person/author_352648f9> a ecrm:E21_Person ;
-    rdfs:label "Hans Willmsen L. Rost [d. i. Johann Lauremberg]"@de ;
+    rdfs:label "Hans Willmsen L. Rost [= Johann Lauremberg]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_1a30e2e6>,
         <https://sappho-digital.com/manifestation_creation/bibl_0079799c> .
 
@@ -8483,7 +8478,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_2ccc6a75> .
 
 <https://sappho-digital.com/person/author_50e0d270> a ecrm:E21_Person ;
-    rdfs:label "Fitzinger"@de ;
+    rdfs:label "Franz Fitzinger"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_6091804d>,
         <https://sappho-digital.com/manifestation_creation/bibl_c564852a> .
 
@@ -8533,12 +8528,12 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_574806a3> .
 
 <https://sappho-digital.com/person/author_55676bb1> a ecrm:E21_Person ;
-    rdfs:label "Maria Modena [d. i. Erna Kreis-Weber]"@de ;
+    rdfs:label "Maria Modena [= Erna Kreis-Weber]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_e745799e>,
         <https://sappho-digital.com/manifestation_creation/bibl_54cf33e3> .
 
 <https://sappho-digital.com/person/author_561ed57e> a ecrm:E21_Person ;
-    rdfs:label "L[udwig?] Foglár"@de ;
+    rdfs:label "Ludwig Foglár"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_5afaf2f9>,
         <https://sappho-digital.com/manifestation_creation/bibl_792f9c50> .
 
@@ -8548,7 +8543,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_c785084c> .
 
 <https://sappho-digital.com/person/author_5713be4b> a ecrm:E21_Person ;
-    rdfs:label "Dr. Triller"@de ;
+    rdfs:label "Daniel Wilhelm Triller"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_afe2492c>,
         <https://sappho-digital.com/manifestation_creation/bibl_4431d678> .
 
@@ -8667,10 +8662,6 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_18924bc9>,
         <https://sappho-digital.com/manifestation_creation/bibl_3bdf0ccc> .
 
-<https://sappho-digital.com/person/author_64bb077c> a ecrm:E21_Person ;
-    rdfs:label "Z. Werner"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_3fd78a10> .
-
 <https://sappho-digital.com/person/author_653eb09d> a ecrm:E21_Person ;
     rdfs:label "F. Ztg."@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_42ad958f>,
@@ -8757,12 +8748,12 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_dc336cf6> .
 
 <https://sappho-digital.com/person/author_6f996abd> a ecrm:E21_Person ;
-    rdfs:label "Budik"@de ;
+    rdfs:label "Peter Alcantara Budik"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_d69c46f3>,
         <https://sappho-digital.com/manifestation_creation/bibl_fd44d6db> .
 
 <https://sappho-digital.com/person/author_6fd5058e> a ecrm:E21_Person ;
-    rdfs:label "Johannes Flach"@de ;
+    rdfs:label "Hans Flach"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_e87b8899>,
         <https://sappho-digital.com/manifestation_creation/bibl_e87b8899> .
 
@@ -8777,7 +8768,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_228d3345> .
 
 <https://sappho-digital.com/person/author_71cadc01> a ecrm:E21_Person ;
-    rdfs:label "Ursula Zöge von Mauteuffel"@de ;
+    rdfs:label "Ursula Zoege von Manteuffel"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_5c0e3b53>,
         <https://sappho-digital.com/manifestation_creation/bibl_5b00249a> .
 
@@ -8896,7 +8887,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_c1e2dcfc> .
 
 <https://sappho-digital.com/person/author_82923f4f> a ecrm:E21_Person ;
-    rdfs:label "J. A. P. G."@de ;
+    rdfs:label "Johann Adolph Peter Gries"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_6c26d44c>,
         <https://sappho-digital.com/manifestation_creation/bibl_9db1eec3> .
 
@@ -8921,7 +8912,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_574806a3> .
 
 <https://sappho-digital.com/person/author_86bf4efd> a ecrm:E21_Person ;
-    rdfs:label "G. [d. i. Karl Christian Gärtner?]"@de ;
+    rdfs:label "G. [= Karl Christian Gärtner?]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_e00bac8b>,
         <https://sappho-digital.com/manifestation_creation/bibl_28f85a25> .
 
@@ -8971,12 +8962,12 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_574806a3> .
 
 <https://sappho-digital.com/person/author_8d60dbcb> a ecrm:E21_Person ;
-    rdfs:label "Tami van Dalen [d. i. Tami Dahlheim]"@de ;
+    rdfs:label "Tami van Dalen [= Tami Dahlheim]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_b705febf>,
         <https://sappho-digital.com/manifestation_creation/bibl_b705febf> .
 
 <https://sappho-digital.com/person/author_8f86c2e4> a ecrm:E21_Person ;
-    rdfs:label "b. n. e."@de ;
+    rdfs:label "b. n. e. [= Johann Elias Schlegel?]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_0b562b59>,
         <https://sappho-digital.com/manifestation_creation/bibl_9db1eec3> .
 
@@ -9070,7 +9061,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_a45420a4> .
 
 <https://sappho-digital.com/person/author_98ac3050> a ecrm:E21_Person ;
-    rdfs:label "C. Blessig"@de ;
+    rdfs:label "Karl Blessig"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_688309b5>,
         <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6> .
 
@@ -9105,7 +9096,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_a3bc242d> .
 
 <https://sappho-digital.com/person/author_9a3d3005> a ecrm:E21_Person ;
-    rdfs:label "Carmen Sylva [d. i. Elisabeth zu Wied]"@de ;
+    rdfs:label "Carmen Sylva [= Elisabeth zu Wied]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_e58bccae>,
         <https://sappho-digital.com/manifestation_creation/bibl_e58bccae> .
 
@@ -9130,7 +9121,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_8ce06d17> .
 
 <https://sappho-digital.com/person/author_9cc4db92> a ecrm:E21_Person ;
-    rdfs:label "Ravi Ravendro [d. i. Karl Siegfried Döhring]"@de ;
+    rdfs:label "Ravi Ravendro [= Karl Siegfried Döhring]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_21d85a5a>,
         <https://sappho-digital.com/manifestation_creation/bibl_21d85a5a> .
 
@@ -9159,7 +9150,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_51a3d5d2> .
 
 <https://sappho-digital.com/person/author_9eaa8590> a ecrm:E21_Person ;
-    rdfs:label "P. Berthold"@de ;
+    rdfs:label "P. Berthold [= Stephan Schütze]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_4166923c>,
         <https://sappho-digital.com/manifestation_creation/bibl_4166923c> .
 
@@ -9198,12 +9189,12 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_ebc1bb1f> .
 
 <https://sappho-digital.com/person/author_a18ae9df> a ecrm:E21_Person ;
-    rdfs:label "Marie Madeleine [d. i. Marie Madeleine Baronin von Puttkamer]"@de ;
+    rdfs:label "Marie Madeleine [= Marie Madeleine Baronin von Puttkamer]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_e2546c7f>,
         <https://sappho-digital.com/manifestation_creation/bibl_dfe57cf2> .
 
 <https://sappho-digital.com/person/author_a1af1a8c> a ecrm:E21_Person ;
-    rdfs:label "H. F. Pöschl"@de ;
+    rdfs:label "Heinrich Ernst Pöschl"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_a8172b78>,
         <https://sappho-digital.com/manifestation_creation/bibl_11303d4b> .
 
@@ -9218,12 +9209,12 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_e445ceed> .
 
 <https://sappho-digital.com/person/author_a24b6787> a ecrm:E21_Person ;
-    rdfs:label "Amoroso?"@de ;
+    rdfs:label "Amoroso"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_82d5b99e>,
         <https://sappho-digital.com/manifestation_creation/bibl_b370eb1a> .
 
 <https://sappho-digital.com/person/author_a3810329> a ecrm:E21_Person ;
-    rdfs:label "H. Steinbach"@de ;
+    rdfs:label "H. Steinbach [= Hedwig Müller]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_ffa09bcd>,
         <https://sappho-digital.com/manifestation_creation/bibl_38ed3441> .
 
@@ -9411,11 +9402,6 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_77fb2bf2>,
         <https://sappho-digital.com/manifestation_creation/bibl_f27844a9> .
 
-<https://sappho-digital.com/person/author_bb3b0c3b> a ecrm:E21_Person ;
-    rdfs:label "Hg."@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_bc7fdff6>,
-        <https://sappho-digital.com/manifestation_creation/bibl_da54ba99> .
-
 <https://sappho-digital.com/person/author_bb3bee84> a ecrm:E21_Person ;
     rdfs:label "Heinrich Laube"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_6bc1c5c5>,
@@ -9490,7 +9476,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_c82f2750> .
 
 <https://sappho-digital.com/person/author_c1ad6949> a ecrm:E21_Person ;
-    rdfs:label "A. Noel"@de ;
+    rdfs:label "A. Noel [= Leontine Stern]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_1a83d097>,
         <https://sappho-digital.com/manifestation_creation/bibl_816be51a> .
 
@@ -9873,7 +9859,7 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_c400962f> .
 
 <https://sappho-digital.com/person/author_fbe3f87b> a ecrm:E21_Person ;
-    rdfs:label "UETYL"@de ;
+    rdfs:label "Uetyil"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_dd7513ae>,
         <https://sappho-digital.com/manifestation_creation/bibl_dd7513ae> .
 
@@ -9893,7 +9879,7 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6> .
 
 <https://sappho-digital.com/person/author_fcd61c9a> a ecrm:E21_Person ;
-    rdfs:label "Edward Stucken"@de ;
+    rdfs:label "Eduard Stucken"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_c1ceb83a>,
         <https://sappho-digital.com/manifestation_creation/bibl_c1ceb83a> .
 
@@ -9905,11 +9891,6 @@ Philosophen zu Sanssouci"""@en ;
     rdfs:label "Victor Auburtin"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_5d25f9d2>,
         <https://sappho-digital.com/manifestation_creation/bibl_286cebb8> .
-
-<https://sappho-digital.com/person/author_fe383a4c> a ecrm:E21_Person ;
-    rdfs:label "Hg."@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_8ce49ac8>,
-        <https://sappho-digital.com/manifestation_creation/bibl_da54ba99> .
 
 <https://sappho-digital.com/person/author_fe4f23b6> a ecrm:E21_Person ;
     rdfs:label "Alfred Kittner"@de ;
@@ -10193,12 +10174,6 @@ Philosophen zu Sanssouci"""@en ;
     rdfs:comment "50.53355947692, 14.131899491403"@en ;
     owl:sameAs <https://www.wikidata.org/entity/Q384403> .
 
-<https://sappho-digital.com/place/place_ae9e1d15> a ecrm:E53_Place ;
-    rdfs:label "Gmunden"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_4431d678> ;
-    rdfs:comment "47.918055555556, 13.799444444444"@en ;
-    owl:sameAs <https://www.wikidata.org/entity/Q430449> .
-
 <https://sappho-digital.com/place/place_b086af04> a ecrm:E53_Place ;
     rdfs:label "Klagenfurt"@de ;
     ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_fd44d6db> ;
@@ -10440,7 +10415,8 @@ Philosophen zu Sanssouci"""@en ;
 
 <https://sappho-digital.com/publisher/publisher_0c92f3f4> a ecrm:E74_Group ;
     rdfs:label "Moritz Schauenburg"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_8d4f6eac> .
+    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_8d4f6eac> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q2516717> .
 
 <https://sappho-digital.com/publisher/publisher_0cdf9ff6> a ecrm:E74_Group ;
     rdfs:label "Neue Zürcher Zeitung"@de ;
@@ -10578,8 +10554,9 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_8c4c22d7> .
 
 <https://sappho-digital.com/publisher/publisher_2c03ea46> a ecrm:E74_Group ;
-    rdfs:label "Johann Röhern"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_49520b3e> .
+    rdfs:label "Johann Röhner"@de ;
+    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_49520b3e> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q132804540> .
 
 <https://sappho-digital.com/publisher/publisher_2c3f530f> a ecrm:E74_Group ;
     rdfs:label "Wilhelm Müller"@de ;
@@ -10770,8 +10747,9 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_d01c34ae> .
 
 <https://sappho-digital.com/publisher/publisher_5784d3e9> a ecrm:E74_Group ;
-    rdfs:label "Carl Dunker"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_71f5dd25> .
+    rdfs:label "Carl Duncker"@de ;
+    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_71f5dd25> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q102586> .
 
 <https://sappho-digital.com/publisher/publisher_5b161884> a ecrm:E74_Group ;
     rdfs:label "J. G. Affermann"@de ;
@@ -10820,7 +10798,8 @@ Philosophen zu Sanssouci"""@en ;
 
 <https://sappho-digital.com/publisher/publisher_64433c4d> a ecrm:E74_Group ;
     rdfs:label "Duncker und Humblot, Trowitzsch und Sohn"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_540bb7e8> .
+    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_540bb7e8> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q316626> .
 
 <https://sappho-digital.com/publisher/publisher_6452d242> a ecrm:E74_Group ;
     rdfs:label "Wiener Verlag"@de ;
@@ -11145,7 +11124,8 @@ Philosophen zu Sanssouci"""@en ;
 
 <https://sappho-digital.com/publisher/publisher_a78393d4> a ecrm:E74_Group ;
     rdfs:label "Limes"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_fb8b583f> .
+    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_fb8b583f> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q21745455> .
 
 <https://sappho-digital.com/publisher/publisher_a794d806> a ecrm:E74_Group ;
     rdfs:label "allbärn"@de ;
@@ -11160,8 +11140,9 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_afabdd8a> .
 
 <https://sappho-digital.com/publisher/publisher_aa7fa674> a ecrm:E74_Group ;
-    rdfs:label "Hilscher"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_421c27fb> .
+    rdfs:label "Hilschersche Buchhandlung"@de ;
+    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_421c27fb> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q124477463> .
 
 <https://sappho-digital.com/publisher/publisher_abd7afdd> a ecrm:E74_Group ;
     rdfs:label "Eichborn"@de ;
@@ -11329,7 +11310,8 @@ Philosophen zu Sanssouci"""@en ;
 
 <https://sappho-digital.com/publisher/publisher_ce3cd0df> a ecrm:E74_Group ;
     rdfs:label "Kayser"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_bde24a4e> .
+    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_bde24a4e> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q138953341> .
 
 <https://sappho-digital.com/publisher/publisher_cfb075a7> a ecrm:E74_Group ;
     rdfs:label "Johann Lorenz"@de ;
@@ -11363,7 +11345,8 @@ Philosophen zu Sanssouci"""@en ;
 
 <https://sappho-digital.com/publisher/publisher_d7fe38b6> a ecrm:E74_Group ;
     rdfs:label "DuMont"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_4c622de1> .
+    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_4c622de1> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q877099> .
 
 <https://sappho-digital.com/publisher/publisher_d911c923> a ecrm:E74_Group ;
     rdfs:label "Friedrich Schumann"@de ;
@@ -11512,8 +11495,9 @@ Philosophen zu Sanssouci"""@en ;
     owl:sameAs <https://www.wikidata.org/entity/Q1373800> .
 
 <https://sappho-digital.com/publisher/publisher_f61a1035> a ecrm:E74_Group ;
-    rdfs:label "Georg Sengenwaldt"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_28dc64c6> .
+    rdfs:label "Georg Sengenwald"@de ;
+    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_28dc64c6> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q94854291> .
 
 <https://sappho-digital.com/publisher/publisher_f8722f49> a ecrm:E74_Group ;
     rdfs:label "Daniel Reichel"@de ;
@@ -11525,8 +11509,9 @@ Philosophen zu Sanssouci"""@en ;
     owl:sameAs <https://www.wikidata.org/entity/Q54676621> .
 
 <https://sappho-digital.com/publisher/publisher_fb7d83ca> a ecrm:E74_Group ;
-    rdfs:label "L. Rosner"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6> .
+    rdfs:label "Leopold Rosner"@de ;
+    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1819808> .
 
 <https://sappho-digital.com/publisher/publisher_fd5fc96c> a ecrm:E74_Group ;
     rdfs:label "Carl Cnobloch"@de ;
@@ -11542,6 +11527,11 @@ Philosophen zu Sanssouci"""@en ;
     rdfs:label "Kindler"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_ar54u8a3> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1741966> .
+
+<https://sappho-digital.com/publisher/publisher_ow51bne2> a ecrm:E74_Group ;
+    rdfs:label "Johann Georg Fleischer"@de ;
+    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_4431d678> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q55677460> .
 
 <https://sappho-digital.com/publisher/publisher_tg7fe3cx> a ecrm:E74_Group ;
     rdfs:label "Ernst Julius Günther"@de ;
@@ -11784,10 +11774,6 @@ Philosophen zu Sanssouci"""@en ;
     rdfs:label "1848"^^xsd:gYear ;
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_ea13cdf4> .
 
-<https://sappho-digital.com/timespan/1850> a ecrm:E52_Time-Span ;
-    rdfs:label "1850"^^xsd:gYear ;
-    ecrm:P4i_is_time-span_of <https://sappho-digital.com/expression_creation/bibl_3fd78a10> .
-
 <https://sappho-digital.com/timespan/1851> a ecrm:E52_Time-Span ;
     rdfs:label "1851"^^xsd:gYear ;
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_c4cabf0c> .
@@ -11795,6 +11781,10 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/timespan/1853> a ecrm:E52_Time-Span ;
     rdfs:label "1853"^^xsd:gYear ;
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_971ed81c> .
+
+<https://sappho-digital.com/timespan/1858> a ecrm:E52_Time-Span ;
+    rdfs:label "1858"^^xsd:gYear ;
+    ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_1b432de5> .
 
 <https://sappho-digital.com/timespan/1865> a ecrm:E52_Time-Span ;
     rdfs:label "1865"^^xsd:gYear ;
@@ -11835,10 +11825,6 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/timespan/1927> a ecrm:E52_Time-Span ;
     rdfs:label "1927"^^xsd:gYear ;
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_a3bc242d> .
-
-<https://sappho-digital.com/timespan/1928> a ecrm:E52_Time-Span ;
-    rdfs:label "1928"^^xsd:gYear ;
-    ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_0c7e3721> .
 
 <https://sappho-digital.com/timespan/1930> a ecrm:E52_Time-Span ;
     rdfs:label "1930"^^xsd:gYear ;
@@ -12899,10 +12885,6 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/title/expression/bibl_3fbe3ed3> a ecrm:E35_Title ;
     rdfs:label "Die Kunstausstellung"@de ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_3fbe3ed3> .
-
-<https://sappho-digital.com/title/expression/bibl_3fd78a10> a ecrm:E35_Title ;
-    rdfs:label "Die sieben Wort am Kreuz"@de ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_3fd78a10> .
 
 <https://sappho-digital.com/title/expression/bibl_4029bfaa> a ecrm:E35_Title ;
     rdfs:label "nur ich schlafe"@de ;
@@ -14665,7 +14647,7 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_afd1088f> .
 
 <https://sappho-digital.com/title/expression/bibl_afe2492c> a ecrm:E35_Title ;
-    rdfs:label "Dietätische Lebensregeln"@de ;
+    rdfs:label "Die Getränke"@de ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_afe2492c> .
 
 <https://sappho-digital.com/title/expression/bibl_afeba87d> a ecrm:E35_Title ;
@@ -15584,10 +15566,6 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/title/expression/bibl_e6dbb488> a ecrm:E35_Title ;
     rdfs:label "Die Rettung"@de ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_e6dbb488> .
-
-<https://sappho-digital.com/title/expression/bibl_e6e74ba6> a ecrm:E35_Title ;
-    rdfs:label "Der Sprung ins Leben. Roman"@de ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_e6e74ba6> .
 
 <https://sappho-digital.com/title/expression/bibl_e745799e> a ecrm:E35_Title ;
     rdfs:label "Sappho. Drama in fünf Akten und einem Vor- und Nachspiel mit Berücksichtigung geschichtlicher und legendärer Züge aus Sapphos Leben"@de ;
@@ -18392,7 +18370,7 @@ Philosophen zu Sanssouci"""@de ;
 
 <https://sappho-digital.com/expression_creation/bibl_8ce49ac8> a lrmoo:F28_Expression_Creation ;
     rdfs:label "Expression creation of An Lira"@en ;
-    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_fe383a4c> ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_bb3b0c3b> ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_8ce49ac8> .
 
 <https://sappho-digital.com/expression_creation/bibl_8d8ee5c3> a lrmoo:F28_Expression_Creation ;
@@ -19041,7 +19019,7 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_afd1088f> .
 
 <https://sappho-digital.com/expression_creation/bibl_afe2492c> a lrmoo:F28_Expression_Creation ;
-    rdfs:label "Expression creation of Dietätische Lebensregeln"@en ;
+    rdfs:label "Expression creation of Die Getränke"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_5713be4b> ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_afe2492c> .
 
@@ -19956,11 +19934,6 @@ Philosophen zu Sanssouci"""@de ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_fee2ec24> ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_e6cac312> .
 
-<https://sappho-digital.com/expression_creation/bibl_e6e74ba6> a lrmoo:F28_Expression_Creation ;
-    rdfs:label "Expression creation of Der Sprung ins Leben. Roman"@en ;
-    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_346ff930> ;
-    lrmoo:R17_created <https://sappho-digital.com/expression/bibl_e6e74ba6> .
-
 <https://sappho-digital.com/expression_creation/bibl_e745799e> a lrmoo:F28_Expression_Creation ;
     rdfs:label "Expression creation of Sappho. Drama in fünf Akten und einem Vor- und Nachspiel mit Berücksichtigung geschichtlicher und legendärer Züge aus Sapphos Leben"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_55676bb1> ;
@@ -20539,11 +20512,6 @@ Philosophen zu Sanssouci"""@de ;
     rdfs:label "Versuch einer Kritischen Dichtkunst vor die Deutschen, 1. Aufl."@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_0c31f59a> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_f20f2957> .
-
-<https://sappho-digital.com/manifestation/bibl_0c7e3721> a lrmoo:F3_Manifestation ;
-    rdfs:label "Arbeiterwille"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_0c7e3721> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_e6e74ba6> .
 
 <https://sappho-digital.com/manifestation/bibl_0cdf9ff6> a lrmoo:F3_Manifestation ;
     rdfs:label "Neue Zürcher Zeitung"@de ;
@@ -21206,7 +21174,7 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_f4eb50a0> .
 
 <https://sappho-digital.com/manifestation/bibl_4431d678> a lrmoo:F3_Manifestation ;
-    rdfs:label "Gmundner Wochenblatt"@de ;
+    rdfs:label "Dietätische Lebensregeln oder Belehrung wie es anzufangen ein hohes Alter zu erlangen"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_4431d678> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_afe2492c> .
 
@@ -23078,7 +23046,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_e66096f3> .
 
 <https://sappho-digital.com/person/author_012750d4> a ecrm:E21_Person ;
-    rdfs:label "C."@de ;
+    rdfs:label "C. [= Karl Christian Gärtner]"@de,
+        "Chorin"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_19d9dbc7>,
         <https://sappho-digital.com/expression_creation/bibl_f9c50a63>,
         <https://sappho-digital.com/manifestation_creation/bibl_19d9dbc7>,
@@ -23182,7 +23151,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_643c9bf6> .
 
 <https://sappho-digital.com/person/author_31efc428> a ecrm:E21_Person ;
-    rdfs:label "Theone [d. i. Therese von Artner]"@de,
+    rdfs:label "Theone [= Therese von Artner]"@de,
         "Therese von Artner"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_0434022c>,
         <https://sappho-digital.com/expression_creation/bibl_2ed74e05>,
@@ -23190,7 +23159,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_eef6e5e0> .
 
 <https://sappho-digital.com/person/author_33727565> a ecrm:E21_Person ;
-    rdfs:label "Martin Myllius/Müller"@de ;
+    rdfs:label "Martin Mylius"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_76cc9ac6>,
         <https://sappho-digital.com/expression_creation/bibl_95ae04e5>,
         <https://sappho-digital.com/manifestation_creation/bibl_5923a400> .
@@ -23485,6 +23454,12 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/expression_creation/bibl_d566b179>,
         <https://sappho-digital.com/manifestation_creation/bibl_5e905991>,
         <https://sappho-digital.com/manifestation_creation/bibl_b60786f5> .
+
+<https://sappho-digital.com/person/author_bb3b0c3b> a ecrm:E21_Person ;
+    rdfs:label "Hg."@de ;
+    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_8ce49ac8>,
+        <https://sappho-digital.com/expression_creation/bibl_bc7fdff6>,
+        <https://sappho-digital.com/manifestation_creation/bibl_da54ba99> .
 
 <https://sappho-digital.com/person/author_bc508170> a ecrm:E21_Person ;
     rdfs:label "Cyrus Atabay"@de ;
@@ -23861,12 +23836,14 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
 <https://sappho-digital.com/publisher/publisher_66505069> a ecrm:E74_Group ;
     rdfs:label "Weygand’sche Buchhandlung"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_5c40706c>,
-        <https://sappho-digital.com/manifestation_creation/bibl_8bc6bb14> .
+        <https://sappho-digital.com/manifestation_creation/bibl_8bc6bb14> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q138953100> .
 
 <https://sappho-digital.com/publisher/publisher_6a5ed879> a ecrm:E74_Group ;
     rdfs:label "Heyder"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_921c093e>,
-        <https://sappho-digital.com/manifestation_creation/bibl_983063f3> .
+        <https://sappho-digital.com/manifestation_creation/bibl_983063f3> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q94873098> .
 
 <https://sappho-digital.com/publisher/publisher_71955675> a ecrm:E74_Group ;
     rdfs:label "Zsolnay"@de ;
@@ -24002,7 +23979,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
 <https://sappho-digital.com/publisher/publisher_f8a3a067> a ecrm:E74_Group ;
     rdfs:label "Zeitbilder-Verlag"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_2c7f182d>,
-        <https://sappho-digital.com/manifestation_creation/bibl_dd7513ae> .
+        <https://sappho-digital.com/manifestation_creation/bibl_dd7513ae> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q138953146> .
 
 <https://sappho-digital.com/publisher/publisher_f9680e36> a ecrm:E74_Group ;
     rdfs:label "Frölich"@de ;
@@ -24184,11 +24162,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_9ceda030>,
         <https://sappho-digital.com/manifestation_creation/bibl_a1aeaaab> .
 
-<https://sappho-digital.com/timespan/1858> a ecrm:E52_Time-Span ;
-    rdfs:label "1858"^^xsd:gYear ;
-    ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_1b432de5>,
-        <https://sappho-digital.com/manifestation_creation/bibl_4431d678> .
-
 <https://sappho-digital.com/timespan/1859> a ecrm:E52_Time-Span ;
     rdfs:label "1859"^^xsd:gYear ;
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_4c622de1>,
@@ -24273,11 +24246,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     rdfs:label "1898"^^xsd:gYear ;
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_392a92f2>,
         <https://sappho-digital.com/manifestation_creation/bibl_a905a05b> .
-
-<https://sappho-digital.com/timespan/1900> a ecrm:E52_Time-Span ;
-    rdfs:label "1900"^^xsd:gYear ;
-    ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_6641ea99>,
-        <https://sappho-digital.com/manifestation_creation/bibl_dfe57cf2> .
 
 <https://sappho-digital.com/timespan/1903> a ecrm:E52_Time-Span ;
     rdfs:label "1903"^^xsd:gYear ;
@@ -24494,13 +24462,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_3ad1b69a> ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_3ad1b69a> .
-
-<https://sappho-digital.com/expression/bibl_3fd78a10> a lrmoo:F2_Expression ;
-    rdfs:label "Die sieben Wort am Kreuz"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_3fd78a10> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_3fd78a10> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_3fd78a10> .
 
 <https://sappho-digital.com/expression/bibl_4090d5b7> a lrmoo:F2_Expression ;
     rdfs:label "[??]"@de ;
@@ -25049,12 +25010,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_7240c9e7> ;
     ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1761> ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_3efaf809> .
-
-<https://sappho-digital.com/expression_creation/bibl_3fd78a10> a lrmoo:F28_Expression_Creation ;
-    rdfs:label "Expression creation of Die sieben Wort am Kreuz"@en ;
-    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_64bb077c> ;
-    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1850> ;
-    lrmoo:R17_created <https://sappho-digital.com/expression/bibl_3fd78a10> .
 
 <https://sappho-digital.com/expression_creation/bibl_412df85a> a lrmoo:F28_Expression_Creation ;
     rdfs:label "Expression creation of Trost im Unglück"@en ;
@@ -26800,12 +26755,6 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_0cf5ddf3>,
         <https://sappho-digital.com/manifestation_creation/bibl_7ba396f7> .
 
-<https://sappho-digital.com/timespan/1783> a ecrm:E52_Time-Span ;
-    rdfs:label "1783"^^xsd:gYear ;
-    ecrm:P4i_is_time-span_of <https://sappho-digital.com/expression_creation/bibl_f7328ce8>,
-        <https://sappho-digital.com/manifestation_creation/bibl_6bea9cf3>,
-        <https://sappho-digital.com/manifestation_creation/bibl_b370eb1a> .
-
 <https://sappho-digital.com/timespan/1791> a ecrm:E52_Time-Span ;
     rdfs:label "1791"^^xsd:gYear ;
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_5039e75c>,
@@ -26926,6 +26875,12 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_18bc2e15>,
         <https://sappho-digital.com/manifestation_creation/bibl_e87b8899> .
 
+<https://sappho-digital.com/timespan/1900> a ecrm:E52_Time-Span ;
+    rdfs:label "1900"^^xsd:gYear ;
+    ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_6641ea99>,
+        <https://sappho-digital.com/manifestation_creation/bibl_dde25dfe>,
+        <https://sappho-digital.com/manifestation_creation/bibl_dfe57cf2> .
+
 <https://sappho-digital.com/timespan/1901> a ecrm:E52_Time-Span ;
     rdfs:label "1901"^^xsd:gYear ;
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_309c65af>,
@@ -26991,6 +26946,12 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/expression_creation/bibl_2003b49f>,
         <https://sappho-digital.com/manifestation_creation/bibl_878b2ec5>,
         <https://sappho-digital.com/manifestation_creation/bibl_a6975d0c> .
+
+<https://sappho-digital.com/timespan/1977> a ecrm:E52_Time-Span ;
+    rdfs:label "1977"^^xsd:gYear ;
+    ecrm:P4i_is_time-span_of <https://sappho-digital.com/expression_creation/bibl_1981d940>,
+        <https://sappho-digital.com/manifestation_creation/bibl_19d7d5d6>,
+        <https://sappho-digital.com/manifestation_creation/bibl_5c40706c> .
 
 <https://sappho-digital.com/timespan/1994> a ecrm:E52_Time-Span ;
     rdfs:label "1994"^^xsd:gYear ;
@@ -30247,7 +30208,7 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_d45466bd> .
 
 <https://sappho-digital.com/expression/bibl_afe2492c> a lrmoo:F2_Expression ;
-    rdfs:label "Dietätische Lebensregeln"@de ;
+    rdfs:label "Die Getränke"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_afe2492c> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_afe2492c> ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
@@ -30990,14 +30951,6 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_d929fcff> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_6e320e02> .
 
-<https://sappho-digital.com/expression/bibl_d942939e> a lrmoo:F2_Expression ;
-    rdfs:label "Scenen aus meinem Leben"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_d942939e> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_d942939e> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_d942939e> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_72514b45> .
-
 <https://sappho-digital.com/expression/bibl_d9a8c62b> a lrmoo:F2_Expression ;
     rdfs:label "An Sappho"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_d9a8c62b> ;
@@ -31270,14 +31223,6 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_e623029b> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_e623029b> .
 
-<https://sappho-digital.com/expression/bibl_e66096f3> a lrmoo:F2_Expression ;
-    rdfs:label "Jenes Lied der liebedurchglühten Sappho"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_e66096f3> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_e66096f3> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_e66096f3> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_e66096f3> .
-
 <https://sappho-digital.com/expression/bibl_e6cac312> a lrmoo:F2_Expression ;
     rdfs:label "Mein Bruder Benjamin. Geschichte eines leichten Lebens: Roman"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_e6cac312> ;
@@ -31293,14 +31238,6 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_e6dbb488> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_da54ba99> .
-
-<https://sappho-digital.com/expression/bibl_e6e74ba6> a lrmoo:F2_Expression ;
-    rdfs:label "Der Sprung ins Leben. Roman"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_e6e74ba6> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_e6e74ba6> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_e6e74ba6> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_0c7e3721> .
 
 <https://sappho-digital.com/expression/bibl_e745799e> a lrmoo:F2_Expression ;
     rdfs:label "Sappho. Drama in fünf Akten und einem Vor- und Nachspiel mit Berücksichtigung geschichtlicher und legendärer Züge aus Sapphos Leben"@de ;
@@ -31924,12 +31861,6 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P7_took_place_at <https://sappho-digital.com/place/place_90bebd2f> ;
     lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_0aa2f93e> .
 
-<https://sappho-digital.com/manifestation_creation/bibl_0c7e3721> a lrmoo:F30_Manifestation_Creation ;
-    rdfs:label "Manifestation creation of Arbeiterwille"@en ;
-    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1928> ;
-    ecrm:P7_took_place_at <https://sappho-digital.com/place/place_6e00929f> ;
-    lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_0c7e3721> .
-
 <https://sappho-digital.com/manifestation_creation/bibl_11303d4b> a lrmoo:F30_Manifestation_Creation ;
     rdfs:label "Manifestation creation of Thusnelda"@en ;
     ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1843> ;
@@ -32007,12 +31938,6 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P4_has_time-span <https://sappho-digital.com/timespan/2018> ;
     ecrm:P7_took_place_at <https://sappho-digital.com/place/place_6e00929f> ;
     lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_3b2122af> .
-
-<https://sappho-digital.com/manifestation_creation/bibl_4431d678> a lrmoo:F30_Manifestation_Creation ;
-    rdfs:label "Manifestation creation of Gmundner Wochenblatt"@en ;
-    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1858> ;
-    ecrm:P7_took_place_at <https://sappho-digital.com/place/place_ae9e1d15> ;
-    lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_4431d678> .
 
 <https://sappho-digital.com/manifestation_creation/bibl_44fc8c94> a lrmoo:F30_Manifestation_Creation ;
     rdfs:label "Manifestation creation of Wochenblatt für die Amtsbezirke Offenburg, Oberkirch, Achern, Rheinbischofsheim, Kork, Gengenbach, Haslach und Wolfach"@en ;
@@ -32505,13 +32430,12 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_dd2a4e58> .
 
 <https://sappho-digital.com/publisher/publisher_65410b7e> a ecrm:E74_Group ;
-    rdfs:label "Friedrich"@de,
-        "Verlag von Wilhelm Friedrich"@de,
-        "Wilhelm Friedrich"@de ;
+    rdfs:label "Wilhelm Friedrich"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_499c6852>,
         <https://sappho-digital.com/manifestation_creation/bibl_6c45e77a>,
         <https://sappho-digital.com/manifestation_creation/bibl_711a03a2>,
-        <https://sappho-digital.com/manifestation_creation/bibl_c5d5fb52> .
+        <https://sappho-digital.com/manifestation_creation/bibl_c5d5fb52> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q15854471> .
 
 <https://sappho-digital.com/publisher/publisher_85c2e087> a ecrm:E74_Group ;
     rdfs:label "Berlin Verlag"@de ;
@@ -32602,6 +32526,13 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_056184d7>,
         <https://sappho-digital.com/manifestation_creation/bibl_0eed1803>,
         <https://sappho-digital.com/manifestation_creation/bibl_8addb2a6> .
+
+<https://sappho-digital.com/timespan/1783> a ecrm:E52_Time-Span ;
+    rdfs:label "1783"^^xsd:gYear ;
+    ecrm:P4i_is_time-span_of <https://sappho-digital.com/expression_creation/bibl_f7328ce8>,
+        <https://sappho-digital.com/manifestation_creation/bibl_4431d678>,
+        <https://sappho-digital.com/manifestation_creation/bibl_6bea9cf3>,
+        <https://sappho-digital.com/manifestation_creation/bibl_b370eb1a> .
 
 <https://sappho-digital.com/timespan/1787> a ecrm:E52_Time-Span ;
     rdfs:label "1787"^^xsd:gYear ;
@@ -32721,13 +32652,6 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_54cf33e3>,
         <https://sappho-digital.com/manifestation_creation/bibl_9462d601>,
         <https://sappho-digital.com/manifestation_creation/bibl_bf96255c> .
-
-<https://sappho-digital.com/timespan/1977> a ecrm:E52_Time-Span ;
-    rdfs:label "1977"^^xsd:gYear ;
-    ecrm:P4i_is_time-span_of <https://sappho-digital.com/expression_creation/bibl_1981d940>,
-        <https://sappho-digital.com/manifestation_creation/bibl_19d7d5d6>,
-        <https://sappho-digital.com/manifestation_creation/bibl_5c40706c>,
-        <https://sappho-digital.com/manifestation_creation/bibl_dde25dfe> .
 
 <https://sappho-digital.com/timespan/1985> a ecrm:E52_Time-Span ;
     rdfs:label "1985"^^xsd:gYear ;
@@ -35355,6 +35279,15 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_d85ade6a> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_aa132bb6> .
 
+<https://sappho-digital.com/expression/bibl_d942939e> a lrmoo:F2_Expression ;
+    rdfs:label "Scenen aus meinem Leben"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_d942939e> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_d942939e> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_d942939e> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_d942939e> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_72514b45> .
+
 <https://sappho-digital.com/expression/bibl_d9643dcb> a lrmoo:F2_Expression ;
     rdfs:label "Das Leben und die Meinungen des Herrn Magister Sebaldus Nothanker, Bd. 2"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_d9643dcb> ;
@@ -35579,6 +35512,15 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_e61f95eb> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_aa132bb6> .
+
+<https://sappho-digital.com/expression/bibl_e66096f3> a lrmoo:F2_Expression ;
+    rdfs:label "Jenes Lied der liebedurchglühten Sappho"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_e66096f3> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_e66096f3> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_e66096f3> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_e66096f3> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_e66096f3> .
 
 <https://sappho-digital.com/expression/bibl_e6bb83f8> a lrmoo:F2_Expression ;
     rdfs:label "Der Frühlingsabend"@de ;
@@ -36778,6 +36720,13 @@ Philosophen zu Sanssouci"""@de ;
     ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1823> ;
     ecrm:P7_took_place_at <https://sappho-digital.com/place/place_efeaa516> ;
     lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_4166923c> .
+
+<https://sappho-digital.com/manifestation_creation/bibl_421c27fb> a lrmoo:F30_Manifestation_Creation ;
+    rdfs:label "Manifestation creation of Reise auf der Post von Dresden nach Leipzig. Eine humoristische Erzählung"@en ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/publisher/publisher_aa7fa674> ;
+    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1820> ;
+    ecrm:P7_took_place_at <https://sappho-digital.com/place/place_90bebd2f> ;
+    lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_421c27fb> .
 
 <https://sappho-digital.com/manifestation_creation/bibl_429777c1> a lrmoo:F30_Manifestation_Creation ;
     rdfs:label "Manifestation creation of Der Academische Roman"@en ;
@@ -38615,7 +38564,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
 <https://sappho-digital.com/manifestation_creation/bibl_dde25dfe> a lrmoo:F30_Manifestation_Creation ;
     rdfs:label "Manifestation creation of Sappho"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/publisher/publisher_a2cb3e64> ;
-    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1977> ;
+    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1900> ;
     ecrm:P7_took_place_at <https://sappho-digital.com/place/place_06ec7d19> ;
     lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_dde25dfe> .
 
@@ -39067,6 +39016,16 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_4359d2a2>,
         <https://sappho-digital.com/manifestation_creation/bibl_9ff4d54c>,
         <https://sappho-digital.com/manifestation_creation/bibl_db8eedb2> .
+
+<https://sappho-digital.com/place/place_6e00929f> a ecrm:E53_Place ;
+    rdfs:label "Graz"@de ;
+    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_149u91j4>,
+        <https://sappho-digital.com/manifestation_creation/bibl_17be783b>,
+        <https://sappho-digital.com/manifestation_creation/bibl_3b2122af>,
+        <https://sappho-digital.com/manifestation_creation/bibl_affda0e4>,
+        <https://sappho-digital.com/manifestation_creation/bibl_dc80353f> ;
+    rdfs:comment "47.07083333333333, 15.438611111111111"@en ;
+    owl:sameAs <https://www.wikidata.org/entity/Q13298> .
 
 <https://sappho-digital.com/publisher/publisher_ba9ff1cf> a ecrm:E74_Group ;
     rdfs:label "Ernst Rowohlt"@de,
@@ -39628,14 +39587,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/place/place_efeaa516> ;
     lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_3d74d35a> .
 
-<https://sappho-digital.com/manifestation_creation/bibl_421c27fb> a lrmoo:F30_Manifestation_Creation ;
-    rdfs:label "Manifestation creation of Reise auf der Post von Dresden nach Leipzig. Eine humoristische Erzählung"@en ;
-    ecrm:P14_carried_out_by <https://sappho-digital.com/publisher/publisher_aa7fa674> ;
-    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1820> ;
-    ecrm:P7_took_place_at <https://sappho-digital.com/place/place_90bebd2f>,
-        <https://sappho-digital.com/place/place_efeaa516> ;
-    lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_421c27fb> .
-
 <https://sappho-digital.com/manifestation_creation/bibl_42fbb8ad> a lrmoo:F30_Manifestation_Creation ;
     rdfs:label "Manifestation creation of Griechische Küstenfahrten"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/publisher/publisher_f3dd40e8> ;
@@ -39651,6 +39602,14 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1936> ;
     ecrm:P7_took_place_at <https://sappho-digital.com/place/place_06ec7d19> ;
     lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_432127bb> .
+
+<https://sappho-digital.com/manifestation_creation/bibl_4431d678> a lrmoo:F30_Manifestation_Creation ;
+    rdfs:label "Manifestation creation of Dietätische Lebensregeln oder Belehrung wie es anzufangen ein hohes Alter zu erlangen"@en ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/publisher/publisher_ow51bne2> ;
+    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1783> ;
+    ecrm:P7_took_place_at <https://sappho-digital.com/place/place_ae5c315b>,
+        <https://sappho-digital.com/place/place_efeaa516> ;
+    lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_4431d678> .
 
 <https://sappho-digital.com/manifestation_creation/bibl_49520b3e> a lrmoo:F30_Manifestation_Creation ;
     rdfs:label "Manifestation creation of Deutscher Helicon"@en ;
@@ -40043,17 +40002,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_a3be2ca8> ;
     rdfs:comment "49.016666666667, 8.4"@en ;
     owl:sameAs <https://www.wikidata.org/entity/Q1040> .
-
-<https://sappho-digital.com/place/place_6e00929f> a ecrm:E53_Place ;
-    rdfs:label "Graz"@de ;
-    ecrm:P7i_witnessed <https://sappho-digital.com/manifestation_creation/bibl_0c7e3721>,
-        <https://sappho-digital.com/manifestation_creation/bibl_149u91j4>,
-        <https://sappho-digital.com/manifestation_creation/bibl_17be783b>,
-        <https://sappho-digital.com/manifestation_creation/bibl_3b2122af>,
-        <https://sappho-digital.com/manifestation_creation/bibl_affda0e4>,
-        <https://sappho-digital.com/manifestation_creation/bibl_dc80353f> ;
-    rdfs:comment "47.07083333333333, 15.438611111111111"@en ;
-    owl:sameAs <https://www.wikidata.org/entity/Q13298> .
 
 <https://sappho-digital.com/place/place_811c769d> a ecrm:E53_Place ;
     rdfs:label "Breslau"@de,
@@ -41547,6 +41495,20 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
 <https://sappho-digital.com/id_type/dbpedia> a ecrm:E55_Type ;
     rdfs:label "DBpedia ID"@en .
 
+<https://sappho-digital.com/manifestation_creation/bibl_da54ba99> a lrmoo:F30_Manifestation_Creation ;
+    rdfs:label "Manifestation creation of Morgenblatt für gebildete Stände"@en ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/publisher/publisher_d7432893>,
+        <https://sappho-digital.com/publisher/publisher_f9f09c49> ;
+    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1808>,
+        <https://sappho-digital.com/timespan/1811>,
+        <https://sappho-digital.com/timespan/1837>,
+        <https://sappho-digital.com/timespan/1840>,
+        <https://sappho-digital.com/timespan/1841> ;
+    ecrm:P7_took_place_at <https://sappho-digital.com/place/place_700b43a2>,
+        <https://sappho-digital.com/place/place_ae6e1bfb>,
+        <https://sappho-digital.com/place/place_efeaa516> ;
+    lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_da54ba99> .
+
 <https://sappho-digital.com/place/place_0c1736a7> a ecrm:E53_Place ;
     rdfs:label "München"@de,
         "Zürich"@de ;
@@ -41567,20 +41529,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_fffb4021> ;
     rdfs:comment "47.37444444444444, 8.54111111111111"@en ;
     owl:sameAs <https://www.wikidata.org/entity/Q72> .
-
-<https://sappho-digital.com/manifestation_creation/bibl_da54ba99> a lrmoo:F30_Manifestation_Creation ;
-    rdfs:label "Manifestation creation of Morgenblatt für gebildete Stände"@en ;
-    ecrm:P14_carried_out_by <https://sappho-digital.com/publisher/publisher_d7432893>,
-        <https://sappho-digital.com/publisher/publisher_f9f09c49> ;
-    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1808>,
-        <https://sappho-digital.com/timespan/1811>,
-        <https://sappho-digital.com/timespan/1837>,
-        <https://sappho-digital.com/timespan/1840>,
-        <https://sappho-digital.com/timespan/1841> ;
-    ecrm:P7_took_place_at <https://sappho-digital.com/place/place_700b43a2>,
-        <https://sappho-digital.com/place/place_ae6e1bfb>,
-        <https://sappho-digital.com/place/place_efeaa516> ;
-    lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_da54ba99> .
 
 <https://sappho-digital.com/person/author_c4954682> a ecrm:E21_Person ;
     rdfs:label "Friedrich von Matthisson"@de ;
@@ -41805,6 +41753,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_394ac0d2>,
         <https://sappho-digital.com/manifestation_creation/bibl_3eb0ff8f>,
         <https://sappho-digital.com/manifestation_creation/bibl_40af9793>,
+        <https://sappho-digital.com/manifestation_creation/bibl_4431d678>,
         <https://sappho-digital.com/manifestation_creation/bibl_51e9d92c>,
         <https://sappho-digital.com/manifestation_creation/bibl_53869078>,
         <https://sappho-digital.com/manifestation_creation/bibl_5c2a3a5a>,
@@ -42531,9 +42480,9 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_3ea62c3e>,
         <https://sappho-digital.com/manifestation_creation/bibl_412bf44b>,
         <https://sappho-digital.com/manifestation_creation/bibl_4166923c>,
-        <https://sappho-digital.com/manifestation_creation/bibl_421c27fb>,
         <https://sappho-digital.com/manifestation_creation/bibl_42fbb8ad>,
         <https://sappho-digital.com/manifestation_creation/bibl_439754a7>,
+        <https://sappho-digital.com/manifestation_creation/bibl_4431d678>,
         <https://sappho-digital.com/manifestation_creation/bibl_46a48015>,
         <https://sappho-digital.com/manifestation_creation/bibl_499c6852>,
         <https://sappho-digital.com/manifestation_creation/bibl_4a0f3e87>,
