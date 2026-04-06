@@ -2718,8 +2718,8 @@ document.addEventListener('DOMContentLoaded', initStat10);
 // ── Statistik 11: Gender (Überblick · Zeitverlauf · Phänomene) ──────────────
 
 const GENDER_META = {
-    male:    { label: 'Männlich',     color: 'rgba(234,88,12,0.75)',   line: '#ea580c' },
-    female:  { label: 'Weiblich',     color: 'rgba(22,163,74,0.75)',   line: '#16a34a' },
+    male:    { label: 'Autoren',      color: 'rgba(234,88,12,0.75)',   line: '#ea580c' },
+    female:  { label: 'Autorinnen',   color: 'rgba(22,163,74,0.75)',   line: '#16a34a' },
     unknown: { label: 'Kein Eintrag', color: 'rgba(156,163,175,0.55)', line: '#9ca3af' },
 };
 
@@ -2798,8 +2798,8 @@ function renderGenderOverview() {
             'display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));' +
             'gap:1rem;margin-bottom:1.5rem';
         [
-            { label: 'Männliche Autor_innen',  val: d.nMale,    color: GENDER_META.male.line   },
-            { label: 'Weibliche Autor_innen',   val: d.nFemale,  color: GENDER_META.female.line },
+            { label: 'Autoren',               val: d.nMale,    color: GENDER_META.male.line   },
+            { label: 'Autorinnen',             val: d.nFemale,  color: GENDER_META.female.line },
             { label: 'Kein Gender-Eintrag',     val: d.nUnknown, color: GENDER_META.unknown.line },
         ].forEach(k => {
             const card = document.createElement('div');
@@ -2825,8 +2825,8 @@ function renderGenderOverview() {
         type: 'doughnut',
         data: {
             labels: [
-                `Männlich – ${d.nMale} (${(d.nMale/total*100).toFixed(1)}%)`,
-                `Weiblich – ${d.nFemale} (${(d.nFemale/total*100).toFixed(1)}%)`,
+                `Autoren – ${d.nMale} (${(d.nMale/total*100).toFixed(1)}%)`,
+                `Autorinnen – ${d.nFemale} (${(d.nFemale/total*100).toFixed(1)}%)`,
                 `Kein Eintrag – ${d.nUnknown} (${(d.nUnknown/total*100).toFixed(1)}%)`,
             ],
             datasets: [{
@@ -2848,7 +2848,7 @@ function renderGenderOverview() {
                         label: ctx => {
                             const v = ctx.parsed;
                             const pct = total > 0 ? (v / total * 100).toFixed(1) : '0.0';
-                            return ` ${v} Autor_innen (${pct}%)`;
+                            return ` ${v} (${pct}%)`;
                         },
                     },
                 },
@@ -2880,9 +2880,9 @@ function renderGenderTimeChart() {
     });
 
     const datasets = [
-        { label: 'Männlich',     data: isPercent ? toPct(maleRaw) : maleRaw,
+        { label: 'Autoren',      data: isPercent ? toPct(maleRaw) : maleRaw,
           backgroundColor: GENDER_META.male.color,    borderColor: GENDER_META.male.line,    borderWidth: 1.5, borderRadius: 2 },
-        { label: 'Weiblich',     data: isPercent ? toPct(femRaw)  : femRaw,
+        { label: 'Autorinnen',   data: isPercent ? toPct(femRaw)  : femRaw,
           backgroundColor: GENDER_META.female.color,  borderColor: GENDER_META.female.line,  borderWidth: 1.5, borderRadius: 2 },
         { label: 'Kein Eintrag', data: isPercent ? toPct(unkRaw)  : unkRaw,
           backgroundColor: GENDER_META.unknown.color, borderColor: GENDER_META.unknown.line, borderWidth: 1.5, borderRadius: 2 },
@@ -2941,8 +2941,6 @@ function renderGenderTimeChart() {
 }
 
 // ── Pane 3: Phänomene – aufklappbare Sektionen pro Phänomentyp (wie Stat 1) ──
-// Nur Autor_innen der analysierten Rezeptionszeugnisse, nur männlich/weiblich.
-// "Kein Eintrag" wird im Tooltip gezeigt, aber nicht als Hauptbalken.
 
 const _genderPhenomCharts = {};
 
@@ -2991,9 +2989,9 @@ function renderGenderPhenomSections() {
         ovLegend.style.marginBottom = '.75rem';
         ovLegend.innerHTML =
             `<span><span class="dot" style="background:${GENDER_META.male.color};border:1.5px solid ${GENDER_META.male.line}"></span>` +
-            `Männlich (n=${pd.nMale})</span>` +
+            `Autoren (n=${pd.nMale})</span>` +
             `<span><span class="dot" style="background:${GENDER_META.female.color};border:1.5px solid ${GENDER_META.female.line}"></span>` +
-            `Weiblich (n=${pd.nFemale})</span>`;
+            `Autorinnen (n=${pd.nFemale})</span>`;
         wrap.appendChild(ovLegend);
 
         const controlRow = document.createElement('div');
@@ -3088,8 +3086,8 @@ function renderGenderPhenomSections() {
             data: {
                 labels: overviewLabels,
                 datasets: [
-                    { label: `Männlich (n=${pd.nMale})`,   data: ovMale, backgroundColor: GENDER_META.male.color,   borderColor: GENDER_META.male.line,   borderWidth: 2, borderRadius: 2 },
-                    { label: `Weiblich (n=${pd.nFemale})`, data: ovFem,  backgroundColor: GENDER_META.female.color, borderColor: GENDER_META.female.line, borderWidth: 2, borderRadius: 2 },
+                    { label: `Autoren (n=${pd.nMale})`,   data: ovMale, backgroundColor: GENDER_META.male.color,   borderColor: GENDER_META.male.line,   borderWidth: 2, borderRadius: 2 },
+                    { label: `Autorinnen (n=${pd.nFemale})`, data: ovFem,  backgroundColor: GENDER_META.female.color, borderColor: GENDER_META.female.line, borderWidth: 2, borderRadius: 2 },
                 ],
             },
             options: {
@@ -3109,7 +3107,7 @@ function renderGenderPhenomSections() {
                                 const tot  = isMale ? pd.nMale : pd.nFemale;
                                 const cell = f.cells.find(x => x.g === gk);
                                 const cnt  = cell ? cell.n : 0;
-                                const name = isMale ? 'Männlich' : 'Weiblich';
+                                const name = isMale ? 'Autoren' : 'Autorinnen';
                                 return ` ${name}: ${c.parsed.x.toFixed(2)}% (${cnt}/${tot})`;
                             },
                         },
@@ -3138,7 +3136,7 @@ function renderGenderPhenomSections() {
     genderTopTitle.textContent = 'Top-Phänomene nach Geschlecht';
     wrap.appendChild(genderTopTitle);
 
-    // Nur Top-N Dropdown (kein Geschlechts-Select mehr)
+    // Top-N Dropdown
     const gTopControls = document.createElement('div');
     gTopControls.className = 'control-col-wrap';
     gTopControls.style.marginBottom = '.75rem';
@@ -3223,7 +3221,7 @@ function renderGenderPhenomSections() {
         const tot    = isMale ? pd.nMale : pd.nFemale;
         const color  = isMale ? GENDER_META.male.color  : GENDER_META.female.color;
         const line   = isMale ? GENDER_META.male.line   : GENDER_META.female.line;
-        const title  = isMale ? 'Männlich' : 'Weiblich';
+        const title  = isMale ? 'Autoren' : 'Autorinnen';
 
         const sorted = [...pd.features]
             .map(f => { const cell = f.cells.find(x => x.g === gk); return { ...f, gCount: cell ? cell.n : 0 }; })
@@ -3274,7 +3272,7 @@ function renderGenderPhenomSections() {
                                 const f    = sorted[c.dataIndex];
                                 const cell = f.cells.find(x => x.g === gk);
                                 const cnt  = cell ? cell.n : 0;
-                                return ` ${isMale ? 'Männlich' : 'Weiblich'}: ${c.parsed.x.toFixed(2)}% (${cnt}/${tot})`;
+                                return ` ${isMale ? 'Autoren' : 'Autorinnen'}: ${c.parsed.x.toFixed(2)}% (${cnt}/${tot})`;
                             },
                         },
                     },
@@ -3308,14 +3306,11 @@ function renderGenderPhenomSections() {
     renderGenderTopCharts();
     document.getElementById('sel-gender-top-n')?.addEventListener('change', renderGenderTopCharts);
 
-    // ── Trennlinie vor Phänomentyp-Sektionen ─────────────────────────────────
-    // ── Zwischenüberschrift vor den aufklappbaren Sektionen ─────────────────
     const phenomTypTitle = document.createElement('p');
     phenomTypTitle.className = 'stats-subtitle stats-subtitle-sm-top';
     phenomTypTitle.textContent = 'Nach Phänomentyp';
     wrap.appendChild(phenomTypTitle);
 
-    // Eine aufklappbare Sektion pro Phänomentyp
     const orderedTypes = ftypeOrder.filter(ft => byType[ft]);
 
     orderedTypes.forEach(ft => {
@@ -3369,13 +3364,43 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
         Math.ceil(Math.max(...maleData, ...femData) * 1.05 / 5) * 5
     ) || 10;
 
+    const FS = 11, FW = 6.5;
+    const typeColors = items.map(f => (FTYPE_META[f.ftype] || {}).color || '#6b7280');
+    const stripePlugin = {
+        id: 'genderPhenomStripe_' + ft,
+        afterDraw(chart) {
+            const { ctx: c, scales: { y }, chartArea } = chart;
+            const lw = chartArea.left;
+            items.forEach((item, i) => {
+                const color = typeColors[i];
+                const top   = y.getPixelForValue(i) - y.height / items.length / 2;
+                const bot   = y.getPixelForValue(i) + y.height / items.length / 2;
+                const h     = bot - top;
+                const lbl   = item.label;
+                const maxC  = Math.floor((lw - 16) / FW);
+                const disp  = lbl.length > maxC ? lbl.slice(0, maxC - 1) + '…' : lbl;
+                c.save();
+                c.font = `${FS}px Geist, system-ui, sans-serif`;
+                c.textAlign = 'right'; c.textBaseline = 'middle';
+                const x = lw - 6, gap = 6, r = 3;
+                const tw = c.measureText(disp).width;
+                c.beginPath(); c.fillStyle = color;
+                c.arc(x - tw - gap - r, top + h / 2, r, 0, Math.PI * 2); c.fill();
+                c.fillStyle = '#1f2937';
+                c.fillText(disp, x, top + h / 2);
+                c.restore();
+            });
+        },
+    };
+
     _genderPhenomCharts[ft] = new Chart(canvas.getContext('2d'), {
         type: 'bar',
+        plugins: [stripePlugin],
         data: {
             labels,
             datasets: [
                 {
-                    label: `Männlich (n=${pd.nMale})`,
+                    label: `Autoren (n=${pd.nMale})`,
                     data: maleData,
                     backgroundColor: GENDER_META.male.color,
                     borderColor:     GENDER_META.male.line,
@@ -3383,7 +3408,7 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
                     borderRadius: 2,
                 },
                 {
-                    label: `Weiblich (n=${pd.nFemale})`,
+                    label: `Autorinnen (n=${pd.nFemale})`,
                     data: femData,
                     backgroundColor: GENDER_META.female.color,
                     borderColor:     GENDER_META.female.line,
@@ -3409,8 +3434,7 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
                             const cell = f.cells.find(x => x.g === gk);
                             const cnt  = cell ? cell.n : 0;
                             const pct  = ctx.parsed.x.toFixed(2);
-                            const name = isMale ? 'Männlich' : 'Weiblich';
-                            // Auch "kein Eintrag" im Tooltip zeigen
+                            const name = isMale ? 'Autoren' : 'Autorinnen';
                             const uCell = f.cells.find(x => x.g === 'unknown');
                             const uCnt  = uCell ? uCell.n : 0;
                             const uPct  = pd.nUnknown > 0 ? (uCnt / pd.nUnknown * 100).toFixed(2) : '0.00';
@@ -3458,7 +3482,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ?.addEventListener('change', renderGenderTimeChart);
     document.getElementById('sel-gender-phenom-topn')
         ?.addEventListener('change', () => {
-            // Top-N filter neu anwenden: Sektionen neu aufbauen
             _genderChartInited.phenom = false;
             Object.keys(_genderPhenomCharts).forEach(k => {
                 const c = _genderPhenomCharts[k];
