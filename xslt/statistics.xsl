@@ -529,7 +529,7 @@
                       <a href="#stat10">Durchschnittliche Relationen und gemeinsame Phänomene</a>
                     </li>
                     <li>
-                      <a href="#stat11">Gender – Überblick, Zeitverlauf, Phänomene</a>
+                      <a href="#stat11">Gender – Überblick, Zeitverlauf, Gattungen und Phänomene</a>
                     </li>
                   </ol>
                 </nav>
@@ -816,12 +816,13 @@
                   <div id="stat10-wrap-inner"/>
                 </div>
                 <div class="stats-wrap" id="stat11">
-                  <p class="stats-subtitle">Statistik 11: Gender – Überblick, Zeitverlauf, Phänomene</p>
+                  <p class="stats-subtitle">Statistik 11: Gender – Überblick, Zeitverlauf, Gattungen
+                    und Phänomene</p>
                   <p class="stats-desc">Wie sieht die Geschlechterverteilung aus &#8211; insgesamt,
-                    im Zeitverlauf und nach Ph&#228;nomenen? Die Gender-Angaben stammen von
-                    Wikidata, sind bin&#228;r und zumeist keine Selbstidentifikationen. F&#252;r die
-                    Ph&#228;nomene wurden au&#223;erdem nur die Autor_innen der exemplarisch
-                    analysierten Rezeptionszeugnisse ber&#252;cksichtigt.</p>
+                    im Zeitverlauf, nach Gattungen und nach Ph&#228;nomenen? Die Gender-Angaben
+                    stammen von Wikidata, sind bin&#228;r und zumeist keine Selbstidentifikationen.
+                    F&#252;r die Ph&#228;nomene wurden au&#223;erdem nur die Autor_innen der
+                    exemplarisch analysierten Rezeptionszeugnisse ber&#252;cksichtigt.</p>
                   <div id="gender-tab-bar"
                     style="display:flex;justify-content:center;gap:.5rem;margin-bottom:1.25rem;flex-wrap:wrap"/>
                   <div id="gender-pane-overview">
@@ -842,6 +843,20 @@
                     </div>
                     <div class="chart-wrap">
                       <canvas id="chart-gender-time" style="height:320px"/>
+                    </div>
+                  </div>
+                  <div id="gender-pane-genre" style="display:none">
+                    <div class="control-col-wrap">
+                      <div class="stat3-control-group">
+                        <label for="sel-gender-genre-mode">Anzeige:</label>
+                        <select id="sel-gender-genre-mode" class="stat2-select">
+                          <option value="stacked">Gestapelt (absolut)</option>
+                          <option value="percent">Prozentualer Anteil</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="chart-wrap">
+                      <canvas id="chart-gender-genre" style="height:280px"/>
                     </div>
                   </div>
                   <div id="gender-pane-phenom" style="display:none">

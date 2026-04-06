@@ -1250,16 +1250,29 @@ def main(ttl_path: str, xml_out: str) -> None:
                 gc_el.set("gender", gk)
                 gc_el.set("n",      str(cnt))
 
-    # ── Gattung × Geschlecht ─────────────────────────────────────────
-    genre_gender_counts: dict[str, dict[str, int]] = defaultdict(lambda: defaultdict(int))
+    # ── Gattung × Geschlecht (alle Autor_innen, jede F2 zählt) ──────────────────
+    # Alle Texte aller Personen via P14i_performed.
+    # Eine F2 mit mehreren Autor_innen zählt für jedes Geschlecht einmal.
+    # Gezählt werden distinkte F2-URIs pro Gattung und Geschlecht.
+    genre_gender_f2s: dict[str, dict[str, set]] = defaultdict(
+        lambda: {"male": set(), "female": set(), "unknown": set()}
+    )
     genres_gender_seen: set[str] = set()
 
-    for f2 in reception_with_act:
-        gen     = get_genre(f2)
-        genders = f2_genders.get(f2, {"unknown"})
-        genres_gender_seen.add(gen)
-        for gk in genders:
-            genre_gender_counts[gen][gk] += 1
+    for person, gk in all_persons.items():
+        for _, _, performed in g.triples((person, P14i_performed, None)):
+            for f2 in g.subjects(LRMOO["R17i_was_created_by"], performed):
+                if "/bibl_sappho_" not in str(f2):
+                    gen = get_genre(f2)
+                    if gen == "Unbekannt":
+                        continue
+                    genres_gender_seen.add(gen)
+                    genre_gender_f2s[gen][gk].add(f2)
+
+    genre_gender_counts: dict[str, dict[str, int]] = {
+        gen: {gk: len(f2s) for gk, f2s in gk_dict.items()}
+        for gen, gk_dict in genre_gender_f2s.items()
+    }
 
     sorted_genres_gender = [g2 for g2 in genre_order if g2 in genres_gender_seen]
     sorted_genres_gender += [g2 for g2 in sorted(genres_gender_seen) if g2 not in genre_order]

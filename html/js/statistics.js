@@ -2727,10 +2727,11 @@ const GENDER_META = {
 const GENDER_TABS = [
     { id: 'overview', label: 'Überblick'   },
     { id: 'time',     label: 'Zeitverlauf' },
+    { id: 'genre',    label: 'Gattungen'   },
     { id: 'phenom',   label: 'Phänomene'   },
 ];
 let _genderActiveTab   = 'overview';
-let _genderChartInited = { overview: false, time: false, phenom: false };
+let _genderChartInited = { overview: false, time: false, genre: false, phenom: false };
 
 function buildGenderTabs() {
     const bar = document.getElementById('gender-tab-bar');
@@ -2779,6 +2780,10 @@ function switchGenderTab(tabId) {
     if (tabId === 'time' && !_genderChartInited.time) {
         renderGenderTimeChart();
         _genderChartInited.time = true;
+    }
+    if (tabId === 'genre' && !_genderChartInited.genre) {
+        renderGenderGenreChart();
+        _genderChartInited.genre = true;
     }
     if (tabId === 'phenom' && !_genderChartInited.phenom) {
         renderGenderPhenomSections();
@@ -2931,6 +2936,106 @@ function renderGenderTimeChart() {
                     max: isPercent ? 100 : undefined,
                     ticks: {
                         font: { family: 'Geist, system-ui', size: 11 },
+                        callback: isPercent ? v => v + '%' : v => v,
+                    },
+                    grid: { color: 'rgba(0,0,0,0.06)' },
+                },
+            },
+        },
+    });
+}
+
+// ── Pane 3: Gattungen × Geschlecht ──────────────────────────────────────────
+let _genderGenreChart = null;
+
+function renderGenderGenreChart() {
+    const d = DATA.genderStats;
+    if (!d || !d.genreGender || !d.genreGender.length) return;
+    const ctx = document.getElementById('chart-gender-genre')?.getContext('2d');
+    if (!ctx) return;
+
+    const mode      = document.getElementById('sel-gender-genre-mode')?.value || 'stacked';
+    const isPercent = mode === 'percent';
+
+    const genres   = d.genreGender;
+    const labels   = genres.map(g => g.key);
+    const maleRaw  = genres.map(g => g.male);
+    const femRaw   = genres.map(g => g.female);
+    const unkRaw   = genres.map(g => g.unknown);
+
+    const toPct = arr => arr.map((v, i) => {
+        const t = maleRaw[i] + femRaw[i] + unkRaw[i];
+        return t > 0 ? parseFloat((v / t * 100).toFixed(1)) : 0;
+    });
+    // 0 → null damit kein Stummel erscheint; minBarLength gilt nur für > 0
+    const nullZero = arr => arr.map(v => v === 0 ? null : v);
+    const nullZeroPct = arr => arr.map(v => v === 0 ? null : v);
+
+    const datasets = [
+        { label: 'Autoren',      data: isPercent ? nullZeroPct(toPct(maleRaw)) : nullZero(maleRaw),
+          backgroundColor: GENDER_META.male.color,    borderColor: GENDER_META.male.line,    borderWidth: 1.5, borderRadius: 3, minBarLength: 3 },
+        { label: 'Autorinnen',   data: isPercent ? nullZeroPct(toPct(femRaw))  : nullZero(femRaw),
+          backgroundColor: GENDER_META.female.color,  borderColor: GENDER_META.female.line,  borderWidth: 1.5, borderRadius: 3, minBarLength: 3 },
+        { label: 'Kein Eintrag', data: isPercent ? nullZeroPct(toPct(unkRaw))  : nullZero(unkRaw),
+          backgroundColor: GENDER_META.unknown.color, borderColor: GENDER_META.unknown.line, borderWidth: 1.5, borderRadius: 3, minBarLength: 3 },
+    ];
+
+    if (_genderGenreChart) {
+        _genderGenreChart.data.datasets = datasets;
+        _genderGenreChart.options.scales.y.max = isPercent ? 100 : undefined;
+        _genderGenreChart.options.scales.y.min = 0;
+        _genderGenreChart.options.scales.y.ticks.precision = 0;
+        _genderGenreChart.options.scales.y.ticks.callback = isPercent ? v => v + '%' : v => v;
+        _genderGenreChart.options.scales.y.title.text =
+            isPercent ? 'Prozentualer Anteil' : 'Anzahl Texte';
+        _genderGenreChart.update();
+        return;
+    }
+
+    _genderGenreChart = new Chart(ctx, {
+        type: 'bar',
+        data: { labels, datasets },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                    labels: { font: { family: 'Geist, system-ui', size: 12 }, padding: 12 },
+                },
+                tooltip: {
+                    mode: 'index',
+                    callbacks: {
+                        label: c => {
+                            const g   = genres[c.dataIndex];
+                            const tot = g.male + g.female + g.unknown;
+                            const v   = c.parsed.y;
+                            if (isPercent) return ` ${c.dataset.label}: ${v.toFixed(1)}%`;
+                            const pct = tot > 0 ? (v / tot * 100).toFixed(1) : '0.0';
+                            return ` ${c.dataset.label}: ${v} (${pct}% der Gattung)`;
+                        },
+                    },
+                },
+            },
+            scales: {
+                x: {
+                    stacked: true,
+                    ticks: { font: { family: 'Geist, system-ui', size: 12 } },
+                    grid: { display: false },
+                },
+                y: {
+                    stacked: true,
+                    min: 0,
+                    max: isPercent ? 100 : undefined,
+                    title: {
+                        display: true,
+                        text: isPercent ? 'Prozentualer Anteil' : 'Anzahl Texte',
+                        font: { family: 'Geist, system-ui', size: 11 },
+                        color: '#6b7280',
+                    },
+                    ticks: {
+                        font: { family: 'Geist, system-ui', size: 11 },
+                        precision: 0,
                         callback: isPercent ? v => v + '%' : v => v,
                     },
                     grid: { color: 'rgba(0,0,0,0.06)' },
@@ -3480,6 +3585,8 @@ document.addEventListener('DOMContentLoaded', () => {
     _genderChartInited.overview = true;
     document.getElementById('sel-gender-time-mode')
         ?.addEventListener('change', renderGenderTimeChart);
+    document.getElementById('sel-gender-genre-mode')
+        ?.addEventListener('change', renderGenderGenreChart);
     document.getElementById('sel-gender-phenom-topn')
         ?.addEventListener('change', () => {
             _genderChartInited.phenom = false;
