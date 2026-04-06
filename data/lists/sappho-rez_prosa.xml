@@ -362,9 +362,8 @@
                     <date type="published" when="1820">1820</date>
                     <author ref="https://www.wikidata.org/entity/Q5567424" xml:id="author_220cae48">Karl Wilhelm Baumgarten-Crusius</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="place_90bebd2f">Dresden</pubPlace>
-                    <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_aa7fa674">Hilscher</publisher>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1731" xml:id="place_90bebd2f">Dresden</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q124477463" xml:id="publisher_aa7fa674">Hilschersche Buchhandlung</publisher>
                 </bibl>
                 <bibl xml:id="bibl_e3bb5e0d">
                     <title type="text">Owen Tudor, eine Reisegeschichte</title>
@@ -438,7 +437,7 @@
                     <author ref="https://www.wikidata.org/entity/Q61793" xml:id="author_d386b7e7">Rahel Varnhagen von Ense</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_64433c4d">Duncker und Humblot, Trowitzsch und Sohn</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q316626" xml:id="publisher_64433c4d">Duncker und Humblot, Trowitzsch und Sohn</publisher>
                 </bibl>
                 <bibl xml:id="bibl_d942939e">
                     <title type="text">Scenen aus meinem Leben</title>
@@ -721,7 +720,7 @@
                     <author ref="https://www.wikidata.org/entity/Q41784052" xml:id="author_bbe8c0e3">Wilhelm Fischer</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
-                    <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q877099" xml:id="publisher_d7fe38b6">DuMont</publisher>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q1196819" xml:id="bibl_7a8dd0f0">
                     <title type="text">Der Schüdderump</title>
@@ -779,7 +778,7 @@
                     <author ref="https://www.wikidata.org/entity/Q52131" xml:id="author_bb5f45cd">Bertha Augusti</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
-                    <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q877099" xml:id="publisher_d7fe38b6">DuMont</publisher>
                 </bibl>
                 <bibl xml:id="bibl_ui5a596f">
                     <title type="text">Der Pantoffel der Sappho. 1819</title>
@@ -921,7 +920,7 @@
                     <author ref="https://www.wikidata.org/entity/Q71427" xml:id="author_5dbae385">Richard Voß</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_65410b7e">Verlag von Wilhelm Friedrich</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q15854471" xml:id="publisher_65410b7e">Wilhelm Friedrich</publisher>
                 </bibl>
                 <bibl xml:id="bibl_de7ad33c">
                     <title type="text">Die Sappho von Arles</title>
@@ -1026,7 +1025,7 @@
                     <author ref="https://www.wikidata.org/entity/Q95194" xml:id="author_d1509f6c">Karl Bleibtreu</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_65410b7e">Friedrich</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q15854471" xml:id="publisher_65410b7e">Wilhelm Friedrich</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Bleibtreu,+Karl/Roman/Gr%C3%B6%C3%9Fenwahn/Dritter+Band/Elftes+Buch/4.">http://www.zeno.org/Literatur/M/Bleibtreu,+Karl/Roman/Gr%C3%B6%C3%9Fenwahn/Dritter+Band/Elftes+Buch/4.</ref>
                 </bibl>
                 <bibl xml:id="bibl_70ea4274">
@@ -1073,7 +1072,7 @@
                     <author ref="https://www.wikidata.org/entity/Q21119" xml:id="author_e8e2e042">Detlev von Liliencron</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_65410b7e">Wilhelm Friedrich</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q15854471" xml:id="publisher_65410b7e">Wilhelm Friedrich</publisher>
                     <ref target="https://www.projekt-gutenberg.org/liliencr/maecen/maecen09.html">https://www.projekt-gutenberg.org/liliencr/maecen/maecen09.html</ref>
                 </bibl>
                 <bibl xml:id="bibl_ea40d318">
@@ -1183,7 +1182,7 @@
                     <author ref="https://www.wikidata.org/entity/Q62871" xml:id="author_b72fcd0d">Oskar Panizza</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_65410b7e">Wilhelm Friedrich</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q15854471" xml:id="publisher_65410b7e">Wilhelm Friedrich</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Panizza,+Oskar/Erz%C3%A4hlungen/Visionen/Ein+scandal%C3%B6ser+Fall">http://www.zeno.org/Literatur/M/Panizza,+Oskar/Erz%C3%A4hlungen/Visionen/Ein+scandal%C3%B6ser+Fall</ref>
                 </bibl>
                 <bibl xml:id="bibl_92474bdf">
@@ -1329,7 +1328,7 @@
                     <author ref="https://www.wikidata.org/entity/Q92209" xml:id="author_1f6498c6">Anton von Perfall</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
-                    <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q877099" xml:id="publisher_d7fe38b6">DuMont</publisher>
                 </bibl>
                 <bibl xml:id="bibl_f5ee7352">
                     <title type="text">Rache</title>
@@ -1390,7 +1389,7 @@
                     <author ref="https://www.wikidata.org/entity/Q94738324" xml:id="author_1c65ebdf">Marie Schramm-Macdonald</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
-                    <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q877099" xml:id="publisher_d7fe38b6">DuMont</publisher>
                 </bibl>
                 <bibl xml:id="bibl_5ca5f0b6">
                     <title type="text">Sappho die Dichterin von Lesbos. Roman der Schönheit</title>
@@ -1451,7 +1450,7 @@
                     <author ref="https://www.wikidata.org/entity/Q138834380" xml:id="author_fbe3f87b">Uetyil</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_f8a3a067">Zeitbilder-Verlag</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q138953146" xml:id="publisher_f8a3a067">Zeitbilder-Verlag</publisher>
                 </bibl>
                 <bibl xml:id="bibl_2c7f182d">
                     <title type="text">Gräfin Thunen. Intimes vom Oesterreichisch-ungarischen Hochadel</title>
@@ -1459,7 +1458,7 @@
                     <author ref="https://www.wikidata.org/entity/Q12806303" xml:id="author_97660a23">Freiherr von Baillou</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_f8a3a067">Zeitbilder-Verlag</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q138953146" xml:id="publisher_f8a3a067">Zeitbilder-Verlag</publisher>
                 </bibl>
                 <bibl xml:id="bibl_230b90cb">
                     <title type="text">Modeste: Roman</title>
@@ -1779,7 +1778,7 @@
                     <author ref="https://www.wikidata.org/entity/Q19238757" xml:id="author_01a14763">Wilhelm Herbert [= Wilhelm Mayer]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
-                    <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q877099" xml:id="publisher_d7fe38b6">DuMont</publisher>
                 </bibl>
                 <bibl xml:id="bibl_5d213aae">
                     <title type="text">Hunger!</title>
@@ -1873,7 +1872,7 @@
                     <author ref="https://www.wikidata.org/entity/Q1045347" xml:id="author_4593a9c2">Carry Brachvogel</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
-                    <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q877099" xml:id="publisher_d7fe38b6">DuMont</publisher>
                 </bibl>
                 <bibl xml:id="bibl_a004d085">
                     <title type="text">Eine Frau und vier Verehrer. Novelle</title>
@@ -1884,7 +1883,7 @@
                     <author ref="https://www.wikidata.org/entity/Q55674905" xml:id="author_6cb5644b">Edmund Schopen</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
-                    <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q877099" xml:id="publisher_d7fe38b6">DuMont</publisher>
                 </bibl>
                 <bibl xml:id="bibl_a352cf24">
                     <title type="text">Daniella</title>
@@ -1968,7 +1967,7 @@
                     <author ref="https://www.wikidata.org/entity/Q108306842" xml:id="author_cb7f347d">Wilhelm Scheider</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_5784d3e9">Carl Dunker</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q102586" xml:id="publisher_5784d3e9">Carl Duncker</publisher>
                 </bibl>
                 <bibl xml:id="bibl_2b62a4bc">
                     <title type="text">Die Hand. Novelle</title>
@@ -2057,7 +2056,7 @@
                     <author ref="https://www.wikidata.org/entity/Q1121888" xml:id="author_6aef9f13">Otto Nebelthau</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
-                    <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q877099" xml:id="publisher_d7fe38b6">DuMont</publisher>
                 </bibl>
                 <bibl xml:id="bibl_2dce403c">
                     <title type="text">An eine Freundin</title>

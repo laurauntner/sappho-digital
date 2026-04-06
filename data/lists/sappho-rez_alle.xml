@@ -292,7 +292,7 @@
                     <author ref="https://www.wikidata.org/entity/Q76458" xml:id="author_b8bc3d7f">Philipp von Zesen</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q6837" xml:id="place_e1c2c4a0">Wittenberg</pubPlace>
-                    <publisher xml:id="publisher_2c03ea46">Johann Röhern</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q132804540" xml:id="publisher_2c03ea46">Johann Röhner</publisher>
                     <ref target="https://www.deutschestextarchiv.de/book/view/zesen_helikon02_1641">https://www.deutschestextarchiv.de/book/view/zesen_helikon02_1641</ref>
                 </bibl>
                 <bibl xml:id="bibl_30fada07">
@@ -304,7 +304,7 @@
                     <author ref="https://www.wikidata.org/entity/Q76458" xml:id="author_b8bc3d7f">Philipp von Zesen</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q6837" xml:id="place_e1c2c4a0">Wittenberg</pubPlace>
-                    <publisher xml:id="publisher_2c03ea46">Johann Röhern</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q132804540" xml:id="publisher_2c03ea46">Johann Röhner</publisher>
                     <ref target="https://www.deutschestextarchiv.de/book/view/zesen_helikon02_1641">https://www.deutschestextarchiv.de/book/view/zesen_helikon02_1641</ref>
                 </bibl>
                 <bibl xml:id="bibl_2659860a">
@@ -502,7 +502,7 @@
                     <author ref="https://www.wikidata.org/entity/Q76458" xml:id="author_b8bc3d7f">Philipp von Zesen</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q6837" xml:id="place_e1c2c4a0">Wittenberg</pubPlace>
-                    <publisher xml:id="publisher_2c03ea46">Johann Röhern</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q132804540" xml:id="publisher_2c03ea46">Johann Röhner</publisher>
                 </bibl>
                 <bibl xml:id="bibl_7dc20fdc">
                     <title type="text">Laßet uns emsig Gott den Herren bitten</title>
@@ -613,7 +613,7 @@
                     <author ref="https://www.wikidata.org/entity/Q85638" xml:id="author_9bf8b65c">Ahasverus Fritsch</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3150" xml:id="place_1aa97a04">Jena</pubPlace>
-                    <publisher xml:id="publisher_f61a1035">Georg Sengenwaldt</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q94854291" xml:id="publisher_f61a1035">Georg Sengenwald</publisher>
                     <ref target="https://www.digitale-sammlungen.de/de/view/bsb11288471">https://www.digitale-sammlungen.de/de/view/bsb11288471</ref>
                 </bibl>
                 <bibl xml:id="bibl_6e9aefb7">
@@ -2691,7 +2691,7 @@ Philosophen zu Sanssouci</title>
                     <author ref="https://www.wikidata.org/entity/Q213993" xml:id="author_c4954682">Friedrich von Matthisson</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_66505069">Weygand’sche Buchhandlung</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q138953100" xml:id="publisher_66505069">Weygand’sche Buchhandlung</publisher>
                     <ref target="https://www.digitale-sammlungen.de/de/view/bsb10614687">https://www.digitale-sammlungen.de/de/view/bsb10614687</ref>
                 </bibl>
                 <bibl xml:id="bibl_0e9b272c">
@@ -2985,7 +2985,7 @@ Philosophen zu Sanssouci</title>
                     <author ref="https://www.wikidata.org/entity/Q1694998" xml:id="author_27500efc">J. J. H–b–r [= Johann Joseph Anton Huber]</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2749" xml:id="place_d4135c97">Augsburg</pubPlace>
-                    <publisher xml:id="publisher_ce3cd0df">Kayser</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q138953341" xml:id="publisher_ce3cd0df">Kayser</publisher>
                     <ref target="https://books.google.at/books?id=IpGYZwAOS3kC">https://books.google.at/books?id=IpGYZwAOS3kC</ref>
                 </bibl>
                 <bibl xml:id="bibl_55420632">
@@ -3806,7 +3806,7 @@ Philosophen zu Sanssouci</title>
                     <author ref="https://www.wikidata.org/entity/Q60644" xml:id="author_d2f72734">Friedrich Rückert</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3126" xml:id="place_ce0c1fb4">Erlangen</pubPlace>
-                    <publisher xml:id="publisher_6a5ed879">Heyder</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q94873098" xml:id="publisher_6a5ed879">Heyder</publisher>
                     <ref target="https://www.digitale-sammlungen.de/de/view/bsb10117426">https://www.digitale-sammlungen.de/de/view/bsb10117426</ref>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q689540" xml:id="bibl_7ca7c46a">
@@ -4015,9 +4015,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <date type="published" when="1820">1820</date>
                     <author ref="https://www.wikidata.org/entity/Q5567424" xml:id="author_220cae48">Karl Wilhelm Baumgarten-Crusius</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="place_90bebd2f">Dresden</pubPlace>
-                    <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_aa7fa674">Hilscher</publisher>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1731" xml:id="place_90bebd2f">Dresden</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q124477463" xml:id="publisher_aa7fa674">Hilschersche Buchhandlung</publisher>
                 </bibl>
                 <bibl xml:id="bibl_eff8a98b">
                     <title type="text">Das Gespenst in der Familie oder Sappho und Tobias Vermählung im Reiche der Todten. Locale Posse und Parodie der Geisterkomödien mit Gesang und Tanz in zwei Aufzügen</title>
@@ -4091,7 +4090,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q62432" xml:id="author_d5ea9f29">August von Platen-Hallermünde</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3126" xml:id="place_ce0c1fb4">Erlangen</pubPlace>
-                    <publisher xml:id="publisher_6a5ed879">Heyder</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q94873098" xml:id="publisher_6a5ed879">Heyder</publisher>
                     <ref target="https://www.digitale-sammlungen.de/de/view/bsb10116354">https://www.digitale-sammlungen.de/de/view/bsb10116354</ref>
                 </bibl>
                 <bibl xml:id="bibl_19e062a9">
@@ -4128,7 +4127,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q103564" xml:id="author_c3b4bc0f">Louise Brachmann</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_66505069">Weygand’sche Buchhandlung</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q138953100" xml:id="publisher_66505069">Weygand’sche Buchhandlung</publisher>
                     <ref target="https://books.google.at/books?id=rFYunD8j-XkC">https://books.google.at/books?id=rFYunD8j-XkC</ref>
                 </bibl>
                 <bibl xml:id="bibl_1407fca8">
@@ -4430,7 +4429,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q60644" xml:id="author_d2f72734">Friedrich Rückert</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3126" xml:id="place_ce0c1fb4">Erlangen</pubPlace>
-                    <publisher xml:id="publisher_6a5ed879">Heyder</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q94873098" xml:id="publisher_6a5ed879">Heyder</publisher>
                     <ref target="https://www.digitale-sammlungen.de/de/view/bsb10117427">https://www.digitale-sammlungen.de/de/view/bsb10117427</ref>
                 </bibl>
                 <bibl xml:id="bibl_30bcbdea">
@@ -4598,7 +4597,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q61793" xml:id="author_d386b7e7">Rahel Varnhagen von Ense</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_64433c4d">Duncker und Humblot, Trowitzsch und Sohn</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q316626" xml:id="publisher_64433c4d">Duncker und Humblot, Trowitzsch und Sohn</publisher>
                 </bibl>
                 <bibl xml:id="bibl_65665932">
                     <title type="text">An die Poetaster</title>
@@ -5298,7 +5297,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q41784052" xml:id="author_bbe8c0e3">Wilhelm Fischer</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
-                    <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q877099" xml:id="publisher_d7fe38b6">DuMont</publisher>
                 </bibl>
                 <bibl xml:id="bibl_412b5052">
                     <title type="text">Einer Griechin</title>
@@ -5358,7 +5357,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q96692" xml:id="author_374deda4">Ludwig Eichrodt</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q7039" xml:id="place_6cc9924b">Lahr</pubPlace>
-                    <publisher xml:id="publisher_0c92f3f4">Moritz Schauenburg</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q2516717" xml:id="publisher_0c92f3f4">Moritz Schauenburg</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Eichrodt,+Ludwig/Gedichte/Lyrische+Karrikaturen/Lyrische+Karrikaturen/Mode-Ode">http://www.zeno.org/Literatur/M/Eichrodt,+Ludwig/Gedichte/Lyrische+Karrikaturen/Lyrische+Karrikaturen/Mode-Ode</ref>
                 </bibl>
                 <bibl xml:id="bibl_1f5c9a50">
@@ -5420,7 +5419,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q52131" xml:id="author_bb5f45cd">Bertha Augusti</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
-                    <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q877099" xml:id="publisher_d7fe38b6">DuMont</publisher>
                 </bibl>
                 <bibl xml:id="bibl_ee5a536b">
                     <title type="text">Christabend</title>
@@ -5431,7 +5430,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q67953" xml:id="author_0d9a9602">Adolf von Wilbrandt</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
-                    <publisher xml:id="publisher_fb7d83ca">L. Rosner</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q1819808" xml:id="publisher_fb7d83ca">Leopold Rosner</publisher>
                     <ref target="https://books.google.de/books?id=s_hgAAAAcAAJ">https://books.google.de/books?id=s_hgAAAAcAAJ</ref>
                 </bibl>
                 <bibl xml:id="bibl_ui5a596f">
@@ -5668,7 +5667,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q71427" xml:id="author_5dbae385">Richard Voß</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_65410b7e">Verlag von Wilhelm Friedrich</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q15854471" xml:id="publisher_65410b7e">Wilhelm Friedrich</publisher>
                 </bibl>
                 <bibl xml:id="bibl_5dd94111">
                     <title type="text">An Jakob Burckhardt</title>
@@ -5851,7 +5850,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q95194" xml:id="author_d1509f6c">Karl Bleibtreu</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_65410b7e">Friedrich</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q15854471" xml:id="publisher_65410b7e">Wilhelm Friedrich</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Bleibtreu,+Karl/Roman/Gr%C3%B6%C3%9Fenwahn/Dritter+Band/Elftes+Buch/4.">http://www.zeno.org/Literatur/M/Bleibtreu,+Karl/Roman/Gr%C3%B6%C3%9Fenwahn/Dritter+Band/Elftes+Buch/4.</ref>
                 </bibl>
                 <bibl xml:id="bibl_70ea4274">
@@ -5917,7 +5916,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q21119" xml:id="author_e8e2e042">Detlev von Liliencron</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_65410b7e">Wilhelm Friedrich</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q15854471" xml:id="publisher_65410b7e">Wilhelm Friedrich</publisher>
                     <ref target="https://www.projekt-gutenberg.org/liliencr/maecen/maecen09.html">https://www.projekt-gutenberg.org/liliencr/maecen/maecen09.html</ref>
                 </bibl>
                 <bibl xml:id="bibl_97722fa3">
@@ -6055,7 +6054,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q62871" xml:id="author_b72fcd0d">Oskar Panizza</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_65410b7e">Wilhelm Friedrich</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q15854471" xml:id="publisher_65410b7e">Wilhelm Friedrich</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Panizza,+Oskar/Erz%C3%A4hlungen/Visionen/Ein+scandal%C3%B6ser+Fall">http://www.zeno.org/Literatur/M/Panizza,+Oskar/Erz%C3%A4hlungen/Visionen/Ein+scandal%C3%B6ser+Fall</ref>
                 </bibl>
                 <bibl xml:id="bibl_92474bdf">
@@ -6327,7 +6326,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q92209" xml:id="author_1f6498c6">Anton von Perfall</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
-                    <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q877099" xml:id="publisher_d7fe38b6">DuMont</publisher>
                 </bibl>
                 <bibl xml:id="bibl_f5ee7352">
                     <title type="text">Rache</title>
@@ -6413,7 +6412,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q94738324" xml:id="author_1c65ebdf">Marie Schramm-Macdonald</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
-                    <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q877099" xml:id="publisher_d7fe38b6">DuMont</publisher>
                 </bibl>
                 <bibl xml:id="bibl_5ca5f0b6">
                     <title type="text">Sappho die Dichterin von Lesbos. Roman der Schönheit</title>
@@ -6513,7 +6512,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q138834380" xml:id="author_fbe3f87b">Uetyil</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_f8a3a067">Zeitbilder-Verlag</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q138953146" xml:id="publisher_f8a3a067">Zeitbilder-Verlag</publisher>
                 </bibl>
                 <bibl xml:id="bibl_2c7f182d">
                     <title type="text">Gräfin Thunen. Intimes vom Oesterreichisch-ungarischen Hochadel</title>
@@ -6521,7 +6520,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q12806303" xml:id="author_97660a23">Freiherr von Baillou</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_f8a3a067">Zeitbilder-Verlag</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q138953146" xml:id="publisher_f8a3a067">Zeitbilder-Verlag</publisher>
                 </bibl>
                 <bibl xml:id="bibl_230b90cb">
                     <title type="text">Modeste: Roman</title>
@@ -7161,7 +7160,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q19238757" xml:id="author_01a14763">Wilhelm Herbert [= Wilhelm Mayer]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
-                    <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q877099" xml:id="publisher_d7fe38b6">DuMont</publisher>
                 </bibl>
                 <bibl xml:id="bibl_5d213aae">
                     <title type="text">Hunger!</title>
@@ -7290,7 +7289,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q1045347" xml:id="author_4593a9c2">Carry Brachvogel</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
-                    <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q877099" xml:id="publisher_d7fe38b6">DuMont</publisher>
                 </bibl>
                 <bibl xml:id="bibl_a004d085">
                     <title type="text">Eine Frau und vier Verehrer. Novelle</title>
@@ -7301,7 +7300,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q55674905" xml:id="author_6cb5644b">Edmund Schopen</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
-                    <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q877099" xml:id="publisher_d7fe38b6">DuMont</publisher>
                 </bibl>
                 <bibl xml:id="bibl_a352cf24">
                     <title type="text">Daniella</title>
@@ -7339,7 +7338,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q1795520" xml:id="author_2838152e">Käthe Braun-Prager</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
-                    <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q877099" xml:id="publisher_d7fe38b6">DuMont</publisher>
                     <ref target="https://www.deutsche-digitale-bibliothek.de/newspaper/item/DQSHZXK4DXWBZHHVJBSQOZBJ3L4GDCMT">https://www.deutsche-digitale-bibliothek.de/newspaper/item/DQSHZXK4DXWBZHHVJBSQOZBJ3L4GDCMT</ref>
                 </bibl>
                 <bibl xml:id="bibl_a49a9cb4">
@@ -7461,7 +7460,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q108306842" xml:id="author_cb7f347d">Wilhelm Scheider</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_5784d3e9">Carl Dunker</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q102586" xml:id="publisher_5784d3e9">Carl Duncker</publisher>
                 </bibl>
                 <bibl xml:id="bibl_2b62a4bc">
                     <title type="text">Die Hand. Novelle</title>
@@ -7658,7 +7657,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q1121888" xml:id="author_6aef9f13">Otto Nebelthau</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
-                    <publisher xml:id="publisher_d7fe38b6">DuMont</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q877099" xml:id="publisher_d7fe38b6">DuMont</publisher>
                 </bibl>
                 <bibl xml:id="bibl_3095a510">
                     <title type="text">Sappho</title>
@@ -7802,7 +7801,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q57277" xml:id="author_14d8a453">Gottfried Benn</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1721" xml:id="place_2eae9f29">Wiesbaden</pubPlace>
-                    <publisher xml:id="publisher_a78393d4">Limes</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q21745455" xml:id="publisher_a78393d4">Limes</publisher>
                     <ref target="https://books.google.de/books?id=j0GOPLUfJ2sC">https://books.google.de/books?id=j0GOPLUfJ2sC</ref>
                 </bibl>
                 <bibl xml:id="bibl_a88a263f">
