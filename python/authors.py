@@ -356,7 +356,7 @@ for el in authors:
             if not (gender_type_uri, RDF.type, ECRM.E55_Type) in g:
                 g.add((gender_type_uri, RDF.type, ECRM.E55_Type))
                 g.add((gender_type_uri, RDFS.label, Literal("Wikidata Gender", lang="en")))
-            g.add((gender_type_uri, ECRM.P2i_is_type_of, gender_uri))
+            g.add((gender_uri, ECRM.P2_has_type, gender_type_uri))
 
         # Bild
         image = get_claim_val(entity, "P18", val_type=None)
