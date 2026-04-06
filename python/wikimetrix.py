@@ -228,8 +228,6 @@ def expand_author_rows(
 
         n = non_zero_lengths[0]
 
-        # Falls nur ein Name vorhanden ist, aber mehrere IDs/QIDs, ist das ohne
-        # weitere Struktur nicht zuverlässig aufteilbar -> als mismatch melden.
         if len(names) != n or len(internal_ids) != n or len(qids) != n:
             mismatches.append({
                 "Autor_in": row.get(author_name_col),
