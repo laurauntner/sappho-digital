@@ -927,7 +927,7 @@
                       <canvas id="chart-wm-slscatter" style="height:420px"/>
                     </div>
                     <p class="stats-subtitle stats-subtitle-sm-top" style="text-align:center"
-                      >Sitelinks-Verteilung und Top-Autor_innen</p>
+                      >Sitelinks-Verteilung</p>
                     <div id="wm-sitelinks-donut-wrap"
                       style="display:flex;justify-content:center;flex-wrap:wrap;gap:1.5rem;align-items:flex-start;margin-bottom:1.25rem"/>
                     <div class="control-col-wrap">
@@ -946,6 +946,8 @@
                       <span><span class="dot" style="background:rgba(107,114,128,0.75)"
                         />Korpuspräsenz</span>
                     </div>
+                    <p class="stats-subtitle stats-subtitle-sm-top" style="text-align:center"
+                      >Top-Autor_innen nach Sitelinks</p>
                     <div id="wm-topsitelinks-bar-wrap" class="chart-wrap"/>
                   </div>
                 </div>
