@@ -531,6 +531,9 @@
                     <li>
                       <a href="#stat11">Gender – Überblick, Zeitverlauf, Gattungen und Phänomene</a>
                     </li>
+                    <li>
+                      <a href="#stat12">Wiki-Metriken: Popularität und Korpuspräsenz</a>
+                    </li>
                   </ol>
                 </nav>
 
@@ -864,6 +867,86 @@
                       <div id="gender-phenom-type-legend" class="type-legend"/>
                     </div>
                     <div id="gender-phenom-overview-wrap"/>
+                  </div>
+                </div>
+                <div class="stats-wrap" id="stat12">
+                  <p class="stats-subtitle">Statistik 12: Wiki-Metriken – Popularität und
+                    Korpuspräsenz</p>
+                  <p class="stats-desc">Wie populär sind Autor_innen von deutschsprachigen
+                    Sappho-Rezeptionszeugnissen im Wikiversum &#8211; und wie präsent sind sie im
+                    Korpus? QRank erstellt eine Rangliste von Wikidata-Einträgen, indem es die
+                    Seitenaufrufe aus Wikipedia, Wikispecies, Wikibooks, Wikiquote und weiteren
+                    Wikimedia-Projekten zusammenführt. Sitelinks sind die Wikipedia-Sprachversionen
+                    von Artikeln. Die Korpuspräsenz gibt an, mit wie vielen Rezeptionszeugnissen
+                    eine Person im Korpus vertreten ist.</p>
+                  <div id="wm-kpi-wrap"/>
+                  <div id="wm-tab-bar"
+                    style="display:flex;justify-content:center;gap:.5rem;margin-bottom:1.25rem;flex-wrap:wrap"/>
+                  <div id="wm-scatter-meta"
+                    style="text-align:center;font-size:.8rem;color:#6b7280;margin:.25rem 0 1rem"/>
+
+                  <!-- Tab: QRank -->
+                  <div id="wm-pane-qrank">
+                    <p class="stats-subtitle stats-subtitle-sm" style="text-align:center">QRank vs.
+                      Korpuspräsenz</p>
+                    <p class="stats-desc" style="text-align:center">Jeder Punkt ist ein_e Autor_in.
+                      Die X-Achse zeigt die Korpuspräsenz (Anzahl der Rezeptionszeugnisse im
+                      Korpus), die Y-Achse den QRank (Wiki-Popularität).</p>
+                    <div class="chart-wrap" style="min-height:420px">
+                      <canvas id="chart-wm-scatter" style="height:420px"/>
+                    </div>
+                    <p class="stats-subtitle stats-subtitle-sm-top" style="text-align:center"
+                      >Top-Autor_innen nach QRank</p>
+                    <div class="control-col-wrap">
+                      <div class="stat3-control-group">
+                        <label for="sel-wm-qrank-topn">Anzahl:</label>
+                        <select id="sel-wm-qrank-topn" class="stat2-select">
+                          <option value="10">Top 10</option>
+                          <option value="50" selected="selected">Top 50</option>
+                          <option value="100">Top 100</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="legend">
+                      <span><span class="dot" style="background:rgba(94,23,235,0.75)"/>QRank
+                        (normalisiert)</span>
+                      <span><span class="dot" style="background:rgba(107,114,128,0.75)"
+                        />Korpuspräsenz</span>
+                    </div>
+                    <div id="wm-topqrank-wrap" class="chart-wrap"/>
+                  </div>
+
+                  <!-- Tab: Sitelinks -->
+                  <div id="wm-pane-sitelinks" style="display:none">
+                    <p class="stats-subtitle stats-subtitle-sm" style="text-align:center">Sitelinks
+                      vs. Korpuspräsenz</p>
+                    <p class="stats-desc" style="text-align:center">Jeder Punkt ist ein_e Autor_in.
+                      Die X-Achse zeigt die Korpuspräsenz, die Y-Achse die Anzahl der Sitelinks
+                      (Wikipedia-Sprachversionen).</p>
+                    <div class="chart-wrap" style="min-height:420px">
+                      <canvas id="chart-wm-slscatter" style="height:420px"/>
+                    </div>
+                    <p class="stats-subtitle stats-subtitle-sm-top" style="text-align:center"
+                      >Sitelinks-Verteilung und Top-Autor_innen</p>
+                    <div id="wm-sitelinks-donut-wrap"
+                      style="display:flex;justify-content:center;flex-wrap:wrap;gap:1.5rem;align-items:flex-start;margin-bottom:1.25rem"/>
+                    <div class="control-col-wrap">
+                      <div class="stat3-control-group">
+                        <label for="sel-wm-sl-topn">Anzahl:</label>
+                        <select id="sel-wm-sl-topn" class="stat2-select">
+                          <option value="10">Top 10</option>
+                          <option value="50" selected="selected">Top 50</option>
+                          <option value="100">Top 100</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="legend">
+                      <span><span class="dot" style="background:rgba(94,23,235,0.75)"
+                        />Sitelinks</span>
+                      <span><span class="dot" style="background:rgba(107,114,128,0.75)"
+                        />Korpuspräsenz</span>
+                    </div>
+                    <div id="wm-topsitelinks-bar-wrap" class="chart-wrap"/>
                   </div>
                 </div>
               </div>

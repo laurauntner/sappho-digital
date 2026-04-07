@@ -1107,10 +1107,11 @@ def main(ttl_path: str, xml_out: str) -> None:
                 return "female"
         return "unknown"
 
-    # Alle E21_Person-Knoten mit Geschlecht
+    # Alle E21_Person-Knoten mit Geschlecht – nur Autor_innen (URI enthält /author_)
     all_persons: dict[URIRef, str] = {}
     for person in g.subjects(RDF.type, E21_Person):
-        all_persons[person] = gender_key(person)
+        if "/author_" in str(person):
+            all_persons[person] = gender_key(person)
 
     n_male    = sum(1 for g2 in all_persons.values() if g2 == "male")
     n_female  = sum(1 for g2 in all_persons.values() if g2 == "female")

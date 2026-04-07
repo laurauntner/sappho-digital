@@ -355,20 +355,42 @@ print("\nBuilding output dataframe...")
 
 work_count_df = (
     base_df
-    .group_by(["Autor_in", "Interne Autor_in-ID", "Author Wikidata ID"])
+    .group_by(["Interne Autor_in-ID", "Author Wikidata ID"])
     .agg(pl.len().alias("Work Count"))
 )
 
-distinct_authors_df = (
+def count_special_chars(name: str) -> int:
+    """Count non-alphanumeric, non-space, non-hyphen characters in a name."""
+    return sum(1 for c in name if not (c.isalnum() or c in (" ", "-", ".")))
+
+name_candidates = (
     base_df
-    .unique(["Autor_in", "Interne Autor_in-ID", "Author Wikidata ID"])
+    .select(["Autor_in", "Interne Autor_in-ID", "Author Wikidata ID"])
+    .unique()
 )
+
+best_names = (
+    name_candidates
+    .with_columns(
+        pl.col("Autor_in")
+        .map_elements(count_special_chars, return_dtype=pl.Int32)
+        .alias("_special"),
+        pl.col("Autor_in")
+        .map_elements(len, return_dtype=pl.Int32)
+        .alias("_len"),
+    )
+    .sort(["Interne Autor_in-ID", "Author Wikidata ID", "_special", "_len"])
+    .unique(["Interne Autor_in-ID", "Author Wikidata ID"], keep="first")
+    .drop(["_special", "_len"])
+)
+
+distinct_authors_df = best_names
 
 out_df = (
     distinct_authors_df
     .join(
         work_count_df,
-        on=["Autor_in", "Interne Autor_in-ID", "Author Wikidata ID"],
+        on=["Interne Autor_in-ID", "Author Wikidata ID"],
         how="left",
     )
     .join(

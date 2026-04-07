@@ -7,6 +7,19 @@ const C = {
 
 const charts = {};
 
+// ── Zahlenformatierung: Tausenderpunkt + Dezimalkomma (de-DE) ─────────────────
+function fmtN(n, decimals) {
+    if (n === null || n === undefined || isNaN(n)) return String(n);
+    if (decimals !== undefined) {
+        return Number(n).toLocaleString('de-DE', {
+            minimumFractionDigits: decimals,
+            maximumFractionDigits: decimals,
+        });
+    }
+    return Number(n).toLocaleString('de-DE');
+}
+
+
 // Balkenhöhe
 function canvasHeight(n) {
     return Math.max(120, n * 32 + 40);
@@ -84,7 +97,7 @@ function renderChart(cat) {
             labels,
             datasets: [
                 {
-                    label: `Sappho-Fragmente (n=${DATA.nSappho})`,
+                    label: `Sappho-Fragmente (n = ${fmtN(DATA.nSappho)})`,
                     data: pctS,
                     backgroundColor: C.s,
                     borderColor: C.sLine,
@@ -92,7 +105,7 @@ function renderChart(cat) {
                     borderRadius: 2,
                 },
                 {
-                    label: `Rezeptionszeugnisse (n=${DATA.nReception})`,
+                    label: `Rezeptionszeugnisse (n = ${fmtN(DATA.nReception)})`,
                     data: pctR,
                     backgroundColor: C.r,
                     borderColor: C.rLine,
@@ -119,7 +132,7 @@ function renderChart(cat) {
                             const isSappho = ctx.datasetIndex === 0;
                             const count = isSappho ? d.countSappho : d.countReception;
                             const total = isSappho ? DATA.nSappho : DATA.nReception;
-                            const pct = ctx.parsed.x.toFixed(2);
+                            const pct = ctx.parsed.x.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
                             const name = isSappho ? 'Sappho' : 'Rezeption';
                             return ` ${name}: ${pct}% (${count}/${total})`;
                         },
@@ -297,7 +310,7 @@ function renderCatOverview() {
             labels,
             datasets: [
                 {
-                    label: `Sappho-Fragmente (n=${DATA.nSappho})`,
+                    label: `Sappho-Fragmente (n = ${fmtN(DATA.nSappho)})`,
                     data: pctS,
                     backgroundColor: C.s,
                     borderColor: C.sLine,
@@ -305,7 +318,7 @@ function renderCatOverview() {
                     borderRadius: 2,
                 },
                 {
-                    label: `Rezeptionszeugnisse (n=${DATA.nReception})`,
+                    label: `Rezeptionszeugnisse (n = ${fmtN(DATA.nReception)})`,
                     data: pctR,
                     backgroundColor: C.r,
                     borderColor: C.rLine,
@@ -330,13 +343,13 @@ function renderCatOverview() {
                         if (idx == null) return;
                         const item     = items[idx];
                         const singular = (FTYPE_META[item.catKey] || {}).singular || item.catLabel;
-                        const pctS     = parseFloat(item.pctSappho).toFixed(2);
-                        const pctR     = parseFloat(item.pctReception).toFixed(2);
+                        const pctS     = parseFloat(item.pctSappho).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
+                        const pctR     = parseFloat(item.pctReception).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
                         const html =
                             `<strong>${item.label}</strong>`
                             + `<br><span style="font-size:10px;color:rgba(255,255,255,0.75)">(${singular})</span>`
-                            + `<br><span style="color:rgba(255,255,255,0.85)">Sappho: ${pctS}% (${item.countSappho}/${DATA.nSappho})</span>`
-                            + `<br><span style="color:rgba(255,255,255,0.85)">Rezeption: ${pctR}% (${item.countReception}/${DATA.nReception})</span>`;
+                            + `<br><span style="color:rgba(255,255,255,0.85)">Sappho: ${pctS}% (${item.countSappho}/${fmtN(DATA.nSappho)})</span>`
+                            + `<br><span style="color:rgba(255,255,255,0.85)">Rezeption: ${pctR}% (${item.countReception}/${fmtN(DATA.nReception)})</span>`;
                         const t   = getPdTip();
                         t.innerHTML     = html;
                         t.style.display = 'block';
@@ -566,7 +579,7 @@ function renderSankey2(fragLabel) {
     // Spalten-Header
     [
         ['FRAGMENT',                              lNodeX - PAD,          'end'],
-        [`REZEPTIONSZEUGNISSE (n=${frag.nBibl})`, rNodeX + NODE_W + PAD, 'start'],
+        [`REZEPTIONSZEUGNISSE (n = ${fmtN(frag.nBibl)})`, rNodeX + NODE_W + PAD, 'start'],
     ].forEach(([txt, x, anchor]) => {
         svg.append('text')
             .attr('x', x).attr('y', HDR_H - 5)
@@ -872,7 +885,7 @@ function buildBubbleChart(features, decades, container, showType = false) {
             const ftypeLabel = (FTYPE_META[feat.ftype] || {}).singular || feat.ftype;
             const tipHtml = `<strong>${feat.label}</strong>`
                 + (showType ? `<br><span style="font-size:10px;color:rgba(255,255,255,0.75)">(${ftypeLabel})</span>` : '')
-                + `<br>${decLabel(dec)}: <strong>${v}</strong> Rezeptionszeugnis${v !== 1 ? 'se' : ''}`;
+                + `<br>${decLabel(dec)}: <strong>${fmtN(v)}</strong> Rezeptionszeugnis${v !== 1 ? 'se' : ''}`;
             circle.addEventListener('mouseenter', e => pdTipShow(e, tipHtml));
             circle.addEventListener('mousemove',  e => pdTipMove(e));
             circle.addEventListener('mouseleave', pdTipHide);
@@ -1149,7 +1162,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
             if (v > 0) {
                 const onDark    = opacity > 0.50;
                 const textFill  = onDark ? '#fff' : color;
-                const cellLabel = `${v} (${pct < 1 ? pct.toFixed(1) : Math.round(pct)}%)`;
+                const cellLabel = `${v} (${pct < 1 ? pct.toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) : Math.round(pct)}%)`;
                 svg.appendChild(txt(cx + COL_W / 2, yc, cellLabel, {
                     'text-anchor': 'middle', dy: '0.35em',
                     'font-size': '10px',
@@ -1167,8 +1180,8 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
             const ftypeLabel = (FTYPE_META[feat.ftype] || {}).singular || feat.ftype;
             const tipHtml = `<strong>${rawLabel}</strong>`
                 + (showType ? `<br><span style="font-size:10px;color:rgba(255,255,255,0.75)">(${ftypeLabel})</span>` : '')
-                + `<br>${genre}: <strong>${v}</strong> Rezeptionszeugnis${v !== 1 ? 'se' : ''}`
-                + (v > 0 ? ` (${pct < 1 ? pct.toFixed(1) : Math.round(pct)}%)` : '');
+                + `<br>${genre}: <strong>${fmtN(v)}</strong> Rezeptionszeugnis${v !== 1 ? 'se' : ''}`
+                + (v > 0 ? ` (${pct < 1 ? pct.toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) : Math.round(pct)}%)` : '');
             tipTarget.addEventListener('mouseenter', e => pdTipShow(e, tipHtml));
             tipTarget.addEventListener('mousemove',  e => pdTipMove(e));
             tipTarget.addEventListener('mouseleave', pdTipHide);
@@ -1522,7 +1535,7 @@ function renderPlotComponents(plotUri, topN) {
             const tipHtml = `<strong>${cf.label}</strong>`
                 + `<br><span style="font-size:10px;color:rgba(255,255,255,0.75)">`
                 + `${(FTYPE_META[cf.ftype]||{}).singular || cf.ftype}</span>`
-                + `<br>${cf.n} Rezeptionszeugnis${cf.n!==1?'se':''} (${pct}%)`;
+                + `<br>${fmtN(cf.n)} Rezeptionszeugnis${cf.n!==1?'se':''} (${pct}%)`;
 
             // Strichbreite skaliert mit Segmentgröße für deutlichere Kontraste
             const segFrac  = (a1 - a0) / (2 * Math.PI);
@@ -1650,7 +1663,7 @@ function renderPersonDuality() {
 
     if (metaBar) {
         metaBar.innerHTML =
-            `<span>Rezeptionszeugnisse: <strong>${pd.nPersonRef}</strong> Referenzen; <strong>${pd.nBoth}</strong> auch als Figuren</span>`
+            `<span>Rezeptionszeugnisse: <strong>${fmtN(pd.nPersonRef)}</strong> Referenzen; <strong>${fmtN(pd.nBoth)}</strong> auch als Figuren</span>`
             + `<span style="margin-left:1.2rem">Sappho-Fragmente: <strong>${pd.nSapphoPersonRef}</strong> Referenzen; <strong>${pd.nSapphoCharacter}</strong> auch als Figuren</span>`;
     }
 
@@ -1692,7 +1705,7 @@ function renderPersonDuality() {
             labels,
             datasets: [
                 {
-                    label: `pers_ref – Sappho (n=${DATA.nSappho})`,
+                    label: `pers_ref – Sappho (n = ${fmtN(DATA.nSappho)})`,
                     data: sapPrData,
                     backgroundColor: PD6.sapPr,
                     borderColor: PD6.sapPrLine,
@@ -1700,7 +1713,7 @@ function renderPersonDuality() {
                     borderRadius: 2,
                 },
                 {
-                    label: `character – Sappho (n=${DATA.nSappho})`,
+                    label: `character – Sappho (n = ${fmtN(DATA.nSappho)})`,
                     data: sapChData,
                     backgroundColor: PD6.sapCh,
                     borderColor: PD6.sapChLine,
@@ -1708,7 +1721,7 @@ function renderPersonDuality() {
                     borderRadius: 2,
                 },
                 {
-                    label: `pers_ref – Rezeption (n=${DATA.nReception})`,
+                    label: `pers_ref – Rezeption (n = ${fmtN(DATA.nReception)})`,
                     data: recPrData,
                     backgroundColor: PD6.recPr,
                     borderColor: PD6.recPrLine,
@@ -1716,7 +1729,7 @@ function renderPersonDuality() {
                     borderRadius: 2,
                 },
                 {
-                    label: `character – Rezeption (n=${DATA.nReception})`,
+                    label: `character – Rezeption (n = ${fmtN(DATA.nReception)})`,
                     data: recChData,
                     backgroundColor: PD6.recCh,
                     borderColor: PD6.recChLine,
@@ -1743,7 +1756,7 @@ function renderPersonDuality() {
                                 { lbl: 'Figur in Rezeptionszeugnissen',    n: p.charN,   total: DATA.nReception },
                             ];
                             const { lbl, n, total } = configs[ctx.datasetIndex];
-                            const pct = ctx.parsed.x.toFixed(2);
+                            const pct = ctx.parsed.x.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
                             return ` ${lbl}: ${pct}% (${n}/${total})`;
                         },
                     },
@@ -1840,7 +1853,7 @@ function renderWorkCitation() {
             labels,
             datasets: [
                 {
-                    label: `Referenziert (n=${wc.nReception})`,
+                    label: `Referenziert (n = ${fmtN(wc.nReception)})`,
                     data:  pctRef,
                     backgroundColor: 'rgba(107,114,128,0.75)',
                     borderColor:     '#6b7280',
@@ -1848,7 +1861,7 @@ function renderWorkCitation() {
                     borderRadius: 2,
                 },
                 {
-                    label: `Referenziert und zitiert (n=${wc.nReception})`,
+                    label: `Referenziert und zitiert (n = ${fmtN(wc.nReception)})`,
                     data:  pctBoth,
                     backgroundColor: 'rgba(8,145,178,0.75)',
                     borderColor:     '#0891b2',
@@ -1871,12 +1884,12 @@ function renderWorkCitation() {
                         const idx = tooltip.dataPoints?.[0]?.dataIndex;
                         if (idx == null) return;
                         const w    = works[idx];
-                        const pctR = parseFloat(w.pctRef).toFixed(2);
-                        const pctB = parseFloat(w.pctBoth).toFixed(2);
+                        const pctR = parseFloat(w.pctRef).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
+                        const pctB = parseFloat(w.pctBoth).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
                         const html =
                             `<strong>${wc7CleanLabel(w.label)}</strong>`
-                            + `<br><span style="color:rgba(255,255,255,0.85)">Referenziert: ${pctR}% (${w.refN}/${wc.nReception})</span>`
-                            + `<br><span style="color:rgba(255,255,255,0.85)">Referenziert und zitiert: ${pctB}% (${w.bothN}/${wc.nReception})</span>`;
+                            + `<br><span style="color:rgba(255,255,255,0.85)">Referenziert: ${pctR}% (${fmtN(w.refN)}/${fmtN(wc.nReception)})</span>`
+                            + `<br><span style="color:rgba(255,255,255,0.85)">Referenziert und zitiert: ${pctB}% (${fmtN(w.bothN)}/${fmtN(wc.nReception)})</span>`;
                         const t = getWc7Tip();
                         t.innerHTML     = html;
                         t.style.display = 'block';
@@ -1952,7 +1965,7 @@ function renderInt31MetaBar() {
     if (!co || !wrap) return;
     wrap.innerHTML =
         `<div style="text-align:center;margin-bottom:0.5rem">`
-        + `<span style="font-size:2rem;font-weight:700;color:#1f2937">${co.nInt31All}</span>`
+        + `<span style="font-size:2rem;font-weight:700;color:#1f2937">${fmtN(co.nInt31All)}</span>`
         + `<span style="font-size:0.9rem;color:#6b7280;margin-left:0.5rem">intertextuelle Relationen gesamt</span>`
         + `</div>`;
 }
@@ -2008,7 +2021,7 @@ function renderInt31FtypeBar() {
             plugins: { legend: { display: false },
                 tooltip: { callbacks: { label: ctx2 => {
                     const it = items[ctx2.dataIndex];
-                    return ` ${it.n} INT31-Knoten (${ctx2.parsed.x.toFixed(2)}%)`;
+                    return ` ${fmtN(it.n)} INT31-Knoten (${ctx2.parsed.x.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2})}%)`;
                 }}}},
             scales: {
                 x: { min: 0, max: maxX,
@@ -2146,11 +2159,11 @@ function renderInt31Sunburst() {
 
             const ftA = (FTYPE_META[fA.ftype]||{}).singular || fA.ftype;
             const ftB = (FTYPE_META[fB.ftype]||{}).singular || fB.ftype;
-            const pct = (n / total * 100).toFixed(1);
+            const pct = (n / total * 100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1});
             const tipHtml =
                 `<strong>${fA.label}</strong> <span style="color:rgba(255,255,255,0.6)">(${ftA})</span>`
                 + `<br>× <strong>${fB.label}</strong> <span style="color:rgba(255,255,255,0.6)">(${ftB})</span>`
-                + `<br><strong>${n}</strong> gemeinsame INT31-Knoten (${pct}%)`;
+                + `<br><strong>${fmtN(n)}</strong> gemeinsame INT31-Knoten (${pct}%)`;
 
             path.addEventListener('mouseenter', e => { path.setAttribute('stroke-opacity','0.92'); int31TipShow(e,tipHtml); });
             path.addEventListener('mousemove',  e => int31TipMove(e));
@@ -2198,12 +2211,12 @@ function renderInt31Sunburst() {
     typeSegs.forEach(({ k, color, itemSegs }) => {
         itemSegs.forEach(({ f, a0, a1, aMid }) => {
             if (a1 - a0 < 0.002) return;
-            const pct    = (f.n / total * 100).toFixed(1);
+            const pct    = (f.n / total * 100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1});
             const ft     = (FTYPE_META[f.ftype]||{}).singular || f.ftype;
             const tipHtml =
                 `<strong>${f.label}</strong>`
                 + `<br><span style="font-size:10px;color:rgba(255,255,255,0.7)">(${ft})</span>`
-                + `<br><strong>${f.n}</strong> INT31-Knoten (${pct}%)`;
+                + `<br><strong>${fmtN(f.n)}</strong> INT31-Knoten (${pct}%)`;
 
             const segFrac = (a1 - a0) / (2 * Math.PI);
             const strokeW = segFrac > 0.04 ? 1.8 : segFrac > 0.015 ? 1.0 : 0.4;
@@ -2324,7 +2337,7 @@ function renderInt31Pairs() {
         svg.appendChild(setA(mkE('rect'), { x:LABEL_W, y:y0+2, width:halfW, height:BAR_H-4, fill:colorA, 'fill-opacity':'0.65', rx:2 }));
         svg.appendChild(setA(mkE('rect'), { x:LABEL_W+halfW, y:y0+2, width:barW-halfW, height:BAR_H-4, fill:colorB, 'fill-opacity':'0.65' }));
 
-        const pct = (pair.n / total * 100).toFixed(1);
+        const pct = (pair.n / total * 100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1});
         svg.appendChild(setA(mkE('text'), { x:LABEL_W+barW+5, y:yc,
             'dominant-baseline':'middle', 'font-size':'10px', fill:'#6b7280' }))
             .textContent = `${pair.n} (${pct}%)`;
@@ -2335,7 +2348,7 @@ function renderInt31Pairs() {
         const ftB = (FTYPE_META[pair.ftypeB]||{}).singular || pair.ftypeB;
         const tipHtml = `<strong>${pair.labelA}</strong> <span style="color:rgba(255,255,255,0.6)">(${ftA})</span>`
             + `<br>× <strong>${pair.labelB}</strong> <span style="color:rgba(255,255,255,0.6)">(${ftB})</span>`
-            + `<br><strong>${pair.n}</strong> gemeinsame INT31-Knoten (${pct}%)`;
+            + `<br><strong>${fmtN(pair.n)}</strong> gemeinsame INT31-Knoten (${pct}%)`;
         overlay.addEventListener('mouseenter', e => int31TipShow(e, tipHtml));
         overlay.addEventListener('mousemove',  e => int31TipMove(e));
         overlay.addEventListener('mouseleave', int31TipHide);
@@ -2593,9 +2606,9 @@ function initStat10() {
         card.innerHTML =
             `<div style="font-size:.78rem;font-weight:700;color:#6b7280;` +
             `text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem">${k.label}</div>` +
-            `<div style="font-size:2rem;font-weight:700;color:${k.color};line-height:1.1">${k.value}</div>` +
+            `<div style="font-size:2rem;font-weight:700;color:${k.color};line-height:1.1">${fmtN(k.value)}</div>` +
             `<div style="font-size:.78rem;color:#9ca3af;margin-top:.25rem">${k.sublbl}</div>` +
-            `<div style="font-size:.72rem;color:#d1d5db;margin-top:.1rem">n = ${k.n}</div>`;
+            `<div style="font-size:.72rem;color:#d1d5db;margin-top:.1rem">n = ${fmtN(k.n)}</div>`;
         kpiGrid.appendChild(card);
     });
     wrap.appendChild(kpiGrid);
@@ -2604,8 +2617,8 @@ function initStat10() {
     const legend = document.createElement('div');
     legend.className = 'legend';
     legend.innerHTML =
-        `<span><span class="dot dot-s"></span>Sappho-Fragmente (n=${d.nSappho})</span>` +
-        `<span><span class="dot dot-r"></span>Rezeptionszeugnisse (n=${d.nReception})</span>`;
+        `<span><span class="dot dot-s"></span>Sappho-Fragmente (n = ${fmtN(d.nSappho)})</span>` +
+        `<span><span class="dot dot-r"></span>Rezeptionszeugnisse (n = ${fmtN(d.nReception)})</span>`;
     wrap.appendChild(legend);
 
     // ── Hilfsfunktion: grouped bar chart ─────────────────────────────────────
@@ -2623,7 +2636,7 @@ function initStat10() {
                 labels,
                 datasets: [
                     {
-                        label: `Sappho-Fragmente (n=${d.nSappho})`,
+                        label: `Sappho-Fragmente (n = ${fmtN(d.nSappho)})`,
                         data:  sapData,
                         backgroundColor: C.s,
                         borderColor:     C.sLine,
@@ -2631,7 +2644,7 @@ function initStat10() {
                         borderRadius: 3,
                     },
                     {
-                        label: `Rezeptionszeugnisse (n=${d.nReception})`,
+                        label: `Rezeptionszeugnisse (n = ${fmtN(d.nReception)})`,
                         data:  recData,
                         backgroundColor: C.r,
                         borderColor:     C.rLine,
@@ -2659,7 +2672,7 @@ function initStat10() {
                                 const total  = isSap ? d.nSappho : d.nReception;
                                 const name   = isSap ? 'Sappho-Fragmente' : 'Rezeptionszeugnisse';
                                 const count  = ctx2.parsed.y;
-                                const pct    = total > 0 ? (count / total * 100).toFixed(1) : '0.0';
+                                const pct    = total > 0 ? (count / total * 100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) : '0.0';
                                 return ` ${name}: ${count} ${count === 1 ? 'Text' : 'Texte'} (${pct}%)`;
                             },
                         },
@@ -2830,9 +2843,9 @@ function renderGenderOverview() {
         type: 'doughnut',
         data: {
             labels: [
-                `Autoren – ${d.nMale} (${(d.nMale/total*100).toFixed(1)}%)`,
-                `Autorinnen – ${d.nFemale} (${(d.nFemale/total*100).toFixed(1)}%)`,
-                `Kein Eintrag – ${d.nUnknown} (${(d.nUnknown/total*100).toFixed(1)}%)`,
+                `Autoren – ${fmtN(d.nMale)} (${(d.nMale/total*100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1})}%)`,
+                `Autorinnen – ${fmtN(d.nFemale)} (${(d.nFemale/total*100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1})}%)`,
+                `Kein Eintrag – ${fmtN(d.nUnknown)} (${(d.nUnknown/total*100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1})}%)`,
             ],
             datasets: [{
                 data: [d.nMale, d.nFemale, d.nUnknown],
@@ -2852,7 +2865,7 @@ function renderGenderOverview() {
                     callbacks: {
                         label: ctx => {
                             const v = ctx.parsed;
-                            const pct = total > 0 ? (v / total * 100).toFixed(1) : '0.0';
+                            const pct = total > 0 ? (v / total * 100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) : '0.0';
                             return ` ${v} (${pct}%)`;
                         },
                     },
@@ -2919,7 +2932,7 @@ function renderGenderTimeChart() {
                         label: c => {
                             const v = c.parsed.y;
                             return isPercent
-                                ? ` ${c.dataset.label}: ${v.toFixed(1)}%`
+                                ? ` ${c.dataset.label}: ${v.toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1})}%`
                                 : ` ${c.dataset.label}: ${v}`;
                         },
                     },
@@ -3010,8 +3023,8 @@ function renderGenderGenreChart() {
                             const g   = genres[c.dataIndex];
                             const tot = g.male + g.female + g.unknown;
                             const v   = c.parsed.y;
-                            if (isPercent) return ` ${c.dataset.label}: ${v.toFixed(1)}%`;
-                            const pct = tot > 0 ? (v / tot * 100).toFixed(1) : '0.0';
+                            if (isPercent) return ` ${c.dataset.label}: ${v.toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1})}%`;
+                            const pct = tot > 0 ? (v / tot * 100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) : '0.0';
                             return ` ${c.dataset.label}: ${v} (${pct}% der Gattung)`;
                         },
                     },
@@ -3094,9 +3107,9 @@ function renderGenderPhenomSections() {
         ovLegend.style.marginBottom = '.75rem';
         ovLegend.innerHTML =
             `<span><span class="dot" style="background:${GENDER_META.male.color};border:1.5px solid ${GENDER_META.male.line}"></span>` +
-            `Autoren (n=${pd.nMale})</span>` +
+            `Autoren (n = ${fmtN(pd.nMale)})</span>` +
             `<span><span class="dot" style="background:${GENDER_META.female.color};border:1.5px solid ${GENDER_META.female.line}"></span>` +
-            `Autorinnen (n=${pd.nFemale})</span>`;
+            `Autorinnen (n = ${fmtN(pd.nFemale)})</span>`;
         wrap.appendChild(ovLegend);
 
         const controlRow = document.createElement('div');
@@ -3191,8 +3204,8 @@ function renderGenderPhenomSections() {
             data: {
                 labels: overviewLabels,
                 datasets: [
-                    { label: `Autoren (n=${pd.nMale})`,   data: ovMale, backgroundColor: GENDER_META.male.color,   borderColor: GENDER_META.male.line,   borderWidth: 2, borderRadius: 2 },
-                    { label: `Autorinnen (n=${pd.nFemale})`, data: ovFem,  backgroundColor: GENDER_META.female.color, borderColor: GENDER_META.female.line, borderWidth: 2, borderRadius: 2 },
+                    { label: `Autoren (n = ${fmtN(pd.nMale)})`,   data: ovMale, backgroundColor: GENDER_META.male.color,   borderColor: GENDER_META.male.line,   borderWidth: 2, borderRadius: 2 },
+                    { label: `Autorinnen (n = ${fmtN(pd.nFemale)})`, data: ovFem,  backgroundColor: GENDER_META.female.color, borderColor: GENDER_META.female.line, borderWidth: 2, borderRadius: 2 },
                 ],
             },
             options: {
@@ -3213,7 +3226,7 @@ function renderGenderPhenomSections() {
                                 const cell = f.cells.find(x => x.g === gk);
                                 const cnt  = cell ? cell.n : 0;
                                 const name = isMale ? 'Autoren' : 'Autorinnen';
-                                return ` ${name}: ${c.parsed.x.toFixed(2)}% (${cnt}/${tot})`;
+                                return ` ${name}: ${c.parsed.x.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2})}% (${cnt}/${tot})`;
                             },
                         },
                     },
@@ -3377,7 +3390,7 @@ function renderGenderPhenomSections() {
                                 const f    = sorted[c.dataIndex];
                                 const cell = f.cells.find(x => x.g === gk);
                                 const cnt  = cell ? cell.n : 0;
-                                return ` ${isMale ? 'Autoren' : 'Autorinnen'}: ${c.parsed.x.toFixed(2)}% (${cnt}/${tot})`;
+                                return ` ${isMale ? 'Autoren' : 'Autorinnen'}: ${c.parsed.x.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2})}% (${cnt}/${tot})`;
                             },
                         },
                     },
@@ -3505,7 +3518,7 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
             labels,
             datasets: [
                 {
-                    label: `Autoren (n=${pd.nMale})`,
+                    label: `Autoren (n = ${fmtN(pd.nMale)})`,
                     data: maleData,
                     backgroundColor: GENDER_META.male.color,
                     borderColor:     GENDER_META.male.line,
@@ -3513,7 +3526,7 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
                     borderRadius: 2,
                 },
                 {
-                    label: `Autorinnen (n=${pd.nFemale})`,
+                    label: `Autorinnen (n = ${fmtN(pd.nFemale)})`,
                     data: femData,
                     backgroundColor: GENDER_META.female.color,
                     borderColor:     GENDER_META.female.line,
@@ -3538,14 +3551,14 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
                             const tot  = isMale ? pd.nMale : pd.nFemale;
                             const cell = f.cells.find(x => x.g === gk);
                             const cnt  = cell ? cell.n : 0;
-                            const pct  = ctx.parsed.x.toFixed(2);
+                            const pct  = ctx.parsed.x.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
                             const name = isMale ? 'Autoren' : 'Autorinnen';
                             const uCell = f.cells.find(x => x.g === 'unknown');
                             const uCnt  = uCell ? uCell.n : 0;
-                            const uPct  = pd.nUnknown > 0 ? (uCnt / pd.nUnknown * 100).toFixed(2) : '0.00';
+                            const uPct  = pd.nUnknown > 0 ? (uCnt / pd.nUnknown * 100).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2}) : '0.00';
                             const lines = [` ${name}: ${pct}% (${cnt}/${tot})`];
                             if (ctx.datasetIndex === 1) {
-                                lines.push(` Kein Eintrag: ${uPct}% (${uCnt}/${pd.nUnknown})`);
+                                lines.push(` Kein Eintrag: ${uPct}% (${uCnt}/${fmtN(pd.nUnknown)})`);
                             }
                             return lines;
                         },
@@ -3599,3 +3612,468 @@ document.addEventListener('DOMContentLoaded', () => {
             _genderChartInited.phenom = true;
         });
 });
+
+// ── Statistik 12: Wiki-Metriken ───────────────────────────────────────────────
+
+(function () {
+    'use strict';
+
+    // ── CSV-Parser ─────────────────────────────────────────────────────────────
+    function parseCsv(text) {
+        const lines   = text.trim().split('\n');
+        const headers = lines[0].split(',').map(h => h.trim());
+        return lines.slice(1).map(line => {
+            const vals = line.split(',');
+            const obj  = {};
+            headers.forEach((h, i) => { obj[h] = (vals[i] || '').trim(); });
+            return obj;
+        });
+    }
+
+    function toEntry(r) {
+        return {
+            name:       r['Autor_in']           || '',
+            wikidataId: r['Author Wikidata ID']  || '',
+            sitelinks:  parseInt(r['Author Sitelinks']) || 0,
+            qrank:      r['Author QRank'] !== '' ? (parseInt(r['Author QRank']) || null) : null,
+            workCount:  parseInt(r['Work Count']) || 0,
+        };
+    }
+
+    function dedup(entries) {
+        const map = new Map();
+        entries.forEach(e => {
+            if (!map.has(e.wikidataId)) {
+                map.set(e.wikidataId, Object.assign({}, e));
+            } else {
+                const ex = map.get(e.wikidataId);
+                ex.workCount += e.workCount;
+                ex.sitelinks  = Math.max(ex.sitelinks, e.sitelinks);
+                if (e.qrank !== null) ex.qrank = Math.max(ex.qrank || 0, e.qrank);
+            }
+        });
+        return Array.from(map.values());
+    }
+
+    // ── Farben ─────────────────────────────────────────────────────────────────
+    const WM_C = {
+        primary:     'rgba(94,23,235,0.75)',
+        primaryLine: '#5e17eb',
+        gray:        'rgba(107,114,128,0.75)',
+        grayLine:    '#6b7280',
+    };
+
+    // ── Tabs ───────────────────────────────────────────────────────────────────
+    const WM_TABS = [
+        { key: 'qrank',     label: 'QRank' },
+        { key: 'sitelinks', label: 'Sitelinks' },
+    ];
+
+
+
+    // Lila-Farbe passend zum restlichen System
+    const BTN_ACTIVE_BG    = '#5e17eb';
+    const BTN_ACTIVE_COLOR = '#fff';
+    const BTN_INACTIVE_BG  = 'transparent';
+    const BTN_INACTIVE_COLOR = '#5e17eb';
+    const BTN_INACTIVE_BORDER = '#5e17eb';
+
+    function buildWmTabs(state) {
+        const bar = document.getElementById('wm-tab-bar');
+        if (!bar) return;
+        WM_TABS.forEach((t, i) => {
+            const btn = document.createElement('button');
+            btn.dataset.pane = t.key;
+            btn.textContent  = t.label;
+            styleWmBtn(btn, i === 0);
+            btn.addEventListener('click', () => switchWmPane(t.key, state));
+            bar.appendChild(btn);
+        });
+    }
+
+    function styleWmBtn(btn, active) {
+        btn.style.cssText =
+            `font-family:Geist,system-ui,sans-serif;font-size:.83rem;` +
+            `padding:.3rem .85rem;border-radius:.375rem;cursor:pointer;` +
+            `border:1px solid ${BTN_INACTIVE_BORDER};` +
+            `background:${active ? BTN_ACTIVE_BG    : BTN_INACTIVE_BG};` +
+            `color:${active      ? BTN_ACTIVE_COLOR : BTN_INACTIVE_COLOR};` +
+            `transition:background .15s,color .15s;`;
+    }
+
+    function switchWmPane(key, state) {
+        WM_TABS.forEach(t => {
+            const pane = document.getElementById('wm-pane-' + t.key);
+            const btn  = document.querySelector(`#wm-tab-bar [data-pane="${t.key}"]`);
+            if (pane) pane.style.display = t.key === key ? '' : 'none';
+            if (btn)  styleWmBtn(btn, t.key === key);
+        });
+        const metaEl = document.getElementById('wm-scatter-meta');
+        if (metaEl) metaEl.style.display = key === 'qrank' ? '' : 'none';
+        if (key === 'qrank') {
+            if (!state.charts.scatter)      renderWmScatter(state);
+            if (!state.charts.topqrank)     renderWmTopQrank(state);
+        }
+        if (key === 'sitelinks') {
+            if (!state.charts.slscatter)    renderWmSlScatter(state);
+            renderWmSitelinksPie(state);
+            if (!state.charts.topsitelinks) renderWmTopSitelinks(state);
+        }
+    }
+
+    // ── KPI-Leiste ─────────────────────────────────────────────────────────────
+    function buildWmKpi(WM_DATA, WM_WITH_QRANK, medianQRank, avgSitelinks) {
+        const wrap = document.getElementById('wm-kpi-wrap');
+        if (!wrap) return;
+        const WM_TOTAL   = WM_DATA.length;
+        const WM_NO_WIKI = WM_DATA.filter(d => d.sitelinks === 0).length;
+
+        // Grid wie Stat10
+        wrap.style.cssText =
+            'display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));' +
+            'gap:1rem;margin-bottom:1.5rem';
+
+        function kpiCard(id, label, value, color) {
+            const card = document.createElement('div');
+            if (id) card.id = id;
+            card.style.cssText =
+                'border:1px solid #e5e7eb;border-radius:8px;padding:.9rem 1.1rem;' +
+                'text-align:center;background:#fff;';
+            card.innerHTML =
+                `<div style="font-size:.75rem;font-weight:700;color:#6b7280;` +
+                `text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem">${label}</div>` +
+                `<div style="font-size:1.7rem;font-weight:700;color:${color};line-height:1.1">${value}</div>`;
+            return card;
+        }
+
+        wrap.appendChild(kpiCard(null, 'Autor_innen gesamt',    WM_TOTAL.toLocaleString('de-DE'),                       '#1f2937'));
+        wrap.appendChild(kpiCard(null, 'Mit Wikipedia-Artikel', (WM_TOTAL - WM_NO_WIKI).toLocaleString('de-DE'),       '#5e17eb'));
+        wrap.appendChild(kpiCard(null, 'Median QRank',          medianQRank.toLocaleString('de-DE'),                                   '#5e17eb'));
+        wrap.appendChild(kpiCard(null, 'Ø Sitelinks',           avgSitelinks.toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}), '#6b7280'));
+    }
+
+    // ── Scatter-Hilfsfunktion: Bubble-Chart ───────────────────────────────────
+    function makeScatterChart(canvasId, points, xLabel, yLabel, yLog, labelSet, getLabel, nameField) {
+        const canvas = document.getElementById(canvasId);
+        if (!canvas) return null;
+
+        const labelPlugin = {
+            id: 'wmLabels_' + canvasId,
+            afterDatasetsDraw(chart) {
+                if (!labelSet || labelSet.size === 0) return;
+                const { ctx, scales: { x, y } } = chart;
+                ctx.save();
+                ctx.font      = '10px Geist, system-ui, sans-serif';
+                ctx.fillStyle = '#374151';
+                ctx.textAlign = 'left';
+                points.forEach(d => {
+                    if (!labelSet.has(d.wikidataId)) return;
+                    const px = x.getPixelForValue(d.x);
+                    const py = y.getPixelForValue(d.y);
+                    const nm = d.name.length > 22 ? d.name.slice(0, 20) + '…' : d.name;
+                    ctx.fillText(nm, px + d.r + 3, py + 3);
+                });
+                ctx.restore();
+            }
+        };
+
+        const yScaleCfg = yLog
+            ? {
+                type: 'logarithmic',
+                title: { display: true, text: yLabel, font: { family: 'Geist, system-ui', size: 11 }, color: '#6b7280' },
+                ticks: {
+                    font: { family: 'Geist, system-ui', size: 10 },
+                    callback: v => { const l = Math.log10(v); return Number.isInteger(l) ? (v >= 1000 ? (v/1000)+'k' : v) : null; }
+                },
+                grid: { color: 'rgba(0,0,0,0.06)' },
+              }
+            : {
+                title: { display: true, text: yLabel, font: { family: 'Geist, system-ui', size: 11 }, color: '#6b7280' },
+                ticks: { font: { family: 'Geist, system-ui', size: 11 } },
+                grid:  { color: 'rgba(0,0,0,0.06)' },
+                min: 0,
+              };
+
+        return new Chart(canvas.getContext('2d'), {
+            type: 'scatter',
+            plugins: [labelPlugin],
+            data: {
+                datasets: [{
+                    label: 'Autor_in',
+                    data: points,
+                    backgroundColor: WM_C.primary,
+                    borderColor:     WM_C.primaryLine,
+                    borderWidth: 1,
+                    pointRadius: 4,
+                    pointHoverRadius: 6,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { label: ctx => getLabel(ctx.raw) } }
+                },
+                scales: {
+                    x: {
+                        title: { display: true, text: xLabel, font: { family: 'Geist, system-ui', size: 11 }, color: '#6b7280' },
+                        ticks: { font: { family: 'Geist, system-ui', size: 11 }, stepSize: 1 },
+                        grid:  { color: 'rgba(0,0,0,0.06)' },
+                        min: 0,
+                    },
+                    y: yScaleCfg,
+                }
+            }
+        });
+    }
+
+    // ── Chart 1: QRank vs. Korpuspräsenz ──────────────────────────────────────
+    function renderWmScatter(state) {
+        if (state.charts.scatter) { state.charts.scatter.destroy(); }
+        const { WM_WITH_QRANK } = state;
+        // n-Info unter der Beschreibung
+        const metaEl = document.getElementById('wm-scatter-meta');
+        if (metaEl) metaEl.textContent = `${WM_WITH_QRANK.length} Autor_innen mit QRank`;
+        const points = WM_WITH_QRANK.map(d => ({
+            x: d.workCount, y: d.qrank,
+            r: 4,
+            name: d.name, qrank: d.qrank,
+            workCount: d.workCount, wikidataId: d.wikidataId,
+        }));
+        state.charts.scatter = makeScatterChart(
+            'chart-wm-scatter', points,
+            'Korpuspräsenz', 'QRank', true,
+            null,
+            d => [` ${d.name}`, ` QRank: ${d.qrank.toLocaleString('de-DE')}`, ` Korpuspräsenz: ${d.workCount}`]
+        );
+    }
+
+    // ── Chart 2: Sitelinks vs. Korpuspräsenz ──────────────────────────────────
+    function renderWmSlScatter(state) {
+        if (state.charts.slscatter) { state.charts.slscatter.destroy(); }
+        const data = state.WM_DATA.filter(d => d.sitelinks > 0);
+        const points = data.map(d => ({
+            x: d.workCount, y: d.sitelinks,
+            r: 4,
+            name: d.name, sitelinks: d.sitelinks,
+            workCount: d.workCount, wikidataId: d.wikidataId,
+        }));
+        state.charts.slscatter = makeScatterChart(
+            'chart-wm-slscatter', points,
+            'Korpuspräsenz', 'Sitelinks', false,
+            null,
+            d => [` ${d.name}`, ` Sitelinks: ${d.sitelinks}`, ` Korpuspräsenz: ${d.workCount}`]
+        );
+    }
+
+    // ── Gemeinsame Balken-Render-Funktion für Top-QRank und Top-Sitelinks ─────
+    function renderWmTopBar(state, chartKey, canvasId, wrapId, selId, dataFn, ds0Fn, ds1Fn, xTitle0, xTitle1) {
+        const topN = parseInt(document.getElementById(selId)?.value || '0') || Infinity;
+        const wrap = document.getElementById(wrapId);
+        if (!wrap) return;
+
+        const items  = dataFn(topN);
+        const labels = uniqueLabels(items.map(d => d.name));
+        const d0     = items.map(ds0Fn);
+        const d1     = items.map(ds1Fn);
+        const height = canvasHeight(items.length);
+
+        wrap.innerHTML = `<canvas id="${canvasId}" style="height:${height}px"/>`;
+        const canvas   = document.getElementById(canvasId);
+        if (!canvas) return;
+
+        if (state.charts[chartKey]) { state.charts[chartKey].destroy(); }
+        state.charts[chartKey] = new Chart(canvas.getContext('2d'), {
+            type: 'bar',
+            data: {
+                labels,
+                datasets: [
+                    {
+                        label: xTitle0,
+                        data: d0,
+                        backgroundColor: WM_C.primary,
+                        borderColor:     WM_C.primaryLine,
+                        borderWidth: 2, borderRadius: 2,
+                        xAxisID: 'x',
+                    },
+                    {
+                        label: xTitle1,
+                        data: d1,
+                        backgroundColor: WM_C.gray,
+                        borderColor:     WM_C.grayLine,
+                        borderWidth: 2, borderRadius: 2,
+                        xAxisID: 'x2',
+                    },
+                ],
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                interaction: { mode: 'nearest', axis: 'y', intersect: true },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: ctx => {
+                                const d = items[ctx.dataIndex];
+                                if (ctx.datasetIndex === 0) {
+                                    return ` ${xTitle0}: ${typeof d0[ctx.dataIndex] === 'number' && d0[ctx.dataIndex] % 1 !== 0
+                                        ? d0[ctx.dataIndex].toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) + '%'
+                                        : Number(d0[ctx.dataIndex]).toLocaleString('de-DE')}`;
+                                }
+                                return ` Korpuspräsenz: ${d.workCount}`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        position: 'bottom', min: 0,
+                        ticks: { font: { family: 'Geist, system-ui', size: 11 } },
+                        grid:  { color: 'rgba(0,0,0,0.06)' },
+                        title: { display: true, text: xTitle0, font: { family: 'Geist, system-ui', size: 10 }, color: '#6b7280' },
+                    },
+                    x2: {
+                        position: 'top', min: 0,
+                        ticks: { font: { family: 'Geist, system-ui', size: 11 }, stepSize: 5 },
+                        grid:  { display: false },
+                        title: { display: true, text: 'Korpuspräsenz', font: { family: 'Geist, system-ui', size: 10 }, color: '#6b7280' },
+                    },
+                    y: {
+                        ticks: { font: { family: 'Geist, system-ui', size: 11 }, autoSkip: false },
+                        grid:  { display: false },
+                        afterFit(scale) {
+                            const maxLen = labels.reduce((m, l) => Math.max(m, l.length), 0);
+                            scale.width  = Math.min(220, Math.max(120, maxLen * 6 + 16));
+                        },
+                    },
+                },
+            },
+        });
+    }
+
+    // ── Chart 3: Top QRank ────────────────────────────────────────────────────
+    function renderWmTopQrank(state) {
+        const selVal = document.getElementById('sel-wm-qrank-topn')?.value || '50';
+        const topN   = selVal === '0' ? Infinity : parseInt(selVal);
+        const sorted = [...state.WM_WITH_QRANK].sort((a, b) => b.qrank - a.qrank);
+        const items  = isFinite(topN) ? sorted.slice(0, topN) : sorted;
+        const metaEl = document.getElementById('wm-scatter-meta');
+        if (metaEl) metaEl.textContent = `${state.WM_WITH_QRANK.length} Autor_innen mit QRank`;
+        const maxQ   = items[0].qrank;
+        renderWmTopBar(
+            state, 'topqrank', 'chart-wm-topqrank-inner', 'wm-topqrank-wrap', 'sel-wm-qrank-topn',
+            () => items,
+            d => parseFloat((d.qrank / maxQ * 100).toFixed(2)),
+            d => d.workCount,
+            'QRank (normalisiert, %)', 'Korpuspräsenz'
+        );
+    }
+
+    // ── Chart 4: Top Sitelinks ────────────────────────────────────────────────
+    function renderWmTopSitelinks(state) {
+        const selVal = document.getElementById('sel-wm-sl-topn')?.value || '50';
+        const topN   = selVal === '0' ? Infinity : parseInt(selVal);
+        const sorted = [...state.WM_DATA].sort((a, b) => b.sitelinks - a.sitelinks);
+        const items  = isFinite(topN) ? sorted.slice(0, topN) : sorted;
+        renderWmTopBar(
+            state, 'topsitelinks', 'chart-wm-topsitelinks-inner', 'wm-topsitelinks-bar-wrap', 'sel-wm-sl-topn',
+            () => items,
+            d => d.sitelinks,
+            d => d.workCount,
+            'Sitelinks', 'Korpuspräsenz'
+        );
+    }
+
+    // ── Donut Sitelinks-Verteilung (bleibt im Sitelinks-Tab) ──────────────────
+    function renderWmSitelinksPie(state) {
+        const wrap = document.getElementById('wm-sitelinks-donut-wrap');
+        if (!wrap || state.charts.sitelinksPie) return;
+        state.charts.sitelinksPie = true;
+
+        const { WM_DATA }  = state;
+        const WM_TOTAL     = WM_DATA.length;
+        const buckets = [
+            { label: 'Kein Artikel (0)',  min: 0,  max: 0,    color: 'rgba(107,114,128,0.7)', line: '#6b7280' },
+            { label: '1–5 Sprachen',      min: 1,  max: 5,    color: 'rgba(94,23,235,0.45)',  line: '#5e17eb' },
+            { label: '6–20 Sprachen',     min: 6,  max: 20,   color: 'rgba(94,23,235,0.75)',  line: '#5e17eb' },
+            { label: '21–50 Sprachen',    min: 21, max: 50,   color: 'rgba(8,145,178,0.75)',  line: '#0891b2' },
+            { label: '> 50 Sprachen',     min: 51, max: 9999, color: 'rgba(220,85,38,0.75)',  line: '#dc5526' },
+        ];
+        const counts = buckets.map(b => WM_DATA.filter(d => d.sitelinks >= b.min && d.sitelinks <= b.max).length);
+        const pcts   = counts.map(c => (c / WM_TOTAL * 100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}));
+
+        const donutWrap = document.createElement('div');
+        donutWrap.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:0.5rem;';
+        const donutCanvas = document.createElement('canvas');
+        donutCanvas.style.cssText = 'width:220px;height:220px;max-width:220px;max-height:220px;';
+        donutWrap.appendChild(donutCanvas);
+
+        const legendDiv = document.createElement('div');
+        legendDiv.style.cssText = 'display:flex;flex-direction:column;gap:.3rem;font-size:.8rem;color:#374151;margin-top:.25rem;';
+        buckets.forEach((b, i) => {
+            legendDiv.innerHTML +=
+                `<span><span style="display:inline-block;width:12px;height:12px;border-radius:2px;` +
+                `background:${b.color};margin-right:5px;vertical-align:middle;"></span>` +
+                `${b.label}: ${counts[i]} (${pcts[i]}%)</span>`;
+        });
+        donutWrap.appendChild(legendDiv);
+        wrap.appendChild(donutWrap);
+
+        new Chart(donutCanvas.getContext('2d'), {
+            type: 'doughnut',
+            data: {
+                labels: buckets.map(b => b.label),
+                datasets: [{ data: counts, backgroundColor: buckets.map(b => b.color), borderColor: buckets.map(b => b.line), borderWidth: 2 }]
+            },
+            options: {
+                responsive: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.parsed} (${pcts[ctx.dataIndex]}%)` } }
+                }
+            }
+        });
+    }
+
+    // ── Init ──────────────────────────────────────────────────────────────────
+    document.addEventListener('DOMContentLoaded', () => {
+        fetch('../../data/wikimetrix.csv')
+            .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+            .then(text => {
+                const raw         = parseCsv(text).map(toEntry).filter(e => e.wikidataId);
+                const WM_DATA     = dedup(raw);
+                const WM_WITH_QRANK = WM_DATA.filter(d => d.qrank !== null && d.qrank > 0);
+                const qranks      = [...WM_WITH_QRANK].map(d => d.qrank).sort((a, b) => a - b);
+                const medianQRank = qranks[Math.floor(qranks.length / 2)];
+                const avgSitelinks = parseFloat((WM_DATA.reduce((s, d) => s + d.sitelinks, 0) / WM_DATA.length).toFixed(1));
+
+                const state = { WM_DATA, WM_WITH_QRANK, charts: {} };
+
+                buildWmKpi(WM_DATA, WM_WITH_QRANK, medianQRank, avgSitelinks);
+                buildWmTabs(state);
+                renderWmScatter(state);
+                renderWmScatter(state);
+                renderWmTopQrank(state);
+
+                document.getElementById('sel-wm-qrank-topn')?.addEventListener('change', () => {
+                    if (state.charts.topqrank) { state.charts.topqrank.destroy(); state.charts.topqrank = null; }
+                    renderWmTopQrank(state);
+                });
+                document.getElementById('sel-wm-sl-topn')?.addEventListener('change', () => {
+                    if (state.charts.topsitelinks) { state.charts.topsitelinks.destroy(); state.charts.topsitelinks = null; }
+                    renderWmTopSitelinks(state);
+                    // Donut neu triggern wenn nötig
+                    renderWmSitelinksPie(state);
+                });
+            })
+            .catch(err => {
+                console.error('wikimetrix.csv konnte nicht geladen werden:', err);
+                const kpi = document.getElementById('wm-kpi-wrap');
+                if (kpi) kpi.innerHTML = `<p style="color:#dc2626;font-size:.85rem;">Fehler beim Laden der Wiki-Daten: ${err.message}</p>`;
+            });
+    });
+
+})();
