@@ -1251,10 +1251,8 @@ def main(ttl_path: str, xml_out: str) -> None:
                 gc_el.set("gender", gk)
                 gc_el.set("n",      str(cnt))
 
-    # ── Gattung × Geschlecht (alle Autor_innen, jede F2 zählt) ──────────────────
-    # Alle Texte aller Personen via P14i_performed.
-    # Eine F2 mit mehreren Autor_innen zählt für jedes Geschlecht einmal.
-    # Gezählt werden distinkte F2-URIs pro Gattung und Geschlecht.
+    # ── Gattung × Geschlecht ──────────────────
+
     genre_gender_f2s: dict[str, dict[str, set]] = defaultdict(
         lambda: {"male": set(), "female": set(), "unknown": set()}
     )
