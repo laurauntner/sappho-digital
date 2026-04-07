@@ -4037,7 +4037,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ── Init ──────────────────────────────────────────────────────────────────
     document.addEventListener('DOMContentLoaded', () => {
-        fetch('../../data/wikimetrix.csv')
+        fetch('https://raw.githubusercontent.com/laurauntner/sappho-digital/main/data/wikimetrix.csv')
             .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
             .then(text => {
                 const raw         = parseCsv(text).map(toEntry).filter(e => e.wikidataId);
