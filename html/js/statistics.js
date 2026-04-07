@@ -3669,8 +3669,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { key: 'sitelinks', label: 'Sitelinks' },
     ];
 
-
-
     // Lila-Farbe passend zum restlichen System
     const BTN_ACTIVE_BG    = '#5e17eb';
     const BTN_ACTIVE_COLOR = '#fff';
@@ -3828,11 +3826,10 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ── Chart 1: QRank vs. Korpuspräsenz ──────────────────────────────────────
+    // ── QRank vs. Korpuspräsenz ──────────────────────────────────────
     function renderWmScatter(state) {
         if (state.charts.scatter) { state.charts.scatter.destroy(); }
         const { WM_WITH_QRANK } = state;
-        // n-Info unter der Beschreibung
         const metaEl = document.getElementById('wm-scatter-meta');
         if (metaEl) metaEl.textContent = `${WM_WITH_QRANK.length} Autor_innen mit QRank`;
         const points = WM_WITH_QRANK.map(d => ({
@@ -3849,7 +3846,7 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     }
 
-    // ── Chart 2: Sitelinks vs. Korpuspräsenz ──────────────────────────────────
+    // ── Sitelinks vs. Korpuspräsenz ──────────────────────────────────
     function renderWmSlScatter(state) {
         if (state.charts.slscatter) { state.charts.slscatter.destroy(); }
         const data = state.WM_DATA.filter(d => d.sitelinks > 0);
@@ -3954,7 +3951,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ── Chart 3: Top QRank ────────────────────────────────────────────────────
+    // ── Top QRank ────────────────────────────────────────────────────
     function renderWmTopQrank(state) {
         const selVal = document.getElementById('sel-wm-qrank-topn')?.value || '50';
         const topN   = selVal === '0' ? Infinity : parseInt(selVal);
@@ -3972,7 +3969,7 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     }
 
-    // ── Chart 4: Top Sitelinks ────────────────────────────────────────────────
+    // ── Top Sitelinks ────────────────────────────────────────────────
     function renderWmTopSitelinks(state) {
         const selVal = document.getElementById('sel-wm-sl-topn')?.value || '50';
         const topN   = selVal === '0' ? Infinity : parseInt(selVal);
@@ -3987,7 +3984,7 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     }
 
-    // ── Donut Sitelinks-Verteilung (bleibt im Sitelinks-Tab) ──────────────────
+    // ── Donut Sitelinks-Verteilung ──────────────────
     function renderWmSitelinksPie(state) {
         const wrap = document.getElementById('wm-sitelinks-donut-wrap');
         if (!wrap || state.charts.sitelinksPie) return;
@@ -4065,7 +4062,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.getElementById('sel-wm-sl-topn')?.addEventListener('change', () => {
                     if (state.charts.topsitelinks) { state.charts.topsitelinks.destroy(); state.charts.topsitelinks = null; }
                     renderWmTopSitelinks(state);
-                    // Donut neu triggern wenn nötig
                     renderWmSitelinksPie(state);
                 });
             })
