@@ -885,7 +885,6 @@
                   <div id="wm-scatter-meta"
                     style="text-align:center;font-size:.8rem;color:#6b7280;margin:.25rem 0 1rem"/>
 
-                  <!-- Tab: QRank -->
                   <div id="wm-pane-qrank">
                     <p class="stats-subtitle stats-subtitle-sm" style="text-align:center">QRank vs.
                       Korpuspräsenz</p>
@@ -916,7 +915,6 @@
                     <div id="wm-topqrank-wrap" class="chart-wrap"/>
                   </div>
 
-                  <!-- Tab: Sitelinks -->
                   <div id="wm-pane-sitelinks" style="display:none">
                     <p class="stats-subtitle stats-subtitle-sm" style="text-align:center">Sitelinks
                       vs. Korpuspräsenz</p>
