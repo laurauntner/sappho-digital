@@ -2004,3 +2004,13 @@ html {
 #wc-chart-wrap {
     overflow-x: auto;
 }
+
+#wm-kpi-wrap {
+    margin-bottom: 1.25rem;
+}
+#wm-tab-bar .btn {
+    transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+}
+#wm-sitelinks-wrap {
+    padding-top: 0.25rem;
+}
