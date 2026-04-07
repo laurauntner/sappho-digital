@@ -530,10 +530,10 @@
                       <a href="#stat10">Durchschnittliche Relationen und gemeinsame Phänomene</a>
                     </li>
                     <li>
-                      <a href="#stat11">Gender – Überblick, Zeitverlauf, Gattungen und Phänomene</a>
+                      <a href="#stat11">Genderspezifische Analysen</a>
                     </li>
                     <li>
-                      <a href="#stat12">Wiki-Metriken: Popularität und Korpuspräsenz</a>
+                      <a href="#stat12">Popularitätsanalysen mit Wiki-Metriken</a>
                     </li>
                   </ol>
                 </nav>
@@ -820,8 +820,7 @@
                   <div id="stat10-wrap-inner"/>
                 </div>
                 <div class="stats-wrap" id="stat11">
-                  <p class="stats-subtitle">Statistik 11: Gender – Überblick, Zeitverlauf, Gattungen
-                    und Phänomene</p>
+                  <p class="stats-subtitle">Statistik 11: Genderspezifische Analysen</p>
                   <p class="stats-desc">Wie sieht die Geschlechterverteilung aus &#8211; insgesamt,
                     im Zeitverlauf, nach Gattungen und nach Ph&#228;nomenen? Die Gender-Angaben
                     stammen von Wikidata, sind bin&#228;r und zumeist keine Selbstidentifikationen.
@@ -871,8 +870,7 @@
                   </div>
                 </div>
                 <div class="stats-wrap" id="stat12">
-                  <p class="stats-subtitle">Statistik 12: Wiki-Metriken – Popularität und
-                    Korpuspräsenz</p>
+                  <p class="stats-subtitle">Statistik 12: Popularitätsanalysen mit Wiki-Metriken</p>
                   <p class="stats-desc">Wie populär sind Autor_innen von deutschsprachigen
                     Sappho-Rezeptionszeugnissen im Wikiversum &#8211; und wie präsent sind sie im
                     Korpus? QRank erstellt eine Rangliste von Wikidata-Einträgen, indem es die
