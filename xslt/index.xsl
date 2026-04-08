@@ -33,7 +33,7 @@
                                     gesammelt &#8211; von den Anf&#228;ngen bis in die
                                     Gegenwart.</p>
                                 <a href="about.html" class="btn btn-secondary button"
-                                    style="display:inline-block;text-decoration:none;margin-bottom:2rem;"
+                                    style="display:inline-block;text-decoration:none;margin-bottom:3rem;"
                                     >&#220;ber das Projekt (work in progress)</a>
                             </div>
                             <div class="hero-kpi-grid">
