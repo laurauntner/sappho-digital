@@ -163,6 +163,31 @@ function renderChart(cat) {
     });
 }
 
+// Zeilenumbruch-Logik für Y-Achsen-Labels (global, wird von mehreren Charts genutzt)
+const FONT_SIZE = 11;
+const FONT_W    = 6.5;
+function splitLabel(label, maxW) {
+    const maxChars1 = Math.floor((maxW - 16) / FONT_W) - 2;
+    const maxChars2 = Math.floor((maxW - 16) / FONT_W);
+    if (label.length <= maxChars1) return [label];
+    const words = label.split(' ');
+    let best = null, current = '';
+    for (let i = 0; i < words.length - 1; i++) {
+        current = current ? current + ' ' + words[i] : words[i];
+        const rest = words.slice(i + 1).join(' ');
+        if (current.length <= maxChars2 && rest.length <= maxChars2)
+            best = { line1: current, line2: rest };
+    }
+    if (best) return [best.line1, best.line2];
+    const mid = Math.floor(label.length / 2);
+    const breakAt = label.lastIndexOf(' ', mid + 6);
+    const split = breakAt > 4 ? breakAt : maxChars2;
+    const line1 = label.slice(0, split).trimEnd();
+    const line2Raw = label.slice(split).trimStart();
+    const line2 = line2Raw.length > maxChars2 ? line2Raw.slice(0, maxChars2 - 1) + '…' : line2Raw;
+    return [line1, line2];
+}
+
 // Überblick-Chart für Stat1 (alle Kategorien, Top-N, nach pctReception sortiert)
 function renderCatOverview() {
     const topN = parseInt(document.getElementById('sel-cat-topn')?.value || '30');
@@ -191,30 +216,7 @@ function renderCatOverview() {
     const ctx = canvas.getContext('2d');
 
     // Plugin: nur 3px Typfarb-Streifen links
-    // Zeilenumbruch-Logik
-    const FONT_SIZE = 11;
-    const FONT_W    = 6.5;
-    const splitLabel = (label, maxW) => {
-        const maxChars1 = Math.floor((maxW - 16) / FONT_W) - 2;
-        const maxChars2 = Math.floor((maxW - 16) / FONT_W);
-        if (label.length <= maxChars1) return [label];
-        const words = label.split(' ');
-        let best = null, current = '';
-        for (let i = 0; i < words.length - 1; i++) {
-            current = current ? current + ' ' + words[i] : words[i];
-            const rest = words.slice(i + 1).join(' ');
-            if (current.length <= maxChars2 && rest.length <= maxChars2)
-                best = { line1: current, line2: rest };
-        }
-        if (best) return [best.line1, best.line2];
-        const mid = Math.floor(label.length / 2);
-        const breakAt = label.lastIndexOf(' ', mid + 6);
-        const split = breakAt > 4 ? breakAt : maxChars2;
-        const line1 = label.slice(0, split).trimEnd();
-        const line2Raw = label.slice(split).trimStart();
-        const line2 = line2Raw.length > maxChars2 ? line2Raw.slice(0, maxChars2 - 1) + '…' : line2Raw;
-        return [line1, line2];
-    };
+    // splitLabel ist global definiert
 
     const typeStripePlugin = {
         id: 'typeStripe',
@@ -450,14 +452,19 @@ document.addEventListener('DOMContentLoaded', () => {
                 'position:fixed;background:#1f2937;color:#fff;font-size:12px;' +
                 'font-family:Geist,system-ui,sans-serif;padding:6px 10px;' +
                 'border-radius:4px;pointer-events:none;display:none;z-index:9999;' +
-                'max-width:320px;white-space:normal;line-height:1.5;';
+                'max-width:320px;white-space:pre-line;line-height:1.6;';
             document.body.appendChild(_riTip);
         }
         return _riTip;
     }
-    function showRiTip(e, html) {
+    function showRiTip(e, text) {
         const t = getRiTip();
-        t.innerHTML = html;
+        // Unterstützt sowohl \n-separierte Zeilen als auch rohes HTML (Rückwärtskompatibilität)
+        t.textContent = '';
+        text.split('\n').forEach((line, i) => {
+            if (i > 0) t.appendChild(document.createElement('br'));
+            t.appendChild(document.createTextNode(line));
+        });
         t.style.display = 'block';
         moveRiTip(e);
     }
@@ -496,37 +503,74 @@ document.addEventListener('DOMContentLoaded', () => {
             return card;
         }
 
-        wrap.appendChild(kpiCard('Rezeptionszeugnisse als Berechnungsgrundlage',       n.toLocaleString('de-DE'),                                           '#1f2937'));
+        wrap.appendChild(kpiCard('Analysierte Rezeptionszeugnisse',       n.toLocaleString('de-DE'),                                           '#1f2937'));
         wrap.appendChild(kpiCard('Ø Rezeptionsindex',  avg.toLocaleString('de-DE', {minimumFractionDigits:3, maximumFractionDigits:3}), '#5e17eb'));
         wrap.appendChild(kpiCard('Median',             median.toLocaleString('de-DE', {minimumFractionDigits:3, maximumFractionDigits:3}), '#6b7280'));
         wrap.appendChild(kpiCard('Höchster Index',     maxVal.toLocaleString('de-DE', {minimumFractionDigits:4, maximumFractionDigits:4}), '#5e17eb'));
     }
 
-    // ── Haupt-Balkendiagramm ───────────────────────────────────────────────────
-    function buildRiChart(wrap, items) {
-        // Absteigend sortiert (höchster Index oben)
-        const sorted = [...items].sort((a, b) => b.reception_index - a.reception_index);
+    // ── Haupt-Balkendiagramm ─────────────────────────────────────────────────────
+    // HTML-Layout: DOM-Labels links (kein Canvas-Clipping), Balken rechts
+    function buildRiChart(wrap, items, topN) {
+        const all    = [...items].sort((a, b) => b.reception_index - a.reception_index);
+        const sorted = topN > 0 ? all.slice(0, topN) : all;
         const n      = sorted.length;
+        const ROW_H  = 36; // px pro Zeile (einheitlich, zweizeilige Einträge haben mehr Inhalt)
 
-        const chartWrap = document.createElement('div');
-        chartWrap.className = 'chart-wrap';
-        const canvas  = document.createElement('canvas');
-        canvas.id     = 'chart-ri-main';
-        canvas.style.height = Math.max(120, n * 24 + 40) + 'px';
-        chartWrap.appendChild(canvas);
-        wrap.appendChild(chartWrap);
+        // ── Äußerer Container: Labels | Canvas nebeneinander ─────────────────
+        const outer = document.createElement('div');
+        outer.style.cssText = 'display:flex;align-items:stretch;width:100%;overflow-x:auto;';
 
-        const labels   = uniqueLabels(sorted.map(d => d.authors ? `${d.label} (${d.authors})` : d.label));
-        const riVals   = sorted.map(d => d.reception_index);
-        const pNorms   = sorted.map(d => d.p_norm);
-        const iNorms   = sorted.map(d => d.i_norm);
-        const nPhenom  = sorted.map(d => d.n_phenomena);
-        const nInt31   = sorted.map(d => d.n_int31);
+        // ── Linke Spalte: DOM-Labels ──────────────────────────────────────────
+        const labelCol = document.createElement('div');
+        labelCol.style.cssText =
+            'flex-shrink:0;display:flex;flex-direction:column;justify-content:space-around;' +
+            'padding:' + (ROW_H / 2) + 'px 10px ' + (ROW_H / 2) + 'px 0;' +
+            'box-sizing:border-box;min-width:0;';
 
-        const bgColors = riVals.map(() => C.r);
-        const brColors = riVals.map(() => C.rLine);
+        sorted.forEach(d => {
+            const cell = document.createElement('div');
+            cell.style.cssText =
+                'display:flex;flex-direction:column;justify-content:center;' +
+                'min-height:' + ROW_H + 'px;text-align:right;cursor:pointer;padding:2px 0;';
+            const t1 = document.createElement('span');
+            t1.style.cssText =
+                'font-family:Geist,system-ui,sans-serif;font-size:11px;' +
+                'color:#1f2937;line-height:1.3;word-break:break-word;';
+            t1.textContent = d.label;
+            cell.appendChild(t1);
+            if (d.authors) {
+                const t2 = document.createElement('span');
+                t2.style.cssText =
+                    'font-family:Geist,system-ui,sans-serif;font-size:10px;' +
+                    'color:#6b7280;line-height:1.3;';
+                t2.textContent = '(' + d.authors + ')';
+                cell.appendChild(t2);
+            }
+            if (d.uri) {
+                cell.addEventListener('click', () => {
+                    const lid = d.uri.replace(/\/+$/, '').split('/').pop().split('#').pop();
+                    window.open('https://sappho-digital.com/' + lid + '.html', '_blank', 'noopener');
+                });
+            }
+            // Tooltip
 
-        // 0,5-Median-Referenzlinie als Annotation-Plugin
+            labelCol.appendChild(cell);
+        });
+
+        // ── Rechte Spalte: Chart.js Canvas ───────────────────────────────────
+        const canvasWrap = document.createElement('div');
+        canvasWrap.style.cssText = 'flex:1;min-width:0;position:relative;';
+        const canvas = document.createElement('canvas');
+        canvas.id    = 'chart-ri-main';
+        canvas.style.height = Math.max(120, n * ROW_H + 40) + 'px';
+        canvasWrap.appendChild(canvas);
+
+        outer.appendChild(labelCol);
+        outer.appendChild(canvasWrap);
+        wrap.appendChild(outer);
+
+        // Median-Referenzlinie
         const medianLinePlugin = {
             id: 'riMedianLine',
             afterDraw(chart) {
@@ -546,6 +590,9 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         };
 
+        const riVals   = sorted.map(d => d.reception_index);
+        const labels   = uniqueLabels(sorted.map(() => ''));  // leere Labels, DOM übernimmt
+
         charts['ri-main'] = new Chart(canvas.getContext('2d'), {
             type: 'bar',
             plugins: [medianLinePlugin],
@@ -554,8 +601,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 datasets: [{
                     label: 'Rezeptionsindex',
                     data:  riVals,
-                    backgroundColor: bgColors,
-                    borderColor:     brColors,
+                    backgroundColor: riVals.map(() => C.r),
+                    borderColor:     riVals.map(() => C.rLine),
                     borderWidth: 2,
                     borderRadius: 2,
                 }],
@@ -564,41 +611,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 indexAxis: 'y',
                 responsive: true,
                 maintainAspectRatio: false,
+                layout: { padding: { top: ROW_H / 2, bottom: ROW_H / 2 } },
                 interaction: { mode: 'nearest', axis: 'y', intersect: true },
                 plugins: {
                     legend: { display: false },
                     tooltip: {
-                        enabled: false,
-                        external: ({ chart, tooltip }) => {
-                            if (tooltip.opacity === 0) { hideRiTip(); return; }
-                            const idx  = tooltip.dataPoints?.[0]?.dataIndex;
-                            if (idx == null) return;
-                            const d    = sorted[idx];
-                            const ri   = d.reception_index.toLocaleString('de-DE', {minimumFractionDigits:4, maximumFractionDigits:4});
-                            const pn   = d.p_norm.toLocaleString('de-DE', {minimumFractionDigits:4, maximumFractionDigits:4});
-                            const inn  = d.i_norm.toLocaleString('de-DE', {minimumFractionDigits:4, maximumFractionDigits:4});
-                            const authStr = d.authors || '';
-                            const html =
-                                `<strong>${d.label}</strong>${authStr ? `<br><span style="color:rgba(255,255,255,0.6);font-size:11px">${authStr}</span>` : ''}` +
-                                `<br><span style="color:rgba(255,255,255,0.85)">Rezeptionsindex: ${ri}</span>` +
-                                `<br><span style="color:rgba(255,255,255,0.7)">Phänomendichte: ${pn} (${fmtN(d.n_phenomena)} Phänomene)</span>` +
-                                `<br><span style="color:rgba(255,255,255,0.7)">Intertextuelle Vernetzung: ${inn} (${fmtN(d.n_int31)} Knoten)</span>`;
-                            const e = tooltip._eventPosition;
-                            if (e) {
-                                const pos = chart.canvas.getBoundingClientRect();
-                                showRiTip(
-                                    { clientX: pos.left + window.scrollX + e.x,
-                                      clientY: pos.top  + window.scrollY + e.y },
-                                    html
-                                );
-                            }
+                        callbacks: {
+                            label: ctx => {
+                                const d  = sorted[ctx.dataIndex];
+                                const ri  = d.reception_index.toLocaleString('de-DE', {minimumFractionDigits:4, maximumFractionDigits:4});
+                                const pn  = d.p_norm.toLocaleString('de-DE', {minimumFractionDigits:4, maximumFractionDigits:4});
+                                const inn = d.i_norm.toLocaleString('de-DE', {minimumFractionDigits:4, maximumFractionDigits:4});
+                                return [
+                                    ...(d.authors ? [` (${d.authors})`] : []),
+                                    ` Rezeptionsindex: ${ri}`,
+                                    ` Phänomendichte: ${pn}`,
+                                    ` Intertextuelle Vernetzung: ${inn}`,
+                                ];
+                            },
+                            title: ctx => {
+                                const d = sorted[ctx[0].dataIndex];
+                                return d.label.length > 50 ? d.label.slice(0, 48) + '…' : d.label;
+                            },
                         },
                     },
                 },
                 scales: {
                     x: {
-                        min: 0,
-                        max: 1,
+                        min: 0, max: 1,
                         ticks: {
                             font: { family: 'Geist, system-ui', size: 11 },
                             callback: v => fmtN(v, 1),
@@ -607,30 +647,37 @@ document.addEventListener('DOMContentLoaded', () => {
                         grid: { color: 'rgba(0,0,0,0.06)' },
                     },
                     y: {
-                        ticks: { font: { family: 'Geist, system-ui', size: 11 }, autoSkip: false },
+                        ticks: { display: false },
                         grid:  { display: false },
-                        afterFit(scale) {
-                            const maxLen = labels.reduce((m, l) => Math.max(m, l.length), 0);
-                            scale.width  = Math.min(260, Math.max(140, maxLen * 5.5 + 16));
-                        },
+                        afterFit(scale) { scale.width = 0; },
                     },
                 },
             },
         });
 
-        // Maus-Events für Tooltip (fix: der external-Tooltip braucht clientX/Y aus dem Canvas)
-        canvas.addEventListener('mouseleave', hideRiTip);
+        // Klick auf Balken → Seite öffnen
+        canvas.style.cursor = 'pointer';
+
         canvas.addEventListener('click', evt => {
-            const points = charts['ri-main'].getElementsAtEventForMode(
+            const pts = charts['ri-main'].getElementsAtEventForMode(
                 evt, 'nearest', { axis: 'y', intersect: true }, false);
-            if (!points.length) return;
-            const d = sorted[points[0].index];
+            if (!pts.length) return;
+            const d = sorted[pts[0].index];
             if (d.uri) {
                 const lid = d.uri.replace(/\/+$/, '').split('/').pop().split('#').pop();
                 window.open('https://sappho-digital.com/' + lid + '.html', '_blank', 'noopener');
             }
         });
-        canvas.style.cursor = 'pointer';
+
+        // Labelbreite nach dem ersten Render fixieren, damit Labels und Balken exakt ausgerichtet sind
+        requestAnimationFrame(() => {
+            let maxW = 0;
+            labelCol.querySelectorAll('div').forEach(cell => {
+                maxW = Math.max(maxW, cell.scrollWidth);
+            });
+            labelCol.style.width = Math.min(320, maxW + 12) + 'px';
+            if (charts['ri-main']) charts['ri-main'].resize();
+        });
     }
 
     // ── Streudiagramm: P_norm vs. I_norm ──────────────────────────────────────
@@ -720,8 +767,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     backgroundColor: bgCols,
                     borderColor:     bgCols.map(() => C.rLine),
                     borderWidth: 1,
-                    pointRadius: 5,
-                    pointHoverRadius: 7,
+                    pointRadius: 4,
+                    pointHoverRadius: 6,
                 }],
             },
             options: {
@@ -734,9 +781,10 @@ document.addEventListener('DOMContentLoaded', () => {
                             label: ctx => {
                                 const p = ctx.raw;
                                 const name = p.label.length > 40 ? p.label.slice(0, 38) + '…' : p.label;
-                                const auth = p.authors ? ` (${p.authors})` : '';
+                                const auth = p.authors ? `(${p.authors})` : '';
                                 return [
-                                    ` ${name}${auth}`,
+                                    ` ${name}`,
+                                    ...(auth ? [` ${auth}`] : []),
                                     ` Rezeptionsindex: ${p.ri.toLocaleString('de-DE', {minimumFractionDigits:4, maximumFractionDigits:4})}`,
                                     ` Phänomendichte: ${p.x.toLocaleString('de-DE', {minimumFractionDigits:4, maximumFractionDigits:4})}`,
                                     ` Intertextuelle Vernetzung: ${p.y.toLocaleString('de-DE', {minimumFractionDigits:4, maximumFractionDigits:4})}`,
@@ -747,13 +795,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 scales: {
                     x: {
-                        min: 0, max: 0.85,
+                        min: 0, max: 0.9,
                         title: { display: true, text: 'Phänomendichte (normalisiert, Gewicht: 75 %)', font: { family: 'Geist, system-ui', size: 11 }, color: '#6b7280' },
                         ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => fmtN(v, 1), stepSize: 0.1 },
                         grid:  { color: 'rgba(0,0,0,0.06)' },
                     },
                     y: {
-                        min: 0, max: 0.65,
+                        min: 0.35, max: 0.6,
                         title: { display: true, text: 'Intertextuelle Vernetzung (normalisiert, Gewicht: 25 %)', font: { family: 'Geist, system-ui', size: 11 }, color: '#6b7280' },
                         ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => fmtN(v, 1), stepSize: 0.1 },
                         grid:  { color: 'rgba(0,0,0,0.06)' },
@@ -818,8 +866,34 @@ document.addEventListener('DOMContentLoaded', () => {
                     'Median-Ankerpunkt: 0,5</span>';
                 wrap.appendChild(medDesc);
 
-                // Balkendiagramm
-                buildRiChart(wrap, items);
+                // TopN-Steuerung
+                const riCtrlWrap = document.createElement('div');
+                riCtrlWrap.className = 'control-col-wrap';
+                const riCtrlGroup = document.createElement('div');
+                riCtrlGroup.className = 'stat3-control-group';
+                riCtrlGroup.innerHTML =
+                    '<label for="sel-ri-topn">Anzahl:</label>' +
+                    '<select id="sel-ri-topn" class="stat2-select">' +
+                    '<option value="10" selected>Top 10</option>' +
+                    '<option value="50">Top 50</option>' +
+                    '<option value="0">Alle</option>' +
+                    '</select>';
+                riCtrlWrap.appendChild(riCtrlGroup);
+                wrap.appendChild(riCtrlWrap);
+
+                // Balkendiagramm-Container (wird bei Änderung neu befüllt)
+                const riChartContainer = document.createElement('div');
+                riChartContainer.id = 'ri-chart-container';
+                wrap.appendChild(riChartContainer);
+
+                const renderRiChart = () => {
+                    const topN = parseInt(document.getElementById('sel-ri-topn')?.value || '10');
+                    if (charts['ri-main']) { charts['ri-main'].destroy(); charts['ri-main'] = null; }
+                    riChartContainer.innerHTML = '';
+                    buildRiChart(riChartContainer, items, topN);
+                };
+                document.getElementById('sel-ri-topn')?.addEventListener('change', renderRiChart);
+                renderRiChart();
 
                 // Streudiagramm
                 buildRiScatter(wrap, items);
@@ -3945,8 +4019,6 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
                 c.textAlign = 'right'; c.textBaseline = 'middle';
                 const x = lw - 6, gap = 6, r = 3;
                 const tw = c.measureText(disp).width;
-                c.beginPath(); c.fillStyle = color;
-                c.arc(x - tw - gap - r, top + h / 2, r, 0, Math.PI * 2); c.fill();
                 c.fillStyle = '#1f2937';
                 c.fillText(disp, x, top + h / 2);
                 c.restore();

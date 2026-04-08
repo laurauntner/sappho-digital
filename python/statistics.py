@@ -1316,7 +1316,7 @@ def main(ttl_path: str, xml_out: str) -> None:
 
     print(f"  Gender-Statistiken in XML geschrieben.", file=sys.stderr)
 
-    # ── receptionAuthors: uri → authors für Rezeptionsindizes-CSV ────────────
+    # ── receptionAuthors ────────────
     ra_el = ET.SubElement(root_el, "receptionAuthors")
     for f2_uri, authors_str in sorted(f2_authors_map.items(), key=lambda x: str(x[0])):
         if authors_str:
@@ -1330,7 +1330,6 @@ def main(ttl_path: str, xml_out: str) -> None:
     tree.write(xml_out, encoding="utf-8", xml_declaration=True)
     print(f"Geschrieben: {xml_out}", file=sys.stderr)
 
-    # ── Reception-Indices CSV mit authors-Spalte neu schreiben (falls vorhanden) ──
     import os, csv as _csv
     csv_path = os.path.join(os.path.dirname(xml_out), "..", "data", "reception-indices.csv")
     if os.path.exists(csv_path):

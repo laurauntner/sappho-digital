@@ -383,8 +383,8 @@
       <xsl:for-each select="statistics/receptionAuthors/entry">
         <xsl:sequence select="
             concat(
-            '&quot;', replace(@uri, '&quot;', '\&quot;'), '&quot;:',
-            '&quot;', replace(replace(@authors, '\', '\\'), '&quot;', '\&quot;'), '&quot;'
+            '&quot;', @uri, '&quot;:',
+            '&quot;', @authors, '&quot;'
             )"/>
       </xsl:for-each>
     </xsl:variable>
@@ -479,6 +479,17 @@
         <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"/>
         <script>const DATA = <xsl:value-of select="$json"/>;</script>
         <script src="js/statistics.js"/>
+        <style>
+          .stats-desc code,
+          .stats-wrap > p code,
+          .stats-wrap p code {
+              color: #5e17eb;
+              font-family: 'Geist Mono', 'Courier New', monospace;
+              font-style: normal;
+          }
+          .stats-wrap > p strong code {
+              color: #5e17eb;
+          }</style>
       </head>
       <body class="page">
         <div class="hfeed site" id="page">
@@ -489,17 +500,17 @@
                 <h1>
                   <xsl:value-of select="$doc_title"/>
                 </h1>
-                <p class="align-left">Diese Seite bietet einen Überblick über exemplarische
-                  statistische Auswertungen der annotierten Sappho-Fragmente und der analysierten
-                  Rezeptionszeugnisse. Den Auftakt bilden die Rezeptionsindizes, ein
-                  zusammengesetzter Wert zur Messung der Rezeptionsstärke einzelner Texte. Darauf
-                  folgen durchschnittliche intertextuelle Relationen und gemeinsame Phänomene,
-                  dichte intertextuelle Beziehungen sowie Phänomene als Grundlage intertextueller
-                  Relationen. Die weiteren Abschnitte zeigen alle Phänomene im Vergleich, ihre
-                  Verteilung nach Fragment-Referenz, im Laufe der Zeit und nach Gattung sowie
-                  Zusammenhänge von Stoff-Komponenten, Personenreferenzen, Werkreferenzen und
-                  Zitaten. Abschließend widmen sich zwei Abschnitte genderspezifischen Analysen
-                  sowie einer Popularitätsanalyse mittels Wiki-Metriken.</p>
+                <p class="align-left">Diese Seite bietet exemplarische statistische Auswertungen der
+                  annotierten Sappho-Fragmente und der analysierten Rezeptionszeugnisse. Den Auftakt
+                  bilden die Rezeptionsindizes, ein zusammengesetzter Wert zur Messung der
+                  Rezeptionsstärke einzelner Texte. Darauf folgen durchschnittliche intertextuelle
+                  Relationen und gemeinsame Phänomene, besonders dichte intertextuelle Beziehungen
+                  sowie Phänomene als Grundlage intertextueller Relationen. Die weiteren Abschnitte
+                  zeigen alle Phänomene im Vergleich, ihre Verteilung nach Fragment-Referenz, im
+                  Laufe der Zeit und nach Gattung sowie Zusammenhänge von Stoff-Komponenten,
+                  Personenreferenzen, Werkreferenzen und Zitaten. Abschließend widmen sich zwei
+                  Abschnitte genderspezifischen Analysen sowie einer Popularitätsanalyse mittels
+                  Wiki-Metriken.</p>
                 <p class="align-left">Nähere Informationen zur exemplarischen Analyse sind <a
                     href="analyse.html">hier</a> zu finden.</p>
                 <p class="align-left">Eine Netzwerkvisualisierung aller Daten ist <a
@@ -562,18 +573,17 @@
                   <p class="stats-desc">Der Rezeptionsindex <code>R(t)</code> ist ein
                     zusammengesetzter Wert auf einer Skala von 0 (schwach) bis 1 (stark), der
                     angibt, wie intensiv die gemessene Rezeption ist. Der Index vereint zwei
-                    Dimensionen: die <em>Ph&#228;nomendichte</em>
-                    <code>P(t)</code> &#8211; die Gesamtzahl aller einem Text zugeordneten
-                    analytischen Einheiten (Personen-, Orts- und Werkreferenzen, Figuren,
-                    rhetorische Topoi, Motive, Themen, Stoffe und Zitate) &#8211; und die
-                      <em>intertextuelle Vernetzung</em>
-                    <code>I(t)</code>, gemessen an der Anzahl der Intertext-Knoten, in denen der
-                    Text als Objekt auftritt. Da beide Rohwerte einer rechtsschiefen Verteilung
-                    folgen, werden sie logarithmisch transformiert (<code>log(1 + x)</code>), um den
-                    Einfluss von Ausrei&#223;ern zu minimieren, ohne jedoch die Rangordnung zu
-                    ver&#228;ndern. Als Normalisierungsankerpunkt dient der Median der exemplarisch
-                    analysierten Texte; durch Division durch das Doppelte des log-transformierten
-                    Medians wird dieser Ankerpunkt auf 0,5 gesetzt.</p>
+                    Dimensionen: die Ph&#228;nomendichte <code>P(t)</code> &#8211; die Gesamtzahl
+                    aller einem Text zugeordneten analytischen Einheiten (Personen-, Orts- und
+                    Werkreferenzen, Figuren, rhetorische Topoi, Motive, Themen, Stoffe und Zitate)
+                    &#8211; und die intertextuelle Vernetzung <code>I(t)</code>, gemessen an der
+                    Anzahl der Intertext-Knoten, in denen der Text als Objekt auftritt. Da beide
+                    Rohwerte einer rechtsschiefen Verteilung folgen, werden sie logarithmisch
+                    transformiert (<code>log(1 + x)</code>), um den Einfluss von Ausrei&#223;ern zu
+                    minimieren, ohne jedoch die Rangordnung zu ver&#228;ndern. Als
+                    Normalisierungsankerpunkt dient der Median der exemplarisch analysierten Texte;
+                    durch Division durch das Doppelte des log-transformierten Medians wird dieser
+                    Ankerpunkt auf 0,5 gesetzt.</p>
                   <p style="text-align:center;margin:1rem 0;"><strong><code>R(t) = 0,75 &#183;
                           P<sub>norm</sub>(t) + 0,25 &#183; I<sub>norm</sub>(t)</code></strong></p>
                   <p class="stats-desc">Die Ph&#228;nomendichte wird mit drei Vierteln gewichtet, da
