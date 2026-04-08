@@ -38,7 +38,7 @@
                             </div>
                             <div class="hero-kpi-grid">
                                 <div class="hero-kpi-card">
-                                    <div class="hero-kpi-num">
+                                    <div class="hero-kpi-num accent">
                                         <xsl:value-of
                                             select="format-number(homepage-counter/@nReception, '#.###', 'de')"
                                         />
@@ -46,7 +46,7 @@
                                     <div class="hero-kpi-lbl">Rezeptionszeugnisse</div>
                                 </div>
                                 <div class="hero-kpi-card">
-                                    <div class="hero-kpi-num">
+                                    <div class="hero-kpi-num accent">
                                         <xsl:value-of
                                             select="format-number(homepage-counter/@nAuthors, '#.###', 'de')"
                                         />
@@ -54,7 +54,7 @@
                                     <div class="hero-kpi-lbl">Autor_innen</div>
                                 </div>
                                 <div class="hero-kpi-card">
-                                    <div class="hero-kpi-num">
+                                    <div class="hero-kpi-num accent">
                                         <xsl:value-of
                                             select="format-number(homepage-counter/@nAnalysed, '#.###', 'de')"
                                         />
@@ -77,7 +77,7 @@
                                     <div class="hero-kpi-lbl">Zeitspanne</div>
                                 </div>
                                 <div class="hero-kpi-card">
-                                    <div class="hero-kpi-num">
+                                    <div class="hero-kpi-num accent">
                                         <xsl:value-of
                                             select="format-number(homepage-counter/@nTriples, '#.###', 'de')"
                                         />
