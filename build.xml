@@ -12,18 +12,20 @@
     </delete>
 
     <!-- imprint -->
-    <xslt in="./data/imprint.xml" out="${target}/imprint.html" style="./xslt/imprint.xsl">
+    <exec executable="python3" failonerror="true">
+        <arg value="python/homepage-counter.py"/>
+        <arg value="data/rdf/sappho-reception.ttl"/>
+        <arg value="${target}/homepage-counter.xml"/>
+    </exec>
+
+    <xslt in="${target}/homepage-counter.xml" out="${target}/index.html" style="./xslt/index.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
 
-    <!-- index -->
-    <xslt in="${index}" out="${target}/index.html" style="./xslt/index.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <delete file="${target}/homepage-counter.xml"/>
 
-    <!-- query -->
+        <!-- query -->
     <xslt in="${index}" out="${target}/query.html" style="./xslt/query.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
