@@ -271,6 +271,7 @@
                 '{',
                 '&quot;uri&quot;:&quot;', replace(@uri, '&quot;', '\\&quot;'), '&quot;,',
                 '&quot;label&quot;:&quot;', replace(replace(@label, '\\', '\\\\'), '&quot;', '\\&quot;'), '&quot;,',
+                '&quot;authors&quot;:&quot;', replace(replace(@authors, '\\', '\\\\'), '&quot;', '\\&quot;'), '&quot;,',
                 '&quot;pageUrl&quot;:&quot;', replace(@pageUrl, '&quot;', '\\&quot;'), '&quot;,',
                 '&quot;isSappho&quot;:', if (@isSappho = 'true') then
                   'true'
@@ -378,6 +379,16 @@
       </xsl:for-each>
     </xsl:variable>
 
+    <xsl:variable name="reception-authors-json" as="xs:string*">
+      <xsl:for-each select="statistics/receptionAuthors/entry">
+        <xsl:sequence select="
+            concat(
+            '&quot;', replace(@uri, '&quot;', '\&quot;'), '&quot;:',
+            '&quot;', replace(replace(@authors, '\', '\\'), '&quot;', '\&quot;'), '&quot;'
+            )"/>
+      </xsl:for-each>
+    </xsl:variable>
+
     <xsl:variable name="json" as="xs:string" select="
         concat(
         '{',
@@ -434,6 +445,7 @@
         '&quot;int31Hist&quot;:[', string-join($stat10-int31hist-json, ','), '],',
         '&quot;sharedHist&quot;:[', string-join($stat10-sharedhist-json, ','), ']',
         '},',
+        '&quot;receptionAuthors&quot;:{', string-join($reception-authors-json, ','), '},',
         '&quot;genderStats&quot;:{',
         '&quot;nMale&quot;:', (statistics/genderStats/@nMale, '0')[1], ',',
         '&quot;nFemale&quot;:', (statistics/genderStats/@nFemale, '0')[1], ',',
@@ -479,13 +491,15 @@
                 </h1>
                 <p class="align-left">Diese Seite bietet einen Überblick über exemplarische
                   statistische Auswertungen der annotierten Sappho-Fragmente und der analysierten
-                  Rezeptionszeugnisse. Die einzelnen Abschnitte zeigen alle Phänomene im Vergleich,
-                  ihre Verteilung nach Fragment-Referenz, im Laufe der Zeit und nach Gattung sowie
+                  Rezeptionszeugnisse. Den Auftakt bilden die Rezeptionsindizes, ein
+                  zusammengesetzter Wert zur Messung der Rezeptionsstärke einzelner Texte. Darauf
+                  folgen durchschnittliche intertextuelle Relationen und gemeinsame Phänomene,
+                  dichte intertextuelle Beziehungen sowie Phänomene als Grundlage intertextueller
+                  Relationen. Die weiteren Abschnitte zeigen alle Phänomene im Vergleich, ihre
+                  Verteilung nach Fragment-Referenz, im Laufe der Zeit und nach Gattung sowie
                   Zusammenhänge von Stoff-Komponenten, Personenreferenzen, Werkreferenzen und
-                  Zitaten. Darüber hinaus werden Phänomene als Grundlage intertextueller Relationen,
-                  besonders dichte intertextuelle Beziehungen sowie durchschnittliche Relationen und
-                  gemeinsame Phänomene sichtbar gemacht. Abschließend widmen sich zwei Abschnitte
-                  genderspezifischen Analysen sowie einer Popularitätsanalyse mittels Wiki-Metriken.</p>
+                  Zitaten. Abschließend widmen sich zwei Abschnitte genderspezifischen Analysen
+                  sowie einer Popularitätsanalyse mittels Wiki-Metriken.</p>
                 <p class="align-left">Nähere Informationen zur exemplarischen Analyse sind <a
                     href="analyse.html">hier</a> zu finden.</p>
                 <p class="align-left">Eine Netzwerkvisualisierung aller Daten ist <a
@@ -499,6 +513,18 @@
                 <nav class="stats-toc smaller-text" aria-label="Inhaltsverzeichnis">
                   <p class="stats-toc-title">Inhaltsverzeichnis</p>
                   <ol class="stats-toc-list">
+                    <li>
+                      <a href="#stat0">Rezeptionsindizes</a>
+                    </li>
+                    <li>
+                      <a href="#stat10">Durchschnittliche Relationen und gemeinsame Phänomene</a>
+                    </li>
+                    <li>
+                      <a href="#stat9">Intertextuelle Beziehungen und Textähnlichkeiten</a>
+                    </li>
+                    <li>
+                      <a href="#stat8">Phänomene als Grundlage intertextueller Relationen</a>
+                    </li>
                     <li>
                       <a href="#stat1">Alle Phänomene im Vergleich</a>
                     </li>
@@ -521,15 +547,6 @@
                       <a href="#stat7">Werkreferenzen und Zitate</a>
                     </li>
                     <li>
-                      <a href="#stat8">Phänomene als Grundlage intertextueller Relationen</a>
-                    </li>
-                    <li>
-                      <a href="#stat9">Intertextuelle Beziehungen und Textähnlichkeiten</a>
-                    </li>
-                    <li>
-                      <a href="#stat10">Durchschnittliche Relationen und gemeinsame Phänomene</a>
-                    </li>
-                    <li>
                       <a href="#stat11">Genderspezifische Analysen</a>
                     </li>
                     <li>
@@ -540,198 +557,67 @@
 
               </div>
               <div class="card-body">
-                <div class="stats-wrap" id="stat1">
-                  <p class="stats-subtitle">Statistik 1: Alle Phänomene im Vergleich</p>
-                  <p class="stats-desc">Welche Phänomene werden in Sappho-Fragmenten sowie in
-                    Rezeptionszeugnissen aktualisiert – und wo liegen die auffälligsten
-                    Übereinstimmungen oder Verschiebungen?</p>
-                  <div class="meta-bar">
-                    <div class="meta-card s">
-                      <span class="num">
-                        <xsl:value-of select="statistics/@nSappho"/>
-                      </span>
-                      <span class="lbl">Sappho-Fragmente mit Annotationen</span>
-                    </div>
-                    <div class="meta-card r">
-                      <span class="num">
-                        <xsl:value-of select="statistics/@nReception"/>
-                      </span>
-                      <span class="lbl">Analysierte Rezeptionszeugnisse</span>
-                    </div>
-                  </div>
-                  <div class="legend">
-                    <span><span class="dot dot-s"/>Sappho-Fragmente</span>
-                    <span><span class="dot dot-r"/>Rezeptionszeugnisse</span>
-                  </div>
-                  <p class="stats-subtitle stats-subtitle-sm">Überblick (Top-N)</p>
+                <div class="stats-wrap" id="stat0">
+                  <p class="stats-subtitle">Statistik 1: Rezeptionsindizes</p>
+                  <p class="stats-desc">Der Rezeptionsindex <code>R(t)</code> ist ein
+                    zusammengesetzter Wert auf einer Skala von 0 (schwach) bis 1 (stark), der
+                    angibt, wie intensiv die gemessene Rezeption ist. Der Index vereint zwei
+                    Dimensionen: die <em>Ph&#228;nomendichte</em>
+                    <code>P(t)</code> &#8211; die Gesamtzahl aller einem Text zugeordneten
+                    analytischen Einheiten (Personen-, Orts- und Werkreferenzen, Figuren,
+                    rhetorische Topoi, Motive, Themen, Stoffe und Zitate) &#8211; und die
+                      <em>intertextuelle Vernetzung</em>
+                    <code>I(t)</code>, gemessen an der Anzahl der Intertext-Knoten, in denen der
+                    Text als Objekt auftritt. Da beide Rohwerte einer rechtsschiefen Verteilung
+                    folgen, werden sie logarithmisch transformiert (<code>log(1 + x)</code>), um den
+                    Einfluss von Ausrei&#223;ern zu minimieren, ohne jedoch die Rangordnung zu
+                    ver&#228;ndern. Als Normalisierungsankerpunkt dient der Median der exemplarisch
+                    analysierten Texte; durch Division durch das Doppelte des log-transformierten
+                    Medians wird dieser Ankerpunkt auf 0,5 gesetzt.</p>
+                  <p style="text-align:center;margin:1rem 0;"><strong><code>R(t) = 0,75 &#183;
+                          P<sub>norm</sub>(t) + 0,25 &#183; I<sub>norm</sub>(t)</code></strong></p>
+                  <p class="stats-desc">Die Ph&#228;nomendichte wird mit drei Vierteln gewichtet, da
+                    sie das inhaltliche Analysevolumen unmittelbar abbildet; die intertextuelle
+                    Vernetzung flie&#223;t erg&#228;nzend zu einem Viertel ein.</p>
+                  <div id="ri-wrap"/>
+                </div>
+                <div class="stats-wrap" id="stat10">
+                  <p class="stats-subtitle">Statistik 2: Durchschnittliche intertextuelle
+                    Beziehungen und gemeinsame Phänomene</p>
+                  <p class="stats-desc">Wie viele intertextuelle Relationen verbinden einen Text im
+                    Durchschnitt mit anderen? Und wie viele Phänomene teilt ein Text im Schnitt mit
+                    seinen intertextuell verbundenen Texten?</p>
+                  <div id="stat10-wrap-inner"/>
+                </div>
+                <div class="stats-wrap" id="stat9">
+                  <p class="stats-subtitle">Statistik 3: Intertextuelle Beziehungen und
+                    Textähnlichkeiten</p>
+                  <p class="stats-desc">Welche intertextuellen Relationen verbinden die meisten
+                    Phänomene? Sichtbar wird, zwischen welchen Texten die reichhaltigsten impliziten
+                    Ähnlichkeiten bestehen – unabhängig von expliziten Referenzen.</p>
                   <div class="control-col-wrap">
                     <div class="stat3-control-group">
-                      <label>Anzahl:</label>
-                      <select id="sel-cat-topn" class="stat2-select">
+                      <label for="sel-stat9-topn">Anzahl:</label>
+                      <select id="sel-stat9-topn" class="stat2-select">
+                        <option value="5" selected="selected">Top 5</option>
+                        <option value="10">Top 10</option>
                         <option value="20">Top 20</option>
-                        <option value="30" selected="selected">Top 30</option>
-                        <option value="50">Top 50</option>
-                        <option value="100">Top 100</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div id="cat-overview-wrap"/>
-                  <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
-                  <div id="cats"/>
-                </div>
-                <div class="stats-wrap" id="stat2">
-                  <p class="stats-subtitle">Statistik 2: Phänomene nach Fragment-Referenz</p>
-                  <p class="stats-desc">Welche Phänomene werden in Rezeptionszeugnissen, die auf
-                    bestimmte Fragmente Bezug nehmen, übernommen, welche ausgelassen – und welche
-                    kommen neu hinzu?</p>
-                  <div class="stat2-controls stat2-controls-center">
-                    <label for="sel-sankey-fragment">Referenziertes Fragment:</label>
-                    <select id="sel-sankey-fragment" class="stat2-select">
-                      <option value="">&#8212; Fragment wählen &#8212;</option>
-                    </select>
-                  </div>
-                  <div id="sankey-wrap2">
-                    <div id="sankey-placeholder2" class="sankey-placeholder"/>
-                    <div id="sankey-svg-wrap"/>
-                    <div id="sankey-legend" class="sankey-legend"/>
-                  </div>
-                </div>
-                <div class="stats-wrap" id="stat3">
-                  <p class="stats-subtitle">Statistik 3: Phänomene im Laufe der Zeit</p>
-                  <p class="stats-desc">Wie verteilen sich konkrete Phänomene über die Zeit? Die
-                    Blasengröße zeigt, in wie vielen Rezeptionszeugnissen eines Jahrzehnts ein
-                    Phänomen annotiert ist; die Farbe kennzeichnet den Phänomentyp.</p>
-                  <p class="stats-subtitle stats-subtitle-sm">Überblick (Top-N)</p>
-                  <div class="control-col-wrap">
-                    <div class="stat3-control-group">
-                      <label>Anzahl:</label>
-                      <select id="sel-pdist-topn" class="stat2-select">
-                        <option value="20">Top 20</option>
-                        <option value="30" selected="selected">Top 30</option>
-                        <option value="50">Top 50</option>
-                        <option value="100">Top 100</option>
-                      </select>
-                    </div>
-                    <div id="pdist-type-legend" class="type-legend"/>
-                  </div>
-                  <div id="pdist-overview-wrap"/>
-                  <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
-                  <div id="pdist-type-sections"/>
-                </div>
-                <div class="stats-wrap" id="stat4">
-                  <p class="stats-subtitle">Statistik 4: Phänomene nach Gattung</p>
-                  <p class="stats-desc">Welche Phänomene dominieren in welcher Gattung? Die
-                    Farbintensität der Zellen zeigt die Häufigkeit innerhalb jeder Gattung; die
-                    Farbe kennzeichnet den Phänomentyp.</p>
-                  <p class="stats-subtitle stats-subtitle-sm">Überblick (Top-N)</p>
-                  <div class="control-col-wrap">
-                    <div class="stat3-control-group">
-                      <label>Anzahl:</label>
-                      <select id="sel-gdist-topn" class="stat2-select">
-                        <option value="20">Top 20</option>
-                        <option value="30" selected="selected">Top 30</option>
-                        <option value="50">Top 50</option>
-                        <option value="100">Top 100</option>
-                      </select>
-                    </div>
-                    <div id="gdist-type-legend" class="type-legend"/>
-                  </div>
-                  <div id="gdist-overview-wrap"/>
-                  <p class="stats-subtitle stats-subtitle-sm-top">Nach Gattung</p>
-                  <div id="gdist-genre-sections"/>
-                  <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
-                  <div id="gdist-type-sections"/>
-                </div>
-                <div class="stats-wrap" id="stat5">
-                  <p class="stats-subtitle">Statistik 5: Stoff-Komponenten</p>
-                  <p class="stats-desc">Welche Phänomene treten gemeinsam mit einem bestimmten Stoff
-                    auf? Der innere Ring zeigt die Phänomentypen, der äußere Ring die einzelnen
-                    Phänomene; die Segmentbreite entspricht der relativen Häufigkeit.</p>
-                  <div class="control-col-wrap">
-                    <div class="stat3-control-group">
-                      <label for="sel-pc-plot">Stoff:</label>
-                      <select id="sel-pc-plot" class="stat2-select">
-                        <option value="">&#8212; Stoff wählen &#8212;</option>
                       </select>
                     </div>
                     <div class="stat3-control-group">
-                      <label for="sel-pc-topn">Anzeigen:</label>
-                      <select id="sel-pc-topn" class="stat2-select">
-                        <option value="3">Top 3 pro Typ</option>
-                        <option value="5" selected="selected">Top 5 pro Typ</option>
-                        <option value="10">Top 10 pro Typ</option>
-                        <option value="0">Alle</option>
+                      <label for="sel-stat9-reltype">Beziehungstyp:</label>
+                      <select id="sel-stat9-reltype" class="stat2-select">
+                        <option value="all">Alle</option>
+                        <option value="reception">Nur zwischen Rezeptionszeugnissen</option>
+                        <option value="mixed">Nur zwischen Rezeptionszeugnissen und
+                          Fragmenten</option>
                       </select>
                     </div>
                   </div>
-                  <div id="pc-placeholder" class="sankey-placeholder"/>
-                  <div id="pc-svg-wrap"/>
-                  <div id="pc-legend"/>
-                </div>
-                <div class="stats-wrap" id="stat6">
-                  <p class="stats-subtitle">Statistik 6: Personenreferenzen und Figuren</p>
-                  <p class="stats-desc">Welche Personen und Personentypen werden in
-                    Sappho-Fragmenten sowie in Rezeptionszeugnissen besonders häufig nicht nur
-                    referenziert, sondern treten auch als Figuren auf? Der Vergleich zeigt pro
-                    Person bzw. Personentyp die Referenz- und Figurenhäufigkeit.</p>
-                  <div class="meta-bar">
-                    <div class="meta-card s">
-                      <span class="num">
-                        <xsl:value-of select="statistics/@nSappho"/>
-                      </span>
-                      <span class="lbl">Sappho-Fragmente mit Annotationen</span>
-                    </div>
-                    <div class="meta-card r">
-                      <span class="num">
-                        <xsl:value-of select="statistics/@nReception"/>
-                      </span>
-                      <span class="lbl">Analysierte Rezeptionszeugnisse</span>
-                    </div>
-                  </div>
-                  <div class="control-col-wrap">
-                    <div class="stat3-control-group">
-                      <label for="sel-pd-topn">Anzahl:</label>
-                      <select id="sel-pd-topn" class="stat2-select">
-                        <option value="20">Top 20</option>
-                        <option value="30" selected="selected">Top 30</option>
-                        <option value="50">Top 50</option>
-                        <option value="0">Alle</option>
-                      </select>
-                    </div>
-                    <div class="stat3-control-group">
-                      <label for="sel-pd-filter"> Filter:</label>
-                      <select id="sel-pd-filter" class="stat2-select">
-                        <option value="all">Alle Personenreferenzen</option>
-                        <option value="both">Nur auch als Figur</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div id="pd-meta-bar"/>
-                  <div class="legend">
-                    <span><span class="dot dot-s-ref"/>Referenzen in Sappho-Fragmenten</span>
-                    <span><span class="dot dot-s-char"/>Figuren in Sappho-Fragmenten</span>
-                    <span><span class="dot dot-r-ref"/>Referenzen in Rezeptionszeugnissen</span>
-                    <span><span class="dot dot-r-char"/>Figuren in Rezeptionszeugnissen</span>
-                  </div>
-                  <div class="chart-wrap">
-                    <div id="pd-chart-wrap"/>
-                  </div>
-                </div>
-                <div class="stats-wrap" id="stat7">
-                  <p class="stats-subtitle" style="text-align:center">Statistik 7: Werkreferenzen
-                    und Zitate</p>
-                  <p class="stats-desc" style="text-align:center">Welche Werke werden in den
-                      <xsl:value-of select="statistics/workCitation/@nReception"/> analysierten
-                    Rezeptionszeugnissen nicht nur referenziert, sondern auch zitiert?</p>
-                  <div id="wc-meta-bar"/>
-                  <div class="legend">
-                    <span><span class="dot dot-wc-ref"/>Nur referenziert</span>
-                    <span><span class="dot dot-wc-both"/>Referenziert und zitiert</span>
-                  </div>
-                  <div id="wc-chart-wrap" class="chart-wrap"/>
+                  <div id="stat9-cards-wrap"/>
                 </div>
                 <div class="stats-wrap" id="stat8">
-                  <p class="stats-subtitle">Statistik 8: Phänomene als Grundlage intertextueller
+                  <p class="stats-subtitle">Statistik 4: Phänomene als Grundlage intertextueller
                     Relationen</p>
                   <p class="stats-desc">Welche Phänomene sind am häufigsten ausschlaggebend für
                     intertextuelle Relationen zwischen Sappho-Fragmenten und Rezeptionszeugnissen
@@ -784,43 +670,198 @@
                   <div id="int31-pairs-wrap" style="display:flex;justify-content:center"/>
 
                 </div>
-                <div class="stats-wrap" id="stat9">
-                  <p class="stats-subtitle">Statistik 9: Intertextuelle Beziehungen und
-                    Textähnlichkeiten</p>
-                  <p class="stats-desc">Welche intertextuellen Relationen verbinden die meisten
-                    Phänomene? Sichtbar wird, zwischen welchen Texten die reichhaltigsten impliziten
-                    Ähnlichkeiten bestehen – unabhängig von expliziten Referenzen.</p>
+                <div class="stats-wrap" id="stat1">
+                  <p class="stats-subtitle">Statistik 5: Alle Phänomene im Vergleich</p>
+                  <p class="stats-desc">Welche Phänomene werden in Sappho-Fragmenten sowie in
+                    Rezeptionszeugnissen aktualisiert – und wo liegen die auffälligsten
+                    Übereinstimmungen oder Verschiebungen?</p>
+                  <div class="meta-bar">
+                    <div class="meta-card s">
+                      <span class="num">
+                        <xsl:value-of select="statistics/@nSappho"/>
+                      </span>
+                      <span class="lbl">Sappho-Fragmente mit Annotationen</span>
+                    </div>
+                    <div class="meta-card r">
+                      <span class="num">
+                        <xsl:value-of select="statistics/@nReception"/>
+                      </span>
+                      <span class="lbl">Analysierte Rezeptionszeugnisse</span>
+                    </div>
+                  </div>
+                  <div class="legend">
+                    <span><span class="dot dot-s"/>Sappho-Fragmente</span>
+                    <span><span class="dot dot-r"/>Rezeptionszeugnisse</span>
+                  </div>
+                  <p class="stats-subtitle stats-subtitle-sm">Überblick (Top-N)</p>
                   <div class="control-col-wrap">
                     <div class="stat3-control-group">
-                      <label for="sel-stat9-topn">Anzahl:</label>
-                      <select id="sel-stat9-topn" class="stat2-select">
-                        <option value="5" selected="selected">Top 5</option>
-                        <option value="10">Top 10</option>
+                      <label>Anzahl:</label>
+                      <select id="sel-cat-topn" class="stat2-select">
                         <option value="20">Top 20</option>
-                      </select>
-                    </div>
-                    <div class="stat3-control-group">
-                      <label for="sel-stat9-reltype">Beziehungstyp:</label>
-                      <select id="sel-stat9-reltype" class="stat2-select">
-                        <option value="all">Alle</option>
-                        <option value="reception">Nur zwischen Rezeptionszeugnissen</option>
-                        <option value="mixed">Nur zwischen Rezeptionszeugnissen und
-                          Fragmenten</option>
+                        <option value="30" selected="selected">Top 30</option>
+                        <option value="50">Top 50</option>
+                        <option value="100">Top 100</option>
                       </select>
                     </div>
                   </div>
-                  <div id="stat9-cards-wrap"/>
+                  <div id="cat-overview-wrap"/>
+                  <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
+                  <div id="cats"/>
                 </div>
-                <div class="stats-wrap" id="stat10">
-                  <p class="stats-subtitle">Statistik 10: Durchschnittliche intertextuelle
-                    Beziehungen und gemeinsame Phänomene</p>
-                  <p class="stats-desc">Wie viele intertextuelle Relationen verbinden einen Text im
-                    Durchschnitt mit anderen? Und wie viele Phänomene teilt ein Text im Schnitt mit
-                    seinen intertextuell verbundenen Texten?</p>
-                  <div id="stat10-wrap-inner"/>
+                <div class="stats-wrap" id="stat2">
+                  <p class="stats-subtitle">Statistik 6: Phänomene nach Fragment-Referenz</p>
+                  <p class="stats-desc">Welche Phänomene werden in Rezeptionszeugnissen, die auf
+                    bestimmte Fragmente Bezug nehmen, übernommen, welche ausgelassen – und welche
+                    kommen neu hinzu?</p>
+                  <div class="stat2-controls stat2-controls-center">
+                    <label for="sel-sankey-fragment">Referenziertes Fragment:</label>
+                    <select id="sel-sankey-fragment" class="stat2-select">
+                      <option value="">&#8212; Fragment wählen &#8212;</option>
+                    </select>
+                  </div>
+                  <div id="sankey-wrap2">
+                    <div id="sankey-placeholder2" class="sankey-placeholder"/>
+                    <div id="sankey-svg-wrap"/>
+                    <div id="sankey-legend" class="sankey-legend"/>
+                  </div>
+                </div>
+                <div class="stats-wrap" id="stat3">
+                  <p class="stats-subtitle">Statistik 7: Phänomene im Laufe der Zeit</p>
+                  <p class="stats-desc">Wie verteilen sich konkrete Phänomene über die Zeit? Die
+                    Blasengröße zeigt, in wie vielen Rezeptionszeugnissen eines Jahrzehnts ein
+                    Phänomen annotiert ist; die Farbe kennzeichnet den Phänomentyp.</p>
+                  <p class="stats-subtitle stats-subtitle-sm">Überblick (Top-N)</p>
+                  <div class="control-col-wrap">
+                    <div class="stat3-control-group">
+                      <label>Anzahl:</label>
+                      <select id="sel-pdist-topn" class="stat2-select">
+                        <option value="20">Top 20</option>
+                        <option value="30" selected="selected">Top 30</option>
+                        <option value="50">Top 50</option>
+                        <option value="100">Top 100</option>
+                      </select>
+                    </div>
+                    <div id="pdist-type-legend" class="type-legend"/>
+                  </div>
+                  <div id="pdist-overview-wrap"/>
+                  <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
+                  <div id="pdist-type-sections"/>
+                </div>
+                <div class="stats-wrap" id="stat4">
+                  <p class="stats-subtitle">Statistik 8: Phänomene nach Gattung</p>
+                  <p class="stats-desc">Welche Phänomene dominieren in welcher Gattung? Die
+                    Farbintensität der Zellen zeigt die Häufigkeit innerhalb jeder Gattung; die
+                    Farbe kennzeichnet den Phänomentyp.</p>
+                  <p class="stats-subtitle stats-subtitle-sm">Überblick (Top-N)</p>
+                  <div class="control-col-wrap">
+                    <div class="stat3-control-group">
+                      <label>Anzahl:</label>
+                      <select id="sel-gdist-topn" class="stat2-select">
+                        <option value="20">Top 20</option>
+                        <option value="30" selected="selected">Top 30</option>
+                        <option value="50">Top 50</option>
+                        <option value="100">Top 100</option>
+                      </select>
+                    </div>
+                    <div id="gdist-type-legend" class="type-legend"/>
+                  </div>
+                  <div id="gdist-overview-wrap"/>
+                  <p class="stats-subtitle stats-subtitle-sm-top">Nach Gattung</p>
+                  <div id="gdist-genre-sections"/>
+                  <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
+                  <div id="gdist-type-sections"/>
+                </div>
+                <div class="stats-wrap" id="stat5">
+                  <p class="stats-subtitle">Statistik 9: Stoff-Komponenten</p>
+                  <p class="stats-desc">Welche Phänomene treten gemeinsam mit einem bestimmten Stoff
+                    auf? Der innere Ring zeigt die Phänomentypen, der äußere Ring die einzelnen
+                    Phänomene; die Segmentbreite entspricht der relativen Häufigkeit.</p>
+                  <div class="control-col-wrap">
+                    <div class="stat3-control-group">
+                      <label for="sel-pc-plot">Stoff:</label>
+                      <select id="sel-pc-plot" class="stat2-select">
+                        <option value="">&#8212; Stoff wählen &#8212;</option>
+                      </select>
+                    </div>
+                    <div class="stat3-control-group">
+                      <label for="sel-pc-topn">Anzeigen:</label>
+                      <select id="sel-pc-topn" class="stat2-select">
+                        <option value="3">Top 3 pro Typ</option>
+                        <option value="5" selected="selected">Top 5 pro Typ</option>
+                        <option value="10">Top 10 pro Typ</option>
+                        <option value="0">Alle</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div id="pc-placeholder" class="sankey-placeholder"/>
+                  <div id="pc-svg-wrap"/>
+                  <div id="pc-legend"/>
+                </div>
+                <div class="stats-wrap" id="stat6">
+                  <p class="stats-subtitle">Statistik 10: Personenreferenzen und Figuren</p>
+                  <p class="stats-desc">Welche Personen und Personentypen werden in
+                    Sappho-Fragmenten sowie in Rezeptionszeugnissen besonders häufig nicht nur
+                    referenziert, sondern treten auch als Figuren auf? Der Vergleich zeigt pro
+                    Person bzw. Personentyp die Referenz- und Figurenhäufigkeit.</p>
+                  <div class="meta-bar">
+                    <div class="meta-card s">
+                      <span class="num">
+                        <xsl:value-of select="statistics/@nSappho"/>
+                      </span>
+                      <span class="lbl">Sappho-Fragmente mit Annotationen</span>
+                    </div>
+                    <div class="meta-card r">
+                      <span class="num">
+                        <xsl:value-of select="statistics/@nReception"/>
+                      </span>
+                      <span class="lbl">Analysierte Rezeptionszeugnisse</span>
+                    </div>
+                  </div>
+                  <div class="control-col-wrap">
+                    <div class="stat3-control-group">
+                      <label for="sel-pd-topn">Anzahl:</label>
+                      <select id="sel-pd-topn" class="stat2-select">
+                        <option value="20">Top 20</option>
+                        <option value="30" selected="selected">Top 30</option>
+                        <option value="50">Top 50</option>
+                        <option value="0">Alle</option>
+                      </select>
+                    </div>
+                    <div class="stat3-control-group">
+                      <label for="sel-pd-filter"> Filter:</label>
+                      <select id="sel-pd-filter" class="stat2-select">
+                        <option value="all">Alle Personenreferenzen</option>
+                        <option value="both">Nur auch als Figur</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div id="pd-meta-bar"/>
+                  <div class="legend">
+                    <span><span class="dot dot-s-ref"/>Referenzen in Sappho-Fragmenten</span>
+                    <span><span class="dot dot-s-char"/>Figuren in Sappho-Fragmenten</span>
+                    <span><span class="dot dot-r-ref"/>Referenzen in Rezeptionszeugnissen</span>
+                    <span><span class="dot dot-r-char"/>Figuren in Rezeptionszeugnissen</span>
+                  </div>
+                  <div class="chart-wrap">
+                    <div id="pd-chart-wrap"/>
+                  </div>
+                </div>
+                <div class="stats-wrap" id="stat7">
+                  <p class="stats-subtitle" style="text-align:center">Statistik 11: Werkreferenzen
+                    und Zitate</p>
+                  <p class="stats-desc" style="text-align:center">Welche Werke werden in den
+                      <xsl:value-of select="statistics/workCitation/@nReception"/> analysierten
+                    Rezeptionszeugnissen nicht nur referenziert, sondern auch zitiert?</p>
+                  <div id="wc-meta-bar"/>
+                  <div class="legend">
+                    <span><span class="dot dot-wc-ref"/>Nur referenziert</span>
+                    <span><span class="dot dot-wc-both"/>Referenziert und zitiert</span>
+                  </div>
+                  <div id="wc-chart-wrap" class="chart-wrap"/>
                 </div>
                 <div class="stats-wrap" id="stat11">
-                  <p class="stats-subtitle">Statistik 11: Genderspezifische Analysen</p>
+                  <p class="stats-subtitle">Statistik 12: Genderspezifische Analysen</p>
                   <p class="stats-desc">Wie sieht die Geschlechterverteilung aus &#8211; insgesamt,
                     im Zeitverlauf, nach Gattungen und nach Ph&#228;nomenen? Die Gender-Angaben
                     stammen von Wikidata, sind bin&#228;r und zumeist keine Selbstidentifikationen.
@@ -870,7 +911,7 @@
                   </div>
                 </div>
                 <div class="stats-wrap" id="stat12">
-                  <p class="stats-subtitle">Statistik 12: Popularitätsanalysen mit Wiki-Metriken</p>
+                  <p class="stats-subtitle">Statistik 13: Popularitätsanalysen mit Wiki-Metriken</p>
                   <p class="stats-desc">Wie populär sind Autor_innen von deutschsprachigen
                     Sappho-Rezeptionszeugnissen im Wikiversum &#8211; und wie präsent sind sie im
                     Korpus? QRank erstellt eine Rangliste von Wikidata-Einträgen, indem es die
