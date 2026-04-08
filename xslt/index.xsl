@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0" exclude-result-prefixes="xsl">
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    version="2.0" exclude-result-prefixes="xsl">
     <xsl:decimal-format name="de" grouping-separator="." decimal-separator=","/>
     <xsl:output encoding="UTF-8" media-type="text/html" method="xhtml" version="1.0" indent="yes"
         omit-xml-declaration="yes"/>
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
     <xsl:import href="./partials/html_footer.xsl"/>
-
+    
     <xsl:template match="/">
         <xsl:variable name="doc_title">Sappho Digital</xsl:variable>
-
+        
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
         <html xmlns="http://www.w3.org/1999/xhtml">
             <head>
@@ -21,114 +22,71 @@
             <body class="page">
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar"/>
-
-                    <!-- ── Intro mit Hintergrundbild (Original-Struktur) ───── -->
-                    <div class="container fragment-background">
-                        <div class="row intro">
-                            <div class="col-md-6 col-lg-6 col-sm-12">
-                                <div class="intro_left">
-                                    <h1>Sappho Digital</h1>
-                                    <h3>Die literarische Sappho-Rezeption <br/>im deutschsprachigen
-                                        Raum</h3>
-                                    <p>Auf dieser Webseite werden Informationen zur literarischen
-                                        Sappho-Rezeption im deutschsprachigen Raum gesammelt. Mehr
-                                        als <b>1.000 literarische Rezeptionszeugnisse vom 15. bis
-                                            zum 21. Jahrhundert</b> sind hier verzeichnet. Knapp 100
-                                        wurden exemplarisch analysiert.</p>
-                                    <p><b>Wo anfangen? Einfach scrollen &#8211; unten finden sich
-                                            vier m&#246;gliche Einstiege. &#x2193;</b></p>
-                                    <button class="btn btn-secondary button"
-                                        onclick="window.location.href='about.html'">&#220;ber das
-                                        Projekt (work in progress)</button>
-
-                                    <!-- ── KPI-Zähler ────────────────────── -->
-                                    <div
-                                        style="margin-top:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:.6rem .6rem;">
-                                        <div
-                                            style="border-radius:6px;padding:.55rem .9rem;background:rgba(255,255,255,0.55);">
-                                            <span
-                                                style="font-size:1.15rem;font-weight:700;color:#6b7280;display:inline;">
-                                                <xsl:value-of
-                                                  select="format-number(homepage-counter/@nReception, '#.###', 'de')"
-                                                />
-                                            </span>
-                                            <span
-                                                style="font-size:.78rem;color:#6b7280;margin-left:.35rem;"
-                                                >verzeichnete Rezeptionszeugnisse</span>
-                                        </div>
-                                        <div
-                                            style="border-radius:6px;padding:.55rem .9rem;background:rgba(255,255,255,0.55);">
-                                            <span
-                                                style="font-size:1.15rem;font-weight:700;color:#6b7280;display:inline;">
-                                                <xsl:value-of
-                                                  select="format-number(homepage-counter/@nAuthors, '#.###', 'de')"
-                                                />
-                                            </span>
-                                            <span
-                                                style="font-size:.78rem;color:#6b7280;margin-left:.35rem;"
-                                                >verzeichnete Autor_innen</span>
-                                        </div>
-
-                                        <div
-                                            style="border-radius:6px;padding:.55rem .9rem;background:rgba(255,255,255,0.55);">
-                                            <span
-                                                style="font-size:1.15rem;font-weight:700;color:#6b7280;display:inline;">
-                                                <xsl:value-of
-                                                  select="format-number(homepage-counter/@nAnalysed, '#.###', 'de')"
-                                                />
-                                            </span>
-                                            <span
-                                                style="font-size:.78rem;color:#6b7280;margin-left:.35rem;"
-                                                >exemplarisch analysierte Texte</span>
-                                        </div>
-                                        <div
-                                            style="border-radius:6px;padding:.55rem .9rem;background:rgba(255,255,255,0.55);">
-                                            <span
-                                                style="font-size:1.15rem;font-weight:700;color:var(--s-line);display:inline;">
-                                                <xsl:value-of
-                                                  select="format-number(homepage-counter/@nInt31, '#.###', 'de')"
-                                                />
-                                            </span>
-                                            <span
-                                                style="font-size:.78rem;color:#6b7280;margin-left:.35rem;"
-                                                >statuierte intertextuelle Beziehungen</span>
-                                        </div>
-
-                                        <div
-                                            style="border-radius:6px;padding:.55rem .9rem;background:rgba(255,255,255,0.55);">
-                                            <span
-                                                style="font-size:1.15rem;font-weight:700;color:var(--s-line);display:inline;">
-                                                <xsl:value-of select="homepage-counter/@yearMin"
-                                                  />&#8202;&#8211;&#8202;<xsl:value-of
-                                                  select="homepage-counter/@yearMax"/>
-                                            </span>
-                                            <span
-                                                style="font-size:.78rem;color:#6b7280;margin-left:.35rem;"
-                                                >Zeitspanne der Rezeptionszeugnisse</span>
-                                        </div>
-                                        <div
-                                            style="border-radius:6px;padding:.55rem .9rem;background:rgba(255,255,255,0.55);">
-                                            <span
-                                                style="font-size:1.15rem;font-weight:700;color:#6b7280;display:inline;">
-                                                <xsl:value-of
-                                                  select="format-number(homepage-counter/@nTriples, '#.###', 'de')"
-                                                />
-                                            </span>
-                                            <span
-                                                style="font-size:.78rem;color:#6b7280;margin-left:.35rem;"
-                                                >Tripel insgesamt</span>
-                                        </div>
-                                    </div>
-
-                                    <p class="smaller-text disclaimer">Disclaimer: The raw data is
-                                        largely annotated with English-language labels and
-                                        structured for broad reuse. The website itself, however, is
-                                        primarily intended for German-speaking users.</p>
+                    
+                    <!-- ── Hero ─────────────────────────────────────────── -->
+                    <div class="container fragment-background" style="min-height:92vh;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:3rem 2rem;">
+                        
+                        <!-- Titel + Untertitel -->
+                        <div style="text-align:center;max-width:720px;margin:0 auto;">
+                            <h1 style="font-size:clamp(2rem,5vw,3.2rem);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.4rem;">Sappho Digital</h1>
+                            <p style="font-size:clamp(1rem,2.2vw,1.3rem);color:#4b5563;margin-bottom:1.4rem;font-weight:300;line-height:1.5;">Die literarische Sappho-Rezeption im deutschsprachigen Raum</p>
+                            <p style="font-size:.95rem;color:#4b5563;line-height:1.7;max-width:580px;margin:0 auto 1.5rem;text-align:justify;text-align-last:center;">
+                                Auf dieser Webseite werden Informationen zur literarischen Sappho-Rezeption im deutschsprachigen Raum gesammelt &#8211; von den Anf&#228;ngen bis in die Gegenwart.
+                            </p>
+                            <a href="about.html" class="btn btn-secondary button" style="display:inline-block;text-decoration:none;margin-bottom:2rem;">&#220;ber das Projekt (work in progress)</a>
+                        </div>
+                        
+                        <!-- KPI-Kacheln -->
+                        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;max-width:760px;width:100%;margin:0 auto;">
+                            <div style="background:rgba(255,255,255,0.72);backdrop-filter:blur(4px);border-radius:10px;padding:1rem 1.1rem;text-align:center;border:1px solid rgba(255,255,255,0.6);">
+                                <div style="font-size:1.65rem;font-weight:700;color:#1f2937;line-height:1.1;">
+                                    <xsl:value-of select="format-number(homepage-counter/@nReception,'#.###','de')"/>
                                 </div>
+                                <div style="font-size:.72rem;color:#6b7280;margin-top:.2rem;text-transform:uppercase;letter-spacing:.05em;">Rezeptionszeugnisse</div>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.72);backdrop-filter:blur(4px);border-radius:10px;padding:1rem 1.1rem;text-align:center;border:1px solid rgba(255,255,255,0.6);">
+                                <div style="font-size:1.65rem;font-weight:700;color:#1f2937;line-height:1.1;">
+                                    <xsl:value-of select="format-number(homepage-counter/@nAuthors,'#.###','de')"/>
+                                </div>
+                                <div style="font-size:.72rem;color:#6b7280;margin-top:.2rem;text-transform:uppercase;letter-spacing:.05em;">Autor_innen</div>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.72);backdrop-filter:blur(4px);border-radius:10px;padding:1rem 1.1rem;text-align:center;border:1px solid rgba(255,255,255,0.6);">
+                                <div style="font-size:1.65rem;font-weight:700;color:#1f2937;line-height:1.1;">
+                                    <xsl:value-of select="format-number(homepage-counter/@nAnalysed,'#.###','de')"/>
+                                </div>
+                                <div style="font-size:.72rem;color:#6b7280;margin-top:.2rem;text-transform:uppercase;letter-spacing:.05em;">Analysierte Texte</div>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.72);backdrop-filter:blur(4px);border-radius:10px;padding:1rem 1.1rem;text-align:center;border:1px solid rgba(255,255,255,0.6);">
+                                <div style="font-size:1.65rem;font-weight:700;color:var(--s-line);line-height:1.1;">
+                                    <xsl:value-of select="format-number(homepage-counter/@nInt31,'#.###','de')"/>
+                                </div>
+                                <div style="font-size:.72rem;color:#6b7280;margin-top:.2rem;text-transform:uppercase;letter-spacing:.05em;">Intertextuelle Beziehungen</div>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.72);backdrop-filter:blur(4px);border-radius:10px;padding:1rem 1.1rem;text-align:center;border:1px solid rgba(255,255,255,0.6);">
+                                <div style="font-size:1.65rem;font-weight:700;color:var(--s-line);line-height:1.1;">
+                                    <xsl:value-of select="homepage-counter/@yearMin"/>&#8202;&#8211;&#8202;<xsl:value-of select="homepage-counter/@yearMax"/>
+                                </div>
+                                <div style="font-size:.72rem;color:#6b7280;margin-top:.2rem;text-transform:uppercase;letter-spacing:.05em;">Zeitspanne</div>
+                            </div>
+                            <div style="background:rgba(255,255,255,0.72);backdrop-filter:blur(4px);border-radius:10px;padding:1rem 1.1rem;text-align:center;border:1px solid rgba(255,255,255,0.6);">
+                                <div style="font-size:1.65rem;font-weight:700;color:#1f2937;line-height:1.1;">
+                                    <xsl:value-of select="format-number(homepage-counter/@nTriples,'#.###','de')"/>
+                                </div>
+                                <div style="font-size:.72rem;color:#6b7280;margin-top:.2rem;text-transform:uppercase;letter-spacing:.05em;">Tripel</div>
                             </div>
                         </div>
+                        
+                        <!-- Scroll-Hinweis -->
+                        <p style="margin-top:2rem;font-size:.82rem;color:#6b7280;text-align:center;">
+                            <b>Wo anfangen? Einfach scrollen &#8211; unten finden sich vier m&#246;gliche Einstiege. &#x2193;</b>
+                        </p>
+                        
+                        <!-- Disclaimer -->
+                        <p class="smaller-text disclaimer" style="margin-top:1rem;text-align:center;max-width:580px;">
+                            Disclaimer: The raw data is largely annotated with English-language labels and structured for broad reuse. The website itself, however, is primarily intended for German-speaking users.
+                        </p>
                     </div>
-
+                    
                     <!-- ── Vier Einstiegs-Karten ──────────────────────────── -->
                     <div class="container-fluid">
                         <div class="row wrapper img_bottom">
@@ -194,11 +152,11 @@
                             </div>
                         </div>
                     </div>
-
+                    
                     <xsl:call-template name="html_footer"/>
                 </div>
             </body>
         </html>
     </xsl:template>
-
+    
 </xsl:stylesheet>
