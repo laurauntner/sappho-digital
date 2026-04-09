@@ -94,14 +94,50 @@ LIMIT 100
                                         Klassen</button>
                                     <button class="example-btn" onclick="loadExample('properties')"
                                         >Alle Properties</button>
+                                    <button class="example-btn"
+                                        onclick="loadExample('phenomTopPersonRef')"
+                                        >Personenreferenzen in Rezeptionszeugnissen</button>
+                                    <button class="example-btn"
+                                        onclick="loadExample('phenomTopCharacter')">Figuren in
+                                        Rezeptionszeugnissen</button>
+                                    <button class="example-btn"
+                                        onclick="loadExample('phenomTopMotif')">Motive in
+                                        Rezeptionszeugnissen</button>
+                                    <button class="example-btn"
+                                        onclick="loadExample('phenomTopTopos')">Rhetorische Topoi in
+                                        Rezeptionszeugnissen</button>
+                                    <button class="example-btn"
+                                        onclick="loadExample('phenomTopPlace')">Ortsreferenzen in
+                                        Rezeptionszeugnissen</button>
+                                    <button class="example-btn"
+                                        onclick="loadExample('phenomTopTopic')">Themen in
+                                        Rezeptionszeugnissen</button>
+                                    <button class="example-btn"
+                                        onclick="loadExample('plotComponents')">Stoffe in
+                                        Rezeptionszeugnissen</button>
+                                    <button class="example-btn" onclick="loadExample('workRefs')"
+                                        >Werkreferenzen in Rezeptionszeugnissen</button>
+                                    <button class="example-btn"
+                                        onclick="loadExample('textPassages')">Zitate in
+                                        Rezeptionszeugnissen</button>
+                                    <button class="example-btn"
+                                        onclick="loadExample('phenomSappho')">Phänomene in
+                                        Sappho-Fragmenten</button>
+                                    <button class="example-btn"
+                                        onclick="loadExample('authorTopWorks')">Top Autor_innen nach
+                                        Korpuspräsenz</button>
+                                    <button class="example-btn"
+                                        onclick="loadExample('intertextDocCount')"
+                                        >Rezeptionszeugnisse mit meisten Relationen</button>
                                 </div>
                                 <div class="section">
                                     <div class="section-title"
-                                        style="width: 100%; margin-top: 20px !important"
-                                        >Hilfreiche Ressourcen:</div>
+                                        style="width: 100%; margin-top: 20px !important">Hilfreiche
+                                        Ressourcen:</div>
                                     <ul class="tooltip-list smaller-text">
                                         <li>
-                                            <a href="https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial"
+                                            <a
+                                                href="https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial"
                                                 target="_blank">SPARQL-Tutorial</a>
                                         </li>
                                         <li>
