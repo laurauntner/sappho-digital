@@ -1390,7 +1390,7 @@
 
                                 <div class="card-body">
                                     <div id="itx-graph" class="big-graph"
-                                        data-src="../data/json/itx-graph-data.json"/>
+                                        data-src="/sappho-digital/data/json/itx-graph-data.json"/>
 
                                     <span class="graph-legend">Es wurden nur die k stärksten
                                         Verbindungen pro Knoten sowie ein verbindender
