@@ -61,7 +61,7 @@
       chart: { style: { fontFamily: 'Geist' }, height: 240, spacing: [8, 8, 8, 8] },
       colors: variants,
       title: { text: null },
-      legend: { itemStyle: { fontSize: '11px' } },
+      legend: { enabled: false },
       xAxis: { labels: { style: { fontSize: '11px' } }, title: { style: { fontSize: '12px' } } },
       yAxis: { labels: { style: { fontSize: '11px' } }, title: { style: { fontSize: '12px' } }, endOnTick: false },
       tooltip: { style: { fontSize: '11px' } },

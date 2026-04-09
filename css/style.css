@@ -1553,11 +1553,16 @@ body.page {
         gap: 2rem;
     }
 }
+
 @media (min-width : 1024px) {
     .charts-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 3rem;
+        grid-template-columns: 1fr;
     }
+}
+
+.charts-grid {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 [data-chart][data-csv] {
