@@ -11,7 +11,7 @@
         <fileset dir="${target}" includes="*.html"/>
     </delete>
 
-    <!--    <!-\- imprint -\->
+        <!-- imprint -->
     <exec executable="python3" failonerror="true">
         <arg value="python/homepage-counter.py"/>
         <arg value="data/rdf/sappho-reception.ttl"/>
@@ -23,7 +23,7 @@
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
 
-    <delete file="${target}/homepage-counter.xml"/>-->
+    <delete file="${target}/homepage-counter.xml"/>
 
     <!-- query -->
     <xslt in="${index}" out="${target}/query.html" style="./xslt/query.xsl">
