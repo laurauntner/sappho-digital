@@ -1377,9 +1377,9 @@
                                         Datengröße langsam. Bitte um Geduld.</p>
 
                                     <div class="graph-toolbar">
-                                        <label class="gewicht-slider">Gewicht
-                                                <input id="edge-threshold" type="range" min="2"
-                                                max="20" value="2" step="1"/>
+                                        <label class="gewicht-slider">Gewicht <input
+                                                id="edge-threshold" type="range" min="2" max="20"
+                                                value="2" step="1"/>
                                         </label>
                                         <br/>
                                         <span class="graph-legend">
@@ -1390,7 +1390,7 @@
 
                                 <div class="card-body">
                                     <div id="itx-graph" class="big-graph"
-                                        data-src="/sappho-digital/data/json/itx-graph-data.json"/>
+                                        data-src="https://cdn.jsdelivr.net/gh/laurauntner/sappho-digital@main/data/json/itx-graph-data.json"/>
 
                                     <span class="graph-legend">Es wurden nur die k stärksten
                                         Verbindungen pro Knoten sowie ein verbindender
