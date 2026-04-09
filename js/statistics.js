@@ -5,6 +5,15 @@ const C = {
     rLine: '#6b7280',
 };
 
+Chart.defaults.plugins.tooltip.backgroundColor = '#ffffff';
+Chart.defaults.plugins.tooltip.titleColor       = '#1f2937';
+Chart.defaults.plugins.tooltip.bodyColor        = '#374151';
+Chart.defaults.plugins.tooltip.borderColor      = '#e5e7eb';
+Chart.defaults.plugins.tooltip.borderWidth      = 1;
+Chart.defaults.plugins.tooltip.titleFont        = { family: 'Geist, system-ui, sans-serif', size: 12 };
+Chart.defaults.plugins.tooltip.bodyFont         = { family: 'Geist, system-ui, sans-serif', size: 12 };
+Chart.defaults.plugins.tooltip.padding          = 8;
+
 const charts = {};
 
 // ── Zahlenformatierung: Tausenderpunkt + Dezimalkomma (de-DE) ─────────────────
@@ -349,9 +358,9 @@ function renderCatOverview() {
                         const pctR     = parseFloat(item.pctReception).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
                         const html =
                             `<strong>${item.label}</strong>`
-                            + `<br><span style="font-size:10px;color:rgba(255,255,255,0.75)">(${singular})</span>`
-                            + `<br><span style="color:rgba(255,255,255,0.85)">Sappho: ${pctS}% (${item.countSappho}/${fmtN(DATA.nSappho)})</span>`
-                            + `<br><span style="color:rgba(255,255,255,0.85)">Rezeption: ${pctR}% (${item.countReception}/${fmtN(DATA.nReception)})</span>`;
+                            + `<br><span style="font-size:10px;color:#6b7280">(${singular})</span>`
+                            + `<br><span style="color:#374151">Sappho: ${pctS}% (${item.countSappho}/${fmtN(DATA.nSappho)})</span>`
+                            + `<br><span style="color:#374151">Rezeption: ${pctR}% (${item.countReception}/${fmtN(DATA.nReception)})</span>`;
                         const t   = getPdTip();
                         t.innerHTML     = html;
                         t.style.display = 'block';
@@ -449,10 +458,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!_riTip) {
             _riTip = document.createElement('div');
             _riTip.style.cssText =
-                'position:fixed;background:#1f2937;color:#fff;font-size:12px;' +
+                'position:fixed;background:#fff;color:#1f2937;font-size:12px;' +
                 'font-family:Geist,system-ui,sans-serif;padding:6px 10px;' +
                 'border-radius:4px;pointer-events:none;display:none;z-index:9999;' +
-                'max-width:320px;white-space:pre-line;line-height:1.6;';
+                'max-width:320px;white-space:pre-line;line-height:1.6;' +
+                'border:1px solid #e5e7eb;box-shadow:0 2px 8px rgba(0,0,0,0.12);';
             document.body.appendChild(_riTip);
         }
         return _riTip;
@@ -951,7 +961,7 @@ let _tip = null;
 function getTip() {
     if (!_tip) {
         _tip = document.createElement('div');
-        _tip.style.cssText = 'position:fixed;background:#1f2937;color:#fff;font-size:12px;font-family:Geist,system-ui,sans-serif;padding:4px 8px;border-radius:4px;pointer-events:none;display:none;z-index:9999;white-space:nowrap';
+        _tip.style.cssText = 'position:fixed;background:#fff;color:#1f2937;font-size:12px;font-family:Geist,system-ui,sans-serif;padding:4px 8px;border-radius:4px;pointer-events:none;display:none;z-index:9999;white-space:nowrap;border:1px solid #e5e7eb;box-shadow:0 2px 8px rgba(0,0,0,0.12)';
         document.body.appendChild(_tip);
     }
     return _tip;
@@ -1245,9 +1255,10 @@ function getPdTip() {
     if (!_pdTip) {
         _pdTip = document.createElement('div');
         _pdTip.style.cssText =
-            'position:fixed;background:#1f2937;color:#fff;font-size:12px;'
+            'position:fixed;background:#fff;color:#1f2937;font-size:12px;'
             + 'font-family:Geist,system-ui,sans-serif;padding:5px 9px;border-radius:5px;'
-            + 'pointer-events:none;display:none;z-index:9999;white-space:nowrap;line-height:1.5';
+            + 'pointer-events:none;display:none;z-index:9999;white-space:nowrap;line-height:1.5;'
+            + 'border:1px solid #e5e7eb;box-shadow:0 2px 8px rgba(0,0,0,0.12)';
         document.body.appendChild(_pdTip);
     }
     return _pdTip;
@@ -1400,7 +1411,7 @@ function buildBubbleChart(features, decades, container, showType = false) {
 
             const ftypeLabel = (FTYPE_META[feat.ftype] || {}).singular || feat.ftype;
             const tipHtml = `<strong>${feat.label}</strong>`
-                + (showType ? `<br><span style="font-size:10px;color:rgba(255,255,255,0.75)">(${ftypeLabel})</span>` : '')
+                + (showType ? `<br><span style="font-size:10px;color:#6b7280">(${ftypeLabel})</span>` : '')
                 + `<br>${decLabel(dec)}: <strong>${fmtN(v)}</strong> Rezeptionszeugnis${v !== 1 ? 'se' : ''}`;
             circle.addEventListener('mouseenter', e => pdTipShow(e, tipHtml));
             circle.addEventListener('mousemove',  e => pdTipMove(e));
@@ -1633,7 +1644,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
             });
             if (showType) {
                 labelEl.addEventListener('mouseenter', e => pdTipShow(e,
-                    `<strong>${rawLabel}</strong><br><span style="font-size:10px;color:rgba(255,255,255,0.75)">${ftypeLbl}</span>`));
+                    `<strong>${rawLabel}</strong><br><span style="font-size:10px;color:#6b7280">${ftypeLbl}</span>`));
                 labelEl.addEventListener('mousemove',  e => pdTipMove(e));
                 labelEl.addEventListener('mouseleave', pdTipHide);
                 labelEl.style.cursor = 'default';
@@ -1651,7 +1662,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
                 });
                 if (showType) {
                     labelEl.addEventListener('mouseenter', e => pdTipShow(e,
-                        `<strong>${rawLabel}</strong><br><span style="font-size:10px;color:rgba(255,255,255,0.75)">${ftypeLbl}</span>`));
+                        `<strong>${rawLabel}</strong><br><span style="font-size:10px;color:#6b7280">${ftypeLbl}</span>`));
                     labelEl.addEventListener('mousemove',  e => pdTipMove(e));
                     labelEl.addEventListener('mouseleave', pdTipHide);
                     labelEl.style.cursor = 'default';
@@ -1695,7 +1706,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
             tipTarget.style.cursor = 'default';
             const ftypeLabel = (FTYPE_META[feat.ftype] || {}).singular || feat.ftype;
             const tipHtml = `<strong>${rawLabel}</strong>`
-                + (showType ? `<br><span style="font-size:10px;color:rgba(255,255,255,0.75)">(${ftypeLabel})</span>` : '')
+                + (showType ? `<br><span style="font-size:10px;color:#6b7280">(${ftypeLabel})</span>` : '')
                 + `<br>${genre}: <strong>${fmtN(v)}</strong> Rezeptionszeugnis${v !== 1 ? 'se' : ''}`
                 + (v > 0 ? ` (${pct < 1 ? pct.toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) : Math.round(pct)}%)` : '');
             tipTarget.addEventListener('mouseenter', e => pdTipShow(e, tipHtml));
@@ -1856,9 +1867,10 @@ function getPcTip() {
     if (!_pcTip) {
         _pcTip = document.createElement('div');
         _pcTip.style.cssText =
-            'position:fixed;background:#1f2937;color:#fff;font-size:12px;'
+            'position:fixed;background:#fff;color:#1f2937;font-size:12px;'
             + 'font-family:Geist,system-ui,sans-serif;padding:6px 10px;border-radius:5px;'
-            + 'pointer-events:none;display:none;z-index:9999;white-space:nowrap;line-height:1.5';
+            + 'pointer-events:none;display:none;z-index:9999;white-space:nowrap;line-height:1.5;'
+            + 'border:1px solid #e5e7eb;box-shadow:0 2px 8px rgba(0,0,0,0.12)';
         document.body.appendChild(_pcTip);
     }
     return _pcTip;
@@ -2049,7 +2061,7 @@ function renderPlotComponents(plotUri, topN) {
 
             const pct     = Math.round(cf.n / plot.nDocs * 100);
             const tipHtml = `<strong>${cf.label}</strong>`
-                + `<br><span style="font-size:10px;color:rgba(255,255,255,0.75)">`
+                + `<br><span style="font-size:10px;color:#6b7280">`
                 + `${(FTYPE_META[cf.ftype]||{}).singular || cf.ftype}</span>`
                 + `<br>${fmtN(cf.n)} Rezeptionszeugnis${cf.n!==1?'se':''} (${pct}%)`;
 
@@ -2320,9 +2332,10 @@ function getWc7Tip() {
     if (!_wc7Tip) {
         _wc7Tip = document.createElement('div');
         _wc7Tip.style.cssText =
-            'position:fixed;background:#1f2937;color:#fff;font-size:12px;'
+            'position:fixed;background:#fff;color:#1f2937;font-size:12px;'
             + 'font-family:Geist,system-ui,sans-serif;padding:5px 9px;border-radius:5px;'
-            + 'pointer-events:none;display:none;z-index:9999;white-space:nowrap;line-height:1.5';
+            + 'pointer-events:none;display:none;z-index:9999;white-space:nowrap;line-height:1.5;'
+            + 'border:1px solid #e5e7eb;box-shadow:0 2px 8px rgba(0,0,0,0.12)';
         document.body.appendChild(_wc7Tip);
     }
     return _wc7Tip;
@@ -2404,8 +2417,8 @@ function renderWorkCitation() {
                         const pctB = parseFloat(w.pctBoth).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
                         const html =
                             `<strong>${wc7CleanLabel(w.label)}</strong>`
-                            + `<br><span style="color:rgba(255,255,255,0.85)">Referenziert: ${pctR}% (${fmtN(w.refN)}/${fmtN(wc.nReception)})</span>`
-                            + `<br><span style="color:rgba(255,255,255,0.85)">Referenziert und zitiert: ${pctB}% (${fmtN(w.bothN)}/${fmtN(wc.nReception)})</span>`;
+                            + `<br><span style="color:#374151">Referenziert: ${pctR}% (${fmtN(w.refN)}/${fmtN(wc.nReception)})</span>`
+                            + `<br><span style="color:#374151">Referenziert und zitiert: ${pctB}% (${fmtN(w.bothN)}/${fmtN(wc.nReception)})</span>`;
                         const t = getWc7Tip();
                         t.innerHTML     = html;
                         t.style.display = 'block';
@@ -2457,9 +2470,10 @@ function getInt31Tip() {
     if (!_int31Tip) {
         _int31Tip = document.createElement('div');
         _int31Tip.style.cssText =
-            'position:fixed;background:#1f2937;color:#fff;font-size:12px;'
+            'position:fixed;background:#fff;color:#1f2937;font-size:12px;'
             + 'font-family:Geist,system-ui,sans-serif;padding:5px 9px;border-radius:5px;'
-            + 'pointer-events:none;display:none;z-index:9999;white-space:nowrap;line-height:1.5';
+            + 'pointer-events:none;display:none;z-index:9999;white-space:nowrap;line-height:1.5;'
+            + 'border:1px solid #e5e7eb;box-shadow:0 2px 8px rgba(0,0,0,0.12)';
         document.body.appendChild(_int31Tip);
     }
     return _int31Tip;
@@ -2677,8 +2691,8 @@ function renderInt31Sunburst() {
             const ftB = (FTYPE_META[fB.ftype]||{}).singular || fB.ftype;
             const pct = (n / total * 100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1});
             const tipHtml =
-                `<strong>${fA.label}</strong> <span style="color:rgba(255,255,255,0.6)">(${ftA})</span>`
-                + `<br>× <strong>${fB.label}</strong> <span style="color:rgba(255,255,255,0.6)">(${ftB})</span>`
+                `<strong>${fA.label}</strong> <span style="color:#6b7280">(${ftA})</span>`
+                + `<br>× <strong>${fB.label}</strong> <span style="color:#6b7280">(${ftB})</span>`
                 + `<br><strong>${fmtN(n)}</strong> gemeinsame INT31-Knoten (${pct}%)`;
 
             path.addEventListener('mouseenter', e => { path.setAttribute('stroke-opacity','0.92'); int31TipShow(e,tipHtml); });
@@ -2731,7 +2745,7 @@ function renderInt31Sunburst() {
             const ft     = (FTYPE_META[f.ftype]||{}).singular || f.ftype;
             const tipHtml =
                 `<strong>${f.label}</strong>`
-                + `<br><span style="font-size:10px;color:rgba(255,255,255,0.7)">(${ft})</span>`
+                + `<br><span style="font-size:10px;color:#6b7280">(${ft})</span>`
                 + `<br><strong>${fmtN(f.n)}</strong> INT31-Knoten (${pct}%)`;
 
             const segFrac = (a1 - a0) / (2 * Math.PI);
@@ -2862,8 +2876,8 @@ function renderInt31Pairs() {
         overlay.style.cursor = 'default';
         const ftA = (FTYPE_META[pair.ftypeA]||{}).singular || pair.ftypeA;
         const ftB = (FTYPE_META[pair.ftypeB]||{}).singular || pair.ftypeB;
-        const tipHtml = `<strong>${pair.labelA}</strong> <span style="color:rgba(255,255,255,0.6)">(${ftA})</span>`
-            + `<br>× <strong>${pair.labelB}</strong> <span style="color:rgba(255,255,255,0.6)">(${ftB})</span>`
+        const tipHtml = `<strong>${pair.labelA}</strong> <span style="color:#6b7280">(${ftA})</span>`
+            + `<br>× <strong>${pair.labelB}</strong> <span style="color:#6b7280">(${ftB})</span>`
             + `<br><strong>${fmtN(pair.n)}</strong> gemeinsame INT31-Knoten (${pct}%)`;
         overlay.addEventListener('mouseenter', e => int31TipShow(e, tipHtml));
         overlay.addEventListener('mousemove',  e => int31TipMove(e));
