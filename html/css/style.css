@@ -113,9 +113,9 @@ h3 {
     visibility: hidden;
     transition: opacity 0.12s ease;
     z-index: 1000;
-    
+
     text-transform: none !important;
-    
+
     overflow-wrap: break-word;
 }
 
@@ -778,9 +778,9 @@ img.icon {
 .graph-toolbar {
     display: flex;
     gap: .75rem;
-    align-items: center;
+    align-items: center !important;
+    justify-content: center !important;
     margin: .75rem 0 1rem;
-    justify-content: flex-start;
     font-family: "Geist", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
@@ -2264,4 +2264,244 @@ html {
     .hero-kpi-grid {
         grid-template-columns: 1fr 1fr;
     }
+}
+
+.feat-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    line-height: 1.35;
+    padding: 0.18em 0.55em;
+    border-radius: 3px;
+    color: #1f2937;
+    background: rgba(107, 114, 128, 0.10);
+    border: 1px solid rgba(107, 114, 128, 0.22);
+    white-space: normal;
+    word-break: break-word;
+    text-decoration: none !important;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+a.feat-tag:hover {
+    background: rgba(94, 23, 235, 0.12);
+    border-color: rgba(94, 23, 235, 0.35);
+    color: #3b0fa8;
+}
+
+.feat-tag--motif {
+    background: rgba(139, 92, 246, 0.08);
+    border-color: rgba(139, 92, 246, 0.30);
+}
+.feat-tag--topic {
+    background: rgba(6, 182, 212, 0.08);
+    border-color: rgba(6, 182, 212, 0.30);
+}
+.feat-tag--plot {
+    background: rgba(249, 115, 22, 0.08);
+    border-color: rgba(249, 115, 22, 0.30);
+}
+.feat-tag--topos {
+    background: rgba(239, 68, 68, 0.08);
+    border-color: rgba(239, 68, 68, 0.30);
+}
+.feat-tag--person {
+    background: rgba(245, 158, 11, 0.08);
+    border-color: rgba(245, 158, 11, 0.30);
+}
+.feat-tag--place {
+    background: rgba(16, 185, 129, 0.08);
+    border-color: rgba(16, 185, 129, 0.30);
+}
+.feat-tag--work-ref {
+    background: rgba(225, 29, 72, 0.08);
+    border-color: rgba(225, 29, 72, 0.30);
+}
+.feat-tag--passage {
+    background: rgba(132, 204, 22, 0.08);
+    border-color: rgba(132, 204, 22, 0.35);
+}
+.feat-tag--phrase {
+    background: rgba(132, 204, 22, 0.06);
+    border-color: rgba(132, 204, 22, 0.28);
+    font-style: italic;
+}
+.feat-tag--intertext {
+    background: rgba(94, 23, 235, 0.08);
+    border-color: rgba(94, 23, 235, 0.30);
+    font-weight: 500;
+}
+
+a.feat-tag--motif:hover {
+    background: rgba(139, 92, 246, 0.18);
+    border-color: rgba(139, 92, 246, 0.55);
+    color: #5b21b6;
+}
+a.feat-tag--topic:hover {
+    background: rgba(6, 182, 212, 0.18);
+    border-color: rgba(6, 182, 212, 0.55);
+    color: #0e7490;
+}
+a.feat-tag--plot:hover {
+    background: rgba(249, 115, 22, 0.18);
+    border-color: rgba(249, 115, 22, 0.55);
+    color: #c2410c;
+}
+a.feat-tag--topos:hover {
+    background: rgba(239, 68, 68, 0.18);
+    border-color: rgba(239, 68, 68, 0.55);
+    color: #b91c1c;
+}
+a.feat-tag--person:hover {
+    background: rgba(245, 158, 11, 0.18);
+    border-color: rgba(245, 158, 11, 0.55);
+    color: #b45309;
+}
+a.feat-tag--place:hover {
+    background: rgba(16, 185, 129, 0.18);
+    border-color: rgba(16, 185, 129, 0.55);
+    color: #065f46;
+}
+a.feat-tag--work-ref:hover {
+    background: rgba(225, 29, 72, 0.18);
+    border-color: rgba(225, 29, 72, 0.55);
+    color: #9f1239;
+}
+a.feat-tag--passage:hover {
+    background: rgba(132, 204, 22, 0.18);
+    border-color: rgba(132, 204, 22, 0.55);
+    color: #3f6212;
+}
+a.feat-tag--phrase:hover {
+    background: rgba(132, 204, 22, 0.14);
+    border-color: rgba(132, 204, 22, 0.45);
+    color: #3f6212;
+}
+a.feat-tag--intertext:hover {
+    background: rgba(94, 23, 235, 0.18);
+    border-color: rgba(94, 23, 235, 0.55);
+    color: #3b0fa8;
+}
+
+.meta-dl {
+    display: table;
+    border-collapse: collapse;
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+    width: 100%;
+    text-align: left;
+}
+
+.meta-row {
+    display: table-row;
+}
+
+.meta-row:not(:last-child) dt,
+.meta-row:not(:last-child) dd {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.045);
+}
+
+.meta-row dt {
+    display: table-cell;
+    width: 13rem;
+    min-width: 13rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6b7280;
+    white-space: nowrap;
+    padding: 0.25rem 0.75rem 0.25rem 0;
+    vertical-align: baseline;
+    text-align: left;
+}
+
+.meta-row dd {
+    display: table-cell;
+    font-size: 0.875rem;
+    color: #1f2937;
+    margin: 0;
+    padding: 0.25rem 0;
+    word-break: break-word;
+    vertical-align: baseline;
+    text-align: left;
+}
+
+.meta-works-heading {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin-top: 0.9rem;
+    margin-bottom: 0.3rem;
+    text-align: left;
+}
+
+.feat-section-heading {
+    margin-top: 1.6rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: #6b7280;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.10);
+    text-align: left;
+}
+
+
+.feat-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 0.55rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.feat-group {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: nowrap;
+    gap: 0;
+}
+
+.feat-group-label {
+    flex: 0 0 12rem;
+    width: 12rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6b7280;
+    white-space: normal;
+    padding-top: 0.2rem;
+    padding-right: 0.75rem;
+}
+
+.feat-section-heading .info-icon {
+    font-size: 0.85em;
+    margin-left: 0.4rem;
+    color: #9ca3af;
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-weight: 400;
+    vertical-align: middle;
+    cursor: pointer;
+    text-decoration: none !important;
+    transition: color 0.15s;
+}
+
+.feat-section-heading .info-icon:hover {
+    color: #5e17eb;
+}
+
+.feat-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    flex: 1 1 0;
+    min-width: 0;
+    align-items: flex-start;
+}
+
+.gewicht-slider {
+    font-size: .9rem
 }

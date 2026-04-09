@@ -17,6 +17,7 @@
 
     <xsl:strip-space elements="*"/>
     <xsl:key name="by-about" match="*[@rdf:about]" use="@rdf:about"/>
+    <xsl:key name="by-resource-ref" match="*[*[@rdf:resource]]" use="*/@rdf:resource"/>
 
     <xsl:key name="rels-by-sim" match="intro:INT31_IntertextualRelation"
         use="intro:R22i_relationIsBasedOnSimilarity/@rdf:resource"/>
@@ -418,7 +419,7 @@
                 if (exists($n1)) then
                     $n1
                 else
-                    $receptionEntities//*/@rdf:resource[. = $uri]/parent::*[1]
+                    key('by-resource-ref', $uri, $receptionEntities)[1]
                 "/>
 
         <xsl:variable name="featUri" select="
@@ -728,7 +729,7 @@
         <xsl:param name="pairs" as="element(pair)*"/>
         <xsl:sequence select="
                 some $p in $pairs
-                    satisfies u:common-count(string($p/@about)) gt 0"/>
+                    satisfies xs:integer($p/@common-count) gt 0"/>
     </xsl:function>
 
     <xsl:function name="u:act-target-bibl" as="xs:string?">
@@ -901,9 +902,10 @@
         <xsl:param name="partner" as="xs:string"/>
         <xsl:param name="partner-uri" as="xs:string"/>
         <xsl:param name="source-uri" as="xs:string"/>
+        <xsl:param name="count" as="xs:integer"/>
 
         <xsl:variable name="rel" select="key('by-about', $about, $receptionEntities)"/>
-        <xsl:variable name="cnt" select="u:common-count($about)"/>
+        <xsl:variable name="cnt" select="$count"/>
 
         <xsl:if test="$cnt &gt; 0">
             <xsl:variable name="cmt"
@@ -1213,6 +1215,7 @@
         <xsl:variable name="pairs_frag" as="element(pair)*">
             <xsl:for-each select="$rels_frag">
                 <xsl:variable name="relAbout" select="string(@rdf:about)"/>
+                <xsl:variable name="cc" as="xs:integer" select="count(u:common-uris(.))"/>
                 <xsl:variable name="allUris" as="xs:string*" select="
                         (
                         data(intro:R13_hasReferringEntity/@rdf:resource),
@@ -1223,10 +1226,11 @@
 
                 <xsl:for-each select="distinct-values($fragUris)">
                     <xsl:variable name="guri" select="."/>
-                    <xsl:for-each select="distinct-values($fragUris[. ne $guri])">
+                    <xsl:variable name="glabel" select="u:label($guri)"/>
+                    <xsl:for-each select="distinct-values($fragUris[. gt $guri])">
                         <xsl:variable name="puri" select="."/>
-                        <pair group="{u:label($guri)}" group-uri="{$guri}"
-                            partner="{u:label($puri)}" partner-uri="{$puri}" about="{$relAbout}"/>
+                        <pair group="{$glabel}" group-uri="{$guri}" partner="{u:label($puri)}"
+                            partner-uri="{$puri}" about="{$relAbout}" common-count="{$cc}"/>
                     </xsl:for-each>
                 </xsl:for-each>
             </xsl:for-each>
@@ -1236,6 +1240,7 @@
         <xsl:variable name="pairs_recep" as="element(pair)*">
             <xsl:for-each select="$rels_recep">
                 <xsl:variable name="relAbout" select="string(@rdf:about)"/>
+                <xsl:variable name="cc" as="xs:integer" select="count(u:common-uris(.))"/>
                 <xsl:variable name="allUris" as="xs:string*" select="
                         (
                         data(intro:R13_hasReferringEntity/@rdf:resource),
@@ -1248,10 +1253,11 @@
 
                 <xsl:for-each select="distinct-values($nonFragUris)">
                     <xsl:variable name="guri" select="."/>
+                    <xsl:variable name="glabel" select="u:label($guri)"/>
                     <xsl:for-each select="distinct-values($fragUris)">
                         <xsl:variable name="puri" select="."/>
-                        <pair group="{u:label($guri)}" group-uri="{$guri}"
-                            partner="{u:label($puri)}" partner-uri="{$puri}" about="{$relAbout}"/>
+                        <pair group="{$glabel}" group-uri="{$guri}" partner="{u:label($puri)}"
+                            partner-uri="{$puri}" about="{$relAbout}" common-count="{$cc}"/>
                     </xsl:for-each>
                 </xsl:for-each>
             </xsl:for-each>
@@ -1261,6 +1267,7 @@
         <xsl:variable name="pairs_none" as="element(pair)*">
             <xsl:for-each select="$rels_none">
                 <xsl:variable name="relAbout" select="string(@rdf:about)"/>
+                <xsl:variable name="cc" as="xs:integer" select="count(u:common-uris(.))"/>
                 <xsl:variable name="allUris" as="xs:string*" select="
                         (
                         data(intro:R13_hasReferringEntity/@rdf:resource),
@@ -1271,10 +1278,11 @@
 
                 <xsl:for-each select="distinct-values($nonFragUris)">
                     <xsl:variable name="guri" select="."/>
-                    <xsl:for-each select="distinct-values($nonFragUris[. ne $guri])">
+                    <xsl:variable name="glabel" select="u:label($guri)"/>
+                    <xsl:for-each select="distinct-values($nonFragUris[. gt $guri])">
                         <xsl:variable name="puri" select="."/>
-                        <pair group="{u:label($guri)}" group-uri="{$guri}"
-                            partner="{u:label($puri)}" partner-uri="{$puri}" about="{$relAbout}"/>
+                        <pair group="{$glabel}" group-uri="{$guri}" partner="{u:label($puri)}"
+                            partner-uri="{$puri}" about="{$relAbout}" common-count="{$cc}"/>
                     </xsl:for-each>
                 </xsl:for-each>
             </xsl:for-each>
@@ -1282,11 +1290,20 @@
 
         <!-- aggregation -->
         <xsl:variable name="pairs_all" select="($pairs_frag, $pairs_recep, $pairs_none)"/>
-        <xsl:variable name="pairs_filtered"
-            select="$pairs_all[u:common-count(string(@about)) &gt; 0]"/>
+        <xsl:variable name="pairs_filtered" select="$pairs_all[xs:integer(@common-count) &gt; 0]"/>
 
         <xsl:variable name="nodeUris"
             select="distinct-values(($pairs_filtered/@group-uri, $pairs_filtered/@partner-uri))"/>
+
+        <xsl:variable name="nodes" as="element(node)*">
+            <xsl:for-each select="$nodeUris">
+                <node uri="{.}" label="{u:label(.)}" href="{u:work-href(.)}" kind="{
+                        if (matches(., '/bibl_sappho_')) then
+                            'frag'
+                        else
+                            'recep'}"/>
+            </xsl:for-each>
+        </xsl:variable>
 
         <xsl:variable name="edges_agg">
             <xsl:for-each-group select="$pairs_filtered" group-by="
@@ -1309,25 +1326,21 @@
                         else
                             $a"/>
                 <edge s="{$source}" t="{$target}"
-                    w="{sum(for $p in current-group() return u:common-count(string($p/@about)))}"/>
+                    w="{sum(for $p in current-group() return xs:integer($p/@common-count))}"/>
             </xsl:for-each-group>
         </xsl:variable>
 
         <!-- json -->
         <xsl:result-document href="../data/json/itx-graph-data.json" method="text" encoding="UTF-8"
-            >{ "nodes": [ <xsl:for-each select="$nodeUris">
-                <xsl:sort select="lower-case(u:label(.))"/> { "id": "<xsl:value-of
-                    select="u:json-escape(.)"/>", "label": "<xsl:value-of
-                    select="u:json-escape(u:label(.))"/>", "href": <xsl:choose>
-                    <xsl:when test="u:work-href(.)">"<xsl:value-of
-                            select="u:json-escape(u:work-href(.))"/>"</xsl:when>
+            >{ "nodes": [ <xsl:for-each select="$nodes">
+                <xsl:sort select="lower-case(@label)"/> { "id": "<xsl:value-of
+                    select="u:json-escape(@uri)"/>", "label": "<xsl:value-of
+                    select="u:json-escape(@label)"/>", "href": <xsl:choose>
+                    <xsl:when test="string(@href) != ''">"<xsl:value-of
+                            select="u:json-escape(@href)"/>"</xsl:when>
                     <xsl:otherwise>null</xsl:otherwise>
-                </xsl:choose>, "kind": "<xsl:value-of select="
-                        if (matches(., '/bibl_sappho_')) then
-                            'frag'
-                        else
-                            'recep'"/>" }<xsl:if test="position() != last()"
-                    >,</xsl:if>
+                </xsl:choose>, "kind": "<xsl:value-of select="@kind"/>" }<xsl:if
+                    test="position() != last()">,</xsl:if>
             </xsl:for-each> ], "edges": [ <xsl:for-each select="$edges_agg/edge[@w &gt; 0]"> {
                 "source": "<xsl:value-of select="u:json-escape(@s)"/>", "target": "<xsl:value-of
                     select="u:json-escape(@t)"/>", "weight": <xsl:value-of select="@w"/> }<xsl:if
@@ -1360,9 +1373,11 @@
                                         Statistische Auswertungen werden <a href="statistics.html"
                                             >hier</a> aufbereitet; eine Netzwerkvisualisierung aller
                                         Daten ist <a href="network.html">hier</a> verfügbar.</p>
+                                    <p class="align-left">⚠️ Diese Seite lädt aufgrund der
+                                        Datengröße langsam. Bitte um Geduld.</p>
 
                                     <div class="graph-toolbar">
-                                        <label style="margin-left:.5rem; font-size: .9rem">Gewicht
+                                        <label class="gewicht-slider">Gewicht
                                                 <input id="edge-threshold" type="range" min="2"
                                                 max="20" value="2" step="1"/>
                                         </label>
@@ -1374,37 +1389,9 @@
                                 </div>
 
                                 <div class="card-body">
-                                    <div id="itx-graph" class="big-graph"/>
+                                    <div id="itx-graph" class="big-graph"
+                                        data-src="../data/json/itx-graph-data.json"/>
 
-                                    <script type="application/json" id="itx-graph-data">{
-                  "nodes": [
-                  <xsl:for-each select="$nodeUris">
-                    <xsl:sort select="lower-case(u:label(.))"/>
-                    {
-                      "id": "<xsl:value-of select="u:json-escape(.)"/>",
-                      "label": "<xsl:value-of select="u:json-escape(u:label(.))"/>",
-                      "href": <xsl:choose>
-                               <xsl:when test="u:work-href(.)">"<xsl:value-of select="u:json-escape(u:work-href(.))"/>"</xsl:when>
-                               <xsl:otherwise>null</xsl:otherwise>
-                              </xsl:choose>,
-                      "kind": "<xsl:value-of select="
-                                                    if (matches(., '/bibl_sappho_')) then
-                                                        'frag'
-                                                    else
-                                                        'recep'"/>"
-                    }<xsl:if test="position() != last()">,</xsl:if>
-                  </xsl:for-each>
-                  ],
-                  "edges": [
-                  <xsl:for-each select="$edges_agg/edge[@w &gt; 0]">
-                    {
-                      "source": "<xsl:value-of select="u:json-escape(@s)"/>",
-                      "target": "<xsl:value-of select="u:json-escape(@t)"/>",
-                      "weight": <xsl:value-of select="@w"/>
-                    }<xsl:if test="position() != last()">,</xsl:if>
-                  </xsl:for-each>
-                  ]
-                }</script>
                                     <span class="graph-legend">Es wurden nur die k stärksten
                                         Verbindungen pro Knoten sowie ein verbindender
                                         Maximum-Spanning-Tree visualisiert (Standard: k = 2).</span>
@@ -1413,7 +1400,7 @@
                         </div>
 
                         <div class="container-fluid">
-                            <div class="card">
+                            <div class="card" style="margin-top: 0px !important">
                                 <div class="card-body skos-wrap">
                                     <ul class="skos-tree">
                                         <!-- frag ↔ frag -->
@@ -1441,7 +1428,7 @@
                                                   <xsl:for-each-group select="current-group()"
                                                   group-by="@partner">
                                                   <xsl:sort data-type="number" order="descending"
-                                                  select="u:common-count(string((current-group()[1]/@about)[1]))"/>
+                                                  select="max(current-group()/xs:integer(@common-count))"/>
                                                   <xsl:call-template name="render-pair">
                                                   <xsl:with-param name="about"
                                                   select="string((current-group()[1]/@about)[1])"/>
@@ -1449,7 +1436,9 @@
                                                   <xsl:with-param name="partner-uri"
                                                   select="string((current-group()[1]/@partner-uri)[1])"/>
                                                   <xsl:with-param name="source-uri"
-                                                  select="string((current-group()[1]/@group-uri)[1])"
+                                                  select="string((current-group()[1]/@group-uri)[1])"/>
+                                                  <xsl:with-param name="count"
+                                                  select="xs:integer((current-group()[1]/@common-count)[1])"
                                                   />
                                                   </xsl:call-template>
                                                   </xsl:for-each-group>
@@ -1490,7 +1479,7 @@
                                                   <xsl:for-each-group select="current-group()"
                                                   group-by="@partner">
                                                   <xsl:sort data-type="number" order="descending"
-                                                  select="u:common-count(string((current-group()[1]/@about)[1]))"/>
+                                                  select="max(current-group()/xs:integer(@common-count))"/>
                                                   <xsl:call-template name="render-pair">
                                                   <xsl:with-param name="about"
                                                   select="string((current-group()[1]/@about)[1])"/>
@@ -1498,7 +1487,9 @@
                                                   <xsl:with-param name="partner-uri"
                                                   select="string((current-group()[1]/@partner-uri)[1])"/>
                                                   <xsl:with-param name="source-uri"
-                                                  select="string((current-group()[1]/@group-uri)[1])"
+                                                  select="string((current-group()[1]/@group-uri)[1])"/>
+                                                  <xsl:with-param name="count"
+                                                  select="xs:integer((current-group()[1]/@common-count)[1])"
                                                   />
                                                   </xsl:call-template>
                                                   </xsl:for-each-group>
@@ -1539,7 +1530,7 @@
                                                   <xsl:for-each-group select="current-group()"
                                                   group-by="@partner">
                                                   <xsl:sort data-type="number" order="descending"
-                                                  select="u:common-count(string((current-group()[1]/@about)[1]))"/>
+                                                  select="max(current-group()/xs:integer(@common-count))"/>
                                                   <xsl:call-template name="render-pair">
                                                   <xsl:with-param name="about"
                                                   select="string((current-group()[1]/@about)[1])"/>
@@ -1547,7 +1538,9 @@
                                                   <xsl:with-param name="partner-uri"
                                                   select="string((current-group()[1]/@partner-uri)[1])"/>
                                                   <xsl:with-param name="source-uri"
-                                                  select="string((current-group()[1]/@group-uri)[1])"
+                                                  select="string((current-group()[1]/@group-uri)[1])"/>
+                                                  <xsl:with-param name="count"
+                                                  select="xs:integer((current-group()[1]/@common-count)[1])"
                                                   />
                                                   </xsl:call-template>
                                                   </xsl:for-each-group>
@@ -1889,6 +1882,8 @@
                             <div class="card">
                                 <div class="card-header">
                                     <h1>Ortsreferenzen</h1>
+                                    <p class="align-left">… in den exemplarisch analysierten
+                                        Rezeptionszeugnissen und Sappho-Fragmenten.</p>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
                                             <a href="vocab.html">Vokabular</a>. Mehr Informationen
                                         zur exemplarischen Analyse sind <a href="analyse.html"
