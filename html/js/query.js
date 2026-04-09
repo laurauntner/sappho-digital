@@ -18,10 +18,50 @@
     
     window.setDataSource = function (url) {
         const input = document.getElementById("dataSource");
-        if (! input) return;
+        if (!input) return;
         input.value = url;
         input.focus();
+    
+        document.querySelectorAll(".data-source-suggestions .example-btn").forEach(function(btn) {
+            btn.style.removeProperty('background-color');
+            btn.style.removeProperty('color');
+            btn.style.removeProperty('border-color');
+        });
+    
+        event.target.style.setProperty('background-color', 'rgb(94, 23, 235)', 'important');
+        event.target.style.setProperty('color', 'white', 'important');
+        event.target.style.setProperty('border-color', 'rgb(94, 23, 235)', 'important');
     };
+    
+    function setActiveDefaults() {
+        // "Alle Tripel" Button aktiv setzen
+        var allBtn = document.querySelector('.examples .example-btn[onclick="loadExample(\'all\')"]');
+        if (allBtn) {
+            allBtn.style.setProperty('background-color', 'rgb(94, 23, 235)', 'important');
+            allBtn.style.setProperty('color', 'white', 'important');
+            allBtn.style.setProperty('border-color', 'rgb(94, 23, 235)', 'important');
+        }
+    
+        // "Default (alle Daten)" Button aktiv setzen
+        var defaultBtn = document.querySelector('.data-source-suggestions .example-btn[onclick*="sappho-reception.ttl"]');
+        if (defaultBtn) {
+            defaultBtn.style.setProperty('background-color', 'rgb(94, 23, 235)', 'important');
+            defaultBtn.style.setProperty('color', 'white', 'important');
+            defaultBtn.style.setProperty('border-color', 'rgb(94, 23, 235)', 'important');
+        }
+    }
+    
+    document.addEventListener("DOMContentLoaded", function () {
+        setActiveDefaults();
+    
+        var editor = document.getElementById("queryEditor");
+        if (!editor) return;
+        editor.addEventListener("keydown", function (e) {
+            if ((e.ctrlKey || e.metaKey) && e.key === "Enter") {
+                window.executeQuery();
+            }
+        });
+    });
     
     function downloadFile(content, filename, mimeType) {
         var blob = new Blob([content], {
@@ -78,8 +118,20 @@
     
     window.loadExample = function (type) {
         var editor = document.getElementById("queryEditor");
-        if (! editor) return;
+        if (!editor) return;
         editor.value = examples[type] || "";
+    
+        document.querySelectorAll(".examples .example-btn").forEach(function(btn) {
+            btn.style.removeProperty('background-color');
+            btn.style.removeProperty('color');
+            btn.style.removeProperty('border-color');
+            btn.classList.remove("active");
+        });
+    
+        event.target.style.setProperty('background-color', 'rgb(94, 23, 235)', 'important');
+        event.target.style.setProperty('color', 'white', 'important');
+        event.target.style.setProperty('border-color', 'rgb(94, 23, 235)', 'important');
+        event.target.classList.add("active");
     };
     
     window.executeQuery = function () {

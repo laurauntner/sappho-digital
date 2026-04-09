@@ -32,13 +32,10 @@
                         </div>
                         <div class="sparql-content">
                             <div class="section">
-                                <p class="align-left">⚠️ in development ⚠️</p>
-                            </div>
-                            <div class="section">
                                 <div class="section-title">Datenquelle</div>
                                 <div class="data-source">
                                     <input type="text" id="dataSource"
-                                        value="https://sappho-digital.com/sappho-reception_asserted-and-inferred.ttl"/>
+                                        value="https://sappho-digital.com/sappho-reception.ttl"/>
                                     <div class="data-source-suggestions smaller-text">
                                         <div class="hint">Andere Quellen:</div>
                                         <div>
@@ -60,7 +57,7 @@
                                         </div>
                                         <div>
                                             <button class="example-btn" type="button"
-                                                onclick="setDataSource('https://sappho-digital.com/sappho-reception_asserted-and-inferred.ttl')"
+                                                onclick="setDataSource('https://sappho-digital.com/sappho-reception.ttl')"
                                                 >Default (alle Daten)</button>
                                         </div>
                                     </div>
@@ -87,7 +84,7 @@ LIMIT 100
 
                                 <div class="examples">
                                     <div class="section-title"
-                                        style="width: 100%; margin-bottom: 5px;"
+                                        style="width: 100%"
                                         >Beispiel-Queries:</div>
                                     <button class="example-btn" onclick="loadExample('all')">Alle
                                         Tripel</button>
