@@ -95,6 +95,33 @@ LIMIT 100
                                     <button class="example-btn" onclick="loadExample('properties')"
                                         >Alle Properties</button>
                                 </div>
+                                <div class="section">
+                                    <div class="section-title"
+                                        style="width: 100%; margin-top: 20px !important"
+                                        >Hilfreiche Ressourcen:</div>
+                                    <ul class="tooltip-list smaller-text">
+                                        <li>
+                                            <a href="https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial"
+                                                target="_blank">SPARQL-Tutorial</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://sappho-digital.com/ontology.html"
+                                                target="_blank">Datenmodell</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://sappho-digital.com/alignments.html"
+                                                target="_blank">Alignments</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://sappho-digital.com/vocab.html"
+                                                target="_blank">Vokabular</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://sappho-digital.com/statistics.html"
+                                                target="_blank">Statistische Auswertungen</a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
 
                             <div class="controls">
