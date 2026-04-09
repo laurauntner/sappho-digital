@@ -84,7 +84,7 @@ LIMIT 100
 
                                 <div class="examples">
                                     <div class="section-title"
-                                        style="width: 100%"
+                                        style="width: 100%; margin-bottom: 0px !important"
                                         >Beispiel-Queries:</div>
                                     <button class="example-btn" onclick="loadExample('all')">Alle
                                         Tripel</button>
