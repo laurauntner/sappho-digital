@@ -78,6 +78,86 @@ h3 {
     display: flex;
 }
 
+.info-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.info-icon {
+    font-size: 0.8em;
+    margin-left: 4px;
+    cursor: help;
+    color: #666;
+    text-transform: none !important;
+}
+
+.tooltip-text {
+    position: absolute;
+    top: 50%;
+    left: 120%;
+    transform: translateY(-50%);
+
+    background: #222;
+    color: #fff;
+    padding: 8px 10px;
+    border-radius: 4px;
+
+    font-size: 0.75rem;
+    line-height: 1.4;
+
+    width: 300px;
+    white-space: normal;
+    text-align: left;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.12s ease;
+    z-index: 1000;
+    
+    text-transform: none !important;
+    
+    overflow-wrap: break-word;
+}
+
+.tooltip-text a {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: #fff;
+    padding: 1px 3px;
+    border-radius: 3px;
+    transition: background 0.15s ease;
+}
+
+.tooltip-text a:hover {
+    background: rgba(94, 23, 235, 0.9);
+    color: #fff;
+}
+
+.tooltip-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 6px 0 0 0;
+}
+
+.tooltip-list li {
+    position: relative;
+    padding-left: 14px;
+    margin-bottom: 4px;
+}
+
+.tooltip-list li::before {
+    content: "›";
+    position: absolute;
+    left: 0;
+    color: #fff;
+    font-weight: bold;
+}
+
+.info-tooltip:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+}
+
 .custom-logo-link img {
     max-width: 50px;
     height: auto;
@@ -2163,7 +2243,7 @@ html {
     line-height: 1.5;
 }
 
-@media (max-width: 900px) {
+@media (max-width : 900px) {
     .entry-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -2172,7 +2252,7 @@ html {
     }
 }
 
-@media (max-width: 560px) {
+@media (max-width : 560px) {
     .entry-grid {
         grid-template-columns: 1fr;
     }

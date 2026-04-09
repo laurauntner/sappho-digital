@@ -82,16 +82,37 @@
                                             select="format-number(homepage-counter/@nTriples, '#.###', 'de')"
                                         />
                                     </div>
-                                    <div class="hero-kpi-lbl">Tripel</div>
+                                    <div class="hero-kpi-lbl">Tripel<span class="info-tooltip">
+                                            <span class="info-icon">&#9432;</span>
+                                            <span class="tooltip-text"> Ein Tripel ist im Grunde
+                                                eine einfache maschinenlesbare Aussage, bestehend
+                                                aus Subjekt, Prädikat und Objekt. Hier beziehen sich
+                                                diese Aussagen auf die literarische Sappho-Rezeption
+                                                – beispielsweise auf Werke und Autor_innen.
+                                                <br/><br/>Siehe zur Einführung auch: <ul
+                                                  class="tooltip-list">
+                                                  <li>
+                                                  <a
+                                                  href="https://en.wikipedia.org/wiki/Semantic_triple"
+                                                  target="_blank"> »Semantic triple« in der Wikipedia </a>
+                                                  </li>
+                                                  <li>
+                                                  <a href="https://sappho-digital.com/about.html"
+                                                  target="_blank"> Projektbeschreibung </a>
+                                                  </li>
+                                                </ul>
+                                            </span>
+                                        </span></div>
                                 </div>
                             </div>
                             <p class="hero-scroll-hint"><b>Wo anfangen? Einfach scrollen &#8211;
                                     unten finden sich vier m&#246;gliche Einstiege. &#x2193;</b></p>
                             <p class="smaller-text disclaimer"
-                                style="text-align:center;max-width:580px;">Disclaimer: The raw data
-                                is largely annotated with English-language labels and structured for
-                                broad reuse. The website itself, however, is primarily intended for
-                                German-speaking users.</p>
+                                style="text-align:center;max-width:580px;">Disclaimer: The <a
+                                    href="https://github.com/laurauntner/sappho-digital">raw
+                                    data</a> is largely annotated with English-language labels and
+                                structured for broad reuse. The website itself, however, is
+                                primarily intended for German-speaking users.</p>
                         </div>
                         <div class="entry-section">
                             <div class="entry-grid">
