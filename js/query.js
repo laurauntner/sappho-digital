@@ -112,10 +112,226 @@
         "  ?s ?property ?o .\n" +
         "}\n" +
         "ORDER BY ?property",
+
+        phenomTopPersonRef:
+        "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+        "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
+        "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "SELECT ?feat ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
+        "WHERE {\n" +
+        "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
+        "  FILTER(CONTAINS(STR(?f2), \"/bibl_\") && !CONTAINS(STR(?f2), \"bibl_sappho_\"))\n" +
+        "  ?f2 intro:R18_showsActualization ?act .\n" +
+        "  ?act intro:R17_actualizesFeature ?feat .\n" +
+        "  ?feat rdf:type intro:INT18_Reference .\n" +
+        "  FILTER(CONTAINS(STR(?feat), \"/person_ref/\"))\n" +
+        "  ?feat rdfs:label ?label .\n" +
+        "}\n" +
+        "GROUP BY ?feat ?label\n" +
+        "ORDER BY DESC(?anzahl)\n" +
+        "LIMIT 20",
+
+        phenomTopCharacter:
+        "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+        "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
+        "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "SELECT ?feat ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
+        "WHERE {\n" +
+        "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
+        "  FILTER(CONTAINS(STR(?f2), \"/bibl_\") && !CONTAINS(STR(?f2), \"bibl_sappho_\"))\n" +
+        "  ?f2 intro:R18_showsActualization ?act .\n" +
+        "  ?act intro:R17_actualizesFeature ?feat .\n" +
+        "  ?feat rdf:type intro:INT_Character .\n" +
+        "  ?feat rdfs:label ?label .\n" +
+        "}\n" +
+        "GROUP BY ?feat ?label\n" +
+        "ORDER BY DESC(?anzahl)\n" +
+        "LIMIT 20",
+
+        phenomTopMotif:
+        "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+        "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
+        "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "SELECT ?feat ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
+        "WHERE {\n" +
+        "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
+        "  FILTER(CONTAINS(STR(?f2), \"/bibl_\") && !CONTAINS(STR(?f2), \"bibl_sappho_\"))\n" +
+        "  ?f2 intro:R18_showsActualization ?act .\n" +
+        "  ?act intro:R17_actualizesFeature ?feat .\n" +
+        "  ?feat rdf:type intro:INT_Motif .\n" +
+        "  ?feat rdfs:label ?label .\n" +
+        "}\n" +
+        "GROUP BY ?feat ?label\n" +
+        "ORDER BY DESC(?anzahl)\n" +
+        "LIMIT 20",
+
+        phenomTopTopos:
+        "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+        "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
+        "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "SELECT ?feat ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
+        "WHERE {\n" +
+        "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
+        "  FILTER(CONTAINS(STR(?f2), \"/bibl_\") && !CONTAINS(STR(?f2), \"bibl_sappho_\"))\n" +
+        "  ?f2 intro:R18_showsActualization ?act .\n" +
+        "  ?act intro:R17_actualizesFeature ?feat .\n" +
+        "  ?feat rdf:type intro:INT_Topos .\n" +
+        "  ?feat rdfs:label ?label .\n" +
+        "}\n" +
+        "GROUP BY ?feat ?label\n" +
+        "ORDER BY DESC(?anzahl)\n" +
+        "LIMIT 20",
+
+        phenomTopPlace:
+        "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+        "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
+        "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "SELECT ?feat ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
+        "WHERE {\n" +
+        "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
+        "  FILTER(CONTAINS(STR(?f2), \"/bibl_\") && !CONTAINS(STR(?f2), \"bibl_sappho_\"))\n" +
+        "  ?f2 intro:R18_showsActualization ?act .\n" +
+        "  ?act intro:R17_actualizesFeature ?feat .\n" +
+        "  ?feat rdf:type intro:INT18_Reference .\n" +
+        "  FILTER(CONTAINS(STR(?feat), \"/place_ref/\"))\n" +
+        "  ?feat rdfs:label ?label .\n" +
+        "}\n" +
+        "GROUP BY ?feat ?label\n" +
+        "ORDER BY DESC(?anzahl)\n" +
+        "LIMIT 20",
+
+        phenomTopTopic:
+        "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+        "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
+        "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "SELECT ?feat ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
+        "WHERE {\n" +
+        "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
+        "  FILTER(CONTAINS(STR(?f2), \"/bibl_\") && !CONTAINS(STR(?f2), \"bibl_sappho_\"))\n" +
+        "  ?f2 intro:R18_showsActualization ?act .\n" +
+        "  ?act intro:R17_actualizesFeature ?feat .\n" +
+        "  ?feat rdf:type intro:INT_Topic .\n" +
+        "  ?feat rdfs:label ?label .\n" +
+        "}\n" +
+        "GROUP BY ?feat ?label\n" +
+        "ORDER BY DESC(?anzahl)\n" +
+        "LIMIT 20",
+
+        plotComponents:
+        "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+        "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
+        "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "SELECT ?feat ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
+        "WHERE {\n" +
+        "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
+        "  FILTER(CONTAINS(STR(?f2), \"/bibl_\") && !CONTAINS(STR(?f2), \"bibl_sappho_\"))\n" +
+        "  ?f2 intro:R18_showsActualization ?act .\n" +
+        "  ?act intro:R17_actualizesFeature ?feat .\n" +
+        "  ?feat rdf:type intro:INT_Plot .\n" +
+        "  ?feat rdfs:label ?label .\n" +
+        "}\n" +
+        "GROUP BY ?feat ?label\n" +
+        "ORDER BY DESC(?anzahl)\n" +
+        "LIMIT 20",
+
+        workRefs:
+        "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+        "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
+        "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "SELECT ?feat ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
+        "WHERE {\n" +
+        "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
+        "  FILTER(CONTAINS(STR(?f2), \"/bibl_\") && !CONTAINS(STR(?f2), \"bibl_sappho_\"))\n" +
+        "  ?f2 intro:R18_showsActualization ?act .\n" +
+        "  ?act intro:R17_actualizesFeature ?feat .\n" +
+        "  ?feat rdf:type intro:INT18_Reference .\n" +
+        "  FILTER(CONTAINS(STR(?feat), \"/work_ref/\"))\n" +
+        "  ?feat rdfs:label ?label .\n" +
+        "}\n" +
+        "GROUP BY ?feat ?label\n" +
+        "ORDER BY DESC(?anzahl)\n" +
+        "LIMIT 20",
+
+        textPassages:
+        "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+        "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
+        "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "SELECT ?tp ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
+        "WHERE {\n" +
+        "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
+        "  FILTER(CONTAINS(STR(?f2), \"/bibl_\") && !CONTAINS(STR(?f2), \"bibl_sappho_\"))\n" +
+        "  ?f2 intro:R30_hasTextPassage ?tp .\n" +
+        "  ?tp rdf:type intro:INT21_TextPassage .\n" +
+        "  OPTIONAL { ?tp rdfs:label ?label . }\n" +
+        "}\n" +
+        "GROUP BY ?tp ?label\n" +
+        "ORDER BY DESC(?anzahl)\n" +
+        "LIMIT 20",
+
+        phenomSappho:
+        "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+        "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
+        "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "SELECT ?feat ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
+        "WHERE {\n" +
+        "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
+        "  FILTER(CONTAINS(STR(?f2), \"bibl_sappho_\"))\n" +
+        "  ?f2 intro:R18_showsActualization ?act .\n" +
+        "  ?act intro:R17_actualizesFeature ?feat .\n" +
+        "  VALUES ?featType { intro:INT18_Reference intro:INT_Motif intro:INT_Character intro:INT_Topos intro:INT_Topic intro:INT_Plot }\n" +
+        "  ?feat rdf:type ?featType .\n" +
+        "  ?feat rdfs:label ?label .\n" +
+        "}\n" +
+        "GROUP BY ?feat ?label\n" +
+        "ORDER BY DESC(?anzahl)\n" +
+        "LIMIT 20",
+
+        authorTopWorks:
+        "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+        "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
+        "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
+        "PREFIX ecrm:  <http://erlangen-crm.org/current/>\n\n" +
+        "SELECT ?person ?authorLabel (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
+        "WHERE {\n" +
+        "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
+        "  FILTER(CONTAINS(STR(?f2), \"/bibl_\") && !CONTAINS(STR(?f2), \"bibl_sappho_\"))\n" +
+        "  ?f28 lrmoo:R17_created ?f2 .\n" +
+        "  ?f28 ecrm:P14_carried_out_by ?person .\n" +
+        "  FILTER(CONTAINS(STR(?person), \"/author_\"))\n" +
+        "  ?person rdfs:label ?authorLabel .\n" +
+        "}\n" +
+        "GROUP BY ?person ?authorLabel\n" +
+        "ORDER BY DESC(?anzahl)\n" +
+        "LIMIT 20",
+
+        intertextDocCount:
+        "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
+        "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
+        "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "SELECT ?f2 ?label (COUNT(DISTINCT ?node) AS ?anzahlRelationen)\n" +
+        "WHERE {\n" +
+        "  ?node rdf:type intro:INT31_IntertextualRelation .\n" +
+        "  ?node intro:R24_hasRelatedEntity ?f2 .\n" +
+        "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
+        "  FILTER(CONTAINS(STR(?f2), \"/bibl_\") && !CONTAINS(STR(?f2), \"bibl_sappho_\"))\n" +
+        "  ?f2 rdfs:label ?label .\n" +
+        "}\n" +
+        "GROUP BY ?f2 ?label\n" +
+        "ORDER BY DESC(?anzahlRelationen)\n" +
+        "LIMIT 20",
     };
-    
-    // ---- Globale Funktionen für onclick ----
-    
+        
     window.loadExample = function (type) {
         var editor = document.getElementById("queryEditor");
         if (!editor) return;
@@ -172,7 +388,6 @@
             return;
         }
         
-        // queryBindings liefert ein Result-Objekt (mit .variables und .toArray()).
         window.myEngine.queryBindings(query, {
             sources:[ {
                 type: "file", value: source, mediaType: "text/turtle"
@@ -180,7 +395,6 @@
         }).then(function (result) {
             var variables = (result && result.variables) ? result.variables:[];
             
-            // result.toArray() sollte ein Array von Bindings liefern
             return result.toArray().then(function (bindings) {
                 return {
                     bindings: bindings, variables: variables
@@ -190,7 +404,6 @@
             var bindings = data.bindings;
             var variables = data.variables;
             
-            // Robustheit: bindings MUSS ein Array sein
             if (! isArray(bindings)) bindings =[];
             
             window.currentResults = bindings;
@@ -201,14 +414,12 @@
                 return;
             }
             
-            // Robustheit: variables holen
             if (! variables || ! variables.length) {
                 if (bindings[0] && bindings[0].variables) {
                     variables = bindings[0].variables;
                 }
             }
             
-            // Letzter Fallback: Keys aus dem Binding (Map)
             if (! variables || ! variables.length) {
                 variables =[];
                 try {
@@ -223,7 +434,6 @@
                 }
             }
             
-            // Wenn immer noch keine Variablen gefunden: Abbruch mit Hinweis
             if (! variables || ! variables.length) {
                 resultsDiv.innerHTML =
                 '<div class="status error">❌ Konnte Ergebnis-Variablen nicht bestimmen (unerwartetes Ergebnisformat).</div>';
@@ -259,10 +469,8 @@
                     
                     try {
                         if (binding && typeof binding. get === "function") {
-                            // v ist i.d.R. ein RDFJS Variable-Objekt
                             term = binding. get (v);
                             
-                            // Fallback, falls v.value gebraucht wird
                             if (! term && v && v.value) term = binding. get (v);
                         }
                     }
@@ -308,7 +516,6 @@
         
         var variables = results[0] && results[0].variables ? results[0].variables: null;
         
-        // Fallback: Variablen aus Keys ziehen, wenn nicht vorhanden
         if (! variables || ! variables.length) {
             variables =[];
             try {
@@ -381,7 +588,6 @@
         }
     };
     
-    // Ctrl/Cmd+Enter nur, wenn DOM bereit ist
     document.addEventListener("DOMContentLoaded", function () {
         var editor = document.getElementById("queryEditor");
         if (! editor) return;

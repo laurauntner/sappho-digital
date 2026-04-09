@@ -905,7 +905,7 @@ body.page {
 }
 
 .section-title {
-    margin-top: 20px !important;
+    margin-top: 5px !important;
     font-size: 14px;
     font-weight: 600;
     color: #666;
@@ -989,7 +989,7 @@ body.page {
 .controls {
     display: flex;
     gap: 10px;
-    margin-top: 15px;
+    margin-top: 30px;
     flex-wrap: wrap;
 }
 
