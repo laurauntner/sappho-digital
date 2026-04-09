@@ -97,11 +97,14 @@ h3 {
     left: 120%;
     transform: translateY(-50%);
 
-    background: #222;
-    color: #fff;
+    background: #ffffff;
+    color: #1f2937;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
     padding: 8px 10px;
     border-radius: 4px;
 
+    font-family: 'Geist', system-ui, sans-serif;
     font-size: 0.75rem;
     line-height: 1.4;
 
@@ -120,9 +123,9 @@ h3 {
 }
 
 .tooltip-text a {
-    color: #fff;
+    color: #5e17eb;
     text-decoration: underline;
-    text-decoration-color: #fff;
+    text-decoration-color: #5e17eb;
     padding: 1px 3px;
     border-radius: 3px;
     transition: background 0.15s ease;
@@ -149,7 +152,7 @@ h3 {
     content: "›";
     position: absolute;
     left: 0;
-    color: #fff;
+    color: #5e17eb;
     font-weight: bold;
 }
 
@@ -1530,8 +1533,12 @@ body.page {
 }
 
 .vis-tooltip {
-    font-family: 'Segoe UI', system-ui, sans-serif !important;
+    font-family: 'Geist', system-ui, sans-serif !important;
     font-size: 12px !important;
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12) !important;
     border-radius: 6px !important;
     padding: 6px 10px !important;
     max-width: 260px !important;
@@ -1684,7 +1691,7 @@ body.page {
 @font-face {
     font-family: 'Geist';
     src: url('../fonts/geist-sans-latin-200-normal.woff2') format('woff2');
-    font-display: swap;
+    font-display: block;
 }
 
 body[data-tei-file] #heatmap-section {

@@ -21,6 +21,8 @@
         <link rel="icon" type="image/png" href="html/image/favicons/favicon-64x64.png"/>
         <link rel="icon" type="image/png" href="html/image/favicons/favicon-96x96.png"/>
         <link rel="icon" type="image/png" href="html/image/favicons/favicon-180x180.png"/>
+        <link rel="preload" href="fonts/geist-sans-latin-200-normal.woff2" as="font"
+            type="font/woff2" crossorigin="anonymous"/>
         <link rel="apple-touch-icon" type="image/png"
             href="html/image/favicons/apple-touch-icon-57x57.png"/>
         <link rel="apple-touch-icon" type="image/png"
