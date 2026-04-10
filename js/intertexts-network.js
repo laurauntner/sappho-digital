@@ -1,26 +1,35 @@
-// intertexts-network-v3.js
+// intertexts-network-v4.js
 import Graph from 'https://cdn.jsdelivr.net/npm/graphology@0.25.4/+esm';
 import forceAtlas2 from 'https://cdn.jsdelivr.net/npm/graphology-layout-forceatlas2@0.10.1/+esm';
-import noverlap from 'https://cdn.jsdelivr.net/npm/graphology-layout-noverlap@0.4.2/+esm';
 import { Sigma } from 'https://cdn.jsdelivr.net/npm/sigma@3.0.0/+esm';
 
 // ---------- DOM ----------
-const dataEl = document.getElementById('itx-graph-data');
-const container = document.getElementById('itx-graph');
+const dataEl     = document.getElementById('itx-graph-data');
+const container  = document.getElementById('itx-graph');
 const edgeSlider = document.getElementById('edge-threshold');
 
-if (!container) {
-    // Seite ohne Graph – nichts zu tun
-} else {
+if (container) {
     (async () => {
+
+        // ---------- Ladeindikator ----------
+        const loader = document.createElement('div');
+        loader.style.cssText =
+            'position:absolute;inset:0;display:flex;align-items:center;' +
+            'justify-content:center;font-size:0.85rem;color:#6b7280;pointer-events:none;';
+        loader.textContent = 'Graph wird geladen …';
+        container.style.position = 'relative';
+        container.appendChild(loader);
+        const setStatus = (msg) => { loader.textContent = msg; };
+        const hideLoader = () => { loader.remove(); };
+
         // ---------- Daten laden ----------
         let payload = {};
         try {
             const dataSrc = container.dataset.src;
-
             if (dataSrc) {
+                setStatus('Daten werden geladen …');
                 const res = await fetch(dataSrc, { cache: 'force-cache' });
-                if (!res.ok) throw new Error(`HTTP ${res.status} beim Laden von ${dataSrc}`);
+                if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 payload = await res.json();
             } else if (dataEl) {
                 payload = JSON.parse(dataEl.textContent || '{}');
@@ -30,7 +39,7 @@ if (!container) {
             }
         } catch (e) {
             console.error(e);
-            container.textContent = 'Daten konnten nicht geladen oder geparst werden.';
+            container.textContent = 'Daten konnten nicht geladen werden.';
             return;
         }
 
@@ -39,7 +48,6 @@ if (!container) {
             container.textContent = 'Ungültige Graphdaten.';
             return;
         }
-
         if (payload.nodes.length === 0) {
             container.textContent = 'Keine Graphdaten vorhanden.';
             return;
@@ -47,223 +55,162 @@ if (!container) {
 
         // ---------- Parameter ----------
         const K_STRUCT = 2;
-        const COLORS = {
-            frag: '#a78bfa',
-            recep: '#9ca3af'
-        };
+        const COLORS   = { frag: '#a78bfa', recep: '#9ca3af' };
 
         // ---------- Graph aufbauen ----------
-        const G = new Graph({
-            type: 'undirected',
-            allowSelfLoops: false,
-            multi: false
-        });
+        setStatus('Graph wird aufgebaut …');
+        await tick();
 
-        (payload.nodes || []).forEach((n) => {
-            if (!n || !n.id) return;
-            if (!G.hasNode(n.id)) {
-                G.addNode(n.id, {
-                    label: n.label || n.id,
-                    kind: n.kind || 'recep',
-                    href: n.href || null,
-                    color: COLORS[n.kind] || '#9ca3af',
-                    size: 1
-                });
-            }
-        });
+        const G = new Graph({ type: 'undirected', allowSelfLoops: false, multi: false });
 
-        (payload.edges || []).forEach((e) => {
-            if (!e || !e.source || !e.target) return;
-            if (!G.hasNode(e.source) || !G.hasNode(e.target) || e.source === e.target) return;
+        for (const n of payload.nodes) {
+            if (!n?.id || G.hasNode(n.id)) continue;
+            G.addNode(n.id, {
+                label: n.label || n.id,
+                kind:  n.kind  || 'recep',
+                href:  n.href  || null,
+                color: COLORS[n.kind] || '#9ca3af',
+                size:  1,
+                x: typeof n.x === 'number' ? n.x : (Math.random() - 0.5) * 10,
+                y: typeof n.y === 'number' ? n.y : (Math.random() - 0.5) * 10,
+            });
+        }
 
+        for (const e of payload.edges) {
+            if (!e?.source || !e?.target) continue;
+            if (!G.hasNode(e.source) || !G.hasNode(e.target) || e.source === e.target) continue;
             const key = e.source < e.target ? `${e.source}|${e.target}` : `${e.target}|${e.source}`;
-
+            const w   = e.weight || 1;
             if (!G.hasEdge(e.source, e.target)) {
                 G.addEdgeWithKey(key, e.source, e.target, {
-                    weight: e.weight || 1,
-                    size: Math.max(0.1, 0.4 * Math.log2(1 + (e.weight || 1)))
+                    weight: w,
+                    size: Math.max(0.1, 0.4 * Math.log2(1 + w))
                 });
             } else {
-                const a = G.getEdgeAttributes(key) || {};
-                const w = (a.weight || 0) + (e.weight || 1);
-                G.setEdgeAttribute(key, 'weight', w);
-                G.setEdgeAttribute(key, 'size', Math.max(0.1, 0.4 * Math.log2(1 + w)));
+                const prev = (G.getEdgeAttribute(key, 'weight') || 0) + w;
+                G.setEdgeAttribute(key, 'weight', prev);
+                G.setEdgeAttribute(key, 'size', Math.max(0.1, 0.4 * Math.log2(1 + prev)));
             }
-        });
-
-        if (G.order === 0) {
-            container.textContent = 'Keine darstellbaren Knoten vorhanden.';
-            return;
         }
+
+        if (G.order === 0) { container.textContent = 'Keine darstellbaren Knoten vorhanden.'; return; }
 
         // ---------- Knotengrößen ----------
         G.forEachNode((n) => {
             const deg = G.degree(n);
-            const size = Math.max(0.8, 0.3 + Math.log2(1 + deg) * 0.75);
-            G.setNodeAttribute(n, 'size', Math.min(size, 4));
+            G.setNodeAttribute(n, 'size', Math.min(Math.max(0.8, 0.3 + Math.log2(1 + deg) * 0.75), 4));
         });
-
-        // ---------- Startpositionen ----------
-        const R = 10;
-        G.forEachNode((n) => {
-            if (typeof G.getNodeAttribute(n, 'x') !== 'number') {
-                G.setNodeAttribute(n, 'x', (Math.random() - 0.5) * R);
-            }
-            if (typeof G.getNodeAttribute(n, 'y') !== 'number') {
-                G.setNodeAttribute(n, 'y', (Math.random() - 0.5) * R);
-            }
-        });
-
-        // ---------- Hilfsfunktionen ----------
-        function edgeKey(a, b) {
-            return a < b ? `${a}|${b}` : `${b}|${a}`;
-        }
-
-        function weightOfKey(key) {
-            return G.getEdgeAttribute(key, 'weight') || 1;
-        }
 
         // ---------- Strukturfilter ----------
-        function keepTopKEdges(k = 2) {
-            const keep = new Set();
-            G.forEachNode((n) => {
-                const nbrs = [];
-                G.forEachNeighbor(n, (m) => {
-                    const key = edgeKey(n, m);
-                    nbrs.push({ key, w: weightOfKey(key) });
-                });
-                nbrs.sort((a, b) => b.w - a.w);
-                nbrs.slice(0, k).forEach(({ key }) => keep.add(key));
-            });
-            return keep;
-        }
+        setStatus('Struktur wird gefiltert …');
+        await tick();
 
-        function maximumSpanningTree() {
-            const edges = G.edges()
-                .map((key) => ({
-                    key,
-                    s: G.source(key),
-                    t: G.target(key),
-                    w: weightOfKey(key)
-                }))
-                .sort((a, b) => b.w - a.w);
+        const keepSet = new Set();
+
+        // kNN: Top-K Nachbarn pro Knoten
+        G.forEachNode((n) => {
+            const nbrs = [];
+            G.forEachNeighbor(n, (m) => {
+                const key = n < m ? `${n}|${m}` : `${m}|${n}`;
+                nbrs.push({ key, w: G.getEdgeAttribute(key, 'weight') || 1 });
+            });
+            nbrs.sort((a, b) => b.w - a.w);
+            nbrs.slice(0, K_STRUCT).forEach(({ key }) => keepSet.add(key));
+        });
+
+        // MST (Kruskal)
+        {
+            const edges = [];
+            G.forEachEdge((key) => edges.push({
+                key, s: G.source(key), t: G.target(key),
+                w: G.getEdgeAttribute(key, 'weight') || 1
+            }));
+            edges.sort((a, b) => b.w - a.w);
 
             const parent = new Map();
             G.forEachNode((n) => parent.set(n, n));
-
             const find = (x) => {
-                while (parent.get(x) !== x) {
-                    parent.set(x, parent.get(parent.get(x)));
-                    x = parent.get(x);
-                }
+                while (parent.get(x) !== x) { parent.set(x, parent.get(parent.get(x))); x = parent.get(x); }
                 return x;
             };
-
-            const unite = (a, b) => {
-                const ra = find(a);
-                const rb = find(b);
-                if (ra !== rb) parent.set(ra, rb);
-            };
-
-            const tree = new Set();
             for (const { key, s, t } of edges) {
-                const rs = find(s);
-                const rt = find(t);
-                if (rs !== rt) {
-                    tree.add(key);
-                    unite(rs, rt);
-                }
+                const rs = find(s), rt = find(t);
+                if (rs !== rt) { keepSet.add(key); parent.set(rs, rt); }
             }
-            return tree;
         }
 
-        function applyStructuralFiltering(k = 2) {
-            const knn = keepTopKEdges(k);
-            const mst = maximumSpanningTree();
-            const keep = new Set([...knn, ...mst]);
+        G.forEachEdge((e) => {
+            const s = G.source(e), t = G.target(e);
+            const k = s < t ? `${s}|${t}` : `${t}|${s}`;
+            G.setEdgeAttribute(e, 'keep_structural', keepSet.has(k));
+        });
 
-            G.forEachEdge((e) => {
-                const s = G.source(e);
-                const t = G.target(e);
-                const kstr = edgeKey(s, t);
-                G.setEdgeAttribute(e, 'keep_structural', keep.has(kstr));
-            });
+        // ---------- Layout in Chunks (kein UI-Freeze) ----------
+        // ForceAtlas2 wird in kleinen Häppchen ausgeführt; zwischen jedem
+        // Chunk gibt setTimeout(0) dem Browser Zeit zum Atmen.
+        const CHUNK = 50;
+        const TOTAL = Math.min(300, Math.round(G.order * 0.5));
+        const FA2_SETTINGS = {
+            linLogMode:                     true,
+            gravity:                        0.05,
+            scalingRatio:                   400,
+            edgeWeightInfluence:            0.12,
+            outboundAttractionDistribution: true,
+            adjustSizes:                    false,  // teuer bei 10k Knoten
+            barnesHutOptimize:              true,
+            barnesHutTheta:                 0.8,
+            slowDown:                       8,
+        };
+
+        let done = 0;
+        while (done < TOTAL) {
+            const iter = Math.min(CHUNK, TOTAL - done);
+            forceAtlas2.assign(G, { iterations: iter, settings: FA2_SETTINGS });
+            done += iter;
+            setStatus(`Layout … ${Math.round((done / TOTAL) * 100)} %`);
+            await tick();
         }
-
-        applyStructuralFiltering(K_STRUCT);
-
-        // ---------- Layout ----------
-        forceAtlas2.assign(G, {
-            iterations: Math.max(300, Math.min(800, G.order * 2)),
-            settings: {
-                linLogMode: true,
-                gravity: 0.00000000001,
-                scalingRatio: 800,
-                edgeWeightInfluence: 0.12,
-                outboundAttractionDistribution: true,
-                adjustSizes: true,
-                barnesHutOptimize: true,
-                barnesHutTheta: 0.7,
-                slowDown: 14
-            }
-        });
-
-        noverlap.assign(G, {
-            margin: 3,
-            ratio: 1.15,
-            maxIterations: 120
-        });
 
         // ---------- Viewport-Normalisierung ----------
-        function normalizeToViewport(padding = 0.85) {
-            if (G.order === 0) return;
-
+        {
             let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
-
             G.forEachNode((n) => {
-                const x = G.getNodeAttribute(n, 'x');
-                const y = G.getNodeAttribute(n, 'y');
-                if (x < minX) minX = x;
-                if (x > maxX) maxX = x;
-                if (y < minY) minY = y;
-                if (y > maxY) maxY = y;
+                const x = G.getNodeAttribute(n, 'x'), y = G.getNodeAttribute(n, 'y');
+                if (x < minX) minX = x; if (x > maxX) maxX = x;
+                if (y < minY) minY = y; if (y > maxY) maxY = y;
             });
-
-            const dx = Math.max(1e-6, maxX - minX);
-            const dy = Math.max(1e-6, maxY - minY);
-            const cx = (minX + maxX) / 2;
-            const cy = (minY + maxY) / 2;
-
-            const w = container.clientWidth || 1;
-            const h = container.clientHeight || 1;
-            const sx = dx / (w * padding);
-            const sy = dy / (h * padding);
-            const scale = Math.max(sx, sy);
-            const inv = 1 / scale;
-
+            const cx  = (minX + maxX) / 2, cy = (minY + maxY) / 2;
+            const w   = container.clientWidth || 1, h = container.clientHeight || 1;
+            const inv = 1 / Math.max(
+                Math.max(1e-6, maxX - minX) / (w * 0.85),
+                Math.max(1e-6, maxY - minY) / (h * 0.85)
+            );
             G.forEachNode((n) => {
-                const x = G.getNodeAttribute(n, 'x');
-                const y = G.getNodeAttribute(n, 'y');
-                G.setNodeAttribute(n, 'x', (x - cx) * inv);
-                G.setNodeAttribute(n, 'y', (y - cy) * inv);
+                G.setNodeAttribute(n, 'x', (G.getNodeAttribute(n, 'x') - cx) * inv);
+                G.setNodeAttribute(n, 'y', (G.getNodeAttribute(n, 'y') - cy) * inv);
             });
         }
 
-        normalizeToViewport(0.85);
-
         // ---------- Renderer ----------
+        setStatus('Renderer wird initialisiert …');
+        await tick();
+
         const renderer = new Sigma(G, container, {
-            renderLabels: true,
-            labelDensity: 0.1,
-            labelRenderedSizeThreshold: 3,
-            defaultEdgeType: 'line',
-            edgeColor: 'default',
-            defaultEdgeColor: '#e5ebe5'
+            renderLabels:               true,
+            labelDensity:               0.05,   // weniger Labels bei 10k Knoten
+            labelRenderedSizeThreshold: 6,      // Labels erst ab höherem Zoom sichtbar
+            defaultEdgeType:            'line',
+            edgeColor:                  'default',
+            defaultEdgeColor:           '#e5ebe5',
+            hideEdgesOnMove:            true,   // Kanten beim Pan/Zoom ausblenden → flüssiger
+            hideLabelsOnMove:           true,
         });
 
         renderer.setSetting('labelFont', '"Geist", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif');
         renderer.setSetting('defaultLabelColor', '#000');
         renderer.setSetting('labelSize', 10);
+
+        hideLoader();
 
         // ---------- Interaktion ----------
         renderer.on('clickNode', (ev) => {
@@ -275,19 +222,14 @@ if (!container) {
         let minWeight = edgeSlider ? Number(edgeSlider.value) || 1 : 1;
 
         renderer.setSetting('edgeReducer', (e, a) => {
-            const keepStruct = a.keep_structural !== false;
-            const w = typeof a.weight === 'number' ? a.weight : 1;
-            if (!keepStruct || w < minWeight) {
-                return { ...a, hidden: true };
-            }
-            return { ...a, hidden: false };
+            a.hidden = !a.keep_structural || a.weight < minWeight;
+            return a;
         });
 
         if (edgeSlider) {
-            if (!edgeSlider.hasAttribute('min')) edgeSlider.min = '1';
-            if (!edgeSlider.hasAttribute('max')) edgeSlider.max = '20';
+            if (!edgeSlider.hasAttribute('min'))  edgeSlider.min  = '1';
+            if (!edgeSlider.hasAttribute('max'))  edgeSlider.max  = '20';
             if (!edgeSlider.hasAttribute('step')) edgeSlider.step = '1';
-
             edgeSlider.addEventListener('input', () => {
                 minWeight = Number(edgeSlider.value) || 1;
                 renderer.refresh();
@@ -298,11 +240,13 @@ if (!container) {
         let resizeTimer = 0;
         window.addEventListener('resize', () => {
             clearTimeout(resizeTimer);
-            resizeTimer = setTimeout(() => {
-                normalizeToViewport(0.85);
-                renderer.refresh();
-            }, 150);
+            resizeTimer = setTimeout(() => renderer.refresh(), 150);
         });
 
     })();
+}
+
+// Gibt dem Browser einen Frame Zeit zum Rendern/Atmen
+function tick() {
+    return new Promise(r => setTimeout(r, 0));
 }

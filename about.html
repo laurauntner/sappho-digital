@@ -45,6 +45,10 @@
                <div class="container-fluid"><a href="index.html" class="navbar-brand custom-logo-link" rel="home" itemprop="url"><img src="images/sappho-reception-digital_logo.png" class="img-fluid" title="Sappho Digital" alt="Sappho Digital" itemprop="logo" /></a><span class="navbar-badges"><span class="badge bg-light text-dark">in development</span><a href="https://docs.google.com/forms/d/e/1FAIpQLScj2_oFbryOurCVvVbBq6M3tY5POjhpWwFRcthZ9T8HDNjQYw/viewform?usp=send_form" target="_blank" rel="noopener noreferrer" class="badge dh-award-badge">Nominiert für den DH Award 2025 – hier abstimmen</a></span><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                      <ul class="navbar-nav mb-2 mb-lg-0">
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle custom-dropdown-link" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projekt</a><ul class="dropdown-menu">
+                              <li><a class="dropdown-item custom-dropdown-link" href="orientierung.html">Orientierung </a></li>
+                              <li>
+                                 <hr class="dropdown-divider" />
+                              </li>
                               <li><a class="dropdown-item custom-dropdown-link" href="about.html">Über das Projekt</a></li>
                               <li><a class="dropdown-item custom-dropdown-link" href="publikationen.html">Publikationen</a></li>
                               <li><a class="dropdown-item custom-dropdown-link" href="bibliographie.html">Bibliographie</a></li>
@@ -309,11 +313,18 @@
                               <li><a class="dropdown-item custom-dropdown-link" href="https://github.com/laurauntner/sappho-digital">GitHub</a></li>
                            </ul>
                         </li>
+                        <li class="nav-item"><span class="info-tooltip"><a class="nav-link nav-orientierung-link" href="orientierung.html" aria-label="Orientierungshilfe"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+                                    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0                                                  .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686                                                  0 1.314.343 1.314 1.168 0 .635-.374.927-.965                                                  1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25                                                  0 0 0 .25.246h.811a.25.25 0 0 0                                                  .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463                                                  1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267                                                  0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609                                                  0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584                                                  0-1.009.388-1.009.94z"></path></svg></a><span class="tooltip-text">Orientierungshilfe</span></span></li>
                      </ul>
                   </div>
                </div>
-            </nav>
-         </div>
+            </nav><script>
+                document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('[data-bs-toggle="tooltip"]')
+                .forEach(el =&gt; new bootstrap.Tooltip(el));
+                });
+            </script></div>
          <div class="container-fluid">
             <div class="card">
                <div class="card-header">
@@ -350,140 +361,67 @@
                      
                      <ul>
                         
-                        <li>einem für Menschen leicht lesbaren tabellarischen Verzeichnis aller
-                           bekannten produktiv-literarischen Rezeptionszeugnisse zu Sappho aus dem
-                           deutschsprachigen Raum,</li>
+                        <li>einem für Menschen leicht lesbaren tabellarischen <b>Verzeichnis</b> aller bekannten produktiv-literarischen
+                           Rezeptionszeugnisse zu Sappho aus dem deutschsprachigen Raum,</li>
                         
-                        <li>einer OWL-Ontologie zur formalen Modellierung von detailliertem Wissen
-                           über diese Rezeptionszeugnisse,</li>
+                        <li>einer formalen <b>Ontologie</b> zur maschinenlesbaren
+                           Modellierung von detailliertem Wissen über literarische
+                           Rezeptionsgeschichten,</li>
                         
-                        <li>einem semantischen Graphen mit diesem detaillierten Wissen und</li>
+                        <li>einem <b>semantischen Graphen</b> mit diesem detaillierten
+                           Wissen über 99 exemplarische Rezeptionszeugnisse und 165 Sappho-Fragmente
+                           bzw. deren intertextuelle Beziehungen sowie</li>
                         
-                        <li>einer SKOS-Taxonomie zur Klassifizierung wiederkehrender Elemente in der
-                           literarischen Sappho-Rezeption.</li>
+                        <li>einem kontrollierten <b>Vokabular</b> zur Klassifizierung
+                           wiederkehrender Elemente in der literarischen Sappho-Rezeption.</li>
                         </ul>
                      
-                     <p class="align-left" id="d5e76">Volltexte der Rezeptionszeugnisse werden zu keinem Zeitpunkt angeboten. Eine
-                        Textauswahl findet sich in meinem Band <i><a href="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/">Sappho. Texte zur literarischen Rezeption im deutschsprachigen
+                     <p class="align-left" id="d5e92">Diese Daten werden auf verschiedene Weisen ausgewertet und aufbereitet. Ein <b>Überblick</b> über alle Bestandteile der Webseite ist <a href="orientierung.html">hier</a> zu finden. Erläuterungen zur
+                        exemplarischen Analyse können <a href="analyse.html">hier</a> nachgelesen
+                        werden. </p>
+                     
+                     <p class="align-left" id="d5e104">Volltexte der Rezeptionszeugnisse werden zu keinem Zeitpunkt angeboten. Eine
+                        Textauswahl findet sich in dem Band <i><a href="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/">Sappho. Texte zur literarischen Rezeption im deutschsprachigen
                               Raum</a></i> (2023); Links zu Digitalisaten sind in den
                         Verzeichnissen vorhanden. Eine Auswahlbibliographie zur literarischen
                         Sappho-Rezeption ist <a href="bibliographie.html">hier</a> zu finden.</p>
                      </div>
                   
-                  <div id="d5e87">
+                  <div id="d5e115">
                      
                      <h3 class="align-left">Projektstand</h3>
                      
-                     <p class="align-left" id="d5e91">Aktuell (Stand: Februar 2026) ist das <b>Verzeichnis der
-                           Rezeptionszeugnisse</b> so weit bearbeitet, dass es auszugsweise
-                        veröffentlicht werden kann. Es werden fünf Zugänge angeboten: Es können Belege
-                        für <a href="toc-alle.html">alle</a>, <a href="toc-prosa.html">prosaische</a>, <a href="toc-lyrik.html">lyrische</a>, <a href="toc-drama.html">dramatische</a> und <a href="toc-sonstige.html">sonstige</a> Rezeptionszeugnisse (z. B. Comics)
-                        eingesehen werden.</p>
-                     
-                     <p class="align-left" id="d5e113">Neben der Gattungszugehörigkeit sind folgende Informationen erfasst und
-                        durchsuchbar:</p>
-                     
-                     <ul>
-                        
-                        <li>Jahr der Entstehung,</li>
-                        
-                        <li>Jahr des Erstdrucks oder der Erstaufführung,</li>
-                        
-                        <li>Titel,</li>
-                        
-                        <li>ggf. Titel des Werks, in dem der Text enthalten ist,</li>
-                        
-                        <li>Autor_in,</li>
-                        
-                        <li>Publikations- oder Erstaufführungsort,</li>
-                        
-                        <li>Verlag oder Druckerei und</li>
-                        
-                        <li>Link zu einem Digitalisat.</li>
-                        </ul>
-                     
-                     <p class="align-left" id="d5e135">Zu vielen Werken, Autor_innen, Orten, Verlagen und Druckereien werden auch <a href="https://www.wikidata.org/">Wikidata</a>-IDs bereitsgestellt.</p>
-                     
-                     <p class="align-left" id="d5e142">Das Verzeichnis wird laufend aktualisiert und erweitert. Zu vielen
-                        Rezeptionszeugnissen sind bereits fast alle Informationen vorhanden, zu manchen
-                        fehlen noch einige.</p>
-                     
-                     <p class="align-left" id="d5e144">Die <b>OWL-Ontologie</b> basierend auf der Erlangen OWL-Version des
-                        CIDOC Conceptual Reference Models (CRM; <a href="http://erlangen-crm.org/current/">ECRM</a> 240307, basierend auf
-                        CIDOC CRM 7.1.3), der objektorientierten Version des IFLA Library Reference
-                        Models (<a href="http://iflastandards.info/ns/lrm/lrmoo/">LRMoo</a>;
-                        v1.1.1) und <a href="https://w3id.org/lso/intro/currentbeta#">INTRO</a>
-                        (the Intertextual, Interpictorial and Intermedial Relations Ontology;
-                        beta202506) ist <a href="ontology.html">hier</a> zu finden.</p>
-                     
-                     <p class="align-left" id="d5e162">Das <b>SKOS-Vokabular</b> ist <a href="vocab.html">hier</a>
-                        einsehbar.</p>
-                     
-                     <p class="align-left" id="d5e171">Sowohl die Ontologie als auch das Vokabular werden fortlaufend
-                        weiterentwickelt.</p>
-                     
-                     <p class="align-left" id="d5e173"><b>Ontologie-Alignments</b> werden <a href="alignments.html">hier</a> visualisiert.</p>
-                     
-                     <p class="align-left" id="d5e181">Eine <b>Netzwerkvisualisierung</b> aller Daten findet sich <a href="network.html">hier</a>. Außerdem ist der Graph <a href="query.html">hier</a> via <b>SPARQL</b>
-                        abfragbar.</p>
-                     
-                     <p class="align-left" id="d5e197"><b>Ergebnisse der exemplarischen Analyse</b> werden in die Reiter
-                        »Rezeptionsphänomene« und »Statistik« (beide in »Analyse«) integriert. Mehr
-                        Informationen zur Analyse sind <a href="analyse.html">hier</a> zu
-                        finden.</p>
-                     
-                     <p class="align-left" id="d5e205">Mit einer Fertigstellung des Projekts ist 2027 zu rechnen. Bis dahin wird die
-                        Webseite fortlaufend erweitert.</p>
+                     <p class="align-left" id="d5e119">Aktuell (Stand: April 2026) ist die Webseite in einem vorläufigen Stand
+                        veröffentlicht. Mit einer Fertigstellung des Projekts ist 2027 zu rechnen. Bis
+                        dahin wird die Webseite fortlaufend erweitert.</p>
                      </div>
                   
-                  <div id="d5e208">
+                  <div id="d5e122">
                      
                      <h3 class="align-left">Daten</h3>
                      
-                     <p class="align-left" id="d5e212"><b>Excel-Tabellen</b> mit den Daten aus den Verzeichnissen können
-                        in den Unterseiten geladen werden. <b>XML/TEI- sowie
-                           RDF-Dateien</b> sind über <a href="https://github.com/laurauntner/sappho-digital/">GitHub</a> frei
+                     <p class="align-left" id="d5e126">Alle bereitgestellten Daten können unter Nennung der Quelle frei weiterverwendet
+                        werden (CC BY 4.0). Alle Daten sind über <a href="https://github.com/laurauntner/sappho-digital/">GitHub</a> frei
                         zugänglich.</p>
-                     
-                     <p class="align-left" id="d5e223">Grundsätzlich können alle bereitgestellten Daten unter Nennung der Quelle frei
-                        weiterverwendet werden.</p>
                      </div>
                   
-                  <div id="d5e226">
+                  <div id="d5e133">
                      
-                     <h3 class="align-left">Mithelfen/Kontakt</h3>
+                     <h3 class="align-left">Zitiervorschlag</h3>
                      
-                     <p class="align-left" id="d5e230">Sie kennen einen literarischen Text aus dem deutschsprachigen Raum, der mit
-                        Sappho zu tun hat, aber hier nicht verzeichnet ist? Über Hinweise jeglicher Art
-                        bin ich sehr dankbar: <a href="mailto:laura.untner@fu-berlin.de">laura.untner@fu-berlin.de</a>.</p>
-                     
-                     <p class="align-left" id="d5e236">Sie haben Verbesserungsvorschläge oder gar einen Fehler gefunden? Auch darüber
-                        freue ich mich. Am besten gleich ein Issue auf <a href="https://github.com/laurauntner/sappho-digital/issues">GitHub</a>
-                        anlegen.</p>
-                     </div>
-                  
-                  <div id="d5e244">
-                     
-                     <h3 class="align-left">Zitieren</h3>
-                     
-                     <p class="align-left" id="d5e248">Die bereitgestellten Daten können unter Nennung der Quelle frei weiterverwendet
-                        werden.</p>
-                     
-                     <p class="align-left" id="d5e250"><b>Zitiervorschlag:</b></p>
-                     
-                     <p class="align-left" id="d5e254">Laura Untner: Sappho Digital. Die literarische Sappho-Rezeption im
+                     <p class="align-left" id="d5e137">Laura Untner: Sappho Digital. Die literarische Sappho-Rezeption im
                         deutschsprachigen Raum. Wien/Berlin 2024–[2027], <a href="https://sappho-digital.com">https://sappho-digital.com</a>.</p>
                      
-                     <p class="align-left" id="d5e260">Um eine bessere Reproduzierbarkeit zu gewährleisten, empfiehlt es sich, den
+                     <p class="align-left" id="d5e143">Um eine bessere Reproduzierbarkeit zu gewährleisten, empfiehlt es sich, den
                         Zeitpunkt der letzten Aktualisierung der Daten in der untersten Zeile der
                         Webseite anzugeben.</p>
                      </div>
                   
-                  <div id="d5e263">
+                  <div id="d5e147">
                      
                      <h3 class="align-left">Über mich: Laura Untner</h3>
                      
-                     <p class="align-left" id="d5e267">Ich bin Doktorandin an der <a href="https://www.geisteswissenschaften.fu-berlin.de/friedrichschlegel/index.html">Friedrich Schlegel Graduiertenschule für literaturwissenschaftliche
+                     <p class="align-left" id="d5e151">Ich bin Doktorandin an der <a href="https://www.geisteswissenschaften.fu-berlin.de/friedrichschlegel/index.html">Friedrich Schlegel Graduiertenschule für literaturwissenschaftliche
                            Studien</a> und wissenschaftliche Mitarbeiterin an der <a href="https://www.fu-berlin.de/">Freien Universität Berlin</a>,
                         assoziiert mit dem Exzellenzcluster »<a href="https://www.temporal-communities.de/">Temporal Communities. Doing
                            Literature in a Global Perspective</a>«. Mein Dissertationsprojekt wird
@@ -492,12 +430,12 @@
                            junge Digital Humanities Berlin-Brandenburg</a>; von April bis Juni 2026
                         bin ich außerdem Gastforscherin am <a href="https://litlab.stanford.edu/">Stanford Literary Lab</a>.</p>
                      
-                     <p class="align-left" id="d5e295">Neben der wissenschaftlichen Arbeit engagiere ich mich in der freien
+                     <p class="align-left" id="d5e179">Neben der wissenschaftlichen Arbeit engagiere ich mich in der freien
                         Literaturszene: als Vorstandsmitglied des <a href="https://www.lesereihen.org/">Unabhängige Lesereihen e. V.</a> und
                         als Mitglied des Kurator_innenteams der Berliner Lesereihe »<a href="https://schreibengegendienormen.de/">Schreiben gegen die
                            Norm(en)?</a>«.</p>
                      
-                     <p class="align-left" id="d5e304">Zuvor studierte ich Deutsche Philologie und Vergleichende Literaturwissenschaft
+                     <p class="align-left" id="d5e188">Zuvor studierte ich Deutsche Philologie und Vergleichende Literaturwissenschaft
                         an der <a href="https://www.univie.ac.at/">Universität Wien</a> und
                         arbeitete von Dezember 2020 bis September 2024 am <a href="https://www.oeaw.ac.at/de/acdh/acdh-home">Austrian Centre for
                            Digital Humanities</a> an der Österreichischen Akademie der
@@ -508,31 +446,44 @@
                         beschäftigte. Ehrenamtlich leitete ich gemeinsam mit Julius Handl für viele
                         Jahre die Wiener Literaturreihe »<a href="https://glaesernetexte.com/">Gläserne Texte</a>«.</p>
                      
-                     <p class="align-left" id="d5e332">Eine Auflistung meiner Publikationen ist auf <a href="https://orcid.org/0000-0002-9649-0870">ORCID</a> zu finden. Viele
+                     <p class="align-left" id="d5e216">Eine Auflistung meiner Publikationen ist auf <a href="https://orcid.org/0000-0002-9649-0870">ORCID</a> zu finden. Viele
                         Volltexte sind auch auf <a href="https://www.researchgate.net/profile/Laura-Untner/publications">ResearchGate</a> verzeichnet. Projektbezogene Publikationen und Vorträge
                         sind zusätzlich <a href="publikationen.html">hier</a> gelistet,
                         Pressemeldungen, Interviews und Rezensionen <a href="https://www.geisteswissenschaften.fu-berlin.de/friedrichschlegel/personen/Doktorand-innen/Untner/index.html">hier</a>. Bei Rückfragen stehe ich gerne unter <a href="mailto:laura.untner@fu-berlin.de">laura.untner@fu-berlin.de</a>
                         zur Verfügung. Auf <a href="https://bsky.app/profile/luntner.bsky.social">Bluesky</a> finden Sie mich ebenfalls.</p>
                      </div>
                   
-                  <div id="d5e355">
+                  <div id="d5e239">
+                     
+                     <h3 class="align-left">Kontakt</h3>
+                     
+                     <p class="align-left" id="d5e243">Sie kennen einen literarischen Text aus dem deutschsprachigen Raum, der mit
+                        Sappho zu tun hat, aber hier nicht verzeichnet ist? Über Hinweise jeglicher Art
+                        bin ich sehr dankbar: <a href="mailto:laura.untner@fu-berlin.de">laura.untner@fu-berlin.de</a>.</p>
+                     
+                     <p class="align-left" id="d5e249">Sie haben Verbesserungsvorschläge oder gar einen Fehler gefunden? Auch darüber
+                        freue ich mich. Am besten gleich ein Issue auf <a href="https://github.com/laurauntner/sappho-digital/issues">GitHub</a>
+                        anlegen.</p>
+                     </div>
+                  
+                  <div id="d5e256">
                      
                      <h3 class="align-left">Dank</h3>
                      
-                     <p class="align-left" id="d5e359">Für Unterstützung bei der Recherche danke ich ausdrücklich Julius Handl.</p>
+                     <p class="align-left" id="d5e260">Für Unterstützung bei der Recherche danke ich ausdrücklich Julius Handl.</p>
                      
-                     <p class="align-left" id="d5e361">Für Feedback, Austausch und Unterstützung danke ich zudem Peter Andorfer, Julia
+                     <p class="align-left" id="d5e262">Für Feedback, Austausch und Unterstützung danke ich zudem Peter Andorfer, Julia
                         Jennifer Beine, Ingo Börner, Frank Fischer, Achim Hölter, Klaus Illmayer,
                         Dimitra Grigoriou, Martin Anton Müller, Bernhard Oberreither, Gregor Pirgie,
                         Lisa Poggel, Henny Sluyter-Gäthje, Amrei Stanzel, Anita Traninger und Paula
                         Wojcik.</p>
                      </div>
                   
-                  <div id="d5e364">
+                  <div id="d5e265">
                      
                      <h3 class="align-left">Fördergeber</h3>
                      
-                     <p class="align-left" id="d5e368">Gefördert von der Stadt Wien Kultur (MA 7 Wissenschaft)</p>
+                     <p class="align-left" id="d5e269">Gefördert von der Stadt Wien Kultur (MA 7 Wissenschaft)</p>
                      
                      <img src="images/Stadt_Wien_Kultur_pos_rgb.png" class="funding" />
                      
@@ -540,6 +491,6 @@
                   </div>
             </div>
          </div>
-         <div id="wrapper-footer-full"><a href="imprint.html">© Laura Untner 2026 (zuletzt aktualisiert am 10.4.2026, 21:24)</a></div><script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script><script src="js/listStopProp.js"></script><script src="js/navScroll.js"></script></div>
+         <div id="wrapper-footer-full"><a href="imprint.html">© Laura Untner 2026 (zuletzt aktualisiert am 10.4.2026, 23:18)</a></div><script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script><script src="js/listStopProp.js"></script><script src="js/navScroll.js"></script></div>
    </body>
 </html>
