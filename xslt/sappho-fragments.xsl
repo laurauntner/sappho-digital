@@ -117,9 +117,15 @@
                 $expr-uri
                 )[1])
                 "/>
-        <xsl:variable name="t1" select="replace($label, '^Expression\s+of\s+', '', 'i')"/>
-        <xsl:variable name="t2" select="replace($t1, '^Expression\s+creation\s+of\s+', '', 'i')"/>
-        <xsl:sequence select="normalize-space($t2)"/>
+        <xsl:variable name="t1"
+            select="normalize-space(replace($label, '^Expression\s+of\s+', '', 'i'))"/>
+        <xsl:variable name="t2"
+            select="normalize-space(replace($t1, '^Expression\s+creation\s+of\s+', '', 'i'))"/>
+        <xsl:sequence select="
+                if ($t2 != '') then
+                    $t2
+                else
+                    $expr-uri"/>
     </xsl:function>
 
     <!-- helper for ids -->
@@ -162,8 +168,11 @@
 
         <xsl:variable name="int31" select="
                 $receptionEntities//intro:INT31_IntertextualRelation[
-                local:iri-id(string(intro:R13_hasReferringEntity/@rdf:resource)) = $work-id or
-                local:iri-id(string(intro:R12_hasReferredToEntity/@rdf:resource)) = $work-id
+                (local:iri-id(string(intro:R13_hasReferringEntity/@rdf:resource)) = $work-id
+                and not(contains(string(intro:R12_hasReferredToEntity/@rdf:resource), 'sappho-work')))
+                or
+                (local:iri-id(string(intro:R12_hasReferredToEntity/@rdf:resource)) = $work-id
+                and not(contains(string(intro:R13_hasReferringEntity/@rdf:resource), 'sappho-work')))
                 ]"/>
 
         <xsl:variable name="targets" as="xs:string*" select="
