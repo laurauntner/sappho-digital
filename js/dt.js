@@ -29,7 +29,8 @@ function createDataTable(containerElement, order, pageLength) {
         { type: "string", targets: 10 },
         { type: "string", targets: 11 },
         { type: "string", targets: 12 },
-        { type: "string", targets: 13 }
+        { type: "string", targets: 13 },
+        { type: "string", targets: 14 }
       ]
     : [
         { type: "num", targets: 0 },
@@ -43,17 +44,45 @@ function createDataTable(containerElement, order, pageLength) {
         { type: "string", targets: 8 },
         { type: "string", targets: 9 },
         { type: "string", targets: 10 },
-        { type: "string", targets: 11 }
+        { type: "string", targets: 11 },
+        { type: "string", targets: 12 },
+        { type: "string", targets: 13 }
       ];
 
-  $(`#${containerElement} thead tr`)
-    .clone(true)
-    .addClass("filters")
-    .appendTo(`#${containerElement} thead`);
+  const exportOnlyCols = showGenres ? [3, 5, 7, 10, 12, 14] : [3, 5, 7, 9, 11, 13];
 
   const table = $(`#${containerElement}`).DataTable({
+    data: window.tocData || [],
+    deferRender: true,
+    columnDefs: [
+      ...columnDefs,
+      {
+        targets: exportOnlyCols,
+        visible: false,
+        searchable: true
+      },
+      {
+        targets: '_all',
+        render: function (data, type) {
+          if (type === 'display') {
+            return data
+              .replace(/&lt;/g, '<')
+              .replace(/&gt;/g, '>')
+              .replace(/&amp;/g, '&')
+              .replace(/&quot;/g, '"')
+              .replace(/&#39;/g, "'");
+          }
+          const tmp = document.createElement('div');
+          tmp.innerHTML = data
+            .replace(/&lt;/g, '<')
+            .replace(/&gt;/g, '>')
+            .replace(/&amp;/g, '&')
+            .replace(/&quot;/g, '"');
+          return tmp.textContent || tmp.innerText || '';
+        }
+      }
+    ],
     autoWidth: false,
-    columnDefs: columnDefs,
     dom:
       "'<'row controlwrapper'<'col-sm-4'f><'col-sm-4'i><'col-sm-4 exportbuttons'B>>'" +
       "'<'row'<'col-sm-12't>>'" +
@@ -68,17 +97,17 @@ function createDataTable(containerElement, order, pageLength) {
         className: "btn-link",
         exportOptions: {
           columns: function (idx, data, node) {
-              return idx !== 13;
-            },
+            return idx !== 13;
+          },
           format: {
             body: function (data, row, column, node) {
               const $cell = $(node).clone();
               $cell.find("a, img, svg").remove();
-            return $cell
-              .text()
-              .replace(/[\r\n\t]+/g, " ")
-              .replace(/\s+/g, " ")
-              .trim();
+              return $cell
+                .text()
+                .replace(/[\r\n\t]+/g, " ")
+                .replace(/\s+/g, " ")
+                .trim();
             }
           }
         },
@@ -93,17 +122,17 @@ function createDataTable(containerElement, order, pageLength) {
         className: "btn-link",
         exportOptions: {
           columns: function (idx, data, node) {
-              return idx !== 13;
-            },
+            return idx !== 13;
+          },
           format: {
             body: function (data, row, column, node) {
               const $cell = $(node).clone();
               $cell.find("a, img, svg").remove();
-                return $cell
-                  .text()
-                  .replace(/[\r\n\t]+/g, " ")
-                  .replace(/\s+/g, " ")
-                  .trim();
+              return $cell
+                .text()
+                .replace(/[\r\n\t]+/g, " ")
+                .replace(/\s+/g, " ")
+                .trim();
             }
           }
         },
@@ -135,6 +164,11 @@ function createDataTable(containerElement, order, pageLength) {
     initComplete: function () {
       const api = this.api();
 
+      $(`#${containerElement} thead tr:first-child`)
+        .clone(true)
+        .addClass("filters")
+        .appendTo(`#${containerElement} thead`);
+
       api.columns().eq(0).each(function (colIdx) {
         const cell = $(`#${containerElement} .filters th`).eq(
           $(api.column(colIdx).header()).index()
@@ -142,7 +176,10 @@ function createDataTable(containerElement, order, pageLength) {
         $(cell).html('<input type="text"/>');
 
         $("input", cell)
-          .off("keyup change")
+          .off("keyup change click")
+          .on("click", function (e) {
+            e.stopPropagation();
+          })
           .on("keyup change", function (e) {
             e.stopPropagation();
             $(this).attr("title", $(this).val());
@@ -174,19 +211,19 @@ function createDataTable(containerElement, order, pageLength) {
     $(".paginate_button.current").removeClass("current");
   });
 
-    table.on("responsive-resize", function (e, datatable, columns) {
-      hideSearchInputs(containerElement, columns);
-    
-      const shouldHide = columns.some(col => col === false);
-      const warning = document.getElementById("screen-too-small");
-      const tableEl = document.getElementById(containerElement);
-    
-      if (shouldHide) {
-        if (warning) warning.style.display = "block";
-        if (tableEl) tableEl.style.display = "none";
-      } else {
-        if (warning) warning.style.display = "none";
-        if (tableEl) tableEl.style.display = "table";
-      }
-    });
+  table.on("responsive-resize", function (e, datatable, columns) {
+    hideSearchInputs(containerElement, columns);
+
+    const shouldHide = columns.some(col => col === false);
+    const warning = document.getElementById("screen-too-small");
+    const tableEl = document.getElementById(containerElement);
+
+    if (shouldHide) {
+      if (warning) warning.style.display = "block";
+      if (tableEl) tableEl.style.display = "none";
+    } else {
+      if (warning) warning.style.display = "none";
+      if (tableEl) tableEl.style.display = "table";
+    }
+  });
 }
