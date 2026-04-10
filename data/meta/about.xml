@@ -8,7 +8,7 @@
             <publicationStmt>
                 <publisher>Laura Untner</publisher>
                 <pubPlace>Wien/Berlin</pubPlace>
-                <date when="2025">2025</date>
+                <date when="2026">2026</date>
                 <availability>
                     <licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
                         <p>CC BY 4.0</p>
@@ -47,17 +47,25 @@
                     Rezeptionswissenschaft.</p>
                 <p>Die hier aufbereiteten <hi rend="bold">Daten</hi> bestehen aus vier Teilen:</p>
                 <list>
-                    <item>einem für Menschen leicht lesbaren tabellarischen Verzeichnis aller
-                        bekannten produktiv-literarischen Rezeptionszeugnisse zu Sappho aus dem
-                        deutschsprachigen Raum,</item>
-                    <item>einer OWL-Ontologie zur formalen Modellierung von detailliertem Wissen
-                        über diese Rezeptionszeugnisse,</item>
-                    <item>einem semantischen Graphen mit diesem detaillierten Wissen und</item>
-                    <item>einer SKOS-Taxonomie zur Klassifizierung wiederkehrender Elemente in der
-                        literarischen Sappho-Rezeption.</item>
+                    <item>einem für Menschen leicht lesbaren tabellarischen <hi rend="bold"
+                            >Verzeichnis</hi> aller bekannten produktiv-literarischen
+                        Rezeptionszeugnisse zu Sappho aus dem deutschsprachigen Raum,</item>
+                    <item>einer formalen <hi rend="bold">Ontologie</hi> zur maschinenlesbaren
+                        Modellierung von detailliertem Wissen über literarische
+                        Rezeptionsgeschichten,</item>
+                    <item>einem <hi rend="bold">semantischen Graphen</hi> mit diesem detaillierten
+                        Wissen über 99 exemplarische Rezeptionszeugnisse und 165 Sappho-Fragmente
+                        bzw. deren intertextuelle Beziehungen sowie</item>
+                    <item>einem kontrollierten <hi rend="bold">Vokabular</hi> zur Klassifizierung
+                        wiederkehrender Elemente in der literarischen Sappho-Rezeption.</item>
                 </list>
+                <p>Diese Daten werden auf verschiedene Weisen ausgewertet und aufbereitet. Ein <hi
+                        rend="bold">Überblick</hi> über alle Bestandteile der Webseite ist <ref
+                        target="orientierung.html">hier</ref> zu finden. Erläuterungen zur
+                    exemplarischen Analyse können <ref target="analyse.html">hier</ref> nachgelesen
+                    werden. </p>
                 <p>Volltexte der Rezeptionszeugnisse werden zu keinem Zeitpunkt angeboten. Eine
-                    Textauswahl findet sich in meinem Band <hi rend="italics"><ref
+                    Textauswahl findet sich in dem Band <hi rend="italics"><ref
                             target="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/"
                             >Sappho. Texte zur literarischen Rezeption im deutschsprachigen
                             Raum</ref></hi> (2023); Links zu Digitalisaten sind in den
@@ -66,82 +74,19 @@
             </div>
             <div>
                 <head>Projektstand</head>
-                <p>Aktuell (Stand: Februar 2026) ist das <hi rend="bold">Verzeichnis der
-                        Rezeptionszeugnisse</hi> so weit bearbeitet, dass es auszugsweise
-                    veröffentlicht werden kann. Es werden fünf Zugänge angeboten: Es können Belege
-                    für <ref target="toc-alle.html">alle</ref>, <ref target="toc-prosa.html"
-                        >prosaische</ref>, <ref target="toc-lyrik.html">lyrische</ref>, <ref
-                        target="toc-drama.html">dramatische</ref> und <ref
-                        target="toc-sonstige.html">sonstige</ref> Rezeptionszeugnisse (z. B. Comics)
-                    eingesehen werden.</p>
-                <p>Neben der Gattungszugehörigkeit sind folgende Informationen erfasst und
-                    durchsuchbar:</p>
-                <list>
-                    <item>Jahr der Entstehung,</item>
-                    <item>Jahr des Erstdrucks oder der Erstaufführung,</item>
-                    <item>Titel,</item>
-                    <item>ggf. Titel des Werks, in dem der Text enthalten ist,</item>
-                    <item>Autor_in,</item>
-                    <item>Publikations- oder Erstaufführungsort,</item>
-                    <item>Verlag oder Druckerei und</item>
-                    <item>Link zu einem Digitalisat.</item>
-                </list>
-                <p>Zu vielen Werken, Autor_innen, Orten, Verlagen und Druckereien werden auch <ref
-                        target="https://www.wikidata.org/">Wikidata</ref>-IDs bereitsgestellt.</p>
-                <p>Das Verzeichnis wird laufend aktualisiert und erweitert. Zu vielen
-                    Rezeptionszeugnissen sind bereits fast alle Informationen vorhanden, zu manchen
-                    fehlen noch einige.</p>
-                <p>Die <hi rend="bold">OWL-Ontologie</hi> basierend auf der Erlangen OWL-Version des
-                    CIDOC Conceptual Reference Models (CRM; <ref
-                        target="http://erlangen-crm.org/current/">ECRM</ref> 240307, basierend auf
-                    CIDOC CRM 7.1.3), der objektorientierten Version des IFLA Library Reference
-                    Models (<ref target="http://iflastandards.info/ns/lrm/lrmoo/">LRMoo</ref>;
-                    v1.1.1) und <ref target="https://w3id.org/lso/intro/currentbeta#">INTRO</ref>
-                    (the Intertextual, Interpictorial and Intermedial Relations Ontology;
-                    beta202506) ist <ref target="ontology.html">hier</ref> zu finden.</p>
-                <p>Das <hi rend="bold">SKOS-Vokabular</hi> ist <ref target="vocab.html">hier</ref>
-                    einsehbar.</p>
-                <p>Sowohl die Ontologie als auch das Vokabular werden fortlaufend
-                    weiterentwickelt.</p>
-                <p><hi rend="bold">Ontologie-Alignments</hi> werden <ref target="alignments.html"
-                        >hier</ref> visualisiert.</p>
-                <p>Eine <hi rend="bold">Netzwerkvisualisierung</hi> aller Daten findet sich <ref
-                        target="network.html">hier</ref>. Außerdem ist der Graph <ref
-                        target="query.html">hier</ref> via <hi rend="bold">SPARQL</hi>
-                    abfragbar.</p>
-                <p><hi rend="bold">Ergebnisse der exemplarischen Analyse</hi> werden in die Reiter
-                    »Rezeptionsphänomene« und »Statistik« (beide in »Analyse«) integriert. Mehr
-                    Informationen zur Analyse sind <ref target="analyse.html">hier</ref> zu
-                    finden.</p>
-                <p>Mit einer Fertigstellung des Projekts ist 2027 zu rechnen. Bis dahin wird die
-                    Webseite fortlaufend erweitert.</p>
+                <p>Aktuell (Stand: April 2026) ist die Webseite in einem vorläufigen Stand
+                    veröffentlicht. Mit einer Fertigstellung des Projekts ist 2027 zu rechnen. Bis
+                    dahin wird die Webseite fortlaufend erweitert.</p>
             </div>
             <div>
                 <head>Daten</head>
-                <p><hi rend="bold">Excel-Tabellen</hi> mit den Daten aus den Verzeichnissen können
-                    in den Unterseiten geladen werden. <hi rend="bold">XML/TEI- sowie
-                        RDF-Dateien</hi> sind über <ref
+                <p>Alle bereitgestellten Daten können unter Nennung der Quelle frei weiterverwendet
+                    werden (CC BY 4.0). Alle Daten sind über <ref
                         target="https://github.com/laurauntner/sappho-digital/">GitHub</ref> frei
                     zugänglich.</p>
-                <p>Grundsätzlich können alle bereitgestellten Daten unter Nennung der Quelle frei
-                    weiterverwendet werden.</p>
             </div>
             <div>
-                <head>Mithelfen/Kontakt</head>
-                <p>Sie kennen einen literarischen Text aus dem deutschsprachigen Raum, der mit
-                    Sappho zu tun hat, aber hier nicht verzeichnet ist? Über Hinweise jeglicher Art
-                    bin ich sehr dankbar: <ref target="mailto:laura.untner@fu-berlin.de"
-                        >laura.untner@fu-berlin.de</ref>.</p>
-                <p>Sie haben Verbesserungsvorschläge oder gar einen Fehler gefunden? Auch darüber
-                    freue ich mich. Am besten gleich ein Issue auf <ref
-                        target="https://github.com/laurauntner/sappho-digital/issues">GitHub</ref>
-                    anlegen.</p>
-            </div>
-            <div>
-                <head>Zitieren</head>
-                <p>Die bereitgestellten Daten können unter Nennung der Quelle frei weiterverwendet
-                    werden.</p>
-                <p><hi rend="bold">Zitiervorschlag:</hi></p>
+                <head>Zitiervorschlag</head>
                 <p>Laura Untner: Sappho Digital. Die literarische Sappho-Rezeption im
                     deutschsprachigen Raum. Wien/Berlin 2024–[2027], <ref
                         target="https://sappho-digital.com">https://sappho-digital.com</ref>.</p>
@@ -205,6 +150,17 @@
                         target="mailto:laura.untner@fu-berlin.de">laura.untner@fu-berlin.de</ref>
                     zur Verfügung. Auf <ref target="https://bsky.app/profile/luntner.bsky.social"
                         >Bluesky</ref> finden Sie mich ebenfalls.</p>
+            </div>
+            <div>
+                <head>Kontakt</head>
+                <p>Sie kennen einen literarischen Text aus dem deutschsprachigen Raum, der mit
+                    Sappho zu tun hat, aber hier nicht verzeichnet ist? Über Hinweise jeglicher Art
+                    bin ich sehr dankbar: <ref target="mailto:laura.untner@fu-berlin.de"
+                        >laura.untner@fu-berlin.de</ref>.</p>
+                <p>Sie haben Verbesserungsvorschläge oder gar einen Fehler gefunden? Auch darüber
+                    freue ich mich. Am besten gleich ein Issue auf <ref
+                        target="https://github.com/laurauntner/sappho-digital/issues">GitHub</ref>
+                    anlegen.</p>
             </div>
             <div>
                 <head>Dank</head>
