@@ -14,6 +14,8 @@
 
     <xsl:variable name="rdf_doc" select="document('../data/rdf/sappho-reception.rdf')"/>
 
+    <xsl:key name="place-by-id" match="ecrm:E53_Place" use="tokenize(@rdf:about, '/')[last()]"/>
+
     <xsl:template match="/">
         <xsl:variable name="doc_title" select="//tei:title[@type = 'main']"/>
         <xsl:variable name="filename" select="tokenize(base-uri(), '/')[last()]"/>
@@ -27,10 +29,6 @@
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"/>
                 </xsl:call-template>
-                <script src="https://code.highcharts.com/highcharts.js"/>
-                <script src="https://code.highcharts.com/modules/timeline.js"/>
-                <script src="https://code.highcharts.com/modules/data.js"/>
-
                 <xsl:if test="$show_heatmap">
                     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
                 </xsl:if>
@@ -110,14 +108,12 @@
                                                 <xsl:for-each select="tei:pubPlace">
                                                     <xsl:variable name="place_id" select="@xml:id"/>
                                                     <xsl:variable name="place_name" select="normalize-space(.)"/>
-                                                    <xsl:variable name="rdf_place" select="
-                                                            $rdf_doc//ecrm:E53_Place[
-                                                            ends-with(@rdf:about, $place_id)
-                                                            ]"/>
+                                                    <xsl:variable name="rdf_place" select="key('place-by-id', $place_id, $rdf_doc)"/>
                                                     <xsl:variable name="coords_raw" select="normalize-space($rdf_place/rdfs:comment[1])"/>
                                                     <xsl:if test="matches($coords_raw, '^-?\d')">
-                                                        <xsl:variable name="lat" select="normalize-space(tokenize($coords_raw, ',')[1])"/>
-                                                        <xsl:variable name="lng" select="normalize-space(tokenize($coords_raw, ',')[2])"/>
+                                                        <xsl:variable name="coords" select="tokenize($coords_raw, ',')"/>
+                                                        <xsl:variable name="lat" select="normalize-space($coords[1])"/>
+                                                        <xsl:variable name="lng" select="normalize-space($coords[2])"/>
                                                         <xsl:text>  {lat:</xsl:text>
                                                         <xsl:value-of select="$lat"/>
                                                         <xsl:text>,lng:</xsl:text>
@@ -132,15 +128,62 @@
                                             </xsl:if>
                                         </xsl:for-each>
                                         <xsl:text>];&#10;</xsl:text>
+                                        <xsl:text>window.timelineData = [&#10;</xsl:text>
+                                        <xsl:for-each select="//tei:listBibl/tei:bibl">
+                                            <xsl:variable name="dateEl" select="(tei:date[@type = 'created'], tei:date[@type = 'published'])[1]"/>
+                                            <xsl:variable name="year">
+                                                <xsl:choose>
+                                                    <xsl:when test="$dateEl/@when">
+                                                        <xsl:value-of select="substring(normalize-space($dateEl/@when), 1, 4)"/>
+                                                    </xsl:when>
+                                                    <xsl:when test="$dateEl/@notBefore and $dateEl/@notAfter">
+                                                        <xsl:value-of select="round((number(substring($dateEl/@notBefore, 1, 4)) + number(substring($dateEl/@notAfter, 1, 4))) div 2)"/>
+                                                    </xsl:when>
+                                                    <xsl:when test="$dateEl/@notBefore">
+                                                        <xsl:value-of select="substring(normalize-space($dateEl/@notBefore), 1, 4)"/>
+                                                    </xsl:when>
+                                                    <xsl:when test="$dateEl/@notAfter">
+                                                        <xsl:value-of select="substring(normalize-space($dateEl/@notAfter), 1, 4)"/>
+                                                    </xsl:when>
+                                                </xsl:choose>
+                                            </xsl:variable>
+                                            <xsl:if test="matches($year, '^\d{4}$')">
+                                                <xsl:value-of select="$year"/><xsl:text>,&#10;</xsl:text>
+                                            </xsl:if>
+                                        </xsl:for-each>
+                                        <xsl:text>];&#10;</xsl:text>
                                     </script>
-
-                                    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"/>
-                                    <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"/>
-                                    <script src="js/heatmap.js"/>
-
                                 </xsl:if>
 
-                                <script src="./js/toc-statistics.js"/>
+                                <xsl:if test="not($show_heatmap)">
+                                    <script>
+                                        <xsl:text>window.timelineData = [&#10;</xsl:text>
+                                        <xsl:for-each select="//tei:listBibl/tei:bibl">
+                                            <xsl:variable name="dateEl" select="(tei:date[@type = 'created'], tei:date[@type = 'published'])[1]"/>
+                                            <xsl:variable name="year">
+                                                <xsl:choose>
+                                                    <xsl:when test="$dateEl/@when">
+                                                        <xsl:value-of select="substring(normalize-space($dateEl/@when), 1, 4)"/>
+                                                    </xsl:when>
+                                                    <xsl:when test="$dateEl/@notBefore and $dateEl/@notAfter">
+                                                        <xsl:value-of select="round((number(substring($dateEl/@notBefore, 1, 4)) + number(substring($dateEl/@notAfter, 1, 4))) div 2)"/>
+                                                    </xsl:when>
+                                                    <xsl:when test="$dateEl/@notBefore">
+                                                        <xsl:value-of select="substring(normalize-space($dateEl/@notBefore), 1, 4)"/>
+                                                    </xsl:when>
+                                                    <xsl:when test="$dateEl/@notAfter">
+                                                        <xsl:value-of select="substring(normalize-space($dateEl/@notAfter), 1, 4)"/>
+                                                    </xsl:when>
+                                                </xsl:choose>
+                                            </xsl:variable>
+                                            <xsl:if test="matches($year, '^\d{4}$')">
+                                                <xsl:value-of select="$year"/><xsl:text>,&#10;</xsl:text>
+                                            </xsl:if>
+                                        </xsl:for-each>
+                                        <xsl:text>];&#10;</xsl:text>
+                                    </script>
+                                </xsl:if>
+
                                 <div id="screen-too-small">Das Fenster ist zu klein, um die Tabelle
                                     darstellen zu können.</div>
 
@@ -358,10 +401,20 @@
                         </div>
                     </div>
                     <xsl:call-template name="html_footer"/>
-                    <script src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js"/>
-                    <script src="js/dt.js"/>
-                    <script>
-                        $(document).ready(function () {
+
+                    <script src="https://code.highcharts.com/highcharts.js" defer="defer"/>
+                    <script src="https://code.highcharts.com/modules/timeline.js" defer="defer"/>
+                    <script src="https://code.highcharts.com/modules/data.js" defer="defer"/>
+                    <xsl:if test="$show_heatmap">
+                        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer="defer"/>
+                        <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js" defer="defer"/>
+                        <script src="js/heatmap.js" defer="defer"/>
+                    </xsl:if>
+                    <script src="https://cdn.datatables.net/v/bs4/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.js" defer="defer"/>
+                    <script src="js/dt.js" defer="defer"/>
+                    <script src="./js/toc-statistics.js" defer="defer"/>
+                    <script defer="defer">
+                        document.addEventListener('DOMContentLoaded', function () {
                             createDataTable('tocTable');
                         });
                     </script>
