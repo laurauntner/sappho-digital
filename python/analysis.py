@@ -76,6 +76,11 @@ if WORKS_TTL.exists():
 if FRAGMENTS_TTL.exists():
     g_src.parse(FRAGMENTS_TTL.as_posix(), format="turtle")
 
+# Separater Index nur für Werke (ohne Fragmente) – für die Werk-Referenz-Auflösung
+g_works_only = Graph()
+if WORKS_TTL.exists():
+    g_works_only.parse(WORKS_TTL.as_posix(), format="turtle")
+
 # Taxonomie laden + indexieren (per skos:prefLabel@de)
 
 g_vocab = Graph()
@@ -211,11 +216,11 @@ def make_keys_for_bibl_variants(tid: str):
     b = base_id(tid)
     return [f"bibl_{b}", f"bibl_sappho_{b}"]
 
-for s, _, otype in g_src.triples((None, RDF.type, None)):
+for s, _, otype in g_works_only.triples((None, RDF.type, None)):
     if is_f2(otype):
         s_str = str(s)
         tid = last_token(s_str)
-        label = next(g_src.objects(s, RDFS.label), None)
+        label = next(g_works_only.objects(s, RDFS.label), None)
         for key in make_keys_for_bibl_variants(tid):
             text_index[key] = {"uri": s, "type": "F2", "label": label}
 
