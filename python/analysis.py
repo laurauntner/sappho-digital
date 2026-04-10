@@ -204,6 +204,7 @@ def link_exact_match(node_uri: URIRef, vocab_uri: URIRef):
 # F2-Expressions-Index aufbauen (aus Quellgraph)
 
 text_index = {}
+werk_index = {}  # nur Werke (ohne Fragmente) – für Werk-Referenz-Auflösung
 
 def is_f2(typ) -> bool:
     t = str(typ)
@@ -216,13 +217,21 @@ def make_keys_for_bibl_variants(tid: str):
     b = base_id(tid)
     return [f"bibl_{b}", f"bibl_sappho_{b}"]
 
+for s, _, otype in g_src.triples((None, RDF.type, None)):
+    if is_f2(otype):
+        s_str = str(s)
+        tid = last_token(s_str)
+        label = next(g_src.objects(s, RDFS.label), None)
+        for key in make_keys_for_bibl_variants(tid):
+            text_index[key] = {"uri": s, "type": "F2", "label": label}
+
 for s, _, otype in g_works_only.triples((None, RDF.type, None)):
     if is_f2(otype):
         s_str = str(s)
         tid = last_token(s_str)
         label = next(g_works_only.objects(s, RDFS.label), None)
         for key in make_keys_for_bibl_variants(tid):
-            text_index[key] = {"uri": s, "type": "F2", "label": label}
+            werk_index[key] = {"uri": s, "type": "F2", "label": label}
 
 # Output-Graph
 
@@ -504,9 +513,9 @@ for text_id, cats in elements_per_text.items():
 
             v_clean = clean_uri_component(v)
 
-            target = (text_index.get(v)
-                    or text_index.get(v.replace("bibl_", ""))
-                    or text_index.get(f"bibl_{v}"))
+            target = (werk_index.get(v)
+                    or werk_index.get(v.replace("bibl_", ""))
+                    or werk_index.get(f"bibl_{v}"))
             ref_target_uri = target["uri"] if target else None
             ref_label = literal_text(target["label"]) if (target and target.get("label")) else v
 
