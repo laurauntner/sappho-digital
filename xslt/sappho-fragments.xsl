@@ -131,9 +131,22 @@
     <!-- helper for ids -->
     <xsl:function name="local:iri-id" as="xs:string">
         <xsl:param name="iri" as="xs:string?"/>
-        <xsl:variable name="s" select="string($iri)"/>
+        <xsl:variable name="s" select="replace(string($iri), '/+$', '')"/>
         <xsl:variable name="base" select="substring-before(concat($s, '#'), '#')"/>
         <xsl:sequence select="string(tokenize($base, '/')[last()])"/>
+    </xsl:function>
+
+    <xsl:function name="local:side-iris" as="xs:string*">
+        <xsl:param name="rel" as="element(intro:INT31_IntertextualRelation)"/>
+        <xsl:param name="prop" as="xs:string"/>
+        <xsl:variable name="side" select="$rel/*[local-name() = $prop][1]"/>
+        <xsl:sequence select="
+                (
+                string($side/@rdf:resource),
+                for $e in $side//lrmoo:F2_Expression
+                return
+                    string($e/@rdf:about)
+                )[normalize-space(.) != '']"/>
     </xsl:function>
 
     <!-- intertexts -->
@@ -182,15 +195,11 @@
                     then
                         string($rel/intro:R12_hasReferredToEntity/@rdf:resource)
                     else
-                        if (local:iri-id(string($rel/intro:R12_hasReferredToEntity/@rdf:resource)) = $work-id)
-                        then
-                            string($rel/intro:R13_hasReferringEntity/@rdf:resource)
-                        else
-                            ()
+                        string($rel/intro:R13_hasReferringEntity/@rdf:resource)
                 "/>
 
         <xsl:variable name="intertexts" as="xs:string*"
-            select="distinct-values($targets[local:iri-id(.) != $work-id])"/>
+            select="distinct-values($targets[normalize-space(.) != '' and local:iri-id(.) != $work-id])"/>
 
         <xsl:if
             test="exists(($motifs, $topics, $plots, $topoi, $persons, $places, $workrefs, $workpassages, $phrases, $intertexts))">
