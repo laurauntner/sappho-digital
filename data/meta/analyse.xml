@@ -23,12 +23,52 @@
   <text>
     <body>
       <div>
-        <p>Neben allen Sappho-Fragmenten, die in Andreas Bagordos zweisprachiger Ausgabe auf Basis
-          der textkritischen Edition von Eva-Maria Voigt (Patmos 2009) enthaltenen sind (vgl. das
-          Menü »Texte« > »Sappho-Fragmente«), wurden 99 exemplarische Rezeptionszeugnisse bzw.
-          Auszüge aus diesen analysiert. Auf dieser Seite werden diese Rezeptionszeugnisse mit
-          detaillierten bibliographischen Informationen gelistet. Unten findet sich außerdem eine
-          statistische Übersicht.</p>
+        <p>Die exemplarische Analyse dient nicht nur der weiteren Erforschung der literarischen
+          Sappho-Rezeption im deutschsprachigen Raum, sondern auch der Prüfung eines bislang
+          unerprobten methodologischen Zugangs zu literarischen Rezeptionsgeschichten in den Digital
+          Humanities.</p>
+      </div>
+      <div>
+        <head>Methodisches Vorgehen</head>
+        <p>Alle analysierten Rezeptionszeugnisse wurden demselben Korpus entnommen: dem Band <hi
+            rend="italics"><ref
+              target="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/">Sappho.
+              Texte zur literarischen Rezeption im deutschsprachigen Raum</ref></hi> (2023), der die
+          Rezeptionszeugnisse – abgesehen von den Texten von Huber, Schrott und Schwarz – in der
+          Form ihres Erstdrucks vorlegt.</p>
+        <p>Analysiert wurden alle in Andreas Bagordos zweisprachiger Ausgabe auf Basis der
+          textkritischen Edition von Eva-Maria Voigt (Patmos 2009) enthaltenen Sappho-Fragmente
+          (vgl. das Menü »Texte« > »Sappho-Fragmente«) sowie 99 exemplarische Rezeptionszeugnisse,
+          die typische Rezeptionsmuster veranschaulichen. Dazu zählen etwa die wiederkehrende
+          Thematisierung der Sappho-Phaon-Legende und die Darstellung Sapphos als große Dichterin
+          oder als homoerotisch Begehrende. Berücksichtigt wurden Texte verschiedener Gattungen
+          (Lyrik, Prosa, Drama sowie Mischformen) und unterschiedlicher Bekanntheit – nicht nur
+          Werke kanonisierter Autor_innen, sondern auch solche weniger bekannter Schreibender, vom
+          16. bis zum 21. Jahrhundert.</p>
+        <p>Berücksichtigt wurden Motive, Themen, Stoffe, rhetorische Topoi, Figuren sowie Personen-,
+          Orts- und Werkreferenzen und Zitate. Auf der Grundlage dieser Phänomene wurden
+          intertextuelle Beziehungen zwischen den Rezeptionszeugnissen und den Sappho-Fragmenten
+          sowie zwischen den Rezeptionszeugnissen untereinander festgestellt.</p>
+        <p>Der Workflow verlief in zwei Schritten: Zunächst wurden die Phänomene in XML-Dateien
+          annotiert. Die XML-Dateien wurden anschließend mithilfe eigens entwickelter <ref
+            target="https://github.com/laurauntner/sappho-digital/tree/main/python"
+            >Python-Skripte</ref> in RDF-Tripel überführt. Zur Repräsentation der Daten wurde eine
+            <ref target="https://sappho-digital.com/ontology.html">Ontologie</ref> entwickelt, die
+          auf bestehenden Ontologien (<ref target="https://cidoc-crm.org/">CIDOC CRM</ref>, <ref
+            target="https://repository.ifla.org/items/729b094a-92d6-4317-9dee-a300053ffdb4"
+            >LRMoo</ref> und <ref target="https://github.com/BOberreither/INTRO">INTRO</ref>)
+          basiert und zusätzlich mit diversen <ref
+            target="https://sappho-digital.com/alignments.html">Alignments</ref> mit anderen
+          Ontologien ausgestattet ist. Wiederkehrende Rezeptionsphänomene sind in einem
+            <ref target="https://sappho-digital.com/vocab.html">SKOS-Vokabular</ref> definiert.</p>
+        <p>Die resultierenden Daten sind in einem <ref
+            target="https://github.com/laurauntner/sappho-digital">GitHub-Repositorium</ref> offen
+          zugänglich und können zudem über ein <ref target="https://sappho-digital.com/query.html"
+            >SPARQL-Interface</ref> auf dieser Webseite abgefragt werden. Exemplarische statistische
+          Auswertungen finden sich <ref target="https://sappho-digital.com/statistics.html"
+            >hier</ref>; alle Daten lassen sich auch über eine <ref
+            target="https://sappho-digital.com/network.html">Netzwerkvisualisierung</ref>
+          erkunden.</p>
       </div>
       <div>
         <head>Analysierte Rezeptionszeugnisse</head>
@@ -307,7 +347,7 @@
           <item><ref target="bibl_0bd2c59f.html">THE MOST BEAUTIFUL</ref> (<ref
               target="author_8c390adb.html">Barbara Köhler</ref>, 2012, S. 239–245 im Erstdruck, S.
             335–339 in der <ref target="buch.html">Anthologie</ref>)</item>
-          <item><ref target="bibl_8ebf0c28.html">Theaterg’schichten durch Liebe, Intrige, Geld und
+          <item><ref target="bibl_8ebf0c28.html">Theaterg'schichten durch Liebe, Intrige, Geld und
               Dummheit. Posse mit Gesang in zwei Akten</ref> (<ref target="author_e00f499f.html"
               >Johann Nestroy</ref>, 1854, S. 19–27 im Erstdruck, S. 159–176 in der <ref
               target="buch.html">Anthologie</ref>)</item>
@@ -352,7 +392,7 @@
         </list>
       </div>
       <div>
-        <head>Statistische Übersicht</head>
+        <head>Statistische Übersicht zu den Rezeptionszeugnissen</head>
         <div rend="charts">
           <p><graphic type="chart" subtype="gattungen"
               url="https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/data/analysetexte_statistik.csv"
