@@ -9,14 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const showGenres = document.body.getAttribute("data-show-genres") === "true";
 
-    // Fix 2: window.timelineData wird vom XSL inline als Jahreszahlen-Array eingebettet –
-    // kein erneuter fetch() der gesamten XML-Datei nötig.
-    // Format: [1800, 1800, 1801, 1803, ...] – Duplikate werden unten gezählt.
     buildCharts(window.timelineData || []);
 
     function buildCharts(years) {
-
-        // Häufigkeiten pro Jahr zählen
         const dateCounts = {};
         for (const year of years) {
             dateCounts[year] = (dateCounts[year] || 0) + 1;
@@ -26,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
             .map(year => [Date.UTC(parseInt(year), 0, 1), dateCounts[year]])
             .sort((a, b) => a[0] - b[0]);
 
-        // Timeline-Liniendiagramm
         Highcharts.chart('container-timeline', {
             chart: { type: 'line' },
             title: { text: null },
@@ -51,23 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }]
         });
 
-        // Genre-Pie-Chart (nur bei "alle")
-        if (showGenres) {
-            // Fix 2b: Genre-Daten aus dem bereits gerenderten DOM lesen –
-            // kein XML-Fetch nötig.
-            const genres = { 'Prosa': 0, 'Lyrik': 0, 'Drama': 0, 'Sonstige': 0 };
-
-            document.querySelectorAll('#tocTable tbody tr').forEach(row => {
-                // Gattungsspalte ist die 9. <td> (Index 8, 0-basiert)
-                const genreCell = row.cells[8];
-                if (!genreCell) return;
-                const text = genreCell.textContent.toLowerCase();
-                if (text.includes('lyrik'))       genres['Lyrik']++;
-                else if (text.includes('prosa'))  genres['Prosa']++;
-                else if (text.includes('drama'))  genres['Drama']++;
-                else                              genres['Sonstige']++;
-            });
-
+        if (showGenres && window.genreData) {
             const baseColor = 'rgba(94, 23, 235,';
             const colorVariants = [
                 `${baseColor} 0.9)`,
@@ -81,7 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 'Drama':    'https://sappho-digital.com/toc-drama.html',
                 'Sonstige': 'https://sappho-digital.com/toc-sonstige.html'
             };
-            const genreData = Object.entries(genres).map(([genre, count], index) => ({
+            const genreData = Object.entries(window.genreData).map(([genre, count], index) => ({
                 name: genre,
                 y: count,
                 color: colorVariants[index % colorVariants.length],
@@ -97,9 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
                         cursor: 'pointer',
                         events: {
                             click: function (event) {
-                                const point = event.point;
-                                if (point.options.url) {
-                                    window.open(point.options.url, '_blank');
+                                if (event.point.options.url) {
+                                    window.open(event.point.options.url, '_blank');
                                 }
                             }
                         }

@@ -153,6 +153,8 @@
                                         </xsl:for-each>
                                         <xsl:text>];&#10;</xsl:text>
                                     </script>
+
+
                                 </xsl:if>
 
                                 <xsl:if test="not($show_heatmap)">
@@ -187,6 +189,156 @@
                                 <div id="screen-too-small">Das Fenster ist zu klein, um die Tabelle
                                     darstellen zu können.</div>
 
+                                <script>
+                                <xsl:text>window.tocData = [&#10;</xsl:text>
+                                <xsl:for-each select="//tei:listBibl/tei:bibl">
+
+                                    <xsl:variable name="createdEl" select="tei:date[@type = 'created']"/>
+                                    <xsl:variable name="publishedEl" select="tei:date[@type = 'published']"/>
+                                    <xsl:variable name="created">
+                                        <xsl:choose>
+                                            <xsl:when test="$createdEl/@when"><xsl:value-of select="$createdEl/@when"/></xsl:when>
+                                            <xsl:when test="$createdEl/@notBefore and $createdEl/@notAfter"><xsl:value-of select="concat($createdEl/@notBefore, '–', $createdEl/@notAfter)"/></xsl:when>
+                                            <xsl:when test="$createdEl/@notBefore"><xsl:value-of select="$createdEl/@notBefore"/></xsl:when>
+                                            <xsl:when test="$createdEl/@notAfter"><xsl:value-of select="$createdEl/@notAfter"/></xsl:when>
+                                            <xsl:otherwise><xsl:value-of select="normalize-space($createdEl)"/></xsl:otherwise>
+                                        </xsl:choose>
+                                    </xsl:variable>
+                                    <xsl:variable name="published">
+                                        <xsl:choose>
+                                            <xsl:when test="$publishedEl/@when"><xsl:value-of select="$publishedEl/@when"/></xsl:when>
+                                            <xsl:when test="$publishedEl/@notBefore and $publishedEl/@notAfter"><xsl:value-of select="concat($publishedEl/@notBefore, '–', $publishedEl/@notAfter)"/></xsl:when>
+                                            <xsl:when test="$publishedEl/@notBefore"><xsl:value-of select="$publishedEl/@notBefore"/></xsl:when>
+                                            <xsl:when test="$publishedEl/@notAfter"><xsl:value-of select="$publishedEl/@notAfter"/></xsl:when>
+                                            <xsl:otherwise><xsl:value-of select="normalize-space($publishedEl)"/></xsl:otherwise>
+                                        </xsl:choose>
+                                    </xsl:variable>
+
+                                    <xsl:variable name="titleText" select="replace(normalize-space(tei:title[@type = 'text']), '\\', '\\\\')"/>
+                                    <xsl:variable name="titleHtml">
+                                        <xsl:value-of select="concat('&lt;a href=&quot;', @xml:id, '.html&quot; class=&quot;link-plain&quot;&gt;', replace($titleText, '&quot;', '&amp;quot;'), '&lt;/a&gt;')"/>
+                                        <xsl:if test="@ref">
+                                            <xsl:value-of select="concat(' &lt;a href=&quot;', @ref, '&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/wiki.png&quot; alt=&quot;Wikidata&quot; class=&quot;icon&quot;/&gt;&lt;/a&gt;')"/>
+                                        </xsl:if>
+                                    </xsl:variable>
+
+                                    <xsl:variable name="workHtml">
+                                        <xsl:for-each select="tei:bibl[tei:title[@type = 'work']]">
+                                            <xsl:value-of select="concat('&lt;a href=&quot;', @xml:id, '.html&quot; class=&quot;link-plain&quot;&gt;', replace(normalize-space(tei:title), '&quot;', '&amp;quot;'), '&lt;/a&gt;')"/>
+                                            <xsl:if test="@ref">
+                                                <xsl:value-of select="concat(' &lt;a href=&quot;', @ref, '&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/wiki.png&quot; alt=&quot;Wikidata&quot; class=&quot;icon&quot;/&gt;&lt;/a&gt;')"/>
+                                            </xsl:if>
+                                            <xsl:if test="position() != last()">, </xsl:if>
+                                        </xsl:for-each>
+                                    </xsl:variable>
+
+                                    <xsl:variable name="workQid" select="string-join(tei:bibl[tei:title[@type = 'work']][@ref]/@ref, ', ')"/>
+
+                                    <xsl:variable name="authorHtml">
+                                        <xsl:for-each select="tei:author">
+                                            <xsl:value-of select="concat('&lt;a href=&quot;', @xml:id, '.html&quot; class=&quot;link-plain&quot;&gt;', replace(normalize-space(.), '&quot;', '&amp;quot;'), '&lt;/a&gt;')"/>
+                                            <xsl:if test="@ref">
+                                                <xsl:value-of select="concat(' &lt;a href=&quot;', @ref, '&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/wiki.png&quot; alt=&quot;Wikidata&quot; class=&quot;icon&quot;/&gt;&lt;/a&gt;')"/>
+                                            </xsl:if>
+                                            <xsl:if test="position() != last()">, </xsl:if>
+                                        </xsl:for-each>
+                                    </xsl:variable>
+                                    <xsl:variable name="authorQid" select="string-join(tei:author[@ref]/@ref, ', ')"/>
+
+                                    <xsl:variable name="genreHtml">
+                                        <xsl:for-each select="tei:note[@type = 'genre']">
+                                            <xsl:variable name="gl" select="lower-case(normalize-space(.))"/>
+                                            <xsl:variable name="label">
+                                                <xsl:choose>
+                                                    <xsl:when test="contains($gl, 'lyrik')">Lyrik</xsl:when>
+                                                    <xsl:when test="contains($gl, 'prosa')">Prosa</xsl:when>
+                                                    <xsl:when test="contains($gl, 'drama')">Drama</xsl:when>
+                                                    <xsl:otherwise>Sonstige</xsl:otherwise>
+                                                </xsl:choose>
+                                            </xsl:variable>
+                                            <xsl:value-of select="concat('&lt;a href=&quot;toc-', lower-case($label), '.html&quot; class=&quot;link-plain&quot;&gt;', $label, '&lt;/a&gt;')"/>
+                                            <xsl:if test="position() != last()">, </xsl:if>
+                                        </xsl:for-each>
+                                    </xsl:variable>
+                                    <xsl:variable name="genreText">
+                                        <xsl:for-each select="tei:note[@type = 'genre']">
+                                            <xsl:variable name="gl" select="lower-case(normalize-space(.))"/>
+                                            <xsl:choose>
+                                                <xsl:when test="contains($gl, 'lyrik')">Lyrik</xsl:when>
+                                                <xsl:when test="contains($gl, 'prosa')">Prosa</xsl:when>
+                                                <xsl:when test="contains($gl, 'drama')">Drama</xsl:when>
+                                                <xsl:otherwise>Sonstige</xsl:otherwise>
+                                            </xsl:choose>
+                                            <xsl:if test="position() != last()">, </xsl:if>
+                                        </xsl:for-each>
+                                    </xsl:variable>
+
+                                    <xsl:variable name="placeHtml">
+                                        <xsl:for-each select="tei:pubPlace">
+                                            <xsl:value-of select="concat('&lt;a href=&quot;', @xml:id, '.html&quot; class=&quot;link-plain&quot;&gt;', replace(normalize-space(.), '&quot;', '&amp;quot;'), '&lt;/a&gt;')"/>
+                                            <xsl:if test="@ref">
+                                                <xsl:value-of select="concat(' &lt;a href=&quot;', @ref, '&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/wiki.png&quot; alt=&quot;Wikidata&quot; class=&quot;icon&quot;/&gt;&lt;/a&gt;')"/>
+                                            </xsl:if>
+                                            <xsl:if test="position() != last()">, </xsl:if>
+                                        </xsl:for-each>
+                                    </xsl:variable>
+                                    <xsl:variable name="placeQid" select="string-join(tei:pubPlace[@ref]/@ref, ', ')"/>
+
+                                    <xsl:variable name="publisherHtml">
+                                        <xsl:for-each select="tei:publisher">
+                                            <xsl:value-of select="concat('&lt;a href=&quot;', @xml:id, '.html&quot; class=&quot;link-plain&quot;&gt;', replace(normalize-space(.), '&quot;', '&amp;quot;'), '&lt;/a&gt;')"/>
+                                            <xsl:if test="@ref">
+                                                <xsl:value-of select="concat(' &lt;a href=&quot;', @ref, '&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/wiki.png&quot; alt=&quot;Wikidata&quot; class=&quot;icon&quot;/&gt;&lt;/a&gt;')"/>
+                                            </xsl:if>
+                                            <xsl:if test="position() != last()">, </xsl:if>
+                                        </xsl:for-each>
+                                    </xsl:variable>
+                                    <xsl:variable name="publisherQid" select="string-join(tei:publisher[@ref]/@ref, ', ')"/>
+
+                                    <xsl:variable name="refHtml">
+                                        <xsl:for-each select="tei:ref">
+                                            <xsl:value-of select="concat('&lt;a href=&quot;', @target, '&quot; target=&quot;_blank&quot; class=&quot;link-plain&quot;&gt;Online&lt;/a&gt;')"/>
+                                            <xsl:if test="position() != last()">, </xsl:if>
+                                        </xsl:for-each>
+                                    </xsl:variable>
+                                    <xsl:variable name="refUrl" select="string-join(tei:ref[@target]/@target, ', ')"/>
+
+                                    <xsl:text>[</xsl:text>
+                                    <xsl:value-of select="concat('&quot;', replace($created, '&quot;', '\\&quot;'), '&quot;,')"/>
+                                    <xsl:value-of select="concat('&quot;', replace($published, '&quot;', '\\&quot;'), '&quot;,')"/>
+                                    <xsl:value-of select="concat('&quot;', replace($titleHtml, '&quot;', '\\&quot;'), '&quot;,')"/>
+                                    <xsl:value-of select="concat('&quot;', replace(normalize-space(@ref), '&quot;', '\\&quot;'), '&quot;,')"/>
+                                    <xsl:value-of select="concat('&quot;', replace($workHtml, '&quot;', '\\&quot;'), '&quot;,')"/>
+                                    <xsl:value-of select="concat('&quot;', replace($workQid, '&quot;', '\\&quot;'), '&quot;,')"/>
+                                    <xsl:value-of select="concat('&quot;', replace($authorHtml, '&quot;', '\\&quot;'), '&quot;,')"/>
+                                    <xsl:value-of select="concat('&quot;', replace($authorQid, '&quot;', '\\&quot;'), '&quot;')"/>
+                                    <xsl:if test="$show_genres">
+                                        <xsl:value-of select="concat(',&quot;', replace($genreHtml, '&quot;', '\\&quot;'), '&quot;')"/>
+                                    </xsl:if>
+                                    <xsl:value-of select="concat(',&quot;', replace($placeHtml, '&quot;', '\\&quot;'), '&quot;,')"/>
+                                    <xsl:value-of select="concat('&quot;', replace($placeQid, '&quot;', '\\&quot;'), '&quot;,')"/>
+                                    <xsl:value-of select="concat('&quot;', replace($publisherHtml, '&quot;', '\\&quot;'), '&quot;,')"/>
+                                    <xsl:value-of select="concat('&quot;', replace($publisherQid, '&quot;', '\\&quot;'), '&quot;,')"/>
+                                    <xsl:value-of select="concat('&quot;', replace($refHtml, '&quot;', '\\&quot;'), '&quot;,')"/>
+                                    <xsl:value-of select="concat('&quot;', replace($refUrl, '&quot;', '\\&quot;'), '&quot;')"/>
+                                    <xsl:text>],&#10;</xsl:text>
+                                </xsl:for-each>
+                                <xsl:text>];&#10;</xsl:text>
+                                <xsl:if test="$show_genres">
+                                    <xsl:text>window.tocShowGenres = true;&#10;</xsl:text>
+                                    <xsl:text>window.genreData = {Prosa:0,Lyrik:0,Drama:0,Sonstige:0};&#10;</xsl:text>
+                                    <xsl:for-each select="//tei:listBibl/tei:bibl/tei:note[@type = 'genre']">
+                                        <xsl:variable name="gl" select="lower-case(normalize-space(.))"/>
+                                        <xsl:choose>
+                                            <xsl:when test="contains($gl, 'lyrik')"><xsl:text>window.genreData.Lyrik++;&#10;</xsl:text></xsl:when>
+                                            <xsl:when test="contains($gl, 'prosa')"><xsl:text>window.genreData.Prosa++;&#10;</xsl:text></xsl:when>
+                                            <xsl:when test="contains($gl, 'drama')"><xsl:text>window.genreData.Drama++;&#10;</xsl:text></xsl:when>
+                                            <xsl:otherwise><xsl:text>window.genreData.Sonstige++;&#10;</xsl:text></xsl:otherwise>
+                                        </xsl:choose>
+                                    </xsl:for-each>
+                                </xsl:if>
+                                </script>
+
                                 <table class="table table-striped display" id="tocTable"
                                     style="width:100%">
                                     <thead>
@@ -210,191 +362,7 @@
                                             <th class="export-only">Link</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <xsl:for-each select="//tei:listBibl/tei:bibl">
-                                            <tr>
-                                                <td>
-                                                  <xsl:value-of select="tei:date[@type = 'created']"
-                                                  />
-                                                </td>
-                                                <td>
-                                                  <xsl:value-of
-                                                  select="tei:date[@type = 'published']"/>
-                                                </td>
-                                                <td>
-                                                  <a href="{@xml:id}.html" class="link-plain">
-                                                  <xsl:value-of select="tei:title[@type = 'text']"/>
-                                                  </a>
-                                                  <xsl:if test="@ref">
-                                                  <a href="{@ref}" target="_blank">
-                                                  <img src="images/wiki.png" alt="Wikidata"
-                                                  title="Wikidata-Eintrag öffnen" class="icon"/>
-                                                  </a>
-                                                  </xsl:if>
-                                                </td>
-                                                <td class="export-only">
-                                                  <xsl:if test="@ref">
-                                                  <xsl:value-of select="@ref"/>
-                                                  </xsl:if>
-                                                </td>
-                                                <td>
-                                                  <xsl:for-each
-                                                  select="tei:bibl[tei:title[@type = 'work']]">
-                                                  <a href="{@xml:id}.html" class="link-plain">
-                                                  <xsl:value-of select="tei:title"/>
-                                                  </a>
-                                                  <xsl:if test="@ref">
-                                                  <a href="{@ref}" target="_blank">
-                                                  <img src="images/wiki.png" alt="Wikidata"
-                                                  title="Wikidata-Eintrag öffnen" class="icon"/>
-                                                  </a>
-                                                  </xsl:if>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                </td>
-                                                <td class="export-only">
-                                                  <xsl:for-each
-                                                  select="tei:bibl[tei:title[@type = 'work']]">
-                                                  <xsl:if test="@ref">
-                                                  <xsl:value-of select="@ref"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:if>
-                                                  </xsl:for-each>
-                                                </td>
-                                                <td>
-                                                  <xsl:for-each select="tei:author">
-                                                  <a href="{@xml:id}.html" class="link-plain">
-                                                  <xsl:value-of select="."/>
-                                                  </a>
-                                                  <xsl:if test="@ref">
-                                                  <a href="{@ref}" target="_blank">
-                                                  <img src="images/wiki.png" alt="Wikidata"
-                                                  title="Wikidata-Eintrag öffnen" class="icon"/>
-                                                  </a>
-                                                  </xsl:if>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                </td>
-                                                <td class="export-only">
-                                                  <xsl:for-each select="tei:author">
-                                                  <xsl:if test="@ref">
-                                                  <xsl:value-of select="
-                                                                    string-join(
-                                                                    for $p in tei:pubPlace[@ref]
-                                                                    return
-                                                                        $p/@ref,
-                                                                    ', '
-                                                                    )
-                                                                    "/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:if>
-                                                  </xsl:for-each>
-                                                </td>
-                                                <xsl:if test="$show_genres">
-                                                  <td>
-                                                  <xsl:for-each select="tei:note[@type = 'genre']">
-                                                  <xsl:variable name="genreText"
-                                                  select="normalize-space(.)"/>
-                                                  <xsl:variable name="genreLower"
-                                                  select="lower-case($genreText)"/>
-                                                  <xsl:choose>
-                                                  <xsl:when test="contains($genreLower, 'lyrik')">
-                                                  <a href="toc-lyrik.html" class="link-plain"
-                                                  >Lyrik</a>
-                                                  </xsl:when>
-                                                  <xsl:when test="contains($genreLower, 'prosa')">
-                                                  <a href="toc-prosa.html" class="link-plain"
-                                                  >Prosa</a>
-                                                  </xsl:when>
-                                                  <xsl:when test="contains($genreLower, 'drama')">
-                                                  <a href="toc-drama.html" class="link-plain"
-                                                  >Drama</a>
-                                                  </xsl:when>
-                                                  <xsl:otherwise>
-                                                  <a href="toc-sonstige.html" class="link-plain"
-                                                  >Sonstige</a>
-                                                  </xsl:otherwise>
-                                                  </xsl:choose>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                  </td>
-                                                </xsl:if>
-                                                <td>
-                                                  <xsl:for-each select="tei:pubPlace">
-                                                  <a href="{@xml:id}.html" class="link-plain">
-                                                  <xsl:value-of select="."/>
-                                                  </a>
-                                                  <xsl:if test="@ref">
-                                                  <a href="{@ref}" target="_blank">
-                                                  <img src="images/wiki.png" alt="Wikidata"
-                                                  title="Wikidata-Eintrag öffnen" class="icon"/>
-                                                  </a>
-                                                  </xsl:if>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                </td>
-                                                <td class="export-only">
-                                                  <xsl:for-each select="tei:pubPlace">
-                                                  <xsl:if test="@ref">
-                                                  <xsl:value-of select="
-                                                                    string-join(
-                                                                    for $p in tei:pubPlace[@ref]
-                                                                    return
-                                                                        $p/@ref,
-                                                                    ', '
-                                                                    )
-                                                                    "/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:if>
-                                                  </xsl:for-each>
-                                                </td>
-                                                <td>
-                                                  <xsl:for-each select="tei:publisher">
-                                                  <a href="{@xml:id}.html" class="link-plain">
-                                                  <xsl:value-of select="."/>
-                                                  </a>
-                                                  <xsl:if test="@ref">
-                                                  <a href="{@ref}" target="_blank">
-                                                  <img src="images/wiki.png" alt="Wikidata"
-                                                  title="Wikidata-Eintrag öffnen" class="icon"/>
-                                                  </a>
-                                                  </xsl:if>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                </td>
-                                                <td class="export-only">
-                                                  <xsl:for-each select="tei:publisher">
-                                                  <xsl:if test="@ref">
-                                                  <xsl:value-of select="
-                                                                    string-join(
-                                                                    for $p in tei:pubPlace[@ref]
-                                                                    return
-                                                                        $p/@ref,
-                                                                    ', '
-                                                                    )
-                                                                    "/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:if>
-                                                  </xsl:for-each>
-                                                </td>
-                                                <td>
-                                                  <xsl:for-each select="tei:ref">
-                                                  <a href="{@target}" target="_blank"
-                                                  class="link-plain"> Online </a>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:for-each>
-                                                </td>
-                                                <td class="export-only">
-                                                  <xsl:for-each select="tei:ref">
-                                                  <xsl:if test="@target">
-                                                  <xsl:value-of select="@target"/>
-                                                  <xsl:if test="position() != last()">, </xsl:if>
-                                                  </xsl:if>
-                                                  </xsl:for-each>
-                                                </td>
-                                            </tr>
-                                        </xsl:for-each>
-                                    </tbody>
+                                    <tbody/>
                                 </table>
 
                             </div>
