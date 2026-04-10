@@ -34,7 +34,7 @@
                                     Gegenwart.</p>
                                 <a href="about.html" class="btn btn-secondary button"
                                     style="display:inline-block;text-decoration:none;margin-bottom:3rem;"
-                                    >&#220;ber das Projekt (work in progress)</a>
+                                    >&#220;ber das Projekt</a>
                             </div>
                             <div class="hero-kpi-grid">
                                 <div class="hero-kpi-card">
@@ -94,7 +94,8 @@
                                                   <li>
                                                   <a
                                                   href="https://en.wikipedia.org/wiki/Semantic_triple"
-                                                  target="_blank"> »Semantic triple« in der Wikipedia </a>
+                                                  target="_blank"> »Semantic triple« in der
+                                                  Wikipedia </a>
                                                   </li>
                                                   <li>
                                                   <a href="https://sappho-digital.com/about.html"
@@ -105,8 +106,11 @@
                                         </span></div>
                                 </div>
                             </div>
-                            <p class="hero-scroll-hint"><b>Wo anfangen? Einfach scrollen &#8211;
-                                    unten finden sich vier m&#246;gliche Einstiege. &#x2193;</b></p>
+                            <p class="hero-scroll-hint"><b>Wo anfangen? &#8594;<a
+                                        href="orientierung.html">Hier</a>&#8592; findet sich eine
+                                    Orientierungshilfe. <br/>Keine Lust darauf? Dann einfach scrollen
+                                    &#8211; unten finden sich vier m&#246;gliche Einstiege.
+                                    &#8595;</b></p>
                             <p class="smaller-text disclaimer"
                                 style="text-align:center;max-width:580px;">Disclaimer: The <a
                                     href="https://github.com/laurauntner/sappho-digital">raw

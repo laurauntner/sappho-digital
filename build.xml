@@ -11,7 +11,7 @@
         <fileset dir="${target}" includes="*.html"/>
     </delete>
 
-        <!-- imprint -->
+    <!-- imprint -->
     <exec executable="python3" failonerror="true">
         <arg value="python/homepage-counter.py"/>
         <arg value="data/rdf/sappho-reception.ttl"/>
@@ -31,8 +31,14 @@
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
 
-        <!-- about -->
+    <!-- about -->
     <xslt in="./data/meta/about.xml" out="${target}/about.html" style="./xslt/meta.xsl">
+        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+        <classpath location="${basedir}/saxon/saxon9he.jar"/>
+    </xslt>
+    
+    <!-- orientierung -->
+    <xslt in="./data/meta/orientierung.xml" out="${target}/orientierung.html" style="./xslt/meta.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>

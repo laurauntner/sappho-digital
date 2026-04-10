@@ -128,11 +128,17 @@
     <xsl:template match="tei:graphic[@type = 'chart']">
         <div class="skos-chart" id="{@n}" data-chart="{@subtype}" data-csv="{@url}"/>
     </xsl:template>
-    
-    <xsl:template match="tei:div[@rend='charts']">
+
+    <xsl:template match="tei:div[@rend = 'charts']">
         <section class="charts-grid">
             <xsl:apply-templates/>
         </section>
+    </xsl:template>
+
+    <xsl:template match="tei:code">
+        <code>
+            <xsl:apply-templates/>
+        </code>
     </xsl:template>
 
 </xsl:stylesheet>

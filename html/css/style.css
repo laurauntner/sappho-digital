@@ -61,7 +61,7 @@
 }
 
 h3 {
-    margin-top: 40px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
@@ -2520,4 +2520,13 @@ a.feat-tag--intertext:hover {
 
 .gewicht-slider {
     font-size: .9rem
+}
+
+.nav-orientierung-link + .tooltip-text {
+    width: max-content;
+    white-space: nowrap;
+}
+
+.nav-orientierung-link:hover {
+    color: #5e17eb !important;
 }

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Orientierung auf dieser Webseite</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Laura Untner</publisher>
+                <pubPlace>Wien/Berlin</pubPlace>
+                <date when="2026">2026</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
+                        <p>CC BY 4.0</p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <head>Startseite</head>
+                <p>Die <ref target="https://sappho-digital.com/">Startseite</ref> gibt einen
+                    Überblick über die Daten: die Anzahl der verzeichneten Rezeptionszeugnisse, der
+                    erfassten Autor_innen, der exemplarisch analysierten Texte sowie der statuierten
+                    intertextuellen Beziehungen – darunter fallen auch ›einfache‹ intertextuelle
+                    Beziehungen zwischen nicht näher analysierten Werken und Sapphos Werk als
+                    Ganzes. Außerdem sind die Zeitspanne der Rezeptionszeugnisse und die
+                    Gesamtanzahl der Tripel angegeben.</p>
+                <p>Von der Startseite aus werden vier Einstiege in die Daten angeboten: »<ref
+                        target="https://sappho-digital.com/toc-alle.html">Rezeptionszeugnisse</ref>«
+                    führt zum Verzeichnis aller bekannten deutschsprachigen literarischen
+                    Rezeptionszeugnisse zu Sappho; »<ref
+                        target="https://sappho-digital.com/statistics.html">Statistik</ref>« bietet
+                    exemplarische statistische Auswertungen zur literarischen Sappho-Rezeption;
+                        »<ref target="https://sappho-digital.com/network.html"
+                        >Netzwerkvisualisierung</ref>« erschließt die Daten als interaktives
+                    Netzwerk; »Daten« führt direkt zu den <ref
+                        target="https://github.com/laurauntner/sappho-digital">Open Access-Daten auf
+                        GitHub</ref> – also nicht eigentlich in die Webseite hinein, sondern zu
+                    einem externen Repositorium.</p>
+                <p>Im Footer jeder Seite ist vermerkt, wann die Webseite zuletzt aktualisiert wurde.
+                    Dieser Hinweis dient der besseren Reproduzierbarkeit der Daten.</p>
+            </div>
+            <div>
+                <head>»Projekt«</head>
+                <p><hi rend="bold"><ref target="https://sappho-digital.com/about.html">Über das
+                            Projekt</ref></hi>: Hier finden sich eine kurze Projektbeschreibung
+                    sowie Informationen zum Projektstand, zu den Daten und ihrem Speicherort,
+                    Kontaktmöglichkeiten, ein Zitiervorschlag, biographische Angaben, eine
+                    Danksagung und ein Förderhinweis.</p>
+                <p><hi rend="bold"><ref target="https://sappho-digital.com/publikationen.html"
+                            >Publikationen</ref></hi>: Diese Seite versammelt eine Auswahl
+                    projektbezogener Veröffentlichungen und Präsentationen.</p>
+                <p><hi rend="bold"><ref target="https://sappho-digital.com/bibliographie.html"
+                            >Bibliographie</ref></hi>: Diese Seite enthält eine Auswahlbibliographie
+                    zur literarischen Sappho-Rezeption.</p>
+                <p><hi rend="bold"><ref target="https://sappho-digital.com/buch.html"
+                            >Primärtexte</ref></hi>: Hier wird primär darauf hingewiesen, dass auf
+                    der Webseite keine Primärtexte angeboten werden; wo vorhanden, sind jedoch Links
+                    zu Digitalisaten angegeben. Außerdem wird auf den Band <hi rend="italics"><ref
+                            target="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/"
+                            >Sappho. Texte zur literarischen Rezeption im deutschsprachigen
+                            Raum</ref></hi> (2023) verwiesen, dem die exemplarisch analysierten
+                    Rezeptionszeugnisse entnommen sind.</p>
+            </div>
+            <div>
+                <head>»Texte«</head>
+                <p><hi rend="bold">Sappho-Fragmente</hi>: Für alle in Andreas Bagordos
+                    zweisprachiger Ausgabe auf Basis der textkritischen Edition von Eva-Maria Voigt
+                    (2009) edierten Fragmente stehen Einzelseiten zur Verfügung. Diese enthalten die
+                    interne ID, die Wikidata-ID, eine Typangabe (Werk) und die Autorin (Sappho)
+                    sowie die Ergebnisse der exemplarischen Analyse – das heißt eine tabellarische
+                    Übersicht der gefundenen Phänomene (Motive, Themen etc.) und der intertextuellen
+                    Beziehungen des jeweiligen Fragments. Bsp.: <ref
+                        target="https://sappho-digital.com/bibl_sappho_1.html">Fragment 1
+                        Voigt</ref>.</p>
+                <p><hi rend="bold">Rezeptionszeugnisse</hi>: Die gesammelten Rezeptionszeugnisse
+                    lassen sich insgesamt oder nach Gattung aufrufen (<ref
+                        target="https://sappho-digital.com/toc-alle.html">alle</ref>, <ref
+                        target="https://sappho-digital.com/toc-prosa.html">prosaische</ref>, <ref
+                        target="https://sappho-digital.com/toc-lyrik.html">lyrische</ref>, <ref
+                        target="https://sappho-digital.com/toc-drama.html">dramatische</ref> und
+                        <ref target="https://sappho-digital.com/toc-sonstige.html">sonstige</ref> –
+                    darunter Comics). Jede dieser Seiten enthält eine Tabelle und einfache
+                    statistische Auswertungen im oberen Bereich – mit Ausnahme von »<ref
+                        target="https://sappho-digital.com/toc-sonstige.html">Sonstige
+                        Rezeptionszeugnisse</ref>«, wo die Datenlage schlichtweg zu klein ist. Auf
+                    der Seite »<ref target="https://sappho-digital.com/toc-alle.html">Alle
+                        Rezeptionszeugnisse</ref>« findet sich eine Übersicht über die
+                    Gattungsverteilung; auf allen Seiten gibt es eine zeitliche und eine räumliche
+                    Statistik, die zeigen, wann und wo Rezeptionszeugnisse erschienen sind.</p>
+                <p>Die Tabellen listen – soweit vorhanden – folgende Angaben: Entstehungsjahr,
+                    Publikations- bzw. Aufführungsjahr, Titel, ggf. Text, in dem der Text enthalten
+                    ist, Autor_in, Gattung (entfällt auf den Gattungsunterseiten), Publikations-
+                    bzw. Aufführungsort sowie Verlag/Druckerei. Zu vielen Entitäten werden auch
+                    Wikidata-IDs bereitgestellt – derzeit vollständig für alle Autor_innen und Orte,
+                    für die übrigen Felder noch nicht durchgängig. Links oben lässt sich die Tabelle
+                    durchsuchen; rechts oben kann sie als Excel-Datei heruntergeladen oder ihr
+                    gesamter Inhalt kopiert werden. Alle Spalten sind einzeln durchsuch- und
+                    sortierbar. Ein Klick auf den Text in »Titel«, »Enthalten in«, »Autor_in«,
+                    »Publikations- bzw. Aufführungsort« oder »Verlag/Druckerei« führt zur jeweiligen
+                    Einzelseite. Ein Klick auf den Text in »Gattung« führt zum jeweiligen
+                    spezifischen Verzeichnis.</p>
+                <p><hi rend="bold">Einzelseiten</hi>:</p>
+                <list>
+                    <item>Bei Werken können folgende Informationen erscheinen: ein Cover-Bild von
+                        Wikimedia, eine interne ID, eine Wikidata-ID, eine Typangabe (Werk), ein_e
+                        Autor_in, eine Gattung, ein Entstehungsjahr, ein Publikations- bzw.
+                        Aufführungsjahr, ein Publikationsort, ein Verlag/eine Druckerei, ein Text,
+                        in dem der Text enthalten ist, und ein Link zu einem Digitalisat. Bsp.: <ref
+                            target="https://sappho-digital.com/bibl_19d5a7ab.html">Erinna an
+                            Sappho</ref>.</item>
+                    <item>Bei Autor_innen sind ggf. ein Porträtbild von Wikimedia, eine interne ID,
+                        eine Wikidata-ID, eine Typangabe (Autor_in), Geburts- und Sterbedaten von
+                        Wikidata sowie eine Liste der erfassten Werke mit Links dazu zu finden.
+                        Bsp.: <ref target="https://sappho-digital.com/author_0de8e0eb.html"
+                            >Friederike Mayröcker</ref>.</item>
+                    <item>Bei Orten erscheinen ggf. eine OpenStreetMap-Karte, eine interne ID, eine
+                        Wikidata-ID, eine Typangabe (Publikations-/Aufführungsort) und eine
+                        Auflistung der zugehörigen Werke. Bsp.: <ref
+                            target="https://sappho-digital.com/place_d35a02eb.html"
+                        >Berlin</ref>.</item>
+                    <item>Bei Verlagen und Druckereien sind eine interne ID, eine Wikidata-ID, eine
+                        Typangabe (Verlag/Druckerei) und die zugehörigen Werke verzeichnet. Bsp.:
+                            <ref target="https://sappho-digital.com/publisher_87308a85.html">Aufbau
+                            Verlag</ref>.</item>
+                </list>
+            </div>
+            <div>
+                <head>»Analyse«</head>
+                <p><hi rend="bold">Datenmodell</hi>:</p>
+                <list>
+                    <item><hi rend="bold"><ref target="https://sappho-digital.com/ontology.html"
+                                >Ontologie</ref></hi>: Hier ist die mit <ref
+                            target="https://github.com/rdflib/pyLODE">pyLODE</ref> erstellte
+                        Dokumentation der angewandten <ref
+                            target="https://github.com/laurauntner/sappho-digital/tree/main/documentation/ontology"
+                            >Ontologie</ref> verlinkt.</item>
+                    <item><hi rend="bold"><ref target="https://sappho-digital.com/alignments.html"
+                                >Alignments</ref></hi>: Hier findet sich eine Netzwerkvisualisierung
+                        der durchgeführten <ref
+                            target="https://github.com/laurauntner/sappho-digital/tree/main/documentation/alignments"
+                            >Ontologie-Alignments</ref>.</item>
+                    <item><hi rend="bold"><ref target="https://sappho-digital.com/vocab.html"
+                                >Vokabular</ref></hi>: Hier ist das angewandte <ref
+                            target="https://github.com/laurauntner/sappho-digital/tree/main/documentation/vocab"
+                            >kontrollierte Vokabular</ref> zugänglich. Dort finden sich Definitionen
+                        zu den einzelnen Konzepten (Motiv, Thema usw.) sowie eine aufklappbare
+                        Listenansicht der Konzepte mit ihren SKOS-Beziehungen, Vorkommen und
+                        IDs.</item>
+                </list>
+                <p><hi rend="bold"><ref target="https://sappho-digital.com/analyse.html"
+                            >Erläuterungen zur Analyse</ref></hi>: Hier werden die exemplarisch
+                    analysierten Rezeptionszeugnisse mit detaillierten bibliographischen Angaben
+                    gelistet, und es gibt eine statistische Übersicht zu diesen Texten.</p>
+                <p><hi rend="bold">Rezeptionsphänomene</hi>:</p>
+                <list>
+                    <item>Die Seite »<ref target="https://sappho-digital.com/intertexts.html"
+                            >Intertextuelle Beziehungen</ref>« listet alle intertextuellen
+                        Beziehungen zwischen Sappho-Fragmenten und den analysierten
+                        Rezeptionszeugnissen sowie zwischen Fragmenten und Rezeptionszeugnissen
+                        untereinander. Im oberen Bereich findet sich außerdem eine
+                        Netzwerkvisualisierung mit Links zu den Werkeinzelseiten. Im unteren Bereich
+                        sind die Beziehungen in aufklappbarer Listenform dargestellt: Pro Text lässt
+                        sich einsehen, mit welchen anderen Texten intertextuelle Beziehungen
+                        bestehen, wie viele Gemeinsamkeiten sie aufweisen, welche Seiten
+                        exemplarisch analysiert wurden und welche Phänomene die jeweilige Beziehung
+                        begründen.</item>
+                    <item>Auf den Seiten »<ref target="https://sappho-digital.com/pers-refs.html"
+                            >Personenreferenzen und Figuren</ref>«, »<ref
+                            target="https://sappho-digital.com/place-refs.html"
+                        >Ortsreferenzen</ref>«, »<ref
+                            target="https://sappho-digital.com/work-refs.html">Werkreferenzen und
+                            Zitate</ref>«, »<ref target="https://sappho-digital.com/topoi.html"
+                            >Rhetorische Topoi</ref>«, »<ref
+                            target="https://sappho-digital.com/motifs.html">Motive</ref>«, »<ref
+                            target="https://sappho-digital.com/topics.html">Themen</ref>« und »<ref
+                            target="https://sappho-digital.com/plots.html">Stoffe</ref>« werden die
+                        jeweiligen Phänomene in den exemplarisch analysierten Rezeptionszeugnissen
+                        und Sappho-Fragmenten mit Häufigkeitsangaben und Links zu den
+                        Werkeinzelseiten gelistet; außerdem gibt es einfache Visualisierungen zu den
+                        häufigsten Vorkommnissen.</item>
+                </list>
+                <p><hi rend="bold"><ref target="https://sappho-digital.com/statistics.html"
+                            >Statistik</ref></hi>: Diese Seite bietet exemplarische statistische
+                    Auswertungen der annotierten Sappho-Fragmente und der analysierten
+                    Rezeptionszeugnisse. Den Anfang bilden die Rezeptionsindizes, ein
+                    zusammengesetzter Wert zur Messung der Rezeptionsstärke einzelner Texte. Es
+                    folgen Auswertungen zu durchschnittlichen intertextuellen Relationen und
+                    gemeinsamen Phänomenen, zu besonders dichten intertextuellen Beziehungen sowie
+                    zu Phänomenen als Grundlage intertextueller Relationen. Weitere Abschnitte
+                    zeigen alle Phänomene im Vergleich, ihre Verteilung nach Fragment-Referenz, im
+                    zeitlichen Verlauf und nach Gattung sowie Zusammenhänge von Stoff-Komponenten,
+                    Personenreferenzen, Werkreferenzen und Zitaten. Abschließend widmen sich zwei
+                    Abschnitte genderspezifischen Analysen und einer Popularitätsanalyse auf Basis
+                    von Wiki-Metriken.</p>
+            </div>
+            <div>
+                <head>»Daten«</head>
+                <p><hi rend="bold"><ref target="https://sappho-digital.com/query.html"
+                        >SPARQL</ref></hi>: Der »<ref target="https://sappho-digital.com/query.html"
+                        >Sappho Digital Query Service</ref>« ist ein auf <ref
+                        target="https://comunica.dev/">Comunica</ref> basierendes SPARQL-Interface.
+                    Es bietet verschiedene Quelldatenoptionen, Beispielqueries und ein offenes
+                    SPARQL-Eingabefeld sowie die Möglichkeit, Ergebnisse als CSV oder JSON
+                    herunterzuladen. Außerdem sind Links zu hilfreichen Ressourcen gelistet: einem
+                        <ref target="https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial"
+                        >SPARQL-Tutorial</ref>, dem Datenmodell, den Alignments, dem Vokabular und
+                    den statistischen Auswertungen (siehe oben).</p>
+                <p><hi rend="bold"><ref target="https://sappho-digital.com/query.html"
+                            >Netzwerkvisualisierung</ref></hi>: Hier findet sich eine Visualisierung
+                    aller Daten als Netzwerk. Links lassen sich Klassen suchen und filtern; per
+                    Default ausgewählt sind alle verwendeten <ref
+                        target="https://github.com/BOberreither/INTRO">INTRO</ref>-Klassen
+                        (<code>INT_Character</code>, <code>INT_Interpretation</code>,
+                        <code>INT_Motif</code>, <code>INT_Plot</code>, <code>INT_Topic</code>,
+                        <code>INT_Topos</code>, <code>INT18_Reference</code>,
+                        <code>INT2_ActualizationOfFeature</code>, <code>INT21_TextPassage</code> und
+                        <code>INT31_IntertextualRelationship</code>) sowie die <ref
+                        target="https://repository.ifla.org/items/729b094a-92d6-4317-9dee-a300053ffdb4"
+                        >LRMoo</ref>-Klassen <code>F1_Work</code> (Sapphos Werk als Ganzes) und
+                        <code>F2_Expression</code> (einzelne Fragmente und alle
+                    Rezeptionszeugnisse). Rechts können Instanzen gesucht und gefiltert werden. Beim
+                    Laden ist als Startpunkt »<ref
+                        target="https://sappho-digital.com/bibl_00e9aff1.html">Von den plejaden her
+                        vierzehn gedichte im hinblick auf Lesbos</ref>« von <ref
+                        target="https://sappho-digital.com/author_547138e4.html">Johannes
+                        Poethen</ref> voreingestellt. Ein einfacher Klick auf einen Knoten klappt
+                    seine Verbindungen auf, ein Doppelklick klappt sie wieder zu; ein Klick auf
+                    einen Plus-Knoten öffnet fünf weitere Verbindungen. Links unten ist die
+                    Gesamtanzahl der Tripel sichtbar; in der Mitte lässt sich der aktuell angezeigte
+                    Graph als PNG exportieren. Tooltips zeigen zu jedem Knoten Label, Klasse, URI
+                    und ggf. einen weiterführenden Link.</p>
+                <p><hi rend="bold"><ref target="https://github.com/laurauntner/sappho-digital"
+                            >GitHub</ref></hi>: Ein Klick auf diesen Menüpunkt führt in das <ref
+                        target="https://github.com/laurauntner/sappho-digital"
+                        >GitHub-Repositorium</ref>, das die Daten selbst sowie alle Skripte und den
+                    Webseiten-Code enthält.</p>
+            </div>
+        </body>
+    </text>
+</TEI>

@@ -47,6 +47,7 @@
                         <xsl:with-param name="html_title"
                             select="'Vokabular zur literarischen Sappho-Rezeption'"/>
                     </xsl:call-template>
+                    <script src="./js/details-lazy.js" defer="defer"/>
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
@@ -166,123 +167,126 @@
                             </xsl:if>
                         </xsl:if>
 
-                        <div class="skos-children">
-                            <xsl:if test="$node/skos:definition or $node/skos:scopeNote">
-                                <div class="skos-note">
-                                    <xsl:if test="$node/skos:definition">
-                                        <p class="align-left smaller-text breakable"
-                                                ><strong>Definition:</strong>
-                                            <xsl:text> </xsl:text>
-                                            <xsl:value-of
-                                                select="normalize-space(($node/skos:definition[@xml:lang = 'de'], $node/skos:definition)[1])"
-                                            />
-                                        </p>
-                                    </xsl:if>
-                                    <xsl:if test="$node/skos:scopeNote">
-                                        <p class="align-left smaller-text breakable">
-                                            <xsl:value-of
-                                                select="normalize-space(($node/skos:scopeNote[@xml:lang = 'de'], $node/skos:scopeNote)[1])"
-                                            />
-                                        </p>
-                                    </xsl:if>
-                                </div>
-                            </xsl:if>
+                        <template data-lazy="">
+                            <div class="skos-children">
+                                <xsl:if test="$node/skos:definition or $node/skos:scopeNote">
+                                    <div class="skos-note">
+                                        <xsl:if test="$node/skos:definition">
+                                            <p class="align-left smaller-text breakable"
+                                                  ><strong>Definition:</strong>
+                                                <xsl:text> </xsl:text>
+                                                <xsl:value-of
+                                                  select="normalize-space(($node/skos:definition[@xml:lang = 'de'], $node/skos:definition)[1])"
+                                                />
+                                            </p>
+                                        </xsl:if>
+                                        <xsl:if test="$node/skos:scopeNote">
+                                            <p class="align-left smaller-text breakable">
+                                                <xsl:value-of
+                                                  select="normalize-space(($node/skos:scopeNote[@xml:lang = 'de'], $node/skos:scopeNote)[1])"
+                                                />
+                                            </p>
+                                        </xsl:if>
+                                    </div>
+                                </xsl:if>
 
-                            <!-- externe SKOS-Matches -->
-                            <xsl:variable name="matchProps"
-                                select="$node/*[contains(local-name(), 'Match') and namespace-uri() = 'http://www.w3.org/2004/02/skos/core#']"/>
-                            <xsl:if test="exists($matchProps)">
-                                <div class="skos-note">
-                                    <xsl:for-each-group select="$matchProps" group-by="local-name()">
-                                        <xsl:sort select="local-name()"/>
-                                        <div class="smaller-text indent">
-                                            <strong>
-                                                <xsl:text>skos:</xsl:text>
-                                                <xsl:value-of select="local-name()"/>
-                                                <xsl:text>:</xsl:text>
-                                            </strong>
-                                            <xsl:text> </xsl:text>
-                                            <xsl:for-each select="current-group()">
-                                                <a href="{@rdf:resource}" target="_blank"
+                                <!-- externe SKOS-Matches -->
+                                <xsl:variable name="matchProps"
+                                    select="$node/*[contains(local-name(), 'Match') and namespace-uri() = 'http://www.w3.org/2004/02/skos/core#']"/>
+                                <xsl:if test="exists($matchProps)">
+                                    <div class="skos-note">
+                                        <xsl:for-each-group select="$matchProps"
+                                            group-by="local-name()">
+                                            <xsl:sort select="local-name()"/>
+                                            <div class="smaller-text indent">
+                                                <strong>
+                                                  <xsl:text>skos:</xsl:text>
+                                                  <xsl:value-of select="local-name()"/>
+                                                  <xsl:text>:</xsl:text>
+                                                </strong>
+                                                <xsl:text> </xsl:text>
+                                                <xsl:for-each select="current-group()">
+                                                  <a href="{@rdf:resource}" target="_blank"
                                                   rel="noopener">
                                                   <xsl:value-of select="@rdf:resource"/>
-                                                </a>
+                                                  </a>
+                                                  <xsl:if test="position() != last()">, </xsl:if>
+                                                </xsl:for-each>
+                                            </div>
+                                        </xsl:for-each-group>
+                                    </div>
+                                </xsl:if>
+
+                                <!-- interne skos:related -->
+                                <xsl:variable name="relatedUris"
+                                    select="$node/skos:related/@rdf:resource"/>
+                                <xsl:if test="exists($relatedUris)">
+                                    <div class="skos-note">
+                                        <div class="smaller-text indent">
+                                            <strong>skos:related:</strong>
+                                            <xsl:text> </xsl:text>
+                                            <xsl:variable name="relatedItems">
+                                                <xsl:for-each select="$relatedUris">
+                                                  <xsl:variable name="relUri" select="string(.)"/>
+                                                  <xsl:variable name="relNode"
+                                                  select="$vocab/rdf:RDF/*[@rdf:about = $relUri]"/>
+                                                  <xsl:variable name="relRawLabel"
+                                                  select="string(($relNode/skos:prefLabel[@xml:lang = 'de'], $relNode/skos:prefLabel[@xml:lang = 'en'], $relNode/skos:prefLabel, $relNode/rdfs:label, $relUri)[1])"/>
+                                                  <xsl:variable name="relTypeMatch"
+                                                  select="replace($relRawLabel, '^.*\(([^)]*)\)\s*$', '$1')"/>
+                                                  <xsl:variable name="relType" select="
+                                                            if ($relTypeMatch != $relRawLabel) then
+                                                                $relTypeMatch
+                                                            else
+                                                                ''"/>
+                                                  <xsl:variable name="relLabel"
+                                                  select="normalize-space(replace($relRawLabel, '\s*\([^)]*\)\s*$', ''))"/>
+                                                  <item label="{$relLabel}" type="{$relType}"
+                                                  uri="{$relUri}"/>
+                                                </xsl:for-each>
+                                            </xsl:variable>
+                                            <xsl:for-each select="$relatedItems/item">
+                                                <xsl:sort select="@type"/>
+                                                <xsl:sort select="lower-case(@label)"/>
+                                                <xsl:value-of select="@label"/>
+                                                <xsl:if test="@type != ''">
+                                                  <xsl:text> (</xsl:text>
+                                                  <xsl:value-of select="@type"/>
+                                                  <xsl:text>)</xsl:text>
+                                                </xsl:if>
                                                 <xsl:if test="position() != last()">, </xsl:if>
                                             </xsl:for-each>
                                         </div>
-                                    </xsl:for-each-group>
-                                </div>
-                            </xsl:if>
+                                    </div>
+                                </xsl:if>
 
-                            <!-- interne skos:related -->
-                            <xsl:variable name="relatedUris"
-                                select="$node/skos:related/@rdf:resource"/>
-                            <xsl:if test="exists($relatedUris)">
-                                <div class="skos-note">
-                                    <div class="smaller-text indent">
-                                        <strong>skos:related:</strong>
-                                        <xsl:text> </xsl:text>
-                                        <xsl:variable name="relatedItems">
-                                            <xsl:for-each select="$relatedUris">
-                                                <xsl:variable name="relUri" select="string(.)"/>
-                                                <xsl:variable name="relNode"
-                                                  select="$vocab/rdf:RDF/*[@rdf:about = $relUri]"/>
-                                                <xsl:variable name="relRawLabel"
-                                                  select="string(($relNode/skos:prefLabel[@xml:lang = 'de'], $relNode/skos:prefLabel[@xml:lang = 'en'], $relNode/skos:prefLabel, $relNode/rdfs:label, $relUri)[1])"/>
-                                                <xsl:variable name="relTypeMatch"
-                                                  select="replace($relRawLabel, '^.*\(([^)]*)\)\s*$', '$1')"/>
-                                                <xsl:variable name="relType" select="
-                                                        if ($relTypeMatch != $relRawLabel) then
-                                                            $relTypeMatch
-                                                        else
-                                                            ''"/>
-                                                <xsl:variable name="relLabel"
-                                                  select="normalize-space(replace($relRawLabel, '\s*\([^)]*\)\s*$', ''))"/>
-                                                <item label="{$relLabel}" type="{$relType}"
-                                                  uri="{$relUri}"/>
+                                <xsl:if test="count($occTexts) &gt; 0">
+                                    <div class="skos-note">
+                                        <div class="smaller-text indent">
+                                            <strong>Vorkommnis in:</strong>
+                                            <xsl:text> </xsl:text>
+                                            <xsl:for-each select="$occTexts">
+                                                <xsl:sort select="lower-case(u:label(.))"/>
+                                                <xsl:call-template name="render-label-or-link">
+                                                  <xsl:with-param name="uri" select="."/>
+                                                </xsl:call-template>
+                                                <xsl:if test="position() != last()">, </xsl:if>
                                             </xsl:for-each>
-                                        </xsl:variable>
-                                        <xsl:for-each select="$relatedItems/item">
-                                            <xsl:sort select="@type"/>
-                                            <xsl:sort select="lower-case(@label)"/>
-                                            <xsl:value-of select="@label"/>
-                                            <xsl:if test="@type != ''">
-                                                <xsl:text> (</xsl:text>
-                                                <xsl:value-of select="@type"/>
-                                                <xsl:text>)</xsl:text>
-                                            </xsl:if>
-                                            <xsl:if test="position() != last()">, </xsl:if>
-                                        </xsl:for-each>
+                                        </div>
                                     </div>
-                                </div>
-                            </xsl:if>
+                                </xsl:if>
 
-                            <xsl:if test="count($occTexts) &gt; 0">
-                                <div class="skos-note">
-                                    <div class="smaller-text indent">
-                                        <strong>Vorkommnis in:</strong>
-                                        <xsl:text> </xsl:text>
-                                        <xsl:for-each select="$occTexts">
-                                            <xsl:sort select="lower-case(u:label(.))"/>
-                                            <xsl:call-template name="render-label-or-link">
-                                                <xsl:with-param name="uri" select="."/>
-                                            </xsl:call-template>
-                                            <xsl:if test="position() != last()">, </xsl:if>
-                                        </xsl:for-each>
-                                    </div>
-                                </div>
-                            </xsl:if>
-
-                            <ul class="skos-tree">
-                                <xsl:for-each select="$children">
-                                    <xsl:sort
-                                        select="lower-case((skos:prefLabel[@xml:lang = 'de'], skos:prefLabel[@xml:lang = 'en'], skos:prefLabel, rdfs:label, @rdf:about)[1])"/>
-                                    <xsl:call-template name="render-concept">
-                                        <xsl:with-param name="node" select="."/>
-                                    </xsl:call-template>
-                                </xsl:for-each>
-                            </ul>
-                        </div>
+                                <ul class="skos-tree">
+                                    <xsl:for-each select="$children">
+                                        <xsl:sort
+                                            select="lower-case((skos:prefLabel[@xml:lang = 'de'], skos:prefLabel[@xml:lang = 'en'], skos:prefLabel, rdfs:label, @rdf:about)[1])"/>
+                                        <xsl:call-template name="render-concept">
+                                            <xsl:with-param name="node" select="."/>
+                                        </xsl:call-template>
+                                    </xsl:for-each>
+                                </ul>
+                            </div>
+                        </template>
                     </details>
                 </xsl:when>
                 <xsl:otherwise>
@@ -937,73 +941,75 @@
                         </span>
                     </summary>
 
-                    <xsl:if test="$cmt != ''">
-                        <div class="skos-note smaller-text indent">
-                            <xsl:value-of select="$cmt"/>
-                        </div>
-                    </xsl:if>
+                    <template data-lazy="">
+                        <xsl:if test="$cmt != ''">
+                            <div class="skos-note smaller-text indent">
+                                <xsl:value-of select="$cmt"/>
+                            </div>
+                        </xsl:if>
 
-                    <xsl:call-template name="emit-kind-list">
-                        <xsl:with-param name="rel" select="$rel"/>
-                        <xsl:with-param name="kind" select="'motifs'"/>
-                        <xsl:with-param name="sg" select="'Gemeinsames Motiv:'"/>
-                        <xsl:with-param name="pl" select="'Gemeinsame Motive:'"/>
-                    </xsl:call-template>
+                        <xsl:call-template name="emit-kind-list">
+                            <xsl:with-param name="rel" select="$rel"/>
+                            <xsl:with-param name="kind" select="'motifs'"/>
+                            <xsl:with-param name="sg" select="'Gemeinsames Motiv:'"/>
+                            <xsl:with-param name="pl" select="'Gemeinsame Motive:'"/>
+                        </xsl:call-template>
 
-                    <xsl:call-template name="emit-kind-list">
-                        <xsl:with-param name="rel" select="$rel"/>
-                        <xsl:with-param name="kind" select="'topics'"/>
-                        <xsl:with-param name="sg" select="'Gemeinsames Thema:'"/>
-                        <xsl:with-param name="pl" select="'Gemeinsame Themen:'"/>
-                    </xsl:call-template>
+                        <xsl:call-template name="emit-kind-list">
+                            <xsl:with-param name="rel" select="$rel"/>
+                            <xsl:with-param name="kind" select="'topics'"/>
+                            <xsl:with-param name="sg" select="'Gemeinsames Thema:'"/>
+                            <xsl:with-param name="pl" select="'Gemeinsame Themen:'"/>
+                        </xsl:call-template>
 
-                    <xsl:call-template name="emit-kind-list">
-                        <xsl:with-param name="rel" select="$rel"/>
-                        <xsl:with-param name="kind" select="'plots'"/>
-                        <xsl:with-param name="sg" select="'Gemeinsamer Stoff:'"/>
-                        <xsl:with-param name="pl" select="'Gemeinsame Stoffe:'"/>
-                    </xsl:call-template>
+                        <xsl:call-template name="emit-kind-list">
+                            <xsl:with-param name="rel" select="$rel"/>
+                            <xsl:with-param name="kind" select="'plots'"/>
+                            <xsl:with-param name="sg" select="'Gemeinsamer Stoff:'"/>
+                            <xsl:with-param name="pl" select="'Gemeinsame Stoffe:'"/>
+                        </xsl:call-template>
 
-                    <xsl:call-template name="emit-kind-list">
-                        <xsl:with-param name="rel" select="$rel"/>
-                        <xsl:with-param name="kind" select="'persons'"/>
-                        <xsl:with-param name="sg" select="'Gemeinsame Personenreferenz:'"/>
-                        <xsl:with-param name="pl" select="'Gemeinsame Personenreferenzen:'"/>
-                    </xsl:call-template>
+                        <xsl:call-template name="emit-kind-list">
+                            <xsl:with-param name="rel" select="$rel"/>
+                            <xsl:with-param name="kind" select="'persons'"/>
+                            <xsl:with-param name="sg" select="'Gemeinsame Personenreferenz:'"/>
+                            <xsl:with-param name="pl" select="'Gemeinsame Personenreferenzen:'"/>
+                        </xsl:call-template>
 
-                    <xsl:call-template name="emit-kind-list">
-                        <xsl:with-param name="rel" select="$rel"/>
-                        <xsl:with-param name="kind" select="'characters'"/>
-                        <xsl:with-param name="sg" select="'Gemeinsame Figur:'"/>
-                        <xsl:with-param name="pl" select="'Gemeinsame Figuren:'"/>
-                    </xsl:call-template>
+                        <xsl:call-template name="emit-kind-list">
+                            <xsl:with-param name="rel" select="$rel"/>
+                            <xsl:with-param name="kind" select="'characters'"/>
+                            <xsl:with-param name="sg" select="'Gemeinsame Figur:'"/>
+                            <xsl:with-param name="pl" select="'Gemeinsame Figuren:'"/>
+                        </xsl:call-template>
 
-                    <xsl:call-template name="emit-kind-list">
-                        <xsl:with-param name="rel" select="$rel"/>
-                        <xsl:with-param name="kind" select="'places'"/>
-                        <xsl:with-param name="sg" select="'Gemeinsame Ortsreferenz:'"/>
-                        <xsl:with-param name="pl" select="'Gemeinsame Ortsreferenzen:'"/>
-                    </xsl:call-template>
+                        <xsl:call-template name="emit-kind-list">
+                            <xsl:with-param name="rel" select="$rel"/>
+                            <xsl:with-param name="kind" select="'places'"/>
+                            <xsl:with-param name="sg" select="'Gemeinsame Ortsreferenz:'"/>
+                            <xsl:with-param name="pl" select="'Gemeinsame Ortsreferenzen:'"/>
+                        </xsl:call-template>
 
-                    <xsl:call-template name="emit-work-lines">
-                        <xsl:with-param name="rel" select="$rel"/>
-                        <xsl:with-param name="source-uri" select="$source-uri"/>
-                        <xsl:with-param name="partner-uri" select="$partner-uri"/>
-                    </xsl:call-template>
+                        <xsl:call-template name="emit-work-lines">
+                            <xsl:with-param name="rel" select="$rel"/>
+                            <xsl:with-param name="source-uri" select="$source-uri"/>
+                            <xsl:with-param name="partner-uri" select="$partner-uri"/>
+                        </xsl:call-template>
 
-                    <xsl:call-template name="emit-kind-list">
-                        <xsl:with-param name="rel" select="$rel"/>
-                        <xsl:with-param name="kind" select="'workpassages'"/>
-                        <xsl:with-param name="sg" select="'Gemeinsames Zitat:'"/>
-                        <xsl:with-param name="pl" select="'Gemeinsame Zitate:'"/>
-                    </xsl:call-template>
+                        <xsl:call-template name="emit-kind-list">
+                            <xsl:with-param name="rel" select="$rel"/>
+                            <xsl:with-param name="kind" select="'workpassages'"/>
+                            <xsl:with-param name="sg" select="'Gemeinsames Zitat:'"/>
+                            <xsl:with-param name="pl" select="'Gemeinsame Zitate:'"/>
+                        </xsl:call-template>
 
-                    <xsl:call-template name="emit-kind-list">
-                        <xsl:with-param name="rel" select="$rel"/>
-                        <xsl:with-param name="kind" select="'topoi'"/>
-                        <xsl:with-param name="sg" select="'Gemeinsamer Topos:'"/>
-                        <xsl:with-param name="pl" select="'Gemeinsame Topoi:'"/>
-                    </xsl:call-template>
+                        <xsl:call-template name="emit-kind-list">
+                            <xsl:with-param name="rel" select="$rel"/>
+                            <xsl:with-param name="kind" select="'topoi'"/>
+                            <xsl:with-param name="sg" select="'Gemeinsamer Topos:'"/>
+                            <xsl:with-param name="pl" select="'Gemeinsame Topoi:'"/>
+                        </xsl:call-template>
+                    </template>
                 </details>
             </li>
         </xsl:if>
@@ -1355,6 +1361,7 @@
                         <xsl:with-param name="html_title" select="'Intertextuelle Beziehungen'"/>
                     </xsl:call-template>
                     <script type="module" src="./js/intertexts-network.js"/>
+                    <script src="./js/details-lazy.js" defer="defer"/>
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
@@ -1373,9 +1380,6 @@
                                         Statistische Auswertungen werden <a href="statistics.html"
                                             >hier</a> aufbereitet; eine Netzwerkvisualisierung aller
                                         Daten ist <a href="network.html">hier</a> verfügbar.</p>
-                                    <p class="align-left">⚠️ Diese Seite lädt aufgrund der
-                                        Datengröße langsam. Bitte um Geduld.</p>
-
                                     <div class="graph-toolbar">
                                         <label class="gewicht-slider">Gewicht <input
                                                 id="edge-threshold" type="range" min="2" max="20"
@@ -1392,7 +1396,7 @@
                                     <div id="itx-graph" class="big-graph"
                                         data-src="https://cdn.jsdelivr.net/gh/laurauntner/sappho-digital@main/data/json/itx-graph-data.json"/>
 
-                                    <span class="graph-legend">Es wurden nur die k stärksten
+                                    <span class="graph-legend">Hier werden nur die k stärksten
                                         Verbindungen pro Knoten sowie ein verbindender
                                         Maximum-Spanning-Tree visualisiert (Standard: k = 2).</span>
                                 </div>
@@ -1408,7 +1412,8 @@
                                             <details>
                                                 <summary class="has-children">Intertextuelle
                                                   Beziehungen zwischen Sappho-Fragmenten</summary>
-                                                <div class="skos-children">
+                                                <template data-lazy="">
+                                                  <div class="skos-children">
                                                   <ul class="skos-tree">
                                                   <xsl:for-each-group select="$pairs_frag"
                                                   group-by="@group">
@@ -1423,6 +1428,7 @@
                                                   />
                                                   </xsl:call-template>
                                                   </summary>
+                                                  <template data-lazy="">
                                                   <div class="skos-children">
                                                   <ul class="skos-tree">
                                                   <xsl:for-each-group select="current-group()"
@@ -1444,12 +1450,14 @@
                                                   </xsl:for-each-group>
                                                   </ul>
                                                   </div>
+                                                  </template>
                                                   </details>
                                                   </li>
                                                   </xsl:if>
                                                   </xsl:for-each-group>
                                                   </ul>
-                                                </div>
+                                                  </div>
+                                                </template>
                                             </details>
                                         </li>
 
@@ -1459,7 +1467,8 @@
                                                 <summary class="has-children">Intertextuelle
                                                   Beziehungen zwischen Rezeptionszeugnissen und
                                                   Sappho-Fragmenten</summary>
-                                                <div class="skos-children">
+                                                <template data-lazy="">
+                                                  <div class="skos-children">
                                                   <ul class="skos-tree">
                                                   <xsl:for-each-group select="$pairs_recep"
                                                   group-by="@group">
@@ -1474,6 +1483,7 @@
                                                   />
                                                   </xsl:call-template>
                                                   </summary>
+                                                  <template data-lazy="">
                                                   <div class="skos-children">
                                                   <ul class="skos-tree">
                                                   <xsl:for-each-group select="current-group()"
@@ -1495,12 +1505,14 @@
                                                   </xsl:for-each-group>
                                                   </ul>
                                                   </div>
+                                                  </template>
                                                   </details>
                                                   </li>
                                                   </xsl:if>
                                                   </xsl:for-each-group>
                                                   </ul>
-                                                </div>
+                                                  </div>
+                                                </template>
                                             </details>
                                         </li>
 
@@ -1510,7 +1522,8 @@
                                                 <summary class="has-children">Intertextuelle
                                                   Beziehungen zwischen
                                                   Rezeptionszeugnissen</summary>
-                                                <div class="skos-children">
+                                                <template data-lazy="">
+                                                  <div class="skos-children">
                                                   <ul class="skos-tree">
                                                   <xsl:for-each-group select="$pairs_none"
                                                   group-by="@group">
@@ -1525,6 +1538,7 @@
                                                   />
                                                   </xsl:call-template>
                                                   </summary>
+                                                  <template data-lazy="">
                                                   <div class="skos-children">
                                                   <ul class="skos-tree">
                                                   <xsl:for-each-group select="current-group()"
@@ -1546,12 +1560,14 @@
                                                   </xsl:for-each-group>
                                                   </ul>
                                                   </div>
+                                                  </template>
                                                   </details>
                                                   </li>
                                                   </xsl:if>
                                                   </xsl:for-each-group>
                                                   </ul>
-                                                </div>
+                                                  </div>
+                                                </template>
                                             </details>
                                         </li>
 
@@ -1647,6 +1663,7 @@
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
+                    <script src="./js/details-lazy.js" defer="defer"/>
                 </head>
 
                 <body class="page">
@@ -1696,12 +1713,13 @@
                                                   </xsl:call-template>
                                                   </summary>
 
+                                                  <template data-lazy="">
                                                   <div class="skos-children">
                                                   <xsl:variable name="appsAll" as="xs:string*"
                                                   select="
-                                                                                        distinct-values(for $t in $occTexts
-                                                                                        return
-                                                                                            u:appellations-for($this, $t))"/>
+                                                                                            distinct-values(for $t in $occTexts
+                                                                                            return
+                                                                                                u:appellations-for($this, $t))"/>
 
                                                   <xsl:if
                                                   test="exists($appsAll) and contains($this, 'person_e585b2a779019b7e')">
@@ -1726,6 +1744,7 @@
                                                   </xsl:for-each>
                                                   </ul>
                                                   </div>
+                                                  </template>
                                                   </details>
                                                   </xsl:when>
 
@@ -1787,12 +1806,13 @@
                                                   </xsl:call-template>
                                                   </summary>
 
+                                                  <template data-lazy="">
                                                   <div class="skos-children">
                                                   <xsl:variable name="appsAll" as="xs:string*"
                                                   select="
-                                                                                        distinct-values(for $t in $occTexts
-                                                                                        return
-                                                                                            u:appellations-for($this, $t))"/>
+                                                                                            distinct-values(for $t in $occTexts
+                                                                                            return
+                                                                                                u:appellations-for($this, $t))"/>
 
                                                   <xsl:if
                                                   test="exists($appsAll) and contains($this, 'person_e585b2a779019b7e')">
@@ -1817,6 +1837,7 @@
                                                   </xsl:for-each>
                                                   </ul>
                                                   </div>
+                                                  </template>
                                                   </details>
                                                   </xsl:when>
 
@@ -1874,6 +1895,7 @@
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
+                    <script src="./js/details-lazy.js" defer="defer"/>
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
@@ -1914,6 +1936,7 @@
                                                   <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </summary>
+                                                  <template data-lazy="">
                                                   <div class="skos-children">
                                                   <ul class="skos-tree">
                                                   <xsl:for-each select="$occTexts">
@@ -1928,6 +1951,7 @@
                                                   </xsl:for-each>
                                                   </ul>
                                                   </div>
+                                                  </template>
                                                   </details>
                                                   </xsl:when>
                                                   <xsl:otherwise>
@@ -1972,6 +1996,7 @@
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
+                    <script src="./js/details-lazy.js" defer="defer"/>
                 </head>
 
                 <body class="page">
@@ -2049,6 +2074,7 @@
                                                   </xsl:call-template>
                                                   </summary>
 
+                                                  <template data-lazy="">
                                                   <div class="skos-children">
                                                   <ul class="skos-tree">
                                                   <xsl:for-each select="$occTexts">
@@ -2063,6 +2089,7 @@
                                                   </xsl:for-each>
                                                   </ul>
                                                   </div>
+                                                  </template>
                                                   </details>
                                                   </xsl:when>
 
@@ -2138,6 +2165,7 @@
                                                   </xsl:call-template>
                                                   </summary>
 
+                                                  <template data-lazy="">
                                                   <div class="skos-children">
                                                   <ul class="skos-tree">
                                                   <xsl:for-each select="$occTexts">
@@ -2152,6 +2180,7 @@
                                                   </xsl:for-each>
                                                   </ul>
                                                   </div>
+                                                  </template>
                                                   </details>
                                                   </xsl:when>
 
@@ -2210,6 +2239,7 @@
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
+                    <script src="./js/details-lazy.js" defer="defer"/>
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
@@ -2248,6 +2278,7 @@
                                                   <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </summary>
+                                                  <template data-lazy="">
                                                   <div class="skos-children">
                                                   <ul class="skos-tree">
                                                   <xsl:for-each select="$occTexts">
@@ -2262,6 +2293,7 @@
                                                   </xsl:for-each>
                                                   </ul>
                                                   </div>
+                                                  </template>
                                                   </details>
                                                   </xsl:when>
                                                   <xsl:otherwise>
@@ -2306,6 +2338,7 @@
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
+                    <script src="./js/details-lazy.js" defer="defer"/>
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
@@ -2346,6 +2379,7 @@
                                                   <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </summary>
+                                                  <template data-lazy="">
                                                   <div class="skos-children">
                                                   <ul class="skos-tree">
                                                   <xsl:for-each select="$occTexts">
@@ -2360,6 +2394,7 @@
                                                   </xsl:for-each>
                                                   </ul>
                                                   </div>
+                                                  </template>
                                                   </details>
                                                   </xsl:when>
                                                   <xsl:otherwise>
@@ -2404,6 +2439,7 @@
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
+                    <script src="./js/details-lazy.js" defer="defer"/>
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
@@ -2444,6 +2480,7 @@
                                                   <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </summary>
+                                                  <template data-lazy="">
                                                   <div class="skos-children">
                                                   <ul class="skos-tree">
                                                   <xsl:for-each select="$occTexts">
@@ -2458,6 +2495,7 @@
                                                   </xsl:for-each>
                                                   </ul>
                                                   </div>
+                                                  </template>
                                                   </details>
                                                   </xsl:when>
                                                   <xsl:otherwise>
@@ -2499,6 +2537,7 @@
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
+                    <script src="./js/details-lazy.js" defer="defer"/>
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
@@ -2539,6 +2578,7 @@
                                                   <xsl:with-param name="n" select="$n"/>
                                                   </xsl:call-template>
                                                   </summary>
+                                                  <template data-lazy="">
                                                   <div class="skos-children">
                                                   <ul class="skos-tree">
                                                   <xsl:for-each select="$occTexts">
@@ -2553,6 +2593,7 @@
                                                   </xsl:for-each>
                                                   </ul>
                                                   </div>
+                                                  </template>
                                                   </details>
                                                   </xsl:when>
                                                   <xsl:otherwise>
