@@ -45,7 +45,7 @@ def main(ttl_path: str, xml_out: str) -> None:
 
     # ── Exemplarisch analysierte Texte ────────────────────────────────────────
     reception_with_act: set = set()
-    for f2 in reception_f2:
+    for f2 in reception_f2 | sappho_f2:
         for _, _, act in g.triples((f2, R18, None)):
             if act_to_feats.get(act):
                 reception_with_act.add(f2)
