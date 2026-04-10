@@ -76,10 +76,11 @@ if WORKS_TTL.exists():
 if FRAGMENTS_TTL.exists():
     g_src.parse(FRAGMENTS_TTL.as_posix(), format="turtle")
 
-# Separater Index nur für Werke (ohne Fragmente) – für die Werk-Referenz-Auflösung
 g_works_only = Graph()
 if WORKS_TTL.exists():
     g_works_only.parse(WORKS_TTL.as_posix(), format="turtle")
+if FRAGMENTS_TTL.exists():
+    g_works_only.parse(FRAGMENTS_TTL.as_posix(), format="turtle")
 
 # Taxonomie laden + indexieren (per skos:prefLabel@de)
 
@@ -116,7 +117,7 @@ vocab_label_index: Dict[str, Dict[str, URIRef]] = {k: {} for k in CAT_TO_VOC_PRE
 vocab_label_global: Dict[str, URIRef] = {}
 
 # Zusätzliche Indizes
-vocab_plot_focus_index: Dict[str, URIRef] = {} 
+vocab_plot_focus_index: Dict[str, URIRef] = {}
 vocab_werk_bare_index:  Dict[str, URIRef] = {}
 
 _ALL_PARENS = re.compile(r"\s*\([^)]*\)\s*$")
@@ -128,8 +129,6 @@ _TYPE_SUFFIXES = re.compile(
 )
 
 def norm_label_key(s: str) -> str:
-    """Normalisiert ein Label für den Abgleich.
-    Entfernt nur bekannte Typ-Suffixe in Klammern, keine semantischen Zusätze."""
     if not s:
         return ""
     s = str(s)
@@ -158,13 +157,11 @@ for s in g_vocab.subjects(RDF.type, SKOS.Concept):
                     vocab_label_index[cat].setdefault(key, s)
                 vocab_label_global.setdefault(key, s)
 
-                # Stoff-Index: Teil nach "Sappho-Stoff mit Fokus auf (die/den/das)"
                 if cat == "stoff":
                     focus_key = _FOKUS_PREFIX.sub("", key).strip()
                     if focus_key and focus_key != key:
                         vocab_plot_focus_index.setdefault(focus_key, s)
 
-                # Werk-Index: bare key ohne abschließenden Klammerausdruck
                 if cat == "werk":
                     bare_key = _ALL_PARENS.sub("", key).strip()
                     if bare_key and bare_key != key:
@@ -177,15 +174,12 @@ def find_vocab(cat: Optional[str], label: str) -> Optional[URIRef]:
         cand = vocab_label_index[cat].get(lab_key)
     if cand is None:
         cand = vocab_label_global.get(lab_key)
-    # Fallback für Stoffe: Fokus-Index (Input ist bereits der Kurzname)
     if cand is None and cat == "stoff":
         cand = vocab_plot_focus_index.get(lab_key)
-        # Fallback 2: Input ist der volle Stoff-Name → Fokus-Teil extrahieren
         if cand is None:
             focus_key = _FOKUS_PREFIX.sub("", lab_key).strip()
             if focus_key != lab_key:
                 cand = vocab_plot_focus_index.get(focus_key)
-    # Fallback für Werke: bare key (ohne Autorenklammer)
     if cand is None and cat == "werk":
         bare_key = _ALL_PARENS.sub("", lab_key).strip()
         cand = vocab_werk_bare_index.get(bare_key)
@@ -204,7 +198,7 @@ def link_exact_match(node_uri: URIRef, vocab_uri: URIRef):
 # F2-Expressions-Index aufbauen (aus Quellgraph)
 
 text_index = {}
-werk_index = {}  # nur Werke (ohne Fragmente) – für Werk-Referenz-Auflösung
+werk_index = {}
 
 def is_f2(typ) -> bool:
     t = str(typ)
@@ -468,28 +462,28 @@ for text_id, cats in elements_per_text.items():
         act_uri = add_actualization_common(g, "motif", text_id, used_id, feat_uri, v, text_uri, text_title)
         g.add((text_uri, INTRO.R18_showsActualization, act_uri))
 
-        # INT_Plot
-        for sinfo in cats["stoff"]:
-            v     = sinfo["label"]
-            modus = sinfo.get("modus", "")
-            v_with_modus = f"{v} ({modus})" if modus else v
-            voc = find_vocab("stoff", v_with_modus) if modus else find_vocab("stoff", v)
-            fid_fallback = get_or_make_distinct("stoff", v_with_modus)
-            if voc:
-                feat_uri = local_uri_from_vocab("stoff", voc) or uri(f"feature/plot/{fid_fallback}")
-                used_id  = last_token(str(voc))
-            else:
-                feat_uri, used_id = uri(f"feature/plot/{fid_fallback}"), fid_fallback
-    
-            g.add((feat_uri, RDF.type, INTRO.INT_Plot))
-            g.add((feat_uri, RDFS.label, Literal(f"Plot: {v_with_modus}", lang="de")))
-            add_identifier(g, used_id, feat_uri)
-            if voc:
-                link_exact_match(feat_uri, voc)
-            act_uri = add_actualization_common(
-                g, "plot", text_id, used_id, feat_uri, v_with_modus, text_uri, text_title
-            )
-            g.add((text_uri, INTRO.R18_showsActualization, act_uri))
+    # INT_Plot
+    for sinfo in cats["stoff"]:
+        v     = sinfo["label"]
+        modus = sinfo.get("modus", "")
+        v_with_modus = f"{v} ({modus})" if modus else v
+        voc = find_vocab("stoff", v_with_modus) if modus else find_vocab("stoff", v)
+        fid_fallback = get_or_make_distinct("stoff", v_with_modus)
+        if voc:
+            feat_uri = local_uri_from_vocab("stoff", voc) or uri(f"feature/plot/{fid_fallback}")
+            used_id  = last_token(str(voc))
+        else:
+            feat_uri, used_id = uri(f"feature/plot/{fid_fallback}"), fid_fallback
+
+        g.add((feat_uri, RDF.type, INTRO.INT_Plot))
+        g.add((feat_uri, RDFS.label, Literal(f"Plot: {v_with_modus}", lang="de")))
+        add_identifier(g, used_id, feat_uri)
+        if voc:
+            link_exact_match(feat_uri, voc)
+        act_uri = add_actualization_common(
+            g, "plot", text_id, used_id, feat_uri, v_with_modus, text_uri, text_title
+        )
+        g.add((text_uri, INTRO.R18_showsActualization, act_uri))
 
     # INT_Topic
     for v in cats["thema"]:
@@ -508,68 +502,67 @@ for text_id, cats in elements_per_text.items():
 
     # INT18_Reference: WORK
     for w in cats["werk"]:
-            v = w["label"]
-            art = w.get("art") or ""
+        v = w["label"]
+        art = w.get("art") or ""
 
-            v_clean = clean_uri_component(v)
+        v_clean = clean_uri_component(v)
 
-            target = (werk_index.get(v)
-                    or werk_index.get(v.replace("bibl_", ""))
-                    or werk_index.get(f"bibl_{v}"))
-            ref_target_uri = target["uri"] if target else None
-            ref_label = literal_text(target["label"]) if (target and target.get("label")) else v
+        target = (werk_index.get(v)
+                or werk_index.get(v.replace("bibl_", ""))
+                or werk_index.get(f"bibl_{v}"))
+        ref_target_uri = target["uri"] if target else None
+        ref_label = literal_text(target["label"]) if (target and target.get("label")) else v
 
-            if ref_label.strip().lower() == "sappho-work":
-                ref_label = "Sappho's Work"
-            ref_label = re.sub(r"^Expression creation of\s+", "", ref_label, flags=re.I).strip()
+        if ref_label.strip().lower() == "sappho-work":
+            ref_label = "Sappho's Work"
+        ref_label = re.sub(r"^Expression creation of\s+", "", ref_label, flags=re.I).strip()
 
-            voc = find_vocab("werk", ref_label)
-            if voc:
-                feat_id = last_token(str(voc))
-            else:
-                feat_id = with_prefix("work_ref", ref_label)
+        voc = find_vocab("werk", ref_label)
+        if voc:
+            feat_id = last_token(str(voc))
+        else:
+            feat_id = with_prefix("work_ref", ref_label)
 
-            feat_uri = uri(f"feature/work_ref/{feat_id}")
-            g.add((feat_uri, RDF.type, INTRO.INT18_Reference))
-            g.add((feat_uri, RDFS.label, Literal(f"Reference to {ref_label} (work)", lang="en")))
-            add_identifier(g, feat_id, feat_uri)
+        feat_uri = uri(f"feature/work_ref/{feat_id}")
+        g.add((feat_uri, RDF.type, INTRO.INT18_Reference))
+        g.add((feat_uri, RDFS.label, Literal(f"Reference to {ref_label} (work)", lang="en")))
+        add_identifier(g, feat_id, feat_uri)
 
-            # exactMatch auf feat_uri setzen (funktioniert auch ohne F2-Eintrag)
-            if voc:
-                link_exact_match(feat_uri, voc)
+        if voc:
+            link_exact_match(feat_uri, voc)
 
+        if ref_target_uri is not None:
+            voc_target = voc or find_vocab("werk", ref_label)
+            if voc_target:
+                link_exact_match(ref_target_uri, voc_target)
+
+        if has_art_token(art, "passage"):
+            tp_id = f"textpassage_{stable_id(f'{text_id}|{ref_label}|{v}')}"
+            tp_uri = uri(f"textpassage/{tp_id}")
+            g.add((tp_uri, RDF.type, INTRO.INT21_TextPassage))
+            g.add((tp_uri, RDFS.label, Literal(f"Passage from {ref_label}", lang="de")))
+            g.add((tp_uri, INTRO.R30i_isTextPassageOf, text_uri))
+            g.add((text_uri, INTRO.R30_hasTextPassage, tp_uri))
             if ref_target_uri is not None:
-                voc_target = voc or find_vocab("werk", ref_label)
-                if voc_target:
-                    link_exact_match(ref_target_uri, voc_target)
+                g.add((tp_uri, INTRO.R30i_isTextPassageOf, ref_target_uri))
+                g.add((ref_target_uri, INTRO.R30_hasTextPassage, tp_uri))
+        else:
+            tp_uri = None
 
-            if has_art_token(art, "passage"):
-                tp_id = f"textpassage_{stable_id(f'{text_id}|{ref_label}|{v}')}"
-                tp_uri = uri(f"textpassage/{tp_id}")
-                g.add((tp_uri, RDF.type, INTRO.INT21_TextPassage))
-                g.add((tp_uri, RDFS.label, Literal(f"Passage from {ref_label}", lang="de")))
-                g.add((tp_uri, INTRO.R30i_isTextPassageOf, text_uri))
-                g.add((text_uri, INTRO.R30_hasTextPassage, tp_uri))
-                if ref_target_uri is not None:
-                    g.add((tp_uri, INTRO.R30i_isTextPassageOf, ref_target_uri))
-                    g.add((ref_target_uri, INTRO.R30_hasTextPassage, tp_uri))
-            else:
-                tp_uri = None
+        act_uri = add_actualization_common(
+            g, "work_ref", text_id, feat_id, feat_uri, ref_label, text_uri, text_title,
+            refers_to_uri=ref_target_uri
+        )
+        g.add((text_uri, INTRO.R18_showsActualization, act_uri))
 
-            act_uri = add_actualization_common(
-                g, "work_ref", text_id, feat_id, feat_uri, ref_label, text_uri, text_title,
-                refers_to_uri=ref_target_uri
-            )
-            g.add((text_uri, INTRO.R18_showsActualization, act_uri))
+        if ref_target_uri is not None:
+            g.add((ref_target_uri, ECRM.P67i_is_referred_to_by, act_uri))
+            for p, o in g_src.predicate_objects(ref_target_uri):
+                g.add((ref_target_uri, p, o))
 
-            if ref_target_uri is not None:
-                g.add((ref_target_uri, ECRM.P67i_is_referred_to_by, act_uri))
-                for p, o in g_src.predicate_objects(ref_target_uri):
-                    g.add((ref_target_uri, p, o))
-
-            if tp_uri is not None:
-                g.add((tp_uri, INTRO.R18_showsActualization, act_uri))
-                g.add((act_uri, INTRO.R18i_actualizationFoundOn, tp_uri))
+        if tp_uri is not None:
+            g.add((tp_uri, INTRO.R18_showsActualization, act_uri))
+            g.add((act_uri, INTRO.R18i_actualizationFoundOn, tp_uri))
 
     # INT18_Reference: PLACE
     for v in cats["ort"]:
@@ -597,7 +590,7 @@ for text_id, cats in elements_per_text.items():
         g.add((place_uri_local, ECRM.P67i_is_referred_to_by, act_uri))
         g.add((text_uri, INTRO.R18_showsActualization, act_uri))
 
-# INT18_Reference: PERSON
+    # INT18_Reference: PERSON
     for pinfo in cats["person"]:
         v = pinfo["label"]
         art = pinfo.get("art") or ""
@@ -630,7 +623,6 @@ for text_id, cats in elements_per_text.items():
         g.add((person_uri_local, ECRM.P67i_is_referred_to_by, act_uri))
         g.add((text_uri, INTRO.R18_showsActualization, act_uri))
 
-        char_act_uri: Optional[URIRef] = None
         if has_art_token(art, "character"):
             char_feat_uri = uri(f"feature/character/{used_id}")
             g.add((char_feat_uri, RDF.type, INTRO.INT_Character))
@@ -642,7 +634,7 @@ for text_id, cats in elements_per_text.items():
             )
             g.add((text_uri, INTRO.R18_showsActualization, char_act_uri))
 
-# INT_Topos
+    # INT_Topos
     for phr in cats["topos"]:
         if not passes_filter("topos", phr):
             continue

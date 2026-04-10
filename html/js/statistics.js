@@ -941,7 +941,7 @@ function initSankey() {
     if (!sel) return;
 
     (DATA.fragments || []).forEach(frag => {
-        if (!frag.sapphoFeatures || !frag.sapphoFeatures.length) return;
+        if (!frag.nBibl || frag.nBibl === 0) return;
         const opt = document.createElement('option');
         opt.value = frag.label;
         opt.textContent = frag.label;

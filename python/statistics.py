@@ -189,12 +189,6 @@ def main(ttl_path: str, xml_out: str) -> None:
 
     # ── Statistik 6: Phänomene nach Fragment-Referenz ───────────────────────────
 
-    INTRO_NS = Namespace("https://w3id.org/lso/intro/currentbeta#")
-    ECRM_NS  = Namespace("http://erlangen-crm.org/current/")
-
-    R17i_featureIsActualizedIn = INTRO_NS["R17i_featureIsActualizedIn"]
-    R18i_actualizationFoundOn  = INTRO_NS["R18i_actualizationFoundOn"]
-
     import re as _re
 
     voigt_refs: dict[URIRef, str] = {}
@@ -218,17 +212,23 @@ def main(ttl_path: str, xml_out: str) -> None:
         if not m:
             continue
         sappho_uri = URIRef(BASE + m.group(1))
-        if sappho_uri in sappho_idx:
+        if sappho_uri in sappho_f2:
             voigt_ref_to_sappho[ref_uri] = sappho_uri
         else:
-            print(f"  WARNUNG: {sappho_uri} nicht in sappho_idx", file=sys.stderr)
+            print(f"  WARNUNG: {sappho_uri} nicht in sappho_f2", file=sys.stderr)
 
-    print(f"  INT18_References mit Voigt:   {len(voigt_refs)}", file=sys.stderr)
+    print(f"  work_refs mit Voigt-Label:    {len(voigt_refs)}", file=sys.stderr)
     print(f"  davon mit Sappho-F2 URI:      {len(voigt_ref_to_sappho)}", file=sys.stderr)
 
     frag_data:      dict[str, dict[str, dict[URIRef, int]]] = {}
     frag_biblsets:  dict[str, set[URIRef]] = {}
     frag_sappho_f2: dict[str, URIRef] = {}
+
+    # Traversal über die tatsächlich im Graphen vorhandenen Properties:
+    # feature/work_ref  --R17i_featureIsActualizedIn-->  actualization/work_ref
+    # actualization/work_ref  --R18i_actualizationFoundOn-->  expression/bibl_...
+    R17i_featureIsActualizedIn = INTRO["R17i_featureIsActualizedIn"]
+    R18i_actualizationFoundOn  = INTRO["R18i_actualizationFoundOn"]
 
     for ref_uri, frag_label in voigt_refs.items():
         if frag_label not in frag_data:

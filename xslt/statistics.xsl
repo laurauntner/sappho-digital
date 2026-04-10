@@ -324,7 +324,7 @@
       </xsl:for-each>
     </xsl:variable>
 
-    <!-- Gender (Stat 11) -->
+    <!-- Gender (Stat 12) -->
     <xsl:variable name="gender-timedist-json" as="xs:string*">
       <xsl:for-each select="statistics/genderStats/genderTimeDist/decade">
         <xsl:sequence select="
@@ -525,50 +525,50 @@
                   <p class="stats-toc-title">Inhaltsverzeichnis</p>
                   <ol class="stats-toc-list">
                     <li>
-                      <a href="#stat0">Rezeptionsindizes</a>
+                      <a href="#stat1">Rezeptionsindizes</a>
                     </li>
                     <li>
-                      <a href="#stat10">Durchschnittliche Relationen und gemeinsame Phänomene</a>
+                      <a href="#stat2">Durchschnittliche Relationen und gemeinsame Phänomene</a>
                     </li>
                     <li>
-                      <a href="#stat9">Intertextuelle Beziehungen und Textähnlichkeiten</a>
+                      <a href="#stat3">Intertextuelle Beziehungen und Textähnlichkeiten</a>
                     </li>
                     <li>
-                      <a href="#stat8">Phänomene als Grundlage intertextueller Relationen</a>
+                      <a href="#stat4">Phänomene als Grundlage intertextueller Relationen</a>
                     </li>
                     <li>
-                      <a href="#stat1">Alle Phänomene im Vergleich</a>
+                      <a href="#stat5">Alle Phänomene im Vergleich</a>
                     </li>
                     <li>
-                      <a href="#stat2">Phänomene nach Fragment-Referenz</a>
+                      <a href="#stat6">Phänomene nach Fragment-Referenz</a>
                     </li>
                     <li>
-                      <a href="#stat3">Phänomene im Laufe der Zeit</a>
+                      <a href="#stat7">Phänomene im Laufe der Zeit</a>
                     </li>
                     <li>
-                      <a href="#stat4">Phänomene nach Gattung</a>
+                      <a href="#stat8">Phänomene nach Gattung</a>
                     </li>
                     <li>
-                      <a href="#stat5">Stoff-Komponenten</a>
+                      <a href="#stat9">Stoff-Komponenten</a>
                     </li>
                     <li>
-                      <a href="#stat6">Personenreferenzen und Figuren</a>
+                      <a href="#stat10">Personenreferenzen und Figuren</a>
                     </li>
                     <li>
-                      <a href="#stat7">Werkreferenzen und Zitate</a>
+                      <a href="#stat11">Werkreferenzen und Zitate</a>
                     </li>
                     <li>
-                      <a href="#stat11">Genderspezifische Analysen</a>
+                      <a href="#stat12">Genderspezifische Analysen</a>
                     </li>
                     <li>
-                      <a href="#stat12">Popularitätsanalysen mit Wiki-Metriken</a>
+                      <a href="#stat13">Popularitätsanalysen mit Wiki-Metriken</a>
                     </li>
                   </ol>
                 </nav>
 
               </div>
               <div class="card-body">
-                <div class="stats-wrap" id="stat0">
+                <div class="stats-wrap" id="stat1">
                   <p class="stats-subtitle">Statistik 1: Rezeptionsindizes</p>
                   <p class="stats-desc">Der Rezeptionsindex <code>R(t)</code> ist ein
                     zusammengesetzter Wert auf einer Skala von 0 (schwach) bis 1 (stark), der
@@ -591,7 +591,7 @@
                     Vernetzung flie&#223;t erg&#228;nzend zu einem Viertel ein.</p>
                   <div id="ri-wrap"/>
                 </div>
-                <div class="stats-wrap" id="stat10">
+                <div class="stats-wrap" id="stat2">
                   <p class="stats-subtitle">Statistik 2: Durchschnittliche intertextuelle
                     Beziehungen und gemeinsame Phänomene</p>
                   <p class="stats-desc">Wie viele intertextuelle Relationen verbinden einen Text im
@@ -599,7 +599,7 @@
                     seinen intertextuell verbundenen Texten?</p>
                   <div id="stat10-wrap-inner"/>
                 </div>
-                <div class="stats-wrap" id="stat9">
+                <div class="stats-wrap" id="stat3">
                   <p class="stats-subtitle">Statistik 3: Intertextuelle Beziehungen und
                     Textähnlichkeiten</p>
                   <p class="stats-desc">Welche intertextuellen Relationen verbinden die meisten
@@ -626,7 +626,7 @@
                   </div>
                   <div id="stat9-cards-wrap"/>
                 </div>
-                <div class="stats-wrap" id="stat8">
+                <div class="stats-wrap" id="stat4">
                   <p class="stats-subtitle">Statistik 4: Phänomene als Grundlage intertextueller
                     Relationen</p>
                   <p class="stats-desc">Welche Phänomene sind am häufigsten ausschlaggebend für
@@ -680,7 +680,7 @@
                   <div id="int31-pairs-wrap" style="display:flex;justify-content:center"/>
 
                 </div>
-                <div class="stats-wrap" id="stat1">
+                <div class="stats-wrap" id="stat5">
                   <p class="stats-subtitle">Statistik 5: Alle Phänomene im Vergleich</p>
                   <p class="stats-desc">Welche Phänomene werden in Sappho-Fragmenten sowie in
                     Rezeptionszeugnissen aktualisiert – und wo liegen die auffälligsten
@@ -719,7 +719,7 @@
                   <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
                   <div id="cats"/>
                 </div>
-                <div class="stats-wrap" id="stat2">
+                <div class="stats-wrap" id="stat6">
                   <p class="stats-subtitle">Statistik 6: Phänomene nach Fragment-Referenz</p>
                   <p class="stats-desc">Welche Phänomene werden in Rezeptionszeugnissen, die auf
                     bestimmte Fragmente Bezug nehmen, übernommen, welche ausgelassen – und welche
@@ -736,7 +736,7 @@
                     <div id="sankey-legend" class="sankey-legend"/>
                   </div>
                 </div>
-                <div class="stats-wrap" id="stat3">
+                <div class="stats-wrap" id="stat7">
                   <p class="stats-subtitle">Statistik 7: Phänomene im Laufe der Zeit</p>
                   <p class="stats-desc">Wie verteilen sich konkrete Phänomene über die Zeit? Die
                     Blasengröße zeigt, in wie vielen Rezeptionszeugnissen eines Jahrzehnts ein
@@ -758,7 +758,7 @@
                   <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
                   <div id="pdist-type-sections"/>
                 </div>
-                <div class="stats-wrap" id="stat4">
+                <div class="stats-wrap" id="stat8">
                   <p class="stats-subtitle">Statistik 8: Phänomene nach Gattung</p>
                   <p class="stats-desc">Welche Phänomene dominieren in welcher Gattung? Die
                     Farbintensität der Zellen zeigt die Häufigkeit innerhalb jeder Gattung; die
@@ -782,7 +782,7 @@
                   <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
                   <div id="gdist-type-sections"/>
                 </div>
-                <div class="stats-wrap" id="stat5">
+                <div class="stats-wrap" id="stat9">
                   <p class="stats-subtitle">Statistik 9: Stoff-Komponenten</p>
                   <p class="stats-desc">Welche Phänomene treten gemeinsam mit einem bestimmten Stoff
                     auf? Der innere Ring zeigt die Phänomentypen, der äußere Ring die einzelnen
@@ -808,7 +808,7 @@
                   <div id="pc-svg-wrap"/>
                   <div id="pc-legend"/>
                 </div>
-                <div class="stats-wrap" id="stat6">
+                <div class="stats-wrap" id="stat10">
                   <p class="stats-subtitle">Statistik 10: Personenreferenzen und Figuren</p>
                   <p class="stats-desc">Welche Personen und Personentypen werden in
                     Sappho-Fragmenten sowie in Rezeptionszeugnissen besonders häufig nicht nur
@@ -857,7 +857,7 @@
                     <div id="pd-chart-wrap"/>
                   </div>
                 </div>
-                <div class="stats-wrap" id="stat7">
+                <div class="stats-wrap" id="stat11">
                   <p class="stats-subtitle" style="text-align:center">Statistik 11: Werkreferenzen
                     und Zitate</p>
                   <p class="stats-desc" style="text-align:center">Welche Werke werden in den
@@ -870,7 +870,7 @@
                   </div>
                   <div id="wc-chart-wrap" class="chart-wrap"/>
                 </div>
-                <div class="stats-wrap" id="stat11">
+                <div class="stats-wrap" id="stat12">
                   <p class="stats-subtitle">Statistik 12: Genderspezifische Analysen</p>
                   <p class="stats-desc">Wie sieht die Geschlechterverteilung aus &#8211; insgesamt,
                     im Zeitverlauf, nach Gattungen und nach Ph&#228;nomenen? Die Gender-Angaben
@@ -920,7 +920,7 @@
                     <div id="gender-phenom-overview-wrap"/>
                   </div>
                 </div>
-                <div class="stats-wrap" id="stat12">
+                <div class="stats-wrap" id="stat13">
                   <p class="stats-subtitle">Statistik 13: Popularitätsanalysen mit Wiki-Metriken</p>
                   <p class="stats-desc">Wie populär sind Autor_innen von deutschsprachigen
                     Sappho-Rezeptionszeugnissen im Wikiversum &#8211; und wie präsent sind sie im

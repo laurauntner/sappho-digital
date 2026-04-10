@@ -199,7 +199,7 @@
                             ()
                 "/>
 
-        <xsl:variable name="intertexts" as="xs:string*" select="distinct-values($targets)"/>
+        <xsl:variable name="intertexts" as="xs:string*" select="distinct-values($targets[normalize-space(.) != ''])"/>
 
         <xsl:if
             test="exists(($motifs, $topics, $plots, $topoi, $persons, $places, $work-refs, $workpassages, $phrases, $intertexts))">
