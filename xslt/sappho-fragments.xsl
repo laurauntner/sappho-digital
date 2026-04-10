@@ -117,7 +117,9 @@
                 $expr-uri
                 )[1])
                 "/>
-        <xsl:sequence select="normalize-space($label)"/>
+        <xsl:variable name="t1" select="replace($label, '^Expression\s+of\s+', '', 'i')"/>
+        <xsl:variable name="t2" select="replace($t1, '^Expression\s+creation\s+of\s+', '', 'i')"/>
+        <xsl:sequence select="normalize-space($t2)"/>
     </xsl:function>
 
     <!-- helper for ids -->
