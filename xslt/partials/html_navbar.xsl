@@ -37,7 +37,7 @@
                                 <ul class="dropdown-menu">
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
-                                            href="orientierung.html">Orientierung </a>
+                                            href="orientierung.html">Zur Orientierung </a>
                                     </li>
                                     <li>
                                         <hr class="dropdown-divider"/>
