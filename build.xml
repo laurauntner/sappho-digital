@@ -32,7 +32,7 @@
     </xslt>
 
     <!-- about -->
-    <xslt in="./data/meta/about.xml" out="${target}/about.html" style="./xslt/meta.xsl">
+    <xslt in="./data/meta/about.xml" out="${target}/projekt.html" style="./xslt/meta.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
@@ -64,7 +64,7 @@
     </xslt>
 
     <!-- book -->
-    <xslt in="./data/meta/buch.xml" out="${target}/buch.html" style="./xslt/meta.xsl">
+    <xslt in="./data/meta/buch.xml" out="${target}/texte.html" style="./xslt/meta.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
@@ -140,7 +140,7 @@
         <arg value="${target}/network-data.xml"/>
     </exec>
 
-    <xslt in="${target}/network-data.xml" out="${target}/network.html" style="xslt/network.xsl">
+    <xslt in="${target}/network-data.xml" out="${target}/netzwerk.html" style="xslt/network.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
@@ -154,7 +154,7 @@
         <arg value="${target}/statistics-data.xml"/>
     </exec>
     
-    <xslt in="${target}/statistics-data.xml" out="${target}/statistics.html" style="xslt/statistics.xsl">
+    <xslt in="${target}/statistics-data.xml" out="${target}/statistik.html" style="xslt/statistics.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>

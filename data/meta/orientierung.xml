@@ -7,7 +7,7 @@
             </titleStmt>
             <publicationStmt>
                 <publisher>Laura Untner</publisher>
-                <pubPlace>Wien/Berlin</pubPlace>
+                <pubPlace>Berlin/Wien</pubPlace>
                 <date when="2026">2026</date>
                 <availability>
                     <licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
@@ -35,9 +35,9 @@
                         target="https://sappho-digital.com/toc-alle.html">Rezeptionszeugnisse</ref>«
                     führt zum Verzeichnis aller bekannten deutschsprachigen literarischen
                     Rezeptionszeugnisse zu Sappho; »<ref
-                        target="https://sappho-digital.com/statistics.html">Statistik</ref>« bietet
+                        target="https://sappho-digital.com/statistik.html">Statistik</ref>« bietet
                     exemplarische statistische Auswertungen zur literarischen Sappho-Rezeption;
-                        »<ref target="https://sappho-digital.com/network.html"
+                        »<ref target="https://sappho-digital.com/netzwerk.html"
                         >Netzwerkvisualisierung</ref>« erschließt die Daten als interaktives
                     Netzwerk; »Daten« führt direkt zu den <ref
                         target="https://github.com/laurauntner/sappho-digital">Open Access-Daten auf
@@ -48,7 +48,7 @@
             </div>
             <div>
                 <head>»Projekt«</head>
-                <p><hi rend="bold"><ref target="https://sappho-digital.com/about.html">Über das
+                <p><hi rend="bold"><ref target="https://sappho-digital.com/projekt.html">Über das
                             Projekt</ref></hi>: Hier finden sich eine Projektbeschreibung sowie
                     Informationen zum Projektstand und zu den Daten, ein Zitiervorschlag,
                     biographische Angaben, Kontaktmöglichkeiten, eine Danksagung und ein
@@ -59,7 +59,7 @@
                 <p><hi rend="bold"><ref target="https://sappho-digital.com/bibliographie.html"
                             >Bibliographie</ref></hi>: Diese Seite enthält eine Auswahlbibliographie
                     zur literarischen Sappho-Rezeption.</p>
-                <p><hi rend="bold"><ref target="https://sappho-digital.com/buch.html"
+                <p><hi rend="bold"><ref target="https://sappho-digital.com/texte.html"
                             >Primärtexte</ref></hi>: Hier wird primär darauf hingewiesen, dass auf
                     der Webseite keine Primärtexte angeboten werden; wo vorhanden, sind jedoch Links
                     zu Digitalisaten angegeben. Außerdem wird auf den Band <hi rend="italics"><ref
@@ -146,7 +146,7 @@
                         der durchgeführten <ref
                             target="https://github.com/laurauntner/sappho-digital/tree/main/documentation/alignments"
                             >Ontologie-Alignments</ref>.</item>
-                    <item><hi rend="bold"><ref target="https://sappho-digital.com/vocab.html"
+                    <item><hi rend="bold"><ref target="https://sappho-digital.com/vokabular.html"
                                 >Vokabular</ref></hi>: Hier ist das angewandte <ref
                             target="https://github.com/laurauntner/sappho-digital/tree/main/documentation/vocab"
                             >kontrollierte Vokabular</ref> zugänglich. Dort finden sich Definitionen
@@ -161,7 +161,7 @@
                     gelistet. Außerdem gibt es eine statistische Übersicht zu diesen Texten.</p>
                 <p><hi rend="bold">Rezeptionsphänomene</hi>:</p>
                 <list>
-                    <item>Die Seite »<ref target="https://sappho-digital.com/intertexts.html"
+                    <item>Die Seite »<ref target="https://sappho-digital.com/intertexte.html"
                             >Intertextuelle Beziehungen</ref>« listet alle intertextuellen
                         Beziehungen zwischen Sappho-Fragmenten und den analysierten
                         Rezeptionszeugnissen sowie zwischen Fragmenten und Rezeptionszeugnissen
@@ -172,22 +172,22 @@
                         bestehen, wie viele Gemeinsamkeiten sie aufweisen, welche Texte bzw. Textausschnitte
                         konkret analysiert wurden und welche Phänomene die jeweilige Beziehung
                         begründen.</item>
-                    <item>Auf den Seiten »<ref target="https://sappho-digital.com/pers-refs.html"
+                    <item>Auf den Seiten »<ref target="https://sappho-digital.com/personen.html"
                             >Personenreferenzen und Figuren</ref>«, »<ref
-                            target="https://sappho-digital.com/place-refs.html"
+                            target="https://sappho-digital.com/orte.html"
                         >Ortsreferenzen</ref>«, »<ref
-                            target="https://sappho-digital.com/work-refs.html">Werkreferenzen und
+                            target="https://sappho-digital.com/werke.html">Werkreferenzen und
                             Zitate</ref>«, »<ref target="https://sappho-digital.com/topoi.html"
                             >Rhetorische Topoi</ref>«, »<ref
-                            target="https://sappho-digital.com/motifs.html">Motive</ref>«, »<ref
-                            target="https://sappho-digital.com/topics.html">Themen</ref>« und »<ref
-                            target="https://sappho-digital.com/plots.html">Stoffe</ref>« werden die
+                            target="https://sappho-digital.com/motive.html">Motive</ref>«, »<ref
+                            target="https://sappho-digital.com/themen.html">Themen</ref>« und »<ref
+                            target="https://sappho-digital.com/stoffe.html">Stoffe</ref>« werden die
                         jeweiligen Phänomene in den exemplarisch analysierten Rezeptionszeugnissen
                         und Sappho-Fragmenten mit Häufigkeitsangaben und Links zu den
                         Werkeinzelseiten gelistet; außerdem gibt es einfache Visualisierungen zu den
                         häufigsten Vorkommnissen.</item>
                 </list>
-                <p><hi rend="bold"><ref target="https://sappho-digital.com/statistics.html"
+                <p><hi rend="bold"><ref target="https://sappho-digital.com/statistik.html"
                             >Statistik</ref></hi>: Diese Seite bietet exemplarische statistische
                     Auswertungen der annotierten Sappho-Fragmente und der analysierten
                     Rezeptionszeugnisse. Den Anfang bilden die Rezeptionsindizes, ein
@@ -213,7 +213,7 @@
                         <ref target="https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial"
                         >SPARQL-Tutorial</ref>, dem Datenmodell, den Alignments, dem Vokabular und
                     den statistischen Auswertungen (siehe oben).</p>
-                <p><hi rend="bold"><ref target="https://sappho-digital.com/network.html"
+                <p><hi rend="bold"><ref target="https://sappho-digital.com/netzwerk.html"
                             >Netzwerkvisualisierung</ref></hi>: Hier findet sich eine Visualisierung
                     aller Daten als Netzwerk. Links lassen sich Klassen suchen und filtern; per
                     Default ausgewählt sind alle verwendeten <ref

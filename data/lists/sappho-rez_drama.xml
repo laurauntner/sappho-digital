@@ -7,8 +7,8 @@
             </titleStmt>
             <publicationStmt>
                 <publisher>Laura Untner</publisher>
-                <pubPlace>Wien/Berlin</pubPlace>
-                <date when="2025">2025</date>
+                <pubPlace>Berlin/Wien</pubPlace>
+                <date>2024–[2027]</date>
                 <availability>
                     <licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
                         <p>CC BY 4.0</p>
@@ -426,7 +426,7 @@
                     <author ref="https://www.wikidata.org/entity/Q73102" xml:id="author_d398349f">Franz Fühmann</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2861" xml:id="place_5cef94ac">Rostock</pubPlace>
-                    <publisher xml:id="publisher_e00310dd">Hirnstorff</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q1619570" xml:id="publisher_006305f7">Hinstorff</publisher>
                 </bibl>
                 <bibl xml:id="bibl_534fad67">
                     <title type="text">Sappho geht stiften</title>

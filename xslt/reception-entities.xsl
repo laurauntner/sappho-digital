@@ -40,7 +40,7 @@
         <xsl:variable name="tops"
             select="$vocab/rdf:RDF/*[@rdf:about = $cs/skos:hasTopConcept/@rdf:resource]"/>
 
-        <xsl:result-document href="../html/vocab.html">
+        <xsl:result-document href="../html/vokabular.html">
             <html lang="de">
                 <head>
                     <xsl:call-template name="html_head">
@@ -1354,7 +1354,7 @@
             </xsl:for-each> ] }</xsl:result-document>
 
         <!-- html -->
-        <xsl:result-document href="../html/intertexts.html" method="html">
+        <xsl:result-document href="../html/intertexte.html" method="html">
             <html lang="de">
                 <head>
                     <xsl:call-template name="html_head">
@@ -1377,9 +1377,9 @@
                                         und Rezeptionszeugnissen untereinander.</p>
                                     <p class="align-left">Mehr Informationen zur exemplarischen
                                         Analyse sind <a href="analyse.html">hier</a> zu finden.
-                                        Statistische Auswertungen werden <a href="statistics.html"
+                                        Statistische Auswertungen werden <a href="statistik.html"
                                             >hier</a> aufbereitet; eine Netzwerkvisualisierung aller
-                                        Daten ist <a href="network.html">hier</a> verfügbar.</p>
+                                        Daten ist <a href="netzwerk.html">hier</a> verfügbar.</p>
                                     <div class="graph-toolbar">
                                         <label class="gewicht-slider">Gewicht <input
                                                 id="edge-threshold" type="range" min="2" max="20"
@@ -1654,7 +1654,7 @@
                 ))"/>
 
         <!-- references to persons -->
-        <xsl:result-document href="../html/pers-refs.html">
+        <xsl:result-document href="../html/personen.html">
             <html lang="de">
                 <head>
                     <xsl:call-template name="html_head">
@@ -1677,12 +1677,12 @@
                                     <p class="align-left">… in den exemplarisch analysierten
                                         Rezeptionszeugnissen und Sappho-Fragmenten.</p>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vocab.html">Vokabular</a>. Mehr Informationen
+                                            <a href="vokabular.html">Vokabular</a>. Mehr Informationen
                                         zur exemplarischen Analyse sind <a href="analyse.html"
                                             >hier</a> zu finden. Statistische Auswertungen werden <a
-                                            href="statistics.html">hier</a> aufbereitet; eine
+                                            href="statistik.html">hier</a> aufbereitet; eine
                                         Netzwerkvisualisierung aller Daten ist <a
-                                            href="network.html">hier</a> verfügbar.</p>
+                                            href="netzwerk.html">hier</a> verfügbar.</p>
                                 </div>
 
                                 <div class="card-body skos-wrap">
@@ -1887,7 +1887,7 @@
         </xsl:result-document>
 
         <!-- references to places -->
-        <xsl:result-document href="../html/place-refs.html">
+        <xsl:result-document href="../html/orte.html">
             <html lang="de">
                 <head>
                     <xsl:call-template name="html_head">
@@ -1907,12 +1907,12 @@
                                     <p class="align-left">… in den exemplarisch analysierten
                                         Rezeptionszeugnissen und Sappho-Fragmenten.</p>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vocab.html">Vokabular</a>. Mehr Informationen
+                                            <a href="vokabular.html">Vokabular</a>. Mehr Informationen
                                         zur exemplarischen Analyse sind <a href="analyse.html"
                                             >hier</a> zu finden. Statistische Auswertungen werden <a
-                                            href="statistics.html">hier</a> aufbereitet; eine
+                                            href="statistik.html">hier</a> aufbereitet; eine
                                         Netzwerkvisualisierung aller Daten ist <a
-                                            href="network.html">hier</a> verfügbar.</p>
+                                            href="netzwerk.html">hier</a> verfügbar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -1988,7 +1988,7 @@
         </xsl:result-document>
 
         <!-- references to works -->
-        <xsl:result-document href="../html/work-refs.html">
+        <xsl:result-document href="../html/werke.html">
             <html lang="de">
                 <head>
                     <xsl:call-template name="html_head">
@@ -2010,12 +2010,12 @@
                                     <p class="align-left">… in den exemplarisch analysierten
                                         Rezeptionszeugnissen und Sappho-Fragmenten.</p>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vocab.html">Vokabular</a>. Mehr Informationen
+                                            <a href="vokabular.html">Vokabular</a>. Mehr Informationen
                                         zur exemplarischen Analyse sind <a href="analyse.html"
                                             >hier</a> zu finden. Statistische Auswertungen werden <a
-                                            href="statistics.html">hier</a> aufbereitet; eine
+                                            href="statistik.html">hier</a> aufbereitet; eine
                                         Netzwerkvisualisierung aller Daten ist <a
-                                            href="network.html">hier</a> verfügbar.</p>
+                                            href="netzwerk.html">hier</a> verfügbar.</p>
                                 </div>
 
                                 <div class="card-body skos-wrap">
@@ -2252,9 +2252,9 @@
                                         Rezeptionszeugnissen und Sappho-Fragmenten.</p>
                                     <p class="align-left">Mehr Informationen zur exemplarischen
                                         Analyse sind <a href="analyse.html">hier</a> zu finden.
-                                        Statistische Auswertungen werden <a href="statistics.html"
+                                        Statistische Auswertungen werden <a href="statistik.html"
                                             >hier</a> aufbereitet; eine Netzwerkvisualisierung aller
-                                        Daten ist <a href="network.html">hier</a> verfügbar.</p>
+                                        Daten ist <a href="netzwerk.html">hier</a> verfügbar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -2330,7 +2330,7 @@
         </xsl:result-document>
 
         <!-- motifs -->
-        <xsl:result-document href="../html/motifs.html">
+        <xsl:result-document href="../html/motive.html">
             <html lang="de">
                 <head>
                     <xsl:call-template name="html_head">
@@ -2350,12 +2350,12 @@
                                     <p class="align-left">… in den exemplarisch analysierten
                                         Rezeptionszeugnissen und Sappho-Fragmenten.</p>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vocab.html">Vokabular</a>. Mehr Informationen
+                                            <a href="vokabular.html">Vokabular</a>. Mehr Informationen
                                         zur exemplarischen Analyse sind <a href="analyse.html"
                                             >hier</a> zu finden. Statistische Auswertungen werden <a
-                                            href="statistics.html">hier</a> aufbereitet; eine
+                                            href="statistik.html">hier</a> aufbereitet; eine
                                         Netzwerkvisualisierung aller Daten ist <a
-                                            href="network.html">hier</a> verfügbar.</p>
+                                            href="netzwerk.html">hier</a> verfügbar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -2431,7 +2431,7 @@
         </xsl:result-document>
 
         <!-- topics -->
-        <xsl:result-document href="../html/topics.html">
+        <xsl:result-document href="../html/themen.html">
             <html lang="de">
                 <head>
                     <xsl:call-template name="html_head">
@@ -2451,12 +2451,12 @@
                                     <p class="align-left">… in den exemplarisch analysierten
                                         Rezeptionszeugnissen und Sappho-Fragmenten.</p>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vocab.html">Vokabular</a>. Mehr Informationen
+                                            <a href="vokabular.html">Vokabular</a>. Mehr Informationen
                                         zur exemplarischen Analyse sind <a href="analyse.html"
                                             >hier</a> zu finden. Statistische Auswertungen werden <a
-                                            href="statistics.html">hier</a> aufbereitet; eine
+                                            href="statistik.html">hier</a> aufbereitet; eine
                                         Netzwerkvisualisierung aller Daten ist <a
-                                            href="network.html">hier</a> verfügbar.</p>
+                                            href="netzwerk.html">hier</a> verfügbar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -2529,7 +2529,7 @@
         </xsl:result-document>
 
         <!-- plots -->
-        <xsl:result-document href="../html/plots.html">
+        <xsl:result-document href="../html/stoffe.html">
             <html lang="de">
                 <head>
                     <xsl:call-template name="html_head">
@@ -2549,12 +2549,12 @@
                                     <p class="align-left">… in den exemplarisch analysierten
                                         Rezeptionszeugnissen und Sappho-Fragmenten.</p>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vocab.html">Vokabular</a>. Mehr Informationen
+                                            <a href="vokabular.html">Vokabular</a>. Mehr Informationen
                                         zur exemplarischen Analyse sind <a href="analyse.html"
                                             >hier</a> zu finden. Statistische Auswertungen werden <a
-                                            href="statistics.html">hier</a> aufbereitet; eine
+                                            href="statistik.html">hier</a> aufbereitet; eine
                                         Netzwerkvisualisierung aller Daten ist <a
-                                            href="network.html">hier</a> verfügbar.</p>
+                                            href="netzwerk.html">hier</a> verfügbar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">

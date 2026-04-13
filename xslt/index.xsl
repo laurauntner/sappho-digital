@@ -32,7 +32,7 @@
                                     literarischen Sappho-Rezeption im deutschsprachigen Raum
                                     gesammelt &#8211; von den Anf&#228;ngen bis in die
                                     Gegenwart.</p>
-                                <a href="about.html" class="btn btn-secondary button"
+                                <a href="projekt.html" class="btn btn-secondary button"
                                     style="display:inline-block;text-decoration:none;margin-bottom:3rem;"
                                     >&#220;ber das Projekt</a>
                             </div>
@@ -98,7 +98,7 @@
                                                   Wikipedia </a>
                                                   </li>
                                                   <li>
-                                                  <a href="https://sappho-digital.com/about.html"
+                                                  <a href="https://sappho-digital.com/projekt.html"
                                                   target="_blank"> Projektbeschreibung </a>
                                                   </li>
                                                 </ul>
@@ -128,7 +128,7 @@
                                             literarischer Rezeptionszeugnisse zu Sappho</div>
                                     </div>
                                 </a>
-                                <a href="statistics.html" class="entry-card">
+                                <a href="statistik.html" class="entry-card">
                                     <img src="images/analysis.png" alt="Statistik"/>
                                     <div>
                                         <div class="entry-card-title">Statistik</div>
@@ -136,7 +136,7 @@
                                             Auswertungen zur literarischen Sappho-Rezeption</div>
                                     </div>
                                 </a>
-                                <a href="network.html" class="entry-card">
+                                <a href="netzwerk.html" class="entry-card">
                                     <img src="images/network.png" alt="Netzwerkvisualisierung"/>
                                     <div>
                                         <div class="entry-card-title">Netzwerkvisualisierung</div>

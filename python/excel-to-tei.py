@@ -158,8 +158,8 @@ def generate_tei(df_filtered, title_text):
     ET.SubElement(titleStmt, "title", {"type": "main"}).text = title_text
     pubStmt = ET.SubElement(fileDesc, "publicationStmt")
     ET.SubElement(pubStmt, "publisher").text = "Laura Untner"
-    ET.SubElement(pubStmt, "pubPlace").text = "Wien/Berlin"
-    ET.SubElement(pubStmt, "date", {"when": "2025"}).text = "2025"
+    ET.SubElement(pubStmt, "pubPlace").text = "Berlin/Wien"
+    ET.SubElement(pubStmt, "date").text = "2024–[2027]"
     availability = ET.SubElement(pubStmt, "availability")
     licence = ET.SubElement(availability, "licence", {"target": "https://creativecommons.org/licenses/by/4.0/deed.de"})
     ET.SubElement(licence, "p").text = "CC BY 4.0"

@@ -7,8 +7,8 @@
             </titleStmt>
             <publicationStmt>
                 <publisher>Laura Untner</publisher>
-                <pubPlace>Wien/Berlin</pubPlace>
-                <date when="2025">2025</date>
+                <pubPlace>Berlin/Wien</pubPlace>
+                <date>2024–[2027]</date>
                 <availability>
                     <licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
                         <p>CC BY 4.0</p>
@@ -955,7 +955,7 @@
                     <author ref="https://www.wikidata.org/entity/Q72938073" xml:id="author_3fcd9826">Theodor Lebrecht Pitschel</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_5c508781">Bernhard Christian Breitkopf</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q100748" xml:id="publisher_8d967df7">Bernhard Christoph Breitkopf</publisher>
                     <ref target="https://books.google.de/books?id=gMItXBKjfNgC">https://books.google.de/books?id=gMItXBKjfNgC</ref>
                 </bibl>
                 <bibl xml:id="bibl_f9c50a63">
@@ -967,7 +967,7 @@
                     <author ref="https://www.wikidata.org/entity/Q111106" xml:id="author_012750d4">C. [= Karl Christian Gärtner]</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_5c508781">Bernhard Christian Breitkopf</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q100748" xml:id="publisher_8d967df7">Bernhard Christoph Breitkopf</publisher>
                     <ref target="https://books.google.de/books?id=gMItXBKjfNgC">https://books.google.de/books?id=gMItXBKjfNgC</ref>
                 </bibl>
                 <bibl xml:id="bibl_0aa2f93e">
@@ -1030,7 +1030,7 @@
                     <author ref="https://www.wikidata.org/entity/Q1526660" xml:id="author_0feff6a0">Heinrich Friedrich Delius</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_5c508781">Bernhard Christian Breitkopf</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q100748" xml:id="publisher_8d967df7">Bernhard Christoph Breitkopf</publisher>
                     <ref target="https://books.google.de/books?id=FHxdAAAAcAAJ">https://books.google.de/books?id=FHxdAAAAcAAJ</ref>
                 </bibl>
                 <bibl xml:id="bibl_e00bac8b">
@@ -1066,7 +1066,7 @@
                     <author ref="https://www.wikidata.org/entity/Q109405" xml:id="author_4380cb31">Christlob Mylius</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_5c508781">Bernhard Christian Breitkopf</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q100748" xml:id="publisher_8d967df7">Bernhard Christoph Breitkopf</publisher>
                     <ref target="https://books.google.de/books?id=HykoAAAAYAAJ">https://books.google.de/books?id=HykoAAAAYAAJ</ref>
                 </bibl>
                 <bibl xml:id="bibl_6dda66c8">
@@ -1078,7 +1078,7 @@
                     <author ref="https://www.wikidata.org/entity/Q109405" xml:id="author_4380cb31">Christlob Mylius</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_5c508781">Bernhard Christian Breitkopf</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q100748" xml:id="publisher_8d967df7">Bernhard Christoph Breitkopf</publisher>
                     <ref target="https://www.google.de/books/edition/Belustigungen_des_Verstandes_und_des_Wit/uXxdAAAAcAAJ?hl=de&amp;gbpv=1">https://www.google.de/books/edition/Belustigungen_des_Verstandes_und_des_Wit/uXxdAAAAcAAJ?hl=de&amp;gbpv=1</ref>
                 </bibl>
                 <bibl xml:id="bibl_c2705125">
@@ -1791,7 +1791,7 @@
                     <author ref="https://www.wikidata.org/entity/Q469571" xml:id="author_7240c9e7">Anna Louisa Karsch</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_231a2be4">Voß und Campagnie</publisher>
+                    <publisher xml:id="publisher_231a2be4">Voß und Compagnie</publisher>
                     <ref target="https://books.google.at/books?id=rGQ6AAAAcAAJ">https://books.google.at/books?id=rGQ6AAAAcAAJ</ref>
                 </bibl>
                 <bibl xml:id="bibl_9ade79f7">
@@ -2208,7 +2208,7 @@ Philosophen zu Sanssouci</title>
                     <author ref="https://www.wikidata.org/entity/Q68209" xml:id="author_659f5f08">Johann Georg Jacobi</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q7072" xml:id="place_bb2b3096">Halberstadt</pubPlace>
-                    <publisher xml:id="publisher_db8c7524">Johann Heinrich Gros</publisher>
+                    <publisher xml:id="publisher_db8c7524">Johann Heinrich Gross</publisher>
                     <ref target="https://books.google.at/books?id=wuKaWlnfAysC">https://books.google.at/books?id=wuKaWlnfAysC</ref>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q19129823" xml:id="bibl_30d70ae7">
@@ -2462,7 +2462,7 @@ Philosophen zu Sanssouci</title>
                     <author ref="https://www.wikidata.org/entity/Q98454" xml:id="author_230b0f40">Leopold Friedrich Günther von Goeckingk</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_0449d307">Weidmanns Erden und Reich</publisher>
+                    <publisher xml:id="publisher_0449d307">Weidmanns Erben und Reich</publisher>
                     <ref target="https://books.google.at/books?id=b7RgAAAAcAAJ">https://books.google.at/books?id=b7RgAAAAcAAJ</ref>
                 </bibl>
                 <bibl xml:id="bibl_3cfd6bbd">
@@ -4876,7 +4876,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <note type="genre">Lyrik</note>
                     <pubPlace xml:id="place_06ec7d19">München</pubPlace>
                     <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_e4edb5a7">Georg Müller</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q1804969" xml:id="publisher_e4edb5a7">Georg Müller</publisher>
                     <ref target="https://babel.hathitrust.org/cgi/pt?id=uiuo.ark:/13960/t9571w14r">https://babel.hathitrust.org/cgi/pt?id=uiuo.ark:/13960/t9571w14r</ref>
                 </bibl>
                 <bibl xml:id="bibl_35f515ac">
@@ -4889,7 +4889,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <note type="genre">Lyrik</note>
                     <pubPlace xml:id="place_06ec7d19">München</pubPlace>
                     <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_e4edb5a7">Georg Müller</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q1804969" xml:id="publisher_e4edb5a7">Georg Müller</publisher>
                     <ref target="https://babel.hathitrust.org/cgi/pt?id=uiuo.ark:/13960/t9571w14r">https://babel.hathitrust.org/cgi/pt?id=uiuo.ark:/13960/t9571w14r</ref>
                 </bibl>
                 <bibl xml:id="bibl_0aff92e3">
@@ -5055,7 +5055,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q1456125" xml:id="author_6cce6676">Frida Bettingen</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
-                    <publisher xml:id="publisher_e4edb5a7">Georg Müller</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q1804969" xml:id="publisher_e4edb5a7">Georg Müller</publisher>
                     <ref target="https://storage.lib.uchicago.edu/pres/2005/pres2005-055.pdf">https://storage.lib.uchicago.edu/pres/2005/pres2005-055.pdf</ref>
                 </bibl>
                 <bibl xml:id="bibl_1e4ef666">
@@ -5079,7 +5079,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <pubPlace ref="https://www.wikidata.org/entity/Q715" xml:id="place_ff4aadf1">Heilbronn</pubPlace>
-                    <publisher xml:id="publisher_8fba5226">Seifert</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q96461186" xml:id="publisher_8fba5226">Seifert</publisher>
                 </bibl>
                 <bibl xml:id="bibl_4422d6d6">
                     <title type="text">An Sappho</title>
@@ -5390,7 +5390,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q122939" xml:id="author_91b3e0e9">Rudolf Hagelstange</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2742" xml:id="place_afc56847">Münster</pubPlace>
-                    <publisher xml:id="publisher_2773bfc9">Regensberg</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q122974487" xml:id="publisher_2773bfc9">Regensberg</publisher>
                 </bibl>
                 <bibl xml:id="bibl_88214683">
                     <title type="text">Sommergefühl</title>
@@ -5446,7 +5446,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q90115" xml:id="author_e68bfecf">Georg Britting</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
-                    <publisher xml:id="publisher_30559948">Süddeutsche Zeitung</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q2380675" xml:id="publisher_de66f449">Süddeutsche Zeitung</publisher>
                 </bibl>
                 <bibl xml:id="bibl_dbf48f68">
                     <title type="text">Der Sehnsucht Lied</title>
@@ -5606,7 +5606,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q106794" xml:id="author_11c6f454">Erich Arendt</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2861" xml:id="place_5cef94ac">Rostock</pubPlace>
-                    <publisher xml:id="publisher_e00310dd">Hirnstorff</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q1619570" xml:id="publisher_006305f7">Hinstorff</publisher>
                 </bibl>
                 <bibl xml:id="bibl_6ad05cd5">
                     <title type="text">Schatten Meere</title>
@@ -5618,7 +5618,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q106794" xml:id="author_11c6f454">Erich Arendt</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2861" xml:id="place_5cef94ac">Rostock</pubPlace>
-                    <publisher xml:id="publisher_e00310dd">Hirnstorff</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q1619570" xml:id="publisher_006305f7">Hinstorff</publisher>
                 </bibl>
                 <bibl xml:id="bibl_56775306">
                     <title type="text">Mit Liedern Sapphos</title>
@@ -6034,7 +6034,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <pubPlace ref="https://www.wikidata.org/entity/Q2833" xml:id="place_81bb34f0">Freiburg i. Br.</pubPlace>
                     <pubPlace ref="https://www.wikidata.org/entity/Q78" xml:id="place_95b8315b">Basel</pubPlace>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_9c83551a">Wien</pubPlace>
-                    <publisher xml:id="publisher_5da691f2">Herder</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q2516698" xml:id="publisher_5da691f2">Herder</publisher>
                 </bibl>
                 <bibl xml:id="bibl_037a34f4">
                     <title type="text">Blick ins Feuer</title>
@@ -6523,7 +6523,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q2164573" xml:id="author_3cf5c166">Roman Graf</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_4c6449d6">Deutsches Literaturinstitut Leipzig</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q1205816" xml:id="publisher_4c6449d6">Deutsches Literaturinstitut Leipzig</publisher>
                 </bibl>
                 <bibl xml:id="bibl_2bf5e667">
                     <title type="text">SApphischer Honig</title>
@@ -7275,7 +7275,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q93614" xml:id="author_0de8e0eb">Friederike Mayröcker</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1794" xml:id="place_ae5c315b">Frankfurt a. M.</pubPlace>
-                    <publisher xml:id="publisher_650d9206">Frankfurter Allgemeine Zeitung</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q111905196" xml:id="publisher_650d9206">Frankfurter Allgemeine Zeitung</publisher>
                 </bibl>
                 <bibl xml:id="bibl_e7bedc12">
                     <title type="text">krynica morska</title>
@@ -7374,7 +7374,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q1081994" xml:id="author_acae0b75">Christian Steinbacher</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
-                    <publisher xml:id="publisher_ebc14577">zeitzoo verein</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139033509" xml:id="publisher_ebc14577">zeitzoo verein</publisher>
                 </bibl>
                 <bibl xml:id="bibl_8c5db259">
                     <title type="text">Fallannahme Sappho. Oden auf Prosa</title>
@@ -8357,7 +8357,7 @@ my music is lost, i bite my tongue. Ein Abgesang</title>
                     <author ref="https://www.wikidata.org/entity/Q132699492" xml:id="author_606f3655">Christian Wollek</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1721" xml:id="place_2eae9f29">Wiesbaden</pubPlace>
-                    <publisher xml:id="publisher_a794d806">allbärn</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139232906" xml:id="publisher_a794d806">allbärn</publisher>
                 </bibl>
                 <bibl xml:id="bibl_30beaa25">
                     <title type="text">Hutmacher</title>

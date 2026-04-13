@@ -149,11 +149,11 @@ LIMIT 100
                                                 target="_blank">Alignments</a>
                                         </li>
                                         <li>
-                                            <a href="https://sappho-digital.com/vocab.html"
+                                            <a href="https://sappho-digital.com/vokabular.html"
                                                 target="_blank">Vokabular</a>
                                         </li>
                                         <li>
-                                            <a href="https://sappho-digital.com/statistics.html"
+                                            <a href="https://sappho-digital.com/statistik.html"
                                                 target="_blank">Statistische Auswertungen</a>
                                         </li>
                                     </ul>

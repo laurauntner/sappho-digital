@@ -44,7 +44,7 @@
                                     </li>
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
-                                            href="about.html">Über das Projekt</a>
+                                            href="projekt.html">Über das Projekt</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
@@ -56,7 +56,7 @@
                                     </li>
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
-                                            href="buch.html">Primärtexte</a>
+                                            href="texte.html">Primärtexte</a>
                                     </li>
                                 </ul>
                             </li>
@@ -926,7 +926,7 @@
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"
-                                                  href="vocab.html">Vokabular</a>
+                                                  href="vokabular.html">Vokabular</a>
                                             </li>
                                         </ul>
                                     </li>
@@ -941,21 +941,21 @@
                                         <ul class="dropdown-menu">
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"
-                                                  href="intertexts.html">Intertextuelle
+                                                  href="intertexte.html">Intertextuelle
                                                   Beziehungen</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"
-                                                  href="pers-refs.html">Personenreferenzen und
+                                                  href="personen.html">Personenreferenzen und
                                                   Figuren</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"
-                                                  href="place-refs.html">Ortsreferenzen</a>
+                                                  href="orte.html">Ortsreferenzen</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"
-                                                  href="work-refs.html">Werkreferenzen und
+                                                  href="werke.html">Werkreferenzen und
                                                   Zitate</a>
                                             </li>
                                             <li>
@@ -964,21 +964,21 @@
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"
-                                                  href="motifs.html">Motive</a>
+                                                  href="motive.html">Motive</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"
-                                                  href="topics.html">Themen</a>
+                                                  href="themen.html">Themen</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"
-                                                  href="plots.html">Stoffe</a>
+                                                  href="stoffe.html">Stoffe</a>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
-                                            href="statistics.html">Statistik</a>
+                                            href="statistik.html">Statistik</a>
                                     </li>
                                 </ul>
                             </li>
@@ -993,7 +993,7 @@
                                     </li>
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"
-                                            href="network.html">Netzwerkvisualisierung</a>
+                                            href="netzwerk.html">Netzwerkvisualisierung</a>
                                     </li>
                                     <li>
                                         <a class="dropdown-item custom-dropdown-link"

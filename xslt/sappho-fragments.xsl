@@ -218,7 +218,7 @@
                         <div class="feat-tag-list">
                             <xsl:for-each select="$motifs">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="motifs.html" class="feat-tag feat-tag--motif">
+                                <a href="motive.html" class="feat-tag feat-tag--motif">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -233,7 +233,7 @@
                         <div class="feat-tag-list">
                             <xsl:for-each select="$topics">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="topics.html" class="feat-tag feat-tag--topic">
+                                <a href="themen.html" class="feat-tag feat-tag--topic">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -248,7 +248,7 @@
                         <div class="feat-tag-list">
                             <xsl:for-each select="$plots">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="plots.html" class="feat-tag feat-tag--plot">
+                                <a href="stoffe.html" class="feat-tag feat-tag--plot">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -279,7 +279,7 @@
                         <div class="feat-tag-list">
                             <xsl:for-each select="$persons">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="pers-refs.html" class="feat-tag feat-tag--person">
+                                <a href="personen.html" class="feat-tag feat-tag--person">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -294,7 +294,7 @@
                         <div class="feat-tag-list">
                             <xsl:for-each select="$places">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="place-refs.html" class="feat-tag feat-tag--place">
+                                <a href="orte.html" class="feat-tag feat-tag--place">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -310,7 +310,7 @@
                         <div class="feat-tag-list">
                             <xsl:for-each select="$workrefs">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="work-refs.html" class="feat-tag feat-tag--work-ref">
+                                <a href="werke.html" class="feat-tag feat-tag--work-ref">
                                     <xsl:value-of select="normalize-space(@label)"/>
                                 </a>
                             </xsl:for-each>
@@ -325,7 +325,7 @@
                         <div class="feat-tag-list">
                             <xsl:for-each select="$workpassages">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="work-refs.html" class="feat-tag feat-tag--passage">
+                                <a href="werke.html" class="feat-tag feat-tag--passage">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -340,7 +340,7 @@
                         <div class="feat-tag-list">
                             <xsl:for-each select="$phrases">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="work-refs.html" class="feat-tag feat-tag--phrase">
+                                <a href="werke.html" class="feat-tag feat-tag--phrase">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>

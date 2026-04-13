@@ -7,8 +7,8 @@
             </titleStmt>
             <publicationStmt>
                 <publisher>Laura Untner</publisher>
-                <pubPlace>Wien/Berlin</pubPlace>
-                <date when="2025">2025</date>
+                <pubPlace>Berlin/Wien</pubPlace>
+                <date>2024–[2027]</date>
                 <availability>
                     <licence target="https://creativecommons.org/licenses/by/4.0/deed.de">
                         <p>CC BY 4.0</p>
@@ -102,7 +102,7 @@
                     <author ref="https://www.wikidata.org/entity/Q154010" xml:id="author_7ea2d8de">Christoph Martin Wieland</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_0449d307">Weidmanns Erden und Reich</publisher>
+                    <publisher xml:id="publisher_0449d307">Weidmanns Erben und Reich</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Wieland,+Christoph+Martin/Romane/Die+Abenteuer+des+Don+Sylvio+von+Rosalva">http://www.zeno.org/Literatur/M/Wieland,+Christoph+Martin/Romane/Die+Abenteuer+des+Don+Sylvio+von+Rosalva</ref>
                 </bibl>
                 <bibl xml:id="bibl_0bc17a29">
@@ -114,7 +114,7 @@
                     <author ref="https://www.wikidata.org/entity/Q154010" xml:id="author_7ea2d8de">Christoph Martin Wieland</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3955" xml:id="place_c35eca96">Weimar</pubPlace>
-                    <publisher xml:id="publisher_6acb1b8b">Carl Ludolf Hoffmanns Verlag</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q119610998" xml:id="publisher_6acb1b8b">Carl Ludolf Hoffmanns Verlag</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Wieland,+Christoph+Martin/Romane/Geschichte+der+Abderiten/Erster+Teil/Erstes+Buch/Erstes+Kapitel">http://www.zeno.org/Literatur/M/Wieland,+Christoph+Martin/Romane/Geschichte+der+Abderiten/Erster+Teil/Erstes+Buch/Erstes+Kapitel</ref>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q120176718" xml:id="bibl_5283cfa8">
@@ -561,7 +561,7 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q7030" xml:id="place_5cef94ac">Wismar</pubPlace>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2861" xml:id="place_64f9e1da">Rostock</pubPlace>
                     <pubPlace ref="https://www.wikidata.org/entity/Q156119" xml:id="place_b3271180">Ludwigslust</pubPlace>
-                    <publisher xml:id="publisher_006305f7">Hinstorff’sche Buchhandlung</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q1619570" xml:id="publisher_006305f7">Hinstorff’sche Buchhandlung</publisher>
                     <ref target="https://books.google.de/books?id=zToXV_6eq10C">https://books.google.de/books?id=zToXV_6eq10C</ref>
                 </bibl>
                 <bibl xml:id="bibl_95634037">
@@ -755,7 +755,7 @@
                     <pubPlace xml:id="place_5cef94ac">Wismar</pubPlace>
                     <pubPlace xml:id="place_64f9e1da">Rostock</pubPlace>
                     <pubPlace xml:id="place_b3271180">Ludwigslust</pubPlace>
-                    <publisher xml:id="publisher_006305f7">Hinstorff’sche Buchhandlung</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q1619570" xml:id="publisher_006305f7">Hinstorff’sche Buchhandlung</publisher>
                     <ref target="https://books.google.de/books?id=aaMuAAAAYAAJ">https://books.google.de/books?id=aaMuAAAAYAAJ</ref>
                 </bibl>
                 <bibl xml:id="bibl_1f5c9a50">
@@ -1095,7 +1095,7 @@
                     <author ref="https://www.wikidata.org/entity/Q94752823" xml:id="author_9201b2fb">Alma Leschivo</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q7030" xml:id="place_b3271180">Wismar</pubPlace>
-                    <publisher xml:id="publisher_74122a89">Hinstorff’sche Hofbuchhandlung</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q1619570" xml:id="publisher_006305f7">Hinstorff’sche Hofbuchhandlung</publisher>
                 </bibl>
                 <bibl xml:id="bibl_b97aa883">
                     <title type="text">Eva Siebeck</title>
@@ -1163,7 +1163,7 @@
                     <author ref="https://www.wikidata.org/entity/Q109471" xml:id="author_74d9eceb">Ida Boy-Ed</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_6b243b53">Bong</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q44264558" xml:id="publisher_6b243b53">Bong</publisher>
                 </bibl>
                 <bibl xml:id="bibl_2cc74cd9">
                     <title type="text">Gräfin Erikas Lehr- und Wanderjahre: Roman</title>
@@ -1279,7 +1279,7 @@
                     <author ref="https://www.wikidata.org/entity/Q94763349" xml:id="author_ed04744d">Karl Roth</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3994" xml:id="place_ff6ed291">Kempten</pubPlace>
-                    <publisher xml:id="publisher_9b5a7b05">Kösel</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q1796710" xml:id="publisher_9b5a7b05">Kösel</publisher>
                 </bibl>
                 <bibl xml:id="bibl_2531c83d">
                     <title type="text">Marianne Wildenberg</title>
@@ -1747,7 +1747,7 @@
                     <author ref="https://www.wikidata.org/entity/Q91288" xml:id="author_80e4b80a">Alexander Moszkowski</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_2bae2100">Fontane</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q108713971" xml:id="publisher_2bae2100">Fontane</publisher>
                     <ref target="https://www.projekt-gutenberg.org/moszkows/inseln/inseln.html">https://www.projekt-gutenberg.org/moszkows/inseln/inseln.html</ref>
                 </bibl>
                 <bibl xml:id="bibl_51704942">
@@ -1767,7 +1767,7 @@
                     <author ref="https://www.wikidata.org/entity/Q115335" xml:id="author_b6223d75">Manfred Kyber</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
-                    <publisher xml:id="publisher_8fba5226">Seifert</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q96461186" xml:id="publisher_8fba5226">Seifert</publisher>
                 </bibl>
                 <bibl xml:id="bibl_b3da0858">
                     <title type="text">Fünfundzwanzig Bräute. Schelmenroman</title>
@@ -2178,7 +2178,7 @@
                     <author ref="https://www.wikidata.org/entity/Q95186926" xml:id="author_41f6be4f">Ottilie Schenk</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q664452" xml:id="place_2f511dd6">St. Michael</pubPlace>
-                    <publisher xml:id="publisher_4a3ccdbe">Bläschke</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q15454849" xml:id="publisher_4a3ccdbe">Bläschke</publisher>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q896376" xml:id="bibl_1b76b1c6">
                     <title type="text">Kassandra. Erzählung</title>

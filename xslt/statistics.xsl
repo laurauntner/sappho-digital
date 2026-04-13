@@ -514,7 +514,7 @@
                 <p class="align-left">Nähere Informationen zur exemplarischen Analyse sind <a
                     href="analyse.html">hier</a> zu finden.</p>
                 <p class="align-left">Eine Netzwerkvisualisierung aller Daten ist <a
-                    href="network.html">hier</a> verfügbar.</p>
+                    href="netzwerk.html">hier</a> verfügbar.</p>
                 <p class="align-left">Einfache Häufigkeitsverteilungen einzelner Phänomene und
                   Auflistungen aller intertextuellen Beziehungen können über den Reiter
                   »Rezeptionsphänomene« (in »Analyse«) angesteuert werden. Häufigkeitsverteilungen
