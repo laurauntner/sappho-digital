@@ -43,7 +43,7 @@
                     <author ref="https://www.wikidata.org/entity/Q73072" xml:id="author_6bcd0402">Jörg Wickram</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q6602" xml:id="place_477d8872">Straßburg</pubPlace>
-                    <publisher xml:id="publisher_f9680e36">Frölich</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q120256238" xml:id="publisher_f9680e36">Jacob Frölich</publisher>
                     <ref target="https://viewer.onb.ac.at/1056A7B8/">https://viewer.onb.ac.at/1056A7B8/</ref>
                 </bibl>
                 <bibl xml:id="bibl_1ab95e47">
@@ -133,7 +133,7 @@
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <pubPlace ref="https://www.wikidata.org/entity/Q393" xml:id="place_d35a02eb">Stettin</pubPlace>
-                    <publisher xml:id="publisher_f1e25fd6">Nicolai</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q109234958" xml:id="publisher_f1e25fd6">Nicolai</publisher>
                     <ref target="https://www.deutschestextarchiv.de/book/view/nicolai_nothanker02_1775">https://www.deutschestextarchiv.de/book/view/nicolai_nothanker02_1775</ref>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q1195163" xml:id="bibl_d8a04de4">
@@ -672,7 +672,7 @@
                     </bibl>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q57948" xml:id="place_bb650d49">Aue</pubPlace>
-                    <publisher xml:id="publisher_4ca9edad">Gärtner</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139300168" xml:id="publisher_4ca9edad">Gärtner</publisher>
                     <ref target="https://www.deutsche-digitale-bibliothek.de/newspaper/item/3JUUDPAJD737R4DGZCUW55LTQD2ZO7UM">https://www.deutsche-digitale-bibliothek.de/newspaper/item/3JUUDPAJD737R4DGZCUW55LTQD2ZO7UM</ref>
                 </bibl>
                 <bibl xml:id="bibl_35d7709d">
@@ -1978,7 +1978,7 @@
                     <author ref="https://www.wikidata.org/entity/Q138879374" xml:id="author_20474163">Rudolf Becht</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q168648" xml:id="place_a6617830">Sopron</pubPlace>
-                    <publisher xml:id="publisher_91cc6e1b">Röttig-Romwalter</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139300200" xml:id="publisher_91cc6e1b">Röttig-Romwalter</publisher>
                 </bibl>
                 <bibl xml:id="bibl_21d85a5a">
                     <title type="text">Flucht aus Buddhas Gesetz: Roman</title>
@@ -2076,7 +2076,7 @@
                     <author ref="https://www.wikidata.org/entity/Q1335819" xml:id="author_4ccbbf71">Emil Barth</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1055" xml:id="place_f23bb5e2">Hamburg</pubPlace>
-                    <publisher xml:id="publisher_b43339c9">Goverts</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q1606785" xml:id="publisher_b43339c9">Goverts</publisher>
                 </bibl>
                 <bibl xml:id="bibl_f3eebdf3">
                     <title type="text">Sappho von Lesbos. Roman</title>
@@ -2120,7 +2120,7 @@
                     <author ref="https://www.wikidata.org/entity/Q55675548" xml:id="author_3c1158f0">Hubert Ludo Gerwald [= Hubertus von Beyer]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2871" xml:id="place_f4429f06">Hagen</pubPlace>
-                    <publisher xml:id="publisher_31d180f3">Pantheon-Sondervertrieb</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139300474" xml:id="publisher_31d180f3">Pantheon-Sondervertrieb</publisher>
                 </bibl>
                 <bibl xml:id="bibl_386de82b">
                     <title type="text">Schöne Aussicht</title>
@@ -2128,7 +2128,7 @@
                     <author ref="https://www.wikidata.org/entity/Q61408" xml:id="author_49a8c79a">Walter Kempowski</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
-                    <publisher xml:id="publisher_229a727a">Knaus</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q2639862" xml:id="publisher_229a727a">Knaus</publisher>
                 </bibl>
                 <bibl xml:id="bibl_c2e4ff2f">
                     <title type="text">Jüdische Sappho</title>
@@ -2359,7 +2359,7 @@
                     <author ref="https://www.wikidata.org/entity/Q138795462" xml:id="author_da7ab3c4">Irene Seydlitz</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q365" xml:id="place_4a15ea49">Köln</pubPlace>
-                    <publisher xml:id="publisher_796e889a">Fredebold und Fischer</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139300722" xml:id="publisher_796e889a">Fredebold und Fischer</publisher>
                     <ref target="https://archive.org/details/derwolkenprinzfr0000iren">https://archive.org/details/derwolkenprinzfr0000iren</ref>
                 </bibl>
                 <bibl xml:id="bibl_7ba66b97">

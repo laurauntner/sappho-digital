@@ -125,7 +125,7 @@
                     <author ref="https://www.wikidata.org/entity/Q692594" xml:id="author_c79ff4a9">Friedrich Wilhelm Gubitz</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_3df6828b">Maurersche Buchhandlung</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139300111" xml:id="publisher_3df6828b">Maurersche Buchhandlung</publisher>
                 </bibl>
                 <bibl xml:id="bibl_19d9dbc7">
                     <title type="text">Seppherl, komisches Melodrama als Parodie mit Gesang in 3 Aufzügen [oder »Jungfer Sepherl«]</title>
@@ -134,7 +134,7 @@
                     <author ref="https://www.wikidata.org/entity/Q138881545" xml:id="author_012750d5">Hirsch</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
-                    <publisher xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q11712374" xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q1242002" xml:id="bibl_ba71b2e5">
                     <title type="text">Sappho. Trauerspiel in fünf Aufzügen</title>
@@ -183,7 +183,7 @@
                     <author ref="https://www.wikidata.org/entity/Q1308773" xml:id="author_0d277f21">Carl Meisl</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
-                    <publisher xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q11712374" xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
                 </bibl>
                 <bibl xml:id="bibl_9ee5b1ff">
                     <title type="text">Das Gespenst im Prater. Als Fortsetzung des Gespenstes auf der Bastey, in zwey Acten</title>
@@ -292,7 +292,7 @@
                     <author ref="https://www.wikidata.org/entity/Q57236" xml:id="author_41ec22f4">Bettina von Arnim</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_828dcaca">Eduard Heinrich Schröder</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q55915351" xml:id="publisher_828dcaca">Eduard Heinrich Schröder</publisher>
                     <ref target="https://www.digitale-sammlungen.de/de/view/bsb10104707">https://www.digitale-sammlungen.de/de/view/bsb10104707</ref>
                 </bibl>
                 <bibl xml:id="bibl_8ebf0c28">
@@ -377,7 +377,7 @@
                     <author ref="https://www.wikidata.org/entity/Q215550" xml:id="author_46b84eb9">Rudolf Levy</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
-                    <publisher xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q11712374" xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
                 </bibl>
                 <bibl xml:id="bibl_b1600f12">
                     <title type="text">Der Kanzler von Tirol. Schauspiel in 5 Akten und einem Epilog</title>
@@ -434,7 +434,7 @@
                     <author ref="https://www.wikidata.org/entity/Q138795544" xml:id="author_f6acb7c3">Astrid Osterland</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q11712374" xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
                 </bibl>
                 <bibl xml:id="bibl_c82571f6">
                     <title type="text">Sapphos Welt</title>
@@ -442,7 +442,7 @@
                     <author ref="https://www.wikidata.org/entity/Q138661019" xml:id="author_2308f519">Leonie Sowa</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q11712374" xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
                 </bibl>
             </listBibl>
         </body>
