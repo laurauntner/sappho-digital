@@ -61,7 +61,7 @@
                     <author ref="https://www.wikidata.org/entity/Q66942" xml:id="author_719065e7">Daniel Casper von Lohenstein</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_b0e60526">Johann Friedrich Bleditschen Buchhändlern</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139328585" xml:id="publisher_b0e60526">Johann Friedrich Bleditschen Buchhändlern</publisher>
                     <ref target="https://www.deutschestextarchiv.de/book/show/lohenstein_feldherr01_1689">https://www.deutschestextarchiv.de/book/show/lohenstein_feldherr01_1689</ref>
                 </bibl>
                 <bibl xml:id="bibl_429777c1">
@@ -333,7 +333,7 @@
                     <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q268" xml:id="place_d5519995">Posen</pubPlace>
-                    <publisher xml:id="publisher_3e982034">Kühn</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139328377" xml:id="publisher_3e982034">Kühn</publisher>
                     <ref target="https://textgridrep.org/browse/jngm.0">https://textgridrep.org/browse/jngm.0</ref>
                 </bibl>
                 <bibl xml:id="bibl_9807b0c9">
@@ -600,7 +600,7 @@
                     <author ref="https://www.wikidata.org/entity/Q77312" xml:id="author_1c589986">Willibald Alexis</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_838f9583">Barthol Verlag</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139328505" xml:id="publisher_838f9583">Barthol</publisher>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q2298931" xml:id="bibl_9143a07d">
                     <title type="text">Soll und Haben</title>
@@ -617,7 +617,7 @@
                     <author ref="https://www.wikidata.org/entity/Q9082" xml:id="author_5692b9c2">Joseph Victor von Scheffel</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1794" xml:id="place_ae5c315b">Frankfurt a. M.</pubPlace>
-                    <publisher xml:id="publisher_46f0bffd">Meidinger Sohn &amp; Cie</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139328466" xml:id="publisher_46f0bffd">Meidinger Sohn &amp; Cie</publisher>
                     <ref target="https://www.deutschestextarchiv.de/book/show/scheffel_ekkehard_1855">https://www.deutschestextarchiv.de/book/show/scheffel_ekkehard_1855</ref>
                 </bibl>
                 <bibl xml:id="bibl_1ac52bab">
@@ -634,7 +634,7 @@
                     <author ref="https://www.wikidata.org/entity/Q216156" xml:id="author_6dd6a140">Hermann Marggraff</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1794" xml:id="place_ae5c315b">Frankfurt a. M.</pubPlace>
-                    <publisher xml:id="publisher_46f0bffd">Meidinger Sohn &amp; Cie</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139328466" xml:id="publisher_46f0bffd">Meidinger Sohn &amp; Cie</publisher>
                 </bibl>
                 <bibl xml:id="bibl_aeaf5061">
                     <title type="text">Der Verstoßene</title>
@@ -1554,7 +1554,7 @@
                     <author ref="https://www.wikidata.org/entity/Q91858" xml:id="author_3ca88707">Wilhelm Walloth</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1305986" xml:id="place_fb957246">Jugenheim an der Bergstraße</pubPlace>
-                    <publisher xml:id="publisher_45bfa6ec">Sueviaverlag</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139328451" xml:id="publisher_45bfa6ec">Suevia</publisher>
                 </bibl>
                 <bibl xml:id="bibl_4bdd1098">
                     <title type="text">Das Kind von Goslar</title>
@@ -2067,7 +2067,7 @@
                     <author ref="https://www.wikidata.org/entity/Q138868045" xml:id="author_a0790a3f">Phoebe</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q72" xml:id="place_0c1736a7">Zürich</pubPlace>
-                    <publisher xml:id="publisher_9050d310">Verlag Der Kreis</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139328231" xml:id="publisher_9050d310">Der Kreis</publisher>
                     <ref target="https://www.e-periodica.ch/digbib/view?pid=kre-002%3A1941%3A9%3A%3A129">https://www.e-periodica.ch/digbib/view?pid=kre-002%3A1941%3A9%3A%3A129</ref>
                 </bibl>
                 <bibl xml:id="bibl_9271a30a">
