@@ -241,9 +241,9 @@
                     <date type="published" when="1799">1799</date>
                     <author ref="https://www.wikidata.org/entity/Q77079" xml:id="author_d6da3022">Jean Paul</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="place_01b3ebf8">Gera</pubPlace>
-                    <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_211c7f89">Heinsius</publisher>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q3750" xml:id="place_01b3ebf8">Gera</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q139328823" xml:id="publisher_211c7f89">Heinsius</publisher>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q19179765" xml:id="bibl_f7bb70af">
                     <title type="text">Die Schwestern von Lesbos</title>
@@ -429,7 +429,7 @@
                     <author ref="https://www.wikidata.org/entity/Q77470" xml:id="author_bb3bee84">Heinrich Laube</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2119" xml:id="place_77b5ece6">Mannheim</pubPlace>
-                    <publisher xml:id="publisher_87c29e77">Hoff</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q62480832" xml:id="publisher_57x23eb0">Hoff</publisher>
                 </bibl>
                 <bibl xml:id="bibl_540bb7e8">
                     <title type="text">Rahel. Ein Buch des Andekens für ihre Freunde. Band 2</title>
@@ -488,7 +488,7 @@
                     <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q490" xml:id="place_e3063093">Mailand</pubPlace>
-                    <publisher xml:id="publisher_c946c8ca">Alois Pirola</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139328767" xml:id="publisher_c946c8ca">Alois Pirola</publisher>
                 </bibl>
                 <bibl xml:id="bibl_8b641cb9">
                     <title type="text">Der Guckguck</title>
@@ -1252,7 +1252,7 @@
                     <author ref="https://www.wikidata.org/entity/Q86886" xml:id="author_4b888f17">Paul Lindau</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1799" xml:id="place_811c769d">Breslau</pubPlace>
-                    <publisher xml:id="publisher_74a15ddb">S. Schottländer</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q108799485" xml:id="publisher_74a15ddb">S. Schottländer</publisher>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q108632301" xml:id="bibl_a5fc1475">
                     <title type="text">Schicksale einer Seele</title>
@@ -1800,7 +1800,7 @@
                     <author ref="https://www.wikidata.org/entity/Q103673" xml:id="author_bf6d8c80">Paul Oskar Höcker</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2119" xml:id="place_77b5ece6">Mannheim</pubPlace>
-                    <publisher xml:id="publisher_b6664739">Mannheimer Morgen Verlag</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139328665" xml:id="publisher_b6664739">Mannheimer Morgen</publisher>
                 </bibl>
                 <bibl xml:id="bibl_2a0c2fda">
                     <title type="text">Schauspieler</title>
@@ -1959,7 +1959,7 @@
                     <author ref="https://www.wikidata.org/entity/Q1616540" xml:id="author_90f115c3">Walther von Hollander</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2119" xml:id="place_77b5ece6">Mannheim</pubPlace>
-                    <publisher xml:id="publisher_b6664739">Mannheimer Morgen Verlag</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139328665" xml:id="publisher_b6664739">Mannheimer Morgen</publisher>
                 </bibl>
                 <bibl xml:id="bibl_71f5dd25">
                     <title type="text">Jagd nach dem Bildnis der Kaiserin Poppäa</title>
@@ -1986,7 +1986,7 @@
                     <author ref="https://www.wikidata.org/entity/Q103704" xml:id="author_9cc4db92">Ravi Ravendro [= Karl Siegfried Döhring]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_70464083">Wegweiser-Verlag</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q136298277" xml:id="publisher_70464083">Wegweiser-Verlag</publisher>
                 </bibl>
                 <bibl xml:id="bibl_94f099bd">
                     <title type="text">Nie wieder luegen</title>
@@ -2084,7 +2084,7 @@
                     <author ref="https://www.wikidata.org/entity/Q6725281" xml:id="author_465361bf">Margot Klausner</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1486" xml:id="place_0c455ad1">Buenos Aires</pubPlace>
-                    <publisher xml:id="publisher_374c900c">Alemann</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139328699" xml:id="publisher_374c900c">Alemann</publisher>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q1170592" xml:id="bibl_d6aa3aa6">
                     <title type="text">Das Treibhaus</title>
@@ -2335,7 +2335,7 @@
                     <author ref="https://www.wikidata.org/entity/Q120165473" xml:id="author_8d60dbcb">Tami van Dalen [= Tami Dahlheim]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q61063562" xml:id="place_b6b4f233">Heinrichshofen</pubPlace>
-                    <publisher xml:id="publisher_143d11f9">Thiasos</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139329215" xml:id="publisher_143d11f9">Thiasos</publisher>
                 </bibl>
                 <bibl xml:id="bibl_62a518d1">
                     <title type="text">Satanszeichen. Der erste Fall für Elza Linden</title>
