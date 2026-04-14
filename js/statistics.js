@@ -4161,8 +4161,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function toEntry(r) {
         return {
-            name:       r['Autor_in']           || '',
-            wikidataId: r['Author Wikidata ID']  || '',
+            name:       r['Autor_in']                 || '',
+            wikidataId: r['Author Wikidata ID']        || '',
+            authorId:   r['Interne Autor_in-ID']       || '',
             sitelinks:  parseInt(r['Author Sitelinks']) || 0,
             qrank:      r['Author QRank'] !== '' ? (parseInt(r['Author QRank']) || null) : null,
             workCount:  parseInt(r['Work Count']) || 0,
@@ -4321,7 +4322,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 min: 0,
               };
 
-        return new Chart(canvas.getContext('2d'), {
+        const chart = new Chart(canvas.getContext('2d'), {
             type: 'scatter',
             plugins: [labelPlugin],
             data: {
@@ -4340,7 +4341,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 maintainAspectRatio: false,
                 plugins: {
                     legend: { display: false },
-                    tooltip: { callbacks: { label: ctx => getLabel(ctx.raw) } }
+                    tooltip: {
+                        callbacks: {
+                            label: ctx => {
+                                const lines = getLabel(ctx.raw);
+                                return lines;
+                            }
+                        }
+                    }
+                },
+                onClick: (evt, elements) => {
+                    if (elements.length > 0) {
+                        const d = points[elements[0].index];
+                        if (d.authorId) {
+                            window.open(`https://sappho-digital.com/${d.authorId}.html`, '_blank');
+                        }
+                    }
                 },
                 scales: {
                     x: {
@@ -4353,6 +4369,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
+        canvas.style.cursor = 'pointer';
+        return chart;
     }
 
     // ── QRank vs. Korpuspräsenz ──────────────────────────────────────
@@ -4365,7 +4383,7 @@ document.addEventListener('DOMContentLoaded', () => {
             x: d.workCount, y: d.qrank,
             r: 4,
             name: d.name, qrank: d.qrank,
-            workCount: d.workCount, wikidataId: d.wikidataId,
+            workCount: d.workCount, wikidataId: d.wikidataId, authorId: d.authorId,
         }));
         state.charts.scatter = makeScatterChart(
             'chart-wm-scatter', points,
@@ -4383,7 +4401,7 @@ document.addEventListener('DOMContentLoaded', () => {
             x: d.workCount, y: d.sitelinks,
             r: 4,
             name: d.name, sitelinks: d.sitelinks,
-            workCount: d.workCount, wikidataId: d.wikidataId,
+            workCount: d.workCount, wikidataId: d.wikidataId, authorId: d.authorId,
         }));
         state.charts.slscatter = makeScatterChart(
             'chart-wm-slscatter', points,
@@ -4438,18 +4456,32 @@ document.addEventListener('DOMContentLoaded', () => {
                 responsive: true,
                 maintainAspectRatio: false,
                 interaction: { mode: 'nearest', axis: 'y', intersect: true },
+                onClick: (evt, elements) => {
+                    if (elements.length > 0) {
+                        const d = items[elements[0].index];
+                        if (d.authorId) {
+                            window.open(`https://sappho-digital.com/${d.authorId}.html`, '_blank');
+                        }
+                    }
+                },
                 plugins: {
                     legend: { display: false },
                     tooltip: {
                         callbacks: {
                             label: ctx => {
                                 const d = items[ctx.dataIndex];
+                                const lines = [];
                                 if (ctx.datasetIndex === 0) {
-                                    return ` ${xTitle0}: ${typeof d0[ctx.dataIndex] === 'number' && d0[ctx.dataIndex] % 1 !== 0
+                                    lines.push(` ${xTitle0}: ${typeof d0[ctx.dataIndex] === 'number' && d0[ctx.dataIndex] % 1 !== 0
                                         ? d0[ctx.dataIndex].toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) + '%'
-                                        : Number(d0[ctx.dataIndex]).toLocaleString('de-DE')}`;
+                                        : Number(d0[ctx.dataIndex]).toLocaleString('de-DE')}`);
+                                    if (d.qrank !== null && d.qrank !== undefined) {
+                                        lines.push(` QRank absolut: ${d.qrank.toLocaleString('de-DE')}`);
+                                    }
+                                } else {
+                                    lines.push(` Korpuspräsenz: ${d.workCount}`);
                                 }
-                                return ` Korpuspräsenz: ${d.workCount}`;
+                                return lines;
                             }
                         }
                     }
@@ -4478,23 +4510,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
             },
         });
+        canvas.style.cursor = 'pointer';
     }
 
     // ── Top QRank ────────────────────────────────────────────────────
     function renderWmTopQrank(state) {
-        const selVal = document.getElementById('sel-wm-qrank-topn')?.value || '50';
-        const topN   = selVal === '0' ? Infinity : parseInt(selVal);
-        const sorted = [...state.WM_WITH_QRANK].sort((a, b) => b.qrank - a.qrank);
-        const items  = isFinite(topN) ? sorted.slice(0, topN) : sorted;
-        const metaEl = document.getElementById('wm-scatter-meta');
+        const selVal     = document.getElementById('sel-wm-qrank-topn')?.value || '50';
+        const topN       = selVal === '0' ? Infinity : parseInt(selVal);
+        const sorted     = [...state.WM_WITH_QRANK].sort((a, b) => b.qrank - a.qrank);
+        const items      = isFinite(topN) ? sorted.slice(0, topN) : sorted;
+        const globalMaxQ = sorted[0]?.qrank || 1;
+        const metaEl     = document.getElementById('wm-scatter-meta');
         if (metaEl) metaEl.textContent = `${state.WM_WITH_QRANK.length} Autor_innen mit QRank`;
-        const maxQ   = items[0].qrank;
         renderWmTopBar(
             state, 'topqrank', 'chart-wm-topqrank-inner', 'wm-topqrank-wrap', 'sel-wm-qrank-topn',
             () => items,
-            d => parseFloat((d.qrank / maxQ * 100).toFixed(2)),
+            d => parseFloat((d.qrank / globalMaxQ * 100).toFixed(2)),
             d => d.workCount,
-            'QRank (normalisiert, %)', 'Korpuspräsenz'
+            'QRank normalisiert', 'Korpuspräsenz'
         );
     }
 
