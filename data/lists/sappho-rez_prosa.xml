@@ -102,7 +102,7 @@
                     <author ref="https://www.wikidata.org/entity/Q154010" xml:id="author_7ea2d8de">Christoph Martin Wieland</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_0449d307">Weidmanns Erben und Reich</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q280215" xml:id="publisher_0449d307">Weidmanns Erben und Reich</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Wieland,+Christoph+Martin/Romane/Die+Abenteuer+des+Don+Sylvio+von+Rosalva">http://www.zeno.org/Literatur/M/Wieland,+Christoph+Martin/Romane/Die+Abenteuer+des+Don+Sylvio+von+Rosalva</ref>
                 </bibl>
                 <bibl xml:id="bibl_0bc17a29">
@@ -902,7 +902,7 @@
                     <author ref="https://www.wikidata.org/entity/Q93525" xml:id="author_c9ceb171">Marie von Ebner-Eschenbach</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_ae27aa06">Ebhardt</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139325796" xml:id="publisher_ae27aa06">Ebhardt</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Ebner-Eschenbach,+Marie+von/Erz%C3%A4hlungen/Nach+dem+Tode">http://www.zeno.org/Literatur/M/Ebner-Eschenbach,+Marie+von/Erz%C3%A4hlungen/Nach+dem+Tode</ref>
                 </bibl>
                 <bibl xml:id="bibl_4665baca">
@@ -1232,7 +1232,7 @@
                     <author ref="https://www.wikidata.org/entity/Q22714" xml:id="author_525a826b">Karl May</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2833" xml:id="place_81bb34f0">Freiburg i. Br.</pubPlace>
-                    <publisher xml:id="publisher_5ebb49cd">Friedrich Ernst Fehlenfeld</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139325716" xml:id="publisher_5ebb49cd">Friedrich Ernst Fehsenfeld</publisher>
                     <ref target="https://www.karl-may-gesellschaft.de/kmg/primlit/reise/gr/gr24/gr24.pdf">https://www.karl-may-gesellschaft.de/kmg/primlit/reise/gr/gr24/gr24.pdf</ref>
                 </bibl>
                 <bibl xml:id="bibl_9616477e">
@@ -1346,7 +1346,7 @@
                     <author ref="https://www.wikidata.org/entity/Q215090" xml:id="author_3e63e21f">Julius Stinde</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_d9920f42">Batzenmacher</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139325951" xml:id="publisher_d9920f42">Batzenmacher</publisher>
                 </bibl>
                 <bibl xml:id="bibl_f8609041">
                     <title type="text">Sappho</title>
@@ -1611,7 +1611,7 @@
                     <author ref="https://www.wikidata.org/entity/Q77486" xml:id="author_aeca2de7">Hermann Löns</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2769" xml:id="place_c4b1eadd">Warendorf</pubPlace>
-                    <publisher xml:id="publisher_ed9ea4fe">Schnell</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q30340500" xml:id="publisher_ed9ea4fe">Schnell</publisher>
                 </bibl>
                 <bibl xml:id="bibl_69625321">
                     <title type="text">Frühlingstaumel</title>

@@ -1233,12 +1233,12 @@
                     <title type="text">Sieg des Liebesgottes</title>
                     <date type="published" when="1755">1755</date>
                     <bibl xml:id="bibl_1bde570a">
-                        <title type="work">Lyrische und andere Gedichte (2. Aufl.)</title>
+                        <title type="work">Lyrische und andere Gedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q69951" xml:id="author_0987846e">Johann Peter Uz</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q14859" xml:id="place_7aeee4a1">Ansbach</pubPlace>
-                    <publisher xml:id="publisher_acea5550">Posch</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139325984" xml:id="publisher_acea5550">Posch</publisher>
                     <ref target="https://www.deutschestextarchiv.de/book/view/uz_gedichte_1755">https://www.deutschestextarchiv.de/book/view/uz_gedichte_1755</ref>
                 </bibl>
                 <bibl xml:id="bibl_412df85a">
@@ -2116,7 +2116,7 @@ Philosophen zu Sanssouci</title>
                     <author ref="https://www.wikidata.org/entity/Q70443" xml:id="author_d5ce330f">Moritz August von Thümmel</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_115fde37">M. G. Weidmanns Erben und Reich</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q280215" xml:id="publisher_0449d307">M. G. Weidmanns Erben und Reich</publisher>
                     <ref target="https://diglib.hab.de/drucke/lo-7535/start.htm">https://diglib.hab.de/drucke/lo-7535/start.htm</ref>
                 </bibl>
                 <bibl xml:id="bibl_cd328f18">
@@ -2462,7 +2462,7 @@ Philosophen zu Sanssouci</title>
                     <author ref="https://www.wikidata.org/entity/Q98454" xml:id="author_230b0f40">Leopold Friedrich Günther von Goeckingk</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_0449d307">Weidmanns Erben und Reich</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q280215" xml:id="publisher_0449d307">Weidmanns Erben und Reich</publisher>
                     <ref target="https://books.google.at/books?id=b7RgAAAAcAAJ">https://books.google.at/books?id=b7RgAAAAcAAJ</ref>
                 </bibl>
                 <bibl xml:id="bibl_3cfd6bbd">
@@ -2602,7 +2602,7 @@ Philosophen zu Sanssouci</title>
                     <author ref="https://www.wikidata.org/entity/Q9369688" xml:id="author_12b3c9ce">Johann Wenzel Hann</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
-                    <publisher xml:id="publisher_b4c91eff">Anton Lorenz Zentz</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139325827" xml:id="publisher_b4c91eff">Anton Lorenz Zentz</publisher>
                     <ref target="https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN77739054X">https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN77739054X</ref>
                 </bibl>
                 <bibl xml:id="bibl_32ad81e5">
@@ -3416,12 +3416,12 @@ Philosophen zu Sanssouci</title>
                     <title type="text">Tian</title>
                     <date type="published" when="1810">1810</date>
                     <bibl xml:id="bibl_dd966591">
-                        <title type="work">Mimigardie. Poetisches Taschenbuch für 1810</title>
+                        <title type="work">Mimigardia. Poetisches Taschenbuch für 1810</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1461662" xml:id="author_5d34caa6">Friedrich Raßmann</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2742" xml:id="place_afc56847">Münster</pubPlace>
-                    <publisher xml:id="publisher_a6e35da2">Waldeck</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139325857" xml:id="publisher_a6e35da2">Waldeck</publisher>
                     <ref target="https://sammlungen.ulb.uni-muenster.de/hd/periodical/titleinfo/2852975">https://sammlungen.ulb.uni-muenster.de/hd/periodical/titleinfo/2852975</ref>
                 </bibl>
                 <bibl xml:id="bibl_1859809d">
@@ -3862,7 +3862,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q62432" xml:id="author_d5ea9f29">August von Platen-Hallermünde</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher ref="https://www.wikidata.org/entity/Q280215" xml:id="publisher_3af9e21d">Weidmann’sche Buchhandlung</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q280215" xml:id="publisher_0449d307">Weidmann’sche Buchhandlung</publisher>
                 </bibl>
                 <bibl xml:id="bibl_2527654c">
                     <title type="text">Sappho</title>
@@ -5516,7 +5516,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q123494" xml:id="author_4697f5ea">Kurt Marti</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q25607" xml:id="place_0dcac3bc">St. Gallen</pubPlace>
-                    <publisher xml:id="publisher_a6a7d347">Tschudy</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q62483490" xml:id="publisher_a6a7d347">Tschudy</publisher>
                 </bibl>
                 <bibl xml:id="bibl_960d8fb3">
                     <title type="text">Der Mann mit dem Rechen</title>
