@@ -286,7 +286,7 @@
                     <note type="genre">Prosa</note>
                     <pubPlace xml:id="place_675a92e1">Hamburg</pubPlace>
                     <pubPlace xml:id="place_f23bb5e2">Frankfurt a. M.</pubPlace>
-                    <publisher xml:id="publisher_49de49d5">J. C. Hermannsche Buchhandlung</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139324367" xml:id="publisher_34543015">J. C. Hermannsche Buchhandlung</publisher>
                     <ref target="https://www.digitale-sammlungen.de/de/view/bsb10861265">https://www.digitale-sammlungen.de/de/view/bsb10861265</ref>
                 </bibl>
                 <bibl xml:id="bibl_f28a176c">
@@ -652,7 +652,7 @@
                     <author ref="https://www.wikidata.org/entity/Q67502" xml:id="author_96590f1e">Johannes Scherr</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_6e89bce2">E. J. Günther</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q95263308" xml:id="publisher_6e89bce2">E. J. Günther</publisher>
                 </bibl>
                 <bibl xml:id="bibl_fa6fc440">
                     <title type="text">Eine russische Provincialstadt</title>
@@ -882,7 +882,7 @@
                     <author ref="https://www.wikidata.org/entity/Q62765" xml:id="author_caa5df32">Georg Ebers</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
-                    <publisher ref="https://www.wikidata.org/entity/Q1288576" xml:id="publisher_72957607">Verlag von Eduard Hallberger</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q1288576" xml:id="publisher_0049cb52">Verlag von Eduard Hallberger</publisher>
                 </bibl>
                 <bibl xml:id="bibl_9b8bb035">
                     <title type="text">Der Kaiser, Bd. 1</title>
@@ -1155,7 +1155,7 @@
                     <author ref="https://www.wikidata.org/entity/Q62765" xml:id="author_caa5df32">Georg Ebers</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_422b9b31">Tauchnitz</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q123668686" xml:id="publisher_422b9b31">Tauchnitz</publisher>
                 </bibl>
                 <bibl xml:id="bibl_80681a89">
                     <title type="text">Empor!</title>
@@ -1317,7 +1317,7 @@
                     <author ref="https://www.wikidata.org/entity/Q85301" xml:id="author_3a6f93f6">Joseph von Lauff</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_19a736bb">Albert Ahn</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q1409218" xml:id="publisher_19a736bb">Albert Ahn</publisher>
                 </bibl>
                 <bibl xml:id="bibl_46a138e7">
                     <title type="text">Münchner Kindeln!</title>
@@ -1652,7 +1652,7 @@
                     <author ref="https://www.wikidata.org/entity/Q2544646" xml:id="author_b79d2407">Walter Harlan</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_64c3f1b4">Fleischel</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q108744485" xml:id="publisher_64c3f1b4">Fleischel</publisher>
                 </bibl>
                 <bibl xml:id="bibl_fcb32a5a">
                     <title type="text">Helge Bendels Luftschlösser. Ein Chikago-Roman</title>
@@ -1670,7 +1670,7 @@
                     <author ref="https://www.wikidata.org/entity/Q106107" xml:id="author_698b81ae">Agnes Günther</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
-                    <publisher xml:id="publisher_06a485b6">Steinkopf</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q1517367" xml:id="publisher_06a485b6">Steinkopf</publisher>
                 </bibl>
                 <bibl xml:id="bibl_ffa09bcd">
                     <title type="text">Schloß Melchow. Roman</title>
@@ -1860,7 +1860,7 @@
                     <author ref="https://www.wikidata.org/entity/Q57386" xml:id="author_573b8bae">Kurt Tucholsky</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_046febd4">Verlag der Weltbühne</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139324322" xml:id="publisher_046febd4">Verlag der Weltbühne</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Tucholsky,+Kurt/Werke/1926/Durchaus+unpassende+Geschichten">http://www.zeno.org/Literatur/M/Tucholsky,+Kurt/Werke/1926/Durchaus+unpassende+Geschichten</ref>
                 </bibl>
                 <bibl xml:id="bibl_acd99842">
@@ -1910,7 +1910,7 @@
                     <author ref="https://www.wikidata.org/entity/Q138867727" xml:id="author_83349cbd">Anita</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2112" xml:id="place_726ed312">Bielefeld</pubPlace>
-                    <publisher xml:id="publisher_a7c24b4c">Gustav Thomas</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139324233" xml:id="publisher_a7c24b4c">Gustav Thomas</publisher>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno-plus?aid=dsf&amp;datum=1932&amp;page=616&amp;size=45&amp;qid=QMLIGCM4H2O8RFKM1H84S34JPHEGCW">https://anno.onb.ac.at/cgi-content/anno-plus?aid=dsf&amp;datum=1932&amp;page=616&amp;size=45&amp;qid=QMLIGCM4H2O8RFKM1H84S34JPHEGCW</ref>
                 </bibl>
                 <bibl xml:id="bibl_65e7174a">
