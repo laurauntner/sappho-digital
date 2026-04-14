@@ -84,13 +84,17 @@ def main(ttl_path: str, xml_out: str) -> None:
     #            F28_Expression_Creation <--P14_carried_out_by-- E21_Person (label)
     _R17_created       = LRMOO["R17_created"]
     _P14_carried_by    = ECRM["P14_carried_out_by"]
-    _f2_authors_raw: dict[URIRef, list] = {}
+    _f2_authors_raw:    dict[URIRef, list] = {}
+    _f2_author_ids_raw: dict[URIRef, list] = {}   # f2 → interne Author-IDs (Zahl aus URI)
     for f28, _, f2 in g.triples((None, _R17_created, None)):
         if f2 not in reception_f2:
             continue
         for _, _, person in g.triples((f28, _P14_carried_by, None)):
-            if "/author_" not in str(person):
+            person_str = str(person)
+            if "/author_" not in person_str:
                 continue
+            # Interne ID: letztes Segment der URI nach /author_
+            internal_id = person_str.rstrip("/").split("/author_")[-1]
             lbl = None
             for _, _, l in g.triples((person, RDFS.label, None)):
                 lang = getattr(l, "language", None)
@@ -100,7 +104,11 @@ def main(ttl_path: str, xml_out: str) -> None:
                 _f2_authors_raw.setdefault(f2, [])
                 if lbl not in _f2_authors_raw[f2]:
                     _f2_authors_raw[f2].append(lbl)
-    f2_authors_map: dict[URIRef, str] = {k: ", ".join(v) for k, v in _f2_authors_raw.items()}
+                _f2_author_ids_raw.setdefault(f2, [])
+                if internal_id not in _f2_author_ids_raw[f2]:
+                    _f2_author_ids_raw[f2].append(internal_id)
+    f2_authors_map:    dict[URIRef, str] = {k: ", ".join(v) for k, v in _f2_authors_raw.items()}
+    f2_author_ids_map: dict[URIRef, str] = {k: ", ".join(v) for k, v in _f2_author_ids_raw.items()}
     print(f"  Autor_innen-Map: {len(f2_authors_map)} Texte mit Autor_innen", file=sys.stderr)
 
     print(f"  Sappho-Fragmente mit Aktualisierungen:    {n_sappho}", file=sys.stderr)
@@ -1321,8 +1329,9 @@ def main(ttl_path: str, xml_out: str) -> None:
     for f2_uri, authors_str in sorted(f2_authors_map.items(), key=lambda x: str(x[0])):
         if authors_str:
             ae = ET.SubElement(ra_el, "entry")
-            ae.set("uri",     str(f2_uri))
-            ae.set("authors", authors_str)
+            ae.set("uri",       str(f2_uri))
+            ae.set("authors",   authors_str)
+            ae.set("authorIds", f2_author_ids_map.get(f2_uri, ""))
     print(f"  receptionAuthors: {len(f2_authors_map)} Einträge in XML", file=sys.stderr)
 
     tree = ET.ElementTree(root_el)
@@ -1336,16 +1345,21 @@ def main(ttl_path: str, xml_out: str) -> None:
         with open(csv_path, newline="", encoding="utf-8") as cf:
             reader = _csv.DictReader(cf)
             rows_csv = list(reader)
-        if rows_csv and "authors" not in rows_csv[0]:
+        needs_authors    = "authors"    not in rows_csv[0] if rows_csv else False
+        needs_author_ids = "author_ids" not in rows_csv[0] if rows_csv else False
+        if rows_csv and (needs_authors or needs_author_ids):
             for row in rows_csv:
                 uri_ref = URIRef(row["uri"])
-                row["authors"] = f2_authors_map.get(uri_ref, "")
+                if needs_authors:
+                    row["authors"]    = f2_authors_map.get(uri_ref, "")
+                if needs_author_ids:
+                    row["author_ids"] = f2_author_ids_map.get(uri_ref, "")
             fieldnames = list(rows_csv[0].keys())
             with open(csv_path, "w", newline="", encoding="utf-8") as cf:
                 writer = _csv.DictWriter(cf, fieldnames=fieldnames)
                 writer.writeheader()
                 writer.writerows(rows_csv)
-            print(f"reception-indices.csv mit authors-Spalte aktualisiert: {csv_path}", file=sys.stderr)
+            print(f"reception-indices.csv mit authors/author_ids-Spalten aktualisiert: {csv_path}", file=sys.stderr)
 
 
 if __name__ == "__main__":
