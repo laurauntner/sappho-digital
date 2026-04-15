@@ -395,8 +395,8 @@ function renderCatOverview() {
                         const html =
                             `<strong>${item.label}</strong>`
                             + `<br><span style="font-size:10px;color:#6b7280">(${singular})</span>`
-                            + `<br><span style="color:#374151">Sappho: ${pctS2}% (${item.countSappho}/${fmtN(DATA.nSappho)})</span>`
-                            + `<br><span style="color:#374151">Rezeption: ${pctR2}% (${item.countReception}/${fmtN(DATA.nReception)})</span>`;
+                            + `<br><span style="color:#374151">Sappho: ${pctS2}% (${fmtN(item.countSappho)}/${fmtN(DATA.nSappho)})</span>`
+                            + `<br><span style="color:#374151">Rezeption: ${pctR2}% (${fmtN(item.countReception)}/${fmtN(DATA.nReception)})</span>`;
                         const t = getPdTip();
                         t.innerHTML = html; t.style.display = 'block';
                         const e = tooltip._eventPosition;
@@ -3665,7 +3665,7 @@ function renderGenderTimeChart() {
                             const v = c.parsed.y;
                             return isPercent
                                 ? ` ${c.dataset.label}: ${v.toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1})}%`
-                                : ` ${c.dataset.label}: ${v}`;
+                                : ` ${c.dataset.label}: ${fmtN(v)}`;
                         },
                     },
                 },
@@ -3757,7 +3757,7 @@ function renderGenderGenreChart() {
                             const v   = c.parsed.y;
                             if (isPercent) return ` ${c.dataset.label}: ${v.toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1})}%`;
                             const pct = tot > 0 ? (v / tot * 100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) : '0.0';
-                            return ` ${c.dataset.label}: ${v} (${pct}% der Gattung)`;
+                            return ` ${c.dataset.label}: ${fmtN(v, 1)} (${pct}% der Gattung)`;
                         },
                     },
                 },
