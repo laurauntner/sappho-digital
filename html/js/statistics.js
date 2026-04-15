@@ -3757,7 +3757,7 @@ function renderGenderGenreChart() {
                             const v   = c.parsed.y;
                             if (isPercent) return ` ${c.dataset.label}: ${v.toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1})}%`;
                             const pct = tot > 0 ? (v / tot * 100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) : '0.0';
-                            return ` ${c.dataset.label}: ${fmtN(v, 1)} (${pct}% der Gattung)`;
+                            return ` ${c.dataset.label}: ${Number(v).toLocaleString('de-DE', { minimumFractionDigits: 0, maximumFractionDigits: 1 })} (${pct}% der Gattung)`;
                         },
                     },
                 },
