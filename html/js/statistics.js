@@ -364,33 +364,9 @@ function renderCatOverview() {
         },
     };
 
-    // Plugin 2: Kategorie-Legende unterhalb der Balken direkt auf Canvas
-    const legendPlugin = {
-        id: 'catLegend',
-        afterDraw(chart) {
-            const { ctx: c, chartArea, width } = chart;
-            const PAD   = 12, ROW_H = 18, SW = 10, COLS = 3;
-            const colW  = Math.floor((width - PAD * 2) / COLS);
-            const startY = chartArea.bottom + 10;
-            c.save();
-            c.font = '11px Geist, system-ui, sans-serif';
-            c.textBaseline = 'middle';
-            seen.forEach((s, i) => {
-                const col = i % COLS, row = Math.floor(i / COLS);
-                const x = PAD + col * colW, y = startY + row * ROW_H;
-                c.fillStyle = s.color;
-                if (c.roundRect) { c.beginPath(); c.roundRect(x, y, SW, SW, 2); c.fill(); }
-                else { c.fillRect(x, y, SW, SW); }
-                c.fillStyle = '#374151';
-                c.fillText(s.label, x + SW + 5, y + SW / 2);
-            });
-            c.restore();
-        },
-    };
-
     new Chart(ctx, {
         type: 'bar',
-        plugins: [typeStripePlugin, legendPlugin],
+        plugins: [typeStripePlugin],
         data: {
             labels,
             datasets: [
@@ -402,7 +378,7 @@ function renderCatOverview() {
         },
         options: {
             indexAxis: 'y', responsive: true, maintainAspectRatio: false,
-            layout: { padding: { left: 0, bottom: LEG_H } },
+            layout: { padding: { left: 0, bottom: 0 } },
             interaction: { mode: 'nearest', axis: 'y', intersect: true },
             plugins: {
                 legend: { display: false },
@@ -446,6 +422,21 @@ function renderCatOverview() {
             },
         },
     });
+
+    const legendHost = document.createElement('div');
+    legendHost.style.cssText =
+    'display:flex;flex-wrap:wrap;justify-content:center;gap:4px 10px;margin-top:.4rem;font-size:11px;';
+    
+    seen.forEach(s => {
+        const span = document.createElement('span');
+        span.style.cssText = 'display:inline-flex;align-items:center;gap:5px';
+        span.innerHTML =
+            `<span style="display:inline-block;width:11px;height:11px;border-radius:2px;` +
+            `background:${s.color};flex-shrink:0"></span>${s.label}`;
+        legendHost.appendChild(span);
+    });
+    
+    wrap.appendChild(legendHost);
 
     // Download-Button in statischen XSL-Container einfügen (id="cat-overview-dl")
     // Dieser Container existiert im HTML und ist unabhängig von cat-overview-wrap
