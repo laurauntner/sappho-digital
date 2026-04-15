@@ -14,6 +14,94 @@ Chart.defaults.plugins.tooltip.titleFont        = { family: 'Geist, system-ui, s
 Chart.defaults.plugins.tooltip.bodyFont         = { family: 'Geist, system-ui, sans-serif', size: 12 };
 Chart.defaults.plugins.tooltip.padding          = 8;
 
+// ── Download-Hilfsfunktionen ──────────────────────────────────────────────
+
+// Erzeugt einen Download-Button nach `container` (nie darin → ResizeObserver sicher).
+// Duplikate werden anhand des Dateinamens verhindert.
+function _mkDlWrap(filename, clickFn, container) {
+    const eid = 'dl-' + filename.replace(/[^a-z0-9]/gi, '-');
+    const existing = document.getElementById(eid);
+    if (existing) existing.remove();
+
+    const wrap = document.createElement('div');
+    wrap.id = eid;
+    wrap.style.cssText = 'text-align:center;margin-top:.35rem;margin-bottom:.1rem;flex-basis:100%;min-width:0;';
+    const btn = document.createElement('button');
+    btn.textContent = 'PNG';
+    btn.title       = 'Grafik als PNG herunterladen';
+    btn.style.cssText =
+        'font-family:Geist,system-ui,sans-serif;font-size:.72rem;' +
+        'padding:.2rem .6rem;border-radius:.3rem;cursor:pointer;' +
+        'border:1px solid #d1d5db;background:#f9fafb;color:#374151;' +
+        'transition:background .15s;';
+    btn.addEventListener('mouseenter', () => btn.style.background = '#f3f4f6');
+    btn.addEventListener('mouseleave', () => btn.style.background = '#f9fafb');
+    btn.addEventListener('click', clickFn);
+    wrap.appendChild(btn);
+    if (container && container.parentNode) {
+        container.parentNode.insertBefore(wrap, container.nextSibling);
+    } else if (container) {
+        container.appendChild(wrap);
+    }
+    return btn;
+}
+
+// Canvas (Chart.js): weißer Hintergrund; alle Beschriftungen sind im Canvas.
+function downloadChart(canvas, filename) {
+    const off = document.createElement('canvas');
+    off.width  = canvas.width;
+    off.height = canvas.height;
+    const oc = off.getContext('2d');
+    oc.fillStyle = '#ffffff';
+    oc.fillRect(0, 0, off.width, off.height);
+    oc.drawImage(canvas, 0, 0);
+    const a = document.createElement('a');
+    a.href     = off.toDataURL('image/png');
+    a.download = filename + '.png';
+    a.click();
+}
+
+// SVG-Grafiken (Bubble, Heatmap, Sankey, Pairs, PC): SVG → Canvas → PNG
+function downloadSvg(svgEl, filename) {
+    if (!svgEl) return;
+    const bb  = svgEl.getBoundingClientRect();
+    const w   = svgEl.viewBox?.baseVal?.width  || bb.width  || 800;
+    const h   = svgEl.viewBox?.baseVal?.height || bb.height || 600;
+    const xml = new XMLSerializer().serializeToString(svgEl);
+    const url = URL.createObjectURL(new Blob([xml], { type: 'image/svg+xml;charset=utf-8' }));
+    const img = new Image();
+    img.onload = () => {
+        const cv  = document.createElement('canvas');
+        cv.width  = w * 2; cv.height = h * 2;
+        const ctx = cv.getContext('2d');
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(0, 0, cv.width, cv.height);
+        ctx.scale(2, 2);
+        ctx.drawImage(img, 0, 0, w, h);
+        URL.revokeObjectURL(url);
+        const a = document.createElement('a');
+        a.href     = cv.toDataURL('image/png');
+        a.download = filename + '.png';
+        a.click();
+    };
+    img.src = url;
+}
+
+// Button für Chart.js-Canvas
+function addDownloadBtn(canvas, filename, container) {
+    return _mkDlWrap(filename, () => downloadChart(canvas, filename), container);
+}
+
+// Button für SVG-basierte Grafiken
+function addDownloadSvgBtn(svgOrContainer, filename, container) {
+    return _mkDlWrap(filename, () => {
+        const svgEl = svgOrContainer && svgOrContainer.tagName === 'svg'
+            ? svgOrContainer
+            : svgOrContainer && svgOrContainer.querySelector('svg');
+        downloadSvg(svgEl, filename);
+    }, container);
+}
+
 const charts = {};
 
 // ── Zahlenformatierung: Tausenderpunkt + Dezimalkomma (de-DE) ─────────────────
@@ -86,6 +174,11 @@ function buildCategory(cat) {
         head.classList.toggle('open', !isOpen);
         if (!isOpen && !charts[cat.key]) {
             renderChart(cat);
+            // Download-Button erst nach Render einfügen
+            requestAnimationFrame(() => {
+                const c = document.getElementById('chart-' + cat.key);
+                if (c) addDownloadBtn(c, 'phaenomene_' + cat.key, wrap);
+            });
         }
     });
 
@@ -213,65 +306,52 @@ function renderCatOverview() {
     allItems.sort((a, b) => parseFloat(b.pctReception) - parseFloat(a.pctReception));
     const items = allItems.slice(0, topN);
 
-    const labels    = uniqueLabels(items.map(i => i.label));
-    const pctS      = items.map(i => parseFloat(i.pctSappho));
-    const pctR      = items.map(i => parseFloat(i.pctReception));
+    const labels     = uniqueLabels(items.map(i => i.label));
+    const pctS       = items.map(i => parseFloat(i.pctSappho));
+    const pctR       = items.map(i => parseFloat(i.pctReception));
     const typeColors = items.map(i => (FTYPE_META[i.catKey] || {}).color || '#6b7280');
-    const maxX      = xMax(items);
-    const height    = canvasHeight(items.length);
+    const maxX       = xMax(items);
+    const height     = canvasHeight(items.length);
 
-    wrap.innerHTML = `<div class="chart-wrap"><canvas id="chart-cat-overview" style="height:${height}px"></canvas></div>`;
+    // Eindeutige Kategorien für die Legende
+    const seen = [];
+    items.forEach(item => {
+        if (!seen.find(s => s.key === item.catKey))
+            seen.push({ key: item.catKey, label: item.catLabel,
+                        color: (FTYPE_META[item.catKey] || {}).color || '#6b7280' });
+    });
+
+    // Legendenhöhe berechnen und unten im Canvas einplanen
+    const LEG_ROWS = Math.ceil(seen.length / 3);
+    const LEG_H    = LEG_ROWS * 18 + 12;
+
+    wrap.innerHTML = `<div class="chart-wrap"><canvas id="chart-cat-overview" style="height:${height + LEG_H}px"></canvas></div>`;
     const canvas = document.getElementById('chart-cat-overview');
-    const ctx = canvas.getContext('2d');
+    const ctx    = canvas.getContext('2d');
 
-    // Plugin: nur 3px Typfarb-Streifen links
-    // splitLabel ist global definiert
-
+    // Plugin 1: Y-Achsen-Labels mit farbigen Punkten
     const typeStripePlugin = {
         id: 'typeStripe',
         afterDraw(chart) {
             const { ctx: c, scales: { y }, chartArea } = chart;
             const labelW = chartArea.left;
-
             items.forEach((item, i) => {
                 const color  = typeColors[i];
                 const top    = y.getPixelForValue(i) - y.height / items.length / 2;
                 const bottom = y.getPixelForValue(i) + y.height / items.length / 2;
                 const h      = bottom - top;
                 const lines  = splitLabel(labels[i], labelW);
-
                 c.save();
-
-                // Text
-                c.fillStyle = '#1f2937';
                 c.font = `${FONT_SIZE}px Geist, system-ui, sans-serif`;
-                c.textAlign = 'right';
-                c.textBaseline = 'middle';
-                
-                const x = labelW - 6;
-                const gap = 6;      // Abstand zwischen Punkt und Text
-                const radius = 3;
-                
-                // breiteste Zeile bestimmen
-                const longestLine = lines.reduce((a, b) => (
-                    c.measureText(a).width > c.measureText(b).width ? a : b
-                ), lines[0]);
-                
+                c.textAlign = 'right'; c.textBaseline = 'middle';
+                const x = labelW - 6, gap = 6, radius = 3;
+                const longestLine = lines.reduce((a, b) =>
+                    c.measureText(a).width > c.measureText(b).width ? a : b, lines[0]);
                 const textWidth = c.measureText(longestLine).width;
-                
-                // linker Anfang des Textes
-                const textLeft = x - textWidth;
-                
-                // Punkt links vor den Text
-                const dotX = textLeft - gap - radius;
+                const dotX = x - textWidth - gap - radius;
                 const dotY = top + h / 2;
-                
-                c.beginPath();
-                c.fillStyle = color;
-                c.arc(dotX, dotY, radius, 0, Math.PI * 2);
-                c.fill();
-                
-                // Text zeichnen
+                c.beginPath(); c.fillStyle = color;
+                c.arc(dotX, dotY, radius, 0, Math.PI * 2); c.fill();
                 c.fillStyle = '#1f2937';
                 if (lines.length === 1) {
                     c.fillText(lines[0], x, top + h / 2);
@@ -279,70 +359,50 @@ function renderCatOverview() {
                     c.fillText(lines[0], x, top + h / 2 - 7);
                     c.fillText(lines[1], x, top + h / 2 + 7);
                 }
-
                 c.restore();
             });
         },
     };
 
-    // Legende als SVG links neben dem Chart aufbauen (einmalig, nach Chart-Render)
-    const buildSideLegend = () => {
-        const existing = wrap.querySelector('.cat-side-legend');
-        if (existing) existing.remove();
-
-        // Einzigartige Kategorien in Reihenfolge ihres ersten Auftretens
-        const seen = [];
-        items.forEach(item => {
-            if (!seen.find(s => s.key === item.catKey)) {
-                seen.push({ key: item.catKey, label: item.catLabel, color: (FTYPE_META[item.catKey] || {}).color || '#6b7280' });
-            }
-        });
-
-        const legendEl = document.createElement('div');
-        legendEl.className = 'cat-side-legend';
-        legendEl.style.cssText = 'display:flex;flex-direction:column;gap:6px;justify-content:center;padding:4px 6px 4px 0;flex-shrink:0;';
-
-        seen.forEach(s => {
-            const row = document.createElement('div');
-            row.style.cssText = 'display:flex;align-items:center;gap:5px;white-space:nowrap;font-size:11px;font-family:Geist,system-ui,sans-serif;color:#374151;';
-            row.innerHTML = `<span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${s.color};flex-shrink:0"></span>${s.label}`;
-            legendEl.appendChild(row);
-        });
-
-        const chartWrap = wrap.querySelector('.chart-wrap');
-        chartWrap.style.cssText = 'display:flex;align-items:flex-start;gap:8px;overflow-x:auto;';
-        chartWrap.insertBefore(legendEl, chartWrap.firstChild);
+    // Plugin 2: Kategorie-Legende unterhalb der Balken direkt auf Canvas
+    const legendPlugin = {
+        id: 'catLegend',
+        afterDraw(chart) {
+            const { ctx: c, chartArea, width } = chart;
+            const PAD   = 12, ROW_H = 18, SW = 10, COLS = 3;
+            const colW  = Math.floor((width - PAD * 2) / COLS);
+            const startY = chartArea.bottom + 10;
+            c.save();
+            c.font = '11px Geist, system-ui, sans-serif';
+            c.textBaseline = 'middle';
+            seen.forEach((s, i) => {
+                const col = i % COLS, row = Math.floor(i / COLS);
+                const x = PAD + col * colW, y = startY + row * ROW_H;
+                c.fillStyle = s.color;
+                if (c.roundRect) { c.beginPath(); c.roundRect(x, y, SW, SW, 2); c.fill(); }
+                else { c.fillRect(x, y, SW, SW); }
+                c.fillStyle = '#374151';
+                c.fillText(s.label, x + SW + 5, y + SW / 2);
+            });
+            c.restore();
+        },
     };
 
-    const chartInstance = new Chart(ctx, {
+    new Chart(ctx, {
         type: 'bar',
-        plugins: [typeStripePlugin],
+        plugins: [typeStripePlugin, legendPlugin],
         data: {
             labels,
             datasets: [
-                {
-                    label: `Sappho-Fragmente (n = ${fmtN(DATA.nSappho)})`,
-                    data: pctS,
-                    backgroundColor: C.s,
-                    borderColor: C.sLine,
-                    borderWidth: 2,
-                    borderRadius: 2,
-                },
-                {
-                    label: `Rezeptionszeugnisse (n = ${fmtN(DATA.nReception)})`,
-                    data: pctR,
-                    backgroundColor: C.r,
-                    borderColor: C.rLine,
-                    borderWidth: 2,
-                    borderRadius: 2,
-                },
+                { label: `Sappho-Fragmente (n = ${fmtN(DATA.nSappho)})`,      data: pctS,
+                  backgroundColor: C.s, borderColor: C.sLine, borderWidth: 2, borderRadius: 2 },
+                { label: `Rezeptionszeugnisse (n = ${fmtN(DATA.nReception)})`, data: pctR,
+                  backgroundColor: C.r, borderColor: C.rLine, borderWidth: 2, borderRadius: 2 },
             ],
         },
         options: {
-            indexAxis: 'y',
-            responsive: true,
-            maintainAspectRatio: false,
-            layout: { padding: { left: 0 } },
+            indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+            layout: { padding: { left: 0, bottom: LEG_H } },
             interaction: { mode: 'nearest', axis: 'y', intersect: true },
             plugins: {
                 legend: { display: false },
@@ -354,16 +414,15 @@ function renderCatOverview() {
                         if (idx == null) return;
                         const item     = items[idx];
                         const singular = (FTYPE_META[item.catKey] || {}).singular || item.catLabel;
-                        const pctS     = parseFloat(item.pctSappho).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
-                        const pctR     = parseFloat(item.pctReception).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
+                        const pctS2    = parseFloat(item.pctSappho).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
+                        const pctR2    = parseFloat(item.pctReception).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
                         const html =
                             `<strong>${item.label}</strong>`
                             + `<br><span style="font-size:10px;color:#6b7280">(${singular})</span>`
-                            + `<br><span style="color:#374151">Sappho: ${pctS}% (${item.countSappho}/${fmtN(DATA.nSappho)})</span>`
-                            + `<br><span style="color:#374151">Rezeption: ${pctR}% (${item.countReception}/${fmtN(DATA.nReception)})</span>`;
-                        const t   = getPdTip();
-                        t.innerHTML     = html;
-                        t.style.display = 'block';
+                            + `<br><span style="color:#374151">Sappho: ${pctS2}% (${item.countSappho}/${fmtN(DATA.nSappho)})</span>`
+                            + `<br><span style="color:#374151">Rezeption: ${pctR2}% (${item.countReception}/${fmtN(DATA.nReception)})</span>`;
+                        const t = getPdTip();
+                        t.innerHTML = html; t.style.display = 'block';
                         const e = tooltip._eventPosition;
                         if (e) {
                             const pos = chart.canvas.getBoundingClientRect();
@@ -377,17 +436,47 @@ function renderCatOverview() {
                 x: {
                     min: 0, max: maxX,
                     ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => v + '%', stepSize: 5 },
-                    grid: { color: 'rgba(0,0,0,0.06)' },
+                    grid:  { color: 'rgba(0,0,0,0.06)' },
                 },
                 y: {
                     ticks: { font: { family: 'Geist, system-ui', size: 12 }, autoSkip: false, color: 'transparent' },
-                    grid: { display: false },
+                    grid:  { display: false },
                     afterFit(scale) { scale.width = 220; },
                 },
             },
         },
     });
-    buildSideLegend();
+
+    // Download-Button in statischen XSL-Container einfügen (id="cat-overview-dl")
+    // Dieser Container existiert im HTML und ist unabhängig von cat-overview-wrap
+    const dlContainer = document.getElementById('cat-overview-dl');
+    if (dlContainer) {
+        dlContainer.innerHTML = '';
+        const btn = document.createElement('button');
+        btn.textContent = 'PNG';
+        btn.title       = 'Grafik als PNG herunterladen';
+        btn.style.cssText =
+            'font-family:Geist,system-ui,sans-serif;font-size:.72rem;' +
+            'padding:.2rem .6rem;border-radius:.3rem;cursor:pointer;' +
+            'border:1px solid #d1d5db;background:#f9fafb;color:#374151;transition:background .15s;';
+        btn.addEventListener('mouseenter', () => btn.style.background = '#f3f4f6');
+        btn.addEventListener('mouseleave', () => btn.style.background = '#f9fafb');
+        btn.addEventListener('click', () => {
+            const cv = document.getElementById('chart-cat-overview');
+            if (!cv) return;
+            const off = document.createElement('canvas');
+            off.width = cv.width; off.height = cv.height;
+            const oc  = off.getContext('2d');
+            oc.fillStyle = '#ffffff';
+            oc.fillRect(0, 0, off.width, off.height);
+            oc.drawImage(cv, 0, 0);
+            const a = document.createElement('a');
+            a.href = off.toDataURL('image/png');
+            a.download = 'uebersicht_alle_phaenomene.png';
+            a.click();
+        });
+        dlContainer.appendChild(btn);
+    }
 }
 
 // Init
@@ -687,6 +776,102 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             labelCol.style.width = Math.min(320, maxW + 12) + 'px';
             if (charts['ri-main']) charts['ri-main'].resize();
+
+            // ── Download-Button: Labels (DOM) + Balken (Canvas) zusammenführen ──
+            // `canvas` enthält nur die Balken mit leeren Y-Labels; die Beschriftungen
+            // stehen als HTML in `labelCol`. Für den Export werden beide manuell auf
+            // ein Offscreen-Canvas gezeichnet.
+            const eid = 'dl-rezeptionsindizes';
+            const existingDl = document.getElementById(eid);
+            if (existingDl) existingDl.remove();
+
+            const dlWrap = document.createElement('div');
+            dlWrap.id = eid;
+            dlWrap.style.cssText = 'text-align:center;margin-top:.35rem;margin-bottom:.1rem;';
+            const dlBtn = document.createElement('button');
+            dlBtn.textContent = 'PNG';
+            dlBtn.title = 'Grafik als PNG herunterladen';
+            dlBtn.style.cssText =
+                'font-family:Geist,system-ui,sans-serif;font-size:.72rem;' +
+                'padding:.2rem .6rem;border-radius:.3rem;cursor:pointer;' +
+                'border:1px solid #d1d5db;background:#f9fafb;color:#374151;' +
+                'transition:background .15s;';
+            dlBtn.addEventListener('mouseenter', () => dlBtn.style.background = '#f3f4f6');
+            dlBtn.addEventListener('mouseleave', () => dlBtn.style.background = '#f9fafb');
+
+            dlBtn.addEventListener('click', () => {
+                const DPR       = window.devicePixelRatio || 1;
+                const labelW    = labelCol.getBoundingClientRect().width;
+                const chartW    = canvas.getBoundingClientRect().width;
+                const totalW    = Math.round((labelW + chartW) * DPR);
+                const totalH    = Math.round(canvas.getBoundingClientRect().height * DPR);
+
+                const off = document.createElement('canvas');
+                off.width  = totalW;
+                off.height = totalH;
+                const oc = off.getContext('2d');
+
+                // weißer Hintergrund
+                oc.fillStyle = '#ffffff';
+                oc.fillRect(0, 0, off.width, off.height);
+
+                // ── Labels manuell zeichnen ──────────────────────────────────
+                // Chart.js setzt oben+unten je ROW_H/2 als padding; das gleiche
+                // Padding gilt für die Label-Spalte (per CSS). Die n Zeilen sind
+                // gleichmäßig über (totalH - ROW_H*DPR) verteilt (space-around).
+                const PAD_TOP  = Math.round((ROW_H / 2) * DPR);
+                const rowH_px  = Math.round(ROW_H * DPR);
+                const innerH   = totalH - PAD_TOP * 2;
+                const cellH    = sorted.length > 0 ? innerH / sorted.length : rowH_px;
+
+                // Text rechts bündig bis zum rechten Rand von labelCol (mit 10px Abstand)
+                const labelRight = Math.round((labelW - 10) * DPR);
+
+                sorted.forEach((d, i) => {
+                    // Zellenmitte (space-around: erster Mittelpunkt bei cellH/2 nach PAD_TOP)
+                    const cy = PAD_TOP + cellH * i + cellH / 2;
+
+                    const hasAuthor = !!d.authors;
+                    if (hasAuthor) {
+                        // zweizeilig: Titel oben, Autor unten
+                        const lineGap = Math.round(7 * DPR);
+                        const titleY  = cy - lineGap / 2;
+                        const authorY = cy + lineGap / 2 + Math.round(10 * DPR);
+
+                        oc.font         = `${Math.round(11 * DPR)}px Geist, system-ui, sans-serif`;
+                        oc.fillStyle    = '#1f2937';
+                        oc.textAlign    = 'right';
+                        oc.textBaseline = 'alphabetic';
+                        oc.fillText(d.label, labelRight, titleY);
+
+                        oc.font         = `${Math.round(10 * DPR)}px Geist, system-ui, sans-serif`;
+                        oc.fillStyle    = '#6b7280';
+                        oc.fillText('(' + d.authors + ')', labelRight, authorY);
+                    } else {
+                        oc.font         = `${Math.round(11 * DPR)}px Geist, system-ui, sans-serif`;
+                        oc.fillStyle    = '#1f2937';
+                        oc.textAlign    = 'right';
+                        oc.textBaseline = 'middle';
+                        oc.fillText(d.label, labelRight, cy);
+                    }
+                });
+
+                // ── Chart-Canvas rechts daneben ──────────────────────────────
+                const labelWpx = Math.round(labelW * DPR);
+                oc.drawImage(canvas, labelWpx, 0, Math.round(chartW * DPR), totalH);
+
+                const a = document.createElement('a');
+                a.href     = off.toDataURL('image/png');
+                a.download = 'rezeptionsindizes.png';
+                a.click();
+            });
+
+            dlWrap.appendChild(dlBtn);
+            if (outer.parentNode) {
+                outer.parentNode.insertBefore(dlWrap, outer.nextSibling);
+            } else {
+                outer.appendChild(dlWrap);
+            }
         });
     }
 
@@ -819,6 +1004,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
             },
         });
+        addDownloadBtn(canvas, 'rezeptionsindizes_streudiagramm', chartWrap);
     }
 
     // ── Init ──────────────────────────────────────────────────────────────────
@@ -1230,6 +1416,9 @@ function renderSankey2(fragLabel) {
             .on('mousemove',  e => moveTip(e))
             .on('mouseleave', () => hideTip());
     });
+
+    const _sankeyWrap = document.getElementById('sankey-svg-wrap');
+    if (_sankeyWrap) addDownloadSvgBtn(_sankeyWrap, 'phaenomene_nach_fragment', _sankeyWrap);
 }
 
 document.addEventListener('DOMContentLoaded', initSankey);
@@ -1423,6 +1612,7 @@ function buildBubbleChart(features, decades, container, showType = false) {
     scroller.style.cssText = 'overflow-x:auto;overflow-y:auto;max-height:600px;padding-bottom:4px';
     scroller.appendChild(svg);
     container.appendChild(scroller);
+    addDownloadSvgBtn(scroller, 'phaenomene_im_laufe_der_zeit_' + (container.id || 'chart'), container);
 }
 
 function initPdist() {
@@ -1720,6 +1910,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
     scroller.style.cssText = 'overflow-x:auto;overflow-y:auto;max-height:600px;padding-bottom:4px';
     scroller.appendChild(svg);
     container.appendChild(scroller);
+    addDownloadSvgBtn(scroller, 'phaenomene_nach_gattung_' + (container.id || 'chart'), container);
 }
 
 function renderGdistOverview() {
@@ -2161,6 +2352,11 @@ function renderPlotComponents(plotUri, topN) {
             + `background:${m.color};opacity:0.85;flex-shrink:0"></span>${m.label}`;
         legend.appendChild(span);
     });
+
+    const _pcWrap  = document.getElementById('pc-svg-wrap');
+    const _pcLeg   = document.getElementById('pc-legend');
+    const _pcAnchor = _pcLeg || _pcWrap;
+    if (_pcWrap) addDownloadSvgBtn(_pcWrap, 'stoff_komponenten', _pcAnchor);
 }
 
 document.addEventListener('DOMContentLoaded', initPlotComponents);
@@ -2311,6 +2507,7 @@ function renderPersonDuality() {
             },
         },
     });
+    addDownloadBtn(canvas, 'personenreferenzen_und_figuren', wrap);
 }
 
 function initPersonDuality() {
@@ -2451,6 +2648,7 @@ function renderWorkCitation() {
             },
         },
     });
+    addDownloadBtn(canvas, 'werkreferenzen_und_zitate', wrap);
 
 }
 
@@ -2562,6 +2760,8 @@ function renderInt31FtypeBar() {
             },
         },
     });
+    const _i31c = document.getElementById('int31-ftype-canvas');
+    if (_i31c) addDownloadBtn(_i31c, 'intertextuelle_relationen_phaenomentypen', wrap);
 }
 
 // ── Sunburst + Sehnen ────────────────────────────────────────────────────────
@@ -2804,6 +3004,12 @@ function renderInt31Sunburst() {
             legWrap.appendChild(span);
         });
     }
+
+    // Download-Button für Sunburst-SVG – nach der Legende einfügen
+    const _sbWrap  = document.getElementById('int31-sunburst-wrap');
+    const _sbLeg   = document.getElementById('int31-sunburst-legend');
+    const _sbAnchor = _sbLeg || _sbWrap;
+    if (_sbWrap) addDownloadSvgBtn(_sbWrap, 'kookkurrenzen_phaenomene', _sbAnchor);
 }
 
 // ── Kombinationsliste ────────────────────────────────────────────────────────
@@ -2890,6 +3096,7 @@ function renderInt31Pairs() {
     scroller.appendChild(svg);
     wrap.innerHTML = '';
     wrap.appendChild(scroller);
+    addDownloadSvgBtn(scroller, 'intertextuelle_relationen_paare', wrap);
 }
 
 // ── Statistik 3: Intertextuelle Beziehungen und Textähnlichkeiten ───────────────
@@ -3246,6 +3453,7 @@ function initStat10() {
         `<div class="chart-wrap"><canvas id="stat10-int31-hist" style="height:260px"></canvas></div>`;
     wrap.appendChild(int31Section);
     renderGroupedBar('stat10-int31-hist', d.int31Hist,  '', 'Anzahl intertextueller Relationen');
+    addDownloadBtn(document.getElementById('stat10-int31-hist'), 'durchschnittliche_relationen_histogramm', int31Section.querySelector('.chart-wrap') || int31Section);
 
     // Shared-Phänomene-Histogramm
     const sharedSection = document.createElement('div');
@@ -3255,6 +3463,7 @@ function initStat10() {
         `<div class="chart-wrap"><canvas id="stat10-shared-hist" style="height:260px"></canvas></div>`;
     wrap.appendChild(sharedSection);
     renderGroupedBar('stat10-shared-hist', d.sharedHist, '', 'Ø gemeinsame Phänomene');
+    addDownloadBtn(document.getElementById('stat10-shared-hist'), 'gemeinsame_phaenomene_histogramm', sharedSection.querySelector('.chart-wrap') || sharedSection);
 }
 
 document.addEventListener('DOMContentLoaded', initStat10);
@@ -3404,6 +3613,7 @@ function renderGenderOverview() {
             },
         },
     });
+    addDownloadBtn(donutCanvas, 'genderspezifische_analysen_uebersicht', donutCanvas.parentElement || document.getElementById('gender-pane-overview'));
 }
 
 // ── Pane 2: Zeitverlauf (alle Autor_innen) ────────────────────────────────────
@@ -3487,6 +3697,7 @@ function renderGenderTimeChart() {
             },
         },
     });
+    addDownloadBtn(document.getElementById('chart-gender-time'), 'genderspezifische_analysen_zeitverlauf', document.getElementById('chart-gender-time')?.parentElement || document.getElementById('gender-pane-time'));
 }
 
 // ── Pane 3: Gattungen × Geschlecht ──────────────────────────────────────────
@@ -3511,7 +3722,6 @@ function renderGenderGenreChart() {
         const t = maleRaw[i] + femRaw[i] + unkRaw[i];
         return t > 0 ? parseFloat((v / t * 100).toFixed(1)) : 0;
     });
-    // 0 → null damit kein Stummel erscheint; minBarLength gilt nur für > 0
     const nullZero = arr => arr.map(v => v === 0 ? null : v);
     const nullZeroPct = arr => arr.map(v => v === 0 ? null : v);
 
@@ -3587,9 +3797,10 @@ function renderGenderGenreChart() {
             },
         },
     });
+    addDownloadBtn(document.getElementById('chart-gender-genre'), 'genderspezifische_analysen_gattungen', document.getElementById('chart-gender-genre')?.parentElement || document.getElementById('gender-pane-genre'));
 }
 
-// ── Pane 3: Phänomene – aufklappbare Sektionen pro Phänomentyp (wie Stat 1) ──
+// ── Pane 3: Phänomene – aufklappbare Sektionen pro Phänomentyp ──
 
 const _genderPhenomCharts = {};
 
@@ -3611,7 +3822,7 @@ function renderGenderPhenomSections() {
         });
     }
 
-    // Phänomene nach Typ gruppieren (Reihenfolge wie FTYPE_META)
+    // Phänomene nach Typ gruppieren
     const ftypeOrder = Object.keys(FTYPE_META);
     const byType = {};
     pd.features.forEach(f => {
@@ -3776,6 +3987,7 @@ function renderGenderPhenomSections() {
                 },
             },
         });
+        addDownloadBtn(ovCanvas, 'genderspezifische_analysen_phaenomene_uebersicht', ovWrap);
 
     }
 
@@ -3815,7 +4027,7 @@ function renderGenderPhenomSections() {
     let _gTopChartM = null;
     let _gTopChartF = null;
 
-    // Typ-Streifen-Plugin — kompaktere Labels für halbe Breite
+    // Typ-Streifen-Plugin
     const FS2 = 10, FW2 = 6.0;
     const splitG = (lbl, maxW) => {
         const c1 = Math.floor((maxW - 12) / FW2) - 2;
@@ -3880,7 +4092,6 @@ function renderGenderPhenomSections() {
         const labels = uniqueLabels(sorted.map(f => f.label));
         const data   = sorted.map(f => tot > 0 ? parseFloat((f.gCount / tot * 100).toFixed(2)) : 0);
         const maxX   = Math.min(100, Math.ceil(Math.max(...data) * 1.05 / 5) * 5) || 10;
-        // Kompaktere Zeilenhöhe für halbe Breite
         const chartH = Math.max(120, sorted.length * 26 + 40);
 
         if (existingChart) { existingChart.destroy(); }
@@ -3936,7 +4147,6 @@ function renderGenderPhenomSections() {
                         ticks: { font: { family: 'Geist, system-ui', size: 10 }, autoSkip: false, color: 'transparent' },
                         grid: { display: false },
                         afterFit(scale) {
-                            // Breite dynamisch aus dem längsten Label berechnen
                             const maxLen = labels.reduce((m, l) => Math.max(m, l.length), 0);
                             scale.width = Math.min(200, Math.max(100, maxLen * 6 + 28));
                         },
@@ -3944,6 +4154,7 @@ function renderGenderPhenomSections() {
                 },
             },
         });
+        addDownloadBtn(colCanvas, 'genderspezifische_analysen_top_' + gk, colChartWrap);
         return chart;
     }
 
@@ -4117,6 +4328,7 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
             },
         },
     });
+    addDownloadBtn(canvas, 'genderspezifische_analysen_phaenomene_' + ft, canvas.parentElement || document.getElementById('gender-phenom-body-' + ft));
 }
 
 // ── Init ──────────────────────────────────────────────────────────────────────
@@ -4370,6 +4582,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         canvas.style.cursor = 'pointer';
+        addDownloadBtn(canvas, (canvasId.includes('slscatter') ? 'popularitaetsanalysen_sitelinks_streudiagramm' : 'popularitaetsanalysen_qrank_streudiagramm'), canvas.parentElement || document.body);
         return chart;
     }
 
@@ -4475,11 +4688,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                     lines.push(` ${xTitle0}: ${typeof d0[ctx.dataIndex] === 'number' && d0[ctx.dataIndex] % 1 !== 0
                                         ? d0[ctx.dataIndex].toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) + '%'
                                         : Number(d0[ctx.dataIndex]).toLocaleString('de-DE')}`);
-                                    if (d.qrank !== null && d.qrank !== undefined) {
+                                    if (xTitle0 === 'QRank normalisiert' && d.qrank !== null && d.qrank !== undefined) {
                                         lines.push(` QRank absolut: ${d.qrank.toLocaleString('de-DE')}`);
+                                    } else if (xTitle0 === 'Sitelinks normalisiert' && d.sitelinks !== null && d.sitelinks !== undefined) {
+                                        lines.push(` Sitelinks absolut: ${d.sitelinks.toLocaleString('de-DE')}`);
                                     }
                                 } else {
-                                    lines.push(` Korpuspräsenz: ${d.workCount}`);
+                                    lines.push(` ${xTitle1}: ${typeof d1[ctx.dataIndex] === 'number' ? d1[ctx.dataIndex].toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) + '%' : d1[ctx.dataIndex]}`);
+                                    lines.push(` Korpuspräsenz absolut: ${d.workCount}`);
                                 }
                                 return lines;
                             }
@@ -4497,7 +4713,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         position: 'top', min: 0,
                         ticks: { font: { family: 'Geist, system-ui', size: 11 }, stepSize: 5 },
                         grid:  { display: false },
-                        title: { display: true, text: 'Korpuspräsenz', font: { family: 'Geist, system-ui', size: 10 }, color: '#6b7280' },
+                        title: { display: true, text: xTitle1, font: { family: 'Geist, system-ui', size: 10 }, color: '#6b7280' },
                     },
                     y: {
                         ticks: { font: { family: 'Geist, system-ui', size: 11 }, autoSkip: false },
@@ -4510,39 +4726,43 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
             },
         });
+        addDownloadBtn(canvas, (chartKey === 'topsitelinks' ? 'popularitaetsanalysen_top_sitelinks' : 'popularitaetsanalysen_top_qrank'), wrap);
         canvas.style.cursor = 'pointer';
     }
 
     // ── Top QRank ────────────────────────────────────────────────────
     function renderWmTopQrank(state) {
-        const selVal     = document.getElementById('sel-wm-qrank-topn')?.value || '50';
-        const topN       = selVal === '0' ? Infinity : parseInt(selVal);
-        const sorted     = [...state.WM_WITH_QRANK].sort((a, b) => b.qrank - a.qrank);
-        const items      = isFinite(topN) ? sorted.slice(0, topN) : sorted;
-        const globalMaxQ = sorted[0]?.qrank || 1;
-        const metaEl     = document.getElementById('wm-scatter-meta');
+        const selVal        = document.getElementById('sel-wm-qrank-topn')?.value || '50';
+        const topN          = selVal === '0' ? Infinity : parseInt(selVal);
+        const sorted        = [...state.WM_WITH_QRANK].sort((a, b) => b.qrank - a.qrank);
+        const items         = isFinite(topN) ? sorted.slice(0, topN) : sorted;
+        const globalMaxQ    = sorted[0]?.qrank || 1;
+        const globalMaxWork = Math.max(...state.WM_DATA.map(d => d.workCount), 1);
+        const metaEl        = document.getElementById('wm-scatter-meta');
         if (metaEl) metaEl.textContent = `${state.WM_WITH_QRANK.length} Autor_innen mit QRank`;
         renderWmTopBar(
             state, 'topqrank', 'chart-wm-topqrank-inner', 'wm-topqrank-wrap', 'sel-wm-qrank-topn',
             () => items,
             d => parseFloat((d.qrank / globalMaxQ * 100).toFixed(2)),
-            d => d.workCount,
-            'QRank normalisiert', 'Korpuspräsenz'
+            d => parseFloat((d.workCount / globalMaxWork * 100).toFixed(2)),
+            'QRank normalisiert', 'Korpuspräsenz normalisiert'
         );
     }
 
     // ── Top Sitelinks ────────────────────────────────────────────────
     function renderWmTopSitelinks(state) {
-        const selVal = document.getElementById('sel-wm-sl-topn')?.value || '50';
-        const topN   = selVal === '0' ? Infinity : parseInt(selVal);
-        const sorted = [...state.WM_DATA].sort((a, b) => b.sitelinks - a.sitelinks);
-        const items  = isFinite(topN) ? sorted.slice(0, topN) : sorted;
+        const selVal          = document.getElementById('sel-wm-sl-topn')?.value || '50';
+        const topN            = selVal === '0' ? Infinity : parseInt(selVal);
+        const sorted          = [...state.WM_DATA].sort((a, b) => b.sitelinks - a.sitelinks);
+        const items           = isFinite(topN) ? sorted.slice(0, topN) : sorted;
+        const globalMaxSL     = sorted[0]?.sitelinks || 1;
+        const globalMaxWorkSL = Math.max(...state.WM_DATA.map(d => d.workCount), 1);
         renderWmTopBar(
             state, 'topsitelinks', 'chart-wm-topsitelinks-inner', 'wm-topsitelinks-bar-wrap', 'sel-wm-sl-topn',
             () => items,
-            d => d.sitelinks,
-            d => d.workCount,
-            'Sitelinks', 'Korpuspräsenz'
+            d => parseFloat((d.sitelinks / globalMaxSL * 100).toFixed(2)),
+            d => parseFloat((d.workCount / globalMaxWorkSL * 100).toFixed(2)),
+            'Sitelinks normalisiert', 'Korpuspräsenz normalisiert'
         );
     }
 
@@ -4595,6 +4815,57 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             }
         });
+        // custom download: canvas + HTML legend combined
+        (function() {
+            const eid = 'dl-popularitaetsanalysen_sitelinks_verteilung';
+            const existing = document.getElementById(eid);
+            if (existing) existing.remove();
+            const btnWrap = document.createElement('div');
+            btnWrap.id = eid;
+            btnWrap.style.cssText = 'text-align:center;margin-top:.4rem;';
+            const btn = document.createElement('button');
+            btn.textContent = 'PNG';
+            btn.title = 'Grafik als PNG herunterladen';
+            btn.style.cssText = 'font-family:Geist,system-ui,sans-serif;font-size:.72rem;padding:.2rem .6rem;border-radius:.3rem;cursor:pointer;border:1px solid #d1d5db;background:#f9fafb;color:#374151;transition:background .15s;';
+            btn.addEventListener('mouseenter', () => btn.style.background = '#f3f4f6');
+            btn.addEventListener('mouseleave', () => btn.style.background = '#f9fafb');
+            btn.addEventListener('click', () => {
+                const DPR = window.devicePixelRatio || 1;
+                const cw  = donutCanvas.width;
+                const ch  = donutCanvas.height;
+                const legItems = [...legendDiv.children].map(sp => {
+                    const sw = sp.querySelector('span');
+                    return { color: sw ? sw.style.background : '#6b7280', label: sp.textContent.trim() };
+                });
+                const PAD   = Math.round(10 * DPR);
+                const ROW_H = Math.round(20 * DPR);
+                const SW    = Math.round(12 * DPR);
+                const legH  = legItems.length * ROW_H + PAD * 2;
+                const off   = document.createElement('canvas');
+                off.width   = cw;
+                off.height  = ch + legH;
+                const oc    = off.getContext('2d');
+                oc.fillStyle = '#ffffff';
+                oc.fillRect(0, 0, off.width, off.height);
+                oc.drawImage(donutCanvas, 0, 0);
+                oc.font = `${Math.round(11 * DPR)}px Geist, system-ui, sans-serif`;
+                legItems.forEach((it, i) => {
+                    const x = Math.round(off.width * 0.1);
+                    const y = ch + PAD + i * ROW_H;
+                    oc.fillStyle = it.color;
+                    oc.fillRect(x, y, SW, SW);
+                    oc.fillStyle = '#374151';
+                    oc.textBaseline = 'middle';
+                    oc.fillText(it.label, x + SW + PAD, y + SW / 2);
+                });
+                const a = document.createElement('a');
+                a.href     = off.toDataURL('image/png');
+                a.download = 'popularitaetsanalysen_sitelinks_verteilung.png';
+                a.click();
+            });
+            btnWrap.appendChild(btn);
+            donutWrap.appendChild(btnWrap);
+        }());
     }
 
     // ── Init ──────────────────────────────────────────────────────────────────
