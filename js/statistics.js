@@ -2344,10 +2344,29 @@ function renderPlotComponents(plotUri, topN) {
         legend.appendChild(span);
     });
 
-    const _pcWrap  = document.getElementById('pc-svg-wrap');
-    const _pcLeg   = document.getElementById('pc-legend');
-    const _pcAnchor = _pcLeg || _pcWrap;
-    if (_pcWrap) addDownloadSvgBtn(_pcWrap, 'stoff_komponenten', _pcAnchor);
+    // PNG-Download-Button in den fixen Platzhalter-Div eintragen.
+    // pc-dl-wrap ist ein leerer <div id="pc-dl-wrap"/> im XSLT direkt nach pc-legend.
+    {
+        const _pcWrap  = document.getElementById('pc-svg-wrap');
+        const _dlTarget = document.getElementById('pc-dl-wrap');
+        if (_dlTarget) {
+            _dlTarget.innerHTML = '';
+            const _dlBtn = document.createElement('button');
+            _dlBtn.textContent = 'PNG';
+            _dlBtn.title = 'Grafik als PNG herunterladen';
+            _dlBtn.style.cssText =
+                'font-family:Geist,system-ui,sans-serif;font-size:.72rem;' +
+                'padding:.2rem .6rem;border-radius:.3rem;cursor:pointer;' +
+                'border:1px solid #d1d5db;background:#f9fafb;color:#374151;transition:background .15s;';
+            _dlBtn.addEventListener('mouseenter', () => _dlBtn.style.background = '#f3f4f6');
+            _dlBtn.addEventListener('mouseleave', () => _dlBtn.style.background = '#f9fafb');
+            _dlBtn.addEventListener('click', () => {
+                const svgEl = _pcWrap ? _pcWrap.querySelector('svg') : null;
+                downloadSvg(svgEl, 'stoff_komponenten');
+            });
+            _dlTarget.appendChild(_dlBtn);
+        }
+    }
 }
 
 document.addEventListener('DOMContentLoaded', initPlotComponents);
@@ -4217,26 +4236,45 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
 
     const FS = 11, FW = 6.5;
     const typeColors = items.map(f => (FTYPE_META[f.ftype] || {}).color || '#6b7280');
+    const splitLblGP = (lbl, maxW) => {
+        const c1 = Math.floor((maxW - 16) / FW) - 2;
+        const c2 = Math.floor((maxW - 16) / FW);
+        if (lbl.length <= c1) return [lbl];
+        const words = lbl.split(' ');
+        let best = null, cur = '';
+        for (let i = 0; i < words.length - 1; i++) {
+            cur = cur ? cur + ' ' + words[i] : words[i];
+            const rest = words.slice(i + 1).join(' ');
+            if (cur.length <= c2 && rest.length <= c2) best = { line1: cur, line2: rest };
+        }
+        if (best) return [best.line1, best.line2];
+        const mid = Math.floor(lbl.length / 2);
+        const brk = lbl.lastIndexOf(' ', mid + 6);
+        const sp  = brk > 4 ? brk : c2;
+        const l2r = lbl.slice(sp).trimStart();
+        return [lbl.slice(0, sp).trimEnd(), l2r.length > c2 ? l2r.slice(0, c2 - 1) + '…' : l2r];
+    };
     const stripePlugin = {
         id: 'genderPhenomStripe_' + ft,
         afterDraw(chart) {
             const { ctx: c, scales: { y }, chartArea } = chart;
             const lw = chartArea.left;
             items.forEach((item, i) => {
-                const color = typeColors[i];
                 const top   = y.getPixelForValue(i) - y.height / items.length / 2;
                 const bot   = y.getPixelForValue(i) + y.height / items.length / 2;
                 const h     = bot - top;
-                const lbl   = item.label;
-                const maxC  = Math.floor((lw - 16) / FW);
-                const disp  = lbl.length > maxC ? lbl.slice(0, maxC - 1) + '…' : lbl;
+                const lines = splitLblGP(labels[i], lw);
                 c.save();
                 c.font = `${FS}px Geist, system-ui, sans-serif`;
                 c.textAlign = 'right'; c.textBaseline = 'middle';
-                const x = lw - 6, gap = 6, r = 3;
-                const tw = c.measureText(disp).width;
+                const x = lw - 6;
                 c.fillStyle = '#1f2937';
-                c.fillText(disp, x, top + h / 2);
+                if (lines.length === 1) {
+                    c.fillText(lines[0], x, top + h / 2);
+                } else {
+                    c.fillText(lines[0], x, top + h / 2 - 7);
+                    c.fillText(lines[1], x, top + h / 2 + 7);
+                }
                 c.restore();
             });
         },
@@ -4284,14 +4322,7 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
                             const cnt  = cell ? cell.n : 0;
                             const pct  = ctx.parsed.x.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
                             const name = isMale ? 'Autoren' : 'Autorinnen';
-                            const uCell = f.cells.find(x => x.g === 'unknown');
-                            const uCnt  = uCell ? uCell.n : 0;
-                            const uPct  = pd.nUnknown > 0 ? (uCnt / pd.nUnknown * 100).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2}) : '0.00';
-                            const lines = [` ${name}: ${pct}% (${cnt}/${tot})`];
-                            if (ctx.datasetIndex === 1) {
-                                lines.push(` Kein Eintrag: ${uPct}% (${uCnt}/${fmtN(pd.nUnknown)})`);
-                            }
-                            return lines;
+                            return ` ${name}: ${pct}% (${cnt}/${tot})`;
                         },
                     },
                 },
