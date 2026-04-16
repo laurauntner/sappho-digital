@@ -716,6 +716,8 @@
                     </div>
                   </div>
                   <div id="cat-overview-wrap"/>
+                  <div id="cat-overview-dl"
+                    style="text-align:center;margin-top:.35rem;margin-bottom:.1rem"/>
                   <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
                   <div id="cats"/>
                 </div>
@@ -807,6 +809,8 @@
                   <div id="pc-placeholder" class="sankey-placeholder"/>
                   <div id="pc-svg-wrap"/>
                   <div id="pc-legend"/>
+                  <div id="pc-dl-wrap"
+                    style="text-align:center;margin-top:.35rem;margin-bottom:.1rem"/>
                 </div>
                 <div class="stats-wrap" id="stat10">
                   <p class="stats-subtitle">Statistik 10: Personenreferenzen und Figuren</p>
