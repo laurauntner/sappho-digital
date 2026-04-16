@@ -964,7 +964,7 @@
                       <span><span class="dot" style="background:rgba(94,23,235,0.75)"/>QRank
                         (normalisiert)</span>
                       <span><span class="dot" style="background:rgba(107,114,128,0.75)"
-                        />Korpuspräsenz</span>
+                        />Korpuspräsenz (normalisiert)</span>
                     </div>
                     <div id="wm-topqrank-wrap" class="chart-wrap"/>
                   </div>
@@ -993,10 +993,10 @@
                       </div>
                     </div>
                     <div class="legend">
-                      <span><span class="dot" style="background:rgba(94,23,235,0.75)"
-                        />Sitelinks</span>
+                      <span><span class="dot" style="background:rgba(94,23,235,0.75)"/>Sitelinks
+                        (normalisiert)</span>
                       <span><span class="dot" style="background:rgba(107,114,128,0.75)"
-                        />Korpuspräsenz</span>
+                        />Korpuspräsenz (normalisiert)</span>
                     </div>
                     <p class="stats-subtitle stats-subtitle-sm-top" style="text-align:center"
                       >Top-Autor_innen nach Sitelinks</p>
