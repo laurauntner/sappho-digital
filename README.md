@@ -33,7 +33,7 @@ For questions, suggestions, or reports of errors, feel free to reach out ([laura
 ---
 
 ### Citation recommendation
-Laura Untner: Sappho Digital. Die literarische Sappho-Rezeption im deutschsprachigen Raum. Vienna/Berlin 2024–[2027], https://sappho-digital.com.
+Laura Untner: Sappho Digital. Die literarische Sappho-Rezeption im deutschsprachigen Raum. Berlin/Vienna 2024–[2027], https://sappho-digital.com.
 
 ---
 
