@@ -577,13 +577,15 @@
                     aller einem Text zugeordneten analytischen Einheiten (Personen-, Orts- und
                     Werkreferenzen, Figuren, rhetorische Topoi, Motive, Themen, Stoffe und Zitate)
                     &#8211; und die intertextuelle Vernetzung <code>I(t)</code>, gemessen an der
-                    Anzahl der Intertext-Knoten, in denen der Text als Objekt auftritt. Da beide
-                    Rohwerte einer rechtsschiefen Verteilung folgen, werden sie logarithmisch
-                    transformiert (<code>log(1 + x)</code>), um den Einfluss von Ausrei&#223;ern zu
-                    minimieren, ohne jedoch die Rangordnung zu ver&#228;ndern. Als
-                    Normalisierungsankerpunkt dient der Median der exemplarisch analysierten Texte;
-                    durch Division durch das Doppelte des log-transformierten Medians wird dieser
-                    Ankerpunkt auf 0,5 gesetzt.</p>
+                    Anzahl der Intertext-Knoten, in denen der Text als Objekt auftritt. Da die
+                    Ph&#228;nomendichte einer ausgepr&#228;gten rechtsschiefen Verteilung folgt und
+                    die intertextuelle Vernetzung eine schw&#228;chere, aber gleichgerichtete
+                    Tendenz zeigt, werden beide Rohwerte logarithmisch transformiert (<code>log(1 +
+                      x)</code>); zugleich bildet diese Skalierung die Annahme ab, dass der
+                    Erkenntniswert jeder zus&#228;tzlichen Einheit mit wachsender Belegdichte
+                    abnimmt. Als Normalisierungsankerpunkt dient der Median der exemplarisch
+                    analysierten Texte; durch Division durch das Doppelte des log-transformierten
+                    Medians wird dieser Ankerpunkt auf 0,5 gesetzt.</p>
                   <p style="text-align:center;margin:1rem 0;"><strong><code>R(t) = 0,75 &#183;
                           P<sub>norm</sub>(t) + 0,25 &#183; I<sub>norm</sub>(t)</code></strong></p>
                   <p class="stats-desc">Die Ph&#228;nomendichte wird mit drei Vierteln gewichtet, da

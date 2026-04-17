@@ -198,6 +198,54 @@ def compute_index(ttl_path: str,
     return results
 
 
+def print_skewness(results: list[dict]) -> None:
+    """Gibt deskriptive Statistik und Pearson'sche Schiefe der Rohwerte aus.
+    Dient zur Überprüfung der Annahme rechtsschiefer Verteilung vor der
+    logarithmischen Transformation."""
+
+    def _mean(vals):
+        return sum(vals) / len(vals)
+
+    def _median(vals):
+        s = sorted(vals)
+        n = len(s)
+        mid = n // 2
+        return (s[mid] + s[mid - 1]) / 2 if n % 2 == 0 else float(s[mid])
+
+    def _stdev(vals):
+        m = _mean(vals)
+        variance = sum((v - m) ** 2 for v in vals) / (len(vals) - 1)
+        return math.sqrt(variance)
+
+    datasets = [
+        ("Phänomene (roh, alle Texte)",     [r["n_phenomena"] for r in results]),
+        ("INT31 (roh, Texte mit >=1 Bez.)", [r["n_int31"] for r in results if r["n_int31"] > 0]),
+    ]
+
+    print(f"\n{'─'*72}")
+    print(f"  Verteilungsdiagnose Rohwerte (vor log-Transformation)")
+    print(f"{'─'*72}")
+
+    for name, vals in datasets:
+        n = len(vals)
+        if n < 2:
+            print(f"  {name}: zu wenige Werte (n={n})")
+            continue
+        mean = _mean(vals)
+        med  = _median(vals)
+        sd   = _stdev(vals)
+        # Pearson'sche Schiefe: 3 * (mean - median) / sd
+        skew = 3 * (mean - med) / sd if sd > 0 else 0.0
+        print(f"  {name}")
+        print(f"    n={n}, min={min(vals)}, max={max(vals)}")
+        print(f"    Mittelwert={mean:.2f}, Median={med:.2f}, SD={sd:.2f}")
+        print(f"    Pearson-Schiefe ≈ {skew:.3f}  "
+              f"({'rechtsschiefe' if skew > 0.5 else 'leicht rechtsschiefe' if skew > 0 else 'symmetrische'} Verteilung)")
+        print()
+
+    print(f"{'─'*72}\n")
+
+
 def print_summary(results: list[dict], top_n: int = 20) -> None:
     print(f"\n{'─'*72}")
     print(f"  Rezeptionsindex – Zusammenfassung  ({len(results)} Texte)")
@@ -223,6 +271,10 @@ def print_summary(results: list[dict], top_n: int = 20) -> None:
     print(f"  Median:         {median:.4f}")
     print(f"  Maximum:        {max(indices):.4f}")
     print(f"{'─'*72}\n")
+
+    # Verteilungsdiagnose der Rohwerte
+    print_skewness(results)
+
 
 TTL_PATH = "../data/rdf/sappho-reception.ttl"
 CSV_PATH = "../data/reception-indices.csv"
