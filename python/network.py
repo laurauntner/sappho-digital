@@ -109,11 +109,41 @@ def shorten(uri):
     return m.group(1) if m else uri
 
 def get_labels(g):
-    labels = {}
+    """Liest rdfs:label-Werte; @de wird bevorzugt, dann @en, dann sprachneutral."""
+    de:   dict[str, str] = {}
+    en:   dict[str, str] = {}
+    any_: dict[str, str] = {}
     for s, p, o in g.triples((None, URIRef(RDFS_LABEL), None)):
-        if isinstance(o, Literal):
-            labels[str(s)] = str(o)
-    return labels
+        if not isinstance(o, Literal):
+            continue
+        key  = str(s)
+        lang = (o.language or "").lower()
+        if lang == "de":
+            de[key] = str(o)
+        elif lang == "en":
+            en.setdefault(key, str(o))
+        else:
+            any_.setdefault(key, str(o))
+    merged = {**any_, **en, **de}
+    return {k: clean_label(v) for k, v in merged.items()}
+
+
+def clean_label(s: str) -> str:
+    """Entfernt unerwünschte Präfixe und Suffixe aus RDF-Labels."""
+    s = re.sub(r"^Expression\s+creation\s+of\s+",    "", s, flags=re.I).strip()
+    s = re.sub(r"^Expressionserstellung\s+von\s+",   "", s, flags=re.I).strip()
+    s = re.sub(r"^Expression\s+of\s+",               "", s, flags=re.I).strip()
+    s = re.sub(r"^Expression\s+von\s+",              "", s, flags=re.I).strip()
+    s = re.sub(r"^(Motif|Motiv|Topic|Thema|Plot|Stoff|Character|Figur)\s*:\s*",
+               "", s, flags=re.I).strip()
+    s = re.sub(r"^(Reference\s+to|Referenz\s+auf)\s+",           "", s, flags=re.I).strip()
+    s = re.sub(r"^(Passage\s+from|Passage\s+aus)\s+",            "", s, flags=re.I).strip()
+    s = re.sub(
+        r"\s*\((Motif|Motiv|Topic|Thema|Plot|Stoff|Character|Figur|"
+        r"place|Ort|person|Person|work|Werk|topos|Topos)\)\s*$",
+        "", s, flags=re.I).strip()
+    s = s.replace("»", "").replace("«", "")
+    return s.strip()
 
 def local_id(uri):
     return uri.rstrip("/").rsplit("/", 1)[-1].rsplit("#", 1)[-1]

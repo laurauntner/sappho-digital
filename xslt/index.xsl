@@ -108,15 +108,15 @@
                             </div>
                             <p class="hero-scroll-hint"><b>Wo anfangen? &#8594;<a
                                         href="orientierung.html">Hier</a>&#8592; findet sich eine
-                                    Orientierungshilfe. <br/>Keine Lust darauf? Dann einfach scrollen
-                                    &#8211; unten finden sich vier m&#246;gliche Einstiege.
+                                    Orientierungshilfe. <br/>Keine Lust darauf? Dann einfach
+                                    scrollen &#8211; unten finden sich vier m&#246;gliche Einstiege.
                                     &#8595;</b></p>
                             <p class="smaller-text disclaimer"
                                 style="text-align:center;max-width:580px;">Disclaimer: The <a
                                     href="https://github.com/laurauntner/sappho-digital">raw
-                                    data</a> is largely annotated with English-language labels and
+                                    data</a> is fully annotated with English-language labels and
                                 structured for broad reuse. The website itself, however, is
-                                primarily intended for German-speaking users.</p>
+                                currently primarily intended for German-speaking users.</p>
                         </div>
                         <div class="entry-section">
                             <div class="entry-grid">

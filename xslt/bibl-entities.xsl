@@ -25,19 +25,28 @@
     <xsl:function name="local:get-label" as="xs:string">
         <xsl:param name="uri" as="xs:string"/>
         <xsl:variable name="entity" select="key('by-about', $uri, $receptionEntities)"/>
-        <xsl:variable name="raw"
-            select="normalize-space(($entity/rdfs:label, $entity/@rdf:about)[1])"/>
+        <xsl:variable name="raw" select="
+                normalize-space((
+                $entity/rdfs:label[@xml:lang = 'de'],
+                $entity/rdfs:label[@xml:lang = 'en'],
+                $entity/rdfs:label,
+                $entity/@rdf:about)[1])"/>
         <xsl:variable name="t1"
-            select="replace($raw, '^\s*intertextual relation(ship)? between\s+', 'Intertextuelle Beziehung zwischen ', 'i')"/>
-        <xsl:variable name="t2" select="replace($t1, '\s+and\s+', ' und ')"/>
-        <xsl:variable name="t3" select="replace($t2, 'Expression of\s+', '', 'i')"/>
-        <xsl:variable name="t4" select="replace($t3, '»\s*(Fragment[^«»]*Voigt)\s*«', '$1', 'i')"/>
-        <xsl:variable name="t5"
-            select="replace($t4, '^\s*(Motif|Topic|Plot|Textpassage|Character)\s*:\s*', '', 'i')"/>
+            select="replace($raw, '^\s*intertextuelle\s+relation\s+zwischen\s+', 'Intertextuelle Beziehung zwischen ', 'i')"/>
+        <xsl:variable name="t2"
+            select="replace($t1, '^\s*intertextual\s+relation(ship)?\s+between\s+', 'Intertextuelle Beziehung zwischen ', 'i')"/>
+        <xsl:variable name="t3" select="replace($t2, '\s+and\s+', ' und ')"/>
+        <xsl:variable name="t4"
+            select="replace($t3, '^(Expression\s+of|Expression\s+von)\s+', '', 'i')"/>
+        <xsl:variable name="t5" select="replace($t4, '»\s*(Fragment[^«»]*Voigt)\s*«', '$1', 'i')"/>
         <xsl:variable name="t6"
-            select="replace($t5, '\s*\((place|person|work|character)\)\s*', '', 'i')"/>
-        <xsl:variable name="t7" select="replace($t6, 'Reference to ', '', 'i')"/>
-        <xsl:sequence select="normalize-space($t7)"/>
+            select="replace($t5, '^\s*(Motif|Motiv|Topic|Thema|Plot|Stoff|Textpassage|Character|Figur)\s*:\s*', '', 'i')"/>
+        <xsl:variable name="t7"
+            select="replace($t6, '\s*\((place|Ort|person|Person|work|Werk|character|Figur|topos|Topos|motif|Motiv|topic|Thema|plot|Stoff)\)\s*', '', 'i')"/>
+        <xsl:variable name="t8"
+            select="replace($t7, '^(Reference\s+to|Referenz\s+auf)\s+', '', 'i')"/>
+        <xsl:variable name="t9" select="replace($t8, '^(Passage\s+from|Passage\s+aus)\s+', '', 'i')"/>
+        <xsl:sequence select="normalize-space($t9)"/>
     </xsl:function>
 
     <!-- get features -->
@@ -120,9 +129,9 @@
                 )[1])"/>
 
         <xsl:variable name="t1"
-            select="normalize-space(replace($label, '^Expression\s+of\s+', '', 'i'))"/>
+            select="normalize-space(replace($label, '^(Expression\s+of|Expression\s+von)\s+', '', 'i'))"/>
         <xsl:variable name="t2"
-            select="normalize-space(replace($t1, '^Expression\s+creation\s+of\s+', '', 'i'))"/>
+            select="normalize-space(replace($t1, '^(Expression\s+creation\s+of|Expressionserstellung\s+von)\s+', '', 'i'))"/>
         <xsl:sequence select="
                 if ($t2 != '') then
                     $t2

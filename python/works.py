@@ -95,20 +95,26 @@ def dbpedia_from_sitelinks(entity: dict) -> Optional[str]:
         return None
     return f"https://dbpedia.org/resource/{title.replace(' ', '_')}"
 
+# -----------------------------------------------------------------------
 # Pfade
-INPUT_FILE = "../data/lists/sappho-rez_alle.xml"
+# -----------------------------------------------------------------------
+INPUT_FILE  = "../data/lists/sappho-rez_alle.xml"
 OUTPUT_FILE = "../data/rdf/works.ttl"
 
+# -----------------------------------------------------------------------
 # Namespaces
-NSMAP = {"tei": "http://www.tei-c.org/ns/1.0"}
-SD = Namespace("https://sappho-digital.com/")
-ECRM = Namespace("http://erlangen-crm.org/current/")
-LRMOO = Namespace("http://iflastandards.info/ns/lrm/lrmoo/")
-WD = "http://www.wikidata.org/entity/"
-WDCOM = "http://commons.wikimedia.org/wiki/Special:FilePath/"
+# -----------------------------------------------------------------------
+NSMAP  = {"tei": "http://www.tei-c.org/ns/1.0"}
+SD     = Namespace("https://sappho-digital.com/")
+ECRM   = Namespace("http://erlangen-crm.org/current/")
+LRMOO  = Namespace("http://iflastandards.info/ns/lrm/lrmoo/")
+WD     = "http://www.wikidata.org/entity/"
+WDCOM  = "http://commons.wikimedia.org/wiki/Special:FilePath/"
 XML_NS = "{http://www.w3.org/XML/1998/namespace}"
 
+# -----------------------------------------------------------------------
 # Graph
+# -----------------------------------------------------------------------
 g = Graph()
 g.bind(":", SD)
 g.bind("ecrm", ECRM)
@@ -117,50 +123,78 @@ g.bind("rdfs", RDFS)
 g.bind("xsd", XSD)
 g.bind("owl", OWL)
 
-# XML parsen
-parser = etree.XMLParser(recover=True)
-tree = etree.parse(INPUT_FILE, parser=parser)
-root = tree.getroot()
-all_bibls = root.findall(".//tei:bibl", namespaces=NSMAP)
-top_bibls = [b for b in all_bibls if b.getparent().tag != f"{{{NSMAP['tei']}}}bibl"]
+# -----------------------------------------------------------------------
+# Hilfsfunktionen
+# -----------------------------------------------------------------------
 
-# Hilfsfunktion: ID-Typen anlegen (einmalig)
-def ensure_id_type(type_local: str, label_en: str):
+def add_bilingual(g: Graph, uri: URIRef, label_de: str, label_en: str) -> None:
+    """Fügt rdfs:label in beiden Sprachen hinzu."""
+    g.add((uri, RDFS.label, Literal(label_de, lang="de")))
+    g.add((uri, RDFS.label, Literal(label_en, lang="en")))
+
+
+# Identifier-Typen: key → (label_de, label_en)
+_IDTYPE_LABELS: dict[str, tuple[str, str]] = {
+    "wikidata":  ("Wikidata-ID",         "Wikidata ID"),
+    "dbpedia":   ("DBpedia-ID",          "DBpedia ID"),
+    "gnd":       ("GND-ID",              "GND ID"),
+    "viaf":      ("VIAF-ID",             "VIAF ID"),
+    "goodreads": ("Goodreads-Werk-ID",   "Goodreads Work ID"),
+    "sappho-digital": ("Sappho-Digital-ID", "Sappho Digital ID"),
+}
+
+def ensure_id_type(type_local: str) -> URIRef:
+    """Legt E55_Type für einen Identifier-Typ an (einmalig, zweisprachig)."""
     type_uri = SD[f"id_type/{type_local}"]
     if (type_uri, RDF.type, ECRM.E55_Type) not in g:
         g.add((type_uri, RDF.type, ECRM.E55_Type))
-        g.add((type_uri, RDFS.label, Literal(label_en, lang="en")))
+        label_de, label_en = _IDTYPE_LABELS[type_local]
+        add_bilingual(g, type_uri, label_de, label_en)
     return type_uri
 
-idtype_wikidata = ensure_id_type("wikidata", "Wikidata ID")
-idtype_dbpedia  = ensure_id_type("dbpedia",  "DBpedia ID")
-idtype_gnd      = ensure_id_type("gnd",      "GND ID")
-idtype_viaf     = ensure_id_type("viaf",     "VIAF ID")
-idtype_gr       = ensure_id_type("goodreads","Goodreads Work ID")
-
-def ensure_genre_type():
+# Gattungstyp
+def ensure_genre_type() -> URIRef:
     gt_uri = SD["genre_type/sappho-digital"]
     if (gt_uri, RDF.type, ECRM.E55_Type) not in g:
         g.add((gt_uri, RDF.type, ECRM.E55_Type))
-        g.add((gt_uri, RDFS.label, Literal("Sappho Digital Genre", lang="en")))
+        add_bilingual(g, gt_uri, "Sappho-Digital-Gattung", "Sappho Digital Genre")
     return gt_uri
+
+# Identifier-Typ-URIs vorab anlegen
+idtype_wikidata = ensure_id_type("wikidata")
+idtype_dbpedia  = ensure_id_type("dbpedia")
+idtype_gnd      = ensure_id_type("gnd")
+idtype_viaf     = ensure_id_type("viaf")
+idtype_gr       = ensure_id_type("goodreads")
+ensure_id_type("sappho-digital")
 
 genre_type_uri = ensure_genre_type()
 
+# -----------------------------------------------------------------------
+# XML parsen
+# -----------------------------------------------------------------------
+parser   = etree.XMLParser(recover=True)
+tree     = etree.parse(INPUT_FILE, parser=parser)
+root     = tree.getroot()
+all_bibls  = root.findall(".//tei:bibl", namespaces=NSMAP)
+top_bibls  = [b for b in all_bibls if b.getparent().tag != f"{{{NSMAP['tei']}}}bibl"]
+
+# -----------------------------------------------------------------------
+# Hauptschleife
+# -----------------------------------------------------------------------
 for bibl in top_bibls:
     bibl_id = bibl.get("{http://www.w3.org/XML/1998/namespace}id")
     if not bibl_id:
         continue
 
-    bibl_uri = SD[f"expression/{bibl_id}"]
+    bibl_uri          = SD[f"expression/{bibl_id}"]
     creation_expr_uri = SD[f"expression_creation/{bibl_id}"]
 
-    title_el = bibl.find("tei:title[@type='text']", namespaces=NSMAP)
+    title_el     = bibl.find("tei:title[@type='text']", namespaces=NSMAP)
     title_string = title_el.text.strip() if title_el is not None and title_el.text else None
 
     # Expression
     g.add((bibl_uri, RDF.type, LRMOO.F2_Expression))
-
     g.add((bibl_uri, RDFS.label, Literal(title_string or "[??]", lang="de")))
 
     if title_string:
@@ -175,23 +209,25 @@ for bibl in top_bibls:
     # Expression Creation
     expr_label = title_string if title_string else "[??]"
     g.add((creation_expr_uri, RDF.type, LRMOO.F28_Expression_Creation))
-    g.add((creation_expr_uri, RDFS.label, Literal(f"Expression creation of {expr_label}", lang="en")))
+    add_bilingual(g, creation_expr_uri,
+                  f"Expressionserstellung von {expr_label}",
+                  f"Expression Creation of {expr_label}")
     g.add((creation_expr_uri, LRMOO.R17_created, bibl_uri))
 
-    # Identifiers (lokale Sappho-ID)
-    g.add((bibl_uri, ECRM.P1_is_identified_by, SD[f"identifier/{bibl_id}"]))
-    g.add((SD[f"identifier/{bibl_id}"], RDF.type, ECRM.E42_Identifier))
-    g.add((SD[f"identifier/{bibl_id}"], RDFS.label, Literal(bibl_id)))
-    g.add((SD[f"identifier/{bibl_id}"], ECRM.P1i_identifies, bibl_uri))
-    g.add((SD[f"identifier/{bibl_id}"], ECRM.P2_has_type, SD["id_type/sappho-digital"]))
+    # Lokale Sappho-Digital-ID
+    sd_id_uri = SD[f"identifier/{bibl_id}"]
+    g.add((bibl_uri, ECRM.P1_is_identified_by, sd_id_uri))
+    g.add((sd_id_uri, RDF.type, ECRM.E42_Identifier))
+    g.add((sd_id_uri, RDFS.label, Literal(bibl_id)))
+    g.add((sd_id_uri, ECRM.P1i_identifies, bibl_uri))
+    g.add((sd_id_uri, ECRM.P2_has_type, SD["id_type/sappho-digital"]))
 
-    # Wikidata-Referenz am bibl
+    # Wikidata-Referenz
     ref = bibl.get("ref")
     if ref and "wikidata.org/entity/" in ref:
         g.add((bibl_uri, OWL.sameAs, URIRef(ref)))
         qid = ref.split("/")[-1]
 
-        # Wikidata-Identifier für das Werk
         wd_id_uri = SD[f"identifier/{qid}"]
         g.add((bibl_uri, ECRM.P1_is_identified_by, wd_id_uri))
         g.add((wd_id_uri, RDF.type, ECRM.E42_Identifier))
@@ -199,7 +235,6 @@ for bibl in top_bibls:
         g.add((wd_id_uri, ECRM.P1i_identifies, bibl_uri))
         g.add((wd_id_uri, ECRM.P2_has_type, idtype_wikidata))
 
-        # Zusätzliche IDs über Wikidata
         entity = fetch_wikidata(qid)
 
         # DBpedia
@@ -215,7 +250,7 @@ for bibl in top_bibls:
                 dbpedia_links.add(maybe)
 
         for link in dbpedia_links:
-            db_key = link.rsplit("/", 1)[-1] or "resource"
+            db_key    = link.rsplit("/", 1)[-1] or "resource"
             db_id_uri = SD[f"identifier/{db_key}"]
             g.add((bibl_uri, ECRM.P1_is_identified_by, db_id_uri))
             g.add((db_id_uri, RDF.type, ECRM.E42_Identifier))
@@ -224,7 +259,7 @@ for bibl in top_bibls:
             g.add((db_id_uri, ECRM.P2_has_type, idtype_dbpedia))
             g.add((bibl_uri, OWL.sameAs, URIRef(link)))
 
-        # GND (P227)
+        # GND
         for gnd in set(get_claim_vals(entity, "P227", expect="str")):
             gnd = (gnd or "").strip().replace(" ", "")
             if not gnd:
@@ -237,7 +272,7 @@ for bibl in top_bibls:
             g.add((gnd_uri, ECRM.P2_has_type, idtype_gnd))
             g.add((bibl_uri, OWL.sameAs, URIRef(f"https://d-nb.info/gnd/{gnd}")))
 
-        # VIAF (P214)
+        # VIAF
         for viaf in set(get_claim_vals(entity, "P214", expect="str")):
             viaf = (viaf or "").strip().replace(" ", "")
             if not viaf:
@@ -250,7 +285,7 @@ for bibl in top_bibls:
             g.add((viaf_uri, ECRM.P2_has_type, idtype_viaf))
             g.add((bibl_uri, OWL.sameAs, URIRef(f"https://viaf.org/viaf/{viaf}")))
 
-        # Goodreads Work (P8383)
+        # Goodreads
         for gr in set(get_claim_vals(entity, "P8383", expect="str")):
             gr = (gr or "").strip()
             if not gr:
@@ -263,30 +298,32 @@ for bibl in top_bibls:
             g.add((gr_uri, ECRM.P2_has_type, idtype_gr))
             g.add((bibl_uri, OWL.sameAs, URIRef(f"https://www.goodreads.com/work/show/{gr}")))
 
-        # Wikimedia Image
+        # Wikimedia-Bild
         img = next((v for v in get_claim_vals(entity, "P18", expect="auto") if v), None)
         if img:
             img_url = WDCOM + img.replace(" ", "_")
             g.add((bibl_uri, RDFS.seeAlso, URIRef(img_url)))
 
-    # Digital Copy
+    # Digitale Kopie
     ref_el = bibl.find("tei:ref", namespaces=NSMAP)
     if ref_el is not None and ref_el.text:
-        url = ref_el.text.strip()
-        digital_uri = SD[f"digital/{bibl_id}"]
-        g.add((digital_uri, RDF.type, ECRM.E73_Information_Object))
+        url          = ref_el.text.strip()
+        digital_uri  = SD[f"digital/{bibl_id}"]
         digital_label = title_string or "[??]"
-        g.add((digital_uri, RDFS.label, Literal(f"Digital copy of {digital_label}", lang="en")))
+        g.add((digital_uri, RDF.type, ECRM.E73_Information_Object))
+        add_bilingual(g, digital_uri,
+                      f"Digitale Kopie von {digital_label}",
+                      f"Digital Copy of {digital_label}")
         g.add((digital_uri, ECRM.P138_represents, bibl_uri))
         g.add((digital_uri, RDFS.seeAlso, URIRef(url)))
         g.add((bibl_uri, ECRM.P138i_has_representation, digital_uri))
 
-    # Dates
-    date_created = bibl.find("tei:date[@type='created']", namespaces=NSMAP)
+    # Daten
+    date_created   = bibl.find("tei:date[@type='created']",   namespaces=NSMAP)
     date_published = bibl.find("tei:date[@type='published']", namespaces=NSMAP)
 
     if date_created is not None and "when" in date_created.attrib:
-        year = date_created.get("when")
+        year   = date_created.get("when")
         ts_uri = SD[f"timespan/{year}"]
         g.add((ts_uri, RDF.type, ECRM["E52_Time-Span"]))
         g.add((ts_uri, RDFS.label, Literal(year, datatype=XSD.gYear)))
@@ -297,72 +334,76 @@ for bibl in top_bibls:
     if date_published is not None:
         nested_bibl = bibl.find("tei:bibl", namespaces=NSMAP)
         if nested_bibl is not None:
-            nested_id = nested_bibl.get("{http://www.w3.org/XML/1998/namespace}id") or bibl_id
-            work_title_el = nested_bibl.find("tei:title[@type='work']", namespaces=NSMAP)
-            work_title = work_title_el.text.strip() if work_title_el is not None and work_title_el.text else None
+            nested_id      = nested_bibl.get("{http://www.w3.org/XML/1998/namespace}id") or bibl_id
+            work_title_el  = nested_bibl.find("tei:title[@type='work']", namespaces=NSMAP)
+            work_title     = work_title_el.text.strip() if work_title_el is not None and work_title_el.text else None
         else:
-            nested_id = bibl_id
+            nested_id  = bibl_id
             work_title = title_string
 
-        final_manifestation_label = work_title or title_string or "[??]"
+        final_label = work_title or title_string or "[??]"
 
-        manifestation_uri = SD[f"manifestation/{nested_id}"]
+        manifestation_uri  = SD[f"manifestation/{nested_id}"]
         creation_manif_uri = SD[f"manifestation_creation/{nested_id}"]
 
         g.add((manifestation_uri, RDF.type, LRMOO.F3_Manifestation))
-        g.add((manifestation_uri, RDFS.label, Literal(final_manifestation_label, lang="de")))
+        g.add((manifestation_uri, RDFS.label, Literal(final_label, lang="de")))
         g.add((manifestation_uri, LRMOO.R4_embodies, bibl_uri))
         g.add((bibl_uri, LRMOO.R4i_is_embodied_in, manifestation_uri))
 
         g.add((creation_manif_uri, RDF.type, LRMOO.F30_Manifestation_Creation))
-        g.add((creation_manif_uri, RDFS.label, Literal(f"Manifestation creation of {final_manifestation_label}", lang="en")))
+        add_bilingual(g, creation_manif_uri,
+                      f"Manifestationserstellung von {final_label}",
+                      f"Manifestation Creation of {final_label}")
         g.add((creation_manif_uri, LRMOO.R24_created, manifestation_uri))
         g.add((manifestation_uri, LRMOO.R24i_was_created_through, creation_manif_uri))
 
         # Zeitspanne
         if "when" in date_published.attrib:
-            year_pub = date_published.get("when")
+            year_pub   = date_published.get("when")
             ts_pub_uri = SD[f"timespan/{year_pub}"]
             g.add((ts_pub_uri, RDF.type, ECRM["E52_Time-Span"]))
             g.add((ts_pub_uri, RDFS.label, Literal(year_pub, datatype=XSD.gYear)))
             g.add((creation_manif_uri, ECRM["P4_has_time-span"], ts_pub_uri))
             g.add((ts_pub_uri, ECRM["P4i_is_time-span_of"], creation_manif_uri))
 
-        # Ort
+        # Erscheinungsort
         for pubplace_el in bibl.findall("tei:pubPlace", namespaces=NSMAP):
-            place_qid = pubplace_el.get("ref")
-            place_ref = pubplace_el.get(f"{XML_NS}id")
-            place_label = pubplace_el.text.strip() if pubplace_el.text else "Unknown"
+            place_qid   = pubplace_el.get("ref")
+            place_ref   = pubplace_el.get(f"{XML_NS}id")
+            place_label = pubplace_el.text.strip() if pubplace_el.text else "Unbekannt"
 
             place_uri = SD[f"place/{place_ref}"]
             g.add((place_uri, RDF.type, ECRM.E53_Place))
             g.add((place_uri, RDFS.label, Literal(place_label, lang="de")))
 
-            qid = None
+            qid_place = None
             if place_qid:
                 g.add((place_uri, OWL.sameAs, URIRef(place_qid)))
-
                 if place_qid.startswith("http"):
-                    qid = place_qid.rstrip("/").split("/")[-1]
+                    qid_place = place_qid.rstrip("/").split("/")[-1]
                 else:
-                    qid = place_qid.strip()
+                    qid_place = place_qid.strip()
 
-            if qid and qid.startswith("Q"):
-                place_entity = fetch_wikidata(qid)
+            if qid_place and qid_place.startswith("Q"):
+                place_entity = fetch_wikidata(qid_place)
                 for coord_str in set(get_p625_coords_as_string(place_entity)):
-                    g.add((place_uri, RDFS.comment, Literal(coord_str, lang="en")))
+                    g.add((place_uri, RDFS.comment, Literal(coord_str)))
+                en_label = place_entity.get("labels", {}).get("en", {}).get("value")
+                if en_label:
+                    g.add((place_uri, RDFS.label, Literal(en_label, lang="en")))
 
             g.add((place_uri, ECRM.P7i_witnessed, creation_manif_uri))
             g.add((creation_manif_uri, ECRM.P7_took_place_at, place_uri))
 
-        # Publisher
+        # Verlag
         for pub in bibl.findall("tei:publisher", namespaces=NSMAP):
             if pub.text:
-                pub_label = pub.text.strip()
-                pub_ref = pub.get("ref")
+                pub_label  = pub.text.strip()
+                pub_ref    = pub.get("ref")
                 pub_xml_id = pub.get("{http://www.w3.org/XML/1998/namespace}id")
-                local_key = pub_xml_id or (pub_ref.split("/")[-1] if pub_ref else pub_label.replace(" ", "_"))
-                pub_uri = SD[f"publisher/{local_key}"]
+                local_key  = pub_xml_id or (pub_ref.split("/")[-1] if pub_ref else pub_label.replace(" ", "_"))
+                pub_uri    = SD[f"publisher/{local_key}"]
                 g.add((pub_uri, RDF.type, ECRM.E74_Group))
                 g.add((pub_uri, RDFS.label, Literal(pub_label, lang="de")))
                 if pub_ref:
@@ -387,26 +428,22 @@ for bibl in top_bibls:
     for genre_note in bibl.findall("tei:note[@type='genre']", namespaces=NSMAP):
         if not (genre_note.text and genre_note.text.strip()):
             continue
-
-        raw_text = genre_note.text.strip()
-        parts = [p.strip() for p in raw_text.split("/") if p.strip()]
-
+        parts = [p.strip() for p in genre_note.text.strip().split("/") if p.strip()]
         for part in parts:
             genre_key = part.rstrip("?").strip()
             if not genre_key:
                 continue
-
             genre_uri = SD[f"genre/{genre_key}"]
-
             if (genre_uri, RDF.type, ECRM.E55_Type) not in g:
                 g.add((genre_uri, RDF.type, ECRM.E55_Type))
                 g.add((genre_uri, RDFS.label, Literal(genre_key, lang="de")))
                 g.add((genre_uri, ECRM.P2_has_type, genre_type_uri))
                 g.add((genre_type_uri, ECRM.P2i_is_type_of, genre_uri))
-
             g.add((bibl_uri, ECRM.P2_has_type, genre_uri))
 
+# -----------------------------------------------------------------------
 # Speichern
+# -----------------------------------------------------------------------
 Path(OUTPUT_FILE).parent.mkdir(parents=True, exist_ok=True)
 g.serialize(destination=OUTPUT_FILE, format="turtle")
 

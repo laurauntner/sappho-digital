@@ -442,6 +442,10 @@
 
         <xsl:variable name="rawLabel" select="
                 normalize-space((
+                $n2/rdfs:label[@xml:lang = 'de'],
+                $featNode/rdfs:label[@xml:lang = 'de'],
+                $n2/rdfs:label[@xml:lang = 'en'],
+                $featNode/rdfs:label[@xml:lang = 'en'],
                 $n2/rdfs:label,
                 $featNode/rdfs:label,
                 $n2/@rdf:about,
@@ -450,18 +454,28 @@
                 "/>
 
         <xsl:variable name="t1"
-            select="replace($rawLabel, '^\s*intertextual relation(ship)? between\s+', 'Intertextuelle Beziehung zwischen ', 'i')"/>
-        <xsl:variable name="t2" select="replace($t1, '\s+and\s+', ' und ')"/>
-        <xsl:variable name="t3" select="replace($t2, 'Expression of\s+', '', 'i')"/>
-        <xsl:variable name="t4" select="replace($t3, '»\s*(Fragment[^«»]*Voigt)\s*«', '$1', 'i')"/>
+            select="replace($rawLabel, '^\s*intertextuelle\s+relation\s+zwischen\s+', 'Intertextuelle Beziehung zwischen ', 'i')"/>
+        <xsl:variable name="t2"
+            select="replace($t1, '^\s*intertextual\s+relation(ship)?\s+between\s+', 'Intertextuelle Beziehung zwischen ', 'i')"/>
+        <xsl:variable name="t3" select="replace($t2, '\s+and\s+', ' und ')"/>
+        <xsl:variable name="t4"
+            select="replace($t3, '^(Expression\s+creation\s+of|Expressionserstellung\s+von)\s+', '', 'i')"/>
         <xsl:variable name="t5"
-            select="replace($t4, '^\s*(Motif|Topic|Plot|Textpassage|Character)\s*:\s*', '', 'i')"/>
-        <xsl:variable name="t6"
-            select="replace($t5, '\s*\((place|person|work|character)\)\s*', '', 'i')"/>
-        <xsl:variable name="t7" select="replace($t6, 'Reference to ', '', 'i')"/>
-        <xsl:variable name="t8" select="replace($t7, 'Passage from ', '', 'i')"/>
-        <xsl:variable name="t9" select="replace($t8, '\s*\([^)]*\)\s*$', '')"/>
-        <xsl:sequence select="normalize-space($t9)"/>
+            select="replace($t4, '^(Expression\s+of|Expression\s+von)\s+', '', 'i')"/>
+        <xsl:variable name="t6" select="replace($t5, '(Fragment[^«»]*Voigt)', '$1', 'i')"/>
+        <xsl:variable name="t7" select="replace(replace($t6, '»', ''), '«', '')"/>
+        <xsl:variable name="t8"
+            select="replace($t7, '^\s*(Motif|Motiv|Topic|Thema|Plot|Stoff|Textpassage|Character|Figur)\s*:\s*', '', 'i')"/>
+        <xsl:variable name="t9"
+            select="replace($t8, '\s*\((place|Ort|person|Person|work|Werk|character|Figur|topos|Topos|motif|Motiv|topic|Thema|plot|Stoff)\)\s*', '', 'i')"/>
+        <xsl:variable name="t10"
+            select="replace($t9, '^(Reference\s+to|Referenz\s+auf)\s+', '', 'i')"/>
+        <xsl:variable name="t11"
+            select="replace($t10, '^(Passage\s+from|Passage\s+aus)\s+', '', 'i')"/>
+        <xsl:variable name="t12"
+            select="replace($t11, '^(Interpretation\s+von|Interpretation\s+of)\s+', '', 'i')"/>
+        <xsl:variable name="t13" select="replace($t12, '\s*\([^)]*\)\s*$', '')"/>
+        <xsl:sequence select="normalize-space($t13)"/>
     </xsl:function>
 
     <xsl:function name="u:sgpl" as="xs:string">
@@ -569,7 +583,7 @@
         <xsl:param name="label" as="xs:string"/>
         <xsl:sequence select="
                 normalize-space(
-                replace($label, '\s*\((person|character)\)\s+in\s+.*$', '', 'i')
+                replace($label, '\s*\((person|character|Person|Figur)\)\s+in\s+.*$', '', 'i')
                 )
                 "/>
     </xsl:function>
@@ -598,7 +612,11 @@
                 return
                     u:appellation-name(
                     normalize-space(
-                    string(key('by-about', $a, $receptionEntities)/rdfs:label[1])
+                    string((
+                    key('by-about', $a, $receptionEntities)/rdfs:label[@xml:lang = 'de'],
+                    key('by-about', $a, $receptionEntities)/rdfs:label[@xml:lang = 'en'],
+                    key('by-about', $a, $receptionEntities)/rdfs:label
+                    )[1])
                     )
                     )
                 )[. != '']
@@ -643,7 +661,6 @@
         </xsl:if>
     </xsl:template>
 
-    <!-- helper functions for intertexts -->
 
     <xsl:function name="u:common-uris" as="xs:string*">
         <xsl:param name="rel" as="element(intro:INT31_IntertextualRelation)"/>
@@ -1677,11 +1694,11 @@
                                     <p class="align-left">… in den exemplarisch analysierten
                                         Rezeptionszeugnissen und Sappho-Fragmenten.</p>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vokabular.html">Vokabular</a>. Mehr Informationen
-                                        zur exemplarischen Analyse sind <a href="analyse.html"
-                                            >hier</a> zu finden. Statistische Auswertungen werden <a
-                                            href="statistik.html">hier</a> aufbereitet; eine
-                                        Netzwerkvisualisierung aller Daten ist <a
+                                            <a href="vokabular.html">Vokabular</a>. Mehr
+                                        Informationen zur exemplarischen Analyse sind <a
+                                            href="analyse.html">hier</a> zu finden. Statistische
+                                        Auswertungen werden <a href="statistik.html">hier</a>
+                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
                                             href="netzwerk.html">hier</a> verfügbar.</p>
                                 </div>
 
@@ -1907,11 +1924,11 @@
                                     <p class="align-left">… in den exemplarisch analysierten
                                         Rezeptionszeugnissen und Sappho-Fragmenten.</p>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vokabular.html">Vokabular</a>. Mehr Informationen
-                                        zur exemplarischen Analyse sind <a href="analyse.html"
-                                            >hier</a> zu finden. Statistische Auswertungen werden <a
-                                            href="statistik.html">hier</a> aufbereitet; eine
-                                        Netzwerkvisualisierung aller Daten ist <a
+                                            <a href="vokabular.html">Vokabular</a>. Mehr
+                                        Informationen zur exemplarischen Analyse sind <a
+                                            href="analyse.html">hier</a> zu finden. Statistische
+                                        Auswertungen werden <a href="statistik.html">hier</a>
+                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
                                             href="netzwerk.html">hier</a> verfügbar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
@@ -2010,11 +2027,11 @@
                                     <p class="align-left">… in den exemplarisch analysierten
                                         Rezeptionszeugnissen und Sappho-Fragmenten.</p>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vokabular.html">Vokabular</a>. Mehr Informationen
-                                        zur exemplarischen Analyse sind <a href="analyse.html"
-                                            >hier</a> zu finden. Statistische Auswertungen werden <a
-                                            href="statistik.html">hier</a> aufbereitet; eine
-                                        Netzwerkvisualisierung aller Daten ist <a
+                                            <a href="vokabular.html">Vokabular</a>. Mehr
+                                        Informationen zur exemplarischen Analyse sind <a
+                                            href="analyse.html">hier</a> zu finden. Statistische
+                                        Auswertungen werden <a href="statistik.html">hier</a>
+                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
                                             href="netzwerk.html">hier</a> verfügbar.</p>
                                 </div>
 
@@ -2350,11 +2367,11 @@
                                     <p class="align-left">… in den exemplarisch analysierten
                                         Rezeptionszeugnissen und Sappho-Fragmenten.</p>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vokabular.html">Vokabular</a>. Mehr Informationen
-                                        zur exemplarischen Analyse sind <a href="analyse.html"
-                                            >hier</a> zu finden. Statistische Auswertungen werden <a
-                                            href="statistik.html">hier</a> aufbereitet; eine
-                                        Netzwerkvisualisierung aller Daten ist <a
+                                            <a href="vokabular.html">Vokabular</a>. Mehr
+                                        Informationen zur exemplarischen Analyse sind <a
+                                            href="analyse.html">hier</a> zu finden. Statistische
+                                        Auswertungen werden <a href="statistik.html">hier</a>
+                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
                                             href="netzwerk.html">hier</a> verfügbar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
@@ -2451,11 +2468,11 @@
                                     <p class="align-left">… in den exemplarisch analysierten
                                         Rezeptionszeugnissen und Sappho-Fragmenten.</p>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vokabular.html">Vokabular</a>. Mehr Informationen
-                                        zur exemplarischen Analyse sind <a href="analyse.html"
-                                            >hier</a> zu finden. Statistische Auswertungen werden <a
-                                            href="statistik.html">hier</a> aufbereitet; eine
-                                        Netzwerkvisualisierung aller Daten ist <a
+                                            <a href="vokabular.html">Vokabular</a>. Mehr
+                                        Informationen zur exemplarischen Analyse sind <a
+                                            href="analyse.html">hier</a> zu finden. Statistische
+                                        Auswertungen werden <a href="statistik.html">hier</a>
+                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
                                             href="netzwerk.html">hier</a> verfügbar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">
@@ -2549,11 +2566,11 @@
                                     <p class="align-left">… in den exemplarisch analysierten
                                         Rezeptionszeugnissen und Sappho-Fragmenten.</p>
                                     <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vokabular.html">Vokabular</a>. Mehr Informationen
-                                        zur exemplarischen Analyse sind <a href="analyse.html"
-                                            >hier</a> zu finden. Statistische Auswertungen werden <a
-                                            href="statistik.html">hier</a> aufbereitet; eine
-                                        Netzwerkvisualisierung aller Daten ist <a
+                                            <a href="vokabular.html">Vokabular</a>. Mehr
+                                        Informationen zur exemplarischen Analyse sind <a
+                                            href="analyse.html">hier</a> zu finden. Statistische
+                                        Auswertungen werden <a href="statistik.html">hier</a>
+                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
                                             href="netzwerk.html">hier</a> verfügbar.</p>
                                 </div>
                                 <div class="card-body skos-wrap">

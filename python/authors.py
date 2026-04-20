@@ -28,6 +28,41 @@ WDCOM = "http://commons.wikimedia.org/wiki/Special:FilePath/"
 NS = {"tei": "http://www.tei-c.org/ns/1.0"}
 XML_NS = "{http://www.w3.org/XML/1998/namespace}"
 
+# -----------------------------------------------------------------------
+# Labels
+# -----------------------------------------------------------------------
+
+# Infrastruktur-Typen
+IDTYPE_LABELS: dict[str, tuple[str, str]] = {
+    "sappho-digital": ("Sappho-Digital-ID",  "Sappho Digital ID"),
+    "wikidata":       ("Wikidata-ID",         "Wikidata ID"),
+    "gnd":            ("GND-ID",              "GND ID"),
+    "viaf":           ("VIAF-ID",             "VIAF ID"),
+    "dbpedia":        ("DBpedia-ID",          "DBpedia ID"),
+}
+
+GENDER_LABELS: dict[str, tuple[str, str]] = {
+    "Q6581072": ("weiblich", "female"),
+    "Q6581097": ("männlich", "male"),
+}
+
+GENDER_TYPE_LABELS: tuple[str, str] = ("Wikidata-Geschlecht", "Wikidata Gender")
+
+
+def add_bilingual(g: Graph, uri: URIRef, label_de: str, label_en: str) -> None:
+    """Fügt rdfs:label in beiden Sprachen hinzu."""
+    g.add((uri, RDFS.label, Literal(label_de, lang="de")))
+    g.add((uri, RDFS.label, Literal(label_en, lang="en")))
+
+
+def ensure_id_type(g: Graph, type_uri: URIRef, key: str) -> None:
+    """Legt einen E55_Type-Knoten für einen Identifier-Typ an (einmalig, zweisprachig)."""
+    if (type_uri, RDF.type, ECRM.E55_Type) not in g:
+        label_de, label_en = IDTYPE_LABELS[key]
+        g.add((type_uri, RDF.type, ECRM.E55_Type))
+        add_bilingual(g, type_uri, label_de, label_en)
+
+
 # RDF Graph
 g = Graph()
 g.bind(":", SD)
@@ -37,7 +72,9 @@ g.bind("xsd", XSD)
 g.bind("prov", PROV)
 g.bind("owl", OWL)
 
+# -----------------------------------------------------------------------
 # Hilfsfunktionen
+# -----------------------------------------------------------------------
 
 def _load_pubplace_index(xml_path: str) -> dict[str, str]:
     idx: dict[str, str] = {}
@@ -45,7 +82,6 @@ def _load_pubplace_index(xml_path: str) -> dict[str, str]:
         root = ET.parse(xml_path).getroot()
     except Exception:
         return idx
-
     for el in root.findall(".//tei:pubPlace", NS):
         ref = (el.get("ref") or "").strip()
         xml_id = (el.get(f"{XML_NS}id") or "").strip()
@@ -58,7 +94,7 @@ def _load_pubplace_index(xml_path: str) -> dict[str, str]:
     return idx
 
 def _place_uri_from_index_or_random(pubplace_idx: dict[str, str], wikidata_qid: str):
-    wd_uri = WD + wikidata_qid   
+    wd_uri = WD + wikidata_qid
     xml_id = pubplace_idx.get(wd_uri)
     if xml_id:
         return SD[f"place/{xml_id}"], wd_uri
@@ -74,7 +110,6 @@ def fetch_wikidata(qid: str) -> dict:
         return {}
     if qid in _WD_CACHE:
         return _WD_CACHE[qid]
-
     url = f"https://www.wikidata.org/wiki/Special:EntityData/{qid}.json"
     for attempt in range(3):
         try:
@@ -116,7 +151,6 @@ def get_label(entity):
         labels.get("en", {}).get("value")
     )
 
-# IDs über Wikidata
 def get_claim_vals(entity, prop, expect="auto"):
     vals = []
     for cl in entity.get("claims", {}).get(prop, []):
@@ -137,11 +171,6 @@ def get_claim_vals(entity, prop, expect="auto"):
         else:
             vals.append(str(val))
     return vals
-
-def ensure_id_type(g, type_uri, label_en):
-    if (type_uri, RDF.type, ECRM.E55_Type) not in g:
-        g.add((type_uri, RDF.type, ECRM.E55_Type))
-        g.add((type_uri, RDFS.label, Literal(label_en, lang="en")))
 
 def normalize_dbpedia_url(url: Optional[str]) -> Optional[str]:
     if not url:
@@ -168,7 +197,10 @@ def dbpedia_from_sitelinks(entity: dict) -> Optional[str]:
         return None
     return f"https://dbpedia.org/resource/{title.replace(' ', '_')}"
 
+# -----------------------------------------------------------------------
 # Autor_innen aus XML lesen
+# -----------------------------------------------------------------------
+
 parser = etree.XMLParser(recover=True)
 tree = etree.parse(INPUT_FILE, parser=parser)
 root = tree.getroot()
@@ -184,9 +216,7 @@ for el in authors:
         continue
     seen.add((xml_id, el.text.strip()))
 
-    norm_id = xml_id
     person_uri = SD[f"person/{xml_id}"]
-    appellation_uri = SD[f"appellation/{xml_id}"]
     identifier_uri = SD[f"identifier/{xml_id}"]
 
     g.add((person_uri, RDF.type, ECRM.E21_Person))
@@ -197,6 +227,7 @@ for el in authors:
     g.add((identifier_uri, RDFS.label, Literal(xml_id)))
     g.add((identifier_uri, ECRM.P1i_identifies, person_uri))
     g.add((identifier_uri, ECRM.P2_has_type, SD["id_type/sappho-digital"]))
+    ensure_id_type(g, SD["id_type/sappho-digital"], "sappho-digital")
 
     # Wikidata-Verlinkung
     wikidata_ref = el.get("ref")
@@ -204,7 +235,7 @@ for el in authors:
         qid = wikidata_ref.split("/")[-1]
         entity = fetch_wikidata(qid)
 
-        # Extra Identifier
+        # Wikidata-Identifier
         wd_id_uri = SD[f"identifier/{qid}"]
         g.add((person_uri, ECRM.P1_is_identified_by, wd_id_uri))
         g.add((wd_id_uri, RDF.type, ECRM.E42_Identifier))
@@ -212,26 +243,17 @@ for el in authors:
         g.add((wd_id_uri, ECRM.P1i_identifies, person_uri))
         g.add((wd_id_uri, ECRM.P2_has_type, SD["id_type/wikidata"]))
 
-        g.add((SD["id_type/wikidata"], RDF.type, ECRM.E55_Type))
-        g.add((SD["id_type/wikidata"], RDFS.label, Literal("Wikidata ID", lang="en")))
+        ensure_id_type(g, SD["id_type/wikidata"], "wikidata")
         g.add((SD["id_type/wikidata"], ECRM.P2i_is_type_of, wd_id_uri))
         g.add((SD["id_type/wikidata"], OWL.sameAs, URIRef("http://wikidata.org/entity/Q43649390")))
 
         g.add((person_uri, OWL.sameAs, URIRef(WD + qid)))
 
-        idtype_dbpedia = SD["id_type/dbpedia"]
-        idtype_gnd     = SD["id_type/gnd"]
-        idtype_viaf    = SD["id_type/viaf"]
-        if (idtype_dbpedia, RDF.type, ECRM.E55_Type) not in g:
-            g.add((idtype_dbpedia, RDF.type, ECRM.E55_Type))
-            g.add((idtype_dbpedia, RDFS.label, Literal("DBpedia ID", lang="en")))
-        if (idtype_gnd, RDF.type, ECRM.E55_Type) not in g:
-            g.add((idtype_gnd, RDF.type, ECRM.E55_Type))
-            g.add((idtype_gnd, RDFS.label, Literal("GND ID", lang="en")))
-        if (idtype_viaf, RDF.type, ECRM.E55_Type) not in g:
-            g.add((idtype_viaf, RDF.type, ECRM.E55_Type))
-            g.add((idtype_viaf, RDFS.label, Literal("VIAF ID", lang="en")))
+        ensure_id_type(g, SD["id_type/dbpedia"], "dbpedia")
+        ensure_id_type(g, SD["id_type/gnd"],     "gnd")
+        ensure_id_type(g, SD["id_type/viaf"],    "viaf")
 
+        # DBpedia
         dbpedia_links = set()
         for p in ("P2888", "P1709"):
             for raw in get_claim_vals(entity, p, expect="url"):
@@ -248,12 +270,12 @@ for el in authors:
             db_id_uri = SD[f"identifier/{db_key}"]
             g.add((person_uri, ECRM.P1_is_identified_by, db_id_uri))
             g.add((db_id_uri, RDF.type, ECRM.E42_Identifier))
-            db_label = link.rsplit("/", 1)[-1]
-            g.add((db_id_uri, RDFS.label, Literal(db_label)))
+            g.add((db_id_uri, RDFS.label, Literal(db_key)))
             g.add((db_id_uri, ECRM.P1i_identifies, person_uri))
-            g.add((db_id_uri, ECRM.P2_has_type, idtype_dbpedia))
+            g.add((db_id_uri, ECRM.P2_has_type, SD["id_type/dbpedia"]))
             g.add((person_uri, OWL.sameAs, URIRef(link)))
 
+        # GND
         for gnd in set(get_claim_vals(entity, "P227", expect="str")):
             gnd = (gnd or "").strip().replace(" ", "")
             if not gnd:
@@ -263,9 +285,10 @@ for el in authors:
             g.add((gnd_uri, RDF.type, ECRM.E42_Identifier))
             g.add((gnd_uri, RDFS.label, Literal(gnd)))
             g.add((gnd_uri, ECRM.P1i_identifies, person_uri))
-            g.add((gnd_uri, ECRM.P2_has_type, idtype_gnd))
+            g.add((gnd_uri, ECRM.P2_has_type, SD["id_type/gnd"]))
             g.add((person_uri, OWL.sameAs, URIRef(f"https://d-nb.info/gnd/{gnd}")))
 
+        # VIAF
         for viaf in set(get_claim_vals(entity, "P214", expect="str")):
             viaf = (viaf or "").strip().replace(" ", "")
             if not viaf:
@@ -275,7 +298,7 @@ for el in authors:
             g.add((viaf_uri, RDF.type, ECRM.E42_Identifier))
             g.add((viaf_uri, RDFS.label, Literal(viaf)))
             g.add((viaf_uri, ECRM.P1i_identifies, person_uri))
-            g.add((viaf_uri, ECRM.P2_has_type, idtype_viaf))
+            g.add((viaf_uri, ECRM.P2_has_type, SD["id_type/viaf"]))
             g.add((person_uri, OWL.sameAs, URIRef(f"https://viaf.org/viaf/{viaf}")))
 
         # Geburtsdatum
@@ -287,7 +310,7 @@ for el in authors:
             time_uri = SD[f"timespan/{b_id}"]
             g.add((person_uri, ECRM.P98i_was_born, birth_uri))
             g.add((birth_uri, RDF.type, ECRM.E67_Birth))
-            g.add((birth_uri, RDFS.label, Literal(f"Birth of {name}", lang="en")))
+            add_bilingual(g, birth_uri, f"Geburt von {name}", f"Birth of {name}")
             g.add((birth_uri, ECRM["P4_has_time-span"], time_uri))
             g.add((birth_uri, ECRM.P98_brought_into_life, person_uri))
             g.add((birth_uri, PROV.wasDerivedFrom, URIRef(WD + qid)))
@@ -304,7 +327,7 @@ for el in authors:
             time_uri = SD[f"timespan/{d_id}"]
             g.add((person_uri, ECRM.P100i_died_in, death_uri))
             g.add((death_uri, RDF.type, ECRM.E69_Death))
-            g.add((death_uri, RDFS.label, Literal(f"Death of {name}", lang="en")))
+            add_bilingual(g, death_uri, f"Tod von {name}", f"Death of {name}")
             g.add((death_uri, ECRM.P100_was_death_of, person_uri))
             g.add((death_uri, ECRM["P4_has_time-span"], time_uri))
             g.add((death_uri, PROV.wasDerivedFrom, URIRef(WD + qid)))
@@ -315,47 +338,54 @@ for el in authors:
         # Geburtsort
         birth_place_qid = get_claim_val(entity, "P19")
         if birth_place_qid:
-            place_label = get_label(fetch_wikidata(birth_place_qid)) or birth_place_qid
+            place_entity = fetch_wikidata(birth_place_qid)
+            place_label_de = (place_entity.get("labels", {}).get("de", {}).get("value")
+                              or place_entity.get("labels", {}).get("en", {}).get("value")
+                              or birth_place_qid)
+            place_label_en = (place_entity.get("labels", {}).get("en", {}).get("value")
+                              or place_label_de)
             place_uri, same_as = _place_uri_from_index_or_random(_pubplace_idx, birth_place_qid)
-
             g.add((place_uri, RDF.type, ECRM.E53_Place))
-            g.add((place_uri, RDFS.label, Literal(place_label, lang="de")))
+            add_bilingual(g, place_uri, place_label_de, place_label_en)
             g.add((place_uri, OWL.sameAs, URIRef(same_as)))
             g.add((place_uri, ECRM["P7i_witnessed"], SD[f"birth/{xml_id}"]))
 
         # Sterbeort
         death_place_qid = get_claim_val(entity, "P20")
         if death_place_qid:
-            place_label = get_label(fetch_wikidata(death_place_qid)) or death_place_qid
+            place_entity = fetch_wikidata(death_place_qid)
+            place_label_de = (place_entity.get("labels", {}).get("de", {}).get("value")
+                              or place_entity.get("labels", {}).get("en", {}).get("value")
+                              or death_place_qid)
+            place_label_en = (place_entity.get("labels", {}).get("en", {}).get("value")
+                              or place_label_de)
             place_uri, same_as = _place_uri_from_index_or_random(_pubplace_idx, death_place_qid)
-
             g.add((place_uri, RDF.type, ECRM.E53_Place))
-            g.add((place_uri, RDFS.label, Literal(place_label, lang="de")))
+            add_bilingual(g, place_uri, place_label_de, place_label_en)
             g.add((place_uri, OWL.sameAs, URIRef(same_as)))
             g.add((place_uri, ECRM["P7i_witnessed"], SD[f"death/{xml_id}"]))
 
         # Geschlecht
-        GENDER_LABELS = {
-            "Q6581072": "female",
-            "Q6581097": "male",
-        }
         gender_qid = get_claim_val(entity, "P21")
         if gender_qid:
-            gender_label = GENDER_LABELS.get(gender_qid) or get_label(fetch_wikidata(gender_qid)) or gender_qid
+            if gender_qid in GENDER_LABELS:
+                g_label_de, g_label_en = GENDER_LABELS[gender_qid]
+            else:
+                fallback = get_label(fetch_wikidata(gender_qid)) or gender_qid
+                g_label_de, g_label_en = fallback, fallback
+
             gender_uri = SD[f"gender/{gender_qid}"]
             gender_type_uri = SD["gender_type/wikidata"]
 
-            # Gender-Instanz
             g.add((gender_uri, RDF.type, ECRM.E55_Type))
-            g.add((gender_uri, RDFS.label, Literal(gender_label, lang="en")))
+            add_bilingual(g, gender_uri, g_label_de, g_label_en)
             g.add((gender_uri, OWL.sameAs, URIRef(WD + gender_qid)))
             g.add((gender_uri, ECRM.P2i_is_type_of, person_uri))
             g.add((person_uri, ECRM.P2_has_type, gender_uri))
 
-            # Typ-Verknüpfung
-            if not (gender_type_uri, RDF.type, ECRM.E55_Type) in g:
+            if (gender_type_uri, RDF.type, ECRM.E55_Type) not in g:
                 g.add((gender_type_uri, RDF.type, ECRM.E55_Type))
-                g.add((gender_type_uri, RDFS.label, Literal("Wikidata Gender", lang="en")))
+                add_bilingual(g, gender_type_uri, *GENDER_TYPE_LABELS)
             g.add((gender_uri, ECRM.P2_has_type, gender_type_uri))
 
         # Bild
@@ -366,11 +396,15 @@ for el in authors:
             g.add((vis_uri, RDFS.seeAlso, URIRef(WDCOM + img_name)))
             g.add((vis_uri, PROV.wasDerivedFrom, URIRef(WD + qid)))
             g.add((vis_uri, RDF.type, ECRM.E36_Visual_Item))
-            g.add((vis_uri, RDFS.label, Literal(f"Visual representation of {name}", lang="en")))
+            add_bilingual(g, vis_uri,
+                          f"Bildliche Darstellung von {name}",
+                          f"Visual representation of {name}")
             g.add((vis_uri, ECRM.P138_represents, person_uri))
             g.add((person_uri, ECRM.P138i_has_representation, vis_uri))
 
+# -----------------------------------------------------------------------
 # Speichern
+# -----------------------------------------------------------------------
 Path(OUTPUT_FILE).parent.mkdir(parents=True, exist_ok=True)
 g.serialize(destination=OUTPUT_FILE, format="turtle")
 
