@@ -16,10 +16,6 @@
                     <!--<a class="navbar-brand site-title-with-logo" rel="home" href="index.html" title="{$project_short_title}" itemprop="url"><xsl:value-of select="$project_short_title"/></a>-->
                     <span class="navbar-badges">
                         <span class="badge bg-light text-dark">in development</span>
-                        <a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLScj2_oFbryOurCVvVbBq6M3tY5POjhpWwFRcthZ9T8HDNjQYw/viewform?usp=send_form"
-                            target="_blank" rel="noopener noreferrer" class="badge dh-award-badge"
-                            >Nominiert für den DH Award 2025 – hier abstimmen</a>
                     </span>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent"
@@ -955,8 +951,7 @@
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"
-                                                  href="werke.html">Werkreferenzen und
-                                                  Zitate</a>
+                                                  href="werke.html">Werkreferenzen und Zitate</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item custom-dropdown-link"
