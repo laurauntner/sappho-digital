@@ -221,9 +221,19 @@ def main(ttl_path: str, xml_out: str) -> None:
         uri_str = str(ref_uri)
         if "/work_ref/" not in uri_str or "/actualization/" in uri_str:
             continue
-        m = _re.search(r'(?:Fragment|Fr\.)\s+(.*?Voigt(?:\s*\([^)]+\))*)\s*\(work\)', lbl_str)
-        frag_label = m.group(1).strip() if m else lbl_str
-        if ref_uri not in voigt_refs or getattr(lbl, 'language', None) == 'en':
+        m = _re.search(
+            r'(?:Fragment|Fr\.)\s+(.*?Voigt(?:\s*\([^)]+\))*)\s*\((?:work|Werk)\)',
+            lbl_str,
+        )
+        if m:
+            frag_label = m.group(1).strip()
+        else:
+            m2 = _re.search(r'(?:Fragment|Fr\.)\s+(.*?Voigt\S*)', lbl_str)
+            frag_label = m2.group(1).strip() if m2 else lbl_str
+        lang = getattr(lbl, 'language', None)
+        if ref_uri not in voigt_refs:
+            voigt_refs[ref_uri] = frag_label
+        elif lang == 'de':
             voigt_refs[ref_uri] = frag_label
 
     BASE = "https://sappho-digital.com/expression/bibl_sappho_"
@@ -244,6 +254,10 @@ def main(ttl_path: str, xml_out: str) -> None:
     frag_biblsets:  dict[str, set[URIRef]] = {}
     frag_sappho_f2: dict[str, URIRef] = {}
 
+    for ref_uri, frag_label in voigt_refs.items():
+        if frag_label not in frag_sappho_f2 and ref_uri in voigt_ref_to_sappho:
+            frag_sappho_f2[frag_label] = voigt_ref_to_sappho[ref_uri]
+
     R17i_featureIsActualizedIn = INTRO["R17i_featureIsActualizedIn"]
     R18i_actualizationFoundOn  = INTRO["R18i_actualizationFoundOn"]
 
@@ -263,9 +277,6 @@ def main(ttl_path: str, xml_out: str) -> None:
                 continue
 
             frag_biblsets[frag_label].add(bibl_expr)
-
-            if frag_label not in frag_sappho_f2 and ref_uri in voigt_ref_to_sappho:
-                frag_sappho_f2[frag_label] = voigt_ref_to_sappho[ref_uri]
 
             for feat_uri in reception_idx.get(bibl_expr, set()):
                 ftype = feature_type(str(feat_uri))
