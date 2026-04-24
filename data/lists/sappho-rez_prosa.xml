@@ -70,7 +70,7 @@
                     <author ref="https://www.wikidata.org/entity/Q90676" xml:id="author_f99433d1">Eberhard Werner Happel</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3012" xml:id="place_e90c98c3">Ulm</pubPlace>
-                    <publisher xml:id="publisher_0db19847">Matthias Wagner</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q94761045" xml:id="publisher_0db19847">Matthias Wagner</publisher>
                     <ref target="https://www.deutschestextarchiv.de/book/show/happel_roman_1690">https://www.deutschestextarchiv.de/book/show/happel_roman_1690</ref>
                 </bibl>
                 <bibl xml:id="bibl_c7770133">
@@ -114,7 +114,7 @@
                     <author ref="https://www.wikidata.org/entity/Q154010" xml:id="author_7ea2d8de">Christoph Martin Wieland</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3955" xml:id="place_c35eca96">Weimar</pubPlace>
-                    <publisher ref="https://www.wikidata.org/entity/Q119610998" xml:id="publisher_6acb1b8b">Carl Ludolf Hoffmanns Verlag</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q119610998" xml:id="publisher_6acb1b8b">Carl Ludolf Hoffmann</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Wieland,+Christoph+Martin/Romane/Geschichte+der+Abderiten/Erster+Teil/Erstes+Buch/Erstes+Kapitel">http://www.zeno.org/Literatur/M/Wieland,+Christoph+Martin/Romane/Geschichte+der+Abderiten/Erster+Teil/Erstes+Buch/Erstes+Kapitel</ref>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q120176718" xml:id="bibl_5283cfa8">
@@ -166,7 +166,7 @@
                     <author ref="https://www.wikidata.org/entity/Q64489" xml:id="author_6deae303">Johann Jakob Wilhelm Heinse</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_dff83d77">Vossische Buchhandlung</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139553320" xml:id="publisher_dff83d77">Vossische Buchhandlung</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Heinse,+Wilhelm/Roman/Hildegard+von+Hohenthal/Erster+Theil">http://www.zeno.org/Literatur/M/Heinse,+Wilhelm/Roman/Hildegard+von+Hohenthal/Erster+Theil</ref>
                 </bibl>
                 <bibl xml:id="bibl_7436971e">
@@ -176,7 +176,7 @@
                     <author ref="https://www.wikidata.org/entity/Q64489" xml:id="author_6deae303">Wilhelm Heinse</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_dff83d77">Vossische Buchhandlung</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139553320" xml:id="publisher_dff83d77">Vossische Buchhandlung</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Heinse,+Wilhelm/Roman/Hildegard+von+Hohenthal/Dritter+Theil">http://www.zeno.org/Literatur/M/Heinse,+Wilhelm/Roman/Hildegard+von+Hohenthal/Dritter+Theil</ref>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q120403015" xml:id="bibl_775bde93">
@@ -345,7 +345,7 @@
                     <author ref="https://www.wikidata.org/entity/Q138895886" xml:id="author_249f3397">Karl Seib</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_7b364dff">Verlag von Georg Voß</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139323975" xml:id="publisher_231a2be4">Verlag von Georg Voß</publisher>
                 </bibl>
                 <bibl xml:id="bibl_2ca7f274">
                     <title type="text">Gleich und Gleich</title>
@@ -375,8 +375,8 @@
                     <note type="genre">Prosa</note>
                     <pubPlace xml:id="place_95b8315b">Leipzig</pubPlace>
                     <pubPlace xml:id="place_efeaa516">Wien</pubPlace>
-                    <publisher xml:id="publisher_5c6827bb">Georg Joachim Göschen</publisher>
-                    <publisher xml:id="publisher_9c2127ee">Carl Gerold’s Sohn Verlag</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q97527" xml:id="publisher_5c6827bb">Georg Joachim Göschen</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q21898136" xml:id="publisher_9c2127ee">Carl Gerold’s Sohn Verlag</publisher>
                 </bibl>
                 <bibl xml:id="bibl_21a4a374">
                     <title type="text">Zweiter Brief</title>
@@ -399,7 +399,7 @@
                     <note type="genre">Prosa</note>
                     <pubPlace xml:id="place_90bebd2f">Dresden</pubPlace>
                     <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_40b57b80">Arnoldsche Buchhandlung</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q85267460" xml:id="publisher_40b57b80">Arnoldsche Buchhandlung</publisher>
                 </bibl>
                 <bibl xml:id="bibl_3c2992d6">
                     <title type="text">Das Zauberschloß</title>
@@ -449,7 +449,7 @@
                     <note type="genre">Prosa</note>
                     <pubPlace xml:id="place_90bebd2f">Dresden</pubPlace>
                     <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_40b57b80">Arnold</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q85267460" xml:id="publisher_40b57b80">Arnold</publisher>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=abe&amp;datum=18340724&amp;seite=1&amp;zoom=33">https://anno.onb.ac.at/cgi-content/anno?aid=abe&amp;datum=18340724&amp;seite=1&amp;zoom=33</ref>
                 </bibl>
                 <bibl xml:id="bibl_643f9997">
@@ -1054,7 +1054,7 @@
                     <author ref="https://www.wikidata.org/entity/Q88752" xml:id="author_2e79e96b">Ernst Eckstein</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_3724e4b1">Verlag von Ernst Eckstein</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139329244" xml:id="publisher_3724e4b1">Ernst Eckstein</publisher>
                 </bibl>
                 <bibl xml:id="bibl_a4677b3b">
                     <title type="text">Sybilla Holm</title>
@@ -1194,7 +1194,7 @@
                     <author ref="https://www.wikidata.org/entity/Q71491" xml:id="author_1e3011ae">Hedwig Dohm</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1799" xml:id="place_811c769d">Breslau</pubPlace>
-                    <publisher xml:id="publisher_689525b6">S. Schottlaender, Schlesische Verlags-Anstalt</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q108799485" xml:id="publisher_689525b6">S. Schottlaender, Schlesische Verlags-Anstalt</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Dohm,+Hedwig/Erz%C3%A4hlungen/Werde,+die+Du+bist!">http://www.zeno.org/Literatur/M/Dohm,+Hedwig/Erz%C3%A4hlungen/Werde,+die+Du+bist!</ref>
                 </bibl>
                 <bibl xml:id="bibl_d83aea77">
@@ -2406,7 +2406,7 @@
                     <author ref="https://www.wikidata.org/entity/Q828487" xml:id="author_241bfafe">Bertram Reinecke</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q4098" xml:id="place_1d1718f7">Greifswald</pubPlace>
-                    <publisher xml:id="publisher_5fb17386">Freiraum</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139329253" xml:id="publisher_5fb17386">Freiraum</publisher>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q105676969" xml:id="bibl_de0b481b">
                     <title type="text">Verzeichnis einiger Verluste</title>

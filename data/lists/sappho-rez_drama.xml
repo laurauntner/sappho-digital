@@ -108,7 +108,7 @@
                     <author ref="https://www.wikidata.org/entity/Q1446007" xml:id="author_c6ba13c5">Franz Alexander von Kleist</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_dff83d77">Vossische Buchhandlung</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139553320" xml:id="publisher_dff83d77">Vossische Buchhandlung</publisher>
                     <ref target="https://books.google.at/books?id=d4YxX_-LQuAC">https://books.google.at/books?id=d4YxX_-LQuAC</ref>
                 </bibl>
                 <bibl xml:id="bibl_5dc28693">
@@ -155,7 +155,7 @@
                     <author ref="https://www.wikidata.org/entity/Q73607" xml:id="author_845ce76f">Ernst von Houwald</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_7b364dff">Verlag von Georg Voß</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139323975" xml:id="publisher_231a2be4">Verlag von Georg Voß</publisher>
                 </bibl>
                 <bibl xml:id="bibl_339f7bbc">
                     <title type="text">Die moderne Sappho. Ein musikalisch-dramatisches Durcheinander ohne Sinn und ohne Verstand. Bestehend aus zwei Akten und einem monodramatischen Finale</title>
@@ -251,7 +251,7 @@
                     <author ref="https://www.wikidata.org/entity/Q113149628" xml:id="author_4b944de3">Friedrich von Helldorff</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q57941" xml:id="place_26d0ccc2">Schneeberg</pubPlace>
-                    <publisher xml:id="publisher_eb0f0174">C. Schumann</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139553183" xml:id="publisher_eb0f0174">C. Schumann</publisher>
                 </bibl>
                 <bibl xml:id="bibl_42afc9ee">
                     <title type="text">Sappho, oder Selbstmord aus unglücklicher Liebe. Trauerspiel</title>
@@ -275,7 +275,8 @@
                         <title type="work">Das gesellige Vergnügen</title>
                     </bibl>
                     <note type="genre">Drama</note>
-                    <publisher xml:id="publisher_bf4938a7">J. A. Edlen v. Kleinmayr’s Buchhandlung</publisher>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q437" xml:id="place_79462cb0">Ljubljana</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q139553272" xml:id="publisher_bf4938a7">J. A. Edlen v. Kleinmayr’s Buchhandlung</publisher>
                 </bibl>
                 <bibl xml:id="bibl_a95d687d">
                     <title type="text">Sappho</title>
@@ -301,7 +302,7 @@
                     <author ref="https://www.wikidata.org/entity/Q44862" xml:id="author_e00f499f">Johann Nestroy</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
-                    <publisher xml:id="publisher_2210b6d4">Ulrich Klopf und Alexander Eurich</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139553011" xml:id="publisher_2210b6d4">Ulrich Klopf und Alexander Eurich</publisher>
                     <ref target="https://books.google.at/books?id=CbtoAAAAcAAJ">https://books.google.at/books?id=CbtoAAAAcAAJ</ref>
                 </bibl>
                 <bibl xml:id="bibl_ad4166f9">
@@ -340,7 +341,7 @@
                     <author ref="https://www.wikidata.org/entity/Q105946" xml:id="author_001f1b95">Georg von Preußen</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher xml:id="publisher_dff83d77">Vossische Buchhandlung</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q139553320" xml:id="publisher_dff83d77">Vossische Buchhandlung</publisher>
                     <ref target="https://dracor.org/ger/georg-von-preussen-sappho#text">https://dracor.org/ger/georg-von-preussen-sappho#text</ref>
                 </bibl>
                 <bibl xml:id="bibl_12e5e057">
