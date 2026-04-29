@@ -157,6 +157,26 @@ LIMIT 100
                                                 target="_blank">Statistische Auswertungen</a>
                                         </li>
                                     </ul>
+                                    <details class="ns-list smaller-text">
+                                        <summary>Namespace-Präfixe</summary>
+                                        <ul class="tooltip-list ns-list__items">
+                                            <li><code>rdf:</code>
+                                                http://www.w3.org/1999/02/22-rdf-syntax-ns#</li>
+                                            <li><code>rdfs:</code>
+                                                http://www.w3.org/2000/01/rdf-schema#</li>
+                                            <li><code>owl:</code>
+                                                http://www.w3.org/2002/07/owl#</li>
+                                            <li><code>skos:</code>
+                                                http://www.w3.org/2004/02/skos/core#</li>
+                                            <li><code>prov:</code> http://www.w3.org/ns/prov#</li>
+                                            <li><code>ecrm:</code>
+                                                http://erlangen-crm.org/current/</li>
+                                            <li><code>lrmoo:</code>
+                                                http://iflastandards.info/ns/lrm/lrmoo/</li>
+                                            <li><code>intro:</code>
+                                                https://w3id.org/lso/intro/currentbeta#</li>
+                                        </ul>
+                                    </details>
                                 </div>
                             </div>
 
