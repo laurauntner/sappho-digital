@@ -133,7 +133,7 @@ def add_bilingual(g: Graph, uri: URIRef, label_de: str, label_en: str) -> None:
     g.add((uri, RDFS.label, Literal(label_en, lang="en")))
 
 
-# Identifier-Typen: key → (label_de, label_en)
+# Identifier-Typen
 _IDTYPE_LABELS: dict[str, tuple[str, str]] = {
     "wikidata":  ("Wikidata-ID",         "Wikidata ID"),
     "dbpedia":   ("DBpedia-ID",          "DBpedia ID"),
@@ -222,25 +222,35 @@ for bibl in top_bibls:
     g.add((sd_id_uri, ECRM.P1i_identifies, bibl_uri))
     g.add((sd_id_uri, ECRM.P2_has_type, SD["id_type/sappho-digital"]))
 
-    # Wikidata-Referenz
-    ref = bibl.get("ref")
-    if not ref:
-        nested = bibl.find("tei:bibl", namespaces=NSMAP)
-        if nested is not None:
-            ref = nested.get("ref")
-    if ref and "wikidata.org/entity/" in ref:
-        g.add((bibl_uri, OWL.sameAs, URIRef(ref)))
-        qid = ref.split("/")[-1]
+    # Wikidata-Referenzen: äußeres bibl → immer F2, inneres bibl → immer F3
+    outer_ref = bibl.get("ref") or ""
+    _nested_bibl = bibl.find("tei:bibl", namespaces=NSMAP)
+    inner_ref = (_nested_bibl.get("ref") or "") if _nested_bibl is not None else ""
 
+    outer_is_wd = "wikidata.org/entity/" in outer_ref
+    inner_is_wd = "wikidata.org/entity/" in inner_ref
+
+    entity = {}
+
+    def _add_wd_identifiers(target: URIRef, qid: str) -> None:
         wd_id_uri = SD[f"identifier/{qid}"]
-        g.add((bibl_uri, ECRM.P1_is_identified_by, wd_id_uri))
+        g.add((target, ECRM.P1_is_identified_by, wd_id_uri))
         g.add((wd_id_uri, RDF.type, ECRM.E42_Identifier))
         g.add((wd_id_uri, RDFS.label, Literal(qid)))
-        g.add((wd_id_uri, ECRM.P1i_identifies, bibl_uri))
+        g.add((wd_id_uri, ECRM.P1i_identifies, target))
         g.add((wd_id_uri, ECRM.P2_has_type, idtype_wikidata))
 
-        entity = fetch_wikidata(qid)
+    if outer_is_wd:
+        outer_qid = outer_ref.split("/")[-1]
+        g.add((bibl_uri, OWL.sameAs, URIRef(outer_ref)))
+        _add_wd_identifiers(bibl_uri, outer_qid)
+        entity = fetch_wikidata(outer_qid)
 
+    if inner_is_wd and not outer_is_wd:
+        inner_qid = inner_ref.split("/")[-1]
+        entity = fetch_wikidata(inner_qid)
+
+    if outer_is_wd and entity:
         # DBpedia
         dbpedia_links = set()
         for p in ("P2888", "P1709"):
@@ -354,6 +364,83 @@ for bibl in top_bibls:
         g.add((manifestation_uri, RDFS.label, Literal(final_label, lang="de")))
         g.add((manifestation_uri, LRMOO.R4_embodies, bibl_uri))
         g.add((bibl_uri, LRMOO.R4i_is_embodied_in, manifestation_uri))
+
+        if inner_is_wd:
+            inner_qid = inner_ref.split("/")[-1]
+            g.add((manifestation_uri, OWL.sameAs, URIRef(inner_ref)))
+            _add_wd_identifiers(manifestation_uri, inner_qid)
+
+            if not outer_is_wd and entity:
+                # DBpedia
+                dbpedia_links = set()
+                for p in ("P2888", "P1709"):
+                    for raw in get_claim_vals(entity, p, expect="url"):
+                        norm = normalize_dbpedia_url(raw)
+                        if norm:
+                            dbpedia_links.add(norm)
+                if not dbpedia_links:
+                    maybe = normalize_dbpedia_url(dbpedia_from_sitelinks(entity))
+                    if maybe:
+                        dbpedia_links.add(maybe)
+
+                for link in dbpedia_links:
+                    db_key    = link.rsplit("/", 1)[-1] or "resource"
+                    db_id_uri = SD[f"identifier/{db_key}"]
+                    g.add((manifestation_uri, ECRM.P1_is_identified_by, db_id_uri))
+                    g.add((db_id_uri, RDF.type, ECRM.E42_Identifier))
+                    g.add((db_id_uri, RDFS.label, Literal(db_key)))
+                    g.add((db_id_uri, ECRM.P1i_identifies, manifestation_uri))
+                    g.add((db_id_uri, ECRM.P2_has_type, idtype_dbpedia))
+                    g.add((manifestation_uri, OWL.sameAs, URIRef(link)))
+
+                # GND
+                for gnd in set(get_claim_vals(entity, "P227", expect="str")):
+                    gnd = (gnd or "").strip().replace(" ", "")
+                    if not gnd:
+                        continue
+                    gnd_uri = SD[f"identifier/{gnd}"]
+                    g.add((manifestation_uri, ECRM.P1_is_identified_by, gnd_uri))
+                    g.add((gnd_uri, RDF.type, ECRM.E42_Identifier))
+                    g.add((gnd_uri, RDFS.label, Literal(gnd)))
+                    g.add((gnd_uri, ECRM.P1i_identifies, manifestation_uri))
+                    g.add((gnd_uri, ECRM.P2_has_type, idtype_gnd))
+                    g.add((manifestation_uri, OWL.sameAs, URIRef(f"https://d-nb.info/gnd/{gnd}")))
+
+                # VIAF
+                for viaf in set(get_claim_vals(entity, "P214", expect="str")):
+                    viaf = (viaf or "").strip().replace(" ", "")
+                    if not viaf:
+                        continue
+                    viaf_uri = SD[f"identifier/{viaf}"]
+                    g.add((manifestation_uri, ECRM.P1_is_identified_by, viaf_uri))
+                    g.add((viaf_uri, RDF.type, ECRM.E42_Identifier))
+                    g.add((viaf_uri, RDFS.label, Literal(viaf)))
+                    g.add((viaf_uri, ECRM.P1i_identifies, manifestation_uri))
+                    g.add((viaf_uri, ECRM.P2_has_type, idtype_viaf))
+                    g.add((manifestation_uri, OWL.sameAs, URIRef(f"https://viaf.org/viaf/{viaf}")))
+
+                # Goodreads
+                for gr in set(get_claim_vals(entity, "P8383", expect="str")):
+                    gr = (gr or "").strip()
+                    if not gr:
+                        continue
+                    gr_uri = SD[f"identifier/{gr}"]
+                    g.add((manifestation_uri, ECRM.P1_is_identified_by, gr_uri))
+                    g.add((gr_uri, RDF.type, ECRM.E42_Identifier))
+                    g.add((gr_uri, RDFS.label, Literal(gr)))
+                    g.add((gr_uri, ECRM.P1i_identifies, manifestation_uri))
+                    g.add((gr_uri, ECRM.P2_has_type, idtype_gr))
+                    g.add((manifestation_uri, OWL.sameAs, URIRef(f"https://www.goodreads.com/work/show/{gr}")))
+
+                # Wikimedia-Bild
+                img = next((v for v in get_claim_vals(entity, "P18", expect="auto") if v), None)
+                if img:
+                    img_url = WDCOM + img.replace(" ", "_")
+                    g.add((manifestation_uri, RDFS.seeAlso, URIRef(img_url)))
+
+        elif outer_is_wd and _nested_bibl is None:
+            # Nur äußeres bibl, kein inneres: outer_ref gilt für F2 und F3
+            g.add((manifestation_uri, OWL.sameAs, URIRef(outer_ref)))
 
         g.add((creation_manif_uri, RDF.type, LRMOO.F30_Manifestation_Creation))
         add_bilingual(g, creation_manif_uri,
