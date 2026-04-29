@@ -441,6 +441,7 @@ for bibl in top_bibls:
         elif outer_is_wd and _nested_bibl is None:
             # Nur äußeres bibl, kein inneres: outer_ref gilt für F2 und F3
             g.add((manifestation_uri, OWL.sameAs, URIRef(outer_ref)))
+            _add_wd_identifiers(manifestation_uri, outer_qid) 
 
         g.add((creation_manif_uri, RDF.type, LRMOO.F30_Manifestation_Creation))
         add_bilingual(g, creation_manif_uri,
