@@ -2530,3 +2530,50 @@ a.feat-tag--intertext:hover {
 .nav-orientierung-link:hover {
     color: #5e17eb !important;
 }
+
+.ns-list {
+    margin-top: 0.6em;
+}
+ 
+.ns-list summary {
+    cursor: pointer;
+    font-weight: 600;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+}
+ 
+.ns-list summary::before {
+    content: "›";
+    color: #5e17eb;
+    font-weight: bold;
+    transition: transform 0.15s ease;
+    display: inline-block;
+}
+ 
+.ns-list[open] summary::before {
+    transform: rotate(90deg);
+}
+ 
+.ns-list summary::-webkit-details-marker {
+    display: none;
+}
+ 
+.ns-list__items {
+    margin-top: 0.4em;
+}
+ 
+.ns-list code {
+    font-size: 0.8em;
+    color: #5e17eb;
+    background: rgba(94, 23, 235, 0.07);
+    border: 1px solid rgba(94, 23, 235, 0.18);
+    border-radius: 3px;
+    padding: 0.1em 0.35em;
+    margin-right: 0.3em;
+    font-family: 'Geist Mono', monospace;
+}
