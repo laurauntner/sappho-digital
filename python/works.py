@@ -224,6 +224,10 @@ for bibl in top_bibls:
 
     # Wikidata-Referenz
     ref = bibl.get("ref")
+    if not ref:
+        nested = bibl.find("tei:bibl", namespaces=NSMAP)
+        if nested is not None:
+            ref = nested.get("ref")
     if ref and "wikidata.org/entity/" in ref:
         g.add((bibl_uri, OWL.sameAs, URIRef(ref)))
         qid = ref.split("/")[-1]
