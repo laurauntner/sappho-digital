@@ -507,7 +507,7 @@
                   Relationen und gemeinsame Phänomene, besonders dichte intertextuelle Beziehungen
                   sowie Phänomene als Grundlage intertextueller Relationen. Die weiteren Abschnitte
                   zeigen alle Phänomene im Vergleich, ihre Verteilung nach Fragment-Referenz, im
-                  Laufe der Zeit und nach Gattung sowie Zusammenhänge von Stoff-Komponenten,
+                  Laufe der Zeit und nach Gattung sowie Zusammenhänge von Komponenten von Stoffvarianten,
                   Personenreferenzen, Werkreferenzen und Zitaten. Abschließend widmen sich zwei
                   Abschnitte genderspezifischen Analysen sowie einer Popularitätsanalyse mittels
                   Wiki-Metriken.</p>
@@ -575,7 +575,7 @@
                     angibt, wie intensiv die gemessene Rezeption ist. Der Index vereint zwei
                     Dimensionen: die Ph&#228;nomendichte <code>P(t)</code> &#8211; die Gesamtzahl
                     aller einem Text zugeordneten analytischen Einheiten (Personen-, Orts- und
-                    Werkreferenzen, Figuren, rhetorische Topoi, Motive, Themen, Stoffe und Zitate)
+                    Werkreferenzen, Figuren, rhetorische Topoi, Motive, Themen, Stoffe bzw. Stoffvarianten und Zitate)
                     &#8211; und die intertextuelle Vernetzung <code>I(t)</code>, gemessen an der
                     Anzahl der Intertext-Knoten, in denen der Text als Objekt auftritt. Da die
                     Ph&#228;nomendichte einer ausgepr&#228;gten rechtsschiefen Verteilung folgt und
@@ -788,14 +788,14 @@
                 </div>
                 <div class="stats-wrap" id="stat9">
                   <p class="stats-subtitle">Statistik 9: Stoff-Komponenten</p>
-                  <p class="stats-desc">Welche Phänomene treten gemeinsam mit einem bestimmten Stoff
+                  <p class="stats-desc">Welche Phänomene treten gemeinsam mit einer bestimmten Stoffvariante
                     auf? Der innere Ring zeigt die Phänomentypen, der äußere Ring die einzelnen
                     Phänomene; die Segmentbreite entspricht der relativen Häufigkeit.</p>
                   <div class="control-col-wrap">
                     <div class="stat3-control-group">
-                      <label for="sel-pc-plot">Stoff:</label>
+                      <label for="sel-pc-plot">Stoffvariante:</label>
                       <select id="sel-pc-plot" class="stat2-select">
-                        <option value="">&#8212; Stoff wählen &#8212;</option>
+                        <option value="">&#8212; Stoffvariante wählen &#8212;</option>
                       </select>
                     </div>
                     <div class="stat3-control-group">
