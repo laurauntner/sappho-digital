@@ -76,8 +76,8 @@
                 <bibl xml:id="bibl_c7770133">
                     <title type="text">Der Autor. Drittes Stück</title>
                     <date type="published" when="1743">1743</date>
-                    <bibl xml:id="bibl_9db1eec3">
-                        <title type="work">Belustigungen des Verstandes und Witzes. Auf das Jahr 1743</title>
+                    <bibl xml:id="bibl_6d27343b" ref="https://www.wikidata.org/entity/Q137690824">
+                        <title type="work">Belustigungen des Verstandes und Witzes</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q111106" xml:id="author_3a578161">Karl Christian Gärtner</author>
                     <note type="genre">Prosa</note>
@@ -504,7 +504,7 @@
                 <bibl xml:id="bibl_633e1efb">
                     <title type="text">Der alte Poet</title>
                     <date type="published" when="1840">1840</date>
-                    <bibl xml:id="bibl_da54ba99">
+                    <bibl xml:id="bibl_da54ba99" ref="https://www.wikidata.org/entity/Q1113948">
                         <title type="work">Morgenblatt für gebildete Stände</title>
                     </bibl>
                     <note type="genre">Prosa</note>
@@ -514,7 +514,7 @@
                 <bibl xml:id="bibl_59424f81">
                     <title type="text">Briefe zweier Römerinnen aus den Zeiten des Nero</title>
                     <date type="published" when="1841">1841</date>
-                    <bibl xml:id="bibl_da54ba99">
+                    <bibl xml:id="bibl_da54ba99" ref="https://www.wikidata.org/entity/Q1113948">
                         <title type="work">Morgenblatt für gebildete Stände</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q2643490" xml:id="author_1b017ab5">Alexander von Ungern-Sternberg</author>
@@ -567,7 +567,7 @@
                 <bibl xml:id="bibl_95634037">
                     <title type="text">Die Höhlen der Ansariè</title>
                     <date type="published" when="1848">1848</date>
-                    <bibl xml:id="bibl_ea13cdf4">
+                    <bibl xml:id="bibl_ea13cdf4" ref="https://www.wikidata.org/entity/Q395955">
                         <title type="work">Agramer Zeitung</title>
                     </bibl>
                     <note type="genre">Prosa</note>
@@ -587,8 +587,8 @@
                 <bibl xml:id="bibl_21911b3d">
                     <title type="text">Die Wiener in Griechenland. Novelle</title>
                     <date type="published" when="1853">1853</date>
-                    <bibl xml:id="bibl_971ed81c">
-                        <title type="work">Troppauer-Zeitung</title>
+                    <bibl xml:id="bibl_971ed81c" ref="https://www.wikidata.org/entity/Q66778324">
+                        <title type="work">Troppauer Zeitung</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q55674445" xml:id="author_b1037de0">Julius Krebs</author>
                     <note type="genre">Prosa</note>
@@ -738,7 +738,7 @@
                 <bibl xml:id="bibl_58816f3d">
                     <title type="text">Gefangen</title>
                     <date type="published" when="1868">1868</date>
-                    <bibl xml:id="bibl_8fd4ed65">
+                    <bibl xml:id="bibl_8fd4ed65" ref="https://www.wikidata.org/entity/Q135968620">
                         <title type="work">Durlacher Wochenblatt</title>
                     </bibl>
                     <note type="genre">Prosa</note>
@@ -936,7 +936,7 @@
                 <bibl xml:id="bibl_db188eae">
                     <title type="text">Sappho. Novelle</title>
                     <date type="published" when="1884">1884</date>
-                    <bibl xml:id="bibl_fd81a760">
+                    <bibl xml:id="bibl_fd81a760" ref="https://www.wikidata.org/entity/Q1667655">
                         <title type="work">Ost und West</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q138659021" xml:id="author_cb06c3ad">E. Jegher</author>
@@ -1132,7 +1132,7 @@
                 <bibl xml:id="bibl_499ac7ae">
                     <title type="text">Der Blaustrumpf</title>
                     <date type="published" when="1891">1891</date>
-                    <bibl xml:id="bibl_c62408ae">
+                    <bibl xml:id="bibl_c62408ae" ref="https://www.wikidata.org/entity/Q120716778">
                         <title type="work">Bukowinaer Nachrichten</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q138834314" xml:id="author_90c06ca4">Georg Biagosch</author>
@@ -1499,7 +1499,7 @@
                 <bibl xml:id="bibl_e5b115d9">
                     <title type="text">Ein Irrtum des Herzens. Originalroman</title>
                     <date type="published" when="1908">1908</date>
-                    <bibl xml:id="bibl_3857bd18">
+                    <bibl xml:id="bibl_3857bd18" ref="https://www.wikidata.org/entity/Q134548927">
                         <title type="work">Ottendorfer Zeitung</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q94693790" xml:id="author_f5a8b647">Franz Zistler</author>
@@ -1991,7 +1991,7 @@
                 <bibl xml:id="bibl_94f099bd">
                     <title type="text">Nie wieder luegen</title>
                     <date type="published" when="1937">1937</date>
-                    <bibl xml:id="bibl_34ea7c2b">
+                    <bibl xml:id="bibl_34ea7c2b" ref="https://www.wikidata.org/entity/Q116739517">
                         <title type="work">Pariser Tageszeitung. Quotidien Anti-Hitlerien</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q71461" xml:id="author_eba562d8">Irmgard Keun</author>
