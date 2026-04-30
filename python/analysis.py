@@ -366,6 +366,7 @@ distinct_value_to_id = {k: {} for k in ["motiv","stoff","thema","werk","ort","pe
 
 distinct_topos_to_id: Dict[str, str] = {}
 topos_to_texts: Dict[str, set] = {}
+character_occurs: Dict[str, set] = defaultdict(set)
 
 doc_occurs = {
     "motiv":  defaultdict(set),
@@ -425,8 +426,10 @@ for xml_file in sorted(XML_DIR.glob("*.xml")):
         for v in set(cats[k]):
             doc_occurs[k][v].add(text_id)
 
-    for v in {p["label"] for p in cats["person"]}:
-        doc_occurs["person"][v].add(text_id)
+    for p in cats["person"]:
+        doc_occurs["person"][p["label"]].add(text_id)
+        if has_art_token(p.get("art", ""), "character"):
+            character_occurs[p["label"]].add(text_id)
 
     for phr in set(cats["topos"]):
         topos_to_texts.setdefault(phr, set()).add(text_id)
@@ -696,6 +699,8 @@ for text_id, cats in elements_per_text.items():
         g.add((text_uri, INTRO.R18_showsActualization, act_uri))
 
         if has_art_token(art, "character"):
+            if len(character_occurs.get(v, set())) < 2:
+                continue
             char_feat_uri = uri(f"feature/character/{used_id}")
             g.add((char_feat_uri, RDF.type, INTRO.INT_Character))
             add_bilingual(g, char_feat_uri,
