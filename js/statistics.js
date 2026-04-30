@@ -1425,7 +1425,7 @@ const FTYPE_META = {
     topos:        { label: 'Rhetorische Topoi',  singular: 'Rhetorischer Topos',  color: '#ef4444' },
     motif:        { label: 'Motive',             singular: 'Motiv',               color: '#8b5cf6' },
     topic:        { label: 'Themen',             singular: 'Thema',               color: '#06b6d4' },
-    plot:         { label: 'Stoffe',             singular: 'Stoff',               color: '#f97316' },
+    plot:         { label: 'Stoffvarianten',             singular: 'Stoffvariante',               color: '#f97316' },
     work_ref:     { label: 'Werkreferenzen',     singular: 'Werkreferenz',        color: '#e11d48' },
     text_passage: { label: 'Zitate',             singular: 'Zitat',               color: '#84cc16' },
 };
@@ -3232,7 +3232,7 @@ function renderInt31TopNodes() {
                 topos:        'Rhetorische Topoi',
                 motif:        'Motive',
                 topic:        'Themen',
-                plot:         'Stoffe',
+                plot:         'Stoffvarianten',
                 text_passage: 'Textpassagen',
                 work_ref:     'Werkreferenzen',
                 other:        'Sonstige',
