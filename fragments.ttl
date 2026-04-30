@@ -5435,8 +5435,8 @@
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
 <https://sappho-digital.com/manifestation_creation/sappho_bagordo> a lrmoo:F30_Manifestation_Creation ;
-    rdfs:label "Entstehung von Andreas Bagordos Sappho-Übersetzung"@de,
-        "Manifestation Creation of Andreas Bagordo's Sappho Translation"@en ;
+    rdfs:label "Entstehung von Andreas Bagordos Sappho-Ausgabe"@de,
+        "Manifestation Creation of Andreas Bagordo’s Sappho edition"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/person/editor_bagordo>,
         <https://sappho-digital.com/publisher/publisher_patmos> ;
     ecrm:P4_has_time-span <https://sappho-digital.com/timespan/2009> ;
@@ -8055,8 +8055,8 @@
         <https://sappho-digital.com/identifier/Q495907> .
 
 <https://sappho-digital.com/manifestation/sappho_bagordo> a lrmoo:F3_Manifestation ;
-    rdfs:label "Andreas Bagordos Sappho-Übersetzung"@de,
-        "Andreas Bagordo's Sappho Translation"@en ;
+    rdfs:label "Andreas Bagordos Sappho-Ausgabe"@de,
+        "Andreas Bagordo’s Sappho edition"@en ;
     ecrm:P102_has_title <https://sappho-digital.com/title/manifestation/sappho_bagordo> ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/sappho_bagordo> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_sappho_1>,
