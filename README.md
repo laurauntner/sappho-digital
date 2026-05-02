@@ -33,7 +33,24 @@ For questions, suggestions, or reports of errors, feel free to reach out ([laura
 ---
 
 ### Citation recommendation
-Laura Untner: Sappho Digital. Die literarische Sappho-Rezeption im deutschsprachigen Raum. Berlin/Vienna 2024–[2027], https://sappho-digital.com.
+
+> Laura Untner: *Sappho Digital. Die literarische Sappho-Rezeption im deutschsprachigen Raum.* Berlin/Vienna 2024–[2027], https://sappho-digital.com.
+
+<details>
+<summary>BibTeX</summary>
+
+```bibtex
+@dataset{untner_sappho_digital_2024,
+  author    = {Untner, Laura},
+  title     = {Sappho Digital. Die literarische Sappho-Rezeption im deutschsprachigen Raum},
+  year      = {2024},
+  url       = {https://sappho-digital.com},
+  note      = {Berlin/Vienna, 2024--[2027]}
+}
+```
+
+A machine-readable citation is also available in [CITATION.cff](https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/CITATION.cff).
+</details>
 
 ---
 
