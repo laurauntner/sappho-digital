@@ -16,13 +16,13 @@ This repository contains:
 - More [files](https://github.com/laurauntner/sappho-digital/tree/main/documentation) documenting the applied data model. To get an idea of the data model, see also the companion repository [wikidata-to-cidoc-crm](https://github.com/laurauntner/wikidata-to-cidoc-crm). This repository contains Python scripts and a Python package for converting structured data from Wikidata into RDF using CIDOC CRM, LRMoo, and INTRO. Cf. Laura Untner: From Wikidata to CIDOC CRM: A Use Case Scenario for Digital Comparative Literary Studies. In: Journal of Open Humanities Data 11 (2025), pp. 1–15, DOI: [10.5334/johd.421](https://doi.org/10.5334/johd.421).
 - Scripts used for data transformation and satistics ([XSLT](https://github.com/laurauntner/sappho-digital/tree/main/xslt), [JavaScript](https://github.com/laurauntner/sappho-digital/tree/main/html/js) and [Python](https://github.com/laurauntner/sappho-digital/tree/main/python)).
 - A [Java program](https://github.com/laurauntner/sappho-digital/blob/main/java/src/main/java/Reasoner.java) for reasoning with HermiT.
-- The website code.
+- The [website](https://sappho-digital.com/) code.
 
 ⚠️ This repository is under active development.
 
 ---
 
-Ontology versions used for developing the ([Sappho Digital Ontology](https://sappho-digital.com/ontology.html):
+Ontology versions used for developing the [Sappho Digital Ontology](https://sappho-digital.com/ontology.html):
 - Erlangen CRM 240307 (based on CIDOC CRM 7.1.3)
 - LRMoo 1.1.1
 - INTRO beta202506
