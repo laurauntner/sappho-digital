@@ -4402,6 +4402,11 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_22ad97e4> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
+<https://sappho-digital.com/identifier/bibl_22hgeq4c> a ecrm:E42_Identifier ;
+    rdfs:label "bibl_22hgeq4c" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_22hgeq4c> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
 <https://sappho-digital.com/identifier/bibl_230b90cb> a ecrm:E42_Identifier ;
     rdfs:label "bibl_230b90cb" ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_230b90cb> ;
@@ -9102,6 +9107,11 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_5c743433>,
         <https://sappho-digital.com/manifestation_creation/bibl_574806a3> .
 
+<https://sappho-digital.com/person/author_03v8eac1> a ecrm:E21_Person ;
+    rdfs:label "Anna Julian Mendlik"@de ;
+    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_22hgeq4c>,
+        <https://sappho-digital.com/manifestation_creation/bibl_22hgeq4c> .
+
 <https://sappho-digital.com/person/author_0400cde1> a ecrm:E21_Person ;
     rdfs:label "Ernst Georgy [= Margarete Michaelson]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_b807efb1>,
@@ -12944,6 +12954,11 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_4431d678> ;
     owl:sameAs <https://www.wikidata.org/entity/Q55677460> .
 
+<https://sappho-digital.com/publisher/publisher_q79gb23x> a ecrm:E74_Group ;
+    rdfs:label "Verlagshaus Berlin"@de ;
+    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_22hgeq4c> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1730745> .
+
 <https://sappho-digital.com/publisher/publisher_tg7fe3cx> a ecrm:E74_Group ;
     rdfs:label "Ernst Julius Günther"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_jj152bj6> ;
@@ -13320,6 +13335,10 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/timespan/2025> a ecrm:E52_Time-Span ;
     rdfs:label "2025"^^xsd:gYear ;
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_63h6e84v> .
+
+<https://sappho-digital.com/timespan/2026> a ecrm:E52_Time-Span ;
+    rdfs:label "2026"^^xsd:gYear ;
+    ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_22hgeq4c> .
 
 <https://sappho-digital.com/title/expression/bibl_009ef370> a ecrm:E35_Title ;
     rdfs:label "hiddensee im dezember"@de ;
@@ -13812,6 +13831,10 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/title/expression/bibl_22ad97e4> a ecrm:E35_Title ;
     rdfs:label "An Herrn Utz, den Verfasser der lyrischen Gedichte"@de ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_22ad97e4> .
+
+<https://sappho-digital.com/title/expression/bibl_22hgeq4c> a ecrm:E35_Title ;
+    rdfs:label "Dante im Darkroom"@de ;
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_22hgeq4c> .
 
 <https://sappho-digital.com/title/expression/bibl_230b90cb> a ecrm:E35_Title ;
     rdfs:label "Modeste: Roman"@de ;
@@ -18142,6 +18165,12 @@ Philosophen zu Sanssouci"""@de ;
         "Expression Creation of An Herrn Utz, den Verfasser der lyrischen Gedichte"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_7240c9e7> ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_22ad97e4> .
+
+<https://sappho-digital.com/expression_creation/bibl_22hgeq4c> a lrmoo:F28_Expression_Creation ;
+    rdfs:label "Expressionserstellung von Dante im Darkroom"@de,
+        "Expression Creation of Dante im Darkroom"@en ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_03v8eac1> ;
+    lrmoo:R17_created <https://sappho-digital.com/expression/bibl_22hgeq4c> .
 
 <https://sappho-digital.com/expression_creation/bibl_230b90cb> a lrmoo:F28_Expression_Creation ;
     rdfs:label "Expressionserstellung von Modeste: Roman"@de,
@@ -23161,6 +23190,11 @@ Philosophen zu Sanssouci"""@de ;
     rdfs:label "Das kleine Aber"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_221afbf2> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_90d49e16> .
+
+<https://sappho-digital.com/manifestation/bibl_22hgeq4c> a lrmoo:F3_Manifestation ;
+    rdfs:label "Dante im Darkroom"@de ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_22hgeq4c> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_22hgeq4c> .
 
 <https://sappho-digital.com/manifestation/bibl_230b90cb> a lrmoo:F3_Manifestation ;
     rdfs:label "Modeste: Roman"@de ;
@@ -30155,6 +30189,14 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_229de6c8> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_def73d2f> .
+
+<https://sappho-digital.com/expression/bibl_22hgeq4c> a lrmoo:F2_Expression ;
+    rdfs:label "Dante im Darkroom"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_22hgeq4c> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_22hgeq4c> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_22hgeq4c> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_22hgeq4c> .
 
 <https://sappho-digital.com/expression/bibl_230b90cb> a lrmoo:F2_Expression ;
     rdfs:label "Modeste: Roman"@de ;
@@ -39311,6 +39353,14 @@ Philosophen zu Sanssouci"""@de ;
     ecrm:P7_took_place_at <https://sappho-digital.com/place/place_001b460b> ;
     lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_228d3345> .
 
+<https://sappho-digital.com/manifestation_creation/bibl_22hgeq4c> a lrmoo:F30_Manifestation_Creation ;
+    rdfs:label "Manifestationserstellung von Dante im Darkroom"@de,
+        "Manifestation Creation of Dante im Darkroom"@en ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/publisher/publisher_q79gb23x> ;
+    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/2026> ;
+    ecrm:P7_took_place_at <https://sappho-digital.com/place/place_d35a02eb> ;
+    lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_22hgeq4c> .
+
 <https://sappho-digital.com/manifestation_creation/bibl_230b90cb> a lrmoo:F30_Manifestation_Creation ;
     rdfs:label "Manifestationserstellung von Modeste: Roman"@de,
         "Manifestation Creation of Modeste: Roman"@en ;
@@ -46146,6 +46196,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_2027856b>,
         <https://sappho-digital.com/manifestation_creation/bibl_21d85a5a>,
         <https://sappho-digital.com/manifestation_creation/bibl_221afbf2>,
+        <https://sappho-digital.com/manifestation_creation/bibl_22hgeq4c>,
         <https://sappho-digital.com/manifestation_creation/bibl_264bf5aa>,
         <https://sappho-digital.com/manifestation_creation/bibl_2838b3d9>,
         <https://sappho-digital.com/manifestation_creation/bibl_285bda39>,
