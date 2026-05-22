@@ -8411,9 +8411,12 @@ my music is lost, i bite my tongue. Ein Abgesang</title>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1149499" xml:id="publisher_971ab43a">Czernin</publisher>
                 </bibl>
-                <bibl xml:id="bibl_22hgeq4c">
-                    <title type="text">Dante im Darkroom</title>
+                <bibl xml:id="bibl_42gg1qbl">
+                    <title type="text">Sappho</title>
                     <date type="published" when="2026">2026</date>
+                    <bibl xml:id="bibl_22hgeq4c">
+                        <title type="work">Dante im Darkroom</title>
+                    </bibl>
                     <author ref="https://www.wikidata.org/entity/Q112333433" xml:id="author_03v8eac1">Anna Julian Mendlik</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>

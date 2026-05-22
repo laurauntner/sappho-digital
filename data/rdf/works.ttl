@@ -4402,11 +4402,6 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_22ad97e4> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
-<https://sappho-digital.com/identifier/bibl_22hgeq4c> a ecrm:E42_Identifier ;
-    rdfs:label "bibl_22hgeq4c" ;
-    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_22hgeq4c> ;
-    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
-
 <https://sappho-digital.com/identifier/bibl_230b90cb> a ecrm:E42_Identifier ;
     rdfs:label "bibl_230b90cb" ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_230b90cb> ;
@@ -5105,6 +5100,11 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/identifier/bibl_42fbb8ad> a ecrm:E42_Identifier ;
     rdfs:label "bibl_42fbb8ad" ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_42fbb8ad> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
+<https://sappho-digital.com/identifier/bibl_42gg1qbl> a ecrm:E42_Identifier ;
+    rdfs:label "bibl_42gg1qbl" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_42gg1qbl> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
 <https://sappho-digital.com/identifier/bibl_431728df> a ecrm:E42_Identifier ;
@@ -9109,7 +9109,7 @@ Philosophen zu Sanssouci"""@en ;
 
 <https://sappho-digital.com/person/author_03v8eac1> a ecrm:E21_Person ;
     rdfs:label "Anna Julian Mendlik"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_22hgeq4c>,
+    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_42gg1qbl>,
         <https://sappho-digital.com/manifestation_creation/bibl_22hgeq4c> .
 
 <https://sappho-digital.com/person/author_0400cde1> a ecrm:E21_Person ;
@@ -13832,10 +13832,6 @@ Philosophen zu Sanssouci"""@en ;
     rdfs:label "An Herrn Utz, den Verfasser der lyrischen Gedichte"@de ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_22ad97e4> .
 
-<https://sappho-digital.com/title/expression/bibl_22hgeq4c> a ecrm:E35_Title ;
-    rdfs:label "Dante im Darkroom"@de ;
-    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_22hgeq4c> .
-
 <https://sappho-digital.com/title/expression/bibl_230b90cb> a ecrm:E35_Title ;
     rdfs:label "Modeste: Roman"@de ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_230b90cb> .
@@ -14375,6 +14371,10 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/title/expression/bibl_42fbb8ad> a ecrm:E35_Title ;
     rdfs:label "Griechische Küstenfahrten"@de ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_42fbb8ad> .
+
+<https://sappho-digital.com/title/expression/bibl_42gg1qbl> a ecrm:E35_Title ;
+    rdfs:label "Sappho"@de ;
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_42gg1qbl> .
 
 <https://sappho-digital.com/title/expression/bibl_431728df> a ecrm:E35_Title ;
     rdfs:label "Ann Tyrsis"@de ;
@@ -18166,12 +18166,6 @@ Philosophen zu Sanssouci"""@de ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_7240c9e7> ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_22ad97e4> .
 
-<https://sappho-digital.com/expression_creation/bibl_22hgeq4c> a lrmoo:F28_Expression_Creation ;
-    rdfs:label "Expressionserstellung von Dante im Darkroom"@de,
-        "Expression Creation of Dante im Darkroom"@en ;
-    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_03v8eac1> ;
-    lrmoo:R17_created <https://sappho-digital.com/expression/bibl_22hgeq4c> .
-
 <https://sappho-digital.com/expression_creation/bibl_230b90cb> a lrmoo:F28_Expression_Creation ;
     rdfs:label "Expressionserstellung von Modeste: Roman"@de,
         "Expression Creation of Modeste: Roman"@en ;
@@ -18867,6 +18861,12 @@ Philosophen zu Sanssouci"""@de ;
         "Expression Creation of Bonmots"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_653eb09d> ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_42ad958f> .
+
+<https://sappho-digital.com/expression_creation/bibl_42gg1qbl> a lrmoo:F28_Expression_Creation ;
+    rdfs:label "Expressionserstellung von Sappho"@de,
+        "Expression Creation of Sappho"@en ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_03v8eac1> ;
+    lrmoo:R17_created <https://sappho-digital.com/expression/bibl_42gg1qbl> .
 
 <https://sappho-digital.com/expression_creation/bibl_433612de> a lrmoo:F28_Expression_Creation ;
     rdfs:label "Expressionserstellung von Klage um den Freund"@de,
@@ -23194,7 +23194,7 @@ Philosophen zu Sanssouci"""@de ;
 <https://sappho-digital.com/manifestation/bibl_22hgeq4c> a lrmoo:F3_Manifestation ;
     rdfs:label "Dante im Darkroom"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_22hgeq4c> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_22hgeq4c> .
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_42gg1qbl> .
 
 <https://sappho-digital.com/manifestation/bibl_230b90cb> a lrmoo:F3_Manifestation ;
     rdfs:label "Modeste: Roman"@de ;
@@ -30190,14 +30190,6 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_229de6c8> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_def73d2f> .
 
-<https://sappho-digital.com/expression/bibl_22hgeq4c> a lrmoo:F2_Expression ;
-    rdfs:label "Dante im Darkroom"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_22hgeq4c> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_22hgeq4c> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_22hgeq4c> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_22hgeq4c> .
-
 <https://sappho-digital.com/expression/bibl_230b90cb> a lrmoo:F2_Expression ;
     rdfs:label "Modeste: Roman"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_230b90cb> ;
@@ -30805,6 +30797,14 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_42fbb8ad> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_42fbb8ad> .
+
+<https://sappho-digital.com/expression/bibl_42gg1qbl> a lrmoo:F2_Expression ;
+    rdfs:label "Sappho"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_42gg1qbl> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_42gg1qbl> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_42gg1qbl> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_22hgeq4c> .
 
 <https://sappho-digital.com/expression/bibl_431728df> a lrmoo:F2_Expression ;
     rdfs:label "Ann Tyrsis"@de ;
