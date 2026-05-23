@@ -1126,6 +1126,12 @@
     ecrm:P138_represents <https://sappho-digital.com/expression/bibl_87edf63e> ;
     rdfs:seeAlso <http://www.zeno.org/Literatur/M/H%C3%B6lty,+Ludwig+Christoph+Heinrich/Gedichte/S%C3%A4mtliche+Gedichte/An+einen+Blumengarten> .
 
+<https://sappho-digital.com/digital/bibl_87wqbh51> a ecrm:E73_Information_Object ;
+    rdfs:label "Digitale Kopie von Jemand wird sich an uns erinnern, sage ich, sogar in einer anderen Zeit"@de,
+        "Digital Copy of Jemand wird sich an uns erinnern, sage ich, sogar in einer anderen Zeit"@en ;
+    ecrm:P138_represents <https://sappho-digital.com/expression/bibl_87wqbh51> ;
+    rdfs:seeAlso <https://archiveofourown.org/works/85038486> .
+
 <https://sappho-digital.com/digital/bibl_8819a3b3> a ecrm:E73_Information_Object ;
     rdfs:label "Digitale Kopie von Sapho"@de,
         "Digital Copy of Sapho"@en ;
@@ -1727,6 +1733,12 @@
         "Digital Copy of O Herr, erheb dich"@en ;
     ecrm:P138_represents <https://sappho-digital.com/expression/bibl_c0db9ef8> ;
     rdfs:seeAlso <https://www.digitale-sammlungen.de/de/view/bsb00070162> .
+
+<https://sappho-digital.com/digital/bibl_c0wpbg52> a ecrm:E73_Information_Object ;
+    rdfs:label "Digitale Kopie von Noch in einer anderen Zeit"@de,
+        "Digital Copy of Noch in einer anderen Zeit"@en ;
+    ecrm:P138_represents <https://sappho-digital.com/expression/bibl_c0wpbg52> ;
+    rdfs:seeAlso <https://archiveofourown.org/works/48789472> .
 
 <https://sappho-digital.com/digital/bibl_c151d4a4> a ecrm:E73_Information_Object ;
     rdfs:label "Digitale Kopie von Ein gräflicher Geburtstag"@de,
@@ -2396,6 +2408,18 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P138_represents <https://sappho-digital.com/expression/bibl_fed3a965> ;
     rdfs:seeAlso <https://www.digitale-sammlungen.de/de/view/bsb00087914> .
 
+<https://sappho-digital.com/digital/bibl_o1qlf92w> a ecrm:E73_Information_Object ;
+    rdfs:label "Digitale Kopie von Who Lives, Who Dies, Who Tells Your Story"@de,
+        "Digital Copy of Who Lives, Who Dies, Who Tells Your Story"@en ;
+    ecrm:P138_represents <https://sappho-digital.com/expression/bibl_o1qlf92w> ;
+    rdfs:seeAlso <https://archiveofourown.org/works/27350287> .
+
+<https://sappho-digital.com/digital/bibl_o4qqfh2c> a ecrm:E73_Information_Object ;
+    rdfs:label "Digitale Kopie von Der verzauberte Hügel"@de,
+        "Digital Copy of Der verzauberte Hügel"@en ;
+    ecrm:P138_represents <https://sappho-digital.com/expression/bibl_o4qqfh2c> ;
+    rdfs:seeAlso <https://archiveofourown.org/works/67541801> .
+
 <https://sappho-digital.com/digital/bibl_ui5a596f> a ecrm:E73_Information_Object ;
     rdfs:label "Digitale Kopie von Der Pantoffel der Sappho. 1819"@de,
         "Digital Copy of Der Pantoffel der Sappho. 1819"@en ;
@@ -2840,6 +2864,11 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/identifier/An_der_Schönen_Blauen_Donau> a ecrm:E42_Identifier ;
     rdfs:label "An_der_Schönen_Blauen_Donau" ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_01298507> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
+
+<https://sappho-digital.com/identifier/Archive_of_Our_Own> a ecrm:E42_Identifier ;
+    rdfs:label "Archive_of_Our_Own" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_cqw3b15b> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
 
 <https://sappho-digital.com/identifier/Armut,_Reichtum,_Schuld_und_Buße_der_Gräfin_Dolores> a ecrm:E42_Identifier ;
@@ -3615,6 +3644,11 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/identifier/Q27237863> a ecrm:E42_Identifier ;
     rdfs:label "Q27237863" ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_9076df3c> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q27764876> a ecrm:E42_Identifier ;
+    rdfs:label "Q27764876" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_cqw3b15b> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
 
 <https://sappho-digital.com/identifier/Q317489> a ecrm:E42_Identifier ;
@@ -6377,6 +6411,11 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_87edf63e> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
+<https://sappho-digital.com/identifier/bibl_87wqbh51> a ecrm:E42_Identifier ;
+    rdfs:label "bibl_87wqbh51" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_87wqbh51> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
 <https://sappho-digital.com/identifier/bibl_8819a3b3> a ecrm:E42_Identifier ;
     rdfs:label "bibl_8819a3b3" ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_8819a3b3> ;
@@ -7650,6 +7689,11 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/identifier/bibl_c0db9ef8> a ecrm:E42_Identifier ;
     rdfs:label "bibl_c0db9ef8" ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_c0db9ef8> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
+<https://sappho-digital.com/identifier/bibl_c0wpbg52> a ecrm:E42_Identifier ;
+    rdfs:label "bibl_c0wpbg52" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_c0wpbg52> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
 <https://sappho-digital.com/identifier/bibl_c14808c9> a ecrm:E42_Identifier ;
@@ -9052,6 +9096,16 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_ffc59e54> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
+<https://sappho-digital.com/identifier/bibl_o1qlf92w> a ecrm:E42_Identifier ;
+    rdfs:label "bibl_o1qlf92w" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_o1qlf92w> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
+<https://sappho-digital.com/identifier/bibl_o4qqfh2c> a ecrm:E42_Identifier ;
+    rdfs:label "bibl_o4qqfh2c" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_o4qqfh2c> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
 <https://sappho-digital.com/identifier/bibl_o708fh9l> a ecrm:E42_Identifier ;
     rdfs:label "bibl_o708fh9l" ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_o708fh9l> ;
@@ -9229,6 +9283,11 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_8723cf23>,
         <https://sappho-digital.com/manifestation_creation/bibl_4387c6fb> .
 
+<https://sappho-digital.com/person/author_11vvqxnl> a ecrm:E21_Person ;
+    rdfs:label "thewreckageofyou"@de ;
+    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_87wqbh51>,
+        <https://sappho-digital.com/manifestation_creation/bibl_cqw3b15b> .
+
 <https://sappho-digital.com/person/author_12b3c9ce> a ecrm:E21_Person ;
     rdfs:label "Johann Wenzel Hann"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_80eaa5e3>,
@@ -9238,6 +9297,16 @@ Philosophen zu Sanssouci"""@en ;
     rdfs:label "Gottfried Kinkel"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_287c0e50>,
         <https://sappho-digital.com/manifestation_creation/bibl_aa132bb6> .
+
+<https://sappho-digital.com/person/author_12vbqenr> a ecrm:E21_Person ;
+    rdfs:label "Madeleine_Beaucoup_Berry"@de ;
+    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_o4qqfh2c>,
+        <https://sappho-digital.com/manifestation_creation/bibl_cqw3b15b> .
+
+<https://sappho-digital.com/person/author_12vbqpnq> a ecrm:E21_Person ;
+    rdfs:label "ahab_cinaa"@de ;
+    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_o1qlf92w>,
+        <https://sappho-digital.com/manifestation_creation/bibl_cqw3b15b> .
 
 <https://sappho-digital.com/person/author_135d0b69> a ecrm:E21_Person ;
     rdfs:label "Jean Laurent [= Karel Ulepič]"@de ;
@@ -10273,6 +10342,11 @@ Philosophen zu Sanssouci"""@en ;
     rdfs:label "Walther von Hollander"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_06cb114b>,
         <https://sappho-digital.com/manifestation_creation/bibl_4f886bc9> .
+
+<https://sappho-digital.com/person/author_912vqxbm> a ecrm:E21_Person ;
+    rdfs:label "GentleGerman"@de ;
+    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_c0wpbg52>,
+        <https://sappho-digital.com/manifestation_creation/bibl_cqw3b15b> .
 
 <https://sappho-digital.com/person/author_91b3e0e9> a ecrm:E21_Person ;
     rdfs:label "Rudolf Hagelstange"@de ;
@@ -13332,14 +13406,6 @@ Philosophen zu Sanssouci"""@en ;
     rdfs:label "2017"^^xsd:gYear ;
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_afe533a8> .
 
-<https://sappho-digital.com/timespan/2025> a ecrm:E52_Time-Span ;
-    rdfs:label "2025"^^xsd:gYear ;
-    ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_63h6e84v> .
-
-<https://sappho-digital.com/timespan/2026> a ecrm:E52_Time-Span ;
-    rdfs:label "2026"^^xsd:gYear ;
-    ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_22hgeq4c> .
-
 <https://sappho-digital.com/title/expression/bibl_009ef370> a ecrm:E35_Title ;
     rdfs:label "hiddensee im dezember"@de ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_009ef370> .
@@ -15360,6 +15426,10 @@ Philosophen zu Sanssouci"""@en ;
     rdfs:label "An einen Blumengarten"@de ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_87edf63e> .
 
+<https://sappho-digital.com/title/expression/bibl_87wqbh51> a ecrm:E35_Title ;
+    rdfs:label "Jemand wird sich an uns erinnern, sage ich, sogar in einer anderen Zeit"@de ;
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_87wqbh51> .
+
 <https://sappho-digital.com/title/expression/bibl_8819a3b3> a ecrm:E35_Title ;
     rdfs:label "Sapho"@de ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_8819a3b3> .
@@ -16352,6 +16422,10 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/title/expression/bibl_c0db9ef8> a ecrm:E35_Title ;
     rdfs:label "O Herr, erheb dich"@de ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_c0db9ef8> .
+
+<https://sappho-digital.com/title/expression/bibl_c0wpbg52> a ecrm:E35_Title ;
+    rdfs:label "Noch in einer anderen Zeit"@de ;
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_c0wpbg52> .
 
 <https://sappho-digital.com/title/expression/bibl_c14808c9> a ecrm:E35_Title ;
     rdfs:label "An den antiken Vers"@de ;
@@ -17429,6 +17503,14 @@ Philosophen zu Sanssouci"""@de ;
 <https://sappho-digital.com/title/expression/bibl_ffc59e54> a ecrm:E35_Title ;
     rdfs:label "Ode an Sappho"@de ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_ffc59e54> .
+
+<https://sappho-digital.com/title/expression/bibl_o1qlf92w> a ecrm:E35_Title ;
+    rdfs:label "Who Lives, Who Dies, Who Tells Your Story"@de ;
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_o1qlf92w> .
+
+<https://sappho-digital.com/title/expression/bibl_o4qqfh2c> a ecrm:E35_Title ;
+    rdfs:label "Der verzauberte Hügel"@de ;
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_o4qqfh2c> .
 
 <https://sappho-digital.com/title/expression/bibl_ui5a596f> a ecrm:E35_Title ;
     rdfs:label "Der Pantoffel der Sappho. 1819"@de ;
@@ -20116,6 +20198,12 @@ Philosophen zu Sanssouci"""@de ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_11b502bb> ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_8723cf23> .
 
+<https://sappho-digital.com/expression_creation/bibl_87wqbh51> a lrmoo:F28_Expression_Creation ;
+    rdfs:label "Expressionserstellung von Jemand wird sich an uns erinnern, sage ich, sogar in einer anderen Zeit"@de,
+        "Expression Creation of Jemand wird sich an uns erinnern, sage ich, sogar in einer anderen Zeit"@en ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_11vvqxnl> ;
+    lrmoo:R17_created <https://sappho-digital.com/expression/bibl_87wqbh51> .
+
 <https://sappho-digital.com/expression_creation/bibl_88214683> a lrmoo:F28_Expression_Creation ;
     rdfs:label "Expressionserstellung von Sommergefühl"@de,
         "Expression Creation of Sommergefühl"@en ;
@@ -21359,6 +21447,12 @@ Philosophen zu Sanssouci"""@de ;
         "Expression Creation of O Herr, erheb dich"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_b0f9b07f> ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_c0db9ef8> .
+
+<https://sappho-digital.com/expression_creation/bibl_c0wpbg52> a lrmoo:F28_Expression_Creation ;
+    rdfs:label "Expressionserstellung von Noch in einer anderen Zeit"@de,
+        "Expression Creation of Noch in einer anderen Zeit"@en ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_912vqxbm> ;
+    lrmoo:R17_created <https://sappho-digital.com/expression/bibl_c0wpbg52> .
 
 <https://sappho-digital.com/expression_creation/bibl_c14808c9> a lrmoo:F28_Expression_Creation ;
     rdfs:label "Expressionserstellung von An den antiken Vers"@de,
@@ -22691,6 +22785,18 @@ Philosophen zu Sanssouci"""@de ;
         "Expression Creation of Ode an Sappho"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_2a6fd40a> ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_ffc59e54> .
+
+<https://sappho-digital.com/expression_creation/bibl_o1qlf92w> a lrmoo:F28_Expression_Creation ;
+    rdfs:label "Expressionserstellung von Who Lives, Who Dies, Who Tells Your Story"@de,
+        "Expression Creation of Who Lives, Who Dies, Who Tells Your Story"@en ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_12vbqpnq> ;
+    lrmoo:R17_created <https://sappho-digital.com/expression/bibl_o1qlf92w> .
+
+<https://sappho-digital.com/expression_creation/bibl_o4qqfh2c> a lrmoo:F28_Expression_Creation ;
+    rdfs:label "Expressionserstellung von Der verzauberte Hügel"@de,
+        "Expression Creation of Der verzauberte Hügel"@en ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_12vbqenr> ;
+    lrmoo:R17_created <https://sappho-digital.com/expression/bibl_o4qqfh2c> .
 
 <https://sappho-digital.com/expression_creation/bibl_o708fh9l> a lrmoo:F28_Expression_Creation ;
     rdfs:label "Expressionserstellung von [??]"@de,
@@ -26342,10 +26448,15 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_2d304546>,
         <https://sappho-digital.com/manifestation_creation/bibl_abde9f9b> .
 
-<https://sappho-digital.com/timespan/2020> a ecrm:E52_Time-Span ;
-    rdfs:label "2020"^^xsd:gYear ;
-    ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_823f9174>,
-        <https://sappho-digital.com/manifestation_creation/bibl_b35fde3c> .
+<https://sappho-digital.com/timespan/2025> a ecrm:E52_Time-Span ;
+    rdfs:label "2025"^^xsd:gYear ;
+    ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_63h6e84v>,
+        <https://sappho-digital.com/manifestation_creation/bibl_cqw3b15b> .
+
+<https://sappho-digital.com/timespan/2026> a ecrm:E52_Time-Span ;
+    rdfs:label "2026"^^xsd:gYear ;
+    ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_22hgeq4c>,
+        <https://sappho-digital.com/manifestation_creation/bibl_cqw3b15b> .
 
 <https://sappho-digital.com/expression/bibl_0a263b83> a lrmoo:F2_Expression ;
     rdfs:label "Schäm’ dich nicht der Liebe zum Kammermädchen"@de ;
@@ -29553,6 +29664,12 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_079e070e>,
         <https://sappho-digital.com/manifestation_creation/bibl_c82571f6>,
         <https://sappho-digital.com/manifestation_creation/bibl_d45466bd> .
+
+<https://sappho-digital.com/timespan/2020> a ecrm:E52_Time-Span ;
+    rdfs:label "2020"^^xsd:gYear ;
+    ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_823f9174>,
+        <https://sappho-digital.com/manifestation_creation/bibl_b35fde3c>,
+        <https://sappho-digital.com/manifestation_creation/bibl_cqw3b15b> .
 
 <https://sappho-digital.com/timespan/2022> a ecrm:E52_Time-Span ;
     rdfs:label "2022"^^xsd:gYear ;
@@ -37086,6 +37203,15 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_87edf63e> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_acea7897> .
 
+<https://sappho-digital.com/expression/bibl_87wqbh51> a lrmoo:F2_Expression ;
+    rdfs:label "Jemand wird sich an uns erinnern, sage ich, sogar in einer anderen Zeit"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_87wqbh51> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_87wqbh51> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_87wqbh51> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_87wqbh51> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_cqw3b15b> .
+
 <https://sappho-digital.com/expression/bibl_8819a3b3> a lrmoo:F2_Expression ;
     rdfs:label "Sapho"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_8819a3b3> ;
@@ -37881,6 +38007,15 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_c0db9ef8> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_19a76400> .
+
+<https://sappho-digital.com/expression/bibl_c0wpbg52> a lrmoo:F2_Expression ;
+    rdfs:label "Noch in einer anderen Zeit"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_c0wpbg52> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_c0wpbg52> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_c0wpbg52> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_c0wpbg52> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_cqw3b15b> .
 
 <https://sappho-digital.com/expression/bibl_c151d4a4> a lrmoo:F2_Expression ;
     rdfs:label "Ein gräflicher Geburtstag"@de ;
@@ -38749,6 +38884,24 @@ Philosophen zu Sanssouci"""@de ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_fed3a965> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_fed3a965> .
+
+<https://sappho-digital.com/expression/bibl_o1qlf92w> a lrmoo:F2_Expression ;
+    rdfs:label "Who Lives, Who Dies, Who Tells Your Story"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_o1qlf92w> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_o1qlf92w> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_o1qlf92w> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_o1qlf92w> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_cqw3b15b> .
+
+<https://sappho-digital.com/expression/bibl_o4qqfh2c> a lrmoo:F2_Expression ;
+    rdfs:label "Der verzauberte Hügel"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_o4qqfh2c> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_o4qqfh2c> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_o4qqfh2c> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_o4qqfh2c> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_cqw3b15b> .
 
 <https://sappho-digital.com/expression/bibl_ui5a596f> a lrmoo:F2_Expression ;
     rdfs:label "Der Pantoffel der Sappho. 1819"@de ;
@@ -43794,15 +43947,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_85ceac60>,
         <https://sappho-digital.com/manifestation_creation/bibl_b705febf> .
 
-<https://sappho-digital.com/timespan/2023> a ecrm:E52_Time-Span ;
-    rdfs:label "2023"^^xsd:gYear ;
-    ecrm:P4i_is_time-span_of <https://sappho-digital.com/expression_creation/bibl_38d4f7cf>,
-        <https://sappho-digital.com/manifestation_creation/bibl_16c00192>,
-        <https://sappho-digital.com/manifestation_creation/bibl_1cc4c62d>,
-        <https://sappho-digital.com/manifestation_creation/bibl_43e645f0>,
-        <https://sappho-digital.com/manifestation_creation/bibl_c657884c>,
-        <https://sappho-digital.com/manifestation_creation/bibl_cf5aa18b> .
-
 <https://sappho-digital.com/expression/bibl_1585db9d> a lrmoo:F2_Expression ;
     rdfs:label "Dies Buch gehört dem König"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_1585db9d> ;
@@ -44012,6 +44156,19 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/expression/bibl_94790204> ;
     owl:sameAs <https://dbpedia.org/resource/Der_Kreis>,
         <https://www.wikidata.org/entity/Q691539> .
+
+<https://sappho-digital.com/manifestation/bibl_cqw3b15b> a lrmoo:F3_Manifestation ;
+    rdfs:label "Archive of Our Own"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Archive_of_Our_Own>,
+        <https://sappho-digital.com/identifier/Q27764876> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_cqw3b15b> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_87wqbh51>,
+        <https://sappho-digital.com/expression/bibl_c0wpbg52>,
+        <https://sappho-digital.com/expression/bibl_o1qlf92w>,
+        <https://sappho-digital.com/expression/bibl_o4qqfh2c> ;
+    rdfs:seeAlso <http://commons.wikimedia.org/wiki/Special:FilePath/Ao3-screenshot.png> ;
+    owl:sameAs <https://dbpedia.org/resource/Archive_of_Our_Own>,
+        <https://www.wikidata.org/entity/Q27764876> .
 
 <https://sappho-digital.com/manifestation/bibl_dc80353f> a lrmoo:F3_Manifestation ;
     rdfs:label "Manuskripte. Zeitschrift für Literatur, Kunst und Kritik"@de ;
@@ -44419,6 +44576,16 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_a3be2ca8>,
         <https://sappho-digital.com/manifestation_creation/bibl_c44e27f0> .
 
+<https://sappho-digital.com/timespan/2023> a ecrm:E52_Time-Span ;
+    rdfs:label "2023"^^xsd:gYear ;
+    ecrm:P4i_is_time-span_of <https://sappho-digital.com/expression_creation/bibl_38d4f7cf>,
+        <https://sappho-digital.com/manifestation_creation/bibl_16c00192>,
+        <https://sappho-digital.com/manifestation_creation/bibl_1cc4c62d>,
+        <https://sappho-digital.com/manifestation_creation/bibl_43e645f0>,
+        <https://sappho-digital.com/manifestation_creation/bibl_c657884c>,
+        <https://sappho-digital.com/manifestation_creation/bibl_cf5aa18b>,
+        <https://sappho-digital.com/manifestation_creation/bibl_cqw3b15b> .
+
 <https://sappho-digital.com/expression/bibl_1b76b1c6> a lrmoo:F2_Expression ;
     rdfs:label "Kassandra. Erzählung"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_1b76b1c6> ;
@@ -44785,6 +44952,15 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/timespan/1941> ;
     ecrm:P7_took_place_at <https://sappho-digital.com/place/place_0c1736a7> ;
     lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_cac5cb34> .
+
+<https://sappho-digital.com/manifestation_creation/bibl_cqw3b15b> a lrmoo:F30_Manifestation_Creation ;
+    rdfs:label "Manifestationserstellung von Archive of Our Own"@de,
+        "Manifestation Creation of Archive of Our Own"@en ;
+    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/2020>,
+        <https://sappho-digital.com/timespan/2023>,
+        <https://sappho-digital.com/timespan/2025>,
+        <https://sappho-digital.com/timespan/2026> ;
+    lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_cqw3b15b> .
 
 <https://sappho-digital.com/manifestation_creation/bibl_f75c9af2> a lrmoo:F30_Manifestation_Creation ;
     rdfs:label "Manifestationserstellung von Iris"@de,

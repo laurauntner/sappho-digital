@@ -2416,6 +2416,16 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q301609" xml:id="publisher_af0aeb0c">Suhrkamp</publisher>
                 </bibl>
+                <bibl xml:id="bibl_o1qlf92w">
+                    <title type="text">Who Lives, Who Dies, Who Tells Your Story</title>
+                    <date type="published" when="2020">2020</date>
+                    <bibl xml:id="bibl_cqw3b15b" ref="https://www.wikidata.org/entity/Q27764876">
+                        <title type="work">Archive of Our Own</title>
+                    </bibl>
+                    <author xml:id="author_12vbqpnq">ahab_cinaa</author>
+                    <note type="genre">Prosa</note>
+                    <ref target="https://archiveofourown.org/works/27350287">https://archiveofourown.org/works/27350287</ref>
+                </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q120143666" xml:id="bibl_3761b97f">
                     <title type="text">Sapphos Sprung</title>
                     <date type="published" when="2021">2021</date>
@@ -2434,6 +2444,36 @@
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q451462" xml:id="publisher_ad86cbbf">Ullstein</publisher>
+                </bibl>
+                <bibl xml:id="bibl_c0wpbg52">
+                    <title type="text">Noch in einer anderen Zeit</title>
+                    <date type="published" when="2023">2023</date>
+                    <bibl xml:id="bibl_cqw3b15b" ref="https://www.wikidata.org/entity/Q27764876">
+                        <title type="work">Archive of Our Own</title>
+                    </bibl>
+                    <author xml:id="author_912vqxbm">GentleGerman</author>
+                    <note type="genre">Prosa</note>
+                    <ref target="https://archiveofourown.org/works/48789472">https://archiveofourown.org/works/48789472</ref>
+                </bibl>
+                <bibl xml:id="bibl_o4qqfh2c">
+                    <title type="text">Der verzauberte Hügel</title>
+                    <date type="published" when="2025">2025</date>
+                    <bibl xml:id="bibl_cqw3b15b" ref="https://www.wikidata.org/entity/Q27764876">
+                        <title type="work">Archive of Our Own</title>
+                    </bibl>
+                    <author xml:id="author_12vbqenr">Madeleine_Beaucoup_Berry</author>
+                    <note type="genre">Prosa</note>
+                    <ref target="https://archiveofourown.org/works/67541801">https://archiveofourown.org/works/67541801</ref>
+                </bibl>
+                <bibl xml:id="bibl_87wqbh51">
+                    <title type="text">Jemand wird sich an uns erinnern, sage ich, sogar in einer anderen Zeit</title>
+                    <date type="published" when="2026">2026</date>
+                    <bibl xml:id="bibl_cqw3b15b" ref="https://www.wikidata.org/entity/Q27764876">
+                        <title type="work">Archive of Our Own</title>
+                    </bibl>
+                    <author xml:id="author_11vvqxnl">thewreckageofyou</author>
+                    <note type="genre">Prosa</note>
+                    <ref target="https://archiveofourown.org/works/85038486">https://archiveofourown.org/works/85038486</ref>
                 </bibl>
             </listBibl>
         </body>
