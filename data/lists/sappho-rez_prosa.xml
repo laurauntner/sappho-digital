@@ -96,7 +96,7 @@
                     <pubPlace xml:id="place_ae5c315b">Frankfurt</pubPlace>
                     <ref target="https://books.google.at/books?id=a89LAAAAcAAJ">https://books.google.at/books?id=a89LAAAAcAAJ</ref>
                 </bibl>
-                <bibl xml:id="bibl_59b9f746">
+                <bibl ref="https://www.wikidata.org/entity/Q140036856" xml:id="bibl_59b9f746">
                     <title type="text">Die Abenteuer des Don Sylvio von Rosalva</title>
                     <date type="published" when="1772">1772</date>
                     <author ref="https://www.wikidata.org/entity/Q154010" xml:id="author_7ea2d8de">Christoph Martin Wieland</author>
@@ -536,7 +536,7 @@
                 <bibl xml:id="bibl_8eeba9fb">
                     <title type="text">Metamorphosen</title>
                     <date type="published" notBefore="1845" notAfter="1846">1845–1846</date>
-                    <bibl xml:id="bibl_39912df8">
+                    <bibl xml:id="bibl_39912df8" ref="https://www.wikidata.org/entity/Q140037159">
                         <title type="work">Blätter für Scherz und Ernst</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q4310020" xml:id="author_f8859041">Franz von Elling [= Karl Müller]</author>
@@ -594,7 +594,7 @@
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q156080" xml:id="place_96ef0de9">Opava</pubPlace>
                 </bibl>
-                <bibl xml:id="bibl_264bf5aa">
+                <bibl ref="https://www.wikidata.org/entity/Q42191597" xml:id="bibl_264bf5aa">
                     <title type="text">Isegrimm: vaterländischer Roman</title>
                     <date type="published" when="1854">1854</date>
                     <author ref="https://www.wikidata.org/entity/Q77312" xml:id="author_1c589986">Willibald Alexis</author>
@@ -868,7 +868,7 @@
                     <publisher ref="https://www.wikidata.org/entity/Q1288576" xml:id="publisher_0049cb52">Eduard Hallberger</publisher>
                     <ref target="https://www.deutschestextarchiv.de/book/view/vischer_auch02_1879">https://www.deutschestextarchiv.de/book/view/vischer_auch02_1879</ref>
                 </bibl>
-                <bibl xml:id="bibl_e58bccae">
+                <bibl ref="https://www.wikidata.org/entity/Q120255640" xml:id="bibl_e58bccae">
                     <title type="text">Sappho</title>
                     <date type="published" when="1880">1880</date>
                     <author ref="https://www.wikidata.org/entity/Q57629" xml:id="author_9a3d3005">Carmen Sylva [= Elisabeth zu Wied]</author>
@@ -1149,7 +1149,7 @@
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q81137" xml:id="place_3c29d3e1">Olmütz</pubPlace>
                 </bibl>
-                <bibl xml:id="bibl_ab99e30c">
+                <bibl ref="https://www.wikidata.org/entity/Q107962914" xml:id="bibl_ab99e30c">
                     <title type="text">Per aspera: Historischer Roman</title>
                     <date type="published" when="1892">1892</date>
                     <author ref="https://www.wikidata.org/entity/Q62765" xml:id="author_caa5df32">Georg Ebers</author>
@@ -1157,7 +1157,7 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q123668686" xml:id="publisher_422b9b31">Tauchnitz</publisher>
                 </bibl>
-                <bibl xml:id="bibl_80681a89">
+                <bibl ref="https://www.wikidata.org/entity/Q140038387" xml:id="bibl_80681a89">
                     <title type="text">Empor!</title>
                     <date type="published" when="1892">1892</date>
                     <author ref="https://www.wikidata.org/entity/Q109471" xml:id="author_74d9eceb">Ida Boy-Ed</author>
@@ -1452,16 +1452,16 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q138953146" xml:id="publisher_f8a3a067">Zeitbilder-Verlag</publisher>
                 </bibl>
-                <bibl xml:id="bibl_2c7f182d">
+                <bibl ref="https://www.wikidata.org/entity/Q140036822" xml:id="bibl_2c7f182d">
                     <title type="text">Gräfin Thunen. Intimes vom Oesterreichisch-ungarischen Hochadel</title>
                     <date type="published" when="1906">1906</date>
-                    <author ref="https://www.wikidata.org/entity/Q12806303" xml:id="author_97660a23">Freiherr von Baillou</author>
+                    <author ref="https://www.wikidata.org/entity/Q12806303" xml:id="author_97660a23">Wilhelm von Baillou</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q138953146" xml:id="publisher_f8a3a067">Zeitbilder-Verlag</publisher>
                 </bibl>
-                <bibl xml:id="bibl_230b90cb">
-                    <title type="text">Modeste: Roman</title>
+                <bibl ref="https://www.wikidata.org/entity/Q140038426" xml:id="bibl_230b90cb">
+                    <title type="text">Modeste</title>
                     <date type="published" when="1906">1906</date>
                     <author ref="https://www.wikidata.org/entity/Q1399126" xml:id="author_5a2e6a24">Johannes Richard zur Megede</author>
                     <note type="genre">Prosa</note>
@@ -1531,7 +1531,7 @@
                 <bibl xml:id="bibl_1a83d097">
                     <title type="text">Der leukadische Felsen</title>
                     <date type="published" notBefore="1908" notAfter="1909">1908–1909</date>
-                    <bibl xml:id="bibl_816be51a">
+                    <bibl xml:id="bibl_816be51a" ref="https://www.wikidata.org/entity/Q134528189">
                         <title type="work">Leipziger Tageblatt und Handelszeitung</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q19124298" xml:id="author_c1ad6949">A. Noel [= Leontine Stern]</author>
@@ -1541,7 +1541,7 @@
                 <bibl xml:id="bibl_6059afaf">
                     <title type="text">250 000</title>
                     <date type="published" when="1909">1909</date>
-                    <bibl xml:id="bibl_816be51a">
+                    <bibl xml:id="bibl_816be51a" ref="https://www.wikidata.org/entity/Q134528189">
                         <title type="work">Leipziger Tageblatt und Handelszeitung</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q138895363" xml:id="author_9f9d51bc">Bob</author>
@@ -1843,7 +1843,7 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q1295" xml:id="place_6d273fb9">Dortmund</pubPlace>
                     <ref target="https://www.deutsche-digitale-bibliothek.de/newspaper/item/FOSTTGI53AB3NYRC4DND5TEH5INZN54A">https://www.deutsche-digitale-bibliothek.de/newspaper/item/FOSTTGI53AB3NYRC4DND5TEH5INZN54A</ref>
                 </bibl>
-                <bibl xml:id="bibl_d319f449">
+                <bibl ref="https://www.wikidata.org/entity/Q140038371" xml:id="bibl_d319f449">
                     <title type="text">Von Genies und Kamelen</title>
                     <date type="published" when="1926">1926</date>
                     <author ref="https://www.wikidata.org/entity/Q91288" xml:id="author_80e4b80a">Alexander Moszkowski</author>
@@ -1942,7 +1942,7 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q1085" xml:id="place_e575530b">Prag</pubPlace>
                     <ref target="https://www.deutsche-digitale-bibliothek.de/newspaper/item/2DHJGILISUQTEOMXFANXHG5CXS3JJ3NS">https://www.deutsche-digitale-bibliothek.de/newspaper/item/2DHJGILISUQTEOMXFANXHG5CXS3JJ3NS</ref>
                 </bibl>
-                <bibl xml:id="bibl_eff6330f">
+                <bibl ref="https://www.wikidata.org/entity/Q140038360" xml:id="bibl_eff6330f">
                     <title type="text">Die Heilige vom Niederrhein</title>
                     <date type="published" when="1933">1933</date>
                     <author ref="https://www.wikidata.org/entity/Q85301" xml:id="author_3a6f93f6">Joseph von Lauff</author>
@@ -1980,8 +1980,8 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q168648" xml:id="place_a6617830">Sopron</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q139300200" xml:id="publisher_91cc6e1b">Röttig-Romwalter</publisher>
                 </bibl>
-                <bibl xml:id="bibl_21d85a5a">
-                    <title type="text">Flucht aus Buddhas Gesetz: Roman</title>
+                <bibl ref="https://www.wikidata.org/entity/Q140038390" xml:id="bibl_21d85a5a">
+                    <title type="text">Flucht aus Buddhas Gesetz</title>
                     <date type="published" when="1937">1937</date>
                     <author ref="https://www.wikidata.org/entity/Q103704" xml:id="author_9cc4db92">Ravi Ravendro [= Karl Siegfried Döhring]</author>
                     <note type="genre">Prosa</note>
@@ -2095,7 +2095,7 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q1794" xml:id="place_ae5c315b">Frankfurt a. M.</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q301609" xml:id="publisher_af0aeb0c">Suhrkamp</publisher>
                 </bibl>
-                <bibl xml:id="bibl_9335ab10">
+                <bibl ref="https://www.wikidata.org/entity/Q140037109" xml:id="bibl_9335ab10">
                     <title type="text">Engelsbrücke. Römische Betrachtungen</title>
                     <date type="published" when="1955">1955</date>
                     <author ref="https://www.wikidata.org/entity/Q62365" xml:id="author_ad13c2e1">Marie Luise Kaschnitz</author>
@@ -2114,7 +2114,7 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q1055" xml:id="place_f23bb5e2">Hamburg</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2152124" xml:id="publisher_c7706915">Hoffmann und Campe</publisher>
                 </bibl>
-                <bibl xml:id="bibl_7a172de5">
+                <bibl ref="https://www.wikidata.org/entity/Q140037229" xml:id="bibl_7a172de5">
                     <title type="text">Sappho, Sängerin archäischer Liebe</title>
                     <date type="published" when="1973">1973</date>
                     <author ref="https://www.wikidata.org/entity/Q55675548" xml:id="author_3c1158f0">Hubert Ludo Gerwald [= Hubertus von Beyer]</author>
@@ -2228,7 +2228,7 @@
                 <bibl xml:id="bibl_4e970562">
                     <title type="text">Immer waren wir Hand in Hand. Erinna an Sappho</title>
                     <date type="published" when="1990">1990</date>
-                    <bibl xml:id="bibl_3063167d">
+                    <bibl xml:id="bibl_3063167d" ref="https://www.wikidata.org/entity/Q120199212">
                         <title type="work">Geliebte Amazone. Briefe aus der Antike</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1698290" xml:id="author_ec557a00">Johannes Rüber</author>
@@ -2288,7 +2288,7 @@
                     <title type="text">Eine Geschichte</title>
                     <date type="created" notAfter="1996">n. n. 1996</date>
                     <date type="published" when="2005">2005</date>
-                    <bibl xml:id="bibl_394ac0d2">
+                    <bibl xml:id="bibl_394ac0d2" ref="https://www.wikidata.org/entity/Q140036887">
                         <title type="work">Auf dem Phantasieroß. Prosa aus dem Nachlaß</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q64248" xml:id="author_19a04e75">Wolfgang Koeppen</author>
@@ -2296,8 +2296,8 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q1794" xml:id="place_ae5c315b">Frankfurt a. M.</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q301609" xml:id="publisher_af0aeb0c">Suhrkamp</publisher>
                 </bibl>
-                <bibl xml:id="bibl_51a3d5d2">
-                    <title type="text">Sappho küsst Europa. Geschichten von Lesben aus 20 Längern</title>
+                <bibl ref="https://www.wikidata.org/entity/Q140038611" xml:id="bibl_51a3d5d2">
+                    <title type="text">Sappho küsst Europa. Geschichten von Lesben aus 20 Ländern</title>
                     <date type="published" when="1997">1997</date>
                     <author ref="https://www.wikidata.org/entity/Q128796825" xml:id="author_9e73b47f">Madeleine Marti</author>
                     <author ref="https://www.wikidata.org/entity/Q138793840" xml:id="author_9e73b47y">Marianne Ulmi</author>
@@ -2345,7 +2345,7 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q82724" xml:id="place_d43e78bc">Meßkirch</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1532897" xml:id="publisher_d4f4b121">Gmeiner</publisher>
                 </bibl>
-                <bibl xml:id="bibl_71edd9d5">
+                <bibl ref="https://www.wikidata.org/entity/Q140036840" xml:id="bibl_71edd9d5">
                     <title type="text">Schrödingers Schlafzimmer</title>
                     <date type="published" when="2006">2006</date>
                     <author ref="https://www.wikidata.org/entity/Q97581" xml:id="author_67c08ad5">Ulrich Woelk</author>
@@ -2362,7 +2362,7 @@
                     <publisher ref="https://www.wikidata.org/entity/Q139300722" xml:id="publisher_796e889a">Fredebold und Fischer</publisher>
                     <ref target="https://archive.org/details/derwolkenprinzfr0000iren">https://archive.org/details/derwolkenprinzfr0000iren</ref>
                 </bibl>
-                <bibl xml:id="bibl_7ba66b97">
+                <bibl ref="https://www.wikidata.org/entity/Q140037196" xml:id="bibl_7ba66b97">
                     <title type="text">Ein Mozart in Galizien. Erzählte Geschichte</title>
                     <date type="published" when="2008">2008</date>
                     <author ref="https://www.wikidata.org/entity/Q106614" xml:id="author_dfa2ad1a">Dieter Kühn</author>
