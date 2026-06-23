@@ -2926,6 +2926,11 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_ee6c648c> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
 
+<https://sappho-digital.com/identifier/Bukowinaer_Nachrichten> a ecrm:E42_Identifier ;
+    rdfs:label "Bukowinaer_Nachrichten" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_c62408ae> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
+
 <https://sappho-digital.com/identifier/Cassandra_(novel)> a ecrm:E42_Identifier ;
     rdfs:label "Cassandra_(novel)" ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_1b76b1c6> ;
@@ -4859,6 +4864,11 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/identifier/bibl_2f25238d> a ecrm:E42_Identifier ;
     rdfs:label "bibl_2f25238d" ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_2f25238d> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
+<https://sappho-digital.com/identifier/bibl_2q9ve90m> a ecrm:E42_Identifier ;
+    rdfs:label "bibl_2q9ve90m" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_2q9ve90m> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
 <https://sappho-digital.com/identifier/bibl_30774635> a ecrm:E42_Identifier ;
@@ -9516,11 +9526,6 @@ Philosophen zu Sanssouci"""@en ;
     rdfs:label "Marie Schramm-Macdonald"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_b07feca9>,
         <https://sappho-digital.com/manifestation_creation/bibl_4c622de1> .
-
-<https://sappho-digital.com/person/author_1e2cbf77> a ecrm:E21_Person ;
-    rdfs:label "Rike Scheffler"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_2d98e80f>,
-        <https://sappho-digital.com/manifestation_creation/bibl_3453aff8> .
 
 <https://sappho-digital.com/person/author_1e490102> a ecrm:E21_Person ;
     rdfs:label "Urs Allemann"@de ;
@@ -14258,6 +14263,10 @@ Philosophen zu Sanssouci"""@en ;
     rdfs:label "Geliebten Freund, was tut ihr so verzagen"@de ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_2f05f5a4> .
 
+<https://sappho-digital.com/title/expression/bibl_2q9ve90m> a ecrm:E35_Title ;
+    rdfs:label "bergen"@de ;
+    ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_2q9ve90m> .
+
 <https://sappho-digital.com/title/expression/bibl_30774635> a ecrm:E35_Title ;
     rdfs:label "Poetin X"@de ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_30774635> .
@@ -15127,7 +15136,7 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_69625321> .
 
 <https://sappho-digital.com/title/expression/bibl_6969e2d1> a ecrm:E35_Title ;
-    rdfs:label "Alexander – Der Roman der Einigung Griechenlands „Hellas“"@de ;
+    rdfs:label "Alexander – Der Roman der Einigung Griechenlands »Hellas«"@de ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_6969e2d1> .
 
 <https://sappho-digital.com/title/expression/bibl_69a9167e> a ecrm:E35_Title ;
@@ -18682,6 +18691,12 @@ Philosophen zu Sanssouci"""@de ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_4d2b85d3> ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_2f25238d> .
 
+<https://sappho-digital.com/expression_creation/bibl_2q9ve90m> a lrmoo:F28_Expression_Creation ;
+    rdfs:label "Expressionserstellung von bergen"@de,
+        "Expression Creation of bergen"@en ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_1e2cbf77> ;
+    lrmoo:R17_created <https://sappho-digital.com/expression/bibl_2q9ve90m> .
+
 <https://sappho-digital.com/expression_creation/bibl_30774635> a lrmoo:F28_Expression_Creation ;
     rdfs:label "Expressionserstellung von Poetin X"@de,
         "Expression Creation of Poetin X"@en ;
@@ -19793,8 +19808,8 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_69625321> .
 
 <https://sappho-digital.com/expression_creation/bibl_6969e2d1> a lrmoo:F28_Expression_Creation ;
-    rdfs:label "Expressionserstellung von Alexander – Der Roman der Einigung Griechenlands „Hellas“"@de,
-        "Expression Creation of Alexander – Der Roman der Einigung Griechenlands „Hellas“"@en ;
+    rdfs:label "Expressionserstellung von Alexander – Der Roman der Einigung Griechenlands »Hellas«"@de,
+        "Expression Creation of Alexander – Der Roman der Einigung Griechenlands »Hellas«"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_bba27650> ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_6969e2d1> .
 
@@ -23780,6 +23795,11 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_3ee6f25d> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_0429caec> .
 
+<https://sappho-digital.com/manifestation/bibl_3j59amf1> a lrmoo:F3_Manifestation ;
+    rdfs:label "der rest ist resonanz"@de ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_3j59amf1> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_2q9ve90m> .
+
 <https://sappho-digital.com/manifestation/bibl_40463a8a> a lrmoo:F3_Manifestation ;
     rdfs:label "Deutscher Gedichte Frühling"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_40463a8a> ;
@@ -23951,7 +23971,7 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_534fad67> .
 
 <https://sappho-digital.com/manifestation/bibl_53869078> a lrmoo:F3_Manifestation ;
-    rdfs:label "Galilei vermißt Dantes Hölle. Aufsätze, S. 18–33"@de ;
+    rdfs:label "Galilei vermißt Dantes Hölle. Aufsätze"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_53869078> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_ca813b5d> .
 
@@ -24121,7 +24141,7 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_65ee8c2a> .
 
 <https://sappho-digital.com/manifestation/bibl_6969e2d1> a lrmoo:F3_Manifestation ;
-    rdfs:label "Alexander – Der Roman der Einigung Griechenlands „Hellas“"@de ;
+    rdfs:label "Alexander – Der Roman der Einigung Griechenlands »Hellas«"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_6969e2d1> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_6969e2d1> .
 
@@ -25233,6 +25253,13 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_d8683cb3>,
         <https://sappho-digital.com/expression_creation/bibl_d8a04de4>,
         <https://sappho-digital.com/manifestation_creation/bibl_5c40706c> .
+
+<https://sappho-digital.com/person/author_1e2cbf77> a ecrm:E21_Person ;
+    rdfs:label "Rike Scheffler"@de ;
+    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_2d98e80f>,
+        <https://sappho-digital.com/expression_creation/bibl_2q9ve90m>,
+        <https://sappho-digital.com/manifestation_creation/bibl_3453aff8>,
+        <https://sappho-digital.com/manifestation_creation/bibl_3j59amf1> .
 
 <https://sappho-digital.com/person/author_1e3011ae> a ecrm:E21_Person ;
     rdfs:label "Hedwig Dohm"@de ;
@@ -28911,13 +28938,6 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_7ca33bdb> ;
     owl:sameAs <https://www.wikidata.org/entity/Q120176899> .
 
-<https://sappho-digital.com/manifestation/bibl_c62408ae> a lrmoo:F3_Manifestation ;
-    rdfs:label "Bukowinaer Nachrichten"@de ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120716778> ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_c62408ae> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_499ac7ae> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q120716778> .
-
 <https://sappho-digital.com/manifestation/bibl_c625355c> a lrmoo:F3_Manifestation ;
     rdfs:label "Emma, das geheimnisvolle Hausmädchen"@de ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q1337939> ;
@@ -29527,13 +29547,6 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_87ad2093>,
         <https://sappho-digital.com/manifestation_creation/bibl_aad7850b> ;
     owl:sameAs <https://www.wikidata.org/entity/Q1463387> .
-
-<https://sappho-digital.com/publisher/publisher_1783a830> a ecrm:E74_Group ;
-    rdfs:label "Kookbooks"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_3453aff8>,
-        <https://sappho-digital.com/manifestation_creation/bibl_c82f2750>,
-        <https://sappho-digital.com/manifestation_creation/bibl_d20e1efd> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1783757> .
 
 <https://sappho-digital.com/publisher/publisher_1bb3a48e> a ecrm:E74_Group ;
     rdfs:label "Hirzel"@de,
@@ -30785,6 +30798,14 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_2ed74e05> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_eef6e5e0> .
 
+<https://sappho-digital.com/expression/bibl_2q9ve90m> a lrmoo:F2_Expression ;
+    rdfs:label "bergen"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_2q9ve90m> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_2q9ve90m> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_2q9ve90m> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_3j59amf1> .
+
 <https://sappho-digital.com/expression/bibl_30774635> a lrmoo:F2_Expression ;
     rdfs:label "Poetin X"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_30774635> ;
@@ -31754,7 +31775,7 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_286cebb8> .
 
 <https://sappho-digital.com/expression/bibl_6969e2d1> a lrmoo:F2_Expression ;
-    rdfs:label "Alexander – Der Roman der Einigung Griechenlands „Hellas“"@de ;
+    rdfs:label "Alexander – Der Roman der Einigung Griechenlands »Hellas«"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_6969e2d1> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_6969e2d1> ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
@@ -34828,6 +34849,15 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/expression/bibl_bf21ee78>,
         <https://sappho-digital.com/expression/bibl_dd084662> .
 
+<https://sappho-digital.com/manifestation/bibl_c62408ae> a lrmoo:F3_Manifestation ;
+    rdfs:label "Bukowinaer Nachrichten"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Bukowinaer_Nachrichten>,
+        <https://sappho-digital.com/identifier/Q120716778> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_c62408ae> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_499ac7ae> ;
+    owl:sameAs <https://dbpedia.org/resource/Bukowinaer_Nachrichten>,
+        <https://www.wikidata.org/entity/Q120716778> .
+
 <https://sappho-digital.com/manifestation/bibl_cb24450f> a lrmoo:F3_Manifestation ;
     rdfs:label "Komm kühle Nacht"@de ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q140037220> ;
@@ -35579,6 +35609,14 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_39bd45eb>,
         <https://sappho-digital.com/manifestation_creation/bibl_59b9f746> ;
     owl:sameAs <https://www.wikidata.org/entity/Q280215> .
+
+<https://sappho-digital.com/publisher/publisher_1783a830> a ecrm:E74_Group ;
+    rdfs:label "Kookbooks"@de ;
+    ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_3453aff8>,
+        <https://sappho-digital.com/manifestation_creation/bibl_3j59amf1>,
+        <https://sappho-digital.com/manifestation_creation/bibl_c82f2750>,
+        <https://sappho-digital.com/manifestation_creation/bibl_d20e1efd> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q1783757> .
 
 <https://sappho-digital.com/publisher/publisher_4f8b35b2> a ecrm:E74_Group ;
     rdfs:label "Nymphenburger"@de,
@@ -40242,6 +40280,14 @@ Philosophen zu Sanssouci"""@de ;
     ecrm:P7_took_place_at <https://sappho-digital.com/place/place_b3271180> ;
     lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_3ee6f25d> .
 
+<https://sappho-digital.com/manifestation_creation/bibl_3j59amf1> a lrmoo:F30_Manifestation_Creation ;
+    rdfs:label "Manifestationserstellung von der rest ist resonanz"@de,
+        "Manifestation Creation of der rest ist resonanz"@en ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/publisher/publisher_1783a830> ;
+    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/2014> ;
+    ecrm:P7_took_place_at <https://sappho-digital.com/place/place_d35a02eb> ;
+    lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_3j59amf1> .
+
 <https://sappho-digital.com/manifestation_creation/bibl_40463a8a> a lrmoo:F30_Manifestation_Creation ;
     rdfs:label "Manifestationserstellung von Deutscher Gedichte Frühling"@de,
         "Manifestation Creation of Deutscher Gedichte Frühling"@en ;
@@ -40475,8 +40521,8 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_534fad67> .
 
 <https://sappho-digital.com/manifestation_creation/bibl_53869078> a lrmoo:F30_Manifestation_Creation ;
-    rdfs:label "Manifestationserstellung von Galilei vermißt Dantes Hölle. Aufsätze, S. 18–33"@de,
-        "Manifestation Creation of Galilei vermißt Dantes Hölle. Aufsätze, S. 18–33"@en ;
+    rdfs:label "Manifestationserstellung von Galilei vermißt Dantes Hölle. Aufsätze"@de,
+        "Manifestation Creation of Galilei vermißt Dantes Hölle. Aufsätze"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/publisher/publisher_af0aeb0c> ;
     ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1996> ;
     ecrm:P7_took_place_at <https://sappho-digital.com/place/place_ae5c315b> ;
@@ -40851,8 +40897,8 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_6834de03> .
 
 <https://sappho-digital.com/manifestation_creation/bibl_6969e2d1> a lrmoo:F30_Manifestation_Creation ;
-    rdfs:label "Manifestationserstellung von Alexander – Der Roman der Einigung Griechenlands „Hellas“"@de,
-        "Manifestation Creation of Alexander – Der Roman der Einigung Griechenlands „Hellas“"@en ;
+    rdfs:label "Manifestationserstellung von Alexander – Der Roman der Einigung Griechenlands »Hellas«"@de,
+        "Manifestation Creation of Alexander – Der Roman der Einigung Griechenlands »Hellas«"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/publisher/publisher_7fb10c43> ;
     ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1992> ;
     ecrm:P7_took_place_at <https://sappho-digital.com/place/place_0c1736a7> ;
@@ -43081,14 +43127,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_b51ec563>,
         <https://sappho-digital.com/manifestation_creation/bibl_f9bbda9e> .
 
-<https://sappho-digital.com/timespan/2014> a ecrm:E52_Time-Span ;
-    rdfs:label "2014"^^xsd:gYear ;
-    ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_31597ed9>,
-        <https://sappho-digital.com/manifestation_creation/bibl_3363e3bf>,
-        <https://sappho-digital.com/manifestation_creation/bibl_574806a3>,
-        <https://sappho-digital.com/manifestation_creation/bibl_650d9206>,
-        <https://sappho-digital.com/manifestation_creation/bibl_d13f4b52> .
-
 <https://sappho-digital.com/expression/bibl_0434022c> a lrmoo:F2_Expression ;
     rdfs:label "Sappho an Phaon"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_0434022c> ;
@@ -44231,6 +44269,15 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_62a518d1>,
         <https://sappho-digital.com/manifestation_creation/bibl_85ceac60>,
         <https://sappho-digital.com/manifestation_creation/bibl_b705febf> .
+
+<https://sappho-digital.com/timespan/2014> a ecrm:E52_Time-Span ;
+    rdfs:label "2014"^^xsd:gYear ;
+    ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_31597ed9>,
+        <https://sappho-digital.com/manifestation_creation/bibl_3363e3bf>,
+        <https://sappho-digital.com/manifestation_creation/bibl_3j59amf1>,
+        <https://sappho-digital.com/manifestation_creation/bibl_574806a3>,
+        <https://sappho-digital.com/manifestation_creation/bibl_650d9206>,
+        <https://sappho-digital.com/manifestation_creation/bibl_d13f4b52> .
 
 <https://sappho-digital.com/expression/bibl_1585db9d> a lrmoo:F2_Expression ;
     rdfs:label "Dies Buch gehört dem König"@de ;
@@ -46651,6 +46698,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_3b14635d>,
         <https://sappho-digital.com/manifestation_creation/bibl_3c2992d6>,
         <https://sappho-digital.com/manifestation_creation/bibl_3e5cc109>,
+        <https://sappho-digital.com/manifestation_creation/bibl_3j59amf1>,
         <https://sappho-digital.com/manifestation_creation/bibl_4501ddc5>,
         <https://sappho-digital.com/manifestation_creation/bibl_4def877f>,
         <https://sappho-digital.com/manifestation_creation/bibl_51a3d5d2>,
