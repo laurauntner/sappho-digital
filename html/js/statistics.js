@@ -1657,6 +1657,7 @@ function buildPdistTypeSections() {
             body.className = 'card-body';
 
             const chartWrap = document.createElement('div');
+            chartWrap.id = 'pdist-type-' + ft;
             chartWrap.style.minHeight = '40px';
             body.appendChild(chartWrap);
             section.appendChild(head);
@@ -1957,6 +1958,7 @@ function buildGdistGenreSections() {
         body.className = 'card-body';
 
         const chartWrap = document.createElement('div');
+        chartWrap.id = 'gdist-genre-' + genre;
         chartWrap.style.minHeight = '40px';
         body.appendChild(chartWrap);
         section.appendChild(head);
@@ -1996,6 +1998,7 @@ function buildGdistTypeSections4() {
             body.className = 'card-body';
 
             const chartWrap = document.createElement('div');
+            chartWrap.id = 'gdist-type-' + ft;
             chartWrap.style.minHeight = '40px';
             body.appendChild(chartWrap);
             section.appendChild(head);
