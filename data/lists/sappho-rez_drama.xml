@@ -126,6 +126,7 @@
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q139300111" xml:id="publisher_3df6828b">Maurersche Buchhandlung</publisher>
+                    <ref target="https://books.google.de/books?id=ld5JAAAAcAAJ">https://books.google.de/books?id=ld5JAAAAcAAJ</ref>
                 </bibl>
                 <bibl xml:id="bibl_19d9dbc7">
                     <title type="text">Seppherl, komisches Melodrama als Parodie mit Gesang in 3 Aufzügen [oder »Jungfer Sepherl«]</title>
@@ -156,6 +157,7 @@
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q139323975" xml:id="publisher_231a2be4">Verlag von Georg Voß</publisher>
+                    <ref target="https://digipress.digitale-sammlungen.de/view/bsb10532381_00213_u001">https://digipress.digitale-sammlungen.de/view/bsb10532381_00213_u001</ref>
                 </bibl>
                 <bibl xml:id="bibl_339f7bbc">
                     <title type="text">Die moderne Sappho. Ein musikalisch-dramatisches Durcheinander ohne Sinn und ohne Verstand. Bestehend aus zwei Akten und einem monodramatischen Finale</title>
@@ -252,6 +254,7 @@
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q57941" xml:id="place_26d0ccc2">Schneeberg</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q139553183" xml:id="publisher_eb0f0174">C. Schumann</publisher>
+                    <ref target="https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00151273">https://collections.thulb.uni-jena.de/receive/HisBest_cbu_00151273</ref>
                 </bibl>
                 <bibl xml:id="bibl_42afc9ee">
                     <title type="text">Sappho, oder Selbstmord aus unglücklicher Liebe. Trauerspiel</title>
@@ -260,13 +263,14 @@
                 </bibl>
                 <bibl xml:id="bibl_d69c46f3">
                     <title type="text">Dramatisches Fragment</title>
-                    <date type="published" when="1831">1831</date>
+                    <date type="published" notBefore="1830" notAfter="1831">1830–1831</date>
                     <bibl xml:id="bibl_fd44d6db">
                         <title type="work">Carinthia. Zeitschrift für Vaterlandskunde, Belehrung und Unterhaltung</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q55887367" xml:id="author_6f996abd">Peter Alcantara Budik</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q41753" xml:id="place_b086af04">Klagenfurt</pubPlace>
+                    <ref target="https://anno.onb.ac.at/cgi-content/anno-plus?aid=car&amp;datum=18300140&amp;seite=1">https://anno.onb.ac.at/cgi-content/anno-plus?aid=car&amp;datum=18300140&amp;seite=1</ref>
                 </bibl>
                 <bibl xml:id="bibl_95e8a466">
                     <title type="text">Sapho</title>
@@ -313,6 +317,7 @@
                     </bibl>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
+                    <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=fig&amp;datum=18600804&amp;seite=3">https://anno.onb.ac.at/cgi-content/anno?aid=fig&amp;datum=18600804&amp;seite=3</ref>
                 </bibl>
                 <bibl xml:id="bibl_5afaf2f9">
                     <title type="text">Sappho, eine dramatische Scene (für Robert Volkmann 1864 gedichtet)</title>
@@ -334,6 +339,7 @@
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher xml:id="publisher_4da25052">Weber</publisher>
+                    <ref target="https://www.digitale-sammlungen.de/de/view/bsb10542187">https://www.digitale-sammlungen.de/de/view/bsb10542187</ref>
                 </bibl>
                 <bibl xml:id="bibl_dc90edfe">
                     <title type="text">Sappho. Drama in einem Aufzuge</title>
@@ -351,6 +357,7 @@
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1136691" xml:id="publisher_adaf6a67">Cotta</publisher>
+                    <ref target="https://archive.org/details/dermeistervonpa00wilbgoog">https://archive.org/details/dermeistervonpa00wilbgoog</ref>
                 </bibl>
                 <bibl xml:id="bibl_f4eb50a0">
                     <title type="text">Bei der Sappho im Burgtheater</title>
