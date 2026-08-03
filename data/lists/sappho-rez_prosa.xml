@@ -93,7 +93,7 @@
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q75169" xml:id="author_d4eead4e">Justus Friedrich Wilhelm Zachariae</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="place_ae5c315b">Frankfurt</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1794" xml:id="place_ae5c315b">Frankfurt</pubPlace>
                     <ref target="https://books.google.at/books?id=a89LAAAAcAAJ">https://books.google.at/books?id=a89LAAAAcAAJ</ref>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q140036856" xml:id="bibl_59b9f746">
@@ -284,8 +284,8 @@
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q62053" xml:id="author_2397260a">Tian [= Karoline von Günderrode]</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="place_675a92e1">Hamburg</pubPlace>
-                    <pubPlace xml:id="place_f23bb5e2">Frankfurt a. M.</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1055" xml:id="place_675a92e1">Hamburg</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1794" xml:id="place_f23bb5e2">Frankfurt a. M.</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q139324367" xml:id="publisher_34543015">J. C. Hermannsche Buchhandlung</publisher>
                     <ref target="https://www.digitale-sammlungen.de/de/view/bsb10861265">https://www.digitale-sammlungen.de/de/view/bsb10861265</ref>
                 </bibl>
@@ -373,8 +373,8 @@
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q70988" xml:id="author_6b97b3e5">Ludwig Achim von Arnim</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="place_95b8315b">Leipzig</pubPlace>
-                    <pubPlace xml:id="place_efeaa516">Wien</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_95b8315b">Leipzig</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_efeaa516">Wien</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q97527" xml:id="publisher_5c6827bb">Georg Joachim Göschen</publisher>
                     <publisher ref="https://www.wikidata.org/entity/Q21898136" xml:id="publisher_9c2127ee">Carl Gerold’s Sohn Verlag</publisher>
                 </bibl>
@@ -397,8 +397,8 @@
                         <title type="work">Abend-Zeitung</title>
                     </bibl>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="place_90bebd2f">Dresden</pubPlace>
-                    <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1731" xml:id="place_90bebd2f">Dresden</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q85267460" xml:id="publisher_40b57b80">Arnoldsche Buchhandlung</publisher>
                 </bibl>
                 <bibl xml:id="bibl_3c2992d6">
@@ -447,8 +447,8 @@
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q138867453" xml:id="author_1441e802">Bernhard Louis Graf von Ostrowski</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="place_90bebd2f">Dresden</pubPlace>
-                    <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1731" xml:id="place_90bebd2f">Dresden</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q85267460" xml:id="publisher_40b57b80">Arnold</publisher>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=abe&amp;datum=18340724&amp;seite=1&amp;zoom=33">https://anno.onb.ac.at/cgi-content/anno?aid=abe&amp;datum=18340724&amp;seite=1&amp;zoom=33</ref>
                 </bibl>
@@ -752,9 +752,9 @@
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q76492" xml:id="author_b8ba5902">Fritz Reuter</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="place_5cef94ac">Wismar</pubPlace>
-                    <pubPlace xml:id="place_64f9e1da">Rostock</pubPlace>
-                    <pubPlace xml:id="place_b3271180">Ludwigslust</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q7030" xml:id="place_5cef94ac">Wismar</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2861" xml:id="place_64f9e1da">Rostock</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q156119" xml:id="place_b3271180">Ludwigslust</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1619570" xml:id="publisher_006305f7">Hinstorff’sche Buchhandlung</publisher>
                     <ref target="https://books.google.de/books?id=aaMuAAAAYAAJ">https://books.google.de/books?id=aaMuAAAAYAAJ</ref>
                 </bibl>
@@ -823,8 +823,8 @@
                     <date type="published" when="1876">1876</date>
                     <author ref="https://www.wikidata.org/entity/Q92115" xml:id="author_079de5c1">Franz von Löher</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="place_726ed312">Bielefeld</pubPlace>
-                    <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2112" xml:id="place_726ed312">Bielefeld</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2512342" xml:id="publisher_f3dd40e8">Velhagen &amp; Klasing</publisher>
                 </bibl>
                 <bibl xml:id="bibl_b258e772">
@@ -863,8 +863,8 @@
                     <date type="published" when="1879">1879</date>
                     <author ref="https://www.wikidata.org/entity/Q651" xml:id="author_b6688b19">Friedrich Theodor Vischer</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="place_700b43a2">Stuttgart</pubPlace>
-                    <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1288576" xml:id="publisher_0049cb52">Eduard Hallberger</publisher>
                     <ref target="https://www.deutschestextarchiv.de/book/view/vischer_auch02_1879">https://www.deutschestextarchiv.de/book/view/vischer_auch02_1879</ref>
                 </bibl>
@@ -889,8 +889,8 @@
                     <date type="published" when="1881">1881</date>
                     <author ref="https://www.wikidata.org/entity/Q62765" xml:id="author_caa5df32">Georg Ebers</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="place_700b43a2">Stuttgart</pubPlace>
-                    <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1288576" xml:id="publisher_0049cb52">Hallberger</publisher>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q19220905" xml:id="bibl_b6b175a4">
@@ -1097,6 +1097,18 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q7030" xml:id="place_b3271180">Wismar</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1619570" xml:id="publisher_006305f7">Hinstorff’sche Hofbuchhandlung</publisher>
                 </bibl>
+                <bibl xml:id="bibl_f4eb50a0">
+                    <title type="text">Bei der »Sappho« im Burgtheater um 1 Uhr Nachmittags</title>
+                    <date type="published" when="1891">1891</date>
+                    <bibl xml:id="bibl_440fa063">
+                        <title type="work">Wiener Humor. Sammlung von humoristischen Vorträgen</title>
+                    </bibl>
+                    <author ref="https://www.wikidata.org/entity/Q138914759" xml:id="author_688d152d">F. Rotter</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q139324679" xml:id="publisher_eca87393">Nationaler Verlag</publisher>
+                    <ref target="https://www.google.de/books/edition/Wiener_Humor/e43IRHJJBzwC">https://www.google.de/books/edition/Wiener_Humor/e43IRHJJBzwC</ref>
+                </bibl>
                 <bibl xml:id="bibl_b97aa883">
                     <title type="text">Eva Siebeck</title>
                     <date type="published" when="1891">1891</date>
@@ -1296,8 +1308,8 @@
                     <date type="published" when="1902">1902</date>
                     <author ref="https://www.wikidata.org/entity/Q94776472" xml:id="author_727e9e25">Therese Rak</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="place_700b43a2">Stuttgart</pubPlace>
-                    <pubPlace xml:id="place_95b8315b">Wien</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q120199137" xml:id="publisher_74ea1d36">Jos. Roth’sche Verlagshandlung</publisher>
                 </bibl>
                 <bibl xml:id="bibl_207071dc">
@@ -1400,8 +1412,8 @@
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q95693" xml:id="author_c47c8ee0">Peter Hille</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q109497803" xml:id="publisher_f732f517">Schuster &amp; Loeffler</publisher>
                     <ref target="https://digital.ub.uni-paderborn.de/ihd/content/zoom/1368152">https://digital.ub.uni-paderborn.de/ihd/content/zoom/1368152</ref>
                 </bibl>
@@ -1680,7 +1692,7 @@
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q138881623" xml:id="author_a3810329">H. Steinbach [= Hedwig Müller]</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="place_79486e93">Dresden-Blasewitz</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q8897" xml:id="place_79486e93">Dresden-Blasewitz</pubPlace>
                 </bibl>
                 <bibl xml:id="bibl_8ffe20df">
                     <title type="text">Zeitenwende</title>
@@ -1926,9 +1938,9 @@
                     <date type="published" when="1933">1933</date>
                     <author ref="https://www.wikidata.org/entity/Q99798" xml:id="author_fcd61c9a">Eduard Stucken</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="place_95b8315b">Berlin</pubPlace>
-                    <pubPlace xml:id="place_d35a02eb">Wien</pubPlace>
-                    <pubPlace xml:id="place_efeaa516">Leipzig</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_95b8315b">Berlin</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_d35a02eb">Wien</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q176169" xml:id="publisher_71955675">Zsolnay</publisher>
                 </bibl>
                 <bibl xml:id="bibl_c50737f7">
@@ -2185,8 +2197,8 @@
                     <date type="published" when="1983">1983</date>
                     <author ref="https://www.wikidata.org/entity/Q57382" xml:id="author_ab5259c5">Christa Wolf</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="place_c35eca96">Berlin</pubPlace>
-                    <pubPlace xml:id="place_d35a02eb">Weimar</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_c35eca96">Berlin</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q3955" xml:id="place_d35a02eb">Weimar</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q316922" xml:id="publisher_87308a85">Aufbau</publisher>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q120199158" xml:id="bibl_a0bace6b">
@@ -2202,8 +2214,8 @@
                     <date type="published" when="1986">1986</date>
                     <author ref="https://www.wikidata.org/entity/Q318335" xml:id="author_a186641f">Joachim Fernau</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace xml:id="place_06ec7d19">München</pubPlace>
-                    <pubPlace xml:id="place_d35a02eb">Berlin</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q120168499" xml:id="publisher_efdcc5bf">F. A. Herbig</publisher>
                 </bibl>
                 <bibl xml:id="bibl_c09c130e">

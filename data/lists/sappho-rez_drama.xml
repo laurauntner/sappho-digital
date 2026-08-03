@@ -242,8 +242,8 @@
                     <date type="published" when="1829">1829</date>
                     <author ref="https://www.wikidata.org/entity/Q62432" xml:id="author_d5ea9f29">August von Platen-Hallermünde</author>
                     <note type="genre">Drama</note>
-                    <pubPlace xml:id="place_700b43a2">Stuttgart</pubPlace>
-                    <pubPlace xml:id="place_ae6e1bfb">Tübingen</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q3806" xml:id="place_ae6e1bfb">Tübingen</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1136691" xml:id="publisher_d7432893">J. G. Cotta</publisher>
                     <ref target="http://www.zeno.org/Literatur/M/Platen,+August+von/Dramen/Der+romantische+%C3%96dipus">http://www.zeno.org/Literatur/M/Platen,+August+von/Dramen/Der+romantische+%C3%96dipus</ref>
                 </bibl>
@@ -278,17 +278,6 @@
                     <bibl xml:id="bibl_86670f30">
                         <title type="work">Das gesellige Vergnügen</title>
                     </bibl>
-                    <note type="genre">Drama</note>
-                    <pubPlace ref="https://www.wikidata.org/entity/Q437" xml:id="place_79462cb0">Ljubljana</pubPlace>
-                    <publisher ref="https://www.wikidata.org/entity/Q139553272" xml:id="publisher_bf4938a7">J. A. Edlen v. Kleinmayr’s Buchhandlung</publisher>
-                </bibl>
-                <bibl xml:id="bibl_a95d687d">
-                    <title type="text">Sappho</title>
-                    <date type="published" when="1835">1835?</date>
-                    <bibl xml:id="bibl_798718ea">
-                        <title type="work">Der Brudermörder, die Waise aus Genf und Sappho</title>
-                    </bibl>
-                    <author ref="https://www.wikidata.org/entity/Q78813" xml:id="author_34ad0706">Ignaz Franz Castelli?</author>
                     <note type="genre">Drama</note>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q105721918" xml:id="bibl_1585db9d">
@@ -359,17 +348,6 @@
                     <publisher ref="https://www.wikidata.org/entity/Q1136691" xml:id="publisher_adaf6a67">Cotta</publisher>
                     <ref target="https://archive.org/details/dermeistervonpa00wilbgoog">https://archive.org/details/dermeistervonpa00wilbgoog</ref>
                 </bibl>
-                <bibl xml:id="bibl_f4eb50a0">
-                    <title type="text">Bei der Sappho im Burgtheater</title>
-                    <date type="published" when="1891">1891</date>
-                    <bibl xml:id="bibl_440fa063">
-                        <title type="work">Wiener Humor. Sammlung von humoristischen Vorträgen</title>
-                    </bibl>
-                    <author ref="https://www.wikidata.org/entity/Q138914759" xml:id="author_688d152d">Fr. Rotter</author>
-                    <note type="genre">Drama</note>
-                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
-                    <publisher ref="https://www.wikidata.org/entity/Q139324679" xml:id="publisher_eca87393">Nationaler Verlag</publisher>
-                </bibl>
                 <bibl xml:id="bibl_6641ea99">
                     <title type="text">Der Star</title>
                     <date type="published" when="1900">1900</date>
@@ -396,8 +374,8 @@
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1681453" xml:id="author_512e247a">Josef Wenter</author>
                     <note type="genre">Drama</note>
-                    <pubPlace xml:id="place_95b8315b">Wien</pubPlace>
-                    <pubPlace xml:id="place_d35a02eb">Berlin</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q176169" xml:id="publisher_71955675">Zsolnay</publisher>
                 </bibl>
                 <bibl xml:id="bibl_e745799e">
@@ -413,10 +391,15 @@
                 </bibl>
                 <bibl xml:id="bibl_b351c733">
                     <title type="text">Sappho und Alkaios</title>
+                    <date type="created" when="1952">1952</date>
                     <date type="published" when="1953">1953</date>
+                    <bibl xml:id="bibl_875c617n" ref="https://www.wikidata.org/entity/Q116152986">
+                        <title type="work">Stillere Heimat</title>
+                    </bibl>
                     <author ref="https://www.wikidata.org/entity/Q2172395" xml:id="author_eed4609b">Rudolf Bayr</author>
                     <note type="genre">Drama</note>
-                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_06ec7d19">Wien</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_95b8315b">München</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q62477247" xml:id="publisher_1e45dd20">Donau-Verlag</publisher>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q120198447" xml:id="bibl_a53d809b">
