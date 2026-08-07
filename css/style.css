@@ -2585,3 +2585,84 @@ a.feat-tag--intertext:hover {
     margin-right: 0.3em;
     font-family: 'Geist Mono', monospace;
 }
+
+/* Search (Pagefind) */
+
+.search-trigger-link {
+    background: none;
+    border: none;
+    padding: .5rem;
+    color: black;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.search-trigger-link:hover {
+    color: #5e17eb !important;
+}
+
+.search-trigger-link + .tooltip-text {
+    width: max-content;
+    white-space: nowrap;
+}
+
+#searchModal .modal-dialog {
+    max-width: 700px;
+}
+
+#searchModal .search-modal-content {
+    border: 1.5px solid black;
+    border-radius: 8px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+#searchModal .modal-header {
+    border-bottom: none;
+    padding: 1.25rem 1.5rem 0;
+}
+
+#searchModal .modal-body {
+    padding: 0.5rem 1.5rem 1.75rem;
+}
+
+#searchModal .btn-close {
+    box-shadow: none !important;
+    opacity: 0.6;
+}
+
+#searchModal .btn-close:hover {
+    opacity: 1;
+}
+
+#search {
+    --pagefind-ui-scale: 0.9;
+    --pagefind-ui-primary: #5e17eb;
+    --pagefind-ui-text: #1f2937;
+    --pagefind-ui-background: #ffffff;
+    --pagefind-ui-border: #dddddd;
+    --pagefind-ui-border-width: 1px;
+    --pagefind-ui-border-radius: 6px;
+    --pagefind-ui-image-border-radius: 6px;
+    --pagefind-ui-tag: rgba(94, 23, 235, 0.08);
+    --pagefind-ui-font: 'Geist', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+#search .pagefind-ui__search-input {
+    font-weight: 400;
+}
+
+#search .pagefind-ui__search-input:focus {
+    outline: none;
+    border-color: #5e17eb;
+    box-shadow: 0 0 0 3px rgba(94, 23, 235, 0.15);
+}
+
+#search .pagefind-ui__result-link {
+    font-weight: 700;
+}
+
+#search mark {
+    background: rgba(94, 23, 235, 0.16);
+    color: inherit;
+    border-radius: 2px;
+}
