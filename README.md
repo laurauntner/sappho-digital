@@ -73,6 +73,12 @@ Clone the repository and run the following from the project root:
 ant
 ```
 
+To also build the site search index (Pagefind), run this afterwards (requires [Node.js](https://nodejs.org/)):
+
+```
+npx pagefind --site html
+```
+
 ---
 
 ## License

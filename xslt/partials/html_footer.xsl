@@ -8,7 +8,22 @@
             select="format-date(xs:date($run-start), '[D].[M].[Y0001]')
             || ', '
             || format-time(xs:time($run-start), '[H]:[m01]')"/>
-        <div id="wrapper-footer-full">
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content search-modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title visually-hidden" id="searchModalLabel">Suche</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Schließen"/>
+                    </div>
+                    <div class="modal-body">
+                        <div id="search"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="wrapper-footer-full" data-pagefind-ignore="all">
             <a href="imprint.html">© Laura Untner 2026 (zuletzt aktualisiert am <xsl:value-of
                     select="$build-stamp"/>)</a>
         </div>
@@ -17,6 +32,8 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"/>
         <script src="js/listStopProp.js"/>
         <script src="js/navScroll.js"/>
+        <script src="pagefind/pagefind-ui.js"/>
+        <script src="js/search.js"/>
     </xsl:template>
 
 </xsl:stylesheet>

@@ -30,9 +30,17 @@ jobs:
     - name: Install Python dependencies
       run: pip install rdflib
 
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
     - name: Prepare Data
       run: |
         ant -f ./build.xml
+
+    - name: Build search index
+      run: npx pagefind --site html
 
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3

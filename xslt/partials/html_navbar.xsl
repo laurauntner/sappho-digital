@@ -6,7 +6,7 @@
     <xsl:template match="/" name="nav_bar">
         <div class="sticky-top">
             <a class="skip-link screen-reader-text sr-only" href="#content">Skip to content</a>
-            <nav class="navbar navbar-expand-lg">
+            <nav class="navbar navbar-expand-lg" data-pagefind-ignore="all">
                 <div class="container-fluid">
                     <a href="index.html" class="navbar-brand custom-logo-link" rel="home"
                         itemprop="url">
@@ -996,6 +996,22 @@
                                             >GitHub</a>
                                     </li>
                                 </ul>
+                            </li>
+                            <li class="nav-item">
+                                <span class="info-tooltip">
+                                    <button type="button" class="nav-link search-trigger-link"
+                                        data-bs-toggle="modal" data-bs-target="#searchModal"
+                                        aria-label="Suche">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18"
+                                            height="18" fill="currentColor" viewBox="0 0 16 16"
+                                            aria-hidden="true">
+                                            <path
+                                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+                                            />
+                                        </svg>
+                                    </button>
+                                    <span class="tooltip-text">Suche (⌘K / Strg+K)</span>
+                                </span>
                             </li>
                             <li class="nav-item">
                                 <span class="info-tooltip">
