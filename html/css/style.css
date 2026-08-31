@@ -2530,6 +2530,13 @@ a.feat-tag--intertext:hover {
     font-size: .9rem
 }
 
+.nav-orientierung-link {
+    display: inline-flex;
+    align-items: center;
+    padding: .5rem;
+    line-height: 1;
+}
+
 .nav-orientierung-link + .tooltip-text {
     width: max-content;
     white-space: nowrap;
@@ -2589,6 +2596,8 @@ a.feat-tag--intertext:hover {
 /* Search (Pagefind) */
 
 .search-trigger-link {
+    display: inline-flex;
+    align-items: center;
     background: none;
     border: none;
     padding: .5rem;
