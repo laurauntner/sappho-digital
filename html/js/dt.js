@@ -50,6 +50,8 @@ function createDataTable(containerElement, order, pageLength) {
       ];
 
   const exportOnlyCols = showGenres ? [3, 5, 7, 10, 12, 14] : [3, 5, 7, 9, 11, 13];
+  const digitalisatLinkCol = exportOnlyCols[exportOnlyCols.length - 1];
+  const digitalisatCol = digitalisatLinkCol - 1;
 
   const table = $(`#${containerElement}`).DataTable({
     data: window.tocData || [],
@@ -96,13 +98,36 @@ function createDataTable(containerElement, order, pageLength) {
         titleAttr: "Tabelle kopieren",
         className: "btn-link",
         exportOptions: {
+          modifier: {
+            page: "all"
+          },
           columns: function (idx, data, node) {
-            return idx !== 13;
+            return idx !== digitalisatLinkCol;
           },
           format: {
             body: function (data, row, column, node) {
-              const $cell = $(node).clone();
-              $cell.find("a, img, svg").remove();
+              const tmp = document.createElement("div");
+              tmp.innerHTML = data
+                .replace(/&lt;/g, "<")
+                .replace(/&gt;/g, ">")
+                .replace(/&amp;/g, "&")
+                .replace(/&quot;/g, '"')
+                .replace(/&#39;/g, "'");
+              const $cell = $(tmp);
+              $cell.find("img, svg").remove();
+              $cell.find("a").each(function () {
+                const $a = $(this);
+                if (column === digitalisatCol) {
+                  $a.replaceWith($a.attr("href") || "");
+                  return;
+                }
+                const text = $a.text().trim();
+                if (text === "") {
+                  $a.remove();
+                } else {
+                  $a.replaceWith(text);
+                }
+              });
               return $cell
                 .text()
                 .replace(/[\r\n\t]+/g, " ")
@@ -121,13 +146,36 @@ function createDataTable(containerElement, order, pageLength) {
         titleAttr: "Excel-Tabelle herunterladen",
         className: "btn-link",
         exportOptions: {
+          modifier: {
+            page: "all"
+          },
           columns: function (idx, data, node) {
-            return idx !== 13;
+            return idx !== digitalisatLinkCol;
           },
           format: {
             body: function (data, row, column, node) {
-              const $cell = $(node).clone();
-              $cell.find("a, img, svg").remove();
+              const tmp = document.createElement("div");
+              tmp.innerHTML = data
+                .replace(/&lt;/g, "<")
+                .replace(/&gt;/g, ">")
+                .replace(/&amp;/g, "&")
+                .replace(/&quot;/g, '"')
+                .replace(/&#39;/g, "'");
+              const $cell = $(tmp);
+              $cell.find("img, svg").remove();
+              $cell.find("a").each(function () {
+                const $a = $(this);
+                if (column === digitalisatCol) {
+                  $a.replaceWith($a.attr("href") || "");
+                  return;
+                }
+                const text = $a.text().trim();
+                if (text === "") {
+                  $a.remove();
+                } else {
+                  $a.replaceWith(text);
+                }
+              });
               return $cell
                 .text()
                 .replace(/[\r\n\t]+/g, " ")
