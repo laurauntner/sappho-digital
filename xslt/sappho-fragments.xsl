@@ -63,6 +63,17 @@
                 intro:R12_hasReferredToEntity/@rdf:resource = $work-uri
                 ]"/>
 
+        <!-- work_ref features whose actualization shows they refer back to this very work -->
+        <xsl:variable name="self-referencing-work-features" select="
+                if ($feature-type = 'work') then
+                    distinct-values(
+                    $receptionEntities//intro:INT2_ActualizationOfFeature[
+                    ecrm:P67_refers_to/@rdf:resource = $work-uri
+                    ]/intro:R17_actualizesFeature/@rdf:resource
+                    )
+                else
+                    ()"/>
+
         <xsl:variable name="feature-uris" select="
                 if ($feature-type = 'motif') then
                     distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/motif/')])
@@ -86,7 +97,7 @@
                                     if ($feature-type = 'work') then
                                         distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[
                                         (matches(., '/feature/work_ref/') or matches(., '/actualization/work_ref/'))
-                                        and not(local:iri-id(.) = $work-id)
+                                        and not(. = $self-referencing-work-features)
                                         ])
                                     else
                                         if ($feature-type = 'workpassage') then
