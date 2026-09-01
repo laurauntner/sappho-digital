@@ -211,7 +211,10 @@
                         target="https://comunica.dev/">Comunica</ref> basierendes SPARQL-Interface.
                     Es bietet verschiedene Quelldatenoptionen, Beispielqueries und ein offenes
                     SPARQL-Eingabefeld sowie die Möglichkeit, Ergebnisse als CSV oder JSON
-                    herunterzuladen. Außerdem sind Links zu hilfreichen Ressourcen gelistet: einem
+                    herunterzuladen. Queries lassen sich auch visuell über einen auf <ref
+                        target="https://github.com/sparna-git/Sparnatural">Sparnatural</ref>
+                    basierenden Query-Builder zusammenstellen, dessen Ergebnis in das
+                    SPARQL-Eingabefeld übernommen wird. Außerdem sind Links zu hilfreichen Ressourcen gelistet: einem
                         <ref target="https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial"
                         >SPARQL-Tutorial</ref>, dem Datenmodell, den Alignments, dem Vokabular und
                     den statistischen Auswertungen (siehe oben).</p>

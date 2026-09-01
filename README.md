@@ -51,7 +51,7 @@ Ontology versions used in developing the [Sappho Digital Ontology](https://sapph
 - LRMoo 1.1.1
 - INTRO beta202506
 
-Additional documentation of the applied data model is in the [`/documentation`](https://github.com/laurauntner/sappho-digital/tree/main/documentation) folder.
+Additional documentation of the applied data model is in the [`/documentation`](https://github.com/laurauntner/sappho-digital/tree/main/documentation) folder, including [SHACL shapes](https://github.com/laurauntner/sappho-digital/blob/main/documentation/ontology/shapes.ttl) configuring the visual query builder ([Sparnatural](https://github.com/sparna-git/Sparnatural)) on the [query page](https://sappho-digital.com/query.html).
 
 For the data model in action, see also the companion repository [wikidata-to-cidoc-crm](https://github.com/laurauntner/wikidata-to-cidoc-crm), which contains Python scripts and a package for converting Wikidata into RDF using CIDOC CRM, LRMoo, and INTRO. See also the associated publication:
 

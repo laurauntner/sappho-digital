@@ -180,4 +180,6 @@
 
     <copy file="documentation/ontology/ontology.html" tofile="html/ontology.html" overwrite="true"/>
 
+    <copy file="documentation/ontology/shapes.ttl" tofile="html/shapes.ttl" overwrite="true"/>
+
 </project>

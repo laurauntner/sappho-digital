@@ -1,0 +1,1669 @@
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix dash:  <http://datashapes.org/dash#> .
+@prefix core:  <http://data.sparna.fr/ontologies/sparnatural-config-core#> .
+@prefix volipi: <http://data.sparna.fr/ontologies/volipi#> .
+@prefix ecrm:  <http://erlangen-crm.org/current/> .
+@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix intro: <https://w3id.org/lso/intro/currentbeta#> .
+@prefix this:  <https://sappho-digital.com/shapes#> .
+
+<https://sappho-digital.com/shapes> a owl:Ontology .
+
+
+this:expression a sh:NodeShape ;
+    sh:order "1"^^xsd:integer ;
+    volipi:iconName "fas fa-scroll" ;
+    sh:targetClass lrmoo:F2_Expression ;
+    rdfs:label "F2 Expression"@en ;
+    sh:property this:expression_label,
+        this:expression_1,
+        this:expression_2,
+        this:expression_3,
+        this:expression_4,
+        this:expression_5,
+        this:expression_6,
+        this:expression_7,
+        this:expression_8,
+        this:expression_9,
+        this:expression_10,
+        this:expression_11,
+        this:expression_12,
+        this:expression_13 .
+
+this:work a sh:NodeShape ;
+    sh:order "2"^^xsd:integer ;
+    volipi:iconName "fas fa-book" ;
+    sh:targetClass lrmoo:F1_Work ;
+    rdfs:label "F1 Work"@en ;
+    sh:property this:work_label,
+        this:work_1,
+        this:work_2,
+        this:work_3 .
+
+this:manifestation a sh:NodeShape ;
+    sh:order "3"^^xsd:integer ;
+    volipi:iconName "fas fa-book-open" ;
+    sh:targetClass lrmoo:F3_Manifestation ;
+    rdfs:label "F3 Manifestation"@en ;
+    sh:property this:manifestation_label,
+        this:manifestation_1,
+        this:manifestation_2,
+        this:manifestation_3,
+        this:manifestation_4 .
+
+this:person a sh:NodeShape ;
+    sh:order "4"^^xsd:integer ;
+    volipi:iconName "fas fa-user" ;
+    sh:targetClass ecrm:E21_Person ;
+    rdfs:label "E21 Person"@en ;
+    sh:property this:person_label,
+        this:person_1,
+        this:person_2,
+        this:person_3,
+        this:person_4,
+        this:person_5,
+        this:person_6,
+        this:person_7,
+        this:person_8 .
+
+this:place a sh:NodeShape ;
+    sh:order "5"^^xsd:integer ;
+    volipi:iconName "fas fa-map-marker-alt" ;
+    sh:targetClass ecrm:E53_Place ;
+    rdfs:label "E53 Place"@en ;
+    sh:property this:place_label,
+        this:place_1,
+        this:place_2,
+        this:place_3,
+        this:place_4,
+        this:place_5 .
+
+this:title a sh:NodeShape ;
+    sh:order "6"^^xsd:integer ;
+    volipi:iconName "fas fa-heading" ;
+    sh:targetClass ecrm:E35_Title ;
+    rdfs:label "E35 Title"@en ;
+    sh:property this:title_label,
+        this:title_1,
+        this:title_2 .
+
+this:type a sh:NodeShape ;
+    sh:order "7"^^xsd:integer ;
+    volipi:iconName "fas fa-tag" ;
+    sh:targetClass ecrm:E55_Type ;
+    rdfs:label "E55 Type"@en ;
+    sh:property this:type_label,
+        this:type_1,
+        this:type_2,
+        this:type_3,
+        this:type_4,
+        this:type_5 .
+
+this:timespan a sh:NodeShape ;
+    sh:order "8"^^xsd:integer ;
+    volipi:iconName "fas fa-calendar-alt" ;
+    sh:targetClass ecrm:E52_Time-Span ;
+    rdfs:label "E52 Time-Span"@en ;
+    sh:property this:timespan_label,
+        this:timespan_1,
+        this:timespan_2 .
+
+this:birth a sh:NodeShape ;
+    sh:order "9"^^xsd:integer ;
+    volipi:iconName "fas fa-baby" ;
+    sh:targetClass ecrm:E67_Birth ;
+    rdfs:label "E67 Birth"@en ;
+    sh:property this:birth_label,
+        this:birth_1,
+        this:birth_2 .
+
+this:death a sh:NodeShape ;
+    sh:order "10"^^xsd:integer ;
+    volipi:iconName "fas fa-cross" ;
+    sh:targetClass ecrm:E69_Death ;
+    rdfs:label "E69 Death"@en ;
+    sh:property this:death_label,
+        this:death_1,
+        this:death_2 .
+
+this:group a sh:NodeShape ;
+    sh:order "11"^^xsd:integer ;
+    volipi:iconName "fas fa-users" ;
+    sh:targetClass ecrm:E74_Group ;
+    rdfs:label "E74 Group"@en ;
+    sh:property this:group_label,
+        this:group_1 .
+
+this:infoobject a sh:NodeShape ;
+    sh:order "12"^^xsd:integer ;
+    volipi:iconName "fas fa-file-alt" ;
+    sh:targetClass ecrm:E73_Information_Object ;
+    rdfs:label "E73 Information Object"@en ;
+    sh:property this:infoobject_label,
+        this:infoobject_1 .
+
+this:visualitem a sh:NodeShape ;
+    sh:order "13"^^xsd:integer ;
+    volipi:iconName "fas fa-image" ;
+    sh:targetClass ecrm:E36_Visual_Item ;
+    rdfs:label "E36 Visual Item"@en ;
+    sh:property this:visualitem_label,
+        this:visualitem_1 .
+
+this:symbolicobject a sh:NodeShape ;
+    sh:order "14"^^xsd:integer ;
+    volipi:iconName "fas fa-icons" ;
+    sh:targetClass ecrm:E90_Symbolic_Object ;
+    rdfs:label "E90 Symbolic Object"@en ;
+    sh:property this:symbolicobject_label,
+        this:symbolicobject_1,
+        this:symbolicobject_2 .
+
+this:identifier a sh:NodeShape ;
+    sh:order "15"^^xsd:integer ;
+    volipi:iconName "fas fa-hashtag" ;
+    sh:targetClass ecrm:E42_Identifier ;
+    rdfs:label "E42 Identifier"@en ;
+    sh:property this:identifier_label,
+        this:identifier_1,
+        this:identifier_2,
+        this:identifier_3,
+        this:identifier_4,
+        this:identifier_5 .
+
+this:exprcreation a sh:NodeShape ;
+    sh:order "16"^^xsd:integer ;
+    volipi:iconName "fas fa-pen" ;
+    sh:targetClass lrmoo:F28_Expression_Creation ;
+    rdfs:label "F28 Expression Creation"@en ;
+    sh:property this:exprcreation_label,
+        this:exprcreation_1,
+        this:exprcreation_2,
+        this:exprcreation_3 .
+
+this:manifcreation a sh:NodeShape ;
+    sh:order "17"^^xsd:integer ;
+    volipi:iconName "fas fa-print" ;
+    sh:targetClass lrmoo:F30_Manifestation_Creation ;
+    rdfs:label "F30 Manifestation Creation"@en ;
+    sh:property this:manifcreation_label,
+        this:manifcreation_1,
+        this:manifcreation_2,
+        this:manifcreation_3,
+        this:manifcreation_4,
+        this:manifcreation_5 .
+
+this:workcreation a sh:NodeShape ;
+    sh:order "18"^^xsd:integer ;
+    volipi:iconName "fas fa-pen-nib" ;
+    sh:targetClass lrmoo:F27_Work_Creation ;
+    rdfs:label "F27 Work Creation"@en ;
+    sh:property this:workcreation_label,
+        this:workcreation_1 .
+
+this:actualization a sh:NodeShape ;
+    sh:order "19"^^xsd:integer ;
+    volipi:iconName "fas fa-bolt" ;
+    sh:targetClass intro:INT2_ActualizationOfFeature ;
+    rdfs:label "INT2 Actualization of Feature"@en ;
+    sh:property this:actualization_label,
+        this:actualization_1,
+        this:actualization_2,
+        this:actualization_3,
+        this:actualization_4,
+        this:actualization_5,
+        this:actualization_6,
+        this:actualization_7,
+        this:actualization_8,
+        this:actualization_9,
+        this:actualization_10,
+        this:actualization_11,
+        this:actualization_12,
+        this:actualization_13,
+        this:actualization_14,
+        this:actualization_15,
+        this:actualization_16,
+        this:actualization_17 .
+
+this:interpretation a sh:NodeShape ;
+    sh:order "20"^^xsd:integer ;
+    volipi:iconName "fas fa-comment-dots" ;
+    sh:targetClass intro:INT_Interpretation ;
+    rdfs:label "INT Interpretation"@en ;
+    sh:property this:interpretation_label,
+        this:interpretation_1 .
+
+this:reference a sh:NodeShape ;
+    sh:order "21"^^xsd:integer ;
+    volipi:iconName "fas fa-quote-right" ;
+    sh:targetClass intro:INT18_Reference ;
+    rdfs:label "INT18 Reference"@en ;
+    sh:property this:reference_label,
+        this:reference_1,
+        this:reference_2 .
+
+this:character a sh:NodeShape ;
+    sh:order "22"^^xsd:integer ;
+    volipi:iconName "fas fa-theater-masks" ;
+    sh:targetClass intro:INT_Character ;
+    rdfs:label "INT Character"@en ;
+    sh:property this:character_label,
+        this:character_1,
+        this:character_2 .
+
+this:motif a sh:NodeShape ;
+    sh:order "23"^^xsd:integer ;
+    volipi:iconName "fas fa-star" ;
+    sh:targetClass intro:INT_Motif ;
+    rdfs:label "INT Motif"@en ;
+    sh:property this:motif_label,
+        this:motif_1,
+        this:motif_2 .
+
+this:plot a sh:NodeShape ;
+    sh:order "24"^^xsd:integer ;
+    volipi:iconName "fas fa-shapes" ;
+    sh:targetClass intro:INT_Plot ;
+    rdfs:label "INT Plot"@en ;
+    sh:property this:plot_label,
+        this:plot_1,
+        this:plot_2 .
+
+this:topic a sh:NodeShape ;
+    sh:order "25"^^xsd:integer ;
+    volipi:iconName "fas fa-lightbulb" ;
+    sh:targetClass intro:INT_Topic ;
+    rdfs:label "INT Topic"@en ;
+    sh:property this:topic_label,
+        this:topic_1,
+        this:topic_2 .
+
+this:topos a sh:NodeShape ;
+    sh:order "26"^^xsd:integer ;
+    volipi:iconName "fas fa-landmark" ;
+    sh:targetClass intro:INT_Topos ;
+    rdfs:label "INT Topos"@en ;
+    sh:property this:topos_label,
+        this:topos_1,
+        this:topos_2 .
+
+this:textpassage a sh:NodeShape ;
+    sh:order "27"^^xsd:integer ;
+    volipi:iconName "fas fa-quote-left" ;
+    sh:targetClass intro:INT21_TextPassage ;
+    rdfs:label "INT21 Text Passage"@en ;
+    sh:property this:textpassage_label,
+        this:textpassage_1,
+        this:textpassage_2,
+        this:textpassage_3 .
+
+this:intertextrel a sh:NodeShape ;
+    sh:order "28"^^xsd:integer ;
+    volipi:iconName "fas fa-link" ;
+    sh:targetClass intro:INT31_IntertextualRelation ;
+    rdfs:label "INT31 Intertextual Relation"@en ;
+    sh:property this:intertextrel_label,
+        this:intertextrel_1,
+        this:intertextrel_2,
+        this:intertextrel_3,
+        this:intertextrel_4,
+        this:intertextrel_5,
+        this:intertextrel_6,
+        this:intertextrel_7,
+        this:intertextrel_8,
+        this:intertextrel_9,
+        this:intertextrel_10,
+        this:intertextrel_11 .
+
+this:expression_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:work_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:manifestation_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:person_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:place_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:title_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:type_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:timespan_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:birth_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:death_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:group_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:infoobject_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:visualitem_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:symbolicobject_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:identifier_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:exprcreation_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:manifcreation_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:workcreation_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:actualization_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:interpretation_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:reference_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:character_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:motif_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:plot_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:topic_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:topos_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:textpassage_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:intertextrel_label sh:path rdfs:label ;
+    sh:order "0"^^xsd:integer ;
+    sh:name "label"@en ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:nodeKind sh:Literal ;
+    sh:languageIn ( "en" "de" ) ;
+    sh:uniqueLang true ;
+    dash:searchWidget core:SearchProperty ;
+    dash:propertyRole dash:LabelRole .
+
+this:person_1 sh:path ecrm:P98i_was_born ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "P98i was born"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E67_Birth ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:birth_1 sh:path ecrm:P98_brought_into_life ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "P98 brought into life"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E21_Person ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:person_2 sh:path ecrm:P100i_died_in ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "P100i died in"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E69_Death ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:death_1 sh:path ecrm:P100_was_death_of ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "P100 was death of"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E21_Person ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:birth_2 sh:path [ sh:inversePath ecrm:P7i_witnessed ] ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "P7i witnessed"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E53_Place ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:place_1 sh:path ecrm:P7i_witnessed ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "P7i witnessed"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E67_Birth ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:death_2 sh:path [ sh:inversePath ecrm:P7i_witnessed ] ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "P7i witnessed"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E53_Place ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:place_2 sh:path ecrm:P7i_witnessed ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "P7i witnessed"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E69_Death ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:person_3 sh:path ecrm:P1_is_identified_by ;
+    sh:order "3"^^xsd:integer ;
+    sh:name "P1 is identified by"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E42_Identifier ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:identifier_1 sh:path ecrm:P1i_identifies ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "P1i identifies"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E21_Person ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:person_4 sh:path ecrm:P2_has_type ;
+    sh:order "4"^^xsd:integer ;
+    sh:name "P2 has type"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E55_Type ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:type_1 sh:path ecrm:P2i_is_type_of ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "P2i is type of"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E21_Person ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:person_5 sh:path ecrm:P138i_has_representation ;
+    sh:order "5"^^xsd:integer ;
+    sh:name "P138i has representation"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E36_Visual_Item ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:visualitem_1 sh:path ecrm:P138_represents ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "P138 represents"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E21_Person ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:person_6 sh:path ecrm:P14i_performed ;
+    sh:order "6"^^xsd:integer ;
+    sh:name "P14i performed"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F28_Expression_Creation ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:exprcreation_1 sh:path ecrm:P14_carried_out_by ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "P14 carried out by"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E21_Person ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:person_7 sh:path ecrm:P14i_performed ;
+    sh:order "7"^^xsd:integer ;
+    sh:name "P14i performed"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F30_Manifestation_Creation ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:manifcreation_1 sh:path [ sh:inversePath ecrm:P14i_performed ] ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "P14i performed"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E21_Person ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:identifier_2 sh:path ecrm:P1i_identifies ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "P1i identifies"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E53_Place ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:place_3 sh:path [ sh:inversePath ecrm:P1i_identifies ] ;
+    sh:order "3"^^xsd:integer ;
+    sh:name "P1i identifies"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E42_Identifier ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:expression_1 sh:path ecrm:P102_has_title ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "P102 has title"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E35_Title ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:title_1 sh:path ecrm:P102i_is_title_of ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "P102i is title of"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F2_Expression ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:expression_2 sh:path ecrm:P1_is_identified_by ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "P1 is identified by"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E42_Identifier ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:identifier_3 sh:path ecrm:P1i_identifies ;
+    sh:order "3"^^xsd:integer ;
+    sh:name "P1i identifies"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F2_Expression ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:expression_3 sh:path ecrm:P2_has_type ;
+    sh:order "3"^^xsd:integer ;
+    sh:name "P2 has type"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E55_Type ;
+    sh:minCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:type_2 sh:path [ sh:inversePath ecrm:P2_has_type ] ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "P2 has type"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F2_Expression ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:expression_4 sh:path ecrm:P138i_has_representation ;
+    sh:order "4"^^xsd:integer ;
+    sh:name "P138i has representation"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E73_Information_Object ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:infoobject_1 sh:path ecrm:P138_represents ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "P138 represents"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F2_Expression ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:expression_5 sh:path ecrm:P165_incorporates ;
+    sh:order "5"^^xsd:integer ;
+    sh:name "P165 incorporates"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E90_Symbolic_Object ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:symbolicobject_1 sh:path ecrm:P165i_is_incorporated_in ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "P165i is incorporated in"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F2_Expression ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:expression_6 sh:path lrmoo:R4i_is_embodied_in ;
+    sh:order "6"^^xsd:integer ;
+    sh:name "R4i is embodied in"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F3_Manifestation ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:manifestation_1 sh:path lrmoo:R4_embodies ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "R4 embodies"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F2_Expression ;
+    sh:minCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:expression_7 sh:path lrmoo:R17i_was_created_by ;
+    sh:order "7"^^xsd:integer ;
+    sh:name "R17i was created by"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F28_Expression_Creation ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:exprcreation_2 sh:path lrmoo:R17_created ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "R17 created"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F2_Expression ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:expression_8 sh:path intro:R18_showsActualization ;
+    sh:order "8"^^xsd:integer ;
+    sh:name "R18 shows actualization"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT2_ActualizationOfFeature ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:actualization_1 sh:path intro:R18i_actualizationFoundOn ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "R18i actualization found on"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F2_Expression ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:expression_9 sh:path intro:R30_hasTextPassage ;
+    sh:order "9"^^xsd:integer ;
+    sh:name "R30 has text passage"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT21_TextPassage ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:textpassage_1 sh:path intro:R30i_isTextPassageOf ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "R30i is text passage of"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F2_Expression ;
+    sh:minCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:expression_10 sh:path intro:R12i_isReferredToEntity ;
+    sh:order "10"^^xsd:integer ;
+    sh:name "R12i is referred to entity"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT31_IntertextualRelation ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:intertextrel_1 sh:path intro:R12_hasReferredToEntity ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "R12 has referred to entity"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F2_Expression ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:expression_11 sh:path intro:R13i_isReferringEntity ;
+    sh:order "11"^^xsd:integer ;
+    sh:name "R13i is referring entity"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT31_IntertextualRelation ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:intertextrel_2 sh:path intro:R13_hasReferringEntity ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "R13 has referring entity"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F2_Expression ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:manifestation_2 sh:path ecrm:P102_has_title ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "P102 has title"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E35_Title ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:title_2 sh:path ecrm:P102i_is_title_of ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "P102i is title of"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F3_Manifestation ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:manifestation_3 sh:path ecrm:P1_is_identified_by ;
+    sh:order "3"^^xsd:integer ;
+    sh:name "P1 is identified by"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E42_Identifier ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:identifier_4 sh:path ecrm:P1i_identifies ;
+    sh:order "4"^^xsd:integer ;
+    sh:name "P1i identifies"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F3_Manifestation ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:manifestation_4 sh:path lrmoo:R24i_was_created_through ;
+    sh:order "4"^^xsd:integer ;
+    sh:name "R24i was created through"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F30_Manifestation_Creation ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:manifcreation_2 sh:path lrmoo:R24_created ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "R24 created"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F3_Manifestation ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:manifcreation_3 sh:path ecrm:P14_carried_out_by ;
+    sh:order "3"^^xsd:integer ;
+    sh:name "P14 carried out by"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E74_Group ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:group_1 sh:path ecrm:P14i_performed ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "P14i performed"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F30_Manifestation_Creation ;
+    sh:minCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:manifcreation_4 sh:path ecrm:P4_has_time-span ;
+    sh:order "4"^^xsd:integer ;
+    sh:name "P4 has time-span"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E52_Time-Span ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:timespan_1 sh:path ecrm:P4i_is_time-span_of ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "P4i is time-span of"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F30_Manifestation_Creation ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:manifcreation_5 sh:path ecrm:P7_took_place_at ;
+    sh:order "5"^^xsd:integer ;
+    sh:name "P7 took place at"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E53_Place ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:place_4 sh:path ecrm:P7i_witnessed ;
+    sh:order "4"^^xsd:integer ;
+    sh:name "P7i witnessed"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F30_Manifestation_Creation ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:exprcreation_3 sh:path ecrm:P4_has_time-span ;
+    sh:order "3"^^xsd:integer ;
+    sh:name "P4 has time-span"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E52_Time-Span ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:timespan_2 sh:path ecrm:P4i_is_time-span_of ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "P4i is time-span of"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F28_Expression_Creation ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:work_1 sh:path lrmoo:R16i_was_created_by ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "R16i was created by"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F27_Work_Creation ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:workcreation_1 sh:path lrmoo:R16_created ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "R16 created"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F1_Work ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:work_2 sh:path lrmoo:R10i_has_member ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "R10i has member"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E90_Symbolic_Object ;
+    sh:minCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:symbolicobject_2 sh:path lrmoo:R10_is_member_of ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "R10 is member of"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F1_Work ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:work_3 sh:path intro:R12i_isReferredToEntity ;
+    sh:order "3"^^xsd:integer ;
+    sh:name "R12i is referred to entity"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT31_IntertextualRelation ;
+    sh:minCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:intertextrel_3 sh:path intro:R12_hasReferredToEntity ;
+    sh:order "3"^^xsd:integer ;
+    sh:name "R12 has referred to entity"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F1_Work ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:type_3 sh:path ecrm:P2_has_type ;
+    sh:order "3"^^xsd:integer ;
+    sh:name "P2 has type"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E55_Type ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:type_4 sh:path ecrm:P2i_is_type_of ;
+    sh:order "4"^^xsd:integer ;
+    sh:name "P2i is type of"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E55_Type ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:actualization_2 sh:path intro:R17_actualizesFeature ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "R17 actualizes feature"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT_Interpretation ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:interpretation_1 sh:path intro:R17i_featureIsActualizedIn ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "R17i feature is actualized in"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT2_ActualizationOfFeature ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:actualization_3 sh:path intro:R17_actualizesFeature ;
+    sh:order "3"^^xsd:integer ;
+    sh:name "R17 actualizes feature"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT_Motif ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:motif_1 sh:path intro:R17i_featureIsActualizedIn ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "R17i feature is actualized in"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT2_ActualizationOfFeature ;
+    sh:minCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:actualization_4 sh:path intro:R17_actualizesFeature ;
+    sh:order "4"^^xsd:integer ;
+    sh:name "R17 actualizes feature"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT18_Reference ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:reference_1 sh:path intro:R17i_featureIsActualizedIn ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "R17i feature is actualized in"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT2_ActualizationOfFeature ;
+    sh:minCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:actualization_5 sh:path intro:R17_actualizesFeature ;
+    sh:order "5"^^xsd:integer ;
+    sh:name "R17 actualizes feature"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT_Character ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:character_1 sh:path intro:R17i_featureIsActualizedIn ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "R17i feature is actualized in"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT2_ActualizationOfFeature ;
+    sh:minCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:actualization_6 sh:path intro:R17_actualizesFeature ;
+    sh:order "6"^^xsd:integer ;
+    sh:name "R17 actualizes feature"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT_Plot ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:plot_1 sh:path intro:R17i_featureIsActualizedIn ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "R17i feature is actualized in"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT2_ActualizationOfFeature ;
+    sh:minCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:actualization_7 sh:path intro:R17_actualizesFeature ;
+    sh:order "7"^^xsd:integer ;
+    sh:name "R17 actualizes feature"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT_Topic ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:topic_1 sh:path intro:R17i_featureIsActualizedIn ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "R17i feature is actualized in"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT2_ActualizationOfFeature ;
+    sh:minCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:actualization_8 sh:path intro:R17_actualizesFeature ;
+    sh:order "8"^^xsd:integer ;
+    sh:name "R17 actualizes feature"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT_Topos ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:topos_1 sh:path intro:R17i_featureIsActualizedIn ;
+    sh:order "1"^^xsd:integer ;
+    sh:name "R17i feature is actualized in"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT2_ActualizationOfFeature ;
+    sh:minCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:actualization_9 sh:path ecrm:P67_refers_to ;
+    sh:order "9"^^xsd:integer ;
+    sh:name "P67 refers to"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E21_Person ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:person_8 sh:path ecrm:P67i_is_referred_to_by ;
+    sh:order "8"^^xsd:integer ;
+    sh:name "P67i is referred to by"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT2_ActualizationOfFeature ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:actualization_10 sh:path ecrm:P67_refers_to ;
+    sh:order "10"^^xsd:integer ;
+    sh:name "P67 refers to"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E53_Place ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:place_5 sh:path ecrm:P67i_is_referred_to_by ;
+    sh:order "5"^^xsd:integer ;
+    sh:name "P67i is referred to by"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT2_ActualizationOfFeature ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:actualization_11 sh:path ecrm:P67_refers_to ;
+    sh:order "11"^^xsd:integer ;
+    sh:name "P67 refers to"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class lrmoo:F2_Expression ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:expression_12 sh:path ecrm:P67i_is_referred_to_by ;
+    sh:order "12"^^xsd:integer ;
+    sh:name "P67i is referred to by"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT2_ActualizationOfFeature ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:expression_13 sh:path intro:R24i_isRelatedEntity ;
+    sh:order "13"^^xsd:integer ;
+    sh:name "R24i is related entity"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT31_IntertextualRelation ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:actualization_12 sh:path intro:R18i_actualizationFoundOn ;
+    sh:order "12"^^xsd:integer ;
+    sh:name "R18i actualization found on"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT21_TextPassage ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:textpassage_2 sh:path intro:R18_showsActualization ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "R18 shows actualization"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT2_ActualizationOfFeature ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:actualization_13 sh:path intro:R21_identifies ;
+    sh:order "13"^^xsd:integer ;
+    sh:name "R21 identifies"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT31_IntertextualRelation ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:intertextrel_4 sh:path intro:R21i_isIdentifiedBy ;
+    sh:order "4"^^xsd:integer ;
+    sh:name "R21i is identified by"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT2_ActualizationOfFeature ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:actualization_14 sh:path intro:R21_identifies ;
+    sh:order "14"^^xsd:integer ;
+    sh:name "R21 identifies"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT2_ActualizationOfFeature ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:actualization_15 sh:path intro:R21i_isIdentifiedBy ;
+    sh:order "15"^^xsd:integer ;
+    sh:name "R21i is identified by"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT2_ActualizationOfFeature ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:actualization_16 sh:path intro:R24i_isRelatedEntity ;
+    sh:order "16"^^xsd:integer ;
+    sh:name "R24i is related entity"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT31_IntertextualRelation ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:intertextrel_5 sh:path intro:R24_hasRelatedEntity ;
+    sh:order "5"^^xsd:integer ;
+    sh:name "R24 has related entity"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT2_ActualizationOfFeature ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:reference_2 sh:path intro:R22_providesSimilarityForRelation ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "R22 provides similarity for relation"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT31_IntertextualRelation ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:intertextrel_6 sh:path intro:R22i_relationIsBasedOnSimilarity ;
+    sh:order "6"^^xsd:integer ;
+    sh:name "R22i relation is based on similarity"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT18_Reference ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:motif_2 sh:path intro:R22_providesSimilarityForRelation ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "R22 provides similarity for relation"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT31_IntertextualRelation ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:intertextrel_7 sh:path intro:R22i_relationIsBasedOnSimilarity ;
+    sh:order "7"^^xsd:integer ;
+    sh:name "R22i relation is based on similarity"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT_Motif ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:character_2 sh:path intro:R22_providesSimilarityForRelation ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "R22 provides similarity for relation"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT31_IntertextualRelation ;
+    sh:minCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:intertextrel_8 sh:path intro:R22i_relationIsBasedOnSimilarity ;
+    sh:order "8"^^xsd:integer ;
+    sh:name "R22i relation is based on similarity"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT_Character ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:plot_2 sh:path intro:R22_providesSimilarityForRelation ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "R22 provides similarity for relation"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT31_IntertextualRelation ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:intertextrel_9 sh:path intro:R22i_relationIsBasedOnSimilarity ;
+    sh:order "9"^^xsd:integer ;
+    sh:name "R22i relation is based on similarity"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT_Plot ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:topic_2 sh:path intro:R22_providesSimilarityForRelation ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "R22 provides similarity for relation"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT31_IntertextualRelation ;
+    sh:minCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:intertextrel_10 sh:path intro:R22i_relationIsBasedOnSimilarity ;
+    sh:order "10"^^xsd:integer ;
+    sh:name "R22i relation is based on similarity"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT_Topic ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:topos_2 sh:path intro:R22_providesSimilarityForRelation ;
+    sh:order "2"^^xsd:integer ;
+    sh:name "R22 provides similarity for relation"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT31_IntertextualRelation ;
+    sh:minCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:intertextrel_11 sh:path intro:R22i_relationIsBasedOnSimilarity ;
+    sh:order "11"^^xsd:integer ;
+    sh:name "R22i relation is based on similarity"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT_Topos ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:textpassage_3 sh:path intro:R18_showsActualization ;
+    sh:order "3"^^xsd:integer ;
+    sh:name "R18 shows actualization"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT2_ActualizationOfFeature ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:actualization_17 sh:path intro:R18i_actualizationFoundOn ;
+    sh:order "17"^^xsd:integer ;
+    sh:name "R18i actualization found on"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class intro:INT21_TextPassage ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:identifier_5 sh:path ecrm:P2_has_type ;
+    sh:order "5"^^xsd:integer ;
+    sh:name "P2 has type"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E55_Type ;
+    sh:minCount "1"^^xsd:integer ;
+    sh:maxCount "1"^^xsd:integer ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .
+
+this:type_5 sh:path ecrm:P2i_is_type_of ;
+    sh:order "5"^^xsd:integer ;
+    sh:name "P2i is type of"@en ;
+    sh:nodeKind sh:IRI ;
+    sh:class ecrm:E42_Identifier ;
+    dash:searchWidget core:NonSelectableProperty ;
+    core:enableOptional "true"^^xsd:boolean ;
+    core:enableNegation "true"^^xsd:boolean .

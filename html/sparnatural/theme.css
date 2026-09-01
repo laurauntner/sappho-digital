@@ -1,0 +1,39 @@
+/* Sparnatural theme override: match the Sappho Digital brand accent (#5e17eb).
+   Sparnatural redeclares its color variables on .Sparnatural (not :root), so the
+   override has to target the same selector to win the cascade. */
+.Sparnatural,
+.SparnaturalForm,
+.select2-container--default,
+.tippy-box {
+  --primary-color-main: #5e17eb;
+  --primary-color-important: #4610b3;
+  --primary-color-medium: #c9a8f5;
+  --primary-color-light: #ede3fc;
+
+  --secondary-color-main: #8b5cf6;
+  --secondary-color-important: #6d28d9;
+  --secondary-color-light: #ede3fc;
+
+  --ternary-color-main: #a78bfa;
+}
+
+/* Sparnatural opens its first (root) class selector as soon as it has
+   loaded, before any interaction. This masks that one dropdown -- purely
+   visually, via CSS -- until the user actually clicks "Search for
+   resources" (see sparnatural-integration.js), instead of opening
+   unprompted. It never touches the "open" class itself or any other
+   selector: doing that from outside desyncs the widget's own open/closed
+   state from the DOM, so its next click acts on the state it still thinks
+   it's in rather than what's visible. Scoped to .StartClassGroup, which is
+   only ever the root selector, not any later one in the query chain. */
+body:not(.sparnatural-start-opened) #sparnaturalSection .StartClassGroup .htmlSelectUiUx.open {
+  display: none;
+}
+
+/* Result-column selection (sort order, "Show column names", per-variable
+   aggregation) is left out entirely -- both the toggle bar and the panel
+   it opens. The query still gets sensible default variables without it. */
+#sparnaturalSection .variablesSelection {
+  display: none;
+}
+

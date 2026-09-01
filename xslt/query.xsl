@@ -19,6 +19,9 @@
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"/>
                 </xsl:call-template>
+                <link rel="stylesheet"
+                    href="https://cdn.jsdelivr.net/npm/sparnatural@12.2.1/dist/browser/sparnatural.css"/>
+                <link rel="stylesheet" href="sparnatural/theme.css" type="text/css"/>
             </head>
             <body class="page">
                 <div class="hfeed site" id="page">
@@ -62,6 +65,30 @@
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="section" id="sparnaturalSection">
+                                <div class="section-title">Visueller Query-Builder</div>
+                                <p class="smaller-text">Der visuelle Query-Builder wird durch <a
+                                        href="https://github.com/sparna-git/Sparnatural"
+                                        target="_blank">Sparnatural</a> bereitgestellt. Seine Nutzung
+                                    ist optional – die SPARQL-Query lässt sich auch direkt im Editor
+                                    unten eingeben.</p>
+                                <p class="smaller-text">Eine Query entsteht durch Verbinden von
+                                    Elementen: Zunächst werden die Klassen ausgewählt, erst danach lässt
+                                    sich – sofern mehrere Möglichkeiten bestehen – das verbindende
+                                    Prädikat festlegen. Suchbegriffe werden textbasiert abgeglichen
+                                    (Groß-/Kleinschreibung wird ignoriert), eine Live-Vorschlagsliste beim
+                                    Tippen gibt es nicht. Mit dem <strong>Play-Button</strong> wird die
+                                    erzeugte Query in den SPARQL-Editor übernommen; ausgeführt wird sie
+                                    erst über ›Query ausführen‹.</p>
+                                <p class="smaller-text">Die Auswahlliste öffnet sich bei Klick auf
+                                        ›Search for resources‹ und lässt sich nur durch Auswahl einer
+                                    Klasse schließen; erst danach werden die übrigen Bedienelemente
+                                    wieder vollständig zugänglich.</p>
+                                <spar-natural id="sparnatural" src="shapes.ttl"
+                                    endpoint="./no-sparql-endpoint" lang="en" defaultLang="en"
+                                    distinct="true" limit="100"><xsl:comment> sparnatural mount point </xsl:comment></spar-natural>
                             </div>
 
                             <div class="section">
@@ -202,6 +229,8 @@ LIMIT 100
 
                 <script src="https://rdf.js.org/comunica-browser/versions/v4/engines/query-sparql/comunica-browser.js" defer="defer"/>
                 <script src="js/query.js" defer="defer"/>
+                <script src="https://cdn.jsdelivr.net/npm/sparnatural@12.2.1/dist/browser/sparnatural.js" defer="defer"/>
+                <script src="js/sparnatural-integration.js" defer="defer"/>
             </body>
         </html>
     </xsl:template>
