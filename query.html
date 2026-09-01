@@ -39,6 +39,8 @@
       <link rel="stylesheet" href="css/style.css" type="text/css" />
       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/jq-3.3.1/jszip-2.5.0/dt-1.11.0/b-2.0.0/b-html5-2.0.0/cr-1.5.4/r-2.2.9/sp-1.4.0/datatables.min.css" />
       <link rel="stylesheet" href="pagefind/pagefind-ui.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sparnatural@12.2.1/dist/browser/sparnatural.css" />
+      <link rel="stylesheet" href="sparnatural/theme.css" type="text/css" />
    </head>
    <body class="page">
       <div class="hfeed site" id="page">
@@ -345,6 +347,25 @@
                      </div>
                   </div>
                </div>
+               <div class="section" id="sparnaturalSection">
+                  <div class="section-title">Visueller Query-Builder</div>
+                  <p class="smaller-text">Der visuelle Query-Builder wird durch <a href="https://github.com/sparna-git/Sparnatural" target="_blank">Sparnatural</a> bereitgestellt. Seine Nutzung
+                     ist optional – die SPARQL-Query lässt sich auch direkt im Editor
+                     unten eingeben.</p>
+                  <p class="smaller-text">Eine Query entsteht durch Verbinden von
+                     Elementen: Zunächst werden die Klassen ausgewählt, erst danach lässt
+                     sich – sofern mehrere Möglichkeiten bestehen – das verbindende
+                     Prädikat festlegen. Suchbegriffe werden textbasiert abgeglichen
+                     (Groß-/Kleinschreibung wird ignoriert), eine Live-Vorschlagsliste beim
+                     Tippen gibt es nicht. Mit dem <strong>Play-Button</strong> wird die
+                     erzeugte Query in den SPARQL-Editor übernommen; ausgeführt wird sie
+                     erst über ›Query ausführen‹.</p>
+                  <p class="smaller-text">Die Auswahlliste öffnet sich bei Klick auf
+                     ›Search for resources‹ und lässt sich nur durch Auswahl einer
+                     Klasse schließen; erst danach werden die übrigen Bedienelemente
+                     wieder vollständig zugänglich.</p>
+                  <spar-natural id="sparnatural" src="shapes.ttl" endpoint="./no-sparql-endpoint" lang="en" defaultLang="en" distinct="true" limit="100"><!-- sparnatural mount point --></spar-natural>
+               </div>
                <div class="section">
                   <div class="section-title">SPARQL Query</div>
                   <div class="query-container"><textarea id="queryEditor" placeholder="Gib hier eine SPARQL-Query ein …">
@@ -420,5 +441,5 @@ LIMIT 100
                </div>
             </div>
          </div>
-         <div id="wrapper-footer-full" data-pagefind-ignore="all"><a href="imprint.html">© Laura Untner 2026 (zuletzt aktualisiert am 24.8.2026, 8:41)</a></div><script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script><script src="js/listStopProp.js"></script><script src="js/navScroll.js"></script><script src="pagefind/pagefind-ui.js"></script><script src="js/search.js"></script></div><script src="https://rdf.js.org/comunica-browser/versions/v4/engines/query-sparql/comunica-browser.js" defer="defer"></script><script src="js/query.js" defer="defer"></script></body>
+         <div id="wrapper-footer-full" data-pagefind-ignore="all"><a href="imprint.html">© Laura Untner 2026 (zuletzt aktualisiert am 1.9.2026, 9:54)</a></div><script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script><script src="js/listStopProp.js"></script><script src="js/navScroll.js"></script><script src="pagefind/pagefind-ui.js"></script><script src="js/search.js"></script></div><script src="https://rdf.js.org/comunica-browser/versions/v4/engines/query-sparql/comunica-browser.js" defer="defer"></script><script src="js/query.js" defer="defer"></script><script src="https://cdn.jsdelivr.net/npm/sparnatural@12.2.1/dist/browser/sparnatural.js" defer="defer"></script><script src="js/sparnatural-integration.js" defer="defer"></script></body>
 </html>

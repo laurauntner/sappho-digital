@@ -1624,6 +1624,12 @@ body.page {
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
     }
+    .navbar-collapse .dropdown-menu,
+    .navbar-collapse .dropdown-item {
+        max-width: 100%;
+        white-space: normal;
+        word-break: break-word;
+    }
 }
 
 @media (max-width : 1024px) {
@@ -1669,6 +1675,39 @@ body.page {
         --bs-card-border-width: 0;
     }
 
+    .wikidata-layout,
+    .stats-col .wikidata-layout {
+        grid-template-columns: 1fr;
+    }
+    .wikidata-right {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .meta-dl,
+    .meta-row {
+        display: block;
+    }
+    .meta-row {
+        margin-bottom: 0.4rem;
+    }
+    .meta-row dt,
+    .meta-row dd {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        white-space: normal;
+    }
+    .meta-row dt {
+        padding: 0.25rem 0 0;
+    }
+    .meta-row:not(:last-child) dt {
+        border-bottom: none;
+    }
+    .meta-row:not(:last-child) dd {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.045);
+        padding-bottom: 0.4rem;
+    }
+
     #layout {
         display: none;
     }
@@ -1684,16 +1723,8 @@ body.page {
     li a br {
         display: block !important;
     }
-    .dropdown-menu li a {
-        max-width: 500px;
-        overflow: hidden;
-    }
-}
-
-@media (max-width : 480px) {
-    .dropdown-menu li a {
-        max-width: 400px;
-        overflow: hidden;
+    .feat-group-label br {
+        display: inline;
     }
 }
 
@@ -1702,6 +1733,18 @@ body.page {
         width: auto !important;
         height: auto !important;
         margin-top: auto !important;
+    }
+    .stats-wrap {
+        overflow-x: auto;
+    }
+    div:has(> #heatmap-section) {
+        flex-wrap: wrap !important;
+    }
+    #heatmap-section,
+    #container-genres,
+    #container-timeline {
+        flex: 1 1 100% !important;
+        width: 100% !important;
     }
 }
 
@@ -2530,6 +2573,13 @@ a.feat-tag--intertext:hover {
     font-size: .9rem
 }
 
+.nav-orientierung-link {
+    display: inline-flex;
+    align-items: center;
+    padding: .5rem;
+    line-height: 1;
+}
+
 .nav-orientierung-link + .tooltip-text {
     width: max-content;
     white-space: nowrap;
@@ -2589,6 +2639,8 @@ a.feat-tag--intertext:hover {
 /* Search (Pagefind) */
 
 .search-trigger-link {
+    display: inline-flex;
+    align-items: center;
     background: none;
     border: none;
     padding: .5rem;
