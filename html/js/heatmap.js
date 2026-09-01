@@ -22,6 +22,9 @@
       '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     maxZoom: 18,
   }).addTo(map);
+  /* re-check size once the responsive layout (e.g. stacked mobile columns) has settled */
+  setTimeout(function () { map.invalidateSize(); }, 0);
+  window.addEventListener("resize", function () { map.invalidateSize(); });
   var heatLayer = L.heatLayer([], {
     radius:     10,
     blur:       5,

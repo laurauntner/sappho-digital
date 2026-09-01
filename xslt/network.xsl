@@ -45,6 +45,9 @@
 
                             <div class="card-body align-left" id="network-app">
 
+                                <div id="screen-too-small">Das Fenster ist zu klein, um die
+                                    Netzwerkvisualisierung darstellen zu können.</div>
+
                                 <div id="layout">
 
                                     <!-- Left sidebar -->
