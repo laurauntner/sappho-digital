@@ -337,46 +337,155 @@
                   
                   <div id="d5e46">
                      
+                     <h3 class="align-left">Data Basis</h3>
+                     
+                     <p class="align-left" id="d5e50">The reception testimonies underlying the lists – and thus also the analysis – were
+                        compiled over several years of research, drawing on the German, Austrian and Swiss
+                        national bibliographies, newspaper and periodical databases such as
+                        <a href="https://anno.onb.ac.at/">ANNO</a> and the
+                        <a href="https://www.deutsche-zeitungsportal.de/">Deutsches
+                           Zeitungsportal</a>, digital text corpora such as
+                        <a href="https://textgrid.de/">TextGrid</a> and
+                        <a href="https://www.projekt-gutenberg.org/">Project Gutenberg</a>, fanfiction
+                        platforms such as the <a href="https://archiveofourown.org/">Archive of Our
+                           Own</a>, and scholarly secondary literature; the material was supplemented with tips
+                        from personal and professional contacts.</p>
+                     
+                     <p class="align-left" id="d5e68">The texts found were first recorded in a spreadsheet with basic bibliographic
+                        information – date of composition and publication, title, author(s), genre, place
+                        of
+                        publication, publisher, and, where available, a link to a digitized copy. Using
+                        <a href="https://openrefine.org/">OpenRefine</a>, the spreadsheet was then
+                        semi-automatically linked to <a href="https://www.wikidata.org/">Wikidata</a> to
+                        identify
+                        persons, works, places and publishers via unique identifiers (QIDs). A purpose-built
+                        <a href="https://github.com/laurauntner/sappho-digital/tree/main/python">Python
+                           script</a> finally converted the spreadsheet into the XML/TEI files openly available
+                        on GitHub, which form the basis for the analysis corpus presented here.</p>
+                     </div>
+                  
+                  <div id="d5e81">
+                     
                      <h3 class="align-left">Methodological Approach</h3>
                      
-                     <p class="align-left" id="d5e50">All analysed reception testimonies were drawn from the same corpus: the volume <i><a href="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/">Sappho.
+                     <p class="align-left" id="d5e85">All analysed reception testimonies were drawn from the same corpus: the volume <i><a href="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/">Sappho.
                               Texte zur literarischen Rezeption im deutschsprachigen Raum</a></i> (2023), which
                         presents the reception testimonies – apart from the texts by Huber, Schrott and Schwarz
                         –
                         in the form of their first printing.</p>
                      
-                     <p class="align-left" id="d5e57">All Sappho fragments contained in Andreas Bagordo’s bilingual edition, based on the
+                     <p class="align-left" id="d5e92">Also, all Sappho fragments contained in Andreas Bagordo’s bilingual edition, based
+                        on the
                         text-critical edition by Eva-Maria Voigt (Patmos 2009), were analysed (cf. the menu
                         »Texts« &gt; »Sappho Fragments«), as well as 99 sample reception testimonies illustrating
                         typical patterns of reception. These include, for example, the recurring treatment
                         of the
                         Sappho–Phaon legend and the portrayal of Sappho as a great poet or as a homoerotic
-                        desiring subject. Texts of various genres (poetry, prose, drama, and hybrid forms)
-                        and of
+                        desiring subject. Texts of various genres (poetry, prose, drama, and other texts,
+                        e.g.
+                        comics) and of
                         varying degrees of renown were considered – not only works by canonized authors, but
                         also
                         those by lesser-known writers, from the 16th to the 21st century.</p>
                      
-                     <p class="align-left" id="d5e59">Motifs, topics, plots, rhetorical topoi, characters, as well as references to
+                     <p class="align-left" id="d5e94">Motifs, topics, plots, rhetorical topoi, characters, as well as references to
                         persons, places and works, and quotations were taken into account. On the basis of
                         these
                         phenomena, intertextual relationships were established between the reception testimonies
                         and the Sappho fragments, as well as among the reception testimonies themselves.</p>
                      
-                     <p class="align-left" id="d5e61">The workflow proceeded in two steps: first, the phenomena were annotated in XML files.
-                        The XML files were then converted into RDF triples using specially developed <a href="https://github.com/laurauntner/sappho-digital/tree/main/python">Python scripts</a>. To represent the data, an <a href="https://sappho-digital.com/ontology.html">ontology</a> was developed, based
-                        on existing ontologies (<a href="https://cidoc-crm.org/">CIDOC CRM</a>, <a href="https://repository.ifla.org/items/729b094a-92d6-4317-9dee-a300053ffdb4">LRMoo</a> and <a href="https://github.com/BOberreither/INTRO">INTRO</a>) and
-                        additionally equipped with various <a href="https://sappho-digital.com/ontology-alignments.html">alignments</a> with other
-                        ontologies. Recurring reception phenomena are defined in a <a href="https://sappho-digital.com/vocabulary.html">SKOS vocabulary</a>.</p>
+                     <p class="align-left" id="d5e96">Before the phenomena could be integrated into this data model, they had to be extracted
+                        from the texts. The 99 reception testimonies were already available in full text through
+                        the work on the Sappho anthology; the 197 Sappho fragments were made machine-readable
+                        using Optical Character Recognition (OCR). The actual interpretive work was carried
+                        out
+                        in several successive <i>close-reading</i> passes: the texts were read multiple times, with each
+                        pass adding further annotations or checking and refining those already made.</p>
                      
-                     <p class="align-left" id="d5e87">The resulting data is openly accessible in a <a href="https://github.com/laurauntner/sappho-digital">GitHub repository</a> and can
+                     <p class="align-left" id="d5e103">Annotation used an individual XML tagset: <code>motiv</code>,
+                        <code>thema</code>, <code>stoff</code> and
+                        <code>topos</code> marked motifs, topics, biographical plot variants and
+                        rhetorical topoi, <code>werk</code> marked references to works (supplemented,
+                        for quotations and paraphrases, with the attribute <code>art="passage"</code>),
+                        <code>person</code> with the attributes <code>art="real"</code>,
+                        <code>art="fictional"</code> and <code>art="type"</code> marked
+                        real people, fictional characters and character types, and <code>ort</code>
+                        with <code>art="real"</code> or <code>art="fictional"</code> marked
+                        real and fictional places. Where a phenomenon could not be pinned directly to the
+                        wording, it was given a normalized term via the attribute <code>type</code>;
+                        where it could not be located in the running text at all – as was often the case for
+                        some
+                        plot variants and topics – tags were placed outside the text as well.</p>
+                     
+                     <p class="align-left" id="d5e136">Two purpose-built Python scripts supported ongoing quality control of the annotation:
+                        one listed all tags already assigned along with their values, the other showed which
+                        of
+                        these had already been used more than once – groundwork that also formed the basis
+                        for
+                        the SKOS vocabulary (see below). For the final round of corrections, a static HTML
+                        view
+                        was developed that displayed, for each text, the full text synoptically alongside
+                        a
+                        checklist of all annotated phenomena.</p>
+                     
+                     <p class="align-left" id="d5e138">Based on the annotated XML documents, six successive
+                        <a href="https://github.com/laurauntner/sappho-digital/tree/main/python">Python
+                           scripts</a> convert the data into RDF triples. A first script creates person
+                        instances from the author information in the list of all reception testimonies and,
+                        where a Wikidata ID is available, adds basic biographical data (birth, death, gender,
+                        image) as well as further identifiers
+                        (<a href="https://www.dbpedia.org/">DBpedia</a>,
+                        <a href="https://www.dnb.de/gnd">GND</a>,
+                        <a href="https://viaf.org/">VIAF</a>). A second script processes
+                        the bibliographic information on the reception testimonies and generates work data
+                        and,
+                        where a publication date is available, manifestation data with titles, places and
+                        dates
+                        of publication, as well as, where available, cover images and further identifiers
+                        (including a <a href="https://www.goodreads.com/">Goodreads</a> work ID); a third
+                        script converts the 197 Sappho fragments and
+                        Sappho’s complete works in the same way. A fourth script reads the annotated XML
+                        documents and enters motifs, topics, plots, topoi, references to works, places and
+                        persons, and characters into the corresponding classes of the data model, matched
+                        against the SKOS vocabulary (see below). A fifth script uses these to construct directed
+                        intertextual relations – both between Sappho’s fragments and the reception testimonies
+                        and among the reception testimonies themselves – documenting the respective textual
+                        evidence along the way. A sixth script finally merges all previously generated files
+                        into a single graph (following a “last write wins” rule); the merged graph is then
+                        processed with the Java-based reasoner
+                        <a href="http://www.hermit-reasoner.com/">HermiT</a>. This produced over
+                        400,000 triples,
+                        extendable to over 600,000 through <i>reasoning</i>.</p>
+                     
+                     <p class="align-left" id="d5e163">To represent the data, a dedicated
+                        <a href="https://sappho-digital.com/ontology.html">ontology</a> was developed,
+                        building on the existing ontologies <a href="https://cidoc-crm.org/">CIDOC
+                           CRM</a>, <a href="https://repository.ifla.org/items/729b094a-92d6-4317-9dee-a300053ffdb4">LRMoo</a> and <a href="https://github.com/BOberreither/INTRO">INTRO</a>, and
+                        additionally equipped with numerous <i><a href="https://sappho-digital.com/ontology-alignments.html">alignments</a></i> to further
+                        ontologies.</p>
+                     
+                     <p class="align-left" id="d5e182">Recurring reception phenomena are also defined in a
+                        <a href="https://sappho-digital.com/vocabulary.html">SKOS vocabulary</a>. Since
+                        productive literary reception phenomena cannot be fully determined in advance, the
+                        vocabulary was developed inductively from the material itself: all phenomena occurring
+                        in at least two annotated documents – references to works and plot variants regardless
+                        of frequency – were manually structured and hierarchized in the web-based LOD editor
+                        <a href="https://vocbench.uniroma2.it/">VocBench</a>. Internally, they were
+                        linked via hierarchical (<code>skos:broader</code>/
+                        <code>skos:narrower</code>) and associative (<code>skos:related</code>) relations,
+                        externally, wherever possible, to Wikidata (<code>skos:relatedMatch</code>,
+                        <code>skos:closeMatch</code>, <code>skos:narrowMatch</code>,
+                        <code>skos:broadMatch</code>). In total, the vocabulary comprises 427 concepts and just
+                        over 5,000 triples; motifs and persons make up the largest share.</p>
+                     
+                     <p class="align-left" id="d5e206">The resulting data is openly accessible in a <a href="https://github.com/laurauntner/sappho-digital">GitHub repository</a> and can
                         also be queried via a <a href="https://sappho-digital.com/query-builder.html">SPARQL
                            interface</a> on this website. Sample statistical analyses can be found <a href="https://sappho-digital.com/statistics.html">here</a>; all data can also be
                         explored via a <a href="https://sappho-digital.com/network.html">network
                            visualization</a>.</p>
                      </div>
                   
-                  <div id="d5e103">
+                  <div id="d5e222">
                      
                      <h3 class="align-left">Analysed Reception Testimonies</h3>
                      
@@ -652,29 +761,29 @@
                         </ul>
                      </div>
                   
-                  <div id="d5e1219">
+                  <div id="d5e1338">
                      
                      <h3 class="align-left">Statistical Overview of the Reception Testimonies</h3>
                      
                      <section class="charts-grid">
                         
-                        <p class="align-left" id="d5e1225">
+                        <p class="align-left" id="d5e1344">
                            <div class="skos-chart" id="chart-gattungen" data-chart="gattungen" data-csv="https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/data/analysetexte_statistik.csv"></div>
                         </p>
                         
-                        <p class="align-left" id="d5e1228">
+                        <p class="align-left" id="d5e1347">
                            <div class="skos-chart" id="chart-zeitverteilung" data-chart="zeitverteilung" data-csv="https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/data/analysetexte_statistik.csv"></div>
                         </p>
                         
-                        <p class="align-left" id="d5e1231">
+                        <p class="align-left" id="d5e1350">
                            <div class="skos-chart" id="chart-geschlecht" data-chart="geschlecht" data-csv="https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/data/analysetexte_statistik.csv"></div>
                         </p>
                         
-                        <p class="align-left" id="d5e1234">
+                        <p class="align-left" id="d5e1353">
                            <div class="skos-chart" id="chart-staedte" data-chart="staedte" data-csv="https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/data/analysetexte_statistik.csv"></div>
                         </p>
                         
-                        <p class="align-left" id="d5e1237">
+                        <p class="align-left" id="d5e1356">
                            <div class="skos-chart" id="chart-laender" data-chart="laender" data-csv="https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/data/analysetexte_statistik.csv"></div>
                         </p>
                         </section>
@@ -693,5 +802,5 @@
                </div>
             </div>
          </div>
-         <div id="wrapper-footer-full" data-pagefind-ignore="all"><a href="legal-notice.html">© Laura Untner 2026 (last updated on 2 September 2026, 12:05)</a></div><script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script><script src="js/listStopProp.js"></script><script src="js/navScroll.js"></script><script src="pagefind/pagefind-ui.js"></script><script src="js/search.js"></script></div><script src="https://code.highcharts.com/highcharts.js"></script><script src="./js/analysis-statistics.js"></script></body>
+         <div id="wrapper-footer-full" data-pagefind-ignore="all"><a href="legal-notice.html">© Laura Untner 2026 (last updated on 2 September 2026, 14:05)</a></div><script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script><script src="js/listStopProp.js"></script><script src="js/navScroll.js"></script><script src="pagefind/pagefind-ui.js"></script><script src="js/search.js"></script></div><script src="https://code.highcharts.com/highcharts.js"></script><script src="./js/analysis-statistics.js"></script></body>
 </html>

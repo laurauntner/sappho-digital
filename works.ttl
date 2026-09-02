@@ -25946,7 +25946,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         "DTV"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_71edd9d5>,
         <https://sappho-digital.com/manifestation_creation/bibl_ad7a16ab> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1205382> .
+    owl:sameAs <https://www.wikidata.org/entity/Q1205382>,
+        <https://www.wikidata.org/entity/Q14906409> .
 
 <https://sappho-digital.com/publisher/publisher_5ee6310f> a ecrm:E74_Group ;
     rdfs:label "Johann Erich Hahn"@de ;
@@ -26109,7 +26110,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         "George Westermann"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/manifestation_creation/bibl_2cc74cd9>,
         <https://sappho-digital.com/manifestation_creation/bibl_63264ecd> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q1508580> .
+    owl:sameAs <https://www.wikidata.org/entity/Q1508580>,
+        <https://www.wikidata.org/entity/Q2564847> .
 
 <https://sappho-digital.com/publisher/publisher_f732f517> a ecrm:E74_Group ;
     rdfs:label "Schuster & Loeffler"@de ;
