@@ -1,5 +1,26 @@
 (function () {
 
+  const lang = document.documentElement.lang === 'en' ? 'en' : 'de';
+  const t = lang === 'en'
+    ? {
+        genreDistribution: 'Genre Distribution', countedPerText: 'counted per text',
+        texts: 'Texts', timeline: 'Over Time', years: 'Years', year: 'Year: ',
+        genderDistribution: 'Gender Distribution',
+        multipleMentionsCoauthor: 'Multiple mentions possible due to co-authorship',
+        multipleMentionsPlace: 'Multiple mentions possible due to multiple places of publication',
+        topPublicationPlacesCities: 'Top Places of Publication (Cities)',
+        topPublicationPlacesCountries: 'Top Places of Publication (Countries)'
+      }
+    : {
+        genreDistribution: 'Gattungsverteilung', countedPerText: 'gezählt pro Text',
+        texts: 'Texte', timeline: 'Zeitlicher Verlauf', years: 'Jahre', year: 'Jahr: ',
+        genderDistribution: 'Genderverteilung',
+        multipleMentionsCoauthor: 'Mehrfachnennungen aufgrund von Ko-Autor_innenschaft möglich',
+        multipleMentionsPlace: 'Mehrfachnennungen aufgrund mehrerer Publikationsorte möglich',
+        topPublicationPlacesCities: 'Top Publikationsorte (Städte)',
+        topPublicationPlacesCountries: 'Top Publikationsorte (Länder)'
+      };
+
   if (!location.protocol.startsWith('http')) {
     console.warn(
       'Hinweis: Diese Seite läuft nicht über HTTP. fetch() auf lokale Dateien wird von Browsern blockiert (CORS). Bitte lokal per http://localhost:… serven.'
@@ -162,8 +183,8 @@
       case 'gattungen':       return chartGattungen(el, data);
       case 'zeitverteilung':  return chartZeitverteilung(el, data);
       case 'geschlecht':      return chartGeschlecht(el, data);
-      case 'staedte':         return chartTop(el, data, 'cityPairs', 'Top Publikationsorte (Städte)', 30);
-      case 'laender':         return chartTop(el, data, 'countryPairs', 'Top Publikationsorte (Länder)', 50);
+      case 'staedte':         return chartTop(el, data, 'cityPairs', t.topPublicationPlacesCities, 30);
+      case 'laender':         return chartTop(el, data, 'countryPairs', t.topPublicationPlacesCountries, 50);
       default:
         console.warn('charts.js: unbekannter data-chart Typ:', kind);
     }
@@ -180,9 +201,9 @@
 
     Highcharts.chart(el.id, {
       chart: { type: 'pie' },
-      title: { text: 'Gattungsverteilung' },
-      subtitle: { text: 'gezählt pro Text' },
-      series: [{ name: 'Texte', colorByPoint: false, data: series }]
+      title: { text: t.genreDistribution },
+      subtitle: { text: t.countedPerText },
+      series: [{ name: t.texts, colorByPoint: false, data: series }]
     });
 
     ensureNote(el, data);
@@ -208,19 +229,19 @@
 
     Highcharts.chart(el.id, {
       chart: { type: 'line' },
-      title: { text: 'Zeitlicher Verlauf' },
-      subtitle: { text: 'gezählt pro Text' },
-      xAxis: { type: 'datetime', title: { text: 'Jahre' } },
+      title: { text: t.timeline },
+      subtitle: { text: t.countedPerText },
+      xAxis: { type: 'datetime', title: { text: t.years } },
       yAxis: {
-        title: { text: 'Texte' },
+        title: { text: t.texts },
         min: 0
       },
       tooltip: {
         formatter() {
-          return 'Jahr: ' + Highcharts.dateFormat('%Y', this.x) + '<br/>Texte: ' + this.y;
+          return t.year + Highcharts.dateFormat('%Y', this.x) + '<br/>' + t.texts + ': ' + this.y;
         }
       },
-      series: [{ name: 'Texte', data: seriesData, color: seriesColor }]
+      series: [{ name: t.texts, data: seriesData, color: seriesColor }]
     });
 
     ensureNote(el, data);
@@ -240,12 +261,12 @@
 
     Highcharts.chart(el.id, {
       chart: { type: 'bar' },
-      title: { text: 'Genderverteilung' },
-      subtitle: { text: 'Mehrfachnennungen aufgrund von Ko-Autor_innenschaft möglich' },
+      title: { text: t.genderDistribution },
+      subtitle: { text: t.multipleMentionsCoauthor },
       xAxis: { type: 'category', title: { text: null } },
-      yAxis: { title: { text: 'Texte' } },
-      tooltip: { pointFormat: 'Texte: <b>{point.y}</b>' },
-      series: [{ name: 'Texte', data: seriesData, color: seriesColor }]
+      yAxis: { title: { text: t.texts } },
+      tooltip: { pointFormat: t.texts + ': <b>{point.y}</b>' },
+      series: [{ name: t.texts, data: seriesData, color: seriesColor }]
     });
 
     ensureNote(el, data);
@@ -276,7 +297,7 @@
     Highcharts.chart(el.id, {
       chart: { type: 'bar', height: dynamicHeight, marginLeft: 120 },
       title: { text: title },
-      subtitle: { text: 'Mehrfachnennungen aufgrund mehrerer Publikationsorte möglich' },
+      subtitle: { text: t.multipleMentionsPlace },
       xAxis: {
         type: 'category',
         title: { text: null },
@@ -287,9 +308,9 @@
         },
         tickInterval: 1
       },
-      yAxis: { title: { text: 'Texte' } },
-      tooltip: { pointFormat: 'Texte: <b>{point.y}</b>' },
-      series: [{ name: 'Texte', data: seriesData, color: seriesColor }]
+      yAxis: { title: { text: t.texts } },
+      tooltip: { pointFormat: t.texts + ': <b>{point.y}</b>' },
+      series: [{ name: t.texts, data: seriesData, color: seriesColor }]
     });
 
     ensureNote(el, data);

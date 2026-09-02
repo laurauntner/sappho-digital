@@ -4,7 +4,8 @@
     xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:ecrm="http://erlangen-crm.org/current/"
-    exclude-result-prefixes="xsl tei xs rdf rdfs ecrm">
+    xmlns:i18n="urn:sappho-digital:i18n"
+    exclude-result-prefixes="xsl tei xs rdf rdfs ecrm i18n">
 
     <xsl:output encoding="UTF-8" method="xhtml" indent="yes" omit-xml-declaration="yes"/>
 
@@ -17,14 +18,16 @@
     <xsl:key name="place-by-id" match="ecrm:E53_Place" use="tokenize(@rdf:about, '/')[last()]"/>
 
     <xsl:template match="/">
-        <xsl:variable name="doc_title" select="//tei:title[@type = 'main']"/>
+        <xsl:variable name="doc_title" select="i18n:t(string(//tei:title[@type = 'main']))"/>
         <xsl:variable name="filename" select="tokenize(base-uri(), '/')[last()]"/>
         <xsl:variable name="show_genres" select="contains($filename, 'sappho-rez_alle')"/>
         <xsl:variable name="show_timeline" select="not(contains($filename, 'sappho-rez_sonstige'))"/>
         <xsl:variable name="show_heatmap" select="not(contains($filename, 'sappho-rez_sonstige'))"/>
+        <xsl:variable name="current_page"
+            select="i18n:href(replace(replace($filename, 'sappho-rez_', 'toc-'), '\.xml$', '.html'))"/>
 
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
-        <html xmlns="http://www.w3.org/1999/xhtml">
+        <html xmlns="http://www.w3.org/1999/xhtml" lang="{$lang}">
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"/>
@@ -35,7 +38,9 @@
             </head>
             <body class="page" data-tei-file="{$filename}" data-show-genres="{$show_genres}">
                 <div class="hfeed site" id="page">
-                    <xsl:call-template name="nav_bar"/>
+                    <xsl:call-template name="nav_bar">
+                        <xsl:with-param name="current_page" select="$current_page"/>
+                    </xsl:call-template>
                     <div class="container">
                         <div class="card">
                             <div class="card-header">
@@ -53,13 +58,13 @@
                                                 <div id="heatmap-section" style="flex:0 0 65%;">
                                                   <div id="map"/>
                                                   <div id="slider-wrapper">
-                                                  <label for="year-slider">Jahr:</label>
+                                                  <label for="year-slider"><xsl:value-of select="i18n:t('Jahr:')"/></label>
                                                   <input type="range" id="year-slider" min="1"
                                                   max="1" value="1" step="1"/>
                                                   <span id="slider-display">–</span>
                                                   <button id="btn-play"
                                                   class="btn btn-sm btn-outline-secondary"> &#9654;
-                                                  Abspielen </button>
+                                                  <xsl:value-of select="i18n:t('Abspielen')"/> </button>
 
                                                   </div>
                                                 </div>
@@ -77,13 +82,13 @@
                                                 <div id="heatmap-section" style="flex:0 0 45%;">
                                                   <div id="map"/>
                                                   <div id="slider-wrapper">
-                                                  <label for="year-slider">Jahr:</label>
+                                                  <label for="year-slider"><xsl:value-of select="i18n:t('Jahr:')"/></label>
                                                   <input type="range" id="year-slider" min="1"
                                                   max="1" value="1" step="1"/>
                                                   <span id="slider-display">–</span>
                                                   <button id="btn-play"
                                                   class="btn btn-sm btn-outline-secondary"> &#9654;
-                                                  Abspielen </button>
+                                                  <xsl:value-of select="i18n:t('Abspielen')"/> </button>
 
                                                   </div>
                                                 </div>
@@ -186,8 +191,9 @@
                                     </script>
                                 </xsl:if>
 
-                                <div id="screen-too-small">Das Fenster ist zu klein, um die Tabelle
-                                    darstellen zu können.</div>
+                                <div id="screen-too-small"><xsl:value-of
+                                        select="i18n:t('Das Fenster ist zu klein, um die Tabelle darstellen zu können.')"
+                                    /></div>
 
                                 <script>
                                 <xsl:text>window.tocData = [&#10;</xsl:text>
@@ -216,7 +222,7 @@
 
                                     <xsl:variable name="titleText" select="replace(normalize-space(tei:title[@type = 'text']), '\\', '\\\\')"/>
                                     <xsl:variable name="titleHtml">
-                                        <xsl:value-of select="concat('&lt;a href=&quot;', @xml:id, '.html&quot; class=&quot;link-plain&quot;&gt;', replace($titleText, '&quot;', '&amp;quot;'), '&lt;/a&gt;')"/>
+                                        <xsl:value-of select="concat('&lt;a href=&quot;', i18n:href(concat(@xml:id, '.html')), '&quot; class=&quot;link-plain&quot;&gt;', replace($titleText, '&quot;', '&amp;quot;'), '&lt;/a&gt;')"/>
                                         <xsl:if test="@ref">
                                             <xsl:value-of select="concat(' &lt;a href=&quot;', @ref, '&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/wiki.png&quot; alt=&quot;Wikidata&quot; class=&quot;icon&quot;/&gt;&lt;/a&gt;')"/>
                                         </xsl:if>
@@ -224,7 +230,7 @@
 
                                     <xsl:variable name="workHtml">
                                         <xsl:for-each select="tei:bibl[tei:title[@type = 'work']]">
-                                            <xsl:value-of select="concat('&lt;a href=&quot;', @xml:id, '.html&quot; class=&quot;link-plain&quot;&gt;', replace(normalize-space(tei:title), '&quot;', '&amp;quot;'), '&lt;/a&gt;')"/>
+                                            <xsl:value-of select="concat('&lt;a href=&quot;', i18n:href(concat(@xml:id, '.html')), '&quot; class=&quot;link-plain&quot;&gt;', replace(normalize-space(tei:title), '&quot;', '&amp;quot;'), '&lt;/a&gt;')"/>
                                             <xsl:if test="@ref">
                                                 <xsl:value-of select="concat(' &lt;a href=&quot;', @ref, '&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/wiki.png&quot; alt=&quot;Wikidata&quot; class=&quot;icon&quot;/&gt;&lt;/a&gt;')"/>
                                             </xsl:if>
@@ -236,7 +242,7 @@
 
                                     <xsl:variable name="authorHtml">
                                         <xsl:for-each select="tei:author">
-                                            <xsl:value-of select="concat('&lt;a href=&quot;', @xml:id, '.html&quot; class=&quot;link-plain&quot;&gt;', replace(normalize-space(.), '&quot;', '&amp;quot;'), '&lt;/a&gt;')"/>
+                                            <xsl:value-of select="concat('&lt;a href=&quot;', i18n:href(concat(@xml:id, '.html')), '&quot; class=&quot;link-plain&quot;&gt;', replace(normalize-space(.), '&quot;', '&amp;quot;'), '&lt;/a&gt;')"/>
                                             <xsl:if test="@ref">
                                                 <xsl:value-of select="concat(' &lt;a href=&quot;', @ref, '&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/wiki.png&quot; alt=&quot;Wikidata&quot; class=&quot;icon&quot;/&gt;&lt;/a&gt;')"/>
                                             </xsl:if>
@@ -256,26 +262,25 @@
                                                     <xsl:otherwise>Sonstige</xsl:otherwise>
                                                 </xsl:choose>
                                             </xsl:variable>
-                                            <xsl:value-of select="concat('&lt;a href=&quot;toc-', lower-case($label), '.html&quot; class=&quot;link-plain&quot;&gt;', $label, '&lt;/a&gt;')"/>
+                                            <xsl:value-of select="concat('&lt;a href=&quot;', i18n:href(concat('toc-', lower-case($label), '.html')), '&quot; class=&quot;link-plain&quot;&gt;', i18n:t($label), '&lt;/a&gt;')"/>
                                             <xsl:if test="position() != last()">, </xsl:if>
                                         </xsl:for-each>
                                     </xsl:variable>
                                     <xsl:variable name="genreText">
                                         <xsl:for-each select="tei:note[@type = 'genre']">
                                             <xsl:variable name="gl" select="lower-case(normalize-space(.))"/>
-                                            <xsl:choose>
-                                                <xsl:when test="contains($gl, 'lyrik')">Lyrik</xsl:when>
-                                                <xsl:when test="contains($gl, 'prosa')">Prosa</xsl:when>
-                                                <xsl:when test="contains($gl, 'drama')">Drama</xsl:when>
-                                                <xsl:otherwise>Sonstige</xsl:otherwise>
-                                            </xsl:choose>
+                                            <xsl:value-of select="i18n:t(
+                                                if (contains($gl, 'lyrik')) then 'Lyrik'
+                                                else if (contains($gl, 'prosa')) then 'Prosa'
+                                                else if (contains($gl, 'drama')) then 'Drama'
+                                                else 'Sonstige')"/>
                                             <xsl:if test="position() != last()">, </xsl:if>
                                         </xsl:for-each>
                                     </xsl:variable>
 
                                     <xsl:variable name="placeHtml">
                                         <xsl:for-each select="tei:pubPlace">
-                                            <xsl:value-of select="concat('&lt;a href=&quot;', @xml:id, '.html&quot; class=&quot;link-plain&quot;&gt;', replace(normalize-space(.), '&quot;', '&amp;quot;'), '&lt;/a&gt;')"/>
+                                            <xsl:value-of select="concat('&lt;a href=&quot;', i18n:href(concat(@xml:id, '.html')), '&quot; class=&quot;link-plain&quot;&gt;', replace(normalize-space(.), '&quot;', '&amp;quot;'), '&lt;/a&gt;')"/>
                                             <xsl:if test="@ref">
                                                 <xsl:value-of select="concat(' &lt;a href=&quot;', @ref, '&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/wiki.png&quot; alt=&quot;Wikidata&quot; class=&quot;icon&quot;/&gt;&lt;/a&gt;')"/>
                                             </xsl:if>
@@ -286,7 +291,7 @@
 
                                     <xsl:variable name="publisherHtml">
                                         <xsl:for-each select="tei:publisher">
-                                            <xsl:value-of select="concat('&lt;a href=&quot;', @xml:id, '.html&quot; class=&quot;link-plain&quot;&gt;', replace(normalize-space(.), '&quot;', '&amp;quot;'), '&lt;/a&gt;')"/>
+                                            <xsl:value-of select="concat('&lt;a href=&quot;', i18n:href(concat(@xml:id, '.html')), '&quot; class=&quot;link-plain&quot;&gt;', replace(normalize-space(.), '&quot;', '&amp;quot;'), '&lt;/a&gt;')"/>
                                             <xsl:if test="@ref">
                                                 <xsl:value-of select="concat(' &lt;a href=&quot;', @ref, '&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;images/wiki.png&quot; alt=&quot;Wikidata&quot; class=&quot;icon&quot;/&gt;&lt;/a&gt;')"/>
                                             </xsl:if>
@@ -297,7 +302,7 @@
 
                                     <xsl:variable name="refHtml">
                                         <xsl:for-each select="tei:ref">
-                                            <xsl:value-of select="concat('&lt;a href=&quot;', @target, '&quot; target=&quot;_blank&quot; class=&quot;link-plain&quot;&gt;Online&lt;/a&gt;')"/>
+                                            <xsl:value-of select="concat('&lt;a href=&quot;', @target, '&quot; target=&quot;_blank&quot; class=&quot;link-plain&quot;&gt;', i18n:t('Online'), '&lt;/a&gt;')"/>
                                             <xsl:if test="position() != last()">, </xsl:if>
                                         </xsl:for-each>
                                     </xsl:variable>
@@ -343,23 +348,23 @@
                                     style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th>Entstehungsjahr</th>
-                                            <th>Publikations-/Aufführungsjahr</th>
-                                            <th>Titel</th>
+                                            <th><xsl:value-of select="i18n:t('Entstehungsjahr')"/></th>
+                                            <th><xsl:value-of select="i18n:t('Publikations-/Aufführungsjahr')"/></th>
+                                            <th><xsl:value-of select="i18n:t('Titel')"/></th>
                                             <th class="export-only">Text QID</th>
-                                            <th>Enthalten in</th>
+                                            <th><xsl:value-of select="i18n:t('Enthalten in')"/></th>
                                             <th class="export-only">Werk QID</th>
-                                            <th>Autor_in</th>
+                                            <th><xsl:value-of select="i18n:t('Autor_in')"/></th>
                                             <th class="export-only">Autor_in QID</th>
                                             <xsl:if test="$show_genres">
-                                                <th>Gattung</th>
+                                                <th><xsl:value-of select="i18n:t('Gattung')"/></th>
                                             </xsl:if>
-                                            <th>Publikations-/Aufführungsort</th>
+                                            <th><xsl:value-of select="i18n:t('Publikations-/Aufführungsort')"/></th>
                                             <th class="export-only">Ort QID</th>
-                                            <th>Verlag/Druckerei</th>
+                                            <th><xsl:value-of select="i18n:t('Verlag/Druckerei')"/></th>
                                             <th class="export-only">Verlag/Druckerei QID</th>
-                                            <th>Digitalisat</th>
-                                            <th class="export-only">Link</th>
+                                            <th><xsl:value-of select="i18n:t('Digitalisat')"/></th>
+                                            <th class="export-only"><xsl:value-of select="i18n:t('Link')"/></th>
                                         </tr>
                                     </thead>
                                     <tbody/>

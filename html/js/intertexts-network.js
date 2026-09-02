@@ -11,12 +11,39 @@ const edgeSlider = document.getElementById('edge-threshold');
 if (container) {
     (async () => {
 
+        const lang = document.documentElement.lang === 'en' ? 'en' : 'de';
+        const t = lang === 'en' ? {
+            loadingGraph: 'Loading graph …',
+            loadingData: 'Loading data …',
+            noGraphDataFound: 'No graph data found.',
+            dataLoadFailed: 'Data could not be loaded.',
+            invalidGraphData: 'Invalid graph data.',
+            noGraphData: 'No graph data available.',
+            buildingGraph: 'Building graph …',
+            filteringStructure: 'Filtering structure …',
+            layoutProgress: (pct) => `Layout … ${pct} %`,
+            initializingRenderer: 'Initializing renderer …',
+            noRenderableNodes: 'No renderable nodes available.',
+        } : {
+            loadingGraph: 'Graph wird geladen …',
+            loadingData: 'Daten werden geladen …',
+            noGraphDataFound: 'Keine Graphdaten gefunden.',
+            dataLoadFailed: 'Daten konnten nicht geladen werden.',
+            invalidGraphData: 'Ungültige Graphdaten.',
+            noGraphData: 'Keine Graphdaten vorhanden.',
+            buildingGraph: 'Graph wird aufgebaut …',
+            filteringStructure: 'Struktur wird gefiltert …',
+            layoutProgress: (pct) => `Layout … ${pct} %`,
+            initializingRenderer: 'Renderer wird initialisiert …',
+            noRenderableNodes: 'Keine darstellbaren Knoten vorhanden.',
+        };
+
         // ---------- Ladeindikator ----------
         const loader = document.createElement('div');
         loader.style.cssText =
             'position:absolute;inset:0;display:flex;align-items:center;' +
             'justify-content:center;font-size:0.85rem;color:#6b7280;pointer-events:none;';
-        loader.textContent = 'Graph wird geladen …';
+        loader.textContent = t.loadingGraph;
         container.style.position = 'relative';
         container.appendChild(loader);
         const setStatus = (msg) => { loader.textContent = msg; };
@@ -27,29 +54,29 @@ if (container) {
         try {
             const dataSrc = container.dataset.src;
             if (dataSrc) {
-                setStatus('Daten werden geladen …');
+                setStatus(t.loadingData);
                 const res = await fetch(dataSrc, { cache: 'force-cache' });
                 if (!res.ok) throw new Error(`HTTP ${res.status}`);
                 payload = await res.json();
             } else if (dataEl) {
                 payload = JSON.parse(dataEl.textContent || '{}');
             } else {
-                container.textContent = 'Keine Graphdaten gefunden.';
+                container.textContent = t.noGraphDataFound;
                 return;
             }
         } catch (e) {
             console.error(e);
-            container.textContent = 'Daten konnten nicht geladen werden.';
+            container.textContent = t.dataLoadFailed;
             return;
         }
 
         // ---------- Guards ----------
         if (!payload || !Array.isArray(payload.nodes) || !Array.isArray(payload.edges)) {
-            container.textContent = 'Ungültige Graphdaten.';
+            container.textContent = t.invalidGraphData;
             return;
         }
         if (payload.nodes.length === 0) {
-            container.textContent = 'Keine Graphdaten vorhanden.';
+            container.textContent = t.noGraphData;
             return;
         }
 
@@ -58,7 +85,7 @@ if (container) {
         const COLORS   = { frag: '#a78bfa', recep: '#9ca3af' };
 
         // ---------- Graph aufbauen ----------
-        setStatus('Graph wird aufgebaut …');
+        setStatus(t.buildingGraph);
         await tick();
 
         const G = new Graph({ type: 'undirected', allowSelfLoops: false, multi: false });
@@ -93,7 +120,7 @@ if (container) {
             }
         }
 
-        if (G.order === 0) { container.textContent = 'Keine darstellbaren Knoten vorhanden.'; return; }
+        if (G.order === 0) { container.textContent = t.noRenderableNodes; return; }
 
         // ---------- Knotengrößen ----------
         G.forEachNode((n) => {
@@ -102,7 +129,7 @@ if (container) {
         });
 
         // ---------- Strukturfilter ----------
-        setStatus('Struktur wird gefiltert …');
+        setStatus(t.filteringStructure);
         await tick();
 
         const keepSet = new Set();
@@ -167,7 +194,7 @@ if (container) {
             const iter = Math.min(CHUNK, TOTAL - done);
             forceAtlas2.assign(G, { iterations: iter, settings: FA2_SETTINGS });
             done += iter;
-            setStatus(`Layout … ${Math.round((done / TOTAL) * 100)} %`);
+            setStatus(t.layoutProgress(Math.round((done / TOTAL) * 100)));
             await tick();
         }
 
@@ -192,7 +219,7 @@ if (container) {
         }
 
         // ---------- Renderer ----------
-        setStatus('Renderer wird initialisiert …');
+        setStatus(t.initializingRenderer);
         await tick();
 
         const renderer = new Sigma(G, container, {

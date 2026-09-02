@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-  version="2.0" exclude-result-prefixes="xsl xs">
+  xmlns:i18n="urn:sappho-digital:i18n" version="2.0" exclude-result-prefixes="xsl xs i18n">
 
   <xsl:output encoding="UTF-8" media-type="text/html" method="xhtml" version="1.0" indent="yes"
     omit-xml-declaration="yes"/>
@@ -12,7 +12,7 @@
 
   <xsl:template match="/">
 
-    <xsl:variable name="doc_title">Statistik</xsl:variable>
+    <xsl:variable name="doc_title" select="i18n:t('Statistik')"/>
 
     <xsl:variable name="cat-json-items" as="xs:string*">
       <xsl:for-each select="statistics/category">
@@ -469,7 +469,7 @@
         )"/>
 
     <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
-    <html>
+    <html lang="{$lang}">
       <head>
         <xsl:call-template name="html_head">
           <xsl:with-param name="html_title" select="$doc_title"/>
@@ -493,75 +493,75 @@
       </head>
       <body class="page">
         <div class="hfeed site" id="page">
-          <xsl:call-template name="nav_bar"/>
+          <xsl:call-template name="nav_bar">
+            <xsl:with-param name="current_page" select="i18n:href('statistik.html')"/>
+          </xsl:call-template>
           <div class="container-fluid">
             <div class="card">
               <div class="card-header">
                 <h1>
                   <xsl:value-of select="$doc_title"/>
                 </h1>
-                <p class="align-left">Diese Seite bietet exemplarische statistische Auswertungen der
-                  annotierten Sappho-Fragmente und der analysierten Rezeptionszeugnisse. Den Auftakt
-                  bilden die Rezeptionsindizes, ein zusammengesetzter Wert zur Messung der
-                  Rezeptionsstärke einzelner Texte. Darauf folgen durchschnittliche intertextuelle
-                  Relationen und gemeinsame Phänomene, besonders dichte intertextuelle Beziehungen
-                  sowie Phänomene als Grundlage intertextueller Relationen. Die weiteren Abschnitte
-                  zeigen alle Phänomene im Vergleich, ihre Verteilung nach Fragment-Referenz, im
-                  Laufe der Zeit und nach Gattung sowie Zusammenhänge von Komponenten von Stoffvarianten,
-                  Personenreferenzen, Werkreferenzen und Zitaten. Abschließend widmen sich zwei
-                  Abschnitte genderspezifischen Analysen sowie einer Popularitätsanalyse mittels
-                  Wiki-Metriken.</p>
-                <p class="align-left">Nähere Informationen zur exemplarischen Analyse sind <a
-                    href="analyse.html">hier</a> zu finden.</p>
-                <p class="align-left">Eine Netzwerkvisualisierung aller Daten ist <a
-                    href="netzwerk.html">hier</a> verfügbar.</p>
-                <p class="align-left">Einfache Häufigkeitsverteilungen einzelner Phänomene und
-                  Auflistungen aller intertextuellen Beziehungen können über den Reiter
-                  »Rezeptionsphänomene« (in »Analyse«) angesteuert werden. Häufigkeitsverteilungen
-                  zu zeitlichen und räumlichen Schwerpunkten finden sich in den einzelnen
-                  Verzeichnissen über den Reiter »Rezeptionszeugnisse« (in »Texte«).</p>
+                <p class="align-left"><xsl:value-of
+                    select="i18n:t('Diese Seite bietet exemplarische statistische Auswertungen der annotierten Sappho-Fragmente und der analysierten Rezeptionszeugnisse. Den Auftakt bilden die Rezeptionsindizes, ein zusammengesetzter Wert zur Messung der Rezeptionsstärke einzelner Texte. Darauf folgen durchschnittliche intertextuelle Relationen und gemeinsame Phänomene, besonders dichte intertextuelle Beziehungen sowie Phänomene als Grundlage intertextueller Relationen. Die weiteren Abschnitte zeigen alle Phänomene im Vergleich, ihre Verteilung nach Fragment-Referenz, im Laufe der Zeit und nach Gattung sowie Zusammenhänge von Komponenten von Stoffvarianten, Personenreferenzen, Werkreferenzen und Zitaten. Abschließend widmen sich zwei Abschnitte genderspezifischen Analysen sowie einer Popularitätsanalyse mittels Wiki-Metriken.')"
+                  /></p>
+                <p class="align-left"><xsl:value-of
+                    select="i18n:t('Nähere Informationen zur exemplarischen Analyse sind ')"/><a
+                    href="{i18n:href('analyse.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                    select="i18n:t(' zu finden.')"/></p>
+                <p class="align-left"><xsl:value-of
+                    select="i18n:t('Eine Netzwerkvisualisierung aller Daten ist ')"/><a
+                    href="{i18n:href('netzwerk.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                    select="i18n:t(' verfügbar.')"/></p>
+                <p class="align-left"><xsl:value-of
+                    select="i18n:t('Einfache Häufigkeitsverteilungen einzelner Phänomene und Auflistungen aller intertextuellen Beziehungen können über den Reiter »Rezeptionsphänomene« (in »Analyse«) angesteuert werden. Häufigkeitsverteilungen zu zeitlichen und räumlichen Schwerpunkten finden sich in den einzelnen Verzeichnissen über den Reiter »Rezeptionszeugnisse« (in »Texte«).')"
+                  /></p>
 
-                <nav class="stats-toc smaller-text" aria-label="Inhaltsverzeichnis">
-                  <p class="stats-toc-title">Inhaltsverzeichnis</p>
+                <nav class="stats-toc smaller-text" aria-label="{i18n:t('Inhaltsverzeichnis')}">
+                  <p class="stats-toc-title"><xsl:value-of select="i18n:t('Inhaltsverzeichnis')"/></p>
                   <ol class="stats-toc-list">
                     <li>
-                      <a href="#stat1">Rezeptionsindizes</a>
+                      <a href="#stat1"><xsl:value-of select="i18n:t('Rezeptionsindizes')"/></a>
                     </li>
                     <li>
-                      <a href="#stat2">Durchschnittliche Relationen und gemeinsame Phänomene</a>
+                      <a href="#stat2"><xsl:value-of
+                          select="i18n:t('Durchschnittliche Relationen und gemeinsame Phänomene')"/></a>
                     </li>
                     <li>
-                      <a href="#stat3">Intertextuelle Beziehungen und Textähnlichkeiten</a>
+                      <a href="#stat3"><xsl:value-of
+                          select="i18n:t('Intertextuelle Beziehungen und Textähnlichkeiten')"/></a>
                     </li>
                     <li>
-                      <a href="#stat4">Phänomene als Grundlage intertextueller Relationen</a>
+                      <a href="#stat4"><xsl:value-of
+                          select="i18n:t('Phänomene als Grundlage intertextueller Relationen')"/></a>
                     </li>
                     <li>
-                      <a href="#stat5">Alle Phänomene im Vergleich</a>
+                      <a href="#stat5"><xsl:value-of select="i18n:t('Alle Phänomene im Vergleich')"/></a>
                     </li>
                     <li>
-                      <a href="#stat6">Phänomene nach Fragment-Referenz</a>
+                      <a href="#stat6"><xsl:value-of select="i18n:t('Phänomene nach Fragment-Referenz')"/></a>
                     </li>
                     <li>
-                      <a href="#stat7">Phänomene im Laufe der Zeit</a>
+                      <a href="#stat7"><xsl:value-of select="i18n:t('Phänomene im Laufe der Zeit')"/></a>
                     </li>
                     <li>
-                      <a href="#stat8">Phänomene nach Gattung</a>
+                      <a href="#stat8"><xsl:value-of select="i18n:t('Phänomene nach Gattung')"/></a>
                     </li>
                     <li>
-                      <a href="#stat9">Stoff-Komponenten</a>
+                      <a href="#stat9"><xsl:value-of select="i18n:t('Stoff-Komponenten')"/></a>
                     </li>
                     <li>
-                      <a href="#stat10">Personenreferenzen und Figuren</a>
+                      <a href="#stat10"><xsl:value-of select="i18n:t('Personenreferenzen und Figuren')"/></a>
                     </li>
                     <li>
-                      <a href="#stat11">Werkreferenzen und Zitate</a>
+                      <a href="#stat11"><xsl:value-of select="i18n:t('Werkreferenzen und Zitate')"/></a>
                     </li>
                     <li>
-                      <a href="#stat12">Genderspezifische Analysen</a>
+                      <a href="#stat12"><xsl:value-of select="i18n:t('Genderspezifische Analysen')"/></a>
                     </li>
                     <li>
-                      <a href="#stat13">Popularitätsanalysen mit Wiki-Metriken</a>
+                      <a href="#stat13"><xsl:value-of
+                          select="i18n:t('Popularitätsanalysen mit Wiki-Metriken')"/></a>
                     </li>
                   </ol>
                 </nav>
@@ -569,97 +569,91 @@
               </div>
               <div class="card-body">
                 <div class="stats-wrap" id="stat1">
-                  <p class="stats-subtitle">Statistik 1: Rezeptionsindizes</p>
-                  <p class="stats-desc">Der Rezeptionsindex <code>R(t)</code> ist ein
-                    zusammengesetzter Wert auf einer Skala von 0 (schwach) bis 1 (stark), der
-                    angibt, wie intensiv die gemessene Rezeption ist. Der Index vereint zwei
-                    Dimensionen: die Ph&#228;nomendichte <code>P(t)</code> &#8211; die Gesamtzahl
-                    aller einem Text zugeordneten analytischen Einheiten (Personen-, Orts- und
-                    Werkreferenzen, Figuren, rhetorische Topoi, Motive, Themen, Stoffe bzw. Stoffvarianten und Zitate)
-                    &#8211; und die intertextuelle Vernetzung <code>I(t)</code>, gemessen an der
-                    Anzahl der Intertext-Knoten, in denen der Text als Objekt auftritt. Da die
-                    Ph&#228;nomendichte einer ausgepr&#228;gten rechtsschiefen Verteilung folgt und
-                    die intertextuelle Vernetzung eine schw&#228;chere, aber gleichgerichtete
-                    Tendenz zeigt, werden beide Rohwerte logarithmisch transformiert (<code>log(1 +
-                      x)</code>); zugleich bildet diese Skalierung die Annahme ab, dass der
-                    Erkenntniswert jeder zus&#228;tzlichen Einheit mit wachsender Belegdichte
-                    abnimmt. Als Normalisierungsankerpunkt dient der Median der exemplarisch
-                    analysierten Texte; durch Division durch das Doppelte des log-transformierten
-                    Medians wird dieser Ankerpunkt auf 0,5 gesetzt.</p>
+                  <p class="stats-subtitle"><xsl:value-of select="i18n:t('Statistik 1: Rezeptionsindizes')"/></p>
+                  <p class="stats-desc"><xsl:value-of
+                      select="i18n:t('Der Rezeptionsindex ')"/><code>R(t)</code><xsl:value-of
+                      select="i18n:t(' ist ein zusammengesetzter Wert auf einer Skala von 0 (schwach) bis 1 (stark), der angibt, wie intensiv die gemessene Rezeption ist. Der Index vereint zwei Dimensionen: die Phänomendichte ')"
+                    /><code>P(t)</code><xsl:value-of
+                      select="i18n:t(' – die Gesamtzahl aller einem Text zugeordneten analytischen Einheiten (Personen-, Orts- und Werkreferenzen, Figuren, rhetorische Topoi, Motive, Themen, Stoffe bzw. Stoffvarianten und Zitate) – und die intertextuelle Vernetzung ')"
+                    /><code>I(t)</code><xsl:value-of
+                      select="i18n:t(', gemessen an der Anzahl der Intertext-Knoten, in denen der Text als Objekt auftritt. Da die Phänomendichte einer ausgeprägten rechtsschiefen Verteilung folgt und die intertextuelle Vernetzung eine schwächere, aber gleichgerichtete Tendenz zeigt, werden beide Rohwerte logarithmisch transformiert (')"
+                    /><code>log(1 + x)</code><xsl:value-of
+                      select="i18n:t('); zugleich bildet diese Skalierung die Annahme ab, dass der Erkenntniswert jeder zusätzlichen Einheit mit wachsender Belegdichte abnimmt. Als Normalisierungsankerpunkt dient der Median der exemplarisch analysierten Texte; durch Division durch das Doppelte des log-transformierten Medians wird dieser Ankerpunkt auf 0,5 gesetzt.')"
+                    /></p>
                   <p style="text-align:center;margin:1rem 0;"><strong><code>R(t) = 0,75 &#183;
                           P<sub>norm</sub>(t) + 0,25 &#183; I<sub>norm</sub>(t)</code></strong></p>
-                  <p class="stats-desc">Die Ph&#228;nomendichte wird mit drei Vierteln gewichtet, da
-                    sie das inhaltliche Analysevolumen unmittelbar abbildet; die intertextuelle
-                    Vernetzung flie&#223;t erg&#228;nzend zu einem Viertel ein.</p>
+                  <p class="stats-desc"><xsl:value-of
+                      select="i18n:t('Die Phänomendichte wird mit drei Vierteln gewichtet, da sie das inhaltliche Analysevolumen unmittelbar abbildet; die intertextuelle Vernetzung fließt ergänzend zu einem Viertel ein.')"
+                    /></p>
                   <div id="ri-wrap"/>
                 </div>
                 <div class="stats-wrap" id="stat2">
-                  <p class="stats-subtitle">Statistik 2: Durchschnittliche intertextuelle
-                    Beziehungen und gemeinsame Phänomene</p>
-                  <p class="stats-desc">Wie viele intertextuelle Relationen verbinden einen Text im
-                    Durchschnitt mit anderen? Und wie viele Phänomene teilt ein Text im Schnitt mit
-                    seinen intertextuell verbundenen Texten?</p>
+                  <p class="stats-subtitle"><xsl:value-of
+                      select="i18n:t('Statistik 2: Durchschnittliche intertextuelle Beziehungen und gemeinsame Phänomene')"
+                    /></p>
+                  <p class="stats-desc"><xsl:value-of
+                      select="i18n:t('Wie viele intertextuelle Relationen verbinden einen Text im Durchschnitt mit anderen? Und wie viele Phänomene teilt ein Text im Schnitt mit seinen intertextuell verbundenen Texten?')"
+                    /></p>
                   <div id="stat10-wrap-inner"/>
                 </div>
                 <div class="stats-wrap" id="stat3">
-                  <p class="stats-subtitle">Statistik 3: Intertextuelle Beziehungen und
-                    Textähnlichkeiten</p>
-                  <p class="stats-desc">Welche intertextuellen Relationen verbinden die meisten
-                    Phänomene? Sichtbar wird, zwischen welchen Texten die reichhaltigsten impliziten
-                    Ähnlichkeiten bestehen – unabhängig von expliziten Referenzen.</p>
+                  <p class="stats-subtitle"><xsl:value-of
+                      select="i18n:t('Statistik 3: Intertextuelle Beziehungen und Textähnlichkeiten')"/></p>
+                  <p class="stats-desc"><xsl:value-of
+                      select="i18n:t('Welche intertextuellen Relationen verbinden die meisten Phänomene? Sichtbar wird, zwischen welchen Texten die reichhaltigsten impliziten Ähnlichkeiten bestehen – unabhängig von expliziten Referenzen.')"
+                    /></p>
                   <div class="control-col-wrap">
                     <div class="stat3-control-group">
-                      <label for="sel-stat9-topn">Anzahl:</label>
+                      <label for="sel-stat9-topn"><xsl:value-of select="i18n:t('Anzahl:')"/></label>
                       <select id="sel-stat9-topn" class="stat2-select">
-                        <option value="5" selected="selected">Top 5</option>
-                        <option value="10">Top 10</option>
-                        <option value="20">Top 20</option>
+                        <option value="5" selected="selected"><xsl:value-of select="i18n:t('Top 5')"/></option>
+                        <option value="10"><xsl:value-of select="i18n:t('Top 10')"/></option>
+                        <option value="20"><xsl:value-of select="i18n:t('Top 20')"/></option>
                       </select>
                     </div>
                     <div class="stat3-control-group">
-                      <label for="sel-stat9-reltype">Beziehungstyp:</label>
+                      <label for="sel-stat9-reltype"><xsl:value-of select="i18n:t('Beziehungstyp:')"/></label>
                       <select id="sel-stat9-reltype" class="stat2-select">
-                        <option value="all">Alle</option>
-                        <option value="reception">Nur zwischen Rezeptionszeugnissen</option>
-                        <option value="mixed">Nur zwischen Rezeptionszeugnissen und
-                          Fragmenten</option>
+                        <option value="all"><xsl:value-of select="i18n:t('Alle')"/></option>
+                        <option value="reception"><xsl:value-of
+                            select="i18n:t('Nur zwischen Rezeptionszeugnissen')"/></option>
+                        <option value="mixed"><xsl:value-of
+                            select="i18n:t('Nur zwischen Rezeptionszeugnissen und Fragmenten')"/></option>
                       </select>
                     </div>
                   </div>
                   <div id="stat9-cards-wrap"/>
                 </div>
                 <div class="stats-wrap" id="stat4">
-                  <p class="stats-subtitle">Statistik 4: Phänomene als Grundlage intertextueller
-                    Relationen</p>
-                  <p class="stats-desc">Welche Phänomene sind am häufigsten ausschlaggebend für
-                    intertextuelle Relationen zwischen Sappho-Fragmenten und Rezeptionszeugnissen
-                    sowie zwischen Fragmenten und Rezeptionszeugnissen untereinander?</p>
+                  <p class="stats-subtitle"><xsl:value-of
+                      select="i18n:t('Statistik 4: Phänomene als Grundlage intertextueller Relationen')"/></p>
+                  <p class="stats-desc"><xsl:value-of
+                      select="i18n:t('Welche Phänomene sind am häufigsten ausschlaggebend für intertextuelle Relationen zwischen Sappho-Fragmenten und Rezeptionszeugnissen sowie zwischen Fragmenten und Rezeptionszeugnissen untereinander?')"
+                    /></p>
                   <div id="int31-meta-bar" style="text-align:center"/>
 
-                  <p class="stats-subtitle stats-subtitle-sm">Phänomentypen als Basis für
-                    intertextuelle Beziehungen</p>
+                  <p class="stats-subtitle stats-subtitle-sm"><xsl:value-of
+                      select="i18n:t('Phänomentypen als Basis für intertextuelle Beziehungen')"/></p>
                   <div class="control-col-wrap">
                     <div id="int31-ftype-legend" class="type-legend"/>
                   </div>
                   <div id="int31-ftype-bar-wrap" class="chart-wrap"/>
 
-                  <p class="stats-subtitle stats-subtitle-sm-top">Kookkurrenzen von
-                    Einzelphänomenen</p>
+                  <p class="stats-subtitle stats-subtitle-sm-top"><xsl:value-of
+                      select="i18n:t('Kookkurrenzen von Einzelphänomenen')"/></p>
                   <p class="stats-desc"
-                    style="text-align:center;max-width:640px;margin:0 auto 0.75rem"> Im inneren Ring
-                    sind die Phänomentypen, im äußeren die einzelnen Phänomene. Die Segmentbreite
-                    gibt deren Häufigkeit an. Die Sehnen in der Mitte verbinden Phänomene, die
-                    besonders häufig gemeinsam in intertextuellen Relationen auftreten – Breite und
-                    Deckkraft skalieren mit der Kookkurrenzstärke.</p>
+                    style="text-align:center;max-width:640px;margin:0 auto 0.75rem"> <xsl:value-of
+                      select="i18n:t('Im inneren Ring sind die Phänomentypen, im äußeren die einzelnen Phänomene. Die Segmentbreite gibt deren Häufigkeit an. Die Sehnen in der Mitte verbinden Phänomene, die besonders häufig gemeinsam in intertextuellen Relationen auftreten – Breite und Deckkraft skalieren mit der Kookkurrenzstärke.')"
+                    /></p>
                   <div class="control-col-wrap">
                     <div class="stat3-control-group">
-                      <label for="sel-int31-topn">Phänomene im Diagramm:</label>
+                      <label for="sel-int31-topn"><xsl:value-of select="i18n:t('Phänomene im Diagramm:')"/></label>
                       <select id="sel-int31-topn" class="stat2-select">
-                        <option value="5">Top 5</option>
-                        <option value="10" selected="selected">Top 10</option>
-                        <option value="15">Top 15</option>
-                        <option value="20">Top 20</option>
-                        <option value="0">Alle</option>
+                        <option value="5"><xsl:value-of select="i18n:t('Top 5')"/></option>
+                        <option value="10" selected="selected"><xsl:value-of select="i18n:t('Top 10')"/></option>
+                        <option value="15"><xsl:value-of select="i18n:t('Top 15')"/></option>
+                        <option value="20"><xsl:value-of select="i18n:t('Top 20')"/></option>
+                        <option value="0"><xsl:value-of select="i18n:t('Alle')"/></option>
                       </select>
                     </div>
                   </div>
@@ -667,15 +661,15 @@
                     style="display:flex;justify-content:center;margin-top:0.5rem"/>
                   <div id="int31-sunburst-legend" class="sankey-legend" style="margin-top:0.5rem"/>
 
-                  <p class="stats-subtitle stats-subtitle-sm-top">Häufigste
-                    Phänomen-Kombinationen</p>
+                  <p class="stats-subtitle stats-subtitle-sm-top"><xsl:value-of
+                      select="i18n:t('Häufigste Phänomen-Kombinationen')"/></p>
                   <div class="control-col-wrap">
                     <div class="stat3-control-group">
-                      <label for="sel-int31-pairs-topn">Anzahl:</label>
+                      <label for="sel-int31-pairs-topn"><xsl:value-of select="i18n:t('Anzahl:')"/></label>
                       <select id="sel-int31-pairs-topn" class="stat2-select">
-                        <option value="20">Top 20</option>
-                        <option value="30" selected="selected">Top 30</option>
-                        <option value="50">Top 50</option>
+                        <option value="20"><xsl:value-of select="i18n:t('Top 20')"/></option>
+                        <option value="30" selected="selected"><xsl:value-of select="i18n:t('Top 30')"/></option>
+                        <option value="50"><xsl:value-of select="i18n:t('Top 50')"/></option>
                       </select>
                     </div>
                   </div>
@@ -683,55 +677,55 @@
 
                 </div>
                 <div class="stats-wrap" id="stat5">
-                  <p class="stats-subtitle">Statistik 5: Alle Phänomene im Vergleich</p>
-                  <p class="stats-desc">Welche Phänomene werden in Sappho-Fragmenten sowie in
-                    Rezeptionszeugnissen aktualisiert – und wo liegen die auffälligsten
-                    Übereinstimmungen oder Verschiebungen?</p>
+                  <p class="stats-subtitle"><xsl:value-of select="i18n:t('Statistik 5: Alle Phänomene im Vergleich')"/></p>
+                  <p class="stats-desc"><xsl:value-of
+                      select="i18n:t('Welche Phänomene werden in Sappho-Fragmenten sowie in Rezeptionszeugnissen aktualisiert – und wo liegen die auffälligsten Übereinstimmungen oder Verschiebungen?')"
+                    /></p>
                   <div class="meta-bar">
                     <div class="meta-card s">
                       <span class="num">
                         <xsl:value-of select="statistics/@nSappho"/>
                       </span>
-                      <span class="lbl">Sappho-Fragmente mit Annotationen</span>
+                      <span class="lbl"><xsl:value-of select="i18n:t('Sappho-Fragmente mit Annotationen')"/></span>
                     </div>
                     <div class="meta-card r">
                       <span class="num">
                         <xsl:value-of select="statistics/@nReception"/>
                       </span>
-                      <span class="lbl">Analysierte Rezeptionszeugnisse</span>
+                      <span class="lbl"><xsl:value-of select="i18n:t('Analysierte Rezeptionszeugnisse')"/></span>
                     </div>
                   </div>
                   <div class="legend">
-                    <span><span class="dot dot-s"/>Sappho-Fragmente</span>
-                    <span><span class="dot dot-r"/>Rezeptionszeugnisse</span>
+                    <span><span class="dot dot-s"/><xsl:value-of select="i18n:t('Sappho-Fragmente')"/></span>
+                    <span><span class="dot dot-r"/><xsl:value-of select="i18n:t('Rezeptionszeugnisse')"/></span>
                   </div>
-                  <p class="stats-subtitle stats-subtitle-sm">Überblick (Top-N)</p>
+                  <p class="stats-subtitle stats-subtitle-sm"><xsl:value-of select="i18n:t('Überblick (Top-N)')"/></p>
                   <div class="control-col-wrap">
                     <div class="stat3-control-group">
-                      <label>Anzahl:</label>
+                      <label><xsl:value-of select="i18n:t('Anzahl:')"/></label>
                       <select id="sel-cat-topn" class="stat2-select">
-                        <option value="20">Top 20</option>
-                        <option value="30" selected="selected">Top 30</option>
-                        <option value="50">Top 50</option>
-                        <option value="100">Top 100</option>
+                        <option value="20"><xsl:value-of select="i18n:t('Top 20')"/></option>
+                        <option value="30" selected="selected"><xsl:value-of select="i18n:t('Top 30')"/></option>
+                        <option value="50"><xsl:value-of select="i18n:t('Top 50')"/></option>
+                        <option value="100"><xsl:value-of select="i18n:t('Top 100')"/></option>
                       </select>
                     </div>
                   </div>
                   <div id="cat-overview-wrap"/>
                   <div id="cat-overview-dl"
                     style="text-align:center;margin-top:.35rem;margin-bottom:.1rem"/>
-                  <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
+                  <p class="stats-subtitle stats-subtitle-sm-top"><xsl:value-of select="i18n:t('Nach Phänomentyp')"/></p>
                   <div id="cats"/>
                 </div>
                 <div class="stats-wrap" id="stat6">
-                  <p class="stats-subtitle">Statistik 6: Phänomene nach Fragment-Referenz</p>
-                  <p class="stats-desc">Welche Phänomene werden in Rezeptionszeugnissen, die auf
-                    bestimmte Fragmente Bezug nehmen, übernommen, welche ausgelassen – und welche
-                    kommen neu hinzu?</p>
+                  <p class="stats-subtitle"><xsl:value-of select="i18n:t('Statistik 6: Phänomene nach Fragment-Referenz')"/></p>
+                  <p class="stats-desc"><xsl:value-of
+                      select="i18n:t('Welche Phänomene werden in Rezeptionszeugnissen, die auf bestimmte Fragmente Bezug nehmen, übernommen, welche ausgelassen – und welche kommen neu hinzu?')"
+                    /></p>
                   <div class="stat2-controls stat2-controls-center">
-                    <label for="sel-sankey-fragment">Referenziertes Fragment:</label>
+                    <label for="sel-sankey-fragment"><xsl:value-of select="i18n:t('Referenziertes Fragment:')"/></label>
                     <select id="sel-sankey-fragment" class="stat2-select">
-                      <option value="">&#8212; Fragment wählen &#8212;</option>
+                      <option value=""><xsl:value-of select="i18n:t('— Fragment wählen —')"/></option>
                     </select>
                   </div>
                   <div id="sankey-wrap2">
@@ -741,70 +735,70 @@
                   </div>
                 </div>
                 <div class="stats-wrap" id="stat7">
-                  <p class="stats-subtitle">Statistik 7: Phänomene im Laufe der Zeit</p>
-                  <p class="stats-desc">Wie verteilen sich konkrete Phänomene über die Zeit? Die
-                    Blasengröße zeigt, in wie vielen Rezeptionszeugnissen eines Jahrzehnts ein
-                    Phänomen annotiert ist; die Farbe kennzeichnet den Phänomentyp.</p>
-                  <p class="stats-subtitle stats-subtitle-sm">Überblick (Top-N)</p>
+                  <p class="stats-subtitle"><xsl:value-of select="i18n:t('Statistik 7: Phänomene im Laufe der Zeit')"/></p>
+                  <p class="stats-desc"><xsl:value-of
+                      select="i18n:t('Wie verteilen sich konkrete Phänomene über die Zeit? Die Blasengröße zeigt, in wie vielen Rezeptionszeugnissen eines Jahrzehnts ein Phänomen annotiert ist; die Farbe kennzeichnet den Phänomentyp.')"
+                    /></p>
+                  <p class="stats-subtitle stats-subtitle-sm"><xsl:value-of select="i18n:t('Überblick (Top-N)')"/></p>
                   <div class="control-col-wrap">
                     <div class="stat3-control-group">
-                      <label>Anzahl:</label>
+                      <label><xsl:value-of select="i18n:t('Anzahl:')"/></label>
                       <select id="sel-pdist-topn" class="stat2-select">
-                        <option value="20">Top 20</option>
-                        <option value="30" selected="selected">Top 30</option>
-                        <option value="50">Top 50</option>
-                        <option value="100">Top 100</option>
+                        <option value="20"><xsl:value-of select="i18n:t('Top 20')"/></option>
+                        <option value="30" selected="selected"><xsl:value-of select="i18n:t('Top 30')"/></option>
+                        <option value="50"><xsl:value-of select="i18n:t('Top 50')"/></option>
+                        <option value="100"><xsl:value-of select="i18n:t('Top 100')"/></option>
                       </select>
                     </div>
                     <div id="pdist-type-legend" class="type-legend"/>
                   </div>
                   <div id="pdist-overview-wrap"/>
-                  <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
+                  <p class="stats-subtitle stats-subtitle-sm-top"><xsl:value-of select="i18n:t('Nach Phänomentyp')"/></p>
                   <div id="pdist-type-sections"/>
                 </div>
                 <div class="stats-wrap" id="stat8">
-                  <p class="stats-subtitle">Statistik 8: Phänomene nach Gattung</p>
-                  <p class="stats-desc">Welche Phänomene dominieren in welcher Gattung? Die
-                    Farbintensität der Zellen zeigt die Häufigkeit innerhalb jeder Gattung; die
-                    Farbe kennzeichnet den Phänomentyp.</p>
-                  <p class="stats-subtitle stats-subtitle-sm">Überblick (Top-N)</p>
+                  <p class="stats-subtitle"><xsl:value-of select="i18n:t('Statistik 8: Phänomene nach Gattung')"/></p>
+                  <p class="stats-desc"><xsl:value-of
+                      select="i18n:t('Welche Phänomene dominieren in welcher Gattung? Die Farbintensität der Zellen zeigt die Häufigkeit innerhalb jeder Gattung; die Farbe kennzeichnet den Phänomentyp.')"
+                    /></p>
+                  <p class="stats-subtitle stats-subtitle-sm"><xsl:value-of select="i18n:t('Überblick (Top-N)')"/></p>
                   <div class="control-col-wrap">
                     <div class="stat3-control-group">
-                      <label>Anzahl:</label>
+                      <label><xsl:value-of select="i18n:t('Anzahl:')"/></label>
                       <select id="sel-gdist-topn" class="stat2-select">
-                        <option value="20">Top 20</option>
-                        <option value="30" selected="selected">Top 30</option>
-                        <option value="50">Top 50</option>
-                        <option value="100">Top 100</option>
+                        <option value="20"><xsl:value-of select="i18n:t('Top 20')"/></option>
+                        <option value="30" selected="selected"><xsl:value-of select="i18n:t('Top 30')"/></option>
+                        <option value="50"><xsl:value-of select="i18n:t('Top 50')"/></option>
+                        <option value="100"><xsl:value-of select="i18n:t('Top 100')"/></option>
                       </select>
                     </div>
                     <div id="gdist-type-legend" class="type-legend"/>
                   </div>
                   <div id="gdist-overview-wrap"/>
-                  <p class="stats-subtitle stats-subtitle-sm-top">Nach Gattung</p>
+                  <p class="stats-subtitle stats-subtitle-sm-top"><xsl:value-of select="i18n:t('Nach Gattung')"/></p>
                   <div id="gdist-genre-sections"/>
-                  <p class="stats-subtitle stats-subtitle-sm-top">Nach Phänomentyp</p>
+                  <p class="stats-subtitle stats-subtitle-sm-top"><xsl:value-of select="i18n:t('Nach Phänomentyp')"/></p>
                   <div id="gdist-type-sections"/>
                 </div>
                 <div class="stats-wrap" id="stat9">
-                  <p class="stats-subtitle">Statistik 9: Stoff-Komponenten</p>
-                  <p class="stats-desc">Welche Phänomene treten gemeinsam mit einer bestimmten Stoffvariante
-                    auf? Der innere Ring zeigt die Phänomentypen, der äußere Ring die einzelnen
-                    Phänomene; die Segmentbreite entspricht der relativen Häufigkeit.</p>
+                  <p class="stats-subtitle"><xsl:value-of select="i18n:t('Statistik 9: Stoff-Komponenten')"/></p>
+                  <p class="stats-desc"><xsl:value-of
+                      select="i18n:t('Welche Phänomene treten gemeinsam mit einer bestimmten Stoffvariante auf? Der innere Ring zeigt die Phänomentypen, der äußere Ring die einzelnen Phänomene; die Segmentbreite entspricht der relativen Häufigkeit.')"
+                    /></p>
                   <div class="control-col-wrap">
                     <div class="stat3-control-group">
-                      <label for="sel-pc-plot">Stoffvariante:</label>
+                      <label for="sel-pc-plot"><xsl:value-of select="i18n:t('Stoffvariante:')"/></label>
                       <select id="sel-pc-plot" class="stat2-select">
-                        <option value="">&#8212; Stoffvariante wählen &#8212;</option>
+                        <option value=""><xsl:value-of select="i18n:t('— Stoffvariante wählen —')"/></option>
                       </select>
                     </div>
                     <div class="stat3-control-group">
-                      <label for="sel-pc-topn">Anzeigen:</label>
+                      <label for="sel-pc-topn"><xsl:value-of select="i18n:t('Anzeigen:')"/></label>
                       <select id="sel-pc-topn" class="stat2-select">
-                        <option value="3">Top 3 pro Typ</option>
-                        <option value="5" selected="selected">Top 5 pro Typ</option>
-                        <option value="10">Top 10 pro Typ</option>
-                        <option value="0">Alle</option>
+                        <option value="3"><xsl:value-of select="i18n:t('Top 3 pro Typ')"/></option>
+                        <option value="5" selected="selected"><xsl:value-of select="i18n:t('Top 5 pro Typ')"/></option>
+                        <option value="10"><xsl:value-of select="i18n:t('Top 10 pro Typ')"/></option>
+                        <option value="0"><xsl:value-of select="i18n:t('Alle')"/></option>
                       </select>
                     </div>
                   </div>
@@ -815,74 +809,73 @@
                     style="text-align:center;margin-top:.35rem;margin-bottom:.1rem"/>
                 </div>
                 <div class="stats-wrap" id="stat10">
-                  <p class="stats-subtitle">Statistik 10: Personenreferenzen und Figuren</p>
-                  <p class="stats-desc">Welche Personen und Personentypen werden in
-                    Sappho-Fragmenten sowie in Rezeptionszeugnissen besonders häufig nicht nur
-                    referenziert, sondern treten auch als Figuren auf? Der Vergleich zeigt pro
-                    Person bzw. Personentyp die Referenz- und Figurenhäufigkeit.</p>
+                  <p class="stats-subtitle"><xsl:value-of select="i18n:t('Statistik 10: Personenreferenzen und Figuren')"/></p>
+                  <p class="stats-desc"><xsl:value-of
+                      select="i18n:t('Welche Personen und Personentypen werden in Sappho-Fragmenten sowie in Rezeptionszeugnissen besonders häufig nicht nur referenziert, sondern treten auch als Figuren auf? Der Vergleich zeigt pro Person bzw. Personentyp die Referenz- und Figurenhäufigkeit.')"
+                    /></p>
                   <div class="meta-bar">
                     <div class="meta-card s">
                       <span class="num">
                         <xsl:value-of select="statistics/@nSappho"/>
                       </span>
-                      <span class="lbl">Sappho-Fragmente mit Annotationen</span>
+                      <span class="lbl"><xsl:value-of select="i18n:t('Sappho-Fragmente mit Annotationen')"/></span>
                     </div>
                     <div class="meta-card r">
                       <span class="num">
                         <xsl:value-of select="statistics/@nReception"/>
                       </span>
-                      <span class="lbl">Analysierte Rezeptionszeugnisse</span>
+                      <span class="lbl"><xsl:value-of select="i18n:t('Analysierte Rezeptionszeugnisse')"/></span>
                     </div>
                   </div>
                   <div class="control-col-wrap">
                     <div class="stat3-control-group">
-                      <label for="sel-pd-topn">Anzahl:</label>
+                      <label for="sel-pd-topn"><xsl:value-of select="i18n:t('Anzahl:')"/></label>
                       <select id="sel-pd-topn" class="stat2-select">
-                        <option value="20">Top 20</option>
-                        <option value="30" selected="selected">Top 30</option>
-                        <option value="50">Top 50</option>
-                        <option value="0">Alle</option>
+                        <option value="20"><xsl:value-of select="i18n:t('Top 20')"/></option>
+                        <option value="30" selected="selected"><xsl:value-of select="i18n:t('Top 30')"/></option>
+                        <option value="50"><xsl:value-of select="i18n:t('Top 50')"/></option>
+                        <option value="0"><xsl:value-of select="i18n:t('Alle')"/></option>
                       </select>
                     </div>
                     <div class="stat3-control-group">
-                      <label for="sel-pd-filter"> Filter:</label>
+                      <label for="sel-pd-filter"> <xsl:value-of select="i18n:t('Filter:')"/></label>
                       <select id="sel-pd-filter" class="stat2-select">
-                        <option value="all">Alle Personenreferenzen</option>
-                        <option value="both">Nur auch als Figur</option>
+                        <option value="all"><xsl:value-of select="i18n:t('Alle Personenreferenzen')"/></option>
+                        <option value="both"><xsl:value-of select="i18n:t('Nur auch als Figur')"/></option>
                       </select>
                     </div>
                   </div>
                   <div id="pd-meta-bar"/>
                   <div class="legend">
-                    <span><span class="dot dot-s-ref"/>Referenzen in Sappho-Fragmenten</span>
-                    <span><span class="dot dot-s-char"/>Figuren in Sappho-Fragmenten</span>
-                    <span><span class="dot dot-r-ref"/>Referenzen in Rezeptionszeugnissen</span>
-                    <span><span class="dot dot-r-char"/>Figuren in Rezeptionszeugnissen</span>
+                    <span><span class="dot dot-s-ref"/><xsl:value-of select="i18n:t('Referenzen in Sappho-Fragmenten')"/></span>
+                    <span><span class="dot dot-s-char"/><xsl:value-of select="i18n:t('Figuren in Sappho-Fragmenten')"/></span>
+                    <span><span class="dot dot-r-ref"/><xsl:value-of select="i18n:t('Referenzen in Rezeptionszeugnissen')"/></span>
+                    <span><span class="dot dot-r-char"/><xsl:value-of select="i18n:t('Figuren in Rezeptionszeugnissen')"/></span>
                   </div>
                   <div class="chart-wrap">
                     <div id="pd-chart-wrap"/>
                   </div>
                 </div>
                 <div class="stats-wrap" id="stat11">
-                  <p class="stats-subtitle" style="text-align:center">Statistik 11: Werkreferenzen
-                    und Zitate</p>
-                  <p class="stats-desc" style="text-align:center">Welche Werke werden in den
-                      <xsl:value-of select="statistics/workCitation/@nReception"/> analysierten
-                    Rezeptionszeugnissen nicht nur referenziert, sondern auch zitiert?</p>
+                  <p class="stats-subtitle" style="text-align:center"><xsl:value-of
+                      select="i18n:t('Statistik 11: Werkreferenzen und Zitate')"/></p>
+                  <p class="stats-desc" style="text-align:center"><xsl:value-of
+                      select="i18n:t('Welche Werke werden in den ')"/>
+                      <xsl:value-of select="statistics/workCitation/@nReception"/><xsl:value-of
+                      select="i18n:t(' analysierten Rezeptionszeugnissen nicht nur referenziert, sondern auch zitiert?')"
+                    /></p>
                   <div id="wc-meta-bar"/>
                   <div class="legend">
-                    <span><span class="dot dot-wc-ref"/>Nur referenziert</span>
-                    <span><span class="dot dot-wc-both"/>Referenziert und zitiert</span>
+                    <span><span class="dot dot-wc-ref"/><xsl:value-of select="i18n:t('Nur referenziert')"/></span>
+                    <span><span class="dot dot-wc-both"/><xsl:value-of select="i18n:t('Referenziert und zitiert')"/></span>
                   </div>
                   <div id="wc-chart-wrap" class="chart-wrap"/>
                 </div>
                 <div class="stats-wrap" id="stat12">
-                  <p class="stats-subtitle">Statistik 12: Genderspezifische Analysen</p>
-                  <p class="stats-desc">Wie sieht die Geschlechterverteilung aus &#8211; insgesamt,
-                    im Zeitverlauf, nach Gattungen und nach Ph&#228;nomenen? Die Gender-Angaben
-                    stammen von Wikidata, sind bin&#228;r und zumeist keine Selbstidentifikationen.
-                    F&#252;r die Ph&#228;nomene wurden au&#223;erdem nur die Autor_innen der
-                    exemplarisch analysierten Rezeptionszeugnisse ber&#252;cksichtigt.</p>
+                  <p class="stats-subtitle"><xsl:value-of select="i18n:t('Statistik 12: Genderspezifische Analysen')"/></p>
+                  <p class="stats-desc"><xsl:value-of
+                      select="i18n:t('Wie sieht die Geschlechterverteilung aus – insgesamt, im Zeitverlauf, nach Gattungen und nach Phänomenen? Die Gender-Angaben stammen von Wikidata, sind binär und zumeist keine Selbstidentifikationen. Für die Phänomene wurden außerdem nur die Autor_innen der exemplarisch analysierten Rezeptionszeugnisse berücksichtigt.')"
+                    /></p>
                   <div id="gender-tab-bar"
                     style="display:flex;justify-content:center;gap:.5rem;margin-bottom:1.25rem;flex-wrap:wrap"/>
                   <div id="gender-pane-overview">
@@ -894,10 +887,10 @@
                   <div id="gender-pane-time" style="display:none">
                     <div class="control-col-wrap">
                       <div class="stat3-control-group">
-                        <label for="sel-gender-time-mode">Anzeige:</label>
+                        <label for="sel-gender-time-mode"><xsl:value-of select="i18n:t('Anzeige:')"/></label>
                         <select id="sel-gender-time-mode" class="stat2-select">
-                          <option value="stacked">Gestapelt (absolut)</option>
-                          <option value="percent">Prozentualer Anteil</option>
+                          <option value="stacked"><xsl:value-of select="i18n:t('Gestapelt (absolut)')"/></option>
+                          <option value="percent"><xsl:value-of select="i18n:t('Prozentualer Anteil')"/></option>
                         </select>
                       </div>
                     </div>
@@ -908,10 +901,10 @@
                   <div id="gender-pane-genre" style="display:none">
                     <div class="control-col-wrap">
                       <div class="stat3-control-group">
-                        <label for="sel-gender-genre-mode">Anzeige:</label>
+                        <label for="sel-gender-genre-mode"><xsl:value-of select="i18n:t('Anzeige:')"/></label>
                         <select id="sel-gender-genre-mode" class="stat2-select">
-                          <option value="stacked">Gestapelt (absolut)</option>
-                          <option value="percent">Prozentualer Anteil</option>
+                          <option value="stacked"><xsl:value-of select="i18n:t('Gestapelt (absolut)')"/></option>
+                          <option value="percent"><xsl:value-of select="i18n:t('Prozentualer Anteil')"/></option>
                         </select>
                       </div>
                     </div>
@@ -927,14 +920,10 @@
                   </div>
                 </div>
                 <div class="stats-wrap" id="stat13">
-                  <p class="stats-subtitle">Statistik 13: Popularitätsanalysen mit Wiki-Metriken</p>
-                  <p class="stats-desc">Wie populär sind Autor_innen von deutschsprachigen
-                    Sappho-Rezeptionszeugnissen im Wikiversum &#8211; und wie präsent sind sie im
-                    Korpus? QRank erstellt eine Rangliste von Wikidata-Einträgen, indem es die
-                    Seitenaufrufe aus Wikipedia, Wikispecies, Wikibooks, Wikiquote und weiteren
-                    Wikimedia-Projekten zusammenführt. Sitelinks sind die Wikipedia-Sprachversionen
-                    von Artikeln. Die Korpuspräsenz gibt an, mit wie vielen Rezeptionszeugnissen
-                    eine Person im Korpus vertreten ist.</p>
+                  <p class="stats-subtitle"><xsl:value-of select="i18n:t('Statistik 13: Popularitätsanalysen mit Wiki-Metriken')"/></p>
+                  <p class="stats-desc"><xsl:value-of
+                      select="i18n:t('Wie populär sind Autor_innen von deutschsprachigen Sappho-Rezeptionszeugnissen im Wikiversum – und wie präsent sind sie im Korpus? QRank erstellt eine Rangliste von Wikidata-Einträgen, indem es die Seitenaufrufe aus Wikipedia, Wikispecies, Wikibooks, Wikiquote und weiteren Wikimedia-Projekten zusammenführt. Sitelinks sind die Wikipedia-Sprachversionen von Artikeln. Die Korpuspräsenz gibt an, mit wie vielen Rezeptionszeugnissen eine Person im Korpus vertreten ist.')"
+                    /></p>
                   <div id="wm-kpi-wrap"/>
                   <div id="wm-tab-bar"
                     style="display:flex;justify-content:center;gap:.5rem;margin-bottom:1.25rem;flex-wrap:wrap"/>
@@ -942,66 +931,66 @@
                     style="text-align:center;font-size:.8rem;color:#6b7280;margin:.25rem 0 1rem"/>
 
                   <div id="wm-pane-qrank">
-                    <p class="stats-subtitle stats-subtitle-sm" style="text-align:center">QRank vs.
-                      Korpuspräsenz</p>
-                    <p class="stats-desc" style="text-align:center">Jeder Punkt ist ein_e Autor_in.
-                      Die X-Achse zeigt die Korpuspräsenz (Anzahl der Rezeptionszeugnisse im
-                      Korpus), die Y-Achse den QRank (Wiki-Popularität).</p>
+                    <p class="stats-subtitle stats-subtitle-sm" style="text-align:center"><xsl:value-of
+                        select="i18n:t('QRank vs. Korpuspräsenz')"/></p>
+                    <p class="stats-desc" style="text-align:center"><xsl:value-of
+                        select="i18n:t('Jeder Punkt ist ein_e Autor_in. Die X-Achse zeigt die Korpuspräsenz (Anzahl der Rezeptionszeugnisse im Korpus), die Y-Achse den QRank (Wiki-Popularität).')"
+                      /></p>
                     <div class="chart-wrap" style="min-height:420px">
                       <canvas id="chart-wm-scatter" style="height:420px"/>
                     </div>
                     <p class="stats-subtitle stats-subtitle-sm-top" style="text-align:center"
-                      >Top-Autor_innen nach QRank</p>
+                      ><xsl:value-of select="i18n:t('Top-Autor_innen nach QRank')"/></p>
                     <div class="control-col-wrap">
                       <div class="stat3-control-group">
-                        <label for="sel-wm-qrank-topn">Anzahl:</label>
+                        <label for="sel-wm-qrank-topn"><xsl:value-of select="i18n:t('Anzahl:')"/></label>
                         <select id="sel-wm-qrank-topn" class="stat2-select">
-                          <option value="10">Top 10</option>
-                          <option value="50" selected="selected">Top 50</option>
-                          <option value="100">Top 100</option>
+                          <option value="10"><xsl:value-of select="i18n:t('Top 10')"/></option>
+                          <option value="50" selected="selected"><xsl:value-of select="i18n:t('Top 50')"/></option>
+                          <option value="100"><xsl:value-of select="i18n:t('Top 100')"/></option>
                         </select>
                       </div>
                     </div>
                     <div class="legend">
-                      <span><span class="dot" style="background:rgba(94,23,235,0.75)"/>QRank
-                        (normalisiert)</span>
+                      <span><span class="dot" style="background:rgba(94,23,235,0.75)"/><xsl:value-of
+                          select="i18n:t('QRank (normalisiert)')"/></span>
                       <span><span class="dot" style="background:rgba(107,114,128,0.75)"
-                        />Korpuspräsenz (normalisiert)</span>
+                        /><xsl:value-of select="i18n:t('Korpuspräsenz (normalisiert)')"/></span>
                     </div>
                     <div id="wm-topqrank-wrap" class="chart-wrap"/>
                   </div>
 
                   <div id="wm-pane-sitelinks" style="display:none">
-                    <p class="stats-subtitle stats-subtitle-sm" style="text-align:center">Sitelinks
-                      vs. Korpuspräsenz</p>
-                    <p class="stats-desc" style="text-align:center">Jeder Punkt ist ein_e Autor_in.
-                      Die X-Achse zeigt die Korpuspräsenz, die Y-Achse die Anzahl der Sitelinks
-                      (Wikipedia-Sprachversionen).</p>
+                    <p class="stats-subtitle stats-subtitle-sm" style="text-align:center"><xsl:value-of
+                        select="i18n:t('Sitelinks vs. Korpuspräsenz')"/></p>
+                    <p class="stats-desc" style="text-align:center"><xsl:value-of
+                        select="i18n:t('Jeder Punkt ist ein_e Autor_in. Die X-Achse zeigt die Korpuspräsenz, die Y-Achse die Anzahl der Sitelinks (Wikipedia-Sprachversionen).')"
+                      /></p>
                     <div class="chart-wrap" style="min-height:420px">
                       <canvas id="chart-wm-slscatter" style="height:420px"/>
                     </div>
                     <p class="stats-subtitle stats-subtitle-sm-top" style="text-align:center"
-                      >Sitelinks-Verteilung</p>
+                      ><xsl:value-of select="i18n:t('Sitelinks-Verteilung')"/></p>
                     <div id="wm-sitelinks-donut-wrap"
                       style="display:flex;justify-content:center;flex-wrap:wrap;gap:1.5rem;align-items:flex-start;margin-bottom:1.25rem"/>
                     <div class="control-col-wrap">
                       <div class="stat3-control-group">
-                        <label for="sel-wm-sl-topn">Anzahl:</label>
+                        <label for="sel-wm-sl-topn"><xsl:value-of select="i18n:t('Anzahl:')"/></label>
                         <select id="sel-wm-sl-topn" class="stat2-select">
-                          <option value="10">Top 10</option>
-                          <option value="50" selected="selected">Top 50</option>
-                          <option value="100">Top 100</option>
+                          <option value="10"><xsl:value-of select="i18n:t('Top 10')"/></option>
+                          <option value="50" selected="selected"><xsl:value-of select="i18n:t('Top 50')"/></option>
+                          <option value="100"><xsl:value-of select="i18n:t('Top 100')"/></option>
                         </select>
                       </div>
                     </div>
                     <div class="legend">
-                      <span><span class="dot" style="background:rgba(94,23,235,0.75)"/>Sitelinks
-                        (normalisiert)</span>
+                      <span><span class="dot" style="background:rgba(94,23,235,0.75)"/><xsl:value-of
+                          select="i18n:t('Sitelinks (normalisiert)')"/></span>
                       <span><span class="dot" style="background:rgba(107,114,128,0.75)"
-                        />Korpuspräsenz (normalisiert)</span>
+                        /><xsl:value-of select="i18n:t('Korpuspräsenz (normalisiert)')"/></span>
                     </div>
                     <p class="stats-subtitle stats-subtitle-sm-top" style="text-align:center"
-                      >Top-Autor_innen nach Sitelinks</p>
+                      ><xsl:value-of select="i18n:t('Top-Autor_innen nach Sitelinks')"/></p>
                     <div id="wm-topsitelinks-bar-wrap" class="chart-wrap"/>
                   </div>
                 </div>

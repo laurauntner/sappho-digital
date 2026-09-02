@@ -7,7 +7,7 @@ document.fonts.ready.then(function () {
   // ── Daten aus DOM lesen ──────────────────────────────────────
   function readJSON(id) {
     var el = document.getElementById(id);
-    if (!el) { console.error("Datenelement nicht gefunden: #" + id); return null; }
+    if (!el) { console.error((document.documentElement.lang === "en" ? "Data element not found: #" : "Datenelement nicht gefunden: #") + id); return null; }
     return JSON.parse(el.textContent);
   }
 
@@ -936,7 +936,7 @@ document.fonts.ready.then(function () {
   // ── PNG-Export ───────────────────────────────────────────────
   document.getElementById("btn-exp-png").onclick = function () {
     var canvas = document.querySelector("#graph canvas");
-    if (!canvas) { alert("Kein Canvas gefunden."); return; }
+    if (!canvas) { alert(document.documentElement.lang === "en" ? "No canvas found." : "Kein Canvas gefunden."); return; }
     var out = document.createElement("canvas");
     out.width = canvas.width; out.height = canvas.height;
     var ctx = out.getContext("2d");

@@ -5,6 +5,264 @@ const C = {
     rLine: '#6b7280',
 };
 
+const STATS_LANG = document.documentElement.lang === 'en' ? 'en' : 'de';
+const NUM_LOCALE = STATS_LANG === 'en' ? 'en-US' : 'de-DE';
+const T = STATS_LANG === 'en' ? {
+    downloadPngTitle: 'Download chart as PNG',
+    receptionIndex: 'Reception Index',
+    receptionTestimony: 'Reception Testimony',
+    phenomenonDensityVsConnectivity: 'Phenomenon Density vs. Connectivity',
+    allExemplarilyAnalysedByIndex: 'All Exemplarily Analysed Reception Testimonies by Index',
+    receptionIndicesLoadError: 'reception-indices.csv could not be loaded:',
+    noData: 'No data.',
+    noCoPhenomenaFound: 'No co-occurring phenomena found.',
+    connectedTexts: 'Connected Texts',
+    basisOfSimilarity: 'Basis of Similarity',
+    sharedPhenomenaCount: n => `${n} shared phenomena`,
+    avgIntertextualRelations: 'Avg. Intertextual Relations',
+    avgSharedPhenomena: 'Avg. Shared Phenomena',
+    numberOfTexts: 'Number of Texts',
+    tabOverview: 'Overview',
+    tabTime: 'Timeline',
+    tabGenre: 'Genres',
+    tabPhenomena: 'Phenomena',
+    male: 'Male',
+    female: 'Female',
+    noGenderEntry: 'No Gender Entry',
+    noEntry: 'No Entry',
+    overviewTopN: 'Overview (Top N)',
+    topPhenomenaByGender: 'Top Phenomena by Gender',
+    byPhenomenonType: 'By Phenomenon Type',
+    qrank: 'QRank',
+    sitelinks: 'Sitelinks',
+    author: 'Author',
+    authorsWithQrank: n => `${n} authors with QRank`,
+    wikimetrixLoadError: 'wikimetrix.csv could not be loaded:',
+    receptionTestimonies: n => `Reception Testimonies (n = ${n})`,
+    phenomenonDensityNormalized: 'Phenomenon Density (normalized, weight: 75 %)',
+    noDataFound: 'No data found.',
+    noData2: 'No data.',
+    workReferences: 'References to Works',
+    workReference: 'Reference to a Work',
+    percentageShare: 'Percentage Share',
+    numberOfTexts2: 'Number of Texts',
+    noPairsFound: 'No pairs found.',
+    noArticle0: 'No Article (0)',
+    analysedReceptionTestimonies: 'Analysed Reception Testimonies',
+    avgReceptionIndex: 'Ø Reception Index',
+    highestIndex: 'Highest Index',
+    scatterDescription: 'Each point represents a reception testimony. The X-axis shows the phenomenon density ' +
+        '(weight: 75 %), the Y-axis the intertextual connectivity (weight: 25 %). ' +
+        'The dashed line marks the median anchor point of 0.5.',
+    intertextualConnectivityNormalized: 'Intertextual Connectivity (normalized, weight: 25 %)',
+    medianAnchorPoint: 'Median anchor point: 0.5</span>',
+    avgSharedPhenomenaPerText: 'Average Number of Shared Phenomena per Text',
+    corpusPresence: 'Corpus Presence',
+    corpusPresenceNormalized: 'Corpus Presence (normalized)',
+    qrankNormalized: 'QRank (normalized)',
+    sitelinksNormalized: 'Sitelinks (normalized)',
+    totalAuthors: 'Total Authors',
+    withWikipediaArticle: 'With Wikipedia Article',
+    median: 'Median',
+    receptionIndexLabel: 'Reception index: ',
+    phenomenonDensityLabel: 'Phenomenon density: ',
+    intertextualConnectivityLabel: 'Intertextual connectivity: ',
+    noAnalysedYet: '– no analysed reception testimonies yet',
+    errorLoadingReceptionIndex: n => `Error loading reception index data: ${n}`,
+    referenceInSapphoFragments: 'Reference in Sappho Fragments',
+    characterInSapphoFragments: 'Character in Sappho Fragments',
+    referenceInReceptionTestimonies: 'Reference in Reception Testimonies',
+    characterInReceptionTestimonies: 'Character in Reception Testimonies',
+    referencedAndQuotedCount: n => `Referenced and Quoted (n = ${n})`,
+    referencedAndQuoted: 'Referenced and quoted',
+    referenced: 'Referenced',
+    referencedCount: n => `Referenced (n = ${n})`,
+    intertextualRelationsTotal: 'intertextual relations total',
+    int31Nodes: n => `INT31 Nodes (n=${n})`,
+    int31NodesTooltip: (n, pct) => `${n} INT31 nodes (${pct}%)`,
+    sharedInt31Nodes: (n, pct) => `${n} shared INT31 nodes (${pct}%)`,
+    textSingular: 'Text',
+    textPlural: 'Texts',
+    numIntertextualRelationsPerText: 'Number of Intertextual Relations per Text',
+    numIntertextualRelations: 'Number of Intertextual Relations',
+    total: 'total',
+    noEntryPct: (n, pct) => `No Entry – ${n} (${pct}%)`,
+    ofGenre: 'of the genre',
+    corpusPresenceAbsolute: n => `Corpus presence, absolute: ${n}`,
+    errorLoadingWikiData: n => `Error loading wiki data: ${n}`,
+    count: 'Number:',
+    all: 'All',
+    medianQrank: 'Median QRank',
+    perReceptionTestimony: 'per reception testimony',
+    personRefLabel: 'References to Persons', personRefSingular: 'Reference to a Person',
+    characterLabel: 'Characters', characterSingular: 'Character',
+    placeRefLabel: 'References to Places', placeRefSingular: 'Reference to a Place',
+    topoiLabel: 'Rhetorical Topoi', topoiSingular: 'Rhetorical Topos',
+    motifLabel: 'Motifs', motifSingular: 'Motif',
+    topicLabel: 'Topics', topicSingular: 'Topic',
+    plotLabel: 'Plot Variants', plotSingular: 'Plot Variant',
+    quotationLabel: 'Quotations', quotationSingular: 'Quotation',
+    perSapphoFragment: 'per Sappho fragment',
+    textPassagesLabel: 'Text Passages',
+    otherLabel: 'Other',
+    personDualityMeta: (ref, both) => `Reception Testimonies: <strong>${ref}</strong> references; <strong>${both}</strong> also as characters`,
+    personDualityMetaSappho: (ref, both) => `Sappho Fragments: <strong>${ref}</strong> references; <strong>${both}</strong> also as characters`,
+    sapphoFragmentsCount: n => `Sappho Fragments (n = ${n})`,
+    receptionTestimoniesCountCaps: n => `RECEPTION TESTIMONIES (n = ${n})`,
+    maleCount: n => `Male (n = ${n})`,
+    femaleCount: n => `Female (n = ${n})`,
+    sapphoFragmentsPlain: 'Sappho Fragments',
+    receptionTestimoniesPlain: 'Reception Testimonies',
+} : {
+    downloadPngTitle: 'Grafik als PNG herunterladen',
+    receptionIndex: 'Rezeptionsindex',
+    receptionTestimony: 'Rezeptionszeugnis',
+    phenomenonDensityVsConnectivity: 'Phänomendichte vs. Vernetzung',
+    allExemplarilyAnalysedByIndex: 'Alle exemplarisch analysierten Rezeptionszeugnisse nach Index',
+    receptionIndicesLoadError: 'reception-indices.csv konnte nicht geladen werden:',
+    noData: 'Keine Daten.',
+    noCoPhenomenaFound: 'Keine Co-Phänomene gefunden.',
+    connectedTexts: 'Verbundene Texte',
+    basisOfSimilarity: 'Grundlage der Ähnlichkeit',
+    sharedPhenomenaCount: n => `${n} gemeinsame Phänomene`,
+    avgIntertextualRelations: 'Ø Intertextuelle Relationen',
+    avgSharedPhenomena: 'Ø gemeinsame Phänomene',
+    numberOfTexts: 'Anzahl Texte',
+    tabOverview: 'Überblick',
+    tabTime: 'Zeitverlauf',
+    tabGenre: 'Gattungen',
+    tabPhenomena: 'Phänomene',
+    male: 'Autoren',
+    female: 'Autorinnen',
+    noGenderEntry: 'Kein Gender-Eintrag',
+    noEntry: 'Kein Eintrag',
+    overviewTopN: 'Überblick (Top-N)',
+    topPhenomenaByGender: 'Top-Phänomene nach Geschlecht',
+    byPhenomenonType: 'Nach Phänomentyp',
+    qrank: 'QRank',
+    sitelinks: 'Sitelinks',
+    author: 'Autor_in',
+    authorsWithQrank: n => `${n} Autor_innen mit QRank`,
+    wikimetrixLoadError: 'wikimetrix.csv konnte nicht geladen werden:',
+    analysedReceptionTestimonies: 'Analysierte Rezeptionszeugnisse',
+    avgReceptionIndex: 'Ø Rezeptionsindex',
+    highestIndex: 'Höchster Index',
+    scatterDescription: 'Jeder Punkt steht für ein Rezeptionszeugnis. Die X-Achse zeigt die Phänomendichte ' +
+        '(Gewicht: 75 %), die Y-Achse die intertextuelle Vernetzung (Gewicht: 25 %). ' +
+        'Die gestrichelte Linie markiert jeweils den Median-Ankerpunkt 0,5.',
+    intertextualConnectivityNormalized: 'Intertextuelle Vernetzung (normalisiert, Gewicht: 25 %)',
+    medianAnchorPoint: 'Median-Ankerpunkt: 0,5</span>',
+    avgSharedPhenomenaPerText: 'Durchschnittliche Anzahl gemeinsamer Phänomene pro Text',
+    corpusPresence: 'Korpuspräsenz',
+    corpusPresenceNormalized: 'Korpuspräsenz normalisiert',
+    qrankNormalized: 'QRank normalisiert',
+    sitelinksNormalized: 'Sitelinks normalisiert',
+    totalAuthors: 'Autor_innen gesamt',
+    withWikipediaArticle: 'Mit Wikipedia-Artikel',
+    median: 'Median',
+    receptionIndexLabel: 'Rezeptionsindex: ',
+    phenomenonDensityLabel: 'Phänomendichte: ',
+    intertextualConnectivityLabel: 'Intertextuelle Vernetzung: ',
+    noAnalysedYet: '– noch keine analysierten Rezeptionszeugnisse',
+    errorLoadingReceptionIndex: n => `Fehler beim Laden der Rezeptionsindex-Daten: ${n}`,
+    referenceInSapphoFragments: 'Referenz in Sappho-Fragmenten',
+    characterInSapphoFragments: 'Figur in Sappho-Fragmenten',
+    referenceInReceptionTestimonies: 'Referenz in Rezeptionszeugnissen',
+    characterInReceptionTestimonies: 'Figur in Rezeptionszeugnissen',
+    referencedAndQuotedCount: n => `Referenziert und zitiert (n = ${n})`,
+    referencedAndQuoted: 'Referenziert und zitiert',
+    referenced: 'Referenziert',
+    referencedCount: n => `Referenziert (n = ${n})`,
+    intertextualRelationsTotal: 'intertextuelle Relationen gesamt',
+    int31Nodes: n => `INT31-Knoten (n=${n})`,
+    int31NodesTooltip: (n, pct) => `${n} INT31-Knoten (${pct}%)`,
+    sharedInt31Nodes: (n, pct) => `${n} gemeinsame INT31-Knoten (${pct}%)`,
+    textSingular: 'Text',
+    textPlural: 'Texte',
+    numIntertextualRelationsPerText: 'Anzahl intertextueller Relationen pro Text',
+    numIntertextualRelations: 'Anzahl intertextueller Relationen',
+    total: 'gesamt',
+    noEntryPct: (n, pct) => `Kein Eintrag – ${n} (${pct}%)`,
+    ofGenre: 'der Gattung',
+    corpusPresenceAbsolute: n => `Korpuspräsenz absolut: ${n}`,
+    errorLoadingWikiData: n => `Fehler beim Laden der Wiki-Daten: ${n}`,
+    count: 'Anzahl:',
+    all: 'Alle',
+    medianQrank: 'Median QRank',
+    perReceptionTestimony: 'pro Rezeptionszeugnis',
+    personRefLabel: 'Personenreferenzen', personRefSingular: 'Personenreferenz',
+    characterLabel: 'Figuren', characterSingular: 'Figur',
+    placeRefLabel: 'Ortsreferenzen', placeRefSingular: 'Ortsreferenz',
+    topoiLabel: 'Rhetorische Topoi', topoiSingular: 'Rhetorischer Topos',
+    motifLabel: 'Motive', motifSingular: 'Motiv',
+    topicLabel: 'Themen', topicSingular: 'Thema',
+    plotLabel: 'Stoffvarianten', plotSingular: 'Stoffvariante',
+    quotationLabel: 'Zitate', quotationSingular: 'Zitat',
+    perSapphoFragment: 'pro Sappho-Fragment',
+    textPassagesLabel: 'Textpassagen',
+    otherLabel: 'Sonstige',
+    personDualityMeta: (ref, both) => `Rezeptionszeugnisse: <strong>${ref}</strong> Referenzen; <strong>${both}</strong> auch als Figuren`,
+    personDualityMetaSappho: (ref, both) => `Sappho-Fragmente: <strong>${ref}</strong> Referenzen; <strong>${both}</strong> auch als Figuren`,
+    sapphoFragmentsCount: n => `Sappho-Fragmente (n = ${n})`,
+    receptionTestimonies: n => `Rezeptionszeugnisse (n = ${n})`,
+    receptionTestimoniesCountCaps: n => `REZEPTIONSZEUGNISSE (n = ${n})`,
+    maleCount: n => `Autoren (n = ${n})`,
+    femaleCount: n => `Autorinnen (n = ${n})`,
+    sapphoFragmentsPlain: 'Sappho-Fragmente',
+    receptionTestimoniesPlain: 'Rezeptionszeugnisse',
+    phenomenonDensityNormalized: 'Phänomendichte (normalisiert, Gewicht: 75 %)',
+    noDataFound: 'Keine Daten gefunden.',
+    noData2: 'Keine Daten.',
+    workReferences: 'Werkreferenzen',
+    workReference: 'Werkreferenz',
+    percentageShare: 'Prozentualer Anteil',
+    numberOfTexts2: 'Anzahl Texte',
+    noPairsFound: 'Keine Paare gefunden.',
+    noArticle0: 'Kein Artikel (0)',
+};
+
+const GENRE_LABELS = {
+    en: { Lyrik: 'Poetry', Prosa: 'Prose', Drama: 'Drama', Comic: 'Comic', Unbekannt: 'Unknown' },
+    de: { Lyrik: 'Lyrik', Prosa: 'Prosa', Drama: 'Drama', Comic: 'Comic', Unbekannt: 'Unbekannt' },
+};
+function genreLabel(key) {
+    return (GENRE_LABELS[STATS_LANG] || {})[key] || key;
+}
+
+// Translates a download-filename stem (without extension) so exported PNGs/CSVs
+// carry an English name on the English pages.
+const FN_MAP = {
+    'phaenomene_': 'phenomena_',
+    'uebersicht_alle_phaenomene': 'overview_all_phenomena',
+    'rezeptionsindizes': 'reception_indices',
+    'rezeptionsindizes_streudiagramm': 'reception_indices_scatterplot',
+    'personenreferenzen_und_figuren': 'references_to_persons_and_characters',
+    'werkreferenzen_und_zitate': 'references_to_works_and_quotations',
+    'intertextuelle_relationen_phaenomentypen': 'intertextual_relations_phenomenon_types',
+    'durchschnittliche_relationen_histogramm': 'average_relations_histogram',
+    'gemeinsame_phaenomene_histogramm': 'shared_phenomena_histogram',
+    'genderspezifische_analysen_uebersicht': 'gender_specific_analyses_overview',
+    'genderspezifische_analysen_zeitverlauf': 'gender_specific_analyses_timeline',
+    'genderspezifische_analysen_gattungen': 'gender_specific_analyses_genres',
+    'genderspezifische_analysen_phaenomene_uebersicht': 'gender_specific_analyses_phenomena_overview',
+    'genderspezifische_analysen_top_': 'gender_specific_analyses_top_',
+    'genderspezifische_analysen_phaenomene_': 'gender_specific_analyses_phenomena_',
+    'popularitaetsanalysen_sitelinks_streudiagramm': 'popularity_analyses_sitelinks_scatterplot',
+    'popularitaetsanalysen_qrank_streudiagramm': 'popularity_analyses_qrank_scatterplot',
+    'popularitaetsanalysen_top_sitelinks': 'popularity_analyses_top_sitelinks',
+    'popularitaetsanalysen_top_qrank': 'popularity_analyses_top_qrank',
+    'popularitaetsanalysen_sitelinks_verteilung': 'popularity_analyses_sitelinks_distribution',
+};
+function fname(stem) {
+    if (STATS_LANG !== 'en') return stem;
+    // exact match first, then prefix match (for stems built with a suffix appended)
+    if (FN_MAP[stem]) return FN_MAP[stem];
+    for (const de in FN_MAP) {
+        if (stem.startsWith(de)) return FN_MAP[de] + stem.slice(de.length);
+    }
+    return stem;
+}
+
 Chart.defaults.plugins.tooltip.backgroundColor = '#ffffff';
 Chart.defaults.plugins.tooltip.titleColor       = '#1f2937';
 Chart.defaults.plugins.tooltip.bodyColor        = '#374151';
@@ -28,7 +286,7 @@ function _mkDlWrap(filename, clickFn, container) {
     wrap.style.cssText = 'text-align:center;margin-top:.35rem;margin-bottom:.1rem;flex-basis:100%;min-width:0;';
     const btn = document.createElement('button');
     btn.textContent = 'PNG';
-    btn.title       = 'Grafik als PNG herunterladen';
+    btn.title       = T.downloadPngTitle;
     btn.style.cssText =
         'font-family:Geist,system-ui,sans-serif;font-size:.72rem;' +
         'padding:.2rem .6rem;border-radius:.3rem;cursor:pointer;' +
@@ -108,12 +366,12 @@ const charts = {};
 function fmtN(n, decimals) {
     if (n === null || n === undefined || isNaN(n)) return String(n);
     if (decimals !== undefined) {
-        return Number(n).toLocaleString('de-DE', {
+        return Number(n).toLocaleString(NUM_LOCALE, {
             minimumFractionDigits: decimals,
             maximumFractionDigits: decimals,
         });
     }
-    return Number(n).toLocaleString('de-DE');
+    return Number(n).toLocaleString(NUM_LOCALE);
 }
 
 
@@ -151,7 +409,7 @@ function buildCategory(cat) {
 
     const head = document.createElement('div');
     head.className = 'card-header';
-    head.innerHTML = `<span class="arrow">▶</span><h2>${cat.label}</h2>`;
+    head.innerHTML = `<span class="arrow">▶</span><h2>${(FTYPE_META[cat.key] || {}).label || cat.label}</h2>`;
 
     const body = document.createElement('div');
     body.className = 'card-body';
@@ -177,7 +435,7 @@ function buildCategory(cat) {
             // Download-Button erst nach Render einfügen
             requestAnimationFrame(() => {
                 const c = document.getElementById('chart-' + cat.key);
-                if (c) addDownloadBtn(c, 'phaenomene_' + cat.key, wrap);
+                if (c) addDownloadBtn(c, fname('phaenomene_' + cat.key), wrap);
             });
         }
     });
@@ -199,7 +457,7 @@ function renderChart(cat) {
             labels,
             datasets: [
                 {
-                    label: `Sappho-Fragmente (n = ${fmtN(DATA.nSappho)})`,
+                    label: `${T.sapphoFragmentsCount(fmtN(DATA.nSappho))}`,
                     data: pctS,
                     backgroundColor: C.s,
                     borderColor: C.sLine,
@@ -207,7 +465,7 @@ function renderChart(cat) {
                     borderRadius: 2,
                 },
                 {
-                    label: `Rezeptionszeugnisse (n = ${fmtN(DATA.nReception)})`,
+                    label: `${T.receptionTestimonies(fmtN(DATA.nReception))}`,
                     data: pctR,
                     backgroundColor: C.r,
                     borderColor: C.rLine,
@@ -234,7 +492,7 @@ function renderChart(cat) {
                             const isSappho = ctx.datasetIndex === 0;
                             const count = isSappho ? d.countSappho : d.countReception;
                             const total = isSappho ? DATA.nSappho : DATA.nReception;
-                            const pct = ctx.parsed.x.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
+                            const pct = ctx.parsed.x.toLocaleString(NUM_LOCALE, {minimumFractionDigits:2, maximumFractionDigits:2});
                             const name = isSappho ? 'Sappho' : 'Rezeption';
                             return ` ${name}: ${pct}% (${count}/${total})`;
                         },
@@ -299,7 +557,7 @@ function renderCatOverview() {
     const allItems = [];
     DATA.categories.forEach(cat => {
         cat.items.forEach(item => {
-            allItems.push({ ...item, catKey: cat.key, catLabel: cat.label });
+            allItems.push({ ...item, catKey: cat.key, catLabel: (FTYPE_META[cat.key] || {}).label || cat.label });
         });
     });
 
@@ -370,9 +628,9 @@ function renderCatOverview() {
         data: {
             labels,
             datasets: [
-                { label: `Sappho-Fragmente (n = ${fmtN(DATA.nSappho)})`,      data: pctS,
+                { label: `${T.sapphoFragmentsCount(fmtN(DATA.nSappho))}`,      data: pctS,
                   backgroundColor: C.s, borderColor: C.sLine, borderWidth: 2, borderRadius: 2 },
-                { label: `Rezeptionszeugnisse (n = ${fmtN(DATA.nReception)})`, data: pctR,
+                { label: T.receptionTestimonies(fmtN(DATA.nReception)), data: pctR,
                   backgroundColor: C.r, borderColor: C.rLine, borderWidth: 2, borderRadius: 2 },
             ],
         },
@@ -390,8 +648,8 @@ function renderCatOverview() {
                         if (idx == null) return;
                         const item     = items[idx];
                         const singular = (FTYPE_META[item.catKey] || {}).singular || item.catLabel;
-                        const pctS2    = parseFloat(item.pctSappho).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
-                        const pctR2    = parseFloat(item.pctReception).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
+                        const pctS2    = parseFloat(item.pctSappho).toLocaleString(NUM_LOCALE, {minimumFractionDigits:2, maximumFractionDigits:2});
+                        const pctR2    = parseFloat(item.pctReception).toLocaleString(NUM_LOCALE, {minimumFractionDigits:2, maximumFractionDigits:2});
                         const html =
                             `<strong>${item.label}</strong>`
                             + `<br><span style="font-size:10px;color:#6b7280">(${singular})</span>`
@@ -445,7 +703,7 @@ function renderCatOverview() {
         dlContainer.innerHTML = '';
         const btn = document.createElement('button');
         btn.textContent = 'PNG';
-        btn.title       = 'Grafik als PNG herunterladen';
+        btn.title       = T.downloadPngTitle;
         btn.style.cssText =
             'font-family:Geist,system-ui,sans-serif;font-size:.72rem;' +
             'padding:.2rem .6rem;border-radius:.3rem;cursor:pointer;' +
@@ -463,7 +721,7 @@ function renderCatOverview() {
             oc.drawImage(cv, 0, 0);
             const a = document.createElement('a');
             a.href = off.toDataURL('image/png');
-            a.download = 'uebersicht_alle_phaenomene.png';
+            a.download = fname('uebersicht_alle_phaenomene') + '.png';
             a.click();
         });
         dlContainer.appendChild(btn);
@@ -593,10 +851,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return card;
         }
 
-        wrap.appendChild(kpiCard('Analysierte Rezeptionszeugnisse',       n.toLocaleString('de-DE'),                                           '#1f2937'));
-        wrap.appendChild(kpiCard('Ø Rezeptionsindex',  avg.toLocaleString('de-DE', {minimumFractionDigits:3, maximumFractionDigits:3}), '#5e17eb'));
-        wrap.appendChild(kpiCard('Median',             median.toLocaleString('de-DE', {minimumFractionDigits:3, maximumFractionDigits:3}), '#6b7280'));
-        wrap.appendChild(kpiCard('Höchster Index',     maxVal.toLocaleString('de-DE', {minimumFractionDigits:4, maximumFractionDigits:4}), '#5e17eb'));
+        wrap.appendChild(kpiCard(T.analysedReceptionTestimonies,       n.toLocaleString(NUM_LOCALE),                                           '#1f2937'));
+        wrap.appendChild(kpiCard(T.avgReceptionIndex,  avg.toLocaleString(NUM_LOCALE, {minimumFractionDigits:3, maximumFractionDigits:3}), '#5e17eb'));
+        wrap.appendChild(kpiCard(T.median,             median.toLocaleString(NUM_LOCALE, {minimumFractionDigits:3, maximumFractionDigits:3}), '#6b7280'));
+        wrap.appendChild(kpiCard(T.highestIndex,     maxVal.toLocaleString(NUM_LOCALE, {minimumFractionDigits:4, maximumFractionDigits:4}), '#5e17eb'));
     }
 
     // ── Haupt-Balkendiagramm ─────────────────────────────────────────────────────
@@ -689,7 +947,7 @@ document.addEventListener('DOMContentLoaded', () => {
             data: {
                 labels,
                 datasets: [{
-                    label: 'Rezeptionsindex',
+                    label: T.receptionIndex,
                     data:  riVals,
                     backgroundColor: riVals.map(() => C.r),
                     borderColor:     riVals.map(() => C.rLine),
@@ -709,14 +967,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         callbacks: {
                             label: ctx => {
                                 const d  = sorted[ctx.dataIndex];
-                                const ri  = d.reception_index.toLocaleString('de-DE', {minimumFractionDigits:4, maximumFractionDigits:4});
-                                const pn  = d.p_norm.toLocaleString('de-DE', {minimumFractionDigits:4, maximumFractionDigits:4});
-                                const inn = d.i_norm.toLocaleString('de-DE', {minimumFractionDigits:4, maximumFractionDigits:4});
+                                const ri  = d.reception_index.toLocaleString(NUM_LOCALE, {minimumFractionDigits:4, maximumFractionDigits:4});
+                                const pn  = d.p_norm.toLocaleString(NUM_LOCALE, {minimumFractionDigits:4, maximumFractionDigits:4});
+                                const inn = d.i_norm.toLocaleString(NUM_LOCALE, {minimumFractionDigits:4, maximumFractionDigits:4});
                                 return [
                                     ...(d.authors ? [` (${d.authors})`] : []),
-                                    ` Rezeptionsindex: ${ri}`,
-                                    ` Phänomendichte: ${pn}`,
-                                    ` Intertextuelle Vernetzung: ${inn}`,
+                                    ` ${T.receptionIndexLabel}${ri}`,
+                                    ` ${T.phenomenonDensityLabel}${pn}`,
+                                    ` ${T.intertextualConnectivityLabel}${inn}`,
                                 ];
                             },
                             title: ctx => {
@@ -781,7 +1039,7 @@ document.addEventListener('DOMContentLoaded', () => {
             dlWrap.style.cssText = 'text-align:center;margin-top:.35rem;margin-bottom:.1rem;';
             const dlBtn = document.createElement('button');
             dlBtn.textContent = 'PNG';
-            dlBtn.title = 'Grafik als PNG herunterladen';
+            dlBtn.title = T.downloadPngTitle;
             dlBtn.style.cssText =
                 'font-family:Geist,system-ui,sans-serif;font-size:.72rem;' +
                 'padding:.2rem .6rem;border-radius:.3rem;cursor:pointer;' +
@@ -853,7 +1111,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 const a = document.createElement('a');
                 a.href     = off.toDataURL('image/png');
-                a.download = 'rezeptionsindizes.png';
+                a.download = fname('rezeptionsindizes') + '.png';
                 a.click();
             });
 
@@ -870,16 +1128,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function buildRiScatter(wrap, items) {
         const heading = document.createElement('p');
         heading.className = 'stats-subtitle stats-subtitle-sm-top';
-        heading.textContent = 'Phänomendichte vs. Vernetzung';
+        heading.textContent = T.phenomenonDensityVsConnectivity;
         wrap.appendChild(heading);
 
         const desc = document.createElement('p');
         desc.className = 'stats-desc';
         desc.style.cssText = 'text-align:center;max-width:640px;margin:0 auto .75rem;';
-        desc.textContent =
-            'Jeder Punkt steht für ein Rezeptionszeugnis. Die X-Achse zeigt die Phänomendichte ' +
-            '(Gewicht: 75\u202f%), die Y-Achse die intertextuelle Vernetzung (Gewicht: 25\u202f%). ' +
-            'Die gestrichelte Linie markiert jeweils den Median-Ankerpunkt 0,5.';
+        desc.textContent = T.scatterDescription;
         wrap.appendChild(desc);
 
         const chartWrap = document.createElement('div');
@@ -948,7 +1203,7 @@ document.addEventListener('DOMContentLoaded', () => {
             plugins: [refLinesPlugin],
             data: {
                 datasets: [{
-                    label: 'Rezeptionszeugnis',
+                    label: T.receptionTestimony,
                     data:  points,
                     backgroundColor: bgCols,
                     borderColor:     bgCols.map(() => C.rLine),
@@ -971,9 +1226,9 @@ document.addEventListener('DOMContentLoaded', () => {
                                 return [
                                     ` ${name}`,
                                     ...(auth ? [` ${auth}`] : []),
-                                    ` Rezeptionsindex: ${p.ri.toLocaleString('de-DE', {minimumFractionDigits:4, maximumFractionDigits:4})}`,
-                                    ` Phänomendichte: ${p.x.toLocaleString('de-DE', {minimumFractionDigits:4, maximumFractionDigits:4})}`,
-                                    ` Intertextuelle Vernetzung: ${p.y.toLocaleString('de-DE', {minimumFractionDigits:4, maximumFractionDigits:4})}`,
+                                    ` ${T.receptionIndexLabel}${p.ri.toLocaleString(NUM_LOCALE, {minimumFractionDigits:4, maximumFractionDigits:4})}`,
+                                    ` ${T.phenomenonDensityLabel}${p.x.toLocaleString(NUM_LOCALE, {minimumFractionDigits:4, maximumFractionDigits:4})}`,
+                                    ` ${T.intertextualConnectivityLabel}${p.y.toLocaleString(NUM_LOCALE, {minimumFractionDigits:4, maximumFractionDigits:4})}`,
                                 ];
                             },
                         },
@@ -982,20 +1237,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 scales: {
                     x: {
                         min: 0, max: 0.9,
-                        title: { display: true, text: 'Phänomendichte (normalisiert, Gewicht: 75 %)', font: { family: 'Geist, system-ui', size: 11 }, color: '#6b7280' },
+                        title: { display: true, text: T.phenomenonDensityNormalized, font: { family: 'Geist, system-ui', size: 11 }, color: '#6b7280' },
                         ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => fmtN(v, 1), stepSize: 0.1 },
                         grid:  { color: 'rgba(0,0,0,0.06)' },
                     },
                     y: {
                         min: 0.35, max: 0.6,
-                        title: { display: true, text: 'Intertextuelle Vernetzung (normalisiert, Gewicht: 25 %)', font: { family: 'Geist, system-ui', size: 11 }, color: '#6b7280' },
+                        title: { display: true, text: T.intertextualConnectivityNormalized, font: { family: 'Geist, system-ui', size: 11 }, color: '#6b7280' },
                         ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => fmtN(v, 1), stepSize: 0.1 },
                         grid:  { color: 'rgba(0,0,0,0.06)' },
                     },
                 },
             },
         });
-        addDownloadBtn(canvas, 'rezeptionsindizes_streudiagramm', chartWrap);
+        addDownloadBtn(canvas, fname('rezeptionsindizes_streudiagramm'), chartWrap);
     }
 
     // ── Init ──────────────────────────────────────────────────────────────────
@@ -1027,7 +1282,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (items.length === 0) {
-                    wrap.innerHTML = '<p style="color:#dc2626;font-size:.85rem;">Keine Daten gefunden.</p>';
+                    wrap.innerHTML = `<p style="color:#dc2626;font-size:.85rem;">${T.noDataFound}</p>`;
                     return;
                 }
 
@@ -1040,7 +1295,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Balkendiagramm-Überschrift
                 const h2 = document.createElement('p');
                 h2.className   = 'stats-subtitle stats-subtitle-sm';
-                h2.textContent = 'Alle exemplarisch analysierten Rezeptionszeugnisse nach Index';
+                h2.textContent = T.allExemplarilyAnalysedByIndex;
                 wrap.appendChild(h2);
 
                 const medDesc = document.createElement('div');
@@ -1050,7 +1305,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     '<span style="display:inline-flex;align-items:center;gap:5px;">' +
                     '<svg width="22" height="10" style="flex-shrink:0"><line x1="0" y1="5" x2="22" y2="5" ' +
                     'stroke="rgba(94,23,235,0.5)" stroke-width="1.5" stroke-dasharray="4,3"/></svg>' +
-                    'Median-Ankerpunkt: 0,5</span>';
+                    T.medianAnchorPoint;
                 wrap.appendChild(medDesc);
 
                 // TopN-Steuerung
@@ -1059,11 +1314,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const riCtrlGroup = document.createElement('div');
                 riCtrlGroup.className = 'stat3-control-group';
                 riCtrlGroup.innerHTML =
-                    '<label for="sel-ri-topn">Anzahl:</label>' +
+                    `<label for="sel-ri-topn">${T.count}</label>` +
                     '<select id="sel-ri-topn" class="stat2-select">' +
                     '<option value="10" selected>Top 10</option>' +
                     '<option value="50">Top 50</option>' +
-                    '<option value="0">Alle</option>' +
+                    `<option value="0">${T.all}</option>` +
                     '</select>';
                 riCtrlWrap.appendChild(riCtrlGroup);
                 wrap.appendChild(riCtrlWrap);
@@ -1086,10 +1341,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 buildRiScatter(wrap, items);
             })
             .catch(err => {
-                console.error('reception-indices.csv konnte nicht geladen werden:', err);
+                console.error(T.receptionIndicesLoadError, err);
                 wrap.innerHTML =
                     `<p style="color:#dc2626;font-size:.85rem;">` +
-                    `Fehler beim Laden der Rezeptionsindex-Daten: ${err.message}</p>`;
+                    `${T.errorLoadingReceptionIndex(err.message)}</p>`;
             });
     });
 
@@ -1191,7 +1446,7 @@ function renderSankey2(fragLabel) {
     });
 
     if (!Object.keys(sapphoFeats).length && !Object.keys(recepFeats).length) {
-        placeholder.textContent   = 'Keine Daten.';
+        placeholder.textContent   = T.noData;
         placeholder.style.display = '';
         svgWrap.style.display     = 'none';
         return;
@@ -1210,7 +1465,7 @@ function renderSankey2(fragLabel) {
     const added   = [...allUris].filter(u => !sapphoFeats[u] &&  recepFeats[u]);
 
     const ftypeLabels = {};
-    (DATA.categories || []).forEach(c => { ftypeLabels[c.key] = c.label; });
+    (DATA.categories || []).forEach(c => { ftypeLabels[c.key] = (FTYPE_META[c.key] || {}).label || c.label; });
 
     const sortByType = (uris, getInfo) => {
         const result = [];
@@ -1282,7 +1537,7 @@ function renderSankey2(fragLabel) {
     // Spalten-Header
     [
         ['FRAGMENT',                              lNodeX - PAD,          'end'],
-        [`REZEPTIONSZEUGNISSE (n = ${fmtN(frag.nBibl)})`, rNodeX + NODE_W + PAD, 'start'],
+        [`${T.receptionTestimoniesCountCaps(fmtN(frag.nBibl))}`, rNodeX + NODE_W + PAD, 'start'],
     ].forEach(([txt, x, anchor]) => {
         svg.append('text')
             .attr('x', x).attr('y', HDR_H - 5)
@@ -1419,15 +1674,15 @@ document.addEventListener('DOMContentLoaded', initSankey);
 // ── Statistik 7: Phänomene im Laufe der Zeit ───────────────────────────────────
 
 const FTYPE_META = {
-    person_ref:   { label: 'Personenreferenzen', singular: 'Personenreferenz',    color: '#f59e0b' },
-    character:    { label: 'Figuren',            singular: 'Figur',               color: '#3b82f6' },
-    place_ref:    { label: 'Ortsreferenzen',     singular: 'Ortsreferenz',        color: '#10b981' },
-    topos:        { label: 'Rhetorische Topoi',  singular: 'Rhetorischer Topos',  color: '#ef4444' },
-    motif:        { label: 'Motive',             singular: 'Motiv',               color: '#8b5cf6' },
-    topic:        { label: 'Themen',             singular: 'Thema',               color: '#06b6d4' },
-    plot:         { label: 'Stoffvarianten',             singular: 'Stoffvariante',               color: '#f97316' },
-    work_ref:     { label: 'Werkreferenzen',     singular: 'Werkreferenz',        color: '#e11d48' },
-    text_passage: { label: 'Zitate',             singular: 'Zitat',               color: '#84cc16' },
+    person_ref:   { label: T.personRefLabel, singular: T.personRefSingular,    color: '#f59e0b' },
+    character:    { label: T.characterLabel,            singular: T.characterSingular,               color: '#3b82f6' },
+    place_ref:    { label: T.placeRefLabel,     singular: T.placeRefSingular,        color: '#10b981' },
+    topos:        { label: T.topoiLabel,  singular: T.topoiSingular,  color: '#ef4444' },
+    motif:        { label: T.motifLabel,             singular: T.motifSingular,               color: '#8b5cf6' },
+    topic:        { label: T.topicLabel,             singular: T.topicSingular,               color: '#06b6d4' },
+    plot:         { label: T.plotLabel,             singular: T.plotSingular,               color: '#f97316' },
+    work_ref:     { label: T.workReferences,     singular: T.workReference,        color: '#e11d48' },
+    text_passage: { label: T.quotationLabel,             singular: T.quotationSingular,               color: '#84cc16' },
 };
 
 let _pdTip = null;
@@ -1450,7 +1705,7 @@ function pdTipHide() { getPdTip().style.display = 'none'; }
 function buildBubbleChart(features, decades, container, showType = false) {
     container.innerHTML = '';
     if (!features.length || !decades.length) {
-        container.innerHTML = '<p style="color:#9ca3af;padding:0.5rem 0">Keine Daten.</p>';
+        container.innerHTML = `<p style="color:#9ca3af;padding:0.5rem 0">${T.noData2}</p>`;
         return;
     }
 
@@ -1465,7 +1720,7 @@ function buildBubbleChart(features, decades, container, showType = false) {
         .sort((a, b) => b.total - a.total);
 
     if (!active.length) {
-        container.innerHTML = '<p style="color:#9ca3af;padding:0.5rem 0">Keine Daten.</p>';
+        container.innerHTML = `<p style="color:#9ca3af;padding:0.5rem 0">${T.noData2}</p>`;
         return;
     }
 
@@ -1709,7 +1964,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
     }
 
     if (!active.length) {
-        container.innerHTML = '<p style="color:#9ca3af;padding:0.5rem 0">Keine Daten.</p>';
+        container.innerHTML = `<p style="color:#9ca3af;padding:0.5rem 0">${T.noData2}</p>`;
         return;
     }
 
@@ -1776,7 +2031,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
     if (!singleGenre) {
         activeCols.forEach((genre, ci) => {
             const cx = LABEL_W + ci * COL_W + COL_W / 2;
-            svg.appendChild(txt(cx, 16, genre, {
+            svg.appendChild(txt(cx, 16, genreLabel(genre), {
                 'text-anchor': 'middle',
                 'font-size': '11px',
                 fill: '#374151',
@@ -1871,7 +2126,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
             if (v > 0) {
                 const onDark    = opacity > 0.50;
                 const textFill  = onDark ? '#fff' : color;
-                const cellLabel = `${v} (${pct < 1 ? pct.toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) : Math.round(pct)}%)`;
+                const cellLabel = `${v} (${pct < 1 ? pct.toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1}) : Math.round(pct)}%)`;
                 svg.appendChild(txt(cx + COL_W / 2, yc, cellLabel, {
                     'text-anchor': 'middle', dy: '0.35em',
                     'font-size': '10px',
@@ -1889,8 +2144,8 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
             const ftypeLabel = (FTYPE_META[feat.ftype] || {}).singular || feat.ftype;
             const tipHtml = `<strong>${rawLabel}</strong>`
                 + (showType ? `<br><span style="font-size:10px;color:#6b7280">(${ftypeLabel})</span>` : '')
-                + `<br>${genre}: <strong>${fmtN(v)}</strong> Rezeptionszeugnis${v !== 1 ? 'se' : ''}`
-                + (v > 0 ? ` (${pct < 1 ? pct.toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) : Math.round(pct)}%)` : '');
+                + `<br>${genreLabel(genre)}: <strong>${fmtN(v)}</strong> ${v !== 1 ? T.receptionTestimoniesPlain : T.receptionTestimony}`
+                + (v > 0 ? ` (${pct < 1 ? pct.toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1}) : Math.round(pct)}%)` : '');
             tipTarget.addEventListener('mouseenter', e => pdTipShow(e, tipHtml));
             tipTarget.addEventListener('mousemove',  e => pdTipMove(e));
             tipTarget.addEventListener('mouseleave', pdTipHide);
@@ -1941,9 +2196,9 @@ function buildGdistGenreSections() {
         head.className = 'card-header';
         head.innerHTML =
             `<span class="arrow${hasData ? '' : ' arrow-hidden'}">▶</span>`
-            + `<h2>${genre}${nLabel}</h2>`
+            + `<h2>${genreLabel(genre)}${nLabel}</h2>`
             + (!hasData
-                ? `<span style="margin-left:0.75rem;font-size:0.78rem;color:#9ca3af;font-weight:400">– noch keine analysierten Rezeptionszeugnisse</span>`
+                ? `<span style="margin-left:0.75rem;font-size:0.78rem;color:#9ca3af;font-weight:400">${T.noAnalysedYet}</span>`
                 : '');
 
         if (!hasData) {
@@ -2119,7 +2374,7 @@ function renderPlotComponents(plotUri, topN) {
 
     const activeTypes = FTYPE_ORDER.filter(k => byType[k].length > 0);
     if (!activeTypes.length) {
-        placeholder.textContent = 'Keine Co-Phänomene gefunden.';
+        placeholder.textContent = T.noCoPhenomenaFound;
         placeholder.style.display = '';
         return;
     }
@@ -2356,7 +2611,7 @@ function renderPlotComponents(plotUri, topN) {
             _dlTarget.innerHTML = '';
             const _dlBtn = document.createElement('button');
             _dlBtn.textContent = 'PNG';
-            _dlBtn.title = 'Grafik als PNG herunterladen';
+            _dlBtn.title = T.downloadPngTitle;
             _dlBtn.style.cssText =
                 'font-family:Geist,system-ui,sans-serif;font-size:.72rem;' +
                 'padding:.2rem .6rem;border-radius:.3rem;cursor:pointer;' +
@@ -2400,8 +2655,8 @@ function renderPersonDuality() {
 
     if (metaBar) {
         metaBar.innerHTML =
-            `<span>Rezeptionszeugnisse: <strong>${fmtN(pd.nPersonRef)}</strong> Referenzen; <strong>${fmtN(pd.nBoth)}</strong> auch als Figuren</span>`
-            + `<span style="margin-left:1.2rem">Sappho-Fragmente: <strong>${pd.nSapphoPersonRef}</strong> Referenzen; <strong>${pd.nSapphoCharacter}</strong> auch als Figuren</span>`;
+            `<span>${T.personDualityMeta(fmtN(pd.nPersonRef), fmtN(pd.nBoth))}</span>`
+            + `<span style="margin-left:1.2rem">${T.personDualityMetaSappho(pd.nSapphoPersonRef, pd.nSapphoCharacter)}</span>`;
     }
 
     let persons = pd.persons.slice();
@@ -2415,7 +2670,7 @@ function renderPersonDuality() {
 
     wrap.innerHTML = '';
     if (!persons.length) {
-        wrap.innerHTML = '<p style="color:#9ca3af;padding:0.5rem 0">Keine Daten.</p>';
+        wrap.innerHTML = `<p style="color:#9ca3af;padding:0.5rem 0">${T.noData2}</p>`;
         return;
     }
 
@@ -2487,13 +2742,13 @@ function renderPersonDuality() {
                         label: ctx => {
                             const p = persons[ctx.dataIndex];
                             const configs = [
-                                { lbl: 'Referenz in Sappho-Fragmenten',    n: p.sapPrN,  total: DATA.nSappho    },
-                                { lbl: 'Figur in Sappho-Fragmenten',       n: p.sapChN,  total: DATA.nSappho    },
-                                { lbl: 'Referenz in Rezeptionszeugnissen', n: p.persRefN, total: DATA.nReception },
-                                { lbl: 'Figur in Rezeptionszeugnissen',    n: p.charN,   total: DATA.nReception },
+                                { lbl: T.referenceInSapphoFragments,    n: p.sapPrN,  total: DATA.nSappho    },
+                                { lbl: T.characterInSapphoFragments,       n: p.sapChN,  total: DATA.nSappho    },
+                                { lbl: T.referenceInReceptionTestimonies, n: p.persRefN, total: DATA.nReception },
+                                { lbl: T.characterInReceptionTestimonies,    n: p.charN,   total: DATA.nReception },
                             ];
                             const { lbl, n, total } = configs[ctx.datasetIndex];
-                            const pct = ctx.parsed.x.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
+                            const pct = ctx.parsed.x.toLocaleString(NUM_LOCALE, {minimumFractionDigits:2, maximumFractionDigits:2});
                             return ` ${lbl}: ${pct}% (${n}/${total})`;
                         },
                     },
@@ -2520,7 +2775,7 @@ function renderPersonDuality() {
             },
         },
     });
-    addDownloadBtn(canvas, 'personenreferenzen_und_figuren', wrap);
+    addDownloadBtn(canvas, fname('personenreferenzen_und_figuren'), wrap);
 }
 
 function initPersonDuality() {
@@ -2569,7 +2824,7 @@ function renderWorkCitation() {
         .sort((a, b) => b.bothN - a.bothN || b.refN - a.refN);
 
     if (!works.length) {
-        wrap.innerHTML = '<p style="color:#9ca3af;padding:0.5rem 0">Keine Daten.</p>';
+        wrap.innerHTML = `<p style="color:#9ca3af;padding:0.5rem 0">${T.noData2}</p>`;
         return;
     }
 
@@ -2592,7 +2847,7 @@ function renderWorkCitation() {
             labels,
             datasets: [
                 {
-                    label: `Referenziert (n = ${fmtN(wc.nReception)})`,
+                    label: T.referencedCount(fmtN(wc.nReception)),
                     data:  pctRef,
                     backgroundColor: 'rgba(107,114,128,0.75)',
                     borderColor:     '#6b7280',
@@ -2600,7 +2855,7 @@ function renderWorkCitation() {
                     borderRadius: 2,
                 },
                 {
-                    label: `Referenziert und zitiert (n = ${fmtN(wc.nReception)})`,
+                    label: T.referencedAndQuotedCount(fmtN(wc.nReception)),
                     data:  pctBoth,
                     backgroundColor: 'rgba(8,145,178,0.75)',
                     borderColor:     '#0891b2',
@@ -2623,12 +2878,12 @@ function renderWorkCitation() {
                         const idx = tooltip.dataPoints?.[0]?.dataIndex;
                         if (idx == null) return;
                         const w    = works[idx];
-                        const pctR = parseFloat(w.pctRef).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
-                        const pctB = parseFloat(w.pctBoth).toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
+                        const pctR = parseFloat(w.pctRef).toLocaleString(NUM_LOCALE, {minimumFractionDigits:2, maximumFractionDigits:2});
+                        const pctB = parseFloat(w.pctBoth).toLocaleString(NUM_LOCALE, {minimumFractionDigits:2, maximumFractionDigits:2});
                         const html =
                             `<strong>${wc7CleanLabel(w.label)}</strong>`
-                            + `<br><span style="color:#374151">Referenziert: ${pctR}% (${fmtN(w.refN)}/${fmtN(wc.nReception)})</span>`
-                            + `<br><span style="color:#374151">Referenziert und zitiert: ${pctB}% (${fmtN(w.bothN)}/${fmtN(wc.nReception)})</span>`;
+                            + `<br><span style="color:#374151">${T.referenced}: ${pctR}% (${fmtN(w.refN)}/${fmtN(wc.nReception)})</span>`
+                            + `<br><span style="color:#374151">${T.referencedAndQuoted}: ${pctB}% (${fmtN(w.bothN)}/${fmtN(wc.nReception)})</span>`;
                         const t = getWc7Tip();
                         t.innerHTML     = html;
                         t.style.display = 'block';
@@ -2661,7 +2916,7 @@ function renderWorkCitation() {
             },
         },
     });
-    addDownloadBtn(canvas, 'werkreferenzen_und_zitate', wrap);
+    addDownloadBtn(canvas, fname('werkreferenzen_und_zitate'), wrap);
 
 }
 
@@ -2707,7 +2962,7 @@ function renderInt31MetaBar() {
     wrap.innerHTML =
         `<div style="text-align:center;margin-bottom:0.5rem">`
         + `<span style="font-size:2rem;font-weight:700;color:#1f2937">${fmtN(co.nInt31All)}</span>`
-        + `<span style="font-size:0.9rem;color:#6b7280;margin-left:0.5rem">intertextuelle Relationen gesamt</span>`
+        + `<span style="font-size:0.9rem;color:#6b7280;margin-left:0.5rem">${T.intertextualRelationsTotal}</span>`
         + `</div>`;
 }
 
@@ -2726,7 +2981,7 @@ function renderInt31FtypeBar() {
         .filter(k => typeSum[k] > 0)
         .map(k => ({ key: k, label: (FTYPE_META[k] || {}).label || k, n: typeSum[k] }));
 
-    if (!items.length) { wrap.innerHTML = '<p style="color:#9ca3af">Keine Daten.</p>'; return; }
+    if (!items.length) { wrap.innerHTML = `<p style="color:#9ca3af">${T.noData2}</p>`; return; }
 
     const legWrap = document.getElementById('int31-ftype-legend');
     if (legWrap) {
@@ -2753,7 +3008,7 @@ function renderInt31FtypeBar() {
         type: 'bar',
         data: {
             labels,
-            datasets: [{ label: `INT31-Knoten (n=${total})`, data: pcts,
+            datasets: [{ label: T.int31Nodes(total), data: pcts,
                 backgroundColor: colors.map(c => c + 'bf'), borderColor: colors,
                 borderWidth: 1.5, borderRadius: 3 }],
         },
@@ -2762,7 +3017,7 @@ function renderInt31FtypeBar() {
             plugins: { legend: { display: false },
                 tooltip: { callbacks: { label: ctx2 => {
                     const it = items[ctx2.dataIndex];
-                    return ` ${fmtN(it.n)} INT31-Knoten (${ctx2.parsed.x.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2})}%)`;
+                    return ` ${T.int31NodesTooltip(fmtN(it.n), ctx2.parsed.x.toLocaleString(NUM_LOCALE, {minimumFractionDigits:2, maximumFractionDigits:2}))}`;
                 }}}},
             scales: {
                 x: { min: 0, max: maxX,
@@ -2774,7 +3029,7 @@ function renderInt31FtypeBar() {
         },
     });
     const _i31c = document.getElementById('int31-ftype-canvas');
-    if (_i31c) addDownloadBtn(_i31c, 'intertextuelle_relationen_phaenomentypen', wrap);
+    if (_i31c) addDownloadBtn(_i31c, fname('intertextuelle_relationen_phaenomentypen'), wrap);
 }
 
 // ── Sunburst + Sehnen ────────────────────────────────────────────────────────
@@ -2788,7 +3043,7 @@ function renderInt31Sunburst() {
 
     const feats = topN > 0 ? co.featFrequencies.slice(0, topN) : co.featFrequencies;
     if (!feats.length) {
-        wrap.innerHTML = '<p style="color:#9ca3af;text-align:center">Keine Daten.</p>';
+        wrap.innerHTML = `<p style="color:#9ca3af;text-align:center">${T.noData2}</p>`;
         return;
     }
 
@@ -2902,11 +3157,11 @@ function renderInt31Sunburst() {
 
             const ftA = (FTYPE_META[fA.ftype]||{}).singular || fA.ftype;
             const ftB = (FTYPE_META[fB.ftype]||{}).singular || fB.ftype;
-            const pct = (n / total * 100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1});
+            const pct = (n / total * 100).toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1});
             const tipHtml =
                 `<strong>${fA.label}</strong> <span style="color:#6b7280">(${ftA})</span>`
                 + `<br>× <strong>${fB.label}</strong> <span style="color:#6b7280">(${ftB})</span>`
-                + `<br><strong>${fmtN(n)}</strong> gemeinsame INT31-Knoten (${pct}%)`;
+                + `<br>${T.sharedInt31Nodes(fmtN(n), pct)}`;
 
             path.addEventListener('mouseenter', e => { path.setAttribute('stroke-opacity','0.92'); int31TipShow(e,tipHtml); });
             path.addEventListener('mousemove',  e => int31TipMove(e));
@@ -2954,12 +3209,12 @@ function renderInt31Sunburst() {
     typeSegs.forEach(({ k, color, itemSegs }) => {
         itemSegs.forEach(({ f, a0, a1, aMid }) => {
             if (a1 - a0 < 0.002) return;
-            const pct    = (f.n / total * 100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1});
+            const pct    = (f.n / total * 100).toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1});
             const ft     = (FTYPE_META[f.ftype]||{}).singular || f.ftype;
             const tipHtml =
                 `<strong>${f.label}</strong>`
                 + `<br><span style="font-size:10px;color:#6b7280">(${ft})</span>`
-                + `<br><strong>${fmtN(f.n)}</strong> INT31-Knoten (${pct}%)`;
+                + `<br>${T.int31NodesTooltip(fmtN(f.n), pct)}`;
 
             const segFrac = (a1 - a0) / (2 * Math.PI);
             const strokeW = segFrac > 0.04 ? 1.8 : segFrac > 0.015 ? 1.0 : 0.4;
@@ -3033,7 +3288,7 @@ function renderInt31Pairs() {
 
     const topN  = Math.min(50, parseInt(document.getElementById('sel-int31-pairs-topn')?.value || '30'));
     const pairs = co.featPairs.slice(0, topN);
-    if (!pairs.length) { wrap.innerHTML = '<p style="color:#9ca3af">Keine Paare gefunden.</p>'; return; }
+    if (!pairs.length) { wrap.innerHTML = `<p style="color:#9ca3af">${T.noPairsFound}</p>`; return; }
 
     const total  = co.nInt31WithFeats || 1;
     const maxN   = pairs[0]?.n || 1;
@@ -3086,7 +3341,7 @@ function renderInt31Pairs() {
         svg.appendChild(setA(mkE('rect'), { x:LABEL_W, y:y0+2, width:halfW, height:BAR_H-4, fill:colorA, 'fill-opacity':'0.65', rx:2 }));
         svg.appendChild(setA(mkE('rect'), { x:LABEL_W+halfW, y:y0+2, width:barW-halfW, height:BAR_H-4, fill:colorB, 'fill-opacity':'0.65' }));
 
-        const pct = (pair.n / total * 100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1});
+        const pct = (pair.n / total * 100).toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1});
         svg.appendChild(setA(mkE('text'), { x:LABEL_W+barW+5, y:yc,
             'dominant-baseline':'middle', 'font-size':'10px', fill:'#6b7280' }))
             .textContent = `${pair.n} (${pct}%)`;
@@ -3097,7 +3352,7 @@ function renderInt31Pairs() {
         const ftB = (FTYPE_META[pair.ftypeB]||{}).singular || pair.ftypeB;
         const tipHtml = `<strong>${pair.labelA}</strong> <span style="color:#6b7280">(${ftA})</span>`
             + `<br>× <strong>${pair.labelB}</strong> <span style="color:#6b7280">(${ftB})</span>`
-            + `<br><strong>${fmtN(pair.n)}</strong> gemeinsame INT31-Knoten (${pct}%)`;
+            + `<br>${T.sharedInt31Nodes(fmtN(pair.n), pct)}`;
         overlay.addEventListener('mouseenter', e => int31TipShow(e, tipHtml));
         overlay.addEventListener('mousemove',  e => int31TipMove(e));
         overlay.addEventListener('mouseleave', int31TipHide);
@@ -3157,7 +3412,7 @@ function renderInt31TopNodes() {
         pillFeat.style.cssText =
             'flex-shrink:0;font-size:11px;padding:2px 9px;border-radius:99px;'
             + 'background:rgba(94,23,235,0.08);color:#5e17eb;font-weight:600;white-space:nowrap';
-        pillFeat.textContent = `${node.nFeats} gemeinsame Phänomene`;
+        pillFeat.textContent = T.sharedPhenomenaCount(node.nFeats);
 
         header.appendChild(badge);
         header.appendChild(pillFeat);
@@ -3176,7 +3431,7 @@ function renderInt31TopNodes() {
         textHead.style.cssText =
             'font-size:11px;font-weight:700;color:#9ca3af;margin:0 0 5px;'
             + 'text-transform:uppercase;letter-spacing:0.05em;text-align:center';
-        textHead.textContent = 'Verbundene Texte';
+        textHead.textContent = T.connectedTexts;
         card.appendChild(textHead);
 
         const textList = document.createElement('div');
@@ -3221,7 +3476,7 @@ function renderInt31TopNodes() {
             bHead.style.cssText =
                 'font-size:11px;font-weight:700;color:#9ca3af;margin:0 0 6px;'
                 + 'text-transform:uppercase;letter-spacing:0.05em';
-            bHead.textContent = 'Grundlage der Ähnlichkeit';
+            bHead.textContent = T.basisOfSimilarity;
             card.appendChild(bHead);
 
             const ftypeOrder = [
@@ -3229,16 +3484,16 @@ function renderInt31TopNodes() {
                 'topic','plot','text_passage','work_ref','other',
             ];
             const ftypeLabels = {
-                person_ref:   'Personenreferenzen',
-                character:    'Figuren',
-                place_ref:    'Ortsreferenzen',
-                topos:        'Rhetorische Topoi',
-                motif:        'Motive',
-                topic:        'Themen',
-                plot:         'Stoffvarianten',
-                text_passage: 'Textpassagen',
-                work_ref:     'Werkreferenzen',
-                other:        'Sonstige',
+                person_ref:   T.personRefLabel,
+                character:    T.characterLabel,
+                place_ref:    T.placeRefLabel,
+                topos:        T.topoiLabel,
+                motif:        T.motifLabel,
+                topic:        T.topicLabel,
+                plot:         T.plotLabel,
+                text_passage: T.textPassagesLabel,
+                work_ref:     T.workReferences,
+                other:        T.otherLabel,
             };
 
             const byType = {};
@@ -3320,29 +3575,29 @@ function initStat10() {
 
     const kpiData = [
         {
-            label:  'Ø Intertextuelle Relationen',
-            sublbl: 'pro Sappho-Fragment',
+            label:  T.avgIntertextualRelations,
+            sublbl: T.perSapphoFragment,
             value:  d.avgSapphoInt31,
             color:  '#5e17eb',
             n:      d.nSappho,
         },
         {
-            label:  'Ø Intertextuelle Relationen',
-            sublbl: 'pro Rezeptionszeugnis',
+            label:  T.avgIntertextualRelations,
+            sublbl: T.perReceptionTestimony,
             value:  d.avgReceptionInt31,
             color:  '#6b7280',
             n:      d.nReception,
         },
         {
-            label:  'Ø gemeinsame Phänomene',
-            sublbl: 'pro Sappho-Fragment',
+            label:  T.avgSharedPhenomena,
+            sublbl: T.perSapphoFragment,
             value:  d.avgSapphoShared,
             color:  '#5e17eb',
             n:      d.nSappho,
         },
         {
-            label:  'Ø gemeinsame Phänomene',
-            sublbl: 'pro Rezeptionszeugnis',
+            label:  T.avgSharedPhenomena,
+            sublbl: T.perReceptionTestimony,
             value:  d.avgReceptionShared,
             color:  '#6b7280',
             n:      d.nReception,
@@ -3368,8 +3623,8 @@ function initStat10() {
     const legend = document.createElement('div');
     legend.className = 'legend';
     legend.innerHTML =
-        `<span><span class="dot dot-s"></span>Sappho-Fragmente (n = ${fmtN(d.nSappho)})</span>` +
-        `<span><span class="dot dot-r"></span>Rezeptionszeugnisse (n = ${fmtN(d.nReception)})</span>`;
+        `<span><span class="dot dot-s"></span>${T.sapphoFragmentsPlain} (n = ${fmtN(d.nSappho)})</span>` +
+        `<span><span class="dot dot-r"></span>${T.receptionTestimoniesPlain} (n = ${fmtN(d.nReception)})</span>`;
     wrap.appendChild(legend);
 
     // ── Hilfsfunktion: grouped bar chart ─────────────────────────────────────
@@ -3387,7 +3642,7 @@ function initStat10() {
                 labels,
                 datasets: [
                     {
-                        label: `Sappho-Fragmente (n = ${fmtN(d.nSappho)})`,
+                        label: `${T.sapphoFragmentsCount(fmtN(d.nSappho))}`,
                         data:  sapData,
                         backgroundColor: C.s,
                         borderColor:     C.sLine,
@@ -3395,7 +3650,7 @@ function initStat10() {
                         borderRadius: 3,
                     },
                     {
-                        label: `Rezeptionszeugnisse (n = ${fmtN(d.nReception)})`,
+                        label: `${T.receptionTestimonies(fmtN(d.nReception))}`,
                         data:  recData,
                         backgroundColor: C.r,
                         borderColor:     C.rLine,
@@ -3421,10 +3676,10 @@ function initStat10() {
                             label: ctx2 => {
                                 const isSap  = ctx2.datasetIndex === 0;
                                 const total  = isSap ? d.nSappho : d.nReception;
-                                const name   = isSap ? 'Sappho-Fragmente' : 'Rezeptionszeugnisse';
+                                const name   = isSap ? T.sapphoFragmentsPlain : T.receptionTestimoniesPlain;
                                 const count  = ctx2.parsed.y;
-                                const pct    = total > 0 ? (count / total * 100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) : '0.0';
-                                return ` ${name}: ${count} ${count === 1 ? 'Text' : 'Texte'} (${pct}%)`;
+                                const pct    = total > 0 ? (count / total * 100).toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1}) : '0.0';
+                                return ` ${name}: ${count} ${count === 1 ? T.textSingular : T.textPlural} (${pct}%)`;
                             },
                         },
                     },
@@ -3445,7 +3700,7 @@ function initStat10() {
                         max: maxY,
                         title: {
                             display: true,
-                            text: 'Anzahl Texte',
+                            text: T.numberOfTexts,
                             font: { family: 'Geist, system-ui', size: 11 },
                             color: '#6b7280',
                         },
@@ -3462,21 +3717,21 @@ function initStat10() {
     int31Section.style.marginBottom = '2rem';
     int31Section.innerHTML =
         `<p class="stats-subtitle stats-subtitle-sm">` +
-        `Anzahl intertextueller Relationen pro Text</p>` +
+        `${T.numIntertextualRelationsPerText}</p>` +
         `<div class="chart-wrap"><canvas id="stat10-int31-hist" style="height:260px"></canvas></div>`;
     wrap.appendChild(int31Section);
-    renderGroupedBar('stat10-int31-hist', d.int31Hist,  '', 'Anzahl intertextueller Relationen');
-    addDownloadBtn(document.getElementById('stat10-int31-hist'), 'durchschnittliche_relationen_histogramm', int31Section.querySelector('.chart-wrap') || int31Section);
+    renderGroupedBar('stat10-int31-hist', d.int31Hist,  '', T.numIntertextualRelations);
+    addDownloadBtn(document.getElementById('stat10-int31-hist'), fname('durchschnittliche_relationen_histogramm'), int31Section.querySelector('.chart-wrap') || int31Section);
 
     // Shared-Phänomene-Histogramm
     const sharedSection = document.createElement('div');
     sharedSection.innerHTML =
         `<p class="stats-subtitle stats-subtitle-sm">` +
-        `Durchschnittliche Anzahl gemeinsamer Phänomene pro Text</p>` +
+        `${T.avgSharedPhenomenaPerText}</p>` +
         `<div class="chart-wrap"><canvas id="stat10-shared-hist" style="height:260px"></canvas></div>`;
     wrap.appendChild(sharedSection);
-    renderGroupedBar('stat10-shared-hist', d.sharedHist, '', 'Ø gemeinsame Phänomene');
-    addDownloadBtn(document.getElementById('stat10-shared-hist'), 'gemeinsame_phaenomene_histogramm', sharedSection.querySelector('.chart-wrap') || sharedSection);
+    renderGroupedBar('stat10-shared-hist', d.sharedHist, '', T.avgSharedPhenomena);
+    addDownloadBtn(document.getElementById('stat10-shared-hist'), fname('gemeinsame_phaenomene_histogramm'), sharedSection.querySelector('.chart-wrap') || sharedSection);
 }
 
 document.addEventListener('DOMContentLoaded', initStat10);
@@ -3484,17 +3739,17 @@ document.addEventListener('DOMContentLoaded', initStat10);
 // ── Statistik 12: Gender (Überblick · Zeitverlauf · Phänomene) ──────────────
 
 const GENDER_META = {
-    male:    { label: 'Autoren',      color: 'rgba(234,88,12,0.75)',   line: '#ea580c' },
-    female:  { label: 'Autorinnen',   color: 'rgba(22,163,74,0.75)',   line: '#16a34a' },
-    unknown: { label: 'Kein Eintrag', color: 'rgba(156,163,175,0.55)', line: '#9ca3af' },
+    male:    { label: T.male,      color: 'rgba(234,88,12,0.75)',   line: '#ea580c' },
+    female:  { label: T.female,   color: 'rgba(22,163,74,0.75)',   line: '#16a34a' },
+    unknown: { label: T.noEntry, color: 'rgba(156,163,175,0.55)', line: '#9ca3af' },
 };
 
 // ── Tab-Steuerung ─────────────────────────────────────────────────────────────
 const GENDER_TABS = [
-    { id: 'overview', label: 'Überblick'   },
-    { id: 'time',     label: 'Zeitverlauf' },
-    { id: 'genre',    label: 'Gattungen'   },
-    { id: 'phenom',   label: 'Phänomene'   },
+    { id: 'overview', label: T.tabOverview   },
+    { id: 'time',     label: T.tabTime },
+    { id: 'genre',    label: T.tabGenre   },
+    { id: 'phenom',   label: T.tabPhenomena   },
 ];
 let _genderActiveTab   = 'overview';
 let _genderChartInited = { overview: false, time: false, genre: false, phenom: false };
@@ -3569,9 +3824,9 @@ function renderGenderOverview() {
             'display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));' +
             'gap:1rem;margin-bottom:1.5rem';
         [
-            { label: 'Autoren',               val: d.nMale,    color: GENDER_META.male.line   },
-            { label: 'Autorinnen',             val: d.nFemale,  color: GENDER_META.female.line },
-            { label: 'Kein Gender-Eintrag',     val: d.nUnknown, color: GENDER_META.unknown.line },
+            { label: T.male,               val: d.nMale,    color: GENDER_META.male.line   },
+            { label: T.female,             val: d.nFemale,  color: GENDER_META.female.line },
+            { label: T.noGenderEntry,     val: d.nUnknown, color: GENDER_META.unknown.line },
         ].forEach(k => {
             const card = document.createElement('div');
             card.style.cssText =
@@ -3581,7 +3836,7 @@ function renderGenderOverview() {
                 `<div style="font-size:.78rem;font-weight:700;color:#6b7280;text-transform:uppercase;` +
                 `letter-spacing:.06em;margin-bottom:.3rem">${k.label}</div>` +
                 `<div style="font-size:2rem;font-weight:700;color:${k.color};line-height:1.1">${k.val}</div>` +
-                `<div style="font-size:.78rem;color:#9ca3af;margin-top:.25rem">gesamt</div>`;
+                `<div style="font-size:.78rem;color:#9ca3af;margin-top:.25rem">${T.total}</div>`;
             kpiGrid.appendChild(card);
         });
         kpiWrap.appendChild(kpiGrid);
@@ -3596,9 +3851,9 @@ function renderGenderOverview() {
         type: 'doughnut',
         data: {
             labels: [
-                `Autoren – ${fmtN(d.nMale)} (${(d.nMale/total*100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1})}%)`,
-                `Autorinnen – ${fmtN(d.nFemale)} (${(d.nFemale/total*100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1})}%)`,
-                `Kein Eintrag – ${fmtN(d.nUnknown)} (${(d.nUnknown/total*100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1})}%)`,
+                `${T.male} – ${fmtN(d.nMale)} (${(d.nMale/total*100).toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1})}%)`,
+                `${T.female} – ${fmtN(d.nFemale)} (${(d.nFemale/total*100).toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1})}%)`,
+                T.noEntryPct(fmtN(d.nUnknown), (d.nUnknown/total*100).toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1})),
             ],
             datasets: [{
                 data: [d.nMale, d.nFemale, d.nUnknown],
@@ -3618,7 +3873,7 @@ function renderGenderOverview() {
                     callbacks: {
                         label: ctx => {
                             const v = ctx.parsed;
-                            const pct = total > 0 ? (v / total * 100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) : '0.0';
+                            const pct = total > 0 ? (v / total * 100).toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1}) : '0.0';
                             return ` ${v} (${pct}%)`;
                         },
                     },
@@ -3626,7 +3881,7 @@ function renderGenderOverview() {
             },
         },
     });
-    addDownloadBtn(donutCanvas, 'genderspezifische_analysen_uebersicht', donutCanvas.parentElement || document.getElementById('gender-pane-overview'));
+    addDownloadBtn(donutCanvas, fname('genderspezifische_analysen_uebersicht'), donutCanvas.parentElement || document.getElementById('gender-pane-overview'));
 }
 
 // ── Pane 2: Zeitverlauf (alle Autor_innen) ────────────────────────────────────
@@ -3652,11 +3907,11 @@ function renderGenderTimeChart() {
     });
 
     const datasets = [
-        { label: 'Autoren',      data: isPercent ? toPct(maleRaw) : maleRaw,
+        { label: T.male,      data: isPercent ? toPct(maleRaw) : maleRaw,
           backgroundColor: GENDER_META.male.color,    borderColor: GENDER_META.male.line,    borderWidth: 1.5, borderRadius: 2 },
-        { label: 'Autorinnen',   data: isPercent ? toPct(femRaw)  : femRaw,
+        { label: T.female,   data: isPercent ? toPct(femRaw)  : femRaw,
           backgroundColor: GENDER_META.female.color,  borderColor: GENDER_META.female.line,  borderWidth: 1.5, borderRadius: 2 },
-        { label: 'Kein Eintrag', data: isPercent ? toPct(unkRaw)  : unkRaw,
+        { label: T.noEntry, data: isPercent ? toPct(unkRaw)  : unkRaw,
           backgroundColor: GENDER_META.unknown.color, borderColor: GENDER_META.unknown.line, borderWidth: 1.5, borderRadius: 2 },
     ];
 
@@ -3686,7 +3941,7 @@ function renderGenderTimeChart() {
                         label: c => {
                             const v = c.parsed.y;
                             return isPercent
-                                ? ` ${c.dataset.label}: ${v.toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1})}%`
+                                ? ` ${c.dataset.label}: ${v.toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1})}%`
                                 : ` ${c.dataset.label}: ${fmtN(v)}`;
                         },
                     },
@@ -3710,7 +3965,7 @@ function renderGenderTimeChart() {
             },
         },
     });
-    addDownloadBtn(document.getElementById('chart-gender-time'), 'genderspezifische_analysen_zeitverlauf', document.getElementById('chart-gender-time')?.parentElement || document.getElementById('gender-pane-time'));
+    addDownloadBtn(document.getElementById('chart-gender-time'), fname('genderspezifische_analysen_zeitverlauf'), document.getElementById('chart-gender-time')?.parentElement || document.getElementById('gender-pane-time'));
 }
 
 // ── Pane 3: Gattungen × Geschlecht ──────────────────────────────────────────
@@ -3726,7 +3981,7 @@ function renderGenderGenreChart() {
     const isPercent = mode === 'percent';
 
     const genres   = d.genreGender;
-    const labels   = genres.map(g => g.key);
+    const labels   = genres.map(g => genreLabel(g.key));
     const maleRaw  = genres.map(g => g.male);
     const femRaw   = genres.map(g => g.female);
     const unkRaw   = genres.map(g => g.unknown);
@@ -3739,11 +3994,11 @@ function renderGenderGenreChart() {
     const nullZeroPct = arr => arr.map(v => v === 0 ? null : v);
 
     const datasets = [
-        { label: 'Autoren',      data: isPercent ? nullZeroPct(toPct(maleRaw)) : nullZero(maleRaw),
+        { label: T.male,      data: isPercent ? nullZeroPct(toPct(maleRaw)) : nullZero(maleRaw),
           backgroundColor: GENDER_META.male.color,    borderColor: GENDER_META.male.line,    borderWidth: 1.5, borderRadius: 3, minBarLength: 3 },
-        { label: 'Autorinnen',   data: isPercent ? nullZeroPct(toPct(femRaw))  : nullZero(femRaw),
+        { label: T.female,   data: isPercent ? nullZeroPct(toPct(femRaw))  : nullZero(femRaw),
           backgroundColor: GENDER_META.female.color,  borderColor: GENDER_META.female.line,  borderWidth: 1.5, borderRadius: 3, minBarLength: 3 },
-        { label: 'Kein Eintrag', data: isPercent ? nullZeroPct(toPct(unkRaw))  : nullZero(unkRaw),
+        { label: T.noEntry, data: isPercent ? nullZeroPct(toPct(unkRaw))  : nullZero(unkRaw),
           backgroundColor: GENDER_META.unknown.color, borderColor: GENDER_META.unknown.line, borderWidth: 1.5, borderRadius: 3, minBarLength: 3 },
     ];
 
@@ -3754,7 +4009,7 @@ function renderGenderGenreChart() {
         _genderGenreChart.options.scales.y.ticks.precision = 0;
         _genderGenreChart.options.scales.y.ticks.callback = isPercent ? v => v + '%' : v => v;
         _genderGenreChart.options.scales.y.title.text =
-            isPercent ? 'Prozentualer Anteil' : 'Anzahl Texte';
+            isPercent ? T.percentageShare : T.numberOfTexts2;
         _genderGenreChart.update();
         return;
     }
@@ -3777,9 +4032,9 @@ function renderGenderGenreChart() {
                             const g   = genres[c.dataIndex];
                             const tot = g.male + g.female + g.unknown;
                             const v   = c.parsed.y;
-                            if (isPercent) return ` ${c.dataset.label}: ${v.toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1})}%`;
-                            const pct = tot > 0 ? (v / tot * 100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) : '0.0';
-                            return ` ${c.dataset.label}: ${Number(v).toLocaleString('de-DE', { minimumFractionDigits: 0, maximumFractionDigits: 1 })} (${pct}% der Gattung)`;
+                            if (isPercent) return ` ${c.dataset.label}: ${v.toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1})}%`;
+                            const pct = tot > 0 ? (v / tot * 100).toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1}) : '0.0';
+                            return ` ${c.dataset.label}: ${Number(v).toLocaleString(NUM_LOCALE, { minimumFractionDigits: 0, maximumFractionDigits: 1 })} (${pct}% ${T.ofGenre})`;
                         },
                     },
                 },
@@ -3796,7 +4051,7 @@ function renderGenderGenreChart() {
                     max: isPercent ? 100 : undefined,
                     title: {
                         display: true,
-                        text: isPercent ? 'Prozentualer Anteil' : 'Anzahl Texte',
+                        text: isPercent ? T.percentageShare : T.numberOfTexts2,
                         font: { family: 'Geist, system-ui', size: 11 },
                         color: '#6b7280',
                     },
@@ -3810,7 +4065,7 @@ function renderGenderGenreChart() {
             },
         },
     });
-    addDownloadBtn(document.getElementById('chart-gender-genre'), 'genderspezifische_analysen_gattungen', document.getElementById('chart-gender-genre')?.parentElement || document.getElementById('gender-pane-genre'));
+    addDownloadBtn(document.getElementById('chart-gender-genre'), fname('genderspezifische_analysen_gattungen'), document.getElementById('chart-gender-genre')?.parentElement || document.getElementById('gender-pane-genre'));
 }
 
 // ── Pane 3: Phänomene – aufklappbare Sektionen pro Phänomentyp ──
@@ -3854,7 +4109,7 @@ function renderGenderPhenomSections() {
     if (topItems.length) {
         const overviewTitle = document.createElement('p');
         overviewTitle.className = 'stats-subtitle stats-subtitle-sm';
-        overviewTitle.textContent = 'Überblick (Top-N)';
+        overviewTitle.textContent = T.overviewTopN;
         wrap.appendChild(overviewTitle);
 
         const ovLegend = document.createElement('div');
@@ -3862,9 +4117,9 @@ function renderGenderPhenomSections() {
         ovLegend.style.marginBottom = '.75rem';
         ovLegend.innerHTML =
             `<span><span class="dot" style="background:${GENDER_META.male.color};border:1.5px solid ${GENDER_META.male.line}"></span>` +
-            `Autoren (n = ${fmtN(pd.nMale)})</span>` +
+            `${T.maleCount(fmtN(pd.nMale))}</span>` +
             `<span><span class="dot" style="background:${GENDER_META.female.color};border:1.5px solid ${GENDER_META.female.line}"></span>` +
-            `Autorinnen (n = ${fmtN(pd.nFemale)})</span>`;
+            `${T.femaleCount(fmtN(pd.nFemale))}</span>`;
         wrap.appendChild(ovLegend);
 
         const controlRow = document.createElement('div');
@@ -3872,7 +4127,7 @@ function renderGenderPhenomSections() {
         controlRow.style.marginBottom = '.75rem';
         controlRow.innerHTML =
             `<div class="stat3-control-group">` +
-            `<label>Anzahl:</label>` +
+            `<label>${T.count}</label>` +
             `<select id="sel-gender-phenom-topn" class="stat2-select">` +
             `<option value="20"${topN===20?' selected':''}>Top 20</option>` +
             `<option value="30"${topN===30?' selected':''}>Top 30</option>` +
@@ -3959,8 +4214,8 @@ function renderGenderPhenomSections() {
             data: {
                 labels: overviewLabels,
                 datasets: [
-                    { label: `Autoren (n = ${fmtN(pd.nMale)})`,   data: ovMale, backgroundColor: GENDER_META.male.color,   borderColor: GENDER_META.male.line,   borderWidth: 2, borderRadius: 2 },
-                    { label: `Autorinnen (n = ${fmtN(pd.nFemale)})`, data: ovFem,  backgroundColor: GENDER_META.female.color, borderColor: GENDER_META.female.line, borderWidth: 2, borderRadius: 2 },
+                    { label: `${T.maleCount(fmtN(pd.nMale))}`,   data: ovMale, backgroundColor: GENDER_META.male.color,   borderColor: GENDER_META.male.line,   borderWidth: 2, borderRadius: 2 },
+                    { label: `${T.femaleCount(fmtN(pd.nFemale))}`, data: ovFem,  backgroundColor: GENDER_META.female.color, borderColor: GENDER_META.female.line, borderWidth: 2, borderRadius: 2 },
                 ],
             },
             options: {
@@ -3980,8 +4235,8 @@ function renderGenderPhenomSections() {
                                 const tot  = isMale ? pd.nMale : pd.nFemale;
                                 const cell = f.cells.find(x => x.g === gk);
                                 const cnt  = cell ? cell.n : 0;
-                                const name = isMale ? 'Autoren' : 'Autorinnen';
-                                return ` ${name}: ${c.parsed.x.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2})}% (${cnt}/${tot})`;
+                                const name = isMale ? T.male : T.female;
+                                return ` ${name}: ${c.parsed.x.toLocaleString(NUM_LOCALE, {minimumFractionDigits:2, maximumFractionDigits:2})}% (${cnt}/${tot})`;
                             },
                         },
                     },
@@ -4000,14 +4255,14 @@ function renderGenderPhenomSections() {
                 },
             },
         });
-        addDownloadBtn(ovCanvas, 'genderspezifische_analysen_phaenomene_uebersicht', ovWrap);
+        addDownloadBtn(ovCanvas, fname('genderspezifische_analysen_phaenomene_uebersicht'), ovWrap);
 
     }
 
     // ── Top-N pro Geschlecht: zwei Spalten nebeneinander ───────────────────────
     const genderTopTitle = document.createElement('p');
     genderTopTitle.className = 'stats-subtitle stats-subtitle-sm-top';
-    genderTopTitle.textContent = 'Top-Phänomene nach Geschlecht';
+    genderTopTitle.textContent = T.topPhenomenaByGender;
     wrap.appendChild(genderTopTitle);
 
     // Top-N Dropdown
@@ -4015,7 +4270,7 @@ function renderGenderPhenomSections() {
     gTopControls.className = 'control-col-wrap';
     gTopControls.style.marginBottom = '.75rem';
     gTopControls.innerHTML =
-        `<div class="stat3-control-group"><label for="sel-gender-top-n">Anzahl:</label>` +
+        `<div class="stat3-control-group"><label for="sel-gender-top-n">${T.count}</label>` +
         `<select id="sel-gender-top-n" class="stat2-select">` +
         `<option value="10">Top 10</option>` +
         `<option value="20" selected>Top 20</option>` +
@@ -4095,7 +4350,7 @@ function renderGenderPhenomSections() {
         const tot    = isMale ? pd.nMale : pd.nFemale;
         const color  = isMale ? GENDER_META.male.color  : GENDER_META.female.color;
         const line   = isMale ? GENDER_META.male.line   : GENDER_META.female.line;
-        const title  = isMale ? 'Autoren' : 'Autorinnen';
+        const title  = isMale ? T.male : T.female;
 
         const sorted = [...pd.features]
             .map(f => { const cell = f.cells.find(x => x.g === gk); return { ...f, gCount: cell ? cell.n : 0 }; })
@@ -4145,7 +4400,7 @@ function renderGenderPhenomSections() {
                                 const f    = sorted[c.dataIndex];
                                 const cell = f.cells.find(x => x.g === gk);
                                 const cnt  = cell ? cell.n : 0;
-                                return ` ${isMale ? 'Autoren' : 'Autorinnen'}: ${c.parsed.x.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2})}% (${cnt}/${tot})`;
+                                return ` ${isMale ? T.male : T.female}: ${c.parsed.x.toLocaleString(NUM_LOCALE, {minimumFractionDigits:2, maximumFractionDigits:2})}% (${cnt}/${tot})`;
                             },
                         },
                     },
@@ -4167,7 +4422,7 @@ function renderGenderPhenomSections() {
                 },
             },
         });
-        addDownloadBtn(colCanvas, 'genderspezifische_analysen_top_' + gk, colChartWrap);
+        addDownloadBtn(colCanvas, fname('genderspezifische_analysen_top_' + gk), colChartWrap);
         return chart;
     }
 
@@ -4181,7 +4436,7 @@ function renderGenderPhenomSections() {
 
     const phenomTypTitle = document.createElement('p');
     phenomTypTitle.className = 'stats-subtitle stats-subtitle-sm-top';
-    phenomTypTitle.textContent = 'Nach Phänomentyp';
+    phenomTypTitle.textContent = T.byPhenomenonType;
     wrap.appendChild(phenomTypTitle);
 
     const orderedTypes = ftypeOrder.filter(ft => byType[ft]);
@@ -4290,7 +4545,7 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
             labels,
             datasets: [
                 {
-                    label: `Autoren (n = ${fmtN(pd.nMale)})`,
+                    label: `${T.maleCount(fmtN(pd.nMale))}`,
                     data: maleData,
                     backgroundColor: GENDER_META.male.color,
                     borderColor:     GENDER_META.male.line,
@@ -4298,7 +4553,7 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
                     borderRadius: 2,
                 },
                 {
-                    label: `Autorinnen (n = ${fmtN(pd.nFemale)})`,
+                    label: `${T.femaleCount(fmtN(pd.nFemale))}`,
                     data: femData,
                     backgroundColor: GENDER_META.female.color,
                     borderColor:     GENDER_META.female.line,
@@ -4323,8 +4578,8 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
                             const tot  = isMale ? pd.nMale : pd.nFemale;
                             const cell = f.cells.find(x => x.g === gk);
                             const cnt  = cell ? cell.n : 0;
-                            const pct  = ctx.parsed.x.toLocaleString('de-DE', {minimumFractionDigits:2, maximumFractionDigits:2});
-                            const name = isMale ? 'Autoren' : 'Autorinnen';
+                            const pct  = ctx.parsed.x.toLocaleString(NUM_LOCALE, {minimumFractionDigits:2, maximumFractionDigits:2});
+                            const name = isMale ? T.male : T.female;
                             return ` ${name}: ${pct}% (${cnt}/${tot})`;
                         },
                     },
@@ -4353,7 +4608,7 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
             },
         },
     });
-    addDownloadBtn(canvas, 'genderspezifische_analysen_phaenomene_' + ft, canvas.parentElement || document.getElementById('gender-phenom-body-' + ft));
+    addDownloadBtn(canvas, fname('genderspezifische_analysen_phaenomene_' + ft), canvas.parentElement || document.getElementById('gender-phenom-body-' + ft));
 }
 
 // ── Init ──────────────────────────────────────────────────────────────────────
@@ -4432,8 +4687,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ── Tabs ───────────────────────────────────────────────────────────────────
     const WM_TABS = [
-        { key: 'qrank',     label: 'QRank' },
-        { key: 'sitelinks', label: 'Sitelinks' },
+        { key: 'qrank',     label: T.qrank },
+        { key: 'sitelinks', label: T.sitelinks },
     ];
 
     // Lila-Farbe passend zum restlichen System
@@ -4511,10 +4766,10 @@ document.addEventListener('DOMContentLoaded', () => {
             return card;
         }
 
-        wrap.appendChild(kpiCard(null, 'Autor_innen gesamt',    WM_TOTAL.toLocaleString('de-DE'),                       '#1f2937'));
-        wrap.appendChild(kpiCard(null, 'Mit Wikipedia-Artikel', (WM_TOTAL - WM_NO_WIKI).toLocaleString('de-DE'),       '#5e17eb'));
-        wrap.appendChild(kpiCard(null, 'Median QRank',          medianQRank.toLocaleString('de-DE'),                                   '#5e17eb'));
-        wrap.appendChild(kpiCard(null, 'Ø Sitelinks',           avgSitelinks.toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}), '#6b7280'));
+        wrap.appendChild(kpiCard(null, T.totalAuthors,    WM_TOTAL.toLocaleString(NUM_LOCALE),                       '#1f2937'));
+        wrap.appendChild(kpiCard(null, T.withWikipediaArticle, (WM_TOTAL - WM_NO_WIKI).toLocaleString(NUM_LOCALE),       '#5e17eb'));
+        wrap.appendChild(kpiCard(null, T.medianQrank,          medianQRank.toLocaleString(NUM_LOCALE),                                   '#5e17eb'));
+        wrap.appendChild(kpiCard(null, 'Ø Sitelinks',           avgSitelinks.toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1}), '#6b7280'));
     }
 
     // ── Scatter-Hilfsfunktion: Bubble-Chart ───────────────────────────────────
@@ -4564,7 +4819,7 @@ document.addEventListener('DOMContentLoaded', () => {
             plugins: [labelPlugin],
             data: {
                 datasets: [{
-                    label: 'Autor_in',
+                    label: T.author,
                     data: points,
                     backgroundColor: WM_C.primary,
                     borderColor:     WM_C.primaryLine,
@@ -4607,7 +4862,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         canvas.style.cursor = 'pointer';
-        addDownloadBtn(canvas, (canvasId.includes('slscatter') ? 'popularitaetsanalysen_sitelinks_streudiagramm' : 'popularitaetsanalysen_qrank_streudiagramm'), canvas.parentElement || document.body);
+        addDownloadBtn(canvas, fname(canvasId.includes('slscatter') ? 'popularitaetsanalysen_sitelinks_streudiagramm' : 'popularitaetsanalysen_qrank_streudiagramm'), canvas.parentElement || document.body);
         return chart;
     }
 
@@ -4616,7 +4871,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (state.charts.scatter) { state.charts.scatter.destroy(); }
         const { WM_WITH_QRANK } = state;
         const metaEl = document.getElementById('wm-scatter-meta');
-        if (metaEl) metaEl.textContent = `${WM_WITH_QRANK.length} Autor_innen mit QRank`;
+        if (metaEl) metaEl.textContent = T.authorsWithQrank(WM_WITH_QRANK.length);
         const points = WM_WITH_QRANK.map(d => ({
             x: d.workCount, y: d.qrank,
             r: 4,
@@ -4625,9 +4880,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }));
         state.charts.scatter = makeScatterChart(
             'chart-wm-scatter', points,
-            'Korpuspräsenz', 'QRank', true,
+            T.corpusPresence, 'QRank', true,
             null,
-            d => [` ${d.name}`, ` QRank: ${d.qrank.toLocaleString('de-DE')}`, ` Korpuspräsenz: ${d.workCount}`]
+            d => [` ${d.name}`, ` QRank: ${d.qrank.toLocaleString(NUM_LOCALE)}`, ` ${T.corpusPresence}: ${d.workCount}`]
         );
     }
 
@@ -4643,9 +4898,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }));
         state.charts.slscatter = makeScatterChart(
             'chart-wm-slscatter', points,
-            'Korpuspräsenz', 'Sitelinks', false,
+            T.corpusPresence, 'Sitelinks', false,
             null,
-            d => [` ${d.name}`, ` Sitelinks: ${d.sitelinks}`, ` Korpuspräsenz: ${d.workCount}`]
+            d => [` ${d.name}`, ` Sitelinks: ${d.sitelinks}`, ` ${T.corpusPresence}: ${d.workCount}`]
         );
     }
 
@@ -4711,16 +4966,16 @@ document.addEventListener('DOMContentLoaded', () => {
                                 const lines = [];
                                 if (ctx.datasetIndex === 0) {
                                     lines.push(` ${xTitle0}: ${typeof d0[ctx.dataIndex] === 'number' && d0[ctx.dataIndex] % 1 !== 0
-                                        ? d0[ctx.dataIndex].toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) + '%'
-                                        : Number(d0[ctx.dataIndex]).toLocaleString('de-DE')}`);
+                                        ? d0[ctx.dataIndex].toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1}) + '%'
+                                        : Number(d0[ctx.dataIndex]).toLocaleString(NUM_LOCALE)}`);
                                     if (xTitle0 === 'QRank normalisiert' && d.qrank !== null && d.qrank !== undefined) {
-                                        lines.push(` QRank absolut: ${d.qrank.toLocaleString('de-DE')}`);
+                                        lines.push(` QRank absolut: ${d.qrank.toLocaleString(NUM_LOCALE)}`);
                                     } else if (xTitle0 === 'Sitelinks normalisiert' && d.sitelinks !== null && d.sitelinks !== undefined) {
-                                        lines.push(` Sitelinks absolut: ${d.sitelinks.toLocaleString('de-DE')}`);
+                                        lines.push(` Sitelinks absolut: ${d.sitelinks.toLocaleString(NUM_LOCALE)}`);
                                     }
                                 } else {
-                                    lines.push(` ${xTitle1}: ${typeof d1[ctx.dataIndex] === 'number' ? d1[ctx.dataIndex].toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}) + '%' : d1[ctx.dataIndex]}`);
-                                    lines.push(` Korpuspräsenz absolut: ${d.workCount}`);
+                                    lines.push(` ${xTitle1}: ${typeof d1[ctx.dataIndex] === 'number' ? d1[ctx.dataIndex].toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1}) + '%' : d1[ctx.dataIndex]}`);
+                                    lines.push(` ${T.corpusPresenceAbsolute(d.workCount)}`);
                                 }
                                 return lines;
                             }
@@ -4751,7 +5006,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
             },
         });
-        addDownloadBtn(canvas, (chartKey === 'topsitelinks' ? 'popularitaetsanalysen_top_sitelinks' : 'popularitaetsanalysen_top_qrank'), wrap);
+        addDownloadBtn(canvas, fname(chartKey === 'topsitelinks' ? 'popularitaetsanalysen_top_sitelinks' : 'popularitaetsanalysen_top_qrank'), wrap);
         canvas.style.cursor = 'pointer';
     }
 
@@ -4764,13 +5019,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const globalMaxQ    = sorted[0]?.qrank || 1;
         const globalMaxWork = Math.max(...state.WM_DATA.map(d => d.workCount), 1);
         const metaEl        = document.getElementById('wm-scatter-meta');
-        if (metaEl) metaEl.textContent = `${state.WM_WITH_QRANK.length} Autor_innen mit QRank`;
+        if (metaEl) metaEl.textContent = T.authorsWithQrank(state.WM_WITH_QRANK.length);
         renderWmTopBar(
             state, 'topqrank', 'chart-wm-topqrank-inner', 'wm-topqrank-wrap', 'sel-wm-qrank-topn',
             () => items,
             d => parseFloat((d.qrank / globalMaxQ * 100).toFixed(2)),
             d => parseFloat((d.workCount / globalMaxWork * 100).toFixed(2)),
-            'QRank normalisiert', 'Korpuspräsenz normalisiert'
+            T.qrankNormalized, T.corpusPresenceNormalized
         );
     }
 
@@ -4787,7 +5042,7 @@ document.addEventListener('DOMContentLoaded', () => {
             () => items,
             d => parseFloat((d.sitelinks / globalMaxSL * 100).toFixed(2)),
             d => parseFloat((d.workCount / globalMaxWorkSL * 100).toFixed(2)),
-            'Sitelinks normalisiert', 'Korpuspräsenz normalisiert'
+            T.sitelinksNormalized, T.corpusPresenceNormalized
         );
     }
 
@@ -4800,14 +5055,14 @@ document.addEventListener('DOMContentLoaded', () => {
         const { WM_DATA }  = state;
         const WM_TOTAL     = WM_DATA.length;
         const buckets = [
-            { label: 'Kein Artikel (0)',  min: 0,  max: 0,    color: 'rgba(107,114,128,0.7)', line: '#6b7280' },
+            { label: T.noArticle0,  min: 0,  max: 0,    color: 'rgba(107,114,128,0.7)', line: '#6b7280' },
             { label: '1–5 Sprachen',      min: 1,  max: 5,    color: 'rgba(94,23,235,0.45)',  line: '#5e17eb' },
             { label: '6–20 Sprachen',     min: 6,  max: 20,   color: 'rgba(94,23,235,0.75)',  line: '#5e17eb' },
             { label: '21–50 Sprachen',    min: 21, max: 50,   color: 'rgba(8,145,178,0.75)',  line: '#0891b2' },
             { label: '> 50 Sprachen',     min: 51, max: 9999, color: 'rgba(220,85,38,0.75)',  line: '#dc5526' },
         ];
         const counts = buckets.map(b => WM_DATA.filter(d => d.sitelinks >= b.min && d.sitelinks <= b.max).length);
-        const pcts   = counts.map(c => (c / WM_TOTAL * 100).toLocaleString('de-DE', {minimumFractionDigits:1, maximumFractionDigits:1}));
+        const pcts   = counts.map(c => (c / WM_TOTAL * 100).toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1}));
 
         const donutWrap = document.createElement('div');
         donutWrap.style.cssText = 'display:flex;flex-direction:column;align-items:center;gap:0.5rem;';
@@ -4850,7 +5105,7 @@ document.addEventListener('DOMContentLoaded', () => {
             btnWrap.style.cssText = 'text-align:center;margin-top:.4rem;';
             const btn = document.createElement('button');
             btn.textContent = 'PNG';
-            btn.title = 'Grafik als PNG herunterladen';
+            btn.title = T.downloadPngTitle;
             btn.style.cssText = 'font-family:Geist,system-ui,sans-serif;font-size:.72rem;padding:.2rem .6rem;border-radius:.3rem;cursor:pointer;border:1px solid #d1d5db;background:#f9fafb;color:#374151;transition:background .15s;';
             btn.addEventListener('mouseenter', () => btn.style.background = '#f3f4f6');
             btn.addEventListener('mouseleave', () => btn.style.background = '#f9fafb');
@@ -4885,7 +5140,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
                 const a = document.createElement('a');
                 a.href     = off.toDataURL('image/png');
-                a.download = 'popularitaetsanalysen_sitelinks_verteilung.png';
+                a.download = fname('popularitaetsanalysen_sitelinks_verteilung') + '.png';
                 a.click();
             });
             btnWrap.appendChild(btn);
@@ -4924,9 +5179,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             })
             .catch(err => {
-                console.error('wikimetrix.csv konnte nicht geladen werden:', err);
+                console.error(T.wikimetrixLoadError, err);
                 const kpi = document.getElementById('wm-kpi-wrap');
-                if (kpi) kpi.innerHTML = `<p style="color:#dc2626;font-size:.85rem;">Fehler beim Laden der Wiki-Daten: ${err.message}</p>`;
+                if (kpi) kpi.innerHTML = `<p style="color:#dc2626;font-size:.85rem;">${T.errorLoadingWikiData(err.message)}</p>`;
             });
     });
 

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0" exclude-result-prefixes="#all">
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:i18n="urn:sappho-digital:i18n" version="2.0"
+    exclude-result-prefixes="#all">
     <xsl:output encoding="UTF-8" media-type="text/html" method="xhtml" version="1.0" indent="yes"
         omit-xml-declaration="yes"/>
     <xsl:import href="./partials/html_navbar.xsl"/>
@@ -14,7 +15,7 @@
         </xsl:variable>
 
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
-        <html xmlns="http://www.w3.org/1999/xhtml">
+        <html xmlns="http://www.w3.org/1999/xhtml" lang="{$lang}">
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"/>
@@ -25,7 +26,9 @@
             </head>
             <body class="page">
                 <div class="hfeed site" id="page">
-                    <xsl:call-template name="nav_bar"/>
+                    <xsl:call-template name="nav_bar">
+                        <xsl:with-param name="current_page" select="i18n:href('query.html')"/>
+                    </xsl:call-template>
 
                     <div class="sparql-container container-fluid">
                         <div class="card-header">
@@ -35,57 +38,56 @@
                         </div>
                         <div class="sparql-content">
                             <div class="section">
-                                <div class="section-title">Datenquelle</div>
+                                <div class="section-title"><xsl:value-of select="i18n:t('Datenquelle')"/></div>
                                 <div class="data-source">
                                     <input type="text" id="dataSource"
                                         value="https://sappho-digital.com/sappho-reception.ttl"/>
                                     <div class="data-source-suggestions smaller-text">
-                                        <div class="hint">Andere Quellen:</div>
+                                        <div class="hint"><xsl:value-of select="i18n:t('Andere Quellen:')"/></div>
                                         <div>
                                             <button class="example-btn" type="button"
                                                 onclick="setDataSource('https://sappho-digital.com/authors.ttl')"
-                                                >Nur Autor_innendaten</button>
+                                                ><xsl:value-of select="i18n:t('Nur Autor_innendaten')"/></button>
                                         </div>
                                         <div>
                                             <button class="example-btn" type="button"
                                                 onclick="setDataSource('https://sappho-digital.com/works.ttl')"
-                                                >Nur bibliographische Daten zu
-                                                Rezeptionszeugnissen</button>
+                                                ><xsl:value-of
+                                                  select="i18n:t('Nur bibliographische Daten zu Rezeptionszeugnissen')"
+                                                /></button>
                                         </div>
                                         <div>
                                             <button class="example-btn" type="button"
                                                 onclick="setDataSource('https://sappho-digital.com/fragments.ttl')"
-                                                >Nur bibliographische Daten zu
-                                                Sappho-Fragmenten</button>
+                                                ><xsl:value-of
+                                                  select="i18n:t('Nur bibliographische Daten zu Sappho-Fragmenten')"
+                                                /></button>
                                         </div>
                                         <div>
                                             <button class="example-btn" type="button"
                                                 onclick="setDataSource('https://sappho-digital.com/sappho-reception.ttl')"
-                                                >Default (alle Daten)</button>
+                                                ><xsl:value-of select="i18n:t('Default (alle Daten)')"/></button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="section" id="sparnaturalSection">
-                                <div class="section-title">Visueller Query-Builder</div>
-                                <p class="smaller-text">Der visuelle Query-Builder wird durch <a
+                                <div class="section-title"><xsl:value-of select="i18n:t('Visueller Query-Builder')"/></div>
+                                <p class="smaller-text"><xsl:value-of
+                                        select="i18n:t('Der visuelle Query-Builder wird durch ')"/><a
                                         href="https://github.com/sparna-git/Sparnatural"
-                                        target="_blank">Sparnatural</a> bereitgestellt. Seine Nutzung
-                                    ist optional – die SPARQL-Query lässt sich auch direkt im Editor
-                                    unten eingeben.</p>
-                                <p class="smaller-text">Eine Query entsteht durch Verbinden von
-                                    Elementen: Zunächst werden die Klassen ausgewählt, erst danach lässt
-                                    sich – sofern mehrere Möglichkeiten bestehen – das verbindende
-                                    Prädikat festlegen. Suchbegriffe werden textbasiert abgeglichen
-                                    (Groß-/Kleinschreibung wird ignoriert), eine Live-Vorschlagsliste beim
-                                    Tippen gibt es nicht. Mit dem <strong>Play-Button</strong> wird die
-                                    erzeugte Query in den SPARQL-Editor übernommen; ausgeführt wird sie
-                                    erst über ›Query ausführen‹.</p>
-                                <p class="smaller-text">Die Auswahlliste öffnet sich bei Klick auf
-                                        ›Search for resources‹ und lässt sich nur durch Auswahl einer
-                                    Klasse schließen; erst danach werden die übrigen Bedienelemente
-                                    wieder vollständig zugänglich.</p>
+                                        target="_blank">Sparnatural</a><xsl:value-of
+                                        select="i18n:t(' bereitgestellt. Seine Nutzung ist optional – die SPARQL-Query lässt sich auch direkt im Editor unten eingeben.')"
+                                    /></p>
+                                <p class="smaller-text"><xsl:value-of
+                                        select="i18n:t('Eine Query entsteht durch Verbinden von Elementen: Zunächst werden die Klassen ausgewählt, erst danach lässt sich – sofern mehrere Möglichkeiten bestehen – das verbindende Prädikat festlegen. Suchbegriffe werden textbasiert abgeglichen (Groß-/Kleinschreibung wird ignoriert), eine Live-Vorschlagsliste beim Tippen gibt es nicht. Mit dem ')"
+                                    /><strong>Play-Button</strong><xsl:value-of
+                                        select="i18n:t(' wird die erzeugte Query in den SPARQL-Editor übernommen; ausgeführt wird sie erst über ›Query ausführen‹.')"
+                                    /></p>
+                                <p class="smaller-text"><xsl:value-of
+                                        select="i18n:t('Die Auswahlliste öffnet sich bei Klick auf ›Search for resources‹ und lässt sich nur durch Auswahl einer Klasse schließen; erst danach werden die übrigen Bedienelemente wieder vollständig zugänglich.')"
+                                    /></p>
                                 <spar-natural id="sparnatural" src="shapes.ttl"
                                     endpoint="./no-sparql-endpoint" lang="en" defaultLang="en"
                                     distinct="true" limit="100"><xsl:comment> sparnatural mount point </xsl:comment></spar-natural>
@@ -95,7 +97,7 @@
                                 <div class="section-title">SPARQL Query</div>
                                 <div class="query-container">
                                     <textarea id="queryEditor"
-                                        placeholder="Gib hier eine SPARQL-Query ein …">
+                                        placeholder="{i18n:t('Gib hier eine SPARQL-Query ein …')}">
                                         <xsl:text>
 PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
 PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
@@ -112,55 +114,61 @@ LIMIT 100
                                 <div class="examples">
                                     <div class="section-title"
                                         style="width: 100%; margin-bottom: 0px !important"
-                                        >Beispiel-Queries:</div>
-                                    <button class="example-btn" onclick="loadExample('all')">Alle
-                                        Tripel</button>
+                                        ><xsl:value-of select="i18n:t('Beispiel-Queries:')"/></div>
+                                    <button class="example-btn" onclick="loadExample('all')"><xsl:value-of
+                                            select="i18n:t('Alle Tripel')"/></button>
                                     <button class="example-btn" onclick="loadExample('count')"
-                                        >Anzahl Tripel</button>
-                                    <button class="example-btn" onclick="loadExample('types')">Alle
-                                        Klassen</button>
+                                        ><xsl:value-of select="i18n:t('Anzahl Tripel')"/></button>
+                                    <button class="example-btn" onclick="loadExample('types')"><xsl:value-of
+                                            select="i18n:t('Alle Klassen')"/></button>
                                     <button class="example-btn" onclick="loadExample('properties')"
-                                        >Alle Properties</button>
+                                        ><xsl:value-of select="i18n:t('Alle Properties')"/></button>
                                     <button class="example-btn"
                                         onclick="loadExample('phenomTopPersonRef')"
-                                        >Personenreferenzen in Rezeptionszeugnissen</button>
+                                        ><xsl:value-of
+                                            select="i18n:t('Personenreferenzen in Rezeptionszeugnissen')"
+                                        /></button>
                                     <button class="example-btn"
-                                        onclick="loadExample('phenomTopCharacter')">Figuren in
-                                        Rezeptionszeugnissen</button>
+                                        onclick="loadExample('phenomTopCharacter')"><xsl:value-of
+                                            select="i18n:t('Figuren in Rezeptionszeugnissen')"/></button>
                                     <button class="example-btn"
-                                        onclick="loadExample('phenomTopMotif')">Motive in
-                                        Rezeptionszeugnissen</button>
+                                        onclick="loadExample('phenomTopMotif')"><xsl:value-of
+                                            select="i18n:t('Motive in Rezeptionszeugnissen')"/></button>
                                     <button class="example-btn"
-                                        onclick="loadExample('phenomTopTopos')">Rhetorische Topoi in
-                                        Rezeptionszeugnissen</button>
+                                        onclick="loadExample('phenomTopTopos')"><xsl:value-of
+                                            select="i18n:t('Rhetorische Topoi in Rezeptionszeugnissen')"
+                                        /></button>
                                     <button class="example-btn"
-                                        onclick="loadExample('phenomTopPlace')">Ortsreferenzen in
-                                        Rezeptionszeugnissen</button>
+                                        onclick="loadExample('phenomTopPlace')"><xsl:value-of
+                                            select="i18n:t('Ortsreferenzen in Rezeptionszeugnissen')"/></button>
                                     <button class="example-btn"
-                                        onclick="loadExample('phenomTopTopic')">Themen in
-                                        Rezeptionszeugnissen</button>
+                                        onclick="loadExample('phenomTopTopic')"><xsl:value-of
+                                            select="i18n:t('Themen in Rezeptionszeugnissen')"/></button>
                                     <button class="example-btn"
-                                        onclick="loadExample('plotComponents')">Stoffe in
-                                        Rezeptionszeugnissen</button>
+                                        onclick="loadExample('plotComponents')"><xsl:value-of
+                                            select="i18n:t('Stoffe in Rezeptionszeugnissen')"/></button>
                                     <button class="example-btn" onclick="loadExample('workRefs')"
-                                        >Werkreferenzen in Rezeptionszeugnissen</button>
+                                        ><xsl:value-of select="i18n:t('Werkreferenzen in Rezeptionszeugnissen')"
+                                        /></button>
                                     <button class="example-btn"
-                                        onclick="loadExample('textPassages')">Zitate in
-                                        Rezeptionszeugnissen</button>
+                                        onclick="loadExample('textPassages')"><xsl:value-of
+                                            select="i18n:t('Zitate in Rezeptionszeugnissen')"/></button>
                                     <button class="example-btn"
-                                        onclick="loadExample('phenomSappho')">Phänomene in
-                                        Sappho-Fragmenten</button>
+                                        onclick="loadExample('phenomSappho')"><xsl:value-of
+                                            select="i18n:t('Phänomene in Sappho-Fragmenten')"/></button>
                                     <button class="example-btn"
-                                        onclick="loadExample('authorTopWorks')">Top Autor_innen nach
-                                        Korpuspräsenz</button>
+                                        onclick="loadExample('authorTopWorks')"><xsl:value-of
+                                            select="i18n:t('Top Autor_innen nach Korpuspräsenz')"/></button>
                                     <button class="example-btn"
                                         onclick="loadExample('intertextDocCount')"
-                                        >Rezeptionszeugnisse mit meisten Relationen</button>
+                                        ><xsl:value-of
+                                            select="i18n:t('Rezeptionszeugnisse mit meisten Relationen')"
+                                        /></button>
                                 </div>
                                 <div class="section">
                                     <div class="section-title"
-                                        style="width: 100%; margin-top: 20px !important">Hilfreiche
-                                        Ressourcen:</div>
+                                        style="width: 100%; margin-top: 20px !important"><xsl:value-of
+                                            select="i18n:t('Hilfreiche Ressourcen:')"/></div>
                                     <ul class="tooltip-list smaller-text">
                                         <li>
                                             <a
@@ -169,7 +177,7 @@ LIMIT 100
                                         </li>
                                         <li>
                                             <a href="https://sappho-digital.com/ontology.html"
-                                                target="_blank">Datenmodell</a>
+                                                target="_blank"><xsl:value-of select="i18n:t('Datenmodell')"/></a>
                                         </li>
                                         <li>
                                             <a href="https://sappho-digital.com/alignments.html"
@@ -177,15 +185,15 @@ LIMIT 100
                                         </li>
                                         <li>
                                             <a href="https://sappho-digital.com/vokabular.html"
-                                                target="_blank">Vokabular</a>
+                                                target="_blank"><xsl:value-of select="i18n:t('Vokabular')"/></a>
                                         </li>
                                         <li>
                                             <a href="https://sappho-digital.com/statistik.html"
-                                                target="_blank">Statistische Auswertungen</a>
+                                                target="_blank"><xsl:value-of select="i18n:t('Statistische Auswertungen')"/></a>
                                         </li>
                                     </ul>
                                     <details class="ns-list smaller-text">
-                                        <summary>Namespace-Präfixe</summary>
+                                        <summary><xsl:value-of select="i18n:t('Namespace-Präfixe')"/></summary>
                                         <ul class="tooltip-list ns-list__items">
                                             <li><code>rdf:</code>
                                                 http://www.w3.org/1999/02/22-rdf-syntax-ns#</li>
@@ -209,9 +217,9 @@ LIMIT 100
 
                             <div class="controls">
                                 <button id="executeBtn" class="sparql-btn" onclick="executeQuery()"
-                                    >▶ Query ausführen</button>
+                                    >▶ <xsl:value-of select="i18n:t('Query ausführen')"/></button>
                                 <button id="clearBtn" class="sparql-btn" onclick="clearResults()"
-                                    >Ergebnisse löschen</button>
+                                    ><xsl:value-of select="i18n:t('Ergebnisse löschen')"/></button>
                                 <div class="export-controls hidden" id="exportControls">
                                     <button class="export-btn" onclick="exportResults('csv')">CSV
                                         Export</button>

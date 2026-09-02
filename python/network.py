@@ -9,6 +9,7 @@ from rdflib import Graph, BNode, Literal, URIRef
 
 INPUT_FILE  = sys.argv[1] if len(sys.argv) > 1 else "./sappho-digital/data/rdf/sappho-reception.ttl"
 OUTPUT_FILE = sys.argv[2] if len(sys.argv) > 2 else "network-data.xml"
+LANG        = sys.argv[3] if len(sys.argv) > 3 else "de"
 HTML_OUT_DIR = Path(OUTPUT_FILE).parent
 
 DEFAULT_TOP_N     = 200
@@ -124,7 +125,7 @@ def get_labels(g):
             en.setdefault(key, str(o))
         else:
             any_.setdefault(key, str(o))
-    merged = {**any_, **en, **de}
+    merged = {**any_, **de, **en} if LANG == "en" else {**any_, **en, **de}
     return {k: clean_label(v) for k, v in merged.items()}
 
 
@@ -138,10 +139,15 @@ def clean_label(s: str) -> str:
                "", s, flags=re.I).strip()
     s = re.sub(r"^(Reference\s+to|Referenz\s+auf)\s+",           "", s, flags=re.I).strip()
     s = re.sub(r"^(Passage\s+from|Passage\s+aus)\s+",            "", s, flags=re.I).strip()
-    s = re.sub(
+    type_paren = re.compile(
         r"\s*\((Motif|Motiv|Topic|Thema|Plot|Stoff|Character|Figur|"
         r"place|Ort|person|Person|work|Werk|topos|Topos)\)\s*$",
-        "", s, flags=re.I).strip()
+        flags=re.I)
+    while True:
+        s2 = type_paren.sub("", s)
+        if s2 == s:
+            break
+        s = s2
     s = s.replace("»", "").replace("«", "")
     return s.strip()
 

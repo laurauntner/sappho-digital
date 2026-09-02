@@ -95,7 +95,7 @@ function createDataTable(containerElement, order, pageLength) {
       {
         extend: "copyHtml5",
         text: '<i class="far fa-copy"></i>',
-        titleAttr: "Tabelle kopieren",
+        titleAttr: document.documentElement.lang === "en" ? "Copy table" : "Tabelle kopieren",
         className: "btn-link",
         exportOptions: {
           modifier: {
@@ -143,7 +143,7 @@ function createDataTable(containerElement, order, pageLength) {
       {
         extend: "excelHtml5",
         text: '<i class="far fa-file-excel"></i>',
-        titleAttr: "Excel-Tabelle herunterladen",
+        titleAttr: document.documentElement.lang === "en" ? "Download Excel table" : "Excel-Tabelle herunterladen",
         className: "btn-link",
         exportOptions: {
           modifier: {
@@ -192,7 +192,23 @@ function createDataTable(containerElement, order, pageLength) {
     order: order,
     orderCellsTop: true,
     fixedHeader: true,
-    language: {
+    language: document.documentElement.lang === "en" ? {
+      sEmptyTable: "No data available",
+      sInfo: "_START_ to _END_ of _TOTAL_ entries",
+      sInfoEmpty: "No entries",
+      sInfoFiltered: "(filtered from _MAX_ entries)",
+      sLengthMenu: "Show _MENU_ entries",
+      sLoadingRecords: "Loading...",
+      sProcessing: "Processing...",
+      sSearch: "Search:",
+      sZeroRecords: "No matching entries found",
+      oPaginate: {
+        sFirst: "First",
+        sLast: "Last",
+        sNext: "Next",
+        sPrevious: "Previous"
+      }
+    } : {
       sEmptyTable: "Keine Daten verfügbar",
       sInfo: "_START_ bis _END_ von _TOTAL_ Einträgen",
       sInfoEmpty: "Keine Einträge",

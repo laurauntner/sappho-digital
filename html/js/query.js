@@ -1,10 +1,32 @@
 (function () {
     window.currentResults =[];
-    
+
+    var qLang = document.documentElement.lang === "en" ? "en" : "de";
+    var qT = qLang === "en" ? {
+        comunicaNotLoaded: "Comunica was not loaded. Check whether the Comunica <script> tag is actually loading (not self-closing) and whether the URL is correct.",
+        missingDomElements: "Missing DOM elements. Check IDs: queryEditor, dataSource, results, executeBtn, exportControls",
+        enterQuery: '<div class="status error">❌ Please enter a query.</div>',
+        enterDataSource: '<div class="status error">❌ Please enter a data source (URL).</div>',
+        running: '<div class="status loading">Query is running client-side … Please be patient.</div>',
+        error: function (msg) { return '<div class="status error">❌ Error: ' + msg + "</div>"; },
+        successNoResults: '<div class="status success">✓ Query successful, but no results found.</div>',
+        cannotDetermineVariables: '<div class="status error">❌ Could not determine result variables (unexpected result format).</div>',
+        resultsFound: function (n) { return '<div class="status success">✓ ' + n + " result" + (n !== 1 ? "s" : "") + " found</div>"; },
+    } : {
+        comunicaNotLoaded: "Comunica wurde nicht geladen. Prüfe, ob der Comunica <script>-Tag wirklich geladen wird (nicht selbstschließend) und ob die URL stimmt.",
+        missingDomElements: "Fehlende DOM-Elemente. Prüfe IDs: queryEditor, dataSource, results, executeBtn, exportControls",
+        enterQuery: '<div class="status error">❌ Bitte eine Query eingeben.</div>',
+        enterDataSource: '<div class="status error">❌ Bitte eine Datenquelle (URL) eingeben.</div>',
+        running: '<div class="status loading">Query wird clientseitig ausgeführt … Bitte um etwas Geduld.</div>',
+        error: function (msg) { return '<div class="status error">❌ Fehler: ' + msg + "</div>"; },
+        successNoResults: '<div class="status success">✓ Query erfolgreich, aber keine Ergebnisse gefunden.</div>',
+        cannotDetermineVariables: '<div class="status error">❌ Konnte Ergebnis-Variablen nicht bestimmen (unerwartetes Ergebnisformat).</div>',
+        resultsFound: function (n) { return '<div class="status success">✓ ' + n + " Ergebnis" + (n !== 1 ? "se" : "") + " gefunden</div>"; },
+    };
+
     function ensureComunica() {
         if (! window.Comunica || ! window.Comunica.QueryEngine) {
-            throw new Error(
-            "Comunica wurde nicht geladen. Prüfe, ob der Comunica <script>-Tag wirklich geladen wird (nicht selbstschließend) und ob die URL stimmt.");
+            throw new Error(qT.comunicaNotLoaded);
         }
         if (! window.myEngine) {
             window.myEngine = new window.Comunica.QueryEngine();
@@ -358,8 +380,7 @@
         var exportControls = document.getElementById("exportControls");
         
         if (! queryEl || ! sourceEl || ! resultsDiv || ! executeBtn || ! exportControls) {
-            console.error(
-            "Fehlende DOM-Elemente. Prüfe IDs: queryEditor, dataSource, results, executeBtn, exportControls");
+            console.error(qT.missingDomElements);
             return;
         }
         
@@ -367,23 +388,23 @@
         var source = (sourceEl.value || "").replace(/^\s+|\s+$/g, "");
         
         if (! query) {
-            resultsDiv.innerHTML = '<div class="status error">❌ Bitte eine Query eingeben.</div>';
+            resultsDiv.innerHTML = qT.enterQuery;
             return;
         }
         if (! source) {
-            resultsDiv.innerHTML = '<div class="status error">❌ Bitte eine Datenquelle (URL) eingeben.</div>';
+            resultsDiv.innerHTML = qT.enterDataSource;
             return;
         }
         
         executeBtn.disabled = true;
-        resultsDiv.innerHTML = '<div class="status loading">Query wird clientseitig ausgeführt … Bitte um etwas Geduld.</div>';
+        resultsDiv.innerHTML = qT.running;
         exportControls.classList.add("hidden");
         
         try {
             ensureComunica();
         }
         catch (e) {
-            resultsDiv.innerHTML = '<div class="status error">❌ Fehler: ' + escapeHtml(e.message) + "</div>";
+            resultsDiv.innerHTML = qT.error(escapeHtml(e.message));
             executeBtn.disabled = false;
             return;
         }
@@ -409,8 +430,7 @@
             window.currentResults = bindings;
             
             if (bindings.length === 0) {
-                resultsDiv.innerHTML =
-                '<div class="status success">✓ Query erfolgreich, aber keine Ergebnisse gefunden.</div>';
+                resultsDiv.innerHTML = qT.successNoResults;
                 return;
             }
             
@@ -435,18 +455,12 @@
             }
             
             if (! variables || ! variables.length) {
-                resultsDiv.innerHTML =
-                '<div class="status error">❌ Konnte Ergebnis-Variablen nicht bestimmen (unerwartetes Ergebnisformat).</div>';
+                resultsDiv.innerHTML = qT.cannotDetermineVariables;
                 return;
             }
             
             var html = "";
-            html +=
-            '<div class="status success">✓ ' +
-            bindings.length +
-            " Ergebnis" +
-            (bindings.length !== 1 ? "se": "") +
-            " gefunden</div>";
+            html += qT.resultsFound(bindings.length);
             
             html += '<div class="results-table-container">';
             html += '<table class="sparql-table">';
@@ -495,7 +509,7 @@
             exportControls.classList.remove("hidden");
         }). catch (function (err) {
             var msg = err && err.message ? err.message: String(err);
-            resultsDiv.innerHTML = '<div class="status error">❌ Fehler: ' + escapeHtml(msg) + "</div>";
+            resultsDiv.innerHTML = qT.error(escapeHtml(msg));
             console.error(err);
         }). finally (function () {
             executeBtn.disabled = false;

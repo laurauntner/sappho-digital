@@ -18,7 +18,9 @@ R30i_isTextPassageOf     = INTRO["R30i_isTextPassageOf"]
 P4_has_time_span         = ECRM["P4_has_time-span"]
 P2_has_type              = ECRM.P2_has_type
 
-FEATURE_TYPES = [
+LANG = sys.argv[3] if len(sys.argv) > 3 else "de"
+
+FEATURE_TYPES_DE = [
     ("person_ref", "/person_ref/",  "Personenreferenzen"),
     ("character",  "/character/",   "Figuren"),
     ("place_ref",  "/place_ref/",   "Ortsreferenzen"),
@@ -28,10 +30,23 @@ FEATURE_TYPES = [
     ("plot",       "/plot/",        "Stoffe"),
 ]
 
-ALL_PHENOM_TYPES = FEATURE_TYPES + [
-    ("work_ref",     "/work_ref/",     "Werkreferenzen"),
-    ("text_passage", "/text_passage/", "Zitate"),
+FEATURE_TYPES_EN = [
+    ("person_ref", "/person_ref/",  "References to Persons"),
+    ("character",  "/character/",   "Characters"),
+    ("place_ref",  "/place_ref/",   "References to Places"),
+    ("topos",      "/topos/",       "Rhetorical Topoi"),
+    ("motif",      "/motif/",       "Motifs"),
+    ("topic",      "/topic/",       "Topics"),
+    ("plot",       "/plot/",        "Plot Variants"),
 ]
+
+FEATURE_TYPES = FEATURE_TYPES_EN if LANG == "en" else FEATURE_TYPES_DE
+
+ALL_PHENOM_TYPES = FEATURE_TYPES + (
+    [("work_ref", "/work_ref/", "References to Works"), ("text_passage", "/text_passage/", "Quotations")]
+    if LANG == "en" else
+    [("work_ref", "/work_ref/", "Werkreferenzen"), ("text_passage", "/text_passage/", "Zitate")]
+)
 
 def feature_type(uri: str) -> Optional[str]:
     for key, pattern, _ in ALL_PHENOM_TYPES:
@@ -126,22 +141,16 @@ def main(ttl_path: str, xml_out: str) -> None:
         s = re.sub(r'(?i)^Expressionserstellung\s+von\s+', '', s)
         s = re.sub(r'(?i)^Expression\s+of\s+',   '', s)
         s = re.sub(r'(?i)^Expression\s+von\s+',  '', s)
-        s = re.sub(r'\s*\(topos\)\s*$',    '', s, flags=re.IGNORECASE)
-        s = re.sub(r'\s*\(Topos\)\s*$',    '', s)
-        s = re.sub(r'\s*\(place\)\s*$',    '', s, flags=re.IGNORECASE)
-        s = re.sub(r'\s*\(Ort\)\s*$',      '', s)
-        s = re.sub(r'\s*\(person\)\s*$',   '', s, flags=re.IGNORECASE)
-        s = re.sub(r'\s*\(Person\)\s*$',   '', s)
-        s = re.sub(r'\s*\(work\)\s*$',     '', s, flags=re.IGNORECASE)
-        s = re.sub(r'\s*\(Werk\)\s*$',     '', s)
-        s = re.sub(r'\s*\(character\)\s*$', '', s, flags=re.IGNORECASE)
-        s = re.sub(r'\s*\(Figur\)\s*$',    '', s)
-        s = re.sub(r'\s*\(motif\)\s*$',    '', s, flags=re.IGNORECASE)
-        s = re.sub(r'\s*\(Motiv\)\s*$',    '', s)
-        s = re.sub(r'\s*\(topic\)\s*$',    '', s, flags=re.IGNORECASE)
-        s = re.sub(r'\s*\(Thema\)\s*$',    '', s)
-        s = re.sub(r'\s*\(plot\)\s*$',     '', s, flags=re.IGNORECASE)
-        s = re.sub(r'\s*\(Stoff\)\s*$',    '', s)
+        type_paren = re.compile(
+            r'\s*\((topos|Topos|place|Ort|person|Person|work|Werk|character|Figur|'
+            r'motif|Motiv|topic|Thema|plot|Stoff)\)\s*$',
+            flags=re.IGNORECASE,
+        )
+        while True:
+            s2 = type_paren.sub('', s)
+            if s2 == s:
+                break
+            s = s2
         return s.strip()
 
     def get_label(uri: URIRef) -> str:
@@ -151,7 +160,8 @@ def main(ttl_path: str, xml_out: str) -> None:
             if lang == "en":   en        = str(label)
             elif lang == "de": de        = str(label)
             else:              any_label = str(label)
-        raw = de or en or any_label or str(uri).split("/")[-1]
+        raw = (en or de or any_label) if LANG == "en" else (de or en or any_label)
+        raw = raw or str(uri).split("/")[-1]
         return clean_label(raw)
 
     # ── Alle Phänomene im Vergleich ────────────────────────────────
@@ -929,7 +939,7 @@ def main(ttl_path: str, xml_out: str) -> None:
             if lang == "de":   de      = str(lbl)
             elif lang == "en": en      = str(lbl)
             else:              any_lbl = str(lbl)
-        raw = de or en or any_lbl
+        raw = (en or de or any_lbl) if LANG == "en" else (de or en or any_lbl)
         if raw is None:
             return str(f2_uri).rstrip("/").rsplit("/", 1)[-1]
         return clean_label(raw)
@@ -1348,7 +1358,7 @@ def main(ttl_path: str, xml_out: str) -> None:
 
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print(f"Verwendung: {sys.argv[0]} <input.ttl> <output.xml>", file=sys.stderr)
+    if len(sys.argv) not in (3, 4):
+        print(f"Verwendung: {sys.argv[0]} <input.ttl> <output.xml> [lang]", file=sys.stderr)
         sys.exit(1)
     main(sys.argv[1], sys.argv[2])

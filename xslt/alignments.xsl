@@ -3,7 +3,8 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:f="urn:func" version="2.0" exclude-result-prefixes="xsl xs rdf skos owl f">
+    xmlns:f="urn:func" xmlns:i18n="urn:sappho-digital:i18n" version="2.0"
+    exclude-result-prefixes="xsl xs rdf skos owl f i18n">
 
     <xsl:output method="xhtml" encoding="UTF-8" indent="yes" omit-xml-declaration="yes"/>
     <xsl:strip-space elements="*"/>
@@ -258,10 +259,10 @@
 
     <!-- html -->
     <xsl:template match="/">
-        <xsl:variable name="doc_title" select="'Ontologie-Alignments'"/>
+        <xsl:variable name="doc_title" select="i18n:t('Ontologie-Alignments')"/>
 
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
-        <html xmlns="http://www.w3.org/1999/xhtml">
+        <html xmlns="http://www.w3.org/1999/xhtml" lang="{$lang}">
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"/>
@@ -278,7 +279,9 @@
 
             <body class="page">
                 <div class="hfeed site" id="page">
-                    <xsl:call-template name="nav_bar"/>
+                    <xsl:call-template name="nav_bar">
+                        <xsl:with-param name="current_page" select="i18n:href('alignments.html')"/>
+                    </xsl:call-template>
 
                     <div class="container-fluid graph-wrap-alignments">
                         <div class="card">
@@ -289,53 +292,70 @@
                             </div>
 
                             <div class="card-body align-left">
-                                <p>Verwendete Klassen und Prädikate – vor allem jene, die für die
-                                    Intertextualitätsanalyse genutzt wurden – wurden mit anderen
-                                    bibliographischen und literaturwissenschaftlichen Ontologien
-                                    abgeglichen, darunter: die Bibliographic Ontology (<a
-                                        href="http://purl.org/ontology/bibo/">BIBO</a>), die
-                                    FRBR-aligned Bibliographic Ontology (<a
-                                        href="http://purl.org/spar/fabio/">FaBiO</a>), die Citation
-                                    Typing Ontology (<a href="http://purl.org/spar/cito/">CiTO</a>),
-                                    die Drama Corpora (<a href="http://dracor.org/ontology#"
-                                        >DraCor</a>) Ontology, die <a
-                                        href="https://ontology.golemlab.eu/">GOLEM</a> Ontology for
-                                    Narrative and Fiction, die <a
+                                <p><xsl:value-of
+                                        select="i18n:t('Verwendete Klassen und Prädikate – vor allem jene, die für die Intertextualitätsanalyse genutzt wurden – wurden mit anderen bibliographischen und literaturwissenschaftlichen Ontologien abgeglichen, darunter: die Bibliographic Ontology (')"
+                                    /><a
+                                        href="http://purl.org/ontology/bibo/">BIBO</a><xsl:value-of
+                                        select="i18n:t('), die FRBR-aligned Bibliographic Ontology (')"
+                                    /><a
+                                        href="http://purl.org/spar/fabio/">FaBiO</a><xsl:value-of
+                                        select="i18n:t('), die Citation Typing Ontology (')"
+                                    /><a href="http://purl.org/spar/cito/">CiTO</a><xsl:value-of
+                                        select="i18n:t('), die Drama Corpora (')"
+                                    /><a href="http://dracor.org/ontology#"
+                                        >DraCor</a><xsl:value-of select="i18n:t(') Ontology, die ')"/><a
+                                        href="https://ontology.golemlab.eu/">GOLEM</a><xsl:value-of
+                                        select="i18n:t(' Ontology for Narrative and Fiction, die ')"/><a
                                         href="https://data.mimotext.uni-trier.de/wiki/Main_Page"
-                                        >MiMoText</a> Ontology, die OntoPoetry/POSTDATA Ontology (<a
+                                        >MiMoText</a><xsl:value-of
+                                        select="i18n:t(' Ontology, die OntoPoetry/POSTDATA Ontology (')"
+                                    /><a
                                         href="https://raw.githubusercontent.com/linhd-postdata/core-ontology/refs/heads/master/postdata-core.owl"
-                                        >core</a>- und <a
+                                        >core</a><xsl:value-of select="i18n:t(' und ')"/><a
                                         href="https://raw.githubusercontent.com/linhd-postdata/literaryAnalysis-ontology/refs/heads/master/postdata-literaryAnalysisElements.owl"
-                                        >analysis</a>-Module), die <a
+                                        >analysis</a><xsl:value-of select="i18n:t('-Module), die ')"/><a
                                         href="https://github.com/intertextor/intertextuality-ontology"
-                                        >Intertextuality Ontology</a> und die Ontologies of
-                                    Under-Represented <a href="https://purl.archive.org/urwriters"
-                                        >Writers</a> und <a href="https://purl.archive.org/urbooks"
-                                        >Books</a>.</p>
-                                <p>Weitere Alignments mit breiter gefassten Ontologien wurden ebenso
-                                    durchgeführt: mit den DCMI Metadata Terms (<a
-                                        href="http://purl.org/dc/terms/">DC</a>), der Document
-                                    Components Ontology (<a href="http://purl.org/spar/doco/"
-                                        >DoCo</a>), der Friend of a Friend (<a
-                                        href="http://xmlns.com/foaf/0.1/">FOAF</a>) Ontology und <a
-                                        href="https://schema.org/">Schema.org</a>. Außerdem wurden
+                                        >Intertextuality Ontology</a><xsl:value-of
+                                        select="i18n:t(' und die Ontologies of Under-Represented ')"/><a
+                                        href="https://purl.archive.org/urwriters"
+                                        >Writers</a><xsl:value-of select="i18n:t(' und ')"/><a
+                                        href="https://purl.archive.org/urbooks"
+                                        >Books</a><xsl:value-of select="i18n:t('.')"/></p>
+                                <p><xsl:value-of
+                                        select="i18n:t('Weitere Alignments mit breiter gefassten Ontologien wurden ebenso durchgeführt: mit den DCMI Metadata Terms (')"
+                                    /><a
+                                        href="http://purl.org/dc/terms/">DC</a><xsl:value-of
+                                        select="i18n:t('), der Document Components Ontology (')"
+                                    /><a href="http://purl.org/spar/doco/"
+                                        >DoCo</a><xsl:value-of select="i18n:t('), der Friend of a Friend (')"
+                                    /><a
+                                        href="http://xmlns.com/foaf/0.1/">FOAF</a><xsl:value-of
+                                        select="i18n:t(') Ontology und ')"/><a
+                                        href="https://schema.org/">Schema.org</a><xsl:value-of
+                                        select="i18n:t('. Außerdem wurden ')"/>
                                         <a href="https://erlangen-crm.org/docs/ecrm/current/"
-                                        >eCRM</a>, <a href="https://cidoc-crm.org/">CIDOC CRM</a>,
-                                        <a href="https://erlangen-crm.org/efrbroo">eFBRoo</a>, <a
+                                        >eCRM</a><xsl:value-of select="i18n:t(', ')"/><a href="https://cidoc-crm.org/">CIDOC CRM</a><xsl:value-of
+                                        select="i18n:t(', ')"/>
+                                        <a href="https://erlangen-crm.org/efrbroo">eFBRoo</a><xsl:value-of
+                                        select="i18n:t(', ')"/><a
                                         href="https://www.iflastandards.info/fr/frbr/frbroo"
-                                        >FRBRoo</a> und <a
+                                        >FRBRoo</a><xsl:value-of select="i18n:t(' und ')"/><a
                                         href="https://repository.ifla.org/handle/20.500.14598/3677"
-                                        >LRMoo</a> aligniert.</p>
-                                <p>Die Netzwerkdarstellung der implementierten Alignments beruht auf
-                                    RDF-Daten, die <a
+                                        >LRMoo</a><xsl:value-of select="i18n:t(' aligniert.')"/></p>
+                                <p><xsl:value-of
+                                        select="i18n:t('Die Netzwerkdarstellung der implementierten Alignments beruht auf RDF-Daten, die ')"
+                                    /><a
                                         href="https://github.com/laurauntner/sappho-digital/tree/main/documentation/alignments"
-                                        >hier</a> zu finden sind. Eine tabellarische Darstellung ist
+                                        ><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                        select="i18n:t(' zu finden sind. Eine tabellarische Darstellung ist ')"
+                                    />
                                         <a
                                         href="https://github.com/laurauntner/wikidata-to-cidoc-crm/blob/main/docs/alignment_full.pdf"
-                                        >hier</a> zu finden.</p>
-                                <p>Das Netzwerk lässt sich mit der Maus (Klicken, Überfahren,
-                                    Zoomen) sowie mit den Steuerelementen rechts und links unten
-                                    navigieren.</p>
+                                        ><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                        select="i18n:t(' zu finden.')"/></p>
+                                <p><xsl:value-of
+                                        select="i18n:t('Das Netzwerk lässt sich mit der Maus (Klicken, Überfahren, Zoomen) sowie mit den Steuerelementen rechts und links unten navigieren.')"
+                                    /></p>
                                 <div id="graph" class="graph-canvas-alignments"/>
 
                                 <script id="graph-nodes" type="application/json">

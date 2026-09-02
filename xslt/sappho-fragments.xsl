@@ -6,7 +6,8 @@
     xmlns:ecrm="http://erlangen-crm.org/current/"
     xmlns:lrmoo="http://iflastandards.info/ns/lrm/lrmoo/"
     xmlns:intro="https://w3id.org/lso/intro/currentbeta#" xmlns:local="xyz"
-    exclude-result-prefixes="xs rdf rdfs owl ecrm lrmoo intro local">
+    xmlns:i18n="urn:sappho-digital:i18n"
+    exclude-result-prefixes="xs rdf rdfs owl ecrm lrmoo intro local i18n">
 
     <!-- partials -->
     <xsl:import href="./partials/html_navbar.xsl"/>
@@ -27,15 +28,22 @@
         <xsl:variable name="entity" select="key('by-about', $uri, $receptionEntities)"/>
         <xsl:variable name="raw" select="
                 normalize-space((
-                $entity/rdfs:label[@xml:lang = 'de'],
-                $entity/rdfs:label[@xml:lang = 'en'],
+                $entity/rdfs:label[@xml:lang = $lang],
+                $entity/rdfs:label[@xml:lang = (if ($lang = 'en') then 'de' else 'en')],
                 $entity/rdfs:label,
                 $entity/@rdf:about)[1])"/>
+        <xsl:variable name="canon-phrase"
+            select="if ($lang = 'en') then 'Intertextual relation between ' else 'Intertextuelle Beziehung zwischen '"/>
         <xsl:variable name="t1"
-            select="replace($raw, '^\s*intertextuelle\s+relation\s+zwischen\s+', 'Intertextuelle Beziehung zwischen ', 'i')"/>
+            select="replace($raw, '^\s*intertextuelle\s+relation\s+zwischen\s+', $canon-phrase, 'i')"/>
         <xsl:variable name="t2"
-            select="replace($t1, '^\s*intertextual\s+relation(ship)?\s+between\s+', 'Intertextuelle Beziehung zwischen ', 'i')"/>
-        <xsl:variable name="t3" select="replace($t2, '\s+and\s+', ' und ')"/>
+            select="replace($t1, '^\s*intertextual\s+relation(ship)?\s+between\s+', $canon-phrase, 'i')"/>
+        <xsl:variable name="t3"
+            select="
+                if ($lang = 'en') then
+                    replace($t2, '\s+und\s+', ' and ')
+                else
+                    replace($t2, '\s+and\s+', ' und ')"/>
         <xsl:variable name="t4"
             select="replace($t3, '^(Expression\s+of|Expression\s+von)\s+', '', 'i')"/>
         <xsl:variable name="t5" select="replace($t4, '»\s*(Fragment[^«»]*Voigt)\s*«', '$1', 'i')"/>
@@ -126,13 +134,13 @@
             select="concat('https://sappho-digital.com/title_string/expression/', $id)"/>
         <xsl:variable name="label" select="
                 string((
-                key('by-about', $ts-uri, $works)/rdfs:label[@xml:lang = 'de'],
+                key('by-about', $ts-uri, $works)/rdfs:label[@xml:lang = $lang],
                 key('by-about', $ts-uri, $works)/rdfs:label,
-                key('by-about', $expr-uri, $works)//rdfs:label[@xml:lang = 'de'],
+                key('by-about', $expr-uri, $works)//rdfs:label[@xml:lang = $lang],
                 key('by-about', $expr-uri, $works)//rdfs:label,
-                key('by-about', $ts-uri, $receptionEntities)/rdfs:label[@xml:lang = 'de'],
+                key('by-about', $ts-uri, $receptionEntities)/rdfs:label[@xml:lang = $lang],
                 key('by-about', $ts-uri, $receptionEntities)/rdfs:label,
-                key('by-about', $expr-uri, $receptionEntities)//rdfs:label[@xml:lang = 'de'],
+                key('by-about', $expr-uri, $receptionEntities)//rdfs:label[@xml:lang = $lang],
                 key('by-about', $expr-uri, $receptionEntities)//rdfs:label,
                 $expr-uri
                 )[1])
@@ -223,10 +231,11 @@
 
         <xsl:if
             test="exists(($motifs, $topics, $plots, $topoi, $persons, $places, $workrefs, $workpassages, $phrases, $intertexts))">
-            <h5 class="align-left feat-section-heading"> Ergebnisse der exemplarischen Analyse <span
+            <h5 class="align-left feat-section-heading"> <xsl:value-of
+                    select="i18n:t('Ergebnisse der exemplarischen Analyse')"/> <span
                     class="info-tooltip">
-                    <a href="https://sappho-digital.com/analyse.html" target="_blank"
-                        class="info-icon" aria-label="Zur Erläuterung der Analyse">ⓘ</a>
+                    <a href="https://sappho-digital.com/{i18n:href('analyse.html')}" target="_blank"
+                        class="info-icon" aria-label="{i18n:t('Zur Erläuterung der Analyse')}">ⓘ</a>
                 </span>
             </h5>
             <div class="feat-groups">
@@ -234,11 +243,11 @@
                 <!-- motifs -->
                 <xsl:if test="exists($motifs)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Motive</span>
+                        <span class="feat-group-label"><xsl:value-of select="i18n:t('Motive')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$motifs">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="motive.html" class="feat-tag feat-tag--motif">
+                                <a href="{i18n:href('motive.html')}" class="feat-tag feat-tag--motif">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -249,11 +258,11 @@
                 <!-- topics -->
                 <xsl:if test="exists($topics)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Themen</span>
+                        <span class="feat-group-label"><xsl:value-of select="i18n:t('Themen')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$topics">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="themen.html" class="feat-tag feat-tag--topic">
+                                <a href="{i18n:href('themen.html')}" class="feat-tag feat-tag--topic">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -264,11 +273,11 @@
                 <!-- plots -->
                 <xsl:if test="exists($plots)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Stoffe</span>
+                        <span class="feat-group-label"><xsl:value-of select="i18n:t('Stoffe')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$plots">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="stoffe.html" class="feat-tag feat-tag--plot">
+                                <a href="{i18n:href('stoffe.html')}" class="feat-tag feat-tag--plot">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -279,11 +288,11 @@
                 <!-- topoi -->
                 <xsl:if test="exists($topoi)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Rhetorische Topoi</span>
+                        <span class="feat-group-label"><xsl:value-of select="i18n:t('Rhetorische Topoi')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$topoi">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="topoi.html" class="feat-tag feat-tag--topos">
+                                <a href="{i18n:href('topoi.html')}" class="feat-tag feat-tag--topos">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -294,12 +303,13 @@
                 <!-- person references -->
                 <xsl:if test="exists($persons)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Personen&#x00AD;referenzen<br/>&amp;
-                            Figuren</span>
+                        <span class="feat-group-label"><xsl:value-of
+                                select="i18n:t('Personenreferenzen')"/><br/>&amp;
+                            <xsl:value-of select="i18n:t('Figuren')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$persons">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="personen.html" class="feat-tag feat-tag--person">
+                                <a href="{i18n:href('personen.html')}" class="feat-tag feat-tag--person">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -310,11 +320,11 @@
                 <!-- place references -->
                 <xsl:if test="exists($places)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Orts&#x200B;referenzen</span>
+                        <span class="feat-group-label"><xsl:value-of select="i18n:t('Ortsreferenzen')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$places">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="orte.html" class="feat-tag feat-tag--place">
+                                <a href="{i18n:href('orte.html')}" class="feat-tag feat-tag--place">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -325,12 +335,13 @@
                 <!-- work references -->
                 <xsl:if test="exists($workrefs)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Werk&#x00AD;referenzen<br/>&amp;
-                            Zitate</span>
+                        <span class="feat-group-label"><xsl:value-of
+                                select="i18n:t('Werkreferenzen')"/><br/>&amp;
+                            <xsl:value-of select="i18n:t('Zitate')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$workrefs">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="werke.html" class="feat-tag feat-tag--work-ref">
+                                <a href="{i18n:href('werke.html')}" class="feat-tag feat-tag--work-ref">
                                     <xsl:value-of select="normalize-space(@label)"/>
                                 </a>
                             </xsl:for-each>
@@ -341,11 +352,11 @@
                 <!-- work passages -->
                 <xsl:if test="exists($workpassages)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Text&#x200B;passagen</span>
+                        <span class="feat-group-label"><xsl:value-of select="i18n:t('Textpassagen')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$workpassages">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="werke.html" class="feat-tag feat-tag--passage">
+                                <a href="{i18n:href('werke.html')}" class="feat-tag feat-tag--passage">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -356,11 +367,11 @@
                 <!-- phrases -->
                 <xsl:if test="exists($phrases)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Phrasen</span>
+                        <span class="feat-group-label"><xsl:value-of select="i18n:t('Phrasen')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$phrases">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="werke.html" class="feat-tag feat-tag--phrase">
+                                <a href="{i18n:href('werke.html')}" class="feat-tag feat-tag--phrase">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -371,11 +382,13 @@
                 <!-- intertexts -->
                 <xsl:if test="exists($intertexts)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Intertextuelle<br/>Beziehungen mit …</span>
+                        <span class="feat-group-label"><xsl:value-of
+                                select="i18n:t('Intertextuelle')"/><br/><xsl:value-of
+                                select="i18n:t('Beziehungen mit …')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$intertexts">
                                 <xsl:sort select="lower-case(local:get-work-label(.))"/>
-                                <a href="{local:iri-id(.)}.html"
+                                <a href="{i18n:href(concat(local:iri-id(.), '.html'))}"
                                     class="feat-tag feat-tag--intertext">
                                     <xsl:value-of select="local:get-work-label(.)"/>
                                 </a>
@@ -400,8 +413,8 @@
             <xsl:variable name="wd"
                 select="string(($expr/owl:sameAs[@rdf:resource[contains(., 'wikidata.org')]]/@rdf:resource)[1])"/>
 
-            <xsl:result-document href="../html/{$id}.html">
-                <html>
+            <xsl:result-document href="../html/{i18n:href(concat($id, '.html'))}">
+                <html lang="{$lang}">
                     <head>
                         <xsl:call-template name="html_head">
                             <xsl:with-param name="html_title" select="$label"/>
@@ -415,7 +428,9 @@
                         </xsl:if>
 
                         <div class="hfeed site" id="page">
-                            <xsl:call-template name="nav_bar"/>
+                            <xsl:call-template name="nav_bar">
+                                <xsl:with-param name="current_page" select="i18n:href(concat($id, '.html'))"/>
+                            </xsl:call-template>
                             <div class="container-fluid">
                                 <div class="card">
                                     <div class="card-header">
@@ -428,7 +443,7 @@
                                         <div class="wikidata-left">
                                             <dl class="meta-dl">
                                                 <div class="meta-row">
-                                                  <dt>Interne ID</dt>
+                                                  <dt><xsl:value-of select="i18n:t('Interne ID')"/></dt>
                                                   <dd>
                                                   <xsl:value-of select="$id"/>
                                                   </dd>
@@ -444,11 +459,11 @@
                                                   </div>
                                                 </xsl:if>
                                                 <div class="meta-row">
-                                                  <dt>Typ</dt>
-                                                  <dd>Werk</dd>
+                                                  <dt><xsl:value-of select="i18n:t('Typ')"/></dt>
+                                                  <dd><xsl:value-of select="i18n:t('Werk')"/></dd>
                                                 </div>
                                                 <div class="meta-row">
-                                                  <dt>Autorin</dt>
+                                                  <dt><xsl:value-of select="i18n:t('Autorin')"/></dt>
                                                   <dd>Sappho</dd>
                                                 </div>
                                             </dl>

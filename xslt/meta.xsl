@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tei="http://www.tei-c.org/ns/1.0"
-    xmlns:xs="http://www.w3.org/2001/XMLSchema" version="2.0" exclude-result-prefixes="xsl tei xs">
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:i18n="urn:sappho-digital:i18n" version="2.0"
+    exclude-result-prefixes="xsl tei xs i18n">
     <xsl:output encoding="UTF-8" media-type="text/html" method="xhtml" version="1.0" indent="yes"
         omit-xml-declaration="yes"/>
 
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
     <xsl:import href="./partials/html_footer.xsl"/>
+
+    <!-- Ant passes the output filename of this particular meta.xsl invocation (e.g. "orientierung.html"),
+         since a single meta.xsl instance is reused for several distinct output pages. -->
+    <xsl:param name="current_page" select="'index.html'"/>
+
     <xsl:template match="/">
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:title[@type = 'main'][1]/text()"/>
         </xsl:variable>
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
-        <html>
+        <html lang="{$lang}">
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"/>
@@ -22,7 +28,9 @@
 
             <body class="page">
                 <div class="hfeed site" id="page">
-                    <xsl:call-template name="nav_bar"/>
+                    <xsl:call-template name="nav_bar">
+                        <xsl:with-param name="current_page" select="$current_page"/>
+                    </xsl:call-template>
 
                     <div class="container-fluid">
                         <div class="card">
@@ -71,7 +79,7 @@
     <xsl:template match="tei:ref">
         <a>
             <xsl:attribute name="href">
-                <xsl:value-of select="@target"/>
+                <xsl:value-of select="i18n:href(@target)"/>
             </xsl:attribute>
             <xsl:value-of select="."/>
         </a>

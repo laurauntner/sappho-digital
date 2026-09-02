@@ -3,12 +3,21 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
     }
 
+    var searchLang = document.documentElement.lang === 'en' ? 'en' : 'de';
+
     new PagefindUI({
         element: '#search',
         showSubResults: true,
         showImages: false,
         resetStyles: false,
-        translations: {
+        translations: searchLang === 'en' ? {
+            placeholder: 'Enter search term …',
+            zero_results: 'No results for [SEARCH_TERM]',
+            many_results: '[COUNT] results for [SEARCH_TERM]',
+            one_result: '[COUNT] result for [SEARCH_TERM]',
+            alt_search: '[COUNT] results for [DIFFERENCE] instead of [SEARCH_TERM]',
+            searching: 'Searching for [SEARCH_TERM] …'
+        } : {
             placeholder: 'Suchbegriff eingeben …',
             zero_results: 'Keine Ergebnisse für [SEARCH_TERM]',
             many_results: '[COUNT] Ergebnisse für [SEARCH_TERM]',

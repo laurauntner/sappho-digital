@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">About the Project</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Laura Untner</publisher>
+                <pubPlace>Berlin/Wien</pubPlace>
+                <date when="2026">2026</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                        <p>CC BY 4.0</p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <p>Over the centuries, the poems of the ancient Greek poet <ref
+                        target="https://de.wikipedia.org/wiki/Sappho">Sappho</ref> have been widely
+                    praised, quoted and, like her person, creatively reimagined. Sappho is also
+                    indispensable to the history of German-language literature: more than 1,000
+                    literary texts from the 15th to the 21st century testify to the productive
+                    literary reception of Sappho. These texts quote Sappho’s work, incorporate the
+                    author as a character, draw on biographical theories and legends about her, and
+                    span an intertextual network with other reception testimonies. At present, a
+                    strong increase in the literary reception of Sappho can be observed in the
+                    German-speaking world.</p>
+            </div>
+            <div>
+                <p>This website gathers information on the literary reception of Sappho in the
+                    German-speaking world. Behind it lies a dissertation project preceded by years
+                    of engagement with the reception of Sappho, which resulted, among other things,
+                    in an <ref
+                        target="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/"
+                        >anthology on the literary reception of Sappho in the German-speaking
+                        world</ref>. Now the accumulated knowledge about the reception of Sappho is
+                    being combined with expertise in the field of Digital Humanities, making Sappho
+                    Digital an exemplary use case for a digital reception studies.</p>
+                <p>The <hi rend="bold">data</hi> compiled here consist of four parts:</p>
+                <list>
+                    <item>a human-readable, tabular <hi rend="bold">catalogue</hi> of all known
+                        productive-literary reception testimonies of Sappho from the German-speaking
+                        world,</item>
+                    <item>a formal <hi rend="bold">ontology</hi> for the machine-readable modelling
+                        of detailed knowledge about literary reception histories,</item>
+                    <item>a <hi rend="bold">semantic graph</hi> holding this detailed knowledge about
+                        99 sample reception testimonies and 165 Sappho fragments and their
+                        intertextual relationships, as well as</item>
+                    <item>a controlled <hi rend="bold">vocabulary</hi> for classifying recurring
+                        elements in the literary reception of Sappho.</item>
+                </list>
+                <p>This data is analysed and presented in various ways. An <hi rend="bold"
+                        >overview</hi> of all the components of the website can be found <ref
+                        target="orientierung.html">here</ref>. Notes on the exemplary analysis can be
+                    read <ref target="analyse.html">here</ref>. </p>
+                <p>Full texts of the reception testimonies are never provided. A selection of texts
+                    can be found in the volume <hi rend="italics"><ref
+                            target="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/"
+                            >Sappho. Texte zur literarischen Rezeption im deutschsprachigen
+                            Raum</ref></hi> (2023); links to digitized copies are provided in the
+                    catalogues. A select bibliography on the literary reception of Sappho can be
+                    found <ref target="bibliographie.html">here</ref>.</p>
+            </div>
+            <div>
+                <head>Project Status</head>
+                <p>The website is currently (as of April 2026) published in a provisional state.
+                    The project is expected to be completed in 2027. Until then, the website will be
+                    continuously expanded.</p>
+            </div>
+            <div>
+                <head>Data</head>
+                <p>All data provided may be freely reused with attribution of the source (CC BY
+                    4.0). All data is freely accessible via <ref
+                        target="https://github.com/laurauntner/sappho-digital/">GitHub</ref>.</p>
+            </div>
+            <div>
+                <head>Suggested Citation</head>
+                <p>Laura Untner: Sappho Digital. Die literarische Sappho-Rezeption im
+                    deutschsprachigen Raum. Berlin/Wien 2024–[2027], <ref
+                        target="https://sappho-digital.com">https://sappho-digital.com</ref>.</p>
+                <p>To ensure better reproducibility, it is advisable to state the date of the data’s
+                    last update, given in the bottom line of the website.</p>
+            </div>
+            <div>
+                <head>About Me: Laura Untner</head>
+                <p>I am a doctoral candidate at the <ref
+                        target="https://www.geisteswissenschaften.fu-berlin.de/friedrichschlegel/index.html"
+                        >Friedrich Schlegel Graduate School for Literary Studies</ref> and a research
+                    associate at <ref target="https://www.fu-berlin.de/">Freie Universität
+                        Berlin</ref>, associated with the Cluster of Excellence »<ref
+                        target="https://www.temporal-communities.de/">Temporal Communities. Doing
+                        Literature in a Global Perspective</ref>«. My dissertation project is
+                    supervised by <ref
+                        target="https://www.geisteswissenschaften.fu-berlin.de/we02/institut/mitarbeiter/Professoren/fischerf/index.html"
+                        >Frank Fischer</ref> (FU Berlin), <ref
+                        target="https://www.geisteswissenschaften.fu-berlin.de/we05/institut/mitarbeiter/traninger/index.html"
+                        >Anita Traninger</ref> (FU Berlin) and <ref
+                        target="https://complit.univie.ac.at/ueber-uns/mitarbeiterinnen/personal-detailansicht/user/paulaw79/inum/1065/backpid/110804/"
+                        >Paula Wojcik</ref> (University of Vienna). Together with Henny
+                    Sluyter-Gäthje (University of Potsdam), I coordinate the Early Career working
+                    group in the DHd association as well as the <ref
+                        target="https://junge-dh-berlin-brandenburg.github.io/homepage/">Network of
+                        Young Digital Humanities Berlin-Brandenburg</ref>; from April to June 2026 I
+                    was a visiting researcher at the <ref target="https://litlab.stanford.edu/"
+                        >Stanford Literary Lab</ref>; since June 2026 I have been a co-opted member
+                    of the board of the <ref target="https://digitalhumanities.de/">DHd
+                        association</ref>.</p>
+                <p>Alongside my academic work, I am active in the independent literary scene: as a
+                    board member of <ref target="https://www.lesereihen.org/">Unabhängige
+                        Lesereihen e. V.</ref> and as a member of the curatorial team of the Berlin
+                    reading series »<ref target="https://schreibengegendienormen.de/">Schreiben
+                        gegen die Norm(en)?</ref>«.</p>
+                <p>Previously, I studied German Philology and Comparative Literature at the <ref
+                        target="https://www.univie.ac.at/">University of Vienna</ref> and worked
+                    from December 2020 to September 2024 at the <ref
+                        target="https://www.oeaw.ac.at/de/acdh/acdh-home">Austrian Centre for Digital
+                        Humanities</ref> at the Austrian Academy of Sciences, where I focused mainly
+                    on Karl Kraus (<hi rend="italics"><ref
+                            target="https://www.kraus.wienbibliothek.at/">Rechtsakten der Kanzlei
+                            Oskar Samek</ref></hi>, <hi rend="italics"><ref
+                            target="https://kraus1933.ace.oeaw.ac.at/index.html">Dritte
+                            Walpurgisnacht</ref></hi>) and Arthur Schnitzler (<hi rend="italics"
+                            ><ref target="https://schnitzler-briefe.acdh.oeaw.ac.at/">Briefwechsel
+                            mit Autorinnen und Autoren</ref></hi> and various <ref
+                        target="https://schnitzler.acdh.oeaw.ac.at/">side projects</ref>). For many
+                    years I co-directed, on a voluntary basis together with Julius Handl, the
+                    Viennese literary reading series »<ref target="https://glaesernetexte.com/"
+                        >Gläserne Texte</ref>«.</p>
+                <p>A list of my publications can be found on <ref
+                        target="https://orcid.org/0000-0002-9649-0870">ORCID</ref>. Many full texts
+                    are also listed on <ref
+                        target="https://www.researchgate.net/profile/Laura-Untner/publications"
+                        >ResearchGate</ref>. Project-related publications and talks are additionally
+                    listed <ref target="publikationen.html">here</ref>, press coverage,
+                    interviews and reviews <ref
+                        target="https://www.geisteswissenschaften.fu-berlin.de/friedrichschlegel/personen/Doktorand-innen/Untner/index.html"
+                        >here</ref>. If you have any questions, feel free to reach me at <ref
+                        target="mailto:laura.untner@fu-berlin.de">laura.untner@fu-berlin.de</ref>.
+                    You can also find me on <ref
+                        target="https://bsky.app/profile/luntner.bsky.social">Bluesky</ref>.</p>
+            </div>
+            <div>
+                <head>Contact</head>
+                <p>Do you know of a literary text from the German-speaking world that has to do with
+                    Sappho but is not listed here? I am very grateful for tips of any kind: <ref
+                        target="mailto:laura.untner@fu-berlin.de">laura.untner@fu-berlin.de</ref>.</p>
+                <p>Have you found a suggestion for improvement or even an error? I would be glad to
+                    hear about that too. The best way is to open an issue on <ref
+                        target="https://github.com/laurauntner/sappho-digital/issues">GitHub</ref>
+                    right away.</p>
+            </div>
+            <div>
+                <head>Acknowledgements</head>
+                <p>For support with research, I am especially grateful to Julius Handl.</p>
+                <p>For feedback, exchange and support, I would also like to thank Peter Andorfer,
+                    Julia Jennifer Beine, Ingo Börner, Frank Fischer, Achim Hölter, Klaus Illmayer,
+                    Dimitra Grigoriou, Martin Anton Müller, Bernhard Oberreither, Gregor Pirgie,
+                    Lisa Poggel, Henny Sluyter-Gäthje, Amrei Stanzel, Anita Traninger and Paula
+                    Wojcik.</p>
+            </div>
+            <div type="funding">
+                <head>Funder</head>
+                <p>Funded by the City of Vienna Culture (MA 7 Wissenschaft)</p>
+                <figure>
+                    <graphic type="funding" url="images/Stadt_Wien_Kultur_pos_rgb.png"/>
+                </figure>
+            </div>
+        </body>
+    </text>
+</TEI>

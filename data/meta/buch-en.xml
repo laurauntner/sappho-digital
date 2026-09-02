@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">Primary Texts</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Laura Untner</publisher>
+                <pubPlace>Berlin/Wien</pubPlace>
+                <date>2024–[2027]</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                        <p>CC BY 4.0</p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <p>This website does not offer full texts; digitized copies are only linked in the
+                    catalogues.</p>
+                <p>Sappho’s poems are available in numerous editions in bookshops. Some
+                    public-domain German-language translations are listed on <ref
+                        target="https://de.wikisource.org/wiki/Sappho">Wikisource</ref>.</p>
+                <p>Selected literary reception testimonies can be found in the volume <hi
+                        rend="italics"><ref
+                            target="https://verlag.koenigshausen-neumann.de/product/9783826077418-sappho/"
+                            >Sappho. Texte zur literarischen Rezeption im deutschsprachigen
+                            Raum</ref></hi>, published in 2023.</p>
+            </div>
+            <div type="image">
+                <figure>
+                    <graphic type="cover" url="images/cover.jpg"/>
+                </figure>
+            </div>
+        </body>
+    </text>
+</TEI>

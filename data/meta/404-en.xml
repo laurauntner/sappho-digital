@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title type="main">404 Not Found</title>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>Laura Untner</publisher>
+                <pubPlace>Berlin/Wien</pubPlace>
+                <date>2024–[2027]</date>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by/4.0/deed.en">
+                        <p>CC BY 4.0</p>
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Born digital</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <body>
+            <div>
+                <p>Perhaps there once was a Sappho poem here. Perhaps not.</p>
+            </div>
+            <div type="image">
+                <figure>
+                    <graphic type="cover" url="images/404.jpeg"/>
+                </figure>
+            </div>
+        </body>
+    </text>
+</TEI>

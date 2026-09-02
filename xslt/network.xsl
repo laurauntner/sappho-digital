@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns="http://www.w3.org/1999/xhtml"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"
-    exclude-result-prefixes="xs" version="2.0">
+    xmlns:i18n="urn:sappho-digital:i18n" exclude-result-prefixes="xs i18n" version="2.0">
 
     <xsl:output method="xhtml" encoding="UTF-8" indent="yes" omit-xml-declaration="yes"/>
     <xsl:strip-space elements="*"/>
@@ -11,12 +11,12 @@
     <xsl:import href="./partials/html_footer.xsl"/>
 
     <xsl:template match="/">
-        <xsl:variable name="doc_title" select="'Netzwerkvisualisierung'"/>
+        <xsl:variable name="doc_title" select="i18n:t('Netzwerkvisualisierung')"/>
         <xsl:variable name="total_fmt"
             select="format-number(xs:integer(/network/meta/totalTriples), '#,##0')"/>
 
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
-        <html xmlns="http://www.w3.org/1999/xhtml">
+        <html xmlns="http://www.w3.org/1999/xhtml" lang="{$lang}">
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"/>
@@ -33,7 +33,9 @@
             <body class="page">
                 <div class="hfeed site" id="page">
 
-                    <xsl:call-template name="nav_bar"/>
+                    <xsl:call-template name="nav_bar">
+                        <xsl:with-param name="current_page" select="i18n:href('netzwerk.html')"/>
+                    </xsl:call-template>
 
                     <div class="container-fluid graph-wrap">
                         <div class="card">
@@ -45,27 +47,28 @@
 
                             <div class="card-body align-left" id="network-app">
 
-                                <div id="screen-too-small">Das Fenster ist zu klein, um die
-                                    Netzwerkvisualisierung darstellen zu können.</div>
+                                <div id="screen-too-small"><xsl:value-of
+                                        select="i18n:t('Das Fenster ist zu klein, um die Netzwerkvisualisierung darstellen zu können.')"
+                                    /></div>
 
                                 <div id="layout">
 
                                     <!-- Left sidebar -->
                                     <aside>
                                         <div id="sidebar-inner">
-                                            <div class="section-title">Klassen</div>
+                                            <div class="section-title"><xsl:value-of select="i18n:t('Klassen')"/></div>
                                             <input type="text" id="class-search"
-                                                placeholder="Klasse suchen …"/>
+                                                placeholder="{i18n:t('Klasse suchen …')}"/>
                                             <div id="class-toolbar">
                                                 <button id="btn-default">Default</button>
-                                                <button id="btn-all">Alle an</button>
-                                                <button id="btn-none">Alle aus</button>
+                                                <button id="btn-all"><xsl:value-of select="i18n:t('Alle an')"/></button>
+                                                <button id="btn-none"><xsl:value-of select="i18n:t('Alle aus')"/></button>
                                             </div>
                                             <div id="class-filter"/>
                                         </div>
                                         <div id="stats">
-                                            <span>Gesamt: <b><xsl:value-of select="$total_fmt"/>
-                                                  Tripel</b></span>
+                                            <span><xsl:value-of select="i18n:t('Gesamt: ')"/><b><xsl:value-of select="$total_fmt"/>
+                                                  <xsl:text> </xsl:text><xsl:value-of select="i18n:t('Tripel')"/></b></span>
                                         </div>
                                     </aside>
 
@@ -74,23 +77,28 @@
 
                                     <!-- Export bar -->
                                     <div id="export-bar">
-                                        <button id="btn-exp-png">PNG exportieren</button>
+                                        <button id="btn-exp-png"><xsl:value-of select="i18n:t('PNG exportieren')"/></button>
                                     </div>
 
                                     <!-- Hint overlay -->
                                     <div id="graph-hint">
                                         <span class="hint-close">&#x2715;</span>
-                                        <b>Hinweis:</b> Startpunkt ist »Von den plejaden her
-                                        vierzehn gedichte im hinblick auf Lesbos« von Johannes
-                                        Poethen. <b>Klick</b> auf einen Knoten klappt seine
-                                        Verbindungen auf. <b>Doppelklick</b> klappt sie wieder zu.
-                                        Klick auf <b>Plus</b>-Knoten öffnet fünf weitere
-                                        Verbindungen. <b>Klassen</b> links filtern, was sichtbar
-                                        ist. Rechts sind <b>Instanzen</b> wählbar.</div>
+                                        <b><xsl:value-of select="i18n:t('Hinweis:')"/></b> <xsl:value-of
+                                            select="i18n:t('Startpunkt ist »Von den plejaden her vierzehn gedichte im hinblick auf Lesbos« von Johannes Poethen. ')"
+                                        /><b><xsl:value-of select="i18n:t('Klick')"/></b><xsl:value-of
+                                            select="i18n:t(' auf einen Knoten klappt seine Verbindungen auf. ')"
+                                        /><b><xsl:value-of select="i18n:t('Doppelklick')"/></b><xsl:value-of
+                                            select="i18n:t(' klappt sie wieder zu. Klick auf ')"
+                                        /><b>Plus</b><xsl:value-of
+                                            select="i18n:t('-Knoten öffnet fünf weitere Verbindungen. ')"
+                                        /><b><xsl:value-of select="i18n:t('Klassen')"/></b><xsl:value-of
+                                            select="i18n:t(' links filtern, was sichtbar ist. Rechts sind ')"
+                                        /><b><xsl:value-of select="i18n:t('Instanzen')"/></b><xsl:value-of
+                                            select="i18n:t(' wählbar.')"/></div>
 
                                     <!-- Tooltip -->
                                     <div id="node-tooltip">
-                                        <button id="node-tooltip-close" title="Schließen"
+                                        <button id="node-tooltip-close" title="{i18n:t('Schließen')}"
                                             >&#x2715;</button>
                                         <div id="node-tooltip-body"/>
                                     </div>
@@ -99,19 +107,19 @@
                                     <div id="right-sidebar">
                                         <div id="right-inner">
                                             <div class="section-title" style="margin-top:4px"
-                                                >Instanzen</div>
+                                                ><xsl:value-of select="i18n:t('Instanzen')"/></div>
                                             <div class="inst-tabs">
                                                 <div class="inst-tab active" data-cls="F2"
-                                                  >Texte</div>
-                                                <div class="inst-tab" data-cls="ALL">Alle</div>
+                                                  ><xsl:value-of select="i18n:t('Texte')"/></div>
+                                                <div class="inst-tab" data-cls="ALL"><xsl:value-of select="i18n:t('Alle')"/></div>
                                             </div>
                                             <div id="inst-toolbar">
                                                 <button id="btn-inst-default">Default</button>
-                                                <button id="btn-inst-none">Alle
-                                                  abw&#xe4;hlen</button>
+                                                <button id="btn-inst-none"><xsl:value-of
+                                                  select="i18n:t('Alle abwählen')"/></button>
                                             </div>
                                             <input type="text" id="instance-search"
-                                                placeholder="Instanz suchen …"/>
+                                                placeholder="{i18n:t('Instanz suchen …')}"/>
                                             <div id="instance-list"/>
                                         </div>
                                     </div>

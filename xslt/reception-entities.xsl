@@ -5,7 +5,8 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:intro="https://w3id.org/lso/intro/currentbeta#"
-    xmlns:ecrm="http://erlangen-crm.org/current/" xmlns:u="urn:util" exclude-result-prefixes="xs u"
+    xmlns:ecrm="http://erlangen-crm.org/current/" xmlns:u="urn:util"
+    xmlns:i18n="urn:sappho-digital:i18n" exclude-result-prefixes="xs u i18n"
     version="3.0">
 
     <xsl:import href="./partials/html_navbar.xsl"/>
@@ -40,31 +41,38 @@
         <xsl:variable name="tops"
             select="$vocab/rdf:RDF/*[@rdf:about = $cs/skos:hasTopConcept/@rdf:resource]"/>
 
-        <xsl:result-document href="../html/vokabular.html">
-            <html lang="de">
+        <xsl:result-document href="../html/{i18n:href('vokabular.html')}">
+            <html lang="{$lang}">
                 <head>
                     <xsl:call-template name="html_head">
                         <xsl:with-param name="html_title"
-                            select="'Vokabular zur literarischen Sappho-Rezeption'"/>
+                            select="i18n:t('Vokabular zur literarischen Sappho-Rezeption')"/>
                     </xsl:call-template>
                     <script src="./js/details-lazy.js" defer="defer"/>
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
-                        <xsl:call-template name="nav_bar"/>
+                        <xsl:call-template name="nav_bar">
+                            <xsl:with-param name="current_page" select="i18n:href('vokabular.html')"/>
+                        </xsl:call-template>
                         <div class="container-fluid">
                             <div class="card">
                                 <div class="card-header">
                                     <h1>
                                         <xsl:value-of
-                                            select="($cs/skos:prefLabel[@xml:lang = 'de'], $cs/skos:prefLabel[@xml:lang = 'en'], $cs/skos:prefLabel, 'Vokabular')[1]"
+                                            select="($cs/skos:prefLabel[@xml:lang = $lang], $cs/skos:prefLabel[@xml:lang = (if ($lang = 'en') then 'de' else 'en')], $cs/skos:prefLabel, 'Vokabular')[1]"
                                         />
                                     </h1>
                                     <p class="align-left">
                                         <xsl:value-of
-                                            select="normalize-space(($cs/skos:scopeNote[@xml:lang = 'de'], $cs/skos:scopeNote)[1])"
+                                            select="normalize-space(($cs/skos:scopeNote[@xml:lang = $lang], $cs/skos:scopeNote)[1])"
                                         />
                                     </p>
+                                    <xsl:if test="$lang = 'en'">
+                                        <p class="align-left smaller-text"><em><xsl:value-of
+                                                    select="i18n:t('Die Definitionen und Anmerkungen zu den einzelnen Konzepten sind maschinell aus dem Deutschen übersetzt.')"
+                                                /></em></p>
+                                    </xsl:if>
                                 </div>
 
                                 <div class="card-body skos-wrap">
@@ -95,7 +103,7 @@
     <xsl:template name="label">
         <xsl:param name="n"/>
         <xsl:variable name="rawLabel"
-            select="($n/skos:prefLabel[@xml:lang = 'de'], $n/skos:prefLabel[@xml:lang = 'en'], $n/skos:prefLabel, $n/rdfs:label, $n/@rdf:about)[1]"/>
+            select="($n/skos:prefLabel[@xml:lang = $lang], $n/skos:prefLabel[@xml:lang = (if ($lang = 'en') then 'de' else 'en')], $n/skos:prefLabel, $n/rdfs:label, $n/@rdf:about)[1]"/>
         <!-- Liebe (Motiv) -> Liebe -->
         <xsl:value-of select="normalize-space(replace($rawLabel, '\s*\([^)]*\)', ''))"/>
     </xsl:template>
@@ -176,14 +184,14 @@
                                                   ><strong>Definition:</strong>
                                                 <xsl:text> </xsl:text>
                                                 <xsl:value-of
-                                                  select="normalize-space(($node/skos:definition[@xml:lang = 'de'], $node/skos:definition)[1])"
+                                                  select="normalize-space(($node/skos:definition[@xml:lang = $lang], $node/skos:definition)[1])"
                                                 />
                                             </p>
                                         </xsl:if>
                                         <xsl:if test="$node/skos:scopeNote">
                                             <p class="align-left smaller-text breakable">
                                                 <xsl:value-of
-                                                  select="normalize-space(($node/skos:scopeNote[@xml:lang = 'de'], $node/skos:scopeNote)[1])"
+                                                  select="normalize-space(($node/skos:scopeNote[@xml:lang = $lang], $node/skos:scopeNote)[1])"
                                                 />
                                             </p>
                                         </xsl:if>
@@ -231,7 +239,7 @@
                                                   <xsl:variable name="relNode"
                                                   select="$vocab/rdf:RDF/*[@rdf:about = $relUri]"/>
                                                   <xsl:variable name="relRawLabel"
-                                                  select="string(($relNode/skos:prefLabel[@xml:lang = 'de'], $relNode/skos:prefLabel[@xml:lang = 'en'], $relNode/skos:prefLabel, $relNode/rdfs:label, $relUri)[1])"/>
+                                                  select="string(($relNode/skos:prefLabel[@xml:lang = $lang], $relNode/skos:prefLabel[@xml:lang = (if ($lang = 'en') then 'de' else 'en')], $relNode/skos:prefLabel, $relNode/rdfs:label, $relUri)[1])"/>
                                                   <xsl:variable name="relTypeMatch"
                                                   select="replace($relRawLabel, '^.*\(([^)]*)\)\s*$', '$1')"/>
                                                   <xsl:variable name="relType" select="
@@ -249,11 +257,6 @@
                                                 <xsl:sort select="@type"/>
                                                 <xsl:sort select="lower-case(@label)"/>
                                                 <xsl:value-of select="@label"/>
-                                                <xsl:if test="@type != ''">
-                                                  <xsl:text> (</xsl:text>
-                                                  <xsl:value-of select="@type"/>
-                                                  <xsl:text>)</xsl:text>
-                                                </xsl:if>
                                                 <xsl:if test="position() != last()">, </xsl:if>
                                             </xsl:for-each>
                                         </div>
@@ -263,7 +266,7 @@
                                 <xsl:if test="count($occTexts) &gt; 0">
                                     <div class="skos-note">
                                         <div class="smaller-text indent">
-                                            <strong>Vorkommnis in:</strong>
+                                            <strong><xsl:value-of select="i18n:t('Vorkommnis in:')"/></strong>
                                             <xsl:text> </xsl:text>
                                             <xsl:for-each select="$occTexts">
                                                 <xsl:sort select="lower-case(u:label(.))"/>
@@ -279,7 +282,7 @@
                                 <ul class="skos-tree">
                                     <xsl:for-each select="$children">
                                         <xsl:sort
-                                            select="lower-case((skos:prefLabel[@xml:lang = 'de'], skos:prefLabel[@xml:lang = 'en'], skos:prefLabel, rdfs:label, @rdf:about)[1])"/>
+                                            select="lower-case((skos:prefLabel[@xml:lang = $lang], skos:prefLabel[@xml:lang = (if ($lang = 'en') then 'de' else 'en')], skos:prefLabel, rdfs:label, @rdf:about)[1])"/>
                                         <xsl:call-template name="render-concept">
                                             <xsl:with-param name="node" select="."/>
                                         </xsl:call-template>
@@ -308,7 +311,7 @@
                         <xsl:if test="$node/skos:definition or $node/skos:scopeNote">
                             <div class="skos-note">
                                 <xsl:value-of
-                                    select="normalize-space(($node/skos:definition[@xml:lang = 'de'], $node/skos:scopeNote[@xml:lang = 'de'], $node/skos:definition, $node/skos:scopeNote)[1])"
+                                    select="normalize-space(($node/skos:definition[@xml:lang = $lang], $node/skos:scopeNote[@xml:lang = $lang], $node/skos:definition, $node/skos:scopeNote)[1])"
                                 />
                             </div>
                         </xsl:if>
@@ -352,7 +355,7 @@
                                             <xsl:variable name="relNode"
                                                 select="$vocab/rdf:RDF/*[@rdf:about = $relUri]"/>
                                             <xsl:variable name="relRawLabel"
-                                                select="string(($relNode/skos:prefLabel[@xml:lang = 'de'], $relNode/skos:prefLabel[@xml:lang = 'en'], $relNode/skos:prefLabel, $relNode/rdfs:label, $relUri)[1])"/>
+                                                select="string(($relNode/skos:prefLabel[@xml:lang = $lang], $relNode/skos:prefLabel[@xml:lang = (if ($lang = 'en') then 'de' else 'en')], $relNode/skos:prefLabel, $relNode/rdfs:label, $relUri)[1])"/>
                                             <xsl:variable name="relTypeMatch"
                                                 select="replace($relRawLabel, '^.*\(([^)]*)\)\s*$', '$1')"/>
                                             <xsl:variable name="relType" select="
@@ -370,11 +373,6 @@
                                         <xsl:sort select="@type"/>
                                         <xsl:sort select="lower-case(@label)"/>
                                         <xsl:value-of select="@label"/>
-                                        <xsl:if test="@type != ''">
-                                            <xsl:text> (</xsl:text>
-                                            <xsl:value-of select="@type"/>
-                                            <xsl:text>)</xsl:text>
-                                        </xsl:if>
                                         <xsl:if test="position() != last()">, </xsl:if>
                                     </xsl:for-each>
                                 </div>
@@ -384,7 +382,7 @@
                         <xsl:if test="count($occTexts) &gt; 0">
                             <div class="skos-note">
                                 <div class="smaller-text indent">
-                                    <strong>Vorkommnis in:</strong>
+                                    <strong><xsl:value-of select="i18n:t('Vorkommnis in:')"/></strong>
                                     <xsl:text> </xsl:text>
                                     <xsl:for-each select="$occTexts">
                                         <xsl:sort select="lower-case(u:label(.))"/>
@@ -442,10 +440,10 @@
 
         <xsl:variable name="rawLabel" select="
                 normalize-space((
-                $n2/rdfs:label[@xml:lang = 'de'],
-                $featNode/rdfs:label[@xml:lang = 'de'],
-                $n2/rdfs:label[@xml:lang = 'en'],
-                $featNode/rdfs:label[@xml:lang = 'en'],
+                $n2/rdfs:label[@xml:lang = $lang],
+                $featNode/rdfs:label[@xml:lang = $lang],
+                $n2/rdfs:label[@xml:lang = (if ($lang = 'en') then 'de' else 'en')],
+                $featNode/rdfs:label[@xml:lang = (if ($lang = 'en') then 'de' else 'en')],
                 $n2/rdfs:label,
                 $featNode/rdfs:label,
                 $n2/@rdf:about,
@@ -453,11 +451,18 @@
                 )[1])
                 "/>
 
+        <xsl:variable name="canon-phrase"
+            select="if ($lang = 'en') then 'Intertextual relation between ' else 'Intertextuelle Beziehung zwischen '"/>
         <xsl:variable name="t1"
-            select="replace($rawLabel, '^\s*intertextuelle\s+relation\s+zwischen\s+', 'Intertextuelle Beziehung zwischen ', 'i')"/>
+            select="replace($rawLabel, '^\s*intertextuelle\s+relation\s+zwischen\s+', $canon-phrase, 'i')"/>
         <xsl:variable name="t2"
-            select="replace($t1, '^\s*intertextual\s+relation(ship)?\s+between\s+', 'Intertextuelle Beziehung zwischen ', 'i')"/>
-        <xsl:variable name="t3" select="replace($t2, '\s+and\s+', ' und ')"/>
+            select="replace($t1, '^\s*intertextual\s+relation(ship)?\s+between\s+', $canon-phrase, 'i')"/>
+        <xsl:variable name="t3"
+            select="
+                if ($lang = 'en') then
+                    replace($t2, '\s+und\s+', ' and ')
+                else
+                    replace($t2, '\s+and\s+', ' und ')"/>
         <xsl:variable name="t4"
             select="replace($t3, '^(Expression\s+creation\s+of|Expressionserstellung\s+von)\s+', '', 'i')"/>
         <xsl:variable name="t5"
@@ -509,7 +514,7 @@
         <xsl:variable name="id" select="($tid, u:work-id($uri))[1]"/>
         <xsl:sequence select="
                 if ($id and normalize-space($id) != '') then
-                    concat('https://sappho-digital.com/', $id, '.html')
+                    i18n:href(concat('https://sappho-digital.com/', $id, '.html'))
                 else
                     ()"/>
     </xsl:function>
@@ -613,8 +618,8 @@
                     u:appellation-name(
                     normalize-space(
                     string((
-                    key('by-about', $a, $receptionEntities)/rdfs:label[@xml:lang = 'de'],
-                    key('by-about', $a, $receptionEntities)/rdfs:label[@xml:lang = 'en'],
+                    key('by-about', $a, $receptionEntities)/rdfs:label[@xml:lang = $lang],
+                    key('by-about', $a, $receptionEntities)/rdfs:label[@xml:lang = (if ($lang = 'en') then 'de' else 'en')],
                     key('by-about', $a, $receptionEntities)/rdfs:label
                     )[1])
                     )
@@ -657,7 +662,7 @@
 
         <xsl:if test="$href">
             <a href="{$href}" class="ext-link" target="_blank" rel="noopener"
-                onclick="event.stopPropagation()" title="Öffnen"> ↗ </a>
+                onclick="event.stopPropagation()" title="{i18n:t('Öffnen')}"> ↗ </a>
         </xsl:if>
     </xsl:template>
 
@@ -885,7 +890,7 @@
             <div class="smaller-text indent">
                 <strong>
                     <xsl:value-of
-                        select="u:sgpl($nCommon, 'Gemeinsame Werkreferenz:', 'Gemeinsame Werkreferenzen:')"
+                        select="u:sgpl($nCommon, i18n:t('Gemeinsame Werkreferenz:'), i18n:t('Gemeinsame Werkreferenzen:'))"
                     />
                 </strong>
                 <xsl:text> </xsl:text>
@@ -903,7 +908,7 @@
         <xsl:if test="$nDirect &gt; 0">
             <div class="smaller-text indent">
                 <strong>
-                    <xsl:value-of select="u:sgpl($nDirect, 'Werkreferenz:', 'Werkreferenzen:')"/>
+                    <xsl:value-of select="u:sgpl($nDirect, i18n:t('Werkreferenz:'), i18n:t('Werkreferenzen:'))"/>
                 </strong>
                 <xsl:text> </xsl:text>
                 <xsl:for-each select="$directUri">
@@ -930,13 +935,13 @@
 
         <xsl:if test="$cnt &gt; 0">
             <xsl:variable name="cmt"
-                select="normalize-space(($rel/rdfs:comment[@xml:lang = 'de'], $rel/rdfs:comment)[1])"/>
+                select="normalize-space(($rel/rdfs:comment[@xml:lang = $lang], $rel/rdfs:comment)[1])"/>
 
             <li>
                 <details>
                     <summary>
                         <span class="leaf">
-                            <xsl:text>Intertextuelle Beziehung mit </xsl:text>
+                            <xsl:value-of select="i18n:t('Intertextuelle Beziehung mit ')"/>
                             <xsl:choose>
                                 <xsl:when test="matches($partner, '^Fragment\s', 'i')">
                                     <xsl:value-of select="$partner"/>
@@ -953,7 +958,7 @@
                             <xsl:text> (</xsl:text>
                             <xsl:value-of select="$cnt"/>
                             <xsl:value-of
-                                select="u:sgpl($cnt, ' Gemeinsamkeit', ' Gemeinsamkeiten')"/>
+                                select="u:sgpl($cnt, i18n:t(' Gemeinsamkeit'), i18n:t(' Gemeinsamkeiten'))"/>
                             <xsl:text>)</xsl:text>
                         </span>
                     </summary>
@@ -968,43 +973,43 @@
                         <xsl:call-template name="emit-kind-list">
                             <xsl:with-param name="rel" select="$rel"/>
                             <xsl:with-param name="kind" select="'motifs'"/>
-                            <xsl:with-param name="sg" select="'Gemeinsames Motiv:'"/>
-                            <xsl:with-param name="pl" select="'Gemeinsame Motive:'"/>
+                            <xsl:with-param name="sg" select="i18n:t('Gemeinsames Motiv:')"/>
+                            <xsl:with-param name="pl" select="i18n:t('Gemeinsame Motive:')"/>
                         </xsl:call-template>
 
                         <xsl:call-template name="emit-kind-list">
                             <xsl:with-param name="rel" select="$rel"/>
                             <xsl:with-param name="kind" select="'topics'"/>
-                            <xsl:with-param name="sg" select="'Gemeinsames Thema:'"/>
-                            <xsl:with-param name="pl" select="'Gemeinsame Themen:'"/>
+                            <xsl:with-param name="sg" select="i18n:t('Gemeinsames Thema:')"/>
+                            <xsl:with-param name="pl" select="i18n:t('Gemeinsame Themen:')"/>
                         </xsl:call-template>
 
                         <xsl:call-template name="emit-kind-list">
                             <xsl:with-param name="rel" select="$rel"/>
                             <xsl:with-param name="kind" select="'plots'"/>
-                            <xsl:with-param name="sg" select="'Gemeinsamer Stoff:'"/>
-                            <xsl:with-param name="pl" select="'Gemeinsame Stoffe:'"/>
+                            <xsl:with-param name="sg" select="i18n:t('Gemeinsamer Stoff:')"/>
+                            <xsl:with-param name="pl" select="i18n:t('Gemeinsame Stoffe:')"/>
                         </xsl:call-template>
 
                         <xsl:call-template name="emit-kind-list">
                             <xsl:with-param name="rel" select="$rel"/>
                             <xsl:with-param name="kind" select="'persons'"/>
-                            <xsl:with-param name="sg" select="'Gemeinsame Personenreferenz:'"/>
-                            <xsl:with-param name="pl" select="'Gemeinsame Personenreferenzen:'"/>
+                            <xsl:with-param name="sg" select="i18n:t('Gemeinsame Personenreferenz:')"/>
+                            <xsl:with-param name="pl" select="i18n:t('Gemeinsame Personenreferenzen:')"/>
                         </xsl:call-template>
 
                         <xsl:call-template name="emit-kind-list">
                             <xsl:with-param name="rel" select="$rel"/>
                             <xsl:with-param name="kind" select="'characters'"/>
-                            <xsl:with-param name="sg" select="'Gemeinsame Figur:'"/>
-                            <xsl:with-param name="pl" select="'Gemeinsame Figuren:'"/>
+                            <xsl:with-param name="sg" select="i18n:t('Gemeinsame Figur:')"/>
+                            <xsl:with-param name="pl" select="i18n:t('Gemeinsame Figuren:')"/>
                         </xsl:call-template>
 
                         <xsl:call-template name="emit-kind-list">
                             <xsl:with-param name="rel" select="$rel"/>
                             <xsl:with-param name="kind" select="'places'"/>
-                            <xsl:with-param name="sg" select="'Gemeinsame Ortsreferenz:'"/>
-                            <xsl:with-param name="pl" select="'Gemeinsame Ortsreferenzen:'"/>
+                            <xsl:with-param name="sg" select="i18n:t('Gemeinsame Ortsreferenz:')"/>
+                            <xsl:with-param name="pl" select="i18n:t('Gemeinsame Ortsreferenzen:')"/>
                         </xsl:call-template>
 
                         <xsl:call-template name="emit-work-lines">
@@ -1016,15 +1021,15 @@
                         <xsl:call-template name="emit-kind-list">
                             <xsl:with-param name="rel" select="$rel"/>
                             <xsl:with-param name="kind" select="'workpassages'"/>
-                            <xsl:with-param name="sg" select="'Gemeinsames Zitat:'"/>
-                            <xsl:with-param name="pl" select="'Gemeinsame Zitate:'"/>
+                            <xsl:with-param name="sg" select="i18n:t('Gemeinsames Zitat:')"/>
+                            <xsl:with-param name="pl" select="i18n:t('Gemeinsame Zitate:')"/>
                         </xsl:call-template>
 
                         <xsl:call-template name="emit-kind-list">
                             <xsl:with-param name="rel" select="$rel"/>
                             <xsl:with-param name="kind" select="'topoi'"/>
-                            <xsl:with-param name="sg" select="'Gemeinsamer Topos:'"/>
-                            <xsl:with-param name="pl" select="'Gemeinsame Topoi:'"/>
+                            <xsl:with-param name="sg" select="i18n:t('Gemeinsamer Topos:')"/>
+                            <xsl:with-param name="pl" select="i18n:t('Gemeinsame Topoi:')"/>
                         </xsl:call-template>
                     </template>
                 </details>
@@ -1038,7 +1043,7 @@
         <xsl:variable name="href" select="u:work-href($uri)"/>
         <xsl:if test="$href">
             <a href="{$href}" class="ext-link" target="_blank" rel="noopener"
-                onclick="event.stopPropagation()" title="Öffnen"> ↗ </a>
+                onclick="event.stopPropagation()" title="{i18n:t('Öffnen')}"> ↗ </a>
         </xsl:if>
     </xsl:template>
 
@@ -1047,7 +1052,7 @@
         <xsl:param name="n" as="xs:integer"/>
         <xsl:text> (</xsl:text>
         <xsl:value-of select="$n"/>
-        <xsl:value-of select="u:sgpl($n, ' Vorkommnis', ' Vorkommnisse')"/>
+        <xsl:value-of select="u:sgpl($n, i18n:t(' Vorkommnis'), i18n:t(' Vorkommnisse'))"/>
         <xsl:text>)</xsl:text>
     </xsl:template>
 
@@ -1195,7 +1200,7 @@
             <div id="{$chart-id}" class="skos-chart" data-chart="bar" aria-label="{$chart-title}"/>
             <script type="application/json" id="{$chart-id}-data">{
                 "title": "<xsl:value-of select="u:json-escape($chart-title)"/>",
-                "seriesName": "Top Vorkommnisse",
+                "seriesName": "<xsl:value-of select="i18n:t('Top Vorkommnisse')"/>",
                 "data": [
                 <xsl:for-each select="$limited">
                     {
@@ -1354,7 +1359,9 @@
         </xsl:variable>
 
         <!-- json -->
-        <xsl:result-document href="../data/json/itx-graph-data.json" method="text" encoding="UTF-8"
+        <xsl:result-document
+            href="../data/json/{if ($lang = 'en') then 'itx-graph-data-en.json' else 'itx-graph-data.json'}"
+            method="text" encoding="UTF-8"
             >{ "nodes": [ <xsl:for-each select="$nodes">
                 <xsl:sort select="lower-case(@label)"/> { "id": "<xsl:value-of
                     select="u:json-escape(@uri)"/>", "label": "<xsl:value-of
@@ -1371,51 +1378,56 @@
             </xsl:for-each> ] }</xsl:result-document>
 
         <!-- html -->
-        <xsl:result-document href="../html/intertexte.html" method="html">
-            <html lang="de">
+        <xsl:result-document href="../html/{i18n:href('intertexte.html')}" method="html">
+            <html lang="{$lang}">
                 <head>
                     <xsl:call-template name="html_head">
-                        <xsl:with-param name="html_title" select="'Intertextuelle Beziehungen'"/>
+                        <xsl:with-param name="html_title" select="i18n:t('Intertextuelle Beziehungen')"/>
                     </xsl:call-template>
                     <script type="module" src="./js/intertexts-network.js"/>
                     <script src="./js/details-lazy.js" defer="defer"/>
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
-                        <xsl:call-template name="nav_bar"/>
+                        <xsl:call-template name="nav_bar">
+                            <xsl:with-param name="current_page" select="i18n:href('intertexte.html')"/>
+                        </xsl:call-template>
 
                         <div class="container-fluid">
                             <div class="card">
                                 <div class="card-header">
-                                    <h1>Intertextuelle Beziehungen</h1>
-                                    <p class="align-left">Alle (im weitesten Sinne) intertextuellen
-                                        Beziehungen zwischen Sappho-Fragmenten und den exemplarisch
-                                        analysierten Rezeptionszeugnissen sowie zwischen Fragmenten
-                                        und Rezeptionszeugnissen untereinander.</p>
-                                    <p class="align-left">Mehr Informationen zur exemplarischen
-                                        Analyse sind <a href="analyse.html">hier</a> zu finden.
-                                        Statistische Auswertungen werden <a href="statistik.html"
-                                            >hier</a> aufbereitet; eine Netzwerkvisualisierung aller
-                                        Daten ist <a href="netzwerk.html">hier</a> verfügbar.</p>
+                                    <h1><xsl:value-of select="i18n:t('Intertextuelle Beziehungen')"/></h1>
+                                    <p class="align-left"><xsl:value-of
+                                            select="i18n:t('Alle (im weitesten Sinne) intertextuellen Beziehungen zwischen Sappho-Fragmenten und den exemplarisch analysierten Rezeptionszeugnissen sowie zwischen Fragmenten und Rezeptionszeugnissen untereinander.')"
+                                        /></p>
+                                    <p class="align-left"><xsl:value-of
+                                            select="i18n:t('Mehr Informationen zur exemplarischen Analyse sind ')"
+                                        /><a href="{i18n:href('analyse.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' zu finden. Statistische Auswertungen werden ')"
+                                        /><a href="{i18n:href('statistik.html')}"
+                                            ><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' aufbereitet; eine Netzwerkvisualisierung aller Daten ist ')"
+                                        /><a href="{i18n:href('netzwerk.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' verfügbar.')"/></p>
                                     <div class="graph-toolbar">
-                                        <label class="gewicht-slider">Gewicht <input
+                                        <label class="gewicht-slider"><xsl:value-of select="i18n:t('Gewicht')"/> <input
                                                 id="edge-threshold" type="range" min="2" max="20"
                                                 value="2" step="1"/>
                                         </label>
                                         <br/>
                                         <span class="graph-legend">
-                                            <span class="dot dot-frag"/> Fragment (Sappho) <br/>
-                                            <span class="dot dot-recep"/> Rezeptionszeugnis </span>
+                                            <span class="dot dot-frag"/> <xsl:value-of select="i18n:t('Fragment (Sappho)')"/> <br/>
+                                            <span class="dot dot-recep"/> <xsl:value-of select="i18n:t('Rezeptionszeugnis')"/> </span>
                                     </div>
                                 </div>
 
                                 <div class="card-body">
                                     <div id="itx-graph" class="big-graph"
-                                        data-src="https://cdn.jsdelivr.net/gh/laurauntner/sappho-digital@main/data/json/itx-graph-data.json"/>
+                                        data-src="https://cdn.jsdelivr.net/gh/laurauntner/sappho-digital@main/data/json/{if ($lang = 'en') then 'itx-graph-data-en.json' else 'itx-graph-data.json'}"/>
 
-                                    <span class="graph-legend">Hier werden nur die k stärksten
-                                        Verbindungen pro Knoten sowie ein verbindender
-                                        Maximum-Spanning-Tree visualisiert (Standard: k = 2).</span>
+                                    <span class="graph-legend"><xsl:value-of
+                                            select="i18n:t('Hier werden nur die k stärksten Verbindungen pro Knoten sowie ein verbindender Maximum-Spanning-Tree visualisiert (Standard: k = 2).')"
+                                        /></span>
                                 </div>
                             </div>
                         </div>
@@ -1427,8 +1439,8 @@
                                         <!-- frag ↔ frag -->
                                         <li>
                                             <details>
-                                                <summary class="has-children">Intertextuelle
-                                                  Beziehungen zwischen Sappho-Fragmenten</summary>
+                                                <summary class="has-children"><xsl:value-of
+                                                  select="i18n:t('Intertextuelle Beziehungen zwischen Sappho-Fragmenten')"/></summary>
                                                 <template data-lazy="">
                                                   <div class="skos-children">
                                                   <ul class="skos-tree">
@@ -1481,9 +1493,8 @@
                                         <!-- recep ↔ frag -->
                                         <li>
                                             <details>
-                                                <summary class="has-children">Intertextuelle
-                                                  Beziehungen zwischen Rezeptionszeugnissen und
-                                                  Sappho-Fragmenten</summary>
+                                                <summary class="has-children"><xsl:value-of
+                                                  select="i18n:t('Intertextuelle Beziehungen zwischen Rezeptionszeugnissen und Sappho-Fragmenten')"/></summary>
                                                 <template data-lazy="">
                                                   <div class="skos-children">
                                                   <ul class="skos-tree">
@@ -1536,9 +1547,8 @@
                                         <!-- recep ↔ recep -->
                                         <li>
                                             <details>
-                                                <summary class="has-children">Intertextuelle
-                                                  Beziehungen zwischen
-                                                  Rezeptionszeugnissen</summary>
+                                                <summary class="has-children"><xsl:value-of
+                                                  select="i18n:t('Intertextuelle Beziehungen zwischen Rezeptionszeugnissen')"/></summary>
                                                 <template data-lazy="">
                                                   <div class="skos-children">
                                                   <ul class="skos-tree">
@@ -1671,11 +1681,11 @@
                 ))"/>
 
         <!-- references to persons -->
-        <xsl:result-document href="../html/personen.html">
-            <html lang="de">
+        <xsl:result-document href="../html/{i18n:href('personen.html')}">
+            <html lang="{$lang}">
                 <head>
                     <xsl:call-template name="html_head">
-                        <xsl:with-param name="html_title" select="'Personenreferenzen und Figuren'"
+                        <xsl:with-param name="html_title" select="i18n:t('Personenreferenzen und Figuren')"
                         />
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
@@ -1685,21 +1695,27 @@
 
                 <body class="page">
                     <div class="hfeed site" id="page">
-                        <xsl:call-template name="nav_bar"/>
+                        <xsl:call-template name="nav_bar">
+                            <xsl:with-param name="current_page" select="i18n:href('personen.html')"/>
+                        </xsl:call-template>
 
                         <div class="container-fluid">
                             <div class="card">
                                 <div class="card-header">
-                                    <h1>Personenreferenzen und Figuren</h1>
-                                    <p class="align-left">… in den exemplarisch analysierten
-                                        Rezeptionszeugnissen und Sappho-Fragmenten.</p>
-                                    <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vokabular.html">Vokabular</a>. Mehr
-                                        Informationen zur exemplarischen Analyse sind <a
-                                            href="analyse.html">hier</a> zu finden. Statistische
-                                        Auswertungen werden <a href="statistik.html">hier</a>
-                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
-                                            href="netzwerk.html">hier</a> verfügbar.</p>
+                                    <h1><xsl:value-of select="i18n:t('Personenreferenzen und Figuren')"/></h1>
+                                    <p class="align-left"><xsl:value-of
+                                            select="i18n:t('… in den exemplarisch analysierten Rezeptionszeugnissen und Sappho-Fragmenten.')"
+                                        /></p>
+                                    <p class="align-left"><xsl:value-of
+                                            select="i18n:t('Für eine hierarchische Ansicht siehe das ')"
+                                        /><a href="{i18n:href('vokabular.html')}"><xsl:value-of select="i18n:t('Vokabular')"/></a><xsl:value-of
+                                            select="i18n:t('. Mehr Informationen zur exemplarischen Analyse sind ')"
+                                        /><a href="{i18n:href('analyse.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' zu finden. Statistische Auswertungen werden ')"
+                                        /><a href="{i18n:href('statistik.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' aufbereitet; eine Netzwerkvisualisierung aller Daten ist ')"
+                                        /><a href="{i18n:href('netzwerk.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' verfügbar.')"/></p>
                                 </div>
 
                                 <div class="card-body skos-wrap">
@@ -1741,7 +1757,7 @@
                                                   <xsl:if
                                                   test="exists($appsAll) and contains($this, 'person_e585b2a779019b7e')">
                                                   <div class="skos-note smaller-text indent">
-                                                  <strong>Namensvarianten:</strong>
+                                                  <strong><xsl:value-of select="i18n:t('Namensvarianten:')"/></strong>
                                                   <xsl:text> </xsl:text>
                                                   <xsl:value-of select="string-join($appsAll, '; ')"
                                                   />
@@ -1834,7 +1850,7 @@
                                                   <xsl:if
                                                   test="exists($appsAll) and contains($this, 'person_e585b2a779019b7e')">
                                                   <div class="skos-note smaller-text indent">
-                                                  <strong>Namensvarianten:</strong>
+                                                  <strong><xsl:value-of select="i18n:t('Namensvarianten:')"/></strong>
                                                   <xsl:text> </xsl:text>
                                                   <xsl:value-of select="string-join($appsAll, '; ')"
                                                   />
@@ -1904,11 +1920,11 @@
         </xsl:result-document>
 
         <!-- references to places -->
-        <xsl:result-document href="../html/orte.html">
-            <html lang="de">
+        <xsl:result-document href="../html/{i18n:href('orte.html')}">
+            <html lang="{$lang}">
                 <head>
                     <xsl:call-template name="html_head">
-                        <xsl:with-param name="html_title" select="'Ortsreferenzen'"/>
+                        <xsl:with-param name="html_title" select="i18n:t('Ortsreferenzen')"/>
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
@@ -1916,20 +1932,26 @@
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
-                        <xsl:call-template name="nav_bar"/>
+                        <xsl:call-template name="nav_bar">
+                            <xsl:with-param name="current_page" select="i18n:href('orte.html')"/>
+                        </xsl:call-template>
                         <div class="container-fluid">
                             <div class="card">
                                 <div class="card-header">
-                                    <h1>Ortsreferenzen</h1>
-                                    <p class="align-left">… in den exemplarisch analysierten
-                                        Rezeptionszeugnissen und Sappho-Fragmenten.</p>
-                                    <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vokabular.html">Vokabular</a>. Mehr
-                                        Informationen zur exemplarischen Analyse sind <a
-                                            href="analyse.html">hier</a> zu finden. Statistische
-                                        Auswertungen werden <a href="statistik.html">hier</a>
-                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
-                                            href="netzwerk.html">hier</a> verfügbar.</p>
+                                    <h1><xsl:value-of select="i18n:t('Ortsreferenzen')"/></h1>
+                                    <p class="align-left"><xsl:value-of
+                                            select="i18n:t('… in den exemplarisch analysierten Rezeptionszeugnissen und Sappho-Fragmenten.')"
+                                        /></p>
+                                    <p class="align-left"><xsl:value-of
+                                            select="i18n:t('Für eine hierarchische Ansicht siehe das ')"
+                                        /><a href="{i18n:href('vokabular.html')}"><xsl:value-of select="i18n:t('Vokabular')"/></a><xsl:value-of
+                                            select="i18n:t('. Mehr Informationen zur exemplarischen Analyse sind ')"
+                                        /><a href="{i18n:href('analyse.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' zu finden. Statistische Auswertungen werden ')"
+                                        /><a href="{i18n:href('statistik.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' aufbereitet; eine Netzwerkvisualisierung aller Daten ist ')"
+                                        /><a href="{i18n:href('netzwerk.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' verfügbar.')"/></p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -2005,11 +2027,11 @@
         </xsl:result-document>
 
         <!-- references to works -->
-        <xsl:result-document href="../html/werke.html">
-            <html lang="de">
+        <xsl:result-document href="../html/{i18n:href('werke.html')}">
+            <html lang="{$lang}">
                 <head>
                     <xsl:call-template name="html_head">
-                        <xsl:with-param name="html_title" select="'Werkreferenzen und Zitate'"/>
+                        <xsl:with-param name="html_title" select="i18n:t('Werkreferenzen und Zitate')"/>
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
@@ -2018,21 +2040,27 @@
 
                 <body class="page">
                     <div class="hfeed site" id="page">
-                        <xsl:call-template name="nav_bar"/>
+                        <xsl:call-template name="nav_bar">
+                            <xsl:with-param name="current_page" select="i18n:href('werke.html')"/>
+                        </xsl:call-template>
 
                         <div class="container-fluid">
                             <div class="card">
                                 <div class="card-header">
-                                    <h1>Werkreferenzen und Zitate</h1>
-                                    <p class="align-left">… in den exemplarisch analysierten
-                                        Rezeptionszeugnissen und Sappho-Fragmenten.</p>
-                                    <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vokabular.html">Vokabular</a>. Mehr
-                                        Informationen zur exemplarischen Analyse sind <a
-                                            href="analyse.html">hier</a> zu finden. Statistische
-                                        Auswertungen werden <a href="statistik.html">hier</a>
-                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
-                                            href="netzwerk.html">hier</a> verfügbar.</p>
+                                    <h1><xsl:value-of select="i18n:t('Werkreferenzen und Zitate')"/></h1>
+                                    <p class="align-left"><xsl:value-of
+                                            select="i18n:t('… in den exemplarisch analysierten Rezeptionszeugnissen und Sappho-Fragmenten.')"
+                                        /></p>
+                                    <p class="align-left"><xsl:value-of
+                                            select="i18n:t('Für eine hierarchische Ansicht siehe das ')"
+                                        /><a href="{i18n:href('vokabular.html')}"><xsl:value-of select="i18n:t('Vokabular')"/></a><xsl:value-of
+                                            select="i18n:t('. Mehr Informationen zur exemplarischen Analyse sind ')"
+                                        /><a href="{i18n:href('analyse.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' zu finden. Statistische Auswertungen werden ')"
+                                        /><a href="{i18n:href('statistik.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' aufbereitet; eine Netzwerkvisualisierung aller Daten ist ')"
+                                        /><a href="{i18n:href('netzwerk.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' verfügbar.')"/></p>
                                 </div>
 
                                 <div class="card-body skos-wrap">
@@ -2248,11 +2276,11 @@
         </xsl:result-document>
 
         <!-- topoi -->
-        <xsl:result-document href="../html/topoi.html">
-            <html lang="de">
+        <xsl:result-document href="../html/{i18n:href('topoi.html')}">
+            <html lang="{$lang}">
                 <head>
                     <xsl:call-template name="html_head">
-                        <xsl:with-param name="html_title" select="'Rhetorische Topoi'"/>
+                        <xsl:with-param name="html_title" select="i18n:t('Rhetorische Topoi')"/>
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
@@ -2260,18 +2288,25 @@
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
-                        <xsl:call-template name="nav_bar"/>
+                        <xsl:call-template name="nav_bar">
+                            <xsl:with-param name="current_page" select="i18n:href('topoi.html')"/>
+                        </xsl:call-template>
                         <div class="container-fluid">
                             <div class="card">
                                 <div class="card-header">
-                                    <h1>Rhetorische Topoi</h1>
-                                    <p class="align-left">… in den exemplarisch analysierten
-                                        Rezeptionszeugnissen und Sappho-Fragmenten.</p>
-                                    <p class="align-left">Mehr Informationen zur exemplarischen
-                                        Analyse sind <a href="analyse.html">hier</a> zu finden.
-                                        Statistische Auswertungen werden <a href="statistik.html"
-                                            >hier</a> aufbereitet; eine Netzwerkvisualisierung aller
-                                        Daten ist <a href="netzwerk.html">hier</a> verfügbar.</p>
+                                    <h1><xsl:value-of select="i18n:t('Rhetorische Topoi')"/></h1>
+                                    <p class="align-left"><xsl:value-of
+                                            select="i18n:t('… in den exemplarisch analysierten Rezeptionszeugnissen und Sappho-Fragmenten.')"
+                                        /></p>
+                                    <p class="align-left"><xsl:value-of
+                                            select="i18n:t('Mehr Informationen zur exemplarischen Analyse sind ')"
+                                        /><a href="{i18n:href('analyse.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' zu finden. Statistische Auswertungen werden ')"
+                                        /><a href="{i18n:href('statistik.html')}"
+                                            ><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' aufbereitet; eine Netzwerkvisualisierung aller Daten ist ')"
+                                        /><a href="{i18n:href('netzwerk.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' verfügbar.')"/></p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -2347,11 +2382,11 @@
         </xsl:result-document>
 
         <!-- motifs -->
-        <xsl:result-document href="../html/motive.html">
-            <html lang="de">
+        <xsl:result-document href="../html/{i18n:href('motive.html')}">
+            <html lang="{$lang}">
                 <head>
                     <xsl:call-template name="html_head">
-                        <xsl:with-param name="html_title" select="'Motive'"/>
+                        <xsl:with-param name="html_title" select="i18n:t('Motive')"/>
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
@@ -2359,20 +2394,26 @@
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
-                        <xsl:call-template name="nav_bar"/>
+                        <xsl:call-template name="nav_bar">
+                            <xsl:with-param name="current_page" select="i18n:href('motive.html')"/>
+                        </xsl:call-template>
                         <div class="container-fluid">
                             <div class="card">
                                 <div class="card-header">
-                                    <h1>Motive</h1>
-                                    <p class="align-left">… in den exemplarisch analysierten
-                                        Rezeptionszeugnissen und Sappho-Fragmenten.</p>
-                                    <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vokabular.html">Vokabular</a>. Mehr
-                                        Informationen zur exemplarischen Analyse sind <a
-                                            href="analyse.html">hier</a> zu finden. Statistische
-                                        Auswertungen werden <a href="statistik.html">hier</a>
-                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
-                                            href="netzwerk.html">hier</a> verfügbar.</p>
+                                    <h1><xsl:value-of select="i18n:t('Motive')"/></h1>
+                                    <p class="align-left"><xsl:value-of
+                                            select="i18n:t('… in den exemplarisch analysierten Rezeptionszeugnissen und Sappho-Fragmenten.')"
+                                        /></p>
+                                    <p class="align-left"><xsl:value-of
+                                            select="i18n:t('Für eine hierarchische Ansicht siehe das ')"
+                                        /><a href="{i18n:href('vokabular.html')}"><xsl:value-of select="i18n:t('Vokabular')"/></a><xsl:value-of
+                                            select="i18n:t('. Mehr Informationen zur exemplarischen Analyse sind ')"
+                                        /><a href="{i18n:href('analyse.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' zu finden. Statistische Auswertungen werden ')"
+                                        /><a href="{i18n:href('statistik.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' aufbereitet; eine Netzwerkvisualisierung aller Daten ist ')"
+                                        /><a href="{i18n:href('netzwerk.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' verfügbar.')"/></p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -2448,11 +2489,11 @@
         </xsl:result-document>
 
         <!-- topics -->
-        <xsl:result-document href="../html/themen.html">
-            <html lang="de">
+        <xsl:result-document href="../html/{i18n:href('themen.html')}">
+            <html lang="{$lang}">
                 <head>
                     <xsl:call-template name="html_head">
-                        <xsl:with-param name="html_title" select="'Themen'"/>
+                        <xsl:with-param name="html_title" select="i18n:t('Themen')"/>
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
@@ -2460,20 +2501,26 @@
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
-                        <xsl:call-template name="nav_bar"/>
+                        <xsl:call-template name="nav_bar">
+                            <xsl:with-param name="current_page" select="i18n:href('themen.html')"/>
+                        </xsl:call-template>
                         <div class="container-fluid">
                             <div class="card">
                                 <div class="card-header">
-                                    <h1>Themen</h1>
-                                    <p class="align-left">… in den exemplarisch analysierten
-                                        Rezeptionszeugnissen und Sappho-Fragmenten.</p>
-                                    <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vokabular.html">Vokabular</a>. Mehr
-                                        Informationen zur exemplarischen Analyse sind <a
-                                            href="analyse.html">hier</a> zu finden. Statistische
-                                        Auswertungen werden <a href="statistik.html">hier</a>
-                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
-                                            href="netzwerk.html">hier</a> verfügbar.</p>
+                                    <h1><xsl:value-of select="i18n:t('Themen')"/></h1>
+                                    <p class="align-left"><xsl:value-of
+                                            select="i18n:t('… in den exemplarisch analysierten Rezeptionszeugnissen und Sappho-Fragmenten.')"
+                                        /></p>
+                                    <p class="align-left"><xsl:value-of
+                                            select="i18n:t('Für eine hierarchische Ansicht siehe das ')"
+                                        /><a href="{i18n:href('vokabular.html')}"><xsl:value-of select="i18n:t('Vokabular')"/></a><xsl:value-of
+                                            select="i18n:t('. Mehr Informationen zur exemplarischen Analyse sind ')"
+                                        /><a href="{i18n:href('analyse.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' zu finden. Statistische Auswertungen werden ')"
+                                        /><a href="{i18n:href('statistik.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' aufbereitet; eine Netzwerkvisualisierung aller Daten ist ')"
+                                        /><a href="{i18n:href('netzwerk.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' verfügbar.')"/></p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">
@@ -2546,11 +2593,11 @@
         </xsl:result-document>
 
         <!-- plots -->
-        <xsl:result-document href="../html/stoffe.html">
-            <html lang="de">
+        <xsl:result-document href="../html/{i18n:href('stoffe.html')}">
+            <html lang="{$lang}">
                 <head>
                     <xsl:call-template name="html_head">
-                        <xsl:with-param name="html_title" select="'Stoffe'"/>
+                        <xsl:with-param name="html_title" select="i18n:t('Stoffe')"/>
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
@@ -2558,20 +2605,26 @@
                 </head>
                 <body class="page">
                     <div class="hfeed site" id="page">
-                        <xsl:call-template name="nav_bar"/>
+                        <xsl:call-template name="nav_bar">
+                            <xsl:with-param name="current_page" select="i18n:href('stoffe.html')"/>
+                        </xsl:call-template>
                         <div class="container-fluid">
                             <div class="card">
                                 <div class="card-header">
-                                    <h1>Stoffe</h1>
-                                    <p class="align-left">… in den exemplarisch analysierten
-                                        Rezeptionszeugnissen und Sappho-Fragmenten.</p>
-                                    <p class="align-left">Für eine hierarchische Ansicht siehe das
-                                            <a href="vokabular.html">Vokabular</a>. Mehr
-                                        Informationen zur exemplarischen Analyse sind <a
-                                            href="analyse.html">hier</a> zu finden. Statistische
-                                        Auswertungen werden <a href="statistik.html">hier</a>
-                                        aufbereitet; eine Netzwerkvisualisierung aller Daten ist <a
-                                            href="netzwerk.html">hier</a> verfügbar.</p>
+                                    <h1><xsl:value-of select="i18n:t('Stoffe')"/></h1>
+                                    <p class="align-left"><xsl:value-of
+                                            select="i18n:t('… in den exemplarisch analysierten Rezeptionszeugnissen und Sappho-Fragmenten.')"
+                                        /></p>
+                                    <p class="align-left"><xsl:value-of
+                                            select="i18n:t('Für eine hierarchische Ansicht siehe das ')"
+                                        /><a href="{i18n:href('vokabular.html')}"><xsl:value-of select="i18n:t('Vokabular')"/></a><xsl:value-of
+                                            select="i18n:t('. Mehr Informationen zur exemplarischen Analyse sind ')"
+                                        /><a href="{i18n:href('analyse.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' zu finden. Statistische Auswertungen werden ')"
+                                        /><a href="{i18n:href('statistik.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' aufbereitet; eine Netzwerkvisualisierung aller Daten ist ')"
+                                        /><a href="{i18n:href('netzwerk.html')}"><xsl:value-of select="i18n:t('hier')"/></a><xsl:value-of
+                                            select="i18n:t(' verfügbar.')"/></p>
                                 </div>
                                 <div class="card-body skos-wrap">
                                     <div class="wikidata-layout has-wide-chart">

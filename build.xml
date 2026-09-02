@@ -11,164 +11,210 @@
         <fileset dir="${target}" includes="*.html"/>
     </delete>
 
-    <!-- imprint -->
+    <!-- runs one XSLT transform for a given language; lang=en implies an "-en" output filename -->
+    <macrodef name="run-xslt">
+        <attribute name="in"/>
+        <attribute name="out"/>
+        <attribute name="style"/>
+        <attribute name="lang"/>
+        <sequential>
+            <xslt in="@{in}" out="@{out}" style="@{style}">
+                <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+                <classpath location="${basedir}/saxon/saxon9he.jar"/>
+                <param name="lang" expression="@{lang}"/>
+            </xslt>
+        </sequential>
+    </macrodef>
+
+    <!-- same as run-xslt, but also passes the output page's own filename as $current_page
+         (needed by meta.xsl, which is reused for several distinct output pages) -->
+    <macrodef name="run-xslt-page">
+        <attribute name="in"/>
+        <attribute name="out"/>
+        <attribute name="style"/>
+        <attribute name="lang"/>
+        <attribute name="page"/>
+        <sequential>
+            <xslt in="@{in}" out="@{out}" style="@{style}">
+                <factory name="net.sf.saxon.TransformerFactoryImpl"/>
+                <classpath location="${basedir}/saxon/saxon9he.jar"/>
+                <param name="lang" expression="@{lang}"/>
+                <param name="current_page" expression="@{page}"/>
+            </xslt>
+        </sequential>
+    </macrodef>
+
+    <!-- homepage -->
     <exec executable="python3" failonerror="true">
         <arg value="python/homepage-counter.py"/>
         <arg value="data/rdf/sappho-reception.ttl"/>
         <arg value="${target}/homepage-counter.xml"/>
     </exec>
 
-    <xslt in="${target}/homepage-counter.xml" out="${target}/index.html" style="./xslt/index.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <run-xslt in="${target}/homepage-counter.xml" out="${target}/index.html"
+        style="./xslt/index.xsl" lang="de"/>
+    <run-xslt in="${target}/homepage-counter.xml" out="${target}/home.html"
+        style="./xslt/index.xsl" lang="en"/>
 
     <delete file="${target}/homepage-counter.xml"/>
 
     <!-- query -->
-    <xslt in="${index}" out="${target}/query.html" style="./xslt/query.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <run-xslt in="${index}" out="${target}/query.html" style="./xslt/query.xsl" lang="de"/>
+    <run-xslt in="${index}" out="${target}/query-builder.html" style="./xslt/query.xsl" lang="en"/>
 
     <!-- about -->
-    <xslt in="./data/meta/about.xml" out="${target}/projekt.html" style="./xslt/meta.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
-    
+    <run-xslt-page in="./data/meta/about.xml" out="${target}/projekt.html"
+        style="./xslt/meta.xsl" lang="de" page="projekt.html"/>
+    <run-xslt-page in="./data/meta/about-en.xml" out="${target}/project.html"
+        style="./xslt/meta.xsl" lang="en" page="project.html"/>
+
     <!-- orientierung -->
-    <xslt in="./data/meta/orientierung.xml" out="${target}/orientierung.html" style="./xslt/meta.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <run-xslt-page in="./data/meta/orientierung.xml" out="${target}/orientierung.html"
+        style="./xslt/meta.xsl" lang="de" page="orientierung.html"/>
+    <run-xslt-page in="./data/meta/orientierung-en.xml" out="${target}/guidance.html"
+        style="./xslt/meta.xsl" lang="en" page="guidance.html"/>
 
     <!-- analyse -->
-    <xslt in="./data/meta/analyse.xml" out="${target}/analyse.html" style="./xslt/meta.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <run-xslt-page in="./data/meta/analyse.xml" out="${target}/analyse.html"
+        style="./xslt/meta.xsl" lang="de" page="analyse.html"/>
+    <run-xslt-page in="./data/meta/analyse-en.xml" out="${target}/analysis.html"
+        style="./xslt/meta.xsl" lang="en" page="analysis.html"/>
 
     <!-- publications -->
-    <xslt in="./data/meta/publikationen.xml" out="${target}/publikationen.html"
-        style="./xslt/meta.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <run-xslt-page in="./data/meta/publikationen.xml" out="${target}/publikationen.html"
+        style="./xslt/meta.xsl" lang="de" page="publikationen.html"/>
+    <run-xslt-page in="./data/meta/publikationen-en.xml" out="${target}/publications.html"
+        style="./xslt/meta.xsl" lang="en" page="publications.html"/>
 
     <!-- bibliography -->
-    <xslt in="./data/meta/bibliographie.xml" out="${target}/bibliographie.html"
-        style="./xslt/meta.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <run-xslt-page in="./data/meta/bibliographie.xml" out="${target}/bibliographie.html"
+        style="./xslt/meta.xsl" lang="de" page="bibliographie.html"/>
+    <run-xslt-page in="./data/meta/bibliographie-en.xml" out="${target}/bibliography.html"
+        style="./xslt/meta.xsl" lang="en" page="bibliography.html"/>
 
     <!-- book -->
-    <xslt in="./data/meta/buch.xml" out="${target}/texte.html" style="./xslt/meta.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <run-xslt-page in="./data/meta/buch.xml" out="${target}/texte.html" style="./xslt/meta.xsl"
+        lang="de" page="texte.html"/>
+    <run-xslt-page in="./data/meta/buch-en.xml" out="${target}/texts.html"
+        style="./xslt/meta.xsl" lang="en" page="texts.html"/>
 
     <!-- 404 -->
-    <xslt in="./data/meta/404.xml" out="${target}/404.html" style="./xslt/meta.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <run-xslt-page in="./data/meta/404.xml" out="${target}/404.html" style="./xslt/meta.xsl"
+        lang="de" page="404.html"/>
+    <run-xslt-page in="./data/meta/404-en.xml" out="${target}/not-found.html" style="./xslt/meta.xsl"
+        lang="en" page="not-found.html"/>
+
+    <!-- imprint -->
+    <run-xslt in="./data/imprint.xml" out="${target}/imprint.html" style="./xslt/imprint.xsl"
+        lang="de"/>
+    <run-xslt in="./data/imprint-en.xml" out="${target}/legal-notice.html" style="./xslt/imprint.xsl"
+        lang="en"/>
 
     <!-- tocs -->
-    <xslt in="./data/lists/sappho-rez_alle.xml" out="${target}/toc-alle.html" style="./xslt/toc.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <run-xslt in="./data/lists/sappho-rez_alle.xml" out="${target}/toc-alle.html"
+        style="./xslt/toc.xsl" lang="de"/>
+    <run-xslt in="./data/lists/sappho-rez_alle.xml" out="${target}/toc-all.html"
+        style="./xslt/toc.xsl" lang="en"/>
 
-    <xslt in="./data/lists/sappho-rez_drama.xml" out="${target}/toc-drama.html"
-        style="./xslt/toc.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <run-xslt in="./data/lists/sappho-rez_drama.xml" out="${target}/toc-drama.html"
+        style="./xslt/toc.xsl" lang="de"/>
+    <run-xslt in="./data/lists/sappho-rez_drama.xml" out="${target}/toc-plays.html"
+        style="./xslt/toc.xsl" lang="en"/>
 
-    <xslt in="./data/lists/sappho-rez_lyrik.xml" out="${target}/toc-lyrik.html"
-        style="./xslt/toc.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <run-xslt in="./data/lists/sappho-rez_lyrik.xml" out="${target}/toc-lyrik.html"
+        style="./xslt/toc.xsl" lang="de"/>
+    <run-xslt in="./data/lists/sappho-rez_lyrik.xml" out="${target}/toc-poetry.html"
+        style="./xslt/toc.xsl" lang="en"/>
 
-    <xslt in="./data/lists/sappho-rez_prosa.xml" out="${target}/toc-prosa.html"
-        style="./xslt/toc.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <run-xslt in="./data/lists/sappho-rez_prosa.xml" out="${target}/toc-prosa.html"
+        style="./xslt/toc.xsl" lang="de"/>
+    <run-xslt in="./data/lists/sappho-rez_prosa.xml" out="${target}/toc-prose.html"
+        style="./xslt/toc.xsl" lang="en"/>
 
-    <xslt in="./data/lists/sappho-rez_sonstige.xml" out="${target}/toc-sonstige.html"
-        style="./xslt/toc.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <run-xslt in="./data/lists/sappho-rez_sonstige.xml" out="${target}/toc-sonstige.html"
+        style="./xslt/toc.xsl" lang="de"/>
+    <run-xslt in="./data/lists/sappho-rez_sonstige.xml" out="${target}/toc-other.html"
+        style="./xslt/toc.xsl" lang="en"/>
 
-    <!-- bibl entities -->
-    <xslt in="./data/lists/sappho-rez_alle.xml" out="${target}/_bibl-entities-dummy.html"
-        style="./xslt/bibl-entities.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <!-- bibl entities (each invocation fans out into many result-document pages) -->
+    <run-xslt in="./data/lists/sappho-rez_alle.xml" out="${target}/_bibl-entities-dummy.html"
+        style="./xslt/bibl-entities.xsl" lang="de"/>
+    <run-xslt in="./data/lists/sappho-rez_alle.xml" out="${target}/_bibl-entities-dummy-en.html"
+        style="./xslt/bibl-entities.xsl" lang="en"/>
 
-    <!-- reception entities -->
-    <xslt in="./data/rdf/sappho-reception.rdf" out="${target}/_reception-entities-dummy.html"
-        style="./xslt/reception-entities.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <!-- reception entities (each invocation fans out into many result-document pages) -->
+    <run-xslt in="./data/rdf/sappho-reception.rdf" out="${target}/_reception-entities-dummy.html"
+        style="./xslt/reception-entities.xsl" lang="de"/>
+    <run-xslt in="./data/rdf/sappho-reception.rdf" out="${target}/_reception-entities-dummy-en.html"
+        style="./xslt/reception-entities.xsl" lang="en"/>
 
-    <!-- sappho fragments -->
-    <xslt in="./data/rdf/fragments.rdf" out="${target}/_fragments-dummy.html"
-        style="./xslt/sappho-fragments.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <!-- sappho fragments (each invocation fans out into many result-document pages) -->
+    <run-xslt in="./data/rdf/fragments.rdf" out="${target}/_fragments-dummy.html"
+        style="./xslt/sappho-fragments.xsl" lang="de"/>
+    <run-xslt in="./data/rdf/fragments.rdf" out="${target}/_fragments-dummy-en.html"
+        style="./xslt/sappho-fragments.xsl" lang="en"/>
 
     <!-- alignments -->
-    <xslt in="./documentation/alignments/alignments.rdf" out="${target}/alignments.html"
-        style="./xslt/alignments.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <run-xslt in="./documentation/alignments/alignments.rdf" out="${target}/alignments.html"
+        style="./xslt/alignments.xsl" lang="de"/>
+    <run-xslt in="./documentation/alignments/alignments.rdf" out="${target}/ontology-alignments.html"
+        style="./xslt/alignments.xsl" lang="en"/>
 
     <!-- network -->
     <exec executable="python3" failonerror="true">
         <arg value="python/network.py"/>
         <arg value="data/rdf/sappho-reception.ttl"/>
         <arg value="${target}/network-data.xml"/>
+        <arg value="de"/>
+    </exec>
+    <exec executable="python3" failonerror="true">
+        <arg value="python/network.py"/>
+        <arg value="data/rdf/sappho-reception.ttl"/>
+        <arg value="${target}/network-data-en.xml"/>
+        <arg value="en"/>
     </exec>
 
-    <xslt in="${target}/network-data.xml" out="${target}/netzwerk.html" style="xslt/network.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    <run-xslt in="${target}/network-data.xml" out="${target}/netzwerk.html"
+        style="xslt/network.xsl" lang="de"/>
+    <run-xslt in="${target}/network-data-en.xml" out="${target}/network.html"
+        style="xslt/network.xsl" lang="en"/>
 
     <delete file="${target}/network-data.xml"/>
-    
+    <delete file="${target}/network-data-en.xml"/>
+
     <!-- statistics -->
     <exec executable="python3" failonerror="true">
         <arg value="python/statistics.py"/>
         <arg value="data/rdf/sappho-reception.ttl"/>
         <arg value="${target}/statistics-data.xml"/>
+        <arg value="de"/>
     </exec>
-    
-    <xslt in="${target}/statistics-data.xml" out="${target}/statistik.html" style="xslt/statistics.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
-    
+    <exec executable="python3" failonerror="true">
+        <arg value="python/statistics.py"/>
+        <arg value="data/rdf/sappho-reception.ttl"/>
+        <arg value="${target}/statistics-data-en.xml"/>
+        <arg value="en"/>
+    </exec>
+
+    <run-xslt in="${target}/statistics-data.xml" out="${target}/statistik.html"
+        style="xslt/statistics.xsl" lang="de"/>
+    <run-xslt in="${target}/statistics-data-en.xml" out="${target}/statistics.html"
+        style="xslt/statistics.xsl" lang="en"/>
+
     <delete file="${target}/statistics-data.xml"/>
+    <delete file="${target}/statistics-data-en.xml"/>
 
     <!-- remove dummies -->
     <delete file="${target}/_bibl-entities-dummy.html"/>
+    <delete file="${target}/_bibl-entities-dummy-en.html"/>
     <delete file="${target}/_reception-entities-dummy.html"/>
+    <delete file="${target}/_reception-entities-dummy-en.html"/>
     <delete file="${target}/_fragments-dummy.html"/>
+    <delete file="${target}/_fragments-dummy-en.html"/>
 
     <copy file="data/rdf/sappho-reception_asserted-and-inferred.ttl"
         tofile="html/sappho-reception_asserted-and-inferred.ttl" overwrite="true"/>
-        
+
     <copy file="data/rdf/sappho-reception.ttl"
         tofile="html/sappho-reception.ttl" overwrite="true"/>
 

@@ -6,7 +6,8 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     xmlns:local="xyz" xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:intro="https://w3id.org/lso/intro/currentbeta#"
-    xmlns:lrmoo="http://iflastandards.info/ns/lrm/lrmoo/" exclude-result-prefixes="tei">
+    xmlns:lrmoo="http://iflastandards.info/ns/lrm/lrmoo/" xmlns:i18n="urn:sappho-digital:i18n"
+    exclude-result-prefixes="tei i18n">
 
     <xsl:import href="./partials/html_navbar.xsl"/>
     <xsl:import href="./partials/html_head.xsl"/>
@@ -27,15 +28,22 @@
         <xsl:variable name="entity" select="key('by-about', $uri, $receptionEntities)"/>
         <xsl:variable name="raw" select="
                 normalize-space((
-                $entity/rdfs:label[@xml:lang = 'de'],
-                $entity/rdfs:label[@xml:lang = 'en'],
+                $entity/rdfs:label[@xml:lang = $lang],
+                $entity/rdfs:label[@xml:lang = (if ($lang = 'en') then 'de' else 'en')],
                 $entity/rdfs:label,
                 $entity/@rdf:about)[1])"/>
+        <xsl:variable name="canon-phrase"
+            select="if ($lang = 'en') then 'Intertextual relation between ' else 'Intertextuelle Beziehung zwischen '"/>
         <xsl:variable name="t1"
-            select="replace($raw, '^\s*intertextuelle\s+relation\s+zwischen\s+', 'Intertextuelle Beziehung zwischen ', 'i')"/>
+            select="replace($raw, '^\s*intertextuelle\s+relation\s+zwischen\s+', $canon-phrase, 'i')"/>
         <xsl:variable name="t2"
-            select="replace($t1, '^\s*intertextual\s+relation(ship)?\s+between\s+', 'Intertextuelle Beziehung zwischen ', 'i')"/>
-        <xsl:variable name="t3" select="replace($t2, '\s+and\s+', ' und ')"/>
+            select="replace($t1, '^\s*intertextual\s+relation(ship)?\s+between\s+', $canon-phrase, 'i')"/>
+        <xsl:variable name="t3"
+            select="
+                if ($lang = 'en') then
+                    replace($t2, '\s+und\s+', ' and ')
+                else
+                    replace($t2, '\s+and\s+', ' und ')"/>
         <xsl:variable name="t4"
             select="replace($t3, '^(Expression\s+of|Expression\s+von)\s+', '', 'i')"/>
         <xsl:variable name="t5" select="replace($t4, '»\s*(Fragment[^«»]*Voigt)\s*«', '$1', 'i')"/>
@@ -131,13 +139,13 @@
 
         <xsl:variable name="label" select="
                 string((
-                key('by-about', $ts-uri, $works)/rdfs:label[@xml:lang = 'de'],
+                key('by-about', $ts-uri, $works)/rdfs:label[@xml:lang = $lang],
                 key('by-about', $ts-uri, $works)/rdfs:label,
-                key('by-about', $expr-uri, $works)//rdfs:label[@xml:lang = 'de'],
+                key('by-about', $expr-uri, $works)//rdfs:label[@xml:lang = $lang],
                 key('by-about', $expr-uri, $works)//rdfs:label,
-                key('by-about', $ts-uri, $receptionEntities)/rdfs:label[@xml:lang = 'de'],
+                key('by-about', $ts-uri, $receptionEntities)/rdfs:label[@xml:lang = $lang],
                 key('by-about', $ts-uri, $receptionEntities)/rdfs:label,
-                key('by-about', $expr-uri, $receptionEntities)//rdfs:label[@xml:lang = 'de'],
+                key('by-about', $expr-uri, $receptionEntities)//rdfs:label[@xml:lang = $lang],
                 key('by-about', $expr-uri, $receptionEntities)//rdfs:label,
                 $expr-uri
                 )[1])"/>
@@ -236,10 +244,11 @@
 
         <xsl:if
             test="exists(($motifs, $topics, $plots, $topoi, $persons, $places, $work-refs, $workpassages, $phrases, $intertexts))">
-            <h5 class="align-left feat-section-heading"> Ergebnisse der exemplarischen Analyse <span
+            <h5 class="align-left feat-section-heading"> <xsl:value-of
+                    select="i18n:t('Ergebnisse der exemplarischen Analyse')"/> <span
                     class="info-tooltip">
-                    <a href="https://sappho-digital.com/analyse.html" target="_blank"
-                        class="info-icon" aria-label="Zur Erläuterung der Analyse">ⓘ</a>
+                    <a href="https://sappho-digital.com/{i18n:href('analyse.html')}" target="_blank"
+                        class="info-icon" aria-label="{i18n:t('Zur Erläuterung der Analyse')}">ⓘ</a>
                 </span>
             </h5>
             <div class="feat-groups">
@@ -247,11 +256,11 @@
                 <!-- motifs -->
                 <xsl:if test="exists($motifs)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Motive</span>
+                        <span class="feat-group-label"><xsl:value-of select="i18n:t('Motive')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$motifs">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="motive.html" class="feat-tag feat-tag--motif">
+                                <a href="{i18n:href('motive.html')}" class="feat-tag feat-tag--motif">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -262,11 +271,11 @@
                 <!-- topics -->
                 <xsl:if test="exists($topics)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Themen</span>
+                        <span class="feat-group-label"><xsl:value-of select="i18n:t('Themen')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$topics">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="themen.html" class="feat-tag feat-tag--topic">
+                                <a href="{i18n:href('themen.html')}" class="feat-tag feat-tag--topic">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -277,11 +286,11 @@
                 <!-- plots -->
                 <xsl:if test="exists($plots)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Stoffe</span>
+                        <span class="feat-group-label"><xsl:value-of select="i18n:t('Stoffe')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$plots">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="stoffe.html" class="feat-tag feat-tag--plot">
+                                <a href="{i18n:href('stoffe.html')}" class="feat-tag feat-tag--plot">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -292,11 +301,11 @@
                 <!-- topoi -->
                 <xsl:if test="exists($topoi)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Rhetorische Topoi</span>
+                        <span class="feat-group-label"><xsl:value-of select="i18n:t('Rhetorische Topoi')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$topoi">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="topoi.html" class="feat-tag feat-tag--topos">
+                                <a href="{i18n:href('topoi.html')}" class="feat-tag feat-tag--topos">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -307,11 +316,12 @@
                 <!-- person references -->
                 <xsl:if test="exists($persons)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Personen­referenzen<br/>&amp; Figuren</span>
+                        <span class="feat-group-label"><xsl:value-of select="i18n:t('Personenreferenzen')"/><br/>&amp;
+                            <xsl:value-of select="i18n:t('Figuren')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$persons">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="personen.html" class="feat-tag feat-tag--person">
+                                <a href="{i18n:href('personen.html')}" class="feat-tag feat-tag--person">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -322,11 +332,11 @@
                 <!-- place references -->
                 <xsl:if test="exists($places)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Orts&#x200B;referenzen</span>
+                        <span class="feat-group-label"><xsl:value-of select="i18n:t('Ortsreferenzen')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$places">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="orte.html" class="feat-tag feat-tag--place">
+                                <a href="{i18n:href('orte.html')}" class="feat-tag feat-tag--place">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -337,7 +347,8 @@
                 <!-- work references -->
                 <xsl:if test="exists($work-refs)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Werk­referenzen<br/>&amp; Zitate</span>
+                        <span class="feat-group-label"><xsl:value-of select="i18n:t('Werkreferenzen')"/><br/>&amp;
+                            <xsl:value-of select="i18n:t('Zitate')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$work-refs">
                                 <xsl:sort select="lower-case(@label)"/>
@@ -348,7 +359,7 @@
                                         = lower-case($lbl)
                                         ][1]"/>
                                 <a
-                                    href="{if ($hit) then concat($hit/@xml:id, '.html') else 'werke.html'}"
+                                    href="{if ($hit) then i18n:href(concat($hit/@xml:id, '.html')) else i18n:href('werke.html')}"
                                     class="feat-tag feat-tag--work-ref">
                                     <xsl:value-of select="$lbl"/>
                                 </a>
@@ -360,11 +371,11 @@
                 <!-- work passages -->
                 <xsl:if test="exists($workpassages)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Text&#x200B;passagen</span>
+                        <span class="feat-group-label"><xsl:value-of select="i18n:t('Textpassagen')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$workpassages">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="werke.html" class="feat-tag feat-tag--passage">
+                                <a href="{i18n:href('werke.html')}" class="feat-tag feat-tag--passage">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -375,11 +386,11 @@
                 <!-- phrases -->
                 <xsl:if test="exists($phrases)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Phrasen</span>
+                        <span class="feat-group-label"><xsl:value-of select="i18n:t('Phrasen')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$phrases">
                                 <xsl:sort select="lower-case(@label)"/>
-                                <a href="werke.html" class="feat-tag feat-tag--phrase">
+                                <a href="{i18n:href('werke.html')}" class="feat-tag feat-tag--phrase">
                                     <xsl:value-of select="@label"/>
                                 </a>
                             </xsl:for-each>
@@ -390,11 +401,13 @@
                 <!-- intertexts -->
                 <xsl:if test="exists($intertexts)">
                     <div class="feat-group">
-                        <span class="feat-group-label">Intertextuelle<br/>Beziehungen mit …</span>
+                        <span class="feat-group-label"><xsl:value-of
+                                select="i18n:t('Intertextuelle')"/><br/><xsl:value-of
+                                select="i18n:t('Beziehungen mit …')"/></span>
                         <div class="feat-tag-list">
                             <xsl:for-each select="$intertexts">
                                 <xsl:sort select="lower-case(local:get-work-label(.))"/>
-                                <a href="{local:iri-id(.)}.html"
+                                <a href="{i18n:href(concat(local:iri-id(.), '.html'))}"
                                     class="feat-tag feat-tag--intertext">
                                     <xsl:value-of select="local:get-work-label(.)"/>
                                 </a>
@@ -430,8 +443,8 @@
                 </xsl:choose>
             </xsl:variable>
 
-            <xsl:result-document href="../html/{$id}.html">
-                <html>
+            <xsl:result-document href="../html/{i18n:href(concat($id, '.html'))}">
+                <html lang="{$lang}">
                     <head>
                         <xsl:call-template name="html_head">
                             <xsl:with-param name="html_title" select="$label"/>
@@ -457,7 +470,9 @@
 
 
                         <div class="hfeed site" id="page">
-                            <xsl:call-template name="nav_bar"/>
+                            <xsl:call-template name="nav_bar">
+                                <xsl:with-param name="current_page" select="i18n:href(concat($id, '.html'))"/>
+                            </xsl:call-template>
                             <div class="container-fluid">
                                 <div class="card">
                                     <div class="card-header">
@@ -527,7 +542,7 @@
                                         <div class="wikidata-left">
                                             <dl class="meta-dl">
                                                 <div class="meta-row">
-                                                  <dt>Interne ID</dt>
+                                                  <dt><xsl:value-of select="i18n:t('Interne ID')"/></dt>
                                                   <dd>
                                                   <xsl:value-of select="$id"/>
                                                   </dd>
@@ -569,18 +584,18 @@
     <xsl:template match="self::tei:bibl">
         <dl class="meta-dl">
             <div class="meta-row">
-                <dt>Typ</dt>
-                <dd>Werk</dd>
+                <dt><xsl:value-of select="i18n:t('Typ')"/></dt>
+                <dd><xsl:value-of select="i18n:t('Werk')"/></dd>
             </div>
 
             <xsl:if test="tei:author">
                 <div class="meta-row">
-                    <dt>Autor_in</dt>
+                    <dt><xsl:value-of select="i18n:t('Autor_in')"/></dt>
                     <dd>
                         <xsl:for-each select="tei:author">
                             <xsl:choose>
                                 <xsl:when test="@xml:id">
-                                    <a href="{@xml:id}.html">
+                                    <a href="{i18n:href(concat(@xml:id, '.html'))}">
                                         <xsl:value-of select="."/>
                                     </a>
                                 </xsl:when>
@@ -591,7 +606,7 @@
                             <xsl:if test="@ref">
                                 <a href="{@ref}" target="_blank">
                                     <img src="images/wiki.png" alt="Wikidata"
-                                        title="Wikidata-Eintrag öffnen" class="icon"/>
+                                        title="{i18n:t('Wikidata-Eintrag öffnen')}" class="icon"/>
                                 </a>
                             </xsl:if>
                             <xsl:if test="position() != last()">, </xsl:if>
@@ -602,23 +617,23 @@
 
             <xsl:if test="tei:note[@type = 'genre']">
                 <div class="meta-row">
-                    <dt>Gattung</dt>
+                    <dt><xsl:value-of select="i18n:t('Gattung')"/></dt>
                     <dd>
                         <xsl:for-each select="tei:note[@type = 'genre']">
                             <xsl:variable name="genreText" select="normalize-space(.)"/>
                             <xsl:variable name="genreLower" select="lower-case($genreText)"/>
                             <xsl:choose>
                                 <xsl:when test="contains($genreLower, 'lyrik')">
-                                    <a href="toc-lyrik.html">Lyrik</a>
+                                    <a href="{i18n:href('toc-lyrik.html')}"><xsl:value-of select="i18n:t('Lyrik')"/></a>
                                 </xsl:when>
                                 <xsl:when test="contains($genreLower, 'prosa')">
-                                    <a href="toc-prosa.html">Prosa</a>
+                                    <a href="{i18n:href('toc-prosa.html')}"><xsl:value-of select="i18n:t('Prosa')"/></a>
                                 </xsl:when>
                                 <xsl:when test="contains($genreLower, 'drama')">
-                                    <a href="toc-drama.html">Drama</a>
+                                    <a href="{i18n:href('toc-drama.html')}"><xsl:value-of select="i18n:t('Drama')"/></a>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <a href="toc-sonstige.html">Sonstige</a>
+                                    <a href="{i18n:href('toc-sonstige.html')}"><xsl:value-of select="i18n:t('Sonstige')"/></a>
                                 </xsl:otherwise>
                             </xsl:choose>
                             <xsl:if test="position() != last()">, </xsl:if>
@@ -629,7 +644,7 @@
 
             <xsl:if test="tei:date[@type = 'created']">
                 <div class="meta-row">
-                    <dt>Entstehungsjahr</dt>
+                    <dt><xsl:value-of select="i18n:t('Entstehungsjahr')"/></dt>
                     <dd>
                         <xsl:value-of select="tei:date[@type = 'created']"/>
                     </dd>
@@ -638,7 +653,7 @@
 
             <xsl:if test="tei:date[@type = 'published']">
                 <div class="meta-row">
-                    <dt>Publ.-/Aufführungsjahr</dt>
+                    <dt><xsl:value-of select="i18n:t('Publ.-/Aufführungsjahr')"/></dt>
                     <dd>
                         <xsl:value-of select="tei:date[@type = 'published']"/>
                     </dd>
@@ -647,12 +662,12 @@
 
             <xsl:if test="tei:pubPlace">
                 <div class="meta-row">
-                    <dt>Publ.-/Aufführungsort</dt>
+                    <dt><xsl:value-of select="i18n:t('Publ.-/Aufführungsort')"/></dt>
                     <dd>
                         <xsl:for-each select="tei:pubPlace">
                             <xsl:choose>
                                 <xsl:when test="@xml:id">
-                                    <a href="{@xml:id}.html">
+                                    <a href="{i18n:href(concat(@xml:id, '.html'))}">
                                         <xsl:value-of select="."/>
                                     </a>
                                 </xsl:when>
@@ -663,7 +678,7 @@
                             <xsl:if test="@ref">
                                 <a href="{@ref}" target="_blank">
                                     <img src="images/wiki.png" alt="Wikidata"
-                                        title="Wikidata-Eintrag öffnen" class="icon"/>
+                                        title="{i18n:t('Wikidata-Eintrag öffnen')}" class="icon"/>
                                 </a>
                             </xsl:if>
                             <xsl:if test="position() != last()">, </xsl:if>
@@ -674,12 +689,12 @@
 
             <xsl:if test="tei:publisher">
                 <div class="meta-row">
-                    <dt>Verlag/Druckerei</dt>
+                    <dt><xsl:value-of select="i18n:t('Verlag/Druckerei')"/></dt>
                     <dd>
                         <xsl:for-each select="tei:publisher">
                             <xsl:choose>
                                 <xsl:when test="@xml:id">
-                                    <a href="{@xml:id}.html">
+                                    <a href="{i18n:href(concat(@xml:id, '.html'))}">
                                         <xsl:value-of select="."/>
                                     </a>
                                 </xsl:when>
@@ -690,7 +705,7 @@
                             <xsl:if test="@ref">
                                 <a href="{@ref}" target="_blank">
                                     <img src="images/wiki.png" alt="Wikidata"
-                                        title="Wikidata-Eintrag öffnen" class="icon"/>
+                                        title="{i18n:t('Wikidata-Eintrag öffnen')}" class="icon"/>
                                 </a>
                             </xsl:if>
                             <xsl:if test="position() != last()">, </xsl:if>
@@ -701,12 +716,12 @@
 
             <xsl:if test="tei:bibl/tei:title">
                 <div class="meta-row">
-                    <dt>Enthalten in</dt>
+                    <dt><xsl:value-of select="i18n:t('Enthalten in')"/></dt>
                     <dd>
                         <xsl:for-each select="tei:bibl">
                             <xsl:choose>
                                 <xsl:when test="@xml:id">
-                                    <a href="{@xml:id}.html">
+                                    <a href="{i18n:href(concat(@xml:id, '.html'))}">
                                         <xsl:value-of select="tei:title"/>
                                     </a>
                                 </xsl:when>
@@ -717,7 +732,7 @@
                             <xsl:if test="@ref">
                                 <a href="{@ref}" target="_blank">
                                     <img src="images/wiki.png" alt="Wikidata"
-                                        title="Wikidata-Eintrag öffnen" class="icon"/>
+                                        title="{i18n:t('Wikidata-Eintrag öffnen')}" class="icon"/>
                                 </a>
                             </xsl:if>
                             <xsl:if test="position() != last()">, </xsl:if>
@@ -728,7 +743,7 @@
 
             <xsl:if test="tei:ref">
                 <div class="meta-row">
-                    <dt>Digitalisat</dt>
+                    <dt><xsl:value-of select="i18n:t('Digitalisat')"/></dt>
                     <dd>
                         <xsl:for-each select="tei:ref">
                             <a href="{@target}" target="_blank">
@@ -747,8 +762,8 @@
         <xsl:variable name="id" select="@xml:id"/>
         <dl class="meta-dl">
             <div class="meta-row">
-                <dt>Typ</dt>
-                <dd>Verlag/Druckerei</dd>
+                <dt><xsl:value-of select="i18n:t('Typ')"/></dt>
+                <dd><xsl:value-of select="i18n:t('Verlag/Druckerei')"/></dd>
             </div>
         </dl>
         <xsl:variable name="matches" select="//tei:bibl[tei:publisher/@xml:id = $id]"/>
@@ -756,9 +771,8 @@
         <xsl:if test="$count &gt; 0">
             <p class="align-left meta-works-heading">
                 <xsl:choose>
-                    <xsl:when test="$count = 1">Ein Werk in der Datenbank:</xsl:when>
-                    <xsl:otherwise><xsl:value-of select="$count"/> Werke in der
-                        Datenbank:</xsl:otherwise>
+                    <xsl:when test="$count = 1"><xsl:value-of select="i18n:t('Ein Werk in der Datenbank:')"/></xsl:when>
+                    <xsl:otherwise><xsl:value-of select="$count"/><xsl:value-of select="i18n:t(' Werke in der Datenbank:')"/></xsl:otherwise>
                 </xsl:choose>
             </p>
             <ul>
@@ -773,7 +787,7 @@
                     <xsl:variable name="t"
                         select="normalize-space((tei:title[@type = 'text'][1], tei:title[1])[1])"/>
                     <li>
-                        <a href="{@xml:id}.html">
+                        <a href="{i18n:href(concat(@xml:id, '.html'))}">
                             <xsl:choose>
                                 <xsl:when test="$t != ''">
                                     <xsl:value-of select="$t"/>
@@ -792,8 +806,8 @@
         <div>
             <dl class="meta-dl">
                 <div class="meta-row">
-                    <dt>Typ</dt>
-                    <dd>Autor_in</dd>
+                    <dt><xsl:value-of select="i18n:t('Typ')"/></dt>
+                    <dd><xsl:value-of select="i18n:t('Autor_in')"/></dd>
                 </div>
                 <xsl:variable name="id" select="@xml:id"/>
                 <xsl:variable name="matches" select="//tei:bibl[tei:author/@xml:id = $id]"/>
@@ -826,14 +840,14 @@
 
                     <xsl:if test="$bdate or $bplace">
                         <div class="meta-row">
-                            <dt>Geboren</dt>
+                            <dt><xsl:value-of select="i18n:t('Geboren')"/></dt>
                             <dd>
                                 <xsl:value-of
                                     select="local:format-partial-date(string(($bdate)[1]))"/>
                                 <xsl:if test="$bplace">
                                     <xsl:text>, </xsl:text>
                                     <xsl:variable name="label"
-                                        select="string(($bplace/rdfs:label[@xml:lang = 'de'], $bplace/rdfs:label)[1])"/>
+                                        select="string(($bplace/rdfs:label[@xml:lang = $lang], $bplace/rdfs:label)[1])"/>
                                     <xsl:variable name="id"
                                         select="tokenize(string(($bplace/@rdf:about)[1]), '/')[last()]"/>
                                     <xsl:variable name="iri"
@@ -846,7 +860,7 @@
                                             ))"/>
                                     <xsl:choose>
                                         <xsl:when test="$hasPlace">
-                                            <a href="{$id}.html">
+                                            <a href="{i18n:href(concat($id, '.html'))}">
                                                 <xsl:value-of select="$label"/>
                                             </a>
                                         </xsl:when>
@@ -857,7 +871,7 @@
                                     <xsl:if test="$wd">
                                         <a href="{$wd}" target="_blank" rel="noopener">
                                             <img src="images/wiki.png" alt="Wikidata"
-                                                title="Wikidata-Eintrag öffnen" class="icon"/>
+                                                title="{i18n:t('Wikidata-Eintrag öffnen')}" class="icon"/>
                                         </a>
                                     </xsl:if>
                                 </xsl:if>
@@ -867,14 +881,14 @@
 
                     <xsl:if test="$ddate or $dplace">
                         <div class="meta-row">
-                            <dt>Gestorben</dt>
+                            <dt><xsl:value-of select="i18n:t('Gestorben')"/></dt>
                             <dd>
                                 <xsl:value-of
                                     select="local:format-partial-date(string(($ddate)[1]))"/>
                                 <xsl:if test="$dplace">
                                     <xsl:text>, </xsl:text>
                                     <xsl:variable name="label"
-                                        select="string(($dplace/rdfs:label[@xml:lang = 'de'], $dplace/rdfs:label)[1])"/>
+                                        select="string(($dplace/rdfs:label[@xml:lang = $lang], $dplace/rdfs:label)[1])"/>
                                     <xsl:variable name="id"
                                         select="tokenize(string(($dplace/@rdf:about)[1]), '/')[last()]"/>
                                     <xsl:variable name="iri"
@@ -887,7 +901,7 @@
                                             ))"/>
                                     <xsl:choose>
                                         <xsl:when test="$hasPlace">
-                                            <a href="{$id}.html">
+                                            <a href="{i18n:href(concat($id, '.html'))}">
                                                 <xsl:value-of select="$label"/>
                                             </a>
                                         </xsl:when>
@@ -898,7 +912,7 @@
                                     <xsl:if test="$wd">
                                         <a href="{$wd}" target="_blank" rel="noopener">
                                             <img src="images/wiki.png" alt="Wikidata"
-                                                title="Wikidata-Eintrag öffnen" class="icon"/>
+                                                title="{i18n:t('Wikidata-Eintrag öffnen')}" class="icon"/>
                                         </a>
                                     </xsl:if>
                                 </xsl:if>
@@ -914,9 +928,8 @@
             <xsl:if test="$count &gt; 0">
                 <p class="align-left meta-works-heading">
                     <xsl:choose>
-                        <xsl:when test="$count = 1">Ein Werk in der Datenbank:</xsl:when>
-                        <xsl:otherwise><xsl:value-of select="$count"/> Werke in der
-                            Datenbank:</xsl:otherwise>
+                        <xsl:when test="$count = 1"><xsl:value-of select="i18n:t('Ein Werk in der Datenbank:')"/></xsl:when>
+                        <xsl:otherwise><xsl:value-of select="$count"/><xsl:value-of select="i18n:t(' Werke in der Datenbank:')"/></xsl:otherwise>
                     </xsl:choose>
                 </p>
                 <ul>
@@ -931,7 +944,7 @@
                         <xsl:variable name="t"
                             select="normalize-space((tei:title[@type = 'text'][1], tei:title[1])[1])"/>
                         <li>
-                            <a href="{@xml:id}.html">
+                            <a href="{i18n:href(concat(@xml:id, '.html'))}">
                                 <xsl:choose>
                                     <xsl:when test="$t != ''">
                                         <xsl:value-of select="$t"/>
@@ -951,8 +964,8 @@
         <div>
             <dl class="meta-dl">
                 <div class="meta-row">
-                    <dt>Typ</dt>
-                    <dd>Publikations-/Aufführungsort</dd>
+                    <dt><xsl:value-of select="i18n:t('Typ')"/></dt>
+                    <dd><xsl:value-of select="i18n:t('Publikations-/Aufführungsort')"/></dd>
                 </div>
             </dl>
             <xsl:variable name="id" select="@xml:id"/>
@@ -961,9 +974,8 @@
             <xsl:if test="$count &gt; 0">
                 <p class="align-left meta-works-heading">
                     <xsl:choose>
-                        <xsl:when test="$count = 1">Ein Werk in der Datenbank:</xsl:when>
-                        <xsl:otherwise><xsl:value-of select="$count"/> Werke in der
-                            Datenbank:</xsl:otherwise>
+                        <xsl:when test="$count = 1"><xsl:value-of select="i18n:t('Ein Werk in der Datenbank:')"/></xsl:when>
+                        <xsl:otherwise><xsl:value-of select="$count"/><xsl:value-of select="i18n:t(' Werke in der Datenbank:')"/></xsl:otherwise>
                     </xsl:choose>
                 </p>
                 <ul>
@@ -979,7 +991,7 @@
                             select="normalize-space((tei:title[@type = 'text'][1], tei:title[1])[1])"/>
 
                         <li>
-                            <a href="{@xml:id}.html">
+                            <a href="{i18n:href(concat(@xml:id, '.html'))}">
                                 <xsl:choose>
                                     <xsl:when test="$t != ''">
                                         <xsl:value-of select="$t"/>
@@ -1005,7 +1017,7 @@
         <xsl:if test="count($containedWorks) &gt; 0">
             <dl class="meta-dl">
                 <div class="meta-row">
-                    <dt>Enthält</dt>
+                    <dt><xsl:value-of select="i18n:t('Enthält')"/></dt>
                     <dd>
                         <xsl:for-each select="$containedWorks">
                             <xsl:sort select="
@@ -1017,7 +1029,7 @@
                                 select="lower-case(normalize-space((tei:title[@type = 'text'][1], tei:title[1])[1]))"/>
                             <xsl:variable name="t"
                                 select="normalize-space((tei:title[@type = 'text'][1], tei:title[1])[1])"/>
-                            <a href="{@xml:id}.html">
+                            <a href="{i18n:href(concat(@xml:id, '.html'))}">
                                 <xsl:choose>
                                     <xsl:when test="$t != ''">
                                         <xsl:value-of select="$t"/>
@@ -1029,7 +1041,7 @@
                                 <xsl:text> (</xsl:text>
                                 <xsl:choose>
                                     <xsl:when test="tei:author[1]/@xml:id">
-                                        <a href="{tei:author[1]/@xml:id}.html">
+                                        <a href="{i18n:href(concat(tei:author[1]/@xml:id, '.html'))}">
                                             <xsl:value-of select="tei:author[1]"/>
                                         </a>
                                     </xsl:when>
@@ -1042,7 +1054,7 @@
                             <xsl:if test="@ref">
                                 <a href="{@ref}" target="_blank">
                                     <img src="images/wiki.png" alt="Wikidata"
-                                        title="Wikidata-Eintrag öffnen" class="icon"/>
+                                        title="{i18n:t('Wikidata-Eintrag öffnen')}" class="icon"/>
                                 </a>
                             </xsl:if>
                             <xsl:if test="position() != last()">, </xsl:if>
@@ -1052,7 +1064,7 @@
 
                 <xsl:if test="$containedWorks/tei:date[@type = 'published']">
                     <div class="meta-row">
-                        <dt>Publ.-/Aufführungsjahr</dt>
+                        <dt><xsl:value-of select="i18n:t('Publ.-/Aufführungsjahr')"/></dt>
                         <dd>
                             <xsl:for-each-group
                                 select="$containedWorks/tei:date[@type = 'published']"
@@ -1066,7 +1078,7 @@
 
                 <xsl:if test="$containedWorks/tei:pubPlace">
                     <div class="meta-row">
-                        <dt>Publ.-/Aufführungsort</dt>
+                        <dt><xsl:value-of select="i18n:t('Publ.-/Aufführungsort')"/></dt>
                         <dd>
                             <xsl:for-each-group select="$containedWorks/tei:pubPlace" group-by="
                                     if (@xml:id) then
@@ -1087,7 +1099,7 @@
                                     select="normalize-space(string(current-group()[1]))"/>
                                 <xsl:choose>
                                     <xsl:when test="$id">
-                                        <a href="{$id}.html">
+                                        <a href="{i18n:href(concat($id, '.html'))}">
                                             <xsl:choose>
                                                 <xsl:when test="$t != ''">
                                                   <xsl:value-of select="current-group()[1]"/>
@@ -1108,7 +1120,7 @@
                                 <xsl:if test="$ref">
                                     <a href="{$ref}" target="_blank">
                                         <img src="images/wiki.png" alt="Wikidata"
-                                            title="Wikidata-Eintrag öffnen" class="icon"/>
+                                            title="{i18n:t('Wikidata-Eintrag öffnen')}" class="icon"/>
                                     </a>
                                 </xsl:if>
                                 <xsl:if test="position() != last()">, </xsl:if>
@@ -1140,7 +1152,7 @@
                                     select="normalize-space(string(current-group()[1]))"/>
                                 <xsl:choose>
                                     <xsl:when test="$id">
-                                        <a href="{$id}.html">
+                                        <a href="{i18n:href(concat($id, '.html'))}">
                                             <xsl:choose>
                                                 <xsl:when test="$t != ''">
                                                   <xsl:value-of select="current-group()[1]"/>
@@ -1161,7 +1173,7 @@
                                 <xsl:if test="$ref">
                                     <a href="{$ref}" target="_blank">
                                         <img src="images/wiki.png" alt="Wikidata"
-                                            title="Wikidata-Eintrag öffnen" class="icon"/>
+                                            title="{i18n:t('Wikidata-Eintrag öffnen')}" class="icon"/>
                                     </a>
                                 </xsl:if>
                                 <xsl:if test="position() != last()">, </xsl:if>
@@ -1178,8 +1190,12 @@
     <xsl:function name="local:month-name-de" as="xs:string">
         <xsl:param name="m" as="xs:integer"/>
         <xsl:sequence select="
-                ('Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
-                'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember')[$m]"/>
+                if ($lang = 'en') then
+                    ('January', 'February', 'March', 'April', 'May', 'June',
+                    'July', 'August', 'September', 'October', 'November', 'December')[$m]
+                else
+                    ('Januar', 'Februar', 'März', 'April', 'Mai', 'Juni',
+                    'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember')[$m]"/>
     </xsl:function>
 
     <xsl:function name="local:format-partial-date" as="xs:string?">
@@ -1191,7 +1207,11 @@
             <xsl:when test="$s castable as xs:date">
                 <xsl:variable name="d" select="xs:date($s)"/>
                 <xsl:sequence
-                    select="concat(day-from-date($d), '. ', local:month-name-de(month-from-date($d)), ' ', year-from-date($d))"
+                    select="
+                        if ($lang = 'en') then
+                            concat(day-from-date($d), ' ', local:month-name-de(month-from-date($d)), ' ', year-from-date($d))
+                        else
+                            concat(day-from-date($d), '. ', local:month-name-de(month-from-date($d)), ' ', year-from-date($d))"
                 />
             </xsl:when>
 
