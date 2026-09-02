@@ -79,7 +79,7 @@
                     <author ref="https://www.wikidata.org/entity/Q77979" xml:id="author_b0f9b07f">Sixt Birck</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q78" xml:id="place_7aaf6c53">Basel</pubPlace>
-                    <publisher xml:id="publisher_187b672a">Schauber</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q134900964" xml:id="publisher_187b672a">Schauber</publisher>
                     <ref target="https://www.digitale-sammlungen.de/de/view/bsb00070162">https://www.digitale-sammlungen.de/de/view/bsb00070162</ref>
                 </bibl>
                 <bibl xml:id="bibl_c0db9ef8">
@@ -273,7 +273,7 @@
                     <author ref="https://www.wikidata.org/entity/Q66605" xml:id="author_96e97674">Georg Philipp Harsdörffer</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2090" xml:id="place_2bd03983">Nürnberg</pubPlace>
-                    <publisher xml:id="publisher_a9d1be61">Wolfgang Endter</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q55676027" xml:id="publisher_a9d1be61">Wolfgang Endter</publisher>
                     <ref target="https://books.google.at/books?id=szVXAAAAcAAJ">https://books.google.at/books?id=szVXAAAAcAAJ</ref>
                 </bibl>
                 <bibl xml:id="bibl_fce454f6">
@@ -374,7 +374,7 @@
                     <author ref="https://www.wikidata.org/entity/Q66605" xml:id="author_96e97674">Georg Philipp Harsdörffer</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2090" xml:id="place_2bd03983">Nürnberg</pubPlace>
-                    <publisher xml:id="publisher_a9d1be61">Wolfgang Endter</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q55676027" xml:id="publisher_a9d1be61">Wolfgang Endter</publisher>
                 </bibl>
                 <bibl xml:id="bibl_7b1d4020">
                     <title type="text">Tempel deß Friedens</title>
@@ -735,7 +735,7 @@
                     <author ref="https://www.wikidata.org/entity/Q105229" xml:id="author_1ab6fe01">Philander von der Linde [= Johann Burckhardt Mencke]</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_dfadc43f">Johann Friedrich Gleditsch und Sohn</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q89095" xml:id="publisher_dfadc43f">Johann Friedrich Gleditsch und Sohn</publisher>
                     <ref target="https://books.google.de/books?id=C9s6AAAAcAAJ">https://books.google.de/books?id=C9s6AAAAcAAJ</ref>
                 </bibl>
                 <bibl xml:id="bibl_e2ea3469">
@@ -3224,7 +3224,7 @@ Philosophen zu Sanssouci</title>
                     <author ref="https://www.wikidata.org/entity/Q71484" xml:id="author_7b93a308">Ludwig Gotthard Kosegarten</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_20e96b47">Gräff</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q94860191" xml:id="publisher_20e96b47">Gräff</publisher>
                     <ref target="https://www.deutschestextarchiv.de/book/view/kosegarten_poesieen03_1802">https://www.deutschestextarchiv.de/book/view/kosegarten_poesieen03_1802</ref>
                 </bibl>
                 <bibl xml:id="bibl_93ec1fb7">
@@ -4121,7 +4121,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q110567" xml:id="author_7af40cab">Kathinka Zitz-Halein</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1720" xml:id="place_efaf7112">Mainz</pubPlace>
-                    <publisher ref="https://www.wikidata.org/entity/Q1298441" xml:id="publisher_bbff788d">Faber’sche Buchhandlung</publisher>
+                    <publisher xml:id="publisher_bbff788d">Faber’sche Buchhandlung</publisher>
                     <ref target="https://books.google.de/books?id=GluOzQEACAAJ">https://books.google.de/books?id=GluOzQEACAAJ</ref>
                 </bibl>
                 <bibl xml:id="bibl_806695b9">
@@ -4952,7 +4952,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q60785" xml:id="author_24558c69">Ricarda Huch</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_d7f622d5">Haessel</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q18222140" xml:id="publisher_d7f622d5">Haessel</publisher>
                 </bibl>
                 <bibl xml:id="bibl_48707ca2">
                     <title type="text"/>
@@ -5117,7 +5117,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher xml:id="publisher_6d69f739">Adolf Luser</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q363242" xml:id="publisher_6d69f739">Adolf Luser</publisher>
                 </bibl>
                 <bibl xml:id="bibl_433612de">
                     <title type="text">Klage um den Freund</title>
@@ -6238,7 +6238,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <author ref="https://www.wikidata.org/entity/Q96912" xml:id="author_2f14b48f">Heinz Piontek</author>
                     <note type="genre">Lyrik</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2999" xml:id="place_34f75abc">Würzburg</pubPlace>
-                    <publisher xml:id="publisher_5b6f26d7">Bergstadtverlag</publisher>
+                    <publisher ref="https://www.wikidata.org/entity/Q14906409" xml:id="publisher_5b6f26d7">Bergstadtverlag</publisher>
                 </bibl>
                 <bibl xml:id="bibl_a5889140">
                     <title type="text">Sapphos Wiederkehr (Gertrud Kolmar, verschollen 1943)</title>
