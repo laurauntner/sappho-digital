@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
+  var lang = document.documentElement.lang === 'en' ? 'en' : 'de';
+  var occurrences = lang === 'en' ? 'Occurrences' : 'Vorkommnisse';
+
   if (typeof Highcharts !== 'undefined') {
     Highcharts.setOptions({
       chart: { style: { fontFamily: 'Geist' } }
@@ -22,11 +25,11 @@ document.addEventListener('DOMContentLoaded', function () {
       chart: { type: 'bar' },
       title: { text: null },
       xAxis: { type: 'category', title: { text: null } },
-      yAxis: { title: { text: 'Vorkommnisse' }, endOnTick: false },
+      yAxis: { title: { text: occurrences }, endOnTick: false },
       legend: { enabled: false },
-      tooltip: { pointFormat: 'Vorkommnisse: <b>{point.y}</b>' },
+      tooltip: { pointFormat: occurrences + ': <b>{point.y}</b>' },
       series: [{
-        name: payload.seriesName || 'Vorkommnisse',
+        name: payload.seriesName || occurrences,
         data: payload.data || [],
         color: 'rgba(94, 23, 235, 0.7)'
       }],

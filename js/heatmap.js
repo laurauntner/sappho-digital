@@ -1,5 +1,9 @@
 (function () {
   "use strict";
+  var lang = document.documentElement.lang === "en" ? "en" : "de";
+  var t = lang === "en"
+    ? { until: "until ", play: "▶ Play", stop: "⏹ Stop" }
+    : { until: "bis ", play: "▶ Abspielen", stop: "⏹ Stop" };
   var rawData = window.heatmapData;
   if (!rawData || !rawData.length) {
     var section = document.getElementById("heatmap-section");
@@ -46,7 +50,7 @@
   slider.value = minYear;
   /* cumulative: all publications UP TO year */
   function update(year) {
-    display.textContent = "bis " + year;
+    display.textContent = t.until + year;
     var filtered = rawData.filter(function (d) { return d.year <= year; });
     var points   = filtered.map(function (d) { return [d.lat, d.lng, 1]; });
     heatLayer.setLatLngs(points);
@@ -61,14 +65,14 @@
   function stopPlay() {
     clearInterval(playTimer);
     playTimer = null;
-    playBtn.textContent = "▶ Abspielen";
+    playBtn.textContent = t.play;
   }
   function startPlay() {
     if (+slider.value >= maxYear) {
       slider.value = minYear;
       update(minYear);
     }
-    playBtn.textContent = "⏹ Stop";
+    playBtn.textContent = t.stop;
     playTimer = setInterval(function () {
       var next = +slider.value + 1;
       slider.value = next;
