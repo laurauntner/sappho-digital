@@ -29,6 +29,31 @@
           Humanities.</p>
       </div>
       <div>
+        <head>Datengrundlage</head>
+        <p>Die den Verzeichnissen und damit auch der Analyse zugrundeliegenden Rezeptionszeugnisse
+          wurden im Zuge einer mehrjährigen Dokumentationsarbeit recherchiert – unter anderem in
+          den deutschen, österreichischen und schweizerischen Nationalbibliographien, in Zeitungs-
+          und Zeitschriftendatenbanken wie <ref target="https://anno.onb.ac.at/">ANNO</ref> und dem
+            <ref target="https://www.deutsche-zeitungsportal.de/">Deutschen Zeitungsportal</ref>,
+          in digitalen Textkorpora wie <ref target="https://textgrid.de/">TextGrid</ref> und dem
+            <ref target="https://www.projekt-gutenberg.org/">Projekt Gutenberg</ref> sowie in
+          Fanfiction-Portalen wie dem
+            <ref target="https://archiveofourown.org/">Archive of Our Own</ref> und der
+          wissenschaftlichen Sekundärliteratur; ergänzt wurde das Material durch Hinweise aus dem
+          persönlichen und fachlichen Umfeld.</p>
+        <p>Die gefundenen Texte wurden zunächst mit grundlegenden bibliographischen Angaben –
+          Entstehungs- und Publikationsjahr, Titel, Autor_in(nen), Gattung, Publikationsort,
+          Verlag sowie ggf. einem Link zu einem Digitalisat – in einer Excel-Tabelle erfasst.
+          Mithilfe von <ref target="https://openrefine.org/">OpenRefine</ref> wurde die Tabelle
+          anschließend semiautomatisch mit <ref target="https://www.wikidata.org/">Wikidata</ref>
+          verknüpft, um Personen, Werke, Orte und Verlage über eindeutige Identifikatoren (QIDs)
+          zu erschließen. Ein eigens entwickeltes <ref
+            target="https://github.com/laurauntner/sappho-digital/tree/main/python"
+            >Python-Skript</ref> überführte die Tabelle schließlich in die auf GitHub öffentlich
+          zugänglichen XML/TEI-Dateien, die die Grundlage für das hier vorliegende Analysekorpus
+          bilden.</p>
+      </div>
+      <div>
         <head>Methodisches Vorgehen</head>
         <p>Alle analysierten Rezeptionszeugnisse wurden demselben Korpus entnommen: dem Band <hi
             rend="italics"><ref
@@ -42,25 +67,87 @@
           die typische Rezeptionsmuster veranschaulichen. Dazu zählen etwa die wiederkehrende
           Thematisierung der Sappho-Phaon-Legende und die Darstellung Sapphos als große Dichterin
           oder als homoerotisch Begehrende. Berücksichtigt wurden Texte verschiedener Gattungen
-          (Lyrik, Prosa, Drama sowie Mischformen) und unterschiedlicher Bekanntheit – nicht nur
+          (Lyrik, Prosa, Drama sowie Sonstiges, z. B. Comics) und unterschiedlicher Bekanntheit – nicht nur
           Werke kanonisierter Autor_innen, sondern auch solche weniger bekannter Schreibender, vom
           16. bis zum 21. Jahrhundert.</p>
         <p>Berücksichtigt wurden Motive, Themen, Stoffe, rhetorische Topoi, Figuren sowie Personen-,
           Orts- und Werkreferenzen und Zitate. Auf der Grundlage dieser Phänomene wurden
           intertextuelle Beziehungen zwischen den Rezeptionszeugnissen und den Sappho-Fragmenten
           sowie zwischen den Rezeptionszeugnissen untereinander festgestellt.</p>
-        <p>Der Workflow verlief in zwei Schritten: Zunächst wurden die Phänomene in XML-Dateien
-          annotiert. Die XML-Dateien wurden anschließend mithilfe eigens entwickelter <ref
-            target="https://github.com/laurauntner/sappho-digital/tree/main/python"
-            >Python-Skripte</ref> in RDF-Tripel überführt. Zur Repräsentation der Daten wurde eine
+        <p>Bevor die Phänomene in dieses Datenmodell überführt werden konnten, mussten sie aus den
+          Texten herausgearbeitet werden. Die 99 Rezeptionszeugnisse lagen durch die Arbeit an der
+          Sappho-Anthologie bereits im Volltext vor, die 197 Sappho-Fragmente wurden mittels
+          Optical Character Recognition (OCR) maschinenlesbar gemacht. Die eigentliche
+          Interpretationsarbeit erfolgte in mehreren aufeinanderfolgenden
+          <hi rend="italics">close reading</hi>-Durchgängen:
+          Die Texte wurden mehrfach gelesen, wobei mit jedem Durchgang weitere Annotationen ergänzt
+          bzw. bereits gesetzte kontrolliert und präzisiert wurden.</p>
+        <p>Annotiert wurde mit einem individuellen XML-Tagset: <code>motiv</code>,
+            <code>thema</code>, <code>stoff</code> und
+            <code>topos</code> markierten Motive, Themen, biographische Stoffvarianten
+          und rhetorische Topoi, <code>werk</code> Werkreferenzen (bei Zitaten und
+          Paraphrasen ergänzt um das Attribut <code>art="passage"</code>),
+            <code>person</code> mit den Attributen <code>art="real"</code>,
+            <code>art="fictional"</code> und <code>art="type"</code> reale
+          Personen, fiktive Figuren und Personentypen sowie <code>ort</code> mit
+            <code>art="real"</code> bzw. <code>art="fictional"</code> reale
+          und fiktive Orte. Ließ sich ein Phänomen nicht direkt am Wortlaut festmachen, wurde es
+          über das Attribut <code>type</code> mit dem normalisierten Begriff versehen;
+          wo eine Verortung im Fließtext nicht möglich war – etwa bei manchen Stoffvarianten und
+          Themen –, wurden Tags auch außerhalb des Textes gesetzt.</p>
+        <p>Zur laufenden Kontrolle der Annotation kamen zwei eigens entwickelte Python-Skripte zum
+          Einsatz: Eines listete alle bereits vergebenen Tags mitsamt ihren Werten auf, das andere
+          zeigte, welche davon bereits mehrfach verwendet worden waren – eine Vorarbeit, die
+          zugleich die Grundlage für das SKOS-Vokabular (siehe unten) schuf. Für die abschließende
+          Korrekturrunde wurde zudem eine statische HTML-Ansicht entwickelt, die für jeden Text den
+          Volltext synoptisch neben einer Checkliste aller annotierten Phänomene darstellte.</p>
+        <p>Auf Grundlage der annotierten XML-Dokumente überführen sechs aufeinander aufbauende
+            <ref target="https://github.com/laurauntner/sappho-digital/tree/main/python"
+            >Python-Skripte</ref> die Daten in RDF-Tripel. Ein erstes Skript legt aus den
+          Autor_innenangaben im Verzeichnis sämtlicher Rezeptionszeugnisse Personeninstanzen an und
+          ergänzt sie, wo eine Wikidata-ID vorliegt, um biographische Grunddaten (Geburt, Tod,
+          Geschlecht, Abbildung) sowie weitere Identifikatoren
+          (<ref target="https://www.dbpedia.org/">DBpedia</ref>,
+          <ref target="https://www.dnb.de/gnd">GND</ref>,
+          <ref target="https://viaf.org/">VIAF</ref>). Ein zweites
+          Skript verarbeitet die bibliographischen Angaben zu den Rezeptionszeugnissen und erzeugt
+          Werk- und, wo ein Publikationsdatum vorliegt, Manifestationsdaten samt Titeln,
+          Publikationsorten und -daten sowie, sofern verfügbar, Cover-Abbildungen und weiteren
+          Identifikatoren (u. a. eine <ref target="https://www.goodreads.com/">Goodreads</ref>-Work-ID); ein drittes Skript überführt auf dieselbe
+          Weise die 197 Sappho-Fragmente sowie Sapphos Gesamtwerk. Ein viertes Skript liest die
+          annotierten XML-Dokumente aus und trägt Motive, Themen, Stoffe, Topoi, Werk-, Orts- und
+          Personenreferenzen sowie Figuren in die entsprechenden Klassen des Datenmodells ein,
+          abgeglichen mit dem SKOS-Vokabular (siehe unten). Ein fünftes Skript konstruiert daraus
+          gerichtete intertextuelle Relationen – sowohl zwischen Sapphos Fragmenten und den
+          Rezeptionszeugnissen als auch zwischen Rezeptionszeugnissen untereinander – und
+          dokumentiert dabei die jeweiligen Belegstellen. Ein sechstes Skript führt schließlich
+          alle zuvor erzeugten Dateien zu einem gemeinsamen Graphen zusammen (nach der Regel
+          »last write wins«); der zusammengeführte Graph wird anschließend mit dem
+          Java-basierten Reasoner <ref target="http://www.hermit-reasoner.com/">HermiT</ref>
+          verarbeitet. So entstanden über 400.000 Tripel, die sich
+          durch das <hi rend="italics">reasoning</hi> auf über 600.000 erweitern lassen.</p>
+        <p>Zur Repräsentation der Daten wurde eine eigene
             <ref target="https://sappho-digital.com/ontology.html">Ontologie</ref> entwickelt, die
-          auf bestehenden Ontologien (<ref target="https://cidoc-crm.org/">CIDOC CRM</ref>, <ref
-            target="https://repository.ifla.org/items/729b094a-92d6-4317-9dee-a300053ffdb4"
-            >LRMoo</ref> und <ref target="https://github.com/BOberreither/INTRO">INTRO</ref>)
-          basiert und zusätzlich mit diversen <ref
-            target="https://sappho-digital.com/alignments.html">Alignments</ref> mit anderen
-          Ontologien ausgestattet ist. Wiederkehrende Rezeptionsphänomene sind in einem
-            <ref target="https://sappho-digital.com/vokabular.html">SKOS-Vokabular</ref> definiert.</p>
+          auf den bestehenden Ontologien <ref target="https://cidoc-crm.org/">CIDOC CRM</ref>,
+            <ref target="https://repository.ifla.org/items/729b094a-92d6-4317-9dee-a300053ffdb4"
+            >LRMoo</ref> und <ref target="https://github.com/BOberreither/INTRO">INTRO</ref>
+          aufbaut und zusätzlich mit zahlreichen <hi rend="italics"><ref
+            target="https://sappho-digital.com/alignments.html">alignments</ref></hi> zu weiteren
+          Ontologien ausgestattet ist.</p>
+        <p>Wiederkehrende Rezeptionsphänomene sind zudem in einem
+            <ref target="https://sappho-digital.com/vokabular.html">SKOS-Vokabular</ref> definiert.
+          Da sich produktiv-literarische Rezeptionsphänomene nicht abschließend vorab bestimmen
+          lassen, wurde das Vokabular induktiv aus dem Material selbst entwickelt: Alle Phänomene,
+          die in mindestens zwei annotierten Dokumenten auftraten – Werkreferenzen und
+          Stoffvarianten unabhängig von ihrer Häufigkeit –, wurden im webbasierten LOD-Editor
+            <ref target="https://vocbench.uniroma2.it/">VocBench</ref> manuell strukturiert und
+          hierarchisiert. Intern wurden sie über hierarchische
+          (<code>skos:broader</code>/<code>skos:narrower</code>) und assoziative
+          (<code>skos:related</code>) Relationen verknüpft, extern wo möglich mit Wikidata
+          (<code>skos:relatedMatch</code>, <code>skos:closeMatch</code>,
+          <code>skos:narrowMatch</code>, <code>skos:broadMatch</code>). Insgesamt umfasst das
+          Vokabular 427 Konzepte und gut 5.000 Tripel; den größten Anteil bilden Motive und
+          Personen.</p>
         <p>Die resultierenden Daten sind in einem <ref
             target="https://github.com/laurauntner/sappho-digital">GitHub-Repositorium</ref> offen
           zugänglich und können zudem über ein <ref target="https://sappho-digital.com/query.html"

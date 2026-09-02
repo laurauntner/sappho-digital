@@ -28,6 +28,30 @@
           approach to literary reception histories within the Digital Humanities.</p>
       </div>
       <div>
+        <head>Data Basis</head>
+        <p>The reception testimonies underlying the lists – and thus also the analysis – were
+          compiled over several years of research, drawing on the German, Austrian and Swiss
+          national bibliographies, newspaper and periodical databases such as
+            <ref target="https://anno.onb.ac.at/">ANNO</ref> and the
+            <ref target="https://www.deutsche-zeitungsportal.de/">Deutsches
+            Zeitungsportal</ref>, digital text corpora such as
+            <ref target="https://textgrid.de/">TextGrid</ref> and
+            <ref target="https://www.projekt-gutenberg.org/">Project Gutenberg</ref>, fanfiction
+          platforms such as the <ref target="https://archiveofourown.org/">Archive of Our
+            Own</ref>, and scholarly secondary literature; the material was supplemented with tips
+          from personal and professional contacts.</p>
+        <p>The texts found were first recorded in a spreadsheet with basic bibliographic
+          information – date of composition and publication, title, author(s), genre, place of
+          publication, publisher, and, where available, a link to a digitized copy. Using
+            <ref target="https://openrefine.org/">OpenRefine</ref>, the spreadsheet was then
+          semi-automatically linked to <ref target="https://www.wikidata.org/">Wikidata</ref> to
+          identify
+          persons, works, places and publishers via unique identifiers (QIDs). A purpose-built
+          <ref target="https://github.com/laurauntner/sappho-digital/tree/main/python">Python
+            script</ref> finally converted the spreadsheet into the XML/TEI files openly available
+          on GitHub, which form the basis for the analysis corpus presented here.</p>
+      </div>
+      <div>
         <head>Methodological Approach</head>
         <p>All analysed reception testimonies were drawn from the same corpus: the volume <hi
             rend="italics"><ref
@@ -40,25 +64,87 @@
           »Texts« > »Sappho Fragments«), as well as 99 sample reception testimonies illustrating
           typical patterns of reception. These include, for example, the recurring treatment of the
           Sappho–Phaon legend and the portrayal of Sappho as a great poet or as a homoerotic
-          desiring subject. Texts of various genres (poetry, prose, drama, and hybrid forms) and of
+          desiring subject. Texts of various genres (poetry, prose, drama, and other texts, e.g.
+          comics) and of
           varying degrees of renown were considered – not only works by canonized authors, but also
           those by lesser-known writers, from the 16th to the 21st century.</p>
         <p>Motifs, topics, plots, rhetorical topoi, characters, as well as references to
           persons, places and works, and quotations were taken into account. On the basis of these
           phenomena, intertextual relationships were established between the reception testimonies
           and the Sappho fragments, as well as among the reception testimonies themselves.</p>
-        <p>The workflow proceeded in two steps: first, the phenomena were annotated in XML files.
-          The XML files were then converted into RDF triples using specially developed <ref
-            target="https://github.com/laurauntner/sappho-digital/tree/main/python"
-            >Python scripts</ref>. To represent the data, an <ref
-            target="https://sappho-digital.com/ontology.html">ontology</ref> was developed, based
-          on existing ontologies (<ref target="https://cidoc-crm.org/">CIDOC CRM</ref>, <ref
+        <p>Before the phenomena could be integrated into this data model, they had to be extracted
+          from the texts. The 99 reception testimonies were already available in full text through
+          the work on the Sappho anthology; the 197 Sappho fragments were made machine-readable
+          using Optical Character Recognition (OCR). The actual interpretive work was carried out
+          in several successive <hi rend="italics">close-reading</hi> passes: the texts were read multiple times, with each
+          pass adding further annotations or checking and refining those already made.</p>
+        <p>Annotation used an individual XML tagset: <code>motiv</code>,
+            <code>thema</code>, <code>stoff</code> and
+            <code>topos</code> marked motifs, topics, biographical plot variants and
+          rhetorical topoi, <code>werk</code> marked references to works (supplemented,
+          for quotations and paraphrases, with the attribute <code>art="passage"</code>),
+            <code>person</code> with the attributes <code>art="real"</code>,
+            <code>art="fictional"</code> and <code>art="type"</code> marked
+          real people, fictional characters and character types, and <code>ort</code>
+          with <code>art="real"</code> or <code>art="fictional"</code> marked
+          real and fictional places. Where a phenomenon could not be pinned directly to the
+          wording, it was given a normalized term via the attribute <code>type</code>;
+          where it could not be located in the running text at all – as was often the case for some
+          plot variants and topics – tags were placed outside the text as well.</p>
+        <p>Two purpose-built Python scripts supported ongoing quality control of the annotation:
+          one listed all tags already assigned along with their values, the other showed which of
+          these had already been used more than once – groundwork that also formed the basis for
+          the SKOS vocabulary (see below). For the final round of corrections, a static HTML view
+          was developed that displayed, for each text, the full text synoptically alongside a
+          checklist of all annotated phenomena.</p>
+        <p>Based on the annotated XML documents, six successive
+            <ref target="https://github.com/laurauntner/sappho-digital/tree/main/python">Python
+            scripts</ref> convert the data into RDF triples. A first script creates person
+          instances from the author information in the list of all reception testimonies and,
+          where a Wikidata ID is available, adds basic biographical data (birth, death, gender,
+          image) as well as further identifiers
+          (<ref target="https://www.dbpedia.org/">DBpedia</ref>,
+          <ref target="https://www.dnb.de/gnd">GND</ref>,
+          <ref target="https://viaf.org/">VIAF</ref>). A second script processes
+          the bibliographic information on the reception testimonies and generates work data and,
+          where a publication date is available, manifestation data with titles, places and dates
+          of publication, as well as, where available, cover images and further identifiers
+          (including a <ref target="https://www.goodreads.com/">Goodreads</ref> work ID); a third
+          script converts the 197 Sappho fragments and
+          Sappho’s complete works in the same way. A fourth script reads the annotated XML
+          documents and enters motifs, topics, plots, topoi, references to works, places and
+          persons, and characters into the corresponding classes of the data model, matched
+          against the SKOS vocabulary (see below). A fifth script uses these to construct directed
+          intertextual relations – both between Sappho’s fragments and the reception testimonies
+          and among the reception testimonies themselves – documenting the respective textual
+          evidence along the way. A sixth script finally merges all previously generated files
+          into a single graph (following a “last write wins” rule); the merged graph is then
+          processed with the Java-based reasoner
+            <ref target="http://www.hermit-reasoner.com/">HermiT</ref>. This produced over
+          400,000 triples,
+          extendable to over 600,000 through <hi rend="italics">reasoning</hi>.</p>
+        <p>To represent the data, a dedicated
+            <ref target="https://sappho-digital.com/ontology.html">ontology</ref> was developed,
+          building on the existing ontologies <ref target="https://cidoc-crm.org/">CIDOC
+            CRM</ref>, <ref
             target="https://repository.ifla.org/items/729b094a-92d6-4317-9dee-a300053ffdb4"
-            >LRMoo</ref> and <ref target="https://github.com/BOberreither/INTRO">INTRO</ref>) and
-          additionally equipped with various <ref
-            target="https://sappho-digital.com/alignments.html">alignments</ref> with other
-          ontologies. Recurring reception phenomena are defined in a <ref
-            target="https://sappho-digital.com/vokabular.html">SKOS vocabulary</ref>.</p>
+            >LRMoo</ref> and <ref target="https://github.com/BOberreither/INTRO">INTRO</ref>, and
+          additionally equipped with numerous <hi rend="italics"><ref
+            target="https://sappho-digital.com/alignments.html">alignments</ref></hi> to further
+          ontologies.</p>
+        <p>Recurring reception phenomena are also defined in a
+            <ref target="https://sappho-digital.com/vokabular.html">SKOS vocabulary</ref>. Since
+          productive literary reception phenomena cannot be fully determined in advance, the
+          vocabulary was developed inductively from the material itself: all phenomena occurring
+          in at least two annotated documents – references to works and plot variants regardless
+          of frequency – were manually structured and hierarchized in the web-based LOD editor
+            <ref target="https://vocbench.uniroma2.it/">VocBench</ref>. Internally, they were
+          linked via hierarchical (<code>skos:broader</code>/
+          <code>skos:narrower</code>) and associative (<code>skos:related</code>) relations,
+          externally, wherever possible, to Wikidata (<code>skos:relatedMatch</code>,
+          <code>skos:closeMatch</code>, <code>skos:narrowMatch</code>,
+          <code>skos:broadMatch</code>). In total, the vocabulary comprises 427 concepts and just
+          over 5,000 triples; motifs and persons make up the largest share.</p>
         <p>The resulting data is openly accessible in a <ref
             target="https://github.com/laurauntner/sappho-digital">GitHub repository</ref> and can
           also be queried via a <ref target="https://sappho-digital.com/query.html">SPARQL
