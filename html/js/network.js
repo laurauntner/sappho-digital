@@ -946,7 +946,7 @@ document.fonts.ready.then(function () {
     out.toBlob(function (blob) {
       var a = document.createElement("a");
       a.href = URL.createObjectURL(blob);
-      a.download = "graph.png";
+      a.download = (document.documentElement.lang === "en" ? "network_visualization" : "netzwerkvisualisierung") + ".png";
       a.click();
       URL.revokeObjectURL(a.href);
     }, "image/png");
