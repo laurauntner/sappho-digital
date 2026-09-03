@@ -65,6 +65,8 @@ For the data model in action, see also the companion repository [wikidata-to-cid
 - **[Java](https://github.com/laurauntner/sappho-digital/blob/main/java/src/main/java/Reasoner.java)** — Reasoner program using HermiT.
 - Code for the **[project website](https://sappho-digital.com/)**.
 
+AI disclosure: Much of the code was created or refined with the help of [Claude Code](https://claude.com/de/product/claude-code).
+
 ---
 
 ## Running Locally
