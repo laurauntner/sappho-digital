@@ -1786,7 +1786,7 @@ function buildBubbleChart(features, decades, container, showType = false) {
         const t = mk('text'); set(t, { x, y, ...attrs }); t.textContent = content; return t;
     };
 
-    const decLabel = d => d === 'n/a' ? 'o. J.' : d.replace(/(\d+)s$/, '$1er');
+    const decLabel = d => d === 'n/a' ? (STATS_LANG === 'en' ? 'n/a' : 'o. J.') : (STATS_LANG === 'en' ? d : d.replace(/(\d+)s$/, '$1er'));
 
     decades.forEach((dec, ci) => {
         const cx = LABEL_W + ci * COL_W + COL_W / 2;
@@ -3896,7 +3896,7 @@ function renderGenderTimeChart() {
     const mode      = document.getElementById('sel-gender-time-mode')?.value || 'stacked';
     const isPercent = mode === 'percent';
 
-    const decLabels = d.timeDist.map(b => b.key === 'n/a' ? 'o. J.' : b.key.replace(/(\d+)s$/, '$1er'));
+    const decLabels = d.timeDist.map(b => b.key === 'n/a' ? (STATS_LANG === 'en' ? 'n/a' : 'o. J.') : (STATS_LANG === 'en' ? b.key : b.key.replace(/(\d+)s$/, '$1er')));
     const maleRaw   = d.timeDist.map(b => b.male);
     const femRaw    = d.timeDist.map(b => b.female);
     const unkRaw    = d.timeDist.map(b => b.unknown);
