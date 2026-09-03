@@ -228,6 +228,14 @@ add_bilingual(g, manifestation_uri,
               "Andreas Bagordo’s Sappho edition")
 g.add((manifestation_uri, LRMOO.R24i_was_created_through, manifestation_creation_uri))
 g.add((manifestation_uri, ECRM.P102_has_title, title_uri))
+g.add((manifestation_uri, ECRM.P1_is_identified_by, SD["identifier/Q141262334"]))
+g.add((manifestation_uri, OWL.sameAs, URIRef("http://www.wikidata.org/entity/Q141262334")))
+
+g.add((SD["identifier/Q141262334"], RDF.type, ECRM.E42_Identifier))
+g.add((SD["identifier/Q141262334"], RDFS.label, Literal("Q141262334")))
+g.add((SD["identifier/Q141262334"], ECRM.P1i_identifies, manifestation_uri))
+g.add((SD["identifier/Q141262334"], ECRM.P2_has_type, SD["id_type/wikidata"]))
+g.add((SD["id_type/wikidata"], ECRM.P2i_is_type_of, SD["identifier/Q141262334"]))
 
 g.add((manifestation_creation_uri, RDF.type, LRMOO.F30_Manifestation_Creation))
 add_bilingual(g, manifestation_creation_uri,
