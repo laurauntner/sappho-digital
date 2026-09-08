@@ -5414,6 +5414,11 @@
     ecrm:P2i_is_type_of <https://sappho-digital.com/gender/female>,
         <https://sappho-digital.com/gender/male> .
 
+<https://sappho-digital.com/identifier/Q141262334> a ecrm:E42_Identifier ;
+    rdfs:label "Q141262334" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/sappho_bagordo> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
 <https://sappho-digital.com/identifier/Q17892> a ecrm:E42_Identifier ;
     rdfs:label "Q17892" ;
     ecrm:P1i_identifies <https://sappho-digital.com/person/author_sappho> ;
@@ -8044,6 +8049,7 @@
         <https://sappho-digital.com/identifier/Q119292638>,
         <https://sappho-digital.com/identifier/Q119292647>,
         <https://sappho-digital.com/identifier/Q119292648>,
+        <https://sappho-digital.com/identifier/Q141262334>,
         <https://sappho-digital.com/identifier/Q17079267>,
         <https://sappho-digital.com/identifier/Q17892>,
         <https://sappho-digital.com/identifier/Q21070481>,
@@ -8058,6 +8064,7 @@
     rdfs:label "Andreas Bagordos Sappho-Ausgabe"@de,
         "Andreas Bagordo’s Sappho edition"@en ;
     ecrm:P102_has_title <https://sappho-digital.com/title/manifestation/sappho_bagordo> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141262334> ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/sappho_bagordo> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_sappho_1>,
         <https://sappho-digital.com/expression/bibl_sappho_100>,
@@ -8255,7 +8262,8 @@
         <https://sappho-digital.com/expression/bibl_sappho_95>,
         <https://sappho-digital.com/expression/bibl_sappho_96>,
         <https://sappho-digital.com/expression/bibl_sappho_97>,
-        <https://sappho-digital.com/expression/bibl_sappho_98> .
+        <https://sappho-digital.com/expression/bibl_sappho_98> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q141262334> .
 
 <https://sappho-digital.com/person/editor_bagordo> a ecrm:E21_Person ;
     rdfs:label "Andreas Bagordo" ;
