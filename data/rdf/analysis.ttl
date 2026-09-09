@@ -1812,6 +1812,11 @@
         "Interpretation of girl (Character) in Sappho träumt eine zweite Fahrt ins Exil"@en ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_2660d82e_character_person_40792a88ba634e66> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_2660d82e_character_person_887e83106aad1200> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation von Charon (Figur) in Sappho träumt eine zweite Fahrt ins Exil"@de,
+        "Interpretation of Charon (Character) in Sappho träumt eine zweite Fahrt ins Exil"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_2660d82e_character_person_887e83106aad1200> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_2660d82e_character_person_b793a3807d130de0> a intro:INT_Interpretation ;
     rdfs:label "Interpretation von Kleis (Figur) in Sappho träumt eine zweite Fahrt ins Exil"@de,
         "Interpretation of Cleis (Character) in Sappho träumt eine zweite Fahrt ins Exil"@en ;
@@ -1921,6 +1926,11 @@
     rdfs:label "Interpretation von Mädchen (Person) in Sappho träumt eine zweite Fahrt ins Exil"@de,
         "Interpretation of girl (Person) in Sappho träumt eine zweite Fahrt ins Exil"@en ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_2660d82e_person_40792a88ba634e66> .
+
+<https://sappho-digital.com/feature/interpretation/bibl_2660d82e_person_887e83106aad1200> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation von Charon (Person) in Sappho träumt eine zweite Fahrt ins Exil"@de,
+        "Interpretation of Charon (Person) in Sappho träumt eine zweite Fahrt ins Exil"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_2660d82e_person_887e83106aad1200> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_2660d82e_person_b793a3807d130de0> a intro:INT_Interpretation ;
     rdfs:label "Interpretation von Kleis (Person) in Sappho träumt eine zweite Fahrt ins Exil"@de,
@@ -3057,6 +3067,11 @@
         "Interpretation of Lesbos (Place) in Sappho und Phaon"@en ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_458b7c88_place_0009a58f625c087b> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_458b7c88_place_1adb2da7993ecc95> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation von Unterwelt/Hades/Orkus (Ort) in Sappho und Phaon"@de,
+        "Interpretation of underworld/Hades/Orcus (Place) in Sappho und Phaon"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_458b7c88_place_1adb2da7993ecc95> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_458b7c88_place_21104b06fd2e1311> a intro:INT_Interpretation ;
     rdfs:label "Interpretation von Mytilene (Ort) in Sappho und Phaon"@de,
         "Interpretation of Mytilene (Place) in Sappho und Phaon"@en ;
@@ -3877,6 +3892,11 @@
         "Interpretation of Sappho (Character) in Sappho. Ein dramatisches Gedicht"@en ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_5aa55e45_character_person_e585b2a779019b7e> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_5aa55e45_character_person_f42fab276b6fdb13> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation von Alkaios (Figur) in Sappho. Ein dramatisches Gedicht"@de,
+        "Interpretation of Alcaeus (Character) in Sappho. Ein dramatisches Gedicht"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_5aa55e45_character_person_f42fab276b6fdb13> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_5aa55e45_motif_15d689c1f40b1d56> a intro:INT_Interpretation ;
     rdfs:label "Interpretation von Eifersucht (Motiv) in Sappho. Ein dramatisches Gedicht"@de,
         "Interpretation of jealousy (Motif) in Sappho. Ein dramatisches Gedicht"@en ;
@@ -3931,6 +3951,11 @@
     rdfs:label "Interpretation von Sappho (Person) in Sappho. Ein dramatisches Gedicht"@de,
         "Interpretation of Sappho (Person) in Sappho. Ein dramatisches Gedicht"@en ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_5aa55e45_person_e585b2a779019b7e> .
+
+<https://sappho-digital.com/feature/interpretation/bibl_5aa55e45_person_f42fab276b6fdb13> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation von Alkaios (Person) in Sappho. Ein dramatisches Gedicht"@de,
+        "Interpretation of Alcaeus (Person) in Sappho. Ein dramatisches Gedicht"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_5aa55e45_person_f42fab276b6fdb13> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_5aa55e45_person_f9d48292bc61bb67> a intro:INT_Interpretation ;
     rdfs:label "Interpretation von Eros (Person) in Sappho. Ein dramatisches Gedicht"@de,
@@ -4767,6 +4792,11 @@
         "Interpretation of Apollo (Character) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_character_person_a92154dba89f764f> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_69a9167e_character_person_b793a3807d130de0> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation von Kleis (Figur) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
+        "Interpretation of Cleis (Character) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_character_person_b793a3807d130de0> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_69a9167e_character_person_c408a1bcd63c420f> a intro:INT_Interpretation ;
     rdfs:label "Interpretation von Phaon (Figur) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
         "Interpretation of Phaon (Character) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
@@ -4982,6 +5012,11 @@
         "Interpretation of Apollo (Person) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_person_a92154dba89f764f> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_69a9167e_person_b793a3807d130de0> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation von Kleis (Person) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
+        "Interpretation of Cleis (Person) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_person_b793a3807d130de0> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_69a9167e_person_c408a1bcd63c420f> a intro:INT_Interpretation ;
     rdfs:label "Interpretation von Phaon (Person) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
         "Interpretation of Phaon (Person) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
@@ -5032,11 +5067,6 @@
         "Interpretation of Leucadian rock (Place) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_place_c7da5f2e77438154> .
 
-<https://sappho-digital.com/feature/interpretation/bibl_69a9167e_plot_011312b82eb4fc98> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sapphos Suizid (Stoff) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
-        "Interpretation of Sappho plot focusing on Sappho's suicide (Plot) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
-    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_plot_011312b82eb4fc98> .
-
 <https://sappho-digital.com/feature/interpretation/bibl_69a9167e_plot_168fc491c40ff2fd> a intro:INT_Interpretation ;
     rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sappho als Chorleiterin (Stoff) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
         "Interpretation of Sappho plot focusing on Sappho as chorus leader (Plot) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
@@ -5076,6 +5106,11 @@
     rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sappho als große Dichterin (Stoff) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
         "Interpretation of Sappho plot focusing on Sappho as great poet (Plot) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_plot_86a1ad47f8e7fa03> .
+
+<https://sappho-digital.com/feature/interpretation/bibl_69a9167e_plot_99b118c4> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sapphos Suizid (Dekonstruktion) (Stoff) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
+        "Interpretation of Sappho-Stoff mit Fokus auf Sapphos Suizid (Dekonstruktion) (Plot) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_plot_99b118c4> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_69a9167e_plot_cc6bf7467ad0c7cf> a intro:INT_Interpretation ;
     rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sappho als unglücklich Liebende (Stoff) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
@@ -11179,6 +11214,11 @@
         "Interpretation of Eos (Character) in Fragment 103 Voigt"@en ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_sappho_103_character_person_807f37582972882e> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_sappho_103_character_person_c7aebd12b1cbd031> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation von Zeus (Figur) in Fragment 103 Voigt"@de,
+        "Interpretation of Zeus (Character) in Fragment 103 Voigt"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_sappho_103_character_person_c7aebd12b1cbd031> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_sappho_103_motif_172883cbad5b3349> a intro:INT_Interpretation ;
     rdfs:label "Interpretation von Heller Ton (Motiv) in Fragment 103 Voigt"@de,
         "Interpretation of clear tone (Motif) in Fragment 103 Voigt"@en ;
@@ -11248,6 +11288,11 @@
     rdfs:label "Interpretation von Eos (Person) in Fragment 103 Voigt"@de,
         "Interpretation of Eos (Person) in Fragment 103 Voigt"@en ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_sappho_103_person_807f37582972882e> .
+
+<https://sappho-digital.com/feature/interpretation/bibl_sappho_103_person_c7aebd12b1cbd031> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation von Zeus (Person) in Fragment 103 Voigt"@de,
+        "Interpretation of Zeus (Person) in Fragment 103 Voigt"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_sappho_103_person_c7aebd12b1cbd031> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_sappho_103_place_c469fa37e1f081e9> a intro:INT_Interpretation ;
     rdfs:label "Interpretation von Pieria (Ort) in Fragment 103 Voigt"@de,
@@ -17751,6 +17796,12 @@
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_2660d82e_character_person_40792a88ba634e66> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/character/bibl_2660d82e_character_person_40792a88ba634e66> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_2660d82e_character_person_887e83106aad1200> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation von Charon (Figur) in Sappho träumt eine zweite Fahrt ins Exil"@de,
+        "Interpretation of Charon (Character) in Sappho träumt eine zweite Fahrt ins Exil"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_2660d82e_character_person_887e83106aad1200> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/character/bibl_2660d82e_character_person_887e83106aad1200> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_2660d82e_character_person_b793a3807d130de0> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation von Kleis (Figur) in Sappho träumt eine zweite Fahrt ins Exil"@de,
         "Interpretation of Cleis (Character) in Sappho träumt eine zweite Fahrt ins Exil"@en ;
@@ -17882,6 +17933,12 @@
         "Interpretation of girl (Person) in Sappho träumt eine zweite Fahrt ins Exil"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_2660d82e_person_40792a88ba634e66> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_40792a88ba634e66> .
+
+<https://sappho-digital.com/actualization/interpretation/bibl_2660d82e_person_887e83106aad1200> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation von Charon (Person) in Sappho träumt eine zweite Fahrt ins Exil"@de,
+        "Interpretation of Charon (Person) in Sappho träumt eine zweite Fahrt ins Exil"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_2660d82e_person_887e83106aad1200> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_887e83106aad1200> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_2660d82e_person_b793a3807d130de0> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation von Kleis (Person) in Sappho träumt eine zweite Fahrt ins Exil"@de,
@@ -19245,6 +19302,12 @@
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_458b7c88_place_0009a58f625c087b> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/place_ref/bibl_458b7c88_place_0009a58f625c087b> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_458b7c88_place_1adb2da7993ecc95> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation von Unterwelt/Hades/Orkus (Ort) in Sappho und Phaon"@de,
+        "Interpretation of underworld/Hades/Orcus (Place) in Sappho und Phaon"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_458b7c88_place_1adb2da7993ecc95> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/place_ref/bibl_458b7c88_place_1adb2da7993ecc95> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_458b7c88_place_21104b06fd2e1311> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation von Mytilene (Ort) in Sappho und Phaon"@de,
         "Interpretation of Mytilene (Place) in Sappho und Phaon"@en ;
@@ -20229,6 +20292,12 @@
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_5aa55e45_character_person_e585b2a779019b7e> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/character/bibl_5aa55e45_character_person_e585b2a779019b7e> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_5aa55e45_character_person_f42fab276b6fdb13> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation von Alkaios (Figur) in Sappho. Ein dramatisches Gedicht"@de,
+        "Interpretation of Alcaeus (Character) in Sappho. Ein dramatisches Gedicht"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_5aa55e45_character_person_f42fab276b6fdb13> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/character/bibl_5aa55e45_character_person_f42fab276b6fdb13> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_5aa55e45_motif_15d689c1f40b1d56> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation von Eifersucht (Motiv) in Sappho. Ein dramatisches Gedicht"@de,
         "Interpretation of jealousy (Motif) in Sappho. Ein dramatisches Gedicht"@en ;
@@ -20294,6 +20363,12 @@
         "Interpretation of Sappho (Person) in Sappho. Ein dramatisches Gedicht"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_5aa55e45_person_e585b2a779019b7e> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_e585b2a779019b7e> .
+
+<https://sappho-digital.com/actualization/interpretation/bibl_5aa55e45_person_f42fab276b6fdb13> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation von Alkaios (Person) in Sappho. Ein dramatisches Gedicht"@de,
+        "Interpretation of Alcaeus (Person) in Sappho. Ein dramatisches Gedicht"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_5aa55e45_person_f42fab276b6fdb13> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_f42fab276b6fdb13> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_5aa55e45_person_f9d48292bc61bb67> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation von Eros (Person) in Sappho. Ein dramatisches Gedicht"@de,
@@ -21297,6 +21372,12 @@
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_69a9167e_character_person_a92154dba89f764f> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/character/bibl_69a9167e_character_person_a92154dba89f764f> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_character_person_b793a3807d130de0> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation von Kleis (Figur) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
+        "Interpretation of Cleis (Character) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_69a9167e_character_person_b793a3807d130de0> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/character/bibl_69a9167e_character_person_b793a3807d130de0> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_character_person_c408a1bcd63c420f> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation von Phaon (Figur) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
         "Interpretation of Phaon (Character) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
@@ -21555,6 +21636,12 @@
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_69a9167e_person_a92154dba89f764f> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_a92154dba89f764f> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_person_b793a3807d130de0> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation von Kleis (Person) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
+        "Interpretation of Cleis (Person) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_69a9167e_person_b793a3807d130de0> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_b793a3807d130de0> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_person_c408a1bcd63c420f> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation von Phaon (Person) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
         "Interpretation of Phaon (Person) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
@@ -21615,12 +21702,6 @@
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_69a9167e_place_c7da5f2e77438154> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/place_ref/bibl_69a9167e_place_c7da5f2e77438154> .
 
-<https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_plot_011312b82eb4fc98> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sapphos Suizid (Stoff) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
-        "Interpretation of Sappho plot focusing on Sappho's suicide (Plot) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
-    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_69a9167e_plot_011312b82eb4fc98> ;
-    intro:R21_identifies <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_011312b82eb4fc98> .
-
 <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_plot_168fc491c40ff2fd> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sappho als Chorleiterin (Stoff) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
         "Interpretation of Sappho plot focusing on Sappho as chorus leader (Plot) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
@@ -21668,6 +21749,12 @@
         "Interpretation of Sappho plot focusing on Sappho as great poet (Plot) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_69a9167e_plot_86a1ad47f8e7fa03> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_86a1ad47f8e7fa03> .
+
+<https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_plot_99b118c4> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sapphos Suizid (Dekonstruktion) (Stoff) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
+        "Interpretation of Sappho-Stoff mit Fokus auf Sapphos Suizid (Dekonstruktion) (Plot) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_69a9167e_plot_99b118c4> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_99b118c4> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_plot_cc6bf7467ad0c7cf> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sappho als unglücklich Liebende (Stoff) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
@@ -28987,6 +29074,12 @@
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_sappho_103_character_person_807f37582972882e> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/character/bibl_sappho_103_character_person_807f37582972882e> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_sappho_103_character_person_c7aebd12b1cbd031> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation von Zeus (Figur) in Fragment 103 Voigt"@de,
+        "Interpretation of Zeus (Character) in Fragment 103 Voigt"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_sappho_103_character_person_c7aebd12b1cbd031> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/character/bibl_sappho_103_character_person_c7aebd12b1cbd031> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_sappho_103_motif_172883cbad5b3349> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation von Heller Ton (Motiv) in Fragment 103 Voigt"@de,
         "Interpretation of clear tone (Motif) in Fragment 103 Voigt"@en ;
@@ -29070,6 +29163,12 @@
         "Interpretation of Eos (Person) in Fragment 103 Voigt"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_sappho_103_person_807f37582972882e> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_sappho_103_person_807f37582972882e> .
+
+<https://sappho-digital.com/actualization/interpretation/bibl_sappho_103_person_c7aebd12b1cbd031> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation von Zeus (Person) in Fragment 103 Voigt"@de,
+        "Interpretation of Zeus (Person) in Fragment 103 Voigt"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_sappho_103_person_c7aebd12b1cbd031> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_sappho_103_person_c7aebd12b1cbd031> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_sappho_103_place_c469fa37e1f081e9> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation von Pieria (Ort) in Fragment 103 Voigt"@de,
@@ -34027,11 +34126,6 @@
     skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_914fc268bcaq7dlc> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_a0bace6b_plot_914fc268bcaq7dlc> .
 
-<https://sappho-digital.com/feature/plot/plot_99b118c4> a intro:INT_Plot ;
-    rdfs:label "Sappho-Stoff mit Fokus auf Sapphos Suizid (Dekonstruktion) (Stoff)"@de,
-        "Sappho-Stoff mit Fokus auf Sapphos Suizid (Dekonstruktion) (Plot)"@en ;
-    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_1585db9d_plot_99b118c4> .
-
 <https://sappho-digital.com/feature/plot/plot_9gjw6ed64q936259> a intro:INT_Plot ;
     rdfs:label "Sappho-Stoff mit Fokus auf die Sappho-Alkaios-Beziehung (Stoff)"@de,
         "Sappho plot focusing on the Sappho-Alcaeus relationship (Plot)"@en ;
@@ -34338,6 +34432,14 @@
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_2660d82e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_2660d82e_character_person_40792a88ba634e66> .
 
+<https://sappho-digital.com/actualization/character/bibl_2660d82e_character_person_887e83106aad1200> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Charon (Figur) in Sappho träumt eine zweite Fahrt ins Exil"@de,
+        "Charon (Character) in Sappho träumt eine zweite Fahrt ins Exil"@en ;
+    ecrm:P67_refers_to <https://sappho-digital.com/person/person_887e83106aad1200> ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/character/person_887e83106aad1200> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_2660d82e> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_2660d82e_character_person_887e83106aad1200> .
+
 <https://sappho-digital.com/actualization/character/bibl_2660d82e_character_person_b793a3807d130de0> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Kleis (Figur) in Sappho träumt eine zweite Fahrt ins Exil"@de,
         "Cleis (Character) in Sappho träumt eine zweite Fahrt ins Exil"@en ;
@@ -34602,6 +34704,14 @@
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_5aa55e45> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_5aa55e45_character_person_e585b2a779019b7e> .
 
+<https://sappho-digital.com/actualization/character/bibl_5aa55e45_character_person_f42fab276b6fdb13> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Alkaios (Figur) in Sappho. Ein dramatisches Gedicht"@de,
+        "Alcaeus (Character) in Sappho. Ein dramatisches Gedicht"@en ;
+    ecrm:P67_refers_to <https://sappho-digital.com/person/person_f42fab276b6fdb13> ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/character/person_f42fab276b6fdb13> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_5aa55e45> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_5aa55e45_character_person_f42fab276b6fdb13> .
+
 <https://sappho-digital.com/actualization/character/bibl_5ae4b5fe_character_person_e585b2a779019b7e> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Sappho (Figur) in Nachricht aus Lesbos"@de,
         "Sappho (Character) in Nachricht aus Lesbos"@en ;
@@ -34769,6 +34879,14 @@
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/character/person_a92154dba89f764f> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_69a9167e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_character_person_a92154dba89f764f> .
+
+<https://sappho-digital.com/actualization/character/bibl_69a9167e_character_person_b793a3807d130de0> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Kleis (Figur) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
+        "Cleis (Character) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
+    ecrm:P67_refers_to <https://sappho-digital.com/person/person_b793a3807d130de0> ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/character/person_b793a3807d130de0> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_69a9167e> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_character_person_b793a3807d130de0> .
 
 <https://sappho-digital.com/actualization/character/bibl_69a9167e_character_person_c408a1bcd63c420f> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Phaon (Figur) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
@@ -35923,6 +36041,14 @@
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/character/person_807f37582972882e> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_sappho_103> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_sappho_103_character_person_807f37582972882e> .
+
+<https://sappho-digital.com/actualization/character/bibl_sappho_103_character_person_c7aebd12b1cbd031> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Zeus (Figur) in Fragment 103 Voigt"@de,
+        "Zeus (Character) in Fragment 103 Voigt"@en ;
+    ecrm:P67_refers_to <https://sappho-digital.com/person/person_c7aebd12b1cbd031> ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/character/person_c7aebd12b1cbd031> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_sappho_103> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_sappho_103_character_person_c7aebd12b1cbd031> .
 
 <https://sappho-digital.com/actualization/character/bibl_sappho_103b_character_person_05e200db9312b803> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Braut/Bräutigam (Figur) in Fragment 103b Voigt"@de,
@@ -45734,13 +45860,6 @@
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_684109f1> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_684109f1_plot_fd168d9b2224361d> .
 
-<https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_011312b82eb4fc98> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Sappho-Stoff mit Fokus auf Sapphos Suizid (Stoff) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
-        "Sappho plot focusing on Sappho's suicide (Plot) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
-    intro:R17_actualizesFeature <https://sappho-digital.com/feature/plot/plot_011312b82eb4fc98> ;
-    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_69a9167e> ;
-    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_plot_011312b82eb4fc98> .
-
 <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_168fc491c40ff2fd> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Sappho-Stoff mit Fokus auf Sappho als Chorleiterin (Stoff) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
         "Sappho plot focusing on Sappho as chorus leader (Plot) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
@@ -45796,6 +45915,13 @@
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/plot/plot_86a1ad47f8e7fa03> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_69a9167e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_plot_86a1ad47f8e7fa03> .
+
+<https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_99b118c4> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Sappho-Stoff mit Fokus auf Sapphos Suizid (Dekonstruktion) (Stoff) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
+        "Sappho-Stoff mit Fokus auf Sapphos Suizid (Dekonstruktion) (Plot) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/plot/plot_99b118c4> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_69a9167e> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_plot_99b118c4> .
 
 <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_cc6bf7467ad0c7cf> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Sappho-Stoff mit Fokus auf Sappho als unglücklich Liebende (Stoff) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
@@ -48945,13 +49071,6 @@
         <https://sappho-digital.com/actualization/character/bibl_e745799e_character_person_38af0ac181d5d397>,
         <https://sappho-digital.com/actualization/character/bibl_sappho_140_character_person_38af0ac181d5d397> .
 
-<https://sappho-digital.com/feature/character/person_887e83106aad1200> a intro:INT_Character ;
-    rdfs:label "Charon (Figur)"@de,
-        "Charon (Character)"@en ;
-    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/character/bibl_00e9aff1_character_person_887e83106aad1200>,
-        <https://sappho-digital.com/actualization/character/bibl_69a9167e_character_person_887e83106aad1200>,
-        <https://sappho-digital.com/actualization/character/bibl_cbfea792_character_person_887e83106aad1200> .
-
 <https://sappho-digital.com/feature/character/person_98fe1bf71475363b> a intro:INT_Character ;
     rdfs:label "Erinna (Figur)"@de,
         "Erinna (Character)"@en ;
@@ -48979,13 +49098,6 @@
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/character/bibl_5283cfa8_character_person_e3e42e3bfe456766>,
         <https://sappho-digital.com/actualization/character/bibl_sappho_16_character_person_e3e42e3bfe456766>,
         <https://sappho-digital.com/actualization/character/bibl_sappho_23_character_person_e3e42e3bfe456766> .
-
-<https://sappho-digital.com/feature/character/person_f42fab276b6fdb13> a intro:INT_Character ;
-    rdfs:label "Alkaios (Figur)"@de,
-        "Alcaeus (Character)"@en ;
-    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/character/bibl_8665dcc5_character_person_f42fab276b6fdb13>,
-        <https://sappho-digital.com/actualization/character/bibl_8fc572e2_character_person_f42fab276b6fdb13>,
-        <https://sappho-digital.com/actualization/character/bibl_ebc1bb1f_character_person_f42fab276b6fdb13> .
 
 <https://sappho-digital.com/feature/motif/motif_01c3eb8edb59de39> a intro:INT_Motif ;
     rdfs:label "Morgenrot (Motiv)"@de,
@@ -49369,6 +49481,12 @@
     skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_7fc0a31f8eefb7cc> ;
     intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_56775306_plot_7fc0a31f8eefb7cc>,
         <https://sappho-digital.com/actualization/plot/bibl_8665dcc5_plot_7fc0a31f8eefb7cc> .
+
+<https://sappho-digital.com/feature/plot/plot_99b118c4> a intro:INT_Plot ;
+    rdfs:label "Sappho-Stoff mit Fokus auf Sapphos Suizid (Dekonstruktion) (Stoff)"@de,
+        "Sappho-Stoff mit Fokus auf Sapphos Suizid (Dekonstruktion) (Plot)"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_1585db9d_plot_99b118c4>,
+        <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_99b118c4> .
 
 <https://sappho-digital.com/feature/plot/plot_9b9d5a40ffdaaaba> a intro:INT_Plot ;
     rdfs:label "Sappho-Stoff mit Fokus auf Sapphos wohlhabende Familie (Stoff)"@de,
@@ -50162,6 +50280,14 @@
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_2660d82e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_2660d82e_person_40792a88ba634e66> .
 
+<https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_887e83106aad1200> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Charon (Person) in Sappho träumt eine zweite Fahrt ins Exil"@de,
+        "Charon (Person) in Sappho träumt eine zweite Fahrt ins Exil"@en ;
+    ecrm:P67_refers_to <https://sappho-digital.com/person/person_887e83106aad1200> ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_887e83106aad1200> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_2660d82e> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_2660d82e_person_887e83106aad1200> .
+
 <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_b793a3807d130de0> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Kleis (Person) in Sappho träumt eine zweite Fahrt ins Exil"@de,
         "Cleis (Person) in Sappho träumt eine zweite Fahrt ins Exil"@en ;
@@ -50826,6 +50952,14 @@
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_5aa55e45> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_5aa55e45_person_e585b2a779019b7e> .
 
+<https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_f42fab276b6fdb13> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Alkaios (Person) in Sappho. Ein dramatisches Gedicht"@de,
+        "Alcaeus (Person) in Sappho. Ein dramatisches Gedicht"@en ;
+    ecrm:P67_refers_to <https://sappho-digital.com/person/person_f42fab276b6fdb13> ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_f42fab276b6fdb13> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_5aa55e45> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_5aa55e45_person_f42fab276b6fdb13> .
+
 <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_f9d48292bc61bb67> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Eros (Person) in Sappho. Ein dramatisches Gedicht"@de,
         "Eros (Person) in Sappho. Ein dramatisches Gedicht"@en ;
@@ -51041,6 +51175,14 @@
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_a92154dba89f764f> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_69a9167e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_person_a92154dba89f764f> .
+
+<https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_b793a3807d130de0> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Kleis (Person) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
+        "Cleis (Person) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@en ;
+    ecrm:P67_refers_to <https://sappho-digital.com/person/person_b793a3807d130de0> ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_b793a3807d130de0> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_69a9167e> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_69a9167e_person_b793a3807d130de0> .
 
 <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_c408a1bcd63c420f> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Phaon (Person) in Vergeßt den Namen des Eisvogels nicht: Sappho an die Abschied nehmenden Mädchen auf Lesbos"@de,
@@ -53238,6 +53380,14 @@
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_sappho_103> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_sappho_103_person_807f37582972882e> .
 
+<https://sappho-digital.com/actualization/person_ref/bibl_sappho_103_person_c7aebd12b1cbd031> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Zeus (Person) in Fragment 103 Voigt"@de,
+        "Zeus (Person) in Fragment 103 Voigt"@en ;
+    ecrm:P67_refers_to <https://sappho-digital.com/person/person_c7aebd12b1cbd031> ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_c7aebd12b1cbd031> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_sappho_103> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_sappho_103_person_c7aebd12b1cbd031> .
+
 <https://sappho-digital.com/actualization/person_ref/bibl_sappho_103a_person_c4b1fa4084e429c3> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Gorgo (Person) in Fragment 103a Voigt"@de,
         "Gorgo (Person) in Fragment 103a Voigt"@en ;
@@ -54589,6 +54739,14 @@
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/place_ref/place_0009a58f625c087b> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_458b7c88> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_458b7c88_place_0009a58f625c087b> .
+
+<https://sappho-digital.com/actualization/place_ref/bibl_458b7c88_place_1adb2da7993ecc95> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Unterwelt/Hades/Orkus (Ort) in Sappho und Phaon"@de,
+        "underworld/Hades/Orcus (Place) in Sappho und Phaon"@en ;
+    ecrm:P67_refers_to <https://sappho-digital.com/place/place_1adb2da7993ecc95> ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/place_ref/place_1adb2da7993ecc95> ;
+    intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_458b7c88> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_458b7c88_place_1adb2da7993ecc95> .
 
 <https://sappho-digital.com/actualization/place_ref/bibl_458b7c88_place_21104b06fd2e1311> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Mytilene (Ort) in Sappho und Phaon"@de,
@@ -56204,6 +56362,14 @@
         <https://sappho-digital.com/actualization/character/bibl_sappho_17_character_person_499bbc9e7596f10d>,
         <https://sappho-digital.com/actualization/character/bibl_sappho_9_character_person_499bbc9e7596f10d> .
 
+<https://sappho-digital.com/feature/character/person_887e83106aad1200> a intro:INT_Character ;
+    rdfs:label "Charon (Figur)"@de,
+        "Charon (Character)"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/character/bibl_00e9aff1_character_person_887e83106aad1200>,
+        <https://sappho-digital.com/actualization/character/bibl_2660d82e_character_person_887e83106aad1200>,
+        <https://sappho-digital.com/actualization/character/bibl_69a9167e_character_person_887e83106aad1200>,
+        <https://sappho-digital.com/actualization/character/bibl_cbfea792_character_person_887e83106aad1200> .
+
 <https://sappho-digital.com/feature/character/person_a92154dba89f764f> a intro:INT_Character ;
     rdfs:label "Apollon (Figur)"@de,
         "Apollo (Character)"@en ;
@@ -56219,6 +56385,14 @@
         <https://sappho-digital.com/actualization/character/bibl_sappho_112_character_person_d92f8054b846977e>,
         <https://sappho-digital.com/actualization/character/bibl_sappho_153_character_person_d92f8054b846977e>,
         <https://sappho-digital.com/actualization/character/bibl_sappho_44_character_person_d92f8054b846977e> .
+
+<https://sappho-digital.com/feature/character/person_f42fab276b6fdb13> a intro:INT_Character ;
+    rdfs:label "Alkaios (Figur)"@de,
+        "Alcaeus (Character)"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/character/bibl_5aa55e45_character_person_f42fab276b6fdb13>,
+        <https://sappho-digital.com/actualization/character/bibl_8665dcc5_character_person_f42fab276b6fdb13>,
+        <https://sappho-digital.com/actualization/character/bibl_8fc572e2_character_person_f42fab276b6fdb13>,
+        <https://sappho-digital.com/actualization/character/bibl_ebc1bb1f_character_person_f42fab276b6fdb13> .
 
 <https://sappho-digital.com/feature/motif/motif_002ca4e56dca366e> a intro:INT_Motif ;
     rdfs:label "Weibliche Gemeinschaft (Motiv)"@de,
@@ -56377,14 +56551,6 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_88439060_person_86564f02874aec39>,
         <https://sappho-digital.com/actualization/person_ref/bibl_8fc572e2_person_86564f02874aec39>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_55_person_86564f02874aec39> .
-
-<https://sappho-digital.com/feature/person_ref/person_887e83106aad1200> a intro:INT18_Reference ;
-    rdfs:label "Referenz auf Charon (Person)"@de,
-        "Reference to Charon (Person)"@en ;
-    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/person_ref/bibl_00e9aff1_person_887e83106aad1200>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_887e83106aad1200>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_cbfea792_person_887e83106aad1200>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_887e83106aad1200> .
 
 <https://sappho-digital.com/feature/person_ref/person_9545062e029ef19b> a intro:INT18_Reference ;
     rdfs:label "Referenz auf Melitta (Person)"@de,
@@ -57323,6 +57489,15 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_65_person_2a23732b2a3c21cf>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_68_person_2a23732b2a3c21cf> .
 
+<https://sappho-digital.com/feature/person_ref/person_887e83106aad1200> a intro:INT18_Reference ;
+    rdfs:label "Referenz auf Charon (Person)"@de,
+        "Reference to Charon (Person)"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/person_ref/bibl_00e9aff1_person_887e83106aad1200>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_887e83106aad1200>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_887e83106aad1200>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_cbfea792_person_887e83106aad1200>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_887e83106aad1200> .
+
 <https://sappho-digital.com/feature/person_ref/person_9ee0b67040c4734c> a intro:INT18_Reference ;
     rdfs:label "Referenz auf Rhodopis (Person)"@de,
         "Reference to Rhodopis (Person)"@en ;
@@ -57331,15 +57506,6 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_9ee0b67040c4734c>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_15_person_9ee0b67040c4734c>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_7_person_9ee0b67040c4734c> .
-
-<https://sappho-digital.com/feature/person_ref/person_f42fab276b6fdb13> a intro:INT18_Reference ;
-    rdfs:label "Referenz auf Alkaios (Person)"@de,
-        "Reference to Alcaeus (Person)"@en ;
-    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/person_ref/bibl_39b012ab_person_f42fab276b6fdb13>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_f42fab276b6fdb13>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_8fc572e2_person_f42fab276b6fdb13>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_d85ade6a_person_f42fab276b6fdb13>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_f42fab276b6fdb13> .
 
 <https://sappho-digital.com/feature/person_ref/person_f47881025ad98035> a intro:INT18_Reference ;
     rdfs:label "Referenz auf Dionysos (Person)"@de,
@@ -57936,6 +58102,16 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_44a_person_4054b50081c54a12>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_53_person_4054b50081c54a12>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_81_person_4054b50081c54a12> .
+
+<https://sappho-digital.com/feature/person_ref/person_f42fab276b6fdb13> a intro:INT18_Reference ;
+    rdfs:label "Referenz auf Alkaios (Person)"@de,
+        "Reference to Alcaeus (Person)"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/person_ref/bibl_39b012ab_person_f42fab276b6fdb13>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_f42fab276b6fdb13>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_f42fab276b6fdb13>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_8fc572e2_person_f42fab276b6fdb13>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_d85ade6a_person_f42fab276b6fdb13>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_f42fab276b6fdb13> .
 
 <https://sappho-digital.com/feature/place_ref/place_39fc06d60391f952> a intro:INT18_Reference ;
     rdfs:label "Referenz auf Lydien (Ort)"@de,
@@ -58712,18 +58888,6 @@
         <https://sappho-digital.com/actualization/character/bibl_sappho_168b_character_person_807f37582972882e>,
         <https://sappho-digital.com/actualization/character/bibl_sappho_58_character_person_807f37582972882e> .
 
-<https://sappho-digital.com/feature/character/person_c7aebd12b1cbd031> a intro:INT_Character ;
-    rdfs:label "Zeus (Figur)"@de,
-        "Zeus (Character)"@en ;
-    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/character/bibl_0491bde2_character_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/character/bibl_4fcb8123_character_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/character/bibl_d85ade6a_character_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/character/bibl_f4da59f4_character_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/character/bibl_sappho_17_character_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/character/bibl_sappho_1_character_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/character/bibl_sappho_44a_character_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/character/bibl_sappho_53_character_person_c7aebd12b1cbd031> .
-
 <https://sappho-digital.com/feature/character/person_fe179d791732151d> a intro:INT_Character ;
     rdfs:label "Atthis (Figur)"@de,
         "Atthis (Character)"@en ;
@@ -58911,14 +59075,6 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_141_person_2eb129793d7ca74a>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_95_person_2eb129793d7ca74a> ;
     skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_2eb129793d7ca74a> .
-
-<https://sappho-digital.com/person/person_887e83106aad1200> a ecrm:E21_Person ;
-    rdfs:label "Charon"@de ;
-    ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_00e9aff1_person_887e83106aad1200>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_887e83106aad1200>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_cbfea792_person_887e83106aad1200>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_887e83106aad1200> ;
-    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_887e83106aad1200> .
 
 <https://sappho-digital.com/person/person_dbb519c32f7f48ce> a ecrm:E21_Person ;
     rdfs:label "Leto"@de ;
@@ -59115,18 +59271,18 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_95_person_a44f7c86bfc2958d>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_95_place_4cab37cdf075289f> .
 
-<https://sappho-digital.com/feature/character/person_b793a3807d130de0> a intro:INT_Character ;
-    rdfs:label "Kleis (Figur)"@de,
-        "Cleis (Character)"@en ;
-    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/character/bibl_2660d82e_character_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/character/bibl_458b7c88_character_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/character/bibl_4e970562_character_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/character/bibl_8665dcc5_character_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/character/bibl_b705febf_character_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/character/bibl_e745799e_character_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/character/bibl_ebc1bb1f_character_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/character/bibl_sappho_132_character_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/character/bibl_sappho_98_character_person_b793a3807d130de0> .
+<https://sappho-digital.com/feature/character/person_c7aebd12b1cbd031> a intro:INT_Character ;
+    rdfs:label "Zeus (Figur)"@de,
+        "Zeus (Character)"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/character/bibl_0491bde2_character_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/character/bibl_4fcb8123_character_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/character/bibl_d85ade6a_character_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/character/bibl_f4da59f4_character_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/character/bibl_sappho_103_character_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/character/bibl_sappho_17_character_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/character/bibl_sappho_1_character_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/character/bibl_sappho_44a_character_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/character/bibl_sappho_53_character_person_c7aebd12b1cbd031> .
 
 <https://sappho-digital.com/feature/motif/motif_117bf1151b920a34> a intro:INT_Motif ;
     rdfs:label "Frühling (Motiv)"@de,
@@ -59232,19 +59388,6 @@
         <https://sappho-digital.com/actualization/motif/bibl_sappho_2_motif_d80bb67aabd5386f>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_44_motif_d80bb67aabd5386f> .
 
-<https://sappho-digital.com/feature/person_ref/person_b793a3807d130de0> a intro:INT18_Reference ;
-    rdfs:label "Referenz auf Kleis (Person)"@de,
-        "Reference to Cleis (Person)"@en ;
-    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_458b7c88_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_b705febf_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_e745799e_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_132_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_98_person_b793a3807d130de0> .
-
 <https://sappho-digital.com/feature/person_ref/person_fe179d791732151d> a intro:INT18_Reference ;
     rdfs:label "Referenz auf Atthis (Person)"@de,
         "Reference to Atthis (Person)"@en ;
@@ -59257,19 +59400,6 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_49_person_fe179d791732151d>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_8_person_fe179d791732151d>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_96_person_fe179d791732151d> .
-
-<https://sappho-digital.com/feature/place_ref/place_1adb2da7993ecc95> a intro:INT18_Reference ;
-    rdfs:label "Referenz auf Unterwelt/Hades/Orkus (Ort)"@de,
-        "Reference to underworld/Hades/Orcus (Place)"@en ;
-    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/place_ref/bibl_0491bde2_place_1adb2da7993ecc95>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_0643ca58_place_1adb2da7993ecc95>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_19d5a7ab_place_1adb2da7993ecc95>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_4e970562_place_1adb2da7993ecc95>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_632dac82_place_1adb2da7993ecc95>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_69a9167e_place_1adb2da7993ecc95>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_a667785d_place_1adb2da7993ecc95>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_cbfea792_place_1adb2da7993ecc95>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_e745799e_place_1adb2da7993ecc95> .
 
 <https://sappho-digital.com/feature/place_ref/place_ac07f1e878d38c8d> a intro:INT18_Reference ;
     rdfs:label "Referenz auf Griechenland (Ort)"@de,
@@ -59339,16 +59469,6 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_153_person_d92f8054b846977e>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_44_person_d92f8054b846977e> ;
     skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_d92f8054b846977e> .
-
-<https://sappho-digital.com/person/person_f42fab276b6fdb13> a ecrm:E21_Person ;
-    rdfs:label "Alkaios"@de,
-        "Alcaeus"@en ;
-    ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_39b012ab_person_f42fab276b6fdb13>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_f42fab276b6fdb13>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_8fc572e2_person_f42fab276b6fdb13>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_d85ade6a_person_f42fab276b6fdb13>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_f42fab276b6fdb13> ;
-    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_f42fab276b6fdb13> .
 
 <https://sappho-digital.com/expression/bibl_1bf78f84> a lrmoo:F2_Expression ;
     rdfs:label "Duke, der Logenkönig"@de ;
@@ -59502,6 +59622,20 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_65_place_040eb47ff2612816>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_65_place_4cab37cdf075289f> .
 
+<https://sappho-digital.com/feature/character/person_b793a3807d130de0> a intro:INT_Character ;
+    rdfs:label "Kleis (Figur)"@de,
+        "Cleis (Character)"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/character/bibl_2660d82e_character_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/character/bibl_458b7c88_character_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/character/bibl_4e970562_character_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/character/bibl_69a9167e_character_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/character/bibl_8665dcc5_character_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/character/bibl_b705febf_character_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/character/bibl_e745799e_character_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/character/bibl_ebc1bb1f_character_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/character/bibl_sappho_132_character_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/character/bibl_sappho_98_character_person_b793a3807d130de0> .
+
 <https://sappho-digital.com/feature/motif/motif_5a30a7576a2ef0e9> a intro:INT_Motif ;
     rdfs:label "Süße Stimme (Motiv)"@de,
         "sweet voice (Motif)"@en ;
@@ -59572,6 +59706,34 @@
         <https://sappho-digital.com/actualization/motif/bibl_sappho_95_motif_c2ec495b51738811>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_96_motif_c2ec495b51738811> .
 
+<https://sappho-digital.com/feature/person_ref/person_b793a3807d130de0> a intro:INT18_Reference ;
+    rdfs:label "Referenz auf Kleis (Person)"@de,
+        "Reference to Cleis (Person)"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_458b7c88_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_b705febf_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_e745799e_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_132_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_98_person_b793a3807d130de0> .
+
+<https://sappho-digital.com/feature/place_ref/place_1adb2da7993ecc95> a intro:INT18_Reference ;
+    rdfs:label "Referenz auf Unterwelt/Hades/Orkus (Ort)"@de,
+        "Reference to underworld/Hades/Orcus (Place)"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/place_ref/bibl_0491bde2_place_1adb2da7993ecc95>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_0643ca58_place_1adb2da7993ecc95>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_19d5a7ab_place_1adb2da7993ecc95>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_458b7c88_place_1adb2da7993ecc95>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_4e970562_place_1adb2da7993ecc95>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_632dac82_place_1adb2da7993ecc95>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_69a9167e_place_1adb2da7993ecc95>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_a667785d_place_1adb2da7993ecc95>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_cbfea792_place_1adb2da7993ecc95>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_e745799e_place_1adb2da7993ecc95> .
+
 <https://sappho-digital.com/feature/plot/plot_efe620bf3882fa2f> a intro:INT_Plot ;
     rdfs:label "Sappho-Stoff mit Fokus auf Sappho als Mutter von Kleis (Stoff)"@de,
         "Sappho plot focusing on Sappho as mother of Cleis (Plot)"@en ;
@@ -59609,19 +59771,14 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_68_person_2a23732b2a3c21cf> ;
     skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_2a23732b2a3c21cf> .
 
-<https://sappho-digital.com/place/place_1adb2da7993ecc95> a ecrm:E53_Place ;
-    rdfs:label "Unterwelt/Hades/Orkus"@de,
-        "underworld/Hades/Orcus"@en ;
-    ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_0491bde2_place_1adb2da7993ecc95>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_0643ca58_place_1adb2da7993ecc95>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_19d5a7ab_place_1adb2da7993ecc95>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_4e970562_place_1adb2da7993ecc95>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_632dac82_place_1adb2da7993ecc95>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_69a9167e_place_1adb2da7993ecc95>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_a667785d_place_1adb2da7993ecc95>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_cbfea792_place_1adb2da7993ecc95>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_e745799e_place_1adb2da7993ecc95> ;
-    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_1adb2da7993ecc95> .
+<https://sappho-digital.com/person/person_887e83106aad1200> a ecrm:E21_Person ;
+    rdfs:label "Charon"@de ;
+    ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_00e9aff1_person_887e83106aad1200>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_887e83106aad1200>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_887e83106aad1200>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_cbfea792_person_887e83106aad1200>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_887e83106aad1200> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_887e83106aad1200> .
 
 <https://sappho-digital.com/place/place_ac07f1e878d38c8d> a ecrm:E53_Place ;
     rdfs:label "Griechenland"@de,
@@ -59899,6 +60056,32 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_15_person_9ee0b67040c4734c>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_7_person_9ee0b67040c4734c> ;
     skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_9ee0b67040c4734c> .
+
+<https://sappho-digital.com/person/person_f42fab276b6fdb13> a ecrm:E21_Person ;
+    rdfs:label "Alkaios"@de,
+        "Alcaeus"@en ;
+    ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_39b012ab_person_f42fab276b6fdb13>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_f42fab276b6fdb13>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_f42fab276b6fdb13>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_8fc572e2_person_f42fab276b6fdb13>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_d85ade6a_person_f42fab276b6fdb13>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_f42fab276b6fdb13> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_f42fab276b6fdb13> .
+
+<https://sappho-digital.com/place/place_1adb2da7993ecc95> a ecrm:E53_Place ;
+    rdfs:label "Unterwelt/Hades/Orkus"@de,
+        "underworld/Hades/Orcus"@en ;
+    ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_0491bde2_place_1adb2da7993ecc95>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_0643ca58_place_1adb2da7993ecc95>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_19d5a7ab_place_1adb2da7993ecc95>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_458b7c88_place_1adb2da7993ecc95>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_4e970562_place_1adb2da7993ecc95>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_632dac82_place_1adb2da7993ecc95>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_69a9167e_place_1adb2da7993ecc95>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_a667785d_place_1adb2da7993ecc95>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_cbfea792_place_1adb2da7993ecc95>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_e745799e_place_1adb2da7993ecc95> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_1adb2da7993ecc95> .
 
 <https://sappho-digital.com/expression/bibl_56775306> a lrmoo:F2_Expression ;
     rdfs:label "Mit Liedern Sapphos"@de ;
@@ -60311,23 +60494,6 @@
         <https://sappho-digital.com/actualization/motif/bibl_cbfea792_motif_e50316313352d60d>,
         <https://sappho-digital.com/actualization/motif/bibl_e745799e_motif_e50316313352d60d> .
 
-<https://sappho-digital.com/feature/person_ref/person_c7aebd12b1cbd031> a intro:INT18_Reference ;
-    rdfs:label "Referenz auf Zeus (Person)"@de,
-        "Reference to Zeus (Person)"@en ;
-    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/person_ref/bibl_0491bde2_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_4fcb8123_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_88439060_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_d85ade6a_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_f4da59f4_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_17_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_1_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_44a_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_53_person_c7aebd12b1cbd031> .
-
 <https://sappho-digital.com/feature/place_ref/place_21104b06fd2e1311> a intro:INT18_Reference ;
     rdfs:label "Referenz auf Mytilene (Ort)"@de,
         "Reference to Mytilene (Place)"@en ;
@@ -60640,6 +60806,24 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_117_person_05e200db9312b803>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_141_person_05e200db9312b803>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_30_person_05e200db9312b803> .
+
+<https://sappho-digital.com/feature/person_ref/person_c7aebd12b1cbd031> a intro:INT18_Reference ;
+    rdfs:label "Referenz auf Zeus (Person)"@de,
+        "Reference to Zeus (Person)"@en ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/person_ref/bibl_0491bde2_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_4fcb8123_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_88439060_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_d85ade6a_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_f4da59f4_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_103_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_17_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_1_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_44a_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_53_person_c7aebd12b1cbd031> .
 
 <https://sappho-digital.com/feature/plot/plot_43b59f052f3dc73e> a intro:INT_Plot ;
     rdfs:label "Sappho-Stoff mit Fokus auf Sappho als homoerotisch Begehrende (Stoff)"@de,
@@ -61299,35 +61483,6 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_96_person_fe179d791732151d> ;
     skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_fe179d791732151d> .
 
-<https://sappho-digital.com/expression/bibl_sappho_103> a lrmoo:F2_Expression ;
-    rdfs:label "Expression von Fragment 103 Voigt"@de,
-        "Expression of Fragment 103 Voigt"@en ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_103> ;
-    ecrm:P165_incorporates <https://sappho-digital.com/fragment/bibl_sappho_103> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/lyrik> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_sappho_103> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
-    owl:sameAs <http://www.wikidata.org/entity/Q119291036> ;
-    intro:R18_showsActualization <https://sappho-digital.com/actualization/character/bibl_sappho_103_character_person_05e200db9312b803>,
-        <https://sappho-digital.com/actualization/character/bibl_sappho_103_character_person_37c2bf8d11811a0e>,
-        <https://sappho-digital.com/actualization/character/bibl_sappho_103_character_person_4054b50081c54a12>,
-        <https://sappho-digital.com/actualization/character/bibl_sappho_103_character_person_807f37582972882e>,
-        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_172883cbad5b3349>,
-        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_281b95ce63718bed>,
-        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_4c9fc6a95d249640>,
-        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_67d99b12bd68f38d>,
-        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_7a31b1efe2cb20da>,
-        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_7de60080ab357919>,
-        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_88df0b1164b2fb91>,
-        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_a9a67d884bb4bc94>,
-        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_e454faf75bf650db>,
-        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_eadc613d365792dc>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_103_person_05e200db9312b803>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_103_person_37c2bf8d11811a0e>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_103_person_4054b50081c54a12>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_103_person_807f37582972882e>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_sappho_103_place_c469fa37e1f081e9> .
-
 <https://sappho-digital.com/expression/bibl_sappho_94> a lrmoo:F2_Expression ;
     rdfs:label "Expression von Fragment 94 Voigt"@de,
         "Expression of Fragment 94 Voigt"@en ;
@@ -61381,20 +61536,6 @@
         <https://sappho-digital.com/actualization/motif/bibl_ec11b447_motif_d8dc25c9b4d4bd52>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_134_motif_d8dc25c9b4d4bd52>,
         <https://sappho-digital.com/actualization/motif/bibl_sappho_63_motif_d8dc25c9b4d4bd52> .
-
-<https://sappho-digital.com/person/person_b793a3807d130de0> a ecrm:E21_Person ;
-    rdfs:label "Kleis"@de,
-        "Cleis"@en ;
-    ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_458b7c88_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_b705febf_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_e745799e_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_132_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_98_person_b793a3807d130de0> ;
-    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_b793a3807d130de0> .
 
 <https://sappho-digital.com/expression/bibl_8ebf0c28> a lrmoo:F2_Expression ;
     rdfs:label "Theaterg’schichten durch Liebe, Intrige, Geld und Dummheit. Posse mit Gesang in zwei Akten"@de ;
@@ -61638,6 +61779,52 @@
         <https://sappho-digital.com/actualization/plot/bibl_a717f073_plot_6ec13f66820264d7>,
         <https://sappho-digital.com/actualization/topic/bibl_a717f073_topic_a10417e468b798b0> .
 
+<https://sappho-digital.com/expression/bibl_sappho_103> a lrmoo:F2_Expression ;
+    rdfs:label "Expression von Fragment 103 Voigt"@de,
+        "Expression of Fragment 103 Voigt"@en ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_sappho_103> ;
+    ecrm:P165_incorporates <https://sappho-digital.com/fragment/bibl_sappho_103> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_sappho_103> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/sappho_bagordo> ;
+    owl:sameAs <http://www.wikidata.org/entity/Q119291036> ;
+    intro:R18_showsActualization <https://sappho-digital.com/actualization/character/bibl_sappho_103_character_person_05e200db9312b803>,
+        <https://sappho-digital.com/actualization/character/bibl_sappho_103_character_person_37c2bf8d11811a0e>,
+        <https://sappho-digital.com/actualization/character/bibl_sappho_103_character_person_4054b50081c54a12>,
+        <https://sappho-digital.com/actualization/character/bibl_sappho_103_character_person_807f37582972882e>,
+        <https://sappho-digital.com/actualization/character/bibl_sappho_103_character_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_172883cbad5b3349>,
+        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_281b95ce63718bed>,
+        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_4c9fc6a95d249640>,
+        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_67d99b12bd68f38d>,
+        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_7a31b1efe2cb20da>,
+        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_7de60080ab357919>,
+        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_88df0b1164b2fb91>,
+        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_a9a67d884bb4bc94>,
+        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_e454faf75bf650db>,
+        <https://sappho-digital.com/actualization/motif/bibl_sappho_103_motif_eadc613d365792dc>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_103_person_05e200db9312b803>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_103_person_37c2bf8d11811a0e>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_103_person_4054b50081c54a12>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_103_person_807f37582972882e>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_103_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_sappho_103_place_c469fa37e1f081e9> .
+
+<https://sappho-digital.com/person/person_b793a3807d130de0> a ecrm:E21_Person ;
+    rdfs:label "Kleis"@de,
+        "Cleis"@en ;
+    ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_458b7c88_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_b705febf_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_e745799e_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_132_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_98_person_b793a3807d130de0> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_b793a3807d130de0> .
+
 <https://sappho-digital.com/expression/bibl_0491bde2> a lrmoo:F2_Expression ;
     rdfs:label "Ode der Sappho"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_0491bde2> ;
@@ -61851,23 +62038,6 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_44a_person_f9d48292bc61bb67>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_47_person_f9d48292bc61bb67>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_54_person_f9d48292bc61bb67> .
-
-<https://sappho-digital.com/person/person_c7aebd12b1cbd031> a ecrm:E21_Person ;
-    rdfs:label "Zeus"@de ;
-    ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_0491bde2_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_4fcb8123_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_88439060_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_d85ade6a_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_f4da59f4_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_17_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_1_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_44a_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_53_person_c7aebd12b1cbd031> ;
-    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_c7aebd12b1cbd031> .
 
 <https://sappho-digital.com/expression/bibl_407a0d29> a lrmoo:F2_Expression ;
     rdfs:label "Die späten Jahre"@de ;
@@ -62250,6 +62420,24 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_44a_person_37c2bf8d11811a0e>,
         <https://sappho-digital.com/actualization/person_ref/bibl_sappho_64_person_37c2bf8d11811a0e> .
 
+<https://sappho-digital.com/person/person_c7aebd12b1cbd031> a ecrm:E21_Person ;
+    rdfs:label "Zeus"@de ;
+    ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/person_ref/bibl_0491bde2_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_4e970562_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_4fcb8123_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_8665dcc5_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_88439060_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_d85ade6a_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_ebc1bb1f_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_f4da59f4_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_103_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_17_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_1_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_44a_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_sappho_53_person_c7aebd12b1cbd031> ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/person_c7aebd12b1cbd031> .
+
 <https://sappho-digital.com/place/place_0009a58f625c087b> a ecrm:E53_Place ;
     rdfs:label "Lesbos"@de ;
     ecrm:P67i_is_referred_to_by <https://sappho-digital.com/actualization/place_ref/bibl_00e9aff1_place_0009a58f625c087b>,
@@ -62276,42 +62464,6 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_fa064c2f_place_0009a58f625c087b>,
         <https://sappho-digital.com/actualization/place_ref/bibl_sappho_106_place_0009a58f625c087b> ;
     skos:exactMatch <https://w3id.org/sappho-digital/vocab/place_0009a58f625c087b> .
-
-<https://sappho-digital.com/expression/bibl_5aa55e45> a lrmoo:F2_Expression ;
-    rdfs:label "Sappho. Ein dramatisches Gedicht"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_5aa55e45> ;
-    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_5aa55e45> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120181010>,
-        <https://sappho-digital.com/identifier/bibl_5aa55e45> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_5aa55e45> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_5aa55e45> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q120181010> ;
-    intro:R18_showsActualization <https://sappho-digital.com/actualization/character/bibl_5aa55e45_character_person_669b106539453871>,
-        <https://sappho-digital.com/actualization/character/bibl_5aa55e45_character_person_c408a1bcd63c420f>,
-        <https://sappho-digital.com/actualization/character/bibl_5aa55e45_character_person_e585b2a779019b7e>,
-        <https://sappho-digital.com/actualization/motif/bibl_5aa55e45_motif_15d689c1f40b1d56>,
-        <https://sappho-digital.com/actualization/motif/bibl_5aa55e45_motif_232c5062cde7d3c1>,
-        <https://sappho-digital.com/actualization/motif/bibl_5aa55e45_motif_25bab1557374fb8e>,
-        <https://sappho-digital.com/actualization/motif/bibl_5aa55e45_motif_c2ec495b51738811>,
-        <https://sappho-digital.com/actualization/motif/bibl_5aa55e45_motif_cf45a73d6da82f20>,
-        <https://sappho-digital.com/actualization/motif/bibl_5aa55e45_motif_ff994c162fe2474d>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_1526106cabf2fa6b>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_669b106539453871>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_c408a1bcd63c420f>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_c7aebd12b1cbd031>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_e585b2a779019b7e>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_f9d48292bc61bb67>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_5aa55e45_place_9bd33c7fdd67c764>,
-        <https://sappho-digital.com/actualization/plot/bibl_5aa55e45_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_5aa55e45_plot_6ec13f66820264d7>,
-        <https://sappho-digital.com/actualization/plot/bibl_5aa55e45_plot_9gjw6ed64q936259>,
-        <https://sappho-digital.com/actualization/plot/bibl_5aa55e45_plot_cc6bf7467ad0c7cf>,
-        <https://sappho-digital.com/actualization/topic/bibl_5aa55e45_topic_6c84497f664d562a>,
-        <https://sappho-digital.com/actualization/topic/bibl_5aa55e45_topic_979480c5de919f6e>,
-        <https://sappho-digital.com/actualization/topic/bibl_5aa55e45_topic_a10417e468b798b0>,
-        <https://sappho-digital.com/actualization/topic/bibl_5aa55e45_topic_ccb502909ffa7cd8>,
-        <https://sappho-digital.com/actualization/work_ref/bibl_5aa55e45_work_ref_d85b3ad9> .
 
 <https://sappho-digital.com/feature/motif/motif_25f446d346d5ae39> a intro:INT_Motif ;
     rdfs:label "Schönheit (Motiv)"@de,
@@ -62465,6 +62617,74 @@
         <https://sappho-digital.com/actualization/plot/bibl_a53d809b_plot_fd168d9b2224361d>,
         <https://sappho-digital.com/actualization/topic/bibl_a53d809b_topic_7112b97bd8eccdc6> .
 
+<https://sappho-digital.com/feature/plot/plot_011312b82eb4fc98> a intro:INT_Plot ;
+    rdfs:label "Sappho-Stoff mit Fokus auf Sapphos Suizid (Stoff)"@de,
+        "Sappho plot focusing on Sappho's suicide (Plot)"@en ;
+    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_011312b82eb4fc98> ;
+    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_00e9aff1_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_0434022c_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_0a0e461e_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_31f96313_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_3759bef5_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_3761b97f_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_4110fba1_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_4422d6d6_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_5aa55e45_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_5f1d7d40_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_63209746_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_632dac82_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_69eddc38_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_8819a3b3_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_8df69e81_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_8fc572e2_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_926d0a7c_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_b0693a0e_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_ba71b2e5_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_cbfea792_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_d85ade6a_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_e2546c7f_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_e58bccae_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_e745799e_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_ec11b447_plot_011312b82eb4fc98> .
+
+<https://sappho-digital.com/expression/bibl_5aa55e45> a lrmoo:F2_Expression ;
+    rdfs:label "Sappho. Ein dramatisches Gedicht"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_5aa55e45> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_5aa55e45> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120181010>,
+        <https://sappho-digital.com/identifier/bibl_5aa55e45> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_5aa55e45> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_5aa55e45> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q120181010> ;
+    intro:R18_showsActualization <https://sappho-digital.com/actualization/character/bibl_5aa55e45_character_person_669b106539453871>,
+        <https://sappho-digital.com/actualization/character/bibl_5aa55e45_character_person_c408a1bcd63c420f>,
+        <https://sappho-digital.com/actualization/character/bibl_5aa55e45_character_person_e585b2a779019b7e>,
+        <https://sappho-digital.com/actualization/character/bibl_5aa55e45_character_person_f42fab276b6fdb13>,
+        <https://sappho-digital.com/actualization/motif/bibl_5aa55e45_motif_15d689c1f40b1d56>,
+        <https://sappho-digital.com/actualization/motif/bibl_5aa55e45_motif_232c5062cde7d3c1>,
+        <https://sappho-digital.com/actualization/motif/bibl_5aa55e45_motif_25bab1557374fb8e>,
+        <https://sappho-digital.com/actualization/motif/bibl_5aa55e45_motif_c2ec495b51738811>,
+        <https://sappho-digital.com/actualization/motif/bibl_5aa55e45_motif_cf45a73d6da82f20>,
+        <https://sappho-digital.com/actualization/motif/bibl_5aa55e45_motif_ff994c162fe2474d>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_1526106cabf2fa6b>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_669b106539453871>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_c408a1bcd63c420f>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_c7aebd12b1cbd031>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_e585b2a779019b7e>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_f42fab276b6fdb13>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_5aa55e45_person_f9d48292bc61bb67>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_5aa55e45_place_9bd33c7fdd67c764>,
+        <https://sappho-digital.com/actualization/plot/bibl_5aa55e45_plot_011312b82eb4fc98>,
+        <https://sappho-digital.com/actualization/plot/bibl_5aa55e45_plot_6ec13f66820264d7>,
+        <https://sappho-digital.com/actualization/plot/bibl_5aa55e45_plot_9gjw6ed64q936259>,
+        <https://sappho-digital.com/actualization/plot/bibl_5aa55e45_plot_cc6bf7467ad0c7cf>,
+        <https://sappho-digital.com/actualization/topic/bibl_5aa55e45_topic_6c84497f664d562a>,
+        <https://sappho-digital.com/actualization/topic/bibl_5aa55e45_topic_979480c5de919f6e>,
+        <https://sappho-digital.com/actualization/topic/bibl_5aa55e45_topic_a10417e468b798b0>,
+        <https://sappho-digital.com/actualization/topic/bibl_5aa55e45_topic_ccb502909ffa7cd8>,
+        <https://sappho-digital.com/actualization/work_ref/bibl_5aa55e45_work_ref_d85b3ad9> .
+
 <https://sappho-digital.com/expression/bibl_sappho_96> a lrmoo:F2_Expression ;
     rdfs:label "Expression von Fragment 96 Voigt"@de,
         "Expression of Fragment 96 Voigt"@en ;
@@ -62595,37 +62815,6 @@
         <https://sappho-digital.com/actualization/motif/bibl_e745799e_motif_c9ab4b3812d39197>,
         <https://sappho-digital.com/actualization/motif/bibl_ec11b447_motif_c9ab4b3812d39197>,
         <https://sappho-digital.com/actualization/motif/bibl_f4da59f4_motif_c9ab4b3812d39197> .
-
-<https://sappho-digital.com/feature/plot/plot_011312b82eb4fc98> a intro:INT_Plot ;
-    rdfs:label "Sappho-Stoff mit Fokus auf Sapphos Suizid (Stoff)"@de,
-        "Sappho plot focusing on Sappho's suicide (Plot)"@en ;
-    skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_011312b82eb4fc98> ;
-    intro:R17i_featureIsActualizedIn <https://sappho-digital.com/actualization/plot/bibl_00e9aff1_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_0434022c_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_0a0e461e_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_31f96313_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_3759bef5_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_3761b97f_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_4110fba1_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_4422d6d6_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_5aa55e45_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_5f1d7d40_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_63209746_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_632dac82_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_69eddc38_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_8819a3b3_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_8df69e81_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_8fc572e2_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_926d0a7c_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_b0693a0e_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_ba71b2e5_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_cbfea792_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_d85ade6a_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_e2546c7f_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_e58bccae_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_e745799e_plot_011312b82eb4fc98>,
-        <https://sappho-digital.com/actualization/plot/bibl_ec11b447_plot_011312b82eb4fc98> .
 
 <https://sappho-digital.com/person/person_05e200db9312b803> a ecrm:E21_Person ;
     rdfs:label "Braut/Bräutigam"@de,
@@ -63159,49 +63348,6 @@
         <https://sappho-digital.com/actualization/topic/bibl_8fc572e2_topic_16fb1687f7449a95>,
         <https://sappho-digital.com/actualization/topic/bibl_8fc572e2_topic_ccb502909ffa7cd8> .
 
-<https://sappho-digital.com/expression/bibl_2660d82e> a lrmoo:F2_Expression ;
-    rdfs:label "Sappho träumt eine zweite Fahrt ins Exil"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_2660d82e> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_2660d82e> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_2660d82e> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_bc49cfcd> ;
-    intro:R18_showsActualization <https://sappho-digital.com/actualization/character/bibl_2660d82e_character_person_298d1d2696887999>,
-        <https://sappho-digital.com/actualization/character/bibl_2660d82e_character_person_40792a88ba634e66>,
-        <https://sappho-digital.com/actualization/character/bibl_2660d82e_character_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/character/bibl_2660d82e_character_person_e585b2a779019b7e>,
-        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_01ca370ea29462e3>,
-        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_24f6269abdf1c989>,
-        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_2d730412302b3df0>,
-        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_3950fcecf002a43a>,
-        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_4592efcd729119a1>,
-        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_62581a673f405e6c>,
-        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_6defe0a8e240f27b>,
-        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_71dbf6e67ea5a907>,
-        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_751896a2b642d52f>,
-        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_88df0b1164b2fb91>,
-        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_8d6c4ae5261c1b7f>,
-        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_8d88e091e3bb28d8>,
-        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_acf2f74928d12caa>,
-        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_c9ab4b3812d39197>,
-        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_e1073fb7>,
-        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_e3647u9e8676bb1l>,
-        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_ec830d6c2e83aea3>,
-        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_l59pefedf23116a1>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_298d1d2696887999>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_40792a88ba634e66>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_b793a3807d130de0>,
-        <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_e585b2a779019b7e>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_2660d82e_place_21104b06fd2e1311>,
-        <https://sappho-digital.com/actualization/place_ref/bibl_2660d82e_place_8f3a4ee0def96e05>,
-        <https://sappho-digital.com/actualization/plot/bibl_2660d82e_plot_0b092ed64a936159>,
-        <https://sappho-digital.com/actualization/plot/bibl_2660d82e_plot_531e3c7365ed869a>,
-        <https://sappho-digital.com/actualization/plot/bibl_2660d82e_plot_7088a192832d9d0c>,
-        <https://sappho-digital.com/actualization/plot/bibl_2660d82e_plot_830dcfef58019d56>,
-        <https://sappho-digital.com/actualization/plot/bibl_2660d82e_plot_fd168d9b2224361d>,
-        <https://sappho-digital.com/actualization/topic/bibl_2660d82e_topic_b0049a9652bca00f>,
-        <https://sappho-digital.com/actualization/topic/bibl_2660d82e_topic_d8a87ac0faded437> .
-
 <https://sappho-digital.com/expression/bibl_a0bace6b> a lrmoo:F2_Expression ;
     rdfs:label "Die Frau im Brunnen. Roman"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_a0bace6b> ;
@@ -63380,6 +63526,51 @@
         <https://sappho-digital.com/actualization/topic/bibl_19d5a7ab_topic_16fb1687f7449a95>,
         <https://sappho-digital.com/actualization/work_ref/bibl_19d5a7ab_work_7ad506cbcc0b8143> ;
     intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_9184d56f> .
+
+<https://sappho-digital.com/expression/bibl_2660d82e> a lrmoo:F2_Expression ;
+    rdfs:label "Sappho träumt eine zweite Fahrt ins Exil"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_2660d82e> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_2660d82e> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_2660d82e> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_bc49cfcd> ;
+    intro:R18_showsActualization <https://sappho-digital.com/actualization/character/bibl_2660d82e_character_person_298d1d2696887999>,
+        <https://sappho-digital.com/actualization/character/bibl_2660d82e_character_person_40792a88ba634e66>,
+        <https://sappho-digital.com/actualization/character/bibl_2660d82e_character_person_887e83106aad1200>,
+        <https://sappho-digital.com/actualization/character/bibl_2660d82e_character_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/character/bibl_2660d82e_character_person_e585b2a779019b7e>,
+        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_01ca370ea29462e3>,
+        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_24f6269abdf1c989>,
+        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_2d730412302b3df0>,
+        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_3950fcecf002a43a>,
+        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_4592efcd729119a1>,
+        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_62581a673f405e6c>,
+        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_6defe0a8e240f27b>,
+        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_71dbf6e67ea5a907>,
+        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_751896a2b642d52f>,
+        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_88df0b1164b2fb91>,
+        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_8d6c4ae5261c1b7f>,
+        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_8d88e091e3bb28d8>,
+        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_acf2f74928d12caa>,
+        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_c9ab4b3812d39197>,
+        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_e1073fb7>,
+        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_e3647u9e8676bb1l>,
+        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_ec830d6c2e83aea3>,
+        <https://sappho-digital.com/actualization/motif/bibl_2660d82e_motif_l59pefedf23116a1>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_298d1d2696887999>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_40792a88ba634e66>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_887e83106aad1200>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_b793a3807d130de0>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_2660d82e_person_e585b2a779019b7e>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_2660d82e_place_21104b06fd2e1311>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_2660d82e_place_8f3a4ee0def96e05>,
+        <https://sappho-digital.com/actualization/plot/bibl_2660d82e_plot_0b092ed64a936159>,
+        <https://sappho-digital.com/actualization/plot/bibl_2660d82e_plot_531e3c7365ed869a>,
+        <https://sappho-digital.com/actualization/plot/bibl_2660d82e_plot_7088a192832d9d0c>,
+        <https://sappho-digital.com/actualization/plot/bibl_2660d82e_plot_830dcfef58019d56>,
+        <https://sappho-digital.com/actualization/plot/bibl_2660d82e_plot_fd168d9b2224361d>,
+        <https://sappho-digital.com/actualization/topic/bibl_2660d82e_topic_b0049a9652bca00f>,
+        <https://sappho-digital.com/actualization/topic/bibl_2660d82e_topic_d8a87ac0faded437> .
 
 <https://sappho-digital.com/feature/person_ref/person_669b106539453871> a intro:INT18_Reference ;
     rdfs:label "Referenz auf Gott/Göttin (Person)"@de,
@@ -64154,6 +64345,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_458b7c88_person_e585b2a779019b7e>,
         <https://sappho-digital.com/actualization/person_ref/bibl_458b7c88_person_f47881025ad98035>,
         <https://sappho-digital.com/actualization/place_ref/bibl_458b7c88_place_0009a58f625c087b>,
+        <https://sappho-digital.com/actualization/place_ref/bibl_458b7c88_place_1adb2da7993ecc95>,
         <https://sappho-digital.com/actualization/place_ref/bibl_458b7c88_place_21104b06fd2e1311>,
         <https://sappho-digital.com/actualization/place_ref/bibl_458b7c88_place_7a4fb8e10d66c95f>,
         <https://sappho-digital.com/actualization/place_ref/bibl_458b7c88_place_8f3a4ee0def96e05>,
@@ -64605,6 +64797,7 @@
         <https://sappho-digital.com/actualization/character/bibl_69a9167e_character_person_887e83106aad1200>,
         <https://sappho-digital.com/actualization/character/bibl_69a9167e_character_person_a44f7c86bfc2958d>,
         <https://sappho-digital.com/actualization/character/bibl_69a9167e_character_person_a92154dba89f764f>,
+        <https://sappho-digital.com/actualization/character/bibl_69a9167e_character_person_b793a3807d130de0>,
         <https://sappho-digital.com/actualization/character/bibl_69a9167e_character_person_c408a1bcd63c420f>,
         <https://sappho-digital.com/actualization/character/bibl_69a9167e_character_person_d2167a313c41ceaa>,
         <https://sappho-digital.com/actualization/character/bibl_69a9167e_character_person_e585b2a779019b7e>,
@@ -64648,6 +64841,7 @@
         <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_887e83106aad1200>,
         <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_a44f7c86bfc2958d>,
         <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_a92154dba89f764f>,
+        <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_b793a3807d130de0>,
         <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_c408a1bcd63c420f>,
         <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_d2167a313c41ceaa>,
         <https://sappho-digital.com/actualization/person_ref/bibl_69a9167e_person_e585b2a779019b7e>,
@@ -64658,7 +64852,6 @@
         <https://sappho-digital.com/actualization/place_ref/bibl_69a9167e_place_21104b06fd2e1311>,
         <https://sappho-digital.com/actualization/place_ref/bibl_69a9167e_place_4cab37cdf075289f>,
         <https://sappho-digital.com/actualization/place_ref/bibl_69a9167e_place_c7da5f2e77438154>,
-        <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_011312b82eb4fc98>,
         <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_168fc491c40ff2fd>,
         <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_1bd6cf31c44d00e5>,
         <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_30ec8b515802033f>,
@@ -64667,6 +64860,7 @@
         <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_6ec13f66820264d7>,
         <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_7088a192832d9d0c>,
         <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_86a1ad47f8e7fa03>,
+        <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_99b118c4>,
         <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_cc6bf7467ad0c7cf>,
         <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_ebb7046704a8c30c>,
         <https://sappho-digital.com/actualization/plot/bibl_69a9167e_plot_efe620bf3882fa2f>,
