@@ -18,11 +18,42 @@
         <xsl:variable name="doc_title">
             <xsl:value-of select=".//tei:title[@type = 'main'][1]/text()"/>
         </xsl:variable>
+        <xsl:variable name="doc_description" as="xs:string">
+            <xsl:choose>
+                <xsl:when test="$current_page = ('projekt.html', 'project.html')">
+                    <xsl:value-of select="i18n:t('Projektbeschreibung von Sappho Digital: Dissertationsprojekt zur literarischen Sappho-Rezeption im deutschsprachigen Raum mittels Linked Data und Ontologien.')"/>
+                </xsl:when>
+                <xsl:when test="$current_page = ('orientierung.html', 'guidance.html')">
+                    <xsl:value-of select="i18n:t('Orientierungshilfe für den Einstieg in Sappho Digital: Wie sich die Webseite und ihre Daten am besten erkunden lassen.')"/>
+                </xsl:when>
+                <xsl:when test="$current_page = ('analyse.html', 'analysis.html')">
+                    <xsl:value-of select="i18n:t('Erläuterungen zur exemplarischen Analyse der Sappho-Fragmente und Rezeptionszeugnisse: Datenmodell, Annotation und Methodik.')"/>
+                </xsl:when>
+                <xsl:when test="$current_page = ('publikationen.html', 'publications.html')">
+                    <xsl:value-of select="i18n:t('Publikationen zum Projekt Sappho Digital.')"/>
+                </xsl:when>
+                <xsl:when test="$current_page = ('bibliographie.html', 'bibliography.html')">
+                    <xsl:value-of select="i18n:t('Bibliographie und Quellenverzeichnis des Projekts Sappho Digital.')"/>
+                </xsl:when>
+                <xsl:when test="$current_page = ('texte.html', 'texts.html')">
+                    <xsl:value-of select="i18n:t('Primärtexte: Sappho-Fragmente und deutschsprachige Rezeptionszeugnisse im Projekt Sappho Digital.')"/>
+                </xsl:when>
+                <xsl:when test="$current_page = ('404.html', 'not-found.html')">
+                    <xsl:value-of select="i18n:t('Seite nicht gefunden – Sappho Digital.')"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="$project_description"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
         <html lang="{$lang}">
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"/>
+                    <xsl:with-param name="html_description" select="$doc_description"/>
+                    <xsl:with-param name="current_page" select="$current_page"/>
+                    <xsl:with-param name="html_noindex" select="$current_page = ('404.html', 'not-found.html')"/>
                 </xsl:call-template>
             </head>
 

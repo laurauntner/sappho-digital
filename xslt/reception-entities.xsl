@@ -47,6 +47,9 @@
                     <xsl:call-template name="html_head">
                         <xsl:with-param name="html_title"
                             select="i18n:t('Vokabular zur literarischen Sappho-Rezeption')"/>
+                        <xsl:with-param name="html_description"
+                            select="i18n:t('SKOS-Vokabular mit über 400 Konzepten zu Motiven, Themen, Stoffen und weiteren Phänomenen der literarischen Sappho-Rezeption.')"/>
+                        <xsl:with-param name="current_page" select="i18n:href('vokabular.html')"/>
                     </xsl:call-template>
                     <script src="./js/details-lazy.js" defer="defer"/>
                 </head>
@@ -1383,6 +1386,9 @@
                 <head>
                     <xsl:call-template name="html_head">
                         <xsl:with-param name="html_title" select="i18n:t('Intertextuelle Beziehungen')"/>
+                        <xsl:with-param name="html_description"
+                            select="i18n:t('Intertextuelle Beziehungen zwischen Sappho-Fragmenten und deutschsprachigen Rezeptionszeugnissen.')"/>
+                        <xsl:with-param name="current_page" select="i18n:href('intertexte.html')"/>
                     </xsl:call-template>
                     <script type="module" src="./js/intertexts-network.js"/>
                     <script src="./js/details-lazy.js" defer="defer"/>
@@ -1687,6 +1693,9 @@
                     <xsl:call-template name="html_head">
                         <xsl:with-param name="html_title" select="i18n:t('Personenreferenzen und Figuren')"
                         />
+                        <xsl:with-param name="html_description"
+                            select="i18n:t('Personenreferenzen und Figuren in Sappho-Fragmenten und deutschsprachigen Rezeptionszeugnissen.')"/>
+                        <xsl:with-param name="current_page" select="i18n:href('personen.html')"/>
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
@@ -1925,6 +1934,9 @@
                 <head>
                     <xsl:call-template name="html_head">
                         <xsl:with-param name="html_title" select="i18n:t('Ortsreferenzen')"/>
+                        <xsl:with-param name="html_description"
+                            select="i18n:t('Ortsreferenzen in Sappho-Fragmenten und deutschsprachigen Rezeptionszeugnissen.')"/>
+                        <xsl:with-param name="current_page" select="i18n:href('orte.html')"/>
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
@@ -2032,6 +2044,9 @@
                 <head>
                     <xsl:call-template name="html_head">
                         <xsl:with-param name="html_title" select="i18n:t('Werkreferenzen und Zitate')"/>
+                        <xsl:with-param name="html_description"
+                            select="i18n:t('Werkreferenzen und Zitate in Sappho-Fragmenten und deutschsprachigen Rezeptionszeugnissen.')"/>
+                        <xsl:with-param name="current_page" select="i18n:href('werke.html')"/>
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
@@ -2281,6 +2296,9 @@
                 <head>
                     <xsl:call-template name="html_head">
                         <xsl:with-param name="html_title" select="i18n:t('Rhetorische Topoi')"/>
+                        <xsl:with-param name="html_description"
+                            select="i18n:t('Rhetorische Topoi in Sappho-Fragmenten und deutschsprachigen Rezeptionszeugnissen.')"/>
+                        <xsl:with-param name="current_page" select="i18n:href('topoi.html')"/>
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
@@ -2387,6 +2405,9 @@
                 <head>
                     <xsl:call-template name="html_head">
                         <xsl:with-param name="html_title" select="i18n:t('Motive')"/>
+                        <xsl:with-param name="html_description"
+                            select="i18n:t('Motive in Sappho-Fragmenten und deutschsprachigen Rezeptionszeugnissen.')"/>
+                        <xsl:with-param name="current_page" select="i18n:href('motive.html')"/>
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
@@ -2494,6 +2515,9 @@
                 <head>
                     <xsl:call-template name="html_head">
                         <xsl:with-param name="html_title" select="i18n:t('Themen')"/>
+                        <xsl:with-param name="html_description"
+                            select="i18n:t('Themen in Sappho-Fragmenten und deutschsprachigen Rezeptionszeugnissen.')"/>
+                        <xsl:with-param name="current_page" select="i18n:href('themen.html')"/>
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>
@@ -2598,6 +2622,9 @@
                 <head>
                     <xsl:call-template name="html_head">
                         <xsl:with-param name="html_title" select="i18n:t('Stoffe')"/>
+                        <xsl:with-param name="html_description"
+                            select="i18n:t('Stoffe und Stoffvarianten in Sappho-Fragmenten und deutschsprachigen Rezeptionszeugnissen.')"/>
+                        <xsl:with-param name="current_page" select="i18n:href('stoffe.html')"/>
                     </xsl:call-template>
                     <script src="https://code.highcharts.com/highcharts.js"/>
                     <script src="./js/feature-statistics.js"/>

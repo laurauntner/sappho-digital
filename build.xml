@@ -228,4 +228,11 @@
 
     <copy file="documentation/ontology/shapes.ttl" tofile="html/shapes.ttl" overwrite="true"/>
 
+    <!-- sitemap (scans the freshly built ${target}/*.html pages) -->
+    <exec executable="python3" failonerror="true">
+        <arg value="python/generate_sitemap.py"/>
+        <arg value="${target}"/>
+        <arg value="${target}/sitemap.xml"/>
+    </exec>
+
 </project>

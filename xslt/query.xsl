@@ -19,6 +19,9 @@
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"/>
+                    <xsl:with-param name="html_description"
+                        select="i18n:t('Visueller SPARQL-Query-Builder für die RDF-Daten der literarischen Sappho-Rezeption.')"/>
+                    <xsl:with-param name="current_page" select="i18n:href('query.html')"/>
                 </xsl:call-template>
                 <link rel="stylesheet"
                     href="https://cdn.jsdelivr.net/npm/sparnatural@12.2.1/dist/browser/sparnatural.css"/>

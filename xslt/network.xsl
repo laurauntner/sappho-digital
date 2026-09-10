@@ -20,11 +20,11 @@
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"/>
+                    <xsl:with-param name="html_description"
+                        select="i18n:t('Interaktive Netzwerkvisualisierung aller RDF-Daten zur literarischen Sappho-Rezeption.')"/>
+                    <xsl:with-param name="current_page" select="i18n:href('netzwerk.html')"/>
                 </xsl:call-template>
 
-                <title>
-                    <xsl:value-of select="$doc_title"/>
-                </title>
                 <meta charset="utf-8"/>
 
                 <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"/>

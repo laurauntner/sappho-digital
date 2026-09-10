@@ -11,19 +11,22 @@
     <xsl:import href="./partials/html_footer.xsl"/>
     <xsl:template match="/">
         <xsl:variable name="doc_title" select="i18n:t('Impressum')"/>
+        <xsl:variable name="current_page"
+            select="if ($lang = 'en') then 'legal-notice.html' else 'imprint.html'"/>
         <xsl:text disable-output-escaping="yes">&lt;!DOCTYPE html&gt;</xsl:text>
         <html xmlns="http://www.w3.org/1999/xhtml" lang="{$lang}">
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"/>
+                    <xsl:with-param name="html_description" select="i18n:t('Impressum von Sappho Digital.')"/>
+                    <xsl:with-param name="current_page" select="$current_page"/>
                 </xsl:call-template>
             </head>
 
             <body class="page">
                 <div class="hfeed site" id="page">
                     <xsl:call-template name="nav_bar">
-                        <xsl:with-param name="current_page"
-                            select="if ($lang = 'en') then 'legal-notice.html' else 'imprint.html'"/>
+                        <xsl:with-param name="current_page" select="$current_page"/>
                     </xsl:call-template>
 
                     <div class="container-fluid">

@@ -443,11 +443,26 @@
                 </xsl:choose>
             </xsl:variable>
 
+            <xsl:variable name="entity_description" as="xs:string">
+                <xsl:choose>
+                    <xsl:when test="self::tei:bibl">
+                        <xsl:value-of select="concat(i18n:t('Rezeptionszeugnis in der literarischen Sappho-Rezeption: '), $label, '. ', i18n:t('Bibliographische Daten, Autor_in, Erscheinungsjahr und intertextuelle Bezüge.'))"/>
+                    </xsl:when>
+                    <xsl:when test="self::tei:author">
+                        <xsl:value-of select="concat(i18n:t('Autor_in in der literarischen Sappho-Rezeption: '), $label, '.')"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                        <xsl:value-of select="concat(i18n:t('Ort in der literarischen Sappho-Rezeption: '), $label, '.')"/>
+                    </xsl:otherwise>
+                </xsl:choose>
+            </xsl:variable>
             <xsl:result-document href="../html/{i18n:href(concat($id, '.html'))}">
                 <html lang="{$lang}">
                     <head>
                         <xsl:call-template name="html_head">
                             <xsl:with-param name="html_title" select="$label"/>
+                            <xsl:with-param name="html_description" select="$entity_description"/>
+                            <xsl:with-param name="current_page" select="i18n:href(concat($id, '.html'))"/>
                         </xsl:call-template>
                         <xsl:if
                             test="exists($all-refs) and (self::tei:author or self::tei:bibl or self::tei:pubPlace)">

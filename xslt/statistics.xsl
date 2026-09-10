@@ -473,6 +473,9 @@
       <head>
         <xsl:call-template name="html_head">
           <xsl:with-param name="html_title" select="$doc_title"/>
+          <xsl:with-param name="html_description"
+              select="i18n:t('Statistische Auswertungen zu Sappho-Fragmenten und deutschsprachigen Rezeptionszeugnissen: Rezeptionsindizes, Phänomenverteilungen, Netzwerke und mehr.')"/>
+          <xsl:with-param name="current_page" select="i18n:href('statistik.html')"/>
         </xsl:call-template>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"/>

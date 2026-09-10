@@ -266,11 +266,11 @@
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"/>
+                    <xsl:with-param name="html_description"
+                        select="i18n:t('Alignments der Sappho-Digital-Ontologie mit weiteren bibliographischen und literaturwissenschaftlichen Ontologien.')"/>
+                    <xsl:with-param name="current_page" select="i18n:href('alignments.html')"/>
                 </xsl:call-template>
 
-                <title>
-                    <xsl:value-of select="$doc_title"/>
-                </title>
                 <meta charset="utf-8"/>
 
                 <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"/>

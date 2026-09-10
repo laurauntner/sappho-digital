@@ -14,6 +14,14 @@
     <!-- Language of the current build: 'de' (default) or 'en'. Ant passes lang=en for the English build. -->
     <xsl:param name="lang" select="'de'"/>
 
+    <!-- Fallback <meta name="description"> for pages that don't set a more specific $html_description. -->
+    <xsl:param name="project_description"
+        select="
+            if ($lang = 'en') then
+                'Sappho Digital documents and analyses the literary reception of the ancient Greek poet Sappho across more than 1,000 German-language texts from the 15th to the 21st century, using Linked Data and formal ontologies.'
+            else
+                'Sappho Digital dokumentiert und analysiert die literarische Rezeption der antiken Dichterin Sappho anhand von über 1.000 deutschsprachigen Texten vom 15. bis 21. Jahrhundert – mittels Linked Data und formaler Ontologien.'"/>
+
     <!-- Rewrites an internal page href to its English-language variant when $lang = 'en'.
          External links, mailto:, anchors and hrefs without an .html target pass through unchanged.
          Absolute links to our own $base_url are treated as internal. -->
@@ -594,6 +602,72 @@
         <entry de="Intertextuelle Beziehungen zwischen Sappho-Fragmenten" en="Intertextual Relations between Sappho Fragments"/>
         <entry de="Intertextuelle Beziehungen zwischen Rezeptionszeugnissen und Sappho-Fragmenten" en="Intertextual Relations between Reception Testimonies and Sappho Fragments"/>
         <entry de="Intertextuelle Beziehungen zwischen Rezeptionszeugnissen" en="Intertextual Relations between Reception Testimonies"/>
+
+        <!-- meta descriptions -->
+        <entry
+            de="Projektbeschreibung von Sappho Digital: Dissertationsprojekt zur literarischen Sappho-Rezeption im deutschsprachigen Raum mittels Linked Data und Ontologien."
+            en="Project description of Sappho Digital: a dissertation project on the literary reception of Sappho in the German-speaking world using Linked Data and ontologies."/>
+        <entry
+            de="Orientierungshilfe für den Einstieg in Sappho Digital: Wie sich die Webseite und ihre Daten am besten erkunden lassen."
+            en="Guidance for getting started with Sappho Digital: how to best explore the website and its data."/>
+        <entry
+            de="Erläuterungen zur exemplarischen Analyse der Sappho-Fragmente und Rezeptionszeugnisse: Datenmodell, Annotation und Methodik."
+            en="Notes on the exemplary analysis of the Sappho fragments and reception testimonies: data model, annotation, and methodology."/>
+        <entry de="Publikationen zum Projekt Sappho Digital." en="Publications on the Sappho Digital project."/>
+        <entry de="Bibliographie und Quellenverzeichnis des Projekts Sappho Digital."
+            en="Bibliography and list of sources for the Sappho Digital project."/>
+        <entry
+            de="Primärtexte: Sappho-Fragmente und deutschsprachige Rezeptionszeugnisse im Projekt Sappho Digital."
+            en="Primary texts: Sappho fragments and German-language reception testimonies in the Sappho Digital project."/>
+        <entry de="Seite nicht gefunden – Sappho Digital." en="Page not found – Sappho Digital."/>
+        <entry de="Impressum von Sappho Digital." en="Imprint of Sappho Digital."/>
+        <entry
+            de="Visueller SPARQL-Query-Builder für die RDF-Daten der literarischen Sappho-Rezeption."
+            en="Visual SPARQL query builder for the RDF data on the literary reception of Sappho."/>
+        <entry
+            de="Interaktive Netzwerkvisualisierung aller RDF-Daten zur literarischen Sappho-Rezeption."
+            en="Interactive network visualization of all RDF data on the literary reception of Sappho."/>
+        <entry
+            de="Alignments der Sappho-Digital-Ontologie mit weiteren bibliographischen und literaturwissenschaftlichen Ontologien."
+            en="Alignments of the Sappho Digital ontology with further bibliographic and literary-studies ontologies."/>
+        <entry
+            de="Statistische Auswertungen zu Sappho-Fragmenten und deutschsprachigen Rezeptionszeugnissen: Rezeptionsindizes, Phänomenverteilungen, Netzwerke und mehr."
+            en="Statistical analyses of Sappho fragments and German-language reception testimonies: reception indices, phenomenon distributions, networks and more."/>
+        <entry
+            de="SKOS-Vokabular mit über 400 Konzepten zu Motiven, Themen, Stoffen und weiteren Phänomenen der literarischen Sappho-Rezeption."
+            en="SKOS vocabulary with over 400 concepts covering motifs, topics, plots, and other phenomena of the literary reception of Sappho."/>
+        <entry
+            de="Intertextuelle Beziehungen zwischen Sappho-Fragmenten und deutschsprachigen Rezeptionszeugnissen."
+            en="Intertextual relationships between Sappho fragments and German-language reception testimonies."/>
+        <entry
+            de="Personenreferenzen und Figuren in Sappho-Fragmenten und deutschsprachigen Rezeptionszeugnissen."
+            en="References to persons and characters in Sappho fragments and German-language reception testimonies."/>
+        <entry de="Ortsreferenzen in Sappho-Fragmenten und deutschsprachigen Rezeptionszeugnissen."
+            en="References to places in Sappho fragments and German-language reception testimonies."/>
+        <entry
+            de="Werkreferenzen und Zitate in Sappho-Fragmenten und deutschsprachigen Rezeptionszeugnissen."
+            en="References to works and quotations in Sappho fragments and German-language reception testimonies."/>
+        <entry de="Rhetorische Topoi in Sappho-Fragmenten und deutschsprachigen Rezeptionszeugnissen."
+            en="Rhetorical topoi in Sappho fragments and German-language reception testimonies."/>
+        <entry de="Motive in Sappho-Fragmenten und deutschsprachigen Rezeptionszeugnissen."
+            en="Motifs in Sappho fragments and German-language reception testimonies."/>
+        <entry de="Themen in Sappho-Fragmenten und deutschsprachigen Rezeptionszeugnissen."
+            en="Topics in Sappho fragments and German-language reception testimonies."/>
+        <entry de="Stoffe und Stoffvarianten in Sappho-Fragmenten und deutschsprachigen Rezeptionszeugnissen."
+            en="Plots and plot variants in Sappho fragments and German-language reception testimonies."/>
+        <entry de="Verzeichnis deutschsprachiger literarischer Rezeptionszeugnisse zu Sappho: "
+            en="Catalogue of German-language literary reception testimonies about Sappho: "/>
+        <entry de="Rezeptionszeugnis in der literarischen Sappho-Rezeption: "
+            en="Reception testimony in the literary reception of Sappho: "/>
+        <entry de="Autor_in in der literarischen Sappho-Rezeption: "
+            en="Author in the literary reception of Sappho: "/>
+        <entry de="Ort in der literarischen Sappho-Rezeption: "
+            en="Place in the literary reception of Sappho: "/>
+        <entry
+            de="Bibliographische Daten, Autor_in, Erscheinungsjahr und intertextuelle Bezüge."
+            en="Bibliographic data, author, year of publication, and intertextual relations."/>
+        <entry de="Sappho-Fragment mit Analyse intertextueller Bezüge zur deutschsprachigen Rezeption: "
+            en="Sappho fragment with an analysis of intertextual relations to its German-language reception: "/>
     </xsl:variable>
 
     <xsl:key name="i18n-key" match="entry" use="@de"/>

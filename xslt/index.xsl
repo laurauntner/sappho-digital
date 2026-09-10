@@ -18,7 +18,37 @@
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"/>
+                    <xsl:with-param name="html_description"
+                        select="i18n:t('Auf dieser Webseite werden Informationen zur literarischen Sappho-Rezeption im deutschsprachigen Raum gesammelt – von den Anfängen bis in die Gegenwart.')"/>
+                    <xsl:with-param name="current_page" select="i18n:href('index.html')"/>
                 </xsl:call-template>
+                <script type="application/ld+json">
+                    <xsl:text disable-output-escaping="yes">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "Sappho Digital",
+      "url": "https://sappho-digital.com/",
+      "inLanguage": ["de", "en"],
+      "description": "</xsl:text><xsl:value-of select="i18n:t('Auf dieser Webseite werden Informationen zur literarischen Sappho-Rezeption im deutschsprachigen Raum gesammelt – von den Anfängen bis in die Gegenwart.')"/><xsl:text disable-output-escaping="yes">"
+    },
+    {
+      "@type": "Dataset",
+      "name": "Sappho Digital",
+      "description": "</xsl:text><xsl:value-of select="$project_description"/><xsl:text disable-output-escaping="yes">",
+      "url": "https://sappho-digital.com/",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "creator": {
+        "@type": "Person",
+        "name": "Laura Untner"
+      },
+      "inLanguage": ["de", "en"],
+      "sameAs": "https://github.com/laurauntner/sappho-digital"
+    }
+  ]
+}</xsl:text>
+                </script>
             </head>
             <body class="page">
                 <div class="hfeed site" id="page">

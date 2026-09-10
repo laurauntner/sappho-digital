@@ -418,6 +418,9 @@
                     <head>
                         <xsl:call-template name="html_head">
                             <xsl:with-param name="html_title" select="$label"/>
+                            <xsl:with-param name="html_description"
+                                select="concat(i18n:t('Sappho-Fragment mit Analyse intertextueller Bezüge zur deutschsprachigen Rezeption: '), $label, '.')"/>
+                            <xsl:with-param name="current_page" select="i18n:href(concat($id, '.html'))"/>
                         </xsl:call-template>
                     </head>
                     <body class="page">
