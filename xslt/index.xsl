@@ -22,6 +22,7 @@
                         select="i18n:t('Auf dieser Webseite werden Informationen zur literarischen Sappho-Rezeption im deutschsprachigen Raum gesammelt – von den Anfängen bis in die Gegenwart.')"/>
                     <xsl:with-param name="current_page" select="i18n:href('index.html')"/>
                 </xsl:call-template>
+                <meta name="google-site-verification" content="bKu1L77jOTheWGXNG5-T6Nd3gaRthrj-zqMcPkfd8to"/>
                 <script type="application/ld+json">
                     <xsl:text disable-output-escaping="yes">{
   "@context": "https://schema.org",
