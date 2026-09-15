@@ -60578,10 +60578,12 @@
     rdfs:label "Die moderne Sappho. Ein musikalisch-dramatisches Durcheinander ohne Sinn und ohne Verstand. Bestehend aus zwei Akten und einem monodramatischen Finale"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_339f7bbc> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_339f7bbc> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_339f7bbc> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120199245>,
+        <https://sappho-digital.com/identifier/bibl_339f7bbc> ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_339f7bbc> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_339f7bbc> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q120199245> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/character/bibl_339f7bbc_character_person_9545062e029ef19b>,
         <https://sappho-digital.com/actualization/character/bibl_339f7bbc_character_person_e585b2a779019b7e>,
         <https://sappho-digital.com/actualization/motif/bibl_339f7bbc_motif_71dbf6e67ea5a907>,

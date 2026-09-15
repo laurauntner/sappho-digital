@@ -236,7 +236,7 @@
                     <publisher ref="https://www.wikidata.org/entity/Q112563758" xml:id="publisher_aa8c7246">Heinrich Frölich</publisher>
                     <ref target="https://www.digitale-sammlungen.de/de/view/bsb11342069">https://www.digitale-sammlungen.de/de/view/bsb11342069</ref>
                 </bibl>
-                <bibl xml:id="bibl_2318415b">
+                <bibl ref="https://www.wikidata.org/entity/Q141452824" xml:id="bibl_2318415b">
                     <title type="text">Jean Pauls Briefe und bevorstehender Lebenslauf</title>
                     <date type="published" when="1799">1799</date>
                     <author ref="https://www.wikidata.org/entity/Q77079" xml:id="author_d6da3022">Jean Paul</author>
@@ -401,7 +401,7 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q85267460" xml:id="publisher_40b57b80">Arnoldsche Buchhandlung</publisher>
                 </bibl>
-                <bibl xml:id="bibl_3c2992d6">
+                <bibl ref="https://www.wikidata.org/entity/Q141452964" xml:id="bibl_3c2992d6">
                     <title type="text">Das Zauberschloß</title>
                     <date type="published" when="1830">1830</date>
                     <author ref="https://www.wikidata.org/entity/Q57239" xml:id="author_787b818f">Ludwig Tieck</author>
@@ -493,7 +493,7 @@
                 <bibl xml:id="bibl_8b641cb9">
                     <title type="text">Der Guckguck</title>
                     <date type="published" when="1838">1838</date>
-                    <bibl xml:id="bibl_b3d0f556">
+                    <bibl xml:id="bibl_b3d0f556" ref="https://www.wikidata.org/entity/Q141452901">
                         <title type="work">Der Österreichische Zuschauer. Zeitschrift für Kunst, Wissenschaft und geistiges Leben</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q94578406" xml:id="author_31f5aba0">Carl Frühauf</author>
@@ -761,7 +761,7 @@
                 <bibl xml:id="bibl_1f5c9a50">
                     <title type="text">Reichsgräfin Gisela</title>
                     <date type="published" when="1869">1869</date>
-                    <bibl xml:id="bibl_75f8bec1">
+                    <bibl xml:id="bibl_75f8bec1" ref="https://www.wikidata.org/entity/Q655617">
                         <title type="work">Die Gartenlaube</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q62950" xml:id="author_f468f7e6">Eugenie Marlitt</author>
@@ -990,9 +990,12 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno-plus?aid=asd&amp;datum=1886&amp;page=637&amp;size=45">https://anno.onb.ac.at/cgi-content/anno-plus?aid=asd&amp;datum=1886&amp;page=637&amp;size=45</ref>
                 </bibl>
-                <bibl xml:id="bibl_b2c80eed">
+                <bibl ref="https://www.wikidata.org/entity/Q19178489" xml:id="bibl_b2c80eed">
                     <title type="text">Die Nilbraut</title>
                     <date type="published" when="1887">1887</date>
+                    <bibl xml:id="bibl_75f8bec1" ref="https://www.wikidata.org/entity/Q655617">
+                        <title type="work">Die Gartenlaube</title>
+                    </bibl>
                     <author ref="https://www.wikidata.org/entity/Q62765" xml:id="author_caa5df32">Georg Ebers</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
@@ -1177,10 +1180,10 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q44264558" xml:id="publisher_6b243b53">Bong</publisher>
                 </bibl>
-                <bibl xml:id="bibl_2cc74cd9">
+                <bibl ref="https://www.wikidata.org/entity/Q141463215" xml:id="bibl_2cc74cd9">
                     <title type="text">Gräfin Erikas Lehr- und Wanderjahre: Roman</title>
                     <date type="published" when="1892">1892</date>
-                    <author ref="https://www.wikidata.org/entity/Q446713" xml:id="author_8d1e5941">Ossip Schubin</author>
+                    <author ref="https://www.wikidata.org/entity/Q446713" xml:id="author_8d1e5941">Ossip Schubin [= Aloisia Kirschner]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2773" xml:id="place_0e5a73dc">Braunschweig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2564847" xml:id="publisher_f513ce34">George Westemann</publisher>
@@ -1773,7 +1776,7 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <ref target="https://www.deutsche-digitale-bibliothek.de/newspaper/item/YL3OCX4TA6AC7TNPCYA4RWIJG6ZKOLUA">https://www.deutsche-digitale-bibliothek.de/newspaper/item/YL3OCX4TA6AC7TNPCYA4RWIJG6ZKOLUA</ref>
                 </bibl>
-                <bibl xml:id="bibl_5dc89088">
+                <bibl ref="https://www.wikidata.org/entity/Q141453018" xml:id="bibl_5dc89088">
                     <title type="text">Grotesken</title>
                     <date type="published" when="1922">1922</date>
                     <author ref="https://www.wikidata.org/entity/Q115335" xml:id="author_b6223d75">Manfred Kyber</author>
@@ -1806,7 +1809,7 @@
                 <bibl xml:id="bibl_295626d5">
                     <title type="text">Die lachende Maske. Roman</title>
                     <date type="published" notBefore="1922" notAfter="1923">1922–1923</date>
-                    <bibl xml:id="bibl_4f886bc9">
+                    <bibl xml:id="bibl_4f886bc9" ref="https://www.wikidata.org/entity/Q141462460">
                         <title type="work">Neue Mannheimer Zeitung</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q103673" xml:id="author_bf6d8c80">Paul Oskar Höcker</author>
@@ -1847,7 +1850,7 @@
                 <bibl xml:id="bibl_f0a4aa7a">
                     <title type="text">Wenn die Erde sich öffnet …</title>
                     <date type="published" when="1925">1925</date>
-                    <bibl xml:id="bibl_50f7ab48">
+                    <bibl xml:id="bibl_50f7ab48" ref="https://www.wikidata.org/entity/Q141463473">
                         <title type="work">Dortmunder Zeitung</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q94837904" xml:id="author_5cbc88f8">Gustav W. Eberlein</author>
@@ -1946,7 +1949,7 @@
                 <bibl xml:id="bibl_c50737f7">
                     <title type="text">Zwischen Nacht und Morgen</title>
                     <date type="published" when="1933">1933</date>
-                    <bibl xml:id="bibl_7667b749">
+                    <bibl xml:id="bibl_7667b749" ref="https://www.wikidata.org/entity/Q1401425">
                         <title type="work">Feierabend</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q94876834" xml:id="author_480cb744">Willy Möbus</author>
@@ -1965,7 +1968,7 @@
                 <bibl xml:id="bibl_06cb114b">
                     <title type="text">Die Geschichte einer Hochzeitsreise. Roman</title>
                     <date type="published" when="1935">1935</date>
-                    <bibl xml:id="bibl_4f886bc9">
+                    <bibl xml:id="bibl_4f886bc9" ref="https://www.wikidata.org/entity/Q141462460">
                         <title type="work">Neue Mannheimer Zeitung</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1616540" xml:id="author_90f115c3">Walther von Hollander</author>
@@ -1973,7 +1976,7 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q2119" xml:id="place_77b5ece6">Mannheim</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q139328665" xml:id="publisher_b6664739">Mannheimer Morgen</publisher>
                 </bibl>
-                <bibl xml:id="bibl_71f5dd25">
+                <bibl ref="https://www.wikidata.org/entity/Q141452810" xml:id="bibl_71f5dd25">
                     <title type="text">Jagd nach dem Bildnis der Kaiserin Poppäa</title>
                     <date type="published" when="1935">1935</date>
                     <author ref="https://www.wikidata.org/entity/Q108306842" xml:id="author_cb7f347d">Wilhelm Scheider</author>
@@ -2082,7 +2085,7 @@
                     <publisher ref="https://www.wikidata.org/entity/Q139328231" xml:id="publisher_9050d310">Der Kreis</publisher>
                     <ref target="https://www.e-periodica.ch/digbib/view?pid=kre-002%3A1941%3A9%3A%3A129">https://www.e-periodica.ch/digbib/view?pid=kre-002%3A1941%3A9%3A%3A129</ref>
                 </bibl>
-                <bibl xml:id="bibl_9271a30a">
+                <bibl ref="https://www.wikidata.org/entity/Q141462631" xml:id="bibl_9271a30a">
                     <title type="text">Das Lorbeerufer. Roman</title>
                     <date type="published" when="1942">1942</date>
                     <author ref="https://www.wikidata.org/entity/Q1335819" xml:id="author_4ccbbf71">Emil Barth</author>
@@ -2134,7 +2137,7 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q2871" xml:id="place_f4429f06">Hagen</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q139300474" xml:id="publisher_31d180f3">Pantheon-Sondervertrieb</publisher>
                 </bibl>
-                <bibl xml:id="bibl_386de82b">
+                <bibl ref="https://www.wikidata.org/entity/Q2258905" xml:id="bibl_386de82b">
                     <title type="text">Schöne Aussicht</title>
                     <date type="published" when="1981">1981</date>
                     <author ref="https://www.wikidata.org/entity/Q61408" xml:id="author_49a8c79a">Walter Kempowski</author>
@@ -2153,7 +2156,7 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q34713" xml:id="place_f2646aa0">Salzburg</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2145655" xml:id="publisher_f13bea0a">Residenz</publisher>
                 </bibl>
-                <bibl xml:id="bibl_c1e2dcfc">
+                <bibl ref="https://www.wikidata.org/entity/Q65586229" xml:id="bibl_c1e2dcfc">
                     <title type="text">Amanda. Ein Hexenroman</title>
                     <date type="published" when="1983">1983</date>
                     <author ref="https://www.wikidata.org/entity/Q68137" xml:id="author_8139a4e6">Irmtraud Morgner</author>
@@ -2184,7 +2187,7 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2516721" xml:id="publisher_c6e387b0">Neues Leben</publisher>
                 </bibl>
-                <bibl xml:id="bibl_d0d9834f">
+                <bibl ref="https://www.wikidata.org/entity/Q141452763" xml:id="bibl_d0d9834f">
                     <title type="text">Der Vikar Sappho oder Die Verzauberung. Erzählung</title>
                     <date type="published" when="1983">1983</date>
                     <author ref="https://www.wikidata.org/entity/Q95186926" xml:id="author_41f6be4f">Ottilie Schenk</author>
@@ -2365,7 +2368,7 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1205382" xml:id="publisher_5b6f26d7">DTV</publisher>
                 </bibl>
-                <bibl xml:id="bibl_2348e130">
+                <bibl ref="https://www.wikidata.org/entity/Q141452837" xml:id="bibl_2348e130">
                     <title type="text">Der Wolkenprinz. Frauenroman</title>
                     <date type="published" when="2007">2007</date>
                     <author ref="https://www.wikidata.org/entity/Q138795462" xml:id="author_da7ab3c4">Irene Seydlitz</author>
