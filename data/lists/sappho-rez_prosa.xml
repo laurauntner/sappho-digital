@@ -279,7 +279,7 @@
                     <title type="text">Ein apokaliptisches Fragment</title>
                     <date type="created" notBefore="1801" notAfter="1804">1801–1804</date>
                     <date type="published" when="1804">1804</date>
-                    <bibl xml:id="bibl_7cfe62ea">
+                    <bibl xml:id="bibl_7cfe62ea" ref="https://www.wikidata.org/entity/Q116295174">
                         <title type="work">Gedichte und Phantasien</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q62053" xml:id="author_2397260a">Tian [= Karoline von Günderrode]</author>
@@ -289,7 +289,7 @@
                     <publisher ref="https://www.wikidata.org/entity/Q139324367" xml:id="publisher_34543015">J. C. Hermannsche Buchhandlung</publisher>
                     <ref target="https://www.digitale-sammlungen.de/de/view/bsb10861265">https://www.digitale-sammlungen.de/de/view/bsb10861265</ref>
                 </bibl>
-                <bibl xml:id="bibl_f28a176c">
+                <bibl ref="https://www.wikidata.org/entity/Q141474798" xml:id="bibl_f28a176c">
                     <title type="text">Albert und Albertine</title>
                     <date type="published" when="1804">1804</date>
                     <author ref="https://www.wikidata.org/entity/Q1457049" xml:id="author_bd8a5c89">Friederike Helene Unger</author>
@@ -667,7 +667,7 @@
                 <bibl xml:id="bibl_46cb78aa">
                     <title type="text">Agnes</title>
                     <date type="published" when="1864">1864</date>
-                    <bibl xml:id="bibl_034b684d">
+                    <bibl xml:id="bibl_034b684d" ref="https://www.wikidata.org/entity/Q106765746">
                         <title type="work">Erzgebirgischer Volksfreund</title>
                     </bibl>
                     <note type="genre">Prosa</note>
@@ -960,7 +960,7 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1204376" xml:id="publisher_f49e3b89">Deutsche Verlagsanstalt</publisher>
                 </bibl>
-                <bibl xml:id="bibl_e87b8899">
+                <bibl ref="https://www.wikidata.org/entity/Q141474809" xml:id="bibl_e87b8899">
                     <title type="text">Sappho. Griechische Novelle</title>
                     <date type="published" when="1886">1886</date>
                     <author ref="https://www.wikidata.org/entity/Q1333149" xml:id="author_6fd5058e">Hans Flach</author>
@@ -1203,7 +1203,7 @@
                 <bibl xml:id="bibl_92474bdf">
                     <title type="text">Werde, die Du bist!</title>
                     <date type="published" when="1894">1894</date>
-                    <bibl xml:id="bibl_85b1397b">
+                    <bibl xml:id="bibl_85b1397b" ref="https://www.wikidata.org/entity/Q141474833">
                         <title type="work">Wie Frauen werden. Werde, wie du bist. Novellen</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q71491" xml:id="author_1e3011ae">Hedwig Dohm</author>
@@ -2093,7 +2093,7 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q1055" xml:id="place_f23bb5e2">Hamburg</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1606785" xml:id="publisher_b43339c9">Goverts</publisher>
                 </bibl>
-                <bibl xml:id="bibl_f3eebdf3">
+                <bibl ref="https://www.wikidata.org/entity/Q141474819" xml:id="bibl_f3eebdf3">
                     <title type="text">Sappho von Lesbos. Roman</title>
                     <date type="published" when="1945">1945</date>
                     <author ref="https://www.wikidata.org/entity/Q6725281" xml:id="author_465361bf">Margot Klausner</author>
