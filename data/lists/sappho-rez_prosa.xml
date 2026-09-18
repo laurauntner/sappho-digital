@@ -952,8 +952,8 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1468453" xml:id="publisher_1bb3a48e">Hirzel</publisher>
                 </bibl>
-                <bibl xml:id="bibl_2cb6f632">
-                    <title type="text">Serapis: Historischer Roman</title>
+                <bibl ref="https://www.wikidata.org/entity/Q141489891" xml:id="bibl_2cb6f632">
+                    <title type="text">Serapis. Historischer Roman</title>
                     <date type="published" when="1885">1885</date>
                     <author ref="https://www.wikidata.org/entity/Q62765" xml:id="author_caa5df32">Georg Ebers</author>
                     <note type="genre">Prosa</note>
@@ -1230,10 +1230,10 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q481576" xml:id="publisher_26115c29">S. Fischer</publisher>
                 </bibl>
-                <bibl xml:id="bibl_f0d806e8">
+                <bibl ref="https://www.wikidata.org/entity/Q141489706" xml:id="bibl_f0d806e8">
                     <title type="text">Maximum</title>
                     <date type="published" when="1896">1896</date>
-                    <author ref="https://www.wikidata.org/entity/Q446713" xml:id="author_8d1e5941">Ossip Schubin</author>
+                    <author ref="https://www.wikidata.org/entity/Q446713" xml:id="author_8d1e5941">Ossip Schubin [= Aloisia Kirschner]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1204376" xml:id="publisher_f49e3b89">Deutsche Verlagsanstalt</publisher>
@@ -1928,7 +1928,7 @@
                     <publisher ref="https://www.wikidata.org/entity/Q139324233" xml:id="publisher_a7c24b4c">Gustav Thomas</publisher>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno-plus?aid=dsf&amp;datum=1932&amp;page=616&amp;size=45&amp;qid=QMLIGCM4H2O8RFKM1H84S34JPHEGCW">https://anno.onb.ac.at/cgi-content/anno-plus?aid=dsf&amp;datum=1932&amp;page=616&amp;size=45&amp;qid=QMLIGCM4H2O8RFKM1H84S34JPHEGCW</ref>
                 </bibl>
-                <bibl xml:id="bibl_65e7174a">
+                <bibl ref="https://www.wikidata.org/entity/Q141494994" xml:id="bibl_65e7174a">
                     <title type="text">Die Hexe von Endor. Roman</title>
                     <date type="published" when="1932">1932</date>
                     <author ref="https://www.wikidata.org/entity/Q1593671" xml:id="author_fee2ec24">Rudolf Presber</author>
@@ -2328,7 +2328,7 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q2122937" xml:id="publisher_8f72e265">Querverlag</publisher>
                 </bibl>
-                <bibl xml:id="bibl_f4da59f4">
+                <bibl ref="https://www.wikidata.org/entity/Q120198614" xml:id="bibl_f4da59f4">
                     <title type="text">Sappho. Roman</title>
                     <date type="published" when="2001">2001</date>
                     <author ref="https://www.wikidata.org/entity/Q100877" xml:id="author_f917bb57">Siegfried Obermeier</author>

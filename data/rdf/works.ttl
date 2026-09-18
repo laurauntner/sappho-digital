@@ -112,6 +112,12 @@
     ecrm:P138_represents <https://sappho-digital.com/expression/bibl_0bca4e09> ;
     rdfs:seeAlso <https://www.deutschestextarchiv.de/book/show/opitz_buch_1624> .
 
+<https://sappho-digital.com/digital/bibl_0d5144ca> a ecrm:E73_Information_Object ;
+    rdfs:label "Digitale Kopie von An eine junge Dichterin"@de,
+        "Digital Copy of An eine junge Dichterin"@en ;
+    ecrm:P138_represents <https://sappho-digital.com/expression/bibl_0d5144ca> ;
+    rdfs:seeAlso <https://sl.wikisource.org/wiki/France_Pre%C5%A1eren-_An_eine_junge_Dichterin> .
+
 <https://sappho-digital.com/digital/bibl_0e43f553> a ecrm:E73_Information_Object ;
     rdfs:label "Digitale Kopie von Sappho"@de,
         "Digital Copy of Sappho"@en ;
@@ -2594,6 +2600,11 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_6c45e77a> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/gnd> .
 
+<https://sappho-digital.com/identifier/1225403219> a ecrm:E42_Identifier ;
+    rdfs:label "1225403219" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_7cfe62ea> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/gnd> .
+
 <https://sappho-digital.com/identifier/1225522196> a ecrm:E42_Identifier ;
     rdfs:label "1225522196" ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_49df824c> ;
@@ -2602,6 +2613,11 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/identifier/1230928243> a ecrm:E42_Identifier ;
     rdfs:label "1230928243" ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_875c617n> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/gnd> .
+
+<https://sappho-digital.com/identifier/1234174170> a ecrm:E42_Identifier ;
+    rdfs:label "1234174170" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_2709b6e8> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/gnd> .
 
 <https://sappho-digital.com/identifier/1373943033> a ecrm:E42_Identifier ;
@@ -2674,6 +2690,11 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_7a8dd0f0> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/viaf> .
 
+<https://sappho-digital.com/identifier/210262020> a ecrm:E42_Identifier ;
+    rdfs:label "210262020" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_bf668b0b> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/viaf> .
+
 <https://sappho-digital.com/identifier/212906886> a ecrm:E42_Identifier ;
     rdfs:label "212906886" ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_3d7eaebd> ;
@@ -2707,6 +2728,11 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/identifier/219189027> a ecrm:E42_Identifier ;
     rdfs:label "219189027" ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_c4cabf0c> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/viaf> .
+
+<https://sappho-digital.com/identifier/2923165326342416290000> a ecrm:E42_Identifier ;
+    rdfs:label "2923165326342416290000" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_2cb6f632> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/viaf> .
 
 <https://sappho-digital.com/identifier/308617083> a ecrm:E42_Identifier ;
@@ -2939,6 +2965,11 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_89381dac> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/viaf> .
 
+<https://sappho-digital.com/identifier/6959127> a ecrm:E42_Identifier ;
+    rdfs:label "6959127" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_9143a07d> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/goodreads> .
+
 <https://sappho-digital.com/identifier/7534658-8> a ecrm:E42_Identifier ;
     rdfs:label "7534658-8" ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_810cb8c4> ;
@@ -2962,6 +2993,11 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/identifier/813145857123422922459> a ecrm:E42_Identifier ;
     rdfs:label "813145857123422922459" ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_58e028dd> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/viaf> .
+
+<https://sappho-digital.com/identifier/8376178467053235190005> a ecrm:E42_Identifier ;
+    rdfs:label "8376178467053235190005" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_6834de03> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/viaf> .
 
 <https://sappho-digital.com/identifier/8638159613671641030000> a ecrm:E42_Identifier ;
@@ -3179,6 +3215,11 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_df87af43> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
 
+<https://sappho-digital.com/identifier/Hortulus_(Zeitschrift)> a ecrm:E42_Identifier ;
+    rdfs:label "Hortulus_(Zeitschrift)" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_bdcf59c1> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
+
 <https://sappho-digital.com/identifier/Hälfte_des_Lebens> a ecrm:E42_Identifier ;
     rdfs:label "Hälfte_des_Lebens" ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_3d7eaebd> ;
@@ -3264,6 +3305,11 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_1fdba7e2> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
 
+<https://sappho-digital.com/identifier/Q106765746> a ecrm:E42_Identifier ;
+    rdfs:label "Q106765746" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_034b684d> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
 <https://sappho-digital.com/identifier/Q107001131> a ecrm:E42_Identifier ;
     rdfs:label "Q107001131" ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_4b1fb783> ;
@@ -3317,6 +3363,11 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/identifier/Q116152986> a ecrm:E42_Identifier ;
     rdfs:label "Q116152986" ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_875c617n> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q116295174> a ecrm:E42_Identifier ;
+    rdfs:label "Q116295174" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_7cfe62ea> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
 
 <https://sappho-digital.com/identifier/Q116477085> a ecrm:E42_Identifier ;
@@ -3624,6 +3675,11 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_a905a05b> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
 
+<https://sappho-digital.com/identifier/Q120729550> a ecrm:E42_Identifier ;
+    rdfs:label "Q120729550" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_75924aa7> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
 <https://sappho-digital.com/identifier/Q1212933> a ecrm:E42_Identifier ;
     rdfs:label "Q1212933" ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_fb68007d> ;
@@ -3929,6 +3985,86 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_50f7ab48> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
 
+<https://sappho-digital.com/identifier/Q141474193> a ecrm:E42_Identifier ;
+    rdfs:label "Q141474193" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_221afbf2> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141474203> a ecrm:E42_Identifier ;
+    rdfs:label "Q141474203" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_a858e630> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141474208> a ecrm:E42_Identifier ;
+    rdfs:label "Q141474208" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_ar54u8a3> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141474732> a ecrm:E42_Identifier ;
+    rdfs:label "Q141474732" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_9462d601> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141474743> a ecrm:E42_Identifier ;
+    rdfs:label "Q141474743" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_6834de03> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141474762> a ecrm:E42_Identifier ;
+    rdfs:label "Q141474762" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_8c9c440f> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141474778> a ecrm:E42_Identifier ;
+    rdfs:label "Q141474778" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_ae229b15> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141474833> a ecrm:E42_Identifier ;
+    rdfs:label "Q141474833" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_85b1397b> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141489660> a ecrm:E42_Identifier ;
+    rdfs:label "Q141489660" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_31a193b7> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141489671> a ecrm:E42_Identifier ;
+    rdfs:label "Q141489671" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_bf668b0b> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141489753> a ecrm:E42_Identifier ;
+    rdfs:label "Q141489753" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_11303d4b> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141489921> a ecrm:E42_Identifier ;
+    rdfs:label "Q141489921" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_05346b06> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141494965> a ecrm:E42_Identifier ;
+    rdfs:label "Q141494965" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_a1aeaaab> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141495022> a ecrm:E42_Identifier ;
+    rdfs:label "Q141495022" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_38116b1b> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141495078> a ecrm:E42_Identifier ;
+    rdfs:label "Q141495078" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_a6975d0c> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141495100> a ecrm:E42_Identifier ;
+    rdfs:label "Q141495100" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_32dd4ca1> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
 <https://sappho-digital.com/identifier/Q1576316> a ecrm:E42_Identifier ;
     rdfs:label "Q1576316" ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_5b00249a> ;
@@ -4179,6 +4315,11 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_b7d0c69b> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
 
+<https://sappho-digital.com/identifier/Q63350384> a ecrm:E42_Identifier ;
+    rdfs:label "Q63350384" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_bdcf59c1> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
 <https://sappho-digital.com/identifier/Q64511029> a ecrm:E42_Identifier ;
     rdfs:label "Q64511029" ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_bc7988d7> ;
@@ -4282,6 +4423,11 @@ Philosophen zu Sanssouci"""@en ;
 <https://sappho-digital.com/identifier/Wiener_Zeitschrift_für_Kunst,_Literatur,_Theater_und_Mode> a ecrm:E42_Identifier ;
     rdfs:label "Wiener_Zeitschrift_für_Kunst,_Literatur,_Theater_und_Mode" ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_c564852a> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
+
+<https://sappho-digital.com/identifier/Wilhelmine_(Erzählung)> a ecrm:E42_Identifier ;
+    rdfs:label "Wilhelmine_(Erzählung)" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_2709b6e8> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
 
 <https://sappho-digital.com/identifier/Zeitung_für_die_elegante_Welt> a ecrm:E42_Identifier ;
@@ -11713,7 +11859,7 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_8af299ae> .
 
 <https://sappho-digital.com/person/author_fefd92e0> a ecrm:E21_Person ;
-    rdfs:label "Peter Gan"@de ;
+    rdfs:label "Peter Gan [= Richard Möring]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_96124189>,
         <https://sappho-digital.com/manifestation_creation/bibl_32dd4ca1> .
 
@@ -14499,7 +14645,7 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_2ca7f274> .
 
 <https://sappho-digital.com/title/expression/bibl_2cb6f632> a ecrm:E35_Title ;
-    rdfs:label "Serapis: Historischer Roman"@de ;
+    rdfs:label "Serapis. Historischer Roman"@de ;
     ecrm:P102i_is_title_of <https://sappho-digital.com/expression/bibl_2cb6f632> .
 
 <https://sappho-digital.com/title/expression/bibl_2cc74cd9> a ecrm:E35_Title ;
@@ -18917,8 +19063,8 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_2ca7f274> .
 
 <https://sappho-digital.com/expression_creation/bibl_2cb6f632> a lrmoo:F28_Expression_Creation ;
-    rdfs:label "Expressionserstellung von Serapis: Historischer Roman"@de,
-        "Expression Creation of Serapis: Historischer Roman"@en ;
+    rdfs:label "Expressionserstellung von Serapis. Historischer Roman"@de,
+        "Expression Creation of Serapis. Historischer Roman"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_caa5df32> ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_2cb6f632> .
 
@@ -23356,6 +23502,12 @@ Philosophen zu Sanssouci"""@de ;
         <https://sappho-digital.com/manifestation/bibl_a53d809b> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
 
+<https://sappho-digital.com/identifier/Q120198614> a ecrm:E42_Identifier ;
+    rdfs:label "Q120198614" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_f4da59f4>,
+        <https://sappho-digital.com/manifestation/bibl_f4da59f4> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
 <https://sappho-digital.com/identifier/Q120199158> a ecrm:E42_Identifier ;
     rdfs:label "Q120199158" ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_a0bace6b>,
@@ -23584,6 +23736,48 @@ Philosophen zu Sanssouci"""@de ;
         <https://sappho-digital.com/manifestation/bibl_2cc74cd9> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
 
+<https://sappho-digital.com/identifier/Q141474798> a ecrm:E42_Identifier ;
+    rdfs:label "Q141474798" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_f28a176c>,
+        <https://sappho-digital.com/manifestation/bibl_f28a176c> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141474809> a ecrm:E42_Identifier ;
+    rdfs:label "Q141474809" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_e87b8899>,
+        <https://sappho-digital.com/manifestation/bibl_e87b8899> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141474819> a ecrm:E42_Identifier ;
+    rdfs:label "Q141474819" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_f3eebdf3>,
+        <https://sappho-digital.com/manifestation/bibl_f3eebdf3> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141489706> a ecrm:E42_Identifier ;
+    rdfs:label "Q141489706" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_f0d806e8>,
+        <https://sappho-digital.com/manifestation/bibl_f0d806e8> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141489891> a ecrm:E42_Identifier ;
+    rdfs:label "Q141489891" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_2cb6f632>,
+        <https://sappho-digital.com/manifestation/bibl_2cb6f632> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141489983> a ecrm:E42_Identifier ;
+    rdfs:label "Q141489983" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_efd3ad7c>,
+        <https://sappho-digital.com/manifestation/bibl_efd3ad7c> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q141494994> a ecrm:E42_Identifier ;
+    rdfs:label "Q141494994" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_65e7174a>,
+        <https://sappho-digital.com/manifestation/bibl_65e7174a> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
 <https://sappho-digital.com/identifier/Q2258905> a ecrm:E42_Identifier ;
     rdfs:label "Q2258905" ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_386de82b>,
@@ -23606,6 +23800,24 @@ Philosophen zu Sanssouci"""@de ;
     rdfs:label "Q42191597" ;
     ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_264bf5aa>,
         <https://sappho-digital.com/manifestation/bibl_264bf5aa> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q43598602> a ecrm:E42_Identifier ;
+    rdfs:label "Q43598602" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_2709b6e8>,
+        <https://sappho-digital.com/manifestation/bibl_2709b6e8> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q52927688> a ecrm:E42_Identifier ;
+    rdfs:label "Q52927688" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_12e5e057>,
+        <https://sappho-digital.com/manifestation/bibl_12e5e057> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
+<https://sappho-digital.com/identifier/Q55999227> a ecrm:E42_Identifier ;
+    rdfs:label "Q55999227" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_2b497f94>,
+        <https://sappho-digital.com/manifestation/bibl_2b497f94> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
 
 <https://sappho-digital.com/identifier/Q56447448> a ecrm:E42_Identifier ;
@@ -23648,20 +23860,10 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_018f3f55> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_018f3f55> .
 
-<https://sappho-digital.com/manifestation/bibl_034b684d> a lrmoo:F3_Manifestation ;
-    rdfs:label "Erzgebirgischer Volksfreund"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_034b684d> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_46cb78aa> .
-
 <https://sappho-digital.com/manifestation/bibl_037faa57> a lrmoo:F3_Manifestation ;
     rdfs:label "Die Heilige und ihr Narr. Bd. 1"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_037faa57> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_037faa57> .
-
-<https://sappho-digital.com/manifestation/bibl_05346b06> a lrmoo:F3_Manifestation ;
-    rdfs:label "Mit achtzig Jahren. Lieder und Epigramme"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_05346b06> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_eb33b932> .
 
 <https://sappho-digital.com/manifestation/bibl_0633c293> a lrmoo:F3_Manifestation ;
     rdfs:label "Neuere Gedichte"@de ;
@@ -23713,11 +23915,6 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_1034f40b> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_1034f40b> .
 
-<https://sappho-digital.com/manifestation/bibl_11303d4b> a lrmoo:F3_Manifestation ;
-    rdfs:label "Thusnelda"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_11303d4b> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_a8172b78> .
-
 <https://sappho-digital.com/manifestation/bibl_1182977d> a lrmoo:F3_Manifestation ;
     rdfs:label "Echo der Gegenwart"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_1182977d> ;
@@ -23727,11 +23924,6 @@ Philosophen zu Sanssouci"""@de ;
     rdfs:label "Poesieen"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_127d84c1> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_1c681a00> .
-
-<https://sappho-digital.com/manifestation/bibl_12e5e057> a lrmoo:F3_Manifestation ;
-    rdfs:label "Der Meister von Palmyra. Dramatische Dichtung in fünf Aufzügen"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_12e5e057> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_12e5e057> .
 
 <https://sappho-digital.com/manifestation/bibl_1348d4c2> a lrmoo:F3_Manifestation ;
     rdfs:label "Musen-Almanach für das Jahr 1802"@de ;
@@ -23843,11 +24035,6 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_20a66272> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_fa4c6f94> .
 
-<https://sappho-digital.com/manifestation/bibl_221afbf2> a lrmoo:F3_Manifestation ;
-    rdfs:label "Das kleine Aber"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_221afbf2> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_90d49e16> .
-
 <https://sappho-digital.com/manifestation/bibl_247e87e5> a lrmoo:F3_Manifestation ;
     rdfs:label "Schleuderfigur"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_247e87e5> ;
@@ -23862,11 +24049,6 @@ Philosophen zu Sanssouci"""@de ;
     rdfs:label "Frauenzimmer Gesprechspiele"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_2659860a> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_2659860a> .
-
-<https://sappho-digital.com/manifestation/bibl_2709b6e8> a lrmoo:F3_Manifestation ;
-    rdfs:label "Wilhelmine oder der vermählte Pendant. Ein prosaisch comisches Gedicht"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_2709b6e8> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_2709b6e8> .
 
 <https://sappho-digital.com/manifestation/bibl_2838b3d9> a lrmoo:F3_Manifestation ;
     rdfs:label "Lucinde. Ein Roman. Erster Theil"@de ;
@@ -23898,16 +24080,6 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_2af29a15> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_70157e85> .
 
-<https://sappho-digital.com/manifestation/bibl_2b497f94> a lrmoo:F3_Manifestation ;
-    rdfs:label "Faust. Trauerspiel mit Gesang und Tanz"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_2b497f94> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_2b497f94> .
-
-<https://sappho-digital.com/manifestation/bibl_2cb6f632> a lrmoo:F3_Manifestation ;
-    rdfs:label "Serapis: Historischer Roman"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_2cb6f632> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_2cb6f632> .
-
 <https://sappho-digital.com/manifestation/bibl_2d304546> a lrmoo:F3_Manifestation ;
     rdfs:label "Sappho. Scherben – Skizzen. Übersetzungen und Nachdichtungen"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_2d304546> ;
@@ -23928,11 +24100,6 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_30f2876b> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_ea40d318> .
 
-<https://sappho-digital.com/manifestation/bibl_31a193b7> a lrmoo:F3_Manifestation ;
-    rdfs:label "Holder die Polder. Oden, Elegien, Andere"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_31a193b7> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_c69716ba> .
-
 <https://sappho-digital.com/manifestation/bibl_31b3170b> a lrmoo:F3_Manifestation ;
     rdfs:label "Die schöne Frau"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_31b3170b> ;
@@ -23947,11 +24114,6 @@ Philosophen zu Sanssouci"""@de ;
     rdfs:label "Neue Erzählungen"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_326c0455> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_b6b175a4> .
-
-<https://sappho-digital.com/manifestation/bibl_32dd4ca1> a lrmoo:F3_Manifestation ;
-    rdfs:label "Die Holunderflöte. Gedichte"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_32dd4ca1> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_96124189> .
 
 <https://sappho-digital.com/manifestation/bibl_343cd76a> a lrmoo:F3_Manifestation ;
     rdfs:label "Musenalmanach für das Jahr 1832"@de ;
@@ -23982,11 +24144,6 @@ Philosophen zu Sanssouci"""@de ;
     rdfs:label "Jahrbuch für Literatur, Bd. 12"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_371af9c3> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_285a1195> .
-
-<https://sappho-digital.com/manifestation/bibl_38116b1b> a lrmoo:F3_Manifestation ;
-    rdfs:label "Farbflecken auf einem Mondrian-Bild. Gedichte"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_38116b1b> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_b2d3d092> .
 
 <https://sappho-digital.com/manifestation/bibl_3869ade7> a lrmoo:F3_Manifestation ;
     rdfs:label "Eine Aegyptische Königstochter. Dritter Band"@de ;
@@ -24358,11 +24515,6 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_65db1e08> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_8862da43> .
 
-<https://sappho-digital.com/manifestation/bibl_65e7174a> a lrmoo:F3_Manifestation ;
-    rdfs:label "Die Hexe von Endor. Roman"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_65e7174a> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_65e7174a> .
-
 <https://sappho-digital.com/manifestation/bibl_6641ea99> a lrmoo:F3_Manifestation ;
     rdfs:label "Der Star"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_6641ea99> ;
@@ -24372,11 +24524,6 @@ Philosophen zu Sanssouci"""@de ;
     rdfs:label "Fritz Beutel. Eine Münchhauseniade"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_675aa3d0> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_675aa3d0> .
-
-<https://sappho-digital.com/manifestation/bibl_6834de03> a lrmoo:F3_Manifestation ;
-    rdfs:label "Die Schweiz. Schweizerische illustrierte Zeitschrift"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_6834de03> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_65ee8c2a> .
 
 <https://sappho-digital.com/manifestation/bibl_6969e2d1> a lrmoo:F3_Manifestation ;
     rdfs:label "Alexander – Der Roman der Einigung Griechenlands »Hellas«"@de ;
@@ -24463,11 +24610,6 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_74cdfb5c> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_b2820a76> .
 
-<https://sappho-digital.com/manifestation/bibl_75924aa7> a lrmoo:F3_Manifestation ;
-    rdfs:label "Leitmeritzer Wochenblatt"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_75924aa7> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_279dcfb1> .
-
 <https://sappho-digital.com/manifestation/bibl_792f9c50> a lrmoo:F3_Manifestation ;
     rdfs:label "La Mara. Classisches und Romantisches aus der Tonwelt"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_792f9c50> ;
@@ -24487,11 +24629,6 @@ Philosophen zu Sanssouci"""@de ;
     rdfs:label "Musen-Almanach oder poetische Blumenlese für das Jahr 1780"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_7ba396f7> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_86ec7041> .
-
-<https://sappho-digital.com/manifestation/bibl_7cfe62ea> a lrmoo:F3_Manifestation ;
-    rdfs:label "Gedichte und Phantasien"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_7cfe62ea> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_b53e5151> .
 
 <https://sappho-digital.com/manifestation/bibl_7d554b20> a lrmoo:F3_Manifestation ;
     rdfs:label "Müßiggang ist aller Liebe Anfang"@de ;
@@ -24534,11 +24671,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_85241025> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_df87af43> .
 
-<https://sappho-digital.com/manifestation/bibl_85b1397b> a lrmoo:F3_Manifestation ;
-    rdfs:label "Wie Frauen werden. Werde, wie du bist. Novellen"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_85b1397b> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_92474bdf> .
-
 <https://sappho-digital.com/manifestation/bibl_8665dcc5> a lrmoo:F3_Manifestation ;
     rdfs:label "Eine Aegyptische Königstochter. Historischer Roman. Erster Band"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_8665dcc5> ;
@@ -24573,11 +24705,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     rdfs:label "Der Göttin Eigenthum"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_8c43df20> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_8c43df20> .
-
-<https://sappho-digital.com/manifestation/bibl_8c9c440f> a lrmoo:F3_Manifestation ;
-    rdfs:label "Wiener Mode"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_8c9c440f> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_3d6a534d> .
 
 <https://sappho-digital.com/manifestation/bibl_8d9f2b15> a lrmoo:F3_Manifestation ;
     rdfs:label "Geistliche Übungen für drei Tage"@de ;
@@ -24619,11 +24746,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_944ec74b> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_ebe958ba> .
 
-<https://sappho-digital.com/manifestation/bibl_9462d601> a lrmoo:F3_Manifestation ;
-    rdfs:label "Unter hohen Bäumen"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_9462d601> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_88214683> .
-
 <https://sappho-digital.com/manifestation/bibl_95cc53fc> a lrmoo:F3_Manifestation ;
     rdfs:label "Ivdith. Ain Nutzliche History, durch ain Herrliche Tragœdi"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_95cc53fc> ;
@@ -24653,11 +24775,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     rdfs:label "Die Mädchen der Sappho. Archäologische und andere Streifzüge auf der Insel Lesbos"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_a137de8a> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_a137de8a> .
-
-<https://sappho-digital.com/manifestation/bibl_a1aeaaab> a lrmoo:F3_Manifestation ;
-    rdfs:label "Düsseldorfer Journal und Kreis-Blatt"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_a1aeaaab> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_5700e902> .
 
 <https://sappho-digital.com/manifestation/bibl_a282c8c8> a lrmoo:F3_Manifestation ;
     rdfs:label "Oesterreichischees Morgenblatt"@de ;
@@ -24693,11 +24810,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     rdfs:label "Römische Sappho"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_a49a9cb4> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_a49a9cb4> .
-
-<https://sappho-digital.com/manifestation/bibl_a6975d0c> a lrmoo:F3_Manifestation ;
-    rdfs:label "der landgänger"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_a6975d0c> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_27cc4766> .
 
 <https://sappho-digital.com/manifestation/bibl_a6abb579> a lrmoo:F3_Manifestation ;
     rdfs:label "Akzente. Zeitschrift für Literatur"@de ;
@@ -24753,16 +24865,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     rdfs:label "Neue Umlaufbahn"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_ad7a16ab> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_047dbb7e> .
-
-<https://sappho-digital.com/manifestation/bibl_ae229b15> a lrmoo:F3_Manifestation ;
-    rdfs:label "Kaiserin Elisabeth: Das poetische Tagebuch"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_ae229b15> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_3e42ceb3> .
-
-<https://sappho-digital.com/manifestation/bibl_ar54u8a3> a lrmoo:F3_Manifestation ;
-    rdfs:label "Literatur in der Demokratie. Für Walter Jens zum 60. Geburtstag"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_ar54u8a3> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_00e9aff1> .
 
 <https://sappho-digital.com/manifestation/bibl_b0ffa6cf> a lrmoo:F3_Manifestation ;
     rdfs:label "Musenalmanach auf das Jahr 1806"@de ;
@@ -24839,20 +24941,10 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_bd5657b0> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_87ea0944> .
 
-<https://sappho-digital.com/manifestation/bibl_bdcf59c1> a lrmoo:F3_Manifestation ;
-    rdfs:label "Hortulus. Vierteljahrsschrift für neue Dichtung"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_bdcf59c1> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_e9d96eef> .
-
 <https://sappho-digital.com/manifestation/bibl_bde24a4e> a lrmoo:F3_Manifestation ;
     rdfs:label "Sapho. Ein Melodrama nebst anderen Gedichten"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_bde24a4e> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_632dac82> .
-
-<https://sappho-digital.com/manifestation/bibl_bf668b0b> a lrmoo:F3_Manifestation ;
-    rdfs:label "Dafnis. Lyrisches Portrait aus dem 17. Jahrhundert"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_bf668b0b> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_c378edf5> .
 
 <https://sappho-digital.com/manifestation/bibl_bf96255c> a lrmoo:F3_Manifestation ;
     rdfs:label "Der Bund"@de ;
@@ -25094,11 +25186,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_e6cac312> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_e6cac312> .
 
-<https://sappho-digital.com/manifestation/bibl_e87b8899> a lrmoo:F3_Manifestation ;
-    rdfs:label "Sappho. Griechische Novelle"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_e87b8899> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_e87b8899> .
-
 <https://sappho-digital.com/manifestation/bibl_e9398e01> a lrmoo:F3_Manifestation ;
     rdfs:label "Versuch einer Kritischen Dichtkunst für die Deutschen,  2. Aufl."@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_e9398e01> ;
@@ -25144,11 +25231,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_ef6114e5> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_ef6114e5> .
 
-<https://sappho-digital.com/manifestation/bibl_efd3ad7c> a lrmoo:F3_Manifestation ;
-    rdfs:label "Mosaik. Heinrich des Vierten erste Liebe. Ein Gedicht in drey Gesängen"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_efd3ad7c> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_efd3ad7c> .
-
 <https://sappho-digital.com/manifestation/bibl_eff8a98b> a lrmoo:F3_Manifestation ;
     rdfs:label "Das Gespenst in der Familie oder Sappho und Tobias Vermählung im Reiche der Todten. Locale Posse und Parodie der Geisterkomödien mit Gesang und Tanz in zwei Aufzügen"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_eff8a98b> ;
@@ -25158,11 +25240,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     rdfs:label "Oedenburger Zeitung"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_f0957198> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_2b62a4bc> .
-
-<https://sappho-digital.com/manifestation/bibl_f0d806e8> a lrmoo:F3_Manifestation ;
-    rdfs:label "Maximum"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_f0d806e8> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_f0d806e8> .
 
 <https://sappho-digital.com/manifestation/bibl_f11bc50a> a lrmoo:F3_Manifestation ;
     rdfs:label "Sappho küßt die Welt. Geschichten von Lesben aus vier Kontinenten"@de ;
@@ -25174,11 +25251,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_f27844a9> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_77fb2bf2> .
 
-<https://sappho-digital.com/manifestation/bibl_f28a176c> a lrmoo:F3_Manifestation ;
-    rdfs:label "Albert und Albertine"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_f28a176c> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_f28a176c> .
-
 <https://sappho-digital.com/manifestation/bibl_f32fa5e2> a lrmoo:F3_Manifestation ;
     rdfs:label "Pforzheimer Anzeiger"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_f32fa5e2> ;
@@ -25188,16 +25260,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     rdfs:label "W. G. Beckers Taschenbuch zum geselligen Vergnügen auf das Jahr 1921"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_f337748e> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_e3bb5e0d> .
-
-<https://sappho-digital.com/manifestation/bibl_f3eebdf3> a lrmoo:F3_Manifestation ;
-    rdfs:label "Sappho von Lesbos. Roman"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_f3eebdf3> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_f3eebdf3> .
-
-<https://sappho-digital.com/manifestation/bibl_f4da59f4> a lrmoo:F3_Manifestation ;
-    rdfs:label "Sappho. Roman"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_f4da59f4> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_f4da59f4> .
 
 <https://sappho-digital.com/manifestation/bibl_f85c4b6e> a lrmoo:F3_Manifestation ;
     rdfs:label "Sämmtliche Werke"@de ;
@@ -25652,8 +25714,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_b9d13a1b> .
 
 <https://sappho-digital.com/person/author_8d1e5941> a ecrm:E21_Person ;
-    rdfs:label "Ossip Schubin"@de,
-        "Ossip Schubin [= Aloisia Kirschner]"@de ;
+    rdfs:label "Ossip Schubin [= Aloisia Kirschner]"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_2cc74cd9>,
         <https://sappho-digital.com/expression_creation/bibl_f0d806e8>,
         <https://sappho-digital.com/manifestation_creation/bibl_2cc74cd9>,
@@ -28417,6 +28478,20 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1762> ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_fba1c28b> .
 
+<https://sappho-digital.com/manifestation/bibl_034b684d> a lrmoo:F3_Manifestation ;
+    rdfs:label "Erzgebirgischer Volksfreund"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q106765746> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_034b684d> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_46cb78aa> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q106765746> .
+
+<https://sappho-digital.com/manifestation/bibl_05346b06> a lrmoo:F3_Manifestation ;
+    rdfs:label "Mit achtzig Jahren. Lieder und Epigramme"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141489921> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_05346b06> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_eb33b932> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141489921> .
+
 <https://sappho-digital.com/manifestation/bibl_056184d7> a lrmoo:F3_Manifestation ;
     rdfs:label "Vermischte Versuche in der Dichtkunst"@de ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q140036829> ;
@@ -28458,6 +28533,20 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_0d595730> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_7b1d4020> ;
     owl:sameAs <https://www.wikidata.org/entity/Q141452483> .
+
+<https://sappho-digital.com/manifestation/bibl_11303d4b> a lrmoo:F3_Manifestation ;
+    rdfs:label "Thusnelda"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141489753> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_11303d4b> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_a8172b78> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141489753> .
+
+<https://sappho-digital.com/manifestation/bibl_12e5e057> a lrmoo:F3_Manifestation ;
+    rdfs:label "Der Meister von Palmyra. Dramatische Dichtung in fünf Aufzügen"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q52927688> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_12e5e057> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_12e5e057> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q52927688> .
 
 <https://sappho-digital.com/manifestation/bibl_1369196b> a lrmoo:F3_Manifestation ;
     rdfs:label "Kritik und Antikritik"@de ;
@@ -28561,6 +28650,13 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_1b2fb291>,
         <https://sappho-digital.com/expression/bibl_9948b7c0> .
 
+<https://sappho-digital.com/manifestation/bibl_221afbf2> a lrmoo:F3_Manifestation ;
+    rdfs:label "Das kleine Aber"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141474193> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_221afbf2> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_90d49e16> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141474193> .
+
 <https://sappho-digital.com/manifestation/bibl_228d3345> a lrmoo:F3_Manifestation ;
     rdfs:label "Neu-Verbesserte Teutsche Satyrische Gedichte"@de ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120199091> ;
@@ -28609,6 +28705,13 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_264bf5aa> ;
     owl:sameAs <https://www.wikidata.org/entity/Q42191597> .
 
+<https://sappho-digital.com/manifestation/bibl_2709b6e8> a lrmoo:F3_Manifestation ;
+    rdfs:label "Wilhelmine oder der vermählte Pendant. Ein prosaisch comisches Gedicht"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q43598602> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_2709b6e8> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_2709b6e8> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q43598602> .
+
 <https://sappho-digital.com/manifestation/bibl_2a28fa55> a lrmoo:F3_Manifestation ;
     rdfs:label "Augenzeit"@de ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141452441> ;
@@ -28616,12 +28719,26 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_1981d940> ;
     owl:sameAs <https://www.wikidata.org/entity/Q141452441> .
 
+<https://sappho-digital.com/manifestation/bibl_2b497f94> a lrmoo:F3_Manifestation ;
+    rdfs:label "Faust. Trauerspiel mit Gesang und Tanz"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q55999227> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_2b497f94> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_2b497f94> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q55999227> .
+
 <https://sappho-digital.com/manifestation/bibl_2c7f182d> a lrmoo:F3_Manifestation ;
     rdfs:label "Gräfin Thunen. Intimes vom Oesterreichisch-ungarischen Hochadel"@de ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q140036822> ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_2c7f182d> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_2c7f182d> ;
     owl:sameAs <https://www.wikidata.org/entity/Q140036822> .
+
+<https://sappho-digital.com/manifestation/bibl_2cb6f632> a lrmoo:F3_Manifestation ;
+    rdfs:label "Serapis. Historischer Roman"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141489891> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_2cb6f632> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_2cb6f632> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141489891> .
 
 <https://sappho-digital.com/manifestation/bibl_2cc74cd9> a lrmoo:F3_Manifestation ;
     rdfs:label "Gräfin Erikas Lehr- und Wanderjahre: Roman"@de ;
@@ -28644,6 +28761,13 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_4e970562> ;
     owl:sameAs <https://www.wikidata.org/entity/Q120199212> .
 
+<https://sappho-digital.com/manifestation/bibl_31a193b7> a lrmoo:F3_Manifestation ;
+    rdfs:label "Holder die Polder. Oden, Elegien, Andere"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141489660> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_31a193b7> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_c69716ba> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141489660> .
+
 <https://sappho-digital.com/manifestation/bibl_3229164a> a lrmoo:F3_Manifestation ;
     rdfs:label "Attische Sonette"@de ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120165193> ;
@@ -28657,6 +28781,13 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_3259d5bb> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_018c11d8> ;
     owl:sameAs <https://www.wikidata.org/entity/Q141452400> .
+
+<https://sappho-digital.com/manifestation/bibl_32dd4ca1> a lrmoo:F3_Manifestation ;
+    rdfs:label "Die Holunderflöte. Gedichte"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141495100> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_32dd4ca1> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_96124189> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141495100> .
 
 <https://sappho-digital.com/manifestation/bibl_3363e3bf> a lrmoo:F3_Manifestation ;
     rdfs:label "Tief sind wir gestapelt. Gedichte"@de ;
@@ -28684,6 +28815,13 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_3761b97f> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_3761b97f> ;
     owl:sameAs <https://www.wikidata.org/entity/Q120143666> .
+
+<https://sappho-digital.com/manifestation/bibl_38116b1b> a lrmoo:F3_Manifestation ;
+    rdfs:label "Farbflecken auf einem Mondrian-Bild. Gedichte"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141495022> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_38116b1b> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_b2d3d092> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141495022> .
 
 <https://sappho-digital.com/manifestation/bibl_3857bd18> a lrmoo:F3_Manifestation ;
     rdfs:label "Ottendorfer Zeitung"@de ;
@@ -28888,6 +29026,13 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_554a4b17> ;
     owl:sameAs <https://www.wikidata.org/entity/Q140036871> .
 
+<https://sappho-digital.com/manifestation/bibl_65e7174a> a lrmoo:F3_Manifestation ;
+    rdfs:label "Die Hexe von Endor. Roman"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141494994> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_65e7174a> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_65e7174a> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141494994> .
+
 <https://sappho-digital.com/manifestation/bibl_66437386> a lrmoo:F3_Manifestation ;
     rdfs:label "Zeitzoo"@de ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141452776> ;
@@ -28955,6 +29100,13 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_72514b45> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_9a8c2c40>,
         <https://sappho-digital.com/expression/bibl_d942939e> .
+
+<https://sappho-digital.com/manifestation/bibl_75924aa7> a lrmoo:F3_Manifestation ;
+    rdfs:label "Leitmeritzer Wochenblatt"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120729550> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_75924aa7> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_279dcfb1> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q120729550> .
 
 <https://sappho-digital.com/manifestation/bibl_775bde93> a lrmoo:F3_Manifestation ;
     rdfs:label "Ardinghello und die glückseeligen Inseln. Eine Italiänische Geschichte aus dem sechszehnten Jahrhundert"@de ;
@@ -29031,6 +29183,13 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_88c41a31>,
         <https://sappho-digital.com/expression/bibl_baf110b3> .
 
+<https://sappho-digital.com/manifestation/bibl_85b1397b> a lrmoo:F3_Manifestation ;
+    rdfs:label "Wie Frauen werden. Werde, wie du bist. Novellen"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141474833> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_85b1397b> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_92474bdf> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141474833> .
+
 <https://sappho-digital.com/manifestation/bibl_8addb2a6> a lrmoo:F3_Manifestation ;
     rdfs:label "Abraham Gotthelf Kästners neueste großentheils noch ungedruckte Sinngedichte und Einfälle"@de ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120179640> ;
@@ -29044,6 +29203,13 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_8c4c22d7> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_8c4c22d7> ;
     owl:sameAs <https://www.wikidata.org/entity/Q28001384> .
+
+<https://sappho-digital.com/manifestation/bibl_8c9c440f> a lrmoo:F3_Manifestation ;
+    rdfs:label "Wiener Mode"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141474762> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_8c9c440f> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_3d6a534d> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141474762> .
 
 <https://sappho-digital.com/manifestation/bibl_8d4f6eac> a lrmoo:F3_Manifestation ;
     rdfs:label "Lyrische Karrikaturen"@de ;
@@ -29093,6 +29259,13 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_9335ab10> ;
     owl:sameAs <https://www.wikidata.org/entity/Q140037109> .
 
+<https://sappho-digital.com/manifestation/bibl_9462d601> a lrmoo:F3_Manifestation ;
+    rdfs:label "Unter hohen Bäumen"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141474732> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_9462d601> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_88214683> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141474732> .
+
 <https://sappho-digital.com/manifestation/bibl_969db4fb> a lrmoo:F3_Manifestation ;
     rdfs:label "Anakreon und Sappho. Freie Nachbildung für den deutschen Gesang"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_969db4fb> ;
@@ -29141,6 +29314,13 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_a0bace6b> ;
     owl:sameAs <https://www.wikidata.org/entity/Q120199158> .
 
+<https://sappho-digital.com/manifestation/bibl_a1aeaaab> a lrmoo:F3_Manifestation ;
+    rdfs:label "Düsseldorfer Journal und Kreis-Blatt"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141494965> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_a1aeaaab> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_5700e902> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141494965> .
+
 <https://sappho-digital.com/manifestation/bibl_a4214783> a lrmoo:F3_Manifestation ;
     rdfs:label "Neue Beyträge zum Vergnügen des Verstandes und des Witzes"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_a4214783> ;
@@ -29161,11 +29341,12 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_a5fc1475> ;
     owl:sameAs <https://www.wikidata.org/entity/Q108632301> .
 
-<https://sappho-digital.com/manifestation/bibl_a858e630> a lrmoo:F3_Manifestation ;
-    rdfs:label "Blüthen der Muse aus Rom"@de ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_a858e630> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_30bcbdea>,
-        <https://sappho-digital.com/expression/bibl_bcc8fcbd> .
+<https://sappho-digital.com/manifestation/bibl_a6975d0c> a lrmoo:F3_Manifestation ;
+    rdfs:label "der landgänger. Gedichte"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141495078> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_a6975d0c> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_27cc4766> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141495078> .
 
 <https://sappho-digital.com/manifestation/bibl_a905a05b> a lrmoo:F3_Manifestation ;
     rdfs:label "Bukowinaer Rundschau"@de ;
@@ -29194,6 +29375,13 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_3b9adafa>,
         <https://sappho-digital.com/expression/bibl_dbbc8df7> .
 
+<https://sappho-digital.com/manifestation/bibl_ae229b15> a lrmoo:F3_Manifestation ;
+    rdfs:label "Kaiserin Elisabeth: Das poetische Tagebuch"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141474778> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_ae229b15> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_3e42ceb3> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141474778> .
+
 <https://sappho-digital.com/manifestation/bibl_afabdd8a> a lrmoo:F3_Manifestation ;
     rdfs:label "Prosaische Gedichte"@de ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q140038598> ;
@@ -29213,6 +29401,13 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_affda0e4> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_3a5943be>,
         <https://sappho-digital.com/expression/bibl_e39702a0> .
+
+<https://sappho-digital.com/manifestation/bibl_ar54u8a3> a lrmoo:F3_Manifestation ;
+    rdfs:label "Literatur in der Demokratie. Für Walter Jens zum 60. Geburtstag"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141474208> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_ar54u8a3> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_00e9aff1> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141474208> .
 
 <https://sappho-digital.com/manifestation/bibl_b1d86cba> a lrmoo:F3_Manifestation ;
     rdfs:label "Poetische Blumenlese auf das Jahr 1774"@de ;
@@ -29464,6 +29659,13 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_009ef370> ;
     owl:sameAs <https://www.wikidata.org/entity/Q141262152> .
 
+<https://sappho-digital.com/manifestation/bibl_e87b8899> a lrmoo:F3_Manifestation ;
+    rdfs:label "Sappho. Griechische Novelle"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141474809> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_e87b8899> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_e87b8899> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141474809> .
+
 <https://sappho-digital.com/manifestation/bibl_ebc1bb1f> a lrmoo:F3_Manifestation ;
     rdfs:label "Sappho. Ein griechischer Sommernachtstraum"@de ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120168407> ;
@@ -29484,6 +29686,13 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_2ca7f274>,
         <https://sappho-digital.com/expression/bibl_5a802cb4> .
 
+<https://sappho-digital.com/manifestation/bibl_efd3ad7c> a lrmoo:F3_Manifestation ;
+    rdfs:label "Mosaik. Heinrich des Vierten erste Liebe. Ein Gedicht in drey Gesängen"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141489983> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_efd3ad7c> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_efd3ad7c> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141489983> .
+
 <https://sappho-digital.com/manifestation/bibl_efdf9f15> a lrmoo:F3_Manifestation ;
     rdfs:label "Thalia. Zweyter Theil. Viertes Stück des Jahrganges 1792"@de ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_efdf9f15> ;
@@ -29497,12 +29706,40 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_eff6330f> ;
     owl:sameAs <https://www.wikidata.org/entity/Q140038360> .
 
+<https://sappho-digital.com/manifestation/bibl_f0d806e8> a lrmoo:F3_Manifestation ;
+    rdfs:label "Maximum"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141489706> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_f0d806e8> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_f0d806e8> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141489706> .
+
 <https://sappho-digital.com/manifestation/bibl_f12847ba> a lrmoo:F3_Manifestation ;
     rdfs:label "Aus guter Familie"@de ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q125925878> ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_f12847ba> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_f12847ba> ;
     owl:sameAs <https://www.wikidata.org/entity/Q125925878> .
+
+<https://sappho-digital.com/manifestation/bibl_f28a176c> a lrmoo:F3_Manifestation ;
+    rdfs:label "Albert und Albertine"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141474798> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_f28a176c> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_f28a176c> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141474798> .
+
+<https://sappho-digital.com/manifestation/bibl_f3eebdf3> a lrmoo:F3_Manifestation ;
+    rdfs:label "Sappho von Lesbos. Roman"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141474819> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_f3eebdf3> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_f3eebdf3> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141474819> .
+
+<https://sappho-digital.com/manifestation/bibl_f4da59f4> a lrmoo:F3_Manifestation ;
+    rdfs:label "Sappho. Roman"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120198614> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_f4da59f4> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_f4da59f4> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q120198614> .
 
 <https://sappho-digital.com/manifestation/bibl_f9bbda9e> a lrmoo:F3_Manifestation ;
     rdfs:label "Paradiesvogelschiß. Gedichte"@de ;
@@ -30577,14 +30814,6 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_0c871dc8> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_c44e27f0> .
 
-<https://sappho-digital.com/expression/bibl_0d5144ca> a lrmoo:F2_Expression ;
-    rdfs:label "An eine junge Dichterin"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_0d5144ca> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_0d5144ca> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_0d5144ca> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_2e405d53> .
-
 <https://sappho-digital.com/expression/bibl_0e43f553> a lrmoo:F2_Expression ;
     rdfs:label "Sappho"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_0e43f553> ;
@@ -31112,14 +31341,6 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_2ca7f274> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_ec77dcf8> .
-
-<https://sappho-digital.com/expression/bibl_2cb6f632> a lrmoo:F2_Expression ;
-    rdfs:label "Serapis: Historischer Roman"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_2cb6f632> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_2cb6f632> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_2cb6f632> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_2cb6f632> .
 
 <https://sappho-digital.com/expression/bibl_2d304546> a lrmoo:F2_Expression ;
     rdfs:label "Sappho. Scherben – Skizzen. Übersetzungen und Nachdichtungen"@de ;
@@ -32056,14 +32277,6 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_650a9426> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_650a9426> .
-
-<https://sappho-digital.com/expression/bibl_65e7174a> a lrmoo:F2_Expression ;
-    rdfs:label "Die Hexe von Endor. Roman"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_65e7174a> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_65e7174a> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_65e7174a> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_65e7174a> .
 
 <https://sappho-digital.com/expression/bibl_675aa3d0> a lrmoo:F2_Expression ;
     rdfs:label "Fritz Beutel. Eine Münchhauseniade"@de ;
@@ -34321,14 +34534,6 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_e7bedc12> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_31597ed9> .
 
-<https://sappho-digital.com/expression/bibl_e87b8899> a lrmoo:F2_Expression ;
-    rdfs:label "Sappho. Griechische Novelle"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_e87b8899> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_e87b8899> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_e87b8899> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_e87b8899> .
-
 <https://sappho-digital.com/expression/bibl_e895e80f> a lrmoo:F2_Expression ;
     rdfs:label "als einziges noch"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_e895e80f> ;
@@ -34449,14 +34654,6 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_efcd32b0> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_b51ec563> .
 
-<https://sappho-digital.com/expression/bibl_efd3ad7c> a lrmoo:F2_Expression ;
-    rdfs:label "Mosaik. Heinrich des Vierten erste Liebe. Ein Gedicht in drey Gesängen"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_efd3ad7c> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_efd3ad7c> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_efd3ad7c> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_efd3ad7c> .
-
 <https://sappho-digital.com/expression/bibl_efe90eea> a lrmoo:F2_Expression ;
     rdfs:label "An Gleim. Den 14ten Juny 1761"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_efe90eea> ;
@@ -34480,14 +34677,6 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_f00b9eb2> ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f00b9eb2> .
-
-<https://sappho-digital.com/expression/bibl_f0d806e8> a lrmoo:F2_Expression ;
-    rdfs:label "Maximum"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_f0d806e8> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_f0d806e8> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f0d806e8> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_f0d806e8> .
 
 <https://sappho-digital.com/expression/bibl_f11bc50a> a lrmoo:F2_Expression ;
     rdfs:label "Sappho küßt die Welt. Geschichten von Lesben aus vier Kontinenten"@de ;
@@ -34529,14 +34718,6 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f2087b02> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_6be7b213> .
 
-<https://sappho-digital.com/expression/bibl_f28a176c> a lrmoo:F2_Expression ;
-    rdfs:label "Albert und Albertine"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_f28a176c> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_f28a176c> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f28a176c> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_f28a176c> .
-
 <https://sappho-digital.com/expression/bibl_f35a5abe> a lrmoo:F2_Expression ;
     rdfs:label "die hyazinthe"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_f35a5abe> ;
@@ -34552,22 +34733,6 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f3cb75ff> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_574806a3> .
-
-<https://sappho-digital.com/expression/bibl_f3eebdf3> a lrmoo:F2_Expression ;
-    rdfs:label "Sappho von Lesbos. Roman"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_f3eebdf3> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_f3eebdf3> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f3eebdf3> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_f3eebdf3> .
-
-<https://sappho-digital.com/expression/bibl_f4da59f4> a lrmoo:F2_Expression ;
-    rdfs:label "Sappho. Roman"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_f4da59f4> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_f4da59f4> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f4da59f4> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_f4da59f4> .
 
 <https://sappho-digital.com/expression/bibl_f4f1d952> a lrmoo:F2_Expression ;
     rdfs:label "Knollen, ich. Leseobst als sapphische Strophen"@de ;
@@ -34907,6 +35072,15 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/expression/bibl_8af570f1>,
         <https://sappho-digital.com/expression/bibl_ecc1b304> .
 
+<https://sappho-digital.com/manifestation/bibl_6834de03> a lrmoo:F3_Manifestation ;
+    rdfs:label "Die Schweiz. Schweizerische illustrierte Zeitschrift"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/8376178467053235190005>,
+        <https://sappho-digital.com/identifier/Q141474743> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_6834de03> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_65ee8c2a> ;
+    owl:sameAs <https://viaf.org/viaf/8376178467053235190005>,
+        <https://www.wikidata.org/entity/Q141474743> .
+
 <https://sappho-digital.com/manifestation/bibl_6be7b213> a lrmoo:F3_Manifestation ;
     rdfs:label "Bei Tag. Neue Gedichte"@de ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141462443> ;
@@ -34956,6 +35130,15 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_88439060>,
         <https://sappho-digital.com/expression/bibl_eb481d66> ;
     owl:sameAs <https://www.wikidata.org/entity/Q120177386> .
+
+<https://sappho-digital.com/manifestation/bibl_7cfe62ea> a lrmoo:F3_Manifestation ;
+    rdfs:label "Gedichte und Phantasien"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/1225403219>,
+        <https://sappho-digital.com/identifier/Q116295174> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_7cfe62ea> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_b53e5151> ;
+    owl:sameAs <https://d-nb.info/gnd/1225403219>,
+        <https://www.wikidata.org/entity/Q116295174> .
 
 <https://sappho-digital.com/manifestation/bibl_816be51a> a lrmoo:F3_Manifestation ;
     rdfs:label "Leipziger Tageblatt und Handelszeitung"@de ;
@@ -35040,6 +35223,14 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/expression/bibl_6ad05cd5> ;
     owl:sameAs <https://www.wikidata.org/entity/Q140037315> .
 
+<https://sappho-digital.com/manifestation/bibl_a858e630> a lrmoo:F3_Manifestation ;
+    rdfs:label "Blüthen der Muse aus Rom"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141474203> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_a858e630> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_30bcbdea>,
+        <https://sappho-digital.com/expression/bibl_bcc8fcbd> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141474203> .
+
 <https://sappho-digital.com/manifestation/bibl_acea7897> a lrmoo:F3_Manifestation ;
     rdfs:label "Taschenbuch für Dichter und Dichterfreunde"@de ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q140036836> ;
@@ -35083,6 +35274,24 @@ Philosophen zu Sanssouci"""@en ;
     rdfs:seeAlso <http://commons.wikimedia.org/wiki/Special:FilePath/Reisebilder.tif> ;
     owl:sameAs <https://d-nb.info/gnd/4099226-3>,
         <https://www.wikidata.org/entity/Q64511029> .
+
+<https://sappho-digital.com/manifestation/bibl_bdcf59c1> a lrmoo:F3_Manifestation ;
+    rdfs:label "Hortulus. Vierteljahrsschrift für neue Dichtung"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Hortulus_(Zeitschrift)>,
+        <https://sappho-digital.com/identifier/Q63350384> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_bdcf59c1> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_e9d96eef> ;
+    owl:sameAs <https://dbpedia.org/resource/Hortulus_(Zeitschrift)>,
+        <https://www.wikidata.org/entity/Q63350384> .
+
+<https://sappho-digital.com/manifestation/bibl_bf668b0b> a lrmoo:F3_Manifestation ;
+    rdfs:label "Dafnis. Lyrisches Portrait aus dem 17. Jahrhundert"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/210262020>,
+        <https://sappho-digital.com/identifier/Q141489671> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_bf668b0b> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_c378edf5> ;
+    owl:sameAs <https://viaf.org/viaf/210262020>,
+        <https://www.wikidata.org/entity/Q141489671> .
 
 <https://sappho-digital.com/manifestation/bibl_c22ab1ce> a lrmoo:F3_Manifestation ;
     rdfs:label "Musen-Almanach für das Jahr 1798"@de ;
@@ -36253,6 +36462,15 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_0bca4e09> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_ee6c648c> .
 
+<https://sappho-digital.com/expression/bibl_0d5144ca> a lrmoo:F2_Expression ;
+    rdfs:label "An eine junge Dichterin"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_0d5144ca> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_0d5144ca> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_0d5144ca> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_0d5144ca> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_2e405d53> .
+
 <https://sappho-digital.com/expression/bibl_0e9b272c> a lrmoo:F2_Expression ;
     rdfs:label "Antwort auf die Forderungen eines Weltbürgers"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_0e9b272c> ;
@@ -36270,15 +36488,6 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_11081fdb> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_dd6b8fd4> .
-
-<https://sappho-digital.com/expression/bibl_12e5e057> a lrmoo:F2_Expression ;
-    rdfs:label "Der Meister von Palmyra. Dramatische Dichtung in fünf Aufzügen"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_12e5e057> ;
-    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_12e5e057> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_12e5e057> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_12e5e057> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_12e5e057> .
 
 <https://sappho-digital.com/expression/bibl_1407fca8> a lrmoo:F2_Expression ;
     rdfs:label "Am Bette eines Kindes"@de ;
@@ -36518,15 +36727,6 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_2659860a> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_2659860a> .
 
-<https://sappho-digital.com/expression/bibl_2709b6e8> a lrmoo:F2_Expression ;
-    rdfs:label "Wilhelmine oder der vermählte Pendant. Ein prosaisch comisches Gedicht"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_2709b6e8> ;
-    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_2709b6e8> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_2709b6e8> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_2709b6e8> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_2709b6e8> .
-
 <https://sappho-digital.com/expression/bibl_276ee09f> a lrmoo:F2_Expression ;
     rdfs:label "Lied der Sappho"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_276ee09f> ;
@@ -36580,15 +36780,6 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_29dac241> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_dd6b8fd4> .
-
-<https://sappho-digital.com/expression/bibl_2b497f94> a lrmoo:F2_Expression ;
-    rdfs:label "Faust. Trauerspiel mit Gesang und Tanz"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_2b497f94> ;
-    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_2b497f94> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_2b497f94> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_2b497f94> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_2b497f94> .
 
 <https://sappho-digital.com/expression/bibl_2bf5e667> a lrmoo:F2_Expression ;
     rdfs:label "SApphischer Honig"@de ;
@@ -37325,6 +37516,16 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_659ee739> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_85ceac60> .
+
+<https://sappho-digital.com/expression/bibl_65e7174a> a lrmoo:F2_Expression ;
+    rdfs:label "Die Hexe von Endor. Roman"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_65e7174a> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141494994>,
+        <https://sappho-digital.com/identifier/bibl_65e7174a> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_65e7174a> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_65e7174a> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141494994> .
 
 <https://sappho-digital.com/expression/bibl_65ee8c2a> a lrmoo:F2_Expression ;
     rdfs:label "Sapphische Strophen"@de ;
@@ -39221,6 +39422,16 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_e6bb83f8> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_5c40706c> .
 
+<https://sappho-digital.com/expression/bibl_e87b8899> a lrmoo:F2_Expression ;
+    rdfs:label "Sappho. Griechische Novelle"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_e87b8899> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141474809>,
+        <https://sappho-digital.com/identifier/bibl_e87b8899> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_e87b8899> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_e87b8899> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141474809> .
+
 <https://sappho-digital.com/expression/bibl_e8994ca4> a lrmoo:F2_Expression ;
     rdfs:label "Tian"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_e8994ca4> ;
@@ -39422,6 +39633,16 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_efcce8fc> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_91038132> .
 
+<https://sappho-digital.com/expression/bibl_efd3ad7c> a lrmoo:F2_Expression ;
+    rdfs:label "Mosaik. Heinrich des Vierten erste Liebe. Ein Gedicht in drey Gesängen"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_efd3ad7c> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141489983>,
+        <https://sappho-digital.com/identifier/bibl_efd3ad7c> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_efd3ad7c> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_efd3ad7c> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141489983> .
+
 <https://sappho-digital.com/expression/bibl_eff6330f> a lrmoo:F2_Expression ;
     rdfs:label "Die Heilige vom Niederrhein"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_eff6330f> ;
@@ -39450,6 +39671,16 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f0af5748> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_286cebb8> .
 
+<https://sappho-digital.com/expression/bibl_f0d806e8> a lrmoo:F2_Expression ;
+    rdfs:label "Maximum"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_f0d806e8> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141489706>,
+        <https://sappho-digital.com/identifier/bibl_f0d806e8> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f0d806e8> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_f0d806e8> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141489706> .
+
 <https://sappho-digital.com/expression/bibl_f0df8968> a lrmoo:F2_Expression ;
     rdfs:label "Ode der deutschen Sappho im Lorbeerkranze an die Griechin"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_f0df8968> ;
@@ -39476,6 +39707,36 @@ Philosophen zu Sanssouci"""@de ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f20f2957> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_0c31f59a> .
+
+<https://sappho-digital.com/expression/bibl_f28a176c> a lrmoo:F2_Expression ;
+    rdfs:label "Albert und Albertine"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_f28a176c> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141474798>,
+        <https://sappho-digital.com/identifier/bibl_f28a176c> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f28a176c> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_f28a176c> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141474798> .
+
+<https://sappho-digital.com/expression/bibl_f3eebdf3> a lrmoo:F2_Expression ;
+    rdfs:label "Sappho von Lesbos. Roman"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_f3eebdf3> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141474819>,
+        <https://sappho-digital.com/identifier/bibl_f3eebdf3> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f3eebdf3> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_f3eebdf3> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141474819> .
+
+<https://sappho-digital.com/expression/bibl_f4da59f4> a lrmoo:F2_Expression ;
+    rdfs:label "Sappho. Roman"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_f4da59f4> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120198614>,
+        <https://sappho-digital.com/identifier/bibl_f4da59f4> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f4da59f4> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_f4da59f4> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q120198614> .
 
 <https://sappho-digital.com/expression/bibl_f4eb50a0> a lrmoo:F2_Expression ;
     rdfs:label "Bei der »Sappho« im Burgtheater um 1 Uhr Nachmittags"@de ;
@@ -40320,8 +40581,8 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_2c7f182d> .
 
 <https://sappho-digital.com/manifestation_creation/bibl_2cb6f632> a lrmoo:F30_Manifestation_Creation ;
-    rdfs:label "Manifestationserstellung von Serapis: Historischer Roman"@de,
-        "Manifestation Creation of Serapis: Historischer Roman"@en ;
+    rdfs:label "Manifestationserstellung von Serapis. Historischer Roman"@de,
+        "Manifestation Creation of Serapis. Historischer Roman"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/publisher/publisher_f49e3b89> ;
     ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1885> ;
     ecrm:P7_took_place_at <https://sappho-digital.com/place/place_700b43a2> ;
@@ -41928,8 +42189,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_a5fc1475> .
 
 <https://sappho-digital.com/manifestation_creation/bibl_a6975d0c> a lrmoo:F30_Manifestation_Creation ;
-    rdfs:label "Manifestationserstellung von der landgänger"@de,
-        "Manifestation Creation of der landgänger"@en ;
+    rdfs:label "Manifestationserstellung von der landgänger. Gedichte"@de,
+        "Manifestation Creation of der landgänger. Gedichte"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/publisher/publisher_cb8aafb4> ;
     ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1976> ;
     ecrm:P7_took_place_at <https://sappho-digital.com/place/place_b32e19b8> ;
@@ -43431,6 +43692,17 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_0aa2f93e> ;
     owl:sameAs <https://www.wikidata.org/entity/Q141452854> .
 
+<https://sappho-digital.com/expression/bibl_12e5e057> a lrmoo:F2_Expression ;
+    rdfs:label "Der Meister von Palmyra. Dramatische Dichtung in fünf Aufzügen"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_12e5e057> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_12e5e057> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q52927688>,
+        <https://sappho-digital.com/identifier/bibl_12e5e057> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_12e5e057> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_12e5e057> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q52927688> .
+
 <https://sappho-digital.com/expression/bibl_1369196b> a lrmoo:F2_Expression ;
     rdfs:label "Kritik und Antikritik"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_1369196b> ;
@@ -43475,6 +43747,29 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_295bbaf8> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_c4cabf0c> ;
     owl:sameAs <https://www.wikidata.org/entity/Q33058241> .
+
+<https://sappho-digital.com/expression/bibl_2b497f94> a lrmoo:F2_Expression ;
+    rdfs:label "Faust. Trauerspiel mit Gesang und Tanz"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_2b497f94> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_2b497f94> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q55999227>,
+        <https://sappho-digital.com/identifier/bibl_2b497f94> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_2b497f94> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_2b497f94> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q55999227> .
+
+<https://sappho-digital.com/expression/bibl_2cb6f632> a lrmoo:F2_Expression ;
+    rdfs:label "Serapis. Historischer Roman"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_2cb6f632> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/2923165326342416290000>,
+        <https://sappho-digital.com/identifier/Q141489891>,
+        <https://sappho-digital.com/identifier/bibl_2cb6f632> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_2cb6f632> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_2cb6f632> ;
+    owl:sameAs <https://viaf.org/viaf/2923165326342416290000>,
+        <https://www.wikidata.org/entity/Q141489891> .
 
 <https://sappho-digital.com/expression/bibl_2cc74cd9> a lrmoo:F2_Expression ;
     rdfs:label "Gräfin Erikas Lehr- und Wanderjahre: Roman"@de ;
@@ -43756,10 +44051,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f7bb70af> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_cc8dfe6c> ;
     owl:sameAs <https://www.wikidata.org/entity/Q19179765> .
-
-<https://sappho-digital.com/id_type/goodreads> a ecrm:E55_Type ;
-    rdfs:label "Goodreads-Werk-ID"@de,
-        "Goodreads Work ID"@en .
 
 <https://sappho-digital.com/manifestation/bibl_0cdf9ff6> a lrmoo:F3_Manifestation ;
     rdfs:label "Neue Zürcher Zeitung"@de ;
@@ -44805,6 +45096,10 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://dbpedia.org/resource/Aus_guter_Familie>,
         <https://www.wikidata.org/entity/Q125925878> .
 
+<https://sappho-digital.com/id_type/goodreads> a ecrm:E55_Type ;
+    rdfs:label "Goodreads-Werk-ID"@de,
+        "Goodreads Work ID"@en .
+
 <https://sappho-digital.com/manifestation/bibl_30559948> a lrmoo:F3_Manifestation ;
     rdfs:label "Süddeutsche Zeitung"@de ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/184894497>,
@@ -45340,6 +45635,21 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://viaf.org/viaf/218290083>,
         <https://www.wikidata.org/entity/Q896376> .
 
+<https://sappho-digital.com/expression/bibl_2709b6e8> a lrmoo:F2_Expression ;
+    rdfs:label "Wilhelmine oder der vermählte Pendant. Ein prosaisch comisches Gedicht"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_2709b6e8> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_2709b6e8> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/1234174170>,
+        <https://sappho-digital.com/identifier/Q43598602>,
+        <https://sappho-digital.com/identifier/Wilhelmine_(Erzählung)>,
+        <https://sappho-digital.com/identifier/bibl_2709b6e8> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_2709b6e8> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_2709b6e8> ;
+    owl:sameAs <https://d-nb.info/gnd/1234174170>,
+        <https://dbpedia.org/resource/Wilhelmine_(Erzählung)>,
+        <https://www.wikidata.org/entity/Q43598602> .
+
 <https://sappho-digital.com/expression/bibl_7ca7c46a> a lrmoo:F2_Expression ;
     rdfs:label "Armut, Reichtum, Schuld und Buße der Gräfin Dolores"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_7ca7c46a> ;
@@ -45354,21 +45664,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     owl:sameAs <https://d-nb.info/gnd/4212231-4>,
         <https://dbpedia.org/resource/Armut,_Reichtum,_Schuld_und_Buße_der_Gräfin_Dolores>,
         <https://www.wikidata.org/entity/Q689540> .
-
-<https://sappho-digital.com/expression/bibl_9143a07d> a lrmoo:F2_Expression ;
-    rdfs:label "Soll und Haben"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_9143a07d> ;
-    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_9143a07d> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/4119859-1>,
-        <https://sappho-digital.com/identifier/Debit_and_Credit>,
-        <https://sappho-digital.com/identifier/Q2298931>,
-        <https://sappho-digital.com/identifier/bibl_9143a07d> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_9143a07d> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_9143a07d> ;
-    owl:sameAs <https://d-nb.info/gnd/4119859-1>,
-        <https://dbpedia.org/resource/Debit_and_Credit>,
-        <https://www.wikidata.org/entity/Q2298931> .
 
 <https://sappho-digital.com/manifestation/bibl_c4cabf0c> a lrmoo:F3_Manifestation ;
     rdfs:label "Neue Gedichte"@de ;
@@ -45694,6 +45989,23 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://dbpedia.org/resource/Der_Schüdderump>,
         <https://viaf.org/viaf/206087856>,
         <https://www.wikidata.org/entity/Q1196819> .
+
+<https://sappho-digital.com/expression/bibl_9143a07d> a lrmoo:F2_Expression ;
+    rdfs:label "Soll und Haben"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_9143a07d> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_9143a07d> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/4119859-1>,
+        <https://sappho-digital.com/identifier/6959127>,
+        <https://sappho-digital.com/identifier/Debit_and_Credit>,
+        <https://sappho-digital.com/identifier/Q2298931>,
+        <https://sappho-digital.com/identifier/bibl_9143a07d> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_9143a07d> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_9143a07d> ;
+    owl:sameAs <https://d-nb.info/gnd/4119859-1>,
+        <https://dbpedia.org/resource/Debit_and_Credit>,
+        <https://www.goodreads.com/work/show/6959127>,
+        <https://www.wikidata.org/entity/Q2298931> .
 
 <https://sappho-digital.com/expression/bibl_d6aa3aa6> a lrmoo:F2_Expression ;
     rdfs:label "Das Treibhaus"@de ;
@@ -46458,10 +46770,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_574806a3>,
         <https://sappho-digital.com/manifestation_creation/bibl_d45466bd> .
 
-<https://sappho-digital.com/id_type/viaf> a ecrm:E55_Type ;
-    rdfs:label "VIAF-ID"@de,
-        "VIAF ID"@en .
-
 <https://sappho-digital.com/place/place_f23bb5e2> a ecrm:E53_Place ;
     rdfs:label "Frankfurt a. M."@de,
         "Hamburg"@de,
@@ -46499,6 +46807,10 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         "53.55, 10" ;
     owl:sameAs <https://www.wikidata.org/entity/Q1055>,
         <https://www.wikidata.org/entity/Q1794> .
+
+<https://sappho-digital.com/id_type/viaf> a ecrm:E55_Type ;
+    rdfs:label "VIAF-ID"@de,
+        "VIAF ID"@en .
 
 <https://sappho-digital.com/manifestation/bibl_5aad1021> a lrmoo:F3_Manifestation ;
     rdfs:label "Die sapphischen Lieder. Liebesgedichte"@de ;

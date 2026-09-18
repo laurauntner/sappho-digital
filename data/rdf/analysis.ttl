@@ -64137,10 +64137,12 @@
 <https://sappho-digital.com/expression/bibl_f4da59f4> a lrmoo:F2_Expression ;
     rdfs:label "Sappho. Roman"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_f4da59f4> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_f4da59f4> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120198614>,
+        <https://sappho-digital.com/identifier/bibl_f4da59f4> ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f4da59f4> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_f4da59f4> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q120198614> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/character/bibl_f4da59f4_character_person_298d1d2696887999>,
         <https://sappho-digital.com/actualization/character/bibl_f4da59f4_character_person_499bbc9e7596f10d>,
         <https://sappho-digital.com/actualization/character/bibl_f4da59f4_character_person_4a8abedda068cc77>,
