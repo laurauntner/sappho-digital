@@ -327,7 +327,7 @@
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q13298" xml:id="place_6e00929f">Graz</pubPlace>
                 </bibl>
-                <bibl xml:id="bibl_ac17a500">
+                <bibl ref="https://www.wikidata.org/entity/Q85854812" xml:id="bibl_ac17a500">
                     <title type="text">Schwester Monika</title>
                     <date type="published" when="1815">1815</date>
                     <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
@@ -393,7 +393,7 @@
                 <bibl xml:id="bibl_9a8c2c40">
                     <title type="text">Geistesentwicklung durch Naturanlagen</title>
                     <date type="published" when="1828">1828</date>
-                    <bibl xml:id="bibl_72514b45">
+                    <bibl xml:id="bibl_72514b45" ref="https://www.wikidata.org/entity/Q111665708">
                         <title type="work">Abend-Zeitung</title>
                     </bibl>
                     <note type="genre">Prosa</note>
@@ -1222,13 +1222,14 @@
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1715" xml:id="place_6ea98adb">Hannover</pubPlace>
                 </bibl>
-                <bibl ref="https://www.wikidata.org/entity/Q125925878" xml:id="bibl_f12847ba">
-                    <title type="text">Aus guter Familie</title>
-                    <date type="published" when="1897">1897</date>
-                    <author ref="https://www.wikidata.org/entity/Q99301" xml:id="author_45e5928d">Gabriele Reuter</author>
+                <bibl xml:id="bibl_o82aaasb">
+                    <title type="text">Der Liebe Lust und Leid der Frau zur Frau</title>
+                    <date type="published" when="1895">1895</date>
+                    <author ref="https://www.wikidata.org/entity/Q141518213" xml:id="author_20afcj1b">Emilie Knopf</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher ref="https://www.wikidata.org/entity/Q481576" xml:id="publisher_26115c29">S. Fischer</publisher>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q106268" xml:id="place_6e91sv3q">Stargard</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q141518290" xml:id="publisher_a6m1x8lb">Verlagsbureau für literarische Neuheiten</publisher>
+                    <ref target="https://resolver.staatsbibliothek-berlin.de/SBB0003423B00000000">https://resolver.staatsbibliothek-berlin.de/SBB0003423B00000000</ref>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q141489706" xml:id="bibl_f0d806e8">
                     <title type="text">Maximum</title>
@@ -1249,6 +1250,14 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q2833" xml:id="place_81bb34f0">Freiburg i. Br.</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q139325716" xml:id="publisher_5ebb49cd">Friedrich Ernst Fehsenfeld</publisher>
                     <ref target="https://www.karl-may-gesellschaft.de/kmg/primlit/reise/gr/gr24/gr24.pdf">https://www.karl-may-gesellschaft.de/kmg/primlit/reise/gr/gr24/gr24.pdf</ref>
+                </bibl>
+                <bibl ref="https://www.wikidata.org/entity/Q125925878" xml:id="bibl_f12847ba">
+                    <title type="text">Aus guter Familie</title>
+                    <date type="published" when="1897">1897</date>
+                    <author ref="https://www.wikidata.org/entity/Q99301" xml:id="author_45e5928d">Gabriele Reuter</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q481576" xml:id="publisher_26115c29">S. Fischer</publisher>
                 </bibl>
                 <bibl xml:id="bibl_9616477e">
                     <title type="text">Eine moderne Sappho</title>

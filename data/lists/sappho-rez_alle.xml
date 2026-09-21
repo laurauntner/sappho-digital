@@ -2977,7 +2977,7 @@ Philosophen zu Sanssouci</title>
                 <bibl ref="https://www.wikidata.org/entity/Q120177793" xml:id="bibl_632dac82">
                     <title type="text">Sapho. Ein Melodrama</title>
                     <date type="published" when="1790">1790</date>
-                    <bibl xml:id="bibl_bde24a4e">
+                    <bibl xml:id="bibl_bde24a4e" ref="https://www.wikidata.org/entity/Q120178108">
                         <title type="work">Sapho. Ein Melodrama nebst anderen Gedichten</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1694998" xml:id="author_27500efc">J. J. H–b–r [= Johann Joseph Anton Huber]</author>
@@ -3876,7 +3876,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <publisher ref="https://www.wikidata.org/entity/Q139329015" xml:id="publisher_45a52ce9">J. F. Heerbrandt’sche Buchhandlung</publisher>
                     <ref target="https://de.wikisource.org/wiki/Seite:Deutscher_Dichterwald_141.jpg">https://de.wikisource.org/wiki/Seite:Deutscher_Dichterwald_141.jpg</ref>
                 </bibl>
-                <bibl xml:id="bibl_ac17a500">
+                <bibl ref="https://www.wikidata.org/entity/Q85854812" xml:id="bibl_ac17a500">
                     <title type="text">Schwester Monika</title>
                     <date type="published" when="1815">1815</date>
                     <author ref="https://www.wikidata.org/entity/Q4233718" xml:id="author_cd06f885">Anonym</author>
@@ -4386,7 +4386,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_9a8c2c40">
                     <title type="text">Geistesentwicklung durch Naturanlagen</title>
                     <date type="published" when="1828">1828</date>
-                    <bibl xml:id="bibl_72514b45">
+                    <bibl xml:id="bibl_72514b45" ref="https://www.wikidata.org/entity/Q111665708">
                         <title type="work">Abend-Zeitung</title>
                     </bibl>
                     <note type="genre">Prosa</note>
@@ -6117,13 +6117,14 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1715" xml:id="place_6ea98adb">Hannover</pubPlace>
                 </bibl>
-                <bibl ref="https://www.wikidata.org/entity/Q125925878" xml:id="bibl_f12847ba">
-                    <title type="text">Aus guter Familie</title>
-                    <date type="published" when="1897">1897</date>
-                    <author ref="https://www.wikidata.org/entity/Q99301" xml:id="author_45e5928d">Gabriele Reuter</author>
+                <bibl xml:id="bibl_o82aaasb">
+                    <title type="text">Der Liebe Lust und Leid der Frau zur Frau</title>
+                    <date type="published" when="1895">1895</date>
+                    <author ref="https://www.wikidata.org/entity/Q141518213" xml:id="author_20afcj1b">Emilie Knopf</author>
                     <note type="genre">Prosa</note>
-                    <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
-                    <publisher ref="https://www.wikidata.org/entity/Q481576" xml:id="publisher_26115c29">S. Fischer</publisher>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q106268" xml:id="place_6e91sv3q">Stargard</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q141518290" xml:id="publisher_a6m1x8lb">Verlagsbureau für literarische Neuheiten</publisher>
+                    <ref target="https://resolver.staatsbibliothek-berlin.de/SBB0003423B00000000">https://resolver.staatsbibliothek-berlin.de/SBB0003423B00000000</ref>
                 </bibl>
                 <bibl xml:id="bibl_eb33b932">
                     <title type="text">Sappho</title>
@@ -6156,6 +6157,14 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <pubPlace ref="https://www.wikidata.org/entity/Q2833" xml:id="place_81bb34f0">Freiburg i. Br.</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q139325716" xml:id="publisher_5ebb49cd">Friedrich Ernst Fehsenfeld</publisher>
                     <ref target="https://www.karl-may-gesellschaft.de/kmg/primlit/reise/gr/gr24/gr24.pdf">https://www.karl-may-gesellschaft.de/kmg/primlit/reise/gr/gr24/gr24.pdf</ref>
+                </bibl>
+                <bibl ref="https://www.wikidata.org/entity/Q125925878" xml:id="bibl_f12847ba">
+                    <title type="text">Aus guter Familie</title>
+                    <date type="published" when="1897">1897</date>
+                    <author ref="https://www.wikidata.org/entity/Q99301" xml:id="author_45e5928d">Gabriele Reuter</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q481576" xml:id="publisher_26115c29">S. Fischer</publisher>
                 </bibl>
                 <bibl xml:id="bibl_9616477e">
                     <title type="text">Eine moderne Sappho</title>
@@ -6523,7 +6532,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_9978f3a2">
                     <title type="text">Sapphos letztes Liebeslied</title>
                     <date type="published" notBefore="1906" notAfter="1907">1906/1907</date>
-                    <bibl xml:id="bibl_3a3f21b7">
+                    <bibl xml:id="bibl_3a3f21b7" ref="https://www.wikidata.org/entity/Q330915">
                         <title type="work">Über Land und Meer</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q28837107" xml:id="author_66c39712">Alberta von Puttkamer</author>
@@ -7695,7 +7704,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <title type="text">Der Kanzler von Tirol. Schauspiel in 5 Akten und einem Epilog</title>
                     <date type="created" when="1926">1926</date>
                     <date type="published" when="1936">1936</date>
-                    <bibl xml:id="bibl_ec8cd4ac">
+                    <bibl xml:id="bibl_ec8cd4ac" ref="https://www.wikidata.org/entity/Q141507263">
                         <title type="work">Der Kanzler von Tirol, die Landgräfin von Thüringen</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1681453" xml:id="author_512e247a">Josef Wenter</author>
@@ -7797,7 +7806,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_a88a263f">
                     <title type="text">Sappho ist tot. Auf den Tod von Ricarda Huch</title>
                     <date type="published" when="1950">1950</date>
-                    <bibl xml:id="bibl_407bf2b9">
+                    <bibl xml:id="bibl_407bf2b9" ref="https://www.wikidata.org/entity/Q120176649">
                         <title type="work">Jahrbuch der Droste-Gesellschaft. Westfälische Blätter für Dichtung und Geistesgeschichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q122939" xml:id="author_91b3e0e9">Rudolf Hagelstange</author>
@@ -8489,8 +8498,8 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                 <bibl xml:id="bibl_35721c69">
                     <title type="text">Sappho</title>
                     <date type="published" when="1984">1984</date>
-                    <bibl xml:id="bibl_3b14635d">
-                        <title type="work">Charlotte und Ulrich Grasnik: Flugfeld für Träume. Liebesgedichte</title>
+                    <bibl xml:id="bibl_3b14635d" ref="https://www.wikidata.org/entity/Q141507238">
+                        <title type="work">Flugfeld für Träume. Liebesgedichte</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1067194" xml:id="author_8826b36e">Charlotte Grasnick</author>
                     <note type="genre">Lyrik</note>
@@ -10438,9 +10447,9 @@ my music is lost, i bite my tongue. Ein Abgesang</title>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3185" xml:id="place_6a607ac8">Hildesheim</pubPlace>
                 </bibl>
                 <bibl xml:id="bibl_o708fh9l">
-                    <title type="text"/>
+                    <title type="text">[Gedicht]</title>
                     <date type="published" when="2021">2021</date>
-                    <bibl xml:id="bibl_149u91j4">
+                    <bibl xml:id="bibl_149u91j4" ref="https://www.wikidata.org/entity/Q141507214">
                         <title type="work">Musica Femina. 100 Komponistinnen in 100 Gedichten</title>
                     </bibl>
                     <author ref="https://www.wikidata.org/entity/Q1545603" xml:id="author_l85pac83">Sophie Reyer</author>
