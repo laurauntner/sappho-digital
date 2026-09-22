@@ -48673,6 +48673,7 @@
 <https://sappho-digital.com/expression/bibl_0a0e461e> a lrmoo:F2_Expression ;
     rdfs:label "computergedicht nr. 2"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_0a0e461e> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_0a0e461e> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_0a0e461e> ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_0a0e461e> ;
@@ -58353,6 +58354,7 @@
 <https://sappho-digital.com/expression/bibl_f8609041> a lrmoo:F2_Expression ;
     rdfs:label "Sappho"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_f8609041> ;
+    ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_f8609041> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_f8609041> ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f8609041> ;
@@ -59547,12 +59549,14 @@
     rdfs:label "Minona oder Die Angelsachsen. Ein tragisches Melodrama in vier Akten. Die Musik vom Herrn Kapellmeister J. A. P. Schulz [d. i. Johann Abraham Peter Schulz]"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_98b2a68e> ;
     ecrm:P138i_has_representation <https://sappho-digital.com/digital/bibl_98b2a68e> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120176353>,
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/6168165326582416290006>,
+        <https://sappho-digital.com/identifier/Q120176353>,
         <https://sappho-digital.com/identifier/bibl_98b2a68e> ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_98b2a68e> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_98b2a68e> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q120176353> ;
+    owl:sameAs <https://viaf.org/viaf/6168165326582416290006>,
+        <https://www.wikidata.org/entity/Q120176353> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/character/bibl_98b2a68e_character_person_40792a88ba634e66>,
         <https://sappho-digital.com/actualization/character/bibl_98b2a68e_character_person_e585b2a779019b7e>,
         <https://sappho-digital.com/actualization/motif/bibl_98b2a68e_motif_8f41e1cc1d433f40>,
@@ -64137,12 +64141,14 @@
 <https://sappho-digital.com/expression/bibl_f4da59f4> a lrmoo:F2_Expression ;
     rdfs:label "Sappho. Roman"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_f4da59f4> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q120198614>,
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/2742160062442535790007>,
+        <https://sappho-digital.com/identifier/Q120198614>,
         <https://sappho-digital.com/identifier/bibl_f4da59f4> ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_f4da59f4> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_f4da59f4> ;
-    owl:sameAs <https://www.wikidata.org/entity/Q120198614> ;
+    owl:sameAs <https://viaf.org/viaf/2742160062442535790007>,
+        <https://www.wikidata.org/entity/Q120198614> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/character/bibl_f4da59f4_character_person_298d1d2696887999>,
         <https://sappho-digital.com/actualization/character/bibl_f4da59f4_character_person_499bbc9e7596f10d>,
         <https://sappho-digital.com/actualization/character/bibl_f4da59f4_character_person_4a8abedda068cc77>,
