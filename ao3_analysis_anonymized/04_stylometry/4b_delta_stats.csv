@@ -1,0 +1,4 @@
+comparison,mean_delta,std_delta,n_pairs,mannwhitney_U,p_value
+Sappho present (within),1.0468336,0.35438222,3486,1778171247.0,0.0
+Sappho absent (within),0.96556056,0.31754813,903840,,
+Between groups,1.018316,0.34320423,112980,,
