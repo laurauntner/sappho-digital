@@ -41,6 +41,8 @@ The [RDF data](https://github.com/laurauntner/sappho-digital/tree/main/data/rdf)
 - **[XML/TEI files](https://github.com/laurauntner/sappho-digital/tree/main/data/lists)** – Lists of German-language testimonies of the productive literary reception of Sappho.
 - **[RDF/XML, Turtle, and JSON-LD files](https://github.com/laurauntner/sappho-digital/tree/main/data/rdf)** — Structured information about reception testimonies: authors, works, intertextual features in exemplary texts, and their relationships to each other and to Sappho’s own work. The `sappho-reception` file combines all of these.
 
+- **[AO3 analysis data](https://github.com/laurauntner/sappho-digital/tree/main/ao3_analysis_anonymized)** — Anonymized data (tables and plots) of the analysis of Sappho-related fanfiction from [Archive of Our Own](https://archiveofourown.org/), which is part of the printed dissertation only and not covered on the project website. Author names and work URLs/IDs were replaced by pseudonymous identifiers. The pairwise Delta distances (`04_stylometry/4e_delta_pairwise.csv`) are gzip-compressed.
+
 ### Ontology & Vocabulary
 
 | Resource | URI | Website |
