@@ -43,6 +43,17 @@ The [RDF data](https://github.com/laurauntner/sappho-digital/tree/main/data/rdf)
 
 - **[AO3 analysis data](https://github.com/laurauntner/sappho-digital/tree/main/ao3_analysis_anonymized)** — Anonymized data (tables and plots) of the analysis of Sappho-related fanfiction from [Archive of Our Own](https://archiveofourown.org/), which is part of the printed dissertation only and not covered on the project website. Author names and work URLs/IDs were replaced by pseudonymous identifiers. The pairwise Delta distances (`04_stylometry/4e_delta_pairwise.csv`) are gzip-compressed.
 
+Further files directly in [`data/`](https://github.com/laurauntner/sappho-digital/tree/main/data):
+
+| File | Content | Created by / used for |
+|---|---|---|
+| `sappho_fragments_qids.csv` | The 197 Sappho fragments with their Wikidata link, label, and database number (`;`-separated) | Input of `python/fragments.py` |
+| `reception-indices.csv` | Reception index per annotated testimony (n = 100): number of phenomena and INT31 relations, normalized values (`p_norm`, `i_norm`), weighted `reception_index`, authors and author IDs | Output of `python/reception-index.py`, extended by `python/statistics.py`; used by the statistics page |
+| `wikimetrix.csv` | Wikidata-based prominence metrics per author: Wikidata ID, number of sitelinks, QRank, and number of works | Output of `python/wikimetrix.py`, following [1001 Books](https://github.com/temporal-communities/1001-books); used by the statistics page |
+| `analysetexte_statistik.csv` | Gender, year, genre, and place and country of publication of the 107 analyzed texts (`;`-separated) | Maintained manually; source of the charts on the analysis page |
+| `imprint.xml`, `imprint-en.xml` | Content of the legal notice (German/English) | Input of `xslt/imprint.xsl` |
+| `auszug_rezeptionszeugnisse.docx` | Compact excerpt of the reception testimonies as a list (year, author, title, collection, place, genre) for use in the printed dissertation; `(E)` = date of creation, `(P)` = date of publication, sorted by the earliest year | Output of `python/reception-list.py`; always overwritten, e.g. `python3 python/reception-list.py --sample 40` (filters: `--genre`, `--author`, `--from`, `--to`, `--group-by`) |
+
 ### Ontology & Vocabulary
 
 | Resource | URI | Website |
