@@ -23,9 +23,15 @@ document.addEventListener("DOMContentLoaded", function () {
             dateCounts[year] = (dateCounts[year] || 0) + 1;
         }
 
-        const timelineData = Object.keys(dateCounts)
-            .map(year => [Date.UTC(parseInt(year), 0, 1), dateCounts[year]])
-            .sort((a, b) => a[0] - b[0]);
+        const yearNums = Object.keys(dateCounts).map(y => parseInt(y));
+        const timelineData = [];
+        if (yearNums.length) {
+            const minYear = Math.min(...yearNums);
+            const maxYear = Math.max(...yearNums);
+            for (let y = minYear; y <= maxYear; y++) {
+                timelineData.push([Date.UTC(y, 0, 1), dateCounts[y] || 0]);
+            }
+        }
 
         Highcharts.chart('container-timeline', {
             chart: { type: 'line' },
@@ -36,6 +42,8 @@ document.addEventListener("DOMContentLoaded", function () {
             },
             yAxis: {
                 title: { text: t.works },
+                min: 0,
+                allowDecimals: false,
                 endOnTick: false
             },
             legend: { enabled: false },
