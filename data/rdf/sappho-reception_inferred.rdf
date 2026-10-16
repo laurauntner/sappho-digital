@@ -563,6 +563,24 @@
     
 
 
+    <!-- http://erlangen-crm.org/current/P130_shows_features_of -->
+
+
+    <Thing rdf:about="http://erlangen-crm.org/current/P130_shows_features_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </Thing>
+    
+
+
+    <!-- http://erlangen-crm.org/current/P130i_features_are_also_found_on -->
+
+
+    <Thing rdf:about="http://erlangen-crm.org/current/P130i_features_are_also_found_on">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </Thing>
+    
+
+
     <!-- http://erlangen-crm.org/current/P138_represents -->
 
 
@@ -876,6 +894,24 @@
 
 
     <Thing rdf:about="http://www.cidoc-crm.org/cidoc-crm/P102i_is_title_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </Thing>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of -->
+
+
+    <Thing rdf:about="http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    </Thing>
+    
+
+
+    <!-- http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on -->
+
+
+    <Thing rdf:about="http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     </Thing>
     
@@ -404786,9 +404822,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_1">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -404798,9 +404833,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_100">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -404810,9 +404844,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_101">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -404822,9 +404855,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_101a">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -404834,9 +404866,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_102">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -404846,9 +404877,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_103">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -404858,9 +404888,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_103a">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -404870,9 +404899,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_103b">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -404882,9 +404910,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_103c">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -404894,9 +404921,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_104">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -404906,9 +404932,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_105">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -404918,9 +404943,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_106">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -404930,9 +404954,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_107">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -404942,9 +404965,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_108">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -404954,9 +404976,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_109">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -404966,9 +404987,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_110">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -404978,9 +404998,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_111">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -404990,9 +405009,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_112">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405002,9 +405020,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_113">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405014,9 +405031,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_114">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405026,9 +405042,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_115">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405038,9 +405053,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_116">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405050,9 +405064,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_117">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405062,9 +405075,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_117a">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405074,9 +405086,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_117b">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405086,9 +405097,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_118">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405098,9 +405108,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_119">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405110,9 +405119,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_12">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405122,9 +405130,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_120">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405134,9 +405141,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_121">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405146,9 +405152,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_122">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405158,9 +405163,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_123">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405170,9 +405174,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_124">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405182,9 +405185,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_125">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405194,9 +405196,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_126">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405206,9 +405207,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_127">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405218,9 +405218,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_128">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405230,9 +405229,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_129">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405242,9 +405240,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_130">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405254,9 +405251,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_132">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405266,9 +405262,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_133">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405278,9 +405273,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_134">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405290,9 +405284,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_135">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405302,9 +405295,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_136">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405314,9 +405306,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_137">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405326,9 +405317,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_138">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405338,9 +405328,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_139">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405350,9 +405339,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_140">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405362,9 +405350,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_141">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405374,9 +405361,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_142">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405386,9 +405372,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_143">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405398,9 +405383,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_144">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405410,9 +405394,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_145">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405422,9 +405405,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_146">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405434,9 +405416,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_147">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405446,9 +405427,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_148">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405458,9 +405438,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_149">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405470,9 +405449,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_15">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405482,9 +405460,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_150">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405494,9 +405471,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_151">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405506,9 +405482,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_152">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405518,9 +405493,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_153">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405530,9 +405504,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_154">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405542,9 +405515,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_155">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405554,9 +405526,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_156">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405566,9 +405537,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_157">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405578,9 +405548,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_158">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405590,9 +405559,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_159">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405602,9 +405570,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_16">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405614,9 +405581,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_160">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405626,9 +405592,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_161">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405638,9 +405603,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_162">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405650,9 +405614,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_163">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405662,9 +405625,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_164">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405674,9 +405636,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_165">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405686,9 +405647,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_166">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405698,9 +405658,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_167">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405710,9 +405669,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_168">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405722,9 +405680,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_168a">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405734,9 +405691,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_168b">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405746,9 +405702,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_168c">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405758,9 +405713,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_169">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405770,9 +405724,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_169a">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405782,9 +405735,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_17">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405794,9 +405746,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_170">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405806,9 +405757,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_171">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405818,9 +405768,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_172">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405830,9 +405779,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_173">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405842,9 +405790,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_174">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405854,9 +405801,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_175">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405866,9 +405812,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_176">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405878,9 +405823,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_177">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405890,9 +405834,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_179">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405902,9 +405845,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_18">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405914,9 +405856,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_180">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405926,9 +405867,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_181">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405938,9 +405878,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_182">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405950,9 +405889,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_183">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405962,9 +405900,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_184">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405974,9 +405911,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_185">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405986,9 +405922,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_186">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -405998,9 +405933,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_187">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406010,9 +405944,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_188">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406022,9 +405955,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_189">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406034,9 +405966,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_19">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406046,9 +405977,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_190">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406058,9 +405988,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_191">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406070,9 +405999,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_192">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406082,9 +406010,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_2">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406094,9 +406021,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_20">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406106,9 +406032,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_21">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406118,9 +406043,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_21351_1-8">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406130,9 +406054,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_21351_9-12_21376r_1-8">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406142,9 +406065,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_22">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406154,9 +406076,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_23">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406166,9 +406087,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_24">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406178,9 +406098,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_25">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406190,9 +406109,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_26">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406202,9 +406120,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_27">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406214,9 +406131,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_28">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406226,9 +406142,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_29">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406238,9 +406153,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_3">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406250,9 +406164,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_30">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406262,9 +406175,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_31">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406274,9 +406186,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_32">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406286,9 +406197,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_33">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406298,9 +406208,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_34">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406310,9 +406219,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_35">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406322,9 +406230,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_36">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406334,9 +406241,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_37">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406346,9 +406252,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_38">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406358,9 +406263,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_39">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406370,9 +406274,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_4">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406382,9 +406285,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_40">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406394,9 +406296,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_41">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406406,9 +406307,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_42">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406418,9 +406318,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_43">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406430,9 +406329,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_44">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406442,9 +406340,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_44a">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406454,9 +406351,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_45">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406466,9 +406362,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_46">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406478,9 +406373,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_47">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406490,9 +406384,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_48">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406502,9 +406395,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_49">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406514,9 +406406,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_5">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406526,9 +406417,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_50">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406538,9 +406428,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_51">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406550,9 +406439,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_52">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406562,9 +406450,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_53">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406574,9 +406461,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_54">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406586,9 +406472,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_55">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406598,9 +406483,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_56">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406610,9 +406494,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_57">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406622,9 +406505,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_58">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406634,9 +406516,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_59">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406646,9 +406527,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_6">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406658,9 +406538,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_60">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406670,9 +406549,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_61">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406682,9 +406560,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_62">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406694,9 +406571,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_63">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406706,9 +406582,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_64">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406718,9 +406593,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_65">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406730,9 +406604,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_66">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406742,9 +406615,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_67">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406754,9 +406626,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_68">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406766,9 +406637,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_69">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406778,9 +406648,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_7">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406790,9 +406659,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_70">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406802,9 +406670,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_71">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406814,9 +406681,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_72">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406826,9 +406692,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_73">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406838,9 +406703,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_74">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406850,9 +406714,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_75">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406862,9 +406725,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_76">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406874,9 +406736,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_77">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406886,9 +406747,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_78">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406898,9 +406758,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_79">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406910,9 +406769,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_8">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406922,9 +406780,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_80">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406934,9 +406791,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_81">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406946,9 +406802,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_82">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406958,9 +406813,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_83">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406970,9 +406824,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_84">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406982,9 +406835,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_85">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -406994,9 +406846,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_86">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -407006,9 +406857,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_87">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -407018,9 +406868,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_88">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -407030,9 +406879,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_9">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -407042,9 +406890,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_90">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -407054,9 +406901,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_91">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -407066,9 +406912,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_92">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -407078,9 +406923,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_93">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -407090,9 +406934,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_94">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -407102,9 +406945,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_95">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -407114,9 +406956,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_96">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -407126,9 +406967,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_97">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 
@@ -407138,9 +406978,8 @@
 
     <Thing rdf:about="https://sappho-digital.com/fragment/bibl_sappho_98">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E28_Conceptual_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E72_Legal_Object"/>
-        <rdf:type rdf:resource="http://erlangen-crm.org/current/E90_Symbolic_Object"/>
+        <rdf:type rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+        <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object"/>
     </Thing>
     
 

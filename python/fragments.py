@@ -300,12 +300,12 @@ with open(INPUT_FILE, newline='', encoding="utf-8") as f:
         all_expressions.append(expr_uri)
         all_fragments.append(frag_uri)
 
-        # Fragment (E90)
-        g.add((frag_uri, RDF.type, ECRM.E90_Symbolic_Object))
+        # Fragment als Werk (F1): Mitglied von Sapphos Gesamtwerk (R10), realisiert in der Expression (R3)
+        g.add((frag_uri, RDF.type, LRMOO.F1_Work))
         add_bilingual(g, frag_uri,
                       f"Fragment {frag_num} Voigt",
                       f"Fragment {frag_num} Voigt")
-        g.add((frag_uri, ECRM.P165i_is_incorporated_in, expr_uri))
+        g.add((frag_uri, LRMOO.R3_is_realised_in, expr_uri))
         g.add((frag_uri, LRMOO.R10_is_member_of, SD["work/sappho-work"]))
 
         # Expression Creation
@@ -324,7 +324,7 @@ with open(INPUT_FILE, newline='', encoding="utf-8") as f:
         g.add((expr_uri, LRMOO.R17i_was_created_by, expr_creation_uri))
         g.add((expr_uri, ECRM.P102_has_title, title_frag_uri))
         g.add((expr_uri, ECRM.P2_has_type, SD["genre/lyrik"]))
-        g.add((expr_uri, ECRM.P165_incorporates, frag_uri))
+        g.add((expr_uri, LRMOO.R3i_realises, frag_uri))
         g.add((expr_uri, LRMOO.R4i_is_embodied_in, SD["manifestation/sappho_bagordo"]))
         g.add((expr_uri, OWL.sameAs, URIRef(qid_url)))
 

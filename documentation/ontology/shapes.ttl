@@ -42,7 +42,9 @@ this:work a sh:NodeShape ;
     sh:property this:work_label,
         this:work_1,
         this:work_2,
-        this:work_3 .
+        this:work_3,
+        this:work_4,
+        this:work_5 .
 
 this:manifestation a sh:NodeShape ;
     sh:order "3"^^xsd:integer ;
@@ -153,15 +155,6 @@ this:visualitem a sh:NodeShape ;
     rdfs:label "E36 Visual Item"@en ;
     sh:property this:visualitem_label,
         this:visualitem_1 .
-
-this:symbolicobject a sh:NodeShape ;
-    sh:order "14"^^xsd:integer ;
-    volipi:iconName "fas fa-icons" ;
-    sh:targetClass ecrm:E90_Symbolic_Object ;
-    rdfs:label "E90 Symbolic Object"@en ;
-    sh:property this:symbolicobject_label,
-        this:symbolicobject_1,
-        this:symbolicobject_2 .
 
 this:identifier a sh:NodeShape ;
     sh:order "15"^^xsd:integer ;
@@ -440,16 +433,6 @@ this:infoobject_label sh:path rdfs:label ;
     dash:propertyRole dash:LabelRole .
 
 this:visualitem_label sh:path rdfs:label ;
-    sh:order "0"^^xsd:integer ;
-    sh:name "label"@en ;
-    sh:minCount "1"^^xsd:integer ;
-    sh:nodeKind sh:Literal ;
-    sh:languageIn ( "en" "de" ) ;
-    sh:uniqueLang true ;
-    dash:searchWidget core:SearchProperty ;
-    dash:propertyRole dash:LabelRole .
-
-this:symbolicobject_label sh:path rdfs:label ;
     sh:order "0"^^xsd:integer ;
     sh:name "label"@en ;
     sh:minCount "1"^^xsd:integer ;
@@ -851,9 +834,9 @@ this:type_2 sh:path [ sh:inversePath ecrm:P2_has_type ] ;
     core:enableOptional "true"^^xsd:boolean ;
     core:enableNegation "true"^^xsd:boolean .
 
-this:expression_4 sh:path ecrm:P138i_has_representation ;
+this:expression_4 sh:path ecrm:P130i_features_are_also_found_on ;
     sh:order "4"^^xsd:integer ;
-    sh:name "P138i has representation"@en ;
+    sh:name "P130i features are also found on"@en ;
     sh:nodeKind sh:IRI ;
     sh:class ecrm:E73_Information_Object ;
     sh:maxCount "1"^^xsd:integer ;
@@ -861,9 +844,9 @@ this:expression_4 sh:path ecrm:P138i_has_representation ;
     core:enableOptional "true"^^xsd:boolean ;
     core:enableNegation "true"^^xsd:boolean .
 
-this:infoobject_1 sh:path ecrm:P138_represents ;
+this:infoobject_1 sh:path ecrm:P130_shows_features_of ;
     sh:order "1"^^xsd:integer ;
-    sh:name "P138 represents"@en ;
+    sh:name "P130 shows features of"@en ;
     sh:nodeKind sh:IRI ;
     sh:class lrmoo:F2_Expression ;
     sh:minCount "1"^^xsd:integer ;
@@ -872,22 +855,21 @@ this:infoobject_1 sh:path ecrm:P138_represents ;
     core:enableOptional "true"^^xsd:boolean ;
     core:enableNegation "true"^^xsd:boolean .
 
-this:expression_5 sh:path ecrm:P165_incorporates ;
+this:expression_5 sh:path lrmoo:R3i_realises ;
     sh:order "5"^^xsd:integer ;
-    sh:name "P165 incorporates"@en ;
+    sh:name "R3i realises"@en ;
     sh:nodeKind sh:IRI ;
-    sh:class ecrm:E90_Symbolic_Object ;
+    sh:class lrmoo:F1_Work ;
     sh:maxCount "1"^^xsd:integer ;
     dash:searchWidget core:NonSelectableProperty ;
     core:enableOptional "true"^^xsd:boolean ;
     core:enableNegation "true"^^xsd:boolean .
 
-this:symbolicobject_1 sh:path ecrm:P165i_is_incorporated_in ;
-    sh:order "1"^^xsd:integer ;
-    sh:name "P165i is incorporated in"@en ;
+this:work_4 sh:path lrmoo:R3_is_realised_in ;
+    sh:order "4"^^xsd:integer ;
+    sh:name "R3 is realised in"@en ;
     sh:nodeKind sh:IRI ;
     sh:class lrmoo:F2_Expression ;
-    sh:minCount "1"^^xsd:integer ;
     sh:maxCount "1"^^xsd:integer ;
     dash:searchWidget core:NonSelectableProperty ;
     core:enableOptional "true"^^xsd:boolean ;
@@ -1150,7 +1132,6 @@ this:work_1 sh:path lrmoo:R16i_was_created_by ;
     sh:name "R16i was created by"@en ;
     sh:nodeKind sh:IRI ;
     sh:class lrmoo:F27_Work_Creation ;
-    sh:minCount "1"^^xsd:integer ;
     sh:maxCount "1"^^xsd:integer ;
     dash:searchWidget core:NonSelectableProperty ;
     core:enableOptional "true"^^xsd:boolean ;
@@ -1171,18 +1152,16 @@ this:work_2 sh:path lrmoo:R10i_has_member ;
     sh:order "2"^^xsd:integer ;
     sh:name "R10i has member"@en ;
     sh:nodeKind sh:IRI ;
-    sh:class ecrm:E90_Symbolic_Object ;
-    sh:minCount "1"^^xsd:integer ;
+    sh:class lrmoo:F1_Work ;
     dash:searchWidget core:NonSelectableProperty ;
     core:enableOptional "true"^^xsd:boolean ;
     core:enableNegation "true"^^xsd:boolean .
 
-this:symbolicobject_2 sh:path lrmoo:R10_is_member_of ;
-    sh:order "2"^^xsd:integer ;
+this:work_5 sh:path lrmoo:R10_is_member_of ;
+    sh:order "5"^^xsd:integer ;
     sh:name "R10 is member of"@en ;
     sh:nodeKind sh:IRI ;
     sh:class lrmoo:F1_Work ;
-    sh:minCount "1"^^xsd:integer ;
     sh:maxCount "1"^^xsd:integer ;
     dash:searchWidget core:NonSelectableProperty ;
     core:enableOptional "true"^^xsd:boolean ;

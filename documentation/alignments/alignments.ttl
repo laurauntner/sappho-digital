@@ -59,7 +59,7 @@ mimotext:P10 skos:broadMatch ecrm:P7_took_place_at .
 
 mimotext:P12 skos:broadMatch ecrm:P2_has_type .
 
-mimotext:P21 skos:broadMatch ecrm:P138i_has_representation .
+mimotext:P21 skos:broadMatch ecrm:P130i_features_are_also_found_on .
 
 mimotext:P4 skos:closeMatch ecrm:P102_has_title .
 
@@ -67,7 +67,7 @@ mimotext:P5 skos:broadMatch ecrm:P14_carried_out_by .
 
 mimotext:P7 skos:broadMatch ecrm:P14i_performed .
 
-mimotext:P8 skos:closeMatch ecrm:P131_is_identified_by .
+mimotext:P8 skos:broadMatch rdfs:label .
 
 mimotext:P9 skos:broadMatch ecrm:P4_has_time-span .
 
@@ -118,7 +118,7 @@ postdata_core:PoeticWork skos:broadMatch lrmoo:F1_Work .
 
 postdata_core:Redaction skos:broadMatch lrmoo:F3_Manifestation .
 
-postdata_core:TextUnit skos:broadMatch intro:INT1_Segment ;
+postdata_core:TextUnit skos:broadMatch intro:INT16_Segment ;
     skos:closeMatch intro:INT21_TextPassage .
 
 postdata_core:birthDate skos:broadMatch ecrm:P4_has_time-span .
@@ -161,7 +161,7 @@ dc:PeriodOfTime skos:closeMatch ecrm:E52_Time-Span .
 
 dc:created skos:broadMatch ecrm:P4_has_time-span .
 
-dc:creator skos:broadMatch ecrm:P14i_performed .
+dc:creator skos:broadMatch ecrm:P14_carried_out_by .
 
 dc:date skos:closeMatch ecrm:P4_has_time-span .
 
@@ -171,7 +171,7 @@ dc:hasPart skos:narrowMatch intro:R30_hasTextPassage .
 
 dc:identifier skos:closeMatch ecrm:P1_is_identified_by .
 
-dc:publisher skos:broadMatch ecrm:P14i_performed .
+dc:publisher skos:broadMatch ecrm:P14_carried_out_by .
 
 dc:title skos:closeMatch ecrm:P102_has_title .
 
@@ -241,7 +241,7 @@ fabio:Work skos:closeMatch lrmoo:F1_Work .
 
 fabio:hasPlaceOfPublication skos:broadMatch ecrm:P7_took_place_at .
 
-foaf:Agent skos:broadMatch ecrm:E21_Person ;
+foaf:Agent skos:narrowMatch ecrm:E21_Person ;
     skos:narrowMatch ecrm:E74_Group .
 
 foaf:Document skos:broadMatch lrmoo:F2_Expression,
@@ -256,11 +256,11 @@ foaf:made skos:broadMatch ecrm:P14i_performed .
 
 foaf:maker skos:broadMatch ecrm:P14_carried_out_by .
 
-foaf:name skos:closeMatch ecrm:P131_is_identified_by .
+foaf:name skos:broadMatch rdfs:label .
 
 intertext_ab:IntertexualRelation skos:closeMatch intro:INT31_IntertextualRelation .
 
-intertext_ab:IntertexualSpecification skos:closeMatch intro:INT11_TypeOfInterrelation .
+intertext_ab:IntertextualSpecification skos:closeMatch intro:INT11_TypeOfInterrelation .
 
 intertext_ab:Mediator skos:narrowMatch intro:INT21_TextPassage,
         intro:INT4_Feature .
@@ -276,7 +276,7 @@ intertext_ab:specifiedBy skos:broadMatch intro:R19i_isTypeOf .
 
 intertext_ab:there skos:closeMatch intro:R12i_isReferredToEntity .
 
-intertext_af:Segment skos:broadMatch intro:INT1_Segment .
+intertext_af:Segment skos:broadMatch intro:INT16_Segment .
 
 intertext_af:System skos:broadMatch intro:INT6_Architext .
 
@@ -438,8 +438,8 @@ lrmoo:F5_Item                    owl:equivalentClass frbroo:F5_Item .
 
 ecrm:P100_was_death_of          owl:equivalentProperty crm:P100_was_death_of .
 ecrm:P100i_died_in              owl:equivalentProperty crm:P100i_died_in .
-ecrm:P131_is_identified_by      owl:equivalentProperty crm:P131_is_identified_by .
-ecrm:P131i_identifies           owl:equivalentProperty crm:P131i_identifies .
+ecrm:P130_shows_features_of     owl:equivalentProperty crm:P130_shows_features_of .
+ecrm:P130i_features_are_also_found_on owl:equivalentProperty crm:P130i_features_are_also_found_on .
 ecrm:P138_represents            owl:equivalentProperty crm:P138_represents .
 ecrm:P138i_has_representation   owl:equivalentProperty crm:P138i_has_representation .
 ecrm:P1_is_identified_by        owl:equivalentProperty crm:P1_is_identified_by .
@@ -458,8 +458,6 @@ ecrm:P98_brought_into_life      owl:equivalentProperty crm:P98_brought_into_life
 ecrm:P98i_was_born              owl:equivalentProperty crm:P98i_was_born .
 ecrm:P102_has_title             owl:equivalentProperty crm:P102_has_title .
 ecrm:P102i_is_title_of          owl:equivalentProperty crm:P102i_is_title_of .
-ecrm:P131_is_identified_by      owl:equivalentProperty crm:P131_is_identified_by .
-ecrm:P131i_identifies           owl:equivalentProperty crm:P131i_identifies .
 ecrm:P138_represents            owl:equivalentProperty crm:P138_represents .
 ecrm:P138i_has_representation   owl:equivalentProperty crm:P138i_has_representation .
 ecrm:P14_carried_out_by         owl:equivalentProperty crm:P14_carried_out_by .
@@ -477,8 +475,8 @@ ecrm:P4i_is_time-span_of        owl:equivalentProperty crm:P4i_is_time-span_of .
 ecrm:P7_took_place_at           owl:equivalentProperty crm:P7_took_place_at .
 ecrm:P7i_witnessed              owl:equivalentProperty crm:P7i_witnessed .
 
-lrmoo:R10_has_member            owl:equivalentProperty efrbroo:R10_has_member .
-lrmoo:R10i_is_member_of         owl:equivalentProperty efrbroo:R10i_is_member_of .
+lrmoo:R10_is_member_of          owl:equivalentProperty efrbroo:R10i_is_member_of .
+lrmoo:R10i_has_member           owl:equivalentProperty efrbroo:R10_has_member .
 lrmoo:R16_created               owl:equivalentProperty efrbroo:R16_initiated .
 lrmoo:R16_created               owl:equivalentProperty frbroo:R16_initiated .
 lrmoo:R16i_was_created_by       owl:equivalentProperty efrbroo:R16i_was_initiated_by .
@@ -499,6 +497,10 @@ lrmoo:R28_produced              owl:equivalentProperty efrbroo:R28_produced .
 lrmoo:R28_produced              owl:equivalentProperty frbroo:R28_produced .
 lrmoo:R28i_was_produced_by      owl:equivalentProperty efrbroo:R28i_was_produced_by .
 lrmoo:R28i_was_produced_by      owl:equivalentProperty frbroo:R28i_was_produced_by .
+lrmoo:R3_is_realised_in         owl:equivalentProperty efrbroo:R3_is_realised_in .
+lrmoo:R3_is_realised_in         owl:equivalentProperty frbroo:R3_is_realised_in .
+lrmoo:R3i_realises              owl:equivalentProperty efrbroo:R3i_realises .
+lrmoo:R3i_realises              owl:equivalentProperty frbroo:R3i_realises .
 lrmoo:R4_embodies               owl:equivalentProperty efrbroo:R4i_comprises_carriers_of .
 lrmoo:R4_embodies               owl:equivalentProperty frbroo:R4i_comprises_carriers_of .
 lrmoo:R4i_is_embodied_in        owl:equivalentProperty efrbroo:R4_carriers_provided_by .

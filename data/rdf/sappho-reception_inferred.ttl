@@ -318,6 +318,16 @@ ecrm:P102i_is_title_of rdf:type owl:NamedIndividual ,
                                 owl:Thing .
 
 
+###  http://erlangen-crm.org/current/P130_shows_features_of
+ecrm:P130_shows_features_of rdf:type owl:NamedIndividual ,
+                                     owl:Thing .
+
+
+###  http://erlangen-crm.org/current/P130i_features_are_also_found_on
+ecrm:P130i_features_are_also_found_on rdf:type owl:NamedIndividual ,
+                                               owl:Thing .
+
+
 ###  http://erlangen-crm.org/current/P138_represents
 ecrm:P138_represents rdf:type owl:NamedIndividual ,
                               owl:Thing .
@@ -494,6 +504,16 @@ ecrm:P98i_was_born rdf:type owl:NamedIndividual ,
 ###  http://www.cidoc-crm.org/cidoc-crm/P102i_is_title_of
 <http://www.cidoc-crm.org/cidoc-crm/P102i_is_title_of> rdf:type owl:NamedIndividual ,
                                                                 owl:Thing .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of
+<http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of> rdf:type owl:NamedIndividual ,
+                                                                     owl:Thing .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on
+<http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on> rdf:type owl:NamedIndividual ,
+                                                                               owl:Thing .
 
 
 ###  http://www.cidoc-crm.org/cidoc-crm/P138_represents
@@ -264202,1577 +264222,1380 @@ ecrm:P98i_was_born rdf:type owl:NamedIndividual ,
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_1
 <https://sappho-digital.com/fragment/bibl_sappho_1> rdf:type owl:NamedIndividual ,
-                                                             ecrm:E28_Conceptual_Object ,
-                                                             ecrm:E72_Legal_Object ,
-                                                             ecrm:E90_Symbolic_Object ,
+                                                             lrmoo:F1_Work ,
+                                                             <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                              owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_100
 <https://sappho-digital.com/fragment/bibl_sappho_100> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_101
 <https://sappho-digital.com/fragment/bibl_sappho_101> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_101a
 <https://sappho-digital.com/fragment/bibl_sappho_101a> rdf:type owl:NamedIndividual ,
-                                                                ecrm:E28_Conceptual_Object ,
-                                                                ecrm:E72_Legal_Object ,
-                                                                ecrm:E90_Symbolic_Object ,
+                                                                lrmoo:F1_Work ,
+                                                                <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                 owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_102
 <https://sappho-digital.com/fragment/bibl_sappho_102> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_103
 <https://sappho-digital.com/fragment/bibl_sappho_103> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_103a
 <https://sappho-digital.com/fragment/bibl_sappho_103a> rdf:type owl:NamedIndividual ,
-                                                                ecrm:E28_Conceptual_Object ,
-                                                                ecrm:E72_Legal_Object ,
-                                                                ecrm:E90_Symbolic_Object ,
+                                                                lrmoo:F1_Work ,
+                                                                <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                 owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_103b
 <https://sappho-digital.com/fragment/bibl_sappho_103b> rdf:type owl:NamedIndividual ,
-                                                                ecrm:E28_Conceptual_Object ,
-                                                                ecrm:E72_Legal_Object ,
-                                                                ecrm:E90_Symbolic_Object ,
+                                                                lrmoo:F1_Work ,
+                                                                <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                 owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_103c
 <https://sappho-digital.com/fragment/bibl_sappho_103c> rdf:type owl:NamedIndividual ,
-                                                                ecrm:E28_Conceptual_Object ,
-                                                                ecrm:E72_Legal_Object ,
-                                                                ecrm:E90_Symbolic_Object ,
+                                                                lrmoo:F1_Work ,
+                                                                <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                 owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_104
 <https://sappho-digital.com/fragment/bibl_sappho_104> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_105
 <https://sappho-digital.com/fragment/bibl_sappho_105> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_106
 <https://sappho-digital.com/fragment/bibl_sappho_106> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_107
 <https://sappho-digital.com/fragment/bibl_sappho_107> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_108
 <https://sappho-digital.com/fragment/bibl_sappho_108> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_109
 <https://sappho-digital.com/fragment/bibl_sappho_109> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_110
 <https://sappho-digital.com/fragment/bibl_sappho_110> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_111
 <https://sappho-digital.com/fragment/bibl_sappho_111> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_112
 <https://sappho-digital.com/fragment/bibl_sappho_112> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_113
 <https://sappho-digital.com/fragment/bibl_sappho_113> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_114
 <https://sappho-digital.com/fragment/bibl_sappho_114> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_115
 <https://sappho-digital.com/fragment/bibl_sappho_115> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_116
 <https://sappho-digital.com/fragment/bibl_sappho_116> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_117
 <https://sappho-digital.com/fragment/bibl_sappho_117> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_117a
 <https://sappho-digital.com/fragment/bibl_sappho_117a> rdf:type owl:NamedIndividual ,
-                                                                ecrm:E28_Conceptual_Object ,
-                                                                ecrm:E72_Legal_Object ,
-                                                                ecrm:E90_Symbolic_Object ,
+                                                                lrmoo:F1_Work ,
+                                                                <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                 owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_117b
 <https://sappho-digital.com/fragment/bibl_sappho_117b> rdf:type owl:NamedIndividual ,
-                                                                ecrm:E28_Conceptual_Object ,
-                                                                ecrm:E72_Legal_Object ,
-                                                                ecrm:E90_Symbolic_Object ,
+                                                                lrmoo:F1_Work ,
+                                                                <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                 owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_118
 <https://sappho-digital.com/fragment/bibl_sappho_118> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_119
 <https://sappho-digital.com/fragment/bibl_sappho_119> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_12
 <https://sappho-digital.com/fragment/bibl_sappho_12> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_120
 <https://sappho-digital.com/fragment/bibl_sappho_120> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_121
 <https://sappho-digital.com/fragment/bibl_sappho_121> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_122
 <https://sappho-digital.com/fragment/bibl_sappho_122> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_123
 <https://sappho-digital.com/fragment/bibl_sappho_123> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_124
 <https://sappho-digital.com/fragment/bibl_sappho_124> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_125
 <https://sappho-digital.com/fragment/bibl_sappho_125> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_126
 <https://sappho-digital.com/fragment/bibl_sappho_126> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_127
 <https://sappho-digital.com/fragment/bibl_sappho_127> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_128
 <https://sappho-digital.com/fragment/bibl_sappho_128> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_129
 <https://sappho-digital.com/fragment/bibl_sappho_129> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_130
 <https://sappho-digital.com/fragment/bibl_sappho_130> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_132
 <https://sappho-digital.com/fragment/bibl_sappho_132> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_133
 <https://sappho-digital.com/fragment/bibl_sappho_133> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_134
 <https://sappho-digital.com/fragment/bibl_sappho_134> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_135
 <https://sappho-digital.com/fragment/bibl_sappho_135> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_136
 <https://sappho-digital.com/fragment/bibl_sappho_136> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_137
 <https://sappho-digital.com/fragment/bibl_sappho_137> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_138
 <https://sappho-digital.com/fragment/bibl_sappho_138> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_139
 <https://sappho-digital.com/fragment/bibl_sappho_139> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_140
 <https://sappho-digital.com/fragment/bibl_sappho_140> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_141
 <https://sappho-digital.com/fragment/bibl_sappho_141> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_142
 <https://sappho-digital.com/fragment/bibl_sappho_142> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_143
 <https://sappho-digital.com/fragment/bibl_sappho_143> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_144
 <https://sappho-digital.com/fragment/bibl_sappho_144> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_145
 <https://sappho-digital.com/fragment/bibl_sappho_145> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_146
 <https://sappho-digital.com/fragment/bibl_sappho_146> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_147
 <https://sappho-digital.com/fragment/bibl_sappho_147> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_148
 <https://sappho-digital.com/fragment/bibl_sappho_148> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_149
 <https://sappho-digital.com/fragment/bibl_sappho_149> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_15
 <https://sappho-digital.com/fragment/bibl_sappho_15> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_150
 <https://sappho-digital.com/fragment/bibl_sappho_150> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_151
 <https://sappho-digital.com/fragment/bibl_sappho_151> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_152
 <https://sappho-digital.com/fragment/bibl_sappho_152> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_153
 <https://sappho-digital.com/fragment/bibl_sappho_153> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_154
 <https://sappho-digital.com/fragment/bibl_sappho_154> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_155
 <https://sappho-digital.com/fragment/bibl_sappho_155> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_156
 <https://sappho-digital.com/fragment/bibl_sappho_156> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_157
 <https://sappho-digital.com/fragment/bibl_sappho_157> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_158
 <https://sappho-digital.com/fragment/bibl_sappho_158> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_159
 <https://sappho-digital.com/fragment/bibl_sappho_159> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_16
 <https://sappho-digital.com/fragment/bibl_sappho_16> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_160
 <https://sappho-digital.com/fragment/bibl_sappho_160> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_161
 <https://sappho-digital.com/fragment/bibl_sappho_161> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_162
 <https://sappho-digital.com/fragment/bibl_sappho_162> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_163
 <https://sappho-digital.com/fragment/bibl_sappho_163> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_164
 <https://sappho-digital.com/fragment/bibl_sappho_164> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_165
 <https://sappho-digital.com/fragment/bibl_sappho_165> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_166
 <https://sappho-digital.com/fragment/bibl_sappho_166> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_167
 <https://sappho-digital.com/fragment/bibl_sappho_167> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_168
 <https://sappho-digital.com/fragment/bibl_sappho_168> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_168a
 <https://sappho-digital.com/fragment/bibl_sappho_168a> rdf:type owl:NamedIndividual ,
-                                                                ecrm:E28_Conceptual_Object ,
-                                                                ecrm:E72_Legal_Object ,
-                                                                ecrm:E90_Symbolic_Object ,
+                                                                lrmoo:F1_Work ,
+                                                                <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                 owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_168b
 <https://sappho-digital.com/fragment/bibl_sappho_168b> rdf:type owl:NamedIndividual ,
-                                                                ecrm:E28_Conceptual_Object ,
-                                                                ecrm:E72_Legal_Object ,
-                                                                ecrm:E90_Symbolic_Object ,
+                                                                lrmoo:F1_Work ,
+                                                                <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                 owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_168c
 <https://sappho-digital.com/fragment/bibl_sappho_168c> rdf:type owl:NamedIndividual ,
-                                                                ecrm:E28_Conceptual_Object ,
-                                                                ecrm:E72_Legal_Object ,
-                                                                ecrm:E90_Symbolic_Object ,
+                                                                lrmoo:F1_Work ,
+                                                                <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                 owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_169
 <https://sappho-digital.com/fragment/bibl_sappho_169> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_169a
 <https://sappho-digital.com/fragment/bibl_sappho_169a> rdf:type owl:NamedIndividual ,
-                                                                ecrm:E28_Conceptual_Object ,
-                                                                ecrm:E72_Legal_Object ,
-                                                                ecrm:E90_Symbolic_Object ,
+                                                                lrmoo:F1_Work ,
+                                                                <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                 owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_17
 <https://sappho-digital.com/fragment/bibl_sappho_17> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_170
 <https://sappho-digital.com/fragment/bibl_sappho_170> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_171
 <https://sappho-digital.com/fragment/bibl_sappho_171> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_172
 <https://sappho-digital.com/fragment/bibl_sappho_172> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_173
 <https://sappho-digital.com/fragment/bibl_sappho_173> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_174
 <https://sappho-digital.com/fragment/bibl_sappho_174> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_175
 <https://sappho-digital.com/fragment/bibl_sappho_175> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_176
 <https://sappho-digital.com/fragment/bibl_sappho_176> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_177
 <https://sappho-digital.com/fragment/bibl_sappho_177> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_179
 <https://sappho-digital.com/fragment/bibl_sappho_179> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_18
 <https://sappho-digital.com/fragment/bibl_sappho_18> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_180
 <https://sappho-digital.com/fragment/bibl_sappho_180> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_181
 <https://sappho-digital.com/fragment/bibl_sappho_181> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_182
 <https://sappho-digital.com/fragment/bibl_sappho_182> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_183
 <https://sappho-digital.com/fragment/bibl_sappho_183> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_184
 <https://sappho-digital.com/fragment/bibl_sappho_184> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_185
 <https://sappho-digital.com/fragment/bibl_sappho_185> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_186
 <https://sappho-digital.com/fragment/bibl_sappho_186> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_187
 <https://sappho-digital.com/fragment/bibl_sappho_187> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_188
 <https://sappho-digital.com/fragment/bibl_sappho_188> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_189
 <https://sappho-digital.com/fragment/bibl_sappho_189> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_19
 <https://sappho-digital.com/fragment/bibl_sappho_19> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_190
 <https://sappho-digital.com/fragment/bibl_sappho_190> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_191
 <https://sappho-digital.com/fragment/bibl_sappho_191> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_192
 <https://sappho-digital.com/fragment/bibl_sappho_192> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_2
 <https://sappho-digital.com/fragment/bibl_sappho_2> rdf:type owl:NamedIndividual ,
-                                                             ecrm:E28_Conceptual_Object ,
-                                                             ecrm:E72_Legal_Object ,
-                                                             ecrm:E90_Symbolic_Object ,
+                                                             lrmoo:F1_Work ,
+                                                             <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                              owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_20
 <https://sappho-digital.com/fragment/bibl_sappho_20> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_21
 <https://sappho-digital.com/fragment/bibl_sappho_21> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_21351_1-8
 <https://sappho-digital.com/fragment/bibl_sappho_21351_1-8> rdf:type owl:NamedIndividual ,
-                                                                     ecrm:E28_Conceptual_Object ,
-                                                                     ecrm:E72_Legal_Object ,
-                                                                     ecrm:E90_Symbolic_Object ,
+                                                                     lrmoo:F1_Work ,
+                                                                     <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                      owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_21351_9-12_21376r_1-8
 <https://sappho-digital.com/fragment/bibl_sappho_21351_9-12_21376r_1-8> rdf:type owl:NamedIndividual ,
-                                                                                 ecrm:E28_Conceptual_Object ,
-                                                                                 ecrm:E72_Legal_Object ,
-                                                                                 ecrm:E90_Symbolic_Object ,
+                                                                                 lrmoo:F1_Work ,
+                                                                                 <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                                  owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_22
 <https://sappho-digital.com/fragment/bibl_sappho_22> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_23
 <https://sappho-digital.com/fragment/bibl_sappho_23> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_24
 <https://sappho-digital.com/fragment/bibl_sappho_24> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_25
 <https://sappho-digital.com/fragment/bibl_sappho_25> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_26
 <https://sappho-digital.com/fragment/bibl_sappho_26> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_27
 <https://sappho-digital.com/fragment/bibl_sappho_27> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_28
 <https://sappho-digital.com/fragment/bibl_sappho_28> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_29
 <https://sappho-digital.com/fragment/bibl_sappho_29> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_3
 <https://sappho-digital.com/fragment/bibl_sappho_3> rdf:type owl:NamedIndividual ,
-                                                             ecrm:E28_Conceptual_Object ,
-                                                             ecrm:E72_Legal_Object ,
-                                                             ecrm:E90_Symbolic_Object ,
+                                                             lrmoo:F1_Work ,
+                                                             <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                              owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_30
 <https://sappho-digital.com/fragment/bibl_sappho_30> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_31
 <https://sappho-digital.com/fragment/bibl_sappho_31> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_32
 <https://sappho-digital.com/fragment/bibl_sappho_32> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_33
 <https://sappho-digital.com/fragment/bibl_sappho_33> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_34
 <https://sappho-digital.com/fragment/bibl_sappho_34> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_35
 <https://sappho-digital.com/fragment/bibl_sappho_35> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_36
 <https://sappho-digital.com/fragment/bibl_sappho_36> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_37
 <https://sappho-digital.com/fragment/bibl_sappho_37> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_38
 <https://sappho-digital.com/fragment/bibl_sappho_38> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_39
 <https://sappho-digital.com/fragment/bibl_sappho_39> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_4
 <https://sappho-digital.com/fragment/bibl_sappho_4> rdf:type owl:NamedIndividual ,
-                                                             ecrm:E28_Conceptual_Object ,
-                                                             ecrm:E72_Legal_Object ,
-                                                             ecrm:E90_Symbolic_Object ,
+                                                             lrmoo:F1_Work ,
+                                                             <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                              owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_40
 <https://sappho-digital.com/fragment/bibl_sappho_40> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_41
 <https://sappho-digital.com/fragment/bibl_sappho_41> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_42
 <https://sappho-digital.com/fragment/bibl_sappho_42> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_43
 <https://sappho-digital.com/fragment/bibl_sappho_43> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_44
 <https://sappho-digital.com/fragment/bibl_sappho_44> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_44a
 <https://sappho-digital.com/fragment/bibl_sappho_44a> rdf:type owl:NamedIndividual ,
-                                                               ecrm:E28_Conceptual_Object ,
-                                                               ecrm:E72_Legal_Object ,
-                                                               ecrm:E90_Symbolic_Object ,
+                                                               lrmoo:F1_Work ,
+                                                               <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                                owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_45
 <https://sappho-digital.com/fragment/bibl_sappho_45> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_46
 <https://sappho-digital.com/fragment/bibl_sappho_46> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_47
 <https://sappho-digital.com/fragment/bibl_sappho_47> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_48
 <https://sappho-digital.com/fragment/bibl_sappho_48> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_49
 <https://sappho-digital.com/fragment/bibl_sappho_49> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_5
 <https://sappho-digital.com/fragment/bibl_sappho_5> rdf:type owl:NamedIndividual ,
-                                                             ecrm:E28_Conceptual_Object ,
-                                                             ecrm:E72_Legal_Object ,
-                                                             ecrm:E90_Symbolic_Object ,
+                                                             lrmoo:F1_Work ,
+                                                             <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                              owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_50
 <https://sappho-digital.com/fragment/bibl_sappho_50> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_51
 <https://sappho-digital.com/fragment/bibl_sappho_51> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_52
 <https://sappho-digital.com/fragment/bibl_sappho_52> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_53
 <https://sappho-digital.com/fragment/bibl_sappho_53> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_54
 <https://sappho-digital.com/fragment/bibl_sappho_54> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_55
 <https://sappho-digital.com/fragment/bibl_sappho_55> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_56
 <https://sappho-digital.com/fragment/bibl_sappho_56> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_57
 <https://sappho-digital.com/fragment/bibl_sappho_57> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_58
 <https://sappho-digital.com/fragment/bibl_sappho_58> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_59
 <https://sappho-digital.com/fragment/bibl_sappho_59> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_6
 <https://sappho-digital.com/fragment/bibl_sappho_6> rdf:type owl:NamedIndividual ,
-                                                             ecrm:E28_Conceptual_Object ,
-                                                             ecrm:E72_Legal_Object ,
-                                                             ecrm:E90_Symbolic_Object ,
+                                                             lrmoo:F1_Work ,
+                                                             <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                              owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_60
 <https://sappho-digital.com/fragment/bibl_sappho_60> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_61
 <https://sappho-digital.com/fragment/bibl_sappho_61> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_62
 <https://sappho-digital.com/fragment/bibl_sappho_62> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_63
 <https://sappho-digital.com/fragment/bibl_sappho_63> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_64
 <https://sappho-digital.com/fragment/bibl_sappho_64> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_65
 <https://sappho-digital.com/fragment/bibl_sappho_65> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_66
 <https://sappho-digital.com/fragment/bibl_sappho_66> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_67
 <https://sappho-digital.com/fragment/bibl_sappho_67> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_68
 <https://sappho-digital.com/fragment/bibl_sappho_68> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_69
 <https://sappho-digital.com/fragment/bibl_sappho_69> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_7
 <https://sappho-digital.com/fragment/bibl_sappho_7> rdf:type owl:NamedIndividual ,
-                                                             ecrm:E28_Conceptual_Object ,
-                                                             ecrm:E72_Legal_Object ,
-                                                             ecrm:E90_Symbolic_Object ,
+                                                             lrmoo:F1_Work ,
+                                                             <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                              owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_70
 <https://sappho-digital.com/fragment/bibl_sappho_70> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_71
 <https://sappho-digital.com/fragment/bibl_sappho_71> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_72
 <https://sappho-digital.com/fragment/bibl_sappho_72> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_73
 <https://sappho-digital.com/fragment/bibl_sappho_73> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_74
 <https://sappho-digital.com/fragment/bibl_sappho_74> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_75
 <https://sappho-digital.com/fragment/bibl_sappho_75> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_76
 <https://sappho-digital.com/fragment/bibl_sappho_76> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_77
 <https://sappho-digital.com/fragment/bibl_sappho_77> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_78
 <https://sappho-digital.com/fragment/bibl_sappho_78> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_79
 <https://sappho-digital.com/fragment/bibl_sappho_79> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_8
 <https://sappho-digital.com/fragment/bibl_sappho_8> rdf:type owl:NamedIndividual ,
-                                                             ecrm:E28_Conceptual_Object ,
-                                                             ecrm:E72_Legal_Object ,
-                                                             ecrm:E90_Symbolic_Object ,
+                                                             lrmoo:F1_Work ,
+                                                             <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                              owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_80
 <https://sappho-digital.com/fragment/bibl_sappho_80> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_81
 <https://sappho-digital.com/fragment/bibl_sappho_81> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_82
 <https://sappho-digital.com/fragment/bibl_sappho_82> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_83
 <https://sappho-digital.com/fragment/bibl_sappho_83> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_84
 <https://sappho-digital.com/fragment/bibl_sappho_84> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_85
 <https://sappho-digital.com/fragment/bibl_sappho_85> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_86
 <https://sappho-digital.com/fragment/bibl_sappho_86> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_87
 <https://sappho-digital.com/fragment/bibl_sappho_87> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_88
 <https://sappho-digital.com/fragment/bibl_sappho_88> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_9
 <https://sappho-digital.com/fragment/bibl_sappho_9> rdf:type owl:NamedIndividual ,
-                                                             ecrm:E28_Conceptual_Object ,
-                                                             ecrm:E72_Legal_Object ,
-                                                             ecrm:E90_Symbolic_Object ,
+                                                             lrmoo:F1_Work ,
+                                                             <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                              owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_90
 <https://sappho-digital.com/fragment/bibl_sappho_90> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_91
 <https://sappho-digital.com/fragment/bibl_sappho_91> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_92
 <https://sappho-digital.com/fragment/bibl_sappho_92> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_93
 <https://sappho-digital.com/fragment/bibl_sappho_93> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_94
 <https://sappho-digital.com/fragment/bibl_sappho_94> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_95
 <https://sappho-digital.com/fragment/bibl_sappho_95> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_96
 <https://sappho-digital.com/fragment/bibl_sappho_96> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_97
 <https://sappho-digital.com/fragment/bibl_sappho_97> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 
 ###  https://sappho-digital.com/fragment/bibl_sappho_98
 <https://sappho-digital.com/fragment/bibl_sappho_98> rdf:type owl:NamedIndividual ,
-                                                              ecrm:E28_Conceptual_Object ,
-                                                              ecrm:E72_Legal_Object ,
-                                                              ecrm:E90_Symbolic_Object ,
+                                                              lrmoo:F1_Work ,
+                                                              <http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object> ,
                                                               owl:Thing .
 
 

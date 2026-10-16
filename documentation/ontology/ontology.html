@@ -1771,6 +1771,12 @@
                 <ul>
                   <li>
                     <span>
+                      <a href="http://iflastandards.info/ns/lrm/lrmoo/R3_is_realised_in">R3 is realised in</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
                       <a href="http://iflastandards.info/ns/lrm/lrmoo/R10_is_member_of">R10 is
                         member of</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
@@ -1800,6 +1806,12 @@
               </th>
               <td>
                 <ul>
+                  <li>
+                    <span>
+                      <a href="http://iflastandards.info/ns/lrm/lrmoo/R3i_realises">R3i realises</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
                   <li>
                     <span>
                       <a href="http://iflastandards.info/ns/lrm/lrmoo/R10i_has_member">R10i has
@@ -2091,6 +2103,12 @@
                 <ul>
                   <li>
                     <span>
+                      <a href="http://iflastandards.info/ns/lrm/lrmoo/R3i_realises">R3i realises</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
+                  <li>
+                    <span>
                       <a href="http://iflastandards.info/ns/lrm/lrmoo/R17i_was_created_by">R17i was
                         created by</a>
                       <sup class="sup-op" title="OWL Object Property">op</sup>
@@ -2156,6 +2174,12 @@
               </th>
               <td>
                 <ul>
+                  <li>
+                    <span>
+                      <a href="http://iflastandards.info/ns/lrm/lrmoo/R3_is_realised_in">R3 is realised in</a>
+                      <sup class="sup-op" title="OWL Object Property">op</sup>
+                    </span>
+                  </li>
                   <li>
                     <span>
                       <a href="http://iflastandards.info/ns/lrm/lrmoo/R17_created">R17 created</a>
@@ -3166,6 +3190,143 @@
               <td>
                 <a href="http://erlangen-crm.org/current/E71_Human-Made_Thing"
                   >ecrm:E71_Human-Made_Thing</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="P130showsfeaturesof">
+          <h3>P130 shows features of <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://erlangen-crm.org/current/P130_shows_features_of</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td>
+                <p>Quantification: many to many (0,n:0,n) Scope note: This property generalises the
+                  notions of “copy of” and “similar to” into a directed relationship, where the
+                  domain expresses the derivative or influenced item and the range the source or
+                  influencing item, if such a direction can be established. The property can also be
+                  used to express similarity in cases that can be stated between two objects only,
+                  without historical knowledge about its reasons. The property expresses a symmetric
+                  relationship in case no direction of influence can be established either from
+                  evidence on the item itself or from historical knowledge. This holds in particular
+                  for siblings of a derivation process from a common source or non-causal cultural
+                  parallels, such as some weaving patterns. The P130.1 kind of similarity property
+                  of the P130 shows features of (features are also found on) property enables the
+                  relationship between the domain and the range to be further clarified, in the
+                  sense from domain to range, if applicable. For example, it may be expressed if
+                  both items are product “of the same mould”, or if two texts “contain identical
+                  paragraphs”. If the reason for similarity is a sort of derivation process, i.e.
+                  that the creator has used or had in mind the form of a particular thing during the
+                  creation or production, this process should be explicitly modelled. In these
+                  cases, P130 shows features of can be regarded as a shortcut of such a process.
+                  However, the current model does not contain any path specific enough to infer this
+                  property. Specializations of the CIDOC CRM may however be more explicit, for
+                  instance describing the use of moulds etc. This property is not transitive. This
+                  property is irreflexive. Examples: - Mary Lamb’s Cymbeline from Charles and Mary
+                  Lamb’s Tales from Shakespeare (E89) shows features of William Shakespeare’s
+                  Cymbeline (E89). (Carrington, 1954) - The audio recording of Dante Alighieri’s La
+                  divina commedia read by Enrico de Negri (E73) shows features of the text of Dante
+                  Alighieri’s La divina commedia (E89). (Alighieri, 1956) Properties: - P130.1 kind
+                  of similarity: E55 Type In First Order Logic: - P130(x,y) ⇒ E70(x) - P130(x,y) ⇒
+                  E70(y) - P130(x,y,z) ⇒ [P130(x,y) ∧ E55(z)] - ¬P130(x,x)</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain"
+                  title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)"
+                  >Domain</a>
+              </th>
+              <td>
+                <a href="http://erlangen-crm.org/current/E70_Thing">ecrm:E70_Thing</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range"
+                  title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)"
+                  >Range</a>
+              </th>
+              <td>
+                <a href="http://erlangen-crm.org/current/E70_Thing">ecrm:E70_Thing</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="P130featuresarealsofoundon">
+          <h3>P130 features are also found on <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://erlangen-crm.org/current/P130i_features_are_also_found_on</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td>
+                <p>Quantification of the inverse property: many to many (0,n:0,n) Scope note of the
+                  inverse property: This property generalises the notions of “copy of” and “similar
+                  to” into a directed relationship, where the domain expresses the derivative or
+                  influenced item and the range the source or influencing item, if such a direction
+                  can be established. The property can also be used to express similarity in cases
+                  that can be stated between two objects only, without historical knowledge about
+                  its reasons. The property expresses a symmetric relationship in case no direction
+                  of influence can be established either from evidence on the item itself or from
+                  historical knowledge. This holds in particular for siblings of a derivation
+                  process from a common source or non-causal cultural parallels, such as some
+                  weaving patterns. The P130.1 kind of similarity property of the P130 shows
+                  features of (features are also found on) property enables the relationship between
+                  the domain and the range to be further clarified, in the sense from domain to
+                  range, if applicable. For example, it may be expressed if both items are product
+                  “of the same mould”, or if two texts “contain identical paragraphs”. If the reason
+                  for similarity is a sort of derivation process, i.e. that the creator has used or
+                  had in mind the form of a particular thing during the creation or production, this
+                  process should be explicitly modelled. In these cases, P130 shows features of can
+                  be regarded as a shortcut of such a process. However, the current model does not
+                  contain any path specific enough to infer this property. Specializations of the
+                  CIDOC CRM may however be more explicit, for instance describing the use of moulds
+                  etc. This property is not transitive. This property is irreflexive. Examples of
+                  the inverse property: - Mary Lamb’s Cymbeline from Charles and Mary Lamb’s Tales
+                  from Shakespeare (E89) shows features of William Shakespeare’s Cymbeline (E89).
+                  (Carrington, 1954) - The audio recording of Dante Alighieri’s La divina commedia
+                  read by Enrico de Negri (E73) shows features of the text of Dante Alighieri’s La
+                  divina commedia (E89). (Alighieri, 1956) In First Order Logic of the inverse
+                  property: - P130(x,y) ⇒ E70(x) - P130(x,y) ⇒ E70(y) - P130(x,y,z) ⇒ [P130(x,y) ∧
+                  E55(z)] - ¬P130(x,x)</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain"
+                  title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)"
+                  >Domain</a>
+              </th>
+              <td>
+                <a href="http://erlangen-crm.org/current/E70_Thing">ecrm:E70_Thing</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range"
+                  title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)"
+                  >Range</a>
+              </th>
+              <td>
+                <a href="http://erlangen-crm.org/current/E70_Thing">ecrm:E70_Thing</a>
               </td>
             </tr>
           </table>
@@ -4978,6 +5139,172 @@
                 <span>
                   <a href="http://iflastandards.info/ns/lrm/lrmoo/F30_Manifestation_Creation">F30
                     Manifestation Creation</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="R3isrealisedin">
+          <h3>R3 is realised in <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://iflastandards.info/ns/lrm/lrmoo/R3_is_realised_in</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td>
+                <p>Quantification: one to many, necessary, dependent (1,n:1,1) Scope note: This
+                  property associates an instance of F2 Expression with an instance of F1 Work. This
+                  property expresses the association that exists between an expression and the work
+                  that this expression conveys. Our factual knowledge of how a given work is
+                  historically realised into expressions is often limited. Therefore, this property
+                  makes it possible to express the association between an instance of F2 Expression
+                  and the instance of F1 Work it conveys without identifying the particular
+                  instances of F2 Expression that were part of a chain of derivation from the
+                  source. Examples: - Agatha Christie’s work entitled ‘Murder on the Orient Express’
+                  (F1) is realised in the original text written by Agatha Christie for the novel
+                  (F2). - Agatha Christie’s work entitled ‘Murder on the Orient Express’ (F1) is
+                  realised in the German translation created by Elisabeth van Bebber (F2). - Agatha
+                  Christie’s work entitled ‘Murder on the Orient Express’ (F1) is realised in the
+                  narration of the English text by David Suchet (F2). - Dante’s work entitled
+                  ‘Inferno’ (F1) is realised in the Italian text of Dante’s ‘Inferno’ as found in
+                  the authoritative critical edition ‘La Commedia secondo l’antica issolu’ a cura di
+                  Giorgio Petrocchi, Milano: Mondadori, 1966-67 (= ‘Le Opere di Dante Alighieri’,
+                  Edizione Nazionale a cura della Società Dantesca Italiana, VII, 1-4) (F2). -
+                  Johann Sebastian Bach’s ‘Goldberg Variations’ (F1) is realised in the score of the
+                  ‘Goldberg Variations’ (as published by Balthasar Schmid in 1741) (F2). - Auguste
+                  Rodin’s work ‘The Thinker’ (F1) is realised in the first plaster version of ‘The
+                  thinker’ (F2) that Auguste Rodin made around 1881. - Auguste Rodin’s work ‘The
+                  Thinker’ (F1) is realised in the large-scale version of ‘The thinker’ (F2) created
+                  at the Fonderie Alexis Rudier in 1904. In First Order Logic: - R3(x,y) ⇒ F1(x) -
+                  R3(x,y) ⇒ F2(y) - R3(x,y) ⇒ P130(x,y) - R3(x,z) ∧ R3(y,z) ⇒ x=y</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"
+                  title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)"
+                  >Sub Property Of</a>
+              </th>
+              <td>
+                <a href="http://www.cidoc-crm.org/cidoc-crm/P130_shows_features_of"
+                  >cidoc:P130_shows_features_of</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain"
+                  title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)"
+                  >Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://iflastandards.info/ns/lrm/lrmoo/F1_Work">F1 Work</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range"
+                  title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)"
+                  >Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression">F2 Expression</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="property entity" id="R3irealises">
+          <h3>R3i realises <sup class="sup-op" title="OWL Object Property">op</sup>
+          </h3>
+          <table>
+            <tr>
+              <th>IRI</th>
+              <td>
+                <code>http://iflastandards.info/ns/lrm/lrmoo/R3i_realises</code>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://purl.org/dc/terms/description"
+                  title="An account of the resource. Defined in DCMI Metadata Terms">Description</a>
+              </th>
+              <td>
+                <p>Quantification of the inverse property: one to many, necessary, dependent
+                  (1,n:1,1) Scope note of the inverse property: This property associates an instance
+                  of F2 Expression with an instance of F1 Work. This property expresses the
+                  association that exists between an expression and the work that this expression
+                  conveys. Our factual knowledge of how a given work is historically realised into
+                  expressions is often limited. Therefore, this property makes it possible to
+                  express the association between an instance of F2 Expression and the instance of
+                  F1 Work it conveys without identifying the particular instances of F2 Expression
+                  that were part of a chain of derivation from the source. Examples of the inverse
+                  property: - Agatha Christie’s work entitled ‘Murder on the Orient Express’ (F1) is
+                  realised in the original text written by Agatha Christie for the novel (F2). -
+                  Agatha Christie’s work entitled ‘Murder on the Orient Express’ (F1) is realised in
+                  the German translation created by Elisabeth van Bebber (F2). - Agatha Christie’s
+                  work entitled ‘Murder on the Orient Express’ (F1) is realised in the narration of
+                  the English text by David Suchet (F2). - Dante’s work entitled ‘Inferno’ (F1) is
+                  realised in the Italian text of Dante’s ‘Inferno’ as found in the authoritative
+                  critical edition ‘La Commedia secondo l’antica issolu’ a cura di Giorgio
+                  Petrocchi, Milano: Mondadori, 1966-67 (= ‘Le Opere di Dante Alighieri’, Edizione
+                  Nazionale a cura della Società Dantesca Italiana, VII, 1-4) (F2). - Johann
+                  Sebastian Bach’s ‘Goldberg Variations’ (F1) is realised in the score of the
+                  ‘Goldberg Variations’ (as published by Balthasar Schmid in 1741) (F2). - Auguste
+                  Rodin’s work ‘The Thinker’ (F1) is realised in the first plaster version of ‘The
+                  thinker’ (F2) that Auguste Rodin made around 1881. - Auguste Rodin’s work ‘The
+                  Thinker’ (F1) is realised in the large-scale version of ‘The thinker’ (F2) created
+                  at the Fonderie Alexis Rudier in 1904. In First Order Logic of the inverse
+                  property: - R3(x,y) ⇒ F1(x) - R3(x,y) ⇒ F2(y) - R3(x,y) ⇒ P130(x,y) - R3(x,z) ∧
+                  R3(y,z) ⇒ x=y</p>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"
+                  title="The subject is a subproperty of a property. Defined in The RDF Schema vocabulary (RDFS)"
+                  >Sub Property Of</a>
+              </th>
+              <td>
+                <a href="http://www.cidoc-crm.org/cidoc-crm/P130i_features_are_also_found_on"
+                  >cidoc:P130i_features_are_also_found_on</a>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#domain"
+                  title="A domain of the subject property. Defined in The RDF Schema vocabulary (RDFS)"
+                  >Domain</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression">F2 Expression</a>
+                  <sup class="sup-c" title="OWL/RDFS Class">c</sup>
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <th>
+                <a class="hover_property" href="http://www.w3.org/2000/01/rdf-schema#range"
+                  title="A range of the subject property. Defined in The RDF Schema vocabulary (RDFS)"
+                  >Range</a>
+              </th>
+              <td>
+                <span>
+                  <a href="http://iflastandards.info/ns/lrm/lrmoo/F1_Work">F1 Work</a>
                   <sup class="sup-c" title="OWL/RDFS Class">c</sup>
                 </span>
               </td>
@@ -6990,6 +7317,12 @@
               <a href="#P102istitleof">P102 is title of</a>
             </li>
             <li>
+              <a href="#P130showsfeaturesof">P130 shows features of</a>
+            </li>
+            <li>
+              <a href="#P130featuresarealsofoundon">P130 features are also found on</a>
+            </li>
+            <li>
               <a href="#P138represents">P138 represents</a>
             </li>
             <li>
@@ -7066,6 +7399,12 @@
             </li>
             <li>
               <a href="#R24iwascreatedthrough">R24i was created through</a>
+            </li>
+            <li>
+              <a href="#R3isrealisedin">R3 is realised in</a>
+            </li>
+            <li>
+              <a href="#R3irealises">R3i realises</a>
             </li>
             <li>
               <a href="#R4embodies">R4 embodies</a>

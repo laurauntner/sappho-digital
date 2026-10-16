@@ -26,7 +26,7 @@
         { "@value": "Laura Untner", "@type": "xsd:string" }
       ],
       "dc:issued": { "@value": "2026-02-01", "@type": "xsd:date" },
-      "dc:modified": { "@value": "2026-02-18", "@type": "xsd:date" },
+      "dc:modified": { "@value": "2026-10-16", "@type": "xsd:date" },
       "cc:licence": { "@id": "https://creativecommons.org/licenses/by/4.0/" },
       "dc:rights": "This ontology is distributed under the Creative Commons Attribution 4.0 International Licence (CC-BY 4.0).",
       "dc:description": "This is an ontology developed in the project Sappho Digital by Laura Untner. It reuses the Erlangen OWL version of the CIDOC Conceptual Reference Model (CRM; ECRM 240307, based on CIDOC CRM 7.1.3), the object-oriented version of IFLA's Library Reference Model (LRMoo; v1.1.1) and INTRO (the Intertextual, Interpictorial and Intermedial Relations Ontology; beta202506) to model basic biographical and bibliographical as well as intertextual information.",
@@ -407,6 +407,38 @@
       "owl:inverseOf": { "@id": "ecrm:P102_has_title" },
       "rdfs:subPropertyOf": { "@id": "ecrm:P1i_identifies" },
       "owl:sameAs": { "@id": "crm:P102i_is_title_of" }
+    },
+
+    {
+      "@id": "ecrm:P130_shows_features_of",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P130 shows features of", "@language": "en" },
+        { "@value": "P130 zeigt Merkmale von", "@language": "de" },
+        { "@value": "P130 présente les caractéristiques de", "@language": "fr" },
+        { "@value": "P130 显示特征", "@language": "zh" }
+      ],
+      "skos:notation": "P130",
+      "rdfs:domain": { "@id": "ecrm:E70_Thing" },
+      "rdfs:range": { "@id": "ecrm:E70_Thing" },
+      "owl:inverseOf": { "@id": "ecrm:P130i_features_are_also_found_on" },
+      "owl:sameAs": { "@id": "crm:P130_shows_features_of" }
+    },
+
+    {
+      "@id": "ecrm:P130i_features_are_also_found_on",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": [
+        { "@value": "P130 features are also found on", "@language": "en" },
+        { "@value": "P130 Merkmale auch auf", "@language": "de" },
+        { "@value": "P130 a les caractéristiques aussi présentes sur", "@language": "fr" },
+        { "@value": "P130 发现特征", "@language": "zh" }
+      ],
+      "skos:notation": "P130i",
+      "rdfs:domain": { "@id": "ecrm:E70_Thing" },
+      "rdfs:range": { "@id": "ecrm:E70_Thing" },
+      "owl:inverseOf": { "@id": "ecrm:P130_shows_features_of" },
+      "owl:sameAs": { "@id": "crm:P130i_features_are_also_found_on" }
     },
 
     {
@@ -859,6 +891,30 @@
       "rdfs:range": { "@id": "lrmoo:F30_Manifestation_Creation" },
       "owl:inverseOf": { "@id": "lrmoo:R24_created" },
       "rdfs:subPropertyOf": { "@id": "crm:P94i_was_created_by" }
+    },
+
+    {
+      "@id": "lrmoo:R3_is_realised_in",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R3 is realised in", "@language": "en" },
+      "skos:notation": "R3",
+      "skos:prefLabel": { "@value": "is realised in", "@language": "en" },
+      "rdfs:domain": { "@id": "lrmoo:F1_Work" },
+      "rdfs:range": { "@id": "lrmoo:F2_Expression" },
+      "owl:inverseOf": { "@id": "lrmoo:R3i_realises" },
+      "rdfs:subPropertyOf": { "@id": "crm:P130_shows_features_of" }
+    },
+
+    {
+      "@id": "lrmoo:R3i_realises",
+      "@type": "owl:ObjectProperty",
+      "rdfs:label": { "@value": "R3i realises", "@language": "en" },
+      "skos:notation": "R3i",
+      "skos:prefLabel": { "@value": "realises", "@language": "en" },
+      "rdfs:domain": { "@id": "lrmoo:F2_Expression" },
+      "rdfs:range": { "@id": "lrmoo:F1_Work" },
+      "owl:inverseOf": { "@id": "lrmoo:R3_is_realised_in" },
+      "rdfs:subPropertyOf": { "@id": "crm:P130i_features_are_also_found_on" }
     },
 
     {

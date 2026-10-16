@@ -16,7 +16,9 @@ FRBRoo <-> LRMoo:
 
 | LRMoo Property (direct)          | LRMoo Property (inverse)     | FRBRoo Property (direct)         | FRBRoo Property (inverse)     |
 | -------------------------------- | ---------------------------- | -------------------------------- | ----------------------------- |
+| R3_is_realised_in                | R3i_realises                 | R3_is_realised_in                | R3i_realises                  |
 | R4_embodies                      | R4i_is_embodied_in           | R4i_comprises_carriers_of        | R4_carriers_provided_by       |
+| R10_is_member_of                 | R10i_has_member              | R10i_is_member_of                | R10_has_member                |
 | R7_exemplifies                   | R7i_is_exemplified_by        | R7_is_example_of                 | R7i_has_example               |
 | R16_created                      | R16i_was_created_by          | R16_initiated                    | R16i_was_initiated_by         |
 | R17_created                      | R17i_was_created_by          | R17_created                      | R17i_was_created_by           |

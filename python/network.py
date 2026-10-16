@@ -380,8 +380,10 @@ def resolve_url(uri, classes, g, labels):
     if "https://w3id.org/lso/intro/currentbeta#INT31_IntertextualRelation" in classes:
         return BASE + "intertexts.html", None
 
-    # F1_Work
+    # F1_Work (einzelne Fragmente haben eigene Seiten, das Gesamtwerk nicht)
     if "http://iflastandards.info/ns/lrm/lrmoo/F1_Work" in classes:
+        if "/fragment/" in uri:
+            return BASE + local_id(uri) + ".html", None
         return BASE + "analyse.html", None
 
     # F2_Expression

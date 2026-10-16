@@ -328,9 +328,10 @@ for bibl in top_bibls:
         add_bilingual(g, digital_uri,
                       f"Digitale Kopie von {digital_label}",
                       f"Digital Copy of {digital_label}")
-        g.add((digital_uri, ECRM.P138_represents, bibl_uri))
+        # P130 (shows features of) generalisiert in CIDOC CRM "copy of"; P138 verlangt ein E36_Visual_Item
+        g.add((digital_uri, ECRM.P130_shows_features_of, bibl_uri))
         g.add((digital_uri, RDFS.seeAlso, URIRef(url)))
-        g.add((bibl_uri, ECRM.P138i_has_representation, digital_uri))
+        g.add((bibl_uri, ECRM.P130i_features_are_also_found_on, digital_uri))
 
     # Daten
     date_created   = bibl.find("tei:date[@type='created']",   namespaces=NSMAP)
