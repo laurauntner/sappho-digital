@@ -618,24 +618,13 @@ intro:R30i_isTextPassageOf rdf:type owl:ObjectProperty ;
 <https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by> rdf:type owl:ObjectProperty ;
                                                                   owl:inverseOf <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> ;
                                                                   rdfs:domain lrmoo:F2_Expression ;
-                                                                  rdfs:range lrmoo:F2_Expression ;
-                                                                  rdfs:comment "A F2_Expression is possibly cited by another F2_Expression."@en ;
-                                                                  rdfs:label "expr_possibly_cited_by"@en .
+                                                                  rdfs:range lrmoo:F2_Expression .
 
 
 ###  https://w3id.org/sappho-digital/ontology/expr_possibly_cites
 <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> rdf:type owl:ObjectProperty ;
                                                                rdfs:domain lrmoo:F2_Expression ;
-                                                               rdfs:range lrmoo:F2_Expression ;
-                                                               owl:propertyChainAxiom ( intro:R30_hasTextPassage
-                                                                                        [ owl:inverseOf intro:R24_hasRelatedEntity
-                                                                                        ]
-                                                                                        intro:R24_hasRelatedEntity
-                                                                                        [ owl:inverseOf intro:R30i_isTextPassageOf
-                                                                                        ]
-                                                                                      ) ;
-                                                               rdfs:comment "A F2_Expression possibly cites another F2_Expression."@en ;
-                                                               rdfs:label "expr_possibly_cites"@en .
+                                                               rdfs:range lrmoo:F2_Expression .
 
 
 ###  https://w3id.org/sappho-digital/ontology/expr_references
@@ -654,15 +643,20 @@ intro:R30i_isTextPassageOf rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/sappho-digital/ontology/expr_relation
 <https://w3id.org/sappho-digital/ontology/expr_relation> rdf:type owl:ObjectProperty ,
                                                                   owl:SymmetricProperty ;
-                                                         rdfs:domain lrmoo:F2_Expression ;
-                                                         rdfs:range lrmoo:F2_Expression ;
-                                                         owl:propertyChainAxiom ( [ owl:inverseOf intro:R18i_actualizationFoundOn
-                                                                                  ]
-                                                                                  intro:R24i_isRelatedEntity
-                                                                                  intro:R24_hasRelatedEntity
-                                                                                  intro:R18i_actualizationFoundOn
+                                                         rdfs:domain [ rdf:type owl:Class ;
+                                                                       owl:unionOf ( lrmoo:F1_Work
+                                                                                     lrmoo:F2_Expression
+                                                                                   )
+                                                                     ] ;
+                                                         rdfs:range [ rdf:type owl:Class ;
+                                                                      owl:unionOf ( lrmoo:F1_Work
+                                                                                    lrmoo:F2_Expression
+                                                                                  )
+                                                                    ] ;
+                                                         owl:propertyChainAxiom ( intro:R13i_isReferringEntity
+                                                                                  intro:R12_hasReferredToEntity
                                                                                 ) ;
-                                                         rdfs:comment "A relation between two F2_Expressions."@en ;
+                                                         rdfs:comment "A symmetric relation between two F2_Expressions, or between an F2_Expression and an F1_Work, that are linked as referring entity (R13) and referred-to entity (R12) of the same INT31_IntertextualRelation. The chain therefore never relates an expression to itself; relations without a determinable direction (only R24) are not covered."@en ;
                                                          rdfs:label "expr_relation"@en .
 
 
@@ -692,19 +686,13 @@ intro:R30i_isTextPassageOf rdf:type owl:ObjectProperty ;
 <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> rdf:type owl:ObjectProperty ;
                                                                 owl:inverseOf <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> ;
                                                                 rdfs:domain intro:INT21_TextPassage ;
-                                                                rdfs:range lrmoo:F2_Expression ;
-                                                                rdfs:comment "An INT21_TextPassage is possibly cited by a F2_Expression."@en ;
-                                                                rdfs:label "tp_possibly_cited_by"@en .
+                                                                rdfs:range lrmoo:F2_Expression .
 
 
 ###  https://w3id.org/sappho-digital/ontology/tp_possibly_cites
 <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> rdf:type owl:ObjectProperty ;
                                                              rdfs:domain lrmoo:F2_Expression ;
-                                                             rdfs:range intro:INT21_TextPassage ;
-                                                             owl:propertyChainAxiom ( intro:R30_hasTextPassage
-                                                                                    ) ;
-                                                             rdfs:comment "A F2_Expression possibly cites an INT21_TextPassage."@en ;
-                                                             rdfs:label "tp_possibly_cites"@en .
+                                                             rdfs:range intro:INT21_TextPassage .
 
 
 #################################################################
@@ -214079,7 +214067,15 @@ Philosophen zu Sanssouci"""@de ;
                                                                                <https://sappho-digital.com/textpassage/textpassage_b4ef8382> ,
                                                                                <https://sappho-digital.com/textpassage/textpassage_dfa4d60a> ,
                                                                                <https://sappho-digital.com/textpassage/textpassage_f09c5b81> ,
-                                                                               <https://sappho-digital.com/textpassage/textpassage_f4991caa> .
+                                                                               <https://sappho-digital.com/textpassage/textpassage_f4991caa> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> <https://sappho-digital.com/expression/bibl_sappho_16> ,
+                                                                                                                     <https://sappho-digital.com/expression/bibl_sappho_168b> ,
+                                                                                                                     <https://sappho-digital.com/expression/bibl_sappho_94> ,
+                                                                                                                     <https://sappho-digital.com/expression/bibl_sappho_98> ;
+                                                      <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> <https://sappho-digital.com/textpassage/textpassage_25c515b7> ,
+                                                                                                                   <https://sappho-digital.com/textpassage/textpassage_a04208b2> ,
+                                                                                                                   <https://sappho-digital.com/textpassage/textpassage_dfa4d60a> ,
+                                                                                                                   <https://sappho-digital.com/textpassage/textpassage_f4991caa> .
 
 
 ###  https://sappho-digital.com/expression/bibl_0111d6f5
@@ -216124,7 +216120,9 @@ Philosophen zu Sanssouci"""@de ;
                                                                                  <https://sappho-digital.com/relation/bibl_6fcff98a_bibl_0bd2c59f> ,
                                                                                  <https://sappho-digital.com/relation/bibl_843e4821_bibl_0bd2c59f> ,
                                                                                  <https://sappho-digital.com/relation/bibl_b6b98051_bibl_0bd2c59f> ;
-                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_b3e607dc> .
+                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_b3e607dc> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> <https://sappho-digital.com/expression/bibl_sappho_16> ;
+                                                      <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> <https://sappho-digital.com/textpassage/textpassage_b3e607dc> .
 
 
 ###  https://sappho-digital.com/expression/bibl_0c2f010f
@@ -217592,7 +217590,8 @@ Philosophen zu Sanssouci"""@de ;
                                                                                  <https://sappho-digital.com/relation/bibl_f8609041_bibl_19d5a7ab> ,
                                                                                  <https://sappho-digital.com/relation/bibl_fa4c6f94_bibl_19d5a7ab> ,
                                                                                  <https://sappho-digital.com/relation/bibl_ffadfa01_bibl_19d5a7ab> ;
-                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_9184d56f> .
+                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_9184d56f> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by> <https://sappho-digital.com/expression/bibl_4e970562> .
 
 
 ###  https://sappho-digital.com/expression/bibl_19d9dbc7
@@ -222186,7 +222185,9 @@ Philosophen zu Sanssouci"""@de ;
                                                                                  <https://sappho-digital.com/relation/bibl_3761b97f_bibl_sappho_96> ,
                                                                                  <https://sappho-digital.com/relation/bibl_3761b97f_sappho-work> ,
                                                                                  <https://sappho-digital.com/relation/bibl_6fcff98a_bibl_3761b97f> ;
-                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_599a4574> .
+                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_599a4574> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> <https://sappho-digital.com/expression/bibl_sappho_168b> ;
+                                                      <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> <https://sappho-digital.com/textpassage/textpassage_599a4574> .
 
 
 ###  https://sappho-digital.com/expression/bibl_376b429f
@@ -223527,7 +223528,9 @@ Philosophen zu Sanssouci"""@de ;
                                                                                  <https://sappho-digital.com/relation/bibl_efcd32b0_bibl_407a0d29> ,
                                                                                  <https://sappho-digital.com/relation/bibl_f4da59f4_bibl_407a0d29> ,
                                                                                  <https://sappho-digital.com/relation/bibl_f5e2fa88_bibl_407a0d29> ;
-                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_800c2ae2> .
+                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_800c2ae2> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> <https://sappho-digital.com/expression/bibl_sappho_156> ;
+                                                      <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> <https://sappho-digital.com/textpassage/textpassage_800c2ae2> .
 
 
 ###  https://sappho-digital.com/expression/bibl_408e515e
@@ -225758,7 +225761,13 @@ Philosophen zu Sanssouci"""@de ;
                                                                                <https://sappho-digital.com/textpassage/textpassage_1df2dbe0> ,
                                                                                <https://sappho-digital.com/textpassage/textpassage_4aaaf5f9> ,
                                                                                <https://sappho-digital.com/textpassage/textpassage_9184d56f> ,
-                                                                               <https://sappho-digital.com/textpassage/textpassage_ba815dab> .
+                                                                               <https://sappho-digital.com/textpassage/textpassage_ba815dab> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> <https://sappho-digital.com/expression/bibl_19d5a7ab> ,
+                                                                                                                     <https://sappho-digital.com/expression/bibl_sappho_130> ,
+                                                                                                                     <https://sappho-digital.com/expression/bibl_sappho_55> ;
+                                                      <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> <https://sappho-digital.com/textpassage/textpassage_11c43cae> ,
+                                                                                                                   <https://sappho-digital.com/textpassage/textpassage_1df2dbe0> ,
+                                                                                                                   <https://sappho-digital.com/textpassage/textpassage_9184d56f> .
 
 
 ###  https://sappho-digital.com/expression/bibl_4ea873ad
@@ -226041,7 +226050,9 @@ Philosophen zu Sanssouci"""@de ;
                                                                                  <https://sappho-digital.com/relation/bibl_efcd32b0_bibl_4fcb8123> ,
                                                                                  <https://sappho-digital.com/relation/bibl_f4da59f4_bibl_4fcb8123> ,
                                                                                  <https://sappho-digital.com/relation/bibl_f5e2fa88_bibl_4fcb8123> ;
-                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_feaa4927> .
+                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_feaa4927> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> <https://sappho-digital.com/expression/bibl_sappho_1> ;
+                                                      <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> <https://sappho-digital.com/textpassage/textpassage_feaa4927> .
 
 
 ###  https://sappho-digital.com/expression/bibl_50d9444a
@@ -226467,7 +226478,9 @@ Philosophen zu Sanssouci"""@de ;
                                                                                  <https://sappho-digital.com/relation/bibl_fa064c2f_bibl_5283cfa8> ,
                                                                                  <https://sappho-digital.com/relation/bibl_fa4c6f94_bibl_5283cfa8> ,
                                                                                  <https://sappho-digital.com/relation/bibl_ffadfa01_bibl_5283cfa8> ;
-                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_39e3d09d> .
+                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_39e3d09d> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> <https://sappho-digital.com/expression/bibl_sappho_31> ;
+                                                      <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> <https://sappho-digital.com/textpassage/textpassage_39e3d09d> .
 
 
 ###  https://sappho-digital.com/expression/bibl_5307fa10
@@ -228308,7 +228321,9 @@ Philosophen zu Sanssouci"""@de ;
                                                                                  <https://sappho-digital.com/relation/bibl_f4da59f4_bibl_5ca5f0b6> ,
                                                                                  <https://sappho-digital.com/relation/bibl_f5e2fa88_bibl_5ca5f0b6> ,
                                                                                  <https://sappho-digital.com/relation/bibl_ffadfa01_bibl_5ca5f0b6> ;
-                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_39294f32> .
+                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_39294f32> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> <https://sappho-digital.com/expression/bibl_sappho_136> ;
+                                                      <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> <https://sappho-digital.com/textpassage/textpassage_39294f32> .
 
 
 ###  https://sappho-digital.com/expression/bibl_5cb4754f
@@ -231722,7 +231737,13 @@ Philosophen zu Sanssouci"""@de ;
                                                                                  <https://sappho-digital.com/relation/bibl_6fcff98a_sappho-work> ;
                                                       intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_2b685bda> ,
                                                                                <https://sappho-digital.com/textpassage/textpassage_d886908c> ,
-                                                                               <https://sappho-digital.com/textpassage/textpassage_e93928ba> .
+                                                                               <https://sappho-digital.com/textpassage/textpassage_e93928ba> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> <https://sappho-digital.com/expression/bibl_sappho_130> ,
+                                                                                                                     <https://sappho-digital.com/expression/bibl_sappho_158> ,
+                                                                                                                     <https://sappho-digital.com/expression/bibl_sappho_96> ;
+                                                      <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> <https://sappho-digital.com/textpassage/textpassage_2b685bda> ,
+                                                                                                                   <https://sappho-digital.com/textpassage/textpassage_d886908c> ,
+                                                                                                                   <https://sappho-digital.com/textpassage/textpassage_e93928ba> .
 
 
 ###  https://sappho-digital.com/expression/bibl_70157e85
@@ -232512,7 +232533,9 @@ Philosophen zu Sanssouci"""@de ;
                                                                                  <https://sappho-digital.com/relation/bibl_f4da59f4_bibl_78d95d8c> ,
                                                                                  <https://sappho-digital.com/relation/bibl_f5e2fa88_bibl_78d95d8c> ,
                                                                                  <https://sappho-digital.com/relation/bibl_ffadfa01_bibl_78d95d8c> ;
-                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_c402b493> .
+                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_c402b493> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> <https://sappho-digital.com/expression/bibl_sappho_31> ;
+                                                      <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> <https://sappho-digital.com/textpassage/textpassage_c402b493> .
 
 
 ###  https://sappho-digital.com/expression/bibl_78effcb9
@@ -235395,7 +235418,9 @@ Philosophen zu Sanssouci"""@de ;
                                                                                  <https://sappho-digital.com/relation/bibl_889153c6_sappho-work> ,
                                                                                  <https://sappho-digital.com/relation/bibl_b6b98051_bibl_889153c6> ,
                                                                                  <https://sappho-digital.com/relation/bibl_baaeb54e_bibl_889153c6> ;
-                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_b22ad97c> .
+                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_b22ad97c> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> <https://sappho-digital.com/expression/bibl_sappho_168b> ;
+                                                      <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> <https://sappho-digital.com/textpassage/textpassage_b22ad97c> .
 
 
 ###  https://sappho-digital.com/expression/bibl_889c882e
@@ -236382,7 +236407,9 @@ Philosophen zu Sanssouci"""@de ;
                                                                                  <https://sappho-digital.com/relation/bibl_baaeb54e_bibl_8e053a15> ,
                                                                                  <https://sappho-digital.com/relation/bibl_efcd32b0_bibl_8e053a15> ,
                                                                                  <https://sappho-digital.com/relation/bibl_f5e2fa88_bibl_8e053a15> ;
-                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_8d782837> .
+                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_8d782837> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> <https://sappho-digital.com/expression/bibl_sappho_105> ;
+                                                      <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> <https://sappho-digital.com/textpassage/textpassage_8d782837> .
 
 
 ###  https://sappho-digital.com/expression/bibl_8e5d4b70
@@ -239594,7 +239621,9 @@ Philosophen zu Sanssouci"""@de ;
                                                                                  <https://sappho-digital.com/relation/bibl_efcd32b0_bibl_9bb8a741> ,
                                                                                  <https://sappho-digital.com/relation/bibl_f4da59f4_bibl_9bb8a741> ,
                                                                                  <https://sappho-digital.com/relation/bibl_f5e2fa88_bibl_9bb8a741> ;
-                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_544e7d9d> .
+                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_544e7d9d> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> <https://sappho-digital.com/expression/bibl_sappho_130> ;
+                                                      <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> <https://sappho-digital.com/textpassage/textpassage_544e7d9d> .
 
 
 ###  https://sappho-digital.com/expression/bibl_9d195b55
@@ -240387,7 +240416,13 @@ Philosophen zu Sanssouci"""@de ;
                                                       intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_0726f59d> ,
                                                                                <https://sappho-digital.com/textpassage/textpassage_4912ef03> ,
                                                                                <https://sappho-digital.com/textpassage/textpassage_9ff4e0c8> ,
-                                                                               <https://sappho-digital.com/textpassage/textpassage_f539df53> .
+                                                                               <https://sappho-digital.com/textpassage/textpassage_f539df53> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> <https://sappho-digital.com/expression/bibl_sappho_1> ,
+                                                                                                                     <https://sappho-digital.com/expression/bibl_sappho_2> ,
+                                                                                                                     <https://sappho-digital.com/expression/bibl_sappho_31> ;
+                                                      <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> <https://sappho-digital.com/textpassage/textpassage_0726f59d> ,
+                                                                                                                   <https://sappho-digital.com/textpassage/textpassage_4912ef03> ,
+                                                                                                                   <https://sappho-digital.com/textpassage/textpassage_9ff4e0c8> .
 
 
 ###  https://sappho-digital.com/expression/bibl_a1063242
@@ -246645,7 +246680,8 @@ Philosophen zu Sanssouci"""@de ;
                                                                                  <https://sappho-digital.com/relation/bibl_fa064c2f_bibl_ba71b2e5> ,
                                                                                  <https://sappho-digital.com/relation/bibl_fa4c6f94_bibl_ba71b2e5> ,
                                                                                  <https://sappho-digital.com/relation/bibl_ffadfa01_bibl_ba71b2e5> ;
-                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_0b3967ce> .
+                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_0b3967ce> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by> <https://sappho-digital.com/expression/bibl_ec11b447> .
 
 
 ###  https://sappho-digital.com/expression/bibl_ba81ab70
@@ -246901,7 +246937,9 @@ Philosophen zu Sanssouci"""@de ;
                                                                                  <https://sappho-digital.com/relation/bibl_baaeb54e_bibl_sappho_94> ,
                                                                                  <https://sappho-digital.com/relation/bibl_baaeb54e_bibl_sappho_96> ,
                                                                                  <https://sappho-digital.com/relation/bibl_baaeb54e_sappho-work> ;
-                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_c3c0d4e7> .
+                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_c3c0d4e7> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> <https://sappho-digital.com/expression/bibl_sappho_168b> ;
+                                                      <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> <https://sappho-digital.com/textpassage/textpassage_c3c0d4e7> .
 
 
 ###  https://sappho-digital.com/expression/bibl_babd6d45
@@ -249947,7 +249985,9 @@ Philosophen zu Sanssouci"""@de ;
                                                                                  <https://sappho-digital.com/relation/bibl_fa064c2f_bibl_d85ade6a> ,
                                                                                  <https://sappho-digital.com/relation/bibl_fa4c6f94_bibl_d85ade6a> ,
                                                                                  <https://sappho-digital.com/relation/bibl_ffadfa01_bibl_d85ade6a> ;
-                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_1589ed18> .
+                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_1589ed18> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> <https://sappho-digital.com/expression/bibl_sappho_31> ;
+                                                      <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> <https://sappho-digital.com/textpassage/textpassage_1589ed18> .
 
 
 ###  https://sappho-digital.com/expression/bibl_d8683cb3
@@ -253972,7 +254012,9 @@ Philosophen zu Sanssouci"""@de ;
                                                                                  <https://sappho-digital.com/relation/bibl_f4da59f4_bibl_ec11b447> ,
                                                                                  <https://sappho-digital.com/relation/bibl_f5e2fa88_bibl_ec11b447> ,
                                                                                  <https://sappho-digital.com/relation/bibl_ffadfa01_bibl_ec11b447> ;
-                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_0b3967ce> .
+                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_0b3967ce> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cites> <https://sappho-digital.com/expression/bibl_ba71b2e5> ;
+                                                      <https://w3id.org/sappho-digital/ontology/tp_possibly_cites> <https://sappho-digital.com/textpassage/textpassage_0b3967ce> .
 
 
 ###  https://sappho-digital.com/expression/bibl_ec269dc5
@@ -257619,7 +257661,9 @@ Philosophen zu Sanssouci"""@de ;
                                                                                  <https://sappho-digital.com/relation/bibl_sappho_94_bibl_sappho_1> ,
                                                                                  <https://sappho-digital.com/relation/bibl_sappho_96_bibl_sappho_1> ;
                                                       intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_4912ef03> ,
-                                                                               <https://sappho-digital.com/textpassage/textpassage_feaa4927> .
+                                                                               <https://sappho-digital.com/textpassage/textpassage_feaa4927> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by> <https://sappho-digital.com/expression/bibl_4fcb8123> ,
+                                                                                                                        <https://sappho-digital.com/expression/bibl_a0bace6b> .
 
 
 ###  https://sappho-digital.com/expression/bibl_sappho_100
@@ -258635,7 +258679,8 @@ Philosophen zu Sanssouci"""@de ;
                                                                                    <https://sappho-digital.com/relation/bibl_sappho_92_bibl_sappho_105> ,
                                                                                    <https://sappho-digital.com/relation/bibl_sappho_94_bibl_sappho_105> ,
                                                                                    <https://sappho-digital.com/relation/bibl_sappho_98_bibl_sappho_105> ;
-                                                        intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_8d782837> .
+                                                        intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_8d782837> ;
+                                                        <https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by> <https://sappho-digital.com/expression/bibl_8e053a15> .
 
 
 ###  https://sappho-digital.com/expression/bibl_sappho_106
@@ -260806,7 +260851,10 @@ Philosophen zu Sanssouci"""@de ;
                                                                                    <https://sappho-digital.com/relation/bibl_sappho_96_bibl_sappho_130> ;
                                                         intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_1df2dbe0> ,
                                                                                  <https://sappho-digital.com/textpassage/textpassage_544e7d9d> ,
-                                                                                 <https://sappho-digital.com/textpassage/textpassage_d886908c> .
+                                                                                 <https://sappho-digital.com/textpassage/textpassage_d886908c> ;
+                                                        <https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by> <https://sappho-digital.com/expression/bibl_4e970562> ,
+                                                                                                                          <https://sappho-digital.com/expression/bibl_6fcff98a> ,
+                                                                                                                          <https://sappho-digital.com/expression/bibl_9bb8a741> .
 
 
 ###  https://sappho-digital.com/expression/bibl_sappho_132
@@ -261433,7 +261481,8 @@ Philosophen zu Sanssouci"""@de ;
                                                                                    <https://sappho-digital.com/relation/bibl_e9d96eef_bibl_sappho_136> ,
                                                                                    <https://sappho-digital.com/relation/bibl_sappho_136_bibl_sappho_1> ,
                                                                                    <https://sappho-digital.com/relation/bibl_sappho_136_bibl_sappho_135> ;
-                                                        intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_39294f32> .
+                                                        intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_39294f32> ;
+                                                        <https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by> <https://sappho-digital.com/expression/bibl_5ca5f0b6> .
 
 
 ###  https://sappho-digital.com/expression/bibl_sappho_137
@@ -263073,7 +263122,8 @@ Philosophen zu Sanssouci"""@de ;
                                                                                    <https://sappho-digital.com/relation/bibl_sappho_71_bibl_sappho_156> ,
                                                                                    <https://sappho-digital.com/relation/bibl_sappho_73_bibl_sappho_156> ,
                                                                                    <https://sappho-digital.com/relation/bibl_sappho_96_bibl_sappho_156> ;
-                                                        intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_800c2ae2> .
+                                                        intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_800c2ae2> ;
+                                                        <https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by> <https://sappho-digital.com/expression/bibl_407a0d29> .
 
 
 ###  https://sappho-digital.com/expression/bibl_sappho_157
@@ -263323,7 +263373,8 @@ Philosophen zu Sanssouci"""@de ;
                                                                                    <https://sappho-digital.com/relation/bibl_sappho_31_bibl_sappho_158> ,
                                                                                    <https://sappho-digital.com/relation/bibl_sappho_65_bibl_sappho_158> ,
                                                                                    <https://sappho-digital.com/relation/bibl_sappho_94_bibl_sappho_158> ;
-                                                        intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_2b685bda> .
+                                                        intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_2b685bda> ;
+                                                        <https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by> <https://sappho-digital.com/expression/bibl_6fcff98a> .
 
 
 ###  https://sappho-digital.com/expression/bibl_sappho_159
@@ -263666,7 +263717,9 @@ Philosophen zu Sanssouci"""@de ;
                                                                                   <https://sappho-digital.com/relation/bibl_sappho_94_bibl_sappho_16> ,
                                                                                   <https://sappho-digital.com/relation/bibl_sappho_96_bibl_sappho_16> ;
                                                        intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_a04208b2> ,
-                                                                                <https://sappho-digital.com/textpassage/textpassage_b3e607dc> .
+                                                                                <https://sappho-digital.com/textpassage/textpassage_b3e607dc> ;
+                                                       <https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by> <https://sappho-digital.com/expression/bibl_00e9aff1> ,
+                                                                                                                         <https://sappho-digital.com/expression/bibl_0bd2c59f> .
 
 
 ###  https://sappho-digital.com/expression/bibl_sappho_160
@@ -264102,7 +264155,11 @@ Philosophen zu Sanssouci"""@de ;
                                                          intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_25c515b7> ,
                                                                                   <https://sappho-digital.com/textpassage/textpassage_599a4574> ,
                                                                                   <https://sappho-digital.com/textpassage/textpassage_b22ad97c> ,
-                                                                                  <https://sappho-digital.com/textpassage/textpassage_c3c0d4e7> .
+                                                                                  <https://sappho-digital.com/textpassage/textpassage_c3c0d4e7> ;
+                                                         <https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by> <https://sappho-digital.com/expression/bibl_00e9aff1> ,
+                                                                                                                           <https://sappho-digital.com/expression/bibl_3761b97f> ,
+                                                                                                                           <https://sappho-digital.com/expression/bibl_889153c6> ,
+                                                                                                                           <https://sappho-digital.com/expression/bibl_baaeb54e> .
 
 
 ###  https://sappho-digital.com/expression/bibl_sappho_168c
@@ -265519,7 +265576,8 @@ Philosophen zu Sanssouci"""@de ;
                                                                                  <https://sappho-digital.com/relation/bibl_sappho_96_bibl_sappho_2> ,
                                                                                  <https://sappho-digital.com/relation/bibl_sappho_98_bibl_sappho_2> ,
                                                                                  <https://sappho-digital.com/relation/bibl_sappho_9_bibl_sappho_2> ;
-                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_0726f59d> .
+                                                      intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_0726f59d> ;
+                                                      <https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by> <https://sappho-digital.com/expression/bibl_a0bace6b> .
 
 
 ###  https://sappho-digital.com/expression/bibl_sappho_20
@@ -267159,7 +267217,11 @@ Philosophen zu Sanssouci"""@de ;
                                                        intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_1589ed18> ,
                                                                                 <https://sappho-digital.com/textpassage/textpassage_39e3d09d> ,
                                                                                 <https://sappho-digital.com/textpassage/textpassage_9ff4e0c8> ,
-                                                                                <https://sappho-digital.com/textpassage/textpassage_c402b493> .
+                                                                                <https://sappho-digital.com/textpassage/textpassage_c402b493> ;
+                                                       <https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by> <https://sappho-digital.com/expression/bibl_5283cfa8> ,
+                                                                                                                         <https://sappho-digital.com/expression/bibl_78d95d8c> ,
+                                                                                                                         <https://sappho-digital.com/expression/bibl_a0bace6b> ,
+                                                                                                                         <https://sappho-digital.com/expression/bibl_d85ade6a> .
 
 
 ###  https://sappho-digital.com/expression/bibl_sappho_32
@@ -269481,7 +269543,8 @@ Philosophen zu Sanssouci"""@de ;
                                                                                   <https://sappho-digital.com/relation/bibl_sappho_74_bibl_sappho_55> ,
                                                                                   <https://sappho-digital.com/relation/bibl_sappho_94_bibl_sappho_55> ,
                                                                                   <https://sappho-digital.com/relation/bibl_sappho_96_bibl_sappho_55> ;
-                                                       intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_11c43cae> .
+                                                       intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_11c43cae> ;
+                                                       <https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by> <https://sappho-digital.com/expression/bibl_4e970562> .
 
 
 ###  https://sappho-digital.com/expression/bibl_sappho_56
@@ -272791,7 +272854,8 @@ Philosophen zu Sanssouci"""@de ;
                                                                                   <https://sappho-digital.com/relation/bibl_sappho_95_bibl_sappho_94> ,
                                                                                   <https://sappho-digital.com/relation/bibl_sappho_96_bibl_sappho_94> ,
                                                                                   <https://sappho-digital.com/relation/bibl_sappho_98_bibl_sappho_94> ;
-                                                       intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_dfa4d60a> .
+                                                       intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_dfa4d60a> ;
+                                                       <https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by> <https://sappho-digital.com/expression/bibl_00e9aff1> .
 
 
 ###  https://sappho-digital.com/expression/bibl_sappho_95
@@ -273262,7 +273326,8 @@ Philosophen zu Sanssouci"""@de ;
                                                                                   <https://sappho-digital.com/relation/bibl_sappho_96_bibl_sappho_94> ,
                                                                                   <https://sappho-digital.com/relation/bibl_sappho_96_bibl_sappho_95> ,
                                                                                   <https://sappho-digital.com/relation/bibl_sappho_98_bibl_sappho_96> ;
-                                                       intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_e93928ba> .
+                                                       intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_e93928ba> ;
+                                                       <https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by> <https://sappho-digital.com/expression/bibl_6fcff98a> .
 
 
 ###  https://sappho-digital.com/expression/bibl_sappho_97
@@ -273434,7 +273499,8 @@ Philosophen zu Sanssouci"""@de ;
                                                                                   <https://sappho-digital.com/relation/bibl_sappho_98_bibl_sappho_92> ,
                                                                                   <https://sappho-digital.com/relation/bibl_sappho_98_bibl_sappho_94> ,
                                                                                   <https://sappho-digital.com/relation/bibl_sappho_98_bibl_sappho_96> ;
-                                                       intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_f4991caa> .
+                                                       intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_f4991caa> ;
+                                                       <https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by> <https://sappho-digital.com/expression/bibl_00e9aff1> .
 
 
 ###  https://sappho-digital.com/expression/bibl_ui5a596f
@@ -747347,7 +747413,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 2 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_a0bace6b_work_3eebfbf61e577d43> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_a0bace6b> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_2> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_2> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_a0bace6b> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_0b3967ce
@@ -747359,7 +747426,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Sappho. Tragedy in Five Acts"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_ec11b447_work_0b367126b900439f> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_ba71b2e5> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_ec11b447> .
+                                                                                         <https://sappho-digital.com/expression/bibl_ec11b447> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_ec11b447> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_11c43cae
@@ -747371,7 +747439,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 55 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_4e970562_work_ref_07b98557> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_4e970562> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_55> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_55> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_4e970562> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_1589ed18
@@ -747383,7 +747452,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 31 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_d85ade6a_work_bd94b08706bbf1d8> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_d85ade6a> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_31> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_31> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_d85ade6a> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_1df2dbe0
@@ -747395,7 +747465,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 130 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_4e970562_work_e0fa6d52d403955c> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_4e970562> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_130> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_130> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_4e970562> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_25c515b7
@@ -747407,7 +747478,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 168b Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_00e9aff1_work_0951b31d71de94b8> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_00e9aff1> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_168b> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_168b> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_00e9aff1> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_2678dda7
@@ -747430,7 +747502,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 158 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_6fcff98a_work_ref_c554e4d1> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_6fcff98a> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_158> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_158> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_6fcff98a> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_39294f32
@@ -747442,7 +747515,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 136 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_5ca5f0b6_work_ref_db70a009> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_5ca5f0b6> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_136> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_136> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_5ca5f0b6> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_39e3d09d
@@ -747454,7 +747528,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 31 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_5283cfa8_work_bd94b08706bbf1d8> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_5283cfa8> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_31> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_31> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_5283cfa8> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_4912ef03
@@ -747466,7 +747541,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 1 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_a0bace6b_work_d27bb3164e556709> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_a0bace6b> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_1> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_1> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_a0bace6b> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_4aaaf5f9
@@ -747489,7 +747565,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 130 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_9bb8a741_work_e0fa6d52d403955c> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_9bb8a741> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_130> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_130> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_9bb8a741> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_599a4574
@@ -747501,7 +747578,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 168b Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_3761b97f_work_0951b31d71de94b8> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_3761b97f> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_168b> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_168b> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_3761b97f> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_6fdacde0
@@ -747524,7 +747602,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 156 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_407a0d29_work_5744284c4623de0d> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_407a0d29> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_156> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_156> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_407a0d29> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_8d782837
@@ -747536,7 +747615,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 105 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_8e053a15_work_18f9bba320ea9dc9> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_8e053a15> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_105> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_105> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_8e053a15> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_9184d56f
@@ -747548,7 +747628,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Erinna to Sappho"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_4e970562_work_9b4a173a94427606> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_19d5a7ab> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_4e970562> .
+                                                                                         <https://sappho-digital.com/expression/bibl_4e970562> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_4e970562> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_9ff4e0c8
@@ -747560,7 +747641,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 31 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_a0bace6b_work_bd94b08706bbf1d8> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_a0bace6b> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_31> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_31> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_a0bace6b> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_a04208b2
@@ -747572,7 +747654,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 16 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_00e9aff1_work_ef190d7c21734365> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_00e9aff1> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_16> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_16> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_00e9aff1> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_a3ebb012
@@ -747595,7 +747678,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 168b Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_889153c6_work_0951b31d71de94b8> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_889153c6> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_168b> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_168b> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_889153c6> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_b3e607dc
@@ -747607,7 +747691,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 16 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_ef190d7c21734365> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_0bd2c59f> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_16> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_16> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_0bd2c59f> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_b4ef8382
@@ -747641,7 +747726,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 168b Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_baaeb54e_work_0951b31d71de94b8> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_baaeb54e> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_168b> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_168b> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_baaeb54e> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_c402b493
@@ -747653,7 +747739,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 31 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_78d95d8c_work_bd94b08706bbf1d8> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_78d95d8c> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_31> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_31> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_78d95d8c> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_d886908c
@@ -747665,7 +747752,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 130 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_6fcff98a_work_e0fa6d52d403955c> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_6fcff98a> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_130> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_130> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_6fcff98a> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_dfa4d60a
@@ -747677,7 +747765,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 94 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_00e9aff1_work_ref_26b32bba> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_00e9aff1> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_94> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_94> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_00e9aff1> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_e93928ba
@@ -747689,7 +747778,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 96 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_6fcff98a_work_8b90e47471cb4cb5> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_6fcff98a> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_96> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_96> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_6fcff98a> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_f09c5b81
@@ -747712,7 +747802,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 98 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_00e9aff1_work_ref_f6a90be8> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_00e9aff1> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_98> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_98> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_00e9aff1> .
 
 
 ###  https://sappho-digital.com/textpassage/textpassage_f539df53
@@ -747735,7 +747826,8 @@ Philosophen zu Sanssouci und Sapphos Werk"""@de ;
                                                                          "Passage from Fragment 1 Voigt"@en ;
                                                               intro:R18_showsActualization <https://sappho-digital.com/actualization/work_ref/bibl_4fcb8123_work_d27bb3164e556709> ;
                                                               intro:R30i_isTextPassageOf <https://sappho-digital.com/expression/bibl_4fcb8123> ,
-                                                                                         <https://sappho-digital.com/expression/bibl_sappho_1> .
+                                                                                         <https://sappho-digital.com/expression/bibl_sappho_1> ;
+                                                              <https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> <https://sappho-digital.com/expression/bibl_4fcb8123> .
 
 
 ###  https://sappho-digital.com/timespan/14580101
@@ -800192,6 +800284,22 @@ intro:R30_hasTextPassage rdfs:comment "Links (usually, exceptions are easily con
 
 
 intro:R30i_isTextPassageOf rdfs:label "R30i is text passage of"@en .
+
+
+<https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by> rdfs:comment "A F2_Expression is possibly cited by another F2_Expression."@en ;
+                                                                  rdfs:label "expr_possibly_cited_by"@en .
+
+
+<https://w3id.org/sappho-digital/ontology/expr_possibly_cites> rdfs:comment "An F2_Expression possibly cites another F2_Expression: both contain the same INT21_TextPassage and are linked as referring entity (R13) and referred-to entity (R12) of the same INT31_IntertextualRelation, whose direction is derived from creation and publication dates. The property is not defined by a property chain (a chain would also relate every expression to itself); its statements are generated by relations.py."@en ;
+                                                               rdfs:label "expr_possibly_cites"@en .
+
+
+<https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by> rdfs:comment "An INT21_TextPassage is possibly cited by a F2_Expression."@en ;
+                                                                rdfs:label "tp_possibly_cited_by"@en .
+
+
+<https://w3id.org/sappho-digital/ontology/tp_possibly_cites> rdfs:comment "An F2_Expression possibly cites an INT21_TextPassage that it shares with an earlier F2_Expression it possibly cites (see expr_possibly_cites). Generated by relations.py, not by a property chain."@en ;
+                                                             rdfs:label "tp_possibly_cites"@en .
 
 
 ###  Generated by the OWL API (version 5.1.9.2018-12-12T06:37:32Z) https://github.com/owlcs/owlapi/

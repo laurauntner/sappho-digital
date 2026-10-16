@@ -8,6 +8,7 @@
 @prefix efrbroo: <http://erlangen-crm.org/efrbroo/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
 @prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
 @prefix golem: <https://ontology.golemlab.eu/> .
 @prefix intertext_ab: <https://intertextuality.org/abstract#> .
@@ -18,14 +19,14 @@
 @prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
 @prefix mimotext: <http://data.mimotext.uni-trier.de/entity/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pim: <https://purl.archive.org/people-and-media#> .
 @prefix postdata_analysis: <http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#> .
 @prefix postdata_core: <http://postdata.linhd.uned.es/ontology/postdata-core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sappho_prop: <https://w3id.org/sappho-digital/ontology/> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix urb: <https://purl.archive.org/urbooks#> .
-@prefix urw: <https://purl.archive.org/urwriters#> .
+@prefix urw: <https://purl.archive.org/domain/urwriters#> .
 
 <https://w3id.org/sappho-digital/alignments/> a owl:Ontology ;
     rdfs:label "Sappho Digital Alignments"@en ;
@@ -50,9 +51,11 @@
         intertext_mt:,
         intertext_tx:,
         golem:,
-        urb:,
+        frbr:,
+        pim:,
         urw:,
         schema:,
+        sappho_prop:,
         intro: .
 
 mimotext:P10 skos:broadMatch ecrm:P7_took_place_at .
@@ -302,29 +305,17 @@ golem:G7_Narrative_Sequence skos:broadMatch intro:INT2_ActualizationOfFeature .
 
 golem:G9_Narrative_Unit skos:broadMatch intro:INT4_Feature .
 
-urb:Expression skos:closeMatch lrmoo:F2_Expression .
+frbr:Expression skos:closeMatch lrmoo:F2_Expression .
 
-urb:Manifestation skos:closeMatch lrmoo:F3_Manifestation .
+frbr:Manifestation skos:closeMatch lrmoo:F3_Manifestation .
 
-urb:Reception skos:narrowMatch intro:INT31_IntertextualRelation .
+pim:Reception skos:narrowMatch intro:INT31_IntertextualRelation .
 
-urb:Work skos:closeMatch lrmoo:F1_Work .
+frbr:Work skos:closeMatch lrmoo:F1_Work .
 
-urb:embodimentOf skos:closeMatch lrmoo:R4_embodies .
+frbr:embodimentOf skos:closeMatch lrmoo:R4_embodies .
 
-urw:Agent skos:narrowMatch ecrm:E21_Person .
-
-urw:EntityInfluence skos:narrowMatch intro:INT31_IntertextualRelation .
-
-urw:Organization skos:broadMatch ecrm:E74_Group .
-
-urw:Person skos:closeMatch ecrm:E21_Person .
-
-urw:Place skos:closeMatch ecrm:E53_Place .
-
-urw:Publisher skos:broadMatch ecrm:E74_Group .
-
-urw:date skos:closeMatch ecrm:P4_has_time-span .
+frbr:realization skos:closeMatch lrmoo:R3_is_realised_in .
 
 urw:gender skos:broadMatch ecrm:P2_has_type .
 
@@ -361,9 +352,7 @@ sappho_prop:expr_relation skos:closeMatch mimotext:P34,
         postdata_analysis:isDerivedFrom,
         postdata_analysis:isRelatedContemporaneouslyWith,
         postdata_analysis:isSource,
-        postdata_analysis:usesAsSource,
-        urw:influenced,
-        urw:wasInfluencedBy .
+        postdata_analysis:usesAsSource .
 
 sappho_prop:has_character skos:closeMatch postdata_core:hasCharacter,
         golem:GP1i_has_character,
@@ -452,8 +441,6 @@ ecrm:P65_shows_visual_item      owl:equivalentProperty crm:P65_shows_visual_item
 ecrm:P65i_is_shown_by           owl:equivalentProperty crm:P65i_is_shown_by .
 ecrm:P7_took_place_at           owl:equivalentProperty crm:P7_took_place_at .
 ecrm:P7i_witnessed              owl:equivalentProperty crm:P7i_witnessed .
-ecrm:P87_is_identified_by       owl:equivalentProperty crm:P87_is_identified_by .
-ecrm:P87i_identifies            owl:equivalentProperty crm:P87i_identifies .
 ecrm:P98_brought_into_life      owl:equivalentProperty crm:P98_brought_into_life .
 ecrm:P98i_was_born              owl:equivalentProperty crm:P98i_was_born .
 ecrm:P102_has_title             owl:equivalentProperty crm:P102_has_title .

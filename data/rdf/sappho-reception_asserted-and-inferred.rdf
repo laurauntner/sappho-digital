@@ -10,7 +10,8 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:intro="https://w3id.org/lso/intro/currentbeta#"
-     xmlns:lrmoo="http://iflastandards.info/ns/lrm/lrmoo/">
+     xmlns:lrmoo="http://iflastandards.info/ns/lrm/lrmoo/"
+     xmlns:ontology="https://w3id.org/sappho-digital/ontology/">
     <Ontology>
         <rdfs:label xml:lang="en">Sappho Digital Graph – Asserted and Inferred Triples</rdfs:label>
     </Ontology>
@@ -993,8 +994,6 @@
         <inverseOf rdf:resource="https://w3id.org/sappho-digital/ontology/expr_possibly_cites"/>
         <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
         <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
-        <rdfs:comment xml:lang="en">A F2_Expression is possibly cited by another F2_Expression.</rdfs:comment>
-        <rdfs:label xml:lang="en">expr_possibly_cited_by</rdfs:label>
     </ObjectProperty>
     
 
@@ -1005,18 +1004,6 @@
     <ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/expr_possibly_cites">
         <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
         <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
-        <propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R30_hasTextPassage"/>
-            <rdf:Description>
-                <inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R24_hasRelatedEntity"/>
-            </rdf:Description>
-            <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R24_hasRelatedEntity"/>
-            <rdf:Description>
-                <inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R30i_isTextPassageOf"/>
-            </rdf:Description>
-        </propertyChainAxiom>
-        <rdfs:comment xml:lang="en">A F2_Expression possibly cites another F2_Expression.</rdfs:comment>
-        <rdfs:label xml:lang="en">expr_possibly_cites</rdfs:label>
     </ObjectProperty>
     
 
@@ -1044,17 +1031,27 @@
 
     <ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/expr_relation">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
-        <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
+        <rdfs:domain>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+                    <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
+                </unionOf>
+            </Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <Class>
+                <unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
+                    <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
+                </unionOf>
+            </Class>
+        </rdfs:range>
         <propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description>
-                <inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R18i_actualizationFoundOn"/>
-            </rdf:Description>
-            <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R24i_isRelatedEntity"/>
-            <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R24_hasRelatedEntity"/>
-            <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R18i_actualizationFoundOn"/>
+            <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R13i_isReferringEntity"/>
+            <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R12_hasReferredToEntity"/>
         </propertyChainAxiom>
-        <rdfs:comment xml:lang="en">A relation between two F2_Expressions.</rdfs:comment>
+        <rdfs:comment xml:lang="en">A symmetric relation between two F2_Expressions, or between an F2_Expression and an F1_Work, that are linked as referring entity (R13) and referred-to entity (R12) of the same INT31_IntertextualRelation. The chain therefore never relates an expression to itself; relations without a determinable direction (only R24) are not covered.</rdfs:comment>
         <rdfs:label xml:lang="en">expr_relation</rdfs:label>
     </ObjectProperty>
     
@@ -1098,8 +1095,6 @@
         <inverseOf rdf:resource="https://w3id.org/sappho-digital/ontology/tp_possibly_cites"/>
         <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
         <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
-        <rdfs:comment xml:lang="en">An INT21_TextPassage is possibly cited by a F2_Expression.</rdfs:comment>
-        <rdfs:label xml:lang="en">tp_possibly_cited_by</rdfs:label>
     </ObjectProperty>
     
 
@@ -1110,11 +1105,6 @@
     <ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/tp_possibly_cites">
         <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
         <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
-        <propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R30_hasTextPassage"/>
-        </propertyChainAxiom>
-        <rdfs:comment xml:lang="en">A F2_Expression possibly cites an INT21_TextPassage.</rdfs:comment>
-        <rdfs:label xml:lang="en">tp_possibly_cites</rdfs:label>
     </ObjectProperty>
     
 
@@ -290465,6 +290455,14 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_dfa4d60a"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_f09c5b81"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_f4991caa"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_16"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_168b"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_94"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_98"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_25c515b7"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_a04208b2"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_dfa4d60a"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_f4991caa"/>
     </Thing>
     
 
@@ -292678,6 +292676,8 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_843e4821_bibl_0bd2c59f"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_b6b98051_bibl_0bd2c59f"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_b3e607dc"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_16"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_b3e607dc"/>
     </Thing>
     
 
@@ -294310,6 +294310,7 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_fa4c6f94_bibl_19d5a7ab"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_ffadfa01_bibl_19d5a7ab"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_9184d56f"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_4e970562"/>
     </Thing>
     
 
@@ -299428,6 +299429,8 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_3761b97f_sappho-work"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_6fcff98a_bibl_3761b97f"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_599a4574"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_168b"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_599a4574"/>
     </Thing>
     
 
@@ -300921,6 +300924,8 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_f4da59f4_bibl_407a0d29"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_f5e2fa88_bibl_407a0d29"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_800c2ae2"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_156"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_800c2ae2"/>
     </Thing>
     
 
@@ -303356,6 +303361,12 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_4aaaf5f9"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_9184d56f"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_ba815dab"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_19d5a7ab"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_130"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_55"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_11c43cae"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_1df2dbe0"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_9184d56f"/>
     </Thing>
     
 
@@ -303647,6 +303658,8 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_f4da59f4_bibl_4fcb8123"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_f5e2fa88_bibl_4fcb8123"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_feaa4927"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_1"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_feaa4927"/>
     </Thing>
     
 
@@ -304097,6 +304110,8 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_fa4c6f94_bibl_5283cfa8"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_ffadfa01_bibl_5283cfa8"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_39e3d09d"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_31"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_39e3d09d"/>
     </Thing>
     
 
@@ -306122,6 +306137,8 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_f5e2fa88_bibl_5ca5f0b6"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_ffadfa01_bibl_5ca5f0b6"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_39294f32"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_136"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_39294f32"/>
     </Thing>
     
 
@@ -309808,6 +309825,12 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_2b685bda"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_d886908c"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_e93928ba"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_130"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_158"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_96"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_2b685bda"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_d886908c"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_e93928ba"/>
     </Thing>
     
 
@@ -310730,6 +310753,8 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_f5e2fa88_bibl_78d95d8c"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_ffadfa01_bibl_78d95d8c"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_c402b493"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_31"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_c402b493"/>
     </Thing>
     
 
@@ -313889,6 +313914,8 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_b6b98051_bibl_889153c6"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_baaeb54e_bibl_889153c6"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_b22ad97c"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_168b"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_b22ad97c"/>
     </Thing>
     
 
@@ -314976,6 +315003,8 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_efcd32b0_bibl_8e053a15"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_f5e2fa88_bibl_8e053a15"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_8d782837"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_105"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_8d782837"/>
     </Thing>
     
 
@@ -318460,6 +318489,8 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_f4da59f4_bibl_9bb8a741"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_f5e2fa88_bibl_9bb8a741"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_544e7d9d"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_130"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_544e7d9d"/>
     </Thing>
     
 
@@ -319305,6 +319336,12 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_4912ef03"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_9ff4e0c8"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_f539df53"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_1"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_2"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_31"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_0726f59d"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_4912ef03"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_9ff4e0c8"/>
     </Thing>
     
 
@@ -326039,6 +326076,7 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_fa4c6f94_bibl_ba71b2e5"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_ffadfa01_bibl_ba71b2e5"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_0b3967ce"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_ec11b447"/>
     </Thing>
     
 
@@ -326303,6 +326341,8 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_baaeb54e_bibl_sappho_96"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_baaeb54e_sappho-work"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_c3c0d4e7"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_168b"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_c3c0d4e7"/>
     </Thing>
     
 
@@ -329825,6 +329865,8 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_fa4c6f94_bibl_d85ade6a"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_ffadfa01_bibl_d85ade6a"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_1589ed18"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_sappho_31"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_1589ed18"/>
     </Thing>
     
 
@@ -334234,6 +334276,8 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_f5e2fa88_bibl_ec11b447"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_ffadfa01_bibl_ec11b447"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_0b3967ce"/>
+        <ontology:expr_possibly_cites rdf:resource="https://sappho-digital.com/expression/bibl_ba71b2e5"/>
+        <ontology:tp_possibly_cites rdf:resource="https://sappho-digital.com/textpassage/textpassage_0b3967ce"/>
     </Thing>
     
 
@@ -338253,6 +338297,8 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_96_bibl_sappho_1"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_4912ef03"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_feaa4927"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_4fcb8123"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_a0bace6b"/>
     </Thing>
     
 
@@ -339309,6 +339355,7 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_94_bibl_sappho_105"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_98_bibl_sappho_105"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_8d782837"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_8e053a15"/>
     </Thing>
     
 
@@ -341592,6 +341639,9 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_1df2dbe0"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_544e7d9d"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_d886908c"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_4e970562"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_6fcff98a"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_9bb8a741"/>
     </Thing>
     
 
@@ -342239,6 +342289,7 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_136_bibl_sappho_1"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_136_bibl_sappho_135"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_39294f32"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_5ca5f0b6"/>
     </Thing>
     
 
@@ -343963,6 +344014,7 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_73_bibl_sappho_156"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_96_bibl_sappho_156"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_800c2ae2"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_407a0d29"/>
     </Thing>
     
 
@@ -344221,6 +344273,7 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_65_bibl_sappho_158"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_94_bibl_sappho_158"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_2b685bda"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_6fcff98a"/>
     </Thing>
     
 
@@ -344572,6 +344625,8 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_96_bibl_sappho_16"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_a04208b2"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_b3e607dc"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_00e9aff1"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_0bd2c59f"/>
     </Thing>
     
 
@@ -345052,6 +345107,10 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_599a4574"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_b22ad97c"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_c3c0d4e7"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_00e9aff1"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_3761b97f"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_889153c6"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_baaeb54e"/>
     </Thing>
     
 
@@ -346585,6 +346644,7 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_98_bibl_sappho_2"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_9_bibl_sappho_2"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_0726f59d"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_a0bace6b"/>
     </Thing>
     
 
@@ -348285,6 +348345,10 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_39e3d09d"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_9ff4e0c8"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_c402b493"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_5283cfa8"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_78d95d8c"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_a0bace6b"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_d85ade6a"/>
     </Thing>
     
 
@@ -350715,6 +350779,7 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_94_bibl_sappho_55"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_96_bibl_sappho_55"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_11c43cae"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_4e970562"/>
     </Thing>
     
 
@@ -354193,6 +354258,7 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_96_bibl_sappho_94"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_98_bibl_sappho_94"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_dfa4d60a"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_00e9aff1"/>
     </Thing>
     
 
@@ -354672,6 +354738,7 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_96_bibl_sappho_95"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_98_bibl_sappho_96"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_e93928ba"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_6fcff98a"/>
     </Thing>
     
 
@@ -354852,6 +354919,7 @@ Philosophen zu Sanssouci</rdfs:label>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_98_bibl_sappho_94"/>
         <intro:R24i_isRelatedEntity rdf:resource="https://sappho-digital.com/relation/bibl_sappho_98_bibl_sappho_96"/>
         <intro:R30_hasTextPassage rdf:resource="https://sappho-digital.com/textpassage/textpassage_f4991caa"/>
+        <ontology:expr_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_00e9aff1"/>
     </Thing>
     
 
@@ -962637,6 +962705,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_a0bace6b_work_3eebfbf61e577d43"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_a0bace6b"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_2"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_a0bace6b"/>
     </Thing>
     
 
@@ -962653,6 +962722,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_ec11b447_work_0b367126b900439f"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_ba71b2e5"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_ec11b447"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_ec11b447"/>
     </Thing>
     
 
@@ -962669,6 +962739,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_4e970562_work_ref_07b98557"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_4e970562"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_55"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_4e970562"/>
     </Thing>
     
 
@@ -962685,6 +962756,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_d85ade6a_work_bd94b08706bbf1d8"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_d85ade6a"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_31"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_d85ade6a"/>
     </Thing>
     
 
@@ -962701,6 +962773,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_4e970562_work_e0fa6d52d403955c"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_4e970562"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_130"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_4e970562"/>
     </Thing>
     
 
@@ -962717,6 +962790,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_00e9aff1_work_0951b31d71de94b8"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_00e9aff1"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_168b"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_00e9aff1"/>
     </Thing>
     
 
@@ -962748,6 +962822,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_6fcff98a_work_ref_c554e4d1"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_6fcff98a"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_158"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_6fcff98a"/>
     </Thing>
     
 
@@ -962764,6 +962839,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_5ca5f0b6_work_ref_db70a009"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_5ca5f0b6"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_136"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_5ca5f0b6"/>
     </Thing>
     
 
@@ -962780,6 +962856,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_5283cfa8_work_bd94b08706bbf1d8"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_5283cfa8"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_31"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_5283cfa8"/>
     </Thing>
     
 
@@ -962796,6 +962873,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_a0bace6b_work_d27bb3164e556709"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_a0bace6b"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_1"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_a0bace6b"/>
     </Thing>
     
 
@@ -962827,6 +962905,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_9bb8a741_work_e0fa6d52d403955c"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_9bb8a741"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_130"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_9bb8a741"/>
     </Thing>
     
 
@@ -962843,6 +962922,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_3761b97f_work_0951b31d71de94b8"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_3761b97f"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_168b"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_3761b97f"/>
     </Thing>
     
 
@@ -962874,6 +962954,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_407a0d29_work_5744284c4623de0d"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_407a0d29"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_156"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_407a0d29"/>
     </Thing>
     
 
@@ -962890,6 +962971,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_8e053a15_work_18f9bba320ea9dc9"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_8e053a15"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_105"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_8e053a15"/>
     </Thing>
     
 
@@ -962906,6 +962988,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_4e970562_work_9b4a173a94427606"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_19d5a7ab"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_4e970562"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_4e970562"/>
     </Thing>
     
 
@@ -962922,6 +963005,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_a0bace6b_work_bd94b08706bbf1d8"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_a0bace6b"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_31"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_a0bace6b"/>
     </Thing>
     
 
@@ -962938,6 +963022,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_00e9aff1_work_ef190d7c21734365"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_00e9aff1"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_16"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_00e9aff1"/>
     </Thing>
     
 
@@ -962969,6 +963054,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_889153c6_work_0951b31d71de94b8"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_889153c6"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_168b"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_889153c6"/>
     </Thing>
     
 
@@ -962985,6 +963071,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_ef190d7c21734365"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_0bd2c59f"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_16"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_0bd2c59f"/>
     </Thing>
     
 
@@ -963031,6 +963118,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_baaeb54e_work_0951b31d71de94b8"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_baaeb54e"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_168b"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_baaeb54e"/>
     </Thing>
     
 
@@ -963047,6 +963135,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_78d95d8c_work_bd94b08706bbf1d8"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_78d95d8c"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_31"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_78d95d8c"/>
     </Thing>
     
 
@@ -963063,6 +963152,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_6fcff98a_work_e0fa6d52d403955c"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_6fcff98a"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_130"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_6fcff98a"/>
     </Thing>
     
 
@@ -963079,6 +963169,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_00e9aff1_work_ref_26b32bba"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_00e9aff1"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_94"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_00e9aff1"/>
     </Thing>
     
 
@@ -963095,6 +963186,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_6fcff98a_work_8b90e47471cb4cb5"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_6fcff98a"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_96"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_6fcff98a"/>
     </Thing>
     
 
@@ -963126,6 +963218,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_00e9aff1_work_ref_f6a90be8"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_00e9aff1"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_98"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_00e9aff1"/>
     </Thing>
     
 
@@ -963157,6 +963250,7 @@ Philosophen zu Sanssouci und Sapphos Werk</rdfs:label>
         <intro:R18_showsActualization rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_4fcb8123_work_d27bb3164e556709"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_4fcb8123"/>
         <intro:R30i_isTextPassageOf rdf:resource="https://sappho-digital.com/expression/bibl_sappho_1"/>
+        <ontology:tp_possibly_cited_by rdf:resource="https://sappho-digital.com/expression/bibl_4fcb8123"/>
     </Thing>
     
 
@@ -1035985,6 +1036079,22 @@ Philosophen zu Sanssouci</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R30i_isTextPassageOf">
         <rdfs:label xml:lang="en">R30i is text passage of</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by">
+        <rdfs:comment xml:lang="en">A F2_Expression is possibly cited by another F2_Expression.</rdfs:comment>
+        <rdfs:label xml:lang="en">expr_possibly_cited_by</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/sappho-digital/ontology/expr_possibly_cites">
+        <rdfs:comment xml:lang="en">An F2_Expression possibly cites another F2_Expression: both contain the same INT21_TextPassage and are linked as referring entity (R13) and referred-to entity (R12) of the same INT31_IntertextualRelation, whose direction is derived from creation and publication dates. The property is not defined by a property chain (a chain would also relate every expression to itself); its statements are generated by relations.py.</rdfs:comment>
+        <rdfs:label xml:lang="en">expr_possibly_cites</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/sappho-digital/ontology/tp_possibly_cited_by">
+        <rdfs:comment xml:lang="en">An INT21_TextPassage is possibly cited by a F2_Expression.</rdfs:comment>
+        <rdfs:label xml:lang="en">tp_possibly_cited_by</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="https://w3id.org/sappho-digital/ontology/tp_possibly_cites">
+        <rdfs:comment xml:lang="en">An F2_Expression possibly cites an INT21_TextPassage that it shares with an earlier F2_Expression it possibly cites (see expr_possibly_cites). Generated by relations.py, not by a property chain.</rdfs:comment>
+        <rdfs:label xml:lang="en">tp_possibly_cites</rdfs:label>
     </rdf:Description>
 </rdf:RDF>
 

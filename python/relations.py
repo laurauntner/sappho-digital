@@ -536,6 +536,37 @@ for rel in relations_to_create:
                  Literal("The analysis is based on " + " and ".join(parts_en) + ".", lang="en")))
 
 # -----------------------------------------------------------------------
+# Mögliche Zitate (sappho_prop:expr_possibly_cites / tp_possibly_cites)
+# -----------------------------------------------------------------------
+# Eine lrmoo:F2_Expression X zitiert möglicherweise eine lrmoo:F2_Expression Y,
+# wenn beide dieselbe intro:INT21_TextPassage enthalten und eine gerichtete
+# intro:INT31_IntertextualRelation mit X als verweisender (R13) und Y als
+# referenzierter Entität (R12) besteht; die Richtung ergibt sich oben aus den
+# Entstehungs- und Publikationsdaten. Selbstbezüge sind ausgeschlossen, was
+# mit einer OWL-Property-Chain nicht möglich wäre.
+SAPPHO_PROP = Namespace("https://w3id.org/sappho-digital/ontology/")
+out.bind("sappho_prop", SAPPHO_PROP)
+
+directed_pairs = set()
+for rel_uri in out.subjects(RDF.type, INTRO["INT31_IntertextualRelation"]):
+    for x in out.objects(rel_uri, INTRO["R13_hasReferringEntity"]):
+        for y in out.objects(rel_uri, INTRO["R12_hasReferredToEntity"]):
+            directed_pairs.add((x, y))
+
+for tp in set(g_analysis.subjects(RDF.type, INTRO["INT21_TextPassage"])):
+    owners = (set(g_analysis.objects(tp, INTRO["R30i_isTextPassageOf"]))
+              | set(g_analysis.subjects(INTRO["R30_hasTextPassage"], tp)))
+    for x in owners:
+        for y in owners:
+            if x == y or (x, y) not in directed_pairs:
+                continue
+            out.add((x, SAPPHO_PROP["expr_possibly_cites"],    y))
+            out.add((y, SAPPHO_PROP["expr_possibly_cited_by"], x))
+            out.add((x, SAPPHO_PROP["tp_possibly_cites"],      tp))
+            out.add((tp, SAPPHO_PROP["tp_possibly_cited_by"],  x))
+            relevant_f2.update((x, y))
+
+# -----------------------------------------------------------------------
 # Aufräumen
 # -----------------------------------------------------------------------
 if relations_to_create:

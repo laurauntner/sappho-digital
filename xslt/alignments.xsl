@@ -122,12 +122,16 @@
         </xsl:element>
 
         <xsl:element name="ns" namespace="">
-            <xsl:attribute name="p" select="'urbooks'"/>
-            <xsl:attribute name="u" select="'https://purl.archive.org/urbooks#'"/>
+            <xsl:attribute name="p" select="'frbr'"/>
+            <xsl:attribute name="u" select="'http://purl.org/vocab/frbr/core#'"/>
+        </xsl:element>
+        <xsl:element name="ns" namespace="">
+            <xsl:attribute name="p" select="'pim'"/>
+            <xsl:attribute name="u" select="'https://purl.archive.org/people-and-media#'"/>
         </xsl:element>
         <xsl:element name="ns" namespace="">
             <xsl:attribute name="p" select="'urwriters'"/>
-            <xsl:attribute name="u" select="'https://purl.archive.org/urwriters#'"/>
+            <xsl:attribute name="u" select="'https://purl.archive.org/domain/urwriters#'"/>
         </xsl:element>
 
         <xsl:element name="ns" namespace="">

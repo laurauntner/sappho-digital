@@ -60,6 +60,7 @@ def bind_namespaces(g: Graph):
     g.bind("lrmoo", LRMOO, override=True)
     g.bind("intro", INTRO, override=True)
     g.bind("prov", PROV, override=True)
+    g.bind("sappho_prop", Namespace("https://w3id.org/sappho-digital/ontology/"), override=True)
 
 # Main
 

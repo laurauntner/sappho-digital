@@ -30,8 +30,9 @@
         <owl:imports rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#"/>
         <owl:imports rdf:resource="https://w3id.org/sappho-digital/ontology/"/>
         <owl:imports rdf:resource="https://schema.org/"/>
-        <owl:imports rdf:resource="https://purl.archive.org/urbooks#"/>
-        <owl:imports rdf:resource="https://purl.archive.org/urwriters#"/>
+        <owl:imports rdf:resource="http://purl.org/vocab/frbr/core#"/>
+        <owl:imports rdf:resource="https://purl.archive.org/people-and-media#"/>
+        <owl:imports rdf:resource="https://purl.archive.org/domain/urwriters#"/>
         <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
     </owl:Ontology>
 
@@ -116,16 +117,14 @@
     <skos:narrowMatch rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#hasContemporaryRelation"/>
     <skos:narrowMatch rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#usesAsSource"/>
     <skos:narrowMatch rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#isSource"/>
-    <skos:narrowMatch rdf:resource="https://purl.archive.org/urwriters#influenced"/>
-    <skos:narrowMatch rdf:resource="https://purl.archive.org/urwriters#wasInfluencedBy"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purl.archive.org/urbooks#Manifestation">
+  <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Manifestation">
     <skos:closeMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#gender">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P2_has_type"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purl.archive.org/urbooks#Expression">
+  <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Expression">
     <skos:closeMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/doco/FormulaBox">
@@ -142,9 +141,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#genre">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P2_has_type"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purl.archive.org/urwriters#Place">
-    <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/doco/FrontMatter">
     <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
@@ -228,7 +224,7 @@
   <rdf:Description rdf:about="http://dracor.org/ontology#has_author">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purl.archive.org/urwriters#wasPublishedWhen">
+  <rdf:Description rdf:about="https://purl.archive.org/domain/urwriters#wasPublishedWhen">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/ontology/bibo/editor">
@@ -246,7 +242,7 @@
   <rdf:Description rdf:about="http://purl.org/spar/doco/BodyMatter">
     <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purl.archive.org/urwriters#hasIdentifier">
+  <rdf:Description rdf:about="https://purl.archive.org/domain/urwriters#hasIdentifier">
     <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/P1_is_identified_by"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F38_Character">
@@ -261,9 +257,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/publisher">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purl.archive.org/urwriters#Person">
-    <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#isCreatorOf">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
@@ -305,9 +298,6 @@
   <rdf:Description rdf:about="https://intertextuality.org/abstract#IntertextualSpecification">
     <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT11_TypeOfInterrelation"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purl.archive.org/urwriters#EntityInfluence">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT31_IntertextualRelation"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/P4">
     <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/P102_has_title"/>
   </rdf:Description>
@@ -329,7 +319,7 @@
   <rdf:Description rdf:about="https://w3id.org/sappho-digital/ontology/has_portrayal">
     <skos:closeMatch rdf:resource="http://purl.org/spar/fabio/hasPortrayal"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purl.archive.org/urwriters#wasPublishedWhere">
+  <rdf:Description rdf:about="https://purl.archive.org/domain/urwriters#wasPublishedWhere">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P7_took_place_at"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/title">
@@ -356,9 +346,6 @@
   <rdf:Description rdf:about="https://schema.org/datePublished">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purl.archive.org/urwriters#Agent">
-    <skos:narrowMatch rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
-  </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/extensions/text#TextGenre">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
   </rdf:Description>
@@ -374,7 +361,7 @@
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/Q20">
     <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Topic"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purl.archive.org/urwriters#gender">
+  <rdf:Description rdf:about="https://purl.archive.org/domain/urwriters#gender">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P2_has_type"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/Q26">
@@ -388,9 +375,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/P7">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purl.archive.org/urwriters#Publisher">
-    <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/Q33">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
@@ -414,7 +398,7 @@
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#PoeticWork">
     <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purl.archive.org/urbooks#Work">
+  <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#Work">
     <skos:closeMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#birthPlaceOf">
@@ -422,9 +406,6 @@
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/extensions/text#TextSegment">
     <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purl.archive.org/urwriters#Organization">
-    <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/P10">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P7_took_place_at"/>
@@ -453,7 +434,7 @@
   <rdf:Description rdf:about="https://intertextuality.org/extensions/text#Text">
     <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purl.archive.org/urwriters#wasPublishedBy">
+  <rdf:Description rdf:about="https://purl.archive.org/domain/urwriters#wasPublishedBy">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.golemlab.eu/G0_Character-Stoff">
@@ -477,7 +458,7 @@
   <rdf:Description rdf:about="http://purl.org/spar/doco/Section">
     <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purl.archive.org/urbooks#Reception">
+  <rdf:Description rdf:about="https://purl.archive.org/people-and-media#Reception">
     <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT31_IntertextualRelation"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/Q2">
@@ -495,11 +476,11 @@
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/maker">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://purl.archive.org/urwriters#date">
-    <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://purl.archive.org/urbooks#embodimentOf">
+  <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#embodimentOf">
     <skos:closeMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/R4_embodies"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://purl.org/vocab/frbr/core#realization">
+    <skos:closeMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/R3_is_realised_in"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dracor.org/ontology#genre">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
