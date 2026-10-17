@@ -48,9 +48,9 @@ Further files directly in [`data/`](https://github.com/laurauntner/sappho-digita
 | File | Content | Created by / used for |
 |---|---|---|
 | `sappho_fragments_qids.csv` | The 197 Sappho fragments with their Wikidata link, label, and database number (`;`-separated) | Input of `python/fragments.py` |
-| `reception-indices.csv` | Reception index per annotated testimony (n = 100): number of phenomena and INT31 relations, normalized values (`p_norm`, `i_norm`), weighted `reception_index`, authors and author IDs | Output of `python/reception-index.py`, extended by `python/statistics.py`; used by the statistics page |
+| `reception-indices.csv` | Reception index per annotated testimony (n = 99): number of phenomena and INT31 relations, normalized values (`p_norm`, `i_norm`), weighted `reception_index`, authors and author IDs | Output of `python/reception-index.py`, extended by `python/statistics.py`; used by the statistics page |
 | `wikimetrix.csv` | Wikidata-based prominence metrics per author: Wikidata ID, number of sitelinks, QRank, and number of works | Output of `python/wikimetrix.py`, following [1001 Books](https://github.com/temporal-communities/1001-books); used by the statistics page |
-| `analysetexte_statistik.csv` | Gender, year, genre, and place and country of publication of the 107 analyzed texts (`;`-separated) | Maintained manually; source of the charts on the analysis page |
+| `analysetexte_statistik.csv` | Gender, year, genre, and place and country of publication of the 99 analyzed texts (`;`-separated; 108 rows, as texts with several authors or places of publication appear once per author or place) | Maintained manually; source of the charts on the analysis page |
 | `imprint.xml`, `imprint-en.xml` | Content of the legal notice (German/English) | Input of `xslt/imprint.xsl` |
 | `auszug_rezeptionszeugnisse.docx` | Compact excerpt of the reception testimonies as a list (year, author, title, collection, place, genre) for use in the printed dissertation; `(E)` = date of creation, `(P)` = date of publication, sorted by the earliest year | Output of `python/reception-list.py`; always overwritten, e.g. `python3 python/reception-list.py --sample 40` (filters: `--genre`, `--author`, `--from`, `--to`, `--group-by`) |
 
@@ -68,7 +68,7 @@ Ontology versions used in developing the [Sappho Digital Ontology](https://sapph
 - [LRMoo](https://repository.ifla.org/items/729b094a-92d6-4317-9dee-a300053ffdb4) 1.1.1
 - [INTRO](https://github.com/BOberreither/INTRO) beta202506
 
-Additional documentation of the applied data model is in the [`/documentation`](https://github.com/laurauntner/sappho-digital/tree/main/documentation) folder, including [SHACL shapes](https://github.com/laurauntner/sappho-digital/blob/main/documentation/ontology/shapes.ttl) configuring the visual query builder ([Sparnatural](https://github.com/sparna-git/Sparnatural)) on the [query page](https://sappho-digital.com/query.html).
+Additional documentation of the applied data model is in the [`/documentation`](https://github.com/laurauntner/sappho-digital/tree/main/documentation) folder, including [SHACL shapes](https://github.com/laurauntner/sappho-digital/blob/main/documentation/ontology/shapes.ttl) configuring the visual query builder ([Sparnatural](https://github.com/sparna-git/Sparnatural)) on the [query page](https://sappho-digital.com/query.html). The [competency questions](https://github.com/laurauntner/sappho-digital/tree/main/documentation/competency-questions) used to validate the data model are provided as SPARQL queries (`cq1.rq`–`cq5.rq`); they run against the merged file `sappho-reception.ttl` without inferences.
 
 For the data model in action, see also the companion repository [wikidata-to-cidoc-crm](https://github.com/laurauntner/wikidata-to-cidoc-crm).
 
