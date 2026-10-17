@@ -4,7 +4,7 @@ document.fonts.ready.then(function () {
   if (window._networkInitialized) return;
   window._networkInitialized = true;
 
-  // ── Daten aus DOM lesen ──────────────────────────────────────
+  // Daten aus DOM lesen
   function readJSON(id) {
     var el = document.getElementById(id);
     if (!el) { console.error((document.documentElement.lang === "en" ? "Data element not found: #" : "Datenelement nicht gefunden: #") + id); return null; }
@@ -20,7 +20,7 @@ document.fonts.ready.then(function () {
 
   if (!ALL_NODES || !ALL_EDGES || !CLASS_STATS || !NS_COLORS || !KNOWN_NS || !META) return;
 
-  // ── Aus Meta extrahieren ─────────────────────────────────────
+  // Aus Meta extrahieren
   var DEFAULT_MAX_EDGES      = META.defaultMaxEdges;
   var DEFAULT_NEIGHBORS      = META.defaultNeighbors;
   var START_URI              = META.startUri;
@@ -28,7 +28,7 @@ document.fonts.ready.then(function () {
   var INT31_NEIGHBOR_IDS     = new Set(META.int31NeighborIds);
   var FOCUS_CLASS            = "https://w3id.org/lso/intro/currentbeta#INT31_IntertextualRelation";
 
-  // ── State ────────────────────────────────────────────────────
+  // State
   var maxEdges       = DEFAULT_MAX_EDGES;
   var instModeActive = false;
 
@@ -36,7 +36,7 @@ document.fonts.ready.then(function () {
     return !HIDDEN_BY_DEFAULT.has(c);
   }));
 
-  // ── Farbzuordnung ────────────────────────────────────────────
+  // Farbzuordnung
   var CLASS_COLOR_MAP = {};
   Object.keys(CLASS_STATS).forEach(function (cls) {
     var prefix = "_unknown", bestLen = 0;
@@ -70,7 +70,7 @@ document.fonts.ready.then(function () {
     }};
   });
 
-  // ── vis.js ───────────────────────────────────────────────────
+  // vis.js
   var nodesDS = new vis.DataSet([]);
   var edgesDS = new vis.DataSet([]);
 
@@ -128,7 +128,7 @@ document.fonts.ready.then(function () {
 
   window.addEventListener("resize", function () { network.fit(); });
 
-  // ── Lookups ──────────────────────────────────────────────────
+  // Lookups
   var EDGE_INDEX = {};
   ALL_EDGES.forEach(function (e) {
     if (!EDGE_INDEX[e.from]) EDGE_INDEX[e.from] = [];
@@ -140,7 +140,7 @@ document.fonts.ready.then(function () {
   var NODE_BY_ID = {};
   ALL_NODES.forEach(function (n) { NODE_BY_ID[n.id] = n; });
 
-  // ── Label-Hilfsfunktionen ────────────────────────────────────
+  // Label-Hilfsfunktionen
   function truncateLabel(s, max) {
     max = max || 28;
     return s.length > max ? s.slice(0, max).trimEnd() + " …" : s;
@@ -174,7 +174,7 @@ document.fonts.ready.then(function () {
     return html;
   }
 
-  // ── Gepinnter Tooltip ────────────────────────────────────────
+  // Gepinnter Tooltip
   var tooltip      = document.getElementById("node-tooltip");
   var tooltipBody  = document.getElementById("node-tooltip-body");
   var pinnedNodeId = null;
@@ -230,7 +230,7 @@ document.fonts.ready.then(function () {
     }, 4000);
   });
 
-  // Maus über Tooltip → Timer stoppen (damit man den Link anklicken kann)
+  // Maus über Tooltip -> Timer stoppen (damit man den Link anklicken kann)
   tooltip.addEventListener("mouseenter", function () {
     clearTimeout(_tooltipHideTimer);
   });
@@ -240,7 +240,7 @@ document.fonts.ready.then(function () {
     }, 2000);
   });
 
-  // Klick ins Leere → gepinnten Tooltip schließen
+  // Klick ins Leere -> gepinnten Tooltip schließen
   network.on("click", function (params) {
     if (params.nodes.length === 0) {
       hideTooltip();
@@ -265,7 +265,7 @@ document.fonts.ready.then(function () {
     expandNode(id, !exploredIds.has(id));
   });
 
-  // ── Explorations-State ───────────────────────────────────────
+  // Explorations-State
   var startNode      = null;
   var exploredIds    = new Set();
   var pinnedIds      = new Set();
@@ -284,7 +284,7 @@ document.fonts.ready.then(function () {
       .sort(function (a, b) { return b.degree - a.degree; });
   }
 
-  // ── Kern-Render ──────────────────────────────────────────────
+  // Kern-Render
   function renderGraph() {
     var ed = ALL_EDGES.filter(function (e) {
       if (!visibleIds.has(e.from) || !visibleIds.has(e.to)) return false;
@@ -436,7 +436,7 @@ document.fonts.ready.then(function () {
     renderGraph();
   }
 
-  // ── Klassen-Suche ────────────────────────────────────────────
+  // Klassen-Suche
   document.getElementById("class-search").oninput = function () {
     var q = this.value.trim().toLowerCase();
     document.querySelectorAll(".cls-item[data-cls]").forEach(function (el) {
@@ -453,7 +453,7 @@ document.fonts.ready.then(function () {
     });
   };
 
-  // ── Klassen-Filter aufbauen ──────────────────────────────────
+  // Klassen-Filter aufbauen
   function buildClassFilter() {
     var box = document.getElementById("class-filter");
 
@@ -583,7 +583,7 @@ document.fonts.ready.then(function () {
     }, 50);
   };
 
-  // ── Rechte Sidebar ───────────────────────────────────────────
+  // Rechte Sidebar
   var INSTANCE_CLASSES = {
     "INT2":  "https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature",
     "INT21": "https://w3id.org/lso/intro/currentbeta#INT21_TextPassage",
@@ -592,7 +592,7 @@ document.fonts.ready.then(function () {
   var activeTab      = "F2";
   var checkedNodeIds = new Set();
 
-  // ── Vorberechneter, vorsortierter Cache pro Tab ───────
+  // Vorberechneter, vorsortierter Cache pro Tab
   var INSTANCE_CACHE = {};
 
   function buildInstanceCache(tabKey) {
@@ -621,7 +621,7 @@ document.fonts.ready.then(function () {
     return nodes;
   }
 
-  // ── Binäre Suche für Prefix-Matching ─────────────────
+  // Binäre Suche für Prefix-Matching
   function binarySearchPrefix(nodes, prefix) {
     var lo = 0, hi = nodes.length;
     // Untergrenze: erstes Element >= prefix
@@ -639,7 +639,7 @@ document.fonts.ready.then(function () {
     return nodes.slice(start, lo);
   }
 
-  // ── Kombinierte Suche mit Prefix-Optimierung ─────────
+  // Kombinierte Suche mit Prefix-Optimierung
   function searchInstanceNodes(tabKey, q) {
     var all = buildInstanceCache(tabKey);
 
@@ -687,7 +687,7 @@ document.fonts.ready.then(function () {
     return results;
   }
 
-  // ── Instanzliste: graying via data-Attribut ──────────────────
+  // Instanzliste: graying via data-Attribut
   function updateInstanceListGraying() {
     _vScroll.renderedIds = new Set(nodesDS.getIds());
     _vScrollPaint();
@@ -708,7 +708,7 @@ document.fonts.ready.then(function () {
     renderGraph();
   }
 
-  // ── Instanzliste: Virtual Scrolling ─────────────────────────
+  // Instanzliste: Virtual Scrolling
   var _vScroll = {
     nodes:       [],
     showClass:   false,
@@ -820,7 +820,7 @@ document.fonts.ready.then(function () {
     }
   }
 
-  // ── Debounce für Instanz-Suche ───────────────────────
+  // Debounce für Instanz-Suche
   var _instSearchTimer = null;
   document.getElementById("instance-search").oninput = function () {
     var q = this.value.trim().toLowerCase();
@@ -875,7 +875,7 @@ document.fonts.ready.then(function () {
     updateInstanceListGraying();
   };
 
-  // ── Hinweis-Overlay ──────────────────────────────────────────
+  // Hinweis-Overlay
   var hint = document.getElementById("graph-hint");
   if (hint) {
     hint.onclick = function () {
@@ -890,7 +890,7 @@ document.fonts.ready.then(function () {
     }, 20000);
   }
 
-  // ── Start ────────────────────────────────────────────────────
+  // Start
   buildClassFilter();
 
   // Instanz-Caches für alle Tabs vorwärmen (im Hintergrund, nach dem ersten Paint)
@@ -916,7 +916,7 @@ document.fonts.ready.then(function () {
 
   renderInstanceList("");
 
-  // ── Doppelklick → zuklappen ──────────────────────────────────
+  // Doppelklick -> zuklappen
   network.on("doubleClick", function (params) {
     if (params.nodes.length === 0) return;
     var id = params.nodes[0];
@@ -933,7 +933,7 @@ document.fonts.ready.then(function () {
     renderGraph();
   });
 
-  // ── PNG-Export ───────────────────────────────────────────────
+  // PNG-Export
   document.getElementById("btn-exp-png").onclick = function () {
     var canvas = document.querySelector("#graph canvas");
     if (!canvas) { alert(document.documentElement.lang === "en" ? "No canvas found." : "Kein Canvas gefunden."); return; }

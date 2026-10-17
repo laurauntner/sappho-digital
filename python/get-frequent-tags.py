@@ -52,13 +52,13 @@ def find_tags(folder_path):
                         if art_val in PERSON_ARTS:
                             tag_key = f"{tag}@{art_val}"
                         else:
-                            print(f"⚠️ Warnung: Unerwarteter art-Wert bei <person>: {art_val}")
+                            print(f"Warnung: Unerwarteter art-Wert bei <person>: {art_val}")
                             tag_key = f"{tag}@{art_val}"
                     elif tag == "ort":
                         if art_val in ORT_ARTS:
                             tag_key = f"{tag}@{art_val}"
                         else:
-                            print(f"⚠️ Warnung: Unerwarteter art-Wert bei <ort>: {art_val}")
+                            print(f"Warnung: Unerwarteter art-Wert bei <ort>: {art_val}")
                             tag_key = f"{tag}@{art_val}"
                 else:
                     tag_key = tag
@@ -114,7 +114,7 @@ def check_duplicate_values_across_tags(tag_values):
     for value, tags in value_to_tags.items():
         if len(tags) > 1:
             print(
-                f'⚠️ WARNUNG: Der Wert "{value}" kommt mehrfach vor in den Spalten: {", ".join(sorted(tags))}'
+                f'WARNUNG: Der Wert "{value}" kommt mehrfach vor in den Spalten: {", ".join(sorted(tags))}'
             )
 
 
@@ -147,4 +147,4 @@ if __name__ == "__main__":
     check_duplicate_values_across_tags(tag_values)
     write_table(tag_values, output_file)
 
-    print(f"\n✅ Tabelle mit {len(tag_values)} Spalten gespeichert in:\n{output_file}")
+    print(f"\nTabelle mit {len(tag_values)} Spalten gespeichert in:\n{output_file}")

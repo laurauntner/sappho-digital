@@ -99,7 +99,7 @@ def query_wdqs(query: str, qids: list[str], max_retries: int = MAX_RETRIES) -> p
 
             wait_seconds = REQUEST_SLEEP * (2 ** (attempt - 1))
             print(
-                f"⚠️ Versuch {attempt}/{max_retries} fehlgeschlagen: {e}\n"
+                f"Versuch {attempt}/{max_retries} fehlgeschlagen: {e}\n"
                 f"   Warte {wait_seconds:.1f} Sekunden und versuche es erneut..."
             )
             time.sleep(wait_seconds)
@@ -487,4 +487,4 @@ try:
         print("\nDeleting inputs folder...")
         shutil.rmtree(QRANK_PATH.parent)
 except Exception as e:
-    print(f"⚠️ Cleanup failed: {e}")
+    print(f"Cleanup failed: {e}")

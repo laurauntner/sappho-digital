@@ -146,14 +146,14 @@ def analyze_reasoner_outputs():
         inferred_n = count_triples(INFERRED_TTL)
         print(f"Inferred only: {inferred_n} Tripel ({INFERRED_TTL.name})")
     else:
-        print(f"⚠️ Datei nicht gefunden: {INFERRED_TTL}")
+        print(f"Datei nicht gefunden: {INFERRED_TTL}")
 
     # asserted + inferred
     if ASSERTED_INFERRED_TTL.exists():
         asserted_inferred_n = count_triples(ASSERTED_INFERRED_TTL)
         print(f"Asserted + Inferred: {asserted_inferred_n} Tripel ({ASSERTED_INFERRED_TTL.name})")
     else:
-        print(f"⚠️ Datei nicht gefunden: {ASSERTED_INFERRED_TTL}")
+        print(f"Datei nicht gefunden: {ASSERTED_INFERRED_TTL}")
 
     # delta = inferred only via subtraction
     asserted_path = data_dir / "sappho-reception.ttl"
@@ -175,9 +175,9 @@ def main():
                 total += n
                 print(f"{name}.ttl: {n} Tripel")
             except Exception as e:
-                print(f"❌ Fehler beim Parsen von {ttl_path}: {e}")
+                print(f"Fehler beim Parsen von {ttl_path}: {e}")
         else:
-            print(f"⚠️ Datei nicht gefunden: {ttl_path}")
+            print(f"Datei nicht gefunden: {ttl_path}")
     print(f"\nGesamtanzahl der Tripel: {total}")
 
     # Reasoner outputs
@@ -188,9 +188,9 @@ def main():
         try:
             analyze_vocabs(vocabs_path)
         except Exception as e:
-            print(f"❌ Fehler bei der SKOS-Auswertung von {vocabs_path}: {e}")
+            print(f"Fehler bei der SKOS-Auswertung von {vocabs_path}: {e}")
     else:
-        print(f"⚠️ Datei nicht gefunden (SKOS-Auswertung übersprungen): {vocabs_path}")
+        print(f"Datei nicht gefunden (SKOS-Auswertung übersprungen): {vocabs_path}")
 
 if __name__ == "__main__":
     main()

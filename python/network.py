@@ -592,18 +592,18 @@ def main():
     url_map, warnings = resolve_all_urls(nodes, g, labels)
 
     if warnings:
-        print(f"\n⚠️  {len(warnings)} URL-Mapping-Warnungen:")
+        print(f"\n{len(warnings)} URL-Mapping-Warnungen:")
         for w in sorted(set(warnings)):
             print(f"   {w}")
         print()
     else:
-        print("✓ Alle URLs erfolgreich aufgelöst.")
+        print("Alle URLs erfolgreich aufgelöst.")
 
     root    = build_xml(nodes, edges, class_stats, int31_neighbors, total_triples, url_map)
     xml_str = pretty_print(root)
     Path(OUTPUT_FILE).write_text(xml_str, encoding="utf-8")
 
-    print(f"✓ gespeichert: {OUTPUT_FILE}")
+    print(f"gespeichert: {OUTPUT_FILE}")
 
 
 if __name__ == "__main__":

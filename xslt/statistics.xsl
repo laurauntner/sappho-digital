@@ -429,6 +429,7 @@
         '&quot;nInt31Relevant&quot;:', (statistics/int31CoOccurrence/@nInt31Relevant, '0')[1], ',',
         '&quot;nInt31WithFeats&quot;:', (statistics/int31CoOccurrence/@nInt31WithFeats, '0')[1], ',',
         '&quot;featFrequencies&quot;:[', string-join($int31-feat-freq-json, ','), '],',
+        '&quot;ftypeNodes&quot;:{', string-join(for $f in statistics/int31CoOccurrence/ftypeNodes/ftype return concat('&quot;', $f/@key, '&quot;:', $f/@n), ','), '},',
         '&quot;featPairs&quot;:[', string-join($int31-pair-json, ','), ']',
         '},',
         '&quot;int31TopNodes&quot;:{',

@@ -1,0 +1,24 @@
+# Competency question 1: Which reception testimonies explicitly refer to Fragment 31 Voigt, and through which phenomena are they linked to the fragment?
+PREFIX ecrm: <http://erlangen-crm.org/current/>
+PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>
+PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?titel (GROUP_CONCAT(DISTINCT ?phaenomen; separator="; ")
+               AS ?phaenomene)
+WHERE {
+  BIND(<https://sappho-digital.com/expression/bibl_sappho_31>
+       AS ?fr31)
+  ?referenz ecrm:P67_refers_to ?fr31 ;
+            intro:R18i_actualizationFoundOn ?text .
+  ?text a lrmoo:F2_Expression ; rdfs:label ?titel .
+  ?relation a intro:INT31_IntertextualRelation ;
+            intro:R13_hasReferringEntity ?text ;
+            intro:R12_hasReferredToEntity ?fr31 ;
+            intro:R22i_relationIsBasedOnSimilarity ?feature .
+  ?feature rdfs:label ?phaenomen .
+  FILTER(LANG(?phaenomen) = "de")
+}
+GROUP BY ?text ?titel

@@ -19,21 +19,28 @@ def fetch_wikidata(qid: str) -> dict:
     if qid in _WD_CACHE:
         return _WD_CACHE[qid]
     url = f"https://www.wikidata.org/wiki/Special:EntityData/{qid}.json"
-    for attempt in range(3):
+    for attempt in range(6):
         try:
-            r = SESSION.get(url, timeout=15)
+            r = SESSION.get(url, timeout=30)
             if r.status_code == 200:
-                data = r.json().get("entities", {}).get(qid, {})
+                entities = r.json().get("entities", {})
+                data = entities.get(qid)
+                # zusammengeführte Items: Wikidata liefert das Ziel-Item
+                if not data and len(entities) == 1:
+                    target, data = next(iter(entities.items()))
+                    print(f"Wikidata-Weiterleitung: {qid} -> {target} (in der Tabelle anpassen)")
                 if data:
                     _WD_CACHE[qid] = data
                     return data
-            if r.status_code in (429, 503):
-                time.sleep(1.5 * (attempt + 1))
+            if r.status_code in (429, 500, 502, 503, 504):
+                wait = r.headers.get("Retry-After", "")
+                time.sleep(int(wait) if wait.isdigit() else 2 ** attempt)
                 continue
             break
         except requests.RequestException:
-            time.sleep(1.0 * (attempt + 1))
+            time.sleep(2 ** attempt)
             continue
+    print(f"Wikidata nicht abrufbar: {qid}")
     return {}
 
 def get_claim_vals(entity, prop, expect="auto"):
@@ -222,7 +229,7 @@ for bibl in top_bibls:
     g.add((sd_id_uri, ECRM.P1i_identifies, bibl_uri))
     g.add((sd_id_uri, ECRM.P2_has_type, SD["id_type/sappho-digital"]))
 
-    # Wikidata-Referenzen: äußeres bibl → immer F2, inneres bibl → immer F3
+    # Wikidata-Referenzen: äußeres bibl -> immer F2, inneres bibl -> immer F3
     outer_ref = bibl.get("ref") or ""
     _nested_bibl = bibl.find("tei:bibl", namespaces=NSMAP)
     inner_ref = (_nested_bibl.get("ref") or "") if _nested_bibl is not None else ""

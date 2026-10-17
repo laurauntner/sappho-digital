@@ -1059,7 +1059,7 @@
         <xsl:text>)</xsl:text>
     </xsl:template>
 
-    <!-- Shared helper: compute occTexts for a feature URI via Actualization → R18i + Relations R13/R12 fallback -->
+    <!-- Shared helper: compute occTexts for a feature URI via Actualization -> R18i + Relations R13/R12 fallback -->
     <xsl:function name="u:occ-texts-for-feature" as="xs:string*">
         <xsl:param name="feature-uri" as="xs:string"/>
         <xsl:param name="all-rels" as="element(intro:INT31_IntertextualRelation)*"/>

@@ -17,7 +17,7 @@ def main(ttl_path: str, xml_out: str) -> None:
     n_triples = len(g)
     print(f"  {n_triples} Tripel geladen.", file=sys.stderr)
 
-    # ── F2_Expressions aufteilen ──────────────────────────────────────────────
+    # F2_Expressions aufteilen
     F2_Expression = LRMOO.F2_Expression
     sappho_f2    = set()
     reception_f2 = set()
@@ -30,20 +30,22 @@ def main(ttl_path: str, xml_out: str) -> None:
     n_reception = len(reception_f2)
     print(f"  Rezeptionszeugnisse: {n_reception}", file=sys.stderr)
 
-    # ── Autor_innen ───────────────────────────────────────────────────────────
+    # Autor_innen
     E21_Person = ECRM["E21_Person"]
+    # nur Autor_innen (ohne Sappho aus fragments.ttl)
     n_authors = sum(1 for p in g.subjects(RDF.type, E21_Person)
-                    if "/author_" in str(p))
+                    if "/author_" in str(p)
+                    and (p, ECRM["P14i_performed"], None) in g)
     print(f"  Autor_innen: {n_authors}", file=sys.stderr)
 
-    # ── Aktualisierungen aufbauen (für analysierte Texte) ─────────────────────
+    # Aktualisierungen aufbauen (für analysierte Texte)
     R18 = INTRO.R18_showsActualization
     R17 = INTRO.R17_actualizesFeature
     act_to_feats: dict = {}
     for act, _, feat in g.triples((None, R17, None)):
         act_to_feats.setdefault(act, set()).add(feat)
 
-    # ── Exemplarisch analysierte Texte ────────────────────────────────────────
+    # Exemplarisch analysierte Texte
     reception_with_act: set = set()
     for f2 in reception_f2 | sappho_f2:
         for _, _, act in g.triples((f2, R18, None)):
@@ -53,12 +55,12 @@ def main(ttl_path: str, xml_out: str) -> None:
     n_analysed = len(reception_with_act)
     print(f"  Exemplarisch analysierte Texte: {n_analysed}", file=sys.stderr)
 
-    # ── INT31-Beziehungen ─────────────────────────────────────────────────────
+    # INT31-Beziehungen
     INT31 = INTRO["INT31_IntertextualRelation"]
     n_int31 = sum(1 for _ in g.subjects(RDF.type, INT31))
     print(f"  INT31-Beziehungen: {n_int31}", file=sys.stderr)
 
-    # ── Zeitspanne der Rezeptionszeugnisse ────────────────────────────────────
+    # Zeitspanne der Rezeptionszeugnisse
     P4               = ECRM["P4_has_time-span"]
     R17i_cb          = LRMOO["R17i_was_created_by"]
     R4i_embodied     = LRMOO["R4i_is_embodied_in"]
@@ -93,7 +95,7 @@ def main(ttl_path: str, xml_out: str) -> None:
     year_max = max(years) if years else 0
     print(f"  Zeitspanne: {year_min}–{year_max}", file=sys.stderr)
 
-    # ── XML schreiben ─────────────────────────────────────────────────────────
+    # XML schreiben
     root = ET.Element("homepage-counter")
     root.set("nTriples",   str(n_triples))
     root.set("nReception", str(n_reception))

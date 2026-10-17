@@ -1,0 +1,23 @@
+# Competency question 3: Which phenomena do Christine Brückner's »Vergeßt den Namen des Eisvogels nicht« and Maria Modena's »Sappho« share, and of which type are they?
+PREFIX ecrm: <http://erlangen-crm.org/current/>
+PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>
+PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?typ (COUNT(DISTINCT ?feature) AS ?anzahl)
+WHERE {
+  ?text1 a lrmoo:F2_Expression ; rdfs:label ?t1 .
+  FILTER(STRSTARTS(?t1, "Vergeßt den Namen des Eisvogels"))
+  ?text2 a lrmoo:F2_Expression ; rdfs:label ?t2 .
+  FILTER(STRSTARTS(?t2, "Sappho. Drama in fünf Akten"))
+  ?relation a intro:INT31_IntertextualRelation ;
+            intro:R24_hasRelatedEntity ?text1, ?text2 ;
+            intro:R22i_relationIsBasedOnSimilarity ?feature .
+  ?feature a ?klasse .
+  FILTER(?klasse != owl:NamedIndividual)
+  BIND(STRAFTER(STR(?klasse), "#") AS ?typ)
+}
+GROUP BY ?typ
+ORDER BY DESC(?anzahl)

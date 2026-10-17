@@ -43,9 +43,9 @@ FEATURE_TYPES_EN = [
 FEATURE_TYPES = FEATURE_TYPES_EN if LANG == "en" else FEATURE_TYPES_DE
 
 ALL_PHENOM_TYPES = FEATURE_TYPES + (
-    [("work_ref", "/work_ref/", "References to Works"), ("text_passage", "/text_passage/", "Quotations")]
+    [("work_ref", "/work_ref/", "References to Works"), ("text_passage", "/textpassage/", "Quotations")]
     if LANG == "en" else
-    [("work_ref", "/work_ref/", "Werkreferenzen"), ("text_passage", "/text_passage/", "Zitate")]
+    [("work_ref", "/work_ref/", "Werkreferenzen"), ("text_passage", "/textpassage/", "Zitate")]
 )
 
 def feature_type(uri: str) -> Optional[str]:
@@ -164,7 +164,7 @@ def main(ttl_path: str, xml_out: str) -> None:
         raw = raw or str(uri).split("/")[-1]
         return clean_label(raw)
 
-    # ── Alle Phänomene im Vergleich ────────────────────────────────
+    # Alle Phänomene im Vergleich
 
     for ftype_key, pattern, ftype_label in FEATURE_TYPES:
         all_feat_uris: set[URIRef] = set()
@@ -217,7 +217,7 @@ def main(ttl_path: str, xml_out: str) -> None:
             item_el.set("pctSappho",      f'{d["pct_s"]:.2f}')
             item_el.set("pctReception",   f'{d["pct_r"]:.2f}')
 
-    # ── Phänomene nach Fragment-Referenz ───────────────────────────
+    # Phänomene nach Fragment-Referenz
 
     import re as _re
 
@@ -360,7 +360,7 @@ def main(ttl_path: str, xml_out: str) -> None:
                 feat_el.set("uri",   str(feat_uri))
                 feat_el.set("count", str(count))
 
-    # ── Phänomene im Laufe der Zeit ────────────────────────────────
+    # Phänomene im Laufe der Zeit
 
     R17i_was_created_by      = LRMOO["R17i_was_created_by"]
     R4i_is_embodied_in       = LRMOO["R4i_is_embodied_in"]
@@ -512,7 +512,7 @@ def main(ttl_path: str, xml_out: str) -> None:
                 cell_el.set("decade", dec)
                 cell_el.set("n",      str(dec_total))
 
-    # ── Phänomene nach Gattung ─────────────────────────────────────
+    # Phänomene nach Gattung
 
     genre_dist_feat:   dict[URIRef, dict[str, int]] = defaultdict(lambda: defaultdict(int))
     genre_dist_labels: dict[URIRef, str] = {}
@@ -574,7 +574,7 @@ def main(ttl_path: str, xml_out: str) -> None:
                 gc_el.set("genre", gen)
                 gc_el.set("n",     str(cnt))
 
-    # ── Stoff-Komponenten ──────────────────────────────────────────
+    # Stoff-Komponenten
 
     rec_all_feats: dict[URIRef, set] = {}
     for rec in dist_records:
@@ -603,7 +603,7 @@ def main(ttl_path: str, xml_out: str) -> None:
                 ft = feature_type(str(other))
                 if ft is not None:
                     plot_cooccur[plot_uri][other] += 1
-                elif "/text_passage/" in str(other):
+                elif "/textpassage/" in str(other):
                     plot_cooccur[plot_uri][other] += 1
 
     pc_el = ET.SubElement(root_el, "plotComponents")
@@ -632,7 +632,7 @@ def main(ttl_path: str, xml_out: str) -> None:
         for co_uri, co_n in cofeats_sorted:
             ft = feature_type(str(co_uri))
             if ft is None:
-                if "/text_passage/" in str(co_uri):
+                if "/textpassage/" in str(co_uri):
                     ft = "text_passage"
                 else:
                     continue
@@ -644,7 +644,7 @@ def main(ttl_path: str, xml_out: str) -> None:
 
     print(f"  PlotComponents: {len(sorted_plots)} Stoffe verarbeitet", file=sys.stderr)
 
-    # ── Personenreferenzen vs. Figuren ────────────────────────────
+    # Personenreferenzen vs. Figuren
 
     def count_persons_in_index(f2_index: dict) -> tuple[dict, dict, dict, dict]:
         """Gibt (pr_count, ch_count, pr_labels, pr_by_id, ch_by_id) zurück."""
@@ -730,7 +730,7 @@ def main(ttl_path: str, xml_out: str) -> None:
           f"Sappho: {len(sap_pr_by_id)} pers_ref / {len(sap_ch_by_id)} character",
           file=sys.stderr)
 
-    # ── Werkreferenzen × Zitate ───────────────────────────────────
+    # Werkreferenzen × Zitate
 
     INT21_TextPassage = INTRO["INT21_TextPassage"]
 
@@ -814,7 +814,7 @@ def main(ttl_path: str, xml_out: str) -> None:
 
     print(f"  WorkCitation: {len(sorted_works)} Werke in XML geschrieben", file=sys.stderr)
 
-    # ── Phänomene als Grundlage intertextueller Relationen ─────────
+    # Phänomene als Grundlage intertextueller Relationen
 
     INT31_IntertextualRelation       = INTRO["INT31_IntertextualRelation"]
     R22i_relationIsBasedOnSimilarity = INTRO["R22i_relationIsBasedOnSimilarity"]
@@ -887,6 +887,18 @@ def main(ttl_path: str, xml_out: str) -> None:
                 return "text_passage"
         return "other"
 
+    # Relationen pro Phänomentyp (jeder Typ einmal pro Relation)
+    ftype_node_count: dict[str, int] = defaultdict(int)
+    for feats in int31_to_feats.values():
+        for ft in {int31_ftype(f) for f in feats}:
+            ftype_node_count[ft] += 1
+    ftn_el = ET.SubElement(co_el, "ftypeNodes")
+    for ft, cnt in sorted(ftype_node_count.items(), key=lambda x: -x[1]):
+        fe = ET.SubElement(ftn_el, "ftype")
+        fe.set("key", ft)
+        fe.set("n",   str(cnt))
+    print(f"  INT31-Relationen je Phänomentyp: {dict(ftype_node_count)}", file=sys.stderr)
+
     sorted_feats_int31 = sorted(
         feat_int31_count.items(),
         key=lambda x: (-x[1], get_label(x[0]).lower())
@@ -917,7 +929,7 @@ def main(ttl_path: str, xml_out: str) -> None:
     print(f"  INT31CoOccurrence: {len(sorted_feats_int31)} Phänomene, "
           f"{len(sorted_pairs)} Paare in XML geschrieben", file=sys.stderr)
 
-    # ── Top-N INT31-Knoten ─────────────
+    # Top-N INT31-Knoten
 
     BASE_URL = "https://sappho-digital.com/"
 
@@ -1036,7 +1048,7 @@ def main(ttl_path: str, xml_out: str) -> None:
 
     print(f"  INT31TopNodes: Top-{TOP_PER_TYPE} je relType in XML geschrieben", file=sys.stderr)
 
-    # ── Durchschnittliche intertextuelle Beziehungen & gemeinsame Phänomene ──
+    # Durchschnittliche intertextuelle Beziehungen & gemeinsame Phänomene
 
     f2_to_int31: dict[URIRef, set[URIRef]] = defaultdict(set)
     for node_uri in int31_to_feats:
@@ -1130,7 +1142,7 @@ def main(ttl_path: str, xml_out: str) -> None:
 
     print(f"  Stat10 in XML geschrieben.", file=sys.stderr)
 
-    # ── Gender ────────────────────────────────────────────────────
+    # Gender
 
     E21_Person       = ECRM["E21_Person"]
     P2_has_type_prop = ECRM["P2_has_type"]        
@@ -1149,9 +1161,10 @@ def main(ttl_path: str, xml_out: str) -> None:
                 return "female"
         return "unknown"
 
+    # nur Autor_innen von Rezeptionszeugnissen (ohne Sappho aus fragments.ttl)
     all_persons: dict[URIRef, str] = {}
     for person in g.subjects(RDF.type, E21_Person):
-        if "/author_" in str(person):
+        if "/author_" in str(person) and (person, P14i_performed, None) in g:
             all_persons[person] = gender_key(person)
 
     n_male    = sum(1 for g2 in all_persons.values() if g2 == "male")

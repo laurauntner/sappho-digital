@@ -33,7 +33,7 @@ ALL_PHENOM_PATTERNS = [
     "/topic/",
     "/plot/",
     "/work_ref/",
-    "/text_passage/",
+    "/textpassage/",
 ]
 
 def is_phenomenon(uri: str) -> bool:
@@ -90,7 +90,7 @@ def compute_index(ttl_path: str,
     def get_all_phenomena(f2_uri: URIRef) -> set[URIRef]:
         phenom: set[URIRef] = set()
 
-        # Features via R18_showsActualization → R17_actualizesFeature
+        # Features via R18_showsActualization -> R17_actualizesFeature
         for _, _, act in g.triples((f2_uri, R18_showsActualization, None)):
             for feat in act_to_features.get(act, set()):
                 if is_phenomenon(str(feat)):
@@ -114,13 +114,21 @@ def compute_index(ttl_path: str,
     reception_with_act: set[URIRef] = set(f2_phenomena.keys())
     print(f"  Texte mit Analysedaten: {len(reception_with_act)}", file=sys.stderr)
 
-    # ── INT31-Knoten → beteiligte Texte ──────────────────────────────────────
+    # INT31-Knoten -> beteiligte Texte
     print("  Berechne INT31-Beziehungen …", file=sys.stderr)
     f2_to_int31: dict[URIRef, set[URIRef]] = defaultdict(set)
 
     all_int31: set[URIRef] = set(g.subjects(RDF.type, INT31_IntertextualRelation))
 
+    F1_Work                 = LRMOO.F1_Work
+    R12_hasReferredToEntity = INTRO["R12_hasReferredToEntity"]
+    n_pauschal = 0
     for node_uri in all_int31:
+        # pauschale Relationen zum Gesamtwerk (F1) nicht mitzählen
+        if any((tgt, RDF.type, F1_Work) in g
+               for tgt in g.objects(node_uri, R12_hasReferredToEntity)):
+            n_pauschal += 1
+            continue
         for _, _, obj in g.triples((node_uri, R24_hasRelatedEntity, None)):
             # Textpassagen-Knoten ausschließen
             if "/textpassage/" in str(obj).lower():
@@ -128,7 +136,7 @@ def compute_index(ttl_path: str,
             if obj in (reception_with_act | sappho_f2):
                 f2_to_int31[obj].add(node_uri)
 
-    print(f"  INT31-Knoten gesamt: {len(all_int31)}", file=sys.stderr)
+    print(f"  INT31-Knoten gesamt: {len(all_int31)} (davon pauschal, nicht gezählt: {n_pauschal})", file=sys.stderr)
 
     p_raw: dict[URIRef, int] = {}
     i_raw: dict[URIRef, int] = {}
@@ -155,7 +163,7 @@ def compute_index(ttl_path: str,
     print(f"  Median Phaenomene (aktive Texte): {p_med:.2f}", file=sys.stderr)
     print(f"  Median INT31 (aktive Texte):      {i_med:.2f}", file=sys.stderr)
 
-    # ── Normalisierung relativ zum Median ─────────────────────────────────────
+    # Normalisierung relativ zum Median
     if use_log:
         log_p_ref = math.log1p(p_med)
         log_i_ref = math.log1p(i_med)
@@ -165,7 +173,7 @@ def compute_index(ttl_path: str,
         def norm_p(v): return min(v / (2 * p_med), 1.0) if p_med > 0 else 0.0
         def norm_i(v): return min(v / (2 * i_med), 1.0) if i_med > 0 else 0.0
 
-    # ── Index berechnen ───────────────────────────────────────────────────────
+    # Index berechnen
     results: list[dict] = []
     for f2 in reception_with_act:
         p_n = norm_p(p_raw[f2])
@@ -185,7 +193,7 @@ def compute_index(ttl_path: str,
     # Absteigend nach Index sortieren
     results.sort(key=lambda r: -r["reception_index"])
 
-    # ── Ausgabe ───────────────────────────────────────────────────────────────
+    # Ausgabe
     if csv_out:
         fieldnames = ["uri", "label", "n_phenomena", "n_int31",
                       "p_norm", "i_norm", "reception_index"]

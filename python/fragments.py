@@ -19,21 +19,28 @@ def fetch_wikidata(qid: str) -> dict:
     if qid in _WD_CACHE:
         return _WD_CACHE[qid]
     url = f"https://www.wikidata.org/wiki/Special:EntityData/{qid}.json"
-    for attempt in range(3):
+    for attempt in range(6):
         try:
-            r = SESSION.get(url, timeout=15)
+            r = SESSION.get(url, timeout=30)
             if r.status_code == 200:
-                data = r.json().get("entities", {}).get(qid, {})
+                entities = r.json().get("entities", {})
+                data = entities.get(qid)
+                # zusammengeführte Items: Wikidata liefert das Ziel-Item
+                if not data and len(entities) == 1:
+                    target, data = next(iter(entities.items()))
+                    print(f"Wikidata-Weiterleitung: {qid} -> {target} (in der Tabelle anpassen)")
                 if data:
                     _WD_CACHE[qid] = data
                     return data
-            if r.status_code in (429, 503):
-                time.sleep(1.5 * (attempt + 1))
+            if r.status_code in (429, 500, 502, 503, 504):
+                wait = r.headers.get("Retry-After", "")
+                time.sleep(int(wait) if wait.isdigit() else 2 ** attempt)
                 continue
             break
         except requests.RequestException:
-            time.sleep(1.0 * (attempt + 1))
+            time.sleep(2 ** attempt)
             continue
+    print(f"Wikidata nicht abrufbar: {qid}")
     return {}
 
 def get_claim_vals(entity, prop, expect="auto"):
@@ -134,37 +141,37 @@ add_bilingual(g, SD["id_type/dbpedia"], "DBpedia-ID", "DBpedia ID")
 g.add((SD["id_type/goodreads"], RDF.type, ECRM.E55_Type))
 add_bilingual(g, SD["id_type/goodreads"], "Goodreads-Werk-ID", "Goodreads Work ID")
 
-# Geschlechtstypen
-g.add((SD["gender/female"], RDF.type, ECRM.E55_Type))
-add_bilingual(g, SD["gender/female"], "weiblich", "female")
-g.add((SD["gender/female"], OWL.sameAs, URIRef("http://www.wikidata.org/entity/Q6581072")))
+# Geschlechtstypen (dieselben IRIs wie in authors.py)
+g.add((SD["gender/Q6581072"], RDF.type, ECRM.E55_Type))
+add_bilingual(g, SD["gender/Q6581072"], "weiblich", "female")
+g.add((SD["gender/Q6581072"], OWL.sameAs, URIRef("http://www.wikidata.org/entity/Q6581072")))
 
-g.add((SD["gender/male"], RDF.type, ECRM.E55_Type))
-add_bilingual(g, SD["gender/male"], "männlich", "male")
-g.add((SD["gender/male"], OWL.sameAs, URIRef("http://www.wikidata.org/entity/Q6581097")))
+g.add((SD["gender/Q6581097"], RDF.type, ECRM.E55_Type))
+add_bilingual(g, SD["gender/Q6581097"], "männlich", "male")
+g.add((SD["gender/Q6581097"], OWL.sameAs, URIRef("http://www.wikidata.org/entity/Q6581097")))
 
 g.add((SD["gender_type/wikidata"], RDF.type, ECRM.E55_Type))
 add_bilingual(g, SD["gender_type/wikidata"], "Wikidata-Geschlecht", "Wikidata Gender")
-g.add((SD["gender_type/wikidata"], ECRM.P2i_is_type_of, SD["gender/female"]))
-g.add((SD["gender_type/wikidata"], ECRM.P2i_is_type_of, SD["gender/male"]))
-g.add((SD["gender/female"], ECRM.P2_has_type, SD["gender_type/wikidata"]))
-g.add((SD["gender/male"],   ECRM.P2_has_type, SD["gender_type/wikidata"]))
+g.add((SD["gender_type/wikidata"], ECRM.P2i_is_type_of, SD["gender/Q6581072"]))
+g.add((SD["gender_type/wikidata"], ECRM.P2i_is_type_of, SD["gender/Q6581097"]))
+g.add((SD["gender/Q6581072"], ECRM.P2_has_type, SD["gender_type/wikidata"]))
+g.add((SD["gender/Q6581097"],   ECRM.P2_has_type, SD["gender_type/wikidata"]))
 
-# Gattung
+# Gattung (dieselbe IRI wie in works.py)
 g.add((SD["genre_type/sappho-digital"], RDF.type, ECRM.E55_Type))
 add_bilingual(g, SD["genre_type/sappho-digital"], "Sappho-Digital-Gattung", "Sappho Digital Genre")
 
-g.add((SD["genre/lyrik"], RDF.type, ECRM.E55_Type))
-add_bilingual(g, SD["genre/lyrik"], "Lyrik", "Lyric Poetry")
-g.add((SD["genre/lyrik"], ECRM.P2_has_type, SD["genre_type/sappho-digital"]))
-g.add((SD["genre_type/sappho-digital"], ECRM.P2i_is_type_of, SD["genre/lyrik"]))
+g.add((SD["genre/Lyrik"], RDF.type, ECRM.E55_Type))
+add_bilingual(g, SD["genre/Lyrik"], "Lyrik", "Lyric Poetry")
+g.add((SD["genre/Lyrik"], ECRM.P2_has_type, SD["genre_type/sappho-digital"]))
+# P2i_is_type_of setzt works.py (sonst überschreibt merge.py die Liste)
 
 # Autorin Sappho
 g.add((SD["person/author_sappho"], RDF.type, ECRM.E21_Person))
 g.add((SD["person/author_sappho"], RDFS.label, Literal("Sappho")))
 g.add((SD["person/author_sappho"], ECRM.P1_is_identified_by, SD["identifier/Q17892"]))
 g.add((SD["person/author_sappho"], ECRM.P1_is_identified_by, SD["identifier/author_sappho"]))
-g.add((SD["person/author_sappho"], ECRM.P2_has_type, SD["gender/female"]))
+g.add((SD["person/author_sappho"], ECRM.P2_has_type, SD["gender/Q6581072"]))
 g.add((SD["person/author_sappho"], OWL.sameAs, URIRef("http://www.wikidata.org/entity/Q17892")))
 
 # Identifiers Sappho
@@ -185,7 +192,7 @@ g.add((SD["person/editor_bagordo"], RDF.type, ECRM.E21_Person))
 g.add((SD["person/editor_bagordo"], RDFS.label, Literal("Andreas Bagordo")))
 g.add((SD["person/editor_bagordo"], ECRM.P1_is_identified_by, SD["identifier/Q495907"]))
 g.add((SD["person/editor_bagordo"], ECRM.P1_is_identified_by, SD["identifier/editor_bagordo"]))
-g.add((SD["person/editor_bagordo"], ECRM.P2_has_type, SD["gender/male"]))
+g.add((SD["person/editor_bagordo"], ECRM.P2_has_type, SD["gender/Q6581097"]))
 g.add((SD["person/editor_bagordo"], OWL.sameAs, URIRef("http://www.wikidata.org/entity/Q495907")))
 
 g.add((SD["identifier/editor_bagordo"], RDF.type, ECRM.E42_Identifier))
@@ -323,7 +330,7 @@ with open(INPUT_FILE, newline='', encoding="utf-8") as f:
                       f"Expression of Fragment {frag_num} Voigt")
         g.add((expr_uri, LRMOO.R17i_was_created_by, expr_creation_uri))
         g.add((expr_uri, ECRM.P102_has_title, title_frag_uri))
-        g.add((expr_uri, ECRM.P2_has_type, SD["genre/lyrik"]))
+        g.add((expr_uri, ECRM.P2_has_type, SD["genre/Lyrik"]))
         g.add((expr_uri, LRMOO.R3i_realises, frag_uri))
         g.add((expr_uri, LRMOO.R4i_is_embodied_in, SD["manifestation/sappho_bagordo"]))
         g.add((expr_uri, OWL.sameAs, URIRef(qid_url)))

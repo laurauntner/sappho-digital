@@ -254,6 +254,12 @@ for f2 in set(g_analysis.subjects(RDF.type, LRMOO["F2_Expression"])):
     work_keys  = set()
     f2_targets = set()
 
+    # Textpassagen der Expression (R30)
+    for tp in g_analysis.objects(f2, INTRO["R30_hasTextPassage"]):
+        r30_uris.add(str(tp))
+    for tp in g_analysis.subjects(INTRO["R30i_isTextPassageOf"], f2):
+        r30_uris.add(str(tp))
+
     for a in g_analysis.objects(f2, INTRO["R18_showsActualization"]):
         for tp in g_analysis.objects(a, INTRO["R18i_actualizationFoundOn"]):
             if "/textpassage/" in str(tp):
@@ -325,7 +331,7 @@ for i in range(len(f2_list)):
             "trigger_textpassages": overlap_r30,
         })
 
-# gerichtete INT31 für direkte F2→F2-Referenzen
+# gerichtete INT31 für direkte F2->F2-Referenzen
 seen_direct = set()
 for src, meta in info.items():
     for tgt in meta["f2_targets"]:
@@ -486,6 +492,9 @@ for rel in relations_to_create:
             for act in data["actualizations"]:
                 if (act, ECRM["P67_refers_to"], referred_uri) in g_analysis:
                     trigger_fids.add(fid)
+        # gemeinsame Textpassagen auch bei direkten Werkreferenzen
+        trigger_passages = (info.get(ref_uri, {}).get("r30", set())
+                            & info.get(referred_uri, {}).get("r30", set()))
 
     for fid in sorted(trigger_fids):
         feat_uri_ev = (infer_feature_uri_from_id(fid)
@@ -538,12 +547,9 @@ for rel in relations_to_create:
 # -----------------------------------------------------------------------
 # Mögliche Zitate (sappho_prop:expr_possibly_cites / tp_possibly_cites)
 # -----------------------------------------------------------------------
-# Eine lrmoo:F2_Expression X zitiert möglicherweise eine lrmoo:F2_Expression Y,
-# wenn beide dieselbe intro:INT21_TextPassage enthalten und eine gerichtete
-# intro:INT31_IntertextualRelation mit X als verweisender (R13) und Y als
-# referenzierter Entität (R12) besteht; die Richtung ergibt sich oben aus den
-# Entstehungs- und Publikationsdaten. Selbstbezüge sind ausgeschlossen, was
-# mit einer OWL-Property-Chain nicht möglich wäre.
+# X zitiert möglicherweise Y, wenn beide dieselbe Textpassage enthalten und
+# eine gerichtete Relation X -> Y besteht (R13/R12). Keine Property Chain,
+# weil die auch Selbstbezüge ableiten würde.
 SAPPHO_PROP = Namespace("https://w3id.org/sappho-digital/ontology/")
 out.bind("sappho_prop", SAPPHO_PROP)
 

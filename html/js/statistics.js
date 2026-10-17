@@ -78,6 +78,7 @@ const T = STATS_LANG === 'en' ? {
     referenced: 'Referenced',
     referencedCount: n => `Referenced (n = ${n})`,
     intertextualRelationsTotal: 'intertextual relations total',
+    intertextualRelationsWithFeats: n => `of which ${n} are based on shared phenomena and evaluated here; the remainder are the general links between all reception testimonies and Sappho's work as a whole`,
     int31Nodes: n => `INT31 Nodes (n=${n})`,
     int31NodesTooltip: (n, pct) => `${n} INT31 nodes (${pct}%)`,
     sharedInt31Nodes: (n, pct) => `${n} shared INT31 nodes (${pct}%)`,
@@ -174,6 +175,7 @@ const T = STATS_LANG === 'en' ? {
     referenced: 'Referenziert',
     referencedCount: n => `Referenziert (n = ${n})`,
     intertextualRelationsTotal: 'intertextuelle Relationen gesamt',
+    intertextualRelationsWithFeats: n => `davon ${n} auf Grundlage gemeinsamer Phänomene, die hier ausgewertet werden; die übrigen sind die pauschalen Verknüpfungen aller Rezeptionszeugnisse mit Sapphos Gesamtwerk`,
     int31Nodes: n => `INT31-Knoten (n=${n})`,
     int31NodesTooltip: (n, pct) => `${n} INT31-Knoten (${pct}%)`,
     sharedInt31Nodes: (n, pct) => `${n} gemeinsame INT31-Knoten (${pct}%)`,
@@ -272,9 +274,9 @@ Chart.defaults.plugins.tooltip.titleFont        = { family: 'Geist, system-ui, s
 Chart.defaults.plugins.tooltip.bodyFont         = { family: 'Geist, system-ui, sans-serif', size: 12 };
 Chart.defaults.plugins.tooltip.padding          = 8;
 
-// ── Download-Hilfsfunktionen ──────────────────────────────────────────────
+// Download-Hilfsfunktionen
 
-// Erzeugt einen Download-Button nach `container` (nie darin → ResizeObserver sicher).
+// Erzeugt einen Download-Button nach `container` (nie darin -> ResizeObserver sicher).
 // Duplikate werden anhand des Dateinamens verhindert.
 function _mkDlWrap(filename, clickFn, container) {
     const eid = 'dl-' + filename.replace(/[^a-z0-9]/gi, '-');
@@ -319,7 +321,7 @@ function downloadChart(canvas, filename) {
     a.click();
 }
 
-// SVG-Grafiken (Bubble, Heatmap, Sankey, Pairs, PC): SVG → Canvas → PNG
+// SVG-Grafiken (Bubble, Heatmap, Sankey, Pairs, PC): SVG -> Canvas -> PNG
 function downloadSvg(svgEl, filename) {
     if (!svgEl) return;
     const bb  = svgEl.getBoundingClientRect();
@@ -362,7 +364,7 @@ function addDownloadSvgBtn(svgOrContainer, filename, container) {
 
 const charts = {};
 
-// ── Zahlenformatierung: Tausenderpunkt + Dezimalkomma (de-DE) ─────────────────
+// Zahlenformatierung: Tausenderpunkt + Dezimalkomma (de-DE)
 function fmtN(n, decimals) {
     if (n === null || n === undefined || isNaN(n)) return String(n);
     if (decimals !== undefined) {
@@ -741,12 +743,12 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// ── Statistik 1: Rezeptionsindizes ────────────────────────────────────────────
+// Statistik 1: Rezeptionsindizes
 
 (function () {
     'use strict';
 
-    // ── CSV-Parser (RFC-4180: quoted fields, Kommas + Zeilenumbrüche in Feldern) ──
+    // CSV-Parser (RFC-4180: quoted fields, Kommas + Zeilenumbrüche in Feldern)
     function parseCsv(text) {
         const str = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
         const rows = [];
@@ -790,7 +792,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ── Tooltip (eigener, damit kein Konflikt mit dem globalen _tip) ───────────
+    // Tooltip (eigener, damit kein Konflikt mit dem globalen _tip)
     let _riTip = null;
     function getRiTip() {
         if (!_riTip) {
@@ -826,7 +828,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     function hideRiTip() { if (_riTip) _riTip.style.display = 'none'; }
 
-    // ── KPI-Leiste ─────────────────────────────────────────────────────────────
+    // KPI-Leiste
     function buildRiKpi(wrap, items) {
         const n      = items.length;
         const vals   = items.map(d => d.reception_index);
@@ -857,7 +859,7 @@ document.addEventListener('DOMContentLoaded', () => {
         wrap.appendChild(kpiCard(T.highestIndex,     maxVal.toLocaleString(NUM_LOCALE, {minimumFractionDigits:4, maximumFractionDigits:4}), '#5e17eb'));
     }
 
-    // ── Haupt-Balkendiagramm ─────────────────────────────────────────────────────
+    // Haupt-Balkendiagramm
     // HTML-Layout: DOM-Labels links (kein Canvas-Clipping), Balken rechts
     function buildRiChart(wrap, items, topN) {
         const all    = [...items].sort((a, b) => b.reception_index - a.reception_index);
@@ -865,11 +867,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const n      = sorted.length;
         const ROW_H  = 36; // px pro Zeile (einheitlich, zweizeilige Einträge haben mehr Inhalt)
 
-        // ── Äußerer Container: Labels | Canvas nebeneinander ─────────────────
+        // Äußerer Container: Labels | Canvas nebeneinander
         const outer = document.createElement('div');
         outer.style.cssText = 'display:flex;align-items:stretch;width:100%;overflow-x:auto;';
 
-        // ── Linke Spalte: DOM-Labels ──────────────────────────────────────────
+        // Linke Spalte: DOM-Labels
         const labelCol = document.createElement('div');
         labelCol.style.cssText =
             'flex-shrink:0;display:flex;flex-direction:column;justify-content:space-around;' +
@@ -906,7 +908,7 @@ document.addEventListener('DOMContentLoaded', () => {
             labelCol.appendChild(cell);
         });
 
-        // ── Rechte Spalte: Chart.js Canvas ───────────────────────────────────
+        // Rechte Spalte: Chart.js Canvas
         const canvasWrap = document.createElement('div');
         canvasWrap.style.cssText = 'flex:1;min-width:0;position:relative;';
         const canvas = document.createElement('canvas');
@@ -1003,7 +1005,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         });
 
-        // Klick auf Balken → Seite öffnen
+        // Klick auf Balken -> Seite öffnen
         canvas.style.cursor = 'pointer';
 
         canvas.addEventListener('click', evt => {
@@ -1026,7 +1028,7 @@ document.addEventListener('DOMContentLoaded', () => {
             labelCol.style.width = Math.min(320, maxW + 12) + 'px';
             if (charts['ri-main']) charts['ri-main'].resize();
 
-            // ── Download-Button: Labels (DOM) + Balken (Canvas) zusammenführen ──
+            // Download-Button: Labels (DOM) + Balken (Canvas) zusammenführen
             // `canvas` enthält nur die Balken mit leeren Y-Labels; die Beschriftungen
             // stehen als HTML in `labelCol`. Für den Export werden beide manuell auf
             // ein Offscreen-Canvas gezeichnet.
@@ -1064,7 +1066,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 oc.fillStyle = '#ffffff';
                 oc.fillRect(0, 0, off.width, off.height);
 
-                // ── Labels manuell zeichnen ──────────────────────────────────
+                // Labels manuell zeichnen
                 // Chart.js setzt oben+unten je ROW_H/2 als padding; das gleiche
                 // Padding gilt für die Label-Spalte (per CSS). Die n Zeilen sind
                 // gleichmäßig über (totalH - ROW_H*DPR) verteilt (space-around).
@@ -1105,7 +1107,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 });
 
-                // ── Chart-Canvas rechts daneben ──────────────────────────────
+                // Chart-Canvas rechts daneben
                 const labelWpx = Math.round(labelW * DPR);
                 oc.drawImage(canvas, labelWpx, 0, Math.round(chartW * DPR), totalH);
 
@@ -1124,7 +1126,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ── Streudiagramm: P_norm vs. I_norm ──────────────────────────────────────
+    // Streudiagramm: P_norm vs. I_norm
     function buildRiScatter(wrap, items) {
         const heading = document.createElement('p');
         heading.className = 'stats-subtitle stats-subtitle-sm-top';
@@ -1253,7 +1255,7 @@ document.addEventListener('DOMContentLoaded', () => {
         addDownloadBtn(canvas, fname('rezeptionsindizes_streudiagramm'), chartWrap);
     }
 
-    // ── Init ──────────────────────────────────────────────────────────────────
+    // Init
     document.addEventListener('DOMContentLoaded', () => {
         const wrap = document.getElementById('ri-wrap');
         if (!wrap) return;
@@ -1350,7 +1352,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })();
 
-// ── Sankey ────────────────────────────────────────────────────────────────────
+// Sankey
 
 const FTYPE_COLORS = {
     person_ref: '#f59e0b',
@@ -1671,7 +1673,7 @@ document.addEventListener('DOMContentLoaded', initSankey);
 
 
 
-// ── Statistik 7: Phänomene im Laufe der Zeit ───────────────────────────────────
+// Statistik 7: Phänomene im Laufe der Zeit
 
 const FTYPE_META = {
     person_ref:   { label: T.personRefLabel, singular: T.personRefSingular,    color: '#f59e0b' },
@@ -1933,7 +1935,7 @@ function buildPdistTypeSections() {
 
 document.addEventListener('DOMContentLoaded', initPdist);
 
-// ── Statistik 8: Phänomene nach Gattung (Heatmap) ────────────────────────────
+// Statistik 8: Phänomene nach Gattung (Heatmap)
 
 function buildHeatmap(features, genreObjs, container, showType = false, singleGenre = null) {
     container.innerHTML = '';
@@ -2300,7 +2302,7 @@ function initGdist() {
 document.addEventListener('DOMContentLoaded', initGdist);
 
 
-// ── Statistik 9: Stoff-Komponenten – Sunburst ─────────────────────────────────
+// Statistik 9: Stoff-Komponenten – Sunburst
 
 let _pcTip = null;
 function getPcTip() {
@@ -2382,7 +2384,7 @@ function renderPlotComponents(plotUri, topN) {
 
     const totalWeight = activeTypes.reduce((s, k) => s + byType[k].reduce((a, c) => a + c.n, 0), 0);
 
-    // ── SVG-Setup ────────────────────────────────────────────────────────
+    // SVG-Setup
     const NS = 'http://www.w3.org/2000/svg';
     const mk  = tag => document.createElementNS(NS, tag);
     const setA = (el, attrs) => { Object.entries(attrs).forEach(([k,v]) => el.setAttribute(k,v)); return el; };
@@ -2435,7 +2437,7 @@ function renderPlotComponents(plotUri, topN) {
         return el;
     }
 
-    // ── Winkel-Layout ────────────────────────────────────────────────────
+    // Winkel-Layout
     const START = -Math.PI / 2;
     let cursor  = START;
     const totalGapType = GAP_TYPE * activeTypes.length;
@@ -2465,7 +2467,7 @@ function renderPlotComponents(plotUri, topN) {
         typeSegs.push({ k, color: (FTYPE_META[k]||{}).color||'#6b7280', a0, a1, items: itemSegs });
     });
 
-    // ── Innerer Ring ─────────────────────────────────────────────────────
+    // Innerer Ring
     typeSegs.forEach(({ k, color, a0, a1 }) => {
         const fullLabel = (FTYPE_META[k]||{}).label || k;
         const path = setA(mk('path'), {
@@ -2494,7 +2496,7 @@ function renderPlotComponents(plotUri, topN) {
         }
     });
 
-    // ── Äußerer Ring ─────────────────────────────────────────────────────
+    // Äußerer Ring
     typeSegs.forEach(({ k, color, items }) => {
         items.forEach(({ cf, a0, a1 }) => {
             if (a1 - a0 < 0.002) return;
@@ -2629,7 +2631,7 @@ function renderPlotComponents(plotUri, topN) {
 
 document.addEventListener('DOMContentLoaded', initPlotComponents);
 
-// ── Statistik 10: Personenreferenzen und Figuren (Balkendiagramm) ───────────────
+// Statistik 10: Personenreferenzen und Figuren (Balkendiagramm)
 
 const PD6 = {
     recPr:     'rgba(107,114,128,0.75)',
@@ -2787,11 +2789,11 @@ function initPersonDuality() {
 }
 
 document.addEventListener('DOMContentLoaded', initPersonDuality);
-// ── Statistik 11: Werkreferenzen × Zitate ─────────────────────────────────────
+// Statistik 11: Werkreferenzen × Zitate
 
 let wc7Chart = null;
 
-// ─── Tooltip-Instanz für Stat 7 ─────────────────────────────────────────────
+// Tooltip-Instanz für Stat 7
 let _wc7Tip = null;
 function getWc7Tip() {
     if (!_wc7Tip) {
@@ -2812,7 +2814,7 @@ function wc7CleanLabel(label) {
     return label.replace(/^Reference to\s+/i, '').replace(/^Expression of\s+/i, '');
 }
 
-// ─── Balkendiagramm ──────────────────────────────────────────────────────────
+// Balkendiagramm
 function renderWorkCitation() {
     const wc   = DATA.workCitation;
     const wrap = document.getElementById('wc-chart-wrap');
@@ -2920,7 +2922,7 @@ function renderWorkCitation() {
 
 }
 
-// ─── Init ────────────────────────────────────────────────────────────────────
+// Init
 function initWorkCitation() {
     const wc = DATA.workCitation;
     if (!wc || !wc.works || wc.works.length === 0) return;
@@ -2929,7 +2931,7 @@ function initWorkCitation() {
 
 document.addEventListener('DOMContentLoaded', initWorkCitation);
 
-// ── Statistik 4: Phänomene als Grundlage intertextueller Relationen ─────────────
+// Statistik 4: Phänomene als Grundlage intertextueller Relationen
 
 let _int31Tip = null;
 function getInt31Tip() {
@@ -2954,7 +2956,7 @@ function int31TipMove(e) {
 }
 function int31TipHide() { if (_int31Tip) _int31Tip.style.display = 'none'; }
 
-// ── Meta-Bar ─────────────────────────────────────────────────────────────────
+// Meta-Bar
 function renderInt31MetaBar() {
     const co   = DATA.int31CoOccurrence;
     const wrap = document.getElementById('int31-meta-bar');
@@ -2963,19 +2965,25 @@ function renderInt31MetaBar() {
         `<div style="text-align:center;margin-bottom:0.5rem">`
         + `<span style="font-size:2rem;font-weight:700;color:#1f2937">${fmtN(co.nInt31All)}</span>`
         + `<span style="font-size:0.9rem;color:#6b7280;margin-left:0.5rem">${T.intertextualRelationsTotal}</span>`
-        + `</div>`;
+        + `</div>`
+        + `<div style="text-align:center;font-size:0.8rem;color:#6b7280;margin-bottom:0.5rem">${T.intertextualRelationsWithFeats(fmtN(co.nInt31WithFeats))}</div>`;
 }
 
-// ── Phänomentyp-Balken ───────────────────────────────────────────────────────
+// Phänomentyp-Balken
 function renderInt31FtypeBar() {
     const co   = DATA.int31CoOccurrence;
     const wrap = document.getElementById('int31-ftype-bar-wrap');
     if (!co || !wrap) return;
 
-    const typeSum = {};
-    (co.featFrequencies || []).forEach(f => {
-        typeSum[f.ftype] = (typeSum[f.ftype] || 0) + f.n;
-    });
+    // Relationen pro Phänomentyp (Fallback: Summe der Vorkommen)
+    let typeSum = {};
+    if (co.ftypeNodes && Object.keys(co.ftypeNodes).length) {
+        typeSum = Object.assign({}, co.ftypeNodes);
+    } else {
+        (co.featFrequencies || []).forEach(f => {
+            typeSum[f.ftype] = (typeSum[f.ftype] || 0) + f.n;
+        });
+    }
 
     const items = Object.keys(FTYPE_META)
         .filter(k => typeSum[k] > 0)
@@ -3032,7 +3040,7 @@ function renderInt31FtypeBar() {
     if (_i31c) addDownloadBtn(_i31c, fname('intertextuelle_relationen_phaenomentypen'), wrap);
 }
 
-// ── Sunburst + Sehnen ────────────────────────────────────────────────────────
+// Sunburst + Sehnen
 function renderInt31Sunburst() {
     const co      = DATA.int31CoOccurrence;
     const wrap    = document.getElementById('int31-sunburst-wrap');
@@ -3280,7 +3288,7 @@ function renderInt31Sunburst() {
     if (_sbWrap) addDownloadSvgBtn(_sbWrap, 'kookkurrenzen_phaenomene', _sbAnchor);
 }
 
-// ── Kombinationsliste ────────────────────────────────────────────────────────
+// Kombinationsliste
 function renderInt31Pairs() {
     const co   = DATA.int31CoOccurrence;
     const wrap = document.getElementById('int31-pairs-wrap');
@@ -3367,7 +3375,7 @@ function renderInt31Pairs() {
     addDownloadSvgBtn(scroller, 'intertextuelle_relationen_paare', wrap);
 }
 
-// ── Statistik 3: Intertextuelle Beziehungen und Textähnlichkeiten ───────────────
+// Statistik 3: Intertextuelle Beziehungen und Textähnlichkeiten
 
 function renderInt31TopNodes() {
     const tn   = DATA.int31TopNodes;
@@ -3388,14 +3396,14 @@ function renderInt31TopNodes() {
         const texts = node.texts || [];
         const basis = node.basis || [];
 
-        // ── Karte ─────────────────────────────────────────────────────────
+        // Karte
         const card = document.createElement('div');
         card.style.cssText =
             'background:#fff;border:1.5px solid #e5e7eb;border-radius:10px;'
             + 'padding:16px 18px 14px;margin-bottom:18px;'
             + 'box-shadow:0 1px 4px rgba(0,0,0,0.06)';
 
-        // ── Kopfzeile ─────
+        // Kopfzeile
         const header = document.createElement('div');
         header.style.cssText =
             'display:flex;align-items:center;justify-content:space-between;'
@@ -3418,7 +3426,7 @@ function renderInt31TopNodes() {
         header.appendChild(pillFeat);
         card.appendChild(header);
 
-        // ── Titel ───────────────────────────────
+        // Titel
         const title = document.createElement('p');
         title.style.cssText =
             'text-align:center;font-size:13px;font-weight:600;color:#1f2937;'
@@ -3426,7 +3434,7 @@ function renderInt31TopNodes() {
         title.textContent = node.cardLabel;
         card.appendChild(title);
 
-        // ── Verbundene Texte ──────────────────────────────
+        // Verbundene Texte
         const textHead = document.createElement('p');
         textHead.style.cssText =
             'font-size:11px;font-weight:700;color:#9ca3af;margin:0 0 5px;'
@@ -3465,12 +3473,12 @@ function renderInt31TopNodes() {
         });
         card.appendChild(textList);
 
-        // ── Trennlinie ────────────────────────────────────────────────────
+        // Trennlinie
         const hr = document.createElement('div');
         hr.style.cssText = 'border-top:1px solid #f3f4f6;margin-bottom:10px';
         card.appendChild(hr);
 
-        // ── Grundlage der Ähnlichkeit ───────────────────────
+        // Grundlage der Ähnlichkeit
         if (basis.length) {
             const bHead = document.createElement('p');
             bHead.style.cssText =
@@ -3536,7 +3544,7 @@ function renderInt31TopNodes() {
     });
 }
 
-// ── Init ─────────────────────────────────────────────────────────────────────
+// Init
 function initInt31CoOccurrence() {
     const co = DATA.int31CoOccurrence;
     if (!co || !co.featFrequencies.length) return;
@@ -3556,7 +3564,7 @@ function initInt31CoOccurrence() {
 
 document.addEventListener('DOMContentLoaded', initInt31CoOccurrence);
 
-// ── Statistik 2: Durchschnittliche Relationen und gemeinsame Phänomene ─────────
+// Statistik 2: Durchschnittliche Relationen und gemeinsame Phänomene
 
 let _stat10Charts = {};
 
@@ -3567,7 +3575,7 @@ function initStat10() {
     const wrap = document.getElementById('stat10-wrap-inner');
     if (!wrap) return;
 
-    // ── Kennzahlen-Karten ────────────────────────────────────────────────────
+    // Kennzahlen-Karten
     const kpiGrid = document.createElement('div');
     kpiGrid.style.cssText =
         'display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));' +
@@ -3619,7 +3627,7 @@ function initStat10() {
     });
     wrap.appendChild(kpiGrid);
 
-    // ── Legende ───────────────────────────────────────────────────────────────
+    // Legende
     const legend = document.createElement('div');
     legend.className = 'legend';
     legend.innerHTML =
@@ -3627,7 +3635,7 @@ function initStat10() {
         `<span><span class="dot dot-r"></span>${T.receptionTestimoniesPlain} (n = ${fmtN(d.nReception)})</span>`;
     wrap.appendChild(legend);
 
-    // ── Hilfsfunktion: grouped bar chart ─────────────────────────────────────
+    // Hilfsfunktion: grouped bar chart
     function renderGroupedBar(canvasId, histData, title, xLabel) {
         const labels = histData.map(b => b.label);
         const sapData = histData.map(b => b.sappho);
@@ -3736,7 +3744,7 @@ function initStat10() {
 
 document.addEventListener('DOMContentLoaded', initStat10);
 
-// ── Statistik 12: Gender (Überblick · Zeitverlauf · Phänomene) ──────────────
+// Statistik 12: Gender (Überblick · Zeitverlauf · Phänomene)
 
 const GENDER_META = {
     male:    { label: T.male,      color: 'rgba(234,88,12,0.75)',   line: '#ea580c' },
@@ -3744,7 +3752,7 @@ const GENDER_META = {
     unknown: { label: T.noEntry, color: 'rgba(156,163,175,0.55)', line: '#9ca3af' },
 };
 
-// ── Tab-Steuerung ─────────────────────────────────────────────────────────────
+// Tab-Steuerung
 const GENDER_TABS = [
     { id: 'overview', label: T.tabOverview   },
     { id: 'time',     label: T.tabTime },
@@ -3812,7 +3820,7 @@ function switchGenderTab(tabId) {
     }
 }
 
-// ── Pane 1: Überblick (alle Autor_innen) ─────────────────────────────────────
+// Pane 1: Überblick (alle Autor_innen)
 function renderGenderOverview() {
     const d = DATA.genderStats;
     if (!d) return;
@@ -3884,7 +3892,7 @@ function renderGenderOverview() {
     addDownloadBtn(donutCanvas, fname('genderspezifische_analysen_uebersicht'), donutCanvas.parentElement || document.getElementById('gender-pane-overview'));
 }
 
-// ── Pane 2: Zeitverlauf (alle Autor_innen) ────────────────────────────────────
+// Pane 2: Zeitverlauf (alle Autor_innen)
 let _genderTimeChart = null;
 
 function renderGenderTimeChart() {
@@ -3968,7 +3976,7 @@ function renderGenderTimeChart() {
     addDownloadBtn(document.getElementById('chart-gender-time'), fname('genderspezifische_analysen_zeitverlauf'), document.getElementById('chart-gender-time')?.parentElement || document.getElementById('gender-pane-time'));
 }
 
-// ── Pane 3: Gattungen × Geschlecht ──────────────────────────────────────────
+// Pane 3: Gattungen × Geschlecht
 let _genderGenreChart = null;
 
 function renderGenderGenreChart() {
@@ -4068,7 +4076,7 @@ function renderGenderGenreChart() {
     addDownloadBtn(document.getElementById('chart-gender-genre'), fname('genderspezifische_analysen_gattungen'), document.getElementById('chart-gender-genre')?.parentElement || document.getElementById('gender-pane-genre'));
 }
 
-// ── Pane 3: Phänomene – aufklappbare Sektionen pro Phänomentyp ──
+// Pane 3: Phänomene – aufklappbare Sektionen pro Phänomentyp
 
 const _genderPhenomCharts = {};
 
@@ -4102,7 +4110,7 @@ function renderGenderPhenomSections() {
     if (!wrap) return;
     wrap.innerHTML = '';
 
-    // ── Überblicks-Chart Top-N ────────────────────────────────────────────────
+    // Überblicks-Chart Top-N
     const topN   = parseInt(document.getElementById('sel-gender-phenom-topn')?.value || '30');
     const topItems = pd.features.slice(0, topN > 0 ? topN : pd.features.length);
 
@@ -4259,7 +4267,7 @@ function renderGenderPhenomSections() {
 
     }
 
-    // ── Top-N pro Geschlecht: zwei Spalten nebeneinander ───────────────────────
+    // Top-N pro Geschlecht: zwei Spalten nebeneinander
     const genderTopTitle = document.createElement('p');
     genderTopTitle.className = 'stats-subtitle stats-subtitle-sm-top';
     genderTopTitle.textContent = T.topPhenomenaByGender;
@@ -4611,7 +4619,7 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
     addDownloadBtn(canvas, fname('genderspezifische_analysen_phaenomene_' + ft), canvas.parentElement || document.getElementById('gender-phenom-body-' + ft));
 }
 
-// ── Init ──────────────────────────────────────────────────────────────────────
+// Init
 document.addEventListener('DOMContentLoaded', () => {
     if (!DATA.genderStats) return;
     buildGenderTabs();
@@ -4634,12 +4642,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 });
 
-// ── Statistik 13: Wiki-Metriken ───────────────────────────────────────────────
+// Statistik 13: Wiki-Metriken
 
 (function () {
     'use strict';
 
-    // ── CSV-Parser ─────────────────────────────────────────────────────────────
+    // CSV-Parser
     function parseCsv(text) {
         const lines   = text.trim().split('\n');
         const headers = lines[0].split(',').map(h => h.trim());
@@ -4677,7 +4685,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return Array.from(map.values());
     }
 
-    // ── Farben ─────────────────────────────────────────────────────────────────
+    // Farben
     const WM_C = {
         primary:     'rgba(94,23,235,0.75)',
         primaryLine: '#5e17eb',
@@ -4685,7 +4693,7 @@ document.addEventListener('DOMContentLoaded', () => {
         grayLine:    '#6b7280',
     };
 
-    // ── Tabs ───────────────────────────────────────────────────────────────────
+    // Tabs
     const WM_TABS = [
         { key: 'qrank',     label: T.qrank },
         { key: 'sitelinks', label: T.sitelinks },
@@ -4741,7 +4749,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ── KPI-Leiste ─────────────────────────────────────────────────────────────
+    // KPI-Leiste
     function buildWmKpi(WM_DATA, WM_WITH_QRANK, medianQRank, avgSitelinks) {
         const wrap = document.getElementById('wm-kpi-wrap');
         if (!wrap) return;
@@ -4772,7 +4780,7 @@ document.addEventListener('DOMContentLoaded', () => {
         wrap.appendChild(kpiCard(null, 'Ø Sitelinks',           avgSitelinks.toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1}), '#6b7280'));
     }
 
-    // ── Scatter-Hilfsfunktion: Bubble-Chart ───────────────────────────────────
+    // Scatter-Hilfsfunktion: Bubble-Chart
     function makeScatterChart(canvasId, points, xLabel, yLabel, yLog, labelSet, getLabel, nameField) {
         const canvas = document.getElementById(canvasId);
         if (!canvas) return null;
@@ -4866,7 +4874,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return chart;
     }
 
-    // ── QRank vs. Korpuspräsenz ──────────────────────────────────────
+    // QRank vs. Korpuspräsenz
     function renderWmScatter(state) {
         if (state.charts.scatter) { state.charts.scatter.destroy(); }
         const { WM_WITH_QRANK } = state;
@@ -4886,7 +4894,7 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     }
 
-    // ── Sitelinks vs. Korpuspräsenz ──────────────────────────────────
+    // Sitelinks vs. Korpuspräsenz
     function renderWmSlScatter(state) {
         if (state.charts.slscatter) { state.charts.slscatter.destroy(); }
         const data = state.WM_DATA.filter(d => d.sitelinks > 0);
@@ -4904,7 +4912,7 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     }
 
-    // ── Gemeinsame Balken-Render-Funktion für Top-QRank und Top-Sitelinks ─────
+    // Gemeinsame Balken-Render-Funktion für Top-QRank und Top-Sitelinks
     function renderWmTopBar(state, chartKey, canvasId, wrapId, selId, dataFn, ds0Fn, ds1Fn, xTitle0, xTitle1) {
         const topN = parseInt(document.getElementById(selId)?.value || '0') || Infinity;
         const wrap = document.getElementById(wrapId);
@@ -5010,7 +5018,7 @@ document.addEventListener('DOMContentLoaded', () => {
         canvas.style.cursor = 'pointer';
     }
 
-    // ── Top QRank ────────────────────────────────────────────────────
+    // Top QRank
     function renderWmTopQrank(state) {
         const selVal        = document.getElementById('sel-wm-qrank-topn')?.value || '50';
         const topN          = selVal === '0' ? Infinity : parseInt(selVal);
@@ -5029,7 +5037,7 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     }
 
-    // ── Top Sitelinks ────────────────────────────────────────────────
+    // Top Sitelinks
     function renderWmTopSitelinks(state) {
         const selVal          = document.getElementById('sel-wm-sl-topn')?.value || '50';
         const topN            = selVal === '0' ? Infinity : parseInt(selVal);
@@ -5046,7 +5054,7 @@ document.addEventListener('DOMContentLoaded', () => {
         );
     }
 
-    // ── Donut Sitelinks-Verteilung ──────────────────
+    // Donut Sitelinks-Verteilung
     function renderWmSitelinksPie(state) {
         const wrap = document.getElementById('wm-sitelinks-donut-wrap');
         if (!wrap || state.charts.sitelinksPie) return;
@@ -5148,7 +5156,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }());
     }
 
-    // ── Init ──────────────────────────────────────────────────────────────────
+    // Init
     document.addEventListener('DOMContentLoaded', () => {
         fetch('https://raw.githubusercontent.com/laurauntner/sappho-digital/main/data/wikimetrix.csv')
             .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })

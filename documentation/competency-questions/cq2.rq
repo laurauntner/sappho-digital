@@ -1,0 +1,37 @@
+# Competency question 2: How are the reception testimonies that actualize the Sappho-Phaon legend (including its variants) distributed across genres and centuries?
+PREFIX ecrm: <http://erlangen-crm.org/current/>
+PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>
+PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?gattung ?jahrhundert (COUNT(DISTINCT ?text) AS ?anzahl)
+WHERE {
+  ?stoff a intro:INT_Plot ; rdfs:label ?stoffLabel .
+  FILTER(LANG(?stoffLabel) = "de"
+         && CONTAINS(?stoffLabel, "Sappho-Phaon-Legende"))
+  ?akt intro:R17_actualizesFeature ?stoff ;
+       intro:R18i_actualizationFoundOn ?text .
+  ?text a lrmoo:F2_Expression ;
+        ecrm:P2_has_type/rdfs:label ?gattung .
+  FILTER(LANG(?gattung) = "de")
+  OPTIONAL {
+    SELECT ?text
+           (MIN(xsd:integer(SUBSTR(STR(?j), 1, 4))) AS ?jahr)
+    WHERE {
+      { ?text lrmoo:R17i_was_created_by
+              /ecrm:P4_has_time-span/rdfs:label ?j }
+      UNION
+      { ?text lrmoo:R4i_is_embodied_in
+              /lrmoo:R24i_was_created_through ?mc .
+        ?mc ecrm:P4_has_time-span/rdfs:label ?j .
+        FILTER NOT EXISTS { ?mc ecrm:P4_has_time-span ?a, ?b .
+                            FILTER(?a != ?b) } }
+    } GROUP BY ?text
+  }
+  BIND(COALESCE(STR(FLOOR((?jahr - 1) / 100) + 1), "unklar")
+       AS ?jahrhundert)
+}
+GROUP BY ?gattung ?jahrhundert
+ORDER BY ?jahrhundert ?gattung

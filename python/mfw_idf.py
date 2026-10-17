@@ -85,4 +85,4 @@ if __name__ == "__main__":
 
     export_combined_table(output_file, most_common, top_nouns, top_adjs, distributed)
 
-    print(f"\n✅ Wortstatistik gespeichert in:\n{output_file}")
+    print(f"\nWortstatistik gespeichert in:\n{output_file}")
