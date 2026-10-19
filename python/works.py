@@ -5,6 +5,9 @@ from rdflib import Graph, Namespace, URIRef, Literal
 from rdflib.namespace import RDF, RDFS, XSD, OWL
 from pathlib import Path
 from typing import Optional
+from collections import defaultdict
+
+from person_names import preferred_person_names, add_person_names
 
 # Wikidata
 SESSION = requests.Session()
@@ -186,6 +189,20 @@ root     = tree.getroot()
 all_bibls  = root.findall(".//tei:bibl", namespaces=NSMAP)
 top_bibls  = [b for b in all_bibls if b.getparent().tag != f"{{{NSMAP['tei']}}}bibl"]
 
+# Gleiche Hauptwerk-ID mit unterschiedlichen Publikationsjahren (gleichlautende
+# Sammelbände, Zeitschriften über mehrere Jahrgänge): je Jahr eine eigene Manifestation
+_manif_years = defaultdict(set)
+for _b in top_bibls:
+    _dp = _b.find("tei:date[@type='published']", namespaces=NSMAP)
+    _nb = _b.find("tei:bibl", namespaces=NSMAP)
+    if _dp is None or _nb is None:
+        continue
+    _nid = _nb.get("{http://www.w3.org/XML/1998/namespace}id") or _b.get("{http://www.w3.org/XML/1998/namespace}id")
+    _manif_years[_nid].add(_dp.get("when"))
+SPLIT_MANIF = {k for k, v in _manif_years.items() if len(v) > 1}
+
+PREFERRED_NAMES = preferred_person_names(top_bibls)
+
 # -----------------------------------------------------------------------
 # Hauptschleife
 # -----------------------------------------------------------------------
@@ -365,8 +382,15 @@ for bibl in top_bibls:
 
         final_label = work_title or title_string or "[??]"
 
-        manifestation_uri  = SD[f"manifestation/{nested_id}"]
-        creation_manif_uri = SD[f"manifestation_creation/{nested_id}"]
+        manif_id = nested_id
+        if nested_id in SPLIT_MANIF:
+            manif_id = f"{nested_id}_{date_published.get('when') or bibl_id}"
+        # Normdaten des übergeordneten Titels (z. B. einer Zeitschrift) gelten
+        # nicht für die einzelne Ausgabe: dann rdfs:seeAlso statt owl:sameAs
+        manif_link = RDFS.seeAlso if nested_id in SPLIT_MANIF else OWL.sameAs
+
+        manifestation_uri  = SD[f"manifestation/{manif_id}"]
+        creation_manif_uri = SD[f"manifestation_creation/{manif_id}"]
 
         g.add((manifestation_uri, RDF.type, LRMOO.F3_Manifestation))
         g.add((manifestation_uri, RDFS.label, Literal(final_label, lang="de")))
@@ -375,7 +399,7 @@ for bibl in top_bibls:
 
         if inner_is_wd:
             inner_qid = inner_ref.split("/")[-1]
-            g.add((manifestation_uri, OWL.sameAs, URIRef(inner_ref)))
+            g.add((manifestation_uri, manif_link, URIRef(inner_ref)))
             _add_wd_identifiers(manifestation_uri, inner_qid)
 
             if not outer_is_wd and entity:
@@ -399,7 +423,7 @@ for bibl in top_bibls:
                     g.add((db_id_uri, RDFS.label, Literal(db_key)))
                     g.add((db_id_uri, ECRM.P1i_identifies, manifestation_uri))
                     g.add((db_id_uri, ECRM.P2_has_type, idtype_dbpedia))
-                    g.add((manifestation_uri, OWL.sameAs, URIRef(link)))
+                    g.add((manifestation_uri, manif_link, URIRef(link)))
 
                 # GND
                 for gnd in set(get_claim_vals(entity, "P227", expect="str")):
@@ -412,7 +436,7 @@ for bibl in top_bibls:
                     g.add((gnd_uri, RDFS.label, Literal(gnd)))
                     g.add((gnd_uri, ECRM.P1i_identifies, manifestation_uri))
                     g.add((gnd_uri, ECRM.P2_has_type, idtype_gnd))
-                    g.add((manifestation_uri, OWL.sameAs, URIRef(f"https://d-nb.info/gnd/{gnd}")))
+                    g.add((manifestation_uri, manif_link, URIRef(f"https://d-nb.info/gnd/{gnd}")))
 
                 # VIAF
                 for viaf in set(get_claim_vals(entity, "P214", expect="str")):
@@ -425,7 +449,7 @@ for bibl in top_bibls:
                     g.add((viaf_uri, RDFS.label, Literal(viaf)))
                     g.add((viaf_uri, ECRM.P1i_identifies, manifestation_uri))
                     g.add((viaf_uri, ECRM.P2_has_type, idtype_viaf))
-                    g.add((manifestation_uri, OWL.sameAs, URIRef(f"https://viaf.org/viaf/{viaf}")))
+                    g.add((manifestation_uri, manif_link, URIRef(f"https://viaf.org/viaf/{viaf}")))
 
                 # Goodreads
                 for gr in set(get_claim_vals(entity, "P8383", expect="str")):
@@ -438,7 +462,7 @@ for bibl in top_bibls:
                     g.add((gr_uri, RDFS.label, Literal(gr)))
                     g.add((gr_uri, ECRM.P1i_identifies, manifestation_uri))
                     g.add((gr_uri, ECRM.P2_has_type, idtype_gr))
-                    g.add((manifestation_uri, OWL.sameAs, URIRef(f"https://www.goodreads.com/work/show/{gr}")))
+                    g.add((manifestation_uri, manif_link, URIRef(f"https://www.goodreads.com/work/show/{gr}")))
 
                 # Wikimedia-Bild
                 img = next((v for v in get_claim_vals(entity, "P18", expect="auto") if v), None)
@@ -448,7 +472,7 @@ for bibl in top_bibls:
 
         elif outer_is_wd and _nested_bibl is None:
             # Nur äußeres bibl, kein inneres: outer_ref gilt für F2 und F3
-            g.add((manifestation_uri, OWL.sameAs, URIRef(outer_ref)))
+            g.add((manifestation_uri, manif_link, URIRef(outer_ref)))
             _add_wd_identifiers(manifestation_uri, outer_qid) 
 
         g.add((creation_manif_uri, RDF.type, LRMOO.F30_Manifestation_Creation))
@@ -517,8 +541,7 @@ for bibl in top_bibls:
         if auth_id:
             person_uri = SD[f"person/{auth_id}"]
             g.add((person_uri, RDF.type, ECRM.E21_Person))
-            if auth.text:
-                g.add((person_uri, RDFS.label, Literal(auth.text.strip(), lang="de")))
+            add_person_names(g, person_uri, PREFERRED_NAMES.get(auth_id))
             g.add((person_uri, ECRM.P14i_performed, creation_expr_uri))
             g.add((creation_expr_uri, ECRM.P14_carried_out_by, person_uri))
             if date_published is not None:

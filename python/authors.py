@@ -9,6 +9,8 @@ from pathlib import Path
 from datetime import datetime
 from typing import Optional
 
+from person_names import preferred_person_names, add_person_names
+
 SESSION = requests.Session()
 SESSION.headers.update({
     "User-Agent": "SapphoDigital/1.0 (+mailto:laura.untner@fu-berlin.de)"
@@ -212,6 +214,7 @@ parser = etree.XMLParser(recover=True)
 tree = etree.parse(INPUT_FILE, parser=parser)
 root = tree.getroot()
 authors = root.findall(".//tei:author", namespaces=NS)
+PREFERRED_NAMES = preferred_person_names(root.findall(".//tei:bibl", namespaces=NS))
 seen = set()
 
 for el in authors:
@@ -219,15 +222,16 @@ for el in authors:
     xml_id = el.get("{http://www.w3.org/XML/1998/namespace}id")
     if not xml_id:
         continue
-    if (xml_id, el.text.strip()) in seen:
+    if xml_id in seen:
         continue
-    seen.add((xml_id, el.text.strip()))
+    seen.add(xml_id)
+    name = PREFERRED_NAMES.get(xml_id, (name, []))[0]
 
     person_uri = SD[f"person/{xml_id}"]
     identifier_uri = SD[f"identifier/{xml_id}"]
 
     g.add((person_uri, RDF.type, ECRM.E21_Person))
-    g.add((person_uri, RDFS.label, Literal(name, lang="de")))
+    add_person_names(g, person_uri, PREFERRED_NAMES.get(xml_id))
     g.add((person_uri, ECRM.P1_is_identified_by, identifier_uri))
 
     g.add((identifier_uri, RDF.type, ECRM.E42_Identifier))
