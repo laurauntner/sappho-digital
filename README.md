@@ -4,8 +4,6 @@ A digital humanities dissertation project documenting and analyzing the producti
 
 For a full project description, see the **[project website](https://sappho-digital.com/index.html)** (built with [DSE-Static-Cookiecutter](https://github.com/acdh-oeaw/dse-static-cookiecutter)). If the website is unavailable, an archived version can be accessed via the [Wayback Machine](https://web.archive.org/).
 
-> ⚠️ **This repository is under active development.**
-
 ---
 
 ## Citation

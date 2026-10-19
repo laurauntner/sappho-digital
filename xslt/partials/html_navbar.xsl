@@ -16,9 +16,9 @@
                             alt="{$project_short_title}" itemprop="logo"/>
                     </a>
                     <!--<a class="navbar-brand site-title-with-logo" rel="home" href="{i18n:href('index.html')}" title="{$project_short_title}" itemprop="url"><xsl:value-of select="$project_short_title"/></a>-->
-                    <span class="navbar-badges">
+                    <!--<span class="navbar-badges">
                         <span class="badge bg-light text-dark">in development</span>
-                    </span>
+                    </span>-->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                         data-bs-target="#navbarSupportedContent"
                         aria-controls="navbarSupportedContent" aria-expanded="false"
