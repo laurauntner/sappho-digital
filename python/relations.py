@@ -468,7 +468,7 @@ for rel in relations_to_create:
     feat_label_en = f"Interpretation of Intertextual Relation between {ref_label} and {referred_label}"
     out.add((feature_uri, RDF.type, INTRO["INT_Interpretation"]))
     add_bilingual(out, feature_uri, feat_label_de, feat_label_en)
-    out.add((feature_uri, INTRO["R17i_featureIsActualizedIn"], actual_uri))
+    out.add((feature_uri, INTRO["R17i_featureActualizedIn"], actual_uri))
 
     out.add((actual_uri, RDF.type, INTRO["INT2_ActualizationOfFeature"]))
     add_bilingual(out, actual_uri, feat_label_de, feat_label_en)

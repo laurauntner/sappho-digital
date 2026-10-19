@@ -77,7 +77,6 @@ HIDDEN_BY_DEFAULT = {
     "http://erlangen-crm.org/current/E69_Death",
     "http://erlangen-crm.org/current/E73_Information_Object",
     "http://erlangen-crm.org/current/E74_Group",
-    "http://erlangen-crm.org/current/E90_Symbolic_Object",
     "http://iflastandards.info/ns/lrm/lrmoo/F27_Work_Creation",
     "http://iflastandards.info/ns/lrm/lrmoo/F28_Expression_Creation",
     "http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation",
@@ -321,10 +320,6 @@ def resolve_url(uri, classes, g, labels):
         lid = local_id(uri)
         if lid.startswith("publisher_"): return BASE + "analyse.html", None
         return uri, f"E74_Group: unbekanntes Muster: {uri}"
-
-    # E90_Symbolic_Object
-    if "http://erlangen-crm.org/current/E90_Symbolic_Object" in classes:
-        return BASE + local_id(uri) + ".html", None
 
     # INT_Character
     if "https://w3id.org/lso/intro/currentbeta#INT_Character" in classes:

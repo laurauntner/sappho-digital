@@ -1216,7 +1216,7 @@ this:actualization_2 sh:path intro:R17_actualizesFeature ;
     core:enableOptional "true"^^xsd:boolean ;
     core:enableNegation "true"^^xsd:boolean .
 
-this:interpretation_1 sh:path intro:R17i_featureIsActualizedIn ;
+this:interpretation_1 sh:path intro:R17i_featureActualizedIn ;
     sh:order "1"^^xsd:integer ;
     sh:name "R17i feature is actualized in"@en ;
     sh:nodeKind sh:IRI ;
@@ -1237,7 +1237,7 @@ this:actualization_3 sh:path intro:R17_actualizesFeature ;
     core:enableOptional "true"^^xsd:boolean ;
     core:enableNegation "true"^^xsd:boolean .
 
-this:motif_1 sh:path intro:R17i_featureIsActualizedIn ;
+this:motif_1 sh:path intro:R17i_featureActualizedIn ;
     sh:order "1"^^xsd:integer ;
     sh:name "R17i feature is actualized in"@en ;
     sh:nodeKind sh:IRI ;
@@ -1257,7 +1257,7 @@ this:actualization_4 sh:path intro:R17_actualizesFeature ;
     core:enableOptional "true"^^xsd:boolean ;
     core:enableNegation "true"^^xsd:boolean .
 
-this:reference_1 sh:path intro:R17i_featureIsActualizedIn ;
+this:reference_1 sh:path intro:R17i_featureActualizedIn ;
     sh:order "1"^^xsd:integer ;
     sh:name "R17i feature is actualized in"@en ;
     sh:nodeKind sh:IRI ;
@@ -1277,7 +1277,7 @@ this:actualization_5 sh:path intro:R17_actualizesFeature ;
     core:enableOptional "true"^^xsd:boolean ;
     core:enableNegation "true"^^xsd:boolean .
 
-this:character_1 sh:path intro:R17i_featureIsActualizedIn ;
+this:character_1 sh:path intro:R17i_featureActualizedIn ;
     sh:order "1"^^xsd:integer ;
     sh:name "R17i feature is actualized in"@en ;
     sh:nodeKind sh:IRI ;
@@ -1297,7 +1297,7 @@ this:actualization_6 sh:path intro:R17_actualizesFeature ;
     core:enableOptional "true"^^xsd:boolean ;
     core:enableNegation "true"^^xsd:boolean .
 
-this:plot_1 sh:path intro:R17i_featureIsActualizedIn ;
+this:plot_1 sh:path intro:R17i_featureActualizedIn ;
     sh:order "1"^^xsd:integer ;
     sh:name "R17i feature is actualized in"@en ;
     sh:nodeKind sh:IRI ;
@@ -1317,7 +1317,7 @@ this:actualization_7 sh:path intro:R17_actualizesFeature ;
     core:enableOptional "true"^^xsd:boolean ;
     core:enableNegation "true"^^xsd:boolean .
 
-this:topic_1 sh:path intro:R17i_featureIsActualizedIn ;
+this:topic_1 sh:path intro:R17i_featureActualizedIn ;
     sh:order "1"^^xsd:integer ;
     sh:name "R17i feature is actualized in"@en ;
     sh:nodeKind sh:IRI ;
@@ -1337,7 +1337,7 @@ this:actualization_8 sh:path intro:R17_actualizesFeature ;
     core:enableOptional "true"^^xsd:boolean ;
     core:enableNegation "true"^^xsd:boolean .
 
-this:topos_1 sh:path intro:R17i_featureIsActualizedIn ;
+this:topos_1 sh:path intro:R17i_featureActualizedIn ;
     sh:order "1"^^xsd:integer ;
     sh:name "R17i feature is actualized in"@en ;
     sh:nodeKind sh:IRI ;

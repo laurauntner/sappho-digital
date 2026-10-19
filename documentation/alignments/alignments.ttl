@@ -8,7 +8,6 @@
 @prefix efrbroo: <http://erlangen-crm.org/efrbroo/> .
 @prefix fabio: <http://purl.org/spar/fabio/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix frbr: <http://purl.org/vocab/frbr/core#> .
 @prefix frbroo: <http://iflastandards.info/ns/fr/frbr/frbroo/> .
 @prefix golem: <https://ontology.golemlab.eu/> .
 @prefix intertext_ab: <https://intertextuality.org/abstract#> .
@@ -19,13 +18,13 @@
 @prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
 @prefix mimotext: <http://data.mimotext.uni-trier.de/entity/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix pim: <https://purl.archive.org/people-and-media#> .
 @prefix postdata_analysis: <http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#> .
 @prefix postdata_core: <http://postdata.linhd.uned.es/ontology/postdata-core#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sappho_prop: <https://w3id.org/sappho-digital/ontology/> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix urb: <https://purl.archive.org/domain/urbooks#> .
 @prefix urw: <https://purl.archive.org/domain/urwriters#> .
 
 <https://w3id.org/sappho-digital/alignments/> a owl:Ontology ;
@@ -51,8 +50,7 @@
         intertext_mt:,
         intertext_tx:,
         golem:,
-        frbr:,
-        pim:,
+        urb:,
         urw:,
         schema:,
         sappho_prop:,
@@ -69,8 +67,6 @@ mimotext:P4 skos:closeMatch ecrm:P102_has_title .
 mimotext:P5 skos:broadMatch ecrm:P14_carried_out_by .
 
 mimotext:P7 skos:broadMatch ecrm:P14i_performed .
-
-mimotext:P8 skos:broadMatch rdfs:label .
 
 mimotext:P9 skos:broadMatch ecrm:P4_has_time-span .
 
@@ -232,8 +228,6 @@ fabio:DigitalItem skos:broadMatch ecrm:E73_Information_Object .
 
 fabio:Expression skos:closeMatch lrmoo:F2_Expression .
 
-fabio:Item skos:closeMatch lrmoo:F5_Item .
-
 fabio:LiteraryArtisticWork skos:broadMatch lrmoo:F1_Work .
 
 fabio:Manifestation skos:closeMatch lrmoo:F3_Manifestation .
@@ -248,8 +242,7 @@ foaf:Agent skos:narrowMatch ecrm:E21_Person ;
     skos:narrowMatch ecrm:E74_Group .
 
 foaf:Document skos:broadMatch lrmoo:F2_Expression,
-        lrmoo:F3_Manifestation ;
-    skos:narrowMatch lrmoo:F5_Item .
+        lrmoo:F3_Manifestation .
 
 foaf:gender skos:broadMatch ecrm:P2_has_type .
 
@@ -258,8 +251,6 @@ foaf:img skos:broadMatch ecrm:P138i_has_representation .
 foaf:made skos:broadMatch ecrm:P14i_performed .
 
 foaf:maker skos:broadMatch ecrm:P14_carried_out_by .
-
-foaf:name skos:broadMatch rdfs:label .
 
 intertext_ab:IntertexualRelation skos:closeMatch intro:INT31_IntertextualRelation .
 
@@ -305,17 +296,9 @@ golem:G7_Narrative_Sequence skos:broadMatch intro:INT2_ActualizationOfFeature .
 
 golem:G9_Narrative_Unit skos:broadMatch intro:INT4_Feature .
 
-frbr:Expression skos:closeMatch lrmoo:F2_Expression .
+urb:Edition skos:broadMatch lrmoo:F3_Manifestation .
 
-frbr:Manifestation skos:closeMatch lrmoo:F3_Manifestation .
-
-pim:Reception skos:narrowMatch intro:INT31_IntertextualRelation .
-
-frbr:Work skos:closeMatch lrmoo:F1_Work .
-
-frbr:embodimentOf skos:closeMatch lrmoo:R4_embodies .
-
-frbr:realization skos:closeMatch lrmoo:R3_is_realised_in .
+urb:Publisher skos:broadMatch ecrm:E74_Group .
 
 urw:gender skos:broadMatch ecrm:P2_has_type .
 
@@ -361,10 +344,6 @@ sappho_prop:has_character skos:closeMatch postdata_core:hasCharacter,
 sappho_prop:has_manifestation skos:closeMatch postdata_core:isRealisedThrough,
         fabio:hasManifestation .
 
-sappho_prop:has_portrayal skos:closeMatch fabio:hasPortrayal .
-
-sappho_prop:has_representation skos:closeMatch fabio:hasRepresentation .
-
 sappho_prop:references_person skos:broadMatch postdata_analysis:refersTo .
 
 sappho_prop:references_place skos:broadMatch postdata_analysis:refersTo .
@@ -399,7 +378,6 @@ ecrm:E67_Birth              owl:equivalentClass crm:E67_Birth .
 ecrm:E69_Death              owl:equivalentClass crm:E69_Death .
 ecrm:E73_Information_Object owl:equivalentClass crm:E73_Information_Object .
 ecrm:E74_Group              owl:equivalentClass crm:E74_Group .
-ecrm:E90_Symbolic_Object    owl:equivalentClass crm:E90_Symbolic_Object .
 
 lrmoo:F2_Expression owl:equivalentClass efrbroo:F2_Expression .
 lrmoo:F2_Expression owl:equivalentClass frbroo:F2_Expression .
@@ -410,16 +388,10 @@ lrmoo:F27_Work_Creation         owl:equivalentClass efrbroo:F27_Work_Conception 
 lrmoo:F27_Work_Creation         owl:equivalentClass frbroo:F27_Work_Conception .
 lrmoo:F28_Expression_Creation   owl:equivalentClass efrbroo:F28_Expression_Creation .
 lrmoo:F28_Expression_Creation   owl:equivalentClass frbroo:F28_Expression_Creation .
-lrmoo:F2_Expression             owl:equivalentClass efrbroo:F2_Expression .
-lrmoo:F2_Expression             owl:equivalentClass frbroo:F2_Expression .
 lrmoo:F30_Manifestation_Creation owl:equivalentClass efrbroo:F30_Publication_Event .
 lrmoo:F30_Manifestation_Creation owl:equivalentClass frbroo:F30_Publication_Event .
-lrmoo:F32_Item_Production_Event  owl:equivalentClass efrbroo:F32_Carrier_Production_Event .
-lrmoo:F32_Item_Production_Event  owl:equivalentClass frbroo:F32_Carrier_Production_Event .
 lrmoo:F3_Manifestation           owl:equivalentClass efrbroo:F3_Manifestation_Product_Type .
 lrmoo:F3_Manifestation           owl:equivalentClass frbroo:F3_Manifestation_Product_Type .
-lrmoo:F5_Item                    owl:equivalentClass efrbroo:F5_Item .
-lrmoo:F5_Item                    owl:equivalentClass frbroo:F5_Item .
 
 #################################################################
 # equivalentProperty
@@ -437,30 +409,14 @@ ecrm:P2_has_type                owl:equivalentProperty crm:P2_has_type .
 ecrm:P2i_is_type_of             owl:equivalentProperty crm:P2i_is_type_of .
 ecrm:P4_has_time-span           owl:equivalentProperty crm:P4_has_time-span .
 ecrm:P4i_is_time-span_of        owl:equivalentProperty crm:P4i_is_time-span_of .
-ecrm:P65_shows_visual_item      owl:equivalentProperty crm:P65_shows_visual_item .
-ecrm:P65i_is_shown_by           owl:equivalentProperty crm:P65i_is_shown_by .
 ecrm:P7_took_place_at           owl:equivalentProperty crm:P7_took_place_at .
 ecrm:P7i_witnessed              owl:equivalentProperty crm:P7i_witnessed .
 ecrm:P98_brought_into_life      owl:equivalentProperty crm:P98_brought_into_life .
 ecrm:P98i_was_born              owl:equivalentProperty crm:P98i_was_born .
 ecrm:P102_has_title             owl:equivalentProperty crm:P102_has_title .
 ecrm:P102i_is_title_of          owl:equivalentProperty crm:P102i_is_title_of .
-ecrm:P138_represents            owl:equivalentProperty crm:P138_represents .
-ecrm:P138i_has_representation   owl:equivalentProperty crm:P138i_has_representation .
 ecrm:P14_carried_out_by         owl:equivalentProperty crm:P14_carried_out_by .
 ecrm:P14i_performed             owl:equivalentProperty crm:P14i_performed .
-ecrm:P165_incorporates          owl:equivalentProperty crm:P165_incorporates .
-ecrm:P165i_is_incorporated_in   owl:equivalentProperty crm:P165i_is_incorporated_in .
-ecrm:P190_has_symbolic_content  owl:equivalentProperty crm:P190_has_symbolic_content .
-ecrm:P190i_is_content_of        owl:equivalentProperty crm:P190i_is_content_of .
-ecrm:P1_is_identified_by        owl:equivalentProperty crm:P1_is_identified_by .
-ecrm:P1i_identifies             owl:equivalentProperty crm:P1i_identifies .
-ecrm:P2_has_type                owl:equivalentProperty crm:P2_has_type .
-ecrm:P2i_is_type_of             owl:equivalentProperty crm:P2i_is_type_of .
-ecrm:P4_has_time-span           owl:equivalentProperty crm:P4_has_time-span .
-ecrm:P4i_is_time-span_of        owl:equivalentProperty crm:P4i_is_time-span_of .
-ecrm:P7_took_place_at           owl:equivalentProperty crm:P7_took_place_at .
-ecrm:P7i_witnessed              owl:equivalentProperty crm:P7i_witnessed .
 
 lrmoo:R10_is_member_of          owl:equivalentProperty efrbroo:R10i_is_member_of .
 lrmoo:R10i_has_member           owl:equivalentProperty efrbroo:R10_has_member .
@@ -476,14 +432,6 @@ lrmoo:R24_created               owl:equivalentProperty efrbroo:R24_created .
 lrmoo:R24_created               owl:equivalentProperty frbroo:R24_created .
 lrmoo:R24i_was_created_through  owl:equivalentProperty efrbroo:R24i_was_created_through .
 lrmoo:R24i_was_created_through  owl:equivalentProperty frbroo:R24i_was_created_through .
-lrmoo:R27_materialized          owl:equivalentProperty efrbroo:R27_used_as_source_material .
-lrmoo:R27_materialized          owl:equivalentProperty frbroo:R27_used_as_source_material .
-lrmoo:R27i_was_materialized_by  owl:equivalentProperty efrbroo:R27i_was_used_by .
-lrmoo:R27i_was_materialized_by  owl:equivalentProperty frbroo:R27i_was_used_by .
-lrmoo:R28_produced              owl:equivalentProperty efrbroo:R28_produced .
-lrmoo:R28_produced              owl:equivalentProperty frbroo:R28_produced .
-lrmoo:R28i_was_produced_by      owl:equivalentProperty efrbroo:R28i_was_produced_by .
-lrmoo:R28i_was_produced_by      owl:equivalentProperty frbroo:R28i_was_produced_by .
 lrmoo:R3_is_realised_in         owl:equivalentProperty efrbroo:R3_is_realised_in .
 lrmoo:R3_is_realised_in         owl:equivalentProperty frbroo:R3_is_realised_in .
 lrmoo:R3i_realises              owl:equivalentProperty efrbroo:R3i_realises .
@@ -492,7 +440,3 @@ lrmoo:R4_embodies               owl:equivalentProperty efrbroo:R4i_comprises_car
 lrmoo:R4_embodies               owl:equivalentProperty frbroo:R4i_comprises_carriers_of .
 lrmoo:R4i_is_embodied_in        owl:equivalentProperty efrbroo:R4_carriers_provided_by .
 lrmoo:R4i_is_embodied_in        owl:equivalentProperty frbroo:R4_carriers_provided_by .
-lrmoo:R7_exemplifies            owl:equivalentProperty efrbroo:R7_is_example_of .
-lrmoo:R7_exemplifies            owl:equivalentProperty frbroo:R7_is_example_of .
-lrmoo:R7i_is_exemplified_by     owl:equivalentProperty efrbroo:R7i_has_example .
-lrmoo:R7i_is_exemplified_by     owl:equivalentProperty frbroo:R7i_has_example .

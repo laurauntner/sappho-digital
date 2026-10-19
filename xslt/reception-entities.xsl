@@ -133,7 +133,7 @@
                 distinct-values((
                 key('acts-by-feature', $directUris, $receptionEntities)/@rdf:about,
                 key('acts-by-feature2', $directUris, $receptionEntities)/@rdf:about,
-                key('by-about', $directUris, $receptionEntities)/intro:R17i_featureIsActualizedIn/@rdf:resource
+                key('by-about', $directUris, $receptionEntities)/intro:R17i_featureActualizedIn/@rdf:resource
                 ))"/>
 
         <xsl:variable name="textsViaActs" as="xs:string*" select="
@@ -571,7 +571,7 @@
             </xsl:when>
             <xsl:when test="matches($uri, '/feature/work_ref/')">
                 <xsl:variable name="actUris"
-                    select="$n/intro:R17i_featureIsActualizedIn/@rdf:resource"/>
+                    select="$n/intro:R17i_featureActualizedIn/@rdf:resource"/>
                 <xsl:variable name="targetUris" select="
                         key('by-about', $actUris, $receptionEntities)
                         /ecrm:P67_refers_to/@rdf:resource[matches(., '/expression/')]"/>
@@ -605,7 +605,7 @@
         <xsl:variable name="actsByInline"
             select="key('acts-by-feature2', $feature-uri, $receptionEntities)/@rdf:about"/>
         <xsl:variable name="actsByBacklink"
-            select="key('by-about', $feature-uri, $receptionEntities)/intro:R17i_featureIsActualizedIn/@rdf:resource"/>
+            select="key('by-about', $feature-uri, $receptionEntities)/intro:R17i_featureActualizedIn/@rdf:resource"/>
         <xsl:variable name="acts" as="xs:string*"
             select="distinct-values(($actsByRes, $actsByInline, $actsByBacklink))"/>
 
@@ -849,7 +849,7 @@
                     if (contains($u, '/actualization/work_ref/')) then
                         $u
                     else
-                        key('by-about', $u, $receptionEntities)/intro:R17i_featureIsActualizedIn/@rdf:resource
+                        key('by-about', $u, $receptionEntities)/intro:R17i_featureActualizedIn/@rdf:resource
                 )"/>
 
         <xsl:variable name="targets">
@@ -1068,7 +1068,7 @@
                 distinct-values((
                 key('acts-by-feature', $feature-uri, $receptionEntities)/@rdf:about,
                 key('acts-by-feature2', $feature-uri, $receptionEntities)/@rdf:about,
-                key('by-about', $feature-uri, $receptionEntities)/intro:R17i_featureIsActualizedIn/@rdf:resource
+                key('by-about', $feature-uri, $receptionEntities)/intro:R17i_featureActualizedIn/@rdf:resource
                 ))"/>
         <xsl:variable name="textsViaActs" as="xs:string*" select="
                 distinct-values(
@@ -1125,7 +1125,7 @@
                             <xsl:variable name="actsByInline"
                                 select="key('acts-by-feature2', $grp, $receptionEntities)/@rdf:about"/>
                             <xsl:variable name="actsByBacklink"
-                                select="key('by-about', $grp, $receptionEntities)/intro:R17i_featureIsActualizedIn/@rdf:resource"/>
+                                select="key('by-about', $grp, $receptionEntities)/intro:R17i_featureActualizedIn/@rdf:resource"/>
                             <xsl:variable name="actsOfFeat" as="xs:string*"
                                 select="distinct-values(($actsByRes, $actsByInline, $actsByBacklink))"/>
 
@@ -2105,7 +2105,7 @@
                                                   select="key('acts-by-feature2', $grp, $receptionEntities)/@rdf:about"/>
                                                   <xsl:variable name="actsByBacklink" select="
                                                                         key('by-about', $grp, $receptionEntities)
-                                                                        /intro:R17i_featureIsActualizedIn/@rdf:resource"/>
+                                                                        /intro:R17i_featureActualizedIn/@rdf:resource"/>
 
                                                   <xsl:variable name="actsOfFeat" as="xs:string*"
                                                   select="distinct-values(($actsByRes, $actsByInline, $actsByBacklink))"/>

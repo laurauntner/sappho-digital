@@ -180,27 +180,6 @@ Product Type)<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel
         </y:GenericNode>
       </data>
     </node>
-    <node id="n9">
-      <data key="d6">
-        <y:GenericNode configuration="BevelNode2">
-          <y:Geometry height="97.0" width="248.48549107142856" x="842.1578559027778" y="-29.691176470588232"/>
-          <y:Fill color="#FFFFFF" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="122.24274553571422" y="46.5">
-            <y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="60.53125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="219.115234375" x="7.590138916371416" xml:space="preserve" y="12.67717978395062">ITEM PRODUCTION EVENT
-instance of 
-lrmoo:F32 Item Production Event
-(frbroo:F32 Carrier Production Event)<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.5" labelRatioY="0.5" nodeRatioX="0.41234853316326525" nodeRatioY="0.25472608024691357" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
-        </y:GenericNode>
-      </data>
-    </node>
     <node id="n10">
       <data key="d6">
         <y:GenericNode configuration="BevelNode2">
@@ -383,27 +362,6 @@ ecrm:E35 Title<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelMode
         </y:GenericNode>
       </data>
     </node>
-    <node id="n19">
-      <data key="d6">
-        <y:GenericNode configuration="BevelNode2">
-          <y:Geometry height="91.29437982192985" width="109.2737169701337" x="849.6423143819966" y="119.85281008903507"/>
-          <y:Fill color="#FFFFFF" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="52.636858485066796" y="43.647189910964926">
-            <y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="60.53125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="95.78125" x="3.9144653909992257" xml:space="preserve" y="8.370999431578042">ITEM
-instance of 
-lrmoo:F5 Item
-(frbroo:F5 Item)<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.5" labelRatioY="0.5" nodeRatioX="0.41234853316326525" nodeRatioY="0.25472608024691357" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
-        </y:GenericNode>
-      </data>
-    </node>
     <node id="n20">
       <data key="d6">
         <y:GenericNode configuration="BevelNode2">
@@ -445,21 +403,6 @@ lrmoo:F27 Work Creation
         </y:GenericNode>
       </data>
     </node>
-    <edge id="e0" source="n12" target="n11">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="27.928571428571416" sy="48.5" tx="-33.61002389709934" ty="-55.27055650159923">
-            <y:Point x="274.5013950892857" y="276.5"/>
-            <y:Point x="339.5346251604403" y="276.5"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" horizontalTextPosition="center" iconTextGap="4" modelName="free" modelPosition="anywhere" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="212.265625" x="-141.76026672876174" xml:space="preserve" y="38.325175309381564">lrmoo:R19 created a realisation of
-(frbroo:R19 created a realisation of)<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
     <edge id="e1" source="n12" target="n10">
       <data key="d10">
         <y:PolyLineEdge>
@@ -500,30 +443,6 @@ lrmoo:F27 Work Creation
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e4" source="n9" target="n8">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="62.12137276785711" sy="48.5" tx="0.0" ty="-55.27055650159912"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" horizontalTextPosition="center" iconTextGap="4" modelName="free" modelPosition="anywhere" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="216.783203125" x="5.000017922293637" xml:space="preserve" y="39.117164419257705">lrmoo:R27 materialized
-(frbroo:R27 used as source material)<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e5" source="n9" target="n19">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="-62.12137276785714" sy="48.5" tx="0.0" ty="-45.647189910964926"/>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" horizontalTextPosition="center" iconTextGap="4" modelName="free" modelPosition="anywhere" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="133.908203125" x="-100.21300171668179" xml:space="preserve" y="7.028830939728749">lrmoo:R28 produced
-(frbroo:R28 produced)<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
     <edge id="e6" source="n21" target="n10">
       <data key="d10">
         <y:PolyLineEdge>
@@ -549,21 +468,6 @@ lrmoo:F27 Work Creation
           <y:Arrows source="none" target="standard"/>
           <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" horizontalTextPosition="center" iconTextGap="4" modelName="free" modelPosition="anywhere" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="144.712890625" x="-4.262772790752933E-6" xml:space="preserve" y="5.000005825464086">lrmoo:R3 is realised in
 (frbroo:R3 is realised in)<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
-          <y:BendStyle smoothed="false"/>
-        </y:PolyLineEdge>
-      </data>
-    </edge>
-    <edge id="e8" source="n19" target="n8">
-      <data key="d10">
-        <y:PolyLineEdge>
-          <y:Path sx="0.0" sy="45.647189910964926" tx="-61.62223146102822" ty="-55.27055650159912">
-            <y:Point x="904.2791728670634" y="231.64718991096493"/>
-            <y:Point x="966.8997985488924" y="231.64718991096493"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="32.265625" horizontalTextPosition="center" iconTextGap="4" modelName="free" modelPosition="anywhere" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="144.736328125" x="-87.11570438079502" xml:space="preserve" y="69.58718872070324">lrmoo:R7 exemplifies
-(frboo:R7 is example of)<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/></y:EdgeLabel>
           <y:BendStyle smoothed="false"/>
         </y:PolyLineEdge>
       </data>

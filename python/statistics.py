@@ -268,7 +268,7 @@ def main(ttl_path: str, xml_out: str) -> None:
         if frag_label not in frag_sappho_f2 and ref_uri in voigt_ref_to_sappho:
             frag_sappho_f2[frag_label] = voigt_ref_to_sappho[ref_uri]
 
-    R17i_featureIsActualizedIn = INTRO["R17i_featureIsActualizedIn"]
+    R17i_featureActualizedIn = INTRO["R17i_featureActualizedIn"]
     R18i_actualizationFoundOn  = INTRO["R18i_actualizationFoundOn"]
 
     for ref_uri, frag_label in voigt_refs.items():
@@ -276,7 +276,7 @@ def main(ttl_path: str, xml_out: str) -> None:
             frag_data[frag_label]     = {k: {} for k, _, _ in FEATURE_TYPES}
             frag_biblsets[frag_label] = set()
 
-        for _, _, act_uri in g.triples((ref_uri, R17i_featureIsActualizedIn, None)):
+        for _, _, act_uri in g.triples((ref_uri, R17i_featureActualizedIn, None)):
             bibl_expr = None
             for _, _, src in g.triples((act_uri, R18i_actualizationFoundOn, None)):
                 src_str = str(src)
@@ -825,7 +825,7 @@ def main(ttl_path: str, xml_out: str) -> None:
     int31_nodes_all: set[URIRef] = set(g.subjects(RDF.type, INT31_IntertextualRelation))
     print(f"  INT31-Knoten gesamt: {len(int31_nodes_all)}", file=sys.stderr)
 
-    R17i_featureIsActualizedIn = INTRO["R17i_featureIsActualizedIn"]
+    R17i_featureActualizedIn = INTRO["R17i_featureActualizedIn"]
 
     int31_to_feats: dict[URIRef, set[URIRef]] = {}
     n_filtered_out = 0
@@ -840,7 +840,7 @@ def main(ttl_path: str, xml_out: str) -> None:
             ft = feature_type(str(feat))
             if ft is not None:
                 feats.add(feat)
-            for _, _, act in g.triples((feat, R17i_featureIsActualizedIn, None)):
+            for _, _, act in g.triples((feat, R17i_featureActualizedIn, None)):
                 act_f2s = {obj for _, _, obj in g.triples((act, R18i_actualizationFoundOn, None))
                            if obj in reception_with_act | sappho_with_act}
                 if not act_f2s.intersection(relevant_f2):

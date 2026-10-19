@@ -334,7 +334,7 @@ def add_actualization_common(
     if refers_to_uri is not None:
         g.add((act_uri, ECRM.P67_refers_to, refers_to_uri))
 
-    g.add((feature_uri, INTRO.R17i_featureIsActualizedIn, act_uri))
+    g.add((feature_uri, INTRO.R17i_featureActualizedIn, act_uri))
 
     interp_feat_uri = uri(f"feature/interpretation/{act_id}")
     g.add((interp_feat_uri, RDF.type, INTRO.INT_Interpretation))
@@ -343,7 +343,7 @@ def add_actualization_common(
         f"Interpretation von {feature_label_de} ({label_de_cat}) in {text_title}",
         f"Interpretation of {feature_label_en} ({label_en_cat}) in {text_title}",
     )
-    g.add((interp_feat_uri, INTRO.R17i_featureIsActualizedIn, uri(f"actualization/interpretation/{act_id}")))
+    g.add((interp_feat_uri, INTRO.R17i_featureActualizedIn, uri(f"actualization/interpretation/{act_id}")))
 
     interp_act_uri = uri(f"actualization/interpretation/{act_id}")
     g.add((interp_act_uri, RDF.type, INTRO.INT2_ActualizationOfFeature))
