@@ -67,8 +67,8 @@
 
         <xsl:variable name="relations" select="
                 $receptionEntities//intro:INT31_IntertextualRelation[
-                intro:R13_hasReferringEntity/@rdf:resource = $work-uri or
-                intro:R12_hasReferredToEntity/@rdf:resource = $work-uri
+                intro:R13_hasReferringEntity/(@rdf:resource | *[1]/@rdf:about) = $work-uri or
+                intro:R12_hasReferredToEntity/(@rdf:resource | *[1]/@rdf:about) = $work-uri
                 ]"/>
 
         <!-- work_ref features whose actualization shows they refer back to this very work -->
@@ -84,39 +84,39 @@
 
         <xsl:variable name="feature-uris" select="
                 if ($feature-type = 'motif') then
-                    distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/motif/')])
+                    distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/motif/')])
                 else
                     if ($feature-type = 'topic') then
-                        distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/topic/')])
+                        distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/topic/')])
                     else
                         if ($feature-type = 'plot') then
-                            distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/plot/')])
+                            distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/plot/')])
                         else
                             if ($feature-type = 'person') then
                                 distinct-values(
-                                $relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[
+                                $relations/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[
                                 matches(., '/feature/person_ref/') or matches(., '/feature/character/')
                                 ]
                                 )
                             else
                                 if ($feature-type = 'place') then
-                                    distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/place_ref/')])
+                                    distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/place_ref/')])
                                 else
                                     if ($feature-type = 'work') then
-                                        distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[
+                                        distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[
                                         (matches(., '/feature/work_ref/') or matches(., '/actualization/work_ref/'))
                                         and not(. = $self-referencing-work-features)
                                         ])
                                     else
                                         if ($feature-type = 'workpassage') then
                                             distinct-values(
-                                            $relations/intro:R24_hasRelatedEntity/@rdf:resource[
+                                            $relations/intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)[
                                             matches(., '/textpassage/') and not(matches(., '/textpassage/phrase_'))
                                             ]
                                             )
                                         else
                                             if ($feature-type = 'phrase') then
-                                                distinct-values($relations/intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/textpassage/phrase_')])
+                                                distinct-values($relations/intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/textpassage/phrase_')])
                                             else
                                                 ()
                 "/>
@@ -209,21 +209,21 @@
 
         <xsl:variable name="int31" select="
                 $receptionEntities//intro:INT31_IntertextualRelation[
-                (local:iri-id(string(intro:R13_hasReferringEntity/@rdf:resource)) = $work-id
-                and not(contains(string(intro:R12_hasReferredToEntity/@rdf:resource), 'sappho-work')))
+                (local:iri-id(string(intro:R13_hasReferringEntity/(@rdf:resource | *[1]/@rdf:about))) = $work-id
+                and not(contains(string(intro:R12_hasReferredToEntity/(@rdf:resource | *[1]/@rdf:about)), 'sappho-work')))
                 or
-                (local:iri-id(string(intro:R12_hasReferredToEntity/@rdf:resource)) = $work-id
-                and not(contains(string(intro:R13_hasReferringEntity/@rdf:resource), 'sappho-work')))
+                (local:iri-id(string(intro:R12_hasReferredToEntity/(@rdf:resource | *[1]/@rdf:about))) = $work-id
+                and not(contains(string(intro:R13_hasReferringEntity/(@rdf:resource | *[1]/@rdf:about)), 'sappho-work')))
                 ]"/>
 
         <xsl:variable name="targets" as="xs:string*" select="
                 for $rel in $int31
                 return
-                    if (local:iri-id(string($rel/intro:R13_hasReferringEntity/@rdf:resource)) = $work-id)
+                    if (local:iri-id(string($rel/intro:R13_hasReferringEntity/(@rdf:resource | *[1]/@rdf:about))) = $work-id)
                     then
-                        string($rel/intro:R12_hasReferredToEntity/@rdf:resource)
+                        string($rel/intro:R12_hasReferredToEntity/(@rdf:resource | *[1]/@rdf:about))
                     else
-                        string($rel/intro:R13_hasReferringEntity/@rdf:resource)
+                        string($rel/intro:R13_hasReferringEntity/(@rdf:resource | *[1]/@rdf:about))
                 "/>
 
         <xsl:variable name="intertexts" as="xs:string*"

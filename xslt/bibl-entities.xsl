@@ -67,8 +67,8 @@
 
         <xsl:variable name="relations" select="
                 $receptionEntities//intro:INT31_IntertextualRelation[
-                intro:R13_hasReferringEntity/@rdf:resource = $work-uri or
-                intro:R12_hasReferredToEntity/@rdf:resource = $work-uri
+                local:side-iris(., 'R13_hasReferringEntity') = $work-uri or
+                local:side-iris(., 'R12_hasReferredToEntity') = $work-uri
                 ]"/>
 
         <!-- work_ref features whose actualization shows they refer back to this very work -->
@@ -84,42 +84,42 @@
 
         <xsl:variable name="feature-uris" select="
                 if ($feature-type = 'motif') then
-                    distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/motif/')])
+                    distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/motif/')])
                 else
                     if ($feature-type = 'topic') then
-                        distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/topic/')])
+                        distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/topic/')])
                     else
                         if ($feature-type = 'plot') then
-                            distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/plot/')])
+                            distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/plot/')])
                         else
                             if ($feature-type = 'person') then
                                 distinct-values(
-                                $relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[
+                                $relations/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[
                                 matches(., '/feature/person_ref/') or matches(., '/feature/character/')
                                 ]
                                 )
                             else
                                 if ($feature-type = 'place') then
-                                    distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/place_ref/')])
+                                    distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/place_ref/')])
                                 else
                                     if ($feature-type = 'work') then
-                                        distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[
+                                        distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[
                                         (matches(., '/feature/work_ref/') or matches(., '/actualization/work_ref/'))
                                         and not(. = $self-referencing-work-features)
                                         ])
                                     else
                                         if ($feature-type = 'topos') then
-                                            distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/topos/')])
+                                            distinct-values($relations/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/topos/')])
                                         else
                                             if ($feature-type = 'workpassage') then
                                                 distinct-values(
-                                                $relations/intro:R24_hasRelatedEntity/@rdf:resource[
+                                                $relations/intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)[
                                                 matches(., '/textpassage/') and not(matches(., '/textpassage/phrase_'))
                                                 ]
                                                 )
                                             else
                                                 if ($feature-type = 'phrase') then
-                                                    distinct-values($relations/intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/textpassage/phrase_')])
+                                                    distinct-values($relations/intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/textpassage/phrase_')])
                                                 else
                                                     ()
                 "/>
@@ -186,6 +186,111 @@
     </xsl:function>
 
 
+    <!-- number of shared phenomena of one relation (same logic as u:common-uris in reception-entities.xsl) -->
+    <xsl:function name="local:common-count" as="xs:integer">
+        <xsl:param name="rel" as="element(intro:INT31_IntertextualRelation)"/>
+        <xsl:variable name="sim" select="$rel/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)"/>
+        <xsl:variable name="phr" select="$rel/intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)"/>
+        <xsl:sequence select="
+                count(distinct-values((
+                data($sim[matches(., '/feature/person_ref/')]),
+                data($sim[matches(., '/feature/character/')]),
+                data($sim[matches(., '/feature/place_ref/')]),
+                data($sim[matches(., '/feature/work_ref/') or matches(., '/actualization/work_ref/')]),
+                data($sim[matches(., '/feature/topos/')]),
+                data($phr[matches(., '/textpassage/')]),
+                data($sim[matches(., '/feature/motif/')]),
+                data($sim[matches(., '/feature/topic/')]),
+                data($sim[matches(., '/feature/plot/')])
+                )))"/>
+    </xsl:function>
+
+    <!-- weight of the connection between two works: shared phenomena summed over all their relations -->
+    <xsl:function name="local:partner-weight" as="xs:integer">
+        <xsl:param name="rels" as="element(intro:INT31_IntertextualRelation)*"/>
+        <xsl:param name="partner-uri" as="xs:string"/>
+        <xsl:sequence select="
+                xs:integer(sum(
+                for $r in $rels[string(local:side-iris(., 'R13_hasReferringEntity')[1]) = $partner-uri
+                or string(local:side-iris(., 'R12_hasReferredToEntity')[1]) = $partner-uri]
+                return local:common-count($r)))"/>
+    </xsl:function>
+
+    <!-- targets of a work reference feature/actualization -->
+    <xsl:function name="local:workref-targets" as="xs:string*">
+        <xsl:param name="uri" as="xs:string"/>
+        <xsl:variable name="acts" as="xs:string*" select="
+                if (contains($uri, '/actualization/work_ref/')) then
+                    $uri
+                else
+                    key('by-about', $uri, $receptionEntities)/intro:R17i_featureActualizedIn/@rdf:resource"/>
+        <xsl:sequence select="
+                for $a in $acts
+                return
+                    key('by-about', $a, $receptionEntities)/ecrm:P67_refers_to/@rdf:resource/string(.)"/>
+    </xsl:function>
+
+    <!-- shared phenomena (URIs) of one kind across the given relations -->
+    <xsl:function name="local:commons" as="xs:string*">
+        <xsl:param name="rels" as="element(intro:INT31_IntertextualRelation)*"/>
+        <xsl:param name="kind" as="xs:string"/>
+        <xsl:param name="exclude-ids" as="xs:string*"/>
+        <xsl:variable name="sim" select="$rels/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)/string(.)"/>
+        <xsl:variable name="phr" select="$rels/intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)/string(.)"/>
+        <xsl:sequence select="
+                distinct-values(
+                if ($kind = 'work') then
+                    $sim[matches(., '/feature/work_ref/') or matches(., '/actualization/work_ref/')]
+                    [not(matches(., 'sappho-?work', 'i'))]
+                    [not(some $t in local:workref-targets(.) satisfies local:iri-id($t) = $exclude-ids)]
+                else
+                    if ($kind = 'workpassage') then
+                        $phr[matches(., '/textpassage/')]
+                    else
+                        $sim[matches(., concat('/feature/', $kind, '/'))]
+                )"/>
+    </xsl:function>
+
+    <!-- composition of the relation(s) between this work and one partner -->
+    <xsl:template name="render-relation-composition">
+        <xsl:param name="rels" as="element(intro:INT31_IntertextualRelation)*"/>
+        <xsl:param name="partner-uri" as="xs:string"/>
+        <xsl:param name="this-uri" as="xs:string"/>
+
+        <xsl:variable name="exclude-ids"
+            select="(local:iri-id($partner-uri), local:iri-id($this-uri))"/>
+        <xsl:variable name="kinds">
+            <k xmlns="" n="motif" sg="Gemeinsames Motiv:" pl="Gemeinsame Motive:"/>
+            <k xmlns="" n="topic" sg="Gemeinsames Thema:" pl="Gemeinsame Themen:"/>
+            <k xmlns="" n="plot" sg="Gemeinsamer Stoff:" pl="Gemeinsame Stoffe:"/>
+            <k xmlns="" n="person_ref" sg="Gemeinsame Personenreferenz:" pl="Gemeinsame Personenreferenzen:"/>
+            <k xmlns="" n="character" sg="Gemeinsame Figur:" pl="Gemeinsame Figuren:"/>
+            <k xmlns="" n="place_ref" sg="Gemeinsame Ortsreferenz:" pl="Gemeinsame Ortsreferenzen:"/>
+            <k xmlns="" n="work" sg="Gemeinsame Werkreferenz:" pl="Gemeinsame Werkreferenzen:"/>
+            <k xmlns="" n="workpassage" sg="Gemeinsames Zitat:" pl="Gemeinsame Zitate:"/>
+            <k xmlns="" n="topos" sg="Gemeinsamer Topos:" pl="Gemeinsame Topoi:"/>
+        </xsl:variable>
+
+        <xsl:for-each select="$kinds/k">
+            <xsl:variable name="items" select="local:commons($rels, string(@n), $exclude-ids)"/>
+            <xsl:if test="exists($items)">
+                <div class="smaller-text">
+                    <strong><xsl:value-of select="
+                                i18n:t(if (count($items) = 1) then
+                                    string(@sg)
+                                else
+                                    string(@pl))"/></strong>
+                    <xsl:text> </xsl:text>
+                    <xsl:for-each select="$items">
+                        <xsl:sort select="lower-case(local:get-label(.))"/>
+                        <xsl:value-of select="local:get-label(.)"/>
+                        <xsl:if test="position() != last()">, </xsl:if>
+                    </xsl:for-each>
+                </div>
+            </xsl:if>
+        </xsl:for-each>
+    </xsl:template>
+
     <xsl:template name="render-connected-features">
         <xsl:param name="work-id" as="xs:string"/>
 
@@ -217,30 +322,30 @@
 
         <xsl:variable name="int31" select="
                 $receptionEntities//intro:INT31_IntertextualRelation[
-                (local:iri-id(string(intro:R13_hasReferringEntity/@rdf:resource)) = $work-id
-                and not(contains(string(intro:R12_hasReferredToEntity/@rdf:resource), 'sappho-work')))
+                (local:iri-id(string(local:side-iris(., 'R13_hasReferringEntity')[1])) = $work-id
+                and not(contains(string(local:side-iris(., 'R12_hasReferredToEntity')[1]), 'sappho-work')))
                 or
-                (local:iri-id(string(intro:R12_hasReferredToEntity/@rdf:resource)) = $work-id
-                and not(contains(string(intro:R13_hasReferringEntity/@rdf:resource), 'sappho-work')))
+                (local:iri-id(string(local:side-iris(., 'R12_hasReferredToEntity')[1])) = $work-id
+                and not(contains(string(local:side-iris(., 'R13_hasReferringEntity')[1]), 'sappho-work')))
                 ]
                 "/>
 
         <xsl:variable name="targets" as="xs:string*" select="
                 for $rel in $int31
                 return
-                    if (local:iri-id(string($rel/intro:R13_hasReferringEntity/@rdf:resource)) = $work-id)
+                    if (local:iri-id(string(local:side-iris($rel, 'R13_hasReferringEntity')[1])) = $work-id)
                     then
-                        string($rel/intro:R12_hasReferredToEntity/@rdf:resource)
+                        string(local:side-iris($rel, 'R12_hasReferredToEntity')[1])
                     else
-                        if (local:iri-id(string($rel/intro:R12_hasReferredToEntity/@rdf:resource)) = $work-id)
+                        if (local:iri-id(string(local:side-iris($rel, 'R12_hasReferredToEntity')[1])) = $work-id)
                         then
-                            string($rel/intro:R13_hasReferringEntity/@rdf:resource)
+                            string(local:side-iris($rel, 'R13_hasReferringEntity')[1])
                         else
                             ()
                 "/>
 
         <xsl:variable name="intertexts" as="xs:string*"
-            select="distinct-values($targets[normalize-space(.) != ''])"/>
+            select="distinct-values($targets[normalize-space(.) != ''])[local:partner-weight($int31, .) gt 0]"/>
 
         <xsl:if
             test="exists(($motifs, $topics, $plots, $topoi, $persons, $places, $work-refs, $workpassages, $phrases, $intertexts))">
@@ -403,14 +508,49 @@
                     <div class="feat-group">
                         <span class="feat-group-label"><xsl:value-of
                                 select="i18n:t('Intertextuelle')"/><br/><xsl:value-of
-                                select="i18n:t('Beziehungen mit …')"/></span>
-                        <div class="feat-tag-list">
+                                select="i18n:t('Beziehungen mit …')"/>
+                            <span class="info-tooltip">
+                                <a href="https://sappho-digital.com/{i18n:href('intertexte.html')}"
+                                    target="_blank" class="info-icon"
+                                    aria-label="{i18n:t('Zur Seite Intertextuelle Beziehungen')}">ⓘ</a>
+                                <span class="tooltip-text"><xsl:value-of
+                                        select="i18n:t('Sortiert nach Gewicht, d. h. nach der Zahl geteilter Phänomene. Die Zusammensetzung der Beziehungen ist hier aufgeschlüsselt und auch auf der Seite ')"
+                                    /><a href="{i18n:href('intertexte.html')}"><xsl:value-of
+                                            select="i18n:t('Intertextuelle Beziehungen')"
+                                        /></a><xsl:value-of select="i18n:t(' einsehbar.')"/></span>
+                            </span></span>
+                        <div class="feat-intertext-list">
                             <xsl:for-each select="$intertexts">
+                                <xsl:sort select="local:partner-weight($int31, .)"
+                                    data-type="number" order="descending"/>
                                 <xsl:sort select="lower-case(local:get-work-label(.))"/>
-                                <a href="{i18n:href(concat(local:iri-id(.), '.html'))}"
-                                    class="feat-tag feat-tag--intertext">
-                                    <xsl:value-of select="local:get-work-label(.)"/>
-                                </a>
+                                <xsl:variable name="partner" select="."/>
+                                <xsl:variable name="weight" select="local:partner-weight($int31, $partner)"/>
+                                <xsl:variable name="prels" select="
+                                        $int31[string(local:side-iris(., 'R13_hasReferringEntity')[1]) = $partner
+                                        or string(local:side-iris(., 'R12_hasReferredToEntity')[1]) = $partner]"/>
+                                <details class="feat-intertext">
+                                    <summary>
+                                        <a href="{i18n:href(concat(local:iri-id($partner), '.html'))}"
+                                            class="feat-tag feat-tag--intertext"
+                                            onclick="event.stopPropagation()">
+                                            <xsl:value-of select="local:get-work-label($partner)"/>
+                                        </a>
+                                        <span class="feat-intertext-count"> (<xsl:value-of select="$weight"
+                                            />&#160;<xsl:value-of select="
+                                                    if ($weight = 1) then
+                                                        i18n:t('Gemeinsamkeit')
+                                                    else
+                                                        i18n:t('Gemeinsamkeiten')"/>)</span>
+                                    </summary>
+                                    <div class="feat-intertext-body">
+                                        <xsl:call-template name="render-relation-composition">
+                                            <xsl:with-param name="rels" select="$prels"/>
+                                            <xsl:with-param name="partner-uri" select="$partner"/>
+                                            <xsl:with-param name="this-uri" select="$this-expr-uri"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </details>
                             </xsl:for-each>
                         </div>
                     </div>

@@ -21,9 +21,9 @@
     <xsl:key name="by-resource-ref" match="*[*[@rdf:resource]]" use="*/@rdf:resource"/>
 
     <xsl:key name="rels-by-sim" match="intro:INT31_IntertextualRelation"
-        use="intro:R22i_relationIsBasedOnSimilarity/@rdf:resource"/>
+        use="intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)"/>
     <xsl:key name="rels-by-phr" match="intro:INT31_IntertextualRelation"
-        use="intro:R24_hasRelatedEntity/@rdf:resource"/>
+        use="intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)"/>
 
     <xsl:key name="acts-by-feature" match="*[@rdf:about][intro:R17_actualizesFeature]"
         use="intro:R17_actualizesFeature/@rdf:resource"/>
@@ -144,12 +144,12 @@
 
         <xsl:variable name="occRels" select="
                 $receptionEntities//intro:INT31_IntertextualRelation[
-                intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $directUris
-                or intro:R24_hasRelatedEntity/@rdf:resource = $directUris
+                intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about) = $directUris
+                or intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about) = $directUris
                 ]"/>
         <xsl:variable name="textsViaRels" as="xs:string*" select="
                 distinct-values(data(
-                $occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource
+                $occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/(@rdf:resource | *[1]/@rdf:about)
                 ))[matches(., '/bibl_')]"/>
 
         <xsl:variable name="occTexts" as="xs:string*"
@@ -672,8 +672,8 @@
 
     <xsl:function name="u:common-uris" as="xs:string*">
         <xsl:param name="rel" as="element(intro:INT31_IntertextualRelation)"/>
-        <xsl:variable name="sim" select="$rel/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource"/>
-        <xsl:variable name="phr" select="$rel/intro:R24_hasRelatedEntity/@rdf:resource"/>
+        <xsl:variable name="sim" select="$rel/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)"/>
+        <xsl:variable name="phr" select="$rel/intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)"/>
         <xsl:sequence select="
                 distinct-values((
                 data($sim[matches(., '/feature/person_ref/')]),
@@ -698,8 +698,8 @@
     <xsl:function name="u:commons" as="xs:string*">
         <xsl:param name="rel" as="element(intro:INT31_IntertextualRelation)"/>
         <xsl:param name="kind" as="xs:string"/>
-        <xsl:variable name="sim" select="$rel/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource"/>
-        <xsl:variable name="phr" select="$rel/intro:R24_hasRelatedEntity/@rdf:resource"/>
+        <xsl:variable name="sim" select="$rel/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)"/>
+        <xsl:variable name="phr" select="$rel/intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)"/>
         <xsl:choose>
             <xsl:when test="$kind = 'motifs'">
                 <xsl:sequence select="distinct-values(data($sim[matches(., '/feature/motif/')]))"/>
@@ -731,7 +731,7 @@
 
                 <xsl:variable name="textIds" as="xs:string*" select="
                         distinct-values(
-                        for $t in data(($rel/intro:R13_hasReferringEntity | $rel/intro:R12_hasReferredToEntity)/@rdf:resource)
+                        for $t in data(($rel/intro:R13_hasReferringEntity | $rel/intro:R12_hasReferredToEntity)/(@rdf:resource | *[1]/@rdf:about))
                         return
                             u:work-id-any($t)
                         )"/>
@@ -837,8 +837,8 @@
 
         <xsl:variable name="wr-uris" as="xs:string*" select="
                 distinct-values((
-                $rel/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/(feature|actualization)/work_ref/')],
-                $rel/intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/(feature|actualization)/work_ref/')]
+                $rel/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/(feature|actualization)/work_ref/')],
+                $rel/intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/(feature|actualization)/work_ref/')]
                 ))
                 [not(u:is-sappho-work(.))]"/>
 
@@ -1077,10 +1077,10 @@
                 )"/>
 
         <xsl:variable name="occRels"
-            select="$all-rels[intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $feature-uri]"/>
+            select="$all-rels[intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about) = $feature-uri]"/>
         <xsl:variable name="textsViaRels" as="xs:string*" select="
                 distinct-values(data(
-                $occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource
+                $occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/(@rdf:resource | *[1]/@rdf:about)
                 ))[matches(., '/bibl_')]"/>
 
         <xsl:sequence select="distinct-values(($textsViaActs, $textsViaRels))"/>
@@ -1112,12 +1112,12 @@
 
                             <xsl:variable name="occRels" select="
                                     $rels[
-                                    intro:R22i_relationIsBasedOnSimilarity/@rdf:resource = $grp
-                                    or intro:R24_hasRelatedEntity/@rdf:resource = $grp
+                                    intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about) = $grp
+                                    or intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about) = $grp
                                     ]"/>
                             <xsl:variable name="occTexts_rel" select="
                                     distinct-values(
-                                    data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/@rdf:resource)
+                                    data($occRels/(intro:R13_hasReferringEntity | intro:R12_hasReferredToEntity)/(@rdf:resource | *[1]/@rdf:about))
                                     )"/>
 
                             <xsl:variable name="actsByRes"
@@ -1249,9 +1249,9 @@
                 <xsl:variable name="cc" as="xs:integer" select="count(u:common-uris(.))"/>
                 <xsl:variable name="allUris" as="xs:string*" select="
                         (
-                        data(intro:R13_hasReferringEntity/@rdf:resource),
-                        data(intro:R12_hasReferredToEntity/@rdf:resource),
-                        data(intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/expression/')]))"/>
+                        data(intro:R13_hasReferringEntity/(@rdf:resource | *[1]/@rdf:about)),
+                        data(intro:R12_hasReferredToEntity/(@rdf:resource | *[1]/@rdf:about)),
+                        data(intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/expression/')]))"/>
                 <xsl:variable name="fragUris" as="xs:string*"
                     select="$allUris[matches(., '/bibl_sappho_')]"/>
 
@@ -1274,9 +1274,9 @@
                 <xsl:variable name="cc" as="xs:integer" select="count(u:common-uris(.))"/>
                 <xsl:variable name="allUris" as="xs:string*" select="
                         (
-                        data(intro:R13_hasReferringEntity/@rdf:resource),
-                        data(intro:R12_hasReferredToEntity/@rdf:resource),
-                        data(intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/expression/')]))"/>
+                        data(intro:R13_hasReferringEntity/(@rdf:resource | *[1]/@rdf:about)),
+                        data(intro:R12_hasReferredToEntity/(@rdf:resource | *[1]/@rdf:about)),
+                        data(intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/expression/')]))"/>
                 <xsl:variable name="fragUris" as="xs:string*"
                     select="$allUris[matches(., '/bibl_sappho_')]"/>
                 <xsl:variable name="nonFragUris" as="xs:string*"
@@ -1301,9 +1301,9 @@
                 <xsl:variable name="cc" as="xs:integer" select="count(u:common-uris(.))"/>
                 <xsl:variable name="allUris" as="xs:string*" select="
                         (
-                        data(intro:R13_hasReferringEntity/@rdf:resource),
-                        data(intro:R12_hasReferredToEntity/@rdf:resource),
-                        data(intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/expression/')]))"/>
+                        data(intro:R13_hasReferringEntity/(@rdf:resource | *[1]/@rdf:about)),
+                        data(intro:R12_hasReferredToEntity/(@rdf:resource | *[1]/@rdf:about)),
+                        data(intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/expression/')]))"/>
                 <xsl:variable name="nonFragUris" as="xs:string*"
                     select="$allUris[not(matches(., '/bibl_sappho_'))]"/>
 
@@ -1624,29 +1624,29 @@
 
         <xsl:variable name="u_person_refs" select="
                 distinct-values((
-                $rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/person_ref/')],
-                $rels/intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/feature/person_ref/')],
+                $rels/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/person_ref/')],
+                $rels/intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/person_ref/')],
                 $receptionEntities//intro:INT2_ActualizationOfFeature
                 /intro:R17_actualizesFeature/@rdf:resource[matches(., '/feature/person_ref/')]
                 ))"/>
         <xsl:variable name="u_characters" select="
                 distinct-values((
-                $rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/character/')],
-                $rels/intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/feature/character/')],
+                $rels/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/character/')],
+                $rels/intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/character/')],
                 $receptionEntities//intro:INT2_ActualizationOfFeature
                 /intro:R17_actualizesFeature/@rdf:resource[matches(., '/feature/character/')]
                 ))"/>
         <xsl:variable name="u_places" select="
                 distinct-values((
-                $rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/place_ref/')],
-                $rels/intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/feature/place_ref/')],
+                $rels/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/place_ref/')],
+                $rels/intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/place_ref/')],
                 $receptionEntities//intro:INT2_ActualizationOfFeature
                 /intro:R17_actualizesFeature/@rdf:resource[matches(., '/feature/place_ref/')]
                 ))"/>
         <xsl:variable name="u_works" select="
                 distinct-values((
-                $rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/work_ref/')],
-                $rels/intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/feature/work_ref/')],
+                $rels/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/work_ref/')],
+                $rels/intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/work_ref/')],
                 $receptionEntities//intro:INT2_ActualizationOfFeature/intro:R17_actualizesFeature/@rdf:resource[matches(., '/feature/work_ref/')],
                 $receptionEntities//intro:INT2_ActualizationOfFeature/intro:R17_actualizesFeature/*/@rdf:about[matches(., '/feature/work_ref/')]
                 ))
@@ -1659,29 +1659,29 @@
                 "/>
         <xsl:variable name="u_motifs" select="
                 distinct-values((
-                $rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/motif/')],
-                $rels/intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/feature/motif/')],
+                $rels/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/motif/')],
+                $rels/intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/motif/')],
                 $receptionEntities//intro:INT2_ActualizationOfFeature
                 /intro:R17_actualizesFeature/@rdf:resource[matches(., '/feature/motif/')]
                 ))"/>
         <xsl:variable name="u_topics" select="
                 distinct-values((
-                $rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/topic/')],
-                $rels/intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/feature/topic/')],
+                $rels/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/topic/')],
+                $rels/intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/topic/')],
                 $receptionEntities//intro:INT2_ActualizationOfFeature
                 /intro:R17_actualizesFeature/@rdf:resource[matches(., '/feature/topic/')]
                 ))"/>
         <xsl:variable name="u_topoi" as="xs:string*" select="
                 distinct-values((
-                $rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/topos/')],
-                $rels/intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/feature/topos/')],
+                $rels/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/topos/')],
+                $rels/intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/topos/')],
                 $receptionEntities//intro:INT2_ActualizationOfFeature
                 /intro:R17_actualizesFeature/@rdf:resource[matches(., '/feature/topos/')]
                 ))"/>
         <xsl:variable name="u_plots" select="
                 distinct-values((
-                $rels/intro:R22i_relationIsBasedOnSimilarity/@rdf:resource[matches(., '/feature/plot/')],
-                $rels/intro:R24_hasRelatedEntity/@rdf:resource[matches(., '/feature/plot/')],
+                $rels/intro:R22i_relationIsBasedOnSimilarity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/plot/')],
+                $rels/intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)[matches(., '/feature/plot/')],
                 $receptionEntities//intro:INT2_ActualizationOfFeature
                 /intro:R17_actualizesFeature/@rdf:resource[matches(., '/feature/plot/')]
                 ))"/>

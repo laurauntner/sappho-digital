@@ -2718,3 +2718,52 @@ a.feat-tag--intertext:hover {
     color: inherit;
     border-radius: 2px;
 }
+.feat-intertext-list {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.feat-intertext {
+    margin-bottom: 0.2rem;
+}
+
+.feat-intertext > summary {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    cursor: pointer;
+    list-style: none;
+    padding-top: 0.1rem;
+}
+
+.feat-intertext > summary::-webkit-details-marker {
+    display: none;
+}
+
+.feat-intertext > summary::before {
+    content: "\25B6";
+    flex: 0 0 auto;
+    font-size: 0.8rem;
+}
+
+.feat-intertext[open] > summary::before {
+    content: "\25BC";
+}
+
+.feat-intertext > summary .feat-tag {
+    flex: 0 1 auto;
+    min-width: 0;
+}
+
+.feat-intertext-count {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    color: #6b7280;
+}
+
+.feat-intertext-body {
+    margin: 0.3rem 0 0.6rem 1.2rem;
+    padding-left: 0.75rem;
+    border-left: 2px solid #e5e7eb;
+}

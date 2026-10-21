@@ -525,6 +525,11 @@
         <entry de="Phrasen" en="Phrases"/>
         <entry de="Intertextuelle" en="Intertextual"/>
         <entry de="Beziehungen mit …" en="Relationships with …"/>
+        <entry de="Sortiert nach Gewicht, d. h. nach der Zahl geteilter Phänomene. Die Zusammensetzung der Beziehungen ist hier aufgeschlüsselt und auch auf der Seite " en="Sorted by weight, i.e. by the number of shared phenomena. The composition of the relationships is broken down here and can also be found on the page "/>
+        <entry de="Zur Seite Intertextuelle Beziehungen" en="Go to the Intertextual Relations page"/>
+        <entry de=" einsehbar." en="."/>
+        <entry de="Gemeinsamkeit" en="Commonality"/>
+        <entry de="Gemeinsamkeiten" en="Commonalities"/>
         <entry de="Interne ID" en="Internal ID"/>
         <entry de="Typ" en="Type"/>
         <entry de="Werk" en="Work"/>
