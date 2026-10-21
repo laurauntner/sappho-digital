@@ -274,10 +274,11 @@ function textColor(c, f = 0.6) {
     return '#' + ch(n >> 16 & 255) + ch(n >> 8 & 255) + ch(n & 255);
 }
 
-Chart.defaults.color = '#1f2937';
+Chart.defaults.color = '#111827';
+Chart.defaults.font.size = 12;
 Chart.defaults.plugins.tooltip.backgroundColor = '#ffffff';
 Chart.defaults.plugins.tooltip.titleColor       = '#1f2937';
-Chart.defaults.plugins.tooltip.bodyColor        = '#374151';
+Chart.defaults.plugins.tooltip.bodyColor        = '#1f2937';
 Chart.defaults.plugins.tooltip.borderColor      = '#e5e7eb';
 Chart.defaults.plugins.tooltip.borderWidth      = 1;
 Chart.defaults.plugins.tooltip.titleFont        = { family: 'Geist, system-ui, sans-serif', size: 12 };
@@ -630,7 +631,7 @@ function renderChart(cat) {
                     min: 0,
                     max: maxX,
                     ticks: {
-                        font: { family: 'Geist, system-ui', size: 11 },
+                        font: { family: 'Geist, system-ui', size: 12 },
                         callback: v => v + '%',
                         stepSize: 5
                     },
@@ -672,8 +673,8 @@ function radialLines(label, maxC, maxLines) {
 }
 
 // Zeilenumbruch-Logik für Y-Achsen-Labels (global, wird von mehreren Charts genutzt)
-const FONT_SIZE = 11;
-const FONT_W    = 6.5;
+const FONT_SIZE = 12;
+const FONT_W    = 7.0;
 function splitLabel(label, maxW) {
     const maxChars1 = Math.floor((maxW - 16) / FONT_W) - 2;
     const maxChars2 = Math.floor((maxW - 16) / FONT_W);
@@ -799,7 +800,7 @@ function renderCatOverview() {
                         const pctR2    = parseFloat(item.pctReception).toLocaleString(NUM_LOCALE, {minimumFractionDigits:2, maximumFractionDigits:2});
                         const html =
                             `<strong>${item.label}</strong>`
-                            + `<br><span style="font-size:10px;color:#4b5563">(${singular})</span>`
+                            + `<br><span style="font-size:10px;color:#1f2937">(${singular})</span>`
                             + `<br><span style="color:#374151">Sappho: ${pctS2}% (${fmtN(item.countSappho)}/${fmtN(DATA.nSappho)})</span>`
                             + `<br><span style="color:#374151">Rezeption: ${pctR2}% (${fmtN(item.countReception)}/${fmtN(DATA.nReception)})</span>`;
                         const t = getPdTip();
@@ -816,7 +817,7 @@ function renderCatOverview() {
             scales: {
                 x: {
                     min: 0, max: maxX,
-                    ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => v + '%', stepSize: 5 },
+                    ticks: { font: { family: 'Geist, system-ui', size: 12 }, callback: v => v + '%', stepSize: 5 },
                     grid:  { color: 'rgba(0,0,0,0.06)' },
                 },
                 y: {
@@ -995,7 +996,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'border:1px solid #e5e7eb;border-radius:8px;padding:.9rem 1.1rem;' +
                 'text-align:center;background:#fff;';
             card.innerHTML =
-                `<div style="font-size:.75rem;font-weight:700;color:#4b5563;` +
+                `<div style="font-size:.75rem;font-weight:700;color:#1f2937;` +
                 `text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem">${label}</div>` +
                 `<div style="font-size:1.7rem;font-weight:700;color:${color};line-height:1.1">${value}</div>`;
             return card;
@@ -1041,7 +1042,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const t2 = document.createElement('span');
                 t2.style.cssText =
                     'font-family:Geist,system-ui,sans-serif;font-size:10px;' +
-                    'color:#4b5563;line-height:1.3;';
+                    'color:#1f2937;line-height:1.3;';
                 t2.textContent = '(' + d.authors + ')';
                 cell.appendChild(t2);
             }
@@ -1138,7 +1139,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     x: {
                         min: 0, max: 1,
                         ticks: {
-                            font: { family: 'Geist, system-ui', size: 11 },
+                            font: { family: 'Geist, system-ui', size: 12 },
                             callback: v => fmtN(v, 1),
                             stepSize: 0.1,
                         },
@@ -1209,7 +1210,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     mc.font = '11px Geist, system-ui, sans-serif';
                     needW = Math.max(needW, mc.measureText(d.label).width);
                     if (d.authors) {
-                        mc.font = '10px Geist, system-ui, sans-serif';
+                        mc.font = '11px Geist, system-ui, sans-serif';
                         needW = Math.max(needW, mc.measureText('(' + d.authors + ')').width);
                     }
                 });
@@ -1255,8 +1256,8 @@ document.addEventListener('DOMContentLoaded', () => {
                         oc.textBaseline = 'alphabetic';
                         oc.fillText(d.label, labelRight, titleY);
 
-                        oc.font         = `${Math.round(10 * DPR)}px Geist, system-ui, sans-serif`;
-                        oc.fillStyle    = '#4b5563';
+                        oc.font         = `${Math.round(11 * DPR)}px Geist, system-ui, sans-serif`;
+                        oc.fillStyle    = '#1f2937';
                         oc.fillText('(' + d.authors + ')', labelRight, authorY);
                     } else {
                         oc.font         = `${Math.round(11 * DPR)}px Geist, system-ui, sans-serif`;
@@ -1399,14 +1400,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 scales: {
                     x: {
                         min: 0, max: 0.9,
-                        title: { display: true, text: T.phenomenonDensityNormalized, font: { family: 'Geist, system-ui', size: 11 }, color: '#4b5563' },
-                        ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => fmtN(v, 1), stepSize: 0.1 },
+                        title: { display: true, text: T.phenomenonDensityNormalized, font: { family: 'Geist, system-ui', size: 12 }, color: '#1f2937' },
+                        ticks: { font: { family: 'Geist, system-ui', size: 12 }, callback: v => fmtN(v, 1), stepSize: 0.1 },
                         grid:  { color: 'rgba(0,0,0,0.06)' },
                     },
                     y: {
                         min: 0.35, max: 0.6,
-                        title: { display: true, text: T.intertextualConnectivityNormalized, font: { family: 'Geist, system-ui', size: 11 }, color: '#4b5563' },
-                        ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => fmtN(v, 1), stepSize: 0.1 },
+                        title: { display: true, text: T.intertextualConnectivityNormalized, font: { family: 'Geist, system-ui', size: 12 }, color: '#1f2937' },
+                        ticks: { font: { family: 'Geist, system-ui', size: 12 }, callback: v => fmtN(v, 1), stepSize: 0.1 },
                         grid:  { color: 'rgba(0,0,0,0.06)' },
                     },
                 },
@@ -1712,8 +1713,8 @@ function renderSankey2(fragLabel) {
         svg.append('text')
             .attr('x', x).attr('y', HDR_H - 5)
             .attr('text-anchor', anchor)
-            .attr('font-size', '9px').attr('font-weight', '700')
-            .attr('fill', '#4b5563').attr('letter-spacing', '0.06em')
+            .attr('font-size', '10px').attr('font-weight', '700')
+            .attr('fill', '#1f2937').attr('letter-spacing', '0.06em')
             .text(txt);
     });
 
@@ -1726,7 +1727,7 @@ function renderSankey2(fragLabel) {
             svg.append('text')
                 .attr('x', x).attr('y', y + TYPE_H - 4)
                 .attr('text-anchor', anchor)
-                .attr('font-size', '9px').attr('font-weight', '700')
+                .attr('font-size', '10px').attr('font-weight', '700')
                 .attr('fill', textColor(FTYPE_COLORS[ftypeKey] || '#6b7280'))
                 .attr('letter-spacing', '0.04em')
                 .text((ftypeLabels[ftypeKey] || ftypeKey).toUpperCase());
@@ -1875,7 +1876,7 @@ function pdTipHide() { getPdTip().style.display = 'none'; }
 function buildBubbleChart(features, decades, container, showType = false) {
     container.innerHTML = '';
     if (!features.length || !decades.length) {
-        container.innerHTML = `<p style="color:#4b5563;padding:0.5rem 0">${T.noData2}</p>`;
+        container.innerHTML = `<p style="color:#1f2937;padding:0.5rem 0">${T.noData2}</p>`;
         return;
     }
 
@@ -1890,7 +1891,7 @@ function buildBubbleChart(features, decades, container, showType = false) {
         .sort((a, b) => b.total - a.total);
 
     if (!active.length) {
-        container.innerHTML = `<p style="color:#4b5563;padding:0.5rem 0">${T.noData2}</p>`;
+        container.innerHTML = `<p style="color:#1f2937;padding:0.5rem 0">${T.noData2}</p>`;
         return;
     }
 
@@ -1965,7 +1966,7 @@ function buildBubbleChart(features, decades, container, showType = false) {
         svg.appendChild(txt(cx, HDR_H - 6, decLabel(dec), {
             'text-anchor': 'middle',
             transform: `rotate(-40,${cx},${HDR_H - 6})`,
-            'font-size': '10px', fill: '#4b5563',
+            'font-size': '11px', fill: '#1f2937',
         }));
         svg.appendChild(set(mk('line'), {
             x1: cx, y1: HDR_H, x2: cx, y2: HDR_H + totalRowH,
@@ -2018,7 +2019,7 @@ function buildBubbleChart(features, decades, container, showType = false) {
 
             const ftypeLabel = (FTYPE_META[feat.ftype] || {}).singular || feat.ftype;
             const tipHtml = `<strong>${feat.label}</strong>`
-                + (showType ? `<br><span style="font-size:10px;color:#4b5563">(${ftypeLabel})</span>` : '')
+                + (showType ? `<br><span style="font-size:10px;color:#1f2937">(${ftypeLabel})</span>` : '')
                 + `<br>${decLabel(dec)}: <strong>${fmtN(v)}</strong> Rezeptionszeugnis${v !== 1 ? 'se' : ''}`;
             circle.addEventListener('mouseenter', e => pdTipShow(e, tipHtml));
             circle.addEventListener('mousemove',  e => pdTipMove(e));
@@ -2043,7 +2044,7 @@ function initPdist() {
         [...new Set(pd.features.map(f => f.ftype))]
             .sort((a, b) => (ftypeOrder.indexOf(a) + 1 || 99) - (ftypeOrder.indexOf(b) + 1 || 99))
             .forEach(ft => {
-                const m = FTYPE_META[ft] || { label: ft, color: '#4b5563' };
+                const m = FTYPE_META[ft] || { label: ft, color: '#1f2937' };
                 const span = document.createElement('span');
                 span.style.cssText = 'display:inline-flex;align-items:center;gap:5px';
                 span.innerHTML = `<span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:${m.color};opacity:0.8;flex-shrink:0"></span>${m.label}`;
@@ -2072,7 +2073,7 @@ function buildPdistTypeSections() {
     [...new Set(pd.features.map(f => f.ftype))]
         .sort((a, b) => (ftypeOrder.indexOf(a) + 1 || 99) - (ftypeOrder.indexOf(b) + 1 || 99))
         .forEach(ft => {
-            const meta    = FTYPE_META[ft] || { label: ft, color: '#4b5563' };
+            const meta    = FTYPE_META[ft] || { label: ft, color: '#1f2937' };
             const section = document.createElement('div');
             section.className = 'card cat';
 
@@ -2136,7 +2137,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
     }
 
     if (!active.length) {
-        container.innerHTML = `<p style="color:#4b5563;padding:0.5rem 0">${T.noData2}</p>`;
+        container.innerHTML = `<p style="color:#1f2937;padding:0.5rem 0">${T.noData2}</p>`;
         return;
     }
 
@@ -2207,7 +2208,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
             const cx = LABEL_W + ci * COL_W + COL_W / 2;
             svg.appendChild(txt(cx, 16, genreLabel(genre), {
                 'text-anchor': 'middle',
-                'font-size': '11px',
+                'font-size': '12px',
                 fill: '#374151',
                 'font-weight': '600',
             }));
@@ -2215,8 +2216,8 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
             if (nVal !== null && nVal !== undefined) {
                 svg.appendChild(txt(cx, 32, `n = ${nVal}`, {
                     'text-anchor': 'middle',
-                    'font-size': '10px',
-                    fill: '#4b5563',
+                    'font-size': '11px',
+                    fill: '#1f2937',
                 }));
             }
             svg.appendChild(set(mk('line'), {
@@ -2251,11 +2252,11 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
         if (lines.length === 1) {
             const labelEl = txt(LABEL_W - 8, yc, lines[0], {
                 'text-anchor': 'end', dy: '0.35em',
-                'font-size': '11px', fill: '#1f2937',
+                'font-size': '12px', fill: '#1f2937',
             });
             if (showType) {
                 labelEl.addEventListener('mouseenter', e => pdTipShow(e,
-                    `<strong>${rawLabel}</strong><br><span style="font-size:10px;color:#4b5563">${ftypeLbl}</span>`));
+                    `<strong>${rawLabel}</strong><br><span style="font-size:10px;color:#1f2937">${ftypeLbl}</span>`));
                 labelEl.addEventListener('mousemove',  e => pdTipMove(e));
                 labelEl.addEventListener('mouseleave', pdTipHide);
                 labelEl.style.cursor = 'default';
@@ -2269,11 +2270,11 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
             ].forEach(([line, y, dy]) => {
                 const labelEl = txt(LABEL_W - 8, y, line, {
                     'text-anchor': 'end', dy,
-                    'font-size': '11px', fill: '#1f2937',
+                    'font-size': '12px', fill: '#1f2937',
                 });
                 if (showType) {
                     labelEl.addEventListener('mouseenter', e => pdTipShow(e,
-                        `<strong>${rawLabel}</strong><br><span style="font-size:10px;color:#4b5563">${ftypeLbl}</span>`));
+                        `<strong>${rawLabel}</strong><br><span style="font-size:10px;color:#1f2937">${ftypeLbl}</span>`));
                     labelEl.addEventListener('mousemove',  e => pdTipMove(e));
                     labelEl.addEventListener('mouseleave', pdTipHide);
                     labelEl.style.cursor = 'default';
@@ -2303,7 +2304,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
                 const cellLabel = `${v} (${pct < 1 ? pct.toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1}) : Math.round(pct)}%)`;
                 svg.appendChild(txt(cx + COL_W / 2, yc, cellLabel, {
                     'text-anchor': 'middle', dy: '0.35em',
-                    'font-size': '10px',
+                    'font-size': '11px',
                     fill: textFill,
                     'font-weight': onDark ? '600' : '400',
                     'pointer-events': 'none',
@@ -2317,7 +2318,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
             tipTarget.style.cursor = 'default';
             const ftypeLabel = (FTYPE_META[feat.ftype] || {}).singular || feat.ftype;
             const tipHtml = `<strong>${rawLabel}</strong>`
-                + (showType ? `<br><span style="font-size:10px;color:#4b5563">(${ftypeLabel})</span>` : '')
+                + (showType ? `<br><span style="font-size:10px;color:#1f2937">(${ftypeLabel})</span>` : '')
                 + `<br>${genreLabel(genre)}: <strong>${fmtN(v)}</strong> ${v !== 1 ? T.receptionTestimoniesPlain : T.receptionTestimony}`
                 + (v > 0 ? ` (${pct < 1 ? pct.toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1}) : Math.round(pct)}%)` : '');
             tipTarget.addEventListener('mouseenter', e => pdTipShow(e, tipHtml));
@@ -2362,7 +2363,7 @@ function buildGdistGenreSections() {
     allGenres.forEach(genre => {
         const hasData = sorted.includes(genre);
         const nVal    = genreNMap[genre];
-        const nLabel  = (hasData && nVal !== undefined) ? ` <span style="font-size:0.78rem;color:#4b5563;font-weight:400">(n = ${nVal})</span>` : '';
+        const nLabel  = (hasData && nVal !== undefined) ? ` <span style="font-size:0.78rem;color:#1f2937;font-weight:400">(n = ${nVal})</span>` : '';
         const section = document.createElement('div');
         section.className = 'card cat';
 
@@ -2372,12 +2373,12 @@ function buildGdistGenreSections() {
             `<span class="arrow${hasData ? '' : ' arrow-hidden'}">▶</span>`
             + `<h2>${genreLabel(genre)}${nLabel}</h2>`
             + (!hasData
-                ? `<span style="margin-left:0.75rem;font-size:0.78rem;color:#4b5563;font-weight:400">${T.noAnalysedYet}</span>`
+                ? `<span style="margin-left:0.75rem;font-size:0.78rem;color:#1f2937;font-weight:400">${T.noAnalysedYet}</span>`
                 : '');
 
         if (!hasData) {
             head.style.cursor = 'default';
-            head.querySelector('h2').style.color = '#4b5563';
+            head.querySelector('h2').style.color = '#1f2937';
             section.appendChild(head);
             container.appendChild(section);
             return;
@@ -2415,7 +2416,7 @@ function buildGdistTypeSections4() {
     [...new Set(gd.features.map(f => f.ftype))]
         .sort((a, b) => (ftypeOrder.indexOf(a) + 1 || 99) - (ftypeOrder.indexOf(b) + 1 || 99))
         .forEach(ft => {
-            const meta    = FTYPE_META[ft] || { label: ft, color: '#4b5563' };
+            const meta    = FTYPE_META[ft] || { label: ft, color: '#1f2937' };
             const section = document.createElement('div');
             section.className = 'card cat';
 
@@ -2457,7 +2458,7 @@ function initGdist() {
         [...new Set(gd.features.map(f => f.ftype))]
             .sort((a, b) => (ftypeOrder.indexOf(a) + 1 || 99) - (ftypeOrder.indexOf(b) + 1 || 99))
             .forEach(ft => {
-                const m    = FTYPE_META[ft] || { label: ft, color: '#4b5563' };
+                const m    = FTYPE_META[ft] || { label: ft, color: '#1f2937' };
                 const span = document.createElement('span');
                 span.style.cssText = 'display:inline-flex;align-items:center;gap:5px';
                 span.innerHTML = `<span style="display:inline-block;width:11px;height:11px;border-radius:2px;background:${m.color};opacity:0.8;flex-shrink:0"></span>${m.label}`;
@@ -2659,7 +2660,7 @@ function renderPlotComponents(plotUri, topN) {
         const arcLen = (a1 - a0) * rMid;
         const rDepth = R_INNER_E - R_INNER_S;
         const label  = fullLabel;
-        const fs     = Math.min(11, Math.max(8, rDepth * 0.40));
+        const fs     = Math.min(12, Math.max(9, rDepth * 0.44));
         const maxC   = Math.floor(arcLen / (fs * 0.60));
         const short  = label.length > maxC ? label.slice(0, maxC - 1) + '…' : label;
 
@@ -2675,7 +2676,7 @@ function renderPlotComponents(plotUri, topN) {
 
             const pct     = Math.round(cf.n / plot.nDocs * 100);
             const tipHtml = `<strong>${cf.label}</strong>`
-                + `<br><span style="font-size:10px;color:#4b5563">`
+                + `<br><span style="font-size:10px;color:#1f2937">`
                 + `${(FTYPE_META[cf.ftype]||{}).singular || cf.ftype}</span>`
                 + `<br>${fmtN(cf.n)} Rezeptionszeugnis${cf.n!==1?'se':''} (${pct}%)`;
 
@@ -2704,7 +2705,7 @@ function renderPlotComponents(plotUri, topN) {
             const aMid   = (a0 + a1) / 2;
             const rDepth = R_OUTER_E - R_OUTER_S;
             const arcLen = (a1 - a0) * ((R_OUTER_S + R_OUTER_E) / 2);
-            const fs     = Math.min(9.5, Math.max(7, rDepth * 0.17));
+            const fs     = Math.min(11.5, Math.max(10, rDepth * 0.2));
 
             if (arcLen >= 20) {
                 const maxC   = Math.floor(rDepth * 0.88 / (fs * 0.58));
@@ -2763,7 +2764,7 @@ function renderPlotComponents(plotUri, topN) {
     svg.appendChild(setA(mk('text'), {
         x: CX, y: cY0 + cLines.length * CLH + 2,
         'text-anchor': 'middle', 'dominant-baseline': 'middle',
-        'font-size': '10px', fill: '#4b5563',
+        'font-size': '11px', fill: '#1f2937',
     })).textContent = `n=${plot.nDocs}`;
 
     svgWrap.appendChild(svg);
@@ -2771,7 +2772,7 @@ function renderPlotComponents(plotUri, topN) {
     legend.style.display = 'flex';
     legend.innerHTML = '';
     activeTypes.forEach(k => {
-        const m = FTYPE_META[k] || { label: k, color: '#4b5563' };
+        const m = FTYPE_META[k] || { label: k, color: '#1f2937' };
         const span = document.createElement('span');
         span.style.cssText = 'display:inline-flex;align-items:center;gap:5px';
         span.innerHTML = `<span style="display:inline-block;width:11px;height:11px;border-radius:2px;`
@@ -2847,7 +2848,7 @@ function renderPersonDuality() {
 
     wrap.innerHTML = '';
     if (!persons.length) {
-        wrap.innerHTML = `<p style="color:#4b5563;padding:0.5rem 0">${T.noData2}</p>`;
+        wrap.innerHTML = `<p style="color:#1f2937;padding:0.5rem 0">${T.noData2}</p>`;
         return;
     }
 
@@ -2936,7 +2937,7 @@ function renderPersonDuality() {
                     min: 0,
                     max: maxX,
                     ticks: {
-                        font: { family: 'Geist, system-ui', size: 11 },
+                        font: { family: 'Geist, system-ui', size: 12 },
                         callback: v => v + '%',
                         stepSize: 5,
                     },
@@ -3001,7 +3002,7 @@ function renderWorkCitation() {
         .sort((a, b) => b.bothN - a.bothN || b.refN - a.refN);
 
     if (!works.length) {
-        wrap.innerHTML = `<p style="color:#4b5563;padding:0.5rem 0">${T.noData2}</p>`;
+        wrap.innerHTML = `<p style="color:#1f2937;padding:0.5rem 0">${T.noData2}</p>`;
         return;
     }
 
@@ -3077,7 +3078,7 @@ function renderWorkCitation() {
                 x: {
                     min: 0, max: maxX,
                     ticks: {
-                        font: { family: 'Geist, system-ui', size: 11 },
+                        font: { family: 'Geist, system-ui', size: 12 },
                         callback: v => v + '%',
                         stepSize: 5,
                     },
@@ -3139,9 +3140,9 @@ function renderInt31MetaBar() {
     wrap.innerHTML =
         `<div style="text-align:center;margin-bottom:0.5rem">`
         + `<span style="font-size:2rem;font-weight:700;color:#1f2937">${fmtN(co.nInt31All)}</span>`
-        + `<span style="font-size:0.9rem;color:#4b5563;margin-left:0.5rem">${T.intertextualRelationsTotal}</span>`
+        + `<span style="font-size:0.9rem;color:#1f2937;margin-left:0.5rem">${T.intertextualRelationsTotal}</span>`
         + `</div>`
-        + `<div style="text-align:center;font-size:0.8rem;color:#4b5563;margin-bottom:0.5rem">${T.intertextualRelationsWithFeats(fmtN(co.nInt31WithFeats))}</div>`;
+        + `<div style="text-align:center;font-size:0.8rem;color:#1f2937;margin-bottom:0.5rem">${T.intertextualRelationsWithFeats(fmtN(co.nInt31WithFeats))}</div>`;
 }
 
 // Phänomentyp-Balken
@@ -3164,13 +3165,13 @@ function renderInt31FtypeBar() {
         .filter(k => typeSum[k] > 0)
         .map(k => ({ key: k, label: (FTYPE_META[k] || {}).label || k, n: typeSum[k] }));
 
-    if (!items.length) { wrap.innerHTML = `<p style="color:#4b5563">${T.noData2}</p>`; return; }
+    if (!items.length) { wrap.innerHTML = `<p style="color:#1f2937">${T.noData2}</p>`; return; }
 
     const legWrap = document.getElementById('int31-ftype-legend');
     if (legWrap) {
         legWrap.innerHTML = '';
         items.forEach(it => {
-            const m = FTYPE_META[it.key] || { color: '#4b5563' };
+            const m = FTYPE_META[it.key] || { color: '#1f2937' };
             const span = document.createElement('span');
             span.style.cssText = 'display:inline-flex;align-items:center;gap:5px';
             span.innerHTML = `<span style="display:inline-block;width:11px;height:11px;border-radius:2px;background:${m.color};opacity:0.85;flex-shrink:0"></span>${it.label}`;
@@ -3204,7 +3205,7 @@ function renderInt31FtypeBar() {
                 }}}},
             scales: {
                 x: { min: 0, max: maxX,
-                    ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => v + '%', stepSize: 10 },
+                    ticks: { font: { family: 'Geist, system-ui', size: 12 }, callback: v => v + '%', stepSize: 10 },
                     grid: { color: 'rgba(0,0,0,0.06)' } },
                 y: { ticks: { font: { family: 'Geist, system-ui', size: 12 }, autoSkip: false },
                     grid: { display: false } },
@@ -3226,7 +3227,7 @@ function renderInt31Sunburst() {
 
     const feats = topN > 0 ? co.featFrequencies.slice(0, topN) : co.featFrequencies;
     if (!feats.length) {
-        wrap.innerHTML = `<p style="color:#4b5563;text-align:center">${T.noData2}</p>`;
+        wrap.innerHTML = `<p style="color:#1f2937;text-align:center">${T.noData2}</p>`;
         return;
     }
 
@@ -3342,8 +3343,8 @@ function renderInt31Sunburst() {
             const ftB = (FTYPE_META[fB.ftype]||{}).singular || fB.ftype;
             const pct = (n / total * 100).toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1});
             const tipHtml =
-                `<strong>${fA.label}</strong> <span style="color:#4b5563">(${ftA})</span>`
-                + `<br>× <strong>${fB.label}</strong> <span style="color:#4b5563">(${ftB})</span>`
+                `<strong>${fA.label}</strong> <span style="color:#1f2937">(${ftA})</span>`
+                + `<br>× <strong>${fB.label}</strong> <span style="color:#1f2937">(${ftB})</span>`
                 + `<br>${T.sharedInt31Nodes(fmtN(n), pct)}`;
 
             path.addEventListener('mouseenter', e => { path.setAttribute('stroke-opacity','0.92'); int31TipShow(e,tipHtml); });
@@ -3396,7 +3397,7 @@ function renderInt31Sunburst() {
             const ft     = (FTYPE_META[f.ftype]||{}).singular || f.ftype;
             const tipHtml =
                 `<strong>${f.label}</strong>`
-                + `<br><span style="font-size:10px;color:#4b5563">(${ft})</span>`
+                + `<br><span style="font-size:10px;color:#1f2937">(${ft})</span>`
                 + `<br>${T.int31NodesTooltip(fmtN(f.n), pct)}`;
 
             const segFrac = (a1 - a0) / (2 * Math.PI);
@@ -3415,7 +3416,7 @@ function renderInt31Sunburst() {
 
             const rDepth = R_OUTER_E - R_OUTER_S;
             const arcLen = (a1 - a0) * ((R_OUTER_S + R_OUTER_E) / 2);
-            const fs     = Math.min(9, Math.max(6.5, rDepth * 0.16));
+            const fs     = Math.min(11.5, Math.max(10, rDepth * 0.2));
             if (arcLen >= 18) {
                 const maxC = Math.floor(rDepth * 0.88 / (fs * 0.58));
                 const lh   = fs * 1.15;
@@ -3450,7 +3451,7 @@ function renderInt31Sunburst() {
         legWrap.style.cssText = 'display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px;margin-top:0.75rem';
         legWrap.innerHTML = '';
         activeTypes.forEach(k => {
-            const m = FTYPE_META[k] || { label: k, color: '#4b5563' };
+            const m = FTYPE_META[k] || { label: k, color: '#1f2937' };
             const span = document.createElement('span');
             span.style.cssText = 'display:inline-flex;align-items:center;gap:5px;font-size:11px';
             span.innerHTML = `<span style="display:inline-block;width:11px;height:11px;border-radius:2px;`
@@ -3474,7 +3475,7 @@ function renderInt31Pairs() {
 
     const topN  = Math.min(50, parseInt(document.getElementById('sel-int31-pairs-topn')?.value || '30'));
     const pairs = co.featPairs.slice(0, topN);
-    if (!pairs.length) { wrap.innerHTML = `<p style="color:#4b5563">${T.noPairsFound}</p>`; return; }
+    if (!pairs.length) { wrap.innerHTML = `<p style="color:#1f2937">${T.noPairsFound}</p>`; return; }
 
     const total  = co.nInt31WithFeats || 1;
     const maxN   = pairs[0]?.n || 1;
@@ -3512,16 +3513,16 @@ function renderInt31Pairs() {
 
         const shortA = pair.labelA;
         svg.appendChild(setA(mkE('text'), { x: LABEL_W/2-6, y: yc,
-            'text-anchor':'end', 'dominant-baseline':'middle', 'font-size':'10.5px', fill:textColor(colorA),
+            'text-anchor':'end', 'dominant-baseline':'middle', 'font-size':'11.5px', fill:textColor(colorA),
         })).textContent = shortA;
 
         svg.appendChild(setA(mkE('text'), { x: LABEL_W/2, y: yc,
-            'text-anchor':'middle', 'dominant-baseline':'middle', 'font-size':'10px', fill:'#4b5563',
+            'text-anchor':'middle', 'dominant-baseline':'middle', 'font-size':'11px', fill:'#1f2937',
         })).textContent = '×';
 
         const shortB = pair.labelB;
         svg.appendChild(setA(mkE('text'), { x: LABEL_W/2+6, y: yc,
-            'text-anchor':'start', 'dominant-baseline':'middle', 'font-size':'10.5px', fill:textColor(colorB),
+            'text-anchor':'start', 'dominant-baseline':'middle', 'font-size':'11.5px', fill:textColor(colorB),
         })).textContent = shortB;
 
         const barW  = Math.max(2, Math.round((pair.n / maxN) * BAR_MAX));
@@ -3531,15 +3532,15 @@ function renderInt31Pairs() {
 
         const pct = (pair.n / total * 100).toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1});
         svg.appendChild(setA(mkE('text'), { x:LABEL_W+barW+5, y:yc,
-            'dominant-baseline':'middle', 'font-size':'10px', fill:'#4b5563' }))
+            'dominant-baseline':'middle', 'font-size':'11px', fill:'#1f2937' }))
             .textContent = `${pair.n} (${pct}%)`;
 
         const overlay = setA(mkE('rect'), { x:0, y:y0, width:svgW, height:BAR_H, fill:'transparent' });
         overlay.style.cursor = 'default';
         const ftA = (FTYPE_META[pair.ftypeA]||{}).singular || pair.ftypeA;
         const ftB = (FTYPE_META[pair.ftypeB]||{}).singular || pair.ftypeB;
-        const tipHtml = `<strong>${pair.labelA}</strong> <span style="color:#4b5563">(${ftA})</span>`
-            + `<br>× <strong>${pair.labelB}</strong> <span style="color:#4b5563">(${ftB})</span>`
+        const tipHtml = `<strong>${pair.labelA}</strong> <span style="color:#1f2937">(${ftA})</span>`
+            + `<br>× <strong>${pair.labelB}</strong> <span style="color:#1f2937">(${ftB})</span>`
             + `<br>${T.sharedInt31Nodes(fmtN(pair.n), pct)}`;
         overlay.addEventListener('mouseenter', e => int31TipShow(e, tipHtml));
         overlay.addEventListener('mousemove',  e => int31TipMove(e));
@@ -3617,7 +3618,7 @@ function renderInt31TopNodes() {
         // Verbundene Texte
         const textHead = document.createElement('p');
         textHead.style.cssText =
-            'font-size:11px;font-weight:700;color:#4b5563;margin:0 0 5px;'
+            'font-size:11px;font-weight:700;color:#1f2937;margin:0 0 5px;'
             + 'text-transform:uppercase;letter-spacing:0.05em;text-align:center';
         textHead.textContent = T.connectedTexts;
         card.appendChild(textHead);
@@ -3662,7 +3663,7 @@ function renderInt31TopNodes() {
         if (basis.length) {
             const bHead = document.createElement('p');
             bHead.style.cssText =
-                'font-size:11px;font-weight:700;color:#4b5563;margin:0 0 6px;'
+                'font-size:11px;font-weight:700;color:#1f2937;margin:0 0 6px;'
                 + 'text-transform:uppercase;letter-spacing:0.05em';
             bHead.textContent = T.basisOfSimilarity;
             card.appendChild(bHead);
@@ -3709,7 +3710,7 @@ function renderInt31TopNodes() {
                 typeLbl.textContent = (ftypeLabels[ft] || ft) + ':';
 
                 const itemsSpan = document.createElement('span');
-                itemsSpan.style.cssText = 'font-size:10.5px;color:#4b5563;line-height:1.5;text-align:left';
+                itemsSpan.style.cssText = 'font-size:10.5px;color:#1f2937;line-height:1.5;text-align:left';
                 itemsSpan.textContent   = items.join(', ');
 
                 row.appendChild(typeLbl);
@@ -3798,11 +3799,11 @@ function initStat10() {
             'border:1px solid #e5e7eb;border-radius:8px;padding:1rem 1.25rem;' +
             'text-align:center;background:#fff';
         card.innerHTML =
-            `<div style="font-size:.78rem;font-weight:700;color:#4b5563;` +
+            `<div style="font-size:.78rem;font-weight:700;color:#1f2937;` +
             `text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem">${k.label}</div>` +
             `<div style="font-size:2rem;font-weight:700;color:${k.color};line-height:1.1">${fmtN(k.value)}</div>` +
-            `<div style="font-size:.78rem;color:#4b5563;margin-top:.25rem">${k.sublbl}</div>` +
-            `<div style="font-size:.72rem;color:#4b5563;margin-top:.1rem">n = ${fmtN(k.n)}</div>`;
+            `<div style="font-size:.78rem;color:#1f2937;margin-top:.25rem">${k.sublbl}</div>` +
+            `<div style="font-size:.72rem;color:#1f2937;margin-top:.1rem">n = ${fmtN(k.n)}</div>`;
         kpiGrid.appendChild(card);
     });
     wrap.appendChild(kpiGrid);
@@ -3877,10 +3878,10 @@ function initStat10() {
                         title: {
                             display: !!xLabel,
                             text: xLabel,
-                            font: { family: 'Geist, system-ui', size: 11 },
-                            color: '#4b5563',
+                            font: { family: 'Geist, system-ui', size: 12 },
+                            color: '#1f2937',
                         },
-                        ticks: { font: { family: 'Geist, system-ui', size: 11 } },
+                        ticks: { font: { family: 'Geist, system-ui', size: 12 } },
                         grid:  { display: false },
                     },
                     y: {
@@ -3889,10 +3890,10 @@ function initStat10() {
                         title: {
                             display: true,
                             text: T.numberOfTexts,
-                            font: { family: 'Geist, system-ui', size: 11 },
-                            color: '#4b5563',
+                            font: { family: 'Geist, system-ui', size: 12 },
+                            color: '#1f2937',
                         },
-                        ticks: { font: { family: 'Geist, system-ui', size: 11 }, stepSize: 5 },
+                        ticks: { font: { family: 'Geist, system-ui', size: 12 }, stepSize: 5 },
                         grid:  { color: 'rgba(0,0,0,0.06)' },
                     },
                 },
@@ -4021,10 +4022,10 @@ function renderGenderOverview() {
                 'border:1px solid #e5e7eb;border-radius:8px;padding:1rem 1.25rem;' +
                 'text-align:center;background:#fff';
             card.innerHTML =
-                `<div style="font-size:.78rem;font-weight:700;color:#4b5563;text-transform:uppercase;` +
+                `<div style="font-size:.78rem;font-weight:700;color:#1f2937;text-transform:uppercase;` +
                 `letter-spacing:.06em;margin-bottom:.3rem">${k.label}</div>` +
                 `<div style="font-size:2rem;font-weight:700;color:${k.color};line-height:1.1">${k.val}</div>` +
-                `<div style="font-size:.78rem;color:#4b5563;margin-top:.25rem">${T.total}</div>`;
+                `<div style="font-size:.78rem;color:#1f2937;margin-top:.25rem">${T.total}</div>`;
             kpiGrid.appendChild(card);
         });
         kpiWrap.appendChild(kpiGrid);
@@ -4138,14 +4139,14 @@ function renderGenderTimeChart() {
             scales: {
                 x: {
                     stacked: true,
-                    ticks: { font: { family: 'Geist, system-ui', size: 11 } },
+                    ticks: { font: { family: 'Geist, system-ui', size: 12 } },
                     grid: { display: false },
                 },
                 y: {
                     stacked: true,
                     max: isPercent ? 100 : undefined,
                     ticks: {
-                        font: { family: 'Geist, system-ui', size: 11 },
+                        font: { family: 'Geist, system-ui', size: 12 },
                         callback: isPercent ? v => v + '%' : v => v,
                     },
                     grid: { color: 'rgba(0,0,0,0.06)' },
@@ -4240,11 +4241,11 @@ function renderGenderGenreChart() {
                     title: {
                         display: true,
                         text: isPercent ? T.percentageShare : T.numberOfTexts2,
-                        font: { family: 'Geist, system-ui', size: 11 },
-                        color: '#4b5563',
+                        font: { family: 'Geist, system-ui', size: 12 },
+                        color: '#1f2937',
                     },
                     ticks: {
-                        font: { family: 'Geist, system-ui', size: 11 },
+                        font: { family: 'Geist, system-ui', size: 12 },
                         precision: 0,
                         callback: isPercent ? v => v + '%' : v => v,
                     },
@@ -4270,7 +4271,7 @@ function renderGenderPhenomSections() {
         legendWrap.innerHTML = '';
         const ftypes = [...new Set(pd.features.map(f => f.ftype))];
         ftypes.forEach(ft => {
-            const m = FTYPE_META[ft] || { label: ft, color: '#4b5563' };
+            const m = FTYPE_META[ft] || { label: ft, color: '#1f2937' };
             const span = document.createElement('span');
             span.style.cssText = 'display:inline-flex;align-items:center;gap:5px';
             span.innerHTML = `<span style="display:inline-block;width:11px;height:11px;border-radius:2px;background:${m.color};flex-shrink:0"></span>${m.label}`;
@@ -4351,7 +4352,7 @@ function renderGenderPhenomSections() {
         wrap.appendChild(ovWrap);
 
         // Typ-Streifen-Plugin (analog Stat 1)
-        const FS = 11, FW = 6.5;
+        const FS = 12, FW = 7.0;
         const splitLov = (lbl, maxW) => {
             const c1 = Math.floor((maxW - 16) / FW) - 2;
             const c2 = Math.floor((maxW - 16) / FW);
@@ -4432,7 +4433,7 @@ function renderGenderPhenomSections() {
                 scales: {
                     x: {
                         min: 0, max: ovMaxX,
-                        ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => v + '%', stepSize: 5 },
+                        ticks: { font: { family: 'Geist, system-ui', size: 12 }, callback: v => v + '%', stepSize: 5 },
                         grid: { color: 'rgba(0,0,0,0.06)' },
                     },
                     y: {
@@ -4484,7 +4485,7 @@ function renderGenderPhenomSections() {
     let _gTopChartF = null;
 
     // Typ-Streifen-Plugin
-    const FS2 = 10, FW2 = 6.0;
+    const FS2 = 11, FW2 = 6.6;
     const splitG = (lbl, maxW) => {
         const c1 = Math.floor((maxW - 12) / FW2) - 2;
         const c2 = Math.floor((maxW - 12) / FW2);
@@ -4596,11 +4597,11 @@ function renderGenderPhenomSections() {
                 scales: {
                     x: {
                         min: 0, max: maxX,
-                        ticks: { font: { family: 'Geist, system-ui', size: 10 }, callback: v => v + '%', stepSize: 5 },
+                        ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => v + '%', stepSize: 5 },
                         grid: { color: 'rgba(0,0,0,0.06)' },
                     },
                     y: {
-                        ticks: { font: { family: 'Geist, system-ui', size: 10 }, autoSkip: false, color: 'transparent' },
+                        ticks: { font: { family: 'Geist, system-ui', size: 11 }, autoSkip: false, color: 'transparent' },
                         grid: { display: false },
                         afterFit(scale) {
                             const maxLen = labels.reduce((m, l) => Math.max(m, l.length), 0);
@@ -4631,7 +4632,7 @@ function renderGenderPhenomSections() {
 
     orderedTypes.forEach(ft => {
         const items    = byType[ft];
-        const ftMeta   = FTYPE_META[ft] || { label: ft, color: '#4b5563' };
+        const ftMeta   = FTYPE_META[ft] || { label: ft, color: '#1f2937' };
         const sectionId = 'gender-phenom-cat-' + ft;
 
         const section = document.createElement('div');
@@ -4680,7 +4681,7 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
         Math.ceil(Math.max(...maleData, ...femData) * 1.05 / 5) * 5
     ) || 10;
 
-    const FS = 11, FW = 6.5;
+    const FS = 12, FW = 7.0;
     const typeColors = items.map(f => (FTYPE_META[f.ftype] || {}).color || '#6b7280');
     const splitLblGP = (lbl, maxW) => {
         const c1 = Math.floor((maxW - 16) / FW) - 2;
@@ -4774,7 +4775,7 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
                     min: 0,
                     max: maxX,
                     ticks: {
-                        font: { family: 'Geist, system-ui', size: 11 },
+                        font: { family: 'Geist, system-ui', size: 12 },
                         callback: v => v + '%',
                         stepSize: 5,
                     },
@@ -4944,7 +4945,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'border:1px solid #e5e7eb;border-radius:8px;padding:.9rem 1.1rem;' +
                 'text-align:center;background:#fff;';
             card.innerHTML =
-                `<div style="font-size:.75rem;font-weight:700;color:#4b5563;` +
+                `<div style="font-size:.75rem;font-weight:700;color:#1f2937;` +
                 `text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem">${label}</div>` +
                 `<div style="font-size:1.7rem;font-weight:700;color:${color};line-height:1.1">${value}</div>`;
             return card;
@@ -4967,7 +4968,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (!labelSet || labelSet.size === 0) return;
                 const { ctx, scales: { x, y } } = chart;
                 ctx.save();
-                ctx.font      = '10px Geist, system-ui, sans-serif';
+                ctx.font      = '11px Geist, system-ui, sans-serif';
                 ctx.fillStyle = '#374151';
                 ctx.textAlign = 'left';
                 points.forEach(d => {
@@ -4984,16 +4985,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const yScaleCfg = yLog
             ? {
                 type: 'logarithmic',
-                title: { display: true, text: yLabel, font: { family: 'Geist, system-ui', size: 11 }, color: '#4b5563' },
+                title: { display: true, text: yLabel, font: { family: 'Geist, system-ui', size: 12 }, color: '#1f2937' },
                 ticks: {
-                    font: { family: 'Geist, system-ui', size: 10 },
+                    font: { family: 'Geist, system-ui', size: 11 },
                     callback: v => { const l = Math.log10(v); return Number.isInteger(l) ? (v >= 1000 ? (v/1000)+'k' : v) : null; }
                 },
                 grid: { color: 'rgba(0,0,0,0.06)' },
               }
             : {
-                title: { display: true, text: yLabel, font: { family: 'Geist, system-ui', size: 11 }, color: '#4b5563' },
-                ticks: { font: { family: 'Geist, system-ui', size: 11 } },
+                title: { display: true, text: yLabel, font: { family: 'Geist, system-ui', size: 12 }, color: '#1f2937' },
+                ticks: { font: { family: 'Geist, system-ui', size: 12 } },
                 grid:  { color: 'rgba(0,0,0,0.06)' },
                 min: 0,
               };
@@ -5036,8 +5037,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 scales: {
                     x: {
-                        title: { display: true, text: xLabel, font: { family: 'Geist, system-ui', size: 11 }, color: '#4b5563' },
-                        ticks: { font: { family: 'Geist, system-ui', size: 11 }, stepSize: 1 },
+                        title: { display: true, text: xLabel, font: { family: 'Geist, system-ui', size: 12 }, color: '#1f2937' },
+                        ticks: { font: { family: 'Geist, system-ui', size: 12 }, stepSize: 1 },
                         grid:  { color: 'rgba(0,0,0,0.06)' },
                         min: 0,
                     },
@@ -5169,18 +5170,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 scales: {
                     x: {
                         position: 'bottom', min: 0,
-                        ticks: { font: { family: 'Geist, system-ui', size: 11 } },
+                        ticks: { font: { family: 'Geist, system-ui', size: 12 } },
                         grid:  { color: 'rgba(0,0,0,0.06)' },
-                        title: { display: true, text: xTitle0, font: { family: 'Geist, system-ui', size: 10 }, color: '#4b5563' },
+                        title: { display: true, text: xTitle0, font: { family: 'Geist, system-ui', size: 11 }, color: '#1f2937' },
                     },
                     x2: {
                         position: 'top', min: 0,
-                        ticks: { font: { family: 'Geist, system-ui', size: 11 }, stepSize: 5 },
+                        ticks: { font: { family: 'Geist, system-ui', size: 12 }, stepSize: 5 },
                         grid:  { display: false },
-                        title: { display: true, text: xTitle1, font: { family: 'Geist, system-ui', size: 10 }, color: '#4b5563' },
+                        title: { display: true, text: xTitle1, font: { family: 'Geist, system-ui', size: 11 }, color: '#1f2937' },
                     },
                     y: {
-                        ticks: { font: { family: 'Geist, system-ui', size: 11 }, autoSkip: false },
+                        ticks: { font: { family: 'Geist, system-ui', size: 12 }, autoSkip: false },
                         grid:  { display: false },
                         afterFit(scale) {
                             const maxLen = labels.reduce((m, l) => Math.max(m, l.length), 0);
