@@ -589,6 +589,9 @@ const EXPORT_TEXT      = '#111827';
 
 // Gemeinsame Grundlage für PNG- und SVG-Export von Chart.js-Diagrammen:
 // gleiche Daten/Optionen, aber auf einer um EXPORT_ZOOM schmaleren Zeichenfläche.
+function _isHiddenColor(c) {
+    return typeof c === 'string' && (/^transparent$/i.test(c.trim()) || /,\s*0(\.0+)?\s*\)$/.test(c.trim()));
+}
 function _exportChartSetup(canvas) {
     if (typeof Chart === 'undefined') return null;
     const src = Chart.getChart(canvas);
@@ -605,7 +608,8 @@ function _exportChartSetup(canvas) {
     if (opts.scales) {
         opts.scales = Object.fromEntries(Object.entries(opts.scales).map(([k, sc]) => [k, {
             ...sc,
-            ticks: { ...sc.ticks, color: EXPORT_TEXT },
+            // unsichtbar gemachte Ticks (Beschriftung wird per Plugin gezeichnet) nicht einblenden
+            ticks: { ...sc.ticks, ...(_isHiddenColor(sc.ticks && sc.ticks.color) ? {} : { color: EXPORT_TEXT }) },
             ...(sc.title ? { title: { ...sc.title, color: EXPORT_TEXT } } : {})
         }]));
     }
