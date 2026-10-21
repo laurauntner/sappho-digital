@@ -482,6 +482,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"/>
         <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"/>
         <script>const DATA = <xsl:value-of select="$json"/>;</script>
+        <script src="js/svgcanvas.js"/>
         <script src="js/statistics.js"/>
         <style>
           .stats-desc code,

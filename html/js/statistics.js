@@ -9,6 +9,7 @@ const STATS_LANG = document.documentElement.lang === 'en' ? 'en' : 'de';
 const NUM_LOCALE = STATS_LANG === 'en' ? 'en-US' : 'de-DE';
 const T = STATS_LANG === 'en' ? {
     downloadPngTitle: 'Download chart as PNG',
+    downloadSvgTitle: 'Download chart as SVG (vector)',
     receptionIndex: 'Reception Index',
     receptionTestimony: 'Reception Testimony',
     phenomenonDensityVsConnectivity: 'Phenomenon Density vs. Connectivity',
@@ -116,6 +117,7 @@ const T = STATS_LANG === 'en' ? {
     receptionTestimoniesPlain: 'Reception Testimonies',
 } : {
     downloadPngTitle: 'Grafik als PNG herunterladen',
+    downloadSvgTitle: 'Grafik als SVG (Vektorgrafik) herunterladen',
     receptionIndex: 'Rezeptionsindex',
     receptionTestimony: 'Rezeptionszeugnis',
     phenomenonDensityVsConnectivity: 'Phänomendichte vs. Vernetzung',
@@ -287,9 +289,25 @@ Chart.defaults.plugins.tooltip.padding          = 8;
 
 // Download-Hilfsfunktionen
 
+// Button für den SVG-Export (Vektor, beliebig skalierbar).
+function _mkSvgBtn(clickFn) {
+    const btn = document.createElement('button');
+    btn.textContent = 'SVG';
+    btn.title       = T.downloadSvgTitle;
+    btn.style.cssText =
+        'font-family:Geist,system-ui,sans-serif;font-size:.72rem;' +
+        'padding:.2rem .6rem;border-radius:.3rem;cursor:pointer;' +
+        'border:1px solid #d1d5db;background:#f9fafb;color:#374151;' +
+        'transition:background .15s;';
+    btn.addEventListener('mouseenter', () => btn.style.background = '#f3f4f6');
+    btn.addEventListener('mouseleave', () => btn.style.background = '#f9fafb');
+    btn.addEventListener('click', clickFn);
+    return btn;
+}
+
 // Erzeugt einen Download-Button nach `container` (nie darin -> ResizeObserver sicher).
 // Duplikate werden anhand des Dateinamens verhindert.
-function _mkDlWrap(filename, clickFn, container) {
+function _mkDlWrap(filename, clickFn, container, svgFn) {
     const eid = 'dl-' + filename.replace(/[^a-z0-9]/gi, '-');
     const existing = document.getElementById(eid);
     if (existing) existing.remove();
@@ -309,6 +327,11 @@ function _mkDlWrap(filename, clickFn, container) {
     btn.addEventListener('mouseleave', () => btn.style.background = '#f9fafb');
     btn.addEventListener('click', clickFn);
     wrap.appendChild(btn);
+    if (svgFn) {
+        const sbtn = _mkSvgBtn(svgFn);
+        sbtn.style.marginLeft = '.4rem';
+        wrap.appendChild(sbtn);
+    }
     if (container && container.parentNode) {
         container.parentNode.insertBefore(wrap, container.nextSibling);
     } else if (container) {
@@ -389,6 +412,33 @@ function drawLegend(ctx, items, width, y0, S, draw) {
     }
     return rows.length * LH + 8 * S;
 }
+// Legende als SVG-Markup (gleiches Layout wie drawLegend); gibt { markup, height } zurück.
+function legendSvgMarkup(items, width, y0) {
+    const FS = 12, DOT = 11, GAP = 6, SEP = 16, LH = 20;
+    const m = document.createElement('canvas').getContext('2d');
+    m.font = `${FS}px Geist, system-ui, sans-serif`;
+    const rows = [[]]; let rw = 0;
+    items.forEach(it => {
+        const w = DOT + GAP + m.measureText(it.text).width;
+        if (rows[rows.length - 1].length && rw + SEP + w > width - 32) { rows.push([]); rw = 0; }
+        rows[rows.length - 1].push({ ...it, w });
+        rw += (rw ? SEP : 0) + w;
+    });
+    const esc = t => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    let out = '';
+    rows.forEach((row, ri) => {
+        const tot = row.reduce((a, r, i) => a + r.w + (i ? SEP : 0), 0);
+        let x = (width - tot) / 2;
+        const cy = y0 + ri * LH + LH / 2;
+        row.forEach(r => {
+            out += `<rect x="${x}" y="${cy - DOT / 2}" width="${DOT}" height="${DOT}" fill="${r.color}"/>` +
+                   `<text x="${x + DOT + GAP}" y="${cy}" dominant-baseline="central" font-size="${FS}" fill="#1f2937">${esc(r.text)}</text>`;
+            x += r.w + SEP;
+        });
+    });
+    return { markup: out, height: rows.length * LH + 8 };
+}
+
 function withLegend(srcCanvas, items, S) {
     if (!items || !items.length) return srcCanvas;
     const m  = document.createElement('canvas').getContext('2d');
@@ -420,7 +470,7 @@ function downloadChart(canvas, filename) {
 }
 
 // SVG-Grafiken (Bubble, Heatmap, Sankey, Pairs, PC): SVG -> Canvas -> PNG
-function downloadSvg(svgEl, filename) {
+function downloadSvg(svgEl, filename, asSvg) {
     if (!svgEl) return;
     // Gesamten gezeichneten Inhalt erfassen (Labels können außerhalb der viewBox liegen,
     // da die SVGs overflow:visible nutzen) und mit Rand versehen.
@@ -450,6 +500,35 @@ function downloadSvg(svgEl, filename) {
     clone.style.height = h + 'px';
     clone.style.maxWidth = 'none';
     clone.style.overflow = 'visible';
+    if (asSvg) {
+        // Vektor-Export: weißer Hintergrund, Schrift explizit, Legende als SVG-Elemente anhängen.
+        const NS = 'http://www.w3.org/2000/svg';
+        clone.style.fontFamily = 'Geist, system-ui, sans-serif';
+        const bg = document.createElementNS(NS, 'rect');
+        bg.setAttribute('x', x); bg.setAttribute('y', y);
+        bg.setAttribute('width', w); bg.setAttribute('height', h);
+        bg.setAttribute('fill', '#ffffff');
+        clone.insertBefore(bg, clone.firstChild);
+        let totalH = h;
+        if (legendItems && legendItems.length) {
+            const lg = legendSvgMarkup(legendItems, w, y + h);
+            const g = document.createElementNS(NS, 'g');
+            g.innerHTML = lg.markup;
+            clone.appendChild(g);
+            totalH = h + lg.height;
+            bg.setAttribute('height', totalH);
+            clone.setAttribute('viewBox', `${x} ${y} ${w} ${totalH}`);
+            clone.setAttribute('height', totalH);
+            clone.style.height = totalH + 'px';
+        }
+        const svgXml = '<?xml version="1.0" encoding="UTF-8"?>\n' + new XMLSerializer().serializeToString(clone);
+        const sUrl = URL.createObjectURL(new Blob([svgXml], { type: 'image/svg+xml;charset=utf-8' }));
+        const sa = document.createElement('a');
+        sa.href = sUrl; sa.download = filename + '.svg';
+        sa.click();
+        setTimeout(() => URL.revokeObjectURL(sUrl), 1000);
+        return;
+    }
     const xml = new XMLSerializer().serializeToString(clone);
     const url = URL.createObjectURL(new Blob([xml], { type: 'image/svg+xml;charset=utf-8' }));
     const img = new Image();
@@ -472,19 +551,80 @@ function downloadSvg(svgEl, filename) {
     img.src = url;
 }
 
+// Chart.js-Canvas -> SVG: Das Diagramm wird mit denselben Daten/Optionen auf einen
+// SVG-Zeichenkontext (svgcanvas) neu gerendert. Ergebnis: { inner, w, h } oder null.
+function chartCanvasToSvg(canvas) {
+    const src = (typeof Chart !== 'undefined' && typeof svgcanvas !== 'undefined') ? Chart.getChart(canvas) : null;
+    if (!src) return null;
+    const r = canvas.getBoundingClientRect();
+    const W = Math.round(r.width), H = Math.round(r.height);
+    if (!W || !H) return null;
+    const ctx  = new svgcanvas.Context(W, H);
+    const fake = document.createElement('canvas');
+    fake.width = W; fake.height = H;
+    fake.style.cssText = `position:absolute;left:-99999px;top:0;width:${W}px;height:${H}px`;
+    fake.getContext = () => ctx;
+    Object.defineProperty(ctx, 'canvas', { value: fake, configurable: true });
+    document.body.appendChild(fake);
+    const cfg  = src.config;
+    // Daten kopieren, damit die Listener des Original-Charts nicht berührt werden
+    const data = { ...cfg.data,
+        labels: cfg.data.labels && [...cfg.data.labels],
+        datasets: cfg.data.datasets.map(d => ({ ...d, data: [...d.data] })) };
+    const opts = { ...cfg.options, animation: false, responsive: false, maintainAspectRatio: false,
+                   devicePixelRatio: 1, events: [] };
+    let chart, svgStr;
+    try {
+        chart  = new Chart(fake, { type: cfg.type, data, options: opts, plugins: cfg.plugins });
+        svgStr = ctx.getSerializedSvg();
+    } finally {
+        if (chart) chart.destroy();
+        fake.remove();
+    }
+    const root = new DOMParser().parseFromString(svgStr, 'image/svg+xml').documentElement;
+    const ser  = new XMLSerializer();
+    const inner = [...root.childNodes].map(n => ser.serializeToString(n)).join('');
+    return { inner, w: W, h: H };
+}
+
+// SVG-Download für Chart.js-Diagramme (optional mit Legende und Beschriftungsspalte links).
+// opts.legend: Legendeneinträge (Standard: findLegendItems); opts.left: { w, markup }
+function downloadChartSvg(canvas, filename, opts) {
+    opts = opts || {};
+    const c = chartCanvasToSvg(canvas);
+    if (!c) return;
+    const items = opts.legend !== undefined ? opts.legend : findLegendItems(canvas);
+    const leftW = opts.left ? opts.left.w : 0;
+    const totalW = c.w + leftW;
+    let legend = { markup: '', height: 0 };
+    if (items && items.length) legend = legendSvgMarkup(items, totalW, c.h);
+    const totalH = c.h + legend.height;
+    const xml = '<?xml version="1.0" encoding="UTF-8"?>\n' +
+        `<svg xmlns="http://www.w3.org/2000/svg" width="${totalW}" height="${totalH}" viewBox="0 0 ${totalW} ${totalH}" font-family="Geist, system-ui, sans-serif">` +
+        `<rect width="${totalW}" height="${totalH}" fill="#ffffff"/>` +
+        (opts.left ? opts.left.markup : '') +
+        `<g transform="translate(${leftW},0)">${c.inner}</g>` +
+        legend.markup + '</svg>';
+    const url = URL.createObjectURL(new Blob([xml], { type: 'image/svg+xml;charset=utf-8' }));
+    const a = document.createElement('a');
+    a.href = url; a.download = filename + '.svg';
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
 // Button für Chart.js-Canvas
 function addDownloadBtn(canvas, filename, container) {
-    return _mkDlWrap(filename, () => downloadChart(canvas, filename), container);
+    return _mkDlWrap(filename, () => downloadChart(canvas, filename), container,
+        () => downloadChartSvg(canvas, filename));
 }
 
 // Button für SVG-basierte Grafiken
 function addDownloadSvgBtn(svgOrContainer, filename, container) {
-    return _mkDlWrap(filename, () => {
-        const svgEl = svgOrContainer && svgOrContainer.tagName === 'svg'
-            ? svgOrContainer
-            : svgOrContainer && svgOrContainer.querySelector('svg');
-        downloadSvg(svgEl, filename);
-    }, container);
+    const getSvg = () => svgOrContainer && svgOrContainer.tagName === 'svg'
+        ? svgOrContainer
+        : svgOrContainer && svgOrContainer.querySelector('svg');
+    return _mkDlWrap(filename, () => downloadSvg(getSvg(), filename), container,
+        () => downloadSvg(getSvg(), filename, true));
 }
 
 const charts = {};
@@ -876,6 +1016,15 @@ function renderCatOverview() {
             a.click();
         });
         dlContainer.appendChild(btn);
+        const _sBtn = _mkSvgBtn(() => {
+            const cv = document.getElementById('chart-cat-overview');
+            if (!cv) return;
+            const _dsLeg = _legendItems(document.querySelector('.legend .dot-s')?.closest('.legend'));
+            downloadChartSvg(cv, fname('uebersicht_alle_phaenomene'),
+                { legend: [...(_dsLeg || []), ...(findLegendItems(cv) || [])] });
+        });
+        _sBtn.style.marginLeft = '.4rem';
+        dlContainer.appendChild(_sBtn);
     }
 }
 
@@ -1279,6 +1428,36 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             dlWrap.appendChild(dlBtn);
+            const riSvgBtn = _mkSvgBtn(() => {
+                const domLabelW = labelCol.getBoundingClientRect().width;
+                const mc = document.createElement('canvas').getContext('2d');
+                mc.font = '11px Geist, system-ui, sans-serif';
+                let needW = 0;
+                sorted.forEach(d => {
+                    needW = Math.max(needW, mc.measureText(d.label).width);
+                    if (d.authors) needW = Math.max(needW, mc.measureText('(' + d.authors + ')').width);
+                });
+                const labelW     = Math.max(domLabelW, Math.ceil(needW) + 10 + 16);
+                const totalH     = canvas.getBoundingClientRect().height;
+                const PAD_TOP    = ROW_H / 2;
+                const cellH      = sorted.length > 0 ? (totalH - PAD_TOP * 2) / sorted.length : ROW_H;
+                const labelRight = labelW - 10;
+                const esc = t => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+                let markup = '';
+                sorted.forEach((d, i) => {
+                    const cy = PAD_TOP + cellH * i + cellH / 2;
+                    if (d.authors) {
+                        const lineGap = 7;
+                        markup += `<text x="${labelRight}" y="${cy - lineGap / 2}" text-anchor="end" font-size="11" fill="#1f2937">${esc(d.label)}</text>` +
+                                  `<text x="${labelRight}" y="${cy + lineGap / 2 + 10}" text-anchor="end" font-size="11" fill="#1f2937">${esc('(' + d.authors + ')')}</text>`;
+                    } else {
+                        markup += `<text x="${labelRight}" y="${cy}" text-anchor="end" dominant-baseline="central" font-size="11" fill="#1f2937">${esc(d.label)}</text>`;
+                    }
+                });
+                downloadChartSvg(canvas, fname('rezeptionsindizes'), { left: { w: labelW, markup }, legend: null });
+            });
+            riSvgBtn.style.marginLeft = '.4rem';
+            dlWrap.appendChild(riSvgBtn);
             if (outer.parentNode) {
                 outer.parentNode.insertBefore(dlWrap, outer.nextSibling);
             } else {
@@ -2801,6 +2980,12 @@ function renderPlotComponents(plotUri, topN) {
                 downloadSvg(svgEl, 'stoff_komponenten');
             });
             _dlTarget.appendChild(_dlBtn);
+            const _svgBtn = _mkSvgBtn(() => {
+                const svgEl = _pcWrap ? _pcWrap.querySelector('svg') : null;
+                downloadSvg(svgEl, 'stoff_komponenten', true);
+            });
+            _svgBtn.style.marginLeft = '.4rem';
+            _dlTarget.appendChild(_svgBtn);
         }
     }
 }
@@ -5329,6 +5514,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 a.click();
             });
             btnWrap.appendChild(btn);
+            const sBtn = _mkSvgBtn(() => {
+                const legItems = [...legendDiv.children].map(sp => {
+                    const sw = sp.querySelector('span');
+                    return { color: sw ? sw.style.background : '#6b7280', text: sp.textContent.trim() };
+                });
+                downloadChartSvg(donutCanvas, fname('popularitaetsanalysen_sitelinks_verteilung'), { legend: legItems });
+            });
+            sBtn.style.marginLeft = '.4rem';
+            btnWrap.appendChild(sBtn);
             donutWrap.appendChild(btnWrap);
         }());
     }
