@@ -78,6 +78,7 @@
                                     <!-- Export bar -->
                                     <div id="export-bar">
                                         <button id="btn-exp-png"><xsl:value-of select="i18n:t('PNG exportieren')"/></button>
+                                        <button id="btn-exp-svg"><xsl:value-of select="i18n:t('SVG exportieren')"/></button>
                                     </div>
 
                                     <!-- Hint overlay -->
@@ -195,7 +196,8 @@
                                     <xsl:call-template name="meta-json"/>
                                 </script>
 
-                                <script src="js/network.js" defer="defer"/>
+                                <script src="js/svgcanvas.js"/>
+                <script src="js/network.js" defer="defer"/>
 
                             </div>
                         </div>

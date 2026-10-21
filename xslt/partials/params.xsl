@@ -277,6 +277,7 @@
         <entry de="Alle aus" en="All Off"/>
         <entry de="Gesamt: " en="Total: "/>
         <entry de="PNG exportieren" en="Export PNG"/>
+        <entry de="SVG exportieren" en="Export SVG"/>
         <entry de="Hinweis:" en="Note:"/>
         <entry de="Startpunkt ist »Von den plejaden her vierzehn gedichte im hinblick auf Lesbos« von Johannes Poethen. "
             en="The starting point is »Von den plejaden her vierzehn gedichte im hinblick auf Lesbos« by Johannes Poethen. "/>

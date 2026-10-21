@@ -403,7 +403,7 @@ function drawLegend(ctx, items, width, y0, S, draw) {
             row.forEach(r => {
                 ctx.fillStyle = r.color;
                 ctx.fillRect(x, cy - DOT / 2, DOT, DOT);
-                ctx.fillStyle = '#1f2937';
+                ctx.fillStyle = '#111827';
                 ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
                 ctx.fillText(r.text, x + DOT + GAP, cy);
                 x += r.w + SEP;
@@ -413,14 +413,15 @@ function drawLegend(ctx, items, width, y0, S, draw) {
     return rows.length * LH + 8 * S;
 }
 // Legende als SVG-Markup (gleiches Layout wie drawLegend); gibt { markup, height } zurück.
-function legendSvgMarkup(items, width, y0) {
-    const FS = 12, DOT = 11, GAP = 6, SEP = 16, LH = 20;
+function legendSvgMarkup(items, width, y0, k) {
+    k = k || 1;
+    const FS = 12 * k, DOT = 11 * k, GAP = 6 * k, SEP = 16 * k, LH = 20 * k;
     const m = document.createElement('canvas').getContext('2d');
     m.font = `${FS}px Geist, system-ui, sans-serif`;
     const rows = [[]]; let rw = 0;
     items.forEach(it => {
         const w = DOT + GAP + m.measureText(it.text).width;
-        if (rows[rows.length - 1].length && rw + SEP + w > width - 32) { rows.push([]); rw = 0; }
+        if (rows[rows.length - 1].length && rw + SEP + w > width - 32 * k) { rows.push([]); rw = 0; }
         rows[rows.length - 1].push({ ...it, w });
         rw += (rw ? SEP : 0) + w;
     });
@@ -432,11 +433,11 @@ function legendSvgMarkup(items, width, y0) {
         const cy = y0 + ri * LH + LH / 2;
         row.forEach(r => {
             out += `<rect x="${x}" y="${cy - DOT / 2}" width="${DOT}" height="${DOT}" fill="${r.color}"/>` +
-                   `<text x="${x + DOT + GAP}" y="${cy}" dominant-baseline="central" font-size="${FS}" fill="#1f2937">${esc(r.text)}</text>`;
+                   `<text x="${x + DOT + GAP}" y="${cy}" dominant-baseline="central" font-size="${FS}" fill="#111827">${esc(r.text)}</text>`;
             x += r.w + SEP;
         });
     });
-    return { markup: out, height: rows.length * LH + 8 };
+    return { markup: out, height: rows.length * LH + 8 * k };
 }
 
 function withLegend(srcCanvas, items, S) {
@@ -454,20 +455,42 @@ function withLegend(srcCanvas, items, S) {
 
 // Canvas (Chart.js): weißer Hintergrund; alle Beschriftungen sind im Canvas.
 function downloadChart(canvas, filename, legend) {
-    const off = document.createElement('canvas');
-    off.width  = canvas.width;
-    off.height = canvas.height;
-    const oc = off.getContext('2d');
-    oc.fillStyle = '#ffffff';
-    oc.fillRect(0, 0, off.width, off.height);
-    oc.drawImage(canvas, 0, 0);
-    const _cssW = canvas.getBoundingClientRect().width || canvas.width;
-    const outC  = withLegend(off, legend !== undefined ? legend : findLegendItems(canvas), canvas.width / _cssW);
+    const items = legend !== undefined ? legend : findLegendItems(canvas);
+    const S  = EXPORT_PNG_SCALE;
+    const hi = chartCanvasToPng(canvas, S);
+    let outC;
+    if (hi) {
+        const off = document.createElement('canvas');
+        off.width = hi.width; off.height = hi.height;
+        const oc = off.getContext('2d');
+        oc.fillStyle = '#ffffff';
+        oc.fillRect(0, 0, off.width, off.height);
+        oc.drawImage(hi, 0, 0);
+        outC = withLegend(off, items, S * EXPORT_ZOOM);
+    } else {
+        const off = document.createElement('canvas');
+        off.width  = canvas.width;
+        off.height = canvas.height;
+        const oc = off.getContext('2d');
+        oc.fillStyle = '#ffffff';
+        oc.fillRect(0, 0, off.width, off.height);
+        oc.drawImage(canvas, 0, 0);
+        const _cssW = canvas.getBoundingClientRect().width || canvas.width;
+        outC = withLegend(off, items, canvas.width / _cssW);
+    }
     const a = document.createElement('a');
     a.href     = outC.toDataURL('image/png');
     a.download = filename + '.png';
     a.click();
 }
+
+// Geist als base64-@font-face für den PNG-Export von SVG-Grafiken (einmal beim Laden holen)
+let _geistFontCss = '';
+fetch('fonts/geist-sans-latin-200-normal.woff2').then(r => r.blob()).then(b => new Promise(res => {
+    const fr = new FileReader();
+    fr.onload = () => res(fr.result);
+    fr.readAsDataURL(b);
+})).then(uri => { _geistFontCss = `@font-face{font-family:'Geist';src:url(${uri}) format('woff2');}`; }).catch(() => {});
 
 // SVG-Grafiken (Bubble, Heatmap, Sankey, Pairs, PC): SVG -> Canvas -> PNG
 function downloadSvg(svgEl, filename, asSvg) {
@@ -529,11 +552,17 @@ function downloadSvg(svgEl, filename, asSvg) {
         setTimeout(() => URL.revokeObjectURL(sUrl), 1000);
         return;
     }
+    // Als <img> geladene SVGs sehen keine Webfonts der Seite -> Geist als data-URI einbetten
+    if (_geistFontCss) {
+        const st = document.createElementNS('http://www.w3.org/2000/svg', 'style');
+        st.textContent = _geistFontCss;
+        clone.insertBefore(st, clone.firstChild);
+    }
     const xml = new XMLSerializer().serializeToString(clone);
     const url = URL.createObjectURL(new Blob([xml], { type: 'image/svg+xml;charset=utf-8' }));
     const img = new Image();
     img.onload = () => {
-        const S   = 2;
+        const S   = EXPORT_PNG_SCALE;
         const cv  = document.createElement('canvas');
         cv.width  = Math.ceil(w * S); cv.height = Math.ceil(h * S);
         const ctx = cv.getContext('2d');
@@ -551,40 +580,98 @@ function downloadSvg(svgEl, filename, asSvg) {
     img.src = url;
 }
 
-// Chart.js-Canvas -> SVG: Das Diagramm wird mit denselben Daten/Optionen auf einen
-// SVG-Zeichenkontext (svgcanvas) neu gerendert. Ergebnis: { inner, w, h } oder null.
-function chartCanvasToSvg(canvas) {
-    const src = (typeof Chart !== 'undefined' && typeof svgcanvas !== 'undefined') ? Chart.getChart(canvas) : null;
+// Export-Einstellungen: PNG mit 4-facher Auflösung; das Diagramm wird mit der Layout-Breite W/1,25
+// gezeichnet und dann 1,25-fach vergrößert (Schrift und Linien größer, Höhe wächst mit),
+// Text dunkler als im Interface.
+const EXPORT_PNG_SCALE = 4;
+const EXPORT_ZOOM      = 1.25;
+const EXPORT_TEXT      = '#111827';
+
+// Gemeinsame Grundlage für PNG- und SVG-Export von Chart.js-Diagrammen:
+// gleiche Daten/Optionen, aber auf einer um EXPORT_ZOOM schmaleren Zeichenfläche.
+function _exportChartSetup(canvas) {
+    if (typeof Chart === 'undefined') return null;
+    const src = Chart.getChart(canvas);
     if (!src) return null;
     const r = canvas.getBoundingClientRect();
     const W = Math.round(r.width), H = Math.round(r.height);
     if (!W || !H) return null;
-    const ctx  = new svgcanvas.Context(W, H);
-    const fake = document.createElement('canvas');
-    fake.width = W; fake.height = H;
-    fake.style.cssText = `position:absolute;left:-99999px;top:0;width:${W}px;height:${H}px`;
-    fake.getContext = () => ctx;
-    Object.defineProperty(ctx, 'canvas', { value: fake, configurable: true });
-    document.body.appendChild(fake);
     const cfg  = src.config;
     // Daten kopieren, damit die Listener des Original-Charts nicht berührt werden
     const data = { ...cfg.data,
         labels: cfg.data.labels && [...cfg.data.labels],
         datasets: cfg.data.datasets.map(d => ({ ...d, data: [...d.data] })) };
-    const opts = { ...cfg.options, animation: false, responsive: false, maintainAspectRatio: false,
-                   devicePixelRatio: 1, events: [] };
+    const opts = { ...cfg.options, animation: false, responsive: false, maintainAspectRatio: false, events: [] };
+    if (opts.scales) {
+        opts.scales = Object.fromEntries(Object.entries(opts.scales).map(([k, sc]) => [k, {
+            ...sc,
+            ticks: { ...sc.ticks, color: EXPORT_TEXT },
+            ...(sc.title ? { title: { ...sc.title, color: EXPORT_TEXT } } : {})
+        }]));
+    }
+    if (opts.plugins && opts.plugins.legend && opts.plugins.legend.labels) {
+        opts.plugins = { ...opts.plugins,
+            legend: { ...opts.plugins.legend, labels: { ...opts.plugins.legend.labels, color: EXPORT_TEXT } } };
+    }
+    return { W, H, w: Math.round(W / EXPORT_ZOOM), h: H,
+             type: cfg.type, data, opts, plugins: cfg.plugins };
+}
+
+// Rendert das Diagramm in ein neues Canvas mit S Pixeln pro CSS-Pixel der Originalgröße.
+function chartCanvasToPng(canvas, S) {
+    const c = _exportChartSetup(canvas);
+    if (!c) return null;
+    const el = document.createElement('canvas');
+    el.width = c.w; el.height = c.h;
+    el.style.cssText = `position:absolute;left:-99999px;top:0;width:${c.w}px;height:${c.h}px`;
+    document.body.appendChild(el);
+    const oldColor = Chart.defaults.color;
+    Chart.defaults.color = EXPORT_TEXT;
+    let chart;
+    try {
+        chart = new Chart(el, { type: c.type, data: c.data, plugins: c.plugins,
+            options: { ...c.opts, devicePixelRatio: S * EXPORT_ZOOM } });
+        const out = document.createElement('canvas');
+        out.width = el.width; out.height = el.height;
+        out.getContext('2d').drawImage(el, 0, 0);
+        return out;
+    } finally {
+        Chart.defaults.color = oldColor;
+        if (chart) chart.destroy();
+        el.remove();
+    }
+}
+
+// Chart.js-Canvas -> SVG: Das Diagramm wird mit denselben Daten/Optionen auf einen
+// SVG-Zeichenkontext (svgcanvas) neu gerendert. Ergebnis: { inner, w, h } oder null.
+function chartCanvasToSvg(canvas) {
+    if (typeof svgcanvas === 'undefined') return null;
+    const c = _exportChartSetup(canvas);
+    if (!c) return null;
+    const ctx  = new svgcanvas.Context(c.w, c.h);
+    const fake = document.createElement('canvas');
+    fake.width = c.w; fake.height = c.h;
+    fake.style.cssText = `position:absolute;left:-99999px;top:0;width:${c.w}px;height:${c.h}px`;
+    fake.getContext = () => ctx;
+    Object.defineProperty(ctx, 'canvas', { value: fake, configurable: true });
+    document.body.appendChild(fake);
+    const oldColor = Chart.defaults.color;
+    Chart.defaults.color = EXPORT_TEXT;
     let chart, svgStr;
     try {
-        chart  = new Chart(fake, { type: cfg.type, data, options: opts, plugins: cfg.plugins });
+        chart  = new Chart(fake, { type: c.type, data: c.data, plugins: c.plugins,
+            options: { ...c.opts, devicePixelRatio: 1 } });
         svgStr = ctx.getSerializedSvg();
     } finally {
+        Chart.defaults.color = oldColor;
         if (chart) chart.destroy();
         fake.remove();
     }
     const root = new DOMParser().parseFromString(svgStr, 'image/svg+xml').documentElement;
     const ser  = new XMLSerializer();
-    const inner = [...root.childNodes].map(n => ser.serializeToString(n)).join('');
-    return { inner, w: W, h: H };
+    const inner = `<g transform="scale(${EXPORT_ZOOM})">` +
+        [...root.childNodes].map(n => ser.serializeToString(n)).join('') + '</g>';
+    return { inner, w: c.W, h: Math.round(c.H * EXPORT_ZOOM) };
 }
 
 // SVG-Download für Chart.js-Diagramme (optional mit Legende und Beschriftungsspalte links).
@@ -597,7 +684,7 @@ function downloadChartSvg(canvas, filename, opts) {
     const leftW = opts.left ? opts.left.w : 0;
     const totalW = c.w + leftW;
     let legend = { markup: '', height: 0 };
-    if (items && items.length) legend = legendSvgMarkup(items, totalW, c.h);
+    if (items && items.length) legend = legendSvgMarkup(items, totalW, c.h, EXPORT_ZOOM);
     const totalH = c.h + legend.height;
     const xml = '<?xml version="1.0" encoding="UTF-8"?>\n' +
         `<svg xmlns="http://www.w3.org/2000/svg" width="${totalW}" height="${totalH}" viewBox="0 0 ${totalW} ${totalH}" font-family="Geist, system-ui, sans-serif">` +
@@ -1002,19 +1089,8 @@ function renderCatOverview() {
         btn.addEventListener('click', () => {
             const cv = document.getElementById('chart-cat-overview');
             if (!cv) return;
-            const off = document.createElement('canvas');
-            off.width = cv.width; off.height = cv.height;
-            const oc  = off.getContext('2d');
-            oc.fillStyle = '#ffffff';
-            oc.fillRect(0, 0, off.width, off.height);
-            oc.drawImage(cv, 0, 0);
-            const _cssW = cv.getBoundingClientRect().width || cv.width;
             const _dsLeg = _legendItems(document.querySelector('.legend .dot-s')?.closest('.legend'));
-            const outC  = withLegend(off, [...(_dsLeg || []), ...(findLegendItems(cv) || [])], cv.width / _cssW);
-            const a = document.createElement('a');
-            a.href = outC.toDataURL('image/png');
-            a.download = fname('uebersicht_alle_phaenomene') + '.png';
-            a.click();
+            downloadChart(cv, fname('uebersicht_alle_phaenomene'), [...(_dsLeg || []), ...(findLegendItems(cv) || [])]);
         });
         dlContainer.appendChild(btn);
         const _sBtn = _mkSvgBtn(() => {
@@ -1350,23 +1426,23 @@ document.addEventListener('DOMContentLoaded', () => {
             dlBtn.addEventListener('mouseleave', () => dlBtn.style.background = '#f9fafb');
 
             dlBtn.addEventListener('click', () => {
-                const DPR       = window.devicePixelRatio || 1;
+                const DPR       = EXPORT_PNG_SCALE;
                 const domLabelW = labelCol.getBoundingClientRect().width;
                 const chartW    = canvas.getBoundingClientRect().width;
                 // Labelspalte so breit wie der längste Text (rechtsbündig gezeichnet, sonst links abgeschnitten)
                 const mc = document.createElement('canvas').getContext('2d');
                 let needW = 0;
                 sorted.forEach(d => {
-                    mc.font = '11px Geist, system-ui, sans-serif';
+                    mc.font = `${11 * EXPORT_ZOOM}px Geist, system-ui, sans-serif`;
                     needW = Math.max(needW, mc.measureText(d.label).width);
                     if (d.authors) {
-                        mc.font = '11px Geist, system-ui, sans-serif';
+                        mc.font = `${11 * EXPORT_ZOOM}px Geist, system-ui, sans-serif`;
                         needW = Math.max(needW, mc.measureText('(' + d.authors + ')').width);
                     }
                 });
                 const labelW    = Math.max(domLabelW, Math.ceil(needW) + 10 + 16);
                 const totalW    = Math.round((labelW + chartW) * DPR);
-                const totalH    = Math.round(canvas.getBoundingClientRect().height * DPR);
+                const totalH    = Math.round(canvas.getBoundingClientRect().height * EXPORT_ZOOM * DPR);
 
                 const off = document.createElement('canvas');
                 off.width  = totalW;
@@ -1381,8 +1457,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Chart.js setzt oben+unten je ROW_H/2 als padding; das gleiche
                 // Padding gilt für die Label-Spalte (per CSS). Die n Zeilen sind
                 // gleichmäßig über (totalH - ROW_H*DPR) verteilt (space-around).
-                const PAD_TOP  = Math.round((ROW_H / 2) * DPR);
-                const rowH_px  = Math.round(ROW_H * DPR);
+                const PAD_TOP  = Math.round((ROW_H / 2) * EXPORT_ZOOM * DPR);
+                const rowH_px  = Math.round(ROW_H * EXPORT_ZOOM * DPR);
                 const innerH   = totalH - PAD_TOP * 2;
                 const cellH    = sorted.length > 0 ? innerH / sorted.length : rowH_px;
 
@@ -1396,22 +1472,22 @@ document.addEventListener('DOMContentLoaded', () => {
                     const hasAuthor = !!d.authors;
                     if (hasAuthor) {
                         // zweizeilig: Titel oben, Autor unten
-                        const lineGap = Math.round(7 * DPR);
+                        const lineGap = Math.round(7 * EXPORT_ZOOM * DPR);
                         const titleY  = cy - lineGap / 2;
-                        const authorY = cy + lineGap / 2 + Math.round(10 * DPR);
+                        const authorY = cy + lineGap / 2 + Math.round(10 * EXPORT_ZOOM * DPR);
 
-                        oc.font         = `${Math.round(11 * DPR)}px Geist, system-ui, sans-serif`;
-                        oc.fillStyle    = '#1f2937';
+                        oc.font         = `${Math.round(11 * EXPORT_ZOOM * DPR)}px Geist, system-ui, sans-serif`;
+                        oc.fillStyle    = EXPORT_TEXT;
                         oc.textAlign    = 'right';
                         oc.textBaseline = 'alphabetic';
                         oc.fillText(d.label, labelRight, titleY);
 
-                        oc.font         = `${Math.round(11 * DPR)}px Geist, system-ui, sans-serif`;
-                        oc.fillStyle    = '#1f2937';
+                        oc.font         = `${Math.round(11 * EXPORT_ZOOM * DPR)}px Geist, system-ui, sans-serif`;
+                        oc.fillStyle    = EXPORT_TEXT;
                         oc.fillText('(' + d.authors + ')', labelRight, authorY);
                     } else {
-                        oc.font         = `${Math.round(11 * DPR)}px Geist, system-ui, sans-serif`;
-                        oc.fillStyle    = '#1f2937';
+                        oc.font         = `${Math.round(11 * EXPORT_ZOOM * DPR)}px Geist, system-ui, sans-serif`;
+                        oc.fillStyle    = EXPORT_TEXT;
                         oc.textAlign    = 'right';
                         oc.textBaseline = 'middle';
                         oc.fillText(d.label, labelRight, cy);
@@ -1420,7 +1496,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Chart-Canvas rechts daneben
                 const labelWpx = Math.round(labelW * DPR);
-                oc.drawImage(canvas, labelWpx, 0, Math.round(chartW * DPR), totalH);
+                oc.drawImage(chartCanvasToPng(canvas, DPR) || canvas, labelWpx, 0, Math.round(chartW * DPR), totalH);
 
                 const a = document.createElement('a');
                 a.href     = off.toDataURL('image/png');
@@ -1432,7 +1508,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const riSvgBtn = _mkSvgBtn(() => {
                 const domLabelW = labelCol.getBoundingClientRect().width;
                 const mc = document.createElement('canvas').getContext('2d');
-                mc.font = '11px Geist, system-ui, sans-serif';
+                mc.font = `${11 * EXPORT_ZOOM}px Geist, system-ui, sans-serif`;
                 let needW = 0;
                 sorted.forEach(d => {
                     needW = Math.max(needW, mc.measureText(d.label).width);
@@ -1441,20 +1517,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Word & Co. haben Geist meist nicht installiert und weichen auf breitere Schriften aus;
                 // rechtsbündiger Text würde dann links abgeschnitten -> Puffer von 25 %.
                 const labelW     = Math.max(domLabelW, Math.ceil(needW * 1.25) + 10 + 16);
-                const totalH     = canvas.getBoundingClientRect().height;
-                const PAD_TOP    = ROW_H / 2;
-                const cellH      = sorted.length > 0 ? (totalH - PAD_TOP * 2) / sorted.length : ROW_H;
+                const totalH     = canvas.getBoundingClientRect().height * EXPORT_ZOOM;
+                const PAD_TOP    = ROW_H / 2 * EXPORT_ZOOM;
+                const cellH      = sorted.length > 0 ? (totalH - PAD_TOP * 2) / sorted.length : ROW_H * EXPORT_ZOOM;
                 const labelRight = labelW - 10;
                 const esc = t => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
                 let markup = '';
                 sorted.forEach((d, i) => {
                     const cy = PAD_TOP + cellH * i + cellH / 2;
                     if (d.authors) {
-                        const lineGap = 7;
-                        markup += `<text x="${labelRight}" y="${cy - lineGap / 2}" text-anchor="end" font-size="11" fill="#1f2937">${esc(d.label)}</text>` +
-                                  `<text x="${labelRight}" y="${cy + lineGap / 2 + 10}" text-anchor="end" font-size="11" fill="#1f2937">${esc('(' + d.authors + ')')}</text>`;
+                        const lineGap = 7 * EXPORT_ZOOM;
+                        markup += `<text x="${labelRight}" y="${cy - lineGap / 2}" text-anchor="end" font-size="${11 * EXPORT_ZOOM}" fill="#111827">${esc(d.label)}</text>` +
+                                  `<text x="${labelRight}" y="${cy + lineGap / 2 + 10 * EXPORT_ZOOM}" text-anchor="end" font-size="${11 * EXPORT_ZOOM}" fill="#111827">${esc('(' + d.authors + ')')}</text>`;
                     } else {
-                        markup += `<text x="${labelRight}" y="${cy}" text-anchor="end" dominant-baseline="central" font-size="11" fill="#1f2937">${esc(d.label)}</text>`;
+                        markup += `<text x="${labelRight}" y="${cy}" text-anchor="end" dominant-baseline="central" font-size="${11 * EXPORT_ZOOM}" fill="#111827">${esc(d.label)}</text>`;
                     }
                 });
                 downloadChartSvg(canvas, fname('rezeptionsindizes'), { left: { w: labelW, markup }, legend: null });
@@ -5483,38 +5559,11 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.addEventListener('mouseenter', () => btn.style.background = '#f3f4f6');
             btn.addEventListener('mouseleave', () => btn.style.background = '#f9fafb');
             btn.addEventListener('click', () => {
-                const DPR = window.devicePixelRatio || 1;
-                const cw  = donutCanvas.width;
-                const ch  = donutCanvas.height;
                 const legItems = [...legendDiv.children].map(sp => {
                     const sw = sp.querySelector('span');
-                    return { color: sw ? sw.style.background : '#6b7280', label: sp.textContent.trim() };
+                    return { color: sw ? sw.style.background : '#6b7280', text: sp.textContent.trim() };
                 });
-                const PAD   = Math.round(10 * DPR);
-                const ROW_H = Math.round(20 * DPR);
-                const SW    = Math.round(12 * DPR);
-                const legH  = legItems.length * ROW_H + PAD * 2;
-                const off   = document.createElement('canvas');
-                off.width   = cw;
-                off.height  = ch + legH;
-                const oc    = off.getContext('2d');
-                oc.fillStyle = '#ffffff';
-                oc.fillRect(0, 0, off.width, off.height);
-                oc.drawImage(donutCanvas, 0, 0);
-                oc.font = `${Math.round(11 * DPR)}px Geist, system-ui, sans-serif`;
-                legItems.forEach((it, i) => {
-                    const x = Math.round(off.width * 0.1);
-                    const y = ch + PAD + i * ROW_H;
-                    oc.fillStyle = it.color;
-                    oc.fillRect(x, y, SW, SW);
-                    oc.fillStyle = '#374151';
-                    oc.textBaseline = 'middle';
-                    oc.fillText(it.label, x + SW + PAD, y + SW / 2);
-                });
-                const a = document.createElement('a');
-                a.href     = off.toDataURL('image/png');
-                a.download = fname('popularitaetsanalysen_sitelinks_verteilung') + '.png';
-                a.click();
+                downloadChart(donutCanvas, fname('popularitaetsanalysen_sitelinks_verteilung'), legItems);
             });
             btnWrap.appendChild(btn);
             const sBtn = _mkSvgBtn(() => {

@@ -952,6 +952,60 @@ document.fonts.ready.then(function () {
     }, "image/png");
   };
 
+  // SVG-Export: vis-network zeichnet den aktuellen Ausschnitt einmal auf einen
+  // SVG-Zeichenkontext (svgcanvas) statt auf das Canvas.
+  document.getElementById("btn-exp-svg").onclick = function () {
+    var canvas = document.querySelector("#graph canvas");
+    if (!canvas || typeof svgcanvas === "undefined") {
+      alert(document.documentElement.lang === "en" ? "SVG export is not available." : "SVG-Export nicht verfügbar.");
+      return;
+    }
+    var ctx = new svgcanvas.Context(canvas.width, canvas.height);
+    // vis-network ergänzt CanvasRenderingContext2D um eigene Formen (circle, square, ...);
+    // diese Methoden auf den SVG-Kontext übertragen.
+    ["circle", "square", "triangle", "triangleDown", "star", "diamond", "roundRect",
+     "ellipse_vis", "database", "hexagon", "dashedLine"].forEach(function (n) {
+      var f = CanvasRenderingContext2D.prototype[n];
+      if (typeof f === "function" && typeof ctx[n] !== "function") ctx[n] = f;
+    });
+    // svgcanvas legt bei save() eine neue Gruppe an; vis ruft danach fill() auf (save -> fill -> restore)
+    // und würde damit die Gruppe statt des Pfads füllen. Daher fill/stroke immer auf den letzten Pfad leiten.
+    var lastPath = null;
+    var beginPath = ctx.beginPath;
+    ctx.beginPath = function () { beginPath.apply(this, arguments); lastPath = this.__currentElement; };
+    ["fill", "stroke"].forEach(function (m) {
+      var f = ctx[m];
+      ctx[m] = function () {
+        if (lastPath && this.__currentElement && this.__currentElement.nodeName !== "path") {
+          this.__currentElement = lastPath;
+        }
+        return f.apply(this, arguments);
+      };
+    });
+    canvas.getContext = function () { return ctx; };
+    try {
+      network.renderer._redraw();
+    } finally {
+      delete canvas.getContext;
+    }
+    var root = new DOMParser().parseFromString(ctx.getSerializedSvg(), "image/svg+xml").documentElement;
+    root.setAttribute("viewBox", "0 0 " + canvas.width + " " + canvas.height);
+    root.setAttribute("width", canvas.clientWidth);
+    root.setAttribute("height", canvas.clientHeight);
+    var bg = root.ownerDocument.createElementNS("http://www.w3.org/2000/svg", "rect");
+    bg.setAttribute("width", canvas.width);
+    bg.setAttribute("height", canvas.height);
+    bg.setAttribute("fill", "#ffffff");
+    var defs = root.querySelector("defs");
+    root.insertBefore(bg, defs ? defs.nextSibling : root.firstChild);
+    var xml = '<?xml version="1.0" encoding="UTF-8"?>\n' + new XMLSerializer().serializeToString(root);
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([xml], { type: "image/svg+xml;charset=utf-8" }));
+    a.download = (document.documentElement.lang === "en" ? "network_visualization" : "netzwerkvisualisierung") + ".svg";
+    a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+  };
+
 })();
 
 });
