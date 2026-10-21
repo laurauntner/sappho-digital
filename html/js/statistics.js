@@ -453,7 +453,7 @@ function withLegend(srcCanvas, items, S) {
 }
 
 // Canvas (Chart.js): weißer Hintergrund; alle Beschriftungen sind im Canvas.
-function downloadChart(canvas, filename) {
+function downloadChart(canvas, filename, legend) {
     const off = document.createElement('canvas');
     off.width  = canvas.width;
     off.height = canvas.height;
@@ -462,7 +462,7 @@ function downloadChart(canvas, filename) {
     oc.fillRect(0, 0, off.width, off.height);
     oc.drawImage(canvas, 0, 0);
     const _cssW = canvas.getBoundingClientRect().width || canvas.width;
-    const outC  = withLegend(off, findLegendItems(canvas), canvas.width / _cssW);
+    const outC  = withLegend(off, legend !== undefined ? legend : findLegendItems(canvas), canvas.width / _cssW);
     const a = document.createElement('a');
     a.href     = outC.toDataURL('image/png');
     a.download = filename + '.png';
@@ -613,9 +613,10 @@ function downloadChartSvg(canvas, filename, opts) {
 }
 
 // Button für Chart.js-Canvas
-function addDownloadBtn(canvas, filename, container) {
-    return _mkDlWrap(filename, () => downloadChart(canvas, filename), container,
-        () => downloadChartSvg(canvas, filename));
+// legend: undefined = automatisch suchen, null = keine Legende
+function addDownloadBtn(canvas, filename, container, legend) {
+    return _mkDlWrap(filename, () => downloadChart(canvas, filename, legend), container,
+        () => downloadChartSvg(canvas, filename, legend === undefined ? {} : { legend }));
 }
 
 // Button für SVG-basierte Grafiken
@@ -1437,7 +1438,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     needW = Math.max(needW, mc.measureText(d.label).width);
                     if (d.authors) needW = Math.max(needW, mc.measureText('(' + d.authors + ')').width);
                 });
-                const labelW     = Math.max(domLabelW, Math.ceil(needW) + 10 + 16);
+                // Word & Co. haben Geist meist nicht installiert und weichen auf breitere Schriften aus;
+                // rechtsbündiger Text würde dann links abgeschnitten -> Puffer von 25 %.
+                const labelW     = Math.max(domLabelW, Math.ceil(needW * 1.25) + 10 + 16);
                 const totalH     = canvas.getBoundingClientRect().height;
                 const PAD_TOP    = ROW_H / 2;
                 const cellH      = sorted.length > 0 ? (totalH - PAD_TOP * 2) / sorted.length : ROW_H;
@@ -4095,7 +4098,7 @@ function initStat10() {
         `<div class="chart-wrap"><canvas id="stat10-int31-hist" style="height:260px"></canvas></div>`;
     wrap.appendChild(int31Section);
     renderGroupedBar('stat10-int31-hist', d.int31Hist,  '', T.numIntertextualRelations);
-    addDownloadBtn(document.getElementById('stat10-int31-hist'), fname('durchschnittliche_relationen_histogramm'), int31Section.querySelector('.chart-wrap') || int31Section);
+    addDownloadBtn(document.getElementById('stat10-int31-hist'), fname('durchschnittliche_relationen_histogramm'), int31Section.querySelector('.chart-wrap') || int31Section, null);
 
     // Shared-Phänomene-Histogramm
     const sharedSection = document.createElement('div');
@@ -4105,7 +4108,7 @@ function initStat10() {
         `<div class="chart-wrap"><canvas id="stat10-shared-hist" style="height:260px"></canvas></div>`;
     wrap.appendChild(sharedSection);
     renderGroupedBar('stat10-shared-hist', d.sharedHist, '', T.avgSharedPhenomena);
-    addDownloadBtn(document.getElementById('stat10-shared-hist'), fname('gemeinsame_phaenomene_histogramm'), sharedSection.querySelector('.chart-wrap') || sharedSection);
+    addDownloadBtn(document.getElementById('stat10-shared-hist'), fname('gemeinsame_phaenomene_histogramm'), sharedSection.querySelector('.chart-wrap') || sharedSection, null);
 }
 
 document.addEventListener('DOMContentLoaded', initStat10);
