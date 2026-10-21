@@ -265,6 +265,16 @@ function fname(stem) {
     return stem;
 }
 
+// Dunkelt eine Hex-Farbe für Text ab (helle Typfarben sind als Schrift schlecht lesbar).
+function textColor(c, f = 0.6) {
+    const m = /^#([0-9a-f]{6})$/i.exec(c || '');
+    if (!m) return c || '#374151';
+    const n = parseInt(m[1], 16);
+    const ch = v => Math.round(v * f).toString(16).padStart(2, '0');
+    return '#' + ch(n >> 16 & 255) + ch(n >> 8 & 255) + ch(n & 255);
+}
+
+Chart.defaults.color = '#1f2937';
 Chart.defaults.plugins.tooltip.backgroundColor = '#ffffff';
 Chart.defaults.plugins.tooltip.titleColor       = '#1f2937';
 Chart.defaults.plugins.tooltip.bodyColor        = '#374151';
@@ -306,6 +316,91 @@ function _mkDlWrap(filename, clickFn, container) {
     return btn;
 }
 
+// Legenden (HTML) für den PNG-Export auffinden und mitzeichnen.
+// Eine Legende ist ein Element, dessen Kinder je einen farbigen Punkt (inline background)
+// und einen Text enthalten.
+function _legendItems(x) {
+    if (!x || x.children.length < 2) return null;
+    const items = [];
+    for (const ch of x.children) {
+        const dot = ch.firstElementChild;
+        if (!dot || dot.children.length || dot.textContent.trim() || ch.tagName === 'CANVAS') return null;
+        const cs = getComputedStyle(dot);
+        const bg = cs.backgroundColor;
+        if (!bg || bg === 'rgba(0, 0, 0, 0)' || bg === 'transparent' || parseFloat(cs.width) > 30) return null;
+        const text = ch.textContent.trim();
+        if (!text) return null;
+        items.push({ color: bg, text });
+    }
+    return items;
+}
+// Nächstgelegene Legende(n) vor und nach dem Diagramm.
+function findLegendItems(el) {
+    if (!el) return null;
+    const FOLLOW = Node.DOCUMENT_POSITION_FOLLOWING;
+    for (let a = el.parentElement; a && a !== document.body; a = a.parentElement) {
+        const gfx = [...a.querySelectorAll('canvas,svg')].filter(g => g !== el && !el.contains(g) && g.ownerSVGElement == null);
+        let before = null, after = null;
+        a.querySelectorAll('div,span').forEach(x => {
+            if (x.contains(el) || el.contains(x) || x.offsetParent === null) return;
+            const it = _legendItems(x);
+            if (!it) return;
+            const follows = !!(el.compareDocumentPosition(x) & FOLLOW);
+            // Andere Diagramme zwischen Legende und Diagramm -> Legende gehört nicht dazu
+            const blocked = gfx.some(g => {
+                if (x.contains(g)) return false;
+                const gf = !!(el.compareDocumentPosition(g) & FOLLOW);
+                const gx = !!(x.compareDocumentPosition(g) & FOLLOW);
+                return follows ? (gf && !gx) : (!gf && gx);
+            });
+            if (blocked) return;
+            if (follows) { if (!after) after = it; }
+        });
+        if (before || after) return [...(before || []), ...(after || [])];
+    }
+    return null;
+}
+// Zeichnet die Legende zentriert und gibt die benötigte Höhe zurück (draw=false: nur messen).
+function drawLegend(ctx, items, width, y0, S, draw) {
+    const FS = 12 * S, DOT = 11 * S, GAP = 6 * S, SEP = 16 * S, LH = 20 * S;
+    ctx.font = `${FS}px Geist, system-ui, sans-serif`;
+    const rows = [[]]; let rw = 0;
+    items.forEach(it => {
+        const w = DOT + GAP + ctx.measureText(it.text).width;
+        if (rows[rows.length - 1].length && rw + SEP + w > width - 32 * S) { rows.push([]); rw = 0; }
+        rows[rows.length - 1].push({ ...it, w });
+        rw += (rw ? SEP : 0) + w;
+    });
+    if (draw) {
+        rows.forEach((row, ri) => {
+            const tot = row.reduce((a, r, i) => a + r.w + (i ? SEP : 0), 0);
+            let x = (width - tot) / 2;
+            const cy = y0 + ri * LH + LH / 2;
+            row.forEach(r => {
+                ctx.fillStyle = r.color;
+                ctx.fillRect(x, cy - DOT / 2, DOT, DOT);
+                ctx.fillStyle = '#1f2937';
+                ctx.textAlign = 'left'; ctx.textBaseline = 'middle';
+                ctx.fillText(r.text, x + DOT + GAP, cy);
+                x += r.w + SEP;
+            });
+        });
+    }
+    return rows.length * LH + 8 * S;
+}
+function withLegend(srcCanvas, items, S) {
+    if (!items || !items.length) return srcCanvas;
+    const m  = document.createElement('canvas').getContext('2d');
+    const lh = drawLegend(m, items, srcCanvas.width, 0, S, false);
+    const out = document.createElement('canvas');
+    out.width = srcCanvas.width; out.height = srcCanvas.height + Math.ceil(lh);
+    const oc = out.getContext('2d');
+    oc.fillStyle = '#ffffff'; oc.fillRect(0, 0, out.width, out.height);
+    oc.drawImage(srcCanvas, 0, 0);
+    drawLegend(oc, items, out.width, srcCanvas.height, S, true);
+    return out;
+}
+
 // Canvas (Chart.js): weißer Hintergrund; alle Beschriftungen sind im Canvas.
 function downloadChart(canvas, filename) {
     const off = document.createElement('canvas');
@@ -315,8 +410,10 @@ function downloadChart(canvas, filename) {
     oc.fillStyle = '#ffffff';
     oc.fillRect(0, 0, off.width, off.height);
     oc.drawImage(canvas, 0, 0);
+    const _cssW = canvas.getBoundingClientRect().width || canvas.width;
+    const outC  = withLegend(off, findLegendItems(canvas), canvas.width / _cssW);
     const a = document.createElement('a');
-    a.href     = off.toDataURL('image/png');
+    a.href     = outC.toDataURL('image/png');
     a.download = filename + '.png';
     a.click();
 }
@@ -324,23 +421,50 @@ function downloadChart(canvas, filename) {
 // SVG-Grafiken (Bubble, Heatmap, Sankey, Pairs, PC): SVG -> Canvas -> PNG
 function downloadSvg(svgEl, filename) {
     if (!svgEl) return;
-    const bb  = svgEl.getBoundingClientRect();
-    const w   = svgEl.viewBox?.baseVal?.width  || bb.width  || 800;
-    const h   = svgEl.viewBox?.baseVal?.height || bb.height || 600;
-    const xml = new XMLSerializer().serializeToString(svgEl);
+    // Gesamten gezeichneten Inhalt erfassen (Labels können außerhalb der viewBox liegen,
+    // da die SVGs overflow:visible nutzen) und mit Rand versehen.
+    const PAD = 16;
+    let x = 0, y = 0, w, h;
+    try {
+        const b  = svgEl.getBBox();
+        const vb = svgEl.viewBox && svgEl.viewBox.baseVal;
+        const bb = svgEl.getBoundingClientRect();
+        const x0 = Math.min(b.x, vb && vb.width ? vb.x : 0, 0);
+        const y0 = Math.min(b.y, vb && vb.height ? vb.y : 0, 0);
+        const x1 = Math.max(b.x + b.width,  vb && vb.width  ? vb.x + vb.width  : 0, bb.width);
+        const y1 = Math.max(b.y + b.height, vb && vb.height ? vb.y + vb.height : 0, bb.height);
+        x = x0 - PAD; y = y0 - PAD; w = x1 - x0 + 2 * PAD; h = y1 - y0 + 2 * PAD;
+    } catch (e) {
+        const bb = svgEl.getBoundingClientRect();
+        w = bb.width || 800; h = bb.height || 600;
+    }
+    const legendItems = findLegendItems(svgEl);
+    const clone = svgEl.cloneNode(true);
+    clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+    clone.setAttribute('viewBox', `${x} ${y} ${w} ${h}`);
+    clone.setAttribute('width', w);
+    clone.setAttribute('height', h);
+    clone.setAttribute('preserveAspectRatio', 'xMinYMin meet');
+    clone.style.width = w + 'px';
+    clone.style.height = h + 'px';
+    clone.style.maxWidth = 'none';
+    clone.style.overflow = 'visible';
+    const xml = new XMLSerializer().serializeToString(clone);
     const url = URL.createObjectURL(new Blob([xml], { type: 'image/svg+xml;charset=utf-8' }));
     const img = new Image();
     img.onload = () => {
+        const S   = 2;
         const cv  = document.createElement('canvas');
-        cv.width  = w * 2; cv.height = h * 2;
+        cv.width  = Math.ceil(w * S); cv.height = Math.ceil(h * S);
         const ctx = cv.getContext('2d');
         ctx.fillStyle = '#ffffff';
         ctx.fillRect(0, 0, cv.width, cv.height);
-        ctx.scale(2, 2);
+        ctx.scale(S, S);
         ctx.drawImage(img, 0, 0, w, h);
         URL.revokeObjectURL(url);
+        const outC = withLegend(cv, legendItems, S);
         const a = document.createElement('a');
-        a.href     = cv.toDataURL('image/png');
+        a.href     = outC.toDataURL('image/png');
         a.download = filename + '.png';
         a.click();
     };
@@ -379,7 +503,7 @@ function fmtN(n, decimals) {
 
 // Balkenhöhe
 function canvasHeight(n) {
-    return Math.max(120, n * 32 + 40);
+    return Math.max(120, n * 36 + 40);
 }
 
 
@@ -525,6 +649,28 @@ function renderChart(cat) {
     });
 }
 
+// Umbruch für radiale Labels: so viele Zeilen wie der Bogen zulässt; nur wenn auch das
+// nicht reicht, wird die letzte Zeile gekürzt.
+function radialLines(label, maxC, maxLines) {
+    const words = label.split(' ');
+    const lines = [];
+    let cur = '';
+    words.forEach(w => {
+        if (cur && (cur + ' ' + w).length > maxC) { lines.push(cur); cur = w; }
+        else cur = cur ? cur + ' ' + w : w;
+    });
+    if (cur) lines.push(cur);
+    const out = [];
+    lines.forEach(l => { while (l.length > maxC) { out.push(l.slice(0, maxC)); l = l.slice(maxC); } out.push(l); });
+    if (out.length > maxLines) {
+        const keep = out.slice(0, Math.max(1, maxLines));
+        const last = keep[keep.length - 1];
+        keep[keep.length - 1] = (last.length >= maxC ? last.slice(0, maxC - 1) : last) + '…';
+        return keep;
+    }
+    return out;
+}
+
 // Zeilenumbruch-Logik für Y-Achsen-Labels (global, wird von mehreren Charts genutzt)
 const FONT_SIZE = 11;
 const FONT_W    = 6.5;
@@ -541,13 +687,15 @@ function splitLabel(label, maxW) {
             best = { line1: current, line2: rest };
     }
     if (best) return [best.line1, best.line2];
-    const mid = Math.floor(label.length / 2);
-    const breakAt = label.lastIndexOf(' ', mid + 6);
-    const split = breakAt > 4 ? breakAt : maxChars2;
-    const line1 = label.slice(0, split).trimEnd();
-    const line2Raw = label.slice(split).trimStart();
-    const line2 = line2Raw.length > maxChars2 ? line2Raw.slice(0, maxChars2 - 1) + '…' : line2Raw;
-    return [line1, line2];
+    // Fallback: gieriger Umbruch auf beliebig viele Zeilen (keine Kürzung)
+    const lines = [];
+    let cur = '';
+    words.forEach(w => {
+        if (cur && (cur + ' ' + w).length > maxChars2) { lines.push(cur); cur = w; }
+        else cur = cur ? cur + ' ' + w : w;
+    });
+    if (cur) lines.push(cur);
+    return lines;
 }
 
 // Überblick-Chart für Stat1 (alle Kategorien, Top-N, nach pctReception sortiert)
@@ -571,7 +719,8 @@ function renderCatOverview() {
     const pctR       = items.map(i => parseFloat(i.pctReception));
     const typeColors = items.map(i => (FTYPE_META[i.catKey] || {}).color || '#6b7280');
     const maxX       = xMax(items);
-    const height     = canvasHeight(items.length);
+    const _maxLines  = Math.max(1, ...labels.map(l => splitLabel(l, 220).length));
+    const height     = _maxLines > 2 ? Math.max(120, items.length * 42 + 40) : canvasHeight(items.length);
 
     // Eindeutige Kategorien für die Legende
     const seen = [];
@@ -613,12 +762,8 @@ function renderCatOverview() {
                 c.beginPath(); c.fillStyle = color;
                 c.arc(dotX, dotY, radius, 0, Math.PI * 2); c.fill();
                 c.fillStyle = '#1f2937';
-                if (lines.length === 1) {
-                    c.fillText(lines[0], x, top + h / 2);
-                } else {
-                    c.fillText(lines[0], x, top + h / 2 - 7);
-                    c.fillText(lines[1], x, top + h / 2 + 7);
-                }
+                lines.forEach((ln, k) =>
+                    c.fillText(ln, x, top + h / 2 + (k - (lines.length - 1) / 2) * 13));
                 c.restore();
             });
         },
@@ -654,7 +799,7 @@ function renderCatOverview() {
                         const pctR2    = parseFloat(item.pctReception).toLocaleString(NUM_LOCALE, {minimumFractionDigits:2, maximumFractionDigits:2});
                         const html =
                             `<strong>${item.label}</strong>`
-                            + `<br><span style="font-size:10px;color:#6b7280">(${singular})</span>`
+                            + `<br><span style="font-size:10px;color:#4b5563">(${singular})</span>`
                             + `<br><span style="color:#374151">Sappho: ${pctS2}% (${fmtN(item.countSappho)}/${fmtN(DATA.nSappho)})</span>`
                             + `<br><span style="color:#374151">Rezeption: ${pctR2}% (${fmtN(item.countReception)}/${fmtN(DATA.nReception)})</span>`;
                         const t = getPdTip();
@@ -721,8 +866,11 @@ function renderCatOverview() {
             oc.fillStyle = '#ffffff';
             oc.fillRect(0, 0, off.width, off.height);
             oc.drawImage(cv, 0, 0);
+            const _cssW = cv.getBoundingClientRect().width || cv.width;
+            const _dsLeg = _legendItems(document.querySelector('.legend .dot-s')?.closest('.legend'));
+            const outC  = withLegend(off, [...(_dsLeg || []), ...(findLegendItems(cv) || [])], cv.width / _cssW);
             const a = document.createElement('a');
-            a.href = off.toDataURL('image/png');
+            a.href = outC.toDataURL('image/png');
             a.download = fname('uebersicht_alle_phaenomene') + '.png';
             a.click();
         });
@@ -847,7 +995,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'border:1px solid #e5e7eb;border-radius:8px;padding:.9rem 1.1rem;' +
                 'text-align:center;background:#fff;';
             card.innerHTML =
-                `<div style="font-size:.75rem;font-weight:700;color:#6b7280;` +
+                `<div style="font-size:.75rem;font-weight:700;color:#4b5563;` +
                 `text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem">${label}</div>` +
                 `<div style="font-size:1.7rem;font-weight:700;color:${color};line-height:1.1">${value}</div>`;
             return card;
@@ -893,7 +1041,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const t2 = document.createElement('span');
                 t2.style.cssText =
                     'font-family:Geist,system-ui,sans-serif;font-size:10px;' +
-                    'color:#6b7280;line-height:1.3;';
+                    'color:#4b5563;line-height:1.3;';
                 t2.textContent = '(' + d.authors + ')';
                 cell.appendChild(t2);
             }
@@ -1052,8 +1200,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
             dlBtn.addEventListener('click', () => {
                 const DPR       = window.devicePixelRatio || 1;
-                const labelW    = labelCol.getBoundingClientRect().width;
+                const domLabelW = labelCol.getBoundingClientRect().width;
                 const chartW    = canvas.getBoundingClientRect().width;
+                // Labelspalte so breit wie der längste Text (rechtsbündig gezeichnet, sonst links abgeschnitten)
+                const mc = document.createElement('canvas').getContext('2d');
+                let needW = 0;
+                sorted.forEach(d => {
+                    mc.font = '11px Geist, system-ui, sans-serif';
+                    needW = Math.max(needW, mc.measureText(d.label).width);
+                    if (d.authors) {
+                        mc.font = '10px Geist, system-ui, sans-serif';
+                        needW = Math.max(needW, mc.measureText('(' + d.authors + ')').width);
+                    }
+                });
+                const labelW    = Math.max(domLabelW, Math.ceil(needW) + 10 + 16);
                 const totalW    = Math.round((labelW + chartW) * DPR);
                 const totalH    = Math.round(canvas.getBoundingClientRect().height * DPR);
 
@@ -1096,7 +1256,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         oc.fillText(d.label, labelRight, titleY);
 
                         oc.font         = `${Math.round(10 * DPR)}px Geist, system-ui, sans-serif`;
-                        oc.fillStyle    = '#6b7280';
+                        oc.fillStyle    = '#4b5563';
                         oc.fillText('(' + d.authors + ')', labelRight, authorY);
                     } else {
                         oc.font         = `${Math.round(11 * DPR)}px Geist, system-ui, sans-serif`;
@@ -1239,13 +1399,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 scales: {
                     x: {
                         min: 0, max: 0.9,
-                        title: { display: true, text: T.phenomenonDensityNormalized, font: { family: 'Geist, system-ui', size: 11 }, color: '#6b7280' },
+                        title: { display: true, text: T.phenomenonDensityNormalized, font: { family: 'Geist, system-ui', size: 11 }, color: '#4b5563' },
                         ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => fmtN(v, 1), stepSize: 0.1 },
                         grid:  { color: 'rgba(0,0,0,0.06)' },
                     },
                     y: {
                         min: 0.35, max: 0.6,
-                        title: { display: true, text: T.intertextualConnectivityNormalized, font: { family: 'Geist, system-ui', size: 11 }, color: '#6b7280' },
+                        title: { display: true, text: T.intertextualConnectivityNormalized, font: { family: 'Geist, system-ui', size: 11 }, color: '#4b5563' },
                         ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => fmtN(v, 1), stepSize: 0.1 },
                         grid:  { color: 'rgba(0,0,0,0.06)' },
                     },
@@ -1491,8 +1651,16 @@ function renderSankey2(fragLabel) {
     const NODE_W  = 8;
     const PAD     = 6;
     const FLOW_W  = Math.round(containerW * 0.32);
-    const LABEL_W = Math.round((containerW - FLOW_W - 2 * NODE_W - 2 * PAD) / 2);
-    const W       = containerW;
+    // Labelspalte mindestens so breit wie der längste Text (keine Kürzung)
+    const _mc = document.createElement('canvas').getContext('2d');
+    _mc.font = FONT + 'px Geist, system-ui, sans-serif';
+    let _maxLbl = 0;
+    [[leftGroups, sapphoFeats], [rightGroups, recepFeats]].forEach(([gs, feats]) =>
+        gs.forEach(g => g.uris.forEach(u => {
+            _maxLbl = Math.max(_maxLbl, _mc.measureText((feats[u] || {}).label || '').width);
+        })));
+    const LABEL_W = Math.max(Math.round((containerW - FLOW_W - 2 * NODE_W - 2 * PAD) / 2), Math.ceil(_maxLbl) + 8);
+    const W       = 2 * LABEL_W + FLOW_W + 2 * NODE_W + 2 * PAD;
 
     const lNodeX = LABEL_W + PAD;
     const rNodeX = lNodeX + NODE_W + FLOW_W;
@@ -1545,7 +1713,7 @@ function renderSankey2(fragLabel) {
             .attr('x', x).attr('y', HDR_H - 5)
             .attr('text-anchor', anchor)
             .attr('font-size', '9px').attr('font-weight', '700')
-            .attr('fill', '#9ca3af').attr('letter-spacing', '0.06em')
+            .attr('fill', '#4b5563').attr('letter-spacing', '0.06em')
             .text(txt);
     });
 
@@ -1559,7 +1727,7 @@ function renderSankey2(fragLabel) {
                 .attr('x', x).attr('y', y + TYPE_H - 4)
                 .attr('text-anchor', anchor)
                 .attr('font-size', '9px').attr('font-weight', '700')
-                .attr('fill', FTYPE_COLORS[ftypeKey] || '#6b7280')
+                .attr('fill', textColor(FTYPE_COLORS[ftypeKey] || '#6b7280'))
                 .attr('letter-spacing', '0.04em')
                 .text((ftypeLabels[ftypeKey] || ftypeKey).toUpperCase());
             y += TYPE_H + uris.length * ROW_H + GRP_GAP;
@@ -1642,13 +1810,13 @@ function renderSankey2(fragLabel) {
         const x       = isLeft ? lNodeX - PAD : rNodeX + NODE_W + PAD;
         const anchor  = isLeft ? 'end' : 'start';
         const gray    = n.category !== 'taken';
-        const fill    = gray ? '#b0b8c4' : '#1f2937';
+        const fill    = gray ? '#6b7280' : '#1f2937';
         const count   = (!gray && recepFeats[n.uri]) ? recepFeats[n.uri].count : null;
         const pctL    = (count !== null && frag.nBibl > 0) ? Math.round(count / frag.nBibl * 100) : null;
         const tipText = count !== null
             ? `${n.label}: ${count} Rezeptionszeugnis${count !== 1 ? 'se' : ''} (${pctL}%)`
             : n.label;
-        const display = n.label.length > maxChars ? n.label.slice(0, maxChars - 1) + '…' : n.label;
+        const display = n.label;
 
         const el = svg.append('text')
             .attr('x', x)
@@ -1707,7 +1875,7 @@ function pdTipHide() { getPdTip().style.display = 'none'; }
 function buildBubbleChart(features, decades, container, showType = false) {
     container.innerHTML = '';
     if (!features.length || !decades.length) {
-        container.innerHTML = `<p style="color:#9ca3af;padding:0.5rem 0">${T.noData2}</p>`;
+        container.innerHTML = `<p style="color:#4b5563;padding:0.5rem 0">${T.noData2}</p>`;
         return;
     }
 
@@ -1722,7 +1890,7 @@ function buildBubbleChart(features, decades, container, showType = false) {
         .sort((a, b) => b.total - a.total);
 
     if (!active.length) {
-        container.innerHTML = `<p style="color:#9ca3af;padding:0.5rem 0">${T.noData2}</p>`;
+        container.innerHTML = `<p style="color:#4b5563;padding:0.5rem 0">${T.noData2}</p>`;
         return;
     }
 
@@ -1736,7 +1904,7 @@ function buildBubbleChart(features, decades, container, showType = false) {
     const ROW_H1  = 30;
     const ROW_H2  = 44;
     const COL_W   = 64;
-    const LABEL_W = 200;
+    let   LABEL_W = 200;
     const HDR_H   = 60;
     const PAD_B   = 8;
     const FONT_W  = 7.0;
@@ -1761,9 +1929,11 @@ function buildBubbleChart(features, decades, container, showType = false) {
         const split = breakAt > 4 ? breakAt : MAX_CHARS_2;
         const line1 = label.slice(0, split).trimEnd();
         const line2Raw = label.slice(split).trimStart();
-        const line2 = line2Raw.length > MAX_CHARS_2 ? line2Raw.slice(0, MAX_CHARS_2 - 1) + '…' : line2Raw;
+        const line2 = line2Raw;
         return { lines: [line1, line2], h: ROW_H2 };
     });
+
+    LABEL_W = Math.max(LABEL_W, Math.ceil(Math.max(1, ...rowMeta.flatMap(m => m.lines.map(l => l.length))) * 6.6) + 18);
 
     const rowY = [];
     let curY = HDR_H;
@@ -1795,7 +1965,7 @@ function buildBubbleChart(features, decades, container, showType = false) {
         svg.appendChild(txt(cx, HDR_H - 6, decLabel(dec), {
             'text-anchor': 'middle',
             transform: `rotate(-40,${cx},${HDR_H - 6})`,
-            'font-size': '10px', fill: '#6b7280',
+            'font-size': '10px', fill: '#4b5563',
         }));
         svg.appendChild(set(mk('line'), {
             x1: cx, y1: HDR_H, x2: cx, y2: HDR_H + totalRowH,
@@ -1848,7 +2018,7 @@ function buildBubbleChart(features, decades, container, showType = false) {
 
             const ftypeLabel = (FTYPE_META[feat.ftype] || {}).singular || feat.ftype;
             const tipHtml = `<strong>${feat.label}</strong>`
-                + (showType ? `<br><span style="font-size:10px;color:#6b7280">(${ftypeLabel})</span>` : '')
+                + (showType ? `<br><span style="font-size:10px;color:#4b5563">(${ftypeLabel})</span>` : '')
                 + `<br>${decLabel(dec)}: <strong>${fmtN(v)}</strong> Rezeptionszeugnis${v !== 1 ? 'se' : ''}`;
             circle.addEventListener('mouseenter', e => pdTipShow(e, tipHtml));
             circle.addEventListener('mousemove',  e => pdTipMove(e));
@@ -1873,7 +2043,7 @@ function initPdist() {
         [...new Set(pd.features.map(f => f.ftype))]
             .sort((a, b) => (ftypeOrder.indexOf(a) + 1 || 99) - (ftypeOrder.indexOf(b) + 1 || 99))
             .forEach(ft => {
-                const m = FTYPE_META[ft] || { label: ft, color: '#6b7280' };
+                const m = FTYPE_META[ft] || { label: ft, color: '#4b5563' };
                 const span = document.createElement('span');
                 span.style.cssText = 'display:inline-flex;align-items:center;gap:5px';
                 span.innerHTML = `<span style="display:inline-block;width:11px;height:11px;border-radius:50%;background:${m.color};opacity:0.8;flex-shrink:0"></span>${m.label}`;
@@ -1902,7 +2072,7 @@ function buildPdistTypeSections() {
     [...new Set(pd.features.map(f => f.ftype))]
         .sort((a, b) => (ftypeOrder.indexOf(a) + 1 || 99) - (ftypeOrder.indexOf(b) + 1 || 99))
         .forEach(ft => {
-            const meta    = FTYPE_META[ft] || { label: ft, color: '#6b7280' };
+            const meta    = FTYPE_META[ft] || { label: ft, color: '#4b5563' };
             const section = document.createElement('div');
             section.className = 'card cat';
 
@@ -1966,7 +2136,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
     }
 
     if (!active.length) {
-        container.innerHTML = `<p style="color:#9ca3af;padding:0.5rem 0">${T.noData2}</p>`;
+        container.innerHTML = `<p style="color:#4b5563;padding:0.5rem 0">${T.noData2}</p>`;
         return;
     }
 
@@ -1979,7 +2149,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
     const ROW_H1  = 26;
     const ROW_H2  = 40;
     const COL_W   = singleGenre ? 350 : 265;
-    const LABEL_W = 240;
+    let   LABEL_W = 240;
     const HDR_H   = singleGenre ? 0 : 46;
     const PAD_B   = 8;
     const FONT_W  = 7.0;
@@ -2004,9 +2174,11 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
         const split = breakAt > 4 ? breakAt : MAX_CHARS_2;
         const line1 = label.slice(0, split).trimEnd();
         const line2Raw = label.slice(split).trimStart();
-        const line2 = line2Raw.length > MAX_CHARS_2 ? line2Raw.slice(0, MAX_CHARS_2 - 1) + '…' : line2Raw;
+        const line2 = line2Raw;
         return { lines: [line1, line2], h: ROW_H2 };
     });
+
+    LABEL_W = Math.max(LABEL_W, Math.ceil(Math.max(1, ...rowMeta.flatMap(m => m.lines.map(l => l.length))) * 6.6) + 18);
 
     const rowY = [];
     let curY = HDR_H;
@@ -2044,7 +2216,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
                 svg.appendChild(txt(cx, 32, `n = ${nVal}`, {
                     'text-anchor': 'middle',
                     'font-size': '10px',
-                    fill: '#9ca3af',
+                    fill: '#4b5563',
                 }));
             }
             svg.appendChild(set(mk('line'), {
@@ -2083,7 +2255,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
             });
             if (showType) {
                 labelEl.addEventListener('mouseenter', e => pdTipShow(e,
-                    `<strong>${rawLabel}</strong><br><span style="font-size:10px;color:#6b7280">${ftypeLbl}</span>`));
+                    `<strong>${rawLabel}</strong><br><span style="font-size:10px;color:#4b5563">${ftypeLbl}</span>`));
                 labelEl.addEventListener('mousemove',  e => pdTipMove(e));
                 labelEl.addEventListener('mouseleave', pdTipHide);
                 labelEl.style.cursor = 'default';
@@ -2101,7 +2273,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
                 });
                 if (showType) {
                     labelEl.addEventListener('mouseenter', e => pdTipShow(e,
-                        `<strong>${rawLabel}</strong><br><span style="font-size:10px;color:#6b7280">${ftypeLbl}</span>`));
+                        `<strong>${rawLabel}</strong><br><span style="font-size:10px;color:#4b5563">${ftypeLbl}</span>`));
                     labelEl.addEventListener('mousemove',  e => pdTipMove(e));
                     labelEl.addEventListener('mouseleave', pdTipHide);
                     labelEl.style.cursor = 'default';
@@ -2127,7 +2299,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
 
             if (v > 0) {
                 const onDark    = opacity > 0.50;
-                const textFill  = onDark ? '#fff' : color;
+                const textFill  = onDark ? '#fff' : textColor(color, 0.5);
                 const cellLabel = `${v} (${pct < 1 ? pct.toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1}) : Math.round(pct)}%)`;
                 svg.appendChild(txt(cx + COL_W / 2, yc, cellLabel, {
                     'text-anchor': 'middle', dy: '0.35em',
@@ -2145,7 +2317,7 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
             tipTarget.style.cursor = 'default';
             const ftypeLabel = (FTYPE_META[feat.ftype] || {}).singular || feat.ftype;
             const tipHtml = `<strong>${rawLabel}</strong>`
-                + (showType ? `<br><span style="font-size:10px;color:#6b7280">(${ftypeLabel})</span>` : '')
+                + (showType ? `<br><span style="font-size:10px;color:#4b5563">(${ftypeLabel})</span>` : '')
                 + `<br>${genreLabel(genre)}: <strong>${fmtN(v)}</strong> ${v !== 1 ? T.receptionTestimoniesPlain : T.receptionTestimony}`
                 + (v > 0 ? ` (${pct < 1 ? pct.toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1}) : Math.round(pct)}%)` : '');
             tipTarget.addEventListener('mouseenter', e => pdTipShow(e, tipHtml));
@@ -2190,7 +2362,7 @@ function buildGdistGenreSections() {
     allGenres.forEach(genre => {
         const hasData = sorted.includes(genre);
         const nVal    = genreNMap[genre];
-        const nLabel  = (hasData && nVal !== undefined) ? ` <span style="font-size:0.78rem;color:#6b7280;font-weight:400">(n = ${nVal})</span>` : '';
+        const nLabel  = (hasData && nVal !== undefined) ? ` <span style="font-size:0.78rem;color:#4b5563;font-weight:400">(n = ${nVal})</span>` : '';
         const section = document.createElement('div');
         section.className = 'card cat';
 
@@ -2200,12 +2372,12 @@ function buildGdistGenreSections() {
             `<span class="arrow${hasData ? '' : ' arrow-hidden'}">▶</span>`
             + `<h2>${genreLabel(genre)}${nLabel}</h2>`
             + (!hasData
-                ? `<span style="margin-left:0.75rem;font-size:0.78rem;color:#9ca3af;font-weight:400">${T.noAnalysedYet}</span>`
+                ? `<span style="margin-left:0.75rem;font-size:0.78rem;color:#4b5563;font-weight:400">${T.noAnalysedYet}</span>`
                 : '');
 
         if (!hasData) {
             head.style.cursor = 'default';
-            head.querySelector('h2').style.color = '#9ca3af';
+            head.querySelector('h2').style.color = '#4b5563';
             section.appendChild(head);
             container.appendChild(section);
             return;
@@ -2243,7 +2415,7 @@ function buildGdistTypeSections4() {
     [...new Set(gd.features.map(f => f.ftype))]
         .sort((a, b) => (ftypeOrder.indexOf(a) + 1 || 99) - (ftypeOrder.indexOf(b) + 1 || 99))
         .forEach(ft => {
-            const meta    = FTYPE_META[ft] || { label: ft, color: '#6b7280' };
+            const meta    = FTYPE_META[ft] || { label: ft, color: '#4b5563' };
             const section = document.createElement('div');
             section.className = 'card cat';
 
@@ -2285,7 +2457,7 @@ function initGdist() {
         [...new Set(gd.features.map(f => f.ftype))]
             .sort((a, b) => (ftypeOrder.indexOf(a) + 1 || 99) - (ftypeOrder.indexOf(b) + 1 || 99))
             .forEach(ft => {
-                const m    = FTYPE_META[ft] || { label: ft, color: '#6b7280' };
+                const m    = FTYPE_META[ft] || { label: ft, color: '#4b5563' };
                 const span = document.createElement('span');
                 span.style.cssText = 'display:inline-flex;align-items:center;gap:5px';
                 span.innerHTML = `<span style="display:inline-block;width:11px;height:11px;border-radius:2px;background:${m.color};opacity:0.8;flex-shrink:0"></span>${m.label}`;
@@ -2503,7 +2675,7 @@ function renderPlotComponents(plotUri, topN) {
 
             const pct     = Math.round(cf.n / plot.nDocs * 100);
             const tipHtml = `<strong>${cf.label}</strong>`
-                + `<br><span style="font-size:10px;color:#6b7280">`
+                + `<br><span style="font-size:10px;color:#4b5563">`
                 + `${(FTYPE_META[cf.ftype]||{}).singular || cf.ftype}</span>`
                 + `<br>${fmtN(cf.n)} Rezeptionszeugnis${cf.n!==1?'se':''} (${pct}%)`;
 
@@ -2535,8 +2707,9 @@ function renderPlotComponents(plotUri, topN) {
             const fs     = Math.min(9.5, Math.max(7, rDepth * 0.17));
 
             if (arcLen >= 20) {
-                const maxC  = Math.floor(rDepth * 0.88 / (fs * 0.58));
-                const label = cf.label.length > maxC ? cf.label.slice(0, maxC - 1) + '…' : cf.label;
+                const maxC   = Math.floor(rDepth * 0.88 / (fs * 0.58));
+                const lh     = fs * 1.15;
+                const rLines = radialLines(cf.label, maxC, Math.max(1, Math.floor((arcLen - 2) / lh)));
 
                 const deg  = aMid * 180 / Math.PI;
                 const flip = (aMid > Math.PI / 2 && aMid < 3 * Math.PI / 2);
@@ -2545,16 +2718,18 @@ function renderPlotComponents(plotUri, topN) {
                 const rLabel = (R_OUTER_S + R_OUTER_E) / 2;
                 const [lx, ly] = polarXY(rLabel, aMid);
 
-                const el = setA(mk('text'), {
-                    'text-anchor':       'middle',
-                    'dominant-baseline': 'middle',
-                    'font-size':         fs + 'px',
-                    fill:                '#374151',
-                    'pointer-events':    'none',
-                    transform:           `translate(${lx},${ly}) rotate(${rot})`,
+                rLines.forEach((ln, k) => {
+                    const el = setA(mk('text'), {
+                        'text-anchor':       'middle',
+                        'dominant-baseline': 'middle',
+                        'font-size':         fs + 'px',
+                        fill:                '#374151',
+                        'pointer-events':    'none',
+                        transform:           `translate(${lx},${ly}) rotate(${rot}) translate(0,${(k - (rLines.length - 1) / 2) * lh})`,
+                    });
+                    el.textContent = ln;
+                    svg.appendChild(el);
                 });
-                el.textContent = label;
-                svg.appendChild(el);
             }
         });
     });
@@ -2588,7 +2763,7 @@ function renderPlotComponents(plotUri, topN) {
     svg.appendChild(setA(mk('text'), {
         x: CX, y: cY0 + cLines.length * CLH + 2,
         'text-anchor': 'middle', 'dominant-baseline': 'middle',
-        'font-size': '10px', fill: '#9ca3af',
+        'font-size': '10px', fill: '#4b5563',
     })).textContent = `n=${plot.nDocs}`;
 
     svgWrap.appendChild(svg);
@@ -2596,7 +2771,7 @@ function renderPlotComponents(plotUri, topN) {
     legend.style.display = 'flex';
     legend.innerHTML = '';
     activeTypes.forEach(k => {
-        const m = FTYPE_META[k] || { label: k, color: '#6b7280' };
+        const m = FTYPE_META[k] || { label: k, color: '#4b5563' };
         const span = document.createElement('span');
         span.style.cssText = 'display:inline-flex;align-items:center;gap:5px';
         span.innerHTML = `<span style="display:inline-block;width:11px;height:11px;border-radius:2px;`
@@ -2672,7 +2847,7 @@ function renderPersonDuality() {
 
     wrap.innerHTML = '';
     if (!persons.length) {
-        wrap.innerHTML = `<p style="color:#9ca3af;padding:0.5rem 0">${T.noData2}</p>`;
+        wrap.innerHTML = `<p style="color:#4b5563;padding:0.5rem 0">${T.noData2}</p>`;
         return;
     }
 
@@ -2826,7 +3001,7 @@ function renderWorkCitation() {
         .sort((a, b) => b.bothN - a.bothN || b.refN - a.refN);
 
     if (!works.length) {
-        wrap.innerHTML = `<p style="color:#9ca3af;padding:0.5rem 0">${T.noData2}</p>`;
+        wrap.innerHTML = `<p style="color:#4b5563;padding:0.5rem 0">${T.noData2}</p>`;
         return;
     }
 
@@ -2964,9 +3139,9 @@ function renderInt31MetaBar() {
     wrap.innerHTML =
         `<div style="text-align:center;margin-bottom:0.5rem">`
         + `<span style="font-size:2rem;font-weight:700;color:#1f2937">${fmtN(co.nInt31All)}</span>`
-        + `<span style="font-size:0.9rem;color:#6b7280;margin-left:0.5rem">${T.intertextualRelationsTotal}</span>`
+        + `<span style="font-size:0.9rem;color:#4b5563;margin-left:0.5rem">${T.intertextualRelationsTotal}</span>`
         + `</div>`
-        + `<div style="text-align:center;font-size:0.8rem;color:#6b7280;margin-bottom:0.5rem">${T.intertextualRelationsWithFeats(fmtN(co.nInt31WithFeats))}</div>`;
+        + `<div style="text-align:center;font-size:0.8rem;color:#4b5563;margin-bottom:0.5rem">${T.intertextualRelationsWithFeats(fmtN(co.nInt31WithFeats))}</div>`;
 }
 
 // Phänomentyp-Balken
@@ -2989,13 +3164,13 @@ function renderInt31FtypeBar() {
         .filter(k => typeSum[k] > 0)
         .map(k => ({ key: k, label: (FTYPE_META[k] || {}).label || k, n: typeSum[k] }));
 
-    if (!items.length) { wrap.innerHTML = `<p style="color:#9ca3af">${T.noData2}</p>`; return; }
+    if (!items.length) { wrap.innerHTML = `<p style="color:#4b5563">${T.noData2}</p>`; return; }
 
     const legWrap = document.getElementById('int31-ftype-legend');
     if (legWrap) {
         legWrap.innerHTML = '';
         items.forEach(it => {
-            const m = FTYPE_META[it.key] || { color: '#6b7280' };
+            const m = FTYPE_META[it.key] || { color: '#4b5563' };
             const span = document.createElement('span');
             span.style.cssText = 'display:inline-flex;align-items:center;gap:5px';
             span.innerHTML = `<span style="display:inline-block;width:11px;height:11px;border-radius:2px;background:${m.color};opacity:0.85;flex-shrink:0"></span>${it.label}`;
@@ -3051,7 +3226,7 @@ function renderInt31Sunburst() {
 
     const feats = topN > 0 ? co.featFrequencies.slice(0, topN) : co.featFrequencies;
     if (!feats.length) {
-        wrap.innerHTML = `<p style="color:#9ca3af;text-align:center">${T.noData2}</p>`;
+        wrap.innerHTML = `<p style="color:#4b5563;text-align:center">${T.noData2}</p>`;
         return;
     }
 
@@ -3167,8 +3342,8 @@ function renderInt31Sunburst() {
             const ftB = (FTYPE_META[fB.ftype]||{}).singular || fB.ftype;
             const pct = (n / total * 100).toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1});
             const tipHtml =
-                `<strong>${fA.label}</strong> <span style="color:#6b7280">(${ftA})</span>`
-                + `<br>× <strong>${fB.label}</strong> <span style="color:#6b7280">(${ftB})</span>`
+                `<strong>${fA.label}</strong> <span style="color:#4b5563">(${ftA})</span>`
+                + `<br>× <strong>${fB.label}</strong> <span style="color:#4b5563">(${ftB})</span>`
                 + `<br>${T.sharedInt31Nodes(fmtN(n), pct)}`;
 
             path.addEventListener('mouseenter', e => { path.setAttribute('stroke-opacity','0.92'); int31TipShow(e,tipHtml); });
@@ -3221,7 +3396,7 @@ function renderInt31Sunburst() {
             const ft     = (FTYPE_META[f.ftype]||{}).singular || f.ftype;
             const tipHtml =
                 `<strong>${f.label}</strong>`
-                + `<br><span style="font-size:10px;color:#6b7280">(${ft})</span>`
+                + `<br><span style="font-size:10px;color:#4b5563">(${ft})</span>`
                 + `<br>${T.int31NodesTooltip(fmtN(f.n), pct)}`;
 
             const segFrac = (a1 - a0) / (2 * Math.PI);
@@ -3243,15 +3418,18 @@ function renderInt31Sunburst() {
             const fs     = Math.min(9, Math.max(6.5, rDepth * 0.16));
             if (arcLen >= 18) {
                 const maxC = Math.floor(rDepth * 0.88 / (fs * 0.58));
-                const lbl  = f.label.length > maxC ? f.label.slice(0, maxC - 1) + '…' : f.label;
+                const lh   = fs * 1.15;
+                const rLines = radialLines(f.label, maxC, Math.max(1, Math.floor((arcLen - 2) / lh)));
                 const deg  = aMid * 180 / Math.PI;
                 const flip = aMid > Math.PI / 2 && aMid < 3 * Math.PI / 2;
                 const [lx, ly] = polar((R_OUTER_S + R_OUTER_E) / 2, aMid);
-                svg.appendChild(setA(mk('text'), {
-                    'text-anchor': 'middle', 'dominant-baseline': 'middle',
-                    'font-size': fs + 'px', fill: '#374151', 'pointer-events': 'none',
-                    transform: `translate(${lx},${ly}) rotate(${flip ? deg+180 : deg})`,
-                })).textContent = lbl;
+                rLines.forEach((ln, k) => {
+                    svg.appendChild(setA(mk('text'), {
+                        'text-anchor': 'middle', 'dominant-baseline': 'middle',
+                        'font-size': fs + 'px', fill: '#374151', 'pointer-events': 'none',
+                        transform: `translate(${lx},${ly}) rotate(${flip ? deg+180 : deg}) translate(0,${(k - (rLines.length - 1) / 2) * lh})`,
+                    })).textContent = ln;
+                });
             }
         });
     });
@@ -3272,7 +3450,7 @@ function renderInt31Sunburst() {
         legWrap.style.cssText = 'display:flex;flex-wrap:wrap;justify-content:center;gap:8px 16px;margin-top:0.75rem';
         legWrap.innerHTML = '';
         activeTypes.forEach(k => {
-            const m = FTYPE_META[k] || { label: k, color: '#6b7280' };
+            const m = FTYPE_META[k] || { label: k, color: '#4b5563' };
             const span = document.createElement('span');
             span.style.cssText = 'display:inline-flex;align-items:center;gap:5px;font-size:11px';
             span.innerHTML = `<span style="display:inline-block;width:11px;height:11px;border-radius:2px;`
@@ -3296,7 +3474,7 @@ function renderInt31Pairs() {
 
     const topN  = Math.min(50, parseInt(document.getElementById('sel-int31-pairs-topn')?.value || '30'));
     const pairs = co.featPairs.slice(0, topN);
-    if (!pairs.length) { wrap.innerHTML = `<p style="color:#9ca3af">${T.noPairsFound}</p>`; return; }
+    if (!pairs.length) { wrap.innerHTML = `<p style="color:#4b5563">${T.noPairsFound}</p>`; return; }
 
     const total  = co.nInt31WithFeats || 1;
     const maxN   = pairs[0]?.n || 1;
@@ -3307,11 +3485,13 @@ function renderInt31Pairs() {
 
     const BAR_H    = 18;
     const GAP_Y    = 4;
-    const LABEL_W  = 520;
     const BAR_MAX  = 320;
     const COUNT_W  = 80;
-    const FONT_W   = 6.2;
-    const MAX_HALF = Math.floor((LABEL_W / 2 - 10) / FONT_W);
+    // Labelbreite aus den tatsächlich benötigten Textbreiten (keine Kürzung)
+    const _mc = document.createElement('canvas').getContext('2d');
+    _mc.font = '10.5px Geist, system-ui, sans-serif';
+    const _halfW = Math.max(...pairs.map(p => Math.max(_mc.measureText(p.labelA).width, _mc.measureText(p.labelB).width)));
+    const LABEL_W  = Math.max(520, Math.ceil((_halfW + 24) * 2));
     const PAD_B    = 8;
 
     const svgW = LABEL_W + BAR_MAX + COUNT_W;
@@ -3330,18 +3510,18 @@ function renderInt31Pairs() {
         if (ri % 2 === 0)
             svg.appendChild(setA(mkE('rect'), { x:0, y:y0, width:svgW, height:BAR_H, fill:'rgba(0,0,0,0.018)' }));
 
-        const shortA = pair.labelA.length > MAX_HALF ? pair.labelA.slice(0, MAX_HALF-1) + '…' : pair.labelA;
+        const shortA = pair.labelA;
         svg.appendChild(setA(mkE('text'), { x: LABEL_W/2-6, y: yc,
-            'text-anchor':'end', 'dominant-baseline':'middle', 'font-size':'10.5px', fill:colorA,
+            'text-anchor':'end', 'dominant-baseline':'middle', 'font-size':'10.5px', fill:textColor(colorA),
         })).textContent = shortA;
 
         svg.appendChild(setA(mkE('text'), { x: LABEL_W/2, y: yc,
-            'text-anchor':'middle', 'dominant-baseline':'middle', 'font-size':'10px', fill:'#9ca3af',
+            'text-anchor':'middle', 'dominant-baseline':'middle', 'font-size':'10px', fill:'#4b5563',
         })).textContent = '×';
 
-        const shortB = pair.labelB.length > MAX_HALF ? pair.labelB.slice(0, MAX_HALF-1) + '…' : pair.labelB;
+        const shortB = pair.labelB;
         svg.appendChild(setA(mkE('text'), { x: LABEL_W/2+6, y: yc,
-            'text-anchor':'start', 'dominant-baseline':'middle', 'font-size':'10.5px', fill:colorB,
+            'text-anchor':'start', 'dominant-baseline':'middle', 'font-size':'10.5px', fill:textColor(colorB),
         })).textContent = shortB;
 
         const barW  = Math.max(2, Math.round((pair.n / maxN) * BAR_MAX));
@@ -3351,15 +3531,15 @@ function renderInt31Pairs() {
 
         const pct = (pair.n / total * 100).toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1});
         svg.appendChild(setA(mkE('text'), { x:LABEL_W+barW+5, y:yc,
-            'dominant-baseline':'middle', 'font-size':'10px', fill:'#6b7280' }))
+            'dominant-baseline':'middle', 'font-size':'10px', fill:'#4b5563' }))
             .textContent = `${pair.n} (${pct}%)`;
 
         const overlay = setA(mkE('rect'), { x:0, y:y0, width:svgW, height:BAR_H, fill:'transparent' });
         overlay.style.cursor = 'default';
         const ftA = (FTYPE_META[pair.ftypeA]||{}).singular || pair.ftypeA;
         const ftB = (FTYPE_META[pair.ftypeB]||{}).singular || pair.ftypeB;
-        const tipHtml = `<strong>${pair.labelA}</strong> <span style="color:#6b7280">(${ftA})</span>`
-            + `<br>× <strong>${pair.labelB}</strong> <span style="color:#6b7280">(${ftB})</span>`
+        const tipHtml = `<strong>${pair.labelA}</strong> <span style="color:#4b5563">(${ftA})</span>`
+            + `<br>× <strong>${pair.labelB}</strong> <span style="color:#4b5563">(${ftB})</span>`
             + `<br>${T.sharedInt31Nodes(fmtN(pair.n), pct)}`;
         overlay.addEventListener('mouseenter', e => int31TipShow(e, tipHtml));
         overlay.addEventListener('mousemove',  e => int31TipMove(e));
@@ -3437,7 +3617,7 @@ function renderInt31TopNodes() {
         // Verbundene Texte
         const textHead = document.createElement('p');
         textHead.style.cssText =
-            'font-size:11px;font-weight:700;color:#9ca3af;margin:0 0 5px;'
+            'font-size:11px;font-weight:700;color:#4b5563;margin:0 0 5px;'
             + 'text-transform:uppercase;letter-spacing:0.05em;text-align:center';
         textHead.textContent = T.connectedTexts;
         card.appendChild(textHead);
@@ -3482,7 +3662,7 @@ function renderInt31TopNodes() {
         if (basis.length) {
             const bHead = document.createElement('p');
             bHead.style.cssText =
-                'font-size:11px;font-weight:700;color:#9ca3af;margin:0 0 6px;'
+                'font-size:11px;font-weight:700;color:#4b5563;margin:0 0 6px;'
                 + 'text-transform:uppercase;letter-spacing:0.05em';
             bHead.textContent = T.basisOfSimilarity;
             card.appendChild(bHead);
@@ -3618,11 +3798,11 @@ function initStat10() {
             'border:1px solid #e5e7eb;border-radius:8px;padding:1rem 1.25rem;' +
             'text-align:center;background:#fff';
         card.innerHTML =
-            `<div style="font-size:.78rem;font-weight:700;color:#6b7280;` +
+            `<div style="font-size:.78rem;font-weight:700;color:#4b5563;` +
             `text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem">${k.label}</div>` +
             `<div style="font-size:2rem;font-weight:700;color:${k.color};line-height:1.1">${fmtN(k.value)}</div>` +
-            `<div style="font-size:.78rem;color:#9ca3af;margin-top:.25rem">${k.sublbl}</div>` +
-            `<div style="font-size:.72rem;color:#d1d5db;margin-top:.1rem">n = ${fmtN(k.n)}</div>`;
+            `<div style="font-size:.78rem;color:#4b5563;margin-top:.25rem">${k.sublbl}</div>` +
+            `<div style="font-size:.72rem;color:#4b5563;margin-top:.1rem">n = ${fmtN(k.n)}</div>`;
         kpiGrid.appendChild(card);
     });
     wrap.appendChild(kpiGrid);
@@ -3698,7 +3878,7 @@ function initStat10() {
                             display: !!xLabel,
                             text: xLabel,
                             font: { family: 'Geist, system-ui', size: 11 },
-                            color: '#6b7280',
+                            color: '#4b5563',
                         },
                         ticks: { font: { family: 'Geist, system-ui', size: 11 } },
                         grid:  { display: false },
@@ -3710,7 +3890,7 @@ function initStat10() {
                             display: true,
                             text: T.numberOfTexts,
                             font: { family: 'Geist, system-ui', size: 11 },
-                            color: '#6b7280',
+                            color: '#4b5563',
                         },
                         ticks: { font: { family: 'Geist, system-ui', size: 11 }, stepSize: 5 },
                         grid:  { color: 'rgba(0,0,0,0.06)' },
@@ -3841,10 +4021,10 @@ function renderGenderOverview() {
                 'border:1px solid #e5e7eb;border-radius:8px;padding:1rem 1.25rem;' +
                 'text-align:center;background:#fff';
             card.innerHTML =
-                `<div style="font-size:.78rem;font-weight:700;color:#6b7280;text-transform:uppercase;` +
+                `<div style="font-size:.78rem;font-weight:700;color:#4b5563;text-transform:uppercase;` +
                 `letter-spacing:.06em;margin-bottom:.3rem">${k.label}</div>` +
                 `<div style="font-size:2rem;font-weight:700;color:${k.color};line-height:1.1">${k.val}</div>` +
-                `<div style="font-size:.78rem;color:#9ca3af;margin-top:.25rem">${T.total}</div>`;
+                `<div style="font-size:.78rem;color:#4b5563;margin-top:.25rem">${T.total}</div>`;
             kpiGrid.appendChild(card);
         });
         kpiWrap.appendChild(kpiGrid);
@@ -4061,7 +4241,7 @@ function renderGenderGenreChart() {
                         display: true,
                         text: isPercent ? T.percentageShare : T.numberOfTexts2,
                         font: { family: 'Geist, system-ui', size: 11 },
-                        color: '#6b7280',
+                        color: '#4b5563',
                     },
                     ticks: {
                         font: { family: 'Geist, system-ui', size: 11 },
@@ -4090,7 +4270,7 @@ function renderGenderPhenomSections() {
         legendWrap.innerHTML = '';
         const ftypes = [...new Set(pd.features.map(f => f.ftype))];
         ftypes.forEach(ft => {
-            const m = FTYPE_META[ft] || { label: ft, color: '#6b7280' };
+            const m = FTYPE_META[ft] || { label: ft, color: '#4b5563' };
             const span = document.createElement('span');
             span.style.cssText = 'display:inline-flex;align-items:center;gap:5px';
             span.innerHTML = `<span style="display:inline-block;width:11px;height:11px;border-radius:2px;background:${m.color};flex-shrink:0"></span>${m.label}`;
@@ -4188,7 +4368,7 @@ function renderGenderPhenomSections() {
             const brk = lbl.lastIndexOf(' ', mid + 6);
             const sp  = brk > 4 ? brk : c2;
             const l2r = lbl.slice(sp).trimStart();
-            return [lbl.slice(0, sp).trimEnd(), l2r.length > c2 ? l2r.slice(0, c2 - 1) + '…' : l2r];
+            { const ls = []; let cur2 = ''; words.forEach(w => { if (cur2 && (cur2 + ' ' + w).length > c2) { ls.push(cur2); cur2 = w; } else cur2 = cur2 ? cur2 + ' ' + w : w; }); if (cur2) ls.push(cur2); return ls; }
         };
         const ovStripe = {
             id: 'genderOvStripe',
@@ -4210,7 +4390,7 @@ function renderGenderPhenomSections() {
                     c.arc(x - tw - gap - r, top + h / 2, r, 0, Math.PI * 2); c.fill();
                     c.fillStyle = '#1f2937';
                     if (lines.length === 1) c.fillText(lines[0], x, top + h / 2);
-                    else { c.fillText(lines[0], x, top + h / 2 - 7); c.fillText(lines[1], x, top + h / 2 + 7); }
+                    else lines.forEach((ln, k) => c.fillText(ln, x, top + h / 2 + (k - (lines.length - 1) / 2) * 13));
                     c.restore();
                 });
             },
@@ -4321,7 +4501,7 @@ function renderGenderPhenomSections() {
         const brk = lbl.lastIndexOf(' ', mid + 6);
         const sp  = brk > 4 ? brk : c2;
         const l2r = lbl.slice(sp).trimStart();
-        return [lbl.slice(0, sp).trimEnd(), l2r.length > c2 ? l2r.slice(0, c2 - 1) + '…' : l2r];
+        { const ls = []; let cur2 = ''; words.forEach(w => { if (cur2 && (cur2 + ' ' + w).length > c2) { ls.push(cur2); cur2 = w; } else cur2 = cur2 ? cur2 + ' ' + w : w; }); if (cur2) ls.push(cur2); return ls; }
     };
 
     function makeGenderColStripe(sortedItems, id) {
@@ -4345,7 +4525,7 @@ function renderGenderPhenomSections() {
                     c.arc(x - tw - gap - r, top + h / 2, r, 0, Math.PI * 2); c.fill();
                     c.fillStyle = '#1f2937';
                     if (lines.length === 1) c.fillText(lines[0], x, top + h / 2);
-                    else { c.fillText(lines[0], x, top + h / 2 - 6); c.fillText(lines[1], x, top + h / 2 + 6); }
+                    else lines.forEach((ln, k) => c.fillText(ln, x, top + h / 2 + (k - (lines.length - 1) / 2) * 13));
                     c.restore();
                 });
             },
@@ -4451,7 +4631,7 @@ function renderGenderPhenomSections() {
 
     orderedTypes.forEach(ft => {
         const items    = byType[ft];
-        const ftMeta   = FTYPE_META[ft] || { label: ft, color: '#6b7280' };
+        const ftMeta   = FTYPE_META[ft] || { label: ft, color: '#4b5563' };
         const sectionId = 'gender-phenom-cat-' + ft;
 
         const section = document.createElement('div');
@@ -4518,7 +4698,7 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
         const brk = lbl.lastIndexOf(' ', mid + 6);
         const sp  = brk > 4 ? brk : c2;
         const l2r = lbl.slice(sp).trimStart();
-        return [lbl.slice(0, sp).trimEnd(), l2r.length > c2 ? l2r.slice(0, c2 - 1) + '…' : l2r];
+        { const ls = []; let cur2 = ''; words.forEach(w => { if (cur2 && (cur2 + ' ' + w).length > c2) { ls.push(cur2); cur2 = w; } else cur2 = cur2 ? cur2 + ' ' + w : w; }); if (cur2) ls.push(cur2); return ls; }
     };
     const stripePlugin = {
         id: 'genderPhenomStripe_' + ft,
@@ -4535,12 +4715,8 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
                 c.textAlign = 'right'; c.textBaseline = 'middle';
                 const x = lw - 6;
                 c.fillStyle = '#1f2937';
-                if (lines.length === 1) {
-                    c.fillText(lines[0], x, top + h / 2);
-                } else {
-                    c.fillText(lines[0], x, top + h / 2 - 7);
-                    c.fillText(lines[1], x, top + h / 2 + 7);
-                }
+                lines.forEach((ln, k) =>
+                    c.fillText(ln, x, top + h / 2 + (k - (lines.length - 1) / 2) * 13));
                 c.restore();
             });
         },
@@ -4768,7 +4944,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 'border:1px solid #e5e7eb;border-radius:8px;padding:.9rem 1.1rem;' +
                 'text-align:center;background:#fff;';
             card.innerHTML =
-                `<div style="font-size:.75rem;font-weight:700;color:#6b7280;` +
+                `<div style="font-size:.75rem;font-weight:700;color:#4b5563;` +
                 `text-transform:uppercase;letter-spacing:.06em;margin-bottom:.3rem">${label}</div>` +
                 `<div style="font-size:1.7rem;font-weight:700;color:${color};line-height:1.1">${value}</div>`;
             return card;
@@ -4808,7 +4984,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const yScaleCfg = yLog
             ? {
                 type: 'logarithmic',
-                title: { display: true, text: yLabel, font: { family: 'Geist, system-ui', size: 11 }, color: '#6b7280' },
+                title: { display: true, text: yLabel, font: { family: 'Geist, system-ui', size: 11 }, color: '#4b5563' },
                 ticks: {
                     font: { family: 'Geist, system-ui', size: 10 },
                     callback: v => { const l = Math.log10(v); return Number.isInteger(l) ? (v >= 1000 ? (v/1000)+'k' : v) : null; }
@@ -4816,7 +4992,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 grid: { color: 'rgba(0,0,0,0.06)' },
               }
             : {
-                title: { display: true, text: yLabel, font: { family: 'Geist, system-ui', size: 11 }, color: '#6b7280' },
+                title: { display: true, text: yLabel, font: { family: 'Geist, system-ui', size: 11 }, color: '#4b5563' },
                 ticks: { font: { family: 'Geist, system-ui', size: 11 } },
                 grid:  { color: 'rgba(0,0,0,0.06)' },
                 min: 0,
@@ -4860,7 +5036,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
                 scales: {
                     x: {
-                        title: { display: true, text: xLabel, font: { family: 'Geist, system-ui', size: 11 }, color: '#6b7280' },
+                        title: { display: true, text: xLabel, font: { family: 'Geist, system-ui', size: 11 }, color: '#4b5563' },
                         ticks: { font: { family: 'Geist, system-ui', size: 11 }, stepSize: 1 },
                         grid:  { color: 'rgba(0,0,0,0.06)' },
                         min: 0,
@@ -4995,13 +5171,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         position: 'bottom', min: 0,
                         ticks: { font: { family: 'Geist, system-ui', size: 11 } },
                         grid:  { color: 'rgba(0,0,0,0.06)' },
-                        title: { display: true, text: xTitle0, font: { family: 'Geist, system-ui', size: 10 }, color: '#6b7280' },
+                        title: { display: true, text: xTitle0, font: { family: 'Geist, system-ui', size: 10 }, color: '#4b5563' },
                     },
                     x2: {
                         position: 'top', min: 0,
                         ticks: { font: { family: 'Geist, system-ui', size: 11 }, stepSize: 5 },
                         grid:  { display: false },
-                        title: { display: true, text: xTitle1, font: { family: 'Geist, system-ui', size: 10 }, color: '#6b7280' },
+                        title: { display: true, text: xTitle1, font: { family: 'Geist, system-ui', size: 10 }, color: '#4b5563' },
                     },
                     y: {
                         ticks: { font: { family: 'Geist, system-ui', size: 11 }, autoSkip: false },
