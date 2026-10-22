@@ -10322,11 +10322,6 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_dc90edfe>,
         <https://sappho-digital.com/manifestation_creation/bibl_dc90edfe> .
 
-<https://sappho-digital.com/person/author_012750d4> a ecrm:E21_Person ;
-    rdfs:label "C. [= Karl Christian Gärtner]"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_f9c50a63>,
-        <https://sappho-digital.com/manifestation_creation/bibl_6d27343b_1741> .
-
 <https://sappho-digital.com/person/author_012750d5> a ecrm:E21_Person ;
     rdfs:label "Hirsch"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_19d9dbc7>,
@@ -10385,11 +10380,6 @@ Philosophen zu Sanssouci"""@en ;
     rdfs:label "Lela Davitschoff"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_e9d626ea>,
         <https://sappho-digital.com/manifestation_creation/bibl_a27952d9> .
-
-<https://sappho-digital.com/person/author_059b5d13> a ecrm:E21_Person ;
-    rdfs:label "A. B. N. [= Benjamin Neukirch?]"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_c79ac7a7>,
-        <https://sappho-digital.com/manifestation_creation/bibl_80ce6226> .
 
 <https://sappho-digital.com/person/author_05bbc90a> a ecrm:E21_Person ;
     rdfs:label "Lebrecht Gotthilf Förster"@de ;
@@ -10762,10 +10752,6 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_98c17ab1>,
         <https://sappho-digital.com/manifestation_creation/bibl_df7ecda3> .
 
-<https://sappho-digital.com/person/author_322de61d> a ecrm:E21_Person ;
-    rdfs:label "Benjamin Neukirch"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_34a3200c> .
-
 <https://sappho-digital.com/person/author_33773316> a ecrm:E21_Person ;
     rdfs:label "Wolfgang Borchert"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_85c4ef0f> .
@@ -10819,11 +10805,6 @@ Philosophen zu Sanssouci"""@en ;
     rdfs:label "Caroline Louise von Klencke"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_a667785d>,
         <https://sappho-digital.com/manifestation_creation/bibl_f75c9af2_1775> .
-
-<https://sappho-digital.com/person/author_3a578161> a ecrm:E21_Person ;
-    rdfs:label "Karl Christian Gärtner"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_c7770133>,
-        <https://sappho-digital.com/manifestation_creation/bibl_6d27343b_1743> .
 
 <https://sappho-digital.com/person/author_3bf06e59> a ecrm:E21_Person ;
     rdfs:label "Caroline Rudolphi"@de ;
@@ -11424,11 +11405,6 @@ Philosophen zu Sanssouci"""@en ;
     rdfs:label "Eva Christina Zeller"@de ;
     ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_3c1bc895>,
         <https://sappho-digital.com/manifestation_creation/bibl_574806a3> .
-
-<https://sappho-digital.com/person/author_86bf4efd> a ecrm:E21_Person ;
-    rdfs:label "G. [= Karl Christian Gärtner?]"@de ;
-    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_e00bac8b>,
-        <https://sappho-digital.com/manifestation_creation/bibl_6d27343b_1744> .
 
 <https://sappho-digital.com/person/author_8826b36e> a ecrm:E21_Person ;
     rdfs:label "Charlotte Grasnick"@de ;
@@ -22705,7 +22681,7 @@ Philosophen zu Sanssouci"""@de ;
 <https://sappho-digital.com/expression_creation/bibl_c79ac7a7> a lrmoo:F28_Expression_Creation ;
     rdfs:label "Expressionserstellung von Die Den 1 Sept. 1708 verblichene, und von den Musen hertzl. beweinete Gräfin von Reithardt, geborne von Crane"@de,
         "Expression Creation of Die Den 1 Sept. 1708 verblichene, und von den Musen hertzl. beweinete Gräfin von Reithardt, geborne von Crane"@en ;
-    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_059b5d13> ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_322de61d> ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_c79ac7a7> .
 
 <https://sappho-digital.com/expression_creation/bibl_c82571f6> a lrmoo:F28_Expression_Creation ;
@@ -23167,7 +23143,7 @@ Philosophen zu Sanssouci"""@de ;
 <https://sappho-digital.com/expression_creation/bibl_e00bac8b> a lrmoo:F28_Expression_Creation ;
     rdfs:label "Expressionserstellung von Ode eines Frauenzimmers an einen Freund"@de,
         "Expression Creation of Ode eines Frauenzimmers an einen Freund"@en ;
-    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_86bf4efd> ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_3a578161> ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_e00bac8b> .
 
 <https://sappho-digital.com/expression_creation/bibl_e014f2c3> a lrmoo:F28_Expression_Creation ;
@@ -23737,7 +23713,7 @@ Philosophen zu Sanssouci"""@de ;
 <https://sappho-digital.com/expression_creation/bibl_f9c50a63> a lrmoo:F28_Expression_Creation ;
     rdfs:label "Expressionserstellung von Calliste in einer Ode besungen von einem Abwesenden"@de,
         "Expression Creation of Calliste in einer Ode besungen von einem Abwesenden"@en ;
-    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_012750d4> ;
+    ecrm:P14_carried_out_by <https://sappho-digital.com/person/author_3a578161> ;
     lrmoo:R17_created <https://sappho-digital.com/expression/bibl_f9c50a63> .
 
 <https://sappho-digital.com/expression_creation/bibl_fa064c2f> a lrmoo:F28_Expression_Creation ;
@@ -26407,6 +26383,13 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_a282c8c8>,
         <https://sappho-digital.com/manifestation_creation/bibl_b3d0f556_1838> ;
     skos:altLabel "Karl Raimund Frühauf"@de .
+
+<https://sappho-digital.com/person/author_322de61d> a ecrm:E21_Person ;
+    rdfs:label "Benjamin Neukirch"@de ;
+    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_34a3200c>,
+        <https://sappho-digital.com/expression_creation/bibl_c79ac7a7>,
+        <https://sappho-digital.com/manifestation_creation/bibl_80ce6226> ;
+    skos:altLabel "A. B. N. [= Benjamin Neukirch?]"@de .
 
 <https://sappho-digital.com/person/author_33727565> a ecrm:E21_Person ;
     rdfs:label "Martin Mylius"@de ;
@@ -30981,6 +30964,17 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/expression_creation/bibl_8ad51285>,
         <https://sappho-digital.com/expression_creation/bibl_bcc8fcbd>,
         <https://sappho-digital.com/manifestation_creation/bibl_a858e630> .
+
+<https://sappho-digital.com/person/author_3a578161> a ecrm:E21_Person ;
+    rdfs:label "Karl Christian Gärtner"@de ;
+    ecrm:P14i_performed <https://sappho-digital.com/expression_creation/bibl_c7770133>,
+        <https://sappho-digital.com/expression_creation/bibl_e00bac8b>,
+        <https://sappho-digital.com/expression_creation/bibl_f9c50a63>,
+        <https://sappho-digital.com/manifestation_creation/bibl_6d27343b_1741>,
+        <https://sappho-digital.com/manifestation_creation/bibl_6d27343b_1743>,
+        <https://sappho-digital.com/manifestation_creation/bibl_6d27343b_1744> ;
+    skos:altLabel "C. [= Karl Christian Gärtner]"@de,
+        "G. [= Karl Christian Gärtner?]"@de .
 
 <https://sappho-digital.com/person/author_4a193880> a ecrm:E21_Person ;
     rdfs:label "Johann Gottfried Herder"@de ;
