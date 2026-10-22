@@ -361,12 +361,17 @@ function _legendItems(x) {
 // Nächstgelegene Legende(n) vor und nach dem Diagramm.
 function findLegendItems(el) {
     if (!el) return null;
+    // Chart.js zeichnet seine Legende selbst ins Canvas -> keine zusätzliche
+    const own = (el.tagName === 'CANVAS' && typeof Chart !== 'undefined') ? Chart.getChart(el) : null;
+    if (own && own.options.plugins && own.options.plugins.legend && own.options.plugins.legend.display) return null;
     const FOLLOW = Node.DOCUMENT_POSITION_FOLLOWING;
     for (let a = el.parentElement; a && a !== document.body; a = a.parentElement) {
         const gfx = [...a.querySelectorAll('canvas,svg')].filter(g => g !== el && !el.contains(g) && g.ownerSVGElement == null);
         let before = null, after = null;
         a.querySelectorAll('div,span').forEach(x => {
             if (x.contains(el) || el.contains(x) || x.offsetParent === null) return;
+            // nur echte Legenden (keine Listen mit farbigen Punkten, z. B. Werktitel)
+            if (!x.matches('.legend,.type-legend,.sankey-legend,[id$="legend"]')) return;
             const it = _legendItems(x);
             if (!it) return;
             const follows = !!(el.compareDocumentPosition(x) & FOLLOW);
@@ -378,11 +383,42 @@ function findLegendItems(el) {
                 return follows ? (gf && !gx) : (!gf && gx);
             });
             if (blocked) return;
-            if (follows) { if (!after) after = it; }
+            if (follows) { if (!after) after = it; } else { before = it; }
         });
-        if (before || after) return [...(before || []), ...(after || [])];
+        // Legende über dem Diagramm hat Vorrang, sonst die darunter
+        if (before || after) return before || after;
     }
     return null;
+}
+// Legende „Autoren / Autorinnen“ der Gender-Phänomen-Abschnitte (statisches .legend-Element)
+function genderLegend() {
+    const el = [...document.querySelectorAll('.legend')].find(l => /Autor|Author/.test(l.textContent));
+    return el ? _legendItems(el) : null;
+}
+// Typenlegende unter dem Diagramm „Alle Phänomene im Vergleich“ (ohne eigene Klasse erzeugt)
+function catTypeLegend() {
+    const w = document.getElementById('cat-overview-wrap');
+    if (!w) return null;
+    for (const d of w.querySelectorAll('div')) {
+        const it = _legendItems(d);
+        if (it) return it;
+    }
+    return null;
+}
+// Legende aus den Datensätzen eines Chart.js-Diagramms (z. B. Sappho-Fragmente / Rezeptionszeugnisse).
+function datasetLegend(canvas) {
+    const ch = (typeof Chart !== 'undefined') ? Chart.getChart(canvas) : null;
+    if (!ch) return null;
+    const items = ch.data.datasets.filter(d => d.label).map(d => {
+        const c = [d.borderColor, d.backgroundColor].find(v => typeof v === 'string');
+        return c ? { color: c, text: d.label } : null;
+    }).filter(Boolean);
+    return items.length ? items : null;
+}
+// Legendenangabe auflösen: undefined = automatisch suchen, 'datasets' = aus Datensätzen, sonst direkt.
+function resolveLegend(el, legend) {
+    if (legend === 'datasets') return datasetLegend(el);
+    return legend !== undefined ? legend : findLegendItems(el);
 }
 // Zeichnet die Legende zentriert und gibt die benötigte Höhe zurück (draw=false: nur messen).
 function drawLegend(ctx, items, width, y0, S, draw) {
@@ -455,7 +491,7 @@ function withLegend(srcCanvas, items, S) {
 
 // Canvas (Chart.js): weißer Hintergrund; alle Beschriftungen sind im Canvas.
 function downloadChart(canvas, filename, legend) {
-    const items = legend !== undefined ? legend : findLegendItems(canvas);
+    const items = resolveLegend(canvas, legend);
     const S  = EXPORT_PNG_SCALE;
     const hi = chartCanvasToPng(canvas, S);
     let outC;
@@ -493,7 +529,7 @@ fetch('fonts/geist-sans-latin-200-normal.woff2').then(r => r.blob()).then(b => n
 })).then(uri => { _geistFontCss = `@font-face{font-family:'Geist';src:url(${uri}) format('woff2');}`; }).catch(() => {});
 
 // SVG-Grafiken (Bubble, Heatmap, Sankey, Pairs, PC): SVG -> Canvas -> PNG
-function downloadSvg(svgEl, filename, asSvg) {
+function downloadSvg(svgEl, filename, asSvg, legend) {
     if (!svgEl) return;
     // Gesamten gezeichneten Inhalt erfassen (Labels können außerhalb der viewBox liegen,
     // da die SVGs overflow:visible nutzen) und mit Rand versehen.
@@ -512,7 +548,7 @@ function downloadSvg(svgEl, filename, asSvg) {
         const bb = svgEl.getBoundingClientRect();
         w = bb.width || 800; h = bb.height || 600;
     }
-    const legendItems = findLegendItems(svgEl);
+    const legendItems = legend !== undefined ? legend : findLegendItems(svgEl);
     const clone = svgEl.cloneNode(true);
     clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
     clone.setAttribute('viewBox', `${x} ${y} ${w} ${h}`);
@@ -684,7 +720,7 @@ function downloadChartSvg(canvas, filename, opts) {
     opts = opts || {};
     const c = chartCanvasToSvg(canvas);
     if (!c) return;
-    const items = opts.legend !== undefined ? opts.legend : findLegendItems(canvas);
+    const items = resolveLegend(canvas, opts.legend);
     const leftW = opts.left ? opts.left.w : 0;
     const totalW = c.w + leftW;
     let legend = { markup: '', height: 0 };
@@ -711,12 +747,12 @@ function addDownloadBtn(canvas, filename, container, legend) {
 }
 
 // Button für SVG-basierte Grafiken
-function addDownloadSvgBtn(svgOrContainer, filename, container) {
+function addDownloadSvgBtn(svgOrContainer, filename, container, legend) {
     const getSvg = () => svgOrContainer && svgOrContainer.tagName === 'svg'
         ? svgOrContainer
         : svgOrContainer && svgOrContainer.querySelector('svg');
-    return _mkDlWrap(filename, () => downloadSvg(getSvg(), filename), container,
-        () => downloadSvg(getSvg(), filename, true));
+    return _mkDlWrap(filename, () => downloadSvg(getSvg(), filename, false, legend), container,
+        () => downloadSvg(getSvg(), filename, true, legend));
 }
 
 const charts = {};
@@ -794,7 +830,7 @@ function buildCategory(cat) {
             // Download-Button erst nach Render einfügen
             requestAnimationFrame(() => {
                 const c = document.getElementById('chart-' + cat.key);
-                if (c) addDownloadBtn(c, fname('phaenomene_' + cat.key), wrap);
+                if (c) addDownloadBtn(c, fname('phaenomene_' + cat.key), wrap, _legendItems(document.querySelector('.legend .dot-s')?.closest('.legend')));
             });
         }
     });
@@ -1094,7 +1130,7 @@ function renderCatOverview() {
             const cv = document.getElementById('chart-cat-overview');
             if (!cv) return;
             const _dsLeg = _legendItems(document.querySelector('.legend .dot-s')?.closest('.legend'));
-            downloadChart(cv, fname('uebersicht_alle_phaenomene'), [...(_dsLeg || []), ...(findLegendItems(cv) || [])]);
+            downloadChart(cv, fname('uebersicht_alle_phaenomene'), [...(_dsLeg || []), ...(catTypeLegend() || [])]);
         });
         dlContainer.appendChild(btn);
         const _sBtn = _mkSvgBtn(() => {
@@ -1102,7 +1138,7 @@ function renderCatOverview() {
             if (!cv) return;
             const _dsLeg = _legendItems(document.querySelector('.legend .dot-s')?.closest('.legend'));
             downloadChartSvg(cv, fname('uebersicht_alle_phaenomene'),
-                { legend: [...(_dsLeg || []), ...(findLegendItems(cv) || [])] });
+                { legend: [...(_dsLeg || []), ...(catTypeLegend() || [])] });
         });
         _sBtn.style.marginLeft = '.4rem';
         dlContainer.appendChild(_sBtn);
@@ -2293,7 +2329,9 @@ function buildBubbleChart(features, decades, container, showType = false) {
     scroller.style.cssText = 'overflow-x:auto;overflow-y:auto;max-height:600px;padding-bottom:4px';
     scroller.appendChild(svg);
     container.appendChild(scroller);
-    addDownloadSvgBtn(scroller, 'phaenomene_im_laufe_der_zeit_' + (container.id || 'chart'), container);
+    // Typenlegende nur bei der Gesamtübersicht; die Einzelabschnitte zeigen nur einen Phänomentyp
+    addDownloadSvgBtn(scroller, 'phaenomene_im_laufe_der_zeit_' + (container.id || 'chart'), container,
+        /overview/.test(container.id) ? undefined : null);
 }
 
 function initPdist() {
@@ -2594,7 +2632,9 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
     scroller.style.cssText = 'overflow-x:auto;overflow-y:auto;max-height:600px;padding-bottom:4px';
     scroller.appendChild(svg);
     container.appendChild(scroller);
-    addDownloadSvgBtn(scroller, 'phaenomene_nach_gattung_' + (container.id || 'chart'), container);
+    // Typenlegende nur bei der Gesamtübersicht; die Einzelabschnitte zeigen nur einen Phänomentyp
+    addDownloadSvgBtn(scroller, 'phaenomene_nach_gattung_' + (container.id || 'chart'), container,
+        /overview/.test(container.id) ? undefined : null);
 }
 
 function renderGdistOverview() {
@@ -3821,7 +3861,9 @@ function renderInt31Pairs() {
     scroller.appendChild(svg);
     wrap.innerHTML = '';
     wrap.appendChild(scroller);
-    addDownloadSvgBtn(scroller, 'intertextuelle_relationen_paare', wrap);
+    const pairTypes = [...new Set(pairs.flatMap(p => [p.ftypeA, p.ftypeB]))].filter(ft => FTYPE_META[ft]);
+    addDownloadSvgBtn(scroller, 'intertextuelle_relationen_paare', wrap,
+        pairTypes.map(ft => ({ color: FTYPE_META[ft].color, text: FTYPE_META[ft].label })));
 }
 
 // Statistik 3: Intertextuelle Beziehungen und Textähnlichkeiten
@@ -4178,7 +4220,7 @@ function initStat10() {
         `<div class="chart-wrap"><canvas id="stat10-int31-hist" style="height:260px"></canvas></div>`;
     wrap.appendChild(int31Section);
     renderGroupedBar('stat10-int31-hist', d.int31Hist,  '', T.numIntertextualRelations);
-    addDownloadBtn(document.getElementById('stat10-int31-hist'), fname('durchschnittliche_relationen_histogramm'), int31Section.querySelector('.chart-wrap') || int31Section, null);
+    addDownloadBtn(document.getElementById('stat10-int31-hist'), fname('durchschnittliche_relationen_histogramm'), int31Section.querySelector('.chart-wrap') || int31Section, 'datasets');
 
     // Shared-Phänomene-Histogramm
     const sharedSection = document.createElement('div');
@@ -4188,7 +4230,7 @@ function initStat10() {
         `<div class="chart-wrap"><canvas id="stat10-shared-hist" style="height:260px"></canvas></div>`;
     wrap.appendChild(sharedSection);
     renderGroupedBar('stat10-shared-hist', d.sharedHist, '', T.avgSharedPhenomena);
-    addDownloadBtn(document.getElementById('stat10-shared-hist'), fname('gemeinsame_phaenomene_histogramm'), sharedSection.querySelector('.chart-wrap') || sharedSection, null);
+    addDownloadBtn(document.getElementById('stat10-shared-hist'), fname('gemeinsame_phaenomene_histogramm'), sharedSection.querySelector('.chart-wrap') || sharedSection, 'datasets');
 }
 
 document.addEventListener('DOMContentLoaded', initStat10);
@@ -4712,7 +4754,8 @@ function renderGenderPhenomSections() {
                 },
             },
         });
-        addDownloadBtn(ovCanvas, fname('genderspezifische_analysen_phaenomene_uebersicht'), ovWrap);
+        addDownloadBtn(ovCanvas, fname('genderspezifische_analysen_phaenomene_uebersicht'), ovWrap,
+            [...(genderLegend() || []), ...(_legendItems(document.getElementById('gender-phenom-type-legend')) || [])]);
 
     }
 
@@ -4879,7 +4922,8 @@ function renderGenderPhenomSections() {
                 },
             },
         });
-        addDownloadBtn(colCanvas, fname('genderspezifische_analysen_top_' + gk), colChartWrap);
+        addDownloadBtn(colCanvas, fname('genderspezifische_analysen_top_' + gk), colChartWrap,
+            _legendItems(document.getElementById('gender-phenom-type-legend')));
         return chart;
     }
 
@@ -5061,7 +5105,8 @@ function renderGenderPhenomChart(ft, items, pd, canvas) {
             },
         },
     });
-    addDownloadBtn(canvas, fname('genderspezifische_analysen_phaenomene_' + ft), canvas.parentElement || document.getElementById('gender-phenom-body-' + ft));
+    addDownloadBtn(canvas, fname('genderspezifische_analysen_phaenomene_' + ft), canvas.parentElement || document.getElementById('gender-phenom-body-' + ft),
+        genderLegend());
 }
 
 // Init
@@ -5459,7 +5504,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
             },
         });
-        addDownloadBtn(canvas, fname(chartKey === 'topsitelinks' ? 'popularitaetsanalysen_top_sitelinks' : 'popularitaetsanalysen_top_qrank'), wrap);
+        addDownloadBtn(canvas, fname(chartKey === 'topsitelinks' ? 'popularitaetsanalysen_top_sitelinks' : 'popularitaetsanalysen_top_qrank'), wrap, 'datasets');
         canvas.style.cursor = 'pointer';
     }
 
