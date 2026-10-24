@@ -62,9 +62,12 @@ def _year(date: etree._Element) -> int | None:
 DATE_ABBREVIATIONS = {"published": "P", "created": "E"}
 
 LEGEND = (
-    "Hinweis: (E) = Entstehungsdatum, (P) = Publikationsdatum. "
-    "Einsortiert ist nach dem frühesten bekannten Jahr. "
-    "Die Angaben sind nicht bei jedem Eintrag vollständig."
+    "(E) = Entstehungsdatum, (P) = Publikationsdatum. "
+    "Die Texte sind nach dem frühesten bekannten Jahr gelistet. "
+    "Die Angaben sind nicht bei jedem Eintrag vollständig. "
+    "n. n. = nicht nach, o. T. = ohne Titel, o. A. = ohne Autor_innenangabe. "
+    "Das vollständige, laufend aktualisierte Verzeichnis ist auf Sappho Digital abrufbar "
+    "(https://sappho-digital.com)."
 )
 
 
@@ -156,13 +159,12 @@ def _sentence(text: str) -> str:
     return text if text.endswith((".", "!", "?")) else f"{text}."
 
 
-def entry_text(e: Entry, fields: tuple[str, ...]) -> str:
-    """Baut die Eintragszeile aus den gewählten Feldern."""
-    parts: list[str] = []
+def entry_text(e: Entry, fields: tuple[str, ...]) -> tuple[str, str]:
+    """Baut die Eintragszeile aus den gewählten Feldern: (fette Datierung, Rest)."""
+    year = e.year_label if "year" in fields else ""
+    parts: list[str] = ["\u2002"] if year else []
     add = parts.append
 
-    if "year" in fields and e.year_label:
-        add(f"{e.year_label}\u2002")
     if "author" in fields:
         add(e.author_label + (": " if "title" in fields else ". "))
     if "title" in fields:
@@ -173,7 +175,7 @@ def entry_text(e: Entry, fields: tuple[str, ...]) -> str:
         add(_sentence(e.place) + " ")
     if "genre" in fields and e.genre:
         add(f"[{e.genre}]")
-    return "".join(parts).rstrip()
+    return year, "".join(parts).rstrip()
 
 
 def group_key(group_by: str) -> Callable[[Entry], str]:
@@ -192,6 +194,70 @@ def grouped(entries: list[Entry], group_by: str) -> Iterator[tuple[str, list[Ent
     yield from groups.items()
 
 
+# Formatvorlagen wie in der Dissertation (Werte in Twips bzw. halben Punkten), damit die Liste beim
+# Einfügen 1:1 übernommen wird; gleichnamige Vorlagen im Zieldokument greifen dann identisch.
+STYLES_XML = """
+<w:style xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+    w:type="paragraph" w:customStyle="1" w:styleId="Rezeptionsliste">
+  <w:name w:val="Rezeptionsliste"/><w:basedOn w:val="Normal"/><w:qFormat/>
+  <w:pPr><w:keepLines/><w:suppressAutoHyphens/>
+    <w:spacing w:before="0" w:after="{after}" w:line="250" w:lineRule="atLeast"/>
+    <w:ind w:left="454" w:hanging="454"/><w:jc w:val="left"/></w:pPr>
+  <w:rPr><w:sz w:val="{size}"/><w:szCs w:val="{size}"/></w:rPr>
+</w:style>
+<w:style xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"
+    w:type="paragraph" w:customStyle="1" w:styleId="RezeptionslisteHinweis">
+  <w:name w:val="Rezeptionsliste Hinweis"/><w:basedOn w:val="Normal"/><w:qFormat/>
+  <w:pPr><w:keepLines/><w:suppressAutoHyphens/>
+    <w:spacing w:before="0" w:after="240" w:line="270" w:lineRule="atLeast"/>
+    <w:ind w:firstLine="0"/><w:jc w:val="left"/></w:pPr>
+  <w:rPr><w:i/><w:iCs/><w:sz w:val="{size}"/><w:szCs w:val="{size}"/></w:rPr>
+</w:style>
+"""
+
+
+def _setup_document(font: str, size: float, spacing: float):
+    from docx import Document
+    from docx.enum.text import WD_ALIGN_PARAGRAPH, WD_LINE_SPACING
+    from docx.oxml import OxmlElement, parse_xml
+    from docx.oxml.ns import qn
+    from docx.shared import Pt, RGBColor, Twips
+
+    doc = Document()
+
+    # Seitenformat der Dissertation (A4, Satzspiegel)
+    section = doc.sections[0]
+    section.page_width, section.page_height = Twips(11906), Twips(16838)
+    section.top_margin, section.bottom_margin = Twips(1644), Twips(1814)
+    section.left_margin = section.right_margin = Twips(2211)
+    section.header_distance, section.footer_distance = Twips(850), Twips(907)
+
+    # Standard wie in der Dissertation
+    normal = doc.styles["Normal"]
+    normal.font.name = font
+    normal.font.size = Pt(12)
+    normal.font.color.rgb = RGBColor(0, 0, 0)
+    rfonts = normal.element.rPr.rFonts
+    for attr in ("w:eastAsia", "w:cs"):
+        rfonts.set(qn(attr), font)
+    lang = OxmlElement("w:lang")
+    lang.set(qn("w:val"), "de-DE")
+    normal.element.rPr.append(lang)
+    fmt = normal.paragraph_format
+    fmt.space_before = fmt.space_after = Pt(0)
+    fmt.line_spacing_rule = WD_LINE_SPACING.AT_LEAST
+    fmt.line_spacing = Twips(330)
+    fmt.first_line_indent = Twips(340)
+    fmt.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
+
+    half_points = round(size * 2)
+    styles = parse_xml(f"<w:root xmlns:w='http://schemas.openxmlformats.org/wordprocessingml/2006/main'>"
+                       f"{STYLES_XML.format(size=half_points, after=round(spacing * 20))}</w:root>")
+    for style in list(styles):
+        doc.styles.element.append(style)
+    return doc
+
+
 def write_docx(
     path: Path,
     entries: list[Entry],
@@ -201,39 +267,22 @@ def write_docx(
     size: float,
     spacing: float,
 ) -> None:
-    from docx import Document
-    from docx.enum.style import WD_STYLE_TYPE
-    from docx.oxml.ns import qn
-    from docx.shared import Cm, Pt
-
-    doc = Document()
-    style = doc.styles.add_style("Rezeptionsliste", WD_STYLE_TYPE.PARAGRAPH)
-    style.base_style = doc.styles["Normal"]
-    style.font.name = font
-    style.font.size = Pt(size)
-    style.element.rPr.rFonts.set(qn("w:eastAsia"), font)
-    fmt = style.paragraph_format
-    fmt.left_indent = Cm(0.6)
-    fmt.first_line_indent = Cm(-0.6)
-    fmt.space_before = Pt(0)
-    fmt.space_after = Pt(spacing)
-    fmt.line_spacing = 1.0
-
-    legend = doc.add_paragraph(LEGEND, style="Rezeptionsliste")
-    legend.paragraph_format.left_indent = Cm(0)
-    legend.paragraph_format.first_line_indent = Cm(0)
-    legend.paragraph_format.space_after = Pt(spacing * 3)
+    doc = _setup_document(font, size, spacing)
+    doc.add_paragraph(LEGEND, style="Rezeptionsliste Hinweis")
 
     for heading, group in grouped(entries, group_by):
         if heading:
             p = doc.add_paragraph(style="Rezeptionsliste")
-            p.paragraph_format.left_indent = Cm(0)
-            p.paragraph_format.first_line_indent = Cm(0)
+            p.paragraph_format.left_indent = 0
+            p.paragraph_format.first_line_indent = 0
             p.paragraph_format.keep_with_next = True
             p.add_run(heading).bold = True
         for e in group:
+            year, rest = entry_text(e, fields)
             p = doc.add_paragraph(style="Rezeptionsliste")
-            p.add_run(entry_text(e, fields))
+            if year:
+                p.add_run(year).bold = True
+            p.add_run(rest)
     doc.save(path)
 
 
@@ -261,9 +310,9 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--to", dest="year_to", type=int, help="spätestes Jahr")
     p.add_argument("--sample", type=int, metavar="N", help="N chronologisch gleichmäßig verteilte Einträge")
     p.add_argument("--group-by", choices=("none", "genre", "century"), default="none", help="Zwischenüberschriften")
-    p.add_argument("--font", default="Times New Roman")
-    p.add_argument("--size", type=float, default=9.0, help="Schriftgröße in pt")
-    p.add_argument("--spacing", type=float, default=2.0, help="Abstand nach Eintrag in pt")
+    p.add_argument("--font", default="EB Garamond")
+    p.add_argument("--size", type=float, default=10.0, help="Schriftgröße in pt")
+    p.add_argument("--spacing", type=float, default=3.5, help="Abstand nach Eintrag in pt")
     return p
 
 

@@ -31469,12 +31469,6 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_c564852a_1819>,
         <https://sappho-digital.com/manifestation_creation/bibl_f965201c_1819> .
 
-<https://sappho-digital.com/timespan/1821> a ecrm:E52_Time-Span ;
-    rdfs:label "1821"^^xsd:gYear ;
-    ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_2a1027fd>,
-        <https://sappho-digital.com/manifestation_creation/bibl_cd79b63c>,
-        <https://sappho-digital.com/manifestation_creation/bibl_f337748e> .
-
 <https://sappho-digital.com/timespan/1827> a ecrm:E52_Time-Span ;
     rdfs:label "1827"^^xsd:gYear ;
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/expression_creation/bibl_7f4c01b6>,
@@ -37211,12 +37205,26 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation_creation/bibl_8d9f2b15>,
         <https://sappho-digital.com/manifestation_creation/bibl_969db4fb> .
 
+<https://sappho-digital.com/timespan/1821> a ecrm:E52_Time-Span ;
+    rdfs:label "1821"^^xsd:gYear ;
+    ecrm:P4i_is_time-span_of <https://sappho-digital.com/manifestation_creation/bibl_2a1027fd>,
+        <https://sappho-digital.com/manifestation_creation/bibl_3e4c4625>,
+        <https://sappho-digital.com/manifestation_creation/bibl_cd79b63c>,
+        <https://sappho-digital.com/manifestation_creation/bibl_f337748e> .
+
 <https://sappho-digital.com/timespan/1822> a ecrm:E52_Time-Span ;
     rdfs:label "1822"^^xsd:gYear ;
     ecrm:P4i_is_time-span_of <https://sappho-digital.com/expression_creation/bibl_233e838a>,
         <https://sappho-digital.com/manifestation_creation/bibl_815f2c02>,
         <https://sappho-digital.com/manifestation_creation/bibl_983063f3_1822>,
         <https://sappho-digital.com/manifestation_creation/bibl_c015b3fd> .
+
+<https://sappho-digital.com/timespan/1824> a ecrm:E52_Time-Span ;
+    rdfs:label "1824"^^xsd:gYear ;
+    ecrm:P4i_is_time-span_of <https://sappho-digital.com/expression_creation/bibl_88c41a31>,
+        <https://sappho-digital.com/manifestation_creation/bibl_8bc6bb14>,
+        <https://sappho-digital.com/manifestation_creation/bibl_e9683c9a>,
+        <https://sappho-digital.com/manifestation_creation/bibl_f965201c_1824> .
 
 <https://sappho-digital.com/timespan/1828> a ecrm:E52_Time-Span ;
     rdfs:label "1828"^^xsd:gYear ;
@@ -42879,7 +42887,7 @@ Philosophen zu Sanssouci"""@de ;
     rdfs:label "Manifestationserstellung von Neuestes theatralisches Quodlibet, oder dramatische Beyträge für die Leopoldstädter Schaubühne"@de,
         "Manifestation Creation of Neuestes theatralisches Quodlibet, oder dramatische Beyträge für die Leopoldstädter Schaubühne"@en ;
     ecrm:P14_carried_out_by <https://sappho-digital.com/publisher/publisher_31a3d1ac> ;
-    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1824> ;
+    ecrm:P4_has_time-span <https://sappho-digital.com/timespan/1821> ;
     ecrm:P7_took_place_at <https://sappho-digital.com/place/place_95b8315b> ;
     lrmoo:R24_created <https://sappho-digital.com/manifestation/bibl_3e4c4625> .
 
@@ -46103,14 +46111,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
         <https://sappho-digital.com/manifestation_creation/bibl_569ffa80>,
         <https://sappho-digital.com/manifestation_creation/bibl_c19b1bab_1798>,
         <https://sappho-digital.com/manifestation_creation/bibl_c22ab1ce> .
-
-<https://sappho-digital.com/timespan/1824> a ecrm:E52_Time-Span ;
-    rdfs:label "1824"^^xsd:gYear ;
-    ecrm:P4i_is_time-span_of <https://sappho-digital.com/expression_creation/bibl_88c41a31>,
-        <https://sappho-digital.com/manifestation_creation/bibl_3e4c4625>,
-        <https://sappho-digital.com/manifestation_creation/bibl_8bc6bb14>,
-        <https://sappho-digital.com/manifestation_creation/bibl_e9683c9a>,
-        <https://sappho-digital.com/manifestation_creation/bibl_f965201c_1824> .
 
 <https://sappho-digital.com/timespan/1829> a ecrm:E52_Time-Span ;
     rdfs:label "1829"^^xsd:gYear ;
