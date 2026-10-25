@@ -1711,7 +1711,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 },
             },
         });
-        addDownloadBtn(canvas, fname('rezeptionsindizes_streudiagramm'), chartWrap);
+        addDownloadBtn(canvas, fname('rezeptionsindizes_streudiagramm'), chartWrap, null);
     }
 
     // Init
