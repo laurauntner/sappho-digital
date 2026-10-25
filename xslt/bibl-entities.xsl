@@ -137,16 +137,20 @@
         <xsl:variable name="ts-uri"
             select="concat('https://sappho-digital.com/title_string/expression/', $id)"/>
 
+        <xsl:variable name="title-uri"
+            select="concat('https://sappho-digital.com/title/expression/', $id)"/>
         <xsl:variable name="label" select="
                 string((
+                key('by-about', $title-uri, $works)/rdfs:label[@xml:lang = $lang],
+                key('by-about', $title-uri, $receptionEntities)/rdfs:label[@xml:lang = $lang],
                 key('by-about', $ts-uri, $works)/rdfs:label[@xml:lang = $lang],
                 key('by-about', $ts-uri, $works)/rdfs:label,
-                key('by-about', $expr-uri, $works)//rdfs:label[@xml:lang = $lang],
-                key('by-about', $expr-uri, $works)//rdfs:label,
+                key('by-about', $expr-uri, $works)/rdfs:label[@xml:lang = $lang],
+                key('by-about', $expr-uri, $works)/rdfs:label,
                 key('by-about', $ts-uri, $receptionEntities)/rdfs:label[@xml:lang = $lang],
                 key('by-about', $ts-uri, $receptionEntities)/rdfs:label,
-                key('by-about', $expr-uri, $receptionEntities)//rdfs:label[@xml:lang = $lang],
-                key('by-about', $expr-uri, $receptionEntities)//rdfs:label,
+                key('by-about', $expr-uri, $receptionEntities)/rdfs:label[@xml:lang = $lang],
+                key('by-about', $expr-uri, $receptionEntities)/rdfs:label,
                 $expr-uri
                 )[1])"/>
 
