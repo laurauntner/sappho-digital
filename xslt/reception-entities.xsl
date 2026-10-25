@@ -761,6 +761,21 @@
                     satisfies xs:integer($p/@common-count) gt 0"/>
     </xsl:function>
 
+    <xsl:function name="u:passage-citing-texts" as="xs:string*">
+        <xsl:param name="tp" as="xs:string"/>
+        <xsl:variable name="node" select="key('by-about', $tp, $receptionEntities)"/>
+        <xsl:variable name="citingIds" as="xs:string*" select="
+                distinct-values(
+                for $a in data($node/intro:R18_showsActualization/(@rdf:resource | */@rdf:about))
+                return
+                    replace($a, '^.*/(bibl_(sappho_[0-9]+|[0-9a-f]+))_.*$', '$1')
+                )"/>
+        <xsl:sequence select="
+                distinct-values(
+                data($node/intro:R30i_isTextPassageOf/@rdf:resource)[replace(., '^.*/', '') = $citingIds]
+                )"/>
+    </xsl:function>
+
     <xsl:function name="u:act-target-bibl" as="xs:string?">
         <xsl:param name="act-uri" as="xs:string"/>
         <xsl:variable name="tokens">
@@ -1161,7 +1176,7 @@
                                     distinct-values(
                                     for $tp in $grp
                                     return
-                                        data(key('by-about', $tp, $receptionEntities)/intro:R30i_isTextPassageOf/@rdf:resource)
+                                        u:passage-citing-texts($tp)
                                     )"/>
                             <item name="{u:label($best)}" display="{u:label($best)}"
                                 n="{count($occTexts)}"/>
@@ -2205,10 +2220,7 @@
                                                                         distinct-values(
                                                                         for $tp in $grp
                                                                         return
-                                                                            data(
-                                                                            key('by-about', $tp, $receptionEntities)
-                                                                            /intro:R30i_isTextPassageOf/@rdf:resource
-                                                                            )
+                                                                            u:passage-citing-texts($tp)
                                                                         )"/>
 
                                                   <xsl:variable name="n" select="count($occTexts)"/>
