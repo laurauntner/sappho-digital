@@ -49,6 +49,7 @@ const T = STATS_LANG === 'en' ? {
     numberOfTexts2: 'Number of Texts',
     noPairsFound: 'No pairs found.',
     noArticle0: 'No Article (0)',
+    languages: 'languages',
     analysedReceptionTestimonies: 'Analysed Reception Testimonies',
     avgReceptionIndex: 'Ø Reception Index',
     highestIndex: 'Highest Index',
@@ -223,6 +224,7 @@ const T = STATS_LANG === 'en' ? {
     numberOfTexts2: 'Anzahl Texte',
     noPairsFound: 'Keine Paare gefunden.',
     noArticle0: 'Kein Artikel (0)',
+    languages: 'Sprachen',
 };
 
 const GENRE_LABELS = {
@@ -236,7 +238,13 @@ function genreLabel(key) {
 // Translates a download-filename stem (without extension) so exported PNGs/CSVs
 // carry an English name on the English pages.
 const FN_MAP = {
+    'phaenomene_nach_fragment': 'phenomena_by_fragment',
+    'phaenomene_im_laufe_der_zeit_': 'phenomena_over_time_',
+    'phaenomene_nach_gattung_': 'phenomena_by_genre_',
     'phaenomene_': 'phenomena_',
+    'stoff_komponenten': 'plot_components',
+    'kookkurrenzen_phaenomene': 'phenomena_co_occurrences',
+    'intertextuelle_relationen_paare': 'intertextual_relations_pairs',
     'uebersicht_alle_phaenomene': 'overview_all_phenomena',
     'rezeptionsindizes': 'reception_indices',
     'rezeptionsindizes_streudiagramm': 'reception_indices_scatterplot',
@@ -257,6 +265,15 @@ const FN_MAP = {
     'popularitaetsanalysen_top_qrank': 'popularity_analyses_top_qrank',
     'popularitaetsanalysen_sitelinks_verteilung': 'popularity_analyses_sitelinks_distribution',
 };
+// Dateinamen-Suffix aus der Container-ID der Heatmaps (pdist-/gdist-…): übersetzte Übersicht, Phänomentyp oder Gattung
+function distSuffix(id) {
+    const slug = t => t.toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss').replace(/[^a-z0-9]+/g, '_');
+    const m = /^[pg]dist-(overview|type|genre)(?:-(.+?))?(?:-wrap)?$/.exec(id || '');
+    if (!m) return slug(id || 'chart');
+    if (m[1] === 'overview') return STATS_LANG === 'en' ? 'overview' : 'uebersicht';
+    if (m[1] === 'type') return slug((FTYPE_META[m[2]] || {}).label || m[2]);
+    return slug(genreLabel(m[2]));
+}
 function fname(stem) {
     if (STATS_LANG !== 'en') return stem;
     // exact match first, then prefix match (for stems built with a suffix appended)
@@ -390,9 +407,9 @@ function findLegendItems(el) {
     }
     return null;
 }
-// Legende „Autoren / Autorinnen“ der Gender-Phänomen-Abschnitte (statisches .legend-Element)
+// Legende „Autoren / Autorinnen“ (EN: „Male / Female“) der Gender-Phänomen-Abschnitte (statisches .legend-Element)
 function genderLegend() {
-    const el = [...document.querySelectorAll('.legend')].find(l => /Autor|Author/.test(l.textContent));
+    const el = [...document.querySelectorAll('.legend')].find(l => l.textContent.includes(T.male) && l.textContent.includes(T.female));
     return el ? _legendItems(el) : null;
 }
 // Typenlegende unter dem Diagramm „Alle Phänomene im Vergleich“ (ohne eigene Klasse erzeugt)
@@ -2133,7 +2150,7 @@ function renderSankey2(fragLabel) {
     });
 
     const _sankeyWrap = document.getElementById('sankey-svg-wrap');
-    if (_sankeyWrap) addDownloadSvgBtn(_sankeyWrap, 'phaenomene_nach_fragment', _sankeyWrap);
+    if (_sankeyWrap) addDownloadSvgBtn(_sankeyWrap, fname('phaenomene_nach_fragment'), _sankeyWrap);
 }
 
 document.addEventListener('DOMContentLoaded', initSankey);
@@ -2330,7 +2347,7 @@ function buildBubbleChart(features, decades, container, showType = false) {
     scroller.appendChild(svg);
     container.appendChild(scroller);
     // Typenlegende nur bei der Gesamtübersicht; die Einzelabschnitte zeigen nur einen Phänomentyp
-    addDownloadSvgBtn(scroller, 'phaenomene_im_laufe_der_zeit_' + (container.id || 'chart'), container,
+    addDownloadSvgBtn(scroller, fname('phaenomene_im_laufe_der_zeit_' + distSuffix(container.id)), container,
         /overview/.test(container.id) ? undefined : null);
 }
 
@@ -2632,9 +2649,10 @@ function buildHeatmap(features, genreObjs, container, showType = false, singleGe
     scroller.style.cssText = 'overflow-x:auto;overflow-y:auto;max-height:600px;padding-bottom:4px';
     scroller.appendChild(svg);
     container.appendChild(scroller);
-    // Typenlegende nur bei der Gesamtübersicht; die Einzelabschnitte zeigen nur einen Phänomentyp
-    addDownloadSvgBtn(scroller, 'phaenomene_nach_gattung_' + (container.id || 'chart'), container,
-        /overview/.test(container.id) ? undefined : null);
+    // Typenlegende bei der Gesamtübersicht und den Gattungsabschnitten (mehrere Phänomentypen);
+    // die Typenabschnitte zeigen nur einen Phänomentyp
+    addDownloadSvgBtn(scroller, fname('phaenomene_nach_gattung_' + distSuffix(container.id)), container,
+        /-type-/.test(container.id) ? null : _legendItems(document.getElementById('gdist-type-legend')));
 }
 
 function renderGdistOverview() {
@@ -3100,12 +3118,12 @@ function renderPlotComponents(plotUri, topN) {
             _dlBtn.addEventListener('mouseleave', () => _dlBtn.style.background = '#f9fafb');
             _dlBtn.addEventListener('click', () => {
                 const svgEl = _pcWrap ? _pcWrap.querySelector('svg') : null;
-                downloadSvg(svgEl, 'stoff_komponenten');
+                downloadSvg(svgEl, fname('stoff_komponenten'));
             });
             _dlTarget.appendChild(_dlBtn);
             const _svgBtn = _mkSvgBtn(() => {
                 const svgEl = _pcWrap ? _pcWrap.querySelector('svg') : null;
-                downloadSvg(svgEl, 'stoff_komponenten', true);
+                downloadSvg(svgEl, fname('stoff_komponenten'), true);
             });
             _svgBtn.style.marginLeft = '.4rem';
             _dlTarget.appendChild(_svgBtn);
@@ -3772,7 +3790,7 @@ function renderInt31Sunburst() {
     const _sbWrap  = document.getElementById('int31-sunburst-wrap');
     const _sbLeg   = document.getElementById('int31-sunburst-legend');
     const _sbAnchor = _sbLeg || _sbWrap;
-    if (_sbWrap) addDownloadSvgBtn(_sbWrap, 'kookkurrenzen_phaenomene', _sbAnchor);
+    if (_sbWrap) addDownloadSvgBtn(_sbWrap, fname('kookkurrenzen_phaenomene'), _sbAnchor);
 }
 
 // Kombinationsliste
@@ -3862,7 +3880,7 @@ function renderInt31Pairs() {
     wrap.innerHTML = '';
     wrap.appendChild(scroller);
     const pairTypes = [...new Set(pairs.flatMap(p => [p.ftypeA, p.ftypeB]))].filter(ft => FTYPE_META[ft]);
-    addDownloadSvgBtn(scroller, 'intertextuelle_relationen_paare', wrap,
+    addDownloadSvgBtn(scroller, fname('intertextuelle_relationen_paare'), wrap,
         pairTypes.map(ft => ({ color: FTYPE_META[ft].color, text: FTYPE_META[ft].label })));
 }
 
@@ -5360,7 +5378,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
         canvas.style.cursor = 'pointer';
-        addDownloadBtn(canvas, fname(canvasId.includes('slscatter') ? 'popularitaetsanalysen_sitelinks_streudiagramm' : 'popularitaetsanalysen_qrank_streudiagramm'), canvas.parentElement || document.body);
+        addDownloadBtn(canvas, fname(canvasId.includes('slscatter') ? 'popularitaetsanalysen_sitelinks_streudiagramm' : 'popularitaetsanalysen_qrank_streudiagramm'), canvas.parentElement || document.body, null);
         return chart;
     }
 
@@ -5554,10 +5572,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const WM_TOTAL     = WM_DATA.length;
         const buckets = [
             { label: T.noArticle0,  min: 0,  max: 0,    color: 'rgba(107,114,128,0.7)', line: '#6b7280' },
-            { label: '1–5 Sprachen',      min: 1,  max: 5,    color: 'rgba(94,23,235,0.45)',  line: '#5e17eb' },
-            { label: '6–20 Sprachen',     min: 6,  max: 20,   color: 'rgba(94,23,235,0.75)',  line: '#5e17eb' },
-            { label: '21–50 Sprachen',    min: 21, max: 50,   color: 'rgba(8,145,178,0.75)',  line: '#0891b2' },
-            { label: '> 50 Sprachen',     min: 51, max: 9999, color: 'rgba(220,85,38,0.75)',  line: '#dc5526' },
+            { label: `1–5 ${T.languages}`,      min: 1,  max: 5,    color: 'rgba(94,23,235,0.45)',  line: '#5e17eb' },
+            { label: `6–20 ${T.languages}`,     min: 6,  max: 20,   color: 'rgba(94,23,235,0.75)',  line: '#5e17eb' },
+            { label: `21–50 ${T.languages}`,    min: 21, max: 50,   color: 'rgba(8,145,178,0.75)',  line: '#0891b2' },
+            { label: `> 50 ${T.languages}`,     min: 51, max: 9999, color: 'rgba(220,85,38,0.75)',  line: '#dc5526' },
         ];
         const counts = buckets.map(b => WM_DATA.filter(d => d.sitelinks >= b.min && d.sitelinks <= b.max).length);
         const pcts   = counts.map(c => (c / WM_TOTAL * 100).toLocaleString(NUM_LOCALE, {minimumFractionDigits:1, maximumFractionDigits:1}));
