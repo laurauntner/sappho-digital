@@ -599,6 +599,8 @@
         <entry de="Gemeinsame Ortsreferenzen:" en="Shared References to Places:"/>
         <entry de="Gemeinsames Zitat:" en="Shared Quotation:"/>
         <entry de="Gemeinsame Zitate:" en="Shared Quotations:"/>
+        <entry de="Zitat:" en="Quotation:"/>
+        <entry de="Zitate:" en="Quotations:"/>
         <entry de="Gemeinsamer Topos:" en="Shared Topos:"/>
         <entry de="Gemeinsame Topoi:" en="Shared Topoi:"/>
 

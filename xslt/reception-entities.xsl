@@ -741,14 +741,21 @@
                         [not(u:is-sappho-work(.))]
                         [not(u:workref-target-id(.) = $textIds)]"/>
             </xsl:when>
-            <xsl:when test="$kind = 'workpassages'">
-                <xsl:sequence select="
+            <xsl:when test="$kind = ('workpassages', 'workpassages-direct')">
+                <xsl:variable name="textIds" as="xs:string*" select="
                         distinct-values(
-                        data($phr[
-                        matches(., '/textpassage/')
-                        ])
-                        )
-                        "/>
+                        for $t in data(($rel/intro:R13_hasReferringEntity | $rel/intro:R12_hasReferredToEntity)/(@rdf:resource | *[1]/@rdf:about))
+                        return
+                            u:work-id-any($t)
+                        )"/>
+                <xsl:variable name="passages" select="distinct-values(data($phr[matches(., '/textpassage/')]))"/>
+
+                <!-- passages quoting one of the two related texts are direct quotations, not shared ones -->
+                <xsl:sequence select="
+                        if ($kind = 'workpassages-direct') then
+                            $passages[u:passage-target-ids(.) = $textIds]
+                        else
+                            $passages[not(u:passage-target-ids(.) = $textIds)]"/>
             </xsl:when>
             <xsl:otherwise/>
         </xsl:choose>
@@ -773,6 +780,19 @@
         <xsl:sequence select="
                 distinct-values(
                 data($node/intro:R30i_isTextPassageOf/@rdf:resource)[replace(., '^.*/', '') = $citingIds]
+                )"/>
+    </xsl:function>
+
+    <!-- ids of the works a text passage quotes (via its work_ref actualizations) -->
+    <xsl:function name="u:passage-target-ids" as="xs:string*">
+        <xsl:param name="tp" as="xs:string"/>
+        <xsl:sequence select="
+                distinct-values(
+                for $a in data(key('by-about', $tp, $receptionEntities)/intro:R18_showsActualization/(@rdf:resource | */@rdf:about))
+                return
+                    for $t in data(key('by-about', $a, $receptionEntities)/ecrm:P67_refers_to/@rdf:resource)
+                    return
+                        u:work-id-any($t)
                 )"/>
     </xsl:function>
 
@@ -1041,6 +1061,13 @@
                             <xsl:with-param name="kind" select="'workpassages'"/>
                             <xsl:with-param name="sg" select="i18n:t('Gemeinsames Zitat:')"/>
                             <xsl:with-param name="pl" select="i18n:t('Gemeinsame Zitate:')"/>
+                        </xsl:call-template>
+
+                        <xsl:call-template name="emit-kind-list">
+                            <xsl:with-param name="rel" select="$rel"/>
+                            <xsl:with-param name="kind" select="'workpassages-direct'"/>
+                            <xsl:with-param name="sg" select="i18n:t('Zitat:')"/>
+                            <xsl:with-param name="pl" select="i18n:t('Zitate:')"/>
                         </xsl:call-template>
 
                         <xsl:call-template name="emit-kind-list">

@@ -112,6 +112,7 @@
                                             distinct-values(
                                             $relations/intro:R24_hasRelatedEntity/(@rdf:resource | *[1]/@rdf:about)[
                                             matches(., '/textpassage/') and not(matches(., '/textpassage/phrase_'))
+                                            and not(local:passage-targets(.) = $work-uri)
                                             ]
                                             )
                                         else
@@ -225,6 +226,15 @@
                     key('by-about', $a, $receptionEntities)/ecrm:P67_refers_to/@rdf:resource/string(.)"/>
     </xsl:function>
 
+    <!-- works a text passage quotes (via its work_ref actualizations) -->
+    <xsl:function name="local:passage-targets" as="xs:string*">
+        <xsl:param name="tp" as="xs:string"/>
+        <xsl:sequence select="
+                for $a in key('by-about', $tp, $receptionEntities)/intro:R18_showsActualization/@rdf:resource
+                return
+                    key('by-about', $a, $receptionEntities)/ecrm:P67_refers_to/@rdf:resource/string(.)"/>
+    </xsl:function>
+
     <!-- shared phenomena (URIs) of one kind across the given relations -->
     <xsl:function name="local:commons" as="xs:string*">
         <xsl:param name="rels" as="element(intro:INT31_IntertextualRelation)*"/>
@@ -239,10 +249,19 @@
                     [not(matches(., 'sappho-?work', 'i'))]
                     [not(some $t in local:workref-targets(.) satisfies local:iri-id($t) = $exclude-ids)]
                 else
-                    if ($kind = 'workpassage') then
-                        $phr[matches(., '/textpassage/')]
+                    if ($kind = 'work-direct') then
+                        $sim[matches(., '/feature/work_ref/') or matches(., '/actualization/work_ref/')]
+                        [some $t in local:workref-targets(.) satisfies local:iri-id($t) = $exclude-ids]
                     else
-                        $sim[matches(., concat('/feature/', $kind, '/'))]
+                        if ($kind = 'workpassage') then
+                            $phr[matches(., '/textpassage/')]
+                            [not(some $t in local:passage-targets(.) satisfies local:iri-id($t) = $exclude-ids)]
+                        else
+                            if ($kind = 'workpassage-direct') then
+                                $phr[matches(., '/textpassage/')]
+                                [some $t in local:passage-targets(.) satisfies local:iri-id($t) = $exclude-ids]
+                            else
+                                $sim[matches(., concat('/feature/', $kind, '/'))]
                 )"/>
     </xsl:function>
 
@@ -262,7 +281,9 @@
             <k xmlns="" n="character" sg="Gemeinsame Figur:" pl="Gemeinsame Figuren:"/>
             <k xmlns="" n="place_ref" sg="Gemeinsame Ortsreferenz:" pl="Gemeinsame Ortsreferenzen:"/>
             <k xmlns="" n="work" sg="Gemeinsame Werkreferenz:" pl="Gemeinsame Werkreferenzen:"/>
+            <k xmlns="" n="work-direct" sg="Werkreferenz:" pl="Werkreferenzen:"/>
             <k xmlns="" n="workpassage" sg="Gemeinsames Zitat:" pl="Gemeinsame Zitate:"/>
+            <k xmlns="" n="workpassage-direct" sg="Zitat:" pl="Zitate:"/>
             <k xmlns="" n="topos" sg="Gemeinsamer Topos:" pl="Gemeinsame Topoi:"/>
         </xsl:variable>
 
@@ -442,7 +463,7 @@
                 </xsl:if>
 
                 <!-- work references -->
-                <xsl:if test="exists($workrefs)">
+                <xsl:if test="exists($workrefs) or exists($workpassages)">
                     <div class="feat-group">
                         <span class="feat-group-label"><xsl:value-of
                                 select="i18n:t('Werkreferenzen')"/><br/>&amp;
@@ -454,16 +475,8 @@
                                     <xsl:value-of select="normalize-space(@label)"/>
                                 </a>
                             </xsl:for-each>
-                        </div>
-                    </div>
-                </xsl:if>
-
-                <!-- work passages -->
-                <xsl:if test="exists($workpassages)">
-                    <div class="feat-group">
-                        <span class="feat-group-label"><xsl:value-of select="i18n:t('Textpassagen')"/></span>
-                        <div class="feat-tag-list">
-                            <xsl:for-each select="$workpassages">
+                            <!-- passages of an already listed work would only repeat its label -->
+                            <xsl:for-each select="$workpassages[not(lower-case(normalize-space(@label)) = $workrefs/lower-case(normalize-space(@label)))]">
                                 <xsl:sort select="lower-case(@label)"/>
                                 <a href="{i18n:href('werke.html')}" class="feat-tag feat-tag--passage">
                                     <xsl:value-of select="@label"/>
