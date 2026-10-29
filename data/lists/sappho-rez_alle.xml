@@ -2998,7 +2998,7 @@ Philosophen zu Sanssouci</title>
                     <bibl xml:id="bibl_bde24a4e" ref="https://www.wikidata.org/entity/Q120178108">
                         <title type="work">Sapho. Ein Melodrama nebst anderen Gedichten</title>
                     </bibl>
-                    <author ref="https://www.wikidata.org/entity/Q1694998" xml:id="author_27500efc">J. J. H–b–r [= Johann Joseph Anton Huber]</author>
+                    <author ref="https://www.wikidata.org/entity/Q120177834" xml:id="author_27500efc">J. J. H–b–r [= Johann Joseph von Huber]</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2749" xml:id="place_d4135c97">Augsburg</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q138953341" xml:id="publisher_ce3cd0df">Kayser</publisher>
@@ -4113,6 +4113,18 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <publisher ref="https://www.wikidata.org/entity/Q139324177" xml:id="publisher_5b161884">J. E. Akkermann</publisher>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno-plus?aid=ttu&amp;datum=1821&amp;page=118&amp;size=45">https://anno.onb.ac.at/cgi-content/anno-plus?aid=ttu&amp;datum=1821&amp;page=118&amp;size=45</ref>
                 </bibl>
+                <bibl xml:id="bibl_9ee5b1ff">
+                    <title type="text">Das Gespenst im Prater. Als Fortsetzung des Gespenstes auf der Bastey, in zwey Acten</title>
+                    <date type="published" when="1821">1821</date>
+                    <bibl xml:id="bibl_3e4c4625">
+                        <title type="work">Neuestes theatralisches Quodlibet, oder dramatische Beyträge für die Leopoldstädter Schaubühne</title>
+                    </bibl>
+                    <author ref="https://www.wikidata.org/entity/Q1308773" xml:id="author_0d277f21">Carl Meisl</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q139329180" xml:id="publisher_31a3d1ac">Mörscher und Jasper</publisher>
+                    <ref target="https://books.google.com/books?id=ps86AAAAcAAJ">https://books.google.com/books?id=ps86AAAAcAAJ</ref>
+                </bibl>
                 <bibl xml:id="bibl_233e838a">
                     <title type="text">[Aphorismus]</title>
                     <date type="created" when="1822">1822</date>
@@ -4173,18 +4185,6 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q138953100" xml:id="publisher_66505069">Weygand’sche Buchhandlung</publisher>
                     <ref target="https://books.google.com/books?id=rFYunD8j-XkC">https://books.google.com/books?id=rFYunD8j-XkC</ref>
-                </bibl>
-                <bibl xml:id="bibl_9ee5b1ff">
-                    <title type="text">Das Gespenst im Prater. Als Fortsetzung des Gespenstes auf der Bastey, in zwey Acten</title>
-                    <date type="published" when="1821">1821</date>
-                    <bibl xml:id="bibl_3e4c4625">
-                        <title type="work">Neuestes theatralisches Quodlibet, oder dramatische Beyträge für die Leopoldstädter Schaubühne</title>
-                    </bibl>
-                    <author ref="https://www.wikidata.org/entity/Q1308773" xml:id="author_0d277f21">Carl Meisl</author>
-                    <note type="genre">Drama</note>
-                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
-                    <publisher ref="https://www.wikidata.org/entity/Q139329180" xml:id="publisher_31a3d1ac">Mörscher und Jasper</publisher>
-                    <ref target="https://books.google.com/books?id=ps86AAAAcAAJ">https://books.google.com/books?id=ps86AAAAcAAJ</ref>
                 </bibl>
                 <bibl xml:id="bibl_1407fca8">
                     <title type="text">Am Bette eines Kindes</title>
