@@ -272,6 +272,13 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q41753" xml:id="place_b086af04">Klagenfurt</pubPlace>
                     <ref target="https://anno.onb.ac.at/cgi-content/anno-plus?aid=car&amp;datum=18300140&amp;seite=1">https://anno.onb.ac.at/cgi-content/anno-plus?aid=car&amp;datum=18300140&amp;seite=1</ref>
                 </bibl>
+                <bibl xml:id="bibl_2c66f611">
+                    <title type="text">Humoristische Eilwagen-Reise durch die Theaterwelt. Quodlibet in zwey Acten nebst einem damit verbundenen Vorspiele, unter dem Titel: Der Theaterdiener, die Benefizvorstellung und das Quodlibet</title>
+                    <date type="published" when="1832">1832</date>
+                    <author ref="https://www.wikidata.org/entity/Q44862" xml:id="author_e00f499f">Johann Nestroy [oder Friedrich Hopp?]</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
+                </bibl>
                 <bibl xml:id="bibl_95e8a466">
                     <title type="text">Sapho</title>
                     <date type="published" when="1833">1833?</date>
@@ -365,6 +372,17 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q11712374" xml:id="publisher_a2cb3e64">unveröffentlicht</publisher>
                 </bibl>
+                <bibl xml:id="bibl_50c1d255">
+                    <title type="text">Aus einer früheren Fassung der Tragödie „Die Besessenen“</title>
+                    <date type="published" notBefore="1902" notAfter="1903">1902–1903</date>
+                    <bibl xml:id="bibl_5ebc314a" ref="https://www.wikidata.org/entity/Q329492">
+                        <title type="work">Blätter für die Kunst</title>
+                    </bibl>
+                    <author ref="https://www.wikidata.org/entity/Q1607455" xml:id="author_2d29ece4">Henry von Heiseler</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q1503755" xml:id="publisher_50e219ba">Bondi</publisher>
+                </bibl>
                 <bibl xml:id="bibl_b1600f12">
                     <title type="text">Der Kanzler von Tirol. Schauspiel in 5 Akten und einem Epilog</title>
                     <date type="created" when="1926">1926</date>
@@ -401,6 +419,18 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_06ec7d19">Wien</pubPlace>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_95b8315b">München</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q62477247" xml:id="publisher_1e45dd20">Donau-Verlag</publisher>
+                </bibl>
+                <bibl xml:id="bibl_9f84efac">
+                    <title type="text">Gudrun, die Geschichte und ihr Unterricht</title>
+                    <date type="published" when="1971">1971</date>
+                    <bibl xml:id="bibl_e157b290">
+                        <title type="work">Protokolle. Wiener Jahresschrift für Literatur, bildende Kunst und Musik</title>
+                    </bibl>
+                    <author ref="https://www.wikidata.org/entity/Q89786" xml:id="author_f6642e47">Elfriede Gerstl</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q141960073" xml:id="publisher_bdbfaf6f">Jugend und Volk</publisher>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q120198447" xml:id="bibl_a53d809b">
                     <title type="text">Sappho und alle die danach kamen</title>

@@ -2077,6 +2077,11 @@
         "Interpretation of Intertextual Relation between Sapho an Gleminden. Als sie fragte, ob Sapho etwas an Thyrsis zu bestellen habe? and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_083adf2c_sappho-work> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_08689009_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Gespräch mit Sappho und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Gespräch mit Sappho and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_08689009_sappho-work> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_08a8200f_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Mode-Ode und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Mode-Ode and Sapphos Werk"@en ;
@@ -2488,6 +2493,11 @@
     rdfs:label "Interpretation der intertextuellen Relation zwischen Schäm’ dich nicht der Liebe zum Kammermädchen und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Schäm’ dich nicht der Liebe zum Kammermädchen and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_0a263b83_sappho-work> .
+
+<https://sappho-digital.com/feature/interpretation/bibl_0a472d12_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Ein Kind des Volkes oder Der Arbeiterkönig. Politisch-socialer Roman aus der Gegenwart. Bd. 2 und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Ein Kind des Volkes oder Der Arbeiterkönig. Politisch-socialer Roman aus der Gegenwart. Bd. 2 and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_0a472d12_sappho-work> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_0aa2f93e_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Das Vorspiel. Ein Episches Gedicht und Sapphos Werk"@de,
@@ -3460,6 +3470,11 @@
     rdfs:label "Interpretation der intertextuellen Relation zwischen wir sind untergegangen und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between wir sind untergegangen and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_100a244e_sappho-work> .
+
+<https://sappho-digital.com/feature/interpretation/bibl_1022e85a_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Zwei Titanen und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Zwei Titanen and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_1022e85a_sappho-work> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_1034f40b_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen [??] und Sapphos Werk"@de,
@@ -4592,6 +4607,11 @@
         "Interpretation of Intertextual Relation between Poetisch-Historischer Lustgarten and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_1ab95e47_sappho-work> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_1ac45841_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Neben den Geleisen und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Neben den Geleisen and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_1ac45841_sappho-work> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_1ac52bab_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Meine Reise im Orient, Bd. 2 und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Meine Reise im Orient, Bd. 2 and Sapphos Werk"@en ;
@@ -5264,6 +5284,11 @@
         "Interpretation of Intertextual Relation between Wörlitz and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_1edf6646_sappho-work> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_1f3d3631_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Briefe eines Unbekannten. Bd. 2 und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Briefe eines Unbekannten. Bd. 2 and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_1f3d3631_sappho-work> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_1f5c9a50_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Reichsgräfin Gisela und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Reichsgräfin Gisela and Sapphos Werk"@en ;
@@ -5413,11 +5438,6 @@
     rdfs:label "Interpretation der intertextuellen Relation zwischen Marianne Wildenberg und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Marianne Wildenberg and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_2531c83d_sappho-work> .
-
-<https://sappho-digital.com/feature/interpretation/bibl_25d08a4b_sappho-work> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation der intertextuellen Relation zwischen Zwei Titanen und Sapphos Werk"@de,
-        "Interpretation of Intertextual Relation between Zwei Titanen and Sapphos Werk"@en ;
-    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_25d08a4b_sappho-work> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_264bf5aa_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Isegrimm: vaterländischer Roman und Sapphos Werk"@de,
@@ -6952,6 +6972,11 @@
         "Interpretation of Intertextual Relation between SApphischer Honig and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_2bf5e667_sappho-work> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_2c66f611_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Humoristische Eilwagen-Reise durch die Theaterwelt. Quodlibet in zwey Acten nebst einem damit verbundenen Vorspiele, unter dem Titel: Der Theaterdiener, die Benefizvorstellung und das Quodlibet und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Humoristische Eilwagen-Reise durch die Theaterwelt. Quodlibet in zwey Acten nebst einem damit verbundenen Vorspiele, unter dem Titel: Der Theaterdiener, die Benefizvorstellung und das Quodlibet and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_2c66f611_sappho-work> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_2c7f182d_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Gräfin Thunen. Intimes vom Oesterreichisch-ungarischen Hochadel und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Gräfin Thunen. Intimes vom Oesterreichisch-ungarischen Hochadel and Sapphos Werk"@en ;
@@ -7171,6 +7196,11 @@
     rdfs:label "Interpretation der intertextuellen Relation zwischen [??] und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between [??] and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_2f25238d_sappho-work> .
+
+<https://sappho-digital.com/feature/interpretation/bibl_2fbd5c79_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Gymnasium besuchts Bordell und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Gymnasium besuchts Bordell and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_2fbd5c79_sappho-work> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_2q9ve90m_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen bergen und Sapphos Werk"@de,
@@ -9964,6 +9994,11 @@
         "Interpretation of Intertextual Relation between Sonnet. An den Leser and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_3e17f7f1_sappho-work> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_3e2cdf2a_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Else Lasker-Schüler und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Else Lasker-Schüler and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_3e2cdf2a_sappho-work> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_3e42ceb3_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Seelenbrautfahrt und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Seelenbrautfahrt and Sapphos Werk"@en ;
@@ -11325,6 +11360,16 @@
         "Interpretation of Intertextual Relation between An Sappho and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_4422d6d6_sappho-work> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_4425f143_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Der Major. Roman und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Der Major. Roman and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_4425f143_sappho-work> .
+
+<https://sappho-digital.com/feature/interpretation/bibl_443c81be_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Amanda Waldau und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Amanda Waldau and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_443c81be_sappho-work> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_44cee719_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Zlatna, Oder von Rhue des Gemütes und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Zlatna, Oder von Rhue des Gemütes and Sapphos Werk"@en ;
@@ -11976,6 +12021,11 @@
     rdfs:label "Interpretation der intertextuellen Relation zwischen fort und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between fort and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_4a89b0d9_sappho-work> .
+
+<https://sappho-digital.com/feature/interpretation/bibl_4aa92fa2_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Teufel, Marietta! und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Teufel, Marietta! and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_4aa92fa2_sappho-work> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_4aaee03c_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Zögernder Frühling und Sapphos Werk"@de,
@@ -13410,6 +13460,11 @@
     rdfs:label "Interpretation der intertextuellen Relation zwischen XX und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between XX and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_4fcb8123_sappho-work> .
+
+<https://sappho-digital.com/feature/interpretation/bibl_50c1d255_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Aus einer früheren Fassung der Tragödie „Die Besessenen“ und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Aus einer früheren Fassung der Tragödie „Die Besessenen“ and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_50c1d255_sappho-work> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_50d9444a_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen An Philokles und Sapphos Werk"@de,
@@ -19570,6 +19625,11 @@
         "Interpretation of Intertextual Relation between Erzählung an Tyrsis wegen Einer Dose der Lalage genommen and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_7611b033_sappho-work> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_7611bd84_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Das Gastmahl der Xanthippe. Eine überzeitliche Begegnung und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Das Gastmahl der Xanthippe. Eine überzeitliche Begegnung and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_7611bd84_sappho-work> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_769655fe_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Was zählt und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Was zählt and Sapphos Werk"@en ;
@@ -20835,6 +20895,11 @@
     rdfs:label "Interpretation der intertextuellen Relation zwischen Skize vom 27. August und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Skize vom 27. August and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_82d5b99e_sappho-work> .
+
+<https://sappho-digital.com/feature/interpretation/bibl_830bbe18_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Tagebuchblätter einer Emancipierten und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Tagebuchblätter einer Emancipierten and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_830bbe18_sappho-work> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_834356d7_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Der Geschmack und Sapphos Werk"@de,
@@ -23470,6 +23535,11 @@
     rdfs:label "Interpretation der intertextuellen Relation zwischen Frühling und Unschuld und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Frühling und Unschuld and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_8bfd685a_sappho-work> .
+
+<https://sappho-digital.com/feature/interpretation/bibl_8c16e82f_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Der grüne Esel und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Der grüne Esel and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_8c16e82f_sappho-work> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_8c43df20_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Der Göttin Eigenthum und Sapphos Werk"@de,
@@ -27548,6 +27618,11 @@
         "Interpretation of Intertextual Relation between Dich hat Amor gewiß … and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_9ef5617d_sappho-work> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_9f84efac_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Gudrun, die Geschichte und ihr Unterricht und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Gudrun, die Geschichte und ihr Unterricht and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_9f84efac_sappho-work> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_a004d085_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Eine Frau und vier Verehrer. Novelle und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Eine Frau und vier Verehrer. Novelle and Sapphos Werk"@en ;
@@ -30710,6 +30785,11 @@
         "Interpretation of Intertextual Relation between Mirtill! and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_a667785d_sappho-work> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_a68b98db_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Kleine Verhältnisse. Novelle und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Kleine Verhältnisse. Novelle and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_a68b98db_sappho-work> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_a717f073_bibl_29dac241> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Die Umarmung. Im Herbst 1776 und Ode. An Jungfer L. A. V. Kulmus [d. i. Luise Adelgunde Victorie Gottsched]. 1731. den 11 April"@de,
         "Interpretation of Intertextual Relation between Die Umarmung. Im Herbst 1776 and Ode. An Jungfer L. A. V. Kulmus [d. i. Luise Adelgunde Victorie Gottsched]. 1731. den 11 April"@en ;
@@ -31334,6 +31414,11 @@
         "Interpretation of Intertextual Relation between Sapphos Schwanengesang and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_a90v42bm_sappho-work> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_a94803de_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Schweizerdichter im Himmel. Eine Episode und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Schweizerdichter im Himmel. Eine Episode and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_a94803de_sappho-work> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_a96f9c8c_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Das Eisen und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Das Eisen and Sapphos Werk"@en ;
@@ -31388,6 +31473,11 @@
     rdfs:label "Interpretation der intertextuellen Relation zwischen I took my lyre and said: und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between I took my lyre and said: and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_ac17d87e_sappho-work> .
+
+<https://sappho-digital.com/feature/interpretation/bibl_ac403d0b_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Erinnerung an Sappho und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Erinnerung an Sappho and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_ac403d0b_sappho-work> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_acd99842_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Die Prüfung. Eine Novelle aus dem Lande der Romantik und Sapphos Werk"@de,
@@ -35597,6 +35687,11 @@
         "Interpretation of Intertextual Relation between Sappho. Trauerspiel in fünf Aufzügen and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_ba71b2e5_sappho-work> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_ba7ae77d_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Sappho und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Sappho and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_ba7ae77d_sappho-work> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_ba81ab70_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Elegie, am Genfersee geschrieben und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Elegie, am Genfersee geschrieben and Sapphos Werk"@en ;
@@ -36124,6 +36219,11 @@
         "Interpretation of Intertextual Relation between An Gleim and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_bb952391_sappho-work> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_bbd18684_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Hellas und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Hellas and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_bbd18684_sappho-work> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_bbd3b749_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Schau wie sie und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Schau wie sie and Sapphos Werk"@en ;
@@ -36233,6 +36333,11 @@
     rdfs:label "Interpretation der intertextuellen Relation zwischen Wett-streit Der Schönheit und Stärcke Entschieden aus dem munde der erfahrung und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Wett-streit Der Schönheit und Stärcke Entschieden aus dem munde der erfahrung and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_c1d6d7c1_sappho-work> .
+
+<https://sappho-digital.com/feature/interpretation/bibl_c1dc5fd0_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Briefe nach Norwegen und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Briefe nach Norwegen and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_c1dc5fd0_sappho-work> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_c1e2dcfc_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Amanda. Ein Hexenroman und Sapphos Werk"@de,
@@ -38412,6 +38517,11 @@
         "Interpretation of Intertextual Relation between Sappho. Drama in einem Aufzuge and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_dc90edfe_sappho-work> .
 
+<https://sappho-digital.com/feature/interpretation/bibl_dcc63355_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Grand Écart (Tanzlied) und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Grand Écart (Tanzlied) and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_dcc63355_sappho-work> .
+
 <https://sappho-digital.com/feature/interpretation/bibl_dcf23926_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Die Zuneigung und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Die Zuneigung and Sapphos Werk"@en ;
@@ -40012,6 +40122,11 @@
     rdfs:label "Interpretation der intertextuellen Relation zwischen Der Frühlingsabend und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Der Frühlingsabend and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_e6bb83f8_sappho-work> .
+
+<https://sappho-digital.com/feature/interpretation/bibl_e6c1c86a_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Die Weltverbesserer und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Die Weltverbesserer and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_e6c1c86a_sappho-work> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_e6cac312_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Mein Bruder Benjamin. Geschichte eines leichten Lebens: Roman und Sapphos Werk"@de,
@@ -42352,6 +42467,11 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen O Jungferschaft und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between O Jungferschaft and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_efaf69f6_sappho-work> .
+
+<https://sappho-digital.com/feature/interpretation/bibl_efb83d6d_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Adulis. Novelle und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Adulis. Novelle and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_efb83d6d_sappho-work> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_efcce8fc_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen An den May und Sapphos Werk"@de,
@@ -45811,6 +45931,11 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Ode an Sappho und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Ode an Sappho and Sapphos Werk"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_ffc59e54_sappho-work> .
+
+<https://sappho-digital.com/feature/interpretation/bibl_k41cs84r_sappho-work> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Die Insel der großen Mutter oder Das Wunder von Île des Dames und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Die Insel der großen Mutter oder Das Wunder von Île des Dames and Sapphos Werk"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_k41cs84r_sappho-work> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_o1qlf92w_sappho-work> a intro:INT_Interpretation ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Who Lives, Who Dies, Who Tells Your Story und Sapphos Werk"@de,
@@ -55103,6 +55228,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_083adf2c_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_083adf2c_sappho-work> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_08689009_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Gespräch mit Sappho und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Gespräch mit Sappho and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_08689009_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_08689009_sappho-work> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_08a8200f_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Mode-Ode und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Mode-Ode and Sapphos Werk"@en ;
@@ -55596,6 +55727,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         "Interpretation of Intertextual Relation between Schäm’ dich nicht der Liebe zum Kammermädchen and Sapphos Werk"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_0a263b83_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_0a263b83_sappho-work> .
+
+<https://sappho-digital.com/actualization/interpretation/bibl_0a472d12_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Ein Kind des Volkes oder Der Arbeiterkönig. Politisch-socialer Roman aus der Gegenwart. Bd. 2 und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Ein Kind des Volkes oder Der Arbeiterkönig. Politisch-socialer Roman aus der Gegenwart. Bd. 2 and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_0a472d12_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_0a472d12_sappho-work> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_0aa2f93e_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Das Vorspiel. Ein Episches Gedicht und Sapphos Werk"@de,
@@ -56762,6 +56899,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         "Interpretation of Intertextual Relation between wir sind untergegangen and Sapphos Werk"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_100a244e_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_100a244e_sappho-work> .
+
+<https://sappho-digital.com/actualization/interpretation/bibl_1022e85a_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Zwei Titanen und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Zwei Titanen and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_1022e85a_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_1022e85a_sappho-work> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_1034f40b_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen [??] und Sapphos Werk"@de,
@@ -58119,6 +58262,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_1ab95e47_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_1ab95e47_sappho-work> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_1ac45841_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Neben den Geleisen und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Neben den Geleisen and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_1ac45841_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_1ac45841_sappho-work> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_1ac52bab_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Meine Reise im Orient, Bd. 2 und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Meine Reise im Orient, Bd. 2 and Sapphos Werk"@en ;
@@ -58925,6 +59074,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_1edf6646_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_1edf6646_sappho-work> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_1f3d3631_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Briefe eines Unbekannten. Bd. 2 und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Briefe eines Unbekannten. Bd. 2 and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_1f3d3631_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_1f3d3631_sappho-work> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_1f5c9a50_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Reichsgräfin Gisela und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Reichsgräfin Gisela and Sapphos Werk"@en ;
@@ -59104,12 +59259,6 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         "Interpretation of Intertextual Relation between Marianne Wildenberg and Sapphos Werk"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_2531c83d_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_2531c83d_sappho-work> .
-
-<https://sappho-digital.com/actualization/interpretation/bibl_25d08a4b_sappho-work> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation der intertextuellen Relation zwischen Zwei Titanen und Sapphos Werk"@de,
-        "Interpretation of Intertextual Relation between Zwei Titanen and Sapphos Werk"@en ;
-    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_25d08a4b_sappho-work> ;
-    intro:R21_identifies <https://sappho-digital.com/relation/bibl_25d08a4b_sappho-work> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_264bf5aa_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Isegrimm: vaterländischer Roman und Sapphos Werk"@de,
@@ -60949,6 +61098,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_2bf5e667_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_2bf5e667_sappho-work> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_2c66f611_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Humoristische Eilwagen-Reise durch die Theaterwelt. Quodlibet in zwey Acten nebst einem damit verbundenen Vorspiele, unter dem Titel: Der Theaterdiener, die Benefizvorstellung und das Quodlibet und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Humoristische Eilwagen-Reise durch die Theaterwelt. Quodlibet in zwey Acten nebst einem damit verbundenen Vorspiele, unter dem Titel: Der Theaterdiener, die Benefizvorstellung und das Quodlibet and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_2c66f611_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_2c66f611_sappho-work> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_2c7f182d_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Gräfin Thunen. Intimes vom Oesterreichisch-ungarischen Hochadel und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Gräfin Thunen. Intimes vom Oesterreichisch-ungarischen Hochadel and Sapphos Werk"@en ;
@@ -61212,6 +61367,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         "Interpretation of Intertextual Relation between [??] and Sapphos Werk"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_2f25238d_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_2f25238d_sappho-work> .
+
+<https://sappho-digital.com/actualization/interpretation/bibl_2fbd5c79_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Gymnasium besuchts Bordell und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Gymnasium besuchts Bordell and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_2fbd5c79_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_2fbd5c79_sappho-work> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_2q9ve90m_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen bergen und Sapphos Werk"@de,
@@ -64561,6 +64722,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_3e17f7f1_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_3e17f7f1_sappho-work> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_3e2cdf2a_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Else Lasker-Schüler und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Else Lasker-Schüler and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_3e2cdf2a_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_3e2cdf2a_sappho-work> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_3e42ceb3_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Seelenbrautfahrt und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Seelenbrautfahrt and Sapphos Werk"@en ;
@@ -66193,6 +66360,18 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_4422d6d6_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_4422d6d6_sappho-work> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_4425f143_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Der Major. Roman und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Der Major. Roman and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_4425f143_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_4425f143_sappho-work> .
+
+<https://sappho-digital.com/actualization/interpretation/bibl_443c81be_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Amanda Waldau und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Amanda Waldau and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_443c81be_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_443c81be_sappho-work> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_44cee719_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Zlatna, Oder von Rhue des Gemütes und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Zlatna, Oder von Rhue des Gemütes and Sapphos Werk"@en ;
@@ -66974,6 +67153,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         "Interpretation of Intertextual Relation between fort and Sapphos Werk"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_4a89b0d9_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_4a89b0d9_sappho-work> .
+
+<https://sappho-digital.com/actualization/interpretation/bibl_4aa92fa2_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Teufel, Marietta! und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Teufel, Marietta! and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_4aa92fa2_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_4aa92fa2_sappho-work> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_4aaee03c_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Zögernder Frühling und Sapphos Werk"@de,
@@ -68694,6 +68879,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         "Interpretation of Intertextual Relation between XX and Sapphos Werk"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_4fcb8123_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_4fcb8123_sappho-work> .
+
+<https://sappho-digital.com/actualization/interpretation/bibl_50c1d255_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Aus einer früheren Fassung der Tragödie „Die Besessenen“ und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Aus einer früheren Fassung der Tragödie „Die Besessenen“ and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_50c1d255_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_50c1d255_sappho-work> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_50d9444a_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen An Philokles und Sapphos Werk"@de,
@@ -76081,6 +76272,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_7611b033_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_7611b033_sappho-work> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_7611bd84_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Das Gastmahl der Xanthippe. Eine überzeitliche Begegnung und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Das Gastmahl der Xanthippe. Eine überzeitliche Begegnung and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_7611bd84_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_7611bd84_sappho-work> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_769655fe_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Was zählt und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Was zählt and Sapphos Werk"@en ;
@@ -77598,6 +77795,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         "Interpretation of Intertextual Relation between Skize vom 27. August and Sapphos Werk"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_82d5b99e_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_82d5b99e_sappho-work> .
+
+<https://sappho-digital.com/actualization/interpretation/bibl_830bbe18_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Tagebuchblätter einer Emancipierten und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Tagebuchblätter einer Emancipierten and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_830bbe18_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_830bbe18_sappho-work> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_834356d7_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Der Geschmack und Sapphos Werk"@de,
@@ -80758,6 +80961,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         "Interpretation of Intertextual Relation between Frühling und Unschuld and Sapphos Werk"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_8bfd685a_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_8bfd685a_sappho-work> .
+
+<https://sappho-digital.com/actualization/interpretation/bibl_8c16e82f_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Der grüne Esel und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Der grüne Esel and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_8c16e82f_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_8c16e82f_sappho-work> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_8c43df20_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Der Göttin Eigenthum und Sapphos Werk"@de,
@@ -85647,6 +85856,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_9ef5617d_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_9ef5617d_sappho-work> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_9f84efac_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Gudrun, die Geschichte und ihr Unterricht und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Gudrun, die Geschichte und ihr Unterricht and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_9f84efac_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_9f84efac_sappho-work> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_a004d085_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Eine Frau und vier Verehrer. Novelle und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Eine Frau und vier Verehrer. Novelle and Sapphos Werk"@en ;
@@ -89439,6 +89654,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_a667785d_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_a667785d_sappho-work> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_a68b98db_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Kleine Verhältnisse. Novelle und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Kleine Verhältnisse. Novelle and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_a68b98db_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_a68b98db_sappho-work> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_a717f073_bibl_29dac241> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Die Umarmung. Im Herbst 1776 und Ode. An Jungfer L. A. V. Kulmus [d. i. Luise Adelgunde Victorie Gottsched]. 1731. den 11 April"@de,
         "Interpretation of Intertextual Relation between Die Umarmung. Im Herbst 1776 and Ode. An Jungfer L. A. V. Kulmus [d. i. Luise Adelgunde Victorie Gottsched]. 1731. den 11 April"@en ;
@@ -90187,6 +90408,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_a90v42bm_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_a90v42bm_sappho-work> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_a94803de_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Schweizerdichter im Himmel. Eine Episode und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Schweizerdichter im Himmel. Eine Episode and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_a94803de_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_a94803de_sappho-work> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_a96f9c8c_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Das Eisen und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Das Eisen and Sapphos Werk"@en ;
@@ -90252,6 +90479,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         "Interpretation of Intertextual Relation between I took my lyre and said: and Sapphos Werk"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_ac17d87e_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_ac17d87e_sappho-work> .
+
+<https://sappho-digital.com/actualization/interpretation/bibl_ac403d0b_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Erinnerung an Sappho und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Erinnerung an Sappho and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_ac403d0b_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_ac403d0b_sappho-work> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_acd99842_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Die Prüfung. Eine Novelle aus dem Lande der Romantik und Sapphos Werk"@de,
@@ -95289,6 +95522,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_ba71b2e5_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_ba71b2e5_sappho-work> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_ba7ae77d_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Sappho und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Sappho and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_ba7ae77d_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_ba7ae77d_sappho-work> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_ba81ab70_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Elegie, am Genfersee geschrieben und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Elegie, am Genfersee geschrieben and Sapphos Werk"@en ;
@@ -95921,6 +96160,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_bb952391_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_bb952391_sappho-work> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_bbd18684_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Hellas und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Hellas and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_bbd18684_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_bbd18684_sappho-work> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_bbd3b749_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Schau wie sie und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Schau wie sie and Sapphos Werk"@en ;
@@ -96052,6 +96297,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         "Interpretation of Intertextual Relation between Wett-streit Der Schönheit und Stärcke Entschieden aus dem munde der erfahrung and Sapphos Werk"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_c1d6d7c1_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_c1d6d7c1_sappho-work> .
+
+<https://sappho-digital.com/actualization/interpretation/bibl_c1dc5fd0_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Briefe nach Norwegen und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Briefe nach Norwegen and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_c1dc5fd0_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_c1dc5fd0_sappho-work> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_c1e2dcfc_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Amanda. Ein Hexenroman und Sapphos Werk"@de,
@@ -98665,6 +98916,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_dc90edfe_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_dc90edfe_sappho-work> .
 
+<https://sappho-digital.com/actualization/interpretation/bibl_dcc63355_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Grand Écart (Tanzlied) und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Grand Écart (Tanzlied) and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_dcc63355_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_dcc63355_sappho-work> .
+
 <https://sappho-digital.com/actualization/interpretation/bibl_dcf23926_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Die Zuneigung und Sapphos Werk"@de,
         "Interpretation of Intertextual Relation between Die Zuneigung and Sapphos Werk"@en ;
@@ -100584,6 +100841,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         "Interpretation of Intertextual Relation between Der Frühlingsabend and Sapphos Werk"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_e6bb83f8_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_e6bb83f8_sappho-work> .
+
+<https://sappho-digital.com/actualization/interpretation/bibl_e6c1c86a_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Die Weltverbesserer und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Die Weltverbesserer and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_e6c1c86a_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_e6c1c86a_sappho-work> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_e6cac312_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Mein Bruder Benjamin. Geschichte eines leichten Lebens: Roman und Sapphos Werk"@de,
@@ -103390,6 +103653,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         "Interpretation of Intertextual Relation between O Jungferschaft and Sapphos Werk"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_efaf69f6_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_efaf69f6_sappho-work> .
+
+<https://sappho-digital.com/actualization/interpretation/bibl_efb83d6d_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Adulis. Novelle und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Adulis. Novelle and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_efb83d6d_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_efb83d6d_sappho-work> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_efcce8fc_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen An den May und Sapphos Werk"@de,
@@ -107538,6 +107807,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         "Interpretation of Intertextual Relation between Ode an Sappho and Sapphos Werk"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_ffc59e54_sappho-work> ;
     intro:R21_identifies <https://sappho-digital.com/relation/bibl_ffc59e54_sappho-work> .
+
+<https://sappho-digital.com/actualization/interpretation/bibl_k41cs84r_sappho-work> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation der intertextuellen Relation zwischen Die Insel der großen Mutter oder Das Wunder von Île des Dames und Sapphos Werk"@de,
+        "Interpretation of Intertextual Relation between Die Insel der großen Mutter oder Das Wunder von Île des Dames and Sapphos Werk"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_k41cs84r_sappho-work> ;
+    intro:R21_identifies <https://sappho-digital.com/relation/bibl_k41cs84r_sappho-work> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_o1qlf92w_sappho-work> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation der intertextuellen Relation zwischen Who Lives, Who Dies, Who Tells Your Story und Sapphos Werk"@de,
@@ -115838,6 +116113,17 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_083adf2c_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_083adf2c_sappho-work> .
 
+<https://sappho-digital.com/expression/bibl_08689009> a lrmoo:F2_Expression ;
+    rdfs:label "Gespräch mit Sappho"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_08689009> ;
+    ecrm:P130i_features_are_also_found_on <https://sappho-digital.com/digital/bibl_08689009> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_08689009> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_08689009> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_2b669fa6> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_08689009_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_08689009_sappho-work> .
+
 <https://sappho-digital.com/expression/bibl_08a8200f> a lrmoo:F2_Expression ;
     rdfs:label "Mode-Ode"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_08a8200f> ;
@@ -115868,6 +116154,17 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_0a263b83> ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_0a263b83_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_0a263b83_sappho-work> .
+
+<https://sappho-digital.com/expression/bibl_0a472d12> a lrmoo:F2_Expression ;
+    rdfs:label "Ein Kind des Volkes oder Der Arbeiterkönig. Politisch-socialer Roman aus der Gegenwart. Bd. 2"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_0a472d12> ;
+    ecrm:P130i_features_are_also_found_on <https://sappho-digital.com/digital/bibl_0a472d12> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_0a472d12> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_0a472d12> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_0a472d12> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_0a472d12_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_0a472d12_sappho-work> .
 
 <https://sappho-digital.com/expression/bibl_0aa2f93e> a lrmoo:F2_Expression ;
     rdfs:label "Das Vorspiel. Ein Episches Gedicht"@de ;
@@ -116067,6 +116364,17 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_574806a3> ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_100a244e_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_100a244e_sappho-work> .
+
+<https://sappho-digital.com/expression/bibl_1022e85a> a lrmoo:F2_Expression ;
+    rdfs:label "Zwei Titanen"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_1022e85a> ;
+    ecrm:P130i_features_are_also_found_on <https://sappho-digital.com/digital/bibl_1022e85a> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_1022e85a> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_1022e85a> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_d8009896> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_1022e85a_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_1022e85a_sappho-work> .
 
 <https://sappho-digital.com/expression/bibl_1034f40b> a lrmoo:F2_Expression ;
     rdfs:label "[??]"@de ;
@@ -116436,6 +116744,16 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_1ab95e47_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_1ab95e47_sappho-work> .
 
+<https://sappho-digital.com/expression/bibl_1ac45841> a lrmoo:F2_Expression ;
+    rdfs:label "Neben den Geleisen"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_1ac45841> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_1ac45841> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_1ac45841> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_1ac45841> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_1ac45841_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_1ac45841_sappho-work> .
+
 <https://sappho-digital.com/expression/bibl_1ac52bab> a lrmoo:F2_Expression ;
     rdfs:label "Meine Reise im Orient, Bd. 2"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_1ac52bab> ;
@@ -116614,6 +116932,16 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_7fdec146> ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_1edf6646_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_1edf6646_sappho-work> .
+
+<https://sappho-digital.com/expression/bibl_1f3d3631> a lrmoo:F2_Expression ;
+    rdfs:label "Briefe eines Unbekannten. Bd. 2"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_1f3d3631> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_1f3d3631> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_1f3d3631> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_1f3d3631> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_1f3d3631_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_1f3d3631_sappho-work> .
 
 <https://sappho-digital.com/expression/bibl_1f5c9a50> a lrmoo:F2_Expression ;
     rdfs:label "Reichsgräfin Gisela"@de ;
@@ -116940,16 +117268,6 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_2531c83d_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_2531c83d_sappho-work> .
 
-<https://sappho-digital.com/expression/bibl_25d08a4b> a lrmoo:F2_Expression ;
-    rdfs:label "Zwei Titanen"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_25d08a4b> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_25d08a4b> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_25d08a4b> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_22c69eac> ;
-    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_25d08a4b_sappho-work> ;
-    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_25d08a4b_sappho-work> .
-
 <https://sappho-digital.com/expression/bibl_264bf5aa> a lrmoo:F2_Expression ;
     rdfs:label "Isegrimm: vaterländischer Roman"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_264bf5aa> ;
@@ -117182,6 +117500,16 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_2bf5e667_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_2bf5e667_sappho-work> .
 
+<https://sappho-digital.com/expression/bibl_2c66f611> a lrmoo:F2_Expression ;
+    rdfs:label "Humoristische Eilwagen-Reise durch die Theaterwelt. Quodlibet in zwey Acten nebst einem damit verbundenen Vorspiele, unter dem Titel: Der Theaterdiener, die Benefizvorstellung und das Quodlibet"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_2c66f611> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_2c66f611> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_2c66f611> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_2c66f611> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_2c66f611_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_2c66f611_sappho-work> .
+
 <https://sappho-digital.com/expression/bibl_2c7f182d> a lrmoo:F2_Expression ;
     rdfs:label "Gräfin Thunen. Intimes vom Oesterreichisch-ungarischen Hochadel"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_2c7f182d> ;
@@ -117354,6 +117682,17 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_2f25238d> ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_2f25238d_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_2f25238d_sappho-work> .
+
+<https://sappho-digital.com/expression/bibl_2fbd5c79> a lrmoo:F2_Expression ;
+    rdfs:label "Gymnasium besuchts Bordell"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_2fbd5c79> ;
+    ecrm:P130i_features_are_also_found_on <https://sappho-digital.com/digital/bibl_2fbd5c79> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_2fbd5c79> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_2fbd5c79> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_7d71a5db_1924> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_2fbd5c79_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_2fbd5c79_sappho-work> .
 
 <https://sappho-digital.com/expression/bibl_2q9ve90m> a lrmoo:F2_Expression ;
     rdfs:label "bergen"@de ;
@@ -117973,6 +118312,17 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_3e17f7f1_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_3e17f7f1_sappho-work> .
 
+<https://sappho-digital.com/expression/bibl_3e2cdf2a> a lrmoo:F2_Expression ;
+    rdfs:label "Else Lasker-Schüler"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_3e2cdf2a> ;
+    ecrm:P130i_features_are_also_found_on <https://sappho-digital.com/digital/bibl_3e2cdf2a> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_3e2cdf2a> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_3e2cdf2a> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_7098d2bf> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_3e2cdf2a_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_3e2cdf2a_sappho-work> .
+
 <https://sappho-digital.com/expression/bibl_3e42ceb3> a lrmoo:F2_Expression ;
     rdfs:label "Seelenbrautfahrt"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_3e42ceb3> ;
@@ -118215,6 +118565,27 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_def73d2f> ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_436d1da4_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_436d1da4_sappho-work> .
+
+<https://sappho-digital.com/expression/bibl_4425f143> a lrmoo:F2_Expression ;
+    rdfs:label "Der Major. Roman"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_4425f143> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_4425f143> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_4425f143> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_4425f143> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_4425f143_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_4425f143_sappho-work> .
+
+<https://sappho-digital.com/expression/bibl_443c81be> a lrmoo:F2_Expression ;
+    rdfs:label "Amanda Waldau"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_443c81be> ;
+    ecrm:P130i_features_are_also_found_on <https://sappho-digital.com/digital/bibl_443c81be> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_443c81be> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_443c81be> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_8f7960f9> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_443c81be_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_443c81be_sappho-work> .
 
 <https://sappho-digital.com/expression/bibl_44cee719> a lrmoo:F2_Expression ;
     rdfs:label "Zlatna, Oder von Rhue des Gemütes"@de ;
@@ -118463,6 +118834,16 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_4a89b0d9_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_4a89b0d9_sappho-work> .
 
+<https://sappho-digital.com/expression/bibl_4aa92fa2> a lrmoo:F2_Expression ;
+    rdfs:label "Teufel, Marietta!"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_4aa92fa2> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_4aa92fa2> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_4aa92fa2> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_4aa92fa2> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_4aa92fa2_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_4aa92fa2_sappho-work> .
+
 <https://sappho-digital.com/expression/bibl_4aaee03c> a lrmoo:F2_Expression ;
     rdfs:label "Zögernder Frühling"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_4aaee03c> ;
@@ -118535,6 +118916,16 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_b51ec563> ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_4ea873ad_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_4ea873ad_sappho-work> .
+
+<https://sappho-digital.com/expression/bibl_50c1d255> a lrmoo:F2_Expression ;
+    rdfs:label "Aus einer früheren Fassung der Tragödie „Die Besessenen“"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_50c1d255> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_50c1d255> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_50c1d255> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_5ebc314a_bibl_50c1d255> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_50c1d255_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_50c1d255_sappho-work> .
 
 <https://sappho-digital.com/expression/bibl_50d9444a> a lrmoo:F2_Expression ;
     rdfs:label "An Philokles"@de ;
@@ -119889,6 +120280,16 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_7611b033_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_7611b033_sappho-work> .
 
+<https://sappho-digital.com/expression/bibl_7611bd84> a lrmoo:F2_Expression ;
+    rdfs:label "Das Gastmahl der Xanthippe. Eine überzeitliche Begegnung"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_7611bd84> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_7611bd84> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_7611bd84> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_7611bd84> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_7611bd84_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_7611bd84_sappho-work> .
+
 <https://sappho-digital.com/expression/bibl_769655fe> a lrmoo:F2_Expression ;
     rdfs:label "Was zählt"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_769655fe> ;
@@ -120434,6 +120835,16 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_82d5b99e_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_82d5b99e_sappho-work> .
 
+<https://sappho-digital.com/expression/bibl_830bbe18> a lrmoo:F2_Expression ;
+    rdfs:label "Tagebuchblätter einer Emancipierten"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_830bbe18> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_830bbe18> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_830bbe18> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_830bbe18> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_830bbe18_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_830bbe18_sappho-work> .
+
 <https://sappho-digital.com/expression/bibl_834356d7> a lrmoo:F2_Expression ;
     rdfs:label "Der Geschmack"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_834356d7> ;
@@ -120833,6 +121244,17 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_8bfd685a> ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_8bfd685a_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_8bfd685a_sappho-work> .
+
+<https://sappho-digital.com/expression/bibl_8c16e82f> a lrmoo:F2_Expression ;
+    rdfs:label "Der grüne Esel"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_8c16e82f> ;
+    ecrm:P130i_features_are_also_found_on <https://sappho-digital.com/digital/bibl_8c16e82f> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_8c16e82f> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_8c16e82f> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_253d12a8_1905> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_8c16e82f_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_8c16e82f_sappho-work> .
 
 <https://sappho-digital.com/expression/bibl_8c43df20> a lrmoo:F2_Expression ;
     rdfs:label "Der Göttin Eigenthum"@de ;
@@ -121651,6 +122073,16 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_9ee5b1ff_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_9ee5b1ff_sappho-work> .
 
+<https://sappho-digital.com/expression/bibl_9f84efac> a lrmoo:F2_Expression ;
+    rdfs:label "Gudrun, die Geschichte und ihr Unterricht"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_9f84efac> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_9f84efac> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_9f84efac> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_e157b290> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_9f84efac_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_9f84efac_sappho-work> .
+
 <https://sappho-digital.com/expression/bibl_a004d085> a lrmoo:F2_Expression ;
     rdfs:label "Eine Frau und vier Verehrer. Novelle"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_a004d085> ;
@@ -121936,6 +122368,16 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_a5fc1475_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_a5fc1475_sappho-work> .
 
+<https://sappho-digital.com/expression/bibl_a68b98db> a lrmoo:F2_Expression ;
+    rdfs:label "Kleine Verhältnisse. Novelle"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_a68b98db> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_a68b98db> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_a68b98db> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_a68b98db> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_a68b98db_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_a68b98db_sappho-work> .
+
 <https://sappho-digital.com/expression/bibl_a72e1c0c> a lrmoo:F2_Expression ;
     rdfs:label "sappho (kleïs / tochter)"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_a72e1c0c> ;
@@ -122038,6 +122480,16 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_a90v42bm> ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_a90v42bm_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_a90v42bm_sappho-work> .
+
+<https://sappho-digital.com/expression/bibl_a94803de> a lrmoo:F2_Expression ;
+    rdfs:label "Schweizerdichter im Himmel. Eine Episode"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_a94803de> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_a94803de> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_a94803de> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_e0a7abd2> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_a94803de_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_a94803de_sappho-work> .
 
 <https://sappho-digital.com/expression/bibl_a96f9c8c> a lrmoo:F2_Expression ;
     rdfs:label "Das Eisen"@de ;
@@ -122165,6 +122617,16 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_574806a3> ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_ac17d87e_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_ac17d87e_sappho-work> .
+
+<https://sappho-digital.com/expression/bibl_ac403d0b> a lrmoo:F2_Expression ;
+    rdfs:label "Erinnerung an Sappho"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_ac403d0b> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_ac403d0b> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_ac403d0b> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_68204df4> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_ac403d0b_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_ac403d0b_sappho-work> .
 
 <https://sappho-digital.com/expression/bibl_acd99842> a lrmoo:F2_Expression ;
     rdfs:label "Die Prüfung. Eine Novelle aus dem Lande der Romantik"@de ;
@@ -122749,6 +123211,17 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_b9d5f2ed_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_b9d5f2ed_sappho-work> .
 
+<https://sappho-digital.com/expression/bibl_ba7ae77d> a lrmoo:F2_Expression ;
+    rdfs:label "Sappho"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_ba7ae77d> ;
+    ecrm:P130i_features_are_also_found_on <https://sappho-digital.com/digital/bibl_ba7ae77d> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_ba7ae77d> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_ba7ae77d> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_dfeab201> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_ba7ae77d_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_ba7ae77d_sappho-work> .
+
 <https://sappho-digital.com/expression/bibl_ba81ab70> a lrmoo:F2_Expression ;
     rdfs:label "Elegie, am Genfersee geschrieben"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_ba81ab70> ;
@@ -122801,6 +123274,17 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_5aad1021> ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_bb952391_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_bb952391_sappho-work> .
+
+<https://sappho-digital.com/expression/bibl_bbd18684> a lrmoo:F2_Expression ;
+    rdfs:label "Hellas"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_bbd18684> ;
+    ecrm:P130i_features_are_also_found_on <https://sappho-digital.com/digital/bibl_bbd18684> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_bbd18684> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_bbd18684> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_2efa7cbb> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_bbd18684_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_bbd18684_sappho-work> .
 
 <https://sappho-digital.com/expression/bibl_bbd3b749> a lrmoo:F2_Expression ;
     rdfs:label "Schau wie sie"@de ;
@@ -123039,6 +123523,17 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_6d322653> ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_c1d6d7c1_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_c1d6d7c1_sappho-work> .
+
+<https://sappho-digital.com/expression/bibl_c1dc5fd0> a lrmoo:F2_Expression ;
+    rdfs:label "Briefe nach Norwegen"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_c1dc5fd0> ;
+    ecrm:P130i_features_are_also_found_on <https://sappho-digital.com/digital/bibl_c1dc5fd0> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_c1dc5fd0> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_c1dc5fd0> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_7d71a5db_1911> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_c1dc5fd0_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_c1dc5fd0_sappho-work> .
 
 <https://sappho-digital.com/expression/bibl_c1e2dcfc> a lrmoo:F2_Expression ;
     rdfs:label "Amanda. Ein Hexenroman"@de ;
@@ -124186,6 +124681,16 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_dc90edfe_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_dc90edfe_sappho-work> .
 
+<https://sappho-digital.com/expression/bibl_dcc63355> a lrmoo:F2_Expression ;
+    rdfs:label "Grand Écart (Tanzlied)"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_dcc63355> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_dcc63355> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Lyrik> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_dcc63355> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_e8915525> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_dcc63355_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_dcc63355_sappho-work> .
+
 <https://sappho-digital.com/expression/bibl_dcf23926> a lrmoo:F2_Expression ;
     rdfs:label "Die Zuneigung"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_dcf23926> ;
@@ -124263,13 +124768,19 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
 <https://sappho-digital.com/expression/bibl_de0b481b> a lrmoo:F2_Expression ;
     rdfs:label "Verzeichnis einiger Verluste"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_de0b481b> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/An_Inventory_of_Losses>,
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/1172114870>,
+        <https://sappho-digital.com/identifier/1465154329450326970003>,
+        <https://sappho-digital.com/identifier/64172942>,
+        <https://sappho-digital.com/identifier/An_Inventory_of_Losses>,
         <https://sappho-digital.com/identifier/Q105676969>,
         <https://sappho-digital.com/identifier/bibl_de0b481b> ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_de0b481b> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_de0b481b> ;
-    owl:sameAs <https://dbpedia.org/resource/An_Inventory_of_Losses>,
+    owl:sameAs <https://d-nb.info/gnd/1172114870>,
+        <https://dbpedia.org/resource/An_Inventory_of_Losses>,
+        <https://viaf.org/viaf/1465154329450326970003>,
+        <https://www.goodreads.com/work/show/64172942>,
         <https://www.wikidata.org/entity/Q105676969> ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_de0b481b_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_de0b481b_sappho-work> .
@@ -124702,6 +125213,17 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_e6bb83f8_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_e6bb83f8_sappho-work> .
 
+<https://sappho-digital.com/expression/bibl_e6c1c86a> a lrmoo:F2_Expression ;
+    rdfs:label "Die Weltverbesserer"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_e6c1c86a> ;
+    ecrm:P130i_features_are_also_found_on <https://sappho-digital.com/digital/bibl_e6c1c86a> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_e6c1c86a> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_e6c1c86a> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_8521eacd> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_e6c1c86a_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_e6c1c86a_sappho-work> .
+
 <https://sappho-digital.com/expression/bibl_e6cac312> a lrmoo:F2_Expression ;
     rdfs:label "Mein Bruder Benjamin. Geschichte eines leichten Lebens: Roman"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_e6cac312> ;
@@ -125122,6 +125644,17 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_983063f3_1755> ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_efaf69f6_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_efaf69f6_sappho-work> .
+
+<https://sappho-digital.com/expression/bibl_efb83d6d> a lrmoo:F2_Expression ;
+    rdfs:label "Adulis. Novelle"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_efb83d6d> ;
+    ecrm:P130i_features_are_also_found_on <https://sappho-digital.com/digital/bibl_efb83d6d> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_efb83d6d> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_efb83d6d> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_85fbae48> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_efb83d6d_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_efb83d6d_sappho-work> .
 
 <https://sappho-digital.com/expression/bibl_efcce8fc> a lrmoo:F2_Expression ;
     rdfs:label "An den May"@de ;
@@ -125781,6 +126314,25 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_875c617n_1954> ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_ffc59e54_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_ffc59e54_sappho-work> .
+
+<https://sappho-digital.com/expression/bibl_k41cs84r> a lrmoo:F2_Expression ;
+    rdfs:label "Die Insel der großen Mutter oder Das Wunder von Île des Dames"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_k41cs84r> ;
+    ecrm:P130i_features_are_also_found_on <https://sappho-digital.com/digital/bibl_k41cs84r> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/4193224-9>,
+        <https://sappho-digital.com/identifier/67145857840123021387>,
+        <https://sappho-digital.com/identifier/Die_Insel_der_großen_Mutter>,
+        <https://sappho-digital.com/identifier/Q28737608>,
+        <https://sappho-digital.com/identifier/bibl_k41cs84r> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Prosa> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_k41cs84r> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_k41cs84r> ;
+    owl:sameAs <https://d-nb.info/gnd/4193224-9>,
+        <https://dbpedia.org/resource/Die_Insel_der_großen_Mutter>,
+        <https://viaf.org/viaf/67145857840123021387>,
+        <https://www.wikidata.org/entity/Q28737608> ;
+    intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_k41cs84r_sappho-work> ;
+    intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_k41cs84r_sappho-work> .
 
 <https://sappho-digital.com/expression/bibl_o1qlf92w> a lrmoo:F2_Expression ;
     rdfs:label "Who Lives, Who Dies, Who Tells Your Story"@de ;
@@ -126755,6 +127307,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_083adf2c>,
         <https://sappho-digital.com/work/sappho-work> .
 
+<https://sappho-digital.com/relation/bibl_08689009_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Gespräch mit Sappho und Sapphos Werk"@de,
+        "Intertextual Relation between Gespräch mit Sappho and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_08689009> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_08689009_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_08689009>,
+        <https://sappho-digital.com/work/sappho-work> .
+
 <https://sappho-digital.com/relation/bibl_08a8200f_sappho-work> a intro:INT31_IntertextualRelation ;
     rdfs:label "Intertextuelle Relation zwischen Mode-Ode und Sapphos Werk"@de,
         "Intertextual Relation between Mode-Ode and Sapphos Werk"@en ;
@@ -126791,6 +127352,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_0a263b83> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_0a263b83_sappho-work> ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_0a263b83>,
+        <https://sappho-digital.com/work/sappho-work> .
+
+<https://sappho-digital.com/relation/bibl_0a472d12_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Ein Kind des Volkes oder Der Arbeiterkönig. Politisch-socialer Roman aus der Gegenwart. Bd. 2 und Sapphos Werk"@de,
+        "Intertextual Relation between Ein Kind des Volkes oder Der Arbeiterkönig. Politisch-socialer Roman aus der Gegenwart. Bd. 2 and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_0a472d12> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_0a472d12_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_0a472d12>,
         <https://sappho-digital.com/work/sappho-work> .
 
 <https://sappho-digital.com/relation/bibl_0aa2f93e_sappho-work> a intro:INT31_IntertextualRelation ;
@@ -126984,6 +127554,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_100a244e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_100a244e_sappho-work> ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_100a244e>,
+        <https://sappho-digital.com/work/sappho-work> .
+
+<https://sappho-digital.com/relation/bibl_1022e85a_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Zwei Titanen und Sapphos Werk"@de,
+        "Intertextual Relation between Zwei Titanen and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_1022e85a> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_1022e85a_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_1022e85a>,
         <https://sappho-digital.com/work/sappho-work> .
 
 <https://sappho-digital.com/relation/bibl_1034f40b_sappho-work> a intro:INT31_IntertextualRelation ;
@@ -127334,6 +127913,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_1ab95e47>,
         <https://sappho-digital.com/work/sappho-work> .
 
+<https://sappho-digital.com/relation/bibl_1ac45841_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Neben den Geleisen und Sapphos Werk"@de,
+        "Intertextual Relation between Neben den Geleisen and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_1ac45841> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_1ac45841_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_1ac45841>,
+        <https://sappho-digital.com/work/sappho-work> .
+
 <https://sappho-digital.com/relation/bibl_1ac52bab_sappho-work> a intro:INT31_IntertextualRelation ;
     rdfs:label "Intertextuelle Relation zwischen Meine Reise im Orient, Bd. 2 und Sapphos Werk"@de,
         "Intertextual Relation between Meine Reise im Orient, Bd. 2 and Sapphos Werk"@en ;
@@ -127478,6 +128066,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_1edf6646> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_1edf6646_sappho-work> ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_1edf6646>,
+        <https://sappho-digital.com/work/sappho-work> .
+
+<https://sappho-digital.com/relation/bibl_1f3d3631_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Briefe eines Unbekannten. Bd. 2 und Sapphos Werk"@de,
+        "Intertextual Relation between Briefe eines Unbekannten. Bd. 2 and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_1f3d3631> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_1f3d3631_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_1f3d3631>,
         <https://sappho-digital.com/work/sappho-work> .
 
 <https://sappho-digital.com/relation/bibl_1f5c9a50_sappho-work> a intro:INT31_IntertextualRelation ;
@@ -127750,15 +128347,6 @@ Philosophen zu Sanssouci"""@de ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_2531c83d>,
         <https://sappho-digital.com/work/sappho-work> .
 
-<https://sappho-digital.com/relation/bibl_25d08a4b_sappho-work> a intro:INT31_IntertextualRelation ;
-    rdfs:label "Intertextuelle Relation zwischen Zwei Titanen und Sapphos Werk"@de,
-        "Intertextual Relation between Zwei Titanen and Sapphos Werk"@en ;
-    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
-    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_25d08a4b> ;
-    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_25d08a4b_sappho-work> ;
-    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_25d08a4b>,
-        <https://sappho-digital.com/work/sappho-work> .
-
 <https://sappho-digital.com/relation/bibl_264bf5aa_sappho-work> a intro:INT31_IntertextualRelation ;
     rdfs:label "Intertextuelle Relation zwischen Isegrimm: vaterländischer Roman und Sapphos Werk"@de,
         "Intertextual Relation between Isegrimm: vaterländischer Roman and Sapphos Werk"@en ;
@@ -127992,6 +128580,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_2bf5e667>,
         <https://sappho-digital.com/work/sappho-work> .
 
+<https://sappho-digital.com/relation/bibl_2c66f611_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Humoristische Eilwagen-Reise durch die Theaterwelt. Quodlibet in zwey Acten nebst einem damit verbundenen Vorspiele, unter dem Titel: Der Theaterdiener, die Benefizvorstellung und das Quodlibet und Sapphos Werk"@de,
+        "Intertextual Relation between Humoristische Eilwagen-Reise durch die Theaterwelt. Quodlibet in zwey Acten nebst einem damit verbundenen Vorspiele, unter dem Titel: Der Theaterdiener, die Benefizvorstellung und das Quodlibet and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_2c66f611> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_2c66f611_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_2c66f611>,
+        <https://sappho-digital.com/work/sappho-work> .
+
 <https://sappho-digital.com/relation/bibl_2c7f182d_sappho-work> a intro:INT31_IntertextualRelation ;
     rdfs:label "Intertextuelle Relation zwischen Gräfin Thunen. Intimes vom Oesterreichisch-ungarischen Hochadel und Sapphos Werk"@de,
         "Intertextual Relation between Gräfin Thunen. Intimes vom Oesterreichisch-ungarischen Hochadel and Sapphos Werk"@en ;
@@ -128145,6 +128742,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_2f25238d> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_2f25238d_sappho-work> ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_2f25238d>,
+        <https://sappho-digital.com/work/sappho-work> .
+
+<https://sappho-digital.com/relation/bibl_2fbd5c79_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Gymnasium besuchts Bordell und Sapphos Werk"@de,
+        "Intertextual Relation between Gymnasium besuchts Bordell and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_2fbd5c79> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_2fbd5c79_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_2fbd5c79>,
         <https://sappho-digital.com/work/sappho-work> .
 
 <https://sappho-digital.com/relation/bibl_2q9ve90m_sappho-work> a intro:INT31_IntertextualRelation ;
@@ -128746,6 +129352,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_3e17f7f1>,
         <https://sappho-digital.com/work/sappho-work> .
 
+<https://sappho-digital.com/relation/bibl_3e2cdf2a_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Else Lasker-Schüler und Sapphos Werk"@de,
+        "Intertextual Relation between Else Lasker-Schüler and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_3e2cdf2a> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_3e2cdf2a_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_3e2cdf2a>,
+        <https://sappho-digital.com/work/sappho-work> .
+
 <https://sappho-digital.com/relation/bibl_3e42ceb3_sappho-work> a intro:INT31_IntertextualRelation ;
     rdfs:label "Intertextuelle Relation zwischen Seelenbrautfahrt und Sapphos Werk"@de,
         "Intertextual Relation between Seelenbrautfahrt and Sapphos Werk"@en ;
@@ -128995,6 +129610,24 @@ Philosophen zu Sanssouci"""@de ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_4422d6d6>,
         <https://sappho-digital.com/work/sappho-work> .
 
+<https://sappho-digital.com/relation/bibl_4425f143_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Der Major. Roman und Sapphos Werk"@de,
+        "Intertextual Relation between Der Major. Roman and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_4425f143> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_4425f143_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_4425f143>,
+        <https://sappho-digital.com/work/sappho-work> .
+
+<https://sappho-digital.com/relation/bibl_443c81be_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Amanda Waldau und Sapphos Werk"@de,
+        "Intertextual Relation between Amanda Waldau and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_443c81be> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_443c81be_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_443c81be>,
+        <https://sappho-digital.com/work/sappho-work> .
+
 <https://sappho-digital.com/relation/bibl_44cee719_sappho-work> a intro:INT31_IntertextualRelation ;
     rdfs:label "Intertextuelle Relation zwischen Zlatna, Oder von Rhue des Gemütes und Sapphos Werk"@de,
         "Intertextual Relation between Zlatna, Oder von Rhue des Gemütes and Sapphos Werk"@en ;
@@ -129222,6 +129855,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_4a89b0d9>,
         <https://sappho-digital.com/work/sappho-work> .
 
+<https://sappho-digital.com/relation/bibl_4aa92fa2_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Teufel, Marietta! und Sapphos Werk"@de,
+        "Intertextual Relation between Teufel, Marietta! and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_4aa92fa2> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_4aa92fa2_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_4aa92fa2>,
+        <https://sappho-digital.com/work/sappho-work> .
+
 <https://sappho-digital.com/relation/bibl_4aaee03c_sappho-work> a intro:INT31_IntertextualRelation ;
     rdfs:label "Intertextuelle Relation zwischen Zögernder Frühling und Sapphos Werk"@de,
         "Intertextual Relation between Zögernder Frühling and Sapphos Werk"@en ;
@@ -129305,6 +129947,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_4fcb8123> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_4fcb8123_sappho-work> ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_4fcb8123>,
+        <https://sappho-digital.com/work/sappho-work> .
+
+<https://sappho-digital.com/relation/bibl_50c1d255_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Aus einer früheren Fassung der Tragödie „Die Besessenen“ und Sapphos Werk"@de,
+        "Intertextual Relation between Aus einer früheren Fassung der Tragödie „Die Besessenen“ and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_50c1d255> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_50c1d255_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_50c1d255>,
         <https://sappho-digital.com/work/sappho-work> .
 
 <https://sappho-digital.com/relation/bibl_50d9444a_sappho-work> a intro:INT31_IntertextualRelation ;
@@ -130591,6 +131242,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_7611b033>,
         <https://sappho-digital.com/work/sappho-work> .
 
+<https://sappho-digital.com/relation/bibl_7611bd84_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Das Gastmahl der Xanthippe. Eine überzeitliche Begegnung und Sapphos Werk"@de,
+        "Intertextual Relation between Das Gastmahl der Xanthippe. Eine überzeitliche Begegnung and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_7611bd84> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_7611bd84_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_7611bd84>,
+        <https://sappho-digital.com/work/sappho-work> .
+
 <https://sappho-digital.com/relation/bibl_769655fe_sappho-work> a intro:INT31_IntertextualRelation ;
     rdfs:label "Intertextuelle Relation zwischen Was zählt und Sapphos Werk"@de,
         "Intertextual Relation between Was zählt and Sapphos Werk"@en ;
@@ -131065,6 +131725,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_82d5b99e>,
         <https://sappho-digital.com/work/sappho-work> .
 
+<https://sappho-digital.com/relation/bibl_830bbe18_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Tagebuchblätter einer Emancipierten und Sapphos Werk"@de,
+        "Intertextual Relation between Tagebuchblätter einer Emancipierten and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_830bbe18> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_830bbe18_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_830bbe18>,
+        <https://sappho-digital.com/work/sappho-work> .
+
 <https://sappho-digital.com/relation/bibl_834356d7_sappho-work> a intro:INT31_IntertextualRelation ;
     rdfs:label "Intertextuelle Relation zwischen Der Geschmack und Sapphos Werk"@de,
         "Intertextual Relation between Der Geschmack and Sapphos Werk"@en ;
@@ -131480,6 +132149,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_8bfd685a> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_8bfd685a_sappho-work> ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_8bfd685a>,
+        <https://sappho-digital.com/work/sappho-work> .
+
+<https://sappho-digital.com/relation/bibl_8c16e82f_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Der grüne Esel und Sapphos Werk"@de,
+        "Intertextual Relation between Der grüne Esel and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_8c16e82f> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_8c16e82f_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_8c16e82f>,
         <https://sappho-digital.com/work/sappho-work> .
 
 <https://sappho-digital.com/relation/bibl_8c43df20_sappho-work> a intro:INT31_IntertextualRelation ;
@@ -132307,6 +132985,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_9ef5617d>,
         <https://sappho-digital.com/work/sappho-work> .
 
+<https://sappho-digital.com/relation/bibl_9f84efac_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Gudrun, die Geschichte und ihr Unterricht und Sapphos Werk"@de,
+        "Intertextual Relation between Gudrun, die Geschichte und ihr Unterricht and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_9f84efac> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_9f84efac_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_9f84efac>,
+        <https://sappho-digital.com/work/sappho-work> .
+
 <https://sappho-digital.com/relation/bibl_a004d085_sappho-work> a intro:INT31_IntertextualRelation ;
     rdfs:label "Intertextuelle Relation zwischen Eine Frau und vier Verehrer. Novelle und Sapphos Werk"@de,
         "Intertextual Relation between Eine Frau und vier Verehrer. Novelle and Sapphos Werk"@en ;
@@ -132627,6 +133314,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_a667785d>,
         <https://sappho-digital.com/work/sappho-work> .
 
+<https://sappho-digital.com/relation/bibl_a68b98db_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Kleine Verhältnisse. Novelle und Sapphos Werk"@de,
+        "Intertextual Relation between Kleine Verhältnisse. Novelle and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_a68b98db> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_a68b98db_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_a68b98db>,
+        <https://sappho-digital.com/work/sappho-work> .
+
 <https://sappho-digital.com/relation/bibl_a717f073_sappho-work> a intro:INT31_IntertextualRelation ;
     rdfs:label "Intertextuelle Relation zwischen Die Umarmung. Im Herbst 1776 und Sapphos Werk"@de,
         "Intertextual Relation between Die Umarmung. Im Herbst 1776 and Sapphos Werk"@en ;
@@ -132739,6 +133435,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_a90v42bm>,
         <https://sappho-digital.com/work/sappho-work> .
 
+<https://sappho-digital.com/relation/bibl_a94803de_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Schweizerdichter im Himmel. Eine Episode und Sapphos Werk"@de,
+        "Intertextual Relation between Schweizerdichter im Himmel. Eine Episode and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_a94803de> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_a94803de_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_a94803de>,
+        <https://sappho-digital.com/work/sappho-work> .
+
 <https://sappho-digital.com/relation/bibl_a96f9c8c_sappho-work> a intro:INT31_IntertextualRelation ;
     rdfs:label "Intertextuelle Relation zwischen Das Eisen und Sapphos Werk"@de,
         "Intertextual Relation between Das Eisen and Sapphos Werk"@en ;
@@ -132836,6 +133541,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_ac17d87e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_ac17d87e_sappho-work> ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_ac17d87e>,
+        <https://sappho-digital.com/work/sappho-work> .
+
+<https://sappho-digital.com/relation/bibl_ac403d0b_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Erinnerung an Sappho und Sapphos Werk"@de,
+        "Intertextual Relation between Erinnerung an Sappho and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_ac403d0b> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_ac403d0b_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_ac403d0b>,
         <https://sappho-digital.com/work/sappho-work> .
 
 <https://sappho-digital.com/relation/bibl_acd99842_sappho-work> a intro:INT31_IntertextualRelation ;
@@ -133489,6 +134203,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_ba71b2e5>,
         <https://sappho-digital.com/work/sappho-work> .
 
+<https://sappho-digital.com/relation/bibl_ba7ae77d_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Sappho und Sapphos Werk"@de,
+        "Intertextual Relation between Sappho and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_ba7ae77d> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_ba7ae77d_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_ba7ae77d>,
+        <https://sappho-digital.com/work/sappho-work> .
+
 <https://sappho-digital.com/relation/bibl_ba81ab70_sappho-work> a intro:INT31_IntertextualRelation ;
     rdfs:label "Intertextuelle Relation zwischen Elegie, am Genfersee geschrieben und Sapphos Werk"@de,
         "Intertextual Relation between Elegie, am Genfersee geschrieben and Sapphos Werk"@en ;
@@ -133543,6 +134266,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_bb952391> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_bb952391_sappho-work> ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_bb952391>,
+        <https://sappho-digital.com/work/sappho-work> .
+
+<https://sappho-digital.com/relation/bibl_bbd18684_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Hellas und Sapphos Werk"@de,
+        "Intertextual Relation between Hellas and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_bbd18684> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_bbd18684_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_bbd18684>,
         <https://sappho-digital.com/work/sappho-work> .
 
 <https://sappho-digital.com/relation/bibl_bbd3b749_sappho-work> a intro:INT31_IntertextualRelation ;
@@ -133741,6 +134473,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_c1d6d7c1> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_c1d6d7c1_sappho-work> ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_c1d6d7c1>,
+        <https://sappho-digital.com/work/sappho-work> .
+
+<https://sappho-digital.com/relation/bibl_c1dc5fd0_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Briefe nach Norwegen und Sapphos Werk"@de,
+        "Intertextual Relation between Briefe nach Norwegen and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_c1dc5fd0> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_c1dc5fd0_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_c1dc5fd0>,
         <https://sappho-digital.com/work/sappho-work> .
 
 <https://sappho-digital.com/relation/bibl_c1e2dcfc_sappho-work> a intro:INT31_IntertextualRelation ;
@@ -134783,6 +135524,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_dc90edfe>,
         <https://sappho-digital.com/work/sappho-work> .
 
+<https://sappho-digital.com/relation/bibl_dcc63355_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Grand Écart (Tanzlied) und Sapphos Werk"@de,
+        "Intertextual Relation between Grand Écart (Tanzlied) and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_dcc63355> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_dcc63355_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_dcc63355>,
+        <https://sappho-digital.com/work/sappho-work> .
+
 <https://sappho-digital.com/relation/bibl_dcf23926_sappho-work> a intro:INT31_IntertextualRelation ;
     rdfs:label "Intertextuelle Relation zwischen Die Zuneigung und Sapphos Werk"@de,
         "Intertextual Relation between Die Zuneigung and Sapphos Werk"@en ;
@@ -135259,6 +136009,15 @@ Philosophen zu Sanssouci"""@de ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_e6bb83f8>,
         <https://sappho-digital.com/work/sappho-work> .
 
+<https://sappho-digital.com/relation/bibl_e6c1c86a_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Die Weltverbesserer und Sapphos Werk"@de,
+        "Intertextual Relation between Die Weltverbesserer and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_e6c1c86a> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_e6c1c86a_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_e6c1c86a>,
+        <https://sappho-digital.com/work/sappho-work> .
+
 <https://sappho-digital.com/relation/bibl_e6cac312_sappho-work> a intro:INT31_IntertextualRelation ;
     rdfs:label "Intertextuelle Relation zwischen Mein Bruder Benjamin. Geschichte eines leichten Lebens: Roman und Sapphos Werk"@de,
         "Intertextual Relation between Mein Bruder Benjamin. Geschichte eines leichten Lebens: Roman and Sapphos Werk"@en ;
@@ -135663,6 +136422,15 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_efaf69f6> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_efaf69f6_sappho-work> ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_efaf69f6>,
+        <https://sappho-digital.com/work/sappho-work> .
+
+<https://sappho-digital.com/relation/bibl_efb83d6d_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Adulis. Novelle und Sapphos Werk"@de,
+        "Intertextual Relation between Adulis. Novelle and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_efb83d6d> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_efb83d6d_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_efb83d6d>,
         <https://sappho-digital.com/work/sappho-work> .
 
 <https://sappho-digital.com/relation/bibl_efcce8fc_sappho-work> a intro:INT31_IntertextualRelation ;
@@ -136309,6 +137077,15 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_ffc59e54> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_ffc59e54_sappho-work> ;
     intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_ffc59e54>,
+        <https://sappho-digital.com/work/sappho-work> .
+
+<https://sappho-digital.com/relation/bibl_k41cs84r_sappho-work> a intro:INT31_IntertextualRelation ;
+    rdfs:label "Intertextuelle Relation zwischen Die Insel der großen Mutter oder Das Wunder von Île des Dames und Sapphos Werk"@de,
+        "Intertextual Relation between Die Insel der großen Mutter oder Das Wunder von Île des Dames and Sapphos Werk"@en ;
+    intro:R12_hasReferredToEntity <https://sappho-digital.com/work/sappho-work> ;
+    intro:R13_hasReferringEntity <https://sappho-digital.com/expression/bibl_k41cs84r> ;
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_k41cs84r_sappho-work> ;
+    intro:R24_hasRelatedEntity <https://sappho-digital.com/expression/bibl_k41cs84r>,
         <https://sappho-digital.com/work/sappho-work> .
 
 <https://sappho-digital.com/relation/bibl_o1qlf92w_sappho-work> a intro:INT31_IntertextualRelation ;
@@ -320598,10 +321375,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_07eb8e54_sappho-work>,
         <https://sappho-digital.com/relation/bibl_082bb21a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_083adf2c_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_08689009_sappho-work>,
         <https://sappho-digital.com/relation/bibl_08a8200f_sappho-work>,
         <https://sappho-digital.com/relation/bibl_0a08619a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_0a0e461e_sappho-work>,
         <https://sappho-digital.com/relation/bibl_0a263b83_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_0a472d12_sappho-work>,
         <https://sappho-digital.com/relation/bibl_0aa2f93e_sappho-work>,
         <https://sappho-digital.com/relation/bibl_0aff92e3_sappho-work>,
         <https://sappho-digital.com/relation/bibl_0b469aa3_sappho-work>,
@@ -320623,6 +321402,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_0f7a6b8d_sappho-work>,
         <https://sappho-digital.com/relation/bibl_0fef5e50_sappho-work>,
         <https://sappho-digital.com/relation/bibl_100a244e_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_1022e85a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1034f40b_sappho-work>,
         <https://sappho-digital.com/relation/bibl_10aa135f_sappho-work>,
         <https://sappho-digital.com/relation/bibl_11081fdb_sappho-work>,
@@ -320661,6 +321441,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_1a83d097_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1aa990d1_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1ab95e47_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_1ac45841_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1ac52bab_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1aca788a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1b2fb291_sappho-work>,
@@ -320677,6 +321458,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_1e8c3c4f_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1ec70c71_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1edf6646_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_1f3d3631_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1f5c9a50_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1f78f814_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1fb96ce9_sappho-work>,
@@ -320707,7 +321489,6 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_2527654c_sappho-work>,
         <https://sappho-digital.com/relation/bibl_252f26b0_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2531c83d_sappho-work>,
-        <https://sappho-digital.com/relation/bibl_25d08a4b_sappho-work>,
         <https://sappho-digital.com/relation/bibl_264bf5aa_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2659860a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2660d82e_sappho-work>,
@@ -320733,6 +321514,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_2b497f94_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2b62a4bc_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2bf5e667_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_2c66f611_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2c7f182d_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2ca7f274_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2cb6f632_sappho-work>,
@@ -320750,6 +321532,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_2ed74e05_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2f05f5a4_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2f25238d_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_2fbd5c79_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2q9ve90m_sappho-work>,
         <https://sappho-digital.com/relation/bibl_30774635_sappho-work>,
         <https://sappho-digital.com/relation/bibl_3095a510_sappho-work>,
@@ -320814,6 +321597,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_3d74d35a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_3d7eaebd_sappho-work>,
         <https://sappho-digital.com/relation/bibl_3e17f7f1_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_3e2cdf2a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_3e42ceb3_sappho-work>,
         <https://sappho-digital.com/relation/bibl_3e5cc109_sappho-work>,
         <https://sappho-digital.com/relation/bibl_3ee4c831_sappho-work>,
@@ -320841,6 +321625,8 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_4347ab1c_sappho-work>,
         <https://sappho-digital.com/relation/bibl_436d1da4_sappho-work>,
         <https://sappho-digital.com/relation/bibl_4422d6d6_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_4425f143_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_443c81be_sappho-work>,
         <https://sappho-digital.com/relation/bibl_44cee719_sappho-work>,
         <https://sappho-digital.com/relation/bibl_452522a8_sappho-work>,
         <https://sappho-digital.com/relation/bibl_45252539_sappho-work>,
@@ -320866,6 +321652,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_49d62728_sappho-work>,
         <https://sappho-digital.com/relation/bibl_4a0f3e87_sappho-work>,
         <https://sappho-digital.com/relation/bibl_4a89b0d9_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_4aa92fa2_sappho-work>,
         <https://sappho-digital.com/relation/bibl_4aaee03c_sappho-work>,
         <https://sappho-digital.com/relation/bibl_4bdd1098_sappho-work>,
         <https://sappho-digital.com/relation/bibl_4ca8cbab_sappho-work>,
@@ -320875,6 +321662,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_4e970562_sappho-work>,
         <https://sappho-digital.com/relation/bibl_4ea873ad_sappho-work>,
         <https://sappho-digital.com/relation/bibl_4fcb8123_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_50c1d255_sappho-work>,
         <https://sappho-digital.com/relation/bibl_50d9444a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_51704942_sappho-work>,
         <https://sappho-digital.com/relation/bibl_51a3d5d2_sappho-work>,
@@ -321015,6 +321803,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_7436971e_sappho-work>,
         <https://sappho-digital.com/relation/bibl_75b2a9d6_sappho-work>,
         <https://sappho-digital.com/relation/bibl_7611b033_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_7611bd84_sappho-work>,
         <https://sappho-digital.com/relation/bibl_769655fe_sappho-work>,
         <https://sappho-digital.com/relation/bibl_76ad289e_sappho-work>,
         <https://sappho-digital.com/relation/bibl_76cc9ac6_sappho-work>,
@@ -321067,6 +321856,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_82abb54b_sappho-work>,
         <https://sappho-digital.com/relation/bibl_82b03de6_sappho-work>,
         <https://sappho-digital.com/relation/bibl_82d5b99e_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_830bbe18_sappho-work>,
         <https://sappho-digital.com/relation/bibl_834356d7_sappho-work>,
         <https://sappho-digital.com/relation/bibl_834c4f1f_sappho-work>,
         <https://sappho-digital.com/relation/bibl_840ec8fc_sappho-work>,
@@ -321112,6 +321902,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_8bb104b1_sappho-work>,
         <https://sappho-digital.com/relation/bibl_8bd05323_sappho-work>,
         <https://sappho-digital.com/relation/bibl_8bfd685a_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_8c16e82f_sappho-work>,
         <https://sappho-digital.com/relation/bibl_8c43df20_sappho-work>,
         <https://sappho-digital.com/relation/bibl_8c4c22d7_sappho-work>,
         <https://sappho-digital.com/relation/bibl_8c5db259_sappho-work>,
@@ -321200,6 +321991,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_9e710ddb_sappho-work>,
         <https://sappho-digital.com/relation/bibl_9ee5b1ff_sappho-work>,
         <https://sappho-digital.com/relation/bibl_9ef5617d_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_9f84efac_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a004d085_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a0a1c2a3_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a0bace6b_sappho-work>,
@@ -321234,6 +322026,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_a5d99617_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a5fc1475_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a667785d_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_a68b98db_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a717f073_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a72e1c0c_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a77dcc08_sappho-work>,
@@ -321246,6 +322039,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_a854d283_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a88a263f_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a90v42bm_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_a94803de_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a96f9c8c_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a9873d93_sappho-work>,
         <https://sappho-digital.com/relation/bibl_aa26251a_sappho-work>,
@@ -321257,6 +322051,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_ac12690c_sappho-work>,
         <https://sappho-digital.com/relation/bibl_ac17a500_sappho-work>,
         <https://sappho-digital.com/relation/bibl_ac17d87e_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_ac403d0b_sappho-work>,
         <https://sappho-digital.com/relation/bibl_acd99842_sappho-work>,
         <https://sappho-digital.com/relation/bibl_ad4166f9_sappho-work>,
         <https://sappho-digital.com/relation/bibl_ad532fcf_sappho-work>,
@@ -321322,12 +322117,14 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_b97aa883_sappho-work>,
         <https://sappho-digital.com/relation/bibl_b9d5f2ed_sappho-work>,
         <https://sappho-digital.com/relation/bibl_ba71b2e5_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_ba7ae77d_sappho-work>,
         <https://sappho-digital.com/relation/bibl_ba81ab70_sappho-work>,
         <https://sappho-digital.com/relation/bibl_baaeb54e_sappho-work>,
         <https://sappho-digital.com/relation/bibl_babd6d45_sappho-work>,
         <https://sappho-digital.com/relation/bibl_baf110b3_sappho-work>,
         <https://sappho-digital.com/relation/bibl_bb11d706_sappho-work>,
         <https://sappho-digital.com/relation/bibl_bb952391_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_bbd18684_sappho-work>,
         <https://sappho-digital.com/relation/bibl_bbd3b749_sappho-work>,
         <https://sappho-digital.com/relation/bibl_bbd47f9e_sappho-work>,
         <https://sappho-digital.com/relation/bibl_bc005b45_sappho-work>,
@@ -321350,6 +322147,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_c151d4a4_sappho-work>,
         <https://sappho-digital.com/relation/bibl_c1ceb83a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_c1d6d7c1_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_c1dc5fd0_sappho-work>,
         <https://sappho-digital.com/relation/bibl_c1e2dcfc_sappho-work>,
         <https://sappho-digital.com/relation/bibl_c221648b_sappho-work>,
         <https://sappho-digital.com/relation/bibl_c2705125_sappho-work>,
@@ -321461,6 +322259,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_dbf48f68_sappho-work>,
         <https://sappho-digital.com/relation/bibl_dc836aeb_sappho-work>,
         <https://sappho-digital.com/relation/bibl_dc90edfe_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_dcc63355_sappho-work>,
         <https://sappho-digital.com/relation/bibl_dcf23926_sappho-work>,
         <https://sappho-digital.com/relation/bibl_dcf2ae5e_sappho-work>,
         <https://sappho-digital.com/relation/bibl_dd084662_sappho-work>,
@@ -321513,6 +322312,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_e623029b_sappho-work>,
         <https://sappho-digital.com/relation/bibl_e66096f3_sappho-work>,
         <https://sappho-digital.com/relation/bibl_e6bb83f8_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_e6c1c86a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_e6cac312_sappho-work>,
         <https://sappho-digital.com/relation/bibl_e6dbb488_sappho-work>,
         <https://sappho-digital.com/relation/bibl_e745799e_sappho-work>,
@@ -321557,6 +322357,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_ef11b6b0_sappho-work>,
         <https://sappho-digital.com/relation/bibl_ef6114e5_sappho-work>,
         <https://sappho-digital.com/relation/bibl_efaf69f6_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_efb83d6d_sappho-work>,
         <https://sappho-digital.com/relation/bibl_efcce8fc_sappho-work>,
         <https://sappho-digital.com/relation/bibl_efcd32b0_sappho-work>,
         <https://sappho-digital.com/relation/bibl_efd3ad7c_sappho-work>,
@@ -321627,6 +322428,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_ffa09bcd_sappho-work>,
         <https://sappho-digital.com/relation/bibl_ffadfa01_sappho-work>,
         <https://sappho-digital.com/relation/bibl_ffc59e54_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_k41cs84r_sappho-work>,
         <https://sappho-digital.com/relation/bibl_o1qlf92w_sappho-work>,
         <https://sappho-digital.com/relation/bibl_o4qqfh2c_sappho-work>,
         <https://sappho-digital.com/relation/bibl_o708fh9l_sappho-work>,
@@ -321663,10 +322465,12 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_07eb8e54_sappho-work>,
         <https://sappho-digital.com/relation/bibl_082bb21a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_083adf2c_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_08689009_sappho-work>,
         <https://sappho-digital.com/relation/bibl_08a8200f_sappho-work>,
         <https://sappho-digital.com/relation/bibl_0a08619a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_0a0e461e_sappho-work>,
         <https://sappho-digital.com/relation/bibl_0a263b83_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_0a472d12_sappho-work>,
         <https://sappho-digital.com/relation/bibl_0aa2f93e_sappho-work>,
         <https://sappho-digital.com/relation/bibl_0aff92e3_sappho-work>,
         <https://sappho-digital.com/relation/bibl_0b469aa3_sappho-work>,
@@ -321688,6 +322492,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_0f7a6b8d_sappho-work>,
         <https://sappho-digital.com/relation/bibl_0fef5e50_sappho-work>,
         <https://sappho-digital.com/relation/bibl_100a244e_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_1022e85a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1034f40b_sappho-work>,
         <https://sappho-digital.com/relation/bibl_10aa135f_sappho-work>,
         <https://sappho-digital.com/relation/bibl_11081fdb_sappho-work>,
@@ -321726,6 +322531,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_1a83d097_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1aa990d1_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1ab95e47_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_1ac45841_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1ac52bab_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1aca788a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1b2fb291_sappho-work>,
@@ -321742,6 +322548,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_1e8c3c4f_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1ec70c71_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1edf6646_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_1f3d3631_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1f5c9a50_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1f78f814_sappho-work>,
         <https://sappho-digital.com/relation/bibl_1fb96ce9_sappho-work>,
@@ -321772,7 +322579,6 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_2527654c_sappho-work>,
         <https://sappho-digital.com/relation/bibl_252f26b0_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2531c83d_sappho-work>,
-        <https://sappho-digital.com/relation/bibl_25d08a4b_sappho-work>,
         <https://sappho-digital.com/relation/bibl_264bf5aa_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2659860a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2660d82e_sappho-work>,
@@ -321798,6 +322604,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_2b497f94_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2b62a4bc_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2bf5e667_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_2c66f611_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2c7f182d_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2ca7f274_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2cb6f632_sappho-work>,
@@ -321815,6 +322622,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_2ed74e05_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2f05f5a4_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2f25238d_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_2fbd5c79_sappho-work>,
         <https://sappho-digital.com/relation/bibl_2q9ve90m_sappho-work>,
         <https://sappho-digital.com/relation/bibl_30774635_sappho-work>,
         <https://sappho-digital.com/relation/bibl_3095a510_sappho-work>,
@@ -321879,6 +322687,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_3d74d35a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_3d7eaebd_sappho-work>,
         <https://sappho-digital.com/relation/bibl_3e17f7f1_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_3e2cdf2a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_3e42ceb3_sappho-work>,
         <https://sappho-digital.com/relation/bibl_3e5cc109_sappho-work>,
         <https://sappho-digital.com/relation/bibl_3ee4c831_sappho-work>,
@@ -321906,6 +322715,8 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_4347ab1c_sappho-work>,
         <https://sappho-digital.com/relation/bibl_436d1da4_sappho-work>,
         <https://sappho-digital.com/relation/bibl_4422d6d6_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_4425f143_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_443c81be_sappho-work>,
         <https://sappho-digital.com/relation/bibl_44cee719_sappho-work>,
         <https://sappho-digital.com/relation/bibl_452522a8_sappho-work>,
         <https://sappho-digital.com/relation/bibl_45252539_sappho-work>,
@@ -321931,6 +322742,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_49d62728_sappho-work>,
         <https://sappho-digital.com/relation/bibl_4a0f3e87_sappho-work>,
         <https://sappho-digital.com/relation/bibl_4a89b0d9_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_4aa92fa2_sappho-work>,
         <https://sappho-digital.com/relation/bibl_4aaee03c_sappho-work>,
         <https://sappho-digital.com/relation/bibl_4bdd1098_sappho-work>,
         <https://sappho-digital.com/relation/bibl_4ca8cbab_sappho-work>,
@@ -321940,6 +322752,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_4e970562_sappho-work>,
         <https://sappho-digital.com/relation/bibl_4ea873ad_sappho-work>,
         <https://sappho-digital.com/relation/bibl_4fcb8123_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_50c1d255_sappho-work>,
         <https://sappho-digital.com/relation/bibl_50d9444a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_51704942_sappho-work>,
         <https://sappho-digital.com/relation/bibl_51a3d5d2_sappho-work>,
@@ -322080,6 +322893,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_7436971e_sappho-work>,
         <https://sappho-digital.com/relation/bibl_75b2a9d6_sappho-work>,
         <https://sappho-digital.com/relation/bibl_7611b033_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_7611bd84_sappho-work>,
         <https://sappho-digital.com/relation/bibl_769655fe_sappho-work>,
         <https://sappho-digital.com/relation/bibl_76ad289e_sappho-work>,
         <https://sappho-digital.com/relation/bibl_76cc9ac6_sappho-work>,
@@ -322132,6 +322946,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_82abb54b_sappho-work>,
         <https://sappho-digital.com/relation/bibl_82b03de6_sappho-work>,
         <https://sappho-digital.com/relation/bibl_82d5b99e_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_830bbe18_sappho-work>,
         <https://sappho-digital.com/relation/bibl_834356d7_sappho-work>,
         <https://sappho-digital.com/relation/bibl_834c4f1f_sappho-work>,
         <https://sappho-digital.com/relation/bibl_840ec8fc_sappho-work>,
@@ -322177,6 +322992,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_8bb104b1_sappho-work>,
         <https://sappho-digital.com/relation/bibl_8bd05323_sappho-work>,
         <https://sappho-digital.com/relation/bibl_8bfd685a_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_8c16e82f_sappho-work>,
         <https://sappho-digital.com/relation/bibl_8c43df20_sappho-work>,
         <https://sappho-digital.com/relation/bibl_8c4c22d7_sappho-work>,
         <https://sappho-digital.com/relation/bibl_8c5db259_sappho-work>,
@@ -322265,6 +323081,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_9e710ddb_sappho-work>,
         <https://sappho-digital.com/relation/bibl_9ee5b1ff_sappho-work>,
         <https://sappho-digital.com/relation/bibl_9ef5617d_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_9f84efac_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a004d085_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a0a1c2a3_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a0bace6b_sappho-work>,
@@ -322299,6 +323116,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_a5d99617_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a5fc1475_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a667785d_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_a68b98db_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a717f073_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a72e1c0c_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a77dcc08_sappho-work>,
@@ -322311,6 +323129,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_a854d283_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a88a263f_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a90v42bm_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_a94803de_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a96f9c8c_sappho-work>,
         <https://sappho-digital.com/relation/bibl_a9873d93_sappho-work>,
         <https://sappho-digital.com/relation/bibl_aa26251a_sappho-work>,
@@ -322322,6 +323141,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_ac12690c_sappho-work>,
         <https://sappho-digital.com/relation/bibl_ac17a500_sappho-work>,
         <https://sappho-digital.com/relation/bibl_ac17d87e_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_ac403d0b_sappho-work>,
         <https://sappho-digital.com/relation/bibl_acd99842_sappho-work>,
         <https://sappho-digital.com/relation/bibl_ad4166f9_sappho-work>,
         <https://sappho-digital.com/relation/bibl_ad532fcf_sappho-work>,
@@ -322387,12 +323207,14 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_b97aa883_sappho-work>,
         <https://sappho-digital.com/relation/bibl_b9d5f2ed_sappho-work>,
         <https://sappho-digital.com/relation/bibl_ba71b2e5_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_ba7ae77d_sappho-work>,
         <https://sappho-digital.com/relation/bibl_ba81ab70_sappho-work>,
         <https://sappho-digital.com/relation/bibl_baaeb54e_sappho-work>,
         <https://sappho-digital.com/relation/bibl_babd6d45_sappho-work>,
         <https://sappho-digital.com/relation/bibl_baf110b3_sappho-work>,
         <https://sappho-digital.com/relation/bibl_bb11d706_sappho-work>,
         <https://sappho-digital.com/relation/bibl_bb952391_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_bbd18684_sappho-work>,
         <https://sappho-digital.com/relation/bibl_bbd3b749_sappho-work>,
         <https://sappho-digital.com/relation/bibl_bbd47f9e_sappho-work>,
         <https://sappho-digital.com/relation/bibl_bc005b45_sappho-work>,
@@ -322415,6 +323237,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_c151d4a4_sappho-work>,
         <https://sappho-digital.com/relation/bibl_c1ceb83a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_c1d6d7c1_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_c1dc5fd0_sappho-work>,
         <https://sappho-digital.com/relation/bibl_c1e2dcfc_sappho-work>,
         <https://sappho-digital.com/relation/bibl_c221648b_sappho-work>,
         <https://sappho-digital.com/relation/bibl_c2705125_sappho-work>,
@@ -322526,6 +323349,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_dbf48f68_sappho-work>,
         <https://sappho-digital.com/relation/bibl_dc836aeb_sappho-work>,
         <https://sappho-digital.com/relation/bibl_dc90edfe_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_dcc63355_sappho-work>,
         <https://sappho-digital.com/relation/bibl_dcf23926_sappho-work>,
         <https://sappho-digital.com/relation/bibl_dcf2ae5e_sappho-work>,
         <https://sappho-digital.com/relation/bibl_dd084662_sappho-work>,
@@ -322578,6 +323402,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_e623029b_sappho-work>,
         <https://sappho-digital.com/relation/bibl_e66096f3_sappho-work>,
         <https://sappho-digital.com/relation/bibl_e6bb83f8_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_e6c1c86a_sappho-work>,
         <https://sappho-digital.com/relation/bibl_e6cac312_sappho-work>,
         <https://sappho-digital.com/relation/bibl_e6dbb488_sappho-work>,
         <https://sappho-digital.com/relation/bibl_e745799e_sappho-work>,
@@ -322622,6 +323447,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_ef11b6b0_sappho-work>,
         <https://sappho-digital.com/relation/bibl_ef6114e5_sappho-work>,
         <https://sappho-digital.com/relation/bibl_efaf69f6_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_efb83d6d_sappho-work>,
         <https://sappho-digital.com/relation/bibl_efcce8fc_sappho-work>,
         <https://sappho-digital.com/relation/bibl_efcd32b0_sappho-work>,
         <https://sappho-digital.com/relation/bibl_efd3ad7c_sappho-work>,
@@ -322692,6 +323518,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
         <https://sappho-digital.com/relation/bibl_ffa09bcd_sappho-work>,
         <https://sappho-digital.com/relation/bibl_ffadfa01_sappho-work>,
         <https://sappho-digital.com/relation/bibl_ffc59e54_sappho-work>,
+        <https://sappho-digital.com/relation/bibl_k41cs84r_sappho-work>,
         <https://sappho-digital.com/relation/bibl_o1qlf92w_sappho-work>,
         <https://sappho-digital.com/relation/bibl_o4qqfh2c_sappho-work>,
         <https://sappho-digital.com/relation/bibl_o708fh9l_sappho-work>,

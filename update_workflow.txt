@@ -13,3 +13,7 @@
 9. re-run reasoner (in "java" directory): mvn -q clean compile exec:java
 
 [10. count triples: count-triples.py]
+
+## 1, 4–5, 9–10 kurz: 
+
+conda activate sappho && cd python && python3 excel-to-tei.py && python3 authors.py && python3 works.py && python3 fragments.py && python3 analysis.py && python3 relations.py && python3 merge.py && cd ../java && mvn -q clean compile exec:java && cd ../python && python3 count-triples.py

@@ -530,6 +530,18 @@
                     <publisher ref="https://www.wikidata.org/entity/Q1136691" xml:id="publisher_d7432893">Cotta’sche Verlagsbuchhandlung</publisher>
                     <ref target="https://digipress.digitale-sammlungen.de/calendar/1841/newspaper/bsbmult00000491">https://digipress.digitale-sammlungen.de/calendar/1841/newspaper/bsbmult00000491</ref>
                 </bibl>
+                <bibl xml:id="bibl_e6c1c86a">
+                    <title type="text">Die Weltverbesserer</title>
+                    <date type="published" when="1841">1841</date>
+                    <bibl xml:id="bibl_8521eacd">
+                        <title type="work">Humoristische Novellen</title>
+                    </bibl>
+                    <author ref="https://www.wikidata.org/entity/Q364892" xml:id="author_31277981">Adolf von Tschabuschnigg</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q141959862" xml:id="publisher_845afe1d">Pfautsch &amp; Compagnie</publisher>
+                    <ref target="https://books.google.de/books?id=VZhjAAAAcAAJ">https://books.google.de/books?id=VZhjAAAAcAAJ</ref>
+                </bibl>
                 <bibl xml:id="bibl_060fb665">
                     <title type="text">Saturns Leichenrede auf das Jahr 1841</title>
                     <date type="published" when="1842">1842</date>
@@ -722,6 +734,19 @@
                     <publisher ref="https://www.wikidata.org/entity/Q1288576" xml:id="publisher_0049cb52">Eduard Hallberger</publisher>
                     <ref target="https://www.deutschestextarchiv.de/book/view/ebers_koenigstochter03_1864">https://www.deutschestextarchiv.de/book/view/ebers_koenigstochter03_1864</ref>
                 </bibl>
+                <bibl xml:id="bibl_efb83d6d">
+                    <title type="text">Adulis. Novelle</title>
+                    <date type="published" when="1865">1865</date>
+                    <bibl xml:id="bibl_85fbae48">
+                        <title type="work">Illustrirter Kalender und Novellen-Almanach für 1865</title>
+                    </bibl>
+                    <author ref="https://www.wikidata.org/entity/Q669703" xml:id="author_4e440c27">Ferdinand Kürnberger</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q141960335" xml:id="publisher_e15627f2">Typographisch-Literarisch-Artistische Anstalt</publisher>
+                    <ref target="https://books.google.de/books?id=IoNpAAAAcAAJ">https://books.google.de/books?id=IoNpAAAAcAAJ</ref>
+                </bibl>
                 <bibl xml:id="bibl_ae9ee9b6">
                     <title type="text">Erste, zweite und dritte Liebe. Eine Erzählung</title>
                     <date type="published" when="1866">1866</date>
@@ -769,6 +794,15 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q156119" xml:id="place_b3271180">Ludwigslust</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1619570" xml:id="publisher_006305f7">Hinstorff’sche Buchhandlung</publisher>
                     <ref target="https://books.google.com/books?id=aaMuAAAAYAAJ">https://books.google.com/books?id=aaMuAAAAYAAJ</ref>
+                </bibl>
+                <bibl xml:id="bibl_0a472d12">
+                    <title type="text">Ein Kind des Volkes oder Der Arbeiterkönig. Politisch-socialer Roman aus der Gegenwart. Bd. 2</title>
+                    <date type="published" notBefore="1868" notAfter="1869">1868–1869</date>
+                    <author ref="https://www.wikidata.org/entity/Q61198441" xml:id="author_3ebcc6dd">Arthur Storch [= Franz Julius Schneeberger]</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q278706" xml:id="publisher_6792cad4">A. Hartleben</publisher>
+                    <ref target="https://books.google.de/books?id=2QMptOYiRnYC">https://books.google.de/books?id=2QMptOYiRnYC</ref>
                 </bibl>
                 <bibl xml:id="bibl_1f5c9a50">
                     <title type="text">Reichsgräfin Gisela</title>
@@ -899,6 +933,15 @@
                     <publisher ref="https://www.wikidata.org/entity/Q1288576" xml:id="publisher_0049cb52">Verlag von Eduard Hallberger</publisher>
                     <ref target="https://www.projekt-gutenberg.org/ebers/schwstrn/schwstrn.html">https://www.projekt-gutenberg.org/ebers/schwstrn/schwstrn.html</ref>
                 </bibl>
+                <bibl xml:id="bibl_1f3d3631">
+                    <title type="text">Briefe eines Unbekannten. Bd. 2</title>
+                    <date type="created" notAfter="1880">n. n. 1880</date>
+                    <date type="published" when="1887">1887</date>
+                    <author ref="https://www.wikidata.org/entity/Q1770687" xml:id="author_ebb28b20">Alexander von Villers</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q21898136" xml:id="publisher_9c2127ee">Carl Gerold’s Sohn</publisher>
+                </bibl>
                 <bibl xml:id="bibl_9b8bb035">
                     <title type="text">Der Kaiser, Bd. 1</title>
                     <date type="published" when="1881">1881</date>
@@ -1017,6 +1060,17 @@
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1204376" xml:id="publisher_f49e3b89">Deutsche Verlagsanstalt</publisher>
+                </bibl>
+                <bibl xml:id="bibl_1022e85a">
+                    <title type="text">Zwei Titanen</title>
+                    <date type="published" when="1887">1887</date>
+                    <bibl xml:id="bibl_d8009896">
+                        <title type="work">Wiener Allgemeine Zeitung</title>
+                    </bibl>
+                    <author ref="https://www.wikidata.org/entity/Q1383245" xml:id="author_94014daa">Franziska von Kapff-Essenther</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
+                    <ref target="https://anno.onb.ac.at/cgi-content/anno?aid=waz&amp;datum=18870505">https://anno.onb.ac.at/cgi-content/anno?aid=waz&amp;datum=18870505</ref>
                 </bibl>
                 <bibl xml:id="bibl_8aa567ca">
                     <title type="text">Im Garten der Semiramis</title>
@@ -1177,16 +1231,6 @@
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q157725" xml:id="place_e7593ca9">Czernowitz</pubPlace>
                 </bibl>
-                <bibl xml:id="bibl_25d08a4b">
-                    <title type="text">Zwei Titanen</title>
-                    <date type="published" when="1891">1891</date>
-                    <bibl xml:id="bibl_22c69eac" ref="https://www.wikidata.org/entity/Q18026235">
-                        <title type="work">Mährisches Tagblatt</title>
-                    </bibl>
-                    <author ref="https://www.wikidata.org/entity/Q138834728" xml:id="author_284d7796">A. von Tannus</author>
-                    <note type="genre">Prosa</note>
-                    <pubPlace ref="https://www.wikidata.org/entity/Q81137" xml:id="place_3c29d3e1">Olmütz</pubPlace>
-                </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q107962914" xml:id="bibl_ab99e30c">
                     <title type="text">Per aspera: Historischer Roman</title>
                     <date type="published" when="1892">1892</date>
@@ -1264,6 +1308,18 @@
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1022" xml:id="place_700b43a2">Stuttgart</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1204376" xml:id="publisher_f49e3b89">Deutsche Verlagsanstalt</publisher>
+                </bibl>
+                <bibl xml:id="bibl_443c81be">
+                    <title type="text">Amanda Waldau</title>
+                    <date type="published" when="1897">1897</date>
+                    <bibl xml:id="bibl_8f7960f9">
+                        <title type="work">Allerlei Geister. Geschichten</title>
+                    </bibl>
+                    <author ref="https://www.wikidata.org/entity/Q78846" xml:id="author_04459b3e">Karl Emil Franzos</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q141960420" xml:id="publisher_75fe2ae6">Concordia Deutsche Verlags-Anstalt</publisher>
+                    <ref target="https://books.google.de/books?id=P8LnAAAAMAAJ">https://books.google.de/books?id=P8LnAAAAMAAJ</ref>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q425938" xml:id="bibl_fa4c6f94">
                     <title type="text">»Weihnacht!« Reiseerzählung</title>
@@ -1371,6 +1427,14 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1409218" xml:id="publisher_19a736bb">Albert Ahn</publisher>
                     <ref target="https://www.projekt-gutenberg.org/lauff/kaerreki/kaerreki.html">https://www.projekt-gutenberg.org/lauff/kaerreki/kaerreki.html</ref>
+                </bibl>
+                <bibl xml:id="bibl_830bbe18">
+                    <title type="text">Tagebuchblätter einer Emancipierten</title>
+                    <date type="published" when="1902">1902</date>
+                    <author ref="https://www.wikidata.org/entity/Q90562" xml:id="author_9e16a459">Elsa Asenijeff</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q1612732" xml:id="publisher_e3a8a59b">Hermann Seemann Nachfolger</publisher>
                 </bibl>
                 <bibl xml:id="bibl_46a138e7">
                     <title type="text">Münchner Kindeln!</title>
@@ -1481,6 +1545,17 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q133090063" xml:id="publisher_2eacea36">Staackmann</publisher>
                     <ref target="https://projekt-gutenberg.org/authors/peter-rosegger/books/nixnutzig-volk/">https://projekt-gutenberg.org/authors/peter-rosegger/books/nixnutzig-volk/</ref>
+                </bibl>
+                <bibl xml:id="bibl_8c16e82f">
+                    <title type="text">Der grüne Esel</title>
+                    <date type="published" when="1905">1905</date>
+                    <bibl xml:id="bibl_253d12a8">
+                        <title type="work">Österreichische Rundschau</title>
+                    </bibl>
+                    <author ref="https://www.wikidata.org/entity/Q1732377" xml:id="author_60c3be9c">Karl von Levetzow</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
+                    <ref target="https://books.google.de/books?id=-aGXc5Cfc6YC">https://books.google.de/books?id=-aGXc5Cfc6YC</ref>
                 </bibl>
                 <bibl xml:id="bibl_ee18bd8b">
                     <title type="text">Weder Glück noch Stern</title>
@@ -1665,6 +1740,17 @@
                     <author ref="https://www.wikidata.org/entity/Q28837107" xml:id="author_66c39712">Alberta von Puttkamer</author>
                     <note type="genre">Prosa</note>
                 </bibl>
+                <bibl xml:id="bibl_c1dc5fd0">
+                    <title type="text">Briefe nach Norwegen</title>
+                    <date type="published" when="1911">1911</date>
+                    <bibl xml:id="bibl_7d71a5db" ref="https://www.wikidata.org/entity/Q221490">
+                        <title type="work">Der Sturm</title>
+                    </bibl>
+                    <author ref="https://www.wikidata.org/entity/Q58033" xml:id="author_741b7a44">Else Lasker-Schüler</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
+                    <ref target="https://digi.ub.uni-heidelberg.de/diglit/sturm1911_1912">https://digi.ub.uni-heidelberg.de/diglit/sturm1911_1912</ref>
+                </bibl>
                 <bibl xml:id="bibl_ae2e4b95">
                     <title type="text">Die Wallhecke</title>
                     <date type="published" when="1911">1911</date>
@@ -1748,6 +1834,16 @@
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q8897" xml:id="place_79486e93">Dresden-Blasewitz</pubPlace>
                 </bibl>
+                <bibl xml:id="bibl_a94803de">
+                    <title type="text">Schweizerdichter im Himmel. Eine Episode</title>
+                    <date type="published" when="1914">1914</date>
+                    <bibl xml:id="bibl_e0a7abd2" ref="https://www.wikidata.org/entity/Q1542936">
+                        <title type="work">Süddeutsche Monatshefte</title>
+                    </bibl>
+                    <author ref="https://www.wikidata.org/entity/Q120908" xml:id="author_37b6bec1">Heinrich Federer</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
+                </bibl>
                 <bibl xml:id="bibl_8ffe20df">
                     <title type="text">Zeitenwende</title>
                     <date type="published" when="1916">1916</date>
@@ -1757,6 +1853,18 @@
                     <author ref="https://www.wikidata.org/entity/Q137131739" xml:id="author_5c2c08ee">A. L. Lindner [= Wilhelmine Fleck]</author>
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q3046" xml:id="place_be96ca51">Pforzheim</pubPlace>
+                </bibl>
+                <bibl xml:id="bibl_3e2cdf2a">
+                    <title type="text">Else Lasker-Schüler</title>
+                    <date type="published" when="1917">1917</date>
+                    <bibl xml:id="bibl_7098d2bf">
+                        <title type="work">Die gesammelten Gedichte</title>
+                    </bibl>
+                    <author ref="https://www.wikidata.org/entity/Q95693" xml:id="author_c47c8ee0">Peter Hille</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
+                    <publisher xml:id="publisher_b0fbc436">Verlag der Weißen Bücher</publisher>
+                    <ref target="https://de.wikisource.org/wiki/Gesammelte_Gedichte_(Lasker-Schüler)">https://de.wikisource.org/wiki/Gesammelte_Gedichte_(Lasker-Schüler)</ref>
                 </bibl>
                 <bibl xml:id="bibl_19ba5832">
                     <title type="text">Bis zur nächsten Ecke</title>
@@ -1779,6 +1887,14 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q71476" xml:id="publisher_4d29e5ab">Rudolf Mosse</publisher>
                     <ref target="https://zefys.staatsbibliothek-berlin.de/list/title/zdb/27646518/">https://zefys.staatsbibliothek-berlin.de/list/title/zdb/27646518/</ref>
+                </bibl>
+                <bibl xml:id="bibl_4aa92fa2">
+                    <title type="text">Teufel, Marietta!</title>
+                    <date type="published" when="1919">1919</date>
+                    <author ref="https://www.wikidata.org/entity/Q714568" xml:id="author_628a1dee">Artur Landsberger</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1726" xml:id="place_06ec7d19">München</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q1804969" xml:id="publisher_e4edb5a7">Georg Müller</publisher>
                 </bibl>
                 <bibl xml:id="bibl_fc4d31ad">
                     <title type="text">Bürgerin Louise: Roman</title>
@@ -1894,6 +2010,15 @@
                     <publisher ref="https://www.wikidata.org/entity/Q71476" xml:id="publisher_4d29e5ab">Rudolf Mosse</publisher>
                     <ref target="https://www.deutsche-digitale-bibliothek.de/newspaper/item/RQ7AY2TGHKAAVZI7TBRAC6UFA63WEB7G">https://www.deutsche-digitale-bibliothek.de/newspaper/item/RQ7AY2TGHKAAVZI7TBRAC6UFA63WEB7G</ref>
                 </bibl>
+                <bibl ref="https://www.wikidata.org/entity/Q28737608" xml:id="bibl_k41cs84r">
+                    <title type="text">Die Insel der großen Mutter oder Das Wunder von Île des Dames </title>
+                    <date type="published" when="1924">1924</date>
+                    <author ref="https://www.wikidata.org/entity/Q43523" xml:id="author_0l1ecf9a">Gerhart Hauptmann</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q481576" xml:id="publisher_26115c29">S. Fischer</publisher>
+                    <ref target="https://projekt-gutenberg.org/authors/gerhart-hauptmann/books/die-insel-der-grossen-mutter/">https://projekt-gutenberg.org/authors/gerhart-hauptmann/books/die-insel-der-grossen-mutter/</ref>
+                </bibl>
                 <bibl xml:id="bibl_1d85da79">
                     <title type="text">Ein Erbe am Rhein. Bd. 1</title>
                     <date type="published" when="1925">1925</date>
@@ -1968,6 +2093,14 @@
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1737" xml:id="place_99b809f4">Bregenz</pubPlace>
                 </bibl>
+                <bibl xml:id="bibl_a68b98db">
+                    <title type="text">Kleine Verhältnisse. Novelle</title>
+                    <date type="published" when="1931">1931</date>
+                    <author ref="https://www.wikidata.org/entity/Q78514" xml:id="author_35712c78">Franz Werfel</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q176169" xml:id="publisher_71955675">Zsolnay</publisher>
+                </bibl>
                 <bibl xml:id="bibl_a49a9cb4">
                     <title type="text">Römische Sappho</title>
                     <date type="published" when="1931">1931?</date>
@@ -2036,6 +2169,14 @@
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q2119" xml:id="place_77b5ece6">Mannheim</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q139328665" xml:id="publisher_b6664739">Mannheimer Morgen</publisher>
+                </bibl>
+                <bibl xml:id="bibl_4425f143">
+                    <title type="text">Der Major. Roman</title>
+                    <date type="published" when="1935">1935</date>
+                    <author ref="https://www.wikidata.org/entity/Q1234556" xml:id="author_43e07d0a">Ruth Schaumann</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q64" xml:id="place_d35a02eb">Berlin</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q55613026" xml:id="publisher_cf81bae5">Grote</publisher>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q141452810" xml:id="bibl_71f5dd25">
                     <title type="text">Jagd nach dem Bildnis der Kaiserin Poppäa</title>
@@ -2155,6 +2296,14 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q1055" xml:id="place_f23bb5e2">Hamburg</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1606785" xml:id="publisher_b43339c9">Goverts</publisher>
                 </bibl>
+                <bibl xml:id="bibl_1ac45841">
+                    <title type="text">Neben den Geleisen</title>
+                    <date type="published" when="1944">1944</date>
+                    <author ref="https://www.wikidata.org/entity/Q2562361" xml:id="author_c865da59">Werner Riemerschmid</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q2572715" xml:id="publisher_1a7b8a48">Wilhelm Frick</publisher>
+                </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q141474819" xml:id="bibl_f3eebdf3">
                     <title type="text">Sappho von Lesbos. Roman</title>
                     <date type="published" when="1945">1945</date>
@@ -2180,6 +2329,15 @@
                     <note type="genre">Prosa</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1055" xml:id="place_f23bb5e2">Hamburg</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1094612" xml:id="publisher_3106b246">Claasen</publisher>
+                </bibl>
+                <bibl xml:id="bibl_7611bd84">
+                    <title type="text">Das Gastmahl der Xanthippe. Eine überzeitliche Begegnung</title>
+                    <date type="published" when="1958">1958</date>
+                    <author xml:id="author_a1a7f2c9">Delphica [Sammelpseudonym für Vera Prill, Margarethe Rudorff</author>
+                    <author>Erika Slawinski]</author>
+                    <note type="genre">Prosa</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q6874" xml:id="place_d8e07b89">Rastatt</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q55613026" xml:id="publisher_cf81bae5">Grote</publisher>
                 </bibl>
                 <bibl xml:id="bibl_7848437d">
                     <title type="text">Von der Luft, von Äpfeln und darüber verlorenen Worten</title>
