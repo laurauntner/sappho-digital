@@ -4775,6 +4775,11 @@ Philosophen zu Sanssouci"""@en ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_ec8cd4ac> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
 
+<https://sappho-digital.com/identifier/Q141962329> a ecrm:E42_Identifier ;
+    rdfs:label "Q141962329" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/expression/bibl_ec8c2775> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
+
 <https://sappho-digital.com/identifier/Q1542936> a ecrm:E42_Identifier ;
     rdfs:label "Q1542936" ;
     ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_e0a7abd2> ;
@@ -30156,6 +30161,13 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation/bibl_5ebc314a_bibl_50c1d255> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
 
+<https://sappho-digital.com/identifier/Wiener_Zeitschrift_für_Kunst,_Literatur,_Theater_und_Mode> a ecrm:E42_Identifier ;
+    rdfs:label "Wiener_Zeitschrift_für_Kunst,_Literatur,_Theater_und_Mode" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_c564852a_1827>,
+        <https://sappho-digital.com/manifestation/bibl_c564852a_1833>,
+        <https://sappho-digital.com/manifestation/bibl_c564852a_1835> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
+
 <https://sappho-digital.com/manifestation/bibl_034b684d> a lrmoo:F3_Manifestation ;
     rdfs:label "Erzgebirgischer Volksfreund"@de ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q106765746> ;
@@ -31209,6 +31221,13 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_c1e2dcfc> ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_c1e2dcfc> ;
     owl:sameAs <https://www.wikidata.org/entity/Q65586229> .
+
+<https://sappho-digital.com/manifestation/bibl_c564852a_1819> a lrmoo:F3_Manifestation ;
+    rdfs:label "Wiener Zeitschrift für Kunst, Literatur, Theater und Mode"@de ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q23902154> ;
+    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_c564852a_1819> ;
+    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_ec8c2775> ;
+    rdfs:seeAlso <https://www.wikidata.org/entity/Q23902154> .
 
 <https://sappho-digital.com/manifestation/bibl_c5800c97> a lrmoo:F3_Manifestation ;
     rdfs:label "Textbuch 10: Von Liebeskunst"@de ;
@@ -36445,14 +36464,6 @@ Philosophen zu Sanssouci"""@en ;
         <https://sappho-digital.com/manifestation/bibl_cqw3b15b_2026> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/wikidata> .
 
-<https://sappho-digital.com/identifier/Wiener_Zeitschrift_für_Kunst,_Literatur,_Theater_und_Mode> a ecrm:E42_Identifier ;
-    rdfs:label "Wiener_Zeitschrift_für_Kunst,_Literatur,_Theater_und_Mode" ;
-    ecrm:P1i_identifies <https://sappho-digital.com/manifestation/bibl_c564852a_1819>,
-        <https://sappho-digital.com/manifestation/bibl_c564852a_1827>,
-        <https://sappho-digital.com/manifestation/bibl_c564852a_1833>,
-        <https://sappho-digital.com/manifestation/bibl_c564852a_1835> ;
-    ecrm:P2_has_type <https://sappho-digital.com/id_type/dbpedia> .
-
 <https://sappho-digital.com/manifestation/bibl_01298507> a lrmoo:F3_Manifestation ;
     rdfs:label "An der Schönen Blauen Donau"@de ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/An_der_Schönen_Blauen_Donau>,
@@ -36876,16 +36887,6 @@ Philosophen zu Sanssouci"""@en ;
     lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_a7c2afb5>,
         <https://sappho-digital.com/expression/bibl_bf21ee78>,
         <https://sappho-digital.com/expression/bibl_dd084662> .
-
-<https://sappho-digital.com/manifestation/bibl_c564852a_1819> a lrmoo:F3_Manifestation ;
-    rdfs:label "Wiener Zeitschrift für Kunst, Literatur, Theater und Mode"@de ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q23902154>,
-        <https://sappho-digital.com/identifier/Wiener_Zeitschrift_für_Kunst,_Literatur,_Theater_und_Mode> ;
-    lrmoo:R24i_was_created_through <https://sappho-digital.com/manifestation_creation/bibl_c564852a_1819> ;
-    lrmoo:R4_embodies <https://sappho-digital.com/expression/bibl_ec8c2775> ;
-    rdfs:seeAlso <http://commons.wikimedia.org/wiki/Special:FilePath/Wiener_Zeitschrift_1817_07_02_-_Titel.jpg>,
-        <https://dbpedia.org/resource/Wiener_Zeitschrift_für_Kunst,_Literatur,_Theater_und_Mode>,
-        <https://www.wikidata.org/entity/Q23902154> .
 
 <https://sappho-digital.com/manifestation/bibl_c564852a_1827> a lrmoo:F3_Manifestation ;
     rdfs:label "Wiener Zeitschrift für Kunst, Literatur, Theater und Mode"@de ;
@@ -42173,15 +42174,6 @@ Philosophen zu Sanssouci"""@de ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_ec11b447> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_ec11b447> ;
     owl:sameAs <https://www.wikidata.org/entity/Q119292643> .
-
-<https://sappho-digital.com/expression/bibl_ec8c2775> a lrmoo:F2_Expression ;
-    rdfs:label "Phaon und Melitta. Eine dramatische Phantasie"@de ;
-    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_ec8c2775> ;
-    ecrm:P130i_features_are_also_found_on <https://sappho-digital.com/digital/bibl_ec8c2775> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_ec8c2775> ;
-    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
-    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_ec8c2775> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_c564852a_1819> .
 
 <https://sappho-digital.com/expression/bibl_ec96516c> a lrmoo:F2_Expression ;
     rdfs:label "Schöne Seele, laß genügen"@de ;
@@ -47808,6 +47800,17 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_e42c0bf2> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_e92c73b9> ;
     owl:sameAs <https://www.wikidata.org/entity/Q19179507> .
+
+<https://sappho-digital.com/expression/bibl_ec8c2775> a lrmoo:F2_Expression ;
+    rdfs:label "Phaon und Melitta. Eine dramatische Phantasie"@de ;
+    ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_ec8c2775> ;
+    ecrm:P130i_features_are_also_found_on <https://sappho-digital.com/digital/bibl_ec8c2775> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141962329>,
+        <https://sappho-digital.com/identifier/bibl_ec8c2775> ;
+    ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
+    lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_ec8c2775> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_c564852a_1819> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141962329> .
 
 <https://sappho-digital.com/expression/bibl_eff6330f> a lrmoo:F2_Expression ;
     rdfs:label "Die Heilige vom Niederrhein"@de ;

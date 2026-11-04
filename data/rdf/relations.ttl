@@ -125480,10 +125480,12 @@ Philosophen zu Sanssouci"""@de ;
     rdfs:label "Phaon und Melitta. Eine dramatische Phantasie"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_ec8c2775> ;
     ecrm:P130i_features_are_also_found_on <https://sappho-digital.com/digital/bibl_ec8c2775> ;
-    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_ec8c2775> ;
+    ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/Q141962329>,
+        <https://sappho-digital.com/identifier/bibl_ec8c2775> ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_ec8c2775> ;
     lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_c564852a_1819> ;
+    owl:sameAs <https://www.wikidata.org/entity/Q141962329> ;
     intro:R13i_isReferringEntity <https://sappho-digital.com/relation/bibl_ec8c2775_sappho-work> ;
     intro:R24i_isRelatedEntity <https://sappho-digital.com/relation/bibl_ec8c2775_sappho-work> .
 

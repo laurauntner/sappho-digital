@@ -167,13 +167,13 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
                     <ref target="https://www.digitale-sammlungen.de/view/bsb10129712?page=3">https://www.digitale-sammlungen.de/view/bsb10129712?page=3</ref>
                 </bibl>
-                <bibl xml:id="bibl_ec8c2775">
+                <bibl ref="https://www.wikidata.org/entity/Q141962329" xml:id="bibl_ec8c2775">
                     <title type="text">Phaon und Melitta. Eine dramatische Phantasie</title>
                     <date type="published" when="1819">1819</date>
                     <bibl xml:id="bibl_c564852a" ref="https://www.wikidata.org/entity/Q23902154">
                         <title type="work">Wiener Zeitschrift für Kunst, Literatur, Theater und Mode</title>
                     </bibl>
-                    <author ref="https://www.wikidata.org/entity/Q95879149" xml:id="author_26c71d20">Carl Anton von Gruber</author>
+                    <author ref="https://www.wikidata.org/entity/Q60844048" xml:id="author_26c71d20">Carl Anton von Gruber</author>
                     <note type="genre">Drama</note>
                     <pubPlace ref="https://www.wikidata.org/entity/Q1741" xml:id="place_95b8315b">Wien</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q61990213" xml:id="publisher_6355ff57">Anton Strauß</publisher>
