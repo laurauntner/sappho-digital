@@ -190,7 +190,7 @@
         <entry de="Tripel" en="Triples"/>
         <entry
             de="Ein Tripel ist im Grunde eine einfache maschinenlesbare Aussage, bestehend aus Subjekt, Prädikat und Objekt. Hier beziehen sich diese Aussagen auf die literarische Sappho-Rezeption – beispielsweise auf Werke und Autor_innen."
-            en="A triple is essentially a simple machine-readable statement consisting of subject, predicate, and object. Here, these statements refer to the literary reception of Sappho – for example, to works and authors."/>
+            en="A triple is essentially a simple machine-readable statement consisting of subject, property, and object. Here, these statements refer to the literary reception of Sappho – for example, to works and authors."/>
         <entry de="Siehe zur Einführung auch:" en="For an introduction, see also:"/>
         <entry de="»Semantic triple« in der Wikipedia" en="»Semantic triple« on Wikipedia"/>
         <entry de="Projektbeschreibung" en="Project Description"/>
@@ -232,7 +232,7 @@
             en=". Its use is optional – the SPARQL query can also be entered directly in the editor below."/>
         <entry
             de="Eine Query entsteht durch Verbinden von Elementen: Zunächst werden die Klassen ausgewählt, erst danach lässt sich – sofern mehrere Möglichkeiten bestehen – das verbindende Prädikat festlegen. Suchbegriffe werden textbasiert abgeglichen (Groß-/Kleinschreibung wird ignoriert), eine Live-Vorschlagsliste beim Tippen gibt es nicht. Mit dem "
-            en="A query is built by connecting elements: first the classes are selected, and only then – where several options exist – can the connecting predicate be set. Search terms are matched as text (case is ignored); there is no live suggestion list while typing. The "/>
+            en="A query is built by connecting elements: first the classes are selected, and only then – where several options exist – can the connecting property be set. Search terms are matched as text (case is ignored); there is no live suggestion list while typing. The "/>
         <entry
             de=" wird die erzeugte Query in den SPARQL-Editor übernommen; ausgeführt wird sie erst über ›Query ausführen‹."
             en=" transfers the generated query into the SPARQL editor; it is only executed via ›Run Query‹."/>
@@ -298,7 +298,7 @@
         <!-- alignments.xsl -->
         <entry
             de="Verwendete Klassen und Prädikate – vor allem jene, die für die Intertextualitätsanalyse genutzt wurden – wurden mit anderen bibliographischen und literaturwissenschaftlichen Ontologien abgeglichen, darunter: die Bibliographic Ontology ("
-            en="The classes and predicates used – especially those used for the intertextuality analysis – were aligned with other bibliographic and literary-studies ontologies, including: the Bibliographic Ontology ("/>
+            en="The classes and properties used – especially those used for the intertextuality analysis – were aligned with other bibliographic and literary-studies ontologies, including: the Bibliographic Ontology ("/>
         <entry de="), die FRBR-aligned Bibliographic Ontology ("
             en="), the FRBR-aligned Bibliographic Ontology ("/>
         <entry de="), die Citation Typing Ontology (" en="), the Citation Typing Ontology ("/>
@@ -337,7 +337,7 @@
             de="Diese Seite bietet exemplarische statistische Auswertungen der annotierten Sappho-Fragmente und der analysierten Rezeptionszeugnisse. Den Auftakt bilden die Rezeptionsindizes, ein zusammengesetzter Wert zur Messung der Rezeptionsstärke einzelner Texte. Darauf folgen durchschnittliche intertextuelle Relationen und gemeinsame Phänomene, besonders dichte intertextuelle Beziehungen sowie Phänomene als Grundlage intertextueller Relationen. Die weiteren Abschnitte zeigen alle Phänomene im Vergleich, ihre Verteilung nach Fragment-Referenz, im Laufe der Zeit und nach Gattung sowie Zusammenhänge von Komponenten von Stoffvarianten, Personenreferenzen, Werkreferenzen und Zitaten. Abschließend widmen sich zwei Abschnitte genderspezifischen Analysen sowie einer Popularitätsanalyse mittels Wiki-Metriken."
             en="This page offers sample statistical analyses of the annotated Sappho fragments and the analysed reception testimonies. It opens with the reception indices, a composite value measuring the reception strength of individual texts. This is followed by average intertextual relations and shared phenomena, particularly dense intertextual relationships, and phenomena as the basis of intertextual relations. The further sections show all phenomena compared, their distribution by fragment reference, over time and by genre, as well as connections between components of plot variants, references to persons, references to works, and quotations. Finally, two sections are devoted to gender-specific analyses and to a popularity analysis using wiki metrics."/>
         <entry de="Nähere Informationen zur exemplarischen Analyse sind "
-            en="More information on the exemplary analysis can be found "/>
+            en="More information on the sample analysis can be found "/>
         <entry de=" zu finden." en="."/>
         <entry de="Eine Netzwerkvisualisierung aller Daten ist "
             en="A network visualization of all data is available "/>
@@ -455,7 +455,7 @@
             en="Which persons and person types are, in Sappho fragments as well as in reception testimonies, particularly often not only referenced but also appear as characters? The comparison shows, per person or person type, the frequency of reference and of appearance as a character."/>
         <entry de="Filter:" en="Filter:"/>
         <entry de="Alle Personenreferenzen" en="All References to Persons"/>
-        <entry de="Nur auch als Figur" en="Only Also as a Character"/>
+        <entry de="Nur auch als Figur" en="Only Those Also Appearing as Characters"/>
         <entry de="Referenzen in Sappho-Fragmenten" en="References in Sappho Fragments"/>
         <entry de="Figuren in Sappho-Fragmenten" en="Characters in Sappho Fragments"/>
         <entry de="Referenzen in Rezeptionszeugnissen" en="References in Reception Testimonies"/>
@@ -470,7 +470,7 @@
         <entry de="Statistik 12: Genderspezifische Analysen" en="Statistics 12: Gender-Specific Analyses"/>
         <entry
             de="Wie sieht die Geschlechterverteilung aus – insgesamt, im Zeitverlauf, nach Gattungen und nach Phänomenen? Die Gender-Angaben stammen von Wikidata, sind binär und zumeist keine Selbstidentifikationen. Für die Phänomene wurden außerdem nur die Autor_innen der exemplarisch analysierten Rezeptionszeugnisse berücksichtigt."
-            en="What does the gender distribution look like – overall, over time, by genre, and by phenomenon? The gender data comes from Wikidata, is binary, and is mostly not self-identification. For the phenomena, only the authors of the reception testimonies analysed as examples were also taken into account."/>
+            en="What does the gender distribution look like – overall, over time, by genre, and by phenomenon? The gender data comes from Wikidata, is binary, and is mostly not self-identification. In addition, only the authors of the reception testimonies analysed as examples were taken into account for the phenomena."/>
         <entry de="Anzeige:" en="Display:"/>
         <entry de="Gestapelt (absolut)" en="Stacked (absolute)"/>
         <entry de="Prozentualer Anteil" en="Percentage Share"/>
@@ -516,8 +516,8 @@
         <entry de="Link" en="Link"/>
 
         <!-- sappho-fragments.xsl / bibl-entities.xsl / reception-entities.xsl -->
-        <entry de="Ergebnisse der exemplarischen Analyse" en="Results of the Exemplary Analysis"/>
-        <entry de="Zur Erläuterung der Analyse" en="On the Analysis Notes"/>
+        <entry de="Ergebnisse der exemplarischen Analyse" en="Results of the Sample Analysis"/>
+        <entry de="Zur Erläuterung der Analyse" en="Notes on the Analysis"/>
         <entry de="Personenreferenzen" en="References to Persons"/>
         <entry de="Figuren" en="Characters"/>
         <entry de="Werkreferenzen" en="References to Works"/>
@@ -553,9 +553,9 @@
         <entry de="Gewicht" en="Weight"/>
         <entry
             de="Alle (im weitesten Sinne) intertextuellen Beziehungen zwischen Sappho-Fragmenten und den exemplarisch analysierten Rezeptionszeugnissen sowie zwischen Fragmenten und Rezeptionszeugnissen untereinander."
-            en="All intertextual relationships (in the broadest sense) between Sappho fragments and the reception testimonies analysed as examples, as well as among the reception testimonies themselves."/>
+            en="All intertextual relationships (in the broadest sense) between Sappho fragments and the reception testimonies analysed as examples, as well as between fragments and reception testimonies among themselves."/>
         <entry de="Mehr Informationen zur exemplarischen Analyse sind "
-            en="More information on the exemplary analysis can be found "/>
+            en="More information on the sample analysis can be found "/>
         <entry de=" zu finden. Statistische Auswertungen werden "
             en=". Statistical analyses are compiled "/>
         <entry de=" aufbereitet; eine Netzwerkvisualisierung aller Daten ist "
@@ -566,7 +566,7 @@
         <entry de="Für eine hierarchische Ansicht siehe das "
             en="For a hierarchical view, see the "/>
         <entry de=". Mehr Informationen zur exemplarischen Analyse sind "
-            en=". More information on the exemplary analysis can be found "/>
+            en=". More information on the sample analysis can be found "/>
         <entry de="Fragment (Sappho)" en="Fragment (Sappho)"/>
         <entry de="Rezeptionszeugnis" en="Reception Testimony"/>
         <entry
@@ -605,7 +605,7 @@
         <entry de="Gemeinsame Topoi:" en="Shared Topoi:"/>
 
         <!-- imprint.xsl -->
-        <entry de="Impressum" en="Imprint"/>
+        <entry de="Impressum" en="Legal Notice"/>
         <entry de="Intertextuelle Beziehung mit " en="Intertextual relation with "/>
         <entry de="Intertextuelle Beziehungen zwischen Sappho-Fragmenten" en="Intertextual Relations between Sappho Fragments"/>
         <entry de="Intertextuelle Beziehungen zwischen Rezeptionszeugnissen und Sappho-Fragmenten" en="Intertextual Relations between Reception Testimonies and Sappho Fragments"/>
@@ -620,7 +620,7 @@
             en="Guidance for getting started with Sappho Digital: how to best explore the website and its data."/>
         <entry
             de="Erläuterungen zur exemplarischen Analyse der Sappho-Fragmente und Rezeptionszeugnisse: Datenmodell, Annotation und Methodik."
-            en="Notes on the exemplary analysis of the Sappho fragments and reception testimonies: data model, annotation, and methodology."/>
+            en="Notes on the sample analysis of the Sappho fragments and reception testimonies: data model, annotation, and methodology."/>
         <entry de="Publikationen zum Projekt Sappho Digital." en="Publications on the Sappho Digital project."/>
         <entry de="Bibliographie und Quellenverzeichnis des Projekts Sappho Digital."
             en="Bibliography and list of sources for the Sappho Digital project."/>
@@ -628,7 +628,7 @@
             de="Primärtexte: Sappho-Fragmente und deutschsprachige Rezeptionszeugnisse im Projekt Sappho Digital."
             en="Primary texts: Sappho fragments and German-language reception testimonies in the Sappho Digital project."/>
         <entry de="Seite nicht gefunden – Sappho Digital." en="Page not found – Sappho Digital."/>
-        <entry de="Impressum von Sappho Digital." en="Imprint of Sappho Digital."/>
+        <entry de="Impressum von Sappho Digital." en="Legal notice of Sappho Digital."/>
         <entry
             de="Visueller SPARQL-Query-Builder für die RDF-Daten der literarischen Sappho-Rezeption."
             en="Visual SPARQL query builder for the RDF data on the literary reception of Sappho."/>
