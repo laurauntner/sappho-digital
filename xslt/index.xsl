@@ -45,7 +45,7 @@
         "name": "Laura Untner"
       },
       "inLanguage": ["de", "en"],
-      "sameAs": "https://github.com/laurauntner/sappho-digital"
+      "sameAs": ["https://github.com/laurauntner/sappho-digital", "https://lod-cloud.net/dataset/sappho-digital"]
     }
   ]
 }</xsl:text>

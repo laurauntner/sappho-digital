@@ -8548,7 +8548,7 @@
     </intro:R18_showsActualization>
     <intro:R18_showsActualization>
       <intro:INT2_ActualizationOfFeature rdf:about="https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_0e2eeafefe2dae48">
-        <rdfs:label xml:lang="de">Illias (Werk) in THE MOST BEAUTIFUL</rdfs:label>
+        <rdfs:label xml:lang="de">Ilias (Werk) in THE MOST BEAUTIFUL</rdfs:label>
         <rdfs:label xml:lang="en">Iliad (Work) in THE MOST BEAUTIFUL</rdfs:label>
         <intro:R17_actualizesFeature rdf:resource="https://sappho-digital.com/feature/work_ref/work_0e2eeafefe2dae48"/>
         <intro:R18i_actualizationFoundOn rdf:resource="https://sappho-digital.com/expression/bibl_0bd2c59f"/>
@@ -24736,7 +24736,7 @@
     <rdfs:label>work_0e2eeafefe2dae48</rdfs:label>
     <ecrm:P1i_identifies>
       <intro:INT18_Reference rdf:about="https://sappho-digital.com/feature/work_ref/work_0e2eeafefe2dae48">
-        <rdfs:label xml:lang="de">Referenz auf Illias (Werk)</rdfs:label>
+        <rdfs:label xml:lang="de">Referenz auf Ilias (Werk)</rdfs:label>
         <rdfs:label xml:lang="en">Reference to Iliad (Work)</rdfs:label>
         <skos:exactMatch rdf:resource="https://w3id.org/sappho-digital/vocab/work_0e2eeafefe2dae48"/>
         <intro:R17i_featureActualizedIn rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_0e2eeafefe2dae48"/>
@@ -38266,11 +38266,11 @@
     <intro:R17i_featureActualizedIn rdf:resource="https://sappho-digital.com/actualization/interpretation/bibl_4e970562_work_ref_07b98557"/>
   </intro:INT_Interpretation>
   <intro:INT2_ActualizationOfFeature rdf:about="https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48">
-    <rdfs:label xml:lang="de">Interpretation von Illias (Werk) in THE MOST BEAUTIFUL</rdfs:label>
+    <rdfs:label xml:lang="de">Interpretation von Ilias (Werk) in THE MOST BEAUTIFUL</rdfs:label>
     <rdfs:label xml:lang="en">Interpretation of Iliad (Work) in THE MOST BEAUTIFUL</rdfs:label>
     <intro:R17_actualizesFeature>
       <intro:INT_Interpretation rdf:about="https://sappho-digital.com/feature/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48">
-        <rdfs:label xml:lang="de">Interpretation von Illias (Werk) in THE MOST BEAUTIFUL</rdfs:label>
+        <rdfs:label xml:lang="de">Interpretation von Ilias (Werk) in THE MOST BEAUTIFUL</rdfs:label>
         <rdfs:label xml:lang="en">Interpretation of Iliad (Work) in THE MOST BEAUTIFUL</rdfs:label>
         <intro:R17i_featureActualizedIn rdf:resource="https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48"/>
       </intro:INT_Interpretation>

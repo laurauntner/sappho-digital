@@ -1738,7 +1738,7 @@
 
 :work_0e2eeafefe2dae48 a skos:Concept;
   skos:inScheme <https://w3id.org/sappho-digital/vocab>;
-  skos:prefLabel "Illias"@de, "Iliad"@en;
+  skos:prefLabel "Iliad"@en, "Ilias"@de;
   skos:notation "work_0e2eeafefe2dae48";
   skos:broader :work_75700d3e9077c098;
   skos:related :topic_6c84497f664d562a, :person_c7aebd12b1cbd031, :person_a92154dba89f764f,

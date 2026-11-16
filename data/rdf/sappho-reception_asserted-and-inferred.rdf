@@ -38630,7 +38630,7 @@
         <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
         <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
         <rdfs:label xml:lang="en">Interpretation of Iliad (Work) in THE MOST BEAUTIFUL</rdfs:label>
-        <rdfs:label xml:lang="de">Interpretation von Illias (Werk) in THE MOST BEAUTIFUL</rdfs:label>
+        <rdfs:label xml:lang="de">Interpretation von Ilias (Werk) in THE MOST BEAUTIFUL</rdfs:label>
         <intro:R17_actualizesFeature rdf:resource="https://sappho-digital.com/feature/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48"/>
         <intro:R21_identifies rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_0e2eeafefe2dae48"/>
     </Thing>
@@ -265313,7 +265313,7 @@ Philosophen zu Sanssouci and Sapphos Werk</rdfs:label>
         <rdf:type rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
         <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
         <rdfs:label xml:lang="en">Iliad (Work) in THE MOST BEAUTIFUL</rdfs:label>
-        <rdfs:label xml:lang="de">Illias (Werk) in THE MOST BEAUTIFUL</rdfs:label>
+        <rdfs:label xml:lang="de">Ilias (Werk) in THE MOST BEAUTIFUL</rdfs:label>
         <intro:R17_actualizesFeature rdf:resource="https://sappho-digital.com/feature/work_ref/work_0e2eeafefe2dae48"/>
         <intro:R18i_actualizationFoundOn rdf:resource="https://sappho-digital.com/expression/bibl_0bd2c59f"/>
         <intro:R21i_isIdentifiedBy rdf:resource="https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48"/>
@@ -392025,7 +392025,7 @@ Philosophen zu Sanssouci</rdfs:label>
         <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Interpretation"/>
         <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_PragmaticFeature"/>
         <rdfs:label xml:lang="en">Interpretation of Iliad (Work) in THE MOST BEAUTIFUL</rdfs:label>
-        <rdfs:label xml:lang="de">Interpretation von Illias (Werk) in THE MOST BEAUTIFUL</rdfs:label>
+        <rdfs:label xml:lang="de">Interpretation von Ilias (Werk) in THE MOST BEAUTIFUL</rdfs:label>
         <intro:R17i_featureActualizedIn rdf:resource="https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48"/>
     </Thing>
     
@@ -606036,7 +606036,7 @@ Philosophen zu Sanssouci and Sapphos Werk</rdfs:label>
         <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
         <rdf:type rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_PragmaticFeature"/>
         <rdfs:label xml:lang="en">Reference to Iliad (Work)</rdfs:label>
-        <rdfs:label xml:lang="de">Referenz auf Illias (Werk)</rdfs:label>
+        <rdfs:label xml:lang="de">Referenz auf Ilias (Werk)</rdfs:label>
         <skos:exactMatch rdf:resource="https://w3id.org/sappho-digital/vocab/work_0e2eeafefe2dae48"/>
         <intro:R17i_featureActualizedIn rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_0e2eeafefe2dae48"/>
     </Thing>

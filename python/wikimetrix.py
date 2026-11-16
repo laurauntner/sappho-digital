@@ -31,7 +31,7 @@ REQUEST_SLEEP = 5.0
 REQUEST_TIMEOUT = 120
 MAX_RETRIES = 6
 
-USER_AGENT = "wikimetrix/0.1 (contact: deine-mail@example.com)"
+USER_AGENT = "wikimetrix/0.1 (https://sappho-digital.com)"
 
 QRANK_URL = "https://qrank.wmcloud.org/download/qrank.csv.gz"
 QRANK_PATH = Path("inputs/qrank.csv.gz")

@@ -27691,7 +27691,7 @@ ecrm:P98i_was_born rdf:type owl:NamedIndividual ,
                                                                                                        owl:Thing ,
                                                                                                        intro:INT2_ActualizationOfFeature ;
                                                                                               rdfs:label "Interpretation of Iliad (Work) in THE MOST BEAUTIFUL"@en ,
-                                                                                                         "Interpretation von Illias (Werk) in THE MOST BEAUTIFUL"@de ;
+                                                                                                         "Interpretation von Ilias (Werk) in THE MOST BEAUTIFUL"@de ;
                                                                                               intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48> ;
                                                                                               intro:R21_identifies <https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_0e2eeafefe2dae48> .
 
@@ -194838,7 +194838,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
                                                                                                  owl:Thing ,
                                                                                                  intro:INT2_ActualizationOfFeature ;
                                                                                         rdfs:label "Iliad (Work) in THE MOST BEAUTIFUL"@en ,
-                                                                                                   "Illias (Werk) in THE MOST BEAUTIFUL"@de ;
+                                                                                                   "Ilias (Werk) in THE MOST BEAUTIFUL"@de ;
                                                                                         intro:R17_actualizesFeature <https://sappho-digital.com/feature/work_ref/work_0e2eeafefe2dae48> ;
                                                                                         intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_0bd2c59f> ;
                                                                                         intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48> .
@@ -301738,7 +301738,7 @@ Philosophen zu Sanssouci"""@de .
                                                                                                  intro:INT_Interpretation ,
                                                                                                  intro:INT_PragmaticFeature ;
                                                                                         rdfs:label "Interpretation of Iliad (Work) in THE MOST BEAUTIFUL"@en ,
-                                                                                                   "Interpretation von Illias (Werk) in THE MOST BEAUTIFUL"@de ;
+                                                                                                   "Interpretation von Ilias (Werk) in THE MOST BEAUTIFUL"@de ;
                                                                                         intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48> .
 
 
@@ -464441,7 +464441,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
                                                                              intro:INT9_SemanticFeature ,
                                                                              intro:INT_PragmaticFeature ;
                                                                     rdfs:label "Reference to Iliad (Work)"@en ,
-                                                                               "Referenz auf Illias (Werk)"@de ;
+                                                                               "Referenz auf Ilias (Werk)"@de ;
                                                                     skos:exactMatch <https://w3id.org/sappho-digital/vocab/work_0e2eeafefe2dae48> ;
                                                                     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_0e2eeafefe2dae48> .
 

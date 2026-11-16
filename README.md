@@ -36,8 +36,9 @@ The reception testimonies listed were compiled over several years of research in
 
 The [RDF data](https://github.com/laurauntner/sappho-digital/tree/main/data/rdf) adds a further, more granular layer for an exemplary subcorpus: 197 Sappho fragments and 99 reception testimonies. Intertextual phenomena — motifs, topics, plots, rhetorical topoi, characters, and references to persons, places, and works — were manually annotated in XML through repeated close-reading passes, using a custom tagset. Six successive Python scripts then convert this annotated XML, together with the bibliographic lists, into RDF triples — covering author data, work data, fragment data, analysis data, and intertextual data, followed by a final merge and a reasoning pass with the Java-based reasoner [HermiT](http://www.hermit-reasoner.com/) — yielding 600,000+ triples. The data model is documented as an [ontology](https://sappho-digital.com/ontology.html) built on [CIDOC CRM](https://cidoc-crm.org/), [LRMoo](https://repository.ifla.org/items/729b094a-92d6-4317-9dee-a300053ffdb4), and [INTRO](https://github.com/BOberreither/INTRO) (see below and [alignments](https://sappho-digital.com/alignments.html) to further ontologies); recurring phenomena are defined in a [SKOS vocabulary](https://sappho-digital.com/vokabular.html) of 400+ concepts, developed inductively from the annotations in the LOD editor [VocBench](https://vocbench.uniroma2.it/).
 
-- **[XML/TEI files](https://github.com/laurauntner/sappho-digital/tree/main/data/lists)** – Lists of German-language testimonies of the productive literary reception of Sappho.
+- **[XML/TEI files](https://github.com/laurauntner/sappho-digital/tree/main/data/lists)** — Lists of German-language testimonies of the productive literary reception of Sappho.
 - **[RDF/XML, Turtle, and JSON-LD files](https://github.com/laurauntner/sappho-digital/tree/main/data/rdf)** — Structured information about reception testimonies: authors, works, intertextual features in exemplary texts, and their relationships to each other and to Sappho’s own work. The `sappho-reception` file combines all of these.
+- **[LOD Cloud entry](https://lod-cloud.net/dataset/sappho-digital)** — The RDF dataset is registered in the [Linked Open Data Cloud](https://lod-cloud.net/).
 
 - **[AO3 analysis data](https://github.com/laurauntner/sappho-digital/tree/main/ao3_analysis_anonymized)** — Anonymized data (tables and plots) of the analysis of Sappho-related fanfiction from [Archive of Our Own](https://archiveofourown.org/), which is part of the printed dissertation only and not covered on the project website. Author names and work URLs/IDs were replaced by pseudonymous identifiers. The pairwise Delta distances (`04_stylometry/4e_delta_pairwise.csv`) are gzip-compressed.
 
@@ -57,7 +58,7 @@ Further files directly in [`data/`](https://github.com/laurauntner/sappho-digita
 | Resource | URI | Website |
 |---|---|---|
 | Ontology (OWL) | [w3id.org/sappho-digital/ontology/](https://w3id.org/sappho-digital/ontology/) | [sappho-digital.com/ontology.html](https://sappho-digital.com/ontology.html) |
-| Vocabulary (SKOS) | [w3id.org/sappho-digital/vocab/](https://w3id.org/sappho-digital/vocab/) | [sappho-digital.com/vocab.html](https://sappho-digital.com/vokabular.html) |
+| Vocabulary (SKOS) | [w3id.org/sappho-digital/vocab/](https://w3id.org/sappho-digital/vocab/) | [sappho-digital.com/vocabulary.html](https://sappho-digital.com/vocabulary.html) |
 | Alignments | [w3id.org/sappho-digital/alignments/](https://w3id.org/sappho-digital/alignments/) | [sappho-digital.com/alignments.html](https://sappho-digital.com/alignments.html) |
 
 Ontology versions used in developing the [Sappho Digital Ontology](https://sappho-digital.com/ontology.html):

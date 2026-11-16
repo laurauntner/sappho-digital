@@ -228,8 +228,8 @@ const T = STATS_LANG === 'en' ? {
 };
 
 const GENRE_LABELS = {
-    en: { Lyrik: 'Poetry', Prosa: 'Prose', Drama: 'Drama', Comic: 'Comic', Unbekannt: 'Unknown' },
-    de: { Lyrik: 'Lyrik', Prosa: 'Prosa', Drama: 'Drama', Comic: 'Comic', Unbekannt: 'Unbekannt' },
+    en: { Lyrik: 'Poetry', Prosa: 'Prose', Drama: 'Drama', Comic: 'Other', Unbekannt: 'Unknown' },
+    de: { Lyrik: 'Lyrik', Prosa: 'Prosa', Drama: 'Drama', Comic: 'Sonstige', Unbekannt: 'Unbekannt' },
 };
 function genreLabel(key) {
     return (GENRE_LABELS[STATS_LANG] || {})[key] || key;
@@ -1372,12 +1372,24 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         };
 
+        // DOM-Labels exakt auf die Balkenmitten setzen (statt gleichmäßig über die
+        // gesamte Canvas-Höhe inkl. x-Achse verteilen, was nach unten hin versetzt)
+        function alignRiLabels(chart) {
+            if (!labelCol.dataset.fixed || !chart.scales || !chart.scales.y) return;
+            labelCol.style.height = canvas.getBoundingClientRect().height + 'px';
+            labelCol.querySelectorAll(':scope > div').forEach((cell, i) => {
+                const cy = chart.scales.y.getPixelForValue(i);
+                cell.style.top = (cy - cell.offsetHeight / 2) + 'px';
+            });
+        }
+        const labelAlignPlugin = { id: 'riLabelAlign', afterUpdate: alignRiLabels, resize: alignRiLabels };
+
         const riVals   = sorted.map(d => d.reception_index);
         const labels   = uniqueLabels(sorted.map(() => ''));  // leere Labels, DOM übernimmt
 
         charts['ri-main'] = new Chart(canvas.getContext('2d'), {
             type: 'bar',
-            plugins: [medianLinePlugin],
+            plugins: [medianLinePlugin, labelAlignPlugin],
             data: {
                 labels,
                 datasets: [{
@@ -1458,7 +1470,30 @@ document.addEventListener('DOMContentLoaded', () => {
                 maxW = Math.max(maxW, cell.scrollWidth);
             });
             labelCol.style.width = Math.min(320, maxW + 12) + 'px';
-            if (charts['ri-main']) charts['ri-main'].resize();
+            // Ab jetzt absolut positionieren; die Lage übernimmt alignRiLabels()
+            labelCol.dataset.fixed = '1';
+            labelCol.style.position = 'relative';
+            labelCol.style.display  = 'block';
+            labelCol.style.padding  = '0';
+            let maxCellH = 0;
+            labelCol.querySelectorAll(':scope > div').forEach(cell => {
+                cell.style.position  = 'absolute';
+                cell.style.left      = '0';
+                cell.style.right     = '10px';
+                cell.style.minHeight = '0';
+                maxCellH = Math.max(maxCellH, cell.offsetHeight);
+            });
+            // Umbrechende (mehrzeilige) Titel dürfen sich nicht überlappen:
+            // Zeilenhöhe ggf. an die höchste Beschriftung anpassen
+            if (maxCellH + 4 > ROW_H) {
+                const newH = Math.max(120, n * (maxCellH + 4) + 40) + 'px';
+                canvasWrap.style.height = newH;  // Chart.js liest die Höhe vom Container
+                canvas.style.height     = newH;
+            }
+            if (charts['ri-main']) {
+                charts['ri-main'].resize();
+                alignRiLabels(charts['ri-main']);
+            }
 
             // Download-Button: Labels (DOM) + Balken (Canvas) zusammenführen
             // `canvas` enthält nur die Balken mit leeren Y-Labels; die Beschriftungen
@@ -1510,21 +1545,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 oc.fillStyle = '#ffffff';
                 oc.fillRect(0, 0, off.width, off.height);
 
-                // Labels manuell zeichnen
-                // Chart.js setzt oben+unten je ROW_H/2 als padding; das gleiche
-                // Padding gilt für die Label-Spalte (per CSS). Die n Zeilen sind
-                // gleichmäßig über (totalH - ROW_H*DPR) verteilt (space-around).
-                const PAD_TOP  = Math.round((ROW_H / 2) * EXPORT_ZOOM * DPR);
-                const rowH_px  = Math.round(ROW_H * EXPORT_ZOOM * DPR);
-                const innerH   = totalH - PAD_TOP * 2;
-                const cellH    = sorted.length > 0 ? innerH / sorted.length : rowH_px;
+                // Labels manuell zeichnen – vertikal exakt auf die Balkenmitten
+                // der y-Achse (die x-Achse unten wird so nicht mitverteilt).
+                const yScale = charts['ri-main'].scales.y;
 
                 // Text rechts bündig bis zum rechten Rand von labelCol (mit 10px Abstand)
                 const labelRight = Math.round((labelW - 10) * DPR);
 
                 sorted.forEach((d, i) => {
-                    // Zellenmitte (space-around: erster Mittelpunkt bei cellH/2 nach PAD_TOP)
-                    const cy = PAD_TOP + cellH * i + cellH / 2;
+                    const cy = yScale.getPixelForValue(i) * EXPORT_ZOOM * DPR;
 
                     const hasAuthor = !!d.authors;
                     if (hasAuthor) {
@@ -1574,14 +1603,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Word & Co. haben Geist meist nicht installiert und weichen auf breitere Schriften aus;
                 // rechtsbündiger Text würde dann links abgeschnitten -> Puffer von 25 %.
                 const labelW     = Math.max(domLabelW, Math.ceil(needW * 1.25) + 10 + 16);
-                const totalH     = canvas.getBoundingClientRect().height * EXPORT_ZOOM;
-                const PAD_TOP    = ROW_H / 2 * EXPORT_ZOOM;
-                const cellH      = sorted.length > 0 ? (totalH - PAD_TOP * 2) / sorted.length : ROW_H * EXPORT_ZOOM;
+                const yScale     = charts['ri-main'].scales.y;
                 const labelRight = labelW - 10;
                 const esc = t => t.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
                 let markup = '';
                 sorted.forEach((d, i) => {
-                    const cy = PAD_TOP + cellH * i + cellH / 2;
+                    const cy = yScale.getPixelForValue(i) * EXPORT_ZOOM;
                     if (d.authors) {
                         const lineGap = 7 * EXPORT_ZOOM;
                         markup += `<text x="${labelRight}" y="${cy - lineGap / 2}" text-anchor="end" font-size="${11 * EXPORT_ZOOM}" fill="#111827">${esc(d.label)}</text>` +

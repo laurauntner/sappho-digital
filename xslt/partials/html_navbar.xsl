@@ -1015,6 +1015,11 @@
                                             href="https://github.com/laurauntner/sappho-digital"
                                             >GitHub</a>
                                     </li>
+                                    <li>
+                                        <a class="dropdown-item custom-dropdown-link"
+                                            href="https://lod-cloud.net/dataset/sappho-digital"
+                                            >LOD Cloud</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item">

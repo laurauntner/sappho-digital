@@ -186732,12 +186732,12 @@ Philosophen zu Sanssouci</rdfs:label>
     <rdfs:label xml:lang="de">Als Sr. Hochedelgebornen der Herr Professor Kant den 21. August 1770 für die Professor-Würde disputirte</rdfs:label>
   </ecrm:E35_Title>
   <intro:INT2_ActualizationOfFeature rdf:about="https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48">
-    <rdfs:label xml:lang="de">Interpretation von Illias (Werk) in THE MOST BEAUTIFUL</rdfs:label>
+    <rdfs:label xml:lang="de">Interpretation von Ilias (Werk) in THE MOST BEAUTIFUL</rdfs:label>
     <rdfs:label xml:lang="en">Interpretation of Iliad (Work) in THE MOST BEAUTIFUL</rdfs:label>
     <intro:R17_actualizesFeature>
       <intro:INT_Interpretation rdf:about="https://sappho-digital.com/feature/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48">
         <intro:R17i_featureActualizedIn rdf:resource="https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48"/>
-        <rdfs:label xml:lang="de">Interpretation von Illias (Werk) in THE MOST BEAUTIFUL</rdfs:label>
+        <rdfs:label xml:lang="de">Interpretation von Ilias (Werk) in THE MOST BEAUTIFUL</rdfs:label>
         <rdfs:label xml:lang="en">Interpretation of Iliad (Work) in THE MOST BEAUTIFUL</rdfs:label>
       </intro:INT_Interpretation>
     </intro:R17_actualizesFeature>
@@ -186745,7 +186745,7 @@ Philosophen zu Sanssouci</rdfs:label>
       <intro:INT2_ActualizationOfFeature rdf:about="https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_0e2eeafefe2dae48">
         <intro:R21i_isIdentifiedBy rdf:resource="https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48"/>
         <intro:R18i_actualizationFoundOn rdf:resource="https://sappho-digital.com/expression/bibl_0bd2c59f"/>
-        <rdfs:label xml:lang="de">Illias (Werk) in THE MOST BEAUTIFUL</rdfs:label>
+        <rdfs:label xml:lang="de">Ilias (Werk) in THE MOST BEAUTIFUL</rdfs:label>
         <rdfs:label xml:lang="en">Iliad (Work) in THE MOST BEAUTIFUL</rdfs:label>
         <intro:R17_actualizesFeature rdf:resource="https://sappho-digital.com/feature/work_ref/work_0e2eeafefe2dae48"/>
       </intro:INT2_ActualizationOfFeature>
@@ -325408,7 +325408,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern</
       <intro:INT18_Reference rdf:about="https://sappho-digital.com/feature/work_ref/work_0e2eeafefe2dae48">
         <skos:exactMatch rdf:resource="https://w3id.org/sappho-digital/vocab/work_0e2eeafefe2dae48"/>
         <rdfs:label xml:lang="en">Reference to Iliad (Work)</rdfs:label>
-        <rdfs:label xml:lang="de">Referenz auf Illias (Werk)</rdfs:label>
+        <rdfs:label xml:lang="de">Referenz auf Ilias (Werk)</rdfs:label>
         <intro:R17i_featureActualizedIn rdf:resource="https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_0e2eeafefe2dae48"/>
       </intro:INT18_Reference>
     </ecrm:P1i_identifies>

@@ -11998,7 +11998,7 @@ Philosophen zu Sanssouci"""@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_topic_a10417e468b798b0> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Illias (Werk) in THE MOST BEAUTIFUL"@de,
+    rdfs:label "Interpretation von Ilias (Werk) in THE MOST BEAUTIFUL"@de,
         "Interpretation of Iliad (Work) in THE MOST BEAUTIFUL"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48> .
 
@@ -117099,7 +117099,7 @@ Philosophen zu Sanssouci"""@de ;
     intro:R21_identifies <https://sappho-digital.com/actualization/topic/bibl_0bd2c59f_topic_a10417e468b798b0> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Illias (Werk) in THE MOST BEAUTIFUL"@de,
+    rdfs:label "Interpretation von Ilias (Werk) in THE MOST BEAUTIFUL"@de,
         "Interpretation of Iliad (Work) in THE MOST BEAUTIFUL"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_0e2eeafefe2dae48> .
@@ -201341,7 +201341,7 @@ Philosophen zu Sanssouci and Sapphos Werk"""@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/plot/bibl_8665dcc5_plot_f69b5676eae739bc> .
 
 <https://sappho-digital.com/feature/work_ref/work_0e2eeafefe2dae48> a intro:INT18_Reference ;
-    rdfs:label "Referenz auf Illias (Werk)"@de,
+    rdfs:label "Referenz auf Ilias (Werk)"@de,
         "Reference to Iliad (Work)"@en ;
     skos:exactMatch <https://w3id.org/sappho-digital/vocab/work_0e2eeafefe2dae48> ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_0e2eeafefe2dae48> .
@@ -220437,7 +220437,7 @@ Justinus Kerner, Friedrich Baron de la Motte Fouqué, Ludwig Uhland und Andern""
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_sappho_96_topos_3df47bdc> .
 
 <https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_0e2eeafefe2dae48> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Illias (Werk) in THE MOST BEAUTIFUL"@de,
+    rdfs:label "Ilias (Werk) in THE MOST BEAUTIFUL"@de,
         "Iliad (Work) in THE MOST BEAUTIFUL"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/work_ref/work_0e2eeafefe2dae48> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_0bd2c59f> ;
