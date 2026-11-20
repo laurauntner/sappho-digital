@@ -4694,7 +4694,7 @@ function renderGenderPhenomSections() {
         const pctOf = (n, tot) => tot > 0 ? parseFloat((n / tot * 100).toFixed(2)) : 0;
         const ovMale  = topItems.map(f => { const c = f.cells.find(x => x.g === 'male');   return pctOf(c ? c.n : 0, pd.nMale);   });
         const ovFem   = topItems.map(f => { const c = f.cells.find(x => x.g === 'female'); return pctOf(c ? c.n : 0, pd.nFemale); });
-        const ovMaxX  = Math.min(100, Math.ceil(Math.max(...ovMale, ...ovFem) * 1.05 / 5) * 5) || 10;
+        const ovMaxX  = 100;
         const ovH     = canvasHeight(topItems.length);
 
         const ovWrap  = document.createElement('div');
@@ -4788,7 +4788,7 @@ function renderGenderPhenomSections() {
                 scales: {
                     x: {
                         min: 0, max: ovMaxX,
-                        ticks: { font: { family: 'Geist, system-ui', size: 12 }, callback: v => v + '%', stepSize: 5 },
+                        ticks: { font: { family: 'Geist, system-ui', size: 12 }, callback: v => v + '%', stepSize: 10 },
                         grid: { color: 'rgba(0,0,0,0.06)' },
                     },
                     y: {
@@ -4904,7 +4904,7 @@ function renderGenderPhenomSections() {
 
         const labels = uniqueLabels(sorted.map(f => f.label));
         const data   = sorted.map(f => tot > 0 ? parseFloat((f.gCount / tot * 100).toFixed(2)) : 0);
-        const maxX   = Math.min(100, Math.ceil(Math.max(...data) * 1.05 / 5) * 5) || 10;
+        const maxX   = 100;
         const chartH = Math.max(120, sorted.length * 26 + 40);
 
         if (existingChart) { existingChart.destroy(); }
@@ -4953,7 +4953,7 @@ function renderGenderPhenomSections() {
                 scales: {
                     x: {
                         min: 0, max: maxX,
-                        ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => v + '%', stepSize: 5 },
+                        ticks: { font: { family: 'Geist, system-ui', size: 11 }, callback: v => v + '%', stepSize: 10 },
                         grid: { color: 'rgba(0,0,0,0.06)' },
                     },
                     y: {
