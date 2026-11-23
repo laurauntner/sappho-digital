@@ -39,7 +39,7 @@
 
         <xsl:element name="ns" namespace="">
             <xsl:attribute name="p" select="'intro'"/>
-            <xsl:attribute name="u" select="'https://w3id.org/lso/intro/currentbeta#'"/>
+            <xsl:attribute name="u" select="'https://w3id.org/lso/intro/v1.0#'"/>
         </xsl:element>
 
         <xsl:element name="ns" namespace="">

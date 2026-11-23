@@ -4,7 +4,7 @@
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    xmlns:intro="https://w3id.org/lso/intro/currentbeta#"
+    xmlns:intro="https://w3id.org/lso/intro/v1.0#"
     xmlns:ecrm="http://erlangen-crm.org/current/" xmlns:u="urn:util"
     xmlns:i18n="urn:sappho-digital:i18n" exclude-result-prefixes="xs u i18n"
     version="3.0">

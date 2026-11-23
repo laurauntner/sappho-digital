@@ -5,7 +5,7 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:ecrm="http://erlangen-crm.org/current/"
     xmlns:lrmoo="http://iflastandards.info/ns/lrm/lrmoo/"
-    xmlns:intro="https://w3id.org/lso/intro/currentbeta#" xmlns:local="xyz"
+    xmlns:intro="https://w3id.org/lso/intro/v1.0#" xmlns:local="xyz"
     xmlns:i18n="urn:sappho-digital:i18n"
     exclude-result-prefixes="xs rdf rdfs owl ecrm lrmoo intro local i18n">
 

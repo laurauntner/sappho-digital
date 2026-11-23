@@ -26,7 +26,7 @@ document.fonts.ready.then(function () {
   var START_URI              = META.startUri;
   var HIDDEN_BY_DEFAULT      = new Set(META.hiddenByDefault);
   var INT31_NEIGHBOR_IDS     = new Set(META.int31NeighborIds);
-  var FOCUS_CLASS            = "https://w3id.org/lso/intro/currentbeta#INT31_IntertextualRelation";
+  var FOCUS_CLASS            = "https://w3id.org/lso/intro/v1.0#INT31_IntertextualRelation";
 
   // State
   var maxEdges       = DEFAULT_MAX_EDGES;
@@ -585,8 +585,8 @@ document.fonts.ready.then(function () {
 
   // Rechte Sidebar
   var INSTANCE_CLASSES = {
-    "INT2":  "https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature",
-    "INT21": "https://w3id.org/lso/intro/currentbeta#INT21_TextPassage",
+    "INT2":  "https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature",
+    "INT21": "https://w3id.org/lso/intro/v1.0#INT21_TextPassage",
     "F2":    "http://iflastandards.info/ns/lrm/lrmoo/F2_Expression",
   };
   var activeTab      = "F2";

@@ -4,7 +4,7 @@
     "crm": "http://www.cidoc-crm.org/cidoc-crm/",
     "dc": "http://purl.org/dc/elements/1.1/",
     "ecrm": "http://erlangen-crm.org/current/",
-    "intro": "https://w3id.org/lso/intro/currentbeta#",
+    "intro": "https://w3id.org/lso/intro/v1.0#",
     "lrmoo": "http://iflastandards.info/ns/lrm/lrmoo/",
     "owl": "http://www.w3.org/2002/07/owl#",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
@@ -157,14 +157,14 @@
           "@id": "https://orcid.org/0000-0002-9649-0870"
         }
       ],
-      "dc:description": "This is an ontology developed in the project Sappho Digital by Laura Untner. It reuses the Erlangen OWL version of the CIDOC Conceptual Reference Model (CRM; ECRM 240307, based on CIDOC CRM 7.1.3), the object-oriented version of IFLA’s Library Reference Model (LRMoo; v1.1.1) and INTRO (the Intertextual, Interpictorial and Intermedial Relations Ontology; beta202506) to model basic biographical and bibliographical as well as intertextual information. The ontology has three modules that are connected with each other, see figure 1: https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/meta.png. The authors module models basic biographical information, see figure 2: https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/authors_simple.png. The works module models basic bibliographical information, see figure 3: https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/works_simple.png. The relations module models intertextual information, see figure 4: https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/relations_simple.png. For alignments with the Bibliographic Ontology (BIBO), the FRBR-aligned Bibliographic Ontology (FaBiO), the Citation Typing Ontology (CiTO), Dublin Core (DC), the Document Components Ontology (DoCo), the DraCor Ontology, the Friends of a Friend (FOAF) Ontology, the Functional Requirements for Bibliographic Records object-oriented (FRBRoo) extension to the CIDOC Conceptual Reference Model, the GOLEM Ontology for Narrative and Fiction, the Intertextuality Ontology, the Mining and Modeling Text (MiMoText) Ontology, the OntoPoetry/POSTDATA ontology (core and analysis modules), Schema.org, and the Ontologies of Under-Represented Writers and Books see https://github.com/laurauntner/sappho-digital/tree/main/documentation/alignments.",
+      "dc:description": "This is an ontology developed in the project Sappho Digital by Laura Untner. It reuses the Erlangen OWL version of the CIDOC Conceptual Reference Model (CRM; ECRM 240307, based on CIDOC CRM 7.1.3), the object-oriented version of IFLA’s Library Reference Model (LRMoo; v1.1.1) and INTRO (the Intertextual, Interpictorial and Intermedial Relations Ontology; v1.0) to model basic biographical and bibliographical as well as intertextual information. The ontology has three modules that are connected with each other, see figure 1: https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/meta.png. The authors module models basic biographical information, see figure 2: https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/authors_simple.png. The works module models basic bibliographical information, see figure 3: https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/works_simple.png. The relations module models intertextual information, see figure 4: https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/relations_simple.png. For alignments with the Bibliographic Ontology (BIBO), the FRBR-aligned Bibliographic Ontology (FaBiO), the Citation Typing Ontology (CiTO), Dublin Core (DC), the Document Components Ontology (DoCo), the DraCor Ontology, the Friends of a Friend (FOAF) Ontology, the Functional Requirements for Bibliographic Records object-oriented (FRBRoo) extension to the CIDOC Conceptual Reference Model, the GOLEM Ontology for Narrative and Fiction, the Intertextuality Ontology, the Mining and Modeling Text (MiMoText) Ontology, the OntoPoetry/POSTDATA ontology (core and analysis modules), Schema.org, and the Ontologies of Under-Represented Writers and Books see https://github.com/laurauntner/sappho-digital/tree/main/documentation/alignments.",
       "dc:issued": {
         "@type": "xsd:date",
         "@value": "2026-02-01"
       },
       "dc:modified": {
         "@type": "xsd:date",
-        "@value": "2026-10-19"
+        "@value": "2026-11-23"
       },
       "dc:relation": {
         "@id": "https://sappho-digital.com"
@@ -182,10 +182,10 @@
           "@id": "https://cidoc-crm.org/extensions/lrmoo/owl/1.1.1/LRMoo_v1.1.1.owl"
         },
         {
-          "@id": "https://raw.githubusercontent.com/BOberreither/INTRO/refs/heads/master/INTRO_CurrentBeta.owl"
+          "@id": "https://w3id.org/lso/intro/v1.0"
         }
       ],
-      "owl:versionInfo": "Version 0.1",
+      "owl:versionInfo": "Version 1.0",
       "rdfs:label": {
         "@language": "en",
         "@value": "Sappho Digital Ontology"
@@ -1400,7 +1400,7 @@
       },
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Links an INT2 Actualization of Feature (that is possibly, but not necessarily, specified by a link to the features INT Identification or INT Interpretation) or a text on different levels of granularity to the INT3 Interrelation or the INT2 Actualization of Feature it identifies."
+        "@value": "Links an INT2 Actualization of Feature (that is possibly, but not necessarily, specified by a link to the features INT Identification or INT Interpretation) or a text on different levels of granularity to the INT3 Interrelation or the INT2 Actualization of Feature it identifies. Please note: R21 is a sub-property of CIDOC CRM's P67 refers to, whose domain is E89 Propositional Object. Using R21 therefore makes its domain (the identifying INT1 Passage, INT2 Actualization of Feature, or INT6 Architext, as well as any F1 Work or E73 Information Object) an instance of E89 Propositional Object by inference. This should be kept in mind when modelling."
       },
       "rdfs:domain": {
         "@id": "_:n0799c903ea374cc6933040d03e3e7819b50"
@@ -1487,7 +1487,7 @@
       },
       "rdfs:comment": {
         "@language": "en",
-        "@value": "Links an INT4 Feature to an INT3 Interrelation it provides the similarity for, the similarity being the basis for the detection of the INT3 Interrelation. The property states that an INT3 Interrelation is based on a similarity, i. e. the actualization of the same INT4 Feature in two different texts/images; it constitutes an abbreviation of the modelling of two INT2 Actualizations of Feature of the same F4 Feature in the respective texts/images. The term 'similarity' is to be understood in the widest possible way."
+        "@value": "Links an INT4 Feature to an INT3 Interrelation it provides the similarity for, the similarity being the basis for the detection of the INT3 Interrelation. The property states that an INT3 Interrelation is based on a similarity, i. e. the actualization of the same INT4 Feature in two different texts/images; it constitutes an abbreviation of the modelling of two INT2 Actualizations of Feature of the same INT4 Feature in the respective texts/images. The term 'similarity' is to be understood in the widest possible way."
       },
       "rdfs:domain": {
         "@id": "intro:INT4_Feature"
@@ -3018,7 +3018,7 @@
       "@id": "_:n0799c903ea374cc6933040d03e3e7819b2",
       "@type": "owl:Restriction",
       "owl:minCardinality": {
-        "@type": "xsd:int",
+        "@type": "xsd:nonNegativeInteger",
         "@value": "2"
       },
       "owl:onProperty": {
@@ -3210,6 +3210,9 @@
     {
       "@id": "intro:R24i_isRelatedEntity",
       "@type": "owl:ObjectProperty",
+      "rdfs:subPropertyOf": {
+        "@id": "crm:P129i_is_subject_of"
+      },
       "owl:inverseOf": {
         "@id": "intro:R24_hasRelatedEntity"
       },
@@ -3468,6 +3471,9 @@
     {
       "@id": "intro:R24_hasRelatedEntity",
       "@type": "owl:ObjectProperty",
+      "rdfs:subPropertyOf": {
+        "@id": "crm:P129_is_about"
+      },
       "owl:inverseOf": {
         "@id": "intro:R24i_isRelatedEntity"
       },
@@ -3539,6 +3545,334 @@
       "rdfs:range": {
         "@id": "lrmoo:F3_Manifestation"
       }
+    },
+    {
+      "@id": "ecrm:P95i_was_formed_by",
+      "@type": "owl:ObjectProperty",
+      "owl:inverseOf": {
+        "@id": "ecrm:P95_has_formed"
+      },
+      "owl:sameAs": {
+        "@id": "crm:P95i_was_formed_by"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Quantification of the inverse property: one to many, necessary, dependent (1,n:1,1) Scope note of the inverse property: This property associates the instance of E66 Formation with the instance of E74 Group that it founded. Examples of the inverse property: - The formation of the CIDOC CRM SIG at the August 2000 CIDOC Board meeting (E66) has formed the CIDOC CRM Special Interest Group (E74). In First Order Logic of the inverse property: - P95(x,y) ⇒ E66(x) - P95(x,y) ⇒ E74(y) - P95(x,y) ⇒ P92(x,y)"
+      },
+      "rdfs:domain": {
+        "@id": "ecrm:E74_Group"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "P95 was formed by"
+        },
+        {
+          "@language": "de",
+          "@value": "P95 wurde gebildet von"
+        },
+        {
+          "@language": "el",
+          "@value": "P95 σχηματίστηκε από"
+        },
+        {
+          "@language": "fr",
+          "@value": "P95 a été fondé par"
+        },
+        {
+          "@language": "pt",
+          "@value": "P95 foi formado por"
+        },
+        {
+          "@language": "ru",
+          "@value": "P95 была сформирована посредством"
+        },
+        {
+          "@language": "zh",
+          "@value": "P95 被组成"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "ecrm:E66_Formation"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "ecrm:P92i_was_brought_into_existence_by"
+      },
+      "skos:notation": "P95i"
+    },
+    {
+      "@id": "ecrm:P152_has_parent",
+      "@type": "owl:ObjectProperty",
+      "owl:inverseOf": {
+        "@id": "ecrm:P152i_is_parent_of"
+      },
+      "owl:sameAs": {
+        "@id": "crm:P152_has_parent"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Quantification: many to many, necessary (2,n:0,n) Scope note: This property associates an instance of E21 Person with another instance of E21 Person who plays the role of the first instance’s parent, regardless of whether the relationship is biological parenthood, assumed or pretended biological parenthood or an equivalent legal status of rights and obligations obtained by a social or legal act. This property is, among others, a shortcut of the fully developed paths from E21 Person through P98i was born, E67 Birth, P96 by mother to E21 Person, and from E21 Person through P98i was born, E67 Birth, P97 from father to E21 Person. This property is not transitive. This property is irreflexive. Examples: - Gaius Octavius (E21) has parent Julius Caesar (E21). (Bleicken & Bell, 2015) - Steve Jobs (E21) has parent Joanne Simpson (E21). [Biological mother] (Isaacson, 2011) - Steve Jobs (E21) has parent Clara Jobs (E21). [Adoption mother] (Isaacson, 2011) In First Order Logic: - P152(x,y) ⇒ E21(x) - P152(x,y) ⇒ E21(y) - P152(x,y) ⇐ (∃z) [E67(z) ˄ P98i(x,z) ˄ P96(z,y)] - P152(x,y) ⇐ (∃z) [E67(z) ˄ P98i(x,z) ˄ P97(z,y)] - ¬P152(x,x)"
+      },
+      "rdfs:domain": {
+        "@id": "ecrm:E21_Person"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "P152 has parent"
+        },
+        {
+          "@language": "fr",
+          "@value": "P152 a pour parent"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "ecrm:E21_Person"
+      },
+      "skos:notation": "P152"
+    },
+    {
+      "@id": "ecrm:P107_has_current_or_former_member",
+      "@type": "owl:ObjectProperty",
+      "owl:inverseOf": {
+        "@id": "ecrm:P107i_is_current_or_former_member_of"
+      },
+      "owl:sameAs": {
+        "@id": "crm:P107_has_current_or_former_member"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Quantification: many to many (0,n:0,n) Scope note: This property associates an instance of E74 Group with an instance of E39 Actor that is or has been a member thereof. Instances of E74 Group and E21 Person may all be members of instances of E74 Group. An instance of E74 Group may be founded initially without any member. This property is a shortcut of the more fully developed path from E74 Group, P144i gained member by, E85 Joining, P143 joined to E39 Actor. The property P107.1 kind of member can be used to specify the type of membership or the role the member has in the group. Examples: - László Moholy-Nagy (E21) is current or former member of Bauhaus (E74). (Moholy-Nagy, 2012) - National Museum of Science and Industry (E74) has current or former member The National Railway Museum (E74). (Rolt, 1971) - The married couple Queen Elisabeth and Prince Phillip (E74) has current or former member Prince Phillip (E21) kind of member husband (E55). (Brandreth, 2004) Properties: - P107.1 kind of member: E55 Type In First Order Logic: - P107(x,y) ⇒ E74(x) - P107(x,y) ⇒ E39(y) - P107(x,y,z) ⇒ [P107(x,y) ∧ E55(z)] - P107(x,y) ⇐ (∃z) [E85(z) ˄ P144i(x,z) ˄ P143(z,y)]"
+      },
+      "rdfs:domain": {
+        "@id": "ecrm:E74_Group"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "P107 has current or former member"
+        },
+        {
+          "@language": "de",
+          "@value": "P107 hat derzeitiges oder früheres Mitglied"
+        },
+        {
+          "@language": "el",
+          "@value": "P107 έχει ή είχε μέλος"
+        },
+        {
+          "@language": "fr",
+          "@value": "P107 a pour membre actuel ou antérieur"
+        },
+        {
+          "@language": "pt",
+          "@value": "P107 tem ou teve membro"
+        },
+        {
+          "@language": "ru",
+          "@value": "P107 имеет действующего или бывшего члена"
+        },
+        {
+          "@language": "zh",
+          "@value": "P107 有当前或以往成员"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "ecrm:E39_Actor"
+      },
+      "skos:notation": "P107"
+    },
+    {
+      "@id": "ecrm:P146i_lost_member_by",
+      "@type": "owl:ObjectProperty",
+      "owl:inverseOf": {
+        "@id": "ecrm:P146_separated_from"
+      },
+      "owl:sameAs": {
+        "@id": "crm:P146i_lost_member_by"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Quantification of the inverse property: many to many, necessary (1,n:0,n) Scope note of the inverse property: This property identifies the instance of E74 Group an instance of E39 Actor leaves through an instance of E86 Leaving. Although a leaving activity normally concerns only one instance of E74 Group, it is possible to imagine circumstances under which leaving one E74 Group implies leaving another E74 Group as well. Examples of the inverse property: - The end of Sir Isaac Newton’s duty as Member of Parliament for the University of Cambridge to the Convention Parliament in 1702 (E86) separated from the Convention Parliament (E74). (Iliffe, 2013) - George Washington’s leaving office in 1797 (E86) separated from the office of President of the United States (E74). (Unger, 2015) - The implementation of the treaty regulating the termination of Greenland membership in EU between EU, Denmark and Greenland 1(st) February 1985 (E86) separated from EU (E74). In First Order Logic of the inverse property: - P146(x,y) ⇒ E86(x) - P146(x,y) ⇒ E74(y) - P146(x,y) ⇒ P11(x,y)"
+      },
+      "rdfs:domain": {
+        "@id": "ecrm:E74_Group"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "P146 lost member by"
+        },
+        {
+          "@language": "de",
+          "@value": "P146 verlor Mitglied durch"
+        },
+        {
+          "@language": "fr",
+          "@value": "P146 a perdu le membre par"
+        },
+        {
+          "@language": "zh",
+          "@value": "P146 失去成员"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "ecrm:E86_Leaving"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "ecrm:P11i_participated_in"
+      },
+      "skos:notation": "P146i"
+    },
+    {
+      "@id": "ecrm:P59i_is_located_on_or_within",
+      "@type": "owl:ObjectProperty",
+      "owl:inverseOf": {
+        "@id": "ecrm:P59_has_section"
+      },
+      "owl:sameAs": {
+        "@id": "crm:P59i_is_located_on_or_within"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Quantification of the inverse property: many to many (0,n:0,n) Scope note of the inverse property: This property links an area, i.e., an instance of E53 Place to the instance of E18 Physical Thing upon which it is found. This area may either be identified by a name, or by a geometry in terms of a coordinate system adapted to the shape of the respective instance of E18 Physical Thing. Typically, names identifying sections of physical objects are composed of the name of a kind of part and the name of the object itself, such as “The poop deck of H.M.S. Victory”, which is composed of “poop deck” and “H.M.S. Victory”. Examples of the inverse property: - HMS Victory (E22) has section HMS Victory section B347.6 (E53). (Goodwin, 2015) In First Order Logic of the inverse property: - P59(x,y) ⇒ E18(x) - P59(x,y) ⇒ E53(y)"
+      },
+      "rdfs:domain": {
+        "@id": "ecrm:E53_Place"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "P59 is located on or within"
+        },
+        {
+          "@language": "de",
+          "@value": "P59 befindet sich auf oder in"
+        },
+        {
+          "@language": "el",
+          "@value": "P59 βρίσκεται σε ή εντός"
+        },
+        {
+          "@language": "fr",
+          "@value": "P59 se situe sur ou dans"
+        },
+        {
+          "@language": "pt",
+          "@value": "P59 está localizada sobre ou dentro de"
+        },
+        {
+          "@language": "ru",
+          "@value": "P59 находится на или внутри"
+        },
+        {
+          "@language": "zh",
+          "@value": "P59 位于"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "ecrm:E18_Physical_Thing"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "ecrm:P157_is_at_rest_relative_to"
+      },
+      "skos:notation": "P59i"
+    },
+    {
+      "@id": "ecrm:P135i_was_created_by",
+      "@type": "owl:ObjectProperty",
+      "owl:inverseOf": {
+        "@id": "ecrm:P135_created_type"
+      },
+      "owl:sameAs": {
+        "@id": "crm:P135i_was_created_by"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Quantification of the inverse property: one to many, necessary (1,n:0,1) Scope note of the inverse property: This property identifies the instance of E55 Type, which is created in an instance of E83 Type Creation activity. Examples of the inverse property: - The description of a new ribbon worm species by Bürger (E83) created type ‘Lineus kennelii’ (E55). (Bürger, 1892) In First Order Logic of the inverse property: - P135(x,y) ⇒ E83(x) - P135(x,y) ⇒ E55(y) - P135(x,y) ⇒ P94(x,y)"
+      },
+      "rdfs:domain": {
+        "@id": "ecrm:E55_Type"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "P135 was created by"
+        },
+        {
+          "@language": "de",
+          "@value": "P135 wurde geschaffen durch"
+        },
+        {
+          "@language": "el",
+          "@value": "P135 δημιουργήθηκε από"
+        },
+        {
+          "@language": "fr",
+          "@value": "P135 a été créé par"
+        },
+        {
+          "@language": "pt",
+          "@value": "P135 foi criado por"
+        },
+        {
+          "@language": "ru",
+          "@value": "P135 был создан посредством"
+        },
+        {
+          "@language": "zh",
+          "@value": "P135 被创建"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "ecrm:E83_Type_Creation"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "ecrm:P94i_was_created_by"
+      },
+      "skos:notation": "P135i"
+    },
+    {
+      "@id": "ecrm:P144i_gained_member_by",
+      "@type": "owl:ObjectProperty",
+      "owl:inverseOf": {
+        "@id": "ecrm:P144_joined_with"
+      },
+      "owl:sameAs": {
+        "@id": "crm:P144i_gained_member_by"
+      },
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "Quantification of the inverse property: many to many, necessary (1,n:0,n) Scope note of the inverse property: This property identifies the instance of E74 Group of which an instance of E39 Actor becomes a member through an instance of E85 Joining. Although a joining activity normally concerns only one instance of E74 Group, it is possible to imagine circumstances under which becoming member of one Group implies becoming member of another Group as well. Joining events allow for describing people becoming members of a group with a more detailed path from E74 Group through, P144i gained member by, E85 Joining, P143 joined, E39 Actor, compared to the shortcut offered by P107 has current or former member (is current or former member of). The property P144.1 kind of member can be used to specify the type of membership or the role the member has in the group. Examples of the inverse property: - The election of Sir Isaac Newton as Member of Parliament to the Convention Parliament of 1689 (E85) joined with the Convention Parliament (E74). (Iliffe, 2013) - The inauguration of Mikhail Sergeyevich Gorbachev as Leader of the Union of Soviet Socialist Republics (USSR) in 1985 (E85) joined with the office of Leader of the Union of Soviet Socialist Republics (USSR) (E74) kind of member President (E55). (Galeotti, 1997) - The implementation of the membership treaty 1(st) January 1973 between EU and Denmark (E85) joined with EU (E74). In First Order Logic of the inverse property: - P144(x,y) ⇒ E85(x) - P144(x,y)⇒ E74(y) - P144(x,y,z) ⇒ [P144(x,y) ∧ E55(z)] - P144(x,y) ⇒ P11(x,y)"
+      },
+      "rdfs:domain": {
+        "@id": "ecrm:E74_Group"
+      },
+      "rdfs:label": [
+        {
+          "@language": "en",
+          "@value": "P144 gained member by"
+        },
+        {
+          "@language": "de",
+          "@value": "P144 erwarb Mitglied durch"
+        },
+        {
+          "@language": "fr",
+          "@value": "P144 a accueilli le membre par"
+        },
+        {
+          "@language": "zh",
+          "@value": "P144 获得成员"
+        }
+      ],
+      "rdfs:range": {
+        "@id": "ecrm:E85_Joining"
+      },
+      "rdfs:subPropertyOf": {
+        "@id": "ecrm:P11i_participated_in"
+      },
+      "skos:notation": "P144i"
     }
   ]
 }

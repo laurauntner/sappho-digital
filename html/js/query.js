@@ -139,7 +139,7 @@
         "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
         "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
         "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
-        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/v1.0#>\n\n" +
         "SELECT ?feat ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
         "WHERE {\n" +
         "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
@@ -158,7 +158,7 @@
         "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
         "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
         "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
-        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/v1.0#>\n\n" +
         "SELECT ?feat ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
         "WHERE {\n" +
         "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
@@ -176,7 +176,7 @@
         "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
         "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
         "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
-        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/v1.0#>\n\n" +
         "SELECT ?feat ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
         "WHERE {\n" +
         "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
@@ -194,7 +194,7 @@
         "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
         "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
         "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
-        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/v1.0#>\n\n" +
         "SELECT ?feat ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
         "WHERE {\n" +
         "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
@@ -212,7 +212,7 @@
         "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
         "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
         "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
-        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/v1.0#>\n\n" +
         "SELECT ?feat ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
         "WHERE {\n" +
         "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
@@ -231,7 +231,7 @@
         "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
         "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
         "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
-        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/v1.0#>\n\n" +
         "SELECT ?feat ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
         "WHERE {\n" +
         "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
@@ -249,7 +249,7 @@
         "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
         "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
         "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
-        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/v1.0#>\n\n" +
         "SELECT ?feat ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
         "WHERE {\n" +
         "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
@@ -267,7 +267,7 @@
         "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
         "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
         "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
-        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/v1.0#>\n\n" +
         "SELECT ?feat ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
         "WHERE {\n" +
         "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
@@ -286,7 +286,7 @@
         "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
         "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
         "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
-        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/v1.0#>\n\n" +
         "SELECT ?tp ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
         "WHERE {\n" +
         "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
@@ -303,7 +303,7 @@
         "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
         "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
         "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
-        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/v1.0#>\n\n" +
         "SELECT ?feat ?label (COUNT(DISTINCT ?f2) AS ?anzahl)\n" +
         "WHERE {\n" +
         "  ?f2 rdf:type lrmoo:F2_Expression .\n" +
@@ -340,7 +340,7 @@
         "PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n" +
         "PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>\n" +
         "PREFIX lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/>\n" +
-        "PREFIX intro: <https://w3id.org/lso/intro/currentbeta#>\n\n" +
+        "PREFIX intro: <https://w3id.org/lso/intro/v1.0#>\n\n" +
         "SELECT ?f2 ?label (COUNT(DISTINCT ?node) AS ?anzahlRelationen)\n" +
         "WHERE {\n" +
         "  ?node rdf:type intro:INT31_IntertextualRelation .\n" +

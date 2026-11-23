@@ -8,7 +8,7 @@
 @prefix volipi: <http://data.sparna.fr/ontologies/volipi#> .
 @prefix ecrm:  <http://erlangen-crm.org/current/> .
 @prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
-@prefix intro: <https://w3id.org/lso/intro/currentbeta#> .
+@prefix intro: <https://w3id.org/lso/intro/v1.0#> .
 @prefix this:  <https://sappho-digital.com/shapes#> .
 
 <https://sappho-digital.com/shapes> a owl:Ontology .

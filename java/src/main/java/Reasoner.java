@@ -152,7 +152,7 @@ public class Reasoner {
 
         TurtleDocumentFormat ttlFormat = new TurtleDocumentFormat();
         ttlFormat.setPrefix("ecrm:",  "http://erlangen-crm.org/current/");
-        ttlFormat.setPrefix("intro:", "https://w3id.org/lso/intro/currentbeta#");
+        ttlFormat.setPrefix("intro:", "https://w3id.org/lso/intro/v1.0#");
         ttlFormat.setPrefix("lrmoo:", "http://iflastandards.info/ns/lrm/lrmoo/");
         ttlFormat.setPrefix("owl:",   "http://www.w3.org/2002/07/owl#");
         ttlFormat.setPrefix("prov:",  "http://www.w3.org/ns/prov#");
@@ -163,7 +163,7 @@ public class Reasoner {
 
         RDFXMLDocumentFormat rdfxmlFormat = new RDFXMLDocumentFormat();
         rdfxmlFormat.setPrefix("ecrm:",  "http://erlangen-crm.org/current/");
-        rdfxmlFormat.setPrefix("intro:", "https://w3id.org/lso/intro/currentbeta#");
+        rdfxmlFormat.setPrefix("intro:", "https://w3id.org/lso/intro/v1.0#");
         rdfxmlFormat.setPrefix("lrmoo:", "http://iflastandards.info/ns/lrm/lrmoo/");
         rdfxmlFormat.setPrefix("owl:",   "http://www.w3.org/2002/07/owl#");
         rdfxmlFormat.setPrefix("prov:",  "http://www.w3.org/ns/prov#");
@@ -240,28 +240,37 @@ public class Reasoner {
      * - INTRO  -> imports/INTRO.owl
      * - LRMoo  -> imports/LRMoo.owl
      * - ECRM   -> imports/ECRM.owl
+     *
+     * Each local file is mapped from the import IRI used in ontology.ttl
+     * (owl:imports) as well as from its ontology IRI, so that the local copy
+     * is used no matter which of the two is requested.
      */
     private static void addImportMappings(OWLOntologyManager manager) {
 
-        // INTRO
-        File introLocal = new File("imports/INTRO.owl");
-        if (introLocal.exists()) {
-            IRI introImportIRI = IRI.create("https://w3id.org/lso/intro/currentbeta#");
-            manager.getIRIMappers().add(new SimpleIRIMapper(introImportIRI, IRI.create(introLocal.toURI())));
-        }
+        // INTRO v1.0
+        mapLocal(manager, "imports/INTRO.owl",
+                "https://w3id.org/lso/intro/v1.0",
+                "https://w3id.org/lso/intro/v1.0#");
 
-        // LRMoo
-        File lrmooLocal = new File("imports/LRMoo.owl");
-        if (lrmooLocal.exists()) {
-            IRI lrmooImportIRI = IRI.create("http://iflastandards.info/ns/lrm/lrmoo/");
-            manager.getIRIMappers().add(new SimpleIRIMapper(lrmooImportIRI, IRI.create(lrmooLocal.toURI())));
-        }
+        // LRMoo 1.1.1 (imports CIDOC CRM 7.1.3, which is still resolved online)
+        mapLocal(manager, "imports/LRMoo.owl",
+                "https://cidoc-crm.org/extensions/lrmoo/owl/1.1.1/LRMoo_v1.1.1.owl",
+                "http://iflastandards.info/ns/lrm/lrmoo/");
 
-        // ECRM
-        File ecrmLocal = new File("imports/ECRM.owl");
-        if (ecrmLocal.exists()) {
-            IRI ecrmImportIRI = IRI.create("http://erlangen-crm.org/current/");
-            manager.getIRIMappers().add(new SimpleIRIMapper(ecrmImportIRI, IRI.create(ecrmLocal.toURI())));
+        // ECRM 240307
+        mapLocal(manager, "imports/ECRM.owl",
+                "http://erlangen-crm.org/current/");
+    }
+
+    private static void mapLocal(OWLOntologyManager manager, String path, String... iris) {
+        File local = new File(path);
+        if (!local.exists()) {
+            System.out.println("   WARNING: local import not found, will resolve online: " + path);
+            return;
+        }
+        IRI target = IRI.create(local.toURI());
+        for (String iri : iris) {
+            manager.getIRIMappers().add(new SimpleIRIMapper(IRI.create(iri), target));
         }
     }
 }

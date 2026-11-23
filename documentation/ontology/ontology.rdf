@@ -8,7 +8,7 @@
   xmlns:cc="http://creativecommons.org/ns#"
 >
   <owl:Ontology rdf:about="https://w3id.org/sappho-digital/ontology/">
-    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-10-19</dc:modified>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-23</dc:modified>
     <dc:title xml:lang="en">Sappho Digital Ontology</dc:title>
     <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laura Untner</dc:creator>
     <dc:creator rdf:resource="https://orcid.org/0000-0002-9649-0870"/>
@@ -16,12 +16,12 @@
     <cc:licence rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
     <owl:imports rdf:resource="http://erlangen-crm.org/current/"/>
     <owl:imports rdf:resource="https://cidoc-crm.org/extensions/lrmoo/owl/1.1.1/LRMoo_v1.1.1.owl"/>
-    <owl:imports rdf:resource="https://raw.githubusercontent.com/BOberreither/INTRO/refs/heads/master/INTRO_CurrentBeta.owl"/>
+    <owl:imports rdf:resource="https://w3id.org/lso/intro/v1.0"/>
     <dc:relation rdf:resource="https://sappho-digital.com"/>
-    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 0.1</owl:versionInfo>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Version 1.0</owl:versionInfo>
     <rdfs:label xml:lang="en">Sappho Digital Ontology</rdfs:label>
     <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-02-01</dc:issued>
-    <dc:description>This is an ontology developed in the project Sappho Digital by Laura Untner. It reuses the Erlangen OWL version of the CIDOC Conceptual Reference Model (CRM; ECRM 240307, based on CIDOC CRM 7.1.3), the object-oriented version of IFLA’s Library Reference Model (LRMoo; v1.1.1) and INTRO (the Intertextual, Interpictorial and Intermedial Relations Ontology; beta202506) to model basic biographical and bibliographical as well as intertextual information. The ontology has three modules that are connected with each other, see figure 1: https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/meta.png. The authors module models basic biographical information, see figure 2: https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/authors_simple.png. The works module models basic bibliographical information, see figure 3: https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/works_simple.png. The relations module models intertextual information, see figure 4: https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/relations_simple.png. For alignments with the Bibliographic Ontology (BIBO), the FRBR-aligned Bibliographic Ontology (FaBiO), the Citation Typing Ontology (CiTO), Dublin Core (DC), the Document Components Ontology (DoCo), the DraCor Ontology, the Friends of a Friend (FOAF) Ontology, the Functional Requirements for Bibliographic Records object-oriented (FRBRoo) extension to the CIDOC Conceptual Reference Model, the GOLEM Ontology for Narrative and Fiction, the Intertextuality Ontology, the Mining and Modeling Text (MiMoText) Ontology, the OntoPoetry/POSTDATA ontology (core and analysis modules), Schema.org, and the Ontologies of Under-Represented Writers and Books see https://github.com/laurauntner/sappho-digital/tree/main/documentation/alignments.</dc:description>
+    <dc:description>This is an ontology developed in the project Sappho Digital by Laura Untner. It reuses the Erlangen OWL version of the CIDOC Conceptual Reference Model (CRM; ECRM 240307, based on CIDOC CRM 7.1.3), the object-oriented version of IFLA’s Library Reference Model (LRMoo; v1.1.1) and INTRO (the Intertextual, Interpictorial and Intermedial Relations Ontology; v1.0) to model basic biographical and bibliographical as well as intertextual information. The ontology has three modules that are connected with each other, see figure 1: https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/meta.png. The authors module models basic biographical information, see figure 2: https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/authors_simple.png. The works module models basic bibliographical information, see figure 3: https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/works_simple.png. The relations module models intertextual information, see figure 4: https://raw.githubusercontent.com/laurauntner/sappho-digital/refs/heads/main/documentation/ontology/relations_simple.png. For alignments with the Bibliographic Ontology (BIBO), the FRBR-aligned Bibliographic Ontology (FaBiO), the Citation Typing Ontology (CiTO), Dublin Core (DC), the Document Components Ontology (DoCo), the DraCor Ontology, the Friends of a Friend (FOAF) Ontology, the Functional Requirements for Bibliographic Records object-oriented (FRBRoo) extension to the CIDOC Conceptual Reference Model, the GOLEM Ontology for Narrative and Fiction, the Intertextuality Ontology, the Mining and Modeling Text (MiMoText) Ontology, the OntoPoetry/POSTDATA ontology (core and analysis modules), Schema.org, and the Ontologies of Under-Represented Writers and Books see https://github.com/laurauntner/sappho-digital/tree/main/documentation/alignments.</dc:description>
   </owl:Ontology>
   <owl:Class rdf:about="http://erlangen-crm.org/current/E74_Group">
     <rdfs:subClassOf>
@@ -60,15 +60,15 @@
     <rdfs:comment xml:lang="en">Scope note: This class comprises any gatherings or organizations of human individuals or groups that act collectively or in a similar way due to any form of unifying relationship. In the wider sense this class also comprises official positions which used to be regarded in certain contexts as one actor, independent of the current holder of the office, such as the president of a country. In such cases, it may happen that the group never had more than one member. A joint pseudonym (i.e. a name that seems indicative of an individual but that is actually used as a persona by two or more people) is a particular case of E74 Group. A gathering of people becomes an instance of E74 Group when it exhibits organizational characteristics usually typified by a set of ideas or beliefs held in common, or actions performed together. These might be communication, creating some common artifact, a common purpose such as study, worship, business, sports, etc. Nationality can be modelled as membership in an instance of E74 Group. Married couples and other concepts of family are regarded as particular examples of E74 Group. Examples: - the Impressionists (Wilson, 1994) - the Navajo (Correll, 1972) - the Greeks (Williams, 1993) - the peace protestors in New York City on 15(th) February 2003 - Exxon-Mobil (Raymond, 2006) - King Solomon and his wives (Thieberger, 1947) - the President of the Swiss Confederation - Nicolas Bourbaki [the collective pseudonym of a group of mathematicians, predominantly French alumni of the École normale supérieure] (Aczel, 2007) - Betty Crocker (Crocker, 2012) - Ellery Queen [Ellery Queen is a pseudonym created in 1929 by American crime fiction writers Frederic Dannay and Manfred Bennington Lee.] (Wheat, 2005) - Greenpeace - Paveprime Ltd - the National Museum of Denmark In First Order Logic: - E74(x) ⇒ E39(x)</rdfs:comment>
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E74_Group"/>
   </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Topos">
+  <owl:Class rdf:about="https://w3id.org/lso/intro/v1.0#INT_Topos">
     <rdfs:label xml:lang="en">INT Topos</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/v1.0#INT9_SemanticFeature"/>
   </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT31_IntertextualRelation">
+  <owl:Class rdf:about="https://w3id.org/lso/intro/v1.0#INT31_IntertextualRelation">
     <rdfs:comment xml:lang="en">This class comprises the abstract notion of a relationship between texts resp. parts thereof. It is not identical to, e. g., a quote, but a quote can be considered a typical case. However, the class does not demand any specific theoretical prerequisites for the relation (like the author's intention, identical wording, etc.), but encompasses relations based on all kinds of theoretical frameworks, including scholarly ('pastiche'), legal ('plagiarism'), or very general notions ('quote', 'allusion'). Every INT31 Intertextual Relation has at least two related entities, which are modelled as texts (on any ontological level, including parts thereof) or INT2 Actualizations of Features on these texts. An INT3 Interrelation is possibly identified in an INT2 Actualization of an INT Interpretation and further defined by an INT11 TypeOfInterrelation, or maybe, more precisely, an INT15 Intertextuality in Intertextuality Theories. The skos:broadMatch to oa:Annotation indicates that stating the existence of an intertextual relation can be seen as a kind of annotation made to resources, in this case: at least two, the related entities texts (on any ontological level, including parts thereof).</rdfs:comment>
     <rdfs:label xml:lang="en">INT31 Intertextual Relation</rdfs:label>
     <skos:broadMatch rdf:resource="http://www.w3.org/ns/oa#Annotation"/>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/v1.0#INT3_Interrelation"/>
   </owl:Class>
   <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/person_referenced_by">
     <rdfs:subPropertyOf>
@@ -102,8 +102,8 @@
     <rdfs:comment xml:lang="en">An E21_Person is referenced by an F2_Expression.</rdfs:comment>
     <rdfs:label xml:lang="en">person_referenced_by</rdfs:label>
   </owl:ObjectProperty>
-  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Motif">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+  <owl:Class rdf:about="https://w3id.org/lso/intro/v1.0#INT_Motif">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/v1.0#INT9_SemanticFeature"/>
     <rdfs:label xml:lang="en">INT Motif</rdfs:label>
   </owl:Class>
   <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/place_referenced_by">
@@ -122,9 +122,9 @@
     <rdfs:subPropertyOf rdf:resource="https://w3id.org/sappho-digital/ontology/referenced_by_expr"/>
     <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </owl:ObjectProperty>
-  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Plot">
+  <owl:Class rdf:about="https://w3id.org/lso/intro/v1.0#INT_Plot">
     <rdfs:label xml:lang="en">INT Plot</rdfs:label>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/v1.0#INT9_SemanticFeature"/>
   </owl:Class>
   <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/expr_possibly_cited_by">
     <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
@@ -140,10 +140,10 @@
     <rdfs:label xml:lang="en">expr_possibly_cited_by</rdfs:label>
     <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </owl:ObjectProperty>
-  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT18_Reference">
+  <owl:Class rdf:about="https://w3id.org/lso/intro/v1.0#INT18_Reference">
     <rdfs:comment xml:lang="en">This class comprises references to – usually: real – identifiable objects of any kind. It is not restricted to non-fictional texts resp. images depicting real life objects or events, but can be most easily applied there. The CIDOC CRM property P67 refers to is recommended to establish the link to the referred to entity. There are two options with slightly different semantic and alignment implications: P67 refers to can link this INT18 Reference (or any other feature) to the external entity, which would make the INT18 Reference an E89 Propositional Object (due to P67's domain and range). However, this is in conflict with the conceptual similarity of the F4 Feature and its subclasses to CIDOC CRM's E55 Type. INTRO's suggested – but in no way prescribed – solution is to instead attach P67 refers to to the INT2 Actualization of Feature linked to INT18 Reference. The scope of this class also includes references to other images/texts, if one wants to model an interrelation this way.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_PragmaticFeature"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/v1.0#INT9_SemanticFeature"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/v1.0#INT_PragmaticFeature"/>
     <rdfs:label xml:lang="en">INT18 Reference</rdfs:label>
   </owl:Class>
   <owl:Class rdf:about="http://erlangen-crm.org/current/E42_Identifier">
@@ -163,15 +163,15 @@
     <rdfs:comment xml:lang="en">Link from an F2_Expression to an INT_Character it actualizes. Restriction of sappho_prop:about to INT_Character; declared as a subproperty without a property chain, since a chain cannot restrict the target class.</rdfs:comment>
     <rdfs:label xml:lang="en">has_character</rdfs:label>
     <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
-    <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Character"/>
+    <rdfs:range rdf:resource="https://w3id.org/lso/intro/v1.0#INT_Character"/>
     <rdfs:subPropertyOf>
       <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/about">
         <owl:propertyChainAxiom rdf:parseType="Collection">
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R18_showsActualization"/>
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R17_actualizesFeature"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#R18_showsActualization"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#R17_actualizesFeature"/>
         </owl:propertyChainAxiom>
         <rdfs:label xml:lang="en">about</rdfs:label>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_Feature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/v1.0#INT4_Feature"/>
         <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
         <rdfs:comment xml:lang="en">Link from an F2_Expression to the features (INT4_Feature: topics, motifs, characters, plots, topoi, references) it actualizes.</rdfs:comment>
       </owl:ObjectProperty>
@@ -183,22 +183,22 @@
       <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/tp_possibly_cites">
         <rdfs:comment xml:lang="en">An F2_Expression possibly cites an INT21_TextPassage that it shares with an earlier F2_Expression it possibly cites (see expr_possibly_cites). Generated by relations.py, not by a property chain.</rdfs:comment>
         <rdfs:label xml:lang="en">tp_possibly_cites</rdfs:label>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
         <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
       </owl:ObjectProperty>
     </owl:inverseOf>
     <rdfs:label xml:lang="en">tp_possibly_cited_by</rdfs:label>
-    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
     <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </owl:ObjectProperty>
-  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Interpretation">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_PragmaticFeature"/>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+  <owl:Class rdf:about="https://w3id.org/lso/intro/v1.0#INT_Interpretation">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/v1.0#INT_PragmaticFeature"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/v1.0#INT9_SemanticFeature"/>
     <rdfs:label xml:lang="en">INT Interpretation</rdfs:label>
     <rdfs:comment xml:lang="en">The result of a interpretative act, possibly: as perceived in research literature. An interpretation can identify references or actualizations or the like. A number of interpretations can together recreate the structure of, e. g., a research paper. Accordingly, apart from linking INT Interpretations to the subjects of the interpretation, like intertextual relations or textual features, they can be linked to each other via R9 has subsequent feature resp. R9i has preceding feature. Examples: – the statement that Umberto Eco's 'The Name of the Rose' features a detective character. – the statement that Umberto Eco's 'The Name of the Rose' contains references to Arthur Conan Doyle's 'Sherlock Holmes'. – the statement that Umberto Eco's 'The Name of the Rose' is set in the 14th century. – the conclusion that Umberto Eco's 'The Name of the Rose' belongs to the genre 'postmodern crime novel'.</rdfs:comment>
   </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Topic">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+  <owl:Class rdf:about="https://w3id.org/lso/intro/v1.0#INT_Topic">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/v1.0#INT9_SemanticFeature"/>
     <rdfs:label xml:lang="en">INT Topic</rdfs:label>
   </owl:Class>
   <owl:ObjectProperty rdf:about="https://w3id.org/sappho-digital/ontology/has_manifestation">
@@ -224,8 +224,8 @@
     </rdfs:range>
     <rdfs:comment xml:lang="en">A symmetric relation between two F2_Expressions, or between an F2_Expression and an F1_Work, that are linked as referring entity (R13) and referred-to entity (R12) of the same INT31_IntertextualRelation. The chain therefore never relates an expression to itself; relations without a determinable direction (only R24) are not covered.</rdfs:comment>
     <owl:propertyChainAxiom rdf:parseType="Collection">
-      <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R13i_isReferringEntity"/>
-      <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R12_hasReferredToEntity"/>
+      <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#R13i_isReferringEntity"/>
+      <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#R12_hasReferredToEntity"/>
     </owl:propertyChainAxiom>
     <rdfs:domain>
       <owl:Class rdf:nodeID="n0799c903ea374cc6933040d03e3e7819b88">
@@ -257,15 +257,15 @@
     <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P94_has_created"/>
     <rdfs:domain rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F30_Manifestation_Creation"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R22i_relationIsBasedOnSimilarity">
-    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
-    <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_Feature"/>
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/v1.0#R22i_relationIsBasedOnSimilarity">
+    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/v1.0#INT3_Interrelation"/>
+    <rdfs:range rdf:resource="https://w3id.org/lso/intro/v1.0#INT4_Feature"/>
     <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R22_providesSimilarityForRelation">
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_Feature"/>
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R22i_relationIsBasedOnSimilarity"/>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
-        <rdfs:comment xml:lang="en">Links an INT4 Feature to an INT3 Interrelation it provides the similarity for, the similarity being the basis for the detection of the INT3 Interrelation. The property states that an INT3 Interrelation is based on a similarity, i. e. the actualization of the same INT4 Feature in two different texts/images; it constitutes an abbreviation of the modelling of two INT2 Actualizations of Feature of the same F4 Feature in the respective texts/images. The term 'similarity' is to be understood in the widest possible way.</rdfs:comment>
+      <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/v1.0#R22_providesSimilarityForRelation">
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/v1.0#INT4_Feature"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/v1.0#R22i_relationIsBasedOnSimilarity"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/v1.0#INT3_Interrelation"/>
+        <rdfs:comment xml:lang="en">Links an INT4 Feature to an INT3 Interrelation it provides the similarity for, the similarity being the basis for the detection of the INT3 Interrelation. The property states that an INT3 Interrelation is based on a similarity, i. e. the actualization of the same INT4 Feature in two different texts/images; it constitutes an abbreviation of the modelling of two INT2 Actualizations of Feature of the same INT4 Feature in the respective texts/images. The term 'similarity' is to be understood in the widest possible way.</rdfs:comment>
         <rdfs:label xml:lang="en">R22 provides similarity for relation</rdfs:label>
       </owl:ObjectProperty>
     </owl:inverseOf>
@@ -325,26 +325,26 @@
     <rdfs:label xml:lang="en">R16 created</rdfs:label>
     <skos:notation>R16</skos:notation>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R12i_isReferredToEntity">
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/v1.0#R12i_isReferredToEntity">
     <rdfs:label xml:lang="en">R12i is referred to entity</rdfs:label>
     <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R12_hasReferredToEntity">
+      <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/v1.0#R12_hasReferredToEntity">
         <rdfs:range>
           <owl:Class rdf:nodeID="n0799c903ea374cc6933040d03e3e7819b14">
             <owl:unionOf rdf:parseType="Collection">
               <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
               <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-              <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
-              <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
-              <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+              <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT1_Passage"/>
+              <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
+              <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT6_Architext"/>
             </owl:unionOf>
           </owl:Class>
         </rdfs:range>
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R12i_isReferredToEntity"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/v1.0#R12i_isReferredToEntity"/>
         <rdfs:label xml:lang="en">R12 has referred to entity</rdfs:label>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/v1.0#INT3_Interrelation"/>
         <rdfs:comment xml:lang="en">Links an INT3 Interrelation to the entity referred to in the relationship (a text or image on any ontological level or a feature actualized in the text resp. image in question).</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R24_hasRelatedEntity"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/v1.0#R24_hasRelatedEntity"/>
       </owl:ObjectProperty>
     </owl:inverseOf>
     <rdfs:domain>
@@ -352,63 +352,64 @@
         <owl:unionOf rdf:parseType="Collection">
           <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
           <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT1_Passage"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT6_Architext"/>
         </owl:unionOf>
       </owl:Class>
     </rdfs:domain>
     <rdfs:subPropertyOf>
-      <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R24i_isRelatedEntity">
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R24_hasRelatedEntity"/>
+      <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/v1.0#R24i_isRelatedEntity">
+        <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/v1.0#R24_hasRelatedEntity"/>
         <rdfs:domain>
           <owl:Class rdf:nodeID="n0799c903ea374cc6933040d03e3e7819b74">
             <owl:unionOf rdf:parseType="Collection">
               <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
               <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-              <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
-              <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
-              <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+              <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT1_Passage"/>
+              <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
+              <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT6_Architext"/>
             </owl:unionOf>
           </owl:Class>
         </rdfs:domain>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/v1.0#INT3_Interrelation"/>
         <rdfs:label xml:lang="en">R24i is related entity</rdfs:label>
       </owl:ObjectProperty>
     </rdfs:subPropertyOf>
-    <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+    <rdfs:range rdf:resource="https://w3id.org/lso/intro/v1.0#INT3_Interrelation"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R18_showsActualization">
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/v1.0#R18_showsActualization">
     <rdfs:domain>
       <owl:Class rdf:nodeID="n0799c903ea374cc6933040d03e3e7819b38">
         <owl:unionOf rdf:parseType="Collection">
           <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
           <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT1_Passage"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT6_Architext"/>
         </owl:unionOf>
       </owl:Class>
     </rdfs:domain>
-    <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+    <rdfs:range rdf:resource="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
     <rdfs:label xml:lang="en">R18 shows actualization</rdfs:label>
     <rdfs:comment xml:lang="en">Links a text or an image (on any ontological level) or an INT2 Actualization of Feature to an INT2 Actualization of Feature found on it. (Actualizations found on actualizations – this occurs in cases where, e. g., the actualization of the feature INT Individual Character can be read as the actualization of the feature INT Character Type or INT18 Reference.)</rdfs:comment>
     <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R18i_actualizationFoundOn">
+      <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/v1.0#R18i_actualizationFoundOn">
         <rdfs:label xml:lang="en">R18i actualization found on</rdfs:label>
         <rdfs:range>
           <owl:Class rdf:nodeID="n0799c903ea374cc6933040d03e3e7819b44">
             <owl:unionOf rdf:parseType="Collection">
               <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
               <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-              <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
-              <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
-              <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+              <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT1_Passage"/>
+              <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
+              <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT6_Architext"/>
             </owl:unionOf>
           </owl:Class>
         </rdfs:range>
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R18_showsActualization"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/v1.0#R18_showsActualization"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
       </owl:ObjectProperty>
     </owl:inverseOf>
   </owl:ObjectProperty>
@@ -481,32 +482,32 @@
     <rdfs:comment xml:lang="en">Scope note: This class comprises abstract temporal extents, in the sense of Galilean physics, having a beginning, an end, and a duration. Instances of E52 Time-Span have no semantic connotations about phenomena happening within the temporal extent they represent. They do not convey any meaning other than a positioning on the "time-line" of chronology. The actual extent of an instance of E52 Time-Span can be approximated by properties of E52 Time-Span giving inner and outer bounds in the form of dates (instances of E61 Time Primitive). Comparing knowledge about time-spans is fundamental for chronological reasoning. Some instances of E52 Time-Span may be defined as the actual, in principle observable, temporal extent of instances of E2 Temporal Entity via the property P4 has time-span (is time-span of): E52 Time-Span. They constitute phenomenal time-spans as defined in CRMgeo (Doerr &amp; Hiebel 2013). Since our knowledge of history is imperfect and physical phenomena are fuzzy in nature, the extent of phenomenal time-spans can only be described in approximation. An extreme case of approximation, might, for example, define an instance of E52 Time-Span having unknown beginning, end and duration. It may, nevertheless, be associated with other descriptions by which people can infer knowledge about it, such as in relative chronologies. Some instances of E52 may be defined precisely as representing a declaration of a temporal extent, as, for instance, done in a business contract. They constitute declarative time-spans as defined in CRMgeo (Doerr &amp; Hiebel 2013) and can be described via the property E61 Time Primitive P170 defines time (time is defined by): E52 Time-Span. When used as a common E52 Time-Span for two events, it will nevertheless describe them as being simultaneous, even if nothing else is known. Examples: - 1961 - From 12-17-1993 to 12-8-1996 - 14h30 to 16h22 4(th) July 1945 - 9.30 am 1.1.1999 to 2.00 pm 1.1.1999 - the time-span of the Ming Dynasty (Chan, 2011) In First Order Logic: - E52(x) ⇒ E1(x)</rdfs:comment>
     <skos:notation>E52</skos:notation>
   </owl:Class>
-  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R17_actualizesFeature">
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/v1.0#R17_actualizesFeature">
     <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R17i_featureActualizedIn">
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R17_actualizesFeature"/>
-        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_Feature"/>
+      <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/v1.0#R17i_featureActualizedIn">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/v1.0#R17_actualizesFeature"/>
+        <rdfs:domain rdf:resource="https://w3id.org/lso/intro/v1.0#INT4_Feature"/>
         <rdfs:label xml:lang="en">R17i feature actualized in</rdfs:label>
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
       </owl:ObjectProperty>
     </owl:inverseOf>
     <rdfs:comment xml:lang="en">Links the specific INT2 Actualization of Feature to the (abstract concept of the) feature it actualizes, an INT4 Feature.</rdfs:comment>
-    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
     <rdfs:label xml:lang="en">R17 actualizes feature</rdfs:label>
-    <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_Feature"/>
+    <rdfs:range rdf:resource="https://w3id.org/lso/intro/v1.0#INT4_Feature"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R21i_isIdentifiedBy">
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/v1.0#R21i_isIdentifiedBy">
     <rdfs:label xml:lang="en">R21i is identified by</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"/>
     <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R21_identifies">
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R21i_isIdentifiedBy"/>
-        <rdfs:comment xml:lang="en">Links an INT2 Actualization of Feature (that is possibly, but not necessarily, specified by a link to the features INT Identification or INT Interpretation) or a text on different levels of granularity to the INT3 Interrelation or the INT2 Actualization of Feature it identifies.</rdfs:comment>
+      <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/v1.0#R21_identifies">
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/v1.0#R21i_isIdentifiedBy"/>
+        <rdfs:comment xml:lang="en">Links an INT2 Actualization of Feature (that is possibly, but not necessarily, specified by a link to the features INT Identification or INT Interpretation) or a text on different levels of granularity to the INT3 Interrelation or the INT2 Actualization of Feature it identifies. Please note: R21 is a sub-property of CIDOC CRM's P67 refers to, whose domain is E89 Propositional Object. Using R21 therefore makes its domain (the identifying INT1 Passage, INT2 Actualization of Feature, or INT6 Architext, as well as any F1 Work or E73 Information Object) an instance of E89 Propositional Object by inference. This should be kept in mind when modelling.</rdfs:comment>
         <rdfs:range>
           <owl:Class rdf:nodeID="n0799c903ea374cc6933040d03e3e7819b56">
             <owl:unionOf rdf:parseType="Collection">
-              <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
-              <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+              <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
+              <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT3_Interrelation"/>
             </owl:unionOf>
           </owl:Class>
         </rdfs:range>
@@ -516,9 +517,9 @@
             <owl:unionOf rdf:parseType="Collection">
               <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
               <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-              <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
-              <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
-              <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+              <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT1_Passage"/>
+              <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT6_Architext"/>
+              <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
             </owl:unionOf>
           </owl:Class>
         </rdfs:domain>
@@ -530,17 +531,17 @@
         <owl:unionOf rdf:parseType="Collection">
           <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
           <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT1_Passage"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT6_Architext"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
         </owl:unionOf>
       </owl:Class>
     </rdfs:range>
     <rdfs:domain>
       <owl:Class rdf:nodeID="n0799c903ea374cc6933040d03e3e7819b59">
         <owl:unionOf rdf:parseType="Collection">
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT3_Interrelation"/>
         </owl:unionOf>
       </owl:Class>
     </rdfs:domain>
@@ -692,7 +693,7 @@
     <rdfs:comment xml:lang="en">A reference from an F2_Expression to an E21_Person, an E53_Place or an F2_Expression.</rdfs:comment>
     <rdfs:label xml:lang="en">expr_references</rdfs:label>
     <owl:propertyChainAxiom rdf:parseType="Collection">
-      <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#R18_showsActualization"/>
+      <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#R18_showsActualization"/>
       <rdf:Description rdf:about="http://erlangen-crm.org/current/P67_refers_to"/>
     </owl:propertyChainAxiom>
   </owl:ObjectProperty>
@@ -871,55 +872,56 @@
     <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"/>
     <rdfs:label xml:lang="en">R4i is embodied in</rdfs:label>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R24_hasRelatedEntity">
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/v1.0#R24_hasRelatedEntity">
+    <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P129_is_about"/>
     <rdfs:range>
       <owl:Class rdf:nodeID="n0799c903ea374cc6933040d03e3e7819b68">
         <owl:unionOf rdf:parseType="Collection">
           <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
           <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT1_Passage"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT6_Architext"/>
         </owl:unionOf>
       </owl:Class>
     </rdfs:range>
     <rdfs:comment xml:lang="en">Links any INT3 Interrelation to a text or image (on any ontological level) or INT2 Actualization of Feature that is part of the INT3 Interrelation. The skos:broadMatch states that this property is a more specific version of oa:hasTarget in the sense that the INT3 Interrelation can be seen as an annotation, the texts/images linked by this relationship as their targets.</rdfs:comment>
     <skos:broadMatch rdf:resource="http://www.w3.org/ns/oa#hasTarget"/>
     <rdfs:label xml:lang="en">R24 has related entity</rdfs:label>
-    <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R24i_isRelatedEntity"/>
-    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+    <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/v1.0#R24i_isRelatedEntity"/>
+    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/v1.0#INT3_Interrelation"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R30i_isTextPassageOf">
-    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/v1.0#R30i_isTextPassageOf">
+    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
     <rdfs:label xml:lang="en">R30i is text passage of</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
     <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R30_hasTextPassage">
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+      <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/v1.0#R30_hasTextPassage">
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
         <rdfs:domain>
           <owl:Class rdf:nodeID="n0799c903ea374cc6933040d03e3e7819b80">
             <owl:unionOf rdf:parseType="Collection">
               <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-              <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
+              <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT1_Passage"/>
             </owl:unionOf>
           </owl:Class>
         </rdfs:domain>
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R30i_isTextPassageOf"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/v1.0#R30i_isTextPassageOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:label xml:lang="en">R30 has text passage</rdfs:label>
         <rdfs:comment xml:lang="en">Links (usually, exceptions are easily conceivable) a text, like a work or an expression, to an INT21 Text Passage from that text, e. g., a book to a passage on page three of this book.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R10_hasPassage"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/v1.0#R10_hasPassage"/>
       </owl:ObjectProperty>
     </owl:inverseOf>
     <rdfs:range>
       <owl:Class rdf:nodeID="n0799c903ea374cc6933040d03e3e7819b83">
         <owl:unionOf rdf:parseType="Collection">
           <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT1_Passage"/>
         </owl:unionOf>
       </owl:Class>
     </rdfs:range>
-    <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R10i_isPassageOf"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/v1.0#R10i_isPassageOf"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P1i_identifies">
     <skos:notation>P1i</skos:notation>
@@ -987,7 +989,7 @@
     <rdfs:subClassOf>
       <owl:Restriction rdf:nodeID="n0799c903ea374cc6933040d03e3e7819b2">
         <owl:onProperty rdf:resource="http://erlangen-crm.org/current/P152_has_parent"/>
-        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</owl:minCardinality>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
       </owl:Restriction>
     </rdfs:subClassOf>
     <rdfs:subClassOf rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
@@ -995,7 +997,7 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E21_Person"/>
     <skos:notation>E21</skos:notation>
   </owl:Class>
-  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature">
+  <owl:Class rdf:about="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature">
     <rdfs:comment xml:lang="en">The fact that a text or an image shows – in its own specific way – a certain feature (which itself is an abstract concept and takes form in many texts/images), e. g., a motif, an atmosphere, a theme, a figure of speech. Examples: – the specific actualization of the motif of patricide in Sophokles' "Ödipus Rex". – the specific actualization of the Faust-subject in Goethe's "Faust". – the specific actualization of the iambic pentameter in Rilke's "Archaischer Torso Apollos". – the specific actualization of the Ophelia-character in John Everett Millais' painting "Ophelia". Notes: The INT2 Actualization of Feature can be subject to a I2 Belief as modelled in CRMinf, used like the CRMinf class I4 Proposition Set.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/E28_Conceptual_Object"/>
     <rdfs:label xml:lang="en">INT2 Actualization of Feature</rdfs:label>
@@ -1031,10 +1033,10 @@
     <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of"/>
     <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n) Scope note of the inverse property: This property allows sub-typing of CIDOC CRM entities –a form of specialisation – through the use of a terminological hierarchy, or thesaurus. The CIDOC CRM is intended to focus on the high-level entities and relationships needed to describe data structures. Consequently, it does not specialise entities any further than is required for this immediate purpose. However, entities in the isA hierarchy of the CIDOC CRM may by specialised into any number of sub-entities, which can be defined in the E55 Type hierarchy. E41 Appellation, for example, may be specialised into "e-mail address", "telephone number", "post office box", "URL", etc., none of which figures explicitly in the CIDOC CRM class hierarchy. A comprehensive explanation about refining CIDOC CRM concepts by E55 Type is given in the section "About Types" in the section on "Specific Modelling Constructs" of this document. This property is a shortcut for the path from E1 CRM Entity through P41i was classified by, E17 Type Assignment, P42 assigned to E55 Type. Examples of the inverse property: - "enquiries@cidoc-crm.org" (E41) has type e-mail address (E55). (fictitious) In First Order Logic of the inverse property: - P2(x,y) ⇒ E1(x) - P2(x,y) ⇒ E55(y) - P2(x,y) ⇐ (∃z) [E17(z)] ˄ P41i(x,z) ˄ P42(z,y)]</rdfs:comment>
   </owl:ObjectProperty>
-  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage">
+  <owl:Class rdf:about="https://w3id.org/lso/intro/v1.0#INT21_TextPassage">
     <rdfs:label xml:lang="en">INT21 Text Passage</rdfs:label>
     <rdfs:comment xml:lang="en">The INT21 TextPassage is a means of modelling an identifiable part of an E73 Information Object or its subclasses – without that part being removed from its source Information Object. Examples: – The words 'Abandon all hope ye who enter here' from Canto III of Dante's Inferno. – The first four lines of Rilke's poem "Archaischer Torso Apollos" – The last item on a shopping list. The skos:broadMatch states that the INT21 TextPassage can be regarded as an oa:SpecificResource in the sense that it is a section of a resource. The skos:broadMatch between R41 hasLocation and oa:hasSelector indicates that by replacing R41 hasLocation with oa:hasSelector, multiple selector options from the Web Annotation Ontology can be utilized to specify the INT21 TextPassage's location.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/v1.0#INT1_Passage"/>
     <skos:broadMatch rdf:resource="http://www.w3.org/ns/oa#SpecificResource"/>
   </owl:Class>
   <owl:ObjectProperty rdf:about="http://iflastandards.info/ns/lrm/lrmoo/R3_is_realised_in">
@@ -1158,28 +1160,28 @@
     <skos:notation>R17</skos:notation>
     <rdfs:subPropertyOf rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P94_has_created"/>
   </owl:ObjectProperty>
-  <owl:Class rdf:about="https://w3id.org/lso/intro/currentbeta#INT_Character">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/currentbeta#INT9_SemanticFeature"/>
+  <owl:Class rdf:about="https://w3id.org/lso/intro/v1.0#INT_Character">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/v1.0#INT9_SemanticFeature"/>
     <rdfs:label xml:lang="en">INT Character</rdfs:label>
   </owl:Class>
-  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R13_hasReferringEntity">
+  <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/v1.0#R13_hasReferringEntity">
     <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/currentbeta#R13i_isReferringEntity">
-        <rdfs:range rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+      <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/v1.0#R13i_isReferringEntity">
+        <rdfs:range rdf:resource="https://w3id.org/lso/intro/v1.0#INT3_Interrelation"/>
         <rdfs:label xml:lang="en">R13i is referring entity</rdfs:label>
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R24i_isRelatedEntity"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/v1.0#R24i_isRelatedEntity"/>
         <rdfs:domain>
           <owl:Class rdf:nodeID="n0799c903ea374cc6933040d03e3e7819b32">
             <owl:unionOf rdf:parseType="Collection">
               <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
               <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-              <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
-              <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
-              <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+              <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT1_Passage"/>
+              <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
+              <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT6_Architext"/>
             </owl:unionOf>
           </owl:Class>
         </rdfs:domain>
-        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R13_hasReferringEntity"/>
+        <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/v1.0#R13_hasReferringEntity"/>
       </owl:ObjectProperty>
     </owl:inverseOf>
     <rdfs:range>
@@ -1187,15 +1189,15 @@
         <owl:unionOf rdf:parseType="Collection">
           <rdf:Description rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
           <rdf:Description rdf:about="http://www.cidoc-crm.org/cidoc-crm/E73_Information_Object"/>
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT1_Passage"/>
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
-          <rdf:Description rdf:about="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT1_Passage"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
+          <rdf:Description rdf:about="https://w3id.org/lso/intro/v1.0#INT6_Architext"/>
         </owl:unionOf>
       </owl:Class>
     </rdfs:range>
-    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/currentbeta#INT3_Interrelation"/>
+    <rdfs:domain rdf:resource="https://w3id.org/lso/intro/v1.0#INT3_Interrelation"/>
     <rdfs:label xml:lang="en">R13 has referring entity</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/currentbeta#R24_hasRelatedEntity"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/v1.0#R24_hasRelatedEntity"/>
     <rdfs:comment xml:lang="en">Links an INT3 Interrelation to a referring entity (a text or image on any ontological level or a feature actualized in the text resp. image in question).</rdfs:comment>
   </owl:ObjectProperty>
   <owl:Class rdf:about="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation">
@@ -1213,4 +1215,103 @@
     <rdfs:label xml:lang="en">F30 Manifestation Creation</rdfs:label>
     <rdfs:comment xml:lang="en">Scope note: This class comprises the activities of selecting, arranging and presenting one or more instances of F2 Expression on a carrier or other persistent presentation means with the purpose of communicating it to some public. It includes the specification of the presentation as to sensory impression (such as visual appearance or audio rendition). Examples: - the process of creating the publication 'Murder on the Orient Express / Agatha Christie', published by HarperCollins in 2017, including deciding the format, typesetting the text, designing the cover and other features of the publication - the process of making the HTML-version of the English text of Homer's 'Odyssey' (translated by S. H. Butcher and A. Lang), which is available online from the Gutenberg Project - the process of making the engraved copper plates for the first edition of Bach's 'Goldberg Variations' by Balthasar Schmid - the process of making the CD publication 'Bach Goldberg Variations', published by Hyperion Records in 2016, including the process of recording the performance, editing, and typesetting the booklet, and design of the overall publication In First Order Logic: - F30(x) ⇒ E12(x) - F30(x) ⇒ E65(x)</rdfs:comment>
   </owl:Class>
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P95i_was_formed_by">
+    <rdfs:label xml:lang="en">P95 was formed by</rdfs:label>
+    <rdfs:label xml:lang="de">P95 wurde gebildet von</rdfs:label>
+    <rdfs:label xml:lang="el">P95 σχηματίστηκε από</rdfs:label>
+    <rdfs:label xml:lang="fr">P95 a été fondé par</rdfs:label>
+    <rdfs:label xml:lang="pt">P95 foi formado por</rdfs:label>
+    <rdfs:label xml:lang="ru">P95 была сформирована посредством</rdfs:label>
+    <rdfs:label xml:lang="zh">P95 被组成</rdfs:label>
+    <skos:notation>P95i</skos:notation>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E66_Formation"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P95_has_formed"/>
+    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P92i_was_brought_into_existence_by"/>
+    <rdfs:comment xml:lang="en">Quantification of the inverse property: one to many, necessary, dependent (1,n:1,1) Scope note of the inverse property: This property associates the instance of E66 Formation with the instance of E74 Group that it founded. Examples of the inverse property: - The formation of the CIDOC CRM SIG at the August 2000 CIDOC Board meeting (E66) has formed the CIDOC CRM Special Interest Group (E74). In First Order Logic of the inverse property: - P95(x,y) ⇒ E66(x) - P95(x,y) ⇒ E74(y) - P95(x,y) ⇒ P92(x,y)</rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P95i_was_formed_by"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P135i_was_created_by">
+    <rdfs:label xml:lang="en">P135 was created by</rdfs:label>
+    <rdfs:label xml:lang="de">P135 wurde geschaffen durch</rdfs:label>
+    <rdfs:label xml:lang="el">P135 δημιουργήθηκε από</rdfs:label>
+    <rdfs:label xml:lang="fr">P135 a été créé par</rdfs:label>
+    <rdfs:label xml:lang="pt">P135 foi criado por</rdfs:label>
+    <rdfs:label xml:lang="ru">P135 был создан посредством</rdfs:label>
+    <rdfs:label xml:lang="zh">P135 被创建</rdfs:label>
+    <skos:notation>P135i</skos:notation>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E83_Type_Creation"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P135_created_type"/>
+    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P94i_was_created_by"/>
+    <rdfs:comment xml:lang="en">Quantification of the inverse property: one to many, necessary (1,n:0,1) Scope note of the inverse property: This property identifies the instance of E55 Type, which is created in an instance of E83 Type Creation activity. Examples of the inverse property: - The description of a new ribbon worm species by Bürger (E83) created type ‘Lineus kennelii’ (E55). (Bürger, 1892) In First Order Logic of the inverse property: - P135(x,y) ⇒ E83(x) - P135(x,y) ⇒ E55(y) - P135(x,y) ⇒ P94(x,y)</rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P135i_was_created_by"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P59i_is_located_on_or_within">
+    <rdfs:label xml:lang="en">P59 is located on or within</rdfs:label>
+    <rdfs:label xml:lang="de">P59 befindet sich auf oder in</rdfs:label>
+    <rdfs:label xml:lang="el">P59 βρίσκεται σε ή εντός</rdfs:label>
+    <rdfs:label xml:lang="fr">P59 se situe sur ou dans</rdfs:label>
+    <rdfs:label xml:lang="pt">P59 está localizada sobre ou dentro de</rdfs:label>
+    <rdfs:label xml:lang="ru">P59 находится на или внутри</rdfs:label>
+    <rdfs:label xml:lang="zh">P59 位于</rdfs:label>
+    <skos:notation>P59i</skos:notation>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E18_Physical_Thing"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P59_has_section"/>
+    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P157_is_at_rest_relative_to"/>
+    <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many (0,n:0,n) Scope note of the inverse property: This property links an area, i.e., an instance of E53 Place to the instance of E18 Physical Thing upon which it is found. This area may either be identified by a name, or by a geometry in terms of a coordinate system adapted to the shape of the respective instance of E18 Physical Thing. Typically, names identifying sections of physical objects are composed of the name of a kind of part and the name of the object itself, such as “The poop deck of H.M.S. Victory”, which is composed of “poop deck” and “H.M.S. Victory”. Examples of the inverse property: - HMS Victory (E22) has section HMS Victory section B347.6 (E53). (Goodwin, 2015) In First Order Logic of the inverse property: - P59(x,y) ⇒ E18(x) - P59(x,y) ⇒ E53(y)</rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P59i_is_located_on_or_within"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P152_has_parent">
+    <rdfs:label xml:lang="en">P152 has parent</rdfs:label>
+    <rdfs:label xml:lang="fr">P152 a pour parent</rdfs:label>
+    <skos:notation>P152</skos:notation>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P152i_is_parent_of"/>
+    <rdfs:comment xml:lang="en">Quantification: many to many, necessary (2,n:0,n) Scope note: This property associates an instance of E21 Person with another instance of E21 Person who plays the role of the first instance’s parent, regardless of whether the relationship is biological parenthood, assumed or pretended biological parenthood or an equivalent legal status of rights and obligations obtained by a social or legal act. This property is, among others, a shortcut of the fully developed paths from E21 Person through P98i was born, E67 Birth, P96 by mother to E21 Person, and from E21 Person through P98i was born, E67 Birth, P97 from father to E21 Person. This property is not transitive. This property is irreflexive. Examples: - Gaius Octavius (E21) has parent Julius Caesar (E21). (Bleicken &amp; Bell, 2015) - Steve Jobs (E21) has parent Joanne Simpson (E21). [Biological mother] (Isaacson, 2011) - Steve Jobs (E21) has parent Clara Jobs (E21). [Adoption mother] (Isaacson, 2011) In First Order Logic: - P152(x,y) ⇒ E21(x) - P152(x,y) ⇒ E21(y) - P152(x,y) ⇐ (∃z) [E67(z) ˄ P98i(x,z) ˄ P96(z,y)] - P152(x,y) ⇐ (∃z) [E67(z) ˄ P98i(x,z) ˄ P97(z,y)] - ¬P152(x,x)</rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P152_has_parent"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P146i_lost_member_by">
+    <rdfs:label xml:lang="en">P146 lost member by</rdfs:label>
+    <rdfs:label xml:lang="de">P146 verlor Mitglied durch</rdfs:label>
+    <rdfs:label xml:lang="fr">P146 a perdu le membre par</rdfs:label>
+    <rdfs:label xml:lang="zh">P146 失去成员</rdfs:label>
+    <skos:notation>P146i</skos:notation>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E86_Leaving"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P146_separated_from"/>
+    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
+    <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many, necessary (1,n:0,n) Scope note of the inverse property: This property identifies the instance of E74 Group an instance of E39 Actor leaves through an instance of E86 Leaving. Although a leaving activity normally concerns only one instance of E74 Group, it is possible to imagine circumstances under which leaving one E74 Group implies leaving another E74 Group as well. Examples of the inverse property: - The end of Sir Isaac Newton’s duty as Member of Parliament for the University of Cambridge to the Convention Parliament in 1702 (E86) separated from the Convention Parliament (E74). (Iliffe, 2013) - George Washington’s leaving office in 1797 (E86) separated from the office of President of the United States (E74). (Unger, 2015) - The implementation of the treaty regulating the termination of Greenland membership in EU between EU, Denmark and Greenland 1(st) February 1985 (E86) separated from EU (E74). In First Order Logic of the inverse property: - P146(x,y) ⇒ E86(x) - P146(x,y) ⇒ E74(y) - P146(x,y) ⇒ P11(x,y)</rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P146i_lost_member_by"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P107_has_current_or_former_member">
+    <rdfs:label xml:lang="en">P107 has current or former member</rdfs:label>
+    <rdfs:label xml:lang="de">P107 hat derzeitiges oder früheres Mitglied</rdfs:label>
+    <rdfs:label xml:lang="el">P107 έχει ή είχε μέλος</rdfs:label>
+    <rdfs:label xml:lang="fr">P107 a pour membre actuel ou antérieur</rdfs:label>
+    <rdfs:label xml:lang="pt">P107 tem ou teve membro</rdfs:label>
+    <rdfs:label xml:lang="ru">P107 имеет действующего или бывшего члена</rdfs:label>
+    <rdfs:label xml:lang="zh">P107 有当前或以往成员</rdfs:label>
+    <skos:notation>P107</skos:notation>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E39_Actor"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P107i_is_current_or_former_member_of"/>
+    <rdfs:comment xml:lang="en">Quantification: many to many (0,n:0,n) Scope note: This property associates an instance of E74 Group with an instance of E39 Actor that is or has been a member thereof. Instances of E74 Group and E21 Person may all be members of instances of E74 Group. An instance of E74 Group may be founded initially without any member. This property is a shortcut of the more fully developed path from E74 Group, P144i gained member by, E85 Joining, P143 joined to E39 Actor. The property P107.1 kind of member can be used to specify the type of membership or the role the member has in the group. Examples: - László Moholy-Nagy (E21) is current or former member of Bauhaus (E74). (Moholy-Nagy, 2012) - National Museum of Science and Industry (E74) has current or former member The National Railway Museum (E74). (Rolt, 1971) - The married couple Queen Elisabeth and Prince Phillip (E74) has current or former member Prince Phillip (E21) kind of member husband (E55). (Brandreth, 2004) Properties: - P107.1 kind of member: E55 Type In First Order Logic: - P107(x,y) ⇒ E74(x) - P107(x,y) ⇒ E39(y) - P107(x,y,z) ⇒ [P107(x,y) ∧ E55(z)] - P107(x,y) ⇐ (∃z) [E85(z) ˄ P144i(x,z) ˄ P143(z,y)]</rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://erlangen-crm.org/current/P144i_gained_member_by">
+    <rdfs:label xml:lang="en">P144 gained member by</rdfs:label>
+    <rdfs:label xml:lang="de">P144 erwarb Mitglied durch</rdfs:label>
+    <rdfs:label xml:lang="fr">P144 a accueilli le membre par</rdfs:label>
+    <rdfs:label xml:lang="zh">P144 获得成员</rdfs:label>
+    <skos:notation>P144i</skos:notation>
+    <rdfs:domain rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
+    <rdfs:range rdf:resource="http://erlangen-crm.org/current/E85_Joining"/>
+    <owl:inverseOf rdf:resource="http://erlangen-crm.org/current/P144_joined_with"/>
+    <rdfs:subPropertyOf rdf:resource="http://erlangen-crm.org/current/P11i_participated_in"/>
+    <rdfs:comment xml:lang="en">Quantification of the inverse property: many to many, necessary (1,n:0,n) Scope note of the inverse property: This property identifies the instance of E74 Group of which an instance of E39 Actor becomes a member through an instance of E85 Joining. Although a joining activity normally concerns only one instance of E74 Group, it is possible to imagine circumstances under which becoming member of one Group implies becoming member of another Group as well. Joining events allow for describing people becoming members of a group with a more detailed path from E74 Group through, P144i gained member by, E85 Joining, P143 joined, E39 Actor, compared to the shortcut offered by P107 has current or former member (is current or former member of). The property P144.1 kind of member can be used to specify the type of membership or the role the member has in the group. Examples of the inverse property: - The election of Sir Isaac Newton as Member of Parliament to the Convention Parliament of 1689 (E85) joined with the Convention Parliament (E74). (Iliffe, 2013) - The inauguration of Mikhail Sergeyevich Gorbachev as Leader of the Union of Soviet Socialist Republics (USSR) in 1985 (E85) joined with the office of Leader of the Union of Soviet Socialist Republics (USSR) (E74) kind of member President (E55). (Galeotti, 1997) - The implementation of the membership treaty 1(st) January 1973 between EU and Denmark (E85) joined with EU (E74). In First Order Logic of the inverse property: - P144(x,y) ⇒ E85(x) - P144(x,y)⇒ E74(y) - P144(x,y,z) ⇒ [P144(x,y) ∧ E55(z)] - P144(x,y) ⇒ P11(x,y)</rdfs:comment>
+    <owl:sameAs rdf:resource="http://www.cidoc-crm.org/cidoc-crm/P144i_gained_member_by"/>
+  </owl:ObjectProperty>
 </rdf:RDF>

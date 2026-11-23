@@ -21,7 +21,7 @@ RDF_TYPE   = "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
 RDFS_LABEL = "http://www.w3.org/2000/01/rdf-schema#label"
 
 START_URI   = "https://sappho-digital.com/expression/bibl_00e9aff1"
-FOCUS_CLASS = "https://w3id.org/lso/intro/currentbeta#INT31_IntertextualRelation"
+FOCUS_CLASS = "https://w3id.org/lso/intro/v1.0#INT31_IntertextualRelation"
 BASE        = "https://sappho-digital.com/"
 
 NS_COLORS = {
@@ -48,7 +48,7 @@ KNOWN_NS = {
     "http://erlangen-crm.org/current/":             "ecrm",
     "http://erlangen-crm.org/":                     "ecrm",
     "http://iflastandards.info/ns/lrm/lrmoo/":      "lrmoo",
-    "https://w3id.org/lso/intro/currentbeta#":      "intro",
+    "https://w3id.org/lso/intro/v1.0#":      "intro",
     "http://www.w3.org/ns/prov#":                   "prov",
     "http://www.w3.org/1999/02/22-rdf-syntax-ns#":  "rdf",
     "http://www.w3.org/2000/01/rdf-schema#":        "rdfs",
@@ -84,7 +84,7 @@ HIDDEN_BY_DEFAULT = {
 }
 
 ECRM  = "http://erlangen-crm.org/current/"
-INTRO = "https://w3id.org/lso/intro/currentbeta#"
+INTRO = "https://w3id.org/lso/intro/v1.0#"
 RDFS_SEE_ALSO         = "http://www.w3.org/2000/01/rdf-schema#seeAlso"
 P138_REPRESENTS       = ECRM + "P138_represents"
 P98_BROUGHT_INTO_LIFE = ECRM + "P98_brought_into_life"
@@ -322,38 +322,38 @@ def resolve_url(uri, classes, g, labels):
         return uri, f"E74_Group: unbekanntes Muster: {uri}"
 
     # INT_Character
-    if "https://w3id.org/lso/intro/currentbeta#INT_Character" in classes:
+    if "https://w3id.org/lso/intro/v1.0#INT_Character" in classes:
         return BASE + "pers-refs.html", None
 
     # INT_Interpretation
-    if "https://w3id.org/lso/intro/currentbeta#INT_Interpretation" in classes:
+    if "https://w3id.org/lso/intro/v1.0#INT_Interpretation" in classes:
         return BASE + "analyse.html", None
 
     # INT_Motif
-    if "https://w3id.org/lso/intro/currentbeta#INT_Motif" in classes:
+    if "https://w3id.org/lso/intro/v1.0#INT_Motif" in classes:
         return BASE + "motifs.html", None
 
     # INT_Plot
-    if "https://w3id.org/lso/intro/currentbeta#INT_Plot" in classes:
+    if "https://w3id.org/lso/intro/v1.0#INT_Plot" in classes:
         return BASE + "plots.html", None
 
     # INT_Topic
-    if "https://w3id.org/lso/intro/currentbeta#INT_Topic" in classes:
+    if "https://w3id.org/lso/intro/v1.0#INT_Topic" in classes:
         return BASE + "topics.html", None
 
     # INT_Topos
-    if "https://w3id.org/lso/intro/currentbeta#INT_Topos" in classes:
+    if "https://w3id.org/lso/intro/v1.0#INT_Topos" in classes:
         return BASE + "topoi.html", None
 
     # INT18_Reference
-    if "https://w3id.org/lso/intro/currentbeta#INT18_Reference" in classes:
+    if "https://w3id.org/lso/intro/v1.0#INT18_Reference" in classes:
         if "/person_ref/" in uri: return BASE + "pers-refs.html",  None
         if "/work_ref/"   in uri: return BASE + "work-refs.html",  None
         if "/place_ref/"  in uri: return BASE + "place-refs.html", None
         return uri, f"INT18_Reference: Typ nicht erkannt: {uri}"
 
     # INT2_ActualizationOfFeature
-    if "https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature" in classes:
+    if "https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature" in classes:
         expr = first_obj(g, uri, R18I_FOUND_ON)
         if expr:
             lid = local_id(str(expr))
@@ -364,7 +364,7 @@ def resolve_url(uri, classes, g, labels):
         return uri, f"INT2_ActualizationOfFeature: kein bibl_ auflösbar fuer {uri}"
 
     # INT21_TextPassage
-    if "https://w3id.org/lso/intro/currentbeta#INT21_TextPassage" in classes:
+    if "https://w3id.org/lso/intro/v1.0#INT21_TextPassage" in classes:
         exprs = all_objs(g, uri, R30I_IS_PASSAGE_OF)
         if exprs:
             urls = ",".join(BASE + local_id(str(e)) + ".html" for e in exprs)
@@ -372,7 +372,7 @@ def resolve_url(uri, classes, g, labels):
         return uri, f"INT21_TextPassage: kein R30i_isTextPassageOf fuer {uri}"
 
     # INT31_IntertextualRelation
-    if "https://w3id.org/lso/intro/currentbeta#INT31_IntertextualRelation" in classes:
+    if "https://w3id.org/lso/intro/v1.0#INT31_IntertextualRelation" in classes:
         return BASE + "intertexts.html", None
 
     # F1_Work (einzelne Fragmente haben eigene Seiten, das Gesamtwerk nicht)

@@ -65,7 +65,7 @@ Ontology versions used in developing the [Sappho Digital Ontology](https://sapph
 
 - Erlangen CRM 240307 (based on [CIDOC CRM](https://cidoc-crm.org/) 7.1.3)
 - [LRMoo](https://repository.ifla.org/items/729b094a-92d6-4317-9dee-a300053ffdb4) 1.1.1
-- [INTRO](https://github.com/BOberreither/INTRO) beta202506
+- [INTRO](https://github.com/BOberreither/INTRO) v1.0
 
 Additional documentation of the applied data model is in the [`/documentation`](https://github.com/laurauntner/sappho-digital/tree/main/documentation) folder, including [SHACL shapes](https://github.com/laurauntner/sappho-digital/blob/main/documentation/ontology/shapes.ttl) configuring the visual query builder ([Sparnatural](https://github.com/sparna-git/Sparnatural)) on the [query page](https://sappho-digital.com/query.html). The [competency questions](https://github.com/laurauntner/sappho-digital/tree/main/documentation/competency-questions) used to validate the data model are provided as SPARQL queries (`cq1.rq`–`cq5.rq`); they run against the merged file `sappho-reception.ttl` without inferences.
 

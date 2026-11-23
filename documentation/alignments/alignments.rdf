@@ -23,7 +23,7 @@
         <owl:imports rdf:resource="https://intertextuality.org/extensions/artifacts#"/>
         <owl:imports rdf:resource="https://intertextuality.org/extensions/motifs#"/>
         <owl:imports rdf:resource="https://intertextuality.org/extensions/text#"/>
-        <owl:imports rdf:resource="https://w3id.org/lso/intro/currentbeta#"/>
+        <owl:imports rdf:resource="https://w3id.org/lso/intro/v1.0#"/>
         <owl:imports rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/"/>
         <owl:imports rdf:resource="http://data.mimotext.uni-trier.de/entity/"/>
         <owl:imports rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-core#"/>
@@ -36,7 +36,7 @@
     </owl:Ontology>
 
   <rdf:Description rdf:about="http://purl.org/spar/doco/Table">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/creator">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
@@ -57,7 +57,7 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/doco/Part">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Document">
     <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
@@ -80,16 +80,16 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/extensions/artifacts#Segment">
-    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT16_Segment"/>
+    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT16_Segment"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/doco/BackMatter">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/ontology/bibo/Manuscript">
     <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.golemlab.eu/G9_Narrative_Unit">
-    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_Feature"/>
+    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT4_Feature"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/date">
     <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
@@ -98,8 +98,8 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dracor.org/ontology#character">
-    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
-    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Character"/>
+    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
+    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT_Character"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/identifier">
     <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/P1_is_identified_by"/>
@@ -120,7 +120,7 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P2_has_type"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/doco/FormulaBox">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://schema.org/author">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
@@ -135,13 +135,13 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P2_has_type"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/doco/FrontMatter">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/doco/Formula">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/abstract#there">
-    <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#R12i_isReferredToEntity"/>
+    <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/v1.0#R12i_isReferredToEntity"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/fabio/DigitalItem">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E73_Information_Object"/>
@@ -150,18 +150,17 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#TextUnit">
-    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT16_Segment"/>
-    <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/abstract#IntertexualRelation">
-    <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT31_IntertextualRelation"/>
+    <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT31_IntertextualRelation"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/doco/ComplexRunInQuotation">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://erlangen-crm.org/efrbroo/F38_Character">
-    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
-    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Character"/>
+    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
+    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT_Character"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent">
     <skos:narrowMatch rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
@@ -171,8 +170,8 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/abstract#mediatedBy">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#R22i_relationIsBasedOnSimilarity"/>
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#R24_hasRelatedEntity"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#R22i_relationIsBasedOnSimilarity"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#R24_hasRelatedEntity"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/Q10">
     <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
@@ -187,7 +186,7 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/abstract#here">
-    <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#R13i_isReferringEntity"/>
+    <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/v1.0#R13i_isReferringEntity"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/Q11">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E21_Person"/>
@@ -197,7 +196,7 @@
     <skos:narrowMatch rdf:resource="http://purl.org/spar/cito/hasCitedEntity"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/doco/CaptionedBox">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/sappho-digital/ontology/references_person">
     <skos:broadMatch rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#refersTo"/>
@@ -226,7 +225,7 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/extensions/motifs#Motive">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Motif"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT_Motif"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://schema.org/locationCreated">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P7_took_place_at"/>
@@ -235,14 +234,14 @@
     <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/doco/BodyMatter">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://purl.archive.org/domain/urwriters#hasIdentifier">
     <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/P1_is_identified_by"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://iflastandards.info/ns/fr/frbr/frbroo/F38_Character">
-    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
-    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Character"/>
+    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
+    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT_Character"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/sappho-digital/ontology/expr_possibly_cites">
     <skos:narrowMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/R76_is_derivative_of"/>
@@ -260,14 +259,14 @@
     <skos:closeMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.golemlab.eu/G14_Narrative_Stoff">
-    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Plot"/>
+    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT_Plot"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#Organization">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E74_Group"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/abstract#Mediator">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT4_Feature"/>
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT4_Feature"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/extensions/text#SingleText">
     <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
@@ -279,7 +278,7 @@
     <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/doco/Chapter">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/made">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14i_performed"/>
@@ -288,7 +287,7 @@
     <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/abstract#IntertextualSpecification">
-    <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT11_TypeOfInterrelation"/>
+    <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT11_TypeOfInterrelation"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/P4">
     <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/P102_has_title"/>
@@ -297,10 +296,10 @@
     <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/doco/Footnote">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/doco/List">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/created">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
@@ -324,7 +323,7 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P138i_has_representation"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.golemlab.eu/G7_Narrative_Sequence">
-    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dracor.org/ontology#has_genre">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P2_has_type"/>
@@ -345,10 +344,10 @@
     <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/E52_Time-Span"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.golemlab.eu/G1_Character">
-    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT2_ActualizationOfFeature"/>
+    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT2_ActualizationOfFeature"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/Q20">
-    <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Topic"/>
+    <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT_Topic"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://purl.archive.org/domain/urwriters#gender">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P2_has_type"/>
@@ -357,7 +356,7 @@
     <skos:closeMatch rdf:resource="http://erlangen-crm.org/current/E53_Place"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/ontology/bibo/Quote">
-    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/dateCopyrighted">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
@@ -369,7 +368,7 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/E55_Type"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#hasTextUnit">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#R30_hasTextPassage"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#R30_hasTextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://w3id.org/sappho-digital/ontology/references_place">
     <skos:broadMatch rdf:resource="http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#refersTo"/>
@@ -385,7 +384,7 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P7i_witnessed"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/extensions/text#TextSegment">
-    <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/P10">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P7_took_place_at"/>
@@ -397,10 +396,10 @@
     <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F1_Work"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/abstract#specifiedBy">
-    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#R19i_isTypeOf"/>
+    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/v1.0#R19i_isTypeOf"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/extensions/artifacts#System">
-    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT6_Architext"/>
+    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT6_Architext"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://schema.org/genre">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P2_has_type"/>
@@ -418,10 +417,10 @@
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P14_carried_out_by"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://ontology.golemlab.eu/G0_Character-Stoff">
-    <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Character"/>
+    <skos:closeMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT_Character"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/fabio/Quotation">
-    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://dracor.org/ontology#printYear">
     <skos:broadMatch rdf:resource="http://erlangen-crm.org/current/P4_has_time-span"/>
@@ -433,10 +432,10 @@
     <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/dc/terms/hasPart">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#R30_hasTextPassage"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#R30_hasTextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/doco/Section">
-    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT21_TextPassage"/>
+    <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT21_TextPassage"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://data.mimotext.uni-trier.de/entity/Q2">
     <skos:broadMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
@@ -460,25 +459,25 @@
     <skos:closeMatch rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F3_Manifestation"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-poeticAnalysis#typeOfIntertextuality">
-    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#R19i_isTypeOf"/>
+    <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/v1.0#R19i_isTypeOf"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/doco/Part">
-      <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Topos"/>
+      <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT_Topos"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/abstract#Mediator">
-      <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Topos"/>
+      <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT_Topos"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/ontology/bibo/Quote">
-      <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Topos"/>
+      <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT_Topos"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://purl.org/spar/fabio/Quotation">
-      <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Topos"/>
+      <skos:broadMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT_Topos"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://intertextuality.org/extensions/text#TextSegment">
-      <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Topos"/>
+      <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT_Topos"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://postdata.linhd.uned.es/ontology/postdata-core#TextUnit">
-      <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/currentbeta#INT_Topos"/>
+      <skos:narrowMatch rdf:resource="https://w3id.org/lso/intro/v1.0#INT_Topos"/>
   </rdf:Description>
 
   <!-- ######################################################### -->

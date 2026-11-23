@@ -8,7 +8,7 @@ from rdflib.collection import Collection
 
 ECRM = Namespace("http://erlangen-crm.org/current/")
 LRMOO = Namespace("http://iflastandards.info/ns/lrm/lrmoo/")
-INTRO = Namespace("https://w3id.org/lso/intro/currentbeta#")
+INTRO = Namespace("https://w3id.org/lso/intro/v1.0#")
 PROV = Namespace("http://www.w3.org/ns/prov#")
 SAPPHO = Namespace("https://sappho-digital.com/")
 

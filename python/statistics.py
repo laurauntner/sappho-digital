@@ -7,7 +7,7 @@ from rdflib import Graph, Namespace, URIRef
 from rdflib.namespace import RDF, RDFS
 
 LRMOO = Namespace("http://iflastandards.info/ns/lrm/lrmoo/")
-INTRO  = Namespace("https://w3id.org/lso/intro/currentbeta#")
+INTRO  = Namespace("https://w3id.org/lso/intro/v1.0#")
 ECRM   = Namespace("http://erlangen-crm.org/current/")
 
 F2_Expression            = LRMOO.F2_Expression

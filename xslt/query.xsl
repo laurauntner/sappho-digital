@@ -212,7 +212,7 @@ LIMIT 100
                                             <li><code>lrmoo:</code>
                                                 http://iflastandards.info/ns/lrm/lrmoo/</li>
                                             <li><code>intro:</code>
-                                                https://w3id.org/lso/intro/currentbeta#</li>
+                                                https://w3id.org/lso/intro/v1.0#</li>
                                         </ul>
                                     </details>
                                 </div>

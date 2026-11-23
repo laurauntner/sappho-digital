@@ -14,7 +14,7 @@
 @prefix intertext_af: <https://intertextuality.org/extensions/artifacts#> .
 @prefix intertext_mt: <https://intertextuality.org/extensions/motifs#> .
 @prefix intertext_tx: <https://intertextuality.org/extensions/text#> .
-@prefix intro: <https://w3id.org/lso/intro/currentbeta#> .
+@prefix intro: <https://w3id.org/lso/intro/v1.0#> .
 @prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
 @prefix mimotext: <http://data.mimotext.uni-trier.de/entity/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -117,8 +117,7 @@ postdata_core:PoeticWork skos:broadMatch lrmoo:F1_Work .
 
 postdata_core:Redaction skos:broadMatch lrmoo:F3_Manifestation .
 
-postdata_core:TextUnit skos:broadMatch intro:INT16_Segment ;
-    skos:closeMatch intro:INT21_TextPassage .
+postdata_core:TextUnit skos:closeMatch intro:INT21_TextPassage .
 
 postdata_core:birthDate skos:broadMatch ecrm:P4_has_time-span .
 

@@ -26,7 +26,7 @@ BASE = "https://sappho-digital.com/"
 # -----------------------------------------------------------------------
 LRMOO  = Namespace("http://iflastandards.info/ns/lrm/lrmoo/")
 ECRM   = Namespace("http://erlangen-crm.org/current/")
-INTRO  = Namespace("https://w3id.org/lso/intro/currentbeta#")
+INTRO  = Namespace("https://w3id.org/lso/intro/v1.0#")
 BASENS = Namespace(BASE)
 
 # -----------------------------------------------------------------------
