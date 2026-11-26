@@ -1512,15 +1512,15 @@
         "Interpretation of love (topic) (Topic) in THE MOST BEAUTIFUL"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_topic_a10417e468b798b0> .
 
-<https://sappho-digital.com/feature/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Ilias (Werk) in THE MOST BEAUTIFUL"@de,
-        "Interpretation of Iliad (Work) in THE MOST BEAUTIFUL"@en ;
-    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48> .
-
 <https://sappho-digital.com/feature/interpretation/bibl_0bd2c59f_work_ef190d7c21734365> a intro:INT_Interpretation ;
     rdfs:label "Interpretation von Fragment 16 Voigt (Werk) in THE MOST BEAUTIFUL"@de,
         "Interpretation of Fragment 16 Voigt (Work) in THE MOST BEAUTIFUL"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_ef190d7c21734365> .
+
+<https://sappho-digital.com/feature/interpretation/bibl_0bd2c59f_work_ref_56e18c97> a intro:INT_Interpretation ;
+    rdfs:label "Interpretation von Illias (Werk) in THE MOST BEAUTIFUL"@de,
+        "Interpretation of Illias (Work) in THE MOST BEAUTIFUL"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_ref_56e18c97> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_0f7a6b8d_motif_0824726b36365ab5> a intro:INT_Interpretation ;
     rdfs:label "Interpretation von Nacht (Motiv) in Ich dachte an dich mit verlorenen / Schläfen"@de,
@@ -7748,238 +7748,238 @@
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_a88a263f_topic_e3f9c28d697807a6> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_character_person_01ec9bc374eb76b7> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Solon (Figur) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Solon (Character) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Solon (Figur) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Solon (Character) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_character_person_01ec9bc374eb76b7> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_character_person_669b106539453871> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Gott/Göttin (Figur) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of god/goddess (Character) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Gott/Göttin (Figur) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of god/goddess (Character) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_character_person_669b106539453871> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_character_person_9ee0b67040c4734c> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Rhodopis (Figur) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Rhodopis (Character) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Rhodopis (Figur) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Rhodopis (Character) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_character_person_9ee0b67040c4734c> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_character_person_a8693158074cfc94> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Anakreon (Figur) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Anacreon (Character) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Anakreon (Figur) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Anacreon (Character) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_character_person_a8693158074cfc94> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_character_person_c408a1bcd63c420f> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Phaon (Figur) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Phaon (Character) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Phaon (Figur) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Phaon (Character) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_character_person_c408a1bcd63c420f> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_character_person_e585b2a779019b7e> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Saffo (Figur) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Sappho (Character) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Saffo (Figur) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Sappho (Character) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_character_person_e585b2a779019b7e> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_motif_01ca370ea29462e3> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Blume (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of flower (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Blume (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of flower (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_01ca370ea29462e3> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_motif_1cd4207b96382696> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Vergessen (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of forgetting (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Vergessen (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of forgetting (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_1cd4207b96382696> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_motif_232c5062cde7d3c1> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Rose (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of rose (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Rose (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of rose (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_232c5062cde7d3c1> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_motif_64a381d1facbb9aa> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Feuer (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of fire (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Feuer (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of fire (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_64a381d1facbb9aa> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_motif_d57e3bd57313bbdd> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Vergöttlichung (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of deification (motif) (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Vergöttlichung (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of deification (motif) (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_d57e3bd57313bbdd> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_motif_d80bb67aabd5386f> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Becher/Krug (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of cup/jug (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Becher/Krug (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of cup/jug (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_d80bb67aabd5386f> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_motif_ea72ee231feeee11> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Kranz (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of wreath/garland (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Kranz (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of wreath/garland (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_ea72ee231feeee11> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_motif_jg054872d7377l2p> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Elfenbein (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of ivory (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Elfenbein (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of ivory (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_jg054872d7377l2p> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_01ec9bc374eb76b7> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Solon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Solon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Solon (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Solon (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_01ec9bc374eb76b7> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_1972623f5799ed62> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Homer (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Homer (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Homer (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Homer (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_1972623f5799ed62> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_298d1d2696887999> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Aphrodite (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Aphrodite (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Aphrodite (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Aphrodite (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_298d1d2696887999> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_2eb129793d7ca74a> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Hermes (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Hermes (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Hermes (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Hermes (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_2eb129793d7ca74a> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_37c2bf8d11811a0e> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Muse (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Muse (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Muse (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Muse (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_37c2bf8d11811a0e> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_38af0ac181d5d397> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Adonis (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Adonis (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Adonis (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Adonis (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_38af0ac181d5d397> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_669b106539453871> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Gott/Göttin (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of god/goddess (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Gott/Göttin (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of god/goddess (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_669b106539453871> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_803864de40878a17> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Nymphe (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Nymph (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Nymphe (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Nymph (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_803864de40878a17> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_9ee0b67040c4734c> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Rhodopis (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Rhodopis (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Rhodopis (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Rhodopis (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_9ee0b67040c4734c> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_a8693158074cfc94> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Anakreon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Anacreon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Anakreon (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Anacreon (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_a8693158074cfc94> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_a92154dba89f764f> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Apollon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Apollo (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Apollon (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Apollo (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_a92154dba89f764f> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_c408a1bcd63c420f> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Phaon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Phaon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Phaon (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Phaon (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_c408a1bcd63c420f> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_e585b2a779019b7e> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Saffo (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Sappho (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Saffo (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Sappho (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_e585b2a779019b7e> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_edd73d43dbe4b946> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Narziss (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Narcissus (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Narziss (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Narcissus (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_edd73d43dbe4b946> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_f47881025ad98035> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Dionysos (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Dionysus (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Dionysos (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Dionysus (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_f47881025ad98035> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_f9d48292bc61bb67> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Eros (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Eros (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Eros (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Eros (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_f9d48292bc61bb67> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_place_0009a58f625c087b> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Lesbos (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Lesbos (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Lesbos (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Lesbos (Place) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_0009a58f625c087b> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_place_21104b06fd2e1311> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Mytilene (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Mytilene (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Mytilene (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Mytilene (Place) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_21104b06fd2e1311> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_place_6f62261a950e9311> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Troja (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Troy (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Troja (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Troy (Place) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_6f62261a950e9311> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_place_938d82612b2cbf3a> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Elysium (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Elysium (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Elysium (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Elysium (Place) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_938d82612b2cbf3a> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_place_ac07f1e878d38c8d> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Griechenland (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Greece (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Griechenland (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Greece (Place) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_ac07f1e878d38c8d> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_place_c7da5f2e77438154> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Leukasfelsen (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Leucadian rock (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Leukasfelsen (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Leucadian rock (Place) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_c7da5f2e77438154> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_place_f80dc51761a44c4c> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Olympia (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Olympia (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Olympia (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Olympia (Place) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_f80dc51761a44c4c> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_place_ff6c437a4ca1c9b1> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Lethe (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Lethe (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Lethe (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Lethe (Place) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_ff6c437a4ca1c9b1> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_plot_011312b82eb4fc98> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sapphos Suizid (Stoff) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Sappho plot focusing on Sappho's suicide (Plot) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sapphos Suizid (Stoff) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Sappho plot focusing on Sappho's suicide (Plot) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_plot_011312b82eb4fc98> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_plot_0b092ed64a936159> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sappho als Liebende (Stoff) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Sappho plot focusing on Sappho as lover (Plot) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sappho als Liebende (Stoff) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Sappho plot focusing on Sappho as lover (Plot) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_plot_0b092ed64a936159> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_plot_1d09led62af39159> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf die Sappho-Anakreon-Beziehung (Stoff) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Sappho plot focusing on the Sappho-Anacreon relationship (Plot) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf die Sappho-Anakreon-Beziehung (Stoff) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Sappho plot focusing on the Sappho-Anacreon relationship (Plot) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_plot_1d09led62af39159> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_plot_3b2a78ce1bd49c2f> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf die Sappho-Phaon-Legende (Dekonstruktion) (Stoff) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Sappho plot focusing on the Sappho-Phaon legend (deconstruction) (Plot) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf die Sappho-Phaon-Legende (Dekonstruktion) (Stoff) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Sappho plot focusing on the Sappho-Phaon legend (deconstruction) (Plot) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_plot_3b2a78ce1bd49c2f> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_plot_42557e8d70c24751> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf die göttliche Sappho (Stoff) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Sappho plot focusing on the divine Sappho (Plot) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf die göttliche Sappho (Stoff) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Sappho plot focusing on the divine Sappho (Plot) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_plot_42557e8d70c24751> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_plot_86a1ad47f8e7fa03> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sappho als große Dichterin (Stoff) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Sappho plot focusing on Sappho as great poet (Plot) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sappho als große Dichterin (Stoff) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Sappho plot focusing on Sappho as great poet (Plot) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_plot_86a1ad47f8e7fa03> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_topic_193f7fb77b90540a> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Schönheit (Thema) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of beauty (topic) (Topic) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Schönheit (Thema) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of beauty (topic) (Topic) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_topic_193f7fb77b90540a> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_topic_d0d0d796a787f4a8> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Begehren (Thema) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of desire (topic) (Topic) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Begehren (Thema) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of desire (topic) (Topic) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_topic_d0d0d796a787f4a8> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_work_64e314c856d1dbbe> a intro:INT_Interpretation ;
-    rdfs:label "Interpretation von Griechische Anthologie/Anthologia Graeca (Werk) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Greek Anthology/Anthologia Graeca (Work) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Griechische Anthologie/Anthologia Graeca (Werk) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Greek Anthology/Anthologia Graeca (Work) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_work_64e314c856d1dbbe> .
 
 <https://sappho-digital.com/feature/interpretation/bibl_b47fb393_character_person_e585b2a779019b7e> a intro:INT_Interpretation ;
@@ -16455,11 +16455,6 @@
     ecrm:P1i_identifies <https://sappho-digital.com/feature/work_ref/work_0b367126b900439f> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
-<https://sappho-digital.com/identifier/work_0e2eeafefe2dae48> a ecrm:E42_Identifier ;
-    rdfs:label "work_0e2eeafefe2dae48" ;
-    ecrm:P1i_identifies <https://sappho-digital.com/feature/work_ref/work_0e2eeafefe2dae48> ;
-    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
-
 <https://sappho-digital.com/identifier/work_18f9bba320ea9dc9> a ecrm:E42_Identifier ;
     rdfs:label "work_18f9bba320ea9dc9" ;
     ecrm:P1i_identifies <https://sappho-digital.com/feature/work_ref/work_18f9bba320ea9dc9> ;
@@ -16568,6 +16563,11 @@
 <https://sappho-digital.com/identifier/work_ref_26b32bba> a ecrm:E42_Identifier ;
     rdfs:label "work_ref_26b32bba" ;
     ecrm:P1i_identifies <https://sappho-digital.com/feature/work_ref/work_ref_26b32bba> ;
+    ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
+
+<https://sappho-digital.com/identifier/work_ref_56e18c97> a ecrm:E42_Identifier ;
+    rdfs:label "work_ref_56e18c97" ;
+    ecrm:P1i_identifies <https://sappho-digital.com/feature/work_ref/work_ref_56e18c97> ;
     ecrm:P2_has_type <https://sappho-digital.com/id_type/sappho-digital> .
 
 <https://sappho-digital.com/identifier/work_ref_c554e4d1> a ecrm:E42_Identifier ;
@@ -17436,17 +17436,17 @@
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_0bd2c59f_topic_a10417e468b798b0> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/topic/bibl_0bd2c59f_topic_a10417e468b798b0> .
 
-<https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Ilias (Werk) in THE MOST BEAUTIFUL"@de,
-        "Interpretation of Iliad (Work) in THE MOST BEAUTIFUL"@en ;
-    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48> ;
-    intro:R21_identifies <https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_0e2eeafefe2dae48> .
-
 <https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_ef190d7c21734365> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation von Fragment 16 Voigt (Werk) in THE MOST BEAUTIFUL"@de,
         "Interpretation of Fragment 16 Voigt (Work) in THE MOST BEAUTIFUL"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_0bd2c59f_work_ef190d7c21734365> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_ef190d7c21734365> .
+
+<https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_ref_56e18c97> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Interpretation von Illias (Werk) in THE MOST BEAUTIFUL"@de,
+        "Interpretation of Illias (Work) in THE MOST BEAUTIFUL"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_0bd2c59f_work_ref_56e18c97> ;
+    intro:R21_identifies <https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_ref_56e18c97> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_0f7a6b8d_motif_0824726b36365ab5> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Interpretation von Nacht (Motiv) in Ich dachte an dich mit verlorenen / Schläfen"@de,
@@ -24919,284 +24919,284 @@
     intro:R21_identifies <https://sappho-digital.com/actualization/motif/bibl_a88a263f_topic_e3f9c28d697807a6> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_character_person_01ec9bc374eb76b7> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Solon (Figur) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Solon (Character) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Solon (Figur) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Solon (Character) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_character_person_01ec9bc374eb76b7> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/character/bibl_b0693a0e_character_person_01ec9bc374eb76b7> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_character_person_669b106539453871> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Gott/Göttin (Figur) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of god/goddess (Character) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Gott/Göttin (Figur) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of god/goddess (Character) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_character_person_669b106539453871> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/character/bibl_b0693a0e_character_person_669b106539453871> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_character_person_9ee0b67040c4734c> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Rhodopis (Figur) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Rhodopis (Character) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Rhodopis (Figur) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Rhodopis (Character) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_character_person_9ee0b67040c4734c> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/character/bibl_b0693a0e_character_person_9ee0b67040c4734c> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_character_person_a8693158074cfc94> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Anakreon (Figur) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Anacreon (Character) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Anakreon (Figur) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Anacreon (Character) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_character_person_a8693158074cfc94> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/character/bibl_b0693a0e_character_person_a8693158074cfc94> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_character_person_c408a1bcd63c420f> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Phaon (Figur) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Phaon (Character) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Phaon (Figur) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Phaon (Character) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_character_person_c408a1bcd63c420f> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/character/bibl_b0693a0e_character_person_c408a1bcd63c420f> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_character_person_e585b2a779019b7e> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Saffo (Figur) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Sappho (Character) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Saffo (Figur) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Sappho (Character) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_character_person_e585b2a779019b7e> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/character/bibl_b0693a0e_character_person_e585b2a779019b7e> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_01ca370ea29462e3> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Blume (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of flower (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Blume (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of flower (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_motif_01ca370ea29462e3> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_01ca370ea29462e3> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_1cd4207b96382696> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Vergessen (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of forgetting (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Vergessen (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of forgetting (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_motif_1cd4207b96382696> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_1cd4207b96382696> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_232c5062cde7d3c1> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Rose (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of rose (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Rose (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of rose (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_motif_232c5062cde7d3c1> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_232c5062cde7d3c1> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_64a381d1facbb9aa> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Feuer (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of fire (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Feuer (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of fire (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_motif_64a381d1facbb9aa> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_64a381d1facbb9aa> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_d57e3bd57313bbdd> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Vergöttlichung (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of deification (motif) (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Vergöttlichung (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of deification (motif) (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_motif_d57e3bd57313bbdd> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_d57e3bd57313bbdd> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_d80bb67aabd5386f> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Becher/Krug (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of cup/jug (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Becher/Krug (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of cup/jug (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_motif_d80bb67aabd5386f> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_d80bb67aabd5386f> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_ea72ee231feeee11> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Kranz (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of wreath/garland (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Kranz (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of wreath/garland (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_motif_ea72ee231feeee11> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_ea72ee231feeee11> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_jg054872d7377l2p> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Elfenbein (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of ivory (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Elfenbein (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of ivory (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_motif_jg054872d7377l2p> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_jg054872d7377l2p> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_01ec9bc374eb76b7> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Solon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Solon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Solon (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Solon (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_01ec9bc374eb76b7> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_01ec9bc374eb76b7> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_1972623f5799ed62> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Homer (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Homer (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Homer (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Homer (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_1972623f5799ed62> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_1972623f5799ed62> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_298d1d2696887999> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Aphrodite (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Aphrodite (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Aphrodite (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Aphrodite (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_298d1d2696887999> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_298d1d2696887999> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_2eb129793d7ca74a> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Hermes (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Hermes (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Hermes (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Hermes (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_2eb129793d7ca74a> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_2eb129793d7ca74a> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_37c2bf8d11811a0e> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Muse (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Muse (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Muse (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Muse (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_37c2bf8d11811a0e> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_37c2bf8d11811a0e> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_38af0ac181d5d397> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Adonis (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Adonis (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Adonis (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Adonis (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_38af0ac181d5d397> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_38af0ac181d5d397> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_669b106539453871> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Gott/Göttin (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of god/goddess (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Gott/Göttin (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of god/goddess (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_669b106539453871> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_669b106539453871> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_803864de40878a17> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Nymphe (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Nymph (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Nymphe (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Nymph (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_803864de40878a17> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_803864de40878a17> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_9ee0b67040c4734c> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Rhodopis (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Rhodopis (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Rhodopis (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Rhodopis (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_9ee0b67040c4734c> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_9ee0b67040c4734c> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_a8693158074cfc94> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Anakreon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Anacreon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Anakreon (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Anacreon (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_a8693158074cfc94> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_a8693158074cfc94> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_a92154dba89f764f> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Apollon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Apollo (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Apollon (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Apollo (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_a92154dba89f764f> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_a92154dba89f764f> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_c408a1bcd63c420f> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Phaon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Phaon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Phaon (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Phaon (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_c408a1bcd63c420f> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_c408a1bcd63c420f> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_e585b2a779019b7e> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Saffo (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Sappho (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Saffo (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Sappho (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_e585b2a779019b7e> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_e585b2a779019b7e> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_edd73d43dbe4b946> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Narziss (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Narcissus (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Narziss (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Narcissus (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_edd73d43dbe4b946> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_edd73d43dbe4b946> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_f47881025ad98035> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Dionysos (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Dionysus (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Dionysos (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Dionysus (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_f47881025ad98035> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_f47881025ad98035> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_f9d48292bc61bb67> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Eros (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Eros (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Eros (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Eros (Person) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_person_f9d48292bc61bb67> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_f9d48292bc61bb67> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_0009a58f625c087b> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Lesbos (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Lesbos (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Lesbos (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Lesbos (Place) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_place_0009a58f625c087b> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_0009a58f625c087b> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_21104b06fd2e1311> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Mytilene (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Mytilene (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Mytilene (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Mytilene (Place) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_place_21104b06fd2e1311> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_21104b06fd2e1311> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_6f62261a950e9311> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Troja (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Troy (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Troja (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Troy (Place) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_place_6f62261a950e9311> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_6f62261a950e9311> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_938d82612b2cbf3a> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Elysium (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Elysium (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Elysium (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Elysium (Place) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_place_938d82612b2cbf3a> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_938d82612b2cbf3a> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_ac07f1e878d38c8d> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Griechenland (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Greece (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Griechenland (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Greece (Place) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_place_ac07f1e878d38c8d> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_ac07f1e878d38c8d> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_c7da5f2e77438154> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Leukasfelsen (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Leucadian rock (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Leukasfelsen (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Leucadian rock (Place) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_place_c7da5f2e77438154> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_c7da5f2e77438154> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_f80dc51761a44c4c> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Olympia (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Olympia (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Olympia (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Olympia (Place) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_place_f80dc51761a44c4c> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_f80dc51761a44c4c> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_ff6c437a4ca1c9b1> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Lethe (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Lethe (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Lethe (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Lethe (Place) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_place_ff6c437a4ca1c9b1> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_ff6c437a4ca1c9b1> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_plot_011312b82eb4fc98> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sapphos Suizid (Stoff) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Sappho plot focusing on Sappho's suicide (Plot) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sapphos Suizid (Stoff) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Sappho plot focusing on Sappho's suicide (Plot) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_plot_011312b82eb4fc98> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/plot/bibl_b0693a0e_plot_011312b82eb4fc98> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_plot_0b092ed64a936159> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sappho als Liebende (Stoff) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Sappho plot focusing on Sappho as lover (Plot) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sappho als Liebende (Stoff) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Sappho plot focusing on Sappho as lover (Plot) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_plot_0b092ed64a936159> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/plot/bibl_b0693a0e_plot_0b092ed64a936159> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_plot_1d09led62af39159> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf die Sappho-Anakreon-Beziehung (Stoff) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Sappho plot focusing on the Sappho-Anacreon relationship (Plot) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf die Sappho-Anakreon-Beziehung (Stoff) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Sappho plot focusing on the Sappho-Anacreon relationship (Plot) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_plot_1d09led62af39159> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/plot/bibl_b0693a0e_plot_1d09led62af39159> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_plot_3b2a78ce1bd49c2f> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf die Sappho-Phaon-Legende (Dekonstruktion) (Stoff) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Sappho plot focusing on the Sappho-Phaon legend (deconstruction) (Plot) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf die Sappho-Phaon-Legende (Dekonstruktion) (Stoff) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Sappho plot focusing on the Sappho-Phaon legend (deconstruction) (Plot) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_plot_3b2a78ce1bd49c2f> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/plot/bibl_b0693a0e_plot_3b2a78ce1bd49c2f> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_plot_42557e8d70c24751> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf die göttliche Sappho (Stoff) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Sappho plot focusing on the divine Sappho (Plot) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf die göttliche Sappho (Stoff) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Sappho plot focusing on the divine Sappho (Plot) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_plot_42557e8d70c24751> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/plot/bibl_b0693a0e_plot_42557e8d70c24751> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_plot_86a1ad47f8e7fa03> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sappho als große Dichterin (Stoff) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Sappho plot focusing on Sappho as great poet (Plot) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Sappho-Stoff mit Fokus auf Sappho als große Dichterin (Stoff) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Sappho plot focusing on Sappho as great poet (Plot) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_plot_86a1ad47f8e7fa03> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/plot/bibl_b0693a0e_plot_86a1ad47f8e7fa03> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_topic_193f7fb77b90540a> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Schönheit (Thema) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of beauty (topic) (Topic) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Schönheit (Thema) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of beauty (topic) (Topic) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_topic_193f7fb77b90540a> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/topic/bibl_b0693a0e_topic_193f7fb77b90540a> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_topic_d0d0d796a787f4a8> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Begehren (Thema) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of desire (topic) (Topic) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Begehren (Thema) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of desire (topic) (Topic) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_topic_d0d0d796a787f4a8> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/topic/bibl_b0693a0e_topic_d0d0d796a787f4a8> .
 
 <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_work_64e314c856d1dbbe> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Interpretation von Griechische Anthologie/Anthologia Graeca (Werk) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Interpretation of Greek Anthology/Anthologia Graeca (Work) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Interpretation von Griechische Anthologie/Anthologia Graeca (Werk) in Phaon. Ein Dialog im Elysium"@de,
+        "Interpretation of Greek Anthology/Anthologia Graeca (Work) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/interpretation/bibl_b0693a0e_work_64e314c856d1dbbe> ;
     intro:R21_identifies <https://sappho-digital.com/actualization/work_ref/bibl_b0693a0e_work_64e314c856d1dbbe> .
 
@@ -34150,12 +34150,6 @@
     skos:exactMatch <https://w3id.org/sappho-digital/vocab/plot_f69b5676eae739bc> ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/plot/bibl_8665dcc5_plot_f69b5676eae739bc> .
 
-<https://sappho-digital.com/feature/work_ref/work_0e2eeafefe2dae48> a intro:INT18_Reference ;
-    rdfs:label "Referenz auf Ilias (Werk)"@de,
-        "Reference to Iliad (Work)"@en ;
-    skos:exactMatch <https://w3id.org/sappho-digital/vocab/work_0e2eeafefe2dae48> ;
-    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_0e2eeafefe2dae48> .
-
 <https://sappho-digital.com/feature/work_ref/work_3eebfbf61e577d43> a intro:INT18_Reference ;
     rdfs:label "Referenz auf Fragment 2 Voigt (Werk)"@de,
         "Reference to Fragment 2 Voigt (Work)"@en ;
@@ -34243,6 +34237,11 @@
     rdfs:label "Referenz auf Fragment 94 Voigt (Werk)"@de,
         "Reference to Fragment 94 Voigt (Work)"@en ;
     intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/work_ref/bibl_00e9aff1_work_ref_26b32bba> .
+
+<https://sappho-digital.com/feature/work_ref/work_ref_56e18c97> a intro:INT18_Reference ;
+    rdfs:label "Referenz auf Illias (Werk)"@de,
+        "Reference to Illias (Work)"@en ;
+    intro:R17i_featureActualizedIn <https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_ref_56e18c97> .
 
 <https://sappho-digital.com/feature/work_ref/work_ref_c554e4d1> a intro:INT18_Reference ;
     rdfs:label "Referenz auf Fragment 158 Voigt (Werk)"@de,
@@ -35337,48 +35336,48 @@
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_a717f073_character_person_e585b2a779019b7e> .
 
 <https://sappho-digital.com/actualization/character/bibl_b0693a0e_character_person_01ec9bc374eb76b7> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Solon (Figur) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Solon (Character) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Solon (Figur) in Phaon. Ein Dialog im Elysium"@de,
+        "Solon (Character) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_01ec9bc374eb76b7> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/character/person_01ec9bc374eb76b7> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_character_person_01ec9bc374eb76b7> .
 
 <https://sappho-digital.com/actualization/character/bibl_b0693a0e_character_person_669b106539453871> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Gott/Göttin (Figur) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "god/goddess (Character) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Gott/Göttin (Figur) in Phaon. Ein Dialog im Elysium"@de,
+        "god/goddess (Character) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_669b106539453871> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/character/person_669b106539453871> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_character_person_669b106539453871> .
 
 <https://sappho-digital.com/actualization/character/bibl_b0693a0e_character_person_9ee0b67040c4734c> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Rhodopis (Figur) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Rhodopis (Character) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Rhodopis (Figur) in Phaon. Ein Dialog im Elysium"@de,
+        "Rhodopis (Character) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_9ee0b67040c4734c> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/character/person_9ee0b67040c4734c> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_character_person_9ee0b67040c4734c> .
 
 <https://sappho-digital.com/actualization/character/bibl_b0693a0e_character_person_a8693158074cfc94> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Anakreon (Figur) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Anacreon (Character) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Anakreon (Figur) in Phaon. Ein Dialog im Elysium"@de,
+        "Anacreon (Character) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_a8693158074cfc94> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/character/person_a8693158074cfc94> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_character_person_a8693158074cfc94> .
 
 <https://sappho-digital.com/actualization/character/bibl_b0693a0e_character_person_c408a1bcd63c420f> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Phaon (Figur) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Phaon (Character) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Phaon (Figur) in Phaon. Ein Dialog im Elysium"@de,
+        "Phaon (Character) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_c408a1bcd63c420f> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/character/person_c408a1bcd63c420f> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_character_person_c408a1bcd63c420f> .
 
 <https://sappho-digital.com/actualization/character/bibl_b0693a0e_character_person_e585b2a779019b7e> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Saffo (Figur) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Sappho (Character) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Saffo (Figur) in Phaon. Ein Dialog im Elysium"@de,
+        "Sappho (Character) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_e585b2a779019b7e> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/character/person_e585b2a779019b7e> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
@@ -40885,57 +40884,57 @@
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_a88a263f_topic_e3f9c28d697807a6> .
 
 <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_01ca370ea29462e3> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Blume (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "flower (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Blume (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "flower (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/motif/motif_01ca370ea29462e3> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_01ca370ea29462e3> .
 
 <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_1cd4207b96382696> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Vergessen (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "forgetting (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Vergessen (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "forgetting (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/motif/motif_1cd4207b96382696> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_1cd4207b96382696> .
 
 <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_232c5062cde7d3c1> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Rose (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "rose (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Rose (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "rose (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/motif/motif_232c5062cde7d3c1> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_232c5062cde7d3c1> .
 
 <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_64a381d1facbb9aa> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Feuer (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "fire (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Feuer (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "fire (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/motif/motif_64a381d1facbb9aa> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_64a381d1facbb9aa> .
 
 <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_d57e3bd57313bbdd> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Vergöttlichung (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "deification (motif) (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Vergöttlichung (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "deification (motif) (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/motif/motif_d57e3bd57313bbdd> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_d57e3bd57313bbdd> .
 
 <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_d80bb67aabd5386f> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Becher/Krug (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "cup/jug (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Becher/Krug (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "cup/jug (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/motif/motif_d80bb67aabd5386f> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_d80bb67aabd5386f> .
 
 <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_ea72ee231feeee11> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Kranz (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "wreath/garland (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Kranz (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "wreath/garland (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/motif/motif_ea72ee231feeee11> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_ea72ee231feeee11> .
 
 <https://sappho-digital.com/actualization/motif/bibl_b0693a0e_motif_jg054872d7377l2p> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Elfenbein (Motiv) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "ivory (Motif) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Elfenbein (Motiv) in Phaon. Ein Dialog im Elysium"@de,
+        "ivory (Motif) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/motif/motif_jg054872d7377l2p> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_motif_jg054872d7377l2p> .
@@ -46365,43 +46364,43 @@
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_a88a263f_plot_fd168d9b2224361d> .
 
 <https://sappho-digital.com/actualization/plot/bibl_b0693a0e_plot_011312b82eb4fc98> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Sappho-Stoff mit Fokus auf Sapphos Suizid (Stoff) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Sappho plot focusing on Sappho's suicide (Plot) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Sappho-Stoff mit Fokus auf Sapphos Suizid (Stoff) in Phaon. Ein Dialog im Elysium"@de,
+        "Sappho plot focusing on Sappho's suicide (Plot) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/plot/plot_011312b82eb4fc98> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_plot_011312b82eb4fc98> .
 
 <https://sappho-digital.com/actualization/plot/bibl_b0693a0e_plot_0b092ed64a936159> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Sappho-Stoff mit Fokus auf Sappho als Liebende (Stoff) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Sappho plot focusing on Sappho as lover (Plot) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Sappho-Stoff mit Fokus auf Sappho als Liebende (Stoff) in Phaon. Ein Dialog im Elysium"@de,
+        "Sappho plot focusing on Sappho as lover (Plot) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/plot/plot_0b092ed64a936159> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_plot_0b092ed64a936159> .
 
 <https://sappho-digital.com/actualization/plot/bibl_b0693a0e_plot_1d09led62af39159> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Sappho-Stoff mit Fokus auf die Sappho-Anakreon-Beziehung (Stoff) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Sappho plot focusing on the Sappho-Anacreon relationship (Plot) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Sappho-Stoff mit Fokus auf die Sappho-Anakreon-Beziehung (Stoff) in Phaon. Ein Dialog im Elysium"@de,
+        "Sappho plot focusing on the Sappho-Anacreon relationship (Plot) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/plot/plot_1d09led62af39159> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_plot_1d09led62af39159> .
 
 <https://sappho-digital.com/actualization/plot/bibl_b0693a0e_plot_3b2a78ce1bd49c2f> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Sappho-Stoff mit Fokus auf die Sappho-Phaon-Legende (Dekonstruktion) (Stoff) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Sappho plot focusing on the Sappho-Phaon legend (deconstruction) (Plot) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Sappho-Stoff mit Fokus auf die Sappho-Phaon-Legende (Dekonstruktion) (Stoff) in Phaon. Ein Dialog im Elysium"@de,
+        "Sappho plot focusing on the Sappho-Phaon legend (deconstruction) (Plot) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/plot/plot_3b2a78ce1bd49c2f> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_plot_3b2a78ce1bd49c2f> .
 
 <https://sappho-digital.com/actualization/plot/bibl_b0693a0e_plot_42557e8d70c24751> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Sappho-Stoff mit Fokus auf die göttliche Sappho (Stoff) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Sappho plot focusing on the divine Sappho (Plot) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Sappho-Stoff mit Fokus auf die göttliche Sappho (Stoff) in Phaon. Ein Dialog im Elysium"@de,
+        "Sappho plot focusing on the divine Sappho (Plot) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/plot/plot_42557e8d70c24751> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_plot_42557e8d70c24751> .
 
 <https://sappho-digital.com/actualization/plot/bibl_b0693a0e_plot_86a1ad47f8e7fa03> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Sappho-Stoff mit Fokus auf Sappho als große Dichterin (Stoff) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Sappho plot focusing on Sappho as great poet (Plot) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Sappho-Stoff mit Fokus auf Sappho als große Dichterin (Stoff) in Phaon. Ein Dialog im Elysium"@de,
+        "Sappho plot focusing on Sappho as great poet (Plot) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/plot/plot_86a1ad47f8e7fa03> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_plot_86a1ad47f8e7fa03> .
@@ -47913,15 +47912,15 @@
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_a88a263f_topic_16fb1687f7449a95> .
 
 <https://sappho-digital.com/actualization/topic/bibl_b0693a0e_topic_193f7fb77b90540a> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Schönheit (Thema) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "beauty (topic) (Topic) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Schönheit (Thema) in Phaon. Ein Dialog im Elysium"@de,
+        "beauty (topic) (Topic) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/topic/topic_193f7fb77b90540a> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_topic_193f7fb77b90540a> .
 
 <https://sappho-digital.com/actualization/topic/bibl_b0693a0e_topic_d0d0d796a787f4a8> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Begehren (Thema) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "desire (topic) (Topic) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Begehren (Thema) in Phaon. Ein Dialog im Elysium"@de,
+        "desire (topic) (Topic) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/topic/topic_d0d0d796a787f4a8> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_topic_d0d0d796a787f4a8> .
@@ -48628,12 +48627,12 @@
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_sappho_96> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_sappho_96_topos_3df47bdc> .
 
-<https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_0e2eeafefe2dae48> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Ilias (Werk) in THE MOST BEAUTIFUL"@de,
-        "Iliad (Work) in THE MOST BEAUTIFUL"@en ;
-    intro:R17_actualizesFeature <https://sappho-digital.com/feature/work_ref/work_0e2eeafefe2dae48> ;
+<https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_ref_56e18c97> a intro:INT2_ActualizationOfFeature ;
+    rdfs:label "Illias (Werk) in THE MOST BEAUTIFUL"@de,
+        "Illias (Work) in THE MOST BEAUTIFUL"@en ;
+    intro:R17_actualizesFeature <https://sappho-digital.com/feature/work_ref/work_ref_56e18c97> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_0bd2c59f> ;
-    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_0e2eeafefe2dae48> .
+    intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_0bd2c59f_work_ref_56e18c97> .
 
 <https://sappho-digital.com/actualization/work_ref/bibl_19d5a7ab_work_7ad506cbcc0b8143> a intro:INT2_ActualizationOfFeature ;
     rdfs:label "Die Spindel (Erinna) (Werk) in Erinna an Sappho"@de,
@@ -52162,128 +52161,128 @@
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_a88a263f_person_e585b2a779019b7e> .
 
 <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_01ec9bc374eb76b7> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Solon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Solon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Solon (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Solon (Person) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_01ec9bc374eb76b7> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_01ec9bc374eb76b7> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_01ec9bc374eb76b7> .
 
 <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_1972623f5799ed62> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Homer (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Homer (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Homer (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Homer (Person) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_1972623f5799ed62> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_1972623f5799ed62> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_1972623f5799ed62> .
 
 <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_298d1d2696887999> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Aphrodite (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Aphrodite (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Aphrodite (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Aphrodite (Person) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_298d1d2696887999> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_298d1d2696887999> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_298d1d2696887999> .
 
 <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_2eb129793d7ca74a> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Hermes (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Hermes (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Hermes (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Hermes (Person) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_2eb129793d7ca74a> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_2eb129793d7ca74a> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_2eb129793d7ca74a> .
 
 <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_37c2bf8d11811a0e> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Muse (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Muse (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Muse (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Muse (Person) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_37c2bf8d11811a0e> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_37c2bf8d11811a0e> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_37c2bf8d11811a0e> .
 
 <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_38af0ac181d5d397> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Adonis (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Adonis (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Adonis (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Adonis (Person) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_38af0ac181d5d397> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_38af0ac181d5d397> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_38af0ac181d5d397> .
 
 <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_669b106539453871> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Gott/Göttin (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "god/goddess (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Gott/Göttin (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "god/goddess (Person) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_669b106539453871> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_669b106539453871> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_669b106539453871> .
 
 <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_803864de40878a17> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Nymphe (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Nymph (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Nymphe (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Nymph (Person) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_803864de40878a17> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_803864de40878a17> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_803864de40878a17> .
 
 <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_9ee0b67040c4734c> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Rhodopis (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Rhodopis (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Rhodopis (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Rhodopis (Person) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_9ee0b67040c4734c> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_9ee0b67040c4734c> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_9ee0b67040c4734c> .
 
 <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_a8693158074cfc94> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Anakreon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Anacreon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Anakreon (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Anacreon (Person) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_a8693158074cfc94> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_a8693158074cfc94> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_a8693158074cfc94> .
 
 <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_a92154dba89f764f> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Apollon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Apollo (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Apollon (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Apollo (Person) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_a92154dba89f764f> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_a92154dba89f764f> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_a92154dba89f764f> .
 
 <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_c408a1bcd63c420f> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Phaon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Phaon (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Phaon (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Phaon (Person) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_c408a1bcd63c420f> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_c408a1bcd63c420f> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_c408a1bcd63c420f> .
 
 <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_e585b2a779019b7e> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Saffo (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Sappho (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Saffo (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Sappho (Person) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_e585b2a779019b7e> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_e585b2a779019b7e> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_e585b2a779019b7e> .
 
 <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_edd73d43dbe4b946> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Narziss (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Narcissus (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Narziss (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Narcissus (Person) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_edd73d43dbe4b946> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_edd73d43dbe4b946> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_edd73d43dbe4b946> .
 
 <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_f47881025ad98035> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Dionysos (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Dionysus (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Dionysos (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Dionysus (Person) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_f47881025ad98035> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_f47881025ad98035> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_person_f47881025ad98035> .
 
 <https://sappho-digital.com/actualization/person_ref/bibl_b0693a0e_person_f9d48292bc61bb67> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Eros (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Eros (Person) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Eros (Person) in Phaon. Ein Dialog im Elysium"@de,
+        "Eros (Person) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/person/person_f9d48292bc61bb67> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/person_ref/person_f9d48292bc61bb67> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
@@ -55334,64 +55333,64 @@
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_a667785d_place_1adb2da7993ecc95> .
 
 <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_0009a58f625c087b> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Lesbos (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Lesbos (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Lesbos (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Lesbos (Place) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/place/place_0009a58f625c087b> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/place_ref/place_0009a58f625c087b> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_0009a58f625c087b> .
 
 <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_21104b06fd2e1311> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Mytilene (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Mytilene (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Mytilene (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Mytilene (Place) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/place/place_21104b06fd2e1311> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/place_ref/place_21104b06fd2e1311> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_21104b06fd2e1311> .
 
 <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_6f62261a950e9311> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Troja (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Troy (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Troja (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Troy (Place) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/place/place_6f62261a950e9311> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/place_ref/place_6f62261a950e9311> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_6f62261a950e9311> .
 
 <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_938d82612b2cbf3a> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Elysium (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Elysium (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Elysium (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Elysium (Place) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/place/place_938d82612b2cbf3a> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/place_ref/place_938d82612b2cbf3a> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_938d82612b2cbf3a> .
 
 <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_ac07f1e878d38c8d> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Griechenland (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Greece (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Griechenland (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Greece (Place) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/place/place_ac07f1e878d38c8d> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/place_ref/place_ac07f1e878d38c8d> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_ac07f1e878d38c8d> .
 
 <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_c7da5f2e77438154> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Leukasfelsen (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Leucadian rock (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Leukasfelsen (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Leucadian rock (Place) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/place/place_c7da5f2e77438154> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/place_ref/place_c7da5f2e77438154> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_c7da5f2e77438154> .
 
 <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_f80dc51761a44c4c> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Olympia (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Olympia (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Olympia (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Olympia (Place) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/place/place_f80dc51761a44c4c> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/place_ref/place_f80dc51761a44c4c> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_b0693a0e_place_f80dc51761a44c4c> .
 
 <https://sappho-digital.com/actualization/place_ref/bibl_b0693a0e_place_ff6c437a4ca1c9b1> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Lethe (Ort) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Lethe (Place) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Lethe (Ort) in Phaon. Ein Dialog im Elysium"@de,
+        "Lethe (Place) in Phaon. Ein Dialog im Elysium"@en ;
     ecrm:P67_refers_to <https://sappho-digital.com/place/place_ff6c437a4ca1c9b1> ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/place_ref/place_ff6c437a4ca1c9b1> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e> ;
@@ -56014,8 +56013,8 @@
     intro:R21i_isIdentifiedBy <https://sappho-digital.com/actualization/interpretation/bibl_a667785d_work_bd94b08706bbf1d8> .
 
 <https://sappho-digital.com/actualization/work_ref/bibl_b0693a0e_work_64e314c856d1dbbe> a intro:INT2_ActualizationOfFeature ;
-    rdfs:label "Griechische Anthologie/Anthologia Graeca (Werk) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de,
-        "Greek Anthology/Anthologia Graeca (Work) in Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@en ;
+    rdfs:label "Griechische Anthologie/Anthologia Graeca (Werk) in Phaon. Ein Dialog im Elysium"@de,
+        "Greek Anthology/Anthologia Graeca (Work) in Phaon. Ein Dialog im Elysium"@en ;
     intro:R17_actualizesFeature <https://sappho-digital.com/feature/work_ref/work_64e314c856d1dbbe> ;
     intro:R18i_actualizationFoundOn <https://sappho-digital.com/expression/bibl_b0693a0e>,
         <https://sappho-digital.com/textpassage/textpassage_2678dda7> ;
@@ -61169,8 +61168,8 @@
         <https://sappho-digital.com/actualization/topic/bibl_0bd2c59f_topic_193f7fb77b90540a>,
         <https://sappho-digital.com/actualization/topic/bibl_0bd2c59f_topic_6c84497f664d562a>,
         <https://sappho-digital.com/actualization/topic/bibl_0bd2c59f_topic_a10417e468b798b0>,
-        <https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_0e2eeafefe2dae48>,
-        <https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_ef190d7c21734365> ;
+        <https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_ef190d7c21734365>,
+        <https://sappho-digital.com/actualization/work_ref/bibl_0bd2c59f_work_ref_56e18c97> ;
     intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_b3e607dc> .
 
 <https://sappho-digital.com/expression/bibl_31f96313> a lrmoo:F2_Expression ;
@@ -64197,13 +64196,13 @@
     intro:R30_hasTextPassage <https://sappho-digital.com/textpassage/textpassage_a3ebb012> .
 
 <https://sappho-digital.com/expression/bibl_b0693a0e> a lrmoo:F2_Expression ;
-    rdfs:label "Faon, Nireus, hernach Saffo, zuletzt noch Anakreon"@de ;
+    rdfs:label "Phaon. Ein Dialog im Elysium"@de ;
     ecrm:P102_has_title <https://sappho-digital.com/title/expression/bibl_b0693a0e> ;
     ecrm:P130i_features_are_also_found_on <https://sappho-digital.com/digital/bibl_b0693a0e> ;
     ecrm:P1_is_identified_by <https://sappho-digital.com/identifier/bibl_b0693a0e> ;
     ecrm:P2_has_type <https://sappho-digital.com/genre/Drama> ;
     lrmoo:R17i_was_created_by <https://sappho-digital.com/expression_creation/bibl_b0693a0e> ;
-    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_19ed404e> ;
+    lrmoo:R4i_is_embodied_in <https://sappho-digital.com/manifestation/bibl_49136633_1782> ;
     intro:R18_showsActualization <https://sappho-digital.com/actualization/character/bibl_b0693a0e_character_person_01ec9bc374eb76b7>,
         <https://sappho-digital.com/actualization/character/bibl_b0693a0e_character_person_669b106539453871>,
         <https://sappho-digital.com/actualization/character/bibl_b0693a0e_character_person_9ee0b67040c4734c>,
@@ -65529,7 +65528,6 @@
         <https://sappho-digital.com/identifier/topos_8ed393ab>,
         <https://sappho-digital.com/identifier/work_0951b31d71de94b8>,
         <https://sappho-digital.com/identifier/work_0b367126b900439f>,
-        <https://sappho-digital.com/identifier/work_0e2eeafefe2dae48>,
         <https://sappho-digital.com/identifier/work_18f9bba320ea9dc9>,
         <https://sappho-digital.com/identifier/work_3eebfbf61e577d43>,
         <https://sappho-digital.com/identifier/work_4f835860e11c2674>,
@@ -65552,6 +65550,7 @@
         <https://sappho-digital.com/identifier/work_ef190d7c21734365>,
         <https://sappho-digital.com/identifier/work_ref_07b98557>,
         <https://sappho-digital.com/identifier/work_ref_26b32bba>,
+        <https://sappho-digital.com/identifier/work_ref_56e18c97>,
         <https://sappho-digital.com/identifier/work_ref_c554e4d1>,
         <https://sappho-digital.com/identifier/work_ref_d85b3ad9>,
         <https://sappho-digital.com/identifier/work_ref_db70a009>,

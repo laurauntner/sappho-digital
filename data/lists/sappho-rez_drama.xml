@@ -44,6 +44,18 @@
                     <date type="published" when="1750">18. Jahrhundert?</date>
                     <note type="genre">Drama</note>
                 </bibl>
+                <bibl xml:id="bibl_b0693a0e">
+                    <title type="text">Phaon. Ein Dialog im Elysium</title>
+                    <date type="published" when="1782">1782</date>
+                    <bibl xml:id="bibl_49136633" ref="https://www.wikidata.org/entity/Q1197395">
+                        <title type="work">Der Teutsche Merkur</title>
+                    </bibl>
+                    <author ref="https://www.wikidata.org/entity/Q154010" xml:id="author_7ea2d8de">Christoph Martin Wieland</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q3955" xml:id="place_c35eca96">Weimar</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q119610998" xml:id="publisher_6acb1b8b">Carl Ludolf Hoffmann</publisher>
+                    <ref target="https://ds.ub.uni-bielefeld.de/viewer/image/1951387_037/61/LOG_0014/">https://ds.ub.uni-bielefeld.de/viewer/image/1951387_037/61/LOG_0014/</ref>
+                </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q120176353" xml:id="bibl_98b2a68e">
                     <title type="text">Minona oder Die Angelsachsen. Ein tragisches Melodrama in vier Akten. Die Musik vom Herrn Kapellmeister J. A. P. Schulz [d. i. Johann Abraham Peter Schulz]</title>
                     <date type="published" when="1785">1785</date>
@@ -52,19 +64,6 @@
                     <pubPlace ref="https://www.wikidata.org/entity/Q1055" xml:id="place_f23bb5e2">Hamburg</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q817521" xml:id="publisher_7eaf9ac7">Benjamin Gottlob Hoffmann</publisher>
                     <ref target="https://www.digitale-sammlungen.de/de/view/bsb10578436">https://www.digitale-sammlungen.de/de/view/bsb10578436</ref>
-                </bibl>
-                <bibl xml:id="bibl_b0693a0e">
-                    <title type="text">Faon, Nireus, hernach Saffo, zuletzt noch Anakreon</title>
-                    <date type="created" notBefore="1789" notAfter="1793">1789–1793</date>
-                    <date type="published" when="1796">1796</date>
-                    <bibl xml:id="bibl_19ed404e" ref="https://www.wikidata.org/entity/Q120256383">
-                        <title type="work">C. M. Wielands sämmtliche Werke, Bd. 25: Göttergespräche. Gespräche im Elysium</title>
-                    </bibl>
-                    <author ref="https://www.wikidata.org/entity/Q154010" xml:id="author_7ea2d8de">Christoph Martin Wieland</author>
-                    <note type="genre">Drama</note>
-                    <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher ref="https://www.wikidata.org/entity/Q97527" xml:id="publisher_5c6827bb">Georg Joachim Göschen</publisher>
-                    <ref target="https://books.google.com/books?id=DUkFB4643o0C">https://books.google.com/books?id=DUkFB4643o0C</ref>
                 </bibl>
                 <bibl ref="https://www.wikidata.org/entity/Q120177793" xml:id="bibl_632dac82">
                     <title type="text">Sapho. Ein Melodrama</title>

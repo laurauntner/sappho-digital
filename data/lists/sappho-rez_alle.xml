@@ -2758,6 +2758,18 @@ Philosophen zu Sanssouci</title>
                     <publisher ref="https://www.wikidata.org/entity/Q139325827" xml:id="publisher_b4c91eff">Anton Lorenz Zentz</publisher>
                     <ref target="https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN77739054X">https://digital.staatsbibliothek-berlin.de/werkansicht?PPN=PPN77739054X</ref>
                 </bibl>
+                <bibl xml:id="bibl_b0693a0e">
+                    <title type="text">Phaon. Ein Dialog im Elysium</title>
+                    <date type="published" when="1782">1782</date>
+                    <bibl xml:id="bibl_49136633" ref="https://www.wikidata.org/entity/Q1197395">
+                        <title type="work">Der Teutsche Merkur</title>
+                    </bibl>
+                    <author ref="https://www.wikidata.org/entity/Q154010" xml:id="author_7ea2d8de">Christoph Martin Wieland</author>
+                    <note type="genre">Drama</note>
+                    <pubPlace ref="https://www.wikidata.org/entity/Q3955" xml:id="place_c35eca96">Weimar</pubPlace>
+                    <publisher ref="https://www.wikidata.org/entity/Q119610998" xml:id="publisher_6acb1b8b">Carl Ludolf Hoffmann</publisher>
+                    <ref target="https://ds.ub.uni-bielefeld.de/viewer/image/1951387_037/61/LOG_0014/">https://ds.ub.uni-bielefeld.de/viewer/image/1951387_037/61/LOG_0014/</ref>
+                </bibl>
                 <bibl xml:id="bibl_32ad81e5">
                     <title type="text">Antwort des Herrn von Heß</title>
                     <date type="created" notAfter="1782">n. n. 1782</date>
@@ -2966,19 +2978,6 @@ Philosophen zu Sanssouci</title>
                     <pubPlace ref="https://www.wikidata.org/entity/Q72" xml:id="place_0c1736a7">Zürich</pubPlace>
                     <publisher ref="https://www.wikidata.org/entity/Q1511140" xml:id="publisher_1f917080">Orell, Gessner, Füssli und Compagnie</publisher>
                     <ref target="https://opendata.uni-halle.de/explore?bitstream_id=f104dd55-5496-446a-9e7f-57a1e360a47f&amp;handle=1981185920/45496&amp;provider=iiif-image">https://opendata.uni-halle.de/explore?bitstream_id=f104dd55-5496-446a-9e7f-57a1e360a47f&amp;handle=1981185920/45496&amp;provider=iiif-image</ref>
-                </bibl>
-                <bibl xml:id="bibl_b0693a0e">
-                    <title type="text">Faon, Nireus, hernach Saffo, zuletzt noch Anakreon</title>
-                    <date type="created" notBefore="1789" notAfter="1793">1789–1793</date>
-                    <date type="published" when="1796">1796</date>
-                    <bibl xml:id="bibl_19ed404e" ref="https://www.wikidata.org/entity/Q120256383">
-                        <title type="work">C. M. Wielands sämmtliche Werke, Bd. 25: Göttergespräche. Gespräche im Elysium</title>
-                    </bibl>
-                    <author ref="https://www.wikidata.org/entity/Q154010" xml:id="author_7ea2d8de">Christoph Martin Wieland</author>
-                    <note type="genre">Drama</note>
-                    <pubPlace ref="https://www.wikidata.org/entity/Q2079" xml:id="place_efeaa516">Leipzig</pubPlace>
-                    <publisher ref="https://www.wikidata.org/entity/Q97527" xml:id="publisher_5c6827bb">Georg Joachim Göschen</publisher>
-                    <ref target="https://books.google.com/books?id=DUkFB4643o0C">https://books.google.com/books?id=DUkFB4643o0C</ref>
                 </bibl>
                 <bibl xml:id="bibl_aa26251a">
                     <title type="text">An Gabriele Baumberg</title>
