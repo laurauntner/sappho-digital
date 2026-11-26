@@ -1090,7 +1090,7 @@ lrmoo:F3_Manifestation rdf:type owl:Class ;
 intro:INT18_Reference rdf:type owl:Class ;
                       rdfs:subClassOf intro:INT9_SemanticFeature ,
                                       intro:INT_PragmaticFeature ;
-                      rdfs:comment "This class comprises references to – usually: real – identifiable objects of any kind. It is not restricted to non-fictional texts resp. images depicting real life objects or events, but can be most easily applied there. The CIDOC CRM property P67 refers to is recommended to establish the link to the referred to entity. There are two options with slightly different semantic and alignment implications: P67 refers to can link this INT18 Reference (or any other feature) to the external entity, which would make the INT18 Reference an E89 Propositional Object (due to P67's domain and range). However, this is in conflict with the conceptual similarity of the F4 Feature and its subclasses to CIDOC CRM's E55 Type. INTRO's suggested – but in no way prescribed – solution is to instead attach P67 refers to to the INT2 Actualization of Feature linked to INT18 Reference. The scope of this class also includes references to other images/texts, if one wants to model an interrelation this way."@en ;
+                      rdfs:comment "This class comprises references to – usually: real – identifiable objects of any kind. It is not restricted to non-fictional texts resp. images depicting real life objects or events, but can be most easily applied there. The CIDOC CRM property P67 refers to is recommended to establish the link to the referred to entity. There are two options with slightly different semantic and alignment implications: P67 refers to can link this INT18 Reference (or any other feature) to the external entity, which would make the INT18 Reference an E89 Propositional Object (due to P67's domain and range). However, this is in conflict with the conceptual similarity of the INT4 Feature and its subclasses to CIDOC CRM's E55 Type. INTRO's suggested – but in no way prescribed – solution is to instead attach P67 refers to to the INT2 Actualization of Feature linked to INT18 Reference. The scope of this class also includes references to other images/texts, if one wants to model an interrelation this way."@en ;
                       rdfs:label "INT18 Reference"@en .
 
 
@@ -1147,7 +1147,7 @@ intro:INT_Character rdf:type owl:Class ;
 intro:INT_Interpretation rdf:type owl:Class ;
                          rdfs:subClassOf intro:INT9_SemanticFeature ,
                                          intro:INT_PragmaticFeature ;
-                         rdfs:comment "The result of a interpretative act, possibly: as perceived in research literature. An interpretation can identify references or actualizations or the like. A number of interpretations can together recreate the structure of, e. g., a research paper. Accordingly, apart from linking INT Interpretations to the subjects of the interpretation, like intertextual relations or textual features, they can be linked to each other via R9 has subsequent feature resp. R9i has preceding feature. Examples: – the statement that Umberto Eco's 'The Name of the Rose' features a detective character. – the statement that Umberto Eco's 'The Name of the Rose' contains references to Arthur Conan Doyle's 'Sherlock Holmes'. – the statement that Umberto Eco's 'The Name of the Rose' is set in the 14th century. – the conclusion that Umberto Eco's 'The Name of the Rose' belongs to the genre 'postmodern crime novel'."@en ;
+                         rdfs:comment "The result of a interpretative act, possibly: as perceived in research literature. An interpretation can identify references or actualizations or the like. A number of interpretations can together recreate the structure of, e. g., a research paper. Accordingly, apart from linking INT Interpretations to the subjects of the interpretation, like intertextual relations or textual features, they can be linked to each other via R9 has subsequent actualization resp. R9i has preceding actualization. Examples: – the statement that Umberto Eco's 'The Name of the Rose' features a detective character. – the statement that Umberto Eco's 'The Name of the Rose' contains references to Arthur Conan Doyle's 'Sherlock Holmes'. – the statement that Umberto Eco's 'The Name of the Rose' is set in the 14th century. – the conclusion that Umberto Eco's 'The Name of the Rose' belongs to the genre 'postmodern crime novel'."@en ;
                          rdfs:label "INT Interpretation"@en .
 
 
@@ -801015,7 +801015,7 @@ intro:R18_showsActualization rdfs:comment "Links a text or an image (on any onto
 intro:R18i_actualizationFoundOn rdfs:label "R18i actualization found on"@en .
 
 
-intro:R21_identifies rdfs:comment "Links an INT2 Actualization of Feature (that is possibly, but not necessarily, specified by a link to the features INT Identification or INT Interpretation) or a text on different levels of granularity to the INT3 Interrelation or the INT2 Actualization of Feature it identifies. Please note: R21 is a sub-property of CIDOC CRM's P67 refers to, whose domain is E89 Propositional Object. Using R21 therefore makes its domain (the identifying INT1 Passage, INT2 Actualization of Feature, or INT6 Architext, as well as any F1 Work or E73 Information Object) an instance of E89 Propositional Object by inference. This should be kept in mind when modelling."@en ;
+intro:R21_identifies rdfs:comment "Links an INT2 Actualization of Feature (that is possibly, but not necessarily, specified by a link to the features INT Identification or INT Interpretation) or a text on different levels of granularity to the INT3 Interrelation or the INT2 Actualization of Feature it identifies. Please note: R21 is a sub-property of CIDOC CRM's P67 refers to, whose domain is E89 Propositional Object. Using R21 therefore makes its domain (the identifying INT1 Passage, INT2 Actualization of Feature, or INT6 Architext) an instance of E89 Propositional Object by inference (F1 Work and E73 Information Object already are). This should be kept in mind when modelling."@en ;
                      rdfs:label "R21 identifies"@en .
 
 
@@ -801037,7 +801037,7 @@ intro:R24_hasRelatedEntity rdfs:comment "Links any INT3 Interrelation to a text 
 intro:R24i_isRelatedEntity rdfs:label "R24i is related entity"@en .
 
 
-intro:R30_hasTextPassage rdfs:comment "Links (usually, exceptions are easily conceivable) a text, like a work or an expression, to an INT21 Text Passage from that text, e. g., a book to a passage on page three of this book."@en ;
+intro:R30_hasTextPassage rdfs:comment "Links (usually, exceptions are easily conceivable) a text, like an expression, to an INT21 Text Passage from that text, e. g., a text to a passage of this text."@en ;
                          rdfs:label "R30 has text passage"@en .
 
 

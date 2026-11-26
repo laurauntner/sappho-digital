@@ -8,7 +8,7 @@
   xmlns:cc="http://creativecommons.org/ns#"
 >
   <owl:Ontology rdf:about="https://w3id.org/sappho-digital/ontology/">
-    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-23</dc:modified>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-26</dc:modified>
     <dc:title xml:lang="en">Sappho Digital Ontology</dc:title>
     <dc:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laura Untner</dc:creator>
     <dc:creator rdf:resource="https://orcid.org/0000-0002-9649-0870"/>
@@ -141,7 +141,7 @@
     <rdfs:range rdf:resource="http://iflastandards.info/ns/lrm/lrmoo/F2_Expression"/>
   </owl:ObjectProperty>
   <owl:Class rdf:about="https://w3id.org/lso/intro/v1.0#INT18_Reference">
-    <rdfs:comment xml:lang="en">This class comprises references to – usually: real – identifiable objects of any kind. It is not restricted to non-fictional texts resp. images depicting real life objects or events, but can be most easily applied there. The CIDOC CRM property P67 refers to is recommended to establish the link to the referred to entity. There are two options with slightly different semantic and alignment implications: P67 refers to can link this INT18 Reference (or any other feature) to the external entity, which would make the INT18 Reference an E89 Propositional Object (due to P67's domain and range). However, this is in conflict with the conceptual similarity of the F4 Feature and its subclasses to CIDOC CRM's E55 Type. INTRO's suggested – but in no way prescribed – solution is to instead attach P67 refers to to the INT2 Actualization of Feature linked to INT18 Reference. The scope of this class also includes references to other images/texts, if one wants to model an interrelation this way.</rdfs:comment>
+    <rdfs:comment xml:lang="en">This class comprises references to – usually: real – identifiable objects of any kind. It is not restricted to non-fictional texts resp. images depicting real life objects or events, but can be most easily applied there. The CIDOC CRM property P67 refers to is recommended to establish the link to the referred to entity. There are two options with slightly different semantic and alignment implications: P67 refers to can link this INT18 Reference (or any other feature) to the external entity, which would make the INT18 Reference an E89 Propositional Object (due to P67's domain and range). However, this is in conflict with the conceptual similarity of the INT4 Feature and its subclasses to CIDOC CRM's E55 Type. INTRO's suggested – but in no way prescribed – solution is to instead attach P67 refers to to the INT2 Actualization of Feature linked to INT18 Reference. The scope of this class also includes references to other images/texts, if one wants to model an interrelation this way.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/v1.0#INT9_SemanticFeature"/>
     <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/v1.0#INT_PragmaticFeature"/>
     <rdfs:label xml:lang="en">INT18 Reference</rdfs:label>
@@ -195,7 +195,7 @@
     <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/v1.0#INT_PragmaticFeature"/>
     <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/v1.0#INT9_SemanticFeature"/>
     <rdfs:label xml:lang="en">INT Interpretation</rdfs:label>
-    <rdfs:comment xml:lang="en">The result of a interpretative act, possibly: as perceived in research literature. An interpretation can identify references or actualizations or the like. A number of interpretations can together recreate the structure of, e. g., a research paper. Accordingly, apart from linking INT Interpretations to the subjects of the interpretation, like intertextual relations or textual features, they can be linked to each other via R9 has subsequent feature resp. R9i has preceding feature. Examples: – the statement that Umberto Eco's 'The Name of the Rose' features a detective character. – the statement that Umberto Eco's 'The Name of the Rose' contains references to Arthur Conan Doyle's 'Sherlock Holmes'. – the statement that Umberto Eco's 'The Name of the Rose' is set in the 14th century. – the conclusion that Umberto Eco's 'The Name of the Rose' belongs to the genre 'postmodern crime novel'.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The result of a interpretative act, possibly: as perceived in research literature. An interpretation can identify references or actualizations or the like. A number of interpretations can together recreate the structure of, e. g., a research paper. Accordingly, apart from linking INT Interpretations to the subjects of the interpretation, like intertextual relations or textual features, they can be linked to each other via R9 has subsequent actualization resp. R9i has preceding actualization. Examples: – the statement that Umberto Eco's 'The Name of the Rose' features a detective character. – the statement that Umberto Eco's 'The Name of the Rose' contains references to Arthur Conan Doyle's 'Sherlock Holmes'. – the statement that Umberto Eco's 'The Name of the Rose' is set in the 14th century. – the conclusion that Umberto Eco's 'The Name of the Rose' belongs to the genre 'postmodern crime novel'.</rdfs:comment>
   </owl:Class>
   <owl:Class rdf:about="https://w3id.org/lso/intro/v1.0#INT_Topic">
     <rdfs:subClassOf rdf:resource="https://w3id.org/lso/intro/v1.0#INT9_SemanticFeature"/>
@@ -502,7 +502,7 @@
     <owl:inverseOf>
       <owl:ObjectProperty rdf:about="https://w3id.org/lso/intro/v1.0#R21_identifies">
         <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/v1.0#R21i_isIdentifiedBy"/>
-        <rdfs:comment xml:lang="en">Links an INT2 Actualization of Feature (that is possibly, but not necessarily, specified by a link to the features INT Identification or INT Interpretation) or a text on different levels of granularity to the INT3 Interrelation or the INT2 Actualization of Feature it identifies. Please note: R21 is a sub-property of CIDOC CRM's P67 refers to, whose domain is E89 Propositional Object. Using R21 therefore makes its domain (the identifying INT1 Passage, INT2 Actualization of Feature, or INT6 Architext, as well as any F1 Work or E73 Information Object) an instance of E89 Propositional Object by inference. This should be kept in mind when modelling.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links an INT2 Actualization of Feature (that is possibly, but not necessarily, specified by a link to the features INT Identification or INT Interpretation) or a text on different levels of granularity to the INT3 Interrelation or the INT2 Actualization of Feature it identifies. Please note: R21 is a sub-property of CIDOC CRM's P67 refers to, whose domain is E89 Propositional Object. Using R21 therefore makes its domain (the identifying INT1 Passage, INT2 Actualization of Feature, or INT6 Architext) an instance of E89 Propositional Object by inference (F1 Work and E73 Information Object already are). This should be kept in mind when modelling.</rdfs:comment>
         <rdfs:range>
           <owl:Class rdf:nodeID="n0799c903ea374cc6933040d03e3e7819b56">
             <owl:unionOf rdf:parseType="Collection">
@@ -909,7 +909,7 @@
         <owl:inverseOf rdf:resource="https://w3id.org/lso/intro/v1.0#R30i_isTextPassageOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:label xml:lang="en">R30 has text passage</rdfs:label>
-        <rdfs:comment xml:lang="en">Links (usually, exceptions are easily conceivable) a text, like a work or an expression, to an INT21 Text Passage from that text, e. g., a book to a passage on page three of this book.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links (usually, exceptions are easily conceivable) a text, like an expression, to an INT21 Text Passage from that text, e. g., a text to a passage of this text.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/lso/intro/v1.0#R10_hasPassage"/>
       </owl:ObjectProperty>
     </owl:inverseOf>
